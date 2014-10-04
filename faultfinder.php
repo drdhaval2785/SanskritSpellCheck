@@ -8,9 +8,10 @@ include "C:\\xampp\\htdocs\\sanskrit\\function.php";
 $file=file('PWKslp.txt');
 //$file = array_map("convert1",$file);
 $hlplus = array_merge($hl,array("M","H"));
-
-
-comparepatterns("PWKslp.txt",3,"MWslp.txt");
+for($j=0;$j<10;$j++)
+{
+comparepatterns("MWslp.txt",$j,"PWKslp.txt");    
+}
 
 /* function comparepatterns 
  * $a is the file location of dictionary whose pattern we want to take as input (Base).
@@ -91,7 +92,7 @@ $vccccv = array_values($vccccv);
 sort($vccccv);
     // checking the second file.
     $file1=file($c);
-    $outfile=fopen("compare.html","w+");
+    $outfile=fopen("$j.html","w+");
     foreach ($file1 as $value)
     {
         if(preg_match($pattern,$value))
@@ -105,11 +106,11 @@ sort($vccccv);
 //                    echo '<b style="color:red">'.$value." - ".$vccccvex[$i-1]."</b><br>";
                     fputs($outfile,'<b style="color:red">'.$value." - ".$vccccvex[$i-1]."</b><br>");
                 }
-                else
+/*                else
                 {
-//                    echo $value." - ".$vccccvex[$i-1]."<br>";
+                    echo $value." - ".$vccccvex[$i-1]."<br>";
                     fputs($outfile,$value." - ".$vccccvex[$i-1]."<br>");
-                }
+                }*/
                 $i=$i+2;
             }
         }
