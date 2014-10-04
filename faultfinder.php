@@ -8,6 +8,8 @@ include "C:\\xampp\\htdocs\\sanskrit\\function.php";
 $file=file('PWKslp.txt');
 //$file = array_map("convert1",$file);
 $hlplus = array_merge($hl,array("M","H"));
+$outfile=fopen("compare.html","w+");
+    
 for($j=0;$j<10;$j++)
 {
 comparepatterns("MWslp.txt",$j,"PWKslp.txt");    
@@ -30,47 +32,58 @@ comparepatterns("MWslp.txt",$j,"PWKslp.txt");
  */
 function comparepatterns($a,$b,$c)
 {
+    global $outfile;
 $file= file($a);
 //$file=array_map('convert1',$file);
 if ($b===0)
 {
     $pattern  = '/([aAiIuUfFxXeEoO][aAiIuUfFxXeEoO])/';
+    echo '<b style="color:blue">This is Vowel-Vowel pattern.</b><br>';
 }
 if ($b===1)
 {
     $pattern  = '/([aAiIuUfFxXeEoO][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][aAiIuUfFxXeEoO])/';
+    echo '<b style="color:blue">This is Vowel-Consonant-Vowel pattern.</b><br>';
 }
 if ($b===2)
 {
     $pattern  = '/([aAiIuUfFxXeEoO][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][aAiIuUfFxXeEoO])/';
+    echo '<b style="color:blue">This is Vowel-Consonant-Consonant-Vowel pattern.</b><br>';
 }
 if ($b===3)
 {
     $pattern  = '/([aAiIuUfFxXeEoO][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][aAiIuUfFxXeEoO])/';
+    echo '<b style="color:blue">This is Vowel-Consonant-Consonant-Consonant-Vowel pattern.</b><br>';
 }
 if ($b===4)
 {
     $pattern  = '/([aAiIuUfFxXeEoO][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][aAiIuUfFxXeEoO])/';
+    echo '<b style="color:blue">This is Vowel-Consonant-Consonant-Consonant-Consonant-Vowel pattern.</b><br>';
 }
 if ($b===5)
 {
     $pattern  = '/([aAiIuUfFxXeEoO][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][aAiIuUfFxXeEoO])/';
+    echo '<b style="color:blue">This is Vowel-Consonant-Consonant-Consonant-Consonant-Consonant-Vowel pattern.</b><br>';
 }
 if ($b===6)
 {
     $pattern  = '/^([kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs])/';
+    echo '<b style="color:blue">This is Start-Consonant-Consonant pattern.</b><br>';
 }
 if ($b===7)
 {
     $pattern  = '/([kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs])$/';
+    echo '<b style="color:blue">This is Consonant-Consonant-End pattern.</b><br>';
 }
 if ($b===8)
 {
     $pattern  = '/([kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs])$/';
+    echo '<b style="color:blue">This is Consonant-Consonant-Consonant-End pattern.</b><br>';
 }
 if ($b===9)
 {
     $pattern  = '/([kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs])$/';
+    echo '<b style="color:blue">This is Consonant-Consonant-Consonant-Consonant-End pattern.</b><br>';
 }
 $vccccv=array();
 foreach ($file as $value)
@@ -92,7 +105,7 @@ $vccccv = array_values($vccccv);
 sort($vccccv);
     // checking the second file.
     $file1=file($c);
-    $outfile=fopen("$j.html","w+");
+
     foreach ($file1 as $value)
     {
         if(preg_match($pattern,$value))
@@ -115,8 +128,8 @@ sort($vccccv);
             }
         }
     }
-    fclose($outfile);
 }
 
+    fclose($outfile);
 
 ?>
