@@ -88,16 +88,70 @@ sort($vcccv);
 print_r($vcccv);*/
 
 /* VCCCCV pattern */
-function vccccv($a)
+// $a is the file location of dictionary whose pattern we want to take as input.
+/* $b refers to the pattern we want to check. 
+ * 0 - Vowel-Vowel (VV)
+ * 1 - Vowel-Consonant-Vowel (VCV)
+ * 2 - Vowel-Consonant-Consonant-Vowel (VCCV)
+ * 3 - Vowel-Consonant-Consonant-Consonant-Vowel (VCCCV)
+ * 4 - Vowel-Consonant-Consonant-Consonant-Consonant-Vowel (VCCCCV)
+ * 5 - Vowel-Consonant-Consonant-Consonant-Consonant-Consonant-Vowel (VCCCCCV)
+ * 6 - Start-Consonant-Consonant (^CC)
+ * 7 - Consonant-Consonant-End (CC$)
+ * 8 - Consonant-Consonant-Consonant-End (CCC$)
+ * 9 - Consonant-Consonant-Consonant-Consonant-End (CCCC$)
+ */
+function vccccv($a,$b)
 {
 $file= file($a);
+$file=array_map('convert1',$file);
+if ($b===0)
+{
+    $pattern  = '/([aAiIuUfFxXeEoO][aAiIuUfFxXeEoO])/';
+}
+if ($b===1)
+{
+    $pattern  = '/([aAiIuUfFxXeEoO][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][aAiIuUfFxXeEoO])/';
+}
+if ($b===2)
+{
+    $pattern  = '/([aAiIuUfFxXeEoO][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][aAiIuUfFxXeEoO])/';
+}
+if ($b===3)
+{
+    $pattern  = '/([aAiIuUfFxXeEoO][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][aAiIuUfFxXeEoO])/';
+}
+if ($b===4)
+{
+    $pattern  = '/([aAiIuUfFxXeEoO][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][aAiIuUfFxXeEoO])/';
+}
+if ($b===5)
+{
+    $pattern  = '/([aAiIuUfFxXeEoO][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][aAiIuUfFxXeEoO])/';
+}
+if ($b===6)
+{
+    $pattern  = '/^([kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs])/';
+}
+if ($b===7)
+{
+    $pattern  = '/([kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs])$/';
+}
+if ($b===8)
+{
+    $pattern  = '/([kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs])$/';
+}
+if ($b===9)
+{
+    $pattern  = '/([kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs])$/';
+}
 $vccccv=array();
 foreach ($file as $value)
 {
-    if(preg_match('/([aAiIuUfFxXeEoO][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][aAiIuUfFxXeEoO])/',$value))
+    if(preg_match($pattern,$value))
     {
-        $vccccvwords[] = $value; 
-        $vccccvraw = preg_split('/([aAiIuUfFxXeEoO][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][aAiIuUfFxXeEoO])/',$value,null,PREG_SPLIT_DELIM_CAPTURE);
+//        $vccccvwords[] = $value; 
+        $vccccvraw = preg_split($pattern,$value,null,PREG_SPLIT_DELIM_CAPTURE);
         $i=2;
         while($i<count($vccccvraw))
         {
@@ -112,10 +166,10 @@ sort($vccccv);
 return $vccccv;
 }
 
-$input = vccccv("PWKslp.txt");
-//print_r($input);
+$input = vccccv("PWKslp.txt",4);
+print_r($input);
 /* testing in MW */
-$file1=file("MWslp.txt");
+/*$file1=file("MWslp.txt");
 foreach ($file1 as $value)
 {
     if(preg_match('/([aAiIuUfFxXeEoO][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][aAiIuUfFxXeEoO])/',$value))
@@ -135,24 +189,7 @@ foreach ($file1 as $value)
             $i=$i+2;
         }
     }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}*/
 
 
 /* VCCCCCV pattern */
