@@ -191,7 +191,7 @@ sort($vccccv);
 
 }
 
-comparepatterns("PWKslp.txt",4,"MWslp.txt");
+comparepatterns("PWKslp.txt",5,"MWslp.txt");
 
 
 
