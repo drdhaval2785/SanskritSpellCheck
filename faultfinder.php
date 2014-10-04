@@ -100,8 +100,9 @@ print_r($vcccv);*/
  * 7 - Consonant-Consonant-End (CC$)
  * 8 - Consonant-Consonant-Consonant-End (CCC$)
  * 9 - Consonant-Consonant-Consonant-Consonant-End (CCCC$)
+ * $c is the location of file to be checked.
  */
-function vccccv($a,$b)
+function comparepatterns($a,$b,$c)
 {
 $file= file($a);
 $file=array_map('convert1',$file);
@@ -163,11 +164,37 @@ foreach ($file as $value)
 $vccccv = array_unique($vccccv);
 $vccccv = array_values($vccccv);
 sort($vccccv);
-return $vccccv;
+
+
+    // checking the second file.
+    $file1=file($c);
+    foreach ($file1 as $value)
+    {
+        if(preg_match($pattern,$value))
+        {
+            $vccccvex = preg_split($pattern,$value,null,PREG_SPLIT_DELIM_CAPTURE);        
+            $i=2;
+            while ($i<count($vccccvex))
+            {
+                if ( !in_array($vccccvex[$i-1],$vccccv ))
+                {
+                    echo '<b style="color:red">'.$value." - ".$vccccvex[$i-1]."</b><br>";
+                }
+                else
+                {
+                    echo $value." - ".$vccccvex[$i-1]."<br>";
+                }
+                $i=$i+2;
+            }
+        }
+    }
+
 }
 
-$input = vccccv("PWKslp.txt",4);
-print_r($input);
+comparepatterns("PWKslp.txt",4,"MWslp.txt");
+
+
+
 /* testing in MW */
 /*$file1=file("MWslp.txt");
 foreach ($file1 as $value)
