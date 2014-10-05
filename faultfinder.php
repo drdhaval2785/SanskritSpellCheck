@@ -5,14 +5,12 @@ ini_set('max_execution_time', 36000);
 ini_set("memory_limit","1000M");
 include "C:\\xampp\\htdocs\\sanskrit\\dev-slp.php";
 include "C:\\xampp\\htdocs\\sanskrit\\function.php";
-$file=file('PWKslp.txt');
-//$file = array_map("convert1",$file);
 $hlplus = array_merge($hl,array("M","H"));
-$outfile=fopen("compare.html","w+");
 
 
-/*for($b=0;$b<1;$b++)
+for($b=1;$b<2;$b++)
 {
+$outfile=fopen("$b.html","w+");
 if ($b===0)
 {
     fputs($outfile,'<b style="color:blue">This is Vowel-Vowel pattern.</b><br>');
@@ -93,9 +91,9 @@ if ($b===9)
 {
     $pattern  = '/([kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs])$/';
 }
-*/
+
 comparepatterns("MWslp.txt",$b,"PWKslp.txt");    
-//}
+}
 
 /* function comparepatterns 
  * $a is the file location of dictionary whose pattern we want to take as input (Base).
@@ -149,7 +147,7 @@ sort($vccccv);
                 if ( !in_array($vccccvex[$i-1],$vccccv ))
                 {
 //                    echo '<b style="color:red">'.$value." - ".$vccccvex[$i-1]."</b><br>";
-                    fputs($outfile,'<p style="color:red">'.$value." - ".$vccccvex[$i-1]."</p><br>");
+                    fputs($outfile,'<b style="color:red">'.$value." - ".$vccccvex[$i-1]."</b><br>");
                 }
 /*                else
                 {
