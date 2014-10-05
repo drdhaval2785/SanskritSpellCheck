@@ -8,11 +8,93 @@ include "C:\\xampp\\htdocs\\sanskrit\\function.php";
 $file=file('PWKslp.txt');
 //$file = array_map("convert1",$file);
 $hlplus = array_merge($hl,array("M","H"));
-$outfile=fopen("compare.html","w+");
-    
-for($j=0;$j<10;$j++)
+$outfile=fopen("compare2.html","w+");
+
+
+for($b=0;$b<10;$b++)
 {
-comparepatterns("MWslp.txt",$j,"PWKslp.txt");    
+if ($b===0)
+{
+    fputs($outfile,'<b style="color:blue">This is Vowel-Vowel pattern.</b><br>');
+}
+if ($b===1)
+{
+    fputs($outfile,'<b style="color:blue">This is Vowel-Consonant-Vowel pattern.</b><br>');
+}
+if ($b===2)
+{
+    fputs($outfile,'<b style="color:blue">This is Vowel-Consonant-Consonant-Vowel pattern.</b><br>');
+}
+if ($b===3)
+{
+    fputs($outfile,'<b style="color:blue">This is Vowel-Consonant-Consonant-Consonant-Vowel pattern.</b><br>');
+}
+if ($b===4)
+{
+    fputs($outfile,'<b style="color:blue">This is Vowel-Consonant-Consonant-Consonant-Consonant-Vowel pattern.</b><br>');
+}
+if ($b===5)
+{
+    fputs($outfile,'<b style="color:blue">This is Vowel-Consonant-Consonant-Consonant-Consonant-Consonant-Vowel pattern.</b><br>');
+}
+if ($b===6)
+{
+    fputs($outfile,'<b style="color:blue">This is Start-Consonant-Consonant pattern.</b><br>');
+}
+if ($b===7)
+{
+    fputs($outfile,'<b style="color:blue">This is Consonant-Consonant-End pattern.</b><br>');
+}
+if ($b===8)
+{
+    fputs($outfile,'<b style="color:blue">This is Consonant-Consonant-Consonant-End pattern.</b><br>');
+}
+if ($b===9)
+{
+    fputs($outfile,'<b style="color:blue">This is Consonant-Consonant-Consonant-Consonant-End pattern.</b><br>');
+}
+if ($b===0)
+{
+    $pattern  = '/([aAiIuUfFxXeEoO][aAiIuUfFxXeEoO])/';
+}
+if ($b===1)
+{
+    $pattern  = '/([aAiIuUfFxXeEoO][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][aAiIuUfFxXeEoO])/';
+}
+if ($b===2)
+{
+    $pattern  = '/([aAiIuUfFxXeEoO][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][aAiIuUfFxXeEoO])/';
+}
+if ($b===3)
+{
+    $pattern  = '/([aAiIuUfFxXeEoO][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][aAiIuUfFxXeEoO])/';
+}
+if ($b===4)
+{
+    $pattern  = '/([aAiIuUfFxXeEoO][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][aAiIuUfFxXeEoO])/';
+}
+if ($b===5)
+{
+    $pattern  = '/([aAiIuUfFxXeEoO][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][aAiIuUfFxXeEoO])/';
+}
+if ($b===6)
+{
+    $pattern  = '/^([kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs])/';
+}
+if ($b===7)
+{
+    $pattern  = '/([kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs])$/';
+}
+if ($b===8)
+{
+    $pattern  = '/([kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs])$/';
+}
+if ($b===9)
+{
+    $pattern  = '/([kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs])$/';
+}
+
+comparepatterns("MWslp.txt",$b,"PWKslp.txt");    
 }
 
 /* function comparepatterns 
@@ -32,59 +114,9 @@ comparepatterns("MWslp.txt",$j,"PWKslp.txt");
  */
 function comparepatterns($a,$b,$c)
 {
-    global $outfile;
+    global $outfile; global $b; global $pattern;
 $file= file($a);
 //$file=array_map('convert1',$file);
-if ($b===0)
-{
-    $pattern  = '/([aAiIuUfFxXeEoO][aAiIuUfFxXeEoO])/';
-    echo '<b style="color:blue">This is Vowel-Vowel pattern.</b><br>';
-}
-if ($b===1)
-{
-    $pattern  = '/([aAiIuUfFxXeEoO][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][aAiIuUfFxXeEoO])/';
-    echo '<b style="color:blue">This is Vowel-Consonant-Vowel pattern.</b><br>';
-}
-if ($b===2)
-{
-    $pattern  = '/([aAiIuUfFxXeEoO][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][aAiIuUfFxXeEoO])/';
-    echo '<b style="color:blue">This is Vowel-Consonant-Consonant-Vowel pattern.</b><br>';
-}
-if ($b===3)
-{
-    $pattern  = '/([aAiIuUfFxXeEoO][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][aAiIuUfFxXeEoO])/';
-    echo '<b style="color:blue">This is Vowel-Consonant-Consonant-Consonant-Vowel pattern.</b><br>';
-}
-if ($b===4)
-{
-    $pattern  = '/([aAiIuUfFxXeEoO][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][aAiIuUfFxXeEoO])/';
-    echo '<b style="color:blue">This is Vowel-Consonant-Consonant-Consonant-Consonant-Vowel pattern.</b><br>';
-}
-if ($b===5)
-{
-    $pattern  = '/([aAiIuUfFxXeEoO][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][aAiIuUfFxXeEoO])/';
-    echo '<b style="color:blue">This is Vowel-Consonant-Consonant-Consonant-Consonant-Consonant-Vowel pattern.</b><br>';
-}
-if ($b===6)
-{
-    $pattern  = '/^([kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs])/';
-    echo '<b style="color:blue">This is Start-Consonant-Consonant pattern.</b><br>';
-}
-if ($b===7)
-{
-    $pattern  = '/([kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs])$/';
-    echo '<b style="color:blue">This is Consonant-Consonant-End pattern.</b><br>';
-}
-if ($b===8)
-{
-    $pattern  = '/([kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs])$/';
-    echo '<b style="color:blue">This is Consonant-Consonant-Consonant-End pattern.</b><br>';
-}
-if ($b===9)
-{
-    $pattern  = '/([kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs])$/';
-    echo '<b style="color:blue">This is Consonant-Consonant-Consonant-Consonant-End pattern.</b><br>';
-}
 $vccccv=array();
 foreach ($file as $value)
 {
@@ -117,7 +149,7 @@ sort($vccccv);
                 if ( !in_array($vccccvex[$i-1],$vccccv ))
                 {
 //                    echo '<b style="color:red">'.$value." - ".$vccccvex[$i-1]."</b><br>";
-                    fputs($outfile,'<b style="color:red">'.$value." - ".$vccccvex[$i-1]."</b><br>");
+                    fputs($outfile,'<p style="color:red">'.$value." - ".$vccccvex[$i-1]."</p><br>");
                 }
 /*                else
                 {
