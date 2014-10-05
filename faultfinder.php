@@ -8,6 +8,7 @@ include "C:\\xampp\\htdocs\\sanskrit\\function.php";
 $hlplus = array_merge($hl,array("M","H"));
 
 $outfile=fopen("suspectfalse.html","w+");
+//$outfile=fopen("suspectfalse.txt","w+");
 
 for($b=0;$b<10;$b++)
 {
@@ -149,7 +150,8 @@ $vccccv = array_values($vccccv);
                 if ( !in_array($vccccvex[$i-1],$vccccv ))
                 {
 //                    echo '<b style="color:red">'.$value." - ".$vccccvex[$i-1]."</b><br>";
-                    fputs($outfile,'<b style="color:red">'.$value." - ".$vccccvex[$i-1]."</b><br>");
+//                    fputs($outfile,'<b style="color:red">'.$value." - ".$vccccvex[$i-1]."</b><br>");
+                      fputs($outfile,'<a href="http://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2014/web/webtc/indexcaller.php?key='.$value.'&input=slp1&output=SktDevaUnicode" target="_blank">'.$value."</a> - ".$vccccvex[$i-1]."<br>");
                 }
 /*                else
                 {
