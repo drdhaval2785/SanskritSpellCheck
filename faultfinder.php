@@ -92,7 +92,7 @@ if ($b===9)
     $pattern  = '/([kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs])$/';
 }
 
-comparepatterns("MWslp.txt",$b,"PWKslp.txt");    
+comparepatterns("PWKslp.txt",$b,"MWslp.txt");    
 }
 
 /* function comparepatterns 
