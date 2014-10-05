@@ -7,10 +7,10 @@ include "C:\\xampp\\htdocs\\sanskrit\\dev-slp.php";
 include "C:\\xampp\\htdocs\\sanskrit\\function.php";
 $hlplus = array_merge($hl,array("M","H"));
 
+$outfile=fopen("suspectfalse.html","w+");
 
-for($b=1;$b<2;$b++)
+for($b=0;$b<10;$b++)
 {
-$outfile=fopen("$b.html","w+");
 if ($b===0)
 {
     fputs($outfile,'<b style="color:blue">This is Vowel-Vowel pattern.</b><br>');
