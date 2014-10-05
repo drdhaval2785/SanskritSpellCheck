@@ -125,14 +125,16 @@ foreach ($file as $value)
         $i=2;
         while($i<count($vccccvraw))
         {
+            if(!in_array($vccccvraw[$i-1],$vccccv))
+            {
             $vccccv=array_merge($vccccv,array($vccccvraw[$i-1]));
+            }
             $i=$i+2;
         }
     }
 }
 $vccccv = array_unique($vccccv);
 $vccccv = array_values($vccccv);
-sort($vccccv);
     // checking the second file.
     $file1=file($c);
 
