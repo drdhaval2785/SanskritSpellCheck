@@ -8,10 +8,10 @@ include "C:\\xampp\\htdocs\\sanskrit\\function.php";
 $file=file('PWKslp.txt');
 //$file = array_map("convert1",$file);
 $hlplus = array_merge($hl,array("M","H"));
-$outfile=fopen("compare2.html","w+");
+$outfile=fopen("compare.html","w+");
 
 
-for($b=0;$b<10;$b++)
+/*for($b=0;$b<1;$b++)
 {
 if ($b===0)
 {
@@ -93,9 +93,9 @@ if ($b===9)
 {
     $pattern  = '/([kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs])$/';
 }
-
+*/
 comparepatterns("MWslp.txt",$b,"PWKslp.txt");    
-}
+//}
 
 /* function comparepatterns 
  * $a is the file location of dictionary whose pattern we want to take as input (Base).
