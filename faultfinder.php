@@ -5,52 +5,60 @@ ini_set('max_execution_time', 36000);
 ini_set("memory_limit","1000M");
 include "C:\\xampp\\htdocs\\sanskrit\\dev-slp.php";
 include "C:\\xampp\\htdocs\\sanskrit\\function.php";
+include "C:\\xampp\\htdocs\\sanskrit\\slp-dev.php";
 $hlplus = array_merge($hl,array("M","H"));
 
 $outfile=fopen("suspectfalse.html","w+");
 //$outfile=fopen("suspectfalse.txt","w+");
-
+fputs($outfile,'<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <META HTTP-EQUIV="Content-Language" CONTENT="HI">
+  <!--<meta name="language" content="hi"> -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </meta>
+</head>
+    <body>');
 for($b=0;$b<10;$b++)
 {
 if ($b===0)
 {
-    fputs($outfile,'<b style="color:blue">This is Vowel-Vowel pattern.</b><br>');
+    fputs($outfile,'<b style="color:red">This is Vowel-Vowel pattern.</b><br>');
 }
 if ($b===1)
 {
-    fputs($outfile,'<b style="color:blue">This is Vowel-Consonant-Vowel pattern.</b><br>');
+    fputs($outfile,'<b style="color:red">This is Vowel-Consonant-Vowel pattern.</b><br>');
 }
 if ($b===2)
 {
-    fputs($outfile,'<b style="color:blue">This is Vowel-Consonant-Consonant-Vowel pattern.</b><br>');
+    fputs($outfile,'<b style="color:red">This is Vowel-Consonant-Consonant-Vowel pattern.</b><br>');
 }
 if ($b===3)
 {
-    fputs($outfile,'<b style="color:blue">This is Vowel-Consonant-Consonant-Consonant-Vowel pattern.</b><br>');
+    fputs($outfile,'<b style="color:red">This is Vowel-Consonant-Consonant-Consonant-Vowel pattern.</b><br>');
 }
 if ($b===4)
 {
-    fputs($outfile,'<b style="color:blue">This is Vowel-Consonant-Consonant-Consonant-Consonant-Vowel pattern.</b><br>');
+    fputs($outfile,'<b style="color:red">This is Vowel-Consonant-Consonant-Consonant-Consonant-Vowel pattern.</b><br>');
 }
 if ($b===5)
 {
-    fputs($outfile,'<b style="color:blue">This is Vowel-Consonant-Consonant-Consonant-Consonant-Consonant-Vowel pattern.</b><br>');
+    fputs($outfile,'<b style="color:red">This is Vowel-Consonant-Consonant-Consonant-Consonant-Consonant-Vowel pattern.</b><br>');
 }
 if ($b===6)
 {
-    fputs($outfile,'<b style="color:blue">This is Start-Consonant-Consonant pattern.</b><br>');
+    fputs($outfile,'<b style="color:red">This is Start-Consonant-Consonant pattern.</b><br>');
 }
 if ($b===7)
 {
-    fputs($outfile,'<b style="color:blue">This is Consonant-Consonant-End pattern.</b><br>');
+    fputs($outfile,'<b style="color:red">This is Consonant-Consonant-End pattern.</b><br>');
 }
 if ($b===8)
 {
-    fputs($outfile,'<b style="color:blue">This is Consonant-Consonant-Consonant-End pattern.</b><br>');
+    fputs($outfile,'<b style="color:red">This is Consonant-Consonant-Consonant-End pattern.</b><br>');
 }
 if ($b===9)
 {
-    fputs($outfile,'<b style="color:blue">This is Consonant-Consonant-Consonant-Consonant-End pattern.</b><br>');
+    fputs($outfile,'<b style="color:red">This is Consonant-Consonant-Consonant-Consonant-End pattern.</b><br>');
 }
 if ($b===0)
 {
@@ -151,7 +159,7 @@ $vccccv = array_values($vccccv);
                 {
 //                    echo '<b style="color:red">'.$value." - ".$vccccvex[$i-1]."</b><br>";
 //                    fputs($outfile,'<b style="color:red">'.$value." - ".$vccccvex[$i-1]."</b><br>");
-                      fputs($outfile,'<a href="http://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2014/web/webtc/indexcaller.php?key='.$value.'&input=slp1&output=SktDevaUnicode" target="_blank">'.$value."</a> - ".$vccccvex[$i-1]."<br>");
+                      fputs($outfile,'  <a href="http://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2014/web/webtc/indexcaller.php?key='.$value.'&input=slp1&output=SktDevaUnicode" target="_blank">'.$value."</a> - ".convert($value)." - ".$vccccvex[$i-1]."<br>");
                 }
 /*                else
                 {
@@ -163,7 +171,7 @@ $vccccv = array_values($vccccv);
         }
     }
 }
-
+fputs($outfile,'</body></html>');
     fclose($outfile);
 
 ?>
