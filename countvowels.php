@@ -14,7 +14,7 @@ $file=str_replace("\r","",$file);
 $file=str_replace("<br>","",$file);
 $file=str_replace("\n","",$file);
 $file=trim($file);
-echo $file;
+echo $file."<br>";
 $split=preg_split('/([aAiIuUfFxXeEoO])/',$file,0,PREG_SPLIT_DELIM_CAPTURE);
 echo "Occurrence of vowels - ".((count($split)-1)/2)."<br>";
 $split1=preg_split('/([kKgGNcCjJYwWqQRtTdDnpPbBmyrlvSzshMH])/',$file,0,PREG_SPLIT_DELIM_CAPTURE);
