@@ -3,10 +3,9 @@
 ini_set('max_execution_time', 36000);
 /* set memory limit to 1000 MB */
 ini_set("memory_limit","1000M");
-include "C:\\xampp\\htdocs\\sanskrit\\dev-slp.php";
-include "C:\\xampp\\htdocs\\sanskrit\\function.php";
-include "C:\\xampp\\htdocs\\sanskrit\\slp-dev.php";
-$hlplus = array_merge($hl,array("M","H"));
+include "dev-slp.php";
+include "slp-dev.php";
+//$hlplus = array_merge($hl,array("M","H"));
 
 $outfile=fopen("suspectfalse.html","w+");
 //$outfile=fopen("suspectfalse.txt","w+");
@@ -101,7 +100,7 @@ if ($b===9)
     $pattern  = '/([kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs])$/';
 }
 
-comparepatterns("PWKslp.txt",$b,"MWslp.txt");    
+comparepatterns("MWslp.txt",$b,"PWKslp.txt");    
 }
 
 /* function comparepatterns 
@@ -159,7 +158,8 @@ $vccccv = array_values($vccccv);
                 {
 //                    echo '<b style="color:red">'.$value." - ".$vccccvex[$i-1]."</b><br>";
 //                    fputs($outfile,'<b style="color:red">'.$value." - ".$vccccvex[$i-1]."</b><br>");
-                      fputs($outfile,'  <a href="http://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2014/web/webtc/indexcaller.php?key='.$value.'&input=slp1&output=SktDevaUnicode" target="_blank">'.$value."</a> - ".convert($value)." - ".$vccccvex[$i-1]."<br>");
+//                      fputs($outfile,'  <a href="http://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2014/web/webtc/indexcaller.php?key='.$value.'&input=slp1&output=SktDevaUnicode" target="_blank">'.$value."</a> - ".convert($value)." - ".$vccccvex[$i-1]."<br>");
+                      fputs($outfile,'  <a href="http://www.sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2013/web/webtc/indexcaller.php?key='.$value.'&input=slp1&output=SktDevaUnicode" target="_blank">'.$value."</a> - ".convert($value)." - ".$vccccvex[$i-1]."<br>");
                 }
 /*                else
                 {
@@ -174,4 +174,6 @@ $vccccv = array_values($vccccv);
 fputs($outfile,'</body></html>');
     fclose($outfile);
 
+    
+    
 ?>
