@@ -8,12 +8,13 @@ include "slp-dev.php";
 $ac = array("a","A","i","I","u","U","f","F","x","X","e","o","E","O",); // vowels - 'ac' letters
 $hl = array("k","K","g","G","N","c","C","j","J","Y","w","W","q","Q","R","t","T","d","D","n","p","P","b","B","m","y","r","l","v","S","z","s","h","M","H"); 
 $al = array("a","A","i","I","u","U","f","F","x","X","e","o","E","O","k","K","g","G","N","c","C","j","J","Y","w","W","q","Q","R","t","T","d","D","n","p","P","b","B","m","y","r","l","v","S","z","s","h","M","H");
-$file=file_get_contents("meghadhuta.txt");
+$file=file_get_contents("meghadhuta-CVC-SLP1.txt");
+$file=str_replace(array("1","2","3","4","5","6","7","8","9","0",".","'","?",",","[","]"," ","/"),array("","","","","","","","","","","","","","","","","",""),$file);
 $file=str_replace("\r","",$file);
+$file=str_replace("<br>","",$file);
 $file=str_replace("\n","",$file);
-$file=str_replace("'","",$file);
 $file=trim($file);
-//echo $file;
+echo $file;
 $split=preg_split('/([aAiIuUfFxXeEoO])/',$file,0,PREG_SPLIT_DELIM_CAPTURE);
 echo "Occurrence of vowels - ".((count($split)-1)/2)."<br>";
 $split1=preg_split('/([kKgGNcCjJYwWqQRtTdDnpPbBmyrlvSzshMH])/',$file,0,PREG_SPLIT_DELIM_CAPTURE);
