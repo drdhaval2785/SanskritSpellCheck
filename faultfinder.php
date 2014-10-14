@@ -159,7 +159,7 @@ $vccccv = array_values($vccccv);
 //                    echo '<b style="color:red">'.$value." - ".$vccccvex[$i-1]."</b><br>";
 //                    fputs($outfile,'<b style="color:red">'.$value." - ".$vccccvex[$i-1]."</b><br>");
 //                      fputs($outfile,'  <a href="http://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2014/web/webtc/indexcaller.php?key='.$value.'&input=slp1&output=SktDevaUnicode" target="_blank">'.$value."</a> - ".convert($value)." - ".$vccccvex[$i-1]."<br>");
-                      fputs($outfile,'  <a href="http://www.sanskrit-lexicon.uni-koeln.de/scans/PWGScan/2013/web/webtc/indexcaller.php?key='.$value.'&input=slp1&output=SktDevaUnicode" target="_blank">'.$value."</a> - ".convert($value)." - ".$vccccvex[$i-1]."<br>");
+                      fputs($outfile,'  <a href="http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?key='.$value.'&input=slp1&output=SktDevaUnicode" target="_blank">'.$value."</a> - ".convert($value)." - ".$vccccvex[$i-1]."<br>");
                 }
 /*                else
                 {
