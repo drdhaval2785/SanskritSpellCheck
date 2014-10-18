@@ -1,14 +1,23 @@
 ﻿<?php
+
+/* This code is written by Dr. Dhaval Patel of www.sanskritworld.in.
+ * Video tutorial for its use is available at http://youtu.be/qLqYUZUGM6M
+ * Code is available at https://github.com/drdhaval2785/SanskritSpellCheck.
+ * https://www.youtube.com/watch?v=rKZ_OsSHwsY&feature=youtu.be is the method of finding and noting wrong entries at https://github.com/sanskrit-lexicon/CORRECTIONS/issues
+ * Google doc for understanding the logic behind the machine is https://docs.google.com/document/d/1G4HoDz9nuj2GPeHQopNVSnDEGrnXtoAuXFugj4sQHZg/edit?usp=sharing
+ */
+ 
 /* set execution time to an hour */
 ini_set('max_execution_time', 36000);
 /* set memory limit to 1000 MB */
 ini_set("memory_limit","1000M");
+// include these two files for conversion
 include "dev-slp.php";
 include "slp-dev.php";
-//$hlplus = array_merge($hl,array("M","H"));
 
+// open file where we store the suspect wrong entries.
 $outfile=fopen("suspectfalse.html","w+");
-//$outfile=fopen("suspectfalse.txt","w+");
+// adding HTML head for utf-8
 fputs($outfile,'<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <META HTTP-EQUIV="Content-Language" CONTENT="HI">
@@ -17,6 +26,8 @@ fputs($outfile,'<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "
   </meta>
 </head>
     <body>');
+
+// running a for loop for 10 different type of Consonant, Vowel patterns.
 for($b=0;$b<10;$b++)
 {
 if ($b===0)
@@ -59,6 +70,8 @@ if ($b===9)
 {
     fputs($outfile,'<b style="color:red">This is Consonant-Consonant-Consonant-Consonant-End pattern.</b><br>');
 }
+
+// Regular expression for finding out these 10 patterns. New can be added if needed.
 if ($b===0)
 {
     $pattern  = '/([aAiIuUfFxXeEoO][aAiIuUfFxXeEoO])/';
@@ -100,6 +113,7 @@ if ($b===9)
     $pattern  = '/([kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs][kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs])$/';
 }
 
+// This is the place we will have to change for different dictionaries. first parameter is the base dictionary. second is fixed. Third is the dictionary we want to check.
 comparepatterns("VCPslp.txt",$b,"MWslp.txt");    
 }
 
@@ -122,13 +136,11 @@ function comparepatterns($a,$b,$c)
 {
     global $outfile; global $b; global $pattern;
 $file= file($a);
-//$file=array_map('convert1',$file);
 $vccccv=array();
 foreach ($file as $value)
 {
     if(preg_match($pattern,$value))
     {
-//        $vccccvwords[] = $value; 
         $vccccvraw = preg_split($pattern,$value,null,PREG_SPLIT_DELIM_CAPTURE);
         $i=2;
         while($i<count($vccccvraw))
@@ -154,18 +166,11 @@ $vccccv = array_values($vccccv);
             $i=2;
             while ($i<count($vccccvex))
             {
+// if not found in the patterns already noted - flag it as suspect pattern and enter in suspectfalse.html
                 if ( !in_array($vccccvex[$i-1],$vccccv ))
                 {
-//                    echo '<b style="color:red">'.$value." - ".$vccccvex[$i-1]."</b><br>";
-//                    fputs($outfile,'<b style="color:red">'.$value." - ".$vccccvex[$i-1]."</b><br>");
                       fputs($outfile,'  <a href="http://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2014/web/webtc/indexcaller.php?key='.$value.'&input=slp1&output=SktDevaUnicode" target="_blank">'.$value."</a> - ".convert($value)." - ".$vccccvex[$i-1]."<br>");
- //                     fputs($outfile,'  <a href="http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?key='.$value.'&input=slp1&output=SktDevaUnicode" target="_blank">'.$value."</a> - ".convert($value)." - ".$vccccvex[$i-1]."<br>");
                 }
-/*                else
-                {
-                    echo $value." - ".$vccccvex[$i-1]."<br>";
-                    fputs($outfile,$value." - ".$vccccvex[$i-1]."<br>");
-                }*/
                 $i=$i+2;
             }
         }
