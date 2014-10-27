@@ -1,0 +1,4 @@
+scans/awork/CologneHeadwords/readme.org
+
+* Oct 26, 2014 sanhw2.py
+python26 sanhw1.py sanhw1.txt
