@@ -12,5 +12,5 @@ In short - the logic is as follows
 2. We check the dictionary to be tested for different vowel and consonant patterns like 1 above.
 3. If the pattern is not found in 1, but found in 2 - we note that in suspectfalse.html.
 4. We check those entries from dictionary scans and verify.
-5. If wrong word is detected, it is intimated to the webmaster here.
+5. If wrong word is detected, it is intimated to the webmaster <a href="https://github.com/sanskrit-lexicon/CORRECTIONS/issues">here</a>.
 
