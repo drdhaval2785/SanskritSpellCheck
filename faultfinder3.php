@@ -80,7 +80,7 @@ $hrefyear = array("2014","2014","2014","2014","2014","2014","2014","2014","2014"
 // running a for loop for 10 different type of Consonant, Vowel patterns.
 for($b=0;$b<10;$b++)
 {
-if ($b===0)
+/*if ($b===0)
 {
     fputs($outfile,'<b style="color:red">This is Vowel-Vowel pattern.</b><br>');
 }
@@ -119,7 +119,8 @@ if ($b===8)
 if ($b===9)
 {
     fputs($outfile,'<b style="color:red">This is Consonant-Consonant-Consonant-Consonant-End pattern.</b><br>');
-}
+}*/ 
+    // bracketed because it causes problem in counting of wrong entries. Counted as additional entries.
 
 // Regular expression for finding out these 10 patterns. New can be added if needed.
 if ($b===0)
@@ -239,17 +240,18 @@ function givelink($text,$input)
 {
     global $dictionaryname, $hrefyear;
     $culpritdict = explode(',',$text);
+    $output = $input." - ".convert($input)." - ";
         for($j=0;$j<count($dictionaryname);$j++)
         {    
             foreach ($culpritdict as $culvalue)
             {
                 if ($culvalue===$dictionaryname[$j])
                 {
-                    $text = str_replace($dictionaryname[$j],'<a href="'."http://www.sanskrit-lexicon.uni-koeln.de/scans/".$dictionaryname[$j]."Scan/".$hrefyear[$j]."/web/webtc/indexcaller.php".'?key='.$input.'&input=slp1&output=SktDevaUnicode" target="_blank">'.$dictionaryname[$j]."</a>",$text);            
+                    $culvalue = str_replace($culvalue,'<a href="'."http://www.sanskrit-lexicon.uni-koeln.de/scans/".$culvalue."Scan/".$hrefyear[$j]."/web/webtc/indexcaller.php".'?key='.$input.'&input=slp1&output=SktDevaUnicode" target="_blank">'.$culvalue."</a>",$culvalue);
+                    $output = $output.$culvalue.", ";
                 }
             }
         }        
-    $output = $input." - ".convert($input)." - ".$text;
     return $output;
 }
     
