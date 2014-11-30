@@ -9,6 +9,11 @@
  NO spelling normalization is done, though this may be useful in future
  revisions.
  The output is sorted into Sanskrit alphabetical order by headword.
+ Nov 28, 2014  Modified to place M+consonant in the order of 
+     [homorganic nasal of consonant]+consonant.
+     e.g., aMka  would be (for purpose of ordering) thought of as aNka.
+     This is when the consonant is among the 5 vargas.  For other consonants
+     (  yrlvSzsh), the ordering remains as M.
 """
 import sys,re
 import codecs
@@ -105,6 +110,29 @@ def slp_cmp(a,b):
  b1 = string.translate(b,trantable)
  return cmp(a1,b1)
 
+slp1_cmp1_helper_data = {
+ 'k':'N','K':'N','g':'N','G':'N','N':'N',
+ 'c':'Y','C':'Y','j':'Y','J':'Y','Y':'Y',
+ 'w':'R','W':'R','q':'R','Q':'R','R':'R',
+ 't':'n','T':'n','d':'n','D':'n','n':'n',
+ 'p':'m','P':'m','b':'m','B':'m','m':'m'
+
+}
+def slp_cmp1_helper1(m):
+ #n = m.group(1) # always M
+ c = m.group(2)
+ nasal = slp1_cmp1_helper_data[c]
+ return (nasal+c)
+def slp_cmp1_helper(a):
+ a = re.sub(r'(M)([kKgGNcCjJYwWqQRtTdDnpPbBm])',slp_cmp1_helper1,a)
+ return a
+def slp_cmp1(a,b):
+ a = slp_cmp1_helper(a)
+ b = slp_cmp1_helper(b)
+ a1 = string.translate(a,trantable)
+ b1 = string.translate(b,trantable)
+ return cmp(a1,b1)
+
 def sanhw1(fileout):
  # d is a dictionary
  # key is headword
@@ -116,7 +144,7 @@ def sanhw1(fileout):
   addhw(code,d)
  # sort hws
  hws = d.keys()
- sortedhws = sorted(hws,cmp=slp_cmp)
+ sortedhws = sorted(hws,cmp=slp_cmp1)
  # output 
  fout = codecs.open(fileout,"w","utf-8")
  for hw in sortedhws:
