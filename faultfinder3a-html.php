@@ -119,18 +119,18 @@ foreach($pattern_data as $pattern_datum) {
   }
     if ($repeat === '1' && !rcc($key) )
     {
-        fputs($outfile,givelink($dicts,$key)."</br>\n"); // original by ejf.        
+        fputs($outfile,givelink($dicts,$key,$patvalue)."</br>\n"); // original by ejf.        
     }
     if ($repeat === '2' )
     {
-        fputs($outfile,givelink($dicts,$key)."</br>\n"); 
+        fputs($outfile,givelink($dicts,$key,$patvalue)."</br>\n"); 
     }
     if ($repeat == '0' && !rcc($key) )
     {
     // Keeping only the words occurring in only one dictionary.
         if ($dictnumbers===1)
         {
-        fputs($outfile,givelink($dicts,$key)."</br>\n");      
+        fputs($outfile,givelink($dicts,$key,$patvalue)."</br>\n");      
         } // This if portion is amendment by Dr. Dhaval Patel.        
     }
  }
@@ -139,7 +139,7 @@ fputs($outfile,'</body></html>');
 fclose($outfile);
 }
 
-function givelink($dictstring,$input)
+function givelink($dictstring,$input,$patternvalue)
 {
     $culpritdict = explode(',',$dictstring);
     $linkarr = array();
@@ -150,7 +150,7 @@ function givelink($dictstring,$input)
      $linkarr[] = $text;
     }        
     $linktext = join(" ",$linkarr);
-    $output = $input." - ".convert($input)." - ".$linktext;
+    $output = str_replace($patternvalue,"<b>$patternvalue</b>",$input)." - ".convert($input)." - ".$linktext;
     return $output;
 }
     
