@@ -22,7 +22,7 @@
 function faultfinder_patterns() {
 // Set up $pattern_data, an array for 
 // running a for loop for 10 different type of Consonant, Vowel patterns.
-$cpat='[kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSs]';
+$cpat='[kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSsh]';
 $vpat='[aAiIuUfFxXeEoO]';
 $spat = '^'; // start pattern
 $epat = '$'; // end pattern

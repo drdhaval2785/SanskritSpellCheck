@@ -46,7 +46,7 @@ if(True){echo "check1\n";}
 // Read input parameters
 $input = $argv[1]; // AllvsMW.txt";
 $output = $argv[2];  //AllvsMW.html";
-$repeat = $argv[3]; // 1 for allowing more than one dictionary words. 0 for allowing only one dictionary words. Default is 0.
+$repeat = $argv[3]; // 1 for allowing more than one dictionary words. 0 for allowing only one dictionary words. Default is 0. 2 for allowing rCC type words (Default is to ignore them)
 if (!$repeat){
     $repeat='0'; // setting default value of $repeat
 }
@@ -117,11 +117,15 @@ foreach($pattern_data as $pattern_datum) {
   if($patabbrev != $pattern_abbrev) {
    continue; // skip
   }
-    if ($repeat === '1')
+    if ($repeat === '1' && !rcc($key) )
     {
         fputs($outfile,givelink($dicts,$key)."</br>\n"); // original by ejf.        
     }
-    if ($repeat == '0')
+    if ($repeat === '2' )
+    {
+        fputs($outfile,givelink($dicts,$key)."</br>\n"); 
+    }
+    if ($repeat == '0' && !rcc($key) )
     {
     // Keeping only the words occurring in only one dictionary.
         if ($dictnumbers===1)
@@ -141,7 +145,8 @@ function givelink($dictstring,$input)
     $linkarr = array();
     foreach ($culpritdict as $d){
      $y = Cologne_hrefyear($d); 
-     $text = "<button onclick='linkto(\"$input\",\"$d\",\"$y\");return false;'>$d</button>";
+//     $text = "<button onclick='linkto(\"$input\",\"$d\",\"$y\");return false;'>$d</button>";
+    $text = '<a href="'."http://www.sanskrit-lexicon.uni-koeln.de/scans/".$d."Scan/".$y."/web/webtc/indexcaller.php".'?key='.$input.'&input=slp1&output=SktDevaUnicode" target="_blank">'.$d."</a>"; // Keeping direct href because buttons fail to open in multiple tabs. They refresh the page.
      $linkarr[] = $text;
     }        
     $linktext = join(" ",$linkarr);
@@ -149,4 +154,16 @@ function givelink($dictstring,$input)
     return $output;
 }
     
+function rcc($text)
+{
+    $hl = array("k","K","g","G","N","c","C","j","J","Y","w","W","q","Q","R","t","T","d","D","n","p","P","b","B","m","y","r","l","v","S","z","s","h"); // consonants - hal letters
+    foreach ($hl as $value){
+        if (preg_match("/[r][$value][$value]/",$text))
+        {
+            return true;
+            break;
+        }
+    }
+}
+
 ?>
