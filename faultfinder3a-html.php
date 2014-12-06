@@ -3,6 +3,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 */
+error_reporting(0);
 /* faultfinder3a-html.php 
    ejf.  Nov 28, 2014
    Reads a file in format of that output by faultfinder3a,
@@ -45,7 +46,10 @@ if(True){echo "check1\n";}
 // Read input parameters
 $input = $argv[1]; // AllvsMW.txt";
 $output = $argv[2];  //AllvsMW.html";
-$option = '1';
+$repeat = $argv[3]; // 1 for allowing more than one dictionary words. 0 for allowing only one dictionary words. Default is 0.
+if (!$repeat){
+    $repeat='0'; // setting default value of $repeat
+}
 // read and parse input file 
 $fin = fopen($input,"r");
 $inrecs = array();
@@ -57,7 +61,15 @@ while(! feof($fin)) {
  }
  list($key,$pat0,$dicts) = explode(':',$line);
  list($patabbrev,$patvalue) = explode('=',$pat0);
- $inrecs[] = array($key,$patabbrev,$patvalue,$dicts);
+ $dictnumbers = count(explode(',',$dicts)); // added by Dr. Dhaval Patel for removing words occurring in more than one dicts. 6 Dec 2014
+    if ($repeat==='1')
+    {
+        $inrecs[] = array($key,$patabbrev,$patvalue,$dicts); // original by ejf.        
+    }
+    if ($repeat ==='0')
+    {
+        $inrecs[] = array($key,$patabbrev,$patvalue,$dicts,$dictnumbers); // amendment by Dr. Dhaval Patel.         
+    }
 }
 fclose($fin);
 echo count($inrecs) . " records read from $input\n";
@@ -68,7 +80,8 @@ exit(0);
 */
 function faultfinder3a_html_option1($inrecs,$output,$pattern_data){
  $outfile=fopen($output,"w");  // completely overwrite
-
+ global $repeat;
+echo "repeat is $repeat";
  // add HTML header
 fputs($outfile,"<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n
 <head>\n
@@ -93,11 +106,29 @@ foreach($pattern_data as $pattern_datum) {
  fputs($outfile,"<b style=\"color:red\">This is $pattern_name pattern.</b><br>\n");
  // filter the inrecs for those with this pattern_abbrev
  foreach($inrecs as $inrec) {
-  list($key,$patabbrev,$patvalue,$dicts) = $inrec;
+     if ($repeat==='1')
+     {
+        list($key,$patabbrev,$patvalue,$dicts) = $inrec; // original by ejf.         
+     }
+     if ($repeat === '0')
+     {
+        list($key,$patabbrev,$patvalue,$dicts,$dictnumbers) = $inrec; // Alteration by Dr. Dhaval Patel.         
+     }
   if($patabbrev != $pattern_abbrev) {
    continue; // skip
   }
-  fputs($outfile,givelink($dicts,$key)."</br>\n");
+    if ($repeat === '1')
+    {
+        fputs($outfile,givelink($dicts,$key)."</br>\n"); // original by ejf.        
+    }
+    if ($repeat == '0')
+    {
+    // Keeping only the words occurring in only one dictionary.
+        if ($dictnumbers===1)
+        {
+        fputs($outfile,givelink($dicts,$key)."</br>\n");      
+        } // This if portion is amendment by Dr. Dhaval Patel.        
+    }
  }
 }
 fputs($outfile,'</body></html>');
