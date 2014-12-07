@@ -36,12 +36,19 @@ $dat = file_get_contents($argument1);
 //$outfile2=fopen("dictionarywiseerrors2.html","w");
 $argument2 = $argv[2];
 $outfile2 = fopen($argument2,"w");
+fputs($outfile2,"<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n
+<head>\n
+  <META HTTP-EQUIV=\"Content-Language\" CONTENT=\"HI\">\n
+  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n
+  </meta>\n
+</head>\n
+<body>\n");
 
 $data = explode("</br>",$dat);
 echo count($data);
 foreach ($dictionaryname as $value)
 {
-    fputs($outfile2,"<h1>".$value."</h1></br></br>");
+    fputs($outfile2,"<h1>".$value."</h1></br>");
     foreach ($data as $val1)
     {
         if (strpos($val1,">".$value."<")!==false)
