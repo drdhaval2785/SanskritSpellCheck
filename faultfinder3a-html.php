@@ -150,7 +150,7 @@ function givelink($dictstring,$input,$patternvalue)
      $linkarr[] = $text;
     }        
     $linktext = join(" ",$linkarr);
-    $output = str_replace($patternvalue,"<b>$patternvalue</b>",$input)." - ".slptoiast($input)." - ".convert($input)." - ".$linktext;
+    $output = str_replace($patternvalue,"<b>$patternvalue</b>",$input)." - ".convert($input)." - ".slptoiast($input)." - ".$linktext;
     return $output;
 }
     
