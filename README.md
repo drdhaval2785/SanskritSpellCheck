@@ -11,9 +11,10 @@ php dictwisesorter-v3.php AllvsMW-norepeat.html dictwiseerrors3-table.html
 ```
 
 Their details are as follow:
+
 ```
 php faultfinder3a.php MW sanhw1.txt AllvsMW.txt
-``
+```
 
 faultfinder3a.php modification by ejf of faultfinder3.php
 Nov 28, 2014
