@@ -1,0 +1,4 @@
+अंशांसि_:_अंशांशि - aMSAMsi:aMSAMSi<br/><a href="http://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2014/web/webtc/indexcaller.php?key=aMSAMsi&input=slp1&output=SktDevaUnicode" target="_blank">MW</a><hr/>
+अंसुमन्त्_:_अंशुमन्त् - aMsumant:aMSumant<br/><a href="http://www.sanskrit-lexicon.uni-koeln.de/scans/CCSScan/2014/web/webtc/indexcaller.php?key=aMsumant&input=slp1&output=SktDevaUnicode" target="_blank">CCS</a><hr/>
+अजीनपत्री_:_अजिनपत्री - ajInapatrI:ajinapatrI<br/><a href="http://www.sanskrit-lexicon.uni-koeln.de/scans/SKDScan/2013/web/webtc/indexcaller.php?key=ajInapatrI&input=slp1&output=SktDevaUnicode" target="_blank">SKD</a><hr/>
+अञ्जिष्टः_:_अञ्जिष्ठः - aYjizwaH:aYjizWaH<br/><a href="http://www.sanskrit-lexicon.uni-koeln.de/scans/APScan/2014/web/webtc/indexcaller.php?key=aYjizwaH&input=slp1&output=SktDevaUnicode" target="_blank">AP</a><hr/>
