@@ -257,6 +257,37 @@ foreach ($file as $value)
         echo convert($val[0])." - ".$val[0]."<br>";
     }
 }*/
+include 'faultfinder3a_utils.php';
+function givelinktoo_vs_Otext($text)
+{
+    $x = explode('-',$text);
+	$x = array_map('trim',$x);
+	$dicts = explode(':',$x[1]);
+	$words = explode(':',$x[0]);
+	
+	for ($j=0;$j<count($dicts);$j++)
+	{
+		$culpritdict=explode(',',$dicts[$j]);
+		for ($i=0;$i<count($culpritdict);$i++){
+		$d[$i]=$culpritdict[$i];
+		$y[$i] = Cologne_hrefyear($d[$i]); 
+		$rep[$i] = '<a href="'."http://www.sanskrit-lexicon.uni-koeln.de/scans/".$d[$i]."Scan/".$y[$i]."/web/webtc/indexcaller.php".'?key='.$words[$j].'&input=slp1&output=SktDevaUnicode" target="_blank">'.$d[$i]."</a>"; // Keeping direct href because buttons fail to open in multiple tabs. They refresh the page.
+		$culpritdict[$i] = str_replace($d[$i],$rep[$i],$culpritdict[$i]);
+		}
+		$dicts[$j]=implode(',',$culpritdict);
+	}
+	echo convert($words[0]).":".convert($words[1])." - ".$dicts[0].":".$dicts[1]."<br/>";
+}
 
-include 'o_vs_O.php';
+$raw = file('o_vs_O.txt');
+
+foreach ($raw as $value)
+{
+	$val = preg_split('/([-:,])/',$value);
+	$val = array_map('trim',$val);
+	if (count($val)===count(array_unique($val)))
+	{
+		givelinktoo_vs_Otext($value);	
+	}
+}
 ?>
