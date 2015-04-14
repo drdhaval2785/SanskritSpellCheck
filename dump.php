@@ -248,7 +248,7 @@ echo count($hlplus)*count($hlplus)*count($hlplus);
 */
 
 /* finding f-C-C pattern in CAE */
-$file = file ('sanhw1.txt');
+/*$file = file ('sanhw1.txt');
 foreach ($file as $value)
 {
     if (preg_match('/[k][s]/',$value) && preg_match('/[C][A][E]/',$value))
@@ -256,5 +256,29 @@ foreach ($file as $value)
         $val=explode(":",$value);
         echo convert($val[0])." - ".$val[0]."<br>";
     }
+}*/
+
+include 'o_vs_O.php';
+function similar($text,$start,$end)
+{
+	echo "Starting ".$start." to ".$end."<br/>";
+	global $outfile, $dicts;
+	$counter=0;
+	for($i=$start;$i<$end;$i++)
+	{
+		for($j=$i+1;$j<$end;$j++)
+		{
+			if (strcasecmp($text[$i],$text[$j])===0 && $text[$i]!==$text[$j] && strpos($dicts[$i],"PD")===false && strpos($dicts[$j],"PD")===false && $dicts[$i]!==$dicts[$j] && !(in_array(substr($text[$i],-1),array("a","A","m","M")) && substr($text[$i],-1)!==substr($text[$j],-1) ))
+			{
+				fputs($outfile,$text[$i].":".$text[$j]." - ".$dicts[$i].":".$dicts[$j]."\n");
+				$counter++;
+			}
+		}
+	}
+	echo $counter."<br/>";
 }
-?>
+for($i=0;$i<410000;$i++)
+{
+	similar($words,$i,$i+10000);
+	$i=$i+10000;
+}?>
