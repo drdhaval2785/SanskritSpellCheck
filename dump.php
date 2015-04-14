@@ -276,7 +276,7 @@ function givelinktoo_vs_Otext($text)
 		}
 		$dicts[$j]=implode(',',$culpritdict);
 	}
-	echo convert($words[0]).":".convert($words[1])." - ".$dicts[0].":".$dicts[1]."<br/>";
+	echo convert($words[0]).":".convert($words[1])." - ".$words[0].":".$words[1]." - ".$dicts[0].":".$dicts[1]."<br/>";
 }
 
 $raw = file('o_vs_O.txt');
