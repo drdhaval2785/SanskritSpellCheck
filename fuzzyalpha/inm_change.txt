@@ -1,0 +1,235 @@
+<hr>
+002 ArdrA
+002 ardracarman -> Ardracarman : Print error
+002 arGABiharaRa
+002 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=ardracarman'>ardracarman</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=067'>067-1</a>
+
+<hr>
+005 Ozija
+005 Otanka -> OtaNka : Print error
+005 OttAnapAda
+005 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=Otanka'>Otanka</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=101'>101-2</a>
+
+<hr>
+006 bahudAmA
+006 bAhudaNtaka -> bAhudantaka : Smudge
+006 bahuDAnindita
+006 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=bAhudaNtaka'>bAhudaNtaka</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=104'>104-1</a>
+
+<hr>
+007 banDana
+007 banDanaasurendrARAM -> banDana asurendrARAM : Space in between
+007 bAnDava
+007 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=banDanaasurendrARAM'>banDanaasurendrARAM</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=112'>112-1</a>
+
+<hr>
+010 cedipati
+010 cedipungava -> cedipuNgava
+010 cedirAj
+010 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=cedipungava'>cedipungava</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=175'>175-1</a>
+
+<hr>
+014 SyAmA
+014 SyAmAyAASrama -> SyAmAyA ASrama : Space
+014 SyAmAyana
+014 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=SyAmAyAASrama'>SyAmAyAASrama</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=223'>223-2</a>
+
+<hr>
+015 devAsuravaraprada
+015 devAsuravinirmAwr -> devAsuravinirmAtf : Print error
+015 devAsureSvara
+015 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=devAsuravinirmAwr'>devAsuravinirmAwr</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=239'>239-1</a>
+
+<hr>
+016 DarzaRAtman
+016 DArzWadyumna ->  DArzwadyumna : Print error
+016 DArtarAzwra
+016 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=DArzWadyumna'>DArzWadyumna</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=243'>243-2</a>
+
+<hr>
+017 divyAtman
+017 drasWAtman -> drazwAtman : Not sure. Needs further investigation.
+017 drORaputra
+017 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=drasWAtman'>drasWAtman</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=256'>256-1</a>
+
+<hr>
+019 gaNgAvataraRa
+019 gaNgAyamunayostirTam -> gaNgAyamunayostIrTam : Capital I
+019 gANgeya
+019 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=gaNgAyamunayostirTam'>gaNgAyamunayostirTam</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=299'>299-2</a>
+
+<hr>
+020 goSabdAtmaja
+020 gocfNga -> goSfNga : Also sorted wrong in dictionary
+020 godAvarI
+020 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=gocfNga'>gocfNga</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=309'>309-1</a>
+
+<hr>
+021 goptf
+021 goptrAtman ->  (gaBIrAtman)
+021 goputra
+021 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=goptrAtman'>goptrAtman</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=312'>312-1</a>
+
+<hr>
+023 jyezWa
+023 jyezTA -> jyezWA
+023 jyezWapuzkara
+023 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=jyezTA'>jyezTA</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=364'>364-2</a>
+
+<hr>
+024 kAmAKya
+024 kAmakroDO ->  (kAmakroDa)
+024 kAmakft
+024 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=kAmakroDO'>kAmakroDO</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=378'>378-2</a>
+
+<hr>
+029 kzemya
+029 ksetrajYa -> kzetrajYa : Print error
+029 kzetrAtman
+029 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=ksetrajYa'>ksetrajYa</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=430'>430-1</a>
+
+<hr>
+031 kuRqala
+031 kunqala -> kuRqala
+031 kuRqalA
+031 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=kunqala'>kunqala</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=435'>435-1</a>
+
+<hr>
+032 lohita
+032 lohitOdaDi -> lohita udaDi : Space
+032 lohitAkza
+032 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=lohitOdaDi'>lohitOdaDi</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=446'>446-2</a>
+
+<hr>
+034 murmurA
+034 mUrtO -> mUrtO hi te ... sarve vE devatAH : A sentence
+034 mUrtiSAstra
+034 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=mUrtO'>mUrtO</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=491'>491-2</a>
+
+<hr>
+035 nagAtmajA
+035 nAgavatmAn -> nAgavatman
+035 nAgendra
+035 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=nAgavatmAn'>nAgavatmAn</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=494'>494-1</a>
+
+<hr>
+036 naptf
+036 napumsaka -> napuMsaka
+036 nara
+036 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=napumsaka'>napumsaka</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=504'>504-1</a>
+
+<hr>
+038 pAda
+038 padaanuttama -> pada anuttama
+038 pAdANga
+038 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=padaanuttama'>padaanuttama</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=523'>523-1</a>
+
+<hr>
+039 paRqitaka
+039 pARqoqrAjO -> pARqoqrarAjO
+039 pARqu
+039 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=pARqoqrAjO'>pARqoqrAjO</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=534'>534-1</a>
+
+<hr>
+040 pARqu
+040 pARdu -> pARqu
+040 pARqu
+040 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=pARdu'>pARdu</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=535'>535-1</a>
+
+<hr>
+043 pativratAmAhAtmyaparvan
+043 pativratAyAAKyAna -> pativratAyA AAKyAna : Space
+043 pativratAyAmAhAtmyasAvitryAH
+043 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=pativratAyAAKyAna'>pativratAyAAKyAna</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=545'>545-2</a>
+
+<hr>
+044 piNgatIrTa
+044 piNgAyAASrama -> piNgAyA ASrama
+044 piNgeSa
+044 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=piNgAyAASrama'>piNgAyAASrama</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=551'>551-1</a>
+
+<hr>
+045 pitAmahasyasaras
+045 pitAmahasurta -> pitAmahasuta
+045 pitAmahasuta
+045 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=pitAmahasurta'>pitAmahasurta</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=551'>551-2</a>
+
+<hr>
+046 puzkariRI
+046 pUzRodantaBid -> pUzRo dantaBid : Space
+046 pUzRodantavinASa
+046 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=pUzRodantaBid'>pUzRodantaBid</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=572'>572-1</a>
+
+<hr>
+047 pUzRodantaBid
+047 pUzRodantavinASa -> pUzRo dantavinASa : Space
+047 pUzRodantavinASana
+047 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=pUzRodantavinASa'>pUzRodantavinASa</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=572'>572-1</a>
+
+<hr>
+048 pUzRodantavinASa
+048 pUzRodantavinASana -> pUzRo dantavinASana : Space
+048 puzpa
+048 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=pUzRodantavinASana'>pUzRodantavinASana</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=572'>572-1</a>
+
+<hr>
+049 rAmAyaRa
+049 rAmAyaROpAKyAna -> rAmAyaRa upAKyAna : Space
+049 ramBA
+049 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=rAmAyaROpAKyAna'>rAmAyaROpAKyAna</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=592'>592-1</a>
+
+<hr>
+051 fta
+051 rtA -> ftA : Print error
+051 ftaDAman
+051 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=rtA'>rtA</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=602'>602-1</a>
+
+<hr>
+052 ftaDAman
+052 rtasyakartf ->  ftasya kartf
+052 ftavaHzat
+052 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=rtasyakartf'>rtasyakartf</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=602'>602-1</a>
+
+<hr>
+053 saMsaptaka
+053 samskfti -> saMskfti
+053 saMsTAna
+053 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=samskfti'>samskfti</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=613'>613-1</a>
+
+<hr>
+056 sANkASya
+056 saRkarzaRa -> saNkarzaRa : Print error
+056 saNkarzaRAnuja
+056 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=saRkarzaRa'>saRkarzaRa</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=619'>619-1</a>
+
+<hr>
+062 sraja
+062 sraztf -> srazwf
+062 sruvahasta
+062 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=sraztf'>sraztf</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=648'>648-2</a>
+
+<hr>
+064 surAri
+064 surAriGRa -> surAriGna
+064 surArihan
+064 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=surAriGRa'>surAriGRa</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=661'>661-2</a>
+
+<hr>
+066 svarAj
+066 svarAztra -> svarAzwra
+066 svaravyaYjanaBUzaRa
+066 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=svarAztra'>svarAztra</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=669'>669-1</a>
+
+<hr>
+069 tretAyuga
+069 triBuvanaSfezWa -> triBuvanaSrezWa
+069 triBuvanaviBu
+069 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=triBuvanaSfezWa'>triBuvanaSfezWa</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=679'>679-2</a>
+
+<hr>
+070 uttarAgni
+070 uttarAazAQAH -> uttarA AzAQAH
+070 uttarAHkuravaH
+070 headword <a target='_INMword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/indexcaller.php?input=slp1&output=deva&key=uttarAazAQAH'>uttarAazAQAH</a> ---  page <a target='_INMpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/INMScan/2013/web/webtc/servepdf.php?page=698'>698-1</a>
+
+<hr>
