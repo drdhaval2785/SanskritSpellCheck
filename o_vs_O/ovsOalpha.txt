@@ -1,4 +1,4 @@
-1 aMSAMsi->aMSAMSi=MW
+1 aMSAMSi:aMSAMsi-GST,SHS,WIL:MW
 2 aMSumant:aMsumant-CAE,PW,PWG,STC:CCS
 3 akaraRaM:akAraRaM-AP90:SKD
 4 akAlaH:aKalaH-SKD:AP

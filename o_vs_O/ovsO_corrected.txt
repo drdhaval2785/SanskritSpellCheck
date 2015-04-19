@@ -1,4 +1,5 @@
-2 aMSumant:aMsumant-CAE,PW,PWG,STC:CCS
+1 aMSAMsi->aMSAMSi=MW
+2 aMsumant->aMSumant=CCS
 3 akaraRaM:akAraRaM-AP90:SKD
 4 akAlaH:aKalaH-SKD:AP
 5 aKawwi:aKawWi-BUR,GST,MW,MW72,PW,PWG,VCP,YAT:WIL

@@ -1,0 +1,43 @@
+<hr>
+013 kArotI
+013 kArSkeyIputra -> kArSakeyIputra
+013 kArzRAyasa
+013 headword <a target='_VEIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/VEIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kArSkeyIputra'>kArSkeyIputra</a> ---  page <a target='_VEIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/VEIScan/2014/web/webtc/servepdf.php?page=1-151'>1-151</a>
+
+<hr>
+017 kOzItaki
+017 kanzya -> kOzya : The print u is inverted to n.
+017 kOsalya
+017 headword <a target='_VEIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/VEIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kanzya'>kanzya</a> ---  page <a target='_VEIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/VEIScan/2014/web/webtc/servepdf.php?page=1-195'>1-195</a>
+
+<hr>
+040 prozWapAdavArakya
+040 piakza -> plakza
+040 plakzadayyAMpAti
+040 headword <a target='_VEIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/VEIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=piakza'>piakza</a> ---  page <a target='_VEIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/VEIScan/2014/web/webtc/servepdf.php?page=2-054'>2-054</a>
+
+<hr>
+053 SakvarI
+053 SaNkuinTe -> SaNku : 'in the' is from description. Clubbed wrongly with headword.
+053 SaNKa
+053 headword <a target='_VEIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/VEIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=SaNkuinTe'>SaNkuinTe</a> ---  page <a target='_VEIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/VEIScan/2014/web/webtc/servepdf.php?page=2-349'>2-349</a>
+
+<hr>
+056 SutudrI
+056 SunaHpuCa -> SunaHpucCa : print error. It has to be pucCa.
+056 SunaHSepa
+056 headword <a target='_VEIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/VEIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=SunaHpuCa'>SunaHpuCa</a> ---  page <a target='_VEIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/VEIScan/2014/web/webtc/servepdf.php?page=2-385'>2-385</a>
+
+<hr>
+057 SunAsIra
+057 SunolAngUla -> SunolANgUla
+057 sumbala
+057 headword <a target='_VEIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/VEIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=SunolAngUla'>SunolAngUla</a> ---  page <a target='_VEIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/VEIScan/2014/web/webtc/servepdf.php?page=2-386'>2-386</a>
+
+<hr>
+059 Svitrya
+059 SvetaketuaruReya ->  Svetaketu AruReya : Headword phrase. But aruReya has to be changed to AruReya. Digitization error.
+059 SvetyA
+059 headword <a target='_VEIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/VEIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=SvetaketuaruReya'>SvetaketuaruReya</a> ---  page <a target='_VEIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/VEIScan/2014/web/webtc/servepdf.php?page=2-409'>2-409</a>
+
+<hr>
