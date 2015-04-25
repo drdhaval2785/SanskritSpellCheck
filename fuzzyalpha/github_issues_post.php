@@ -21,7 +21,7 @@ foreach ($data as $value)
 {
 	if (strpos($value,"NO CHANGE")!==false)
 	{
-		fputs($out2,$value);
+		fputs($out2,$value."<hr>");
 	}
 	else
 	{

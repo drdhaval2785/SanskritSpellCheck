@@ -1,0 +1,9 @@
+aprakaraRika:aprAkaraRika-GST:AP,AP90,MW,PW
+apAlita:apalita-GST:MW,MW72,PW,PWG
+apAlita:aPalita-GST:VCP
+aByasat:aByASAt-GST:MW
+aDoGaRWA:aDogaRwA-GST:PWG
+apadarohiRI:apadarohiRi-GST:MW
+aBisaNKya:aBiSaNkya-GST,MW72:MW,PW,PWG,STC
+aBihvAra:aBihvara-GST,MW,PW:AP,AP90,MW72,PWG
+apsuvah:apsuvAh-MW,PW:GST,PWG
