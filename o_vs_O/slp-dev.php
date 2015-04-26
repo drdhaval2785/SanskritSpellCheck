@@ -1,14 +1,5 @@
 <?php
 /* This code is borrowed most probably from php.net examples site. But I am unable to trace it now. */
-function html2txt($document){ 
-$search = array('@<script[^>]*?>.*?</script>@si',  // Strip out javascript 
-               '@<[\/\!]*?[^<>]*?>@si',            // Strip out HTML tags 
-               '@<style[^>]*?>.*?</style>@siU',    // Strip style tags properly 
-               '@<![\s\S]*?--[ \t\n\r]*>@'         // Strip multi-line comments including CDATA 
-); 
-$text = preg_replace($search, '', $document); 
-return $text; 
-}	
 
 /* This code is borrowed and modified from Dicrunch code of Ananda Loponen. That can be accessed at http://www.ingmardeboer.nl/php/diCrunch.php?act=help.*/
 function convert($text)

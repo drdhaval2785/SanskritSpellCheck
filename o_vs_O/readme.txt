@@ -1,4 +1,15 @@
-Readme.txt for o_vs_O directory.
-Step 1: Generate o_vs_O.txt file from sanhw1 by help of o_vs_O.php. Keep HTML part commented out.
-Step 2: Generate o_vs_O.html file with refractorings with help of o_vs_O.php (keep .txt portion commented out).
-Step 3: Copy paste the content of o_vs_O.html file to ovsOalpha.txt (to remove the links).
+Inputs: sanhw1.txt
+Dependencies: dev-slp.php, faultfinder3a-utils.php, function.php, slp-dev.php.
+Step1 - From commandline run php o_vs_O.php.
+Step2 - This gives two outputs. o_vs_O1.txt is the raw form. o_vs_O2.txt is form with refractoring (i.e. after removal of unnecessary words).
+Step3 - Create a folder named output1 in the same directory.
+Step4 - From commandline run php dictsorting.php.
+Step5 - This creates two files for each dictionary - one .txt file (word1:word2-dict1:dict2 format) and one .html file (Tabular presentation with links to the Cologne dictionaries and Devanagari display also).
+Step6 - Click links from these HTML files and verify the errors.
+
+Funderburk Jim would help me by providing Link to scan pages rather than digitized entry.
+
+Note: 
+Please focus only on the corrections in the dictionary under consideration.
+If you see any errors in the dictionary other than the one you are dealing with, leave it.
+You will encounter it in the dictionary concerned. We will treat it there.

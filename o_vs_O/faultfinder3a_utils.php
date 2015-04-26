@@ -19,6 +19,7 @@
   Returns '?' if the 'dict' code is not known.
 
 */
+
 include 'slp-dev.php';
 function faultfinder_patterns() {
 // Set up $pattern_data, an array for 
@@ -100,7 +101,29 @@ function givelinktoo_vs_Otext($text)
 		$dicts[$j]=implode(',',$culpritdict);
 	}
 //	echo convert($words[0])." : ".convert($words[1])." - ".$words[0]." : ".$words[1]." - ".$dicts[0]." : ".$dicts[1]."<br/>";
-	return convert($words[0])." : ".convert($words[1])." - ".$words[0]." : ".$words[1]." - ".$dicts[0]." : ".$dicts[1];
+	return convert($words[0])." : ".convert($words[1])." - ".$words[0]." : ".$words[1]." - ".$dicts[0]." : ".$dicts[1]."<br/>";
+//	echo $words[0].":".$words[1]."-".$dicts[0].":".$dicts[1]."<br/>";
+}
+function givelinktoo_vs_Otext1($text)
+{
+    $x = explode('-',$text);
+	$x = array_map('trim',$x);
+	$dicts = explode(':',$x[1]);
+	$words = explode(':',$x[0]);
+	
+	for ($j=0;$j<count($dicts);$j++)
+	{
+		$culpritdict=explode(',',$dicts[$j]);
+		for ($i=0;$i<count($culpritdict);$i++){
+		$d[$i]=$culpritdict[$i];
+		$y[$i] = Cologne_hrefyear($d[$i]); 
+		$rep[$i] = '<a href="'."http://www.sanskrit-lexicon.uni-koeln.de/scans/".$d[$i]."Scan/".$y[$i]."/web/webtc/indexcaller.php".'?key='.$words[$j].'&input=slp1&output=SktDevaUnicode" target="_blank">'.$d[$i]."</a>"; // Keeping direct href because buttons fail to open in multiple tabs. They refresh the page.
+		$culpritdict[$i] = str_replace($d[$i],$rep[$i],$culpritdict[$i]);
+		}
+		$dicts[$j]=implode(',',$culpritdict);
+	}
+//	echo convert($words[0])." : ".convert($words[1])." - ".$words[0]." : ".$words[1]." - ".$dicts[0]." : ".$dicts[1]."<br/>";
+	return '<tr><td style="width:130px">'.$words[0].'</td><td style="width:130px">'.$words[1].'</td><td style="width:130px">'.convert($words[0]).'</td><td style="width:130px">'.convert($words[1]).'</td><td style="width:130px">'.$dicts[0].'</td><td style="width:130px">'.$dicts[1].'</td></tr>';
 //	echo $words[0].":".$words[1]."-".$dicts[0].":".$dicts[1]."<br/>";
 }
 

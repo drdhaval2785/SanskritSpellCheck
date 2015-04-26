@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+//error_reporting(0);
 $header = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
@@ -11,10 +11,10 @@ $header = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http:
 </head> 
 <body>
 ';
-echo $header;
+//echo $header;
 include 'faultfinder3a_utils.php';
 // Code to arrange the ovsOalpha.txt according to dictionaries rather than only Alphabetical.
-$input = file('ovsOalpha.txt');
+$input = file('o_vs_O2.txt');
 $dictionaryname=array("ACC","CAE","AE","AP90","AP","BEN","BHS","BOP","BOR","BUR","CCS","GRA","GST","IEG","INM","KRM","MCI","MD","MW72","MW","MWE","PD","PE","PGN","PUI","PWG","PW","SCH","SHS","SKD","SNP","STC","VCP","VEI","WIL","YAT");
 $hrefyear = array("2014","2014","2014","2014","2014","2014","2014","2014","2014","2013","2014","2014","2014","2014","2013","2014","2014","2014","2014","2014","2013","2014","2014","2014","2014","2013","2014","2014","2014","2013","2014","2013","2013","2014","2014","2014");
 
@@ -38,19 +38,25 @@ array_map('trim',$dict2);
 
 foreach ($dictionaryname as $value)
 {
+	echo "$value dictionary is being treated<br/>\n";
 	$counter1=0;
 	$counter2=0;
 	$counter3=0;
 	$counter4=0;
 	$counter5=0;
 	$counter6=0;
-	$counter7=0;
-	$counter8=0;
 	$countervalue=0;
 		//$value = "MW";
-		$outtext = fopen("output/$value.txt","w+");
-		$outhtml = fopen("output/$value.html","w+");
-			fputs($outhtml,"<h2>One dictionary in first word and more dictionaries in second word</h2>\n");
+			for ($j=0;$j<count($input);$j++)
+			{
+				if ( in_array($value,$dict1separate[$j]) || in_array($value,$dict2separate[$j]) )
+				{
+					$countervalue++;
+				}
+			}
+		$outtext = fopen("output1/$value.txt","w+");
+		$outhtml = fopen("output1/$value.html","w+");			
+			fputs($outhtml,"<h2>Highest probability (One dictionary in first word and more dictionaries in second word)</h2>\n");
 			for ($j=0;$j<count($input);$j++)
 			{
 				if (count($dict1separate[$j])===1 && count($dict2separate[$j])>1 && in_array($value,$dict1separate[$j]))
@@ -60,7 +66,7 @@ foreach ($dictionaryname as $value)
 					$counter1++;
 				}
 			}
-			fputs($outhtml,"<h2>One dictionary in second word and more dictionaries in first word</h2>\n");
+			//fputs($outhtml,"<h2>One dictionary in second word and more dictionaries in first word</h2>\n");
 			for ($j=0;$j<count($input);$j++)
 			{	
 				if (count($dict2separate[$j])===1 && count($dict1separate[$j])>1 && in_array($value,$dict2separate[$j]))
@@ -70,7 +76,7 @@ foreach ($dictionaryname as $value)
 					$counter2++;
 				}
 			}
-			fputs($outhtml,"<h2>One dictionary in first word and one dictionary in second word</h2>\n");
+			fputs($outhtml,"<h2>Medium probability (One dictionary in first word and one dictionary in second word)</h2>\n");
 			for ($j=0;$j<count($input);$j++)
 			{	
 				if (count($dict1separate[$j])===1 && count($dict2separate[$j])===1 && in_array($value,$dict1separate[$j]))
@@ -80,7 +86,7 @@ foreach ($dictionaryname as $value)
 					$counter3++;
 				}
 			}
-			fputs($outhtml,"<h2>One dictionary in second word and one dictionary in first word</h2>\n");
+			//fputs($outhtml,"<h2>One dictionary in second word and one dictionary in first word</h2>\n");
 			for ($j=0;$j<count($input);$j++)
 			{	
 				if (count($dict1separate[$j])===1 && count($dict2separate[$j])===1 && in_array($value,$dict2separate[$j]))
@@ -90,70 +96,53 @@ foreach ($dictionaryname as $value)
 					$counter4++;
 				}
 			}
-			fputs($outhtml,"<h2>More than one dictionary in first word and even more dictionaries in second word</h2>\n");
+			fputs($outhtml,"<h2>Lowest probability (More than one dictionary in first word and it has dictionary under consideration)</h2>\n");
 			for ($j=0;$j<count($input);$j++)
-			{		
-				if (count($dict1separate[$j])<count($dict2separate[$j]) && count($dict2separate[$j])>1 && count($dict1separate[$j])>1 && in_array($value,$dict1separate[$j]) )
+			{	
+				if ( count($dict1separate[$j])>1 && in_array($value,$dict1separate[$j]) )
 				{
 					fputs($outtext,$word1[$j].":".$word2[$j]."-".$dict1[$j].":".$dict2[$j]."\n"); 
 					fputs($outhtml,$word1[$j].":".$word2[$j]."-".$dict1[$j].":".$dict2[$j]."<br>\n"); 
 					$counter5++;
 				}
 			}
-			fputs($outhtml,"<h2>More than one dictionary in second word and even more dictionaries in first word</h2>\n");
+			//fputs($outhtml,"<h2>More than one dictionary in second word and it has dictionary under consideration</h2>\n");
 			for ($j=0;$j<count($input);$j++)
 			{	
-				if (count($dict2separate[$j])<count($dict1separate[$j]) && count($dict1separate[$j])>1 && count($dict2separate[$j])>1 && in_array($value,$dict2separate[$j]) )
+				if (count($dict2separate[$j])>1 && in_array($value,$dict2separate[$j]) )
 				{
 					fputs($outtext,$word2[$j].":".$word1[$j]."-".$dict2[$j].":".$dict1[$j]."\n"); 
 					fputs($outhtml,$word2[$j].":".$word1[$j]."-".$dict2[$j].":".$dict1[$j]."<br>\n"); 
 					$counter6++;
 				}
 			}
-			fputs($outhtml,"<h2>More than one dictionary in first word and equal dictionaries in second word</h2>\n");
-			for ($j=0;$j<count($input);$j++)
-			{	
-				if (count($dict1separate[$j])===count($dict2separate[$j])  && count($dict1separate[$j])>1 && count($dict2separate[$j])>1 && in_array($value,$dict1separate[$j]))
-				{
-					fputs($outtext,$word1[$j].":".$word2[$j]."-".$dict1[$j].":".$dict2[$j]."\n"); 
-					fputs($outhtml,$word1[$j].":".$word2[$j]."-".$dict1[$j].":".$dict2[$j]."<br>\n"); 
-					$counter7++;
-				}
-			}
-			fputs($outhtml,"<h2>More than one dictionary in second word and equal dictionaries in the first word</h2>\n");
-			for ($j=0;$j<count($input);$j++)
-			{	
-				if (count($dict1separate[$j])===count($dict2separate[$j])  && count($dict1separate[$j])>1 && count($dict2separate[$j])>1 && in_array($value,$dict2separate[$j]))
-				{
-					fputs($outtext,$word1[$j].":".$word2[$j]."-".$dict1[$j].":".$dict2[$j]."\n"); 
-					fputs($outhtml,$word1[$j].":".$word2[$j]."-".$dict1[$j].":".$dict2[$j]."<br>\n"); 
-					$counter8++;
-				}
-			}
 	//This testing shows that all the cases are covered.
-/*	echo count($input)."<br>";
-	echo $counter1."<br>";
-	echo $counter2."<br>";
-	echo $counter3."<br>";
-	echo $counter4."<br>";
-	echo $counter5."<br>";
-	echo $counter6."<br>";
-	echo $counter7."<br>";
-	echo $counter8."<br>";
-	echo $counter1+$counter2+$counter3+$counter4+$counter5+$counter6+$counter7+$counter8."<br>";
+	echo $counter1+$counter2+$counter3+$counter4+$counter5+$counter6." / ".$countervalue." occurrences are handled.<br/>\n";
 	fclose($outtext);
-	fclose($outhtml);*/
+	fclose($outhtml);
 }
 
 foreach ($dictionaryname as $value)
 {
-	echo "$value is printing.<br>";
-	$in = file("output/".$value.".html");
-	$out = array_map("givelinktoo_vs_Otext",$in);
-	$outfile = fopen("output/$value.html","w+");
-	$outputdata = implode("<br>\n",$out);
+	echo "$value is printing.<br/>\n";
+	$in = file("output1/".$value.".html");
+	$outfile = fopen("output1/$value.html","w+");
 	fputs($outfile,$header);
-	fputs($outfile,$outputdata);
+	fputs($outfile,"<h1>$value - list of possible errors found by o_vs_O method</h1>");
+	fputs($outfile,'<table border="1" style="width:100%">');
+	foreach($in as $value1)
+	{
+		if (strpos($value1,"<h2>")===false)
+		{
+			$val =givelinktoo_vs_Otext1($value1);			
+		}
+		else
+		{
+			$val = "</table>".$value1.'<table border="1" style="width:100%">';
+		}
+		fputs($outfile,$val);
+	}
+	fputs($outfile,"</table>");
 	fclose($outfile);
 }
 	
