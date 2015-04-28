@@ -1,14 +1,20 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
+      <style>
+         table.fixed {table-layout:fixed; width:100%; border:1px solid black;}/*Setting the table width is important!*/
+         td.zero {width:40px; border:1px solid black; text-overflow:ellipsis; }
+         td.one {width:50px; border:1px solid black; text-overflow:ellipsis; padding: 10px;}
+         td.two {width:50px; border:1px solid black;text-overflow:ellipsis; padding: 10px;}
+         td.three {width:400px; border:1px solid black;text-overflow:ellipsis; padding: 10px;}
+         td.four {width:200px; border:1px solid black;text-overflow:ellipsis; padding: 10px;}
+		 td {overflow:scroll;}
+      </style>
 <!--... Defining UTF-8 as our default character set, so that devanagari is displayed properly. -->
 <meta charset="UTF-8">
-<!--... Defining CSS -->
-<link rel="stylesheet" type="text/css" href="mystyle.css">
-<!--... including Ajax jquery. -->
 </head> 
 <body>
-<h1>INM - list of possible errors found by o_vs_O method</h1><table border="1" style="width:100%"></table><h2>Highest probability (One dictionary in first word and more dictionaries in second word)</h2>
-<table border="1" style="width:100%"></table><h2>Medium probability (One dictionary in first word and one dictionary in second word)</h2>
-<table border="1" style="width:100%"></table><h2>Lowest probability (More than one dictionary in first word and it has dictionary under consideration)</h2>
-<table border="1" style="width:100%"></table>
+<h1>INM - list of possible errors found by o_vs_O method</h1><table class="fixed"></table><h2>Highest probability (One dictionary in first word and more dictionaries in second word)</h2>
+<table class="fixed"></table><h2>Medium probability (One dictionary in first word and one dictionary in second word)</h2>
+<table class="fixed"></table><h2>Lowest probability (More than one dictionary in first word and it has dictionary under consideration)</h2>
+<table class="fixed"></table>

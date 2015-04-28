@@ -106,6 +106,7 @@ function givelinktoo_vs_Otext($text)
 }
 function givelinktoo_vs_Otext1($text)
 {
+	global $count;
     $x = explode('-',$text);
 	$x = array_map('trim',$x);
 	$dicts = explode(':',$x[1]);
@@ -123,7 +124,7 @@ function givelinktoo_vs_Otext1($text)
 		$dicts[$j]=implode(',',$culpritdict);
 	}
 //	echo convert($words[0])." : ".convert($words[1])." - ".$words[0]." : ".$words[1]." - ".$dicts[0]." : ".$dicts[1]."<br/>";
-	return '<tr><td style="width:130px">'.$words[0].'</td><td style="width:130px">'.$words[1].'</td><td style="width:130px">'.convert($words[0]).'</td><td style="width:130px">'.convert($words[1]).'</td><td style="width:130px">'.$dicts[0].'</td><td style="width:130px">'.$dicts[1].'</td></tr>';
+	return '<tr><td class="zero">'.$count.'</td><td class="one">'.$words[0].'</td><td class="one">'.$words[1].'</td><td class="two">'.convert($words[0]).'</td><td class="two">'.convert($words[1]).'</td><td class="three">'.$dicts[0].'</td><td class="four">'.$dicts[1].'</td></tr>';
 //	echo $words[0].":".$words[1]."-".$dicts[0].":".$dicts[1]."<br/>";
 }
 

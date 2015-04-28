@@ -1,0 +1,25 @@
+<html>
+   <head>
+      <style>
+         table.fixed {table-layout:fixed; width:1200px; border:1px solid black;}/*Setting the table width is important!*/
+         td.one {width:80px; border:1px solid black; text-overflow:ellipsis; padding: 10px;}
+         td.two {width:100px; border:1px solid black;text-overflow:ellipsis; padding: 10px;}
+         td.three {width:120px; border:1px solid black;text-overflow:ellipsis; padding: 10px;}
+		 td {overflow:scroll;}
+      </style>
+   </head>
+   <body>
+   <div>
+      <table class="fixed">
+         <tr>
+            <td class="one">Veryverylongtext</td>
+            <td class="one">Actuallythistextismuchlongeeeeeer</td>
+            <td class="two">We should use spaces tooooooooooooo</td>
+            <td class="two">Veryverylongtext</td>
+            <td class="three">Actuallythistextismuchlongeeeeeer</td>
+            <td class="three">We should use spaces tooooooooooooo</td>
+         </tr>
+      </table>
+	</div>
+   </body>
+</html>

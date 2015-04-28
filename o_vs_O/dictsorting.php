@@ -3,11 +3,17 @@
 $header = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
+      <style>
+         table.fixed {table-layout:fixed; width:100%; border:1px solid black;}/*Setting the table width is important!*/
+         td.zero {width:40px; border:1px solid black; text-overflow:ellipsis; }
+         td.one {width:50px; border:1px solid black; text-overflow:ellipsis; padding: 10px;}
+         td.two {width:50px; border:1px solid black;text-overflow:ellipsis; padding: 10px;}
+         td.three {width:400px; border:1px solid black;text-overflow:ellipsis; padding: 10px;}
+         td.four {width:200px; border:1px solid black;text-overflow:ellipsis; padding: 10px;}
+		 td {overflow:scroll;}
+      </style>
 <!--... Defining UTF-8 as our default character set, so that devanagari is displayed properly. -->
 <meta charset="UTF-8">
-<!--... Defining CSS -->
-<link rel="stylesheet" type="text/css" href="mystyle.css">
-<!--... including Ajax jquery. -->
 </head> 
 <body>
 ';
@@ -61,7 +67,7 @@ foreach ($dictionaryname as $value)
 			{
 				if (count($dict1separate[$j])===1 && count($dict2separate[$j])>1 && in_array($value,$dict1separate[$j]))
 				{
-					fputs($outtext,$word1[$j].":".$word2[$j]."-".$dict1[$j].":".$dict2[$j]."\n"); 
+					fputs($outtext,convert($word1[$j])."->".convert($word2[$j])."\n"); 
 					fputs($outhtml,$word1[$j].":".$word2[$j]."-".$dict1[$j].":".$dict2[$j]."<br>\n"); 
 					$counter1++;
 				}
@@ -71,7 +77,7 @@ foreach ($dictionaryname as $value)
 			{	
 				if (count($dict2separate[$j])===1 && count($dict1separate[$j])>1 && in_array($value,$dict2separate[$j]))
 				{
-					fputs($outtext,$word2[$j].":".$word1[$j]."-".$dict2[$j].":".$dict1[$j]."\n"); 
+					fputs($outtext,convert($word2[$j])."->".convert($word1[$j])."\n"); 
 					fputs($outhtml,$word2[$j].":".$word1[$j]."-".$dict2[$j].":".$dict1[$j]."<br>\n"); 
 					$counter2++;
 				}
@@ -81,7 +87,7 @@ foreach ($dictionaryname as $value)
 			{	
 				if (count($dict1separate[$j])===1 && count($dict2separate[$j])===1 && in_array($value,$dict1separate[$j]))
 				{
-					fputs($outtext,$word1[$j].":".$word2[$j]."-".$dict1[$j].":".$dict2[$j]."\n"); 
+					fputs($outtext,convert($word1[$j])."->".convert($word2[$j])."\n"); 
 					fputs($outhtml,$word1[$j].":".$word2[$j]."-".$dict1[$j].":".$dict2[$j]."<br>\n"); 
 					$counter3++;
 				}
@@ -91,7 +97,7 @@ foreach ($dictionaryname as $value)
 			{	
 				if (count($dict1separate[$j])===1 && count($dict2separate[$j])===1 && in_array($value,$dict2separate[$j]))
 				{
-					fputs($outtext,$word2[$j].":".$word1[$j]."-".$dict2[$j].":".$dict1[$j]."\n"); 
+					fputs($outtext,convert($word2[$j])."->".convert($word1[$j])."\n"); 
 					fputs($outhtml,$word2[$j].":".$word1[$j]."-".$dict2[$j].":".$dict1[$j]."<br>\n"); 
 					$counter4++;
 				}
@@ -101,7 +107,7 @@ foreach ($dictionaryname as $value)
 			{	
 				if ( count($dict1separate[$j])>1 && in_array($value,$dict1separate[$j]) )
 				{
-					fputs($outtext,$word1[$j].":".$word2[$j]."-".$dict1[$j].":".$dict2[$j]."\n"); 
+					fputs($outtext,convert($word1[$j])."->".convert($word2[$j])."\n"); 
 					fputs($outhtml,$word1[$j].":".$word2[$j]."-".$dict1[$j].":".$dict2[$j]."<br>\n"); 
 					$counter5++;
 				}
@@ -111,7 +117,7 @@ foreach ($dictionaryname as $value)
 			{	
 				if (count($dict2separate[$j])>1 && in_array($value,$dict2separate[$j]) )
 				{
-					fputs($outtext,$word2[$j].":".$word1[$j]."-".$dict2[$j].":".$dict1[$j]."\n"); 
+					fputs($outtext,convert($word2[$j])."->".convert($word1[$j])."\n"); 
 					fputs($outhtml,$word2[$j].":".$word1[$j]."-".$dict2[$j].":".$dict1[$j]."<br>\n"); 
 					$counter6++;
 				}
@@ -129,16 +135,18 @@ foreach ($dictionaryname as $value)
 	$outfile = fopen("output1/$value.html","w+");
 	fputs($outfile,$header);
 	fputs($outfile,"<h1>$value - list of possible errors found by o_vs_O method</h1>");
-	fputs($outfile,'<table border="1" style="width:100%">');
+	fputs($outfile,'<table class="fixed">');
+	$count=1;
 	foreach($in as $value1)
 	{
 		if (strpos($value1,"<h2>")===false)
 		{
-			$val =givelinktoo_vs_Otext1($value1);			
+			$val =givelinktoo_vs_Otext1($value1);
+			$count++;
 		}
 		else
 		{
-			$val = "</table>".$value1.'<table border="1" style="width:100%">';
+			$val = "</table>".$value1.'<table class="fixed">';
 		}
 		fputs($outfile,$val);
 	}
