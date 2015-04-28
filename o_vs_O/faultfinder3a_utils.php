@@ -114,6 +114,7 @@ function givelinktoo_vs_Otext1($text)
 	
 	for ($j=0;$j<count($dicts);$j++)
 	{
+		$dicts[$j]=strip_tags($dicts[$j]);
 		$culpritdict=explode(',',$dicts[$j]);
 		for ($i=0;$i<count($culpritdict);$i++){
 		$d[$i]=$culpritdict[$i];
