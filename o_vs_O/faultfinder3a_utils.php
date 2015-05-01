@@ -128,5 +128,34 @@ function givelinktoo_vs_Otext1($text)
 	return '<tr><td class="zero">'.$count.'</td><td class="one">'.$words[0].'</td><td class="one">'.$words[1].'</td><td class="two">'.convert($words[0]).'</td><td class="two">'.convert($words[1]).'</td><td class="three">'.$dicts[0].'</td><td class="four">'.$dicts[1].'</td></tr>';
 //	echo $words[0].":".$words[1]."-".$dicts[0].":".$dicts[1]."<br/>";
 }
+function givelinktoo_vs_Otext2($text)
+{
+	global $count;
+    $x = explode('-',$text);
+	$x = array_map('trim',$x);
+	$dicts = explode(':',$x[1]);
+	$words = explode(':',$x[0]);
+	
+	for ($j=0;$j<count($dicts);$j++)
+	{
+		$dicts[$j]=strip_tags($dicts[$j]);
+		$culpritdict=explode(',',$dicts[$j]);
+		for ($i=0;$i<count($culpritdict);$i++){
+		$d[$i]=$culpritdict[$i];
+		$y[$i] = Cologne_hrefyear($d[$i]); 
+		$rep[$i] = pdflink($d[$i],$words[$j]);
+		//'<a href="http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict='.$d[$i].'&key='.$words[$j].'" target="_blank">'.$d[$i]."</a>";
+		$culpritdict[$i] = str_replace($d[$i],$rep[$i],$culpritdict[$i]);
+		}
+		$dicts[$j]=implode(',',$culpritdict);
+	}
+//	echo convert($words[0])." : ".convert($words[1])." - ".$words[0]." : ".$words[1]." - ".$dicts[0]." : ".$dicts[1]."<br/>";
+	return '<tr><td class="zero">'.$count.'</td><td class="one">'.$words[0].'</td><td class="one">'.$words[1].'</td><td class="two">'.convert($words[0]).'</td><td class="two">'.convert($words[1]).'</td><td class="three">'.$dicts[0].'</td><td class="four">'.$dicts[1].'</td></tr>';
+//	echo $words[0].":".$words[1]."-".$dicts[0].":".$dicts[1]."<br/>";
+}
 
+function pdflink($dict,$word)
+{
+	return '<a href="http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict='.$dict.'&key='.$word.'" target="_blank">'.$dict."</a>";
+}
 ?>

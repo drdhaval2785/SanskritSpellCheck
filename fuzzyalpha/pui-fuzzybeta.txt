@@ -210,235 +210,235 @@
 
 ------------------------------------------------------------------------
 036 UrDvaketu
-036 urDvaketu ->  (upaketu)
+036 urDvaketu -> UrDvaketu
 036 UrDvakeSa
 036 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=urDvaketu'>urDvaketu</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-255'>1-255</a>
 
 ------------------------------------------------------------------------
 037 UrmimAli
-037 Urmizaqkam ->  (UrDvakam,Uzakam)
+037 Urmizaqkam -> NO CHANGE
 037 UrmI
 037 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=Urmizaqkam'>Urmizaqkam</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-256'>1-256</a>
 
 ------------------------------------------------------------------------
 038 UzmAdas
-038 Usija ->  (Ucima,Unita,Uruja,Urja,Urjja,Uhita)
+038 Usija -> NO CHANGE
 038 Uham
 038 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=Usija'>Usija</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-258'>1-258</a>
 
 ------------------------------------------------------------------------
 039 fkzARi
-039 rg ->  (ra,rag,rA,ri,rig,rI,ru,rug,rU,re,rE)
+039 rg -> fg : Seems like fg veda, a headword phrase
 039 fca
 039 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=rg'>rg</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-260'>1-260</a>
 
 ------------------------------------------------------------------------
 040 ftaDAman
-040 fwaDAman ->  (ftaDAman)
+040 fwaDAman -> ftaDAman : print error
 040 ftaDAman
 040 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=fwaDAman'>fwaDAman</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-264'>1-264</a>
 
 ------------------------------------------------------------------------
 041 fzyaSfNga
-041 fzyaSfnga ->  (fzyaSfNga)
+041 fzyaSfnga -> fzyaSfNga : print error
 041 lfkArikA
 041 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=fzyaSfnga'>fzyaSfnga</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-274'>1-274</a>
 
 ------------------------------------------------------------------------
 042 ekapAdAtmikA
-042 ekapingala -> ekapiNgala ()
+042 ekapingala -> ekapiNgala
 042 ekarAjyam
 042 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=ekapingala'>ekapingala</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-276'>1-276</a>
 
 ------------------------------------------------------------------------
 043 ekaliNgas
-043 ekavimSam -> ekaviMSa, ekaviMSat ()
+043 ekavimSam -> ekaviMSam
 043 ekavIrA
 043 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=ekavimSam'>ekavimSam</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-277'>1-277</a>
 
 ------------------------------------------------------------------------
 044 Endra
-044 EndrEzwi -> Endri (Endroti)
+044 EndrEzwi -> Endra-Izwi : Headword phrase
 044 EndrI
 044 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=EndrEzwi'>EndrEzwi</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-281'>1-281</a>
 
 ------------------------------------------------------------------------
 045 Otkaceya
-045 OtkArzweya -> Otkarzya ()
+045 OtkArzweya -> NO CHANGE
 045 Ottama
 045 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=OtkArzweya'>OtkArzweya</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-287'>1-287</a>
 
 ------------------------------------------------------------------------
 046 kaRWakAla
-046 kaRTamudgalas ->  (kARvamudgalas)
+046 kaRTamudgalas -> kaRWamudgalas : print error
 046 kaRWAyanas
 046 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kaRTamudgalas'>kaRTamudgalas</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-301'>1-301</a>
 
 ------------------------------------------------------------------------
 047 kadrUputra
-047 kadvaSamku -> kadvaram ()
+047 kadvaSamku -> kadvaSaMku : print error
 047 kanaka
 047 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kadvaSamku'>kadvaSamku</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-304'>1-304</a>
 
 ------------------------------------------------------------------------
 048 kanyApuram
-048 kapawasamgrAma ->  (kawerakagrAma,karaRagrAma,karaBagrAma,koraRwakagrAma)
+048 kapawasamgrAma -> kapawasaMgrAma : print error
 048 kapardavAn
 048 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kapawasamgrAma'>kapawasamgrAma</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-308'>1-308</a>
 
 ------------------------------------------------------------------------
 049 kapiSA
-049 kapiswwalas -> kapisTala ()
+049 kapiswwalas -> kapizwwalas : print error
 049 kapItara
 049 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kapiswwalas'>kapiswwalas</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-315'>1-315</a>
 
 ------------------------------------------------------------------------
 050 kambalASvatara
-050 kambuSfnga ->  (kawuSfNga)
+050 kambuSfnga -> kambuSfNga
 050 kamboja
 050 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kambuSfnga'>kambuSfnga</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-319'>1-319</a>
 
 ------------------------------------------------------------------------
 051 karandama
-051 karamDama -> karanDama (karaMDama)
+051 karamDama -> karaMDama
 051 karamDama
 051 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=karamDama'>karamDama</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-320'>1-320</a>
 
 ------------------------------------------------------------------------
 051 karamDama
-051 karamDama ->  (karanDama,karaMDama)
+051 karamDama -> karaMDama
 051 karanDama
 051 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=karamDama'>karamDama</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-320'>1-320</a>
 
 ------------------------------------------------------------------------
 052 karmaSrezWa
-052 karmasamnyAsa ->  (karmmasaMnyAsa)
+052 karmasamnyAsa -> karmasaMnyAsa : print error
 052 karmAranAga
 052 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=karmasamnyAsa'>karmasamnyAsa</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-330'>1-330</a>
 
 ------------------------------------------------------------------------
 053 kalaSIkaRWa
-053 kalahamsas ->  (kalahaMsa,kalahaMsaH)
+053 kalahamsas -> kalahaMsas : print error
 053 kalas
 053 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kalahamsas'>kalahamsas</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-330'>1-330</a>
 
 ------------------------------------------------------------------------
 054 kalmAzapAda
-054 kalmAzAmGri -> kalmAzANGri ()
+054 kalmAzAmGri -> kalmAzANGri : print error
 054 kalyARasaptamI
 054 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kalmAzAmGri'>kalmAzAmGri</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-337'>1-337</a>
 
 ------------------------------------------------------------------------
 055 kahoqa
-055 kAmsyam -> kAMsIyam, kAMsya, kAMsyaM (kAmam,kAmAya,kAmikam,kAmya,kAmyaM,kArSyam,kAlIyam,kAlyam,kASAyam,kASyam)
+055 kAmsyam -> kAMsyam
 055 kAka
 055 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kAmsyam'>kAmsyam</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-343'>1-343</a>
 
 ------------------------------------------------------------------------
 056 kAYcI
-056 kAmjanakA ->  (kAYcanakA)
+056 kAmjanakA -> kAMjanakA
 056 kAwya
 056 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kAmjanakA'>kAmjanakA</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-345'>1-345</a>
 
 ------------------------------------------------------------------------
 057 kARqaSaya
-057 kARTAyanadvijas ->  (kaRvAyanadvijas)
+057 kARTAyanadvijas -> kARWAyanadvijas
 057 kARva
 057 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kARTAyanadvijas'>kARTAyanadvijas</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-345'>1-345</a>
 
 ------------------------------------------------------------------------
 058 kAdraveyas
-058 kAdrupingAkzi ->  (kudryAkzi,kuliNgAkzI)
+058 kAdrupingAkzi -> kAdrupiNgAkzi
 058 kAnanasTtalI
 058 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kAdrupingAkzi'>kAdrupingAkzi</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-347'>1-347</a>
 
 ------------------------------------------------------------------------
 059 kAdrupingAkzi
-059 kAnanasTtalI ->  (kanakasTalI)
+059 kAnanasTtalI -> kAnanasTalI
 059 kAnIna
 059 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kAnanasTtalI'>kAnanasTtalI</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-347'>1-347</a>
 
 ------------------------------------------------------------------------
 060 kArpAsaparvata
-060 kArbUram -> kArpUra (karbUra,krUram)
+060 kArbUram -> NO CHANGE
 060 kAryakAraRa
 060 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kArbUram'>kArbUram</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-358'>1-358</a>
 
 ------------------------------------------------------------------------
 061 kAlacakra
-061 kAlajamGikA ->  (kAlakarRikA,kAlagaRqikA,kAlaparRikA,kAlamallikA,kAlamaSikA)
+061 kAlajamGikA -> kAlajaMGikA : print error
 061 kAlajihvA
 061 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kAlajamGikA'>kAlajamGikA</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-361'>1-361</a>
 
 ------------------------------------------------------------------------
 062 kAlaYjara
-062 kAlamjaras -> kAlaYjaraH (kAlaMjara,kAlaYjara,kAlaMjaraH)
+062 kAlamjaras -> kAlaMjaras : print error
 062 kAlatoyaka
 062 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kAlamjaras'>kAlamjaras</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-362'>1-362</a>
 
 ------------------------------------------------------------------------
 063 kAlatvam
-063 kAladamzwra -> kAladamana (karAladaMzwra,kAlaSambara,kUwadaMzwra)
+063 kAladamzwra -> kAladaMzwra : print error
 063 kAlanara
 063 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kAladamzwra'>kAladamzwra</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-362'>1-362</a>
 
 ------------------------------------------------------------------------
 064 kAlaSIKa
-064 kAlasamkarzanI -> kAlasaMkarzin ()
+064 kAlasamkarzanI -> kAlasaMkarzaRI : print error
 064 kAlasarpi
 064 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kAlasamkarzanI'>kAlasamkarzanI</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-364'>1-364</a>
 
 ------------------------------------------------------------------------
 065 kAlIkas
-065 kAlinga ->  (kAliNga,kAliMga,kAlinda)
+065 kAlinga -> kAliMga
 065 kAlingaka
 065 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kAlinga'>kAlinga</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-366'>1-366</a>
 
 ------------------------------------------------------------------------
 066 kAlinga
-066 kAlingaka ->  (kAliNgaka,kAlindaka)
+066 kAlingaka -> kAliMgaka
 066 kAliYjaravanam
 066 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kAlingaka'>kAlingaka</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-366'>1-366</a>
 
 ------------------------------------------------------------------------
 067 kAhala
-067 kimkaRa -> kiNkaRa ()
+067 kimkaRa -> kiMkaRa
 067 kinkiRa
 067 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kimkaRa'>kimkaRa</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-377'>1-377</a>
 
 ------------------------------------------------------------------------
 068 kimkaRa
-068 kinkiRa ->  (kiNkiRa)
+068 kinkiRa -> kiNkiRa
 068 kindevas
 068 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kinkiRa'>kinkiRa</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-377'>1-377</a>
 
 ------------------------------------------------------------------------
 069 kimBayas
-069 kimSukavanam ->  (kAmyakavana,kumAravanam,kumudavana)
+069 kimSukavanam -> kiMSukavanam
 069 kirAta
 069 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kimSukavanam'>kimSukavanam</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-379'>1-379</a>
 
 ------------------------------------------------------------------------
 070 kuYjarI
-070 kumci ->  (kuci,kuYci,kumBi)
+070 kumci -> kuYci : The conversion to Y is because it is between two headwords having kuY at start.
 070 kuYjatIrTam
 070 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kumci'>kumci</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-386'>1-386</a>
 
 ------------------------------------------------------------------------
 071 kundaparvata
-071 kuRqapAyins ->  (kuRqapAyin)
+071 kuRqapAyins -> NO CHANGE
 071 kuRqikera
 071 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kuRqapAyins'>kuRqapAyins</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-389'>1-389</a>
 
 ------------------------------------------------------------------------
 072 kumAravanam
-072 kumAravamSa -> kumAravarga, kumAravarza (kumAravana)
+072 kumAravamSa -> kumAravaMSa
 072 kumArasamBava
 072 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kumAravamSa'>kumAravamSa</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-397'>1-397</a>
 
 ------------------------------------------------------------------------
 073 kuliyas
-073 kuliSAnga -> kuliSAya (kuleSAna)
+073 kuliSAnga -> kuliSANga
 073 kuliSAyuDa
 073 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kuliSAnga'>kuliSAnga</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-409'>1-409</a>
 
@@ -450,97 +450,97 @@
 
 ------------------------------------------------------------------------
 075 kUrca
-075 kUrdini -> kUrcin, kUrdana, kUrdanA, kUrdanI ()
+075 kUrdini -> NO CHANGE
 075 kUrma
 075 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kUrdini'>kUrdini</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-421'>1-421</a>
 
 ------------------------------------------------------------------------
 076 kftaYjaya
-076 kftamjaya ->  (kftaYjaya,kftaMjaya)
+076 kftamjaya -> kftaYjaya
 076 kftamjaya
 076 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kftamjaya'>kftamjaya</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-425'>1-425</a>
 
 ------------------------------------------------------------------------
 076 kftamjaya
-076 kftamjaya ->  (kftaYjaya,kftaMjaya)
+076 kftamjaya -> kftaYjaya : Important to note that these three are given I, II, III but given separate reading in dictionary.
 076 kftadeva
 076 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kftamjaya'>kftamjaya</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-425'>1-425</a>
 
 ------------------------------------------------------------------------
 077 kfzRavratam
-077 kfzRsUtra -> kfzRasUtra ()
+077 kfzRsUtra -> kfzRasUtra : print error
 077 kfzRA
 077 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kfzRsUtra'>kfzRsUtra</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-453'>1-453</a>
 
 ------------------------------------------------------------------------
 078 kEkeyI
-078 kEnkila ->  (kandila,kAkila,kiNkila,kinkiRa,kElakila,kElikila,kokila,kOkila)
+078 kEnkila ->kEMkila
 078 kEwaBa
 078 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kEnkila'>kEnkila</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-463'>1-463</a>
 
 ------------------------------------------------------------------------
 079 kokila
-079 konka -> koNka (koka,konva)
+079 konka -> koNka
 079 kowarA
 079 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=konka'>konka</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-465'>1-465</a>
 
 ------------------------------------------------------------------------
 080 kOSikItIrTam
-080 kOSikIHfadam ->  (kOSikItIrTam)
+080 kOSikIHfadam -> kOSikIhfdam : print error
 080 kOSilya
 080 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kOSikIHfadam'>kOSikIHfadam</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-475'>1-475</a>
 
 ------------------------------------------------------------------------
 081 kOSIti
-081 kOztikI -> kOzikI ()
+081 kOztikI -> NO CHANGE
 081 kOzmARqas
 081 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kOztikI'>kOztikI</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-475'>1-475</a>
 
 ------------------------------------------------------------------------
 082 kratumat
-082 kratumjaya -> kratumaya ()
+082 kratumjaya -> kratuMjaya
 082 kratuvamSa
 082 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kratumjaya'>kratumjaya</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-479'>1-479</a>
 
 ------------------------------------------------------------------------
 083 kratumjaya
-083 kratuvamSa ->  (kratuDvaja,kratupaSu,kratuPala,kratumaya,kratuhaya,kratvaNga,kratvarTa)
+083 kratuvamSa -> kratuvaMSa
 083 kratusTalI
 083 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kratuvamSa'>kratuvamSa</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-479'>1-479</a>
 
 ------------------------------------------------------------------------
 084 kramu
-084 kramTala -> kramela (kamala,kampala,kambala,kraTaka,kraTana,kramaka,kramaja,kramaRa,kramapa)
+084 kramTala -> kraMTala
 084 krayakrIta
 084 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kramTala'>kramTala</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-480'>1-480</a>
 
 ------------------------------------------------------------------------
 085 krUra
-085 kfoqodarAyaRas -> kroqIkaraRa, kroqIkaraRaM, kroqIkaraRam (kAtarAyaRa,kfzRodaraSiras,kEMkarAyaRa,kowarAvaRa,kowarAvaRaM,kOdrAyaRa,kOndrAyaRa,kroDanAyanas)
+085 kfoqodarAyaRas -> kroqodarAyaRas : print error
 085 kroDa
 085 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kfoqodarAyaRas'>kfoqodarAyaRas</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-482'>1-482</a>
 
 ------------------------------------------------------------------------
 086 kroDavaSA
-086 KrodA ->  (KadA,KedA,KolA,KovA)
+086 KrodA -> krodA : print error
 086 kroDinA
 086 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=KrodA'>KrodA</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-483'>1-483</a>
 
 ------------------------------------------------------------------------
 087 gaganamUrDa
-087 gangA -> gaNgA (gaMgA,gantA,ganDA,gargA)
+087 gangA -> gaMgA
 087 gangA
 087 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=gangA'>gangA</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-501'>1-501</a>
 
 ------------------------------------------------------------------------
 087 gangA
-087 gangA ->  (gaMgA,gaNgA,gantA,ganDA,gargA)
+087 gangA -> gaMgA
 087 gangeSvaram
 087 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=gangA'>gangA</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-501'>1-501</a>
 
 ------------------------------------------------------------------------
 088 gangA
-088 gangeSvaram ->  (gargeSvaram)
+088 gangeSvaram -> gaMgeSvaram
 088 gaja
 088 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=gangeSvaram'>gangeSvaram</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-503'>1-503</a>
 

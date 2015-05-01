@@ -141,7 +141,8 @@ foreach ($dictionaryname as $value)
 	{
 		if (strpos($value1,"<h2>")===false)
 		{
-			$val =givelinktoo_vs_Otext1($value1);
+//			$val =givelinktoo_vs_Otext1($value1);
+			$val =givelinktoo_vs_Otext2($value1);
 			$count++;
 		}
 		else
