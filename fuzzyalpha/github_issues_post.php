@@ -9,7 +9,7 @@
 // The first and third line are the words above and below the disputed word.
 // Second line is the actual correction line. If there is no correction it would have -> NO CHANGE
 // Fourth line is for copy pasting the links to Github.
-$dict = "vei"; // Dictionary short name.
+$dict = "pui"; // Dictionary short name.
 $input = file_get_contents($dict."-fuzzybeta.txt");
 $out1 = fopen($dict."_change.txt","w+");
 $out2 = fopen($dict."_nochange.txt","w+");

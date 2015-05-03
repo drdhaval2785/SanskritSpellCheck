@@ -1,0 +1,685 @@
+
+002 agastyas
+002 agastyeSvaram -> NO CHANGE
+002 agAradAhin
+002 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=agastyeSvaram'>agastyeSvaram</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-009'>1-009</a>
+
+<hr>
+003 atyazwi
+003 atyAkarAlagojvAlas -> NO CHANGE
+003 atraya
+003 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=atyAkarAlagojvAlas'>atyAkarAlagojvAlas</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-040'>1-040</a>
+
+<hr>
+004 aDarma
+004 adaSCAyABayas -> NO CHANGE
+004 aDaSSiras
+004 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=adaSCAyABayas'>adaSCAyABayas</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-046'>1-046</a>
+
+<hr>
+007 anucara
+007 anujIvins -> NO CHANGE
+007 anutaptA
+007 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=anujIvins'>anujIvins</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-057'>1-057</a>
+
+<hr>
+010 apasyanta
+010 apasyOza -> NO CHANGE
+010 apasvAnta
+010 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=apasyOza'>apasyOza</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-073'>1-073</a>
+
+<hr>
+012 amftotpAdanam
+012 amftOGA -> NO CHANGE
+012 amoGAkzI
+012 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=amftOGA'>amftOGA</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-087'>1-087</a>
+
+<hr>
+013 aMbuka
+013 aMbujekzaRa -> NO CHANGE
+013 aMBuDArA
+013 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=aMbujekzaRa'>aMbujekzaRa</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-091'>1-091</a>
+
+<hr>
+019 aSvinI
+019 aSvins -> NO CHANGE
+019 aSvizeRa
+019 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=aSvins'>aSvins</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-130'>1-130</a>
+
+<hr>
+021 asakft
+021 asakni -> NO CHANGE
+021 asaNga
+021 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=asakni'>asakni</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-134'>1-134</a>
+
+<hr>
+026 ARqIra
+026 AtatAyins -> NO CHANGE
+026 AttaKaRqikas
+026 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=AtatAyins'>AtatAyins</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-151'>1-151</a>
+
+<hr>
+027 AtreyAyaRi
+027 ATarvaRISruti -> NO CHANGE
+027 AdarSa
+027 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=ATarvaRISruti'>ATarvaRISruti</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-153'>1-153</a>
+
+<hr>
+028 AptoryAma
+028 ApnuvAna -> NO CHANGE
+028 Apya
+028 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=ApnuvAna'>ApnuvAna</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-163'>1-163</a>
+
+<hr>
+029 ASvalAyani
+029 ASvalAyanins -> NO CHANGE
+029 ASvAyani
+029 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=ASvalAyanins'>ASvalAyanins</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-178'>1-178</a>
+
+<hr>
+031 uttAnabarhis
+031 uttAlatAlaBettA -> NO CHANGE
+031 utTAnam
+031 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=uttAlatAlaBettA'>uttAlatAlaBettA</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-220'>1-220</a>
+
+<hr>
+032 udumbaravanam
+032 udumlAnas -> NO CHANGE
+032 udgala
+032 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=udumlAnas'>udumlAnas</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-225'>1-225</a>
+
+<hr>
+033 upaniDi
+033 upanizads -> NO CHANGE
+033 upaplAvyam
+033 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=upanizads'>upanizads</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-233'>1-233</a>
+
+<hr>
+037 UrmimAli
+037 Urmizaqkam -> NO CHANGE
+037 UrmI
+037 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=Urmizaqkam'>Urmizaqkam</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-256'>1-256</a>
+
+<hr>
+038 UzmAdas
+038 Usija -> NO CHANGE
+038 Uham
+038 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=Usija'>Usija</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-258'>1-258</a>
+
+<hr>
+045 Otkaceya
+045 OtkArzweya -> NO CHANGE
+045 Ottama
+045 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=OtkArzweya'>OtkArzweya</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-287'>1-287</a>
+
+<hr>
+060 kArpAsaparvata
+060 kArbUram -> NO CHANGE
+060 kAryakAraRa
+060 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kArbUram'>kArbUram</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-358'>1-358</a>
+
+<hr>
+071 kundaparvata
+071 kuRqapAyins -> NO CHANGE
+071 kuRqikera
+071 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kuRqapAyins'>kuRqapAyins</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-389'>1-389</a>
+
+<hr>
+075 kUrca
+075 kUrdini -> NO CHANGE
+075 kUrma
+075 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kUrdini'>kUrdini</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-421'>1-421</a>
+
+<hr>
+081 kOSIti
+081 kOztikI -> NO CHANGE
+081 kOzmARqas
+081 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kOztikI'>kOztikI</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-475'>1-475</a>
+
+<hr>
+095 gfDra
+095 gfdDrakA -> NO CHANGE
+095 gfDrakuwa
+095 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=gfdDrakA'>gfdDrakA</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-541'>1-541</a>
+
+<hr>
+100 gOrISiKaram
+100 gratadvoca -> NO CHANGE
+100 granTAnukramaRi
+100 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=gratadvoca'>gratadvoca</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-561'>1-561</a>
+
+<hr>
+101 cakram
+101 cakramatsyO -> NO CHANGE
+101 cakraraTa
+101 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=cakramatsyO'>cakramatsyO</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-571'>1-571</a>
+
+<hr>
+102 cakrarajaraTendra
+102 cakravartins -> NO CHANGE
+102 cakravartinI
+102 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=cakravartins'>cakravartins</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-572'>1-572</a>
+
+<hr>
+103 caRqikA
+103 caRqins -> NO CHANGE
+103 caRqISa
+103 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=caRqins'>caRqins</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-578'>1-578</a>
+
+<hr>
+110 calacCiKA
+110 calajjvAla -> NO CHANGE
+110 calA
+110 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=calajjvAla'>calajjvAla</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-592'>1-592</a>
+
+<hr>
+113 cEtrAyaRas
+113 cEtrogni -> NO CHANGE
+113 cEdya
+113 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=cEtrogni'>cEtrogni</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-613'>1-613</a>
+
+<hr>
+114 jagat
+114 jagatsfzwi -> NO CHANGE
+114 jagatI
+114 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=jagatsfzwi'>jagatsfzwi</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=1-620'>1-620</a>
+
+<hr>
+133 tiryak
+133 tiryakjyoti -> NO CHANGE
+133 tiryakyoni
+133 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=tiryakjyoti'>tiryakjyoti</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-025'>2-025</a>
+
+<hr>
+144 danodakadunduBi
+144 dantakARvoSana -> NO CHANGE
+144 dantapavanam
+144 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=dantakARvoSana'>dantakARvoSana</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-070'>2-070</a>
+
+<hr>
+148 dik
+148 dikgajas -> NO CHANGE
+148 dikpati
+148 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=dikgajas'>dikgajas</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-086'>2-086</a>
+
+<hr>
+153 DAnyAyani
+153 DAnvantaramrUpam -> NO CHANGE
+153 DAma
+153 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=DAnvantaramrUpam'>DAnvantaramrUpam</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-169'>2-169</a>
+
+<hr>
+154 DunDuhan
+154 Dumrita -> NO CHANGE
+154 Durya
+154 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=Dumrita'>Dumrita</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-173'>2-173</a>
+
+<hr>
+168 pariveza
+168 parIzadpavamAna -> NO CHANGE
+168 parizRava
+168 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=parIzadpavamAna'>parIzadpavamAna</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-297'>2-297</a>
+
+<hr>
+183 pItAyuta
+183 pIppalI -> NO CHANGE
+183 pIvara
+183 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=pIppalI'>pIppalI</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-337'>2-337</a>
+
+<hr>
+186 purARalakzaRam
+186 purARavettA -> NO CHANGE
+186 purARasamhitA
+186 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=purARavettA'>purARavettA</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-349'>2-349</a>
+
+<hr>
+187 purIzi
+187 purIzyAs -> NO CHANGE
+187 puru
+187 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=purIzyAs'>purIzyAs</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-351'>2-351</a>
+
+<hr>
+191 pUzaRa
+191 pUzRa -> NO CHANGE
+191 pUzRA
+191 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=pUzRa'>pUzRa</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-379'>2-379</a>
+
+<hr>
+192 pUzRa
+192 pUzRA -> NO CHANGE
+192 pfTa
+192 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=pUzRA'>pUzRA</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-380'>2-380</a>
+
+<hr>
+202 pOlaha
+202 pOlahaagnitejas -> NO CHANGE : Headword phrase
+202 pOlas
+202 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=pOlahaagnitejas'>pOlahaagnitejas</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-398'>2-398</a>
+
+<hr>
+208 praDAna
+208 praDAnapuruzO -> NO CHANGE
+208 praDAnam
+208 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=praDAnapuruzO'>praDAnapuruzO</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-419'>2-419</a>
+
+<hr>
+209 praSAnta
+209 praSusruka -> NO CHANGE : Seems like a name.
+209 praSraya
+209 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=praSusruka'>praSusruka</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-430'>2-430</a>
+
+<hr>
+211 prAcInayogaputra
+211 prAcInvan -> NO CHANGE
+211 prAcIsarasvatI
+211 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=prAcInvan'>prAcInvan</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-439'>2-439</a>
+
+<hr>
+215 bfhatputra
+215 bfhatBAnu -> NO CHANGE : the dictionary has tendency towards not doing sandhi.
+215 bfhatraTa
+215 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=bfhatBAnu'>bfhatBAnu</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-490'>2-490</a>
+
+<hr>
+216 bfhatvakzas
+216 bfhatSukla -> NO CHANGE
+216 bfhatSloka
+216 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=bfhatSukla'>bfhatSukla</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-490'>2-490</a>
+
+<hr>
+217 bfhatSukla
+217 bfhatSloka -> NO CHANGE
+217 bfhatsAma
+217 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=bfhatSloka'>bfhatSloka</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-490'>2-490</a>
+
+<hr>
+218 bfhadutta
+218 bfhadkarma -> NO CHANGE
+218 bfhadkarma
+218 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=bfhadkarma'>bfhadkarma</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-493'>2-493</a>
+
+<hr>
+218 bfhadkarma
+218 bfhadkarma -> NO CHANGE
+218 bfhadkarma
+218 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=bfhadkarma'>bfhadkarma</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-493'>2-493</a>
+
+<hr>
+218 bfhadkarma
+218 bfhadkarma -> NO CHANGE
+218 bfhadkarma
+218 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=bfhadkarma'>bfhadkarma</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-493'>2-493</a>
+
+<hr>
+218 bfhadkarma
+218 bfhadkarma -> NO CHANGE
+218 bfhadkarma
+218 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=bfhadkarma'>bfhadkarma</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-493'>2-493</a>
+
+<hr>
+218 bfhadkarma
+218 bfhadkarma -> NO CHANGE
+218 bfhadkarma
+218 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=bfhadkarma'>bfhadkarma</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-493'>2-493</a>
+
+<hr>
+218 bfhadkarma
+218 bfhadkarma -> NO CHANGE
+218 bfhadkAya
+218 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=bfhadkarma'>bfhadkarma</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-493'>2-493</a>
+
+<hr>
+219 bfhadkarma
+219 bfhadkAya -> NO CHANGE
+219 bfhadkIrti
+219 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=bfhadkAya'>bfhadkAya</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-494'>2-494</a>
+
+<hr>
+220 bfhadkAya
+220 bfhadkIrti -> NO CHANGE
+220 bfhadkzaRa
+220 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=bfhadkIrti'>bfhadkIrti</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-494'>2-494</a>
+
+<hr>
+221 bfhadkIrti
+221 bfhadkzaRa -> NO CHANGE
+221 bfhadkzatra
+221 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=bfhadkzaRa'>bfhadkzaRa</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-494'>2-494</a>
+
+<hr>
+222 bfhadkzaRa
+222 bfhadkzatra -> NO CHANGE
+222 bfhadkzatra
+222 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=bfhadkzatra'>bfhadkzatra</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-494'>2-494</a>
+
+<hr>
+222 bfhadkzatra
+222 bfhadkzatra -> NO CHANGE
+222 bfhadkzatra
+222 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=bfhadkzatra'>bfhadkzatra</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-494'>2-494</a>
+
+<hr>
+222 bfhadkzatra
+222 bfhadkzatra -> NO CHANGE
+222 bfhadakzaya
+222 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=bfhadkzatra'>bfhadkzatra</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-494'>2-494</a>
+
+<hr>
+223 bfhadgira
+223 bfhadjihva -> NO CHANGE
+223 bfhadDanu
+223 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=bfhadjihva'>bfhadjihva</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-495'>2-495</a>
+
+<hr>
+225 bfhadvizRu
+225 brhadSukra -> NO CHANGE
+225 bfhadsAma
+225 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=brhadSukra'>brhadSukra</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-499'>2-499</a>
+
+<hr>
+226 brhadSukra
+226 bfhadsAma -> NO CHANGE
+226 bfhangira
+226 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=bfhadsAma'>bfhadsAma</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-499'>2-499</a>
+
+<hr>
+227 bfhadsAma
+227 bfhangira -> NO CHANGE
+227 bfhanta
+227 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=bfhangira'>bfhangira</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-499'>2-499</a>
+
+<hr>
+228 brahmavAdin
+228 brahmavAdins -> NO CHANGE
+228 brahmavAha
+228 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=brahmavAdins'>brahmavAdins</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-511'>2-511</a>
+
+<hr>
+230 Bizak
+230 BizagdvEtarata -> NO CHANGE
+230 BIma
+230 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=BizagdvEtarata'>BizagdvEtarata</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-561'>2-561</a>
+
+<hr>
+240 maDvarRA
+240 maDvI -> NO CHANGE
+240 mana
+240 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=maDvI'>maDvI</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-616'>2-616</a>
+
+<hr>
+244 maruts
+244 marutgaRas -> NO CHANGE
+244 marutta
+244 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=marutgaRas'>marutgaRas</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-641'>2-641</a>
+
+<hr>
+245 marutvantas
+245 marutsoma -> NO CHANGE
+245 marudeva
+245 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=marutsoma'>marutsoma</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-642'>2-642</a>
+
+<hr>
+246 mahatI
+246 mahatpOrava -> NO CHANGE
+246 maharloka
+246 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=mahatpOrava'>mahatpOrava</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-647'>2-647</a>
+
+<hr>
+254 mARqUka
+254 mARqvya -> NO CHANGE
+254 mAtanga
+254 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=mARqvya'>mARqvya</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-677'>2-677</a>
+
+<hr>
+259 mATuras
+259 mATElya -> NO CHANGE
+259 mAdi
+259 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=mATElya'>mATElya</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-680'>2-680</a>
+
+<hr>
+267 mfgottamANga
+267 mfgyA -> NO CHANGE
+267 mfqa
+267 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=mfgyA'>mfgyA</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-725'>2-725</a>
+
+<hr>
+270 mfduvid
+270 mflika -> NO CHANGE
+270 mfzA
+270 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=mflika'>mflika</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-728'>2-728</a>
+
+<hr>
+271 meGI
+271 meQyA -> NO CHANGE
+271 medaSiras
+271 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=meQyA'>meQyA</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=2-732'>2-732</a>
+
+<hr>
+278 rudras
+278 rudrakarRO -> NO CHANGE
+278 rudrakAntam
+278 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=rudrakarRO'>rudrakarRO</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-090'>3-090</a>
+
+<hr>
+281 rohitASva
+281 rOkmAyaRi -> NO CHANGE
+281 rOcya
+281 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=rOkmAyaRi'>rOkmAyaRi</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-106'>3-106</a>
+
+<hr>
+282 rOdrI
+282 rODras -> NO CHANGE
+282 rOpasevaki
+282 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=rODras'>rODras</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-107'>3-107</a>
+
+<hr>
+283 laGuvakzara
+283 laGuSyAmA -> NO CHANGE
+283 laGvi
+283 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=laGuSyAmA'>laGuSyAmA</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-112'>3-112</a>
+
+<hr>
+284 laGuSyAmA
+284 laGvi -> NO CHANGE
+284 lankA
+284 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=laGvi'>laGvi</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-112'>3-112</a>
+
+<hr>
+302 vakra
+302 vaggranTayas -> NO CHANGE
+302 vanga
+302 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=vaggranTayas'>vaggranTayas</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-135'>3-135</a>
+
+<hr>
+305 vatsAra
+305 vadAnyO -> NO CHANGE
+305 vadDryaSva
+305 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=vadAnyO'>vadAnyO</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-145'>3-145</a>
+
+<hr>
+306 vadAnyO
+306 vadDryaSva -> NO CHANGE
+306 vaDa
+306 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=vadDryaSva'>vadDryaSva</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-145'>3-145</a>
+
+<hr>
+307 vandanIyA
+307 vandins -> NO CHANGE
+307 vandyas
+307 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=vandins'>vandins</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-147'>3-147</a>
+
+<hr>
+321 valmIkajanmana
+321 vaSavartins -> NO CHANGE
+321 vaSita
+321 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=vaSavartins'>vaSavartins</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-164'>3-164</a>
+
+<hr>
+323 vAjijit
+323 vAjins -> NO CHANGE
+323 vAjinas
+323 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=vAjins'>vAjins</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-184'>3-184</a>
+
+<hr>
+325 vAdyas
+325 vADnIRasas -> NO CHANGE
+325 vAnadfzwa
+325 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=vADnIRasas'>vADnIRasas</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-188'>3-188</a>
+
+<hr>
+326 vAstukft
+326 vAstukOSikAs -> NO CHANGE
+326 vAstupUjanam
+326 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=vAstukOSikAs'>vAstukOSikAs</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-210'>3-210</a>
+
+<hr>
+329 vidarBas
+329 vidiksTAnam -> NO CHANGE
+329 vidigDa
+329 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=vidiksTAnam'>vidiksTAnam</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-226'>3-226</a>
+
+<hr>
+331 vidyutparRA
+331 vidyutsPUrja -> NO CHANGE
+331 vidyudambA
+331 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=vidyutsPUrja'>vidyutsPUrja</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-233'>3-233</a>
+
+<hr>
+342 vIdUraTa
+342 vIdyutvanta -> NO CHANGE
+342 vIra
+342 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=vIdyutvanta'>vIdyutvanta</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-294'>3-294</a>
+
+<hr>
+344 vfzaparvan
+344 vfzaparvans -> NO CHANGE
+344 vfzaBa
+344 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=vfzaparvans'>vfzaparvans</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-308'>3-308</a>
+
+<hr>
+351 vERikI
+351 vERoya -> NO CHANGE
+351 vEtaRqa
+351 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=vERoya'>vERoya</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-327'>3-327</a>
+
+<hr>
+352 vEdikas
+352 vEdikISruti -> NO CHANGE
+352 vEdiSa
+352 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=vEdikISruti'>vEdikISruti</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-329'>3-329</a>
+
+<hr>
+405 SiKI
+405 SiGrya -> NO CHANGE
+405 Singi
+405 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=SiGrya'>SiGrya</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-416'>3-416</a>
+
+<hr>
+408 SilpaprajApati
+408 Silpins -> NO CHANGE
+408 Siva
+408 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=Silpins'>Silpins</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-421'>3-421</a>
+
+<hr>
+412 SuzkA
+412 SuzmIRa -> NO CHANGE
+412 SUkas
+412 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=SuzmIRa'>SuzmIRa</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-453'>3-453</a>
+
+<hr>
+413 SEnyAs
+413 SEbjA -> NO CHANGE
+413 SEbya
+413 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=SEbjA'>SEbjA</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-462'>3-462</a>
+
+<hr>
+414 SEbyA
+414 SEByAs -> NO CHANGE
+414 SEmimaRqalakozWam
+414 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=SEByAs'>SEByAs</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-463'>3-463</a>
+
+<hr>
+415 SOkram
+415 SOklAyani -> NO CHANGE
+415 SanKaRa
+415 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=SOklAyani'>SOklAyani</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-467'>3-467</a>
+
+<hr>
+418 SrutakIrtI
+418 SrutakIrtI -> NO CHANGE : Because this is feminine (daughter)
+418 Srutadeva
+418 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=SrutakIrtI'>SrutakIrtI</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-485'>3-485</a>
+
+<hr>
+422 Svetodara
+422 zawketu -> NO CHANGE
+422 zawpuras
+422 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=zawketu'>zawketu</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-498'>3-498</a>
+
+<hr>
+423 zawpuras
+423 zawpriya ->  NO CHANGE
+423 zawbrahmARa
+423 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=zawpriya'>zawpriya</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-498'>3-498</a>
+
+<hr>
+424 zawpriya
+424 zawbrahmARa -> NO CHANGE
+424 zawsuras
+424 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=zawbrahmARa'>zawbrahmARa</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-498'>3-498</a>
+
+<hr>
+425 zawbrahmARa
+425 zawsuras -> NO CHANGE
+425 zaqaNga
+425 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=zawsuras'>zawsuras</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-498'>3-498</a>
+
+<hr>
+426 zaqAnana
+426 zaqkarmanizWa -> NO CHANGE
+426 zaqja
+426 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=zaqkarmanizWa'>zaqkarmanizWa</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-499'>3-499</a>
+
+<hr>
+508 sunaya
+508 sunaSSepa -> NO CHANGE
+508 sunaha
+508 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=sunaSSepa'>sunaSSepa</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-632'>3-632</a>
+
+<hr>
+509 supuYjika
+509 supuzwmAn -> NO CHANGE
+509 supraketasa
+509 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=supuzwmAn'>supuzwmAn</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-640'>3-640</a>
+
+<hr>
+517 sEvAlas
+517 sEvyA -> NO CHANGE
+517 sEvyA
+517 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=sEvyA'>sEvyA</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-694'>3-694</a>
+
+<hr>
+517 sEvyA
+517 sEvyA -> NO CHANGE
+517 sEzirIwi
+517 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=sEvyA'>sEvyA</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-694'>3-694</a>
+
+<hr>
+521 sObala
+521 sObuDi -> NO CHANGE
+521 sOBa
+521 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=sObuDi'>sObuDi</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-703'>3-703</a>
+
+<hr>
+524 skandika
+524 skandins -> NO CHANGE
+524 skanDAvAsa
+524 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=skandins'>skandins</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-712'>3-712</a>
+
+<hr>
+544 hariRI
+544 hariRmAn -> NO CHANGE
+544 harita
+544 headword <a target='_PUIword' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=hariRmAn'>hariRmAn</a> ---  page <a target='_PUIpage' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PUIScan/2014/web/webtc/servepdf.php?page=3-750'>3-750</a>
+
+<hr>
