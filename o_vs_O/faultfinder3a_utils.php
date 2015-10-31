@@ -150,12 +150,31 @@ function givelinktoo_vs_Otext2($text)
 		$dicts[$j]=implode(',',$culpritdict);
 	}
 //	echo convert($words[0])." : ".convert($words[1])." - ".$words[0]." : ".$words[1]." - ".$dicts[0]." : ".$dicts[1]."<br/>";
-	return '<tr><td class="zero">'.$count.'</td><td class="one">'.$words[0].'</td><td class="one">'.$words[1].'</td><td class="two">'.convert($words[0]).'</td><td class="two">'.convert($words[1]).'</td><td class="three">'.$dicts[0].'</td><td class="four">'.$dicts[1].'</td></tr>';
+	return '<tr><td class="zero">'.$count.'</td><td class="one">'.get_decorated_diff($words[0],$words[1],1).'</td><td class="one">'.get_decorated_diff($words[0],$words[1],2).'</td><td class="two">'.convert($words[0]).'</td><td class="two">'.convert($words[1]).'</td><td class="three">'.$dicts[0].'</td><td class="four">'.$dicts[1].'</td></tr>';
 //	echo $words[0].":".$words[1]."-".$dicts[0].":".$dicts[1]."<br/>";
 }
 
 function pdflink($dict,$word)
 {
 	return '<a href="http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict='.$dict.'&key='.$word.'" target="_blank">'.$dict."</a>";
+}
+# See https://coderwall.com/p/3j2hxq/find-and-format-difference-between-two-strings-in-php for the origin of code.
+function get_decorated_diff($old, $new, $var){
+    $from_start = strspn($old ^ $new, "\0");        
+    $from_end = strspn(strrev($old) ^ strrev($new), "\0");
+
+    $old_end = strlen($old) - $from_end;
+    $new_end = strlen($new) - $from_end;
+
+    $start = substr($new, 0, $from_start);
+    $end = substr($new, $new_end);
+    $new_diff = substr($new, $from_start, $new_end - $from_start);  
+    $old_diff = substr($old, $from_start, $old_end - $from_start);
+
+    $new = "$start<b style='background-color:#ccffcc'>$new_diff</b>$end";
+    $old = "$start<b style='background-color:#ffcccc'>$old_diff</b>$end";
+	if ($var===1) { return $old; }
+	if ($var===2) { return $new; }
+	if ($var===0) { return array("old"=>$old, "new"=>$new); }
 }
 ?>

@@ -5,11 +5,11 @@ $header = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http:
 <head>
       <style>
          table.fixed {table-layout:fixed; width:100%; border:1px solid black;}/*Setting the table width is important!*/
-         td.zero {width:40px; border:1px solid black; text-overflow:ellipsis; }
-         td.one {width:50px; border:1px solid black; text-overflow:ellipsis; padding: 10px;}
-         td.two {width:50px; border:1px solid black;text-overflow:ellipsis; padding: 10px;}
-         td.three {width:400px; border:1px solid black;text-overflow:ellipsis; padding: 10px;}
-         td.four {width:200px; border:1px solid black;text-overflow:ellipsis; padding: 10px;}
+         td.zero {width:50px; border:1px solid black; text-overflow:ellipsis; }
+         td.one {width:200px; border:1px solid black; text-overflow:ellipsis; padding: 10px;}
+         td.two {width:200px; border:1px solid black;text-overflow:ellipsis; padding: 10px;}
+         td.three {width:100px; border:1px solid black;text-overflow:ellipsis; padding: 10px;}
+         td.four {width:100px; border:1px solid black;text-overflow:ellipsis; padding: 10px;}
 		 td {overflow:scroll;}
       </style>
 <!--... Defining UTF-8 as our default character set, so that devanagari is displayed properly. -->
