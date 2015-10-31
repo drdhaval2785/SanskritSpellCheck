@@ -95,3 +95,6 @@ Step 2 - type php faultfinder3a.php MW sanhw1.txt AllvsMW.txt. (This will create
 Step 3 - type php faultfinder3a-html.php AllvsMW.txt AllvsMW-new.html (This will render AllvsMW.txt in an HTML file with links to individual entries for checking online)
 Step 4 - type php dictwisesorter.php AllvsMW-new.html dictwiseerrors1.html (This will sort AllvsMW-new.html dictionarywise.)
 
+# o_vs_O method
+
+The steps are shown in [this readme](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/o_vs_O/readme.txt)
