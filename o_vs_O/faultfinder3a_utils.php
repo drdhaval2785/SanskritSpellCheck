@@ -130,7 +130,7 @@ function givelinktoo_vs_Otext1($text)
 }
 function givelinktoo_vs_Otext2($text)
 {
-	global $count;
+	global $count, $value;
     $x = explode('-',$text);
 	$x = array_map('trim',$x);
 	$dicts = explode(':',$x[1]);
@@ -140,23 +140,48 @@ function givelinktoo_vs_Otext2($text)
 	{
 		$dicts[$j]=strip_tags($dicts[$j]);
 		$culpritdict=explode(',',$dicts[$j]);
-		for ($i=0;$i<count($culpritdict);$i++){
-		$d[$i]=$culpritdict[$i];
-		$y[$i] = Cologne_hrefyear($d[$i]); 
-		$rep[$i] = pdflink($d[$i],$words[$j]);
-		//'<a href="http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict='.$d[$i].'&key='.$words[$j].'" target="_blank">'.$d[$i]."</a>";
-		$culpritdict[$i] = str_replace($d[$i],$rep[$i],$culpritdict[$i]);
+		$wordslinked[$j]=webpagelink($words[0],$words[1],$dicts[0],$dicts[1],$culpritdict,$j+1);
+		for ($i=0;$i<count($culpritdict);$i++)
+		{
+			$d[$i]=$culpritdict[$i];
+			$y[$i] = Cologne_hrefyear($d[$i]); 
+			$rep[$i] = pdflink($d[$i],$words[$j]);
+			//'<a href="http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict='.$d[$i].'&key='.$words[$j].'" target="_blank">'.$d[$i]."</a>";
+			$culpritdict[$i] = str_replace($d[$i],$rep[$i],$culpritdict[$i]);
 		}
 		$dicts[$j]=implode(',',$culpritdict);
 	}
-//	echo convert($words[0])." : ".convert($words[1])." - ".$words[0]." : ".$words[1]." - ".$dicts[0]." : ".$dicts[1]."<br/>";
-	return '<tr><td class="zero">'.$count.'</td><td class="one">'.get_decorated_diff($words[0],$words[1],1).'</td><td class="one">'.get_decorated_diff($words[0],$words[1],2).'</td><td class="two">'.convert($words[0]).'</td><td class="two">'.convert($words[1]).'</td><td class="three">'.$dicts[0].'</td><td class="four">'.$dicts[1].'</td></tr>';
-//	echo $words[0].":".$words[1]."-".$dicts[0].":".$dicts[1]."<br/>";
+	//return '<tr><td class="zero">'.$count.'</td><td class="one">'.get_decorated_diff($words[0],$words[1],1).'</td><td class="one">'.get_decorated_diff($words[0],$words[1],2).'</td><td class="two">'.convert($words[0]).'</td><td class="two">'.convert($words[1]).'</td><td class="three">'.$dicts[0].'</td><td class="four">'.$dicts[1].'</td></tr>';
+	return '<tr><td class="zero">'.$count.'</td><td class="one">'.$wordslinked[0].'</td><td class="one">'.$wordslinked[1].'</td><td class="two">'.convert($words[0]).'</td><td class="two">'.convert($words[1]).'</td><td class="three">'.$dicts[0].'</td><td class="four">'.$dicts[1].'</td></tr>';
 }
 
 function pdflink($dict,$word)
 {
 	return '<a href="http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict='.$dict.'&key='.$word.'" target="_blank">'.$dict."</a>";
+}
+function webpagelink($oneword,$twoword,$onedict,$twodict,$culpritdict,$var)
+{
+	global $value;
+	if ($var===1) 
+	{
+		$dictionary=$value; $inputword=$oneword;
+	}
+	if ($var===2) 
+	{
+		$preferredorder=array("PWG","PW","MW72","GRA");
+		$dictionary=$culpritdict[0];
+		for($x=0;$x<count($preferredorder);$x++)
+		{
+			if(in_array($preferredorder[$x],$culpritdict))
+			{
+				$dictionary=$preferredorder[$x];
+				break;
+			}
+		}
+		$inputword=$twoword;
+	}
+	$y=Cologne_hrefyear($dictionary);
+	return '<a href="'."http://www.sanskrit-lexicon.uni-koeln.de/scans/".$dictionary."Scan/".$y."/web/webtc/indexcaller.php".'?key='.$inputword.'&input=slp1&output=SktDevaUnicode" target="_blank">'.get_decorated_diff($oneword,$twoword,$var)."</a>"; 
 }
 # See https://coderwall.com/p/3j2hxq/find-and-format-difference-between-two-strings-in-php for the origin of code.
 function get_decorated_diff($old, $new, $var){
