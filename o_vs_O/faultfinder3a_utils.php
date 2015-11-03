@@ -155,6 +155,84 @@ function givelinktoo_vs_Otext2($text)
 	return '<tr><td class="zero">'.$count.'</td><td class="one">'.$wordslinked[0].'</td><td class="one">'.$wordslinked[1].'</td><td class="two">'.convert($words[0]).'</td><td class="two">'.convert($words[1]).'</td><td class="three">'.$dicts[0].'</td><td class="four">'.$dicts[1].'</td></tr>';
 }
 
+// Whether the given dictionary e.g. MW is in the dict string with lnumber 'MW;82,PW:150' 
+function indict_with_lnum($needle,$haystack)
+{
+	// $haystack = "MW;82,PW:150";
+	// $needle = "MW"
+	//$members = explode(',',$haystack);
+	$members = $haystack;
+	for($i=0;$i<count($members);$i++)
+	{
+		$haydict[] = explode(';',$members[$i])[0];
+	}
+	if (in_array($needle,$haydict))
+	{
+		return true;
+	}
+	else 
+	{
+		return false;
+	}
+}
+function lnum($text,$dict)
+{
+    $x = explode('-',$text);
+	$x = array_map('trim',$x);
+	$dicts = explode(':',$x[1]);
+	foreach($dicts as $member)
+	{
+		$alldicts = explode(',',$member);
+		foreach ($alldicts as $onedict)
+		{
+			list($dictchecked,$lnum) = explode(';',$onedict);
+			if ($dictchecked === $dict)
+			{
+				return $lnum;
+				break;
+			}			
+		}
+	}
+}
+function removelnum($dictstring)
+{
+	$dicts = explode(',',$dictstring);
+	$keep = array();
+	foreach($dicts as $member)
+	{
+		$keep[] = explode(';',$member)[0];
+	}
+	return implode(',',$keep);
+}
+function givelinktoo_vs_Otext3($text)
+{
+	global $count, $value;
+	$lnum = lnum($text,$value);
+    $x = explode('-',$text);
+	$x = array_map('trim',$x);
+	$dicts = explode(':',$x[1]);
+	$words = explode(':',$x[0]);
+	
+	for ($j=0;$j<count($dicts);$j++)
+	{
+		$dicts[$j]=removelnum($dicts[$j]);
+		$dicts[$j]=strip_tags($dicts[$j]);
+		$culpritdict=explode(',',$dicts[$j]);
+		$wordslinked[$j]=webpagelink($words[0],$words[1],$dicts[0],$dicts[1],$culpritdict,$j+1);
+		for ($i=0;$i<count($culpritdict);$i++)
+		{
+			$d[$i]=$culpritdict[$i];
+			$y[$i] = Cologne_hrefyear($d[$i]); 
+			$rep[$i] = pdflink($d[$i],$words[$j]);
+			//'<a href="http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict='.$d[$i].'&key='.$words[$j].'" target="_blank">'.$d[$i]."</a>";
+			$culpritdict[$i] = str_replace($d[$i],$rep[$i],$culpritdict[$i]);
+		}
+		$dicts[$j]=implode(',',$culpritdict);
+	}
+	//return '<tr><td class="zero">'.$count.'</td><td class="four">'.$lnum.'</td><td class="one">'.$wordslinked[0].'</td><td class="one">'.$wordslinked[1].'</td><td class="two">'.convert($words[0]).'</td><td class="two">'.convert($words[1]).'</td><td class="three">'.$dicts[0].'</td><td class="four">'.$dicts[1].'</td></tr>';
+	return '<tr><td class="zero">'.$count.'</td><td class="four">'.$lnum.'</td><td class="one">'.$wordslinked[0].'</td><td class="one">'.$wordslinked[1].'</td><td class="two">'.convert($words[0]).'</td><td class="two">'.convert($words[1]).'</td><td class="three">'.$dicts[0].'</td><td class="four">'.$dicts[1].'</td></tr>';
+}
+
 function pdflink($dict,$word)
 {
 	return '<a href="http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict='.$dict.'&key='.$word.'" target="_blank">'.$dict."</a>";

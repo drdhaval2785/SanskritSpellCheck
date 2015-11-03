@@ -123,6 +123,7 @@ foreach ($dictionaryname as $value)
 				}
 			}
 	//This testing shows that all the cases are covered.
+	echo $counter1."+".$counter2."+".$counter3."+".$counter4."+".$counter5."+".$counter6." / ".$countervalue." occurrences are handled.<br/>\n";
 	echo $counter1+$counter2+$counter3+$counter4+$counter5+$counter6." / ".$countervalue." occurrences are handled.<br/>\n";
 	fclose($outtext);
 	fclose($outhtml);
