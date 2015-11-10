@@ -36,8 +36,18 @@ Step6 - Click links from these HTML files and verify the errors.
 
 Major addition in this version is the L IDs.
 
+# Generate a composite HTML for all dictionaries simultaneously.
+
+
+Inputs: sanhw2.txt
+
+Dependencies: dev-slp.php, faultfinder3a-utils.php, function.php, slp-dev.php.
+
+
+
 
 # Note: 
 Please focus only on the corrections in the dictionary under consideration.
 If you see any errors in the dictionary other than the one you are dealing with, leave it.
 You will encounter it in the dictionary concerned. We will treat it there.
+

@@ -230,7 +230,7 @@ function givelinktoo_vs_Otext3($text)
 		$dicts[$j]=implode(',',$culpritdict);
 	}
 	//return '<tr><td class="zero">'.$count.'</td><td class="four">'.$lnum.'</td><td class="one">'.$wordslinked[0].'</td><td class="one">'.$wordslinked[1].'</td><td class="two">'.convert($words[0]).'</td><td class="two">'.convert($words[1]).'</td><td class="three">'.$dicts[0].'</td><td class="four">'.$dicts[1].'</td></tr>';
-	return '<tr><td class="zero">'.$count.'</td><td class="four">'.$lnum.'</td><td class="one">'.$wordslinked[0].'</td><td class="one">'.$wordslinked[1].'</td><td class="two">'.convert($words[0]).'</td><td class="two">'.convert($words[1]).'</td><td class="three">'.$dicts[0].'</td><td class="four">'.$dicts[1].'</td></tr>';
+	return '<tr><td class="zero">'.$count.'</td><td class="zero">'.$lnum.'</td><td class="one">'.$wordslinked[0].'</td><td class="one">'.$wordslinked[1].'</td><td class="three">'.convert($words[0]).'</td><td class="three">'.convert($words[1]).'</td><td class="two">'.$dicts[0].'</td><td class="two">'.$dicts[1].'</td></tr>';
 }
 
 function pdflink($dict,$word)
