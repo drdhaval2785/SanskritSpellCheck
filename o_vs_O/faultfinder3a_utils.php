@@ -232,6 +232,35 @@ function givelinktoo_vs_Otext3($text)
 	//return '<tr><td class="zero">'.$count.'</td><td class="four">'.$lnum.'</td><td class="one">'.$wordslinked[0].'</td><td class="one">'.$wordslinked[1].'</td><td class="two">'.convert($words[0]).'</td><td class="two">'.convert($words[1]).'</td><td class="three">'.$dicts[0].'</td><td class="four">'.$dicts[1].'</td></tr>';
 	return '<tr><td class="zero">'.$count.'</td><td class="zero">'.$lnum.'</td><td class="one">'.$wordslinked[0].'</td><td class="one">'.$wordslinked[1].'</td><td class="three">'.convert($words[0]).'</td><td class="three">'.convert($words[1]).'</td><td class="two">'.$dicts[0].'</td><td class="two">'.$dicts[1].'</td></tr>';
 }
+function givelinktoo_vs_Otext4($text)
+{
+	global $count;
+    $x = explode('-',$text);
+	$x = array_map('trim',$x);
+	$dicts = explode(':',$x[1]);
+	$words = explode(':',$x[0]);
+	$onedict = explode(',',$dicts[0]);
+	list($value,$lnum) = explode(';',$onedict[0]);
+
+	for ($j=0;$j<count($dicts);$j++)
+	{
+		$dicts[$j]=removelnum($dicts[$j]);
+		$dicts[$j]=strip_tags($dicts[$j]);
+		$culpritdict=explode(',',$dicts[$j]);
+		$wordslinked[$j]=webpagelink1($words[0],$words[1],$dicts[0],$dicts[1],$culpritdict,$j+1,$value);
+		for ($i=0;$i<count($culpritdict);$i++)
+		{
+			$d[$i]=$culpritdict[$i];
+			$y[$i] = Cologne_hrefyear($d[$i]); 
+			$rep[$i] = pdflink($d[$i],$words[$j]);
+			//'<a href="http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict='.$d[$i].'&key='.$words[$j].'" target="_blank">'.$d[$i]."</a>";
+			$culpritdict[$i] = str_replace($d[$i],$rep[$i],$culpritdict[$i]);
+		}
+		$dicts[$j]=implode(',',$culpritdict);
+	}
+	//return '<tr><td class="zero">'.$count.'</td><td class="four">'.$lnum.'</td><td class="one">'.$wordslinked[0].'</td><td class="one">'.$wordslinked[1].'</td><td class="two">'.convert($words[0]).'</td><td class="two">'.convert($words[1]).'</td><td class="three">'.$dicts[0].'</td><td class="four">'.$dicts[1].'</td></tr>';
+	return '<tr><td class="zero">'.$count.'</td><td class="zero">'.$lnum.'</td><td class="one">'.$wordslinked[0].'</td><td class="one">'.$wordslinked[1].'</td><td class="three">'.convert($words[0]).'</td><td class="three">'.convert($words[1]).'</td><td class="two">'.$dicts[0].'</td><td class="two">'.$dicts[1].'</td></tr>';
+}
 
 function pdflink($dict,$word)
 {
@@ -240,6 +269,29 @@ function pdflink($dict,$word)
 function webpagelink($oneword,$twoword,$onedict,$twodict,$culpritdict,$var)
 {
 	global $value;
+	if ($var===1) 
+	{
+		$dictionary=$value; $inputword=$oneword;
+	}
+	if ($var===2) 
+	{
+		$preferredorder=array("PWG","PW","MW72","GRA");
+		$dictionary=$culpritdict[0];
+		for($x=0;$x<count($preferredorder);$x++)
+		{
+			if(in_array($preferredorder[$x],$culpritdict))
+			{
+				$dictionary=$preferredorder[$x];
+				break;
+			}
+		}
+		$inputword=$twoword;
+	}
+	$y=Cologne_hrefyear($dictionary);
+	return '<a href="'."http://www.sanskrit-lexicon.uni-koeln.de/scans/".$dictionary."Scan/".$y."/web/webtc/indexcaller.php".'?key='.$inputword.'&input=slp1&output=SktDevaUnicode" target="_blank">'.get_decorated_diff($oneword,$twoword,$var)."</a>"; 
+}
+function webpagelink1($oneword,$twoword,$onedict,$twodict,$culpritdict,$var,$value)
+{
 	if ($var===1) 
 	{
 		$dictionary=$value; $inputword=$oneword;

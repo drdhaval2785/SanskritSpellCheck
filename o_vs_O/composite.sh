@@ -10,3 +10,6 @@ php dictsorting_single.php
 echo "Running sortlen.py."
 echo 
 python sortlen.py
+echo "Running decoratehtml.php."
+echo 
+php decoratehtml.php
