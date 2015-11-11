@@ -38,13 +38,25 @@ Major addition in this version is the L IDs.
 
 # Generate a composite HTML for all dictionaries simultaneously.
 
-
-Inputs: sanhw2.txt
+Inputs: o_vs_O2.txt
 
 Dependencies: dev-slp.php, faultfinder3a-utils.php, function.php, slp-dev.php.
 
+Step1 - run `composite.sh`.
 
+Outputs - 
 
+1. Output3/composite1.txt - first word in one dictionary and second word in many dictionaries.
+
+2. Output3/composite2.txt - first word in one dictionary and second word in one dictionary.
+
+3. Output3/composite3.txt - first word in many dictionary and second word in many dictionaries.
+
+4. Output3/composite1a.txt - composite1.txt sorted in descending order of length of word (Highest probability).
+
+5. Output3/composite2a.txt - composite2.txt sorted in descending order of length of word (Medium probability).
+
+6. Output3/composite3a.txt - composite3.txt sorted in descending order of length of word (Almost next to nil probability).
 
 # Note: 
 Please focus only on the corrections in the dictionary under consideration.
