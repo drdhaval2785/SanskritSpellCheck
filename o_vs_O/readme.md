@@ -58,6 +58,11 @@ Outputs -
 
 6. Output3/composite3a.txt - composite3.txt sorted in descending order of length of word (Almost next to nil probability).
 
+7. Output3/composite1a.html - composite1a.txt displayed with links for comparision (Highest probability).
+
+8. Output3/composite2a.html - composite2a.txt displayed with links for comparision (Medium probability).
+
+7. Output3/composite3a.html - composite3a.txt displayed with links for comparision (Almost next to nil probability).
 # Note: 
 Please focus only on the corrections in the dictionary under consideration.
 If you see any errors in the dictionary other than the one you are dealing with, leave it.
