@@ -19,11 +19,12 @@ $header = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http:
 ';
 include 'faultfinder3a_utils.php';
 
-function decoratehtml($inputfile,$outputfile)
+function decoratehtml($inputfile,$outputfile1,$outputfile2)
 {
 	global $header;
 	$in = file($inputfile);
-	$outfile = fopen($outputfile,"w+");
+	$outfile = fopen($outputfile1,"w+");
+	$outtxt = fopen($outputfile2,"w+");
 	fputs($outfile,$header);
 	fputs($outfile,"<h1>Highest probability words found by o_vs_O method.</h1>");
 	fputs($outfile,'<table class="fixed">');
@@ -34,14 +35,15 @@ function decoratehtml($inputfile,$outputfile)
 		$val =givelinktoo_vs_Otext4($value1);
 		$count++;
 		fputs($outfile,$val);
+		fputs($outtxt,suggestwords($value1)."\n");
 	}
 	fputs($outfile,"</table></body></html>");
 	fclose($outfile);
 }
 echo "Preparing composite1a.html for comparision.\n";
-decoratehtml('output3/composite1a.txt','output3/composite1a.html');
+decoratehtml('output3/composite1a.txt','output3/composite1a.html','output3/composite1b.txt');
 echo "Preparing composite2a.html for comparision.\n";
-decoratehtml('output3/composite2a.txt','output3/composite2a.html');
+decoratehtml('output3/composite2a.txt','output3/composite2a.html','output3/composite2b.txt');
 echo "Preparing composite3a.html for comparision.\n";
-decoratehtml('output3/composite3a.txt','output3/composite3a.html');
+decoratehtml('output3/composite3a.txt','output3/composite3a.html','output3/composite3b.txt');
 ?>

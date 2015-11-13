@@ -36,7 +36,7 @@ Step6 - Click links from these HTML files and verify the errors.
 
 Major addition in this version is the L IDs.
 
-# Generate a composite HTML for all dictionaries simultaneously.
+# Generate a composite HTML for all dictionaries simultaneously. (Best alternative)
 
 Inputs: o_vs_O2.txt
 
@@ -62,5 +62,10 @@ Outputs -
 
 8. Output3/composite2a.html - composite2a.txt displayed with links for comparision (Medium probability).
 
-7. Output3/composite3a.html - composite3a.txt displayed with links for comparision (Almost next to nil probability).
+9. Output3/composite3a.html - composite3a.txt displayed with links for comparision (Almost next to nil probability).
 
+10. Output3/composite1b.txt - composite1a.txt displayed with alternative for machine processing. See [issue 154](https://github.com/sanskrit-lexicon/CORRECTIONS/issues/154).
+
+11. Output3/composite2b.txt - composite2a.txt displayed with alternative for machine processing. See [issue 154](https://github.com/sanskrit-lexicon/CORRECTIONS/issues/154).
+
+11. Output3/composite3b.txt - composite3a.txt displayed with alternative for machine processing. See [issue 154](https://github.com/sanskrit-lexicon/CORRECTIONS/issues/154).

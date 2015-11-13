@@ -261,6 +261,16 @@ function givelinktoo_vs_Otext4($text)
 	//return '<tr><td class="zero">'.$count.'</td><td class="four">'.$lnum.'</td><td class="one">'.$wordslinked[0].'</td><td class="one">'.$wordslinked[1].'</td><td class="two">'.convert($words[0]).'</td><td class="two">'.convert($words[1]).'</td><td class="three">'.$dicts[0].'</td><td class="four">'.$dicts[1].'</td></tr>';
 	return '<tr><td class="zero">'.$count.'</td><td class="zero">'.$lnum.'</td><td class="one">'.$wordslinked[0].'</td><td class="one">'.$wordslinked[1].'</td><td class="three">'.convert($words[0]).'</td><td class="three">'.convert($words[1]).'</td><td class="two">'.$dicts[0].'</td><td class="two">'.$dicts[1].'</td></tr>';
 }
+function suggestwords($text)
+{
+    $x = explode('-',$text);
+	$x = array_map('trim',$x);
+	$dicts = explode(':',$x[1]);
+	$words = explode(':',$x[0]);
+	$onedict = explode(',',$dicts[0]);
+	$firstdict = explode(';',$onedict[0])[0];
+	return $firstdict.":".$words[0].":".$words[1]."::";
+}
 
 function pdflink($dict,$word)
 {
