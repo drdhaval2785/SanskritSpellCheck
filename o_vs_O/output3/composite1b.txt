@@ -1,9 +1,6 @@
-ACC:samitsamAropaRaprAtarOpasanaprayoga:samitsamAropaRaprAtarOpAsanaprayoga::
 MW:praSAntaviniScayapratihAryanirdeSa:praSAntaviniScayaprAtihAryanirdeSa::
 MW:vanaBojanapuRyAhavacanaprayoga:vanaBojanapuRyAhavAcanaprayoga::
-ACC:uddeSyaviDeyaboDasTAlIyavicAra:uddeSyaviDeyaboDasTalIyavicAra::
 MW:citraSAkApUpaBakzyavikArakriyA:citraSAkapUpaBakzyavikArakriyA::
-MW:bADabudDipratiBanDakatAvicAra:bADabudDipratibanDakatAvicAra::
 MW:saMKyAmuzwyaDikaraRakzepa:saMKyAmuzwyaDikaraRAkzepa::
 ACC:sAmAnyalakzaRAvyaBicAra:sAmAnyalakzaRavyaBicAra::
 MW:svAyamBUkzetramAhAtmya:svayaMBUkzetramAhAtmya::
@@ -13,10 +10,8 @@ ACC:OrDvadehikakalpavallI:OrDvadehikakalpavalli::
 PW:vAtUlaBedAdikatantra:vAtulaBedAdikatantra::
 CCS:vAjasaneyiprAtiSaKya:vAjasaneyiprAtiSAKya::
 PWG:sidDAntalakzaRAkroqa:sidDAntalakzaRakroqa::
-MW:brahmAnandasArasvatI:brahmAnandasarasvatI::
 PWG:uttarakAmAKyAtantra:uttarakAmAKyatantra::
 MW:sTARvASramamahAtmya:sTARvASramamAhAtmya::
-MW:ravikuladIpaprakAsa:ravikuladIpaprakASa::
 ACC:rAmavijYApanAstotra:rAmavijYApanastotra::
 VCP:pakvaSasyopamonnati:pakvasasyopamonnati::
 PW:lOhABisArikaprayoga:lOhABisArikAprayoga::
@@ -25,15 +20,12 @@ CCS:bfhatsArvAnukramaRI:bfhatsarvAnukramaRI::
 PW:bahurUpAgarBastotra:bahurUpagarBastotra::
 VCP:SrIkaRWapadalAYcana:SrIkaRWapadalAYCana::
 ACC:zawpaYcASatikAhorA:zawpaYcASatikahorA::
-ACC:viBrAzwezwiprayoga:viBrazwezwiprayoga::
 PE:vetAlapaYcaviMSatI:vetAlapaYcaviMSati::
 MW:sArakzetramAhatmya:sArakzetramAhAtmya::
 PW:parameSastotrAvali:parameSastotrAvalI::
 MW:mArkaRqeyakavindra:mArkaRqeyakavIndra::
 PWG:lakzaRavAdarahasya:lakzaRAvAdarahasya::
 ACC:gIrvARapadamaYjarI:gIrvARapadamaYjari::
-PWG:caturdaSaguRAnAman:caturdaSaguRanAman::
-ACC:zoqaSanityAtantra:zoqaSanityatantra::
 PW:yamunAcAryastotra:yAmunAcAryastotra::
 CAE:yaTaliKitAnuBAvin:yaTAliKitAnuBAvin::
 SHS:vakzaHsammarddinI:vakzaHsammardDinI::
@@ -47,7 +39,6 @@ VCP:kapikacCUPalopamA:kapikacCuPalopamA::
 PWG:jvalArAsaBakAmaya:jvAlArAsaBakAmaya::
 YAT:darSanapratiBAvya:darSanaprAtiBAvya::
 MW:caRqISaparyAkrama:caRqIsaparyAkrama::
-MW:brahmavidyABAraRa:brahmavidyABaraRa::
 SCH:arjunArcapArijAta:arjunArcApArijAta::
 PW:amftabindupanizad:amftabindUpanizad::
 ACC:SAMBavAnandakalpa:SAmbavAnandakalpa::
@@ -62,14 +53,12 @@ MW:parasvatvApAdAna:parasvatvApAdana::
 PWG:parAkramakeSarin:parAkramakesarin::
 MW:padmanABadvadaSI:padmanABadvAdaSI::
 SHS:nemittikakarmman:nEmittikakarmman::
-MW:mantrArTAmaYjarI:mantrArTamaYjarI::
 CCS:maNgaladeSavftta:maNgalAdeSavftta::
 MW:mADuryakadambinI:mADuryakAdambinI::
 VCP:karuRavipralamBa:karuRAvipralamBa::
 ACC:jAtisaMkaryavAda:jAtisAMkaryavAda::
 ACC:haMsapArameSvara:haMsaparameSvara::
 MW:dviraByAsAkUpara:dviraByAsAkUpAra::
-PWG:dvadaSamahAvAkya:dvAdaSamahAvAkya::
 ACC:darSapOrRamAsika:dArSapOrRamAsika::
 SHS:aByupetyaSuSrUzA:aByupetyASuSrUzA::
 PWG:UrDvadaMzwrAkeSa:UrDvadaMzwrakeSa::
@@ -85,13 +74,11 @@ PW:mahAcitrapawala:mahAcitrapAwala::
 PW:liNgakaraRavAda:liNgakAraRavAda::
 BUR:ekaSIlasamAcara:ekaSIlasamAcAra::
 SHS:dvindriyagrAhya:dvIndriyagrAhya::
-PWG:darSanavaraRIya:darSanAvaraRIya::
 INM:balAnucaragupta:bAlAnucaragupta::
 YAT:aRqakoWarapuzpA:aRqakowarapuzpA::
 ACC:AlokamATurAnATI:AlokamaTurAnATI::
 PWG:vikramakeSarin:vikramakesarin::
 PW:vargapraSAMsin:vargapraSaMsin::
-PWG:upadeSasahasrI:upadeSasAhasrI::
 MW:tfRabinduSaras:tfRabindusaras::
 SHS:tejasAvarttinI:tEjasAvarttinI::
 PW:tAracandrodaya:tArAcandrodaya::
@@ -112,7 +99,6 @@ PW:kAzWaDatrIPala:kAzWaDAtrIPala::
 STC:jatukarRIputra:jAtUkarRIputra::
 MW:hoturantevasin:hoturantevAsin::
 MW:hanumanteSvara:hanUmanteSvara::
-PWG:ekavyavahArika:ekavyAvahArika::
 SHS:dvisamatriBujA:dvisamatriBUjA::
 PWG:dvicaturasraka:dvicaturaSraka::
 CCS:darSapUrRAmAsa:darSapUrRamAsa::
@@ -123,8 +109,6 @@ ACC:agnizwomahOtra:agnizwomahotra::
 MW:SakyapratikAra:SakyapratIkAra::
 VCP:DavalayAvAnala:DavalayAvanAla::
 PW:BaktiratnAvali:BaktiratnAvalI::
-MW:yogacintAmaRI:yogacintAmaRi::
-MW:yantraprAkASa:yantraprakASa::
 INM:vArAhaparvata:varAhaparvata::
 PE:uttarapAYcAla:uttarapaYcAla::
 CCS:tridaSasrezWa:tridaSaSrezWa::
@@ -156,7 +140,6 @@ CAE:pARigrAhaRIya:pARigrahaRIya::
 MW:nirvARapurARa:nirvARapUraRa::
 YAT:nAwyaDArmmika:nAwyaDarmmika::
 MW:nAmasArodDara:nAmasArodDAra::
-MW:mantrArTAdIpa:mantrArTadIpa::
 INM:maheSvarapura:mAheSvarapura::
 YAT:mahAsantApana:mahAsAntapana::
 IEG:mahApratihAra:mahApratIhAra::
@@ -267,7 +250,6 @@ CAE:kAraRaSarira:kAraRaSarIra::
 ACC:kAlamArtaRqa:kAlamArtARqa::
 SCH:kAdambayudDa:kadambayudDa::
 SCH:kARvopanizad:kaRvopanizad::
-PWG:jyezWasAmika:jyEzWasAmika::
 CCS:jahAllakzaRA:jahallakzaRA::
 MW:izwakApurARa:izwakApUraRa::
 PUI:hiraRyasfNga:hiraRyaSfNga::
@@ -306,7 +288,6 @@ PE:ISAnADyuzIta:ISAnADyuzita::
 MW:DAnyakozwaka:DAnyakozWaka::
 PW:Buktvasuhita:BuktvAsuhita::
 MW:BrUkuwIbanDa:BrukuwibanDa::
-MW:BrAtfSvasura:BrAtfSvaSura::
 CAE:BUrjakaRWaka:BUrjakaRwaka::
 PW:BImAmAhatmya:BImAmAhAtmya::
 SHS:ArdDadrORIka:ArdDadrORika::
@@ -420,7 +401,6 @@ SHS:kawiSfNkalA:kawiSfNKalA::
 IEG:kapilazazWI:kapilAzazWI::
 PE:kapilahrada:kapilAhrada::
 VCP:kapikacCUrA:kapikacCurA::
-PWG:kanyakumAri:kanyakumArI::
 SKD:kanyAkubjaH:kAnyakubjaH::
 VCP:kandaguqucI:kandaguqUcI::
 PUI:kanakAHvaya:kanakAhvaya::
@@ -465,7 +445,6 @@ PGN:bawwasvAmin:BawwasvAmin::
 MW:bahvajavika:bahvajAvika::
 PE:bahudantaka:bAhudantaka::
 PW:bahramaKAna:bahrAmaKAna::
-PWG:bAvASastrin:bAvASAstrin::
 PWG:bADyogAyana:bADyOgAyana::
 PE:azwamANgala:azwamaNgala::
 YAT:ayaTApUrvva:ayAtapUrvva::
@@ -481,14 +460,11 @@ AP90:aDamArgavaH:aDAmArgavaH::
 SKD:aBinizWAnaH:aBinizwAnaH::
 SHS:UrvvazwIvat:UrvvazWIvat::
 CCS:SvaSrusnuzA:SvaSrUsnuzA::
-PWG:Slizwakzepa:SlizwAkzepa::
 PE:Satrutapana:SatrutApana::
 MW:SamanaSvasf:Samanasvasf::
 YAT:KarapadAdya:KarapAdAdya::
-PWG:EndravaruRa:EndrAvAruRa::
 SHS:DarmaBAginI:DarmaBaginI::
 CCS:Darayatkavi:DArayatkavi::
-PWG:DUlikadamba:DUlIkadamba::
 MW:DAtakiKaRqa:DAtakIKaRqa::
 MW:CardApanIkA:CardApanikA::
 IEG:Candovicita:CAndovicita::
@@ -523,7 +499,6 @@ SHS:vArttayana:vArttAyana::
 SCH:vAraRabUsA:vAraRabusA::
 MW:vAdyaBaRqa:vAdyaBARqa::
 CCS:uzasAnaktA:uzAsAnaktA::
-PWG:utpalavatI:utpalAvatI::
 CAE:utTanavIra:utTAnavIra::
 MW72:ucCilIndra:ucCilInDra::
 VCP:tumbipuzpa:tumbIpuzpa::
@@ -560,7 +535,6 @@ MCI:sahasraGnI:sahasraGni::
 STC:saMpraTita:sampratIta::
 MW:saMjYananA:saMjYAnanA::
 SCH:saMSrAvaRa:saMSravaRa::
-PWG:saMDanAjit:saMDanajit::
 VCP:sUryyamaRI:sUryyamaRi::
 CCS:sTulalakza:sTUlalakza::
 PE:sTuRAkarRa:stURAkarRa::
@@ -625,7 +599,6 @@ STC:nirAkaNkza:nirAkANkza::
 BUR:naravyAgra:naravyAGra::
 SHS:muzwimuzwi:muzwImuzwi::
 VCP:muzkaSunya:muzkaSUnya::
-MW:muktAprAsU:muktAprasU::
 CCS:mfgajivana:mfgajIvana::
 CCS:mfRalavant:mfRAlavant::
 PUI:mahavarAha:mahAvarAha::
@@ -637,14 +610,12 @@ CCS:magaDAdeSa:magaDadeSa::
 SCH:madanAvAsa:madanavaSa::
 CCS:maYjuBazin:maYjuBAzin::
 PW:maTuranATa:maTurAnATa::
-PWG:mUKadUzaRa:muKadUzaRa::
 GRA:mAtarApitf:mAtarapitf::
 PUI:mArgaSIrzi:mArgaSIrzI::
 CCS:mAnApamana:mAnApamAna::
 BEN:mAYjizwika:mAYjizWika::
 PE:lohitAyanI:lohitAyani::
 CCS:lilAkamala:lIlAkamala::
-PWG:lavaRakara:lavaRAkara::
 VCP:lavaRaKani:lavaRaKAni::
 CCS:labDAnAman:labDanAman::
 ACC:laGukaraRa:laGUkaraRa::
@@ -716,7 +687,7 @@ VCP:dfQakzAtra:dfQakzatra::
 CAE:dfQaDAnvin:dfQaDanvin::
 PE:dattamitra:dattAmitra::
 IEG:daSamUlika:dASamUlika::
-MW:dAvikAkUla:dAvikakUla::
+MW72:dAvikakUla:dAvikAkUla::
 VCP:cicCiwiNga:cicciwiNga::
 PWG:caturuzaRa:caturUzaRa::
 PWG:catuHstana:catuHsTAna::
@@ -748,7 +719,6 @@ PW:bAqaBIkAra:bAqaBIkara::
 CCS:bAhUbAhAvi:bAhUbAhavi::
 SCH:azwAniDana:azwaniDana::
 MW72:ayAtapUrva:ayaTApUrva::
-PWG:ayATataTya:ayaTAtaTya::
 MW:avipraRaSa:avipraRASa::
 MW72:avikzobita:avikzoBita::
 VCP:avantIsoma:avantisoma::
@@ -758,7 +728,6 @@ PW:avaKARqana:avaKaRqana::
 MW:asfksrAvin:asfkSrAvin::
 BUR:aparaNmuKa:aparANmuKa::
 CAE:aparANmUKa:aparANmuKa::
-PWG:aparAHRaka:aparAhRaka::
 PW:anAlambuka:anAlamBuka::
 PW:amlakesara:amlakeSara::
 PW:ambukesara:ambukeSara::
@@ -815,7 +784,6 @@ MW:yaTAKyata:yaTAKyAta::
 SKD:yAyAvaraH:yayAvaraH::
 GRA:yAcCrezwa:yAcCrezWa::
 SCH:vyomapada:vyomapAda::
-MW:vyAparita:vyApArita::
 PUI:vrajapati:vrAjapati::
 VEI:vrAtapatI:vratapati::
 VEI:vrAtapatI:vrAtapati::
@@ -825,8 +793,6 @@ PUI:vizRupAda:vizRupada::
 AP90:vivADikaH:vivaDikaH::
 CCS:vittAnATa:vittanATa::
 SKD:vitarddiH:vitardDiH::
-PUI:visvaDAra:viSvaDara::
-PUI:visvaDAra:viSvaDAra::
 PUI:visvaDAra:viSvADAra::
 IEG:vistaraRa:vistAraRa::
 PW:vipaYcIka:vipaYcika::
@@ -865,7 +831,6 @@ SCH:trisaraRa:triSaraRa::
 PUI:tripurArI:tripurAri::
 VCP:trilOhaka:trilohaka::
 PUI:trayodaSi:trayodaSI::
-PWG:trEyaruRa:trEyAruRa::
 CCS:tilaparRi:tilaparRI::
 CCS:tfzyavant:tfzyAvant::
 MW:tfmpaRIya:tfmPaRIya::
@@ -920,6 +885,7 @@ STC:saMprasad:samprasAD::
 STC:saMpraruD:sampraRud::
 STC:saMpradru:samprAdru::
 STC:saMpraRud:sampraruD::
+SCH:saMpAtika:sAMpAtika::
 CAE:saMmIlita:sammilita::
 SCH:saMjvarin:saMjvArin::
 CCS:saMhArzin:saMharzin::
@@ -940,12 +906,9 @@ PW:sADvAsADu:sADvasADu::
 PE:rukmAvatI:rukmavatI::
 BUR:ratodvAha:ratodvaha::
 INM:rakzovaha:rakzovAha::
-MW:rahaHsIla:rahaHSIla::
 SCH:raSitASin:rasitASin::
 PW:rAvaRaBew:rAvaRaBEw::
 VCP:rAtrimARi:rAtrimaRi::
-MW:rAjaSAyyA:rAjaSayyA::
-MW72:rATantara:raTAntara::
 PWG:puruzaGna:pUruzaGna::
 CCS:puravasin:puravAsin::
 AP:pronmaTin:pronmATin::
@@ -976,7 +939,6 @@ PUI:pradeSini:prAdeSinI::
 AP90:praSasita:praSAsita::
 CCS:praSasana:praSAsana::
 YAT:praRayAna:praRayana::
-SCH:prAtiSIna:pratiSIna::
 INM:prAtIpeya:prAtipeya::
 INM:prAtIpIya:prAtipIya::
 CCS:prARanaTa:prARanATa::
@@ -1050,7 +1012,6 @@ MW:mandIBAva:mandIBava::
 INM:mahotsaha:mahotsAha::
 PUI:mahizmati:mahizmatI::
 SKD:mahAvratI:mAhAvratI::
-PWG:mahArodra:mahArOdra::
 PE:mahAnandI:mahAnandi::
 VCP:mahASaNka:mahASaNKa::
 SCH:mahASAntI:mahASAnti::
@@ -1080,7 +1041,6 @@ INM:kundArikA:kundarikA::
 CCS:kumBinasa:kumBInasa::
 PUI:kumBakAri:kumBakArI::
 SNP:kumBAkArI:kumBakArI::
-PWG:kuSAvindu:kuSavindu::
 PWG:krolAyana:krOlAyana::
 SCH:kollApura:kollapura::
 VCP:kolaSimbi:kolaSimbI::
@@ -1294,7 +1254,6 @@ SCH:GurGUraka:GurGuraka::
 VCP:DaraRiDft:DaraRIDft::
 VCP:CagalaRqa:CagalARqa::
 VCP:CagalaRqa:CAgalARqa::
-PWG:Brazwraja:BrAzwraja::
 SCH:BramaRikA:BramarikA::
 MW:BfNgarIwa:BfNgariwa::
 PUI:Bavanandi:BavAnandI::
@@ -1308,7 +1267,6 @@ PE:BadraSAka:BadraSAKa::
 PUI:BadrAkara:BadrakAra::
 MD:BAtvakzAs:BAtvakzas::
 VCP:AzAQABava:AzAQaBava::
-PWG:AtIzadIya:AtIzAdIya::
 PW:ApAtAlikA:ApatAlikA::
 PW:ApAtAlikA:ApAtalikA::
 PUI:AnvIkziki:AnvIkzikI::
@@ -1320,7 +1278,6 @@ SKD:yaTAkAmI:yATAkAmI::
 SCH:yaSomati:yaSomatI::
 CCS:yAyavara:yayAvara::
 CCS:yAyavara:yAyAvara::
-MW:yAmAnuga:yamAnuga::
 AP:vyapaSri:vyapASri::
 VCP:vizozaDI:vizOzaDI::
 PUI:vizaDAra:vizaDara::
@@ -1437,7 +1394,6 @@ CCS:somahuti:somahUti::
 CCS:somahuti:somAhuti::
 CCS:somAvant:somavant::
 PUI:skandika:skanDika::
-SKD:seMhikaH:sEMhikaH::
 SCH:savikAsa:savikASa::
 PWG:satyavan:satyavAn::
 GRA:satyavac:satyavAc::
@@ -1456,7 +1412,6 @@ SCH:samAnIka:samanIka::
 CAE:samASita:samAsita::
 PUI:samABAga:samaBAga::
 PWG:saMvadya:saMvAdya::
-SKD:saMsfzwI:saMsfzwi::
 SKD:saMhataH:saMhAtaH::
 SCH:saBApatI:saBApati::
 INM:sUtasuta:sutasuta::
@@ -1468,7 +1423,6 @@ PUI:sOdAmani:sOdAmanI::
 PW:sODakara:sODakAra::
 SCH:sItApawa:sitapawa::
 AP:sEnAnika:sEnAnIka::
-PWG:sAramIti:sAramiti::
 VCP:sAralOha:sAraloha::
 PW:sArAvali:sArAvalI::
 SCH:romanTay:romanTAy::
@@ -1483,7 +1437,6 @@ CCS:rAjaviTI:rAjavITI::
 SCH:rAjadana:rAjaDana::
 SCH:rAjadana:rAjaDAna::
 SCH:rAjadana:rAjAdana::
-PWG:rAjaSUka:rAjaSuka::
 CCS:rAjaDIna:rAjADIna::
 MW72:rATitara:raTItara::
 MW72:rATitara:rATItara::
@@ -1633,7 +1586,6 @@ MW:lavAnaka:lAvAnaka::
 VCP:lambozwa:lambozWa::
 VCP:lambozwa:lambOzWa::
 MCI:lalitikA:lalItikA::
-MW:lAveriRI:lAveriRi::
 SCH:kzoRIBuj:kzORIBuj::
 SCH:kzoRIBft:kzORIBft::
 SCH:kuwimaha:kuwImaha::
@@ -1648,9 +1600,7 @@ MCI:kuSavati:kuSavatI::
 MCI:kuSavati:kuSAvatI::
 INM:kosalaka:kOsalaka::
 SCH:koSalikA:kOSalikA::
-AP:koRAkoRI:koRAkoRi::
 MW:kiSarika:kisarika::
-PWG:kftakama:kftakAma::
 SCH:kftaDAra:kftadAra::
 SCH:kftaDAra:kftAdara::
 PUI:ketumAlI:ketumAli::
@@ -1736,7 +1686,6 @@ IEG:gocaraka:gocAraka::
 SHS:goSaSasa:gosaSaSa::
 PUI:goRIpati:gOrIpati::
 PWG:girvavAh:girvavah::
-PWG:gfhacAra:gfhAcAra::
 CCS:gfhASuka:gfhaSuka::
 SCH:gavAsana:gavASana::
 PUI:ganDarvi:ganDarvI::
@@ -1760,8 +1709,6 @@ SHS:ditisUta:ditisuta::
 PE:devayAjI:devayaji::
 PUI:devavItI:devavIti::
 PE:devanadi:devanadI::
-PWG:devAvasa:devAvAsa::
-PWG:devAvasa:dEvavaSa::
 CCS:deSikoSa:deSIkoSa::
 PUI:darimuKa:darImuKa::
 PE:darddura:dArddura::
@@ -1893,7 +1840,6 @@ SCH:Astaraka:AstAraka::
 VCP:AraWWaja:Arawwaja::
 PUI:Ajigarta:AjIgarta::
 AP:Agamizwa:AgamizWa::
-PWG:Acyadoha:AcyAdoha::
 PWG:zaqasra:zaqaSra::
 SCH:zAzwIka:zazwika::
 SCH:zAzwIka:zAzwika::
@@ -2065,8 +2011,6 @@ MW:sAmpada:saMpada::
 MW:sAmpada:saMpAda::
 CCS:sAmatya:sAmAtya::
 PWG:sAMkucI:sAMkuci::
-PW:sAMBara:sAmbara::
-PWG:rarAWya:rarAwya::
 AP:ramaRyA:rAmAryA::
 MW:rakzaRI:rakzaRi::
 PUI:rUpasas:rUpaSas::
@@ -2299,7 +2243,6 @@ VCP:ezAvIra:EzAvIra::
 MW:elAvali:elAvalI::
 VCP:ekarama:ekArAma::
 SCH:ekaSila:ekaSIla::
-PWG:ekaSIti:ekASIti::
 YAT:ekAntya:EkAntya::
 YAT:eRanABI:eRanABi::
 CCS:dviBaga:dviBAga::
@@ -2392,7 +2335,6 @@ VCP:TuTUkft:TuTukft::
 PUI:SuzmIRa:SuzmiRa::
 MW:Sunavat:SUnAvat::
 AP90:SukakaH:SUkakaH::
-PWG:SudDAyu:SudDAyU::
 PUI:Sripati:SrIpati::
 INM:SrIvAha:SrIvaha::
 MW72:Sikarin:SIkarin::
@@ -2421,7 +2363,6 @@ PUI:SAmbavI:SAmBavI::
 VCP:SAlANka:SAlaNka::
 AP90:SAbdita:Sabdita::
 PUI:SARqili:SARqilI::
-PWG:SAPakzi:SAPAkzi::
 SHS:SANkika:SaNKika::
 SHS:SANkika:SANKika::
 PUI:SANkarI:SaNkarI::
@@ -2484,7 +2425,6 @@ IEG:AqARaka:AqAraka::
 MW72:Amaritf:AmarItf::
 AP90:AlaMbin:AlamBin::
 AP90:AlaMBin:Alambin::
-PWG:AjYApti:AjYapti::
 SCH:AgUraRa:AguraRa::
 SCH:Aditala:AditAla::
 IEG:AdikAra:Adikara::
@@ -2494,6 +2434,7 @@ SKD:yaskaH:yAskaH::
 SKD:yAvAnI:yavAnI::
 YAT:yAmaya:yamAya::
 SKD:yAmAtA:yamatA::
+MW72:vyAnah:vyAnaH::
 YAT:vizuci:vizUci::
 YAT:vizuci:vizUcI::
 CAE:vizaRa:vizAra::
@@ -2581,6 +2522,7 @@ INM:tamasI:tAmasI::
 IEG:talAka:tAlaka::
 BOP:tadfSa:tAdfSa::
 SCH:tOlana:tolana::
+SHS:tEmana:temana::
 VCP:tAsuna:tAsUna::
 SCH:tApani:tapanI::
 SCH:tAnaka:tanaka::
@@ -2666,6 +2608,7 @@ SCH:prAvis:praviS::
 SCH:prAvis:prAviS::
 BUR:prAsmi:prasmi::
 SCH:prAsin:prASin::
+BOP:plavin:plAvin::
 SKD:plavaH:plAvaH::
 YAT:pitfhu:pitfhU::
 SCH:pewika:pEWika::
@@ -2689,7 +2632,6 @@ CCS:pAwura:pAwUra::
 SCH:pAtAka:pAtaka::
 AP:pAriyA:pariyA::
 IEG:pArasi:pArasI::
-AP:pAraSa:parAsa::
 PWG:pAraQI:pAraqI::
 SNP:pArISa:pAriSa::
 VCP:pAhata:pAhAta::
@@ -2707,7 +2649,6 @@ IEG:niSadi:niSAdi::
 IEG:niSaDi:niSAdi::
 CCS:niBiqa:nibiqa::
 SCH:nfpatI:nfpati::
-PWG:neSika:nESika::
 SKD:navatI:navati::
 IEG:nakara:nakAra::
 PE:nacIna:nAcIna::
@@ -2833,6 +2774,7 @@ VCP:kAbara:kabara::
 IEG:kARika:kaRika::
 IEG:kARika:kaRIka::
 SKD:jurvva:jUrvva::
+CCS:jivasU:jIvasU::
 MCI:jivanI:jIvani::
 MCI:jivanI:jIvanI::
 MW:jihIti:jihiti::
@@ -3037,6 +2979,7 @@ SKD:yayIH:yayiH::
 CCS:yakzi:yakzI::
 SHS:yAjYA:yAjyA::
 VEI:vyaCa:vyaca::
+SCH:vyApa:vyapa::
 BUR:vreha:vrEha::
 SKD:vrIhI:vrIhi::
 CCS:voqar:voQar::
@@ -3151,7 +3094,6 @@ PW:pUrRI:pUrRi::
 PE:pOzwi:pOzwI::
 PUI:pOtri:potrI::
 PUI:pOtri:pOtrI::
-PUI:pAras:parAs::
 MCI:ozwra:Ozwra::
 WIL:noDAs:noDas::
 AP:nizWI:nizwi::
@@ -3346,7 +3288,6 @@ CCS:Braji:BrAji::
 SKD:BavaH:bavaH::
 PWG:BUvAh:BuvaH::
 PWG:BUvAh:BUvah::
-PWG:AzAqI:AzAQI::
 PUI:Aveda:AveDa::
 AP:Avari:AvAri::
 SKD:AtApI:AtApi::
@@ -3402,7 +3343,6 @@ PUI:vERi:veRi::
 PUI:vERi:vEri::
 PUI:vERi:vErI::
 IEG:vAqi:vaqi::
-PWG:vANG:vaNG::
 AP:vADu:vaDu::
 KRM:vACi:vaci::
 KRM:vACi:vAcI::

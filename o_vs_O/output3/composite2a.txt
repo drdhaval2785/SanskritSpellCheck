@@ -88,7 +88,6 @@ vAnavAsimAhAtmya:vAnavAsImAhAtmya-ACC;21844:MW;190871
 sAhityavidyADara:sAhityaviDyADara-ACC;27983:MW;243691
 plakzapraSravaRa:plakzaprAsravaRa-PUI;8821:VEI;2104
 nirRayaratnakara:nirRayaratnAkara-ACC;11913:MW;109600.25
-mantrArTapadDati:mantrArTApadDati-ACC;16915:MW;157434.2
 laGucitrAlaMkara:laGucitrAlaMkAra-MW;180835:ACC;20943
 dvitricaturaBaga:dvitricaturaBAga-CCS;10733:CAE;14954
 devaBAgaSrOtarza:devaBAgaSrOtArza-VEI;1364:PE;1798
@@ -110,7 +109,6 @@ rAmAryavijYapti:rAmAryAvijYapti-MW;177597:ACC;20372
 prAsaNgavAhIvah:prAsaNgavAhIvAh-PW;74651:MW;138976
 pOravyavahArika:pOravyAvahArika-IEG;4320:SCH;18982
 nirvadanavikAra:nirvadanAvikAra-STC;12120:SCH;16985
-mantrArTadIpikA:mantrArTAdIpikA-ACC;16914:MW;157434.1
 ekAnnaviMSatiDA:ekAnnaviMsatiDA-PW;22107:MW;39846
 azwASItisahasra:azwAsItisahasra-SCH;6018:MD;3103
 asADaraRagranTa:asADAraRagranTa-ACC;1481:SCH;6225
@@ -126,7 +124,6 @@ sadAnvakzayaRa:sadAnvAkzayaRa-MW;230771:PW;118522
 pArvAyanAntiyA:pArvAyanAntIyA-AP;21232:VCP;31892
 nayamaRimAlikA:nayamARimAlikA-ACC;11055:MW;103950
 nAtiramaRiyatA:nAtiramaRIyatA-STC;11466:MW;102675.50
-mantrArTaBAzya:mantrArTABAzya-ACC;16916:MW;157434.3
 maRqukAnuvftti:maRqUkAnuvftti-SHS;30148:MW;155039
 mAtfkAbijakoSa:mAtfkAbIjakoSa-MW;162431:ACC;17514
 lalitapaYcANga:lalitApaYcANga-ACC;21043:MW;181684
@@ -391,10 +388,12 @@ sambaDanA:sambADanA-IEG;5116:MW;236804
 samagraya:samAGrAya-MW;233352:MW72;49911
 saYjIvini:saYjIvinI-PUI;15138:INM;9468
 saMvadita:saMvAdita-MW;226060:MW72;47879
+saMpAtika:sAmpAtika-SCH;26091:MW;242590
 saMSranta:saMSrAnta-MW;226671:STC;20852
 sTalapati:sTalapaTI-SCH;27109:PW;130837
 sOraBeyaH:sOraBeyAH-SKD;40337:MCI;416
 rarakzARa:rArakzARa-MW72;38975:MW;173178
+raTaDvAna:raTADvana-PE;5683:INM;9003
 puRyakuwa:puRyakUwa-MW;125360:PW;67614
 priyajAni:priyajAnI-MW;140499:PW;74726
 prayojyaM:prAyojyaM-SHS;27288:SKD;23466
@@ -690,7 +689,6 @@ tantriH:tantrIH-AP;16135:SKD;14358
 svurcCa:svUrcCa-VCP;47702:SKD;41282
 sujaNga:sujaNGa-PW;126118:MW;246288
 smftika:smftIka-MW;257387:MW72;53517
-sekataM:sEkataM-SKD;40174:CCS;28366
 samvaha:samvAha-PUI;15497:BUR;18115
 samutpf:samutpF-MW;235190:MW72;50350
 samuddf:samuddF-MW72;50417:MW;235462
@@ -802,6 +800,7 @@ OdAsyaM:ODasyaM-SKD;5697:AP90;9809
 KaNgika:KANgika-SHS;12641:YAT;12275
 Jumbari:JumbarI-MW;81142:PW;43781
 Dftiman:DftimAn-PUI;6735:PE;2011
+Denukam:DEnukam-PE;1979:AP;18127
 Daviyas:DavIyas-CCS;11015:GRA;4645
 Daviyas:DAvIyas-CCS;11015:MW;100555
 DavIyas:DAvIyas-GRA;4645:MW;100555
@@ -839,6 +838,7 @@ sandih:sanDiH-MW72;49169:SKD;37719
 sabara:saBAra-VEI;3167:SCH;25886
 saNgaH:saNgAh-SKD;37399:MW72;48535
 saNgAh:saNGaH-MW72;48535:SKD;37421
+saMbam:sAmbam-AP;34234:PUI;15794
 saMSat:saMsat-STC;20827:SKD;37234
 sParaH:sPAraH-AP;35895:SKD;40844
 sOraTi:sOraTI-PWG;122669:MW;253854

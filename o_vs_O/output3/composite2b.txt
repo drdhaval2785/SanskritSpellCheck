@@ -88,7 +88,6 @@ ACC:vAnavAsimAhAtmya:vAnavAsImAhAtmya::
 ACC:sAhityavidyADara:sAhityaviDyADara::
 PUI:plakzapraSravaRa:plakzaprAsravaRa::
 ACC:nirRayaratnakara:nirRayaratnAkara::
-ACC:mantrArTapadDati:mantrArTApadDati::
 MW:laGucitrAlaMkara:laGucitrAlaMkAra::
 CCS:dvitricaturaBaga:dvitricaturaBAga::
 VEI:devaBAgaSrOtarza:devaBAgaSrOtArza::
@@ -110,7 +109,6 @@ MW:rAmAryavijYapti:rAmAryAvijYapti::
 PW:prAsaNgavAhIvah:prAsaNgavAhIvAh::
 IEG:pOravyavahArika:pOravyAvahArika::
 STC:nirvadanavikAra:nirvadanAvikAra::
-ACC:mantrArTadIpikA:mantrArTAdIpikA::
 PW:ekAnnaviMSatiDA:ekAnnaviMsatiDA::
 SCH:azwASItisahasra:azwAsItisahasra::
 ACC:asADaraRagranTa:asADAraRagranTa::
@@ -126,7 +124,6 @@ MW:sadAnvakzayaRa:sadAnvAkzayaRa::
 AP:pArvAyanAntiyA:pArvAyanAntIyA::
 ACC:nayamaRimAlikA:nayamARimAlikA::
 STC:nAtiramaRiyatA:nAtiramaRIyatA::
-ACC:mantrArTaBAzya:mantrArTABAzya::
 SHS:maRqukAnuvftti:maRqUkAnuvftti::
 MW:mAtfkAbijakoSa:mAtfkAbIjakoSa::
 ACC:lalitapaYcANga:lalitApaYcANga::
@@ -391,10 +388,12 @@ IEG:sambaDanA:sambADanA::
 MW:samagraya:samAGrAya::
 PUI:saYjIvini:saYjIvinI::
 MW:saMvadita:saMvAdita::
+SCH:saMpAtika:sAmpAtika::
 MW:saMSranta:saMSrAnta::
 SCH:sTalapati:sTalapaTI::
 SKD:sOraBeyaH:sOraBeyAH::
 MW72:rarakzARa:rArakzARa::
+PE:raTaDvAna:raTADvana::
 MW:puRyakuwa:puRyakUwa::
 MW:priyajAni:priyajAnI::
 SHS:prayojyaM:prAyojyaM::
@@ -690,7 +689,6 @@ AP:tantriH:tantrIH::
 VCP:svurcCa:svUrcCa::
 PW:sujaNga:sujaNGa::
 MW:smftika:smftIka::
-SKD:sekataM:sEkataM::
 PUI:samvaha:samvAha::
 MW:samutpf:samutpF::
 MW72:samuddf:samuddF::
@@ -802,6 +800,7 @@ SKD:OdAsyaM:ODasyaM::
 SHS:KaNgika:KANgika::
 MW:Jumbari:JumbarI::
 PUI:Dftiman:DftimAn::
+PE:Denukam:DEnukam::
 CCS:Daviyas:DavIyas::
 CCS:Daviyas:DAvIyas::
 GRA:DavIyas:DAvIyas::
@@ -839,6 +838,7 @@ MW72:sandih:sanDiH::
 VEI:sabara:saBAra::
 SKD:saNgaH:saNgAh::
 MW72:saNgAh:saNGaH::
+AP:saMbam:sAmbam::
 STC:saMSat:saMsat::
 AP:sParaH:sPAraH::
 PWG:sOraTi:sOraTI::

@@ -58,6 +58,7 @@ ACC:jvAlAmuKistotra:jvAlAmuKIstotra::
 PW:haridragaRapati:haridrAgaRapati::
 MW:dvicatvAriMSika:dvicAtvAriMSika::
 ACC:dolayAtrAviveka:dolAyAtrAviveka::
+PWG:darSanavaraRIya:darSanAvaraRIya::
 MW:boDAyanaprayoga:bODAyanaprayoga::
 MW:azwacatvAriMSat:azwAcatvAriMSat::
 ACC:SravaRamAhAtmya:SrAvaRamAhAtmya::
@@ -99,6 +100,7 @@ MW72:kEvartimustaka:kEvartImustaka::
 PW:jambUnadapraBa:jAmbUnadapraBa::
 ACC:jYAnaratnAvali:jYAnaratnAvalI::
 PW:hastamuktAvali:hastamuktAvalI::
+PWG:ekavyavahArika:ekavyAvahArika::
 MW:ekAvaliprakASa:ekAvalIprakASa::
 MW:dvyazwasahasra:dvyazwasAhasra::
 CCS:dvAdaSavarzika:dvAdaSavArzika::
@@ -563,7 +565,6 @@ MW:maRqalavawa:maRqalavAwa::
 CAE:mOktikAvali:mOktikAvalI::
 MW72:mARqUkAyani:mARqUkAyanI::
 CAE:mADavAcarya:mADavAcArya::
-SKD:lokAyatikaH:lOkAyatikaH::
 MW:lohitaDvaja:lOhitaDvaja::
 MW:lakzaRavAda:lakzaRAvAda::
 AP:kuzmARqakaH:kUzmARqakaH::
@@ -584,7 +585,6 @@ MW:karRAwaBAzA:kArRAwaBAzA::
 MW:karIzaganDi:kArIzaganDi::
 MW:kapotAYjana:kApotAYjana::
 MW:kapiYjalAda:kApiYjalAda::
-PWG:kanyakumAri:kanyAkumArI::
 MW:kanyakumArI:kanyAkumArI::
 PW:kanizWineya:kAnizWineya::
 MW:kalyARakara:kalyARakAra::
@@ -692,7 +692,6 @@ MW:PalakANkzin:PalAkANkzin::
 BEN:OrDvadehika:OrDvadEhika::
 MW:KaramaYjari:KaramaYjarI::
 MW:GaRwApAwali:GaRwApAwalI::
-PWG:EndravaruRa:EndrAvaruRa::
 MW:EndramAruta:EndrAmAruta::
 MW72:EndrAvaruRa:EndrAvAruRa::
 BHS:DarmadeSaka:DarmAdeSaka::
@@ -739,7 +738,6 @@ MW:viSvaSamBu:viSvaSamBU::
 MW:viSvaSamBu:viSvaSaMBU::
 PW:viSvaSaMBu:viSvaSamBU::
 PW:viSvaSaMBu:viSvaSaMBU::
-CAE:viSvaDAyas:viSvADAyas::
 AP90:viSraRanaM:viSrARanaM::
 AP90:vfzakapAyI:vfzAkapAyI::
 WIL:vfhatipati:vfhatIpati::
@@ -981,7 +979,6 @@ CAE:prAtaHsava:prAtaHsAva::
 MW:prAkSrotas:prAksrotas::
 MW72:prASravaRa:prAsravaRa::
 CAE:prARapriya:prARApriya::
-MW:plIhaSatru:plIhASatru::
 CAE:pitfdevata:pitfdEvata::
 CAE:pipAsavant:pipAsAvant::
 CAE:piSitASana:piSitAsana::
@@ -1097,7 +1094,6 @@ MW:maDupAlikA:maDuPalikA::
 PWG:mUlakeSara:mUlakesara::
 MW:mADyaMdini:mADyaMdinI::
 MW:lomaSAtana:lomasAtana::
-BEN:lokAyatika:lOkAyatika::
 CAE:lohacAraka:lOhacAraka::
 ACC:lohaSAstra:lOhaSAstra::
 CAE:locanapaTa:locanapAta::
@@ -1275,8 +1271,7 @@ MW:azwapadikA:azwapAdikA::
 MW:azwanavati:azwAnavati::
 MW:azwakapAla:azwAkapAla::
 MW:azwagfhIta:azwAgfhIta::
-SHS:ayaTAtaTya:ayATAtaTya::
-PWG:ayATataTya:ayATAtaTya::
+PWG:ayaTAtaTya:ayATAtaTya::
 CAE:avyaBicAra:avyaBIcAra::
 AP90:avataraRaM:avatAraRaM::
 SHS:avasaktikA:avasakTikA::
@@ -1409,6 +1404,7 @@ BUR:vyatipAta:vyatIpAta::
 AP90:vyatikara:vyatIkAra::
 BEN:vyatihAra:vyatIhAra::
 PW:vyapayana:vyapayAna::
+MW72:vyapanIya:vyApanIya::
 BEN:vyagratva:vyAGratva::
 AP:vyaMSakaH:vyaMsakaH::
 MW:vyaBimAna:vyaBImAna::
@@ -1448,10 +1444,8 @@ MW:viSvavAsa:viSvAvAsa::
 AP:viSvasita:viSvAsita::
 BEN:viSvasana:viSvAsana::
 INM:viSvaruci:viSvarucI::
-INM:viSvanara:viSvAnara::
 ACC:viSvadeva:viSvadEva::
 ACC:viSvaDara:viSvaDAra::
-ACC:viSvaDara:viSvADAra::
 MW:viSvaBava:viSvaBAva::
 BHS:viSravaRa:viSrAvaRa::
 MW72:viSramaRa:viSrAmaRa::
@@ -1561,6 +1555,7 @@ MW:tripadikA:tripAdikA::
 MW:tridalikA:tridAlikA::
 BEN:trayodaSa:trAyodaSa::
 PW:trayivida:trayIvida::
+PWG:trEyaruRa:trEyAruRa::
 MW:toyaqimba:toyaqimBa::
 BEN:tittirika:tittirIka::
 AP90:tiraskara:tiraskAra::
@@ -1668,6 +1663,8 @@ MW:samudDuta:samudDUta::
 MW72:samuccara:samuccAra::
 BUR:samparAya:sAmparAya::
 BUR:samparAya:sAMparAya::
+MW72:sampAtika:sAmpAtika::
+MW72:sampAtika:sAMpAtika::
 MW72:sammilita:sammIlita::
 BEN:saminDana:saminDAna::
 MW72:samazWilA:samazWIlA::
@@ -1771,6 +1768,7 @@ ACC:ramAkAnta:rAmakAnta::
 MW:raktarAji:raktarAjI::
 MW:raktapadI:raktapAdI::
 MW:raktaBava:raktaBAva::
+INM:raTantara:raTAntara::
 CAE:raSmivant:raSmIvant::
 MW:raRakzoRi:raRakzORi::
 SCH:raNgavali:raNgAvali::
@@ -2386,7 +2384,6 @@ MW:hastavApa:hastAvApa::
 MW:hastatala:hastatAla::
 AP90:haritakaM:hAritakaM::
 MW72:harimanta:harimanTa::
-ACC:harikaRWa:hArikaRWa::
 MW:haridrava:hAridrava::
 INM:haridraka:hAridraka::
 MW:hariSravA:hariSrAvA::
@@ -2670,6 +2667,7 @@ MW:SizwacAra:SizwAcAra::
 ACC:Sivastuti:SivAstuti::
 MW:Sivapriya:SivApriya::
 CAE:SivapriyA:SivApriyA::
+PW:Sitapuzpa:SItapuzpa::
 CAE:SirodAman:SiroDAman::
 MW:Silpakara:SilpakAra::
 MW:SilpakarI:SilpakArI::
@@ -3098,7 +3096,6 @@ BUR:upaliNga:upAliNga::
 BEN:upalamBa:upAlamBa::
 AP90:upalabDa:upAlabDa::
 AP90:upalaBya:upAlaBya::
-BUR:upakvaRa:upakvARa::
 AP90:upahAraH:upAhAraH::
 BOP:upagraha:upagrAha::
 SKD:upagataH:upaGAtaH::
@@ -3457,7 +3454,6 @@ IEG:rAjanaka:rAjAnaka::
 CAE:rAjadAra:rAjADara::
 MW:rAjaSuka:rAjasuKa::
 WIL:rAjaSana:rAjAsana::
-PWG:rAjaSUka:rAjasuKa::
 SHS:rAjaDana:rAjaDAna::
 SHS:rAjaDana:rAjAdana::
 MW:rAjaDAna:rAjAdana::
@@ -3676,6 +3672,7 @@ BEN:paravant:parAvant::
 PWG:parajita:parAjita::
 MW:paragata:parAgata::
 MW:paraSvat:parasvat::
+CAE:paraSvas:parASvas::
 CAE:paraDana:parAdana::
 CAE:paraDana:parAdAna::
 BEN:paraBfta:parABfta::
@@ -3819,7 +3816,6 @@ PWG:masijala:masIjala::
 SKD:masiDAnI:masIDAnI::
 BHS:marudeva:mArudeva::
 BEN:marmavid:marmAviD::
-BEN:marakata:mArakata::
 BHS:marIcika:mAricika::
 PWG:manorata:manoraTa::
 MW:manoharI:manohArI::
@@ -4168,6 +4164,7 @@ PUI:haridASa:haridAsa::
 BEN:hariRaka:hAriRaka::
 BEN:hariRAya:harirAya::
 ACC:haranATa:harAnata::
+MW:harahAra:harAhara::
 BEN:harItaka:hAritaka::
 BEN:harItaka:hArItaka::
 BEN:hanumant:hanUmant::
@@ -4619,7 +4616,6 @@ MD:SaNkavya:SANkavya::
 SKD:SaNkaraH:SANkaraH::
 MW72:SUyamana:SUyamAna::
 MD:SItalaya:SItalAya::
-MW:SItabalA:SItAbalA::
 MW:SAtapata:SAtapaTa::
 BUR:SApawika:SApaWika::
 MW:SAmbavya:SAmBavya::
@@ -4742,7 +4738,6 @@ AP90:zazwika:zAzwika::
 AP90:zazwika:zAzWika::
 SKD:zazwikA:zazWikA::
 BEN:zawpada:zawpAda::
-CAE:zaqaMSa:zaqaMsa::
 BEN:zaRqaka:zaRQaka::
 MW:zAzwika:zAzWika::
 AP:yoDeyaH:yODeyaH::
@@ -4788,7 +4783,6 @@ MW72:vyaDita:vyADita::
 CAE:vyaDana:vyAdAna::
 CAE:vyApita:vyApIta::
 AP90:vyApfta:vyApfTa::
-SHS:vyApada:vyApAda::
 BEN:vyAdita:vyADita::
 MW72:vyAdAya:vyADAya::
 MW72:vyADuta:vyADUta::
@@ -4860,7 +4854,6 @@ MW:vidAyin:viDAyin::
 CAE:vidArin:viDArin::
 MW72:viSvayu:viSvAyu::
 MW72:viSvahA:viSvAhA::
-CAE:viSvaDa:visvAda::
 BHS:viSvaBU:viSvABU::
 BEN:viSrama:viSrAma::
 BEN:viSayin:viSAyin::
@@ -4903,6 +4896,7 @@ MW72:vatsAra:vaTsara::
 BUR:vataRqa:vAtaRqa::
 BUR:vataRqa:vAtARqa::
 PW:vastray:vastrAy::
+AP90:vasanaM:vASanaM::
 AP90:varzuka:vArzuka::
 AP90:varzika:vArzika::
 AP90:varzaka:vArzaka::
@@ -5034,7 +5028,6 @@ BHS:vASizWa:vAsizwa::
 BHS:vASizWa:vAsizWa::
 BUR:vASizWI:vAsizWI::
 AP90:vASitaM:vAsitaM::
-AP90:vASanaM:vAsanaM::
 MW:vARavat:vAravat::
 BHS:uttarya:uttArya::
 AP90:uttarin:uttArin::
@@ -5349,6 +5342,7 @@ BEN:sambara:samBara::
 BEN:sambara:samBAra::
 BEN:sambara:saMBara::
 BEN:sambara:saMBAra::
+BEN:sambara:sAmbara::
 BEN:sambala:samBala::
 BEN:sambala:saMBala::
 PUI:sambUta:samBUta::
@@ -5368,6 +5362,8 @@ MW72:samPala:saMPAla::
 BOP:samBava:saMBAva::
 CCS:samBara:samBAra::
 CCS:samBara:saMBAra::
+CCS:samBara:sAmbara::
+BOP:samBAra:sAmbara::
 BEN:samAMSa:samAMsa::
 AP90:sakzaRa:sakzAra::
 SCH:sakARqa:saKaRqa::
@@ -5433,6 +5429,8 @@ MD:saMDaya:saMDAya::
 BEN:saMBava:saMBAva::
 CAE:saMBara:samBAra::
 CAE:saMBara:saMBAra::
+CAE:saMBara:sAmbara::
+BEN:saMBAra:sAmbara::
 CAE:saDamad:saDamAd::
 AP90:saBikaH:saBIkaH::
 CAE:saBakza:saBAkza::
@@ -5462,7 +5460,6 @@ MW:sAvitri:sAvitrI::
 AP:sArizwa:sArizWa::
 AP90:sArgala:sArgAla::
 MW72:sAmudri:sAmudrI::
-MW72:sAmbara:sAmBara::
 BUR:sAmanya:sAmAnya::
 ACC:sAmanta:sAmAnta::
 BEN:sAkzika:sAkzIka::
@@ -5775,6 +5772,7 @@ MW72:palAyat:pAlayat::
 BEN:pakzati:pakzatI::
 MW:paRatva:paratva::
 AP90:paRasaH:paraSaH::
+AP90:paRasaH:parAsaH::
 MW:paRArDa:parArDa::
 MW:pUrviRa:pUrvIRa::
 MW:pUrvatA:pUrvaTA::
@@ -5936,8 +5934,6 @@ AP90:marmika:mArmika::
 BEN:markawa:mArkawa::
 MW:markawI:mArkawi::
 MW72:markara:mArkara::
-AP90:marakaH:mArakaH::
-AP90:marakaH:mARakaH::
 BEN:mandira:mandIra::
 MD:mandaya:mandAya::
 AP:mandara:mandAra::
@@ -6075,7 +6071,6 @@ AP90:kowiSaH:kowISaH::
 AP90:korakaH:KorakaH::
 MW72:kontala:kOntala::
 SKD:kolakaH:KolakaH::
-AP90:koRapaH:kORapaH::
 BEN:koNkaRa:koNkAra::
 BEN:koNkaRa:koNkARa::
 AP:koNkARa:koNkAra::
@@ -7364,7 +7359,9 @@ BEN:vasati:vasAti::
 MW:vasatI:vasAti::
 BUR:vasara:vasAra::
 BEN:vasana:vasAna::
+BEN:vasana:vASana::
 MW:vasAvi:vasAvI::
+AP:vasAna:vASana::
 BUR:varzma:vArzma::
 SHS:varyya:vAryya::
 BHS:varuwa:vAruWa::
@@ -7466,6 +7463,7 @@ BEN:vaSira:vaSIra::
 AP90:vaSika:vasika::
 MW72:vaSana:vasana::
 MW72:vaSana:vasAna::
+MW72:vaSana:vASana::
 INM:vaSAti:vasati::
 INM:vaSAti:vasatI::
 INM:vaSAti:vasAti::
@@ -7524,8 +7522,6 @@ BUR:vASita:vAsita::
 AP90:vASitA:vAsitA::
 MW72:vASikA:vAsikA::
 MW:vASava:vAsava::
-CAE:vASana:vAsana::
-AP90:vASaka:vAsaka::
 BEN:vARija:vArija::
 SHS:vARAri:vAraRI::
 BOP:uzmapa:Uzmapa::
@@ -7913,9 +7909,7 @@ CAE:sanatA:sanATA::
 BUR:sanaka:sanaKa::
 MW72:sammil:saMmIl::
 AP90:samita:samiTa::
-BEN:samira:samIra::
-MW72:samiDa:samIda::
-BHS:samiDA:samIdA::
+BUR:samika:samIka::
 MD:samfta:sAmfta::
 BEN:samaya:samAya::
 AP90:samayA:samAyA::
@@ -7928,7 +7922,6 @@ MW72:samaDI:samADi::
 CAE:samaDA:samAdA::
 CAE:samaDA:samADA::
 BEN:samUra:sAmUra::
-BEN:samIka:sAmika::
 AP90:samIcI:sAmIcI::
 MW72:samAkf:samAkF::
 AP90:samAdA:samADA::
@@ -7969,6 +7962,8 @@ AP90:saMsad:saMsAD::
 AP90:saMmil:sammIl::
 MW:saMkft:saMkFt::
 AP90:saMdih:saMDiH::
+MW:saMSuc:saMsUc::
+AP90:saMSuD:saMsud::
 AP90:saMSri:saMSrI::
 MW72:saMSad:saMsad::
 MW72:saMSad:saMsAD::
@@ -8237,16 +8232,14 @@ BEN:pariDi:pariDI::
 AP90:pariDA:parIdA::
 MW72:pararu:parAru::
 MW72:paraka:parAka::
+MW72:paraSa:parAsa::
 GRA:paraRa:parARa::
 MW:paraBU:parABU::
 BUR:parIra:pAriRa::
 BUR:parIra:pArIRa::
 AP90:parAsu:parAsU::
 AP90:parAsu:pArAsu::
-MW72:parAsa:pArasa::
-MW72:parAsa:pArAsa::
 AP90:parAkf:parAkF::
-MW72:parASF:parAsf::
 MW72:parARI:parAri::
 BEN:panTan:panTAn::
 AP90:palita:pAlita::
@@ -8273,6 +8266,7 @@ MW:paSuka:pASuka::
 AP90:paSukA:paSUKA::
 AP90:paRatA:paratA::
 AP90:paRatA:paraTA::
+MW72:paRasa:parAsa::
 BHS:paRana:parAna::
 MW:paRaDA:parAdA::
 AP90:paRAyA:parAyA::
@@ -8528,10 +8522,6 @@ AP:marjaH:mArjaH::
 BEN:marica:marIca::
 BEN:marica:mArica::
 BEN:marica:mArIca::
-BEN:maraka:mAraka::
-BEN:maraka:mARaka::
-BEN:maraRa:marAra::
-BEN:maraRa:mAraRa::
 BEN:marUka:mAruka::
 PUI:marIzA:mArizA::
 ACC:marIci:marIcI::
@@ -8772,7 +8762,6 @@ BEN:koSala:kOsala::
 BEN:koSala:kOSala::
 MCI:koSalA:kosalA::
 MW:koReya:kOReya::
-MCI:koRapa:kORapa::
 PW:klIbay:klIbAy::
 IEG:kiwikA:kIwikA::
 MW:kiwaka:kIwaka::
@@ -9108,7 +9097,6 @@ ACC:harita:hArita::
 ACC:harita:hArIta::
 PW:haritI:hArIti::
 AP90:haritA:hAritA::
-BEN:harika:hArika::
 MW:hariSa:harISa::
 MW:hariSa:hArisa::
 AP90:hariRa:hAriRa::
@@ -9615,6 +9603,7 @@ AP90:Socaka:SOcaka::
 MW72:SoRaka:SoRAka::
 MW:SoDikA:SODikA::
 CAE:SoBaka:SoBAka::
+BEN:SitatA:SItatA::
 MW:Silaja:SilAja::
 BEN:SiSuka:Sisuka::
 MW:SiKari:SiKarI::
@@ -9807,6 +9796,8 @@ BUR:DoraRi:DoraRI::
 BUR:Dizwya:DizWya::
 ACC:DikowI:DIkowI::
 BEN:Denuka:DenUka::
+BEN:Denuka:DEnuka::
+MW72:DenUka:DEnuka::
 VCP:Davani:DAvani::
 SCH:Davana:DAvana::
 MW72:DavanI:DAvani::
@@ -10159,6 +10150,7 @@ AP90:vaSya:vasya::
 AP90:vaSin:vasin::
 AP90:vaSiH:vasiH::
 SHS:vaSAt:vasat::
+SHS:vaSAt:vASat::
 AP:vaRwa:vaRWa::
 MW:vaRiN:varin::
 MW:vaRiN:vArin::
@@ -10386,9 +10378,9 @@ CAE:sanni:sannI::
 BUR:sandI:sanDi::
 MW72:sandA:sanDA::
 AP90:sanat:sanAt::
-CAE:samiz:samIz::
-MW:samin:sAmin::
+MW:samid:samiD::
 MW72:samfc:samfC::
+BUR:samba:sAmba::
 AP90:samas:samAs::
 AP90:samaS:samas::
 AP90:samaS:samAs::
@@ -10409,6 +10401,7 @@ CAE:saMga:saMGa::
 AP90:saMdI:saMDi::
 MW:saMdA:saMDA::
 MW72:saMSi:saMSI::
+MW:saMSF:saMsf::
 BEN:saMDi:saMDI::
 PW:saMBu:samBU::
 PW:saMBu:saMBU::
@@ -10555,7 +10548,6 @@ BEN:potra:pOtra::
 MW:potrI:pOtrI::
 AP90:potaH:poTaH::
 KRM:pliha:plIha::
-SHS:plihA:plIhA::
 AP90:plava:plAva::
 CAE:pizwi:pizwI::
 SKD:piwaM:pIWaM::
@@ -10589,7 +10581,9 @@ AP90:patat:paTat::
 AP:parza:pArza::
 BEN:parva:pArva::
 BUR:parda:pArda::
+AP90:paras:parAs::
 MW:paraS:paras::
+MW:paraS:parAs::
 BEN:parRa:pArRa::
 AP90:papiH:papIH::
 CAE:palya:pAlya::
@@ -10723,7 +10717,6 @@ BEN:marta:mArta::
 AP90:marka:mArka::
 PWG:marin:mArin::
 MW:marga:mArga::
-AP90:maraH:mAraH::
 BEN:mantu:manTu::
 MW72:manti:manTi::
 SKD:mantA:manTA::
@@ -11001,7 +10994,6 @@ BEN:hasta:hAsta::
 AP90:hasaH:hAsAH::
 KRM:harya:hArya::
 MW:harin:hArin::
-AP90:hariH:hAriH::
 AP:hambA:hamBA::
 AP:halaH:hAlaH::
 AP90:hAsaH:hAsAH::
@@ -11594,6 +11586,7 @@ MW:BUyaS:BUyas::
 MW72:BArgi:BArgI::
 MW:BARqi:BARqI::
 PWG:AzAqI:AzAQi::
+PWG:AzAqI:AzAQI::
 MW:AzAQi:AzAQI::
 CAE:Ayoda:AyoDa::
 BEN:Ayati:AyatI::
@@ -11755,6 +11748,7 @@ SHS:waka:Waka::
 BUR:wAra:WAra::
 MW:wAka:Waka::
 MW72:vyat:vyaT::
+AP90:vyap:vyAp::
 MW72:vyad:vyaD::
 AP90:vyaS:vyas::
 AP90:vyaH:vyah::
@@ -11829,6 +11823,7 @@ IEG:vati:vAti::
 IEG:vati:vAtI::
 AP90:vata:vAta::
 BEN:vasi:vasI::
+BHS:vasa:vASa::
 BEN:varz:vArz::
 AP:varu:vAru::
 AP90:vara:vAra::
@@ -11875,6 +11870,7 @@ BEN:vaSi:vasi::
 BEN:vaSi:vasI::
 BEN:vaSi:vaSI::
 AP90:vaSa:vasa::
+AP90:vaSa:vASa::
 CCS:vaSI:vasi::
 CCS:vaSI:vasI::
 AP90:vaSA:vasA::
@@ -11884,7 +11880,6 @@ KRM:vaRa:vAra::
 KRM:vaRa:vARa::
 AP:vaNk:vaNK::
 AP:vaNg:vaNG::
-AP:vaNg:vANG::
 KRM:vaKa:vAka::
 CAE:vaGA:vAgA::
 BEN:vaDu:vaDU::
@@ -11922,7 +11917,6 @@ MW72:vAca:vACa::
 BEN:vASi:vAsi::
 BEN:vASi:vAsI::
 BEN:vASi:vASI::
-CAE:vASa:vAsa::
 AP90:vASI:vAsi::
 AP90:vASI:vAsI::
 BUR:vASA:vAsA::
@@ -12123,7 +12117,6 @@ MW:sfpa:sfPa::
 AP:sfRi:sfRI::
 MW:sewa:seWa::
 MW:sera:sEra::
-BEN:seka:sEka::
 BUR:sawi:sawI::
 BUR:sawi:saWI::
 BEN:sawa:saWa::
@@ -12133,7 +12126,7 @@ AP90:sari:sarI::
 AP90:sarb:sarB::
 CAE:sapa:saPa::
 BEN:sani:sanI::
-CCS:samI:sAmi::
+AP90:sami:samI::
 BUR:saka:saKa::
 SKD:sakA:saKA::
 SKD:saga:saGa::
@@ -12141,6 +12134,7 @@ MW:sadi:saDi::
 MW:sadi:saDI::
 BEN:sada:saDa::
 BEN:saci:sacI::
+AP90:saMb:sAmb::
 AP:saKi:saKI::
 BUR:saDi:saDI::
 BEN:sUti:sUtI::
@@ -12521,6 +12515,7 @@ AP90:maSI:masi::
 AP90:maSI:masI::
 MW:maRw:maRW::
 ACC:maRi:maRI::
+CAE:maRa:mara::
 AP:maNk:maNK::
 AP:maNg:maNG::
 MW:mOni:mOnI::
@@ -12715,7 +12710,6 @@ CAE:kami:kAmi::
 BHS:kama:kAma::
 AP90:kamA:kAmA::
 BEN:kali:kalI::
-AP90:kakk:kakK::
 AP90:kaja:kAja::
 SHS:kaga:kAga::
 BEN:kaca:kAca::
@@ -12847,9 +12841,6 @@ KRM:hawa:haWa::
 BEN:hava:hAva::
 AP90:hata:haTa::
 BEN:hasa:hAsa::
-ACC:hari:harI::
-ACC:hari:hAri::
-ACC:hari:hArI::
 INM:harI:hAri::
 INM:harI:hArI::
 AP90:hanu:hanU::
@@ -13016,11 +13007,13 @@ BEN:dfti:DftI::
 AP90:dfta:Dfta::
 KRM:dfpa:dfPa::
 AP:dfmp:dfmP::
+AP90:deya:Deya::
 MW:devi:devI::
 MW:devi:dEvI::
 ACC:deva:dEva::
 AP90:devI:dEvI::
 BUR:dehi:dehI::
+GRA:dehI:Dehi::
 BUR:daya:dAya::
 AP90:dayA:dAyA::
 BEN:dava:dAva::
@@ -13583,6 +13576,7 @@ MW72:veS:ves::
 AP90:vaw:vaW::
 AP90:vaw:vAw::
 AP90:vat:vAt::
+AP90:vas:vAS::
 AP90:var:vAr::
 AP90:vaq:vAq::
 AP90:van:vAn::
@@ -13597,6 +13591,7 @@ AP90:vad:vAD::
 AP90:vac:vAc::
 AP90:vac:vAC::
 AP90:vaW:vAw::
+AP90:vaS:vAS::
 AP90:vaR:var::
 AP90:vaR:vAr::
 AP90:vaK:vAk::
@@ -13604,7 +13599,6 @@ SKD:vaH:vAH::
 SHS:vaG:vAg::
 AP90:vaD:vAD::
 AP90:vAc:vAC::
-AP90:vAS:vAs::
 AP90:uza:Uza::
 AP90:uzA:UzA::
 BUR:uwa:uWa::
@@ -14091,7 +14085,7 @@ AP90:uc:uC::
 CAE:tf:tF::
 AP90:su:sU::
 AP90:si:sI::
-MD:se:sE::
+AP90:sf:sF::
 AP90:re:rE::
 IEG:pu:pU::
 AP90:pi:pI::
