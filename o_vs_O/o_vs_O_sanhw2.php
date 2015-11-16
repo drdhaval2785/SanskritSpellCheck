@@ -93,7 +93,7 @@ function refractor()
 		$dict = preg_split('/([:-])/',$value);
 		$dict = array_map('trim',$dict);
 		// Adding some more qualificationsv 
-		if (count($val)===count(array_unique($val)) && str_replace($nasal,$anu,removelnum($val[0]))!==str_replace($nasal,$anu,$val[1]) && !in_array(substr($val[1],-3),array("AMs","Ant")) && removelnum($dict[2])!=="BHS" && removelnum($dict[3])!=="BHS" )
+		if (count($val)===count(array_unique($val)) && str_replace($nasal,$anu,$val[0])!==str_replace($nasal,$anu,$val[1]) && !in_array(substr($val[1],-3),array("AMs","Ant")) && removelnum($dict[2])!=="BHS" && removelnum($dict[3])!=="BHS" && !in_array(get_diff($val[0],$val[1]),array("y","Y","r","R")) && strlen(get_diff($val[0],$val[1]))===1 && strlen($val[0])>3)
 		{
 			fputs($outfile,$value);
 			$counter++;

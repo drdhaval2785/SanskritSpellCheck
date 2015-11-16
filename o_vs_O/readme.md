@@ -68,4 +68,9 @@ Outputs -
 
 11. Output3/composite2b.txt - composite2a.txt displayed with alternative for machine processing. See [issue 154](https://github.com/sanskrit-lexicon/CORRECTIONS/issues/154).
 
-11. Output3/composite3b.txt - composite3a.txt displayed with alternative for machine processing. See [issue 154](https://github.com/sanskrit-lexicon/CORRECTIONS/issues/154).
+12. Output3/composite3b.txt - composite3a.txt displayed with alternative for machine processing. See [issue 154](https://github.com/sanskrit-lexicon/CORRECTIONS/issues/154).
+
+# Statistics of o_vs_O1.txt v/s o_vs_O2.txt
+1. On 15 Nov 2015 - 21989 : 19140 (Started keeping track)
+2. On 16 Nov 2015 - 21990 : 14662 (Removed entries which had more than one letter difference and which had difference in y/Y/r/R only)
+3. On 16 Nov 2015 21990 : 14103 (Removed entries which had less than 4 letters length.)

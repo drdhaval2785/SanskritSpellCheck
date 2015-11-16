@@ -342,4 +342,18 @@ function get_decorated_diff($old, $new, $var){
 	if ($var===2) { return $new; }
 	if ($var===0) { return array("old"=>$old, "new"=>$new); }
 }
+# See https://coderwall.com/p/3j2hxq/find-and-format-difference-between-two-strings-in-php for the origin of code.
+function get_diff($old, $new){
+    $from_start = strspn($old ^ $new, "\0");        
+    $from_end = strspn(strrev($old) ^ strrev($new), "\0");
+
+    $old_end = strlen($old) - $from_end;
+    $new_end = strlen($new) - $from_end;
+
+    $start = substr($new, 0, $from_start);
+    $end = substr($new, $new_end);
+    $old_diff = substr($old, $from_start, $old_end - $from_start);
+
+	return $old_diff;
+}
 ?>
