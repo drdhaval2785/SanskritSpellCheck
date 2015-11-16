@@ -21,7 +21,7 @@ $counter=0;
 
 /* Executing function prepareliststs */
 // This program was run only once. The output was stored as variables.
-echo "Started preparing lists of words from sanhw1.txt<br/>\n";
+echo "Started preparing lists of words from sanhw2.txt<br/>\n";
 $words = preparelists()[0];
 echo "Completed preparing lists of words from sanhw2.txt<br/>\n";
 echo "Started preparing lists of dictionaries from sanhw2.txt<br/>\n";
@@ -92,8 +92,12 @@ function refractor()
 		$val = array_map('trim',$val);
 		$dict = preg_split('/([:-])/',$value);
 		$dict = array_map('trim',$dict);
+		$firstdictstring = removelnum($dict[2]);
+		$firstdictarray = explode(',',$firstdictstring);
+		$seconddictstring = removelnum($dict[3]);
+		$seconddictarray = explode(',',$seconddictstring);
 		// Adding some more qualificationsv 
-		if (count($val)===count(array_unique($val)) && str_replace($nasal,$anu,$val[0])!==str_replace($nasal,$anu,$val[1]) && !in_array(substr($val[1],-3),array("AMs","Ant")) && removelnum($dict[2])!=="BHS" && removelnum($dict[3])!=="BHS" && !in_array(get_diff($val[0],$val[1]),array("y","Y","r","R")) && strlen(get_diff($val[0],$val[1]))===1 && strlen($val[0])>3)
+		if (count($val)===count(array_unique($val)) && str_replace($nasal,$anu,$val[0])!==str_replace($nasal,$anu,$val[1]) && !in_array(substr($val[1],-3),array("AMs","Ant")) && removelnum($dict[2])!=="BHS" && removelnum($dict[3])!=="BHS" && !in_array(get_diff($val[0],$val[1]),array("y","Y","r","R")) && strlen(get_diff($val[0],$val[1]))===1 && strlen($val[0])>3 && count(array_intersect($firstdictarray,$seconddictarray))===0 )
 		{
 			fputs($outfile,$value);
 			$counter++;
@@ -101,8 +105,4 @@ function refractor()
 	}
 	echo "Total of $counter entries culled out and saved to o_vs_O2.txt.<br/>\n";
 }
-// 7148 entries with no adjustments for nasals
-// 5392 entries with adjustments for nasals
-// 5351 entries with adjustments for 'Ant' and 'AMs'
-// 4733 entries after removing BHS only entries.
 ?>

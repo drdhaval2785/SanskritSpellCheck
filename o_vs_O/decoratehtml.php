@@ -41,9 +41,23 @@ function decoratehtml($inputfile,$outputfile1,$outputfile2)
 	fclose($outfile);
 }
 echo "Preparing composite1a.html for comparision.\n";
+$outfile = fopen('output3/composite1a.html','w');
+fputs($outfile,$header);
+fputs($outfile,"<h1>Highest probability words found by o_vs_O method.</h1>");
+fputs($outfile,'<table class="fixed">');
 decoratehtml('output3/composite1a.txt','output3/composite1a.html','output3/composite1b.txt');
+
 echo "Preparing composite2a.html for comparision.\n";
+$outfile = fopen('output3/composite2a.html','w');
+fputs($outfile,$header);
+fputs($outfile,"<h1>Medium probability words found by o_vs_O method.</h1>");
+fputs($outfile,'<table class="fixed">');
 decoratehtml('output3/composite2a.txt','output3/composite2a.html','output3/composite2b.txt');
+
 echo "Preparing composite3a.html for comparision.\n";
+$outfile = fopen('output3/composite3a.html','w');
+fputs($outfile,$header);
+fputs($outfile,"<h1>Lowest probability words found by o_vs_O method.</h1>");
+fputs($outfile,'<table class="fixed">');
 decoratehtml('output3/composite3a.txt','output3/composite3a.html','output3/composite3b.txt');
 ?>
