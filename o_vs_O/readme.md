@@ -74,4 +74,5 @@ Outputs -
 1. On 15 Nov 2015 - 21989 : 19140 (Started keeping track)
 2. On 16 Nov 2015 - 21989 : 14662 (Removed entries which had more than one letter difference and which had difference in y/Y/r/R only)
 3. On 16 Nov 2015 - 21989 : 14103 (Removed entries which had less than 4 letters length.)
-4. On 16 Nov 3015 - 21989 : 4253 (Removed entries where both sided had the same dictionary e.g. Both words appear in the same dictionary)
+4. On 16 Nov 2015 - 21989 : 4253 (Removed entries where both sided had the same dictionary e.g. Both words appear in the same dictionary)
+5. On 17 Nov 2015 - 21989 : 3884 (Removed entries which were in nochange.txt)

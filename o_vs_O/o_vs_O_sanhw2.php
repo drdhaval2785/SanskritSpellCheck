@@ -19,6 +19,8 @@ $header = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http:
 ';
 $counter=0;
 
+$nochange = file('../nochange/nochange.txt');
+$nochange = array_map('trim',$nochange);
 /* Executing function prepareliststs */
 // This program was run only once. The output was stored as variables.
 echo "Started preparing lists of words from sanhw2.txt<br/>\n";
@@ -28,7 +30,7 @@ echo "Started preparing lists of dictionaries from sanhw2.txt<br/>\n";
 $dicts = preparelists()[1];
 echo "Completed preparing lists dictionaries from sanhw2.txt<br/>\n";
 /* Putting data in o_vs_O1.txt file after comparing. */
-comparedicts();
+//comparedicts();
 /* Opening o_vs_O1.txt and refractoring and putting in o_vs_O2.txt */
 refractor();
 
@@ -54,7 +56,7 @@ function similar($text,$start,$end)
 	{
 		for($j=$i+1;$j<$end;$j++)
 		{
-			if (strcasecmp($text[$i],$text[$j])===0 && $text[$i]!==$text[$j] && strpos($dicts[$i],"PD")===false && strpos($dicts[$j],"PD")===false && removelnum($dicts[$i])!==removelnum($dicts[$j]) && !(in_array(substr($text[$i],-1),array("a","A","m","M")) && substr($text[$i],-1)!==substr($text[$j],-1) ))
+			if (strcasecmp($text[$i],$text[$j])===0 && $text[$i]!==$text[$j] && strpos($dicts[$i],"PD")===false && strpos($dicts[$j],"PD")===false && removelnum($dicts[$i])!==removelnum($dicts[$j]) && !(in_array(substr($text[$i],-1),array("a","A","m","M")) && substr($text[$i],-1)!==substr($text[$j],-1) ) )
 			{
 				fputs($outfile,$text[$i].":".$text[$j]."-".$dicts[$i].":".$dicts[$j]."\n");
 				$counter++;
@@ -80,7 +82,7 @@ function comparedicts()
 function refractor()
 {
 	echo "Started refractoring.<br/>\n";
-	global $header;
+	global $header, $nochange;
 	$raw = file('o_vs_O1.txt');
 	$outfile = fopen("o_vs_O2.txt","w+");
 	$nasal = array("N","Y","R","n","m");
@@ -96,9 +98,10 @@ function refractor()
 		$firstdictarray = explode(',',$firstdictstring);
 		$seconddictstring = removelnum($dict[3]);
 		$seconddictarray = explode(',',$seconddictstring);
-		// Adding some more qualificationsv 
-		if (count($val)===count(array_unique($val)) && str_replace($nasal,$anu,$val[0])!==str_replace($nasal,$anu,$val[1]) && !in_array(substr($val[1],-3),array("AMs","Ant")) && removelnum($dict[2])!=="BHS" && removelnum($dict[3])!=="BHS" && !in_array(get_diff($val[0],$val[1]),array("y","Y","r","R")) && strlen(get_diff($val[0],$val[1]))===1 && strlen($val[0])>3 && count(array_intersect($firstdictarray,$seconddictarray))===0 )
+		// Adding some more qualifications
+		if (count($val)===count(array_unique($val)) && str_replace($nasal,$anu,$val[0])!==str_replace($nasal,$anu,$val[1]) && !in_array(substr($val[1],-3),array("AMs","Ant")) && removelnum($dict[2])!=="BHS" && removelnum($dict[3])!=="BHS" && !in_array(get_diff($val[0],$val[1]),array("y","Y","r","R")) && strlen(get_diff($val[0],$val[1]))===1 && strlen($val[0])>3 && count(array_intersect($firstdictarray,$seconddictarray))===0 && !in_array($val[0],$nochange) &&  !in_array($val[1],$nochange) )
 		{
+			echo $val[0]."<br/>\n";
 			fputs($outfile,$value);
 			$counter++;
 		}
