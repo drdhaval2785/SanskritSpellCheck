@@ -16,3 +16,9 @@ iM:i
 IM:I
 uM:u
 UM:U
+FRAM:f
+FRAm:f
+ARAM:a
+AnAM:a
+ARAm:a
+AnAm:a

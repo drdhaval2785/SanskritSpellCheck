@@ -131,7 +131,7 @@ def testwithcommonngrams(test,error,n):
 	whiteends = list(set(whiteends))
 	whiteendsfile.close()
 	testfile = codecs.open(test,'r','utf-8')
-	lines = testfile.readlines()
+	lines = testfile.read().split()
 	lines = triming(lines)
 	errorfile = codecs.open(error,'w','utf-8')
 	counter = 0
@@ -140,13 +140,14 @@ def testwithcommonngrams(test,error,n):
 		line = line.replace('-',' ')
 		testwords = line.split(' ')
 		for testword in testwords:
-			testword = re.sub('[\'",.?0-9!/*_\(\)\[\]\{\};:]','',testword)
+			testword = testword.replace(u'’',u'')
+			testword = re.sub('[\'",.?0-9!/*_\(\)\[\]\{\};:*’#$+%^@–=“”]','',testword)
 			testngrams = ngrams(testword,n)
 			diff = set(testngrams)-set(basengrams)
 			if not diff <= whitelist and not whiteterm(whiteends,testword,diff,basengrams,n):
 				diff = list(diff)
 				if len(diff) is not 0:
-					print testword, diff
+					print testword.encode('utf-8'), diff
 					errorfile.write(testword+':'+','.join(diff)+'\n')
 					counter += 1
 	errorfile.close()
