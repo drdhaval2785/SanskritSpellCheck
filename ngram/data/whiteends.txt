@@ -1,0 +1,12 @@
+aH:a
+AH:a
+iH:i
+IH:I
+uH:u
+UH:U
+eH:i
+EH:a
+yoH:
+OH:OH
+Er:a
+Es:a

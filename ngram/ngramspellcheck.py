@@ -1,11 +1,15 @@
 # -*- coding: utf-8 -*-
 """
-To generate 2-grams and 3-grams which are found in ALL of the following dictionaries.
+To compare n-grams of a given text against the possible ngrams extracted and put in 'data' folder as 2grams.txt and 3grams.txt
 
 Usage:
-python commonngrams.py n
+python commonngrams.py inputfile filetostoreerrors n
 e.g.
-python commonngrams.py 3
+python commonngrams.py data/test.txt data/error.txt 2
+
+It is advisable to try for bigrams only (n=2) to minimize false positives.
+It can be extended to trigrams and higher ngrams, but it would increase false positives too much.
+
 would create 3-grams which are found in all of the following dictionaries.
 
 Dictionaries
@@ -75,17 +79,37 @@ def commonngram(n):
 		ngram = getngrams(basewords,n)
 		print len(ngram)
 		ngrams.append(ngram)
-	commonngrams = commons(ngrams,n)	
-def testwithcommonngrams(testfile,n):
-	whitelist = set(['aH','AH','iH','IH','uH','UH','eH','EH',])
-	textfile = codecs.open(testfile,'r','utf-8')
-	lines = textfile.readlines()
-	lines = triming(lines)
-	errorfile = codecs.open('commonngram/error.txt','w','utf-8')
-	basefile = codecs.open('commonngram/'+str(n)+'grams.txt','r','utf-8')
+	commonngrams = commons(ngrams,n)
+def whiteterm(ends,word,diff,basengrams):
+	for end in ends:
+		[pre,post] = end.split(':')
+		word1 = re.sub(pre+"$",post,word)
+		if word.endswith(end) and diff<=set(ends):
+			if not ngrams(word) < basengrams:
+				return True
+				break
+			elif not ngrams(word1) < basengrams:
+				return True
+				break
+				
+def testwithcommonngrams(test,error,n):
+	basefile = codecs.open('data/'+str(n)+'grams.txt','r','utf-8')
 	basengrams = basefile.read().split()
 	basengrams = triming(basengrams)
 	basefile.close()
+	whitelistfile = codecs.open('data/whitelist.txt','r','utf-8')
+	whitelist = whitelistfile.readlines()
+	whitelist = triming(whitelist)
+	whitelist = set(whitelist)
+	whiteendsfile = codecs.open('data/whiteends.txt','r','utf-8')
+	whiteends = whiteendsfile.readlines()
+	whiteends = triming(whiteends)
+	whiteends = list(set(whiteends))
+	whiteendsfile.close()
+	testfile = codecs.open(test,'r','utf-8')
+	lines = testfile.readlines()
+	lines = triming(lines)
+	errorfile = codecs.open(error,'w','utf-8')
 	counter = 0
 	for line in lines:
 		line = line.replace('-',' ')
@@ -94,7 +118,7 @@ def testwithcommonngrams(testfile,n):
 			testword = re.sub('[\'",.?0-9!/*_\(\)\[\]\{\};:]','',testword)
 			testngrams = ngrams(testword,n)
 			diff = set(testngrams)-set(basengrams)
-			if not diff < whitelist:
+			if not diff <= whitelist and not whiteterm(whiteends,testword,diff,basengrams):
 				diff = list(diff)
 				if len(diff) is not 0:
 					print testword, diff
@@ -104,7 +128,9 @@ def testwithcommonngrams(testfile,n):
 	print "Total potential errors by ngram method are", counter
 	
 if __name__=="__main__":
-	n = sys.argv[1]
-	#commonngram(int(n))
-	testwithcommonngrams('commonngram/test.txt',int(n))
+	fin = sys.argv[1]
+	fout = sys.argv[2]
+	n = sys.argv[3]
+	#commonngram(int(n)) # to generate the common ngrams (data/2grams.txt and data/3grams.txt)
+	testwithcommonngrams(fin,fout,int(n))
 	
