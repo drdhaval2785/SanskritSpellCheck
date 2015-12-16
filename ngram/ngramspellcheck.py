@@ -3,9 +3,9 @@
 To compare n-grams of a given text against the possible ngrams extracted and put in 'data' folder as 2grams.txt and 3grams.txt
 
 Usage:
-python commonngrams.py inputfile filetostoreerrors n
+python ngramspellcheck.py inputfile filetostoreerrors n
 e.g.
-python commonngrams.py data/test.txt data/error.txt 2
+python ngramspellcheck.py data/test.txt data/error.txt 2
 
 It is advisable to try for bigrams only (n=2) to minimize false positives.
 It can be extended to trigrams and higher ngrams, but it would increase false positives too much.
@@ -19,6 +19,21 @@ import sys, re
 import codecs
 import string
 import datetime
+from HTMLParser import HTMLParser
+
+class MLStripper(HTMLParser):
+    def __init__(self):
+        self.reset()
+        self.fed = []
+    def handle_data(self, d):
+        self.fed.append(d)
+    def get_data(self):
+        return ''.join(self.fed)
+
+def strip_tags(html):
+    s = MLStripper()
+    s.feed(html)
+    return s.get_data()
 
 # Function to return timestamp
 def timestamp():
@@ -69,6 +84,14 @@ def commons(lstoflist,n):
 	print "Common ngrams are", len(commons)
 	filestore.close()
 	return commons
+def stripper(text):
+	striplist = open('data/stripgretil.txt').read().split()
+	striplist = triming(striplist)
+	for stripp in striplist:
+		text = text.replace(stripp,'')
+	text = strip_tags(text)
+	return text
+
 def commonngram(n):	
 	#majordicts = ["MW","PW","PWG","PD","MW72","VCP","SHS","YAT","WIL","SKD","CAE","AP","ACC","AP90","CCS","SCH","STC","MD","BUR","BHS","BEN"]
 	majordicts = ["MW","PW"]
@@ -80,17 +103,18 @@ def commonngram(n):
 		print len(ngram)
 		ngrams.append(ngram)
 	commonngrams = commons(ngrams,n)
-def whiteterm(ends,word,diff,basengrams):
+def whiteterm(ends,word,diff,basengrams,n):
 	for end in ends:
 		[pre,post] = end.split(':')
-		word1 = re.sub(pre+"$",post,word)
-		if word.endswith(end) and diff<=set(ends):
-			if not ngrams(word) < basengrams:
-				return True
-				break
-			elif not ngrams(word1) < basengrams:
-				return True
-				break
+		word1 = ''
+		if word.endswith(pre):
+			word1 = word.rstrip(pre)+post
+		if diff<=set(pre) and set(ngrams(word,n)) < set(basengrams):
+			return True
+			break
+		elif  not word1 == '' and set(ngrams(word1,n)) < set(basengrams):
+			return True
+			break
 				
 def testwithcommonngrams(test,error,n):
 	basefile = codecs.open('data/'+str(n)+'grams.txt','r','utf-8')
@@ -112,13 +136,14 @@ def testwithcommonngrams(test,error,n):
 	errorfile = codecs.open(error,'w','utf-8')
 	counter = 0
 	for line in lines:
+		line = stripper(line)
 		line = line.replace('-',' ')
 		testwords = line.split(' ')
 		for testword in testwords:
 			testword = re.sub('[\'",.?0-9!/*_\(\)\[\]\{\};:]','',testword)
 			testngrams = ngrams(testword,n)
 			diff = set(testngrams)-set(basengrams)
-			if not diff <= whitelist and not whiteterm(whiteends,testword,diff,basengrams):
+			if not diff <= whitelist and not whiteterm(whiteends,testword,diff,basengrams,n):
 				diff = list(diff)
 				if len(diff) is not 0:
 					print testword, diff

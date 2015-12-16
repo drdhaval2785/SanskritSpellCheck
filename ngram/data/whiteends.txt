@@ -10,3 +10,9 @@ yoH:
 OH:OH
 Er:a
 Es:a
+aM:a
+AM:a
+iM:i
+IM:I
+uM:u
+UM:U
