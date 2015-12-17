@@ -85,10 +85,10 @@ def commons(lstoflist,n):
 	filestore.close()
 	return commons
 def stripper(text):
-	striplist = open('data/stripgretil.txt').read().split()
+	striplist = codecs.open('data/stripgretil.txt','r','utf-8').read().split()
 	striplist = triming(striplist)
 	for stripp in striplist:
-		text = text.replace(stripp,'')
+		text = re.sub(stripp,'',text)
 	text = strip_tags(text)
 	return text
 
@@ -141,7 +141,7 @@ def testwithcommonngrams(test,error,n):
 		testwords = line.split(' ')
 		for testword in testwords:
 			testword = testword.replace(u'’',u'')
-			testword = re.sub('[\'",.?0-9!/*_\(\)\[\]\{\};:*’#$+%^@–=“”]','',testword)
+			testword = re.sub('[\'",.?0-9!/*_\(\)\[\]\{\};:*’#$+%^@–=“”|]','',testword)
 			testngrams = ngrams(testword,n)
 			diff = set(testngrams)-set(basengrams)
 			if not diff <= whitelist and not whiteterm(whiteends,testword,diff,basengrams,n):
