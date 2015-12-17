@@ -2,7 +2,11 @@
 
 To compare n-grams of a given text against the possible ngrams extracted and put in 'data' folder as 2grams.txt and 3grams.txt
 
-# Usage:
+# Usage 1:
+Put your test file in data/test.txt and click on ngramspellcheck.sh.
+Your suspect errors are stored in data/error.txt.
+
+# Usage 2:
 `python ngramspellcheck.py inputfile filetostoreerrors n`
 e.g.
 `python ngramspellcheck.py data/test.txt data/error.txt 2`
