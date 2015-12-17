@@ -141,7 +141,7 @@ def testwithcommonngrams(test,error,n):
 		testwords = line.split(' ')
 		for testword in testwords:
 			testword = testword.replace(u'’',u'')
-			testword = re.sub('[\'",.?0-9!/*_\(\)\[\]\{\};:*’#$+%^@–=“”|]','',testword)
+			testword = re.sub('[\'",.?0-9!/*_\(\)\[\]\{\}<>;:*’#$+%^@–=“”|]','',testword)
 			testngrams = ngrams(testword,n)
 			diff = set(testngrams)-set(basengrams)
 			if not diff <= whitelist and not whiteterm(whiteends,testword,diff,basengrams,n):
