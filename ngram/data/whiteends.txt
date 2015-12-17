@@ -29,3 +29,5 @@ BiH:
 Bis:
 Bir:
 BiS:
+O:a
+e:a

@@ -30,3 +30,14 @@ Fn
 Lh
 hF
 FR
+FM
+NN
+tF
+kB
+cm
+Cm
+Cl
+Cy
+Cv
+Cr
+FY

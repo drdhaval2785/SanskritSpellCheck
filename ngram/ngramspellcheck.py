@@ -20,6 +20,7 @@ import codecs
 import string
 import datetime
 from HTMLParser import HTMLParser
+import collections
 
 class MLStripper(HTMLParser):
     def __init__(self):
@@ -117,6 +118,8 @@ def whiteterm(ends,word,diff,basengrams,n):
 			break
 				
 def testwithcommonngrams(test,error,n):
+	global spaceignore
+	global artisplitignore
 	basefile = codecs.open('data/'+str(n)+'grams.txt','r','utf-8')
 	basengrams = basefile.read().split()
 	basengrams = triming(basengrams)
@@ -128,6 +131,8 @@ def testwithcommonngrams(test,error,n):
 	whiteendsfile = codecs.open('data/whiteends.txt','r','utf-8')
 	whiteends = whiteendsfile.readlines()
 	whiteends = triming(whiteends)
+	if artisplitignore:
+		whiteends += ['AY:a','FY:f','IY:i','UY:u']
 	whiteends = list(set(whiteends))
 	whiteendsfile.close()
 	testfile = codecs.open(test,'r','utf-8')
@@ -135,6 +140,36 @@ def testwithcommonngrams(test,error,n):
 	lines = triming(lines)
 	errorfile = codecs.open(error,'w','utf-8')
 	counter = 0
+	diffgrand = []
+	for line in lines:
+		line = stripper(line)
+		line = line.replace('-',' ')
+		testwords = line.split(' ')
+		for testword in testwords:
+			testword = testword.replace(u'’',u'')
+			testword = re.sub('[\'",.?0-9!/*_\(\)\[\]\{\}<>;:*’#$+%^@–=“”|॒]','',testword)
+			testngrams = ngrams(testword,n)
+			diff = set(testngrams)-set(basengrams)
+			if not diff <= whitelist and not whiteterm(whiteends,testword,diff,basengrams,n):
+				diff = list(diff)
+				if len(diff) is not 0:
+					if not (spaceignore and diff[0][0]=='n'):
+						print testword.encode('utf-8'), diff
+						diffgrand += diff
+						errorfile.write(testword+':'+','.join(diff)+'\n')
+						counter += 1
+	errorfile.close()
+	com = collections.Counter(diffgrand)
+	mostcom = com.most_common(20)
+	print mostcom
+	print "Total potential errors by ngram method are", counter
+def lessusedngrams(test,error,n):
+	testfile = codecs.open(test,'r','utf-8')
+	lines = testfile.read().split()
+	lines = triming(lines)
+	errorfile = codecs.open(error,'a','utf-8')
+	counter = 0
+	ng = []
 	for line in lines:
 		line = stripper(line)
 		line = line.replace('-',' ')
@@ -142,21 +177,19 @@ def testwithcommonngrams(test,error,n):
 		for testword in testwords:
 			testword = testword.replace(u'’',u'')
 			testword = re.sub('[\'",.?0-9!/*_\(\)\[\]\{\}<>;:*’#$+%^@–=“”|]','',testword)
-			testngrams = ngrams(testword,n)
-			diff = set(testngrams)-set(basengrams)
-			if not diff <= whitelist and not whiteterm(whiteends,testword,diff,basengrams,n):
-				diff = list(diff)
-				if len(diff) is not 0:
-					print testword.encode('utf-8'), diff
-					errorfile.write(testword+':'+','.join(diff)+'\n')
-					counter += 1
+			ng += ngrams(testword,n)
+	counter = collections.Counter(ng)
+	print counter
 	errorfile.close()
-	print "Total potential errors by ngram method are", counter
-	
+	print "Total ngrams are", len(ng)
+		
 if __name__=="__main__":
 	fin = sys.argv[1]
 	fout = sys.argv[2]
 	n = sys.argv[3]
+	spaceignore = True
+	artisplitignore = True
 	#commonngram(int(n)) # to generate the common ngrams (data/2grams.txt and data/3grams.txt)
 	testwithcommonngrams(fin,fout,int(n))
+	#lessusedngrams(fin,fout,int(n))
 	
