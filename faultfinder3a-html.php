@@ -81,7 +81,7 @@ exit(0);
 function faultfinder3a_html_option1($inrecs,$output,$pattern_data){
  $outfile=fopen($output,"w");  // completely overwrite
  global $repeat;
-echo "repeat is $repeat";
+echo "repeat is $repeat"."\n";
  // add HTML header
 fputs($outfile,"<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n
 <head>\n
