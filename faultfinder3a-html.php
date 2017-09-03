@@ -146,7 +146,8 @@ function givelink($dictstring,$input,$patternvalue)
     foreach ($culpritdict as $d){
      $y = Cologne_hrefyear($d); 
 //     $text = "<button onclick='linkto(\"$input\",\"$d\",\"$y\");return false;'>$d</button>";
-    $text = '<a href="'."http://www.sanskrit-lexicon.uni-koeln.de/scans/".$d."Scan/".$y."/web/webtc/indexcaller.php".'?key='.$input.'&input=slp1&output=SktDevaUnicode" target="_blank">'.$d."</a>"; // Keeping direct href because buttons fail to open in multiple tabs. They refresh the page.
+	$text = '<a href="'.'http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict='.$d.'&key='.$input.'">'.$d.'</a>';
+//    $text = '<a href="'."http://www.sanskrit-lexicon.uni-koeln.de/scans/".$d."Scan/".$y."/web/webtc/indexcaller.php".'?key='.$input.'&input=slp1&output=SktDevaUnicode" target="_blank">'.$d."</a>"; // Keeping direct href because buttons fail to open in multiple tabs. They refresh the page.
      $linkarr[] = $text;
     }        
     $linktext = join(" ",$linkarr);
