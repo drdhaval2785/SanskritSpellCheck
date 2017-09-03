@@ -42,12 +42,14 @@ error_reporting(E_ALL ^ E_NOTICE);
 /* get command-line arguments */
  $dictref = $argv[1]; // 'MW';
  $wholedatafile = $argv[2]; // sanhw1.txt
- $output = $argv[3];  //AllvsMW.txt";
+ $output = $argv[3];  //AllvsMW.txt;
+ $sf = $argv[4]; // AllvsMW_sf.txt
 // get pattern data
 include "faultfinder3a_utils.php";
 $pattern_data = faultfinder_patterns();
 // open file where we store the suspect wrong entries.
 $outfile=fopen($output,"w");  // completely overwrite
+$sffile=fopen($sf,"w"); // For standard format.
 
 // read wholedatafile into array of trimmed lines
 $wholedata = file($wholedatafile);
@@ -99,7 +101,7 @@ $unused_dictionaryname=array("ACC","CAE","AE","AP90","AP","BEN","BHS","BOP","BOR
 $unused_hrefyear = array("2014","2014","2014","2014","2014","2014","2014","2014","2014","2013","2014","2014","2014","2014","2013","2014","2014","2014","2014","2014","2013","2014","2014","2014","2014","2013","2014","2014","2014","2013","2014","2013","2013","2014","2014","2014");
 
 foreach($pattern_data as $pattern_datum) {
- comparepatterns($filea,$pattern_datum,$fileb,$outfile); 
+ comparepatterns($filea,$pattern_datum,$fileb,$outfile,$sffile); 
 }
 
 /* function comparepatterns 
@@ -111,9 +113,10 @@ foreach($pattern_data as $pattern_datum) {
     $pattern_abbrev
  * $filec is the contents of dictionary file to be checked.
  $outfile - File handle for output
+ $sffile - File handle for Standard format output.
  */
 
-function comparepatterns($filea,$pattern_datum,$filec,$outfile)
+function comparepatterns($filea,$pattern_datum,$filec,$outfile,$sffile)
 {
 	global $dictdata, $worddata;
 	list($pattern_name,$pattern,$patternAbbrev) = $pattern_datum;
@@ -166,6 +169,10 @@ function comparepatterns($filea,$pattern_datum,$filec,$outfile)
 			  // Put in pattern abbrev, for later 
 			  $wpat1 = "$patternAbbrev=$wpat";
 			  fwrite($outfile,"$w:$wpat1:$dictmatch\n");
+			  foreach ($dictdata[$j] as $dictcode)
+			  {
+				  fwrite($sffile,"$dictcode:$w:$w:n\n");
+			  }
 			  if(count($wpats) > 1) { // curious about this
 			   //echo "DUP pattern: $w:$wpat:$dictmatch\n";
 			 }
@@ -173,7 +180,7 @@ function comparepatterns($filea,$pattern_datum,$filec,$outfile)
 		}
 }
     fclose($outfile);
-
+	fclose($sffile);
 
 function unused_givelink($culpritdict)
 {

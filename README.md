@@ -5,15 +5,15 @@ from faultfinder3a.php - the machine is commandline tool now.
 
 The program sequence is 
 ```
-php faultfinder3a.php MW sanhw1.txt AllvsMW.txt
-php faultfinder3a-html.php AllvsMW.txt AllvsMW-norepeat.html
-php dictwisesorter-v3.php AllvsMW-norepeat.html dictwiseerrors3-table.html
+php faultfinder3a.php MW sanhw1.txt AllvsMW/AllvsMW.txt AllvsMW/AllvsMW_sf.txt
+php faultfinder3a-html.php AllvsMW/AllvsMW.txt AllvsMW/AllvsMW-norepeat.html
+php dictwisesorter-v3.php AllvsMW/AllvsMW-norepeat.html AllvsMW/dictwiseerrors3-table.html
 ```
 
 Their details are as follow:
 
 ```
-php faultfinder3a.php MW sanhw1.txt AllvsMW.txt
+php faultfinder3a.php MW sanhw1.txt AllvsMW.txt AllvsMW_sf.txt
 ```
 
 faultfinder3a.php modification by ejf of faultfinder3.php
@@ -26,7 +26,7 @@ output ( name of output file)
 Usage from commandline only:
 php faultfinder3a.php <dictref> <wholedatafile> <output>
 Usage exampple:
-php faultfinder3a.php MW sanhw1.txt AllvsMW.txt
+php faultfinder3a.php MW sanhw1.txt AllvsMW.txt AllvsMW_sf.txt
 Note 1: the headwords for dictref are derived from wholedata.
 Thus, wholedata is the only input data source.
 Note 2: output is written as a text file. The file is composed of
@@ -42,6 +42,7 @@ Note: It is an implication of the program logic that D does not contain
 Note 2a: A separate program (faultfinder3a-html.php) may be used to
 construct html output from a txt file in the format described in
 Note 2.
+Note 3. AllvsMW_sf.txt is the data in standard format as mentioned in https://github.com/sanskrit-lexicon/CORRECTIONS/issues/154. This format helps easy correction submission.
 
 ```
 php faultfinder3a-html.php AllvsMW.txt AllvsMW-norepeat.html
