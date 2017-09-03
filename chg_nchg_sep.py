@@ -9,7 +9,7 @@ if __name__=="__main__":
 	fchg = codecs.open(filechange,'w','utf-8')
 	fnchg = codecs.open(filenochange,'w','utf-8')
 	for line in fin:
-		if line.endswith(':n\n'):
+		if line.endswith(':n\n') or line.endswith(':n\r\n'):
 			splt = line.split(':')
 			wrd = splt[1]
 			fnchg.write(wrd+'\n')
