@@ -38,7 +38,7 @@ ini_set('display_errors', '1');
  */
  /* set memory limit to 1000 MB */
 ini_set("memory_limit","1000M");
-
+error_reporting(E_ALL ^ E_NOTICE);
 /* get command-line arguments */
  $dictref = $argv[1]; // 'MW';
  $wholedatafile = $argv[2]; // sanhw1.txt
@@ -54,6 +54,10 @@ $wholedata = file($wholedatafile);
 $wholedata = array_map('trim',$wholedata);
 $nwholedata = count($wholedata);
 echo "$wholedatafile has $nwholedata lines\n";
+
+// read whitelisted words
+$whitelistwords = file('nochange/nochange.txt');
+$whitelistwords = array_map('trim',$whitelistwords);
 
 /* parse lines of wholedata into parallel arrays worddata, dictdata
   For instance, if element $i of wholedata is
@@ -73,6 +77,7 @@ for ($i=0;$i<$nwholedata;$i++)
   list($worddata[$i],$dictdatastring) = explode(':',$wholedata[$i]);
   $dictdata[$i] = explode(',',$dictdatastring);
 }
+
 // $filea contains $worddata[$i] provided $dictref is in array $dictdata[$i]
 $filea = array();
 for ($i=0;$i<$nwholedata;$i++) {
@@ -86,7 +91,9 @@ if (count($filea) == 0) {
 }
 echo count($filea) . " keys in $wholedatafile match $dictref\n";
 
-$fileb = $worddata;
+// 03 September 2017. Started removing whitelisted words from generation of txt file.
+#$fileb = $worddata;
+$fileb = array_diff($worddata,$whitelistwords);
 
 $unused_dictionaryname=array("ACC","CAE","AE","AP90","AP","BEN","BHS","BOP","BOR","BUR","CCS","GRA","GST","IEG","INM","KRM","MCI","MD","MW72","MW","MWE","PD","PE","PGN","PUI","PWG","PW","SCH","SHS","SKD","SNP","STC","VCP","VEI","WIL","YAT");
 $unused_hrefyear = array("2014","2014","2014","2014","2014","2014","2014","2014","2014","2013","2014","2014","2014","2014","2013","2014","2014","2014","2014","2014","2013","2014","2014","2014","2014","2013","2014","2014","2014","2013","2014","2013","2013","2014","2014","2014");
@@ -108,62 +115,62 @@ foreach($pattern_data as $pattern_datum) {
 
 function comparepatterns($filea,$pattern_datum,$filec,$outfile)
 {
-global $dictdata, $worddata;
-list($pattern_name,$pattern,$patternAbbrev) = $pattern_datum;
-$file = $filea;
-$vccccv=array();
-foreach ($file as $value)
-{
-    if(preg_match($pattern,$value))
-    {
-        $vccccvraw = preg_split($pattern,$value,null,PREG_SPLIT_DELIM_CAPTURE);
-        $i=2;
-        while($i<count($vccccvraw))
-        {
-            if(!in_array($vccccvraw[$i-1],$vccccv))
-            {$vccccv[]=$vccccvraw[$i-1];
-            }
-            $i=$i+2;
-        }
-    }
-}
-$vccccv = array_unique($vccccv);
-$vccccv = array_values($vccccv);
-    // checking the second file.
-    $file1 = $filec;
-    for ($j=0;$j<count($file1);$j++)
-    {
-        $value=$file1[$j];
-        $wpats=array(); // Patterns flagged for this word
-        if(preg_match($pattern,$value))
-        {
-            $vccccvex = preg_split($pattern,$value,null,PREG_SPLIT_DELIM_CAPTURE);        
-            $i=2;
-            while ($i<count($vccccvex))
-            {
-             // if not found in the patterns already noted -
-	     // flag it as suspect pattern and enter in output
-                if ( !in_array($vccccvex[$i-1],$vccccv ))
-                {$wpats[]=$vccccvex[$i-1];
-                }
-                $i=$i+2;
-            }
-        }
-        if (count($wpats) > 0) {
-	  // generate output
-          //$dictmatch = givelink($dictdata[$j]);
-	  $dictmatch = join(',',$dictdata[$j]);
-          $w = $worddata[$j];
-          // just use the first pattern. There are a handful of multiple patts
-	  $wpat = $wpats[0];
-          // Put in pattern abbrev, for later 
-          $wpat1 = "$patternAbbrev=$wpat";
-          fwrite($outfile,"$w:$wpat1:$dictmatch\n");
-          if(count($wpats) > 1) { // curious about this
-           //echo "DUP pattern: $w:$wpat:$dictmatch\n";
-         }
+	global $dictdata, $worddata;
+	list($pattern_name,$pattern,$patternAbbrev) = $pattern_datum;
+	$file = $filea;
+	$vccccv=array();
+	foreach ($file as $value)
+	{
+		if(preg_match($pattern,$value))
+		{
+			$vccccvraw = preg_split($pattern,$value,null,PREG_SPLIT_DELIM_CAPTURE);
+			$i=2;
+			while($i<count($vccccvraw))
+			{
+				if(!in_array($vccccvraw[$i-1],$vccccv))
+				{$vccccv[]=$vccccvraw[$i-1];
+				}
+				$i=$i+2;
+			}
+		}
 	}
-    }
+	$vccccv = array_unique($vccccv);
+	$vccccv = array_values($vccccv);
+		// checking the second file.
+		$file1 = $filec;
+		for ($j=0;$j<count($file1);$j++)
+		{
+			$value=$file1[$j];
+			$wpats=array(); // Patterns flagged for this word
+			if(preg_match($pattern,$value))
+			{
+				$vccccvex = preg_split($pattern,$value,null,PREG_SPLIT_DELIM_CAPTURE);        
+				$i=2;
+				while ($i<count($vccccvex))
+				{
+				 // if not found in the patterns already noted -
+			 // flag it as suspect pattern and enter in output
+					if ( !in_array($vccccvex[$i-1],$vccccv ))
+					{$wpats[]=$vccccvex[$i-1];
+					}
+					$i=$i+2;
+				}
+			}
+			if (count($wpats) > 0) {
+		  // generate output
+			  //$dictmatch = givelink($dictdata[$j]);
+		  $dictmatch = join(',',$dictdata[$j]);
+			  $w = $worddata[$j];
+			  // just use the first pattern. There are a handful of multiple patts
+		  $wpat = $wpats[0];
+			  // Put in pattern abbrev, for later 
+			  $wpat1 = "$patternAbbrev=$wpat";
+			  fwrite($outfile,"$w:$wpat1:$dictmatch\n");
+			  if(count($wpats) > 1) { // curious about this
+			   //echo "DUP pattern: $w:$wpat:$dictmatch\n";
+			 }
+		}
+		}
 }
     fclose($outfile);
 
