@@ -1,0 +1,13 @@
+ACC:covacInIprakASa:cocacInIprakASa:t
+ACC:BEzajyesAra:BEzajyasAra:t
+SCH:anasvIn:anasvin:t
+PW:asmohiti:asmehiti:t
+YAT:AMgnatretA:AgnitretA:t
+YAT:udayapabbata:udayaparbbata:p
+SHS:ardDaca:ardDarca:p
+WIL:avardDaMmAna:avardDamAna:t
+PW:tAvatpriMya:tAvatpriya:t
+WIL:pfTakkzeca:pfTakkzetra:t
+VCP:ttri:attri:p
+YAT:prodDuzwa:prodGuzwa:p
+YAT:prodDozaRa:prodGozaRa:p
