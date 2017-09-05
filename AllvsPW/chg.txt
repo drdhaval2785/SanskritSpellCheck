@@ -6,3 +6,4 @@ GRA:raTasamga:raTasaMga:t
 ACC:SAmbavyagfhmasUtra:SAmbavyagfhyasUtra:t
 AP:utsrotasa:utsrotas:t
 AP:zwayumaH:zwyumaH:t
+ACC:Agamatatt:AgamatattvavilAsa:t

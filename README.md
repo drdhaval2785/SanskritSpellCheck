@@ -74,7 +74,18 @@ modifications of Dec 8, 2014 so output is a table.
 ref https://github.com/sanskrit-lexicon/CORRECTIONS/issues/42
 
 
+# Current status
+Issues #363 to #394 have handled all dicts versus MW, PW and PWG in that order.
+Now it is getting less fruitful.
+VCP is next on board.
 
+# Less fruitful dictionaries.
+
+It is not worthwhile to look into ACC, BHS, BUR, IEG, KRM because they are specialized dictionaries.
+It is not worthwhile to look into PD, because it is relatively clean and it is peculiar that it handles only 'a' headwords.
+
+
+# Logic
 
 Let me document the method I have adopted to find the suspected wrong entries in #2. 
 Code for checking is attached <a href="https://github.com/drdhaval2785/SanskritSpellCheck">here</a>. 
@@ -95,6 +106,7 @@ Step 1 - CD to the directory containing faultfinder3a.php
 Step 2 - type php faultfinder3a.php MW sanhw1.txt AllvsMW.txt. (This will create a file having suspect wrong entries from sanhw1.php when compared to MW as base.) 
 Step 3 - type php faultfinder3a-html.php AllvsMW.txt AllvsMW-new.html (This will render AllvsMW.txt in an HTML file with links to individual entries for checking online)
 Step 4 - type php dictwisesorter.php AllvsMW-new.html dictwiseerrors1.html (This will sort AllvsMW-new.html dictionarywise.)
+
 
 # o_vs_O method
 

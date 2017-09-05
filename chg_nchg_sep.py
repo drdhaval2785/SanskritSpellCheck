@@ -11,8 +11,9 @@ if __name__=="__main__":
 	for line in fin:
 		if line.endswith(':n\n') or line.endswith(':n\r\n'):
 			splt = line.split(':')
-			wrd = splt[1]
-			fnchg.write(wrd+'\n')
+			if not splt[0] in ['ACC','BHS','BUR','IEG','KRM','PD']:
+				wrd = splt[1]
+				fnchg.write(wrd+'\n')
 		else:
 			fchg.write(line)
 	fin.close()

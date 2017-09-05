@@ -2263,7 +2263,7 @@ PWG:zwyA:zwyA:n
 SKD:zwyUmaH:zwyUmaH:n
 KRM:zwrakza:zwrakza:n
 PD:aDaHSayy:aDaHSayy:n
-ACC:Agamatatt:Agamatatt:n
+ACC:Agamatatt:AgamatattvavilAsa:t
 MW:bahv:bahv:n
 STC:bahv:bahv:n
 MW:bAhv:bAhv:n
