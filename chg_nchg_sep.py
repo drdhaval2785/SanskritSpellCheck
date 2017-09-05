@@ -9,12 +9,20 @@ if __name__=="__main__":
 	fchg = codecs.open(filechange,'w','utf-8')
 	fnchg = codecs.open(filenochange,'w','utf-8')
 	for line in fin:
+		splt = line.split(':')
 		if line.endswith(':n\n') or line.endswith(':n\r\n'):
-			splt = line.split(':')
+			if not splt[1] == splt[2]:
+				print splt
+				print 'item different, but marked with no change'
+				exit(0)
 			if not splt[0] in ['ACC','BHS','BUR','IEG','KRM','PD']:
 				wrd = splt[1]
 				fnchg.write(wrd+'\n')
 		else:
+			if splt[1] == splt[2]:
+				print splt
+				print 'item same, but marked with change'
+				exit(0)
 			fchg.write(line)
 	fin.close()
 	fchg.close()
