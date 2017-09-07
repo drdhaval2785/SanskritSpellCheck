@@ -1750,3 +1750,8 @@ IEG:sarhang:sarhang:n
 IEG:candy:candy:n
 YAT:durbb:durbb:n
 IEG:Coultry:Coultry:n
+PUI:cidvanhi:cidvahni:p
+PUI:janhu:jahnu:p
+PUI:janhugaRa:jahnugaRa:p
+PUI:jAnhavI:jAhnavI:p
+PUI:maDyAnhA:maDyAhnA:p

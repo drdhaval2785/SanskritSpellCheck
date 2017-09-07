@@ -81,7 +81,7 @@ VCP is next on board.
 
 # Less fruitful dictionaries.
 
-It is not worthwhile to look into ACC, BHS, BUR, IEG, KRM because they are specialized dictionaries.
+It is not worthwhile to look into ACC, BHS, BUR, IEG, KRM, VEI because they are specialized dictionaries.
 It is not worthwhile to look into PD, because it is relatively clean and it is peculiar that it handles only 'a' headwords.
 
 

@@ -15,7 +15,7 @@ if __name__=="__main__":
 				print splt
 				print 'item different, but marked with no change'
 				exit(0)
-			if not splt[0] in ['ACC','BHS','BUR','IEG','KRM','PD']:
+			if not splt[0] in ['ACC','BHS','BUR','IEG','KRM','VEI','PD']:
 				wrd = splt[1]
 				fnchg.write(wrd+'\n')
 		else:

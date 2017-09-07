@@ -1,4 +1,3 @@
-; DONE TILL PWG
 PD:aicadeva:aicadeva:n
 PD:aiculA:aiculA:n
 PD:aibuka:aibuka:n
@@ -1235,7 +1234,7 @@ PGN:SrIgohAlI:SrIgohAlI:n
 ACC:SrIdevaAcArya:SrIdevaAcArya:n
 ACC:SrIdevaSarman:SrIdevaSarman:n
 ACC:SrIdevIsiMhadeva:SrIdevIsiMhadeva:n
-PUI:SrIpUrtI:SrIpUrti:n
+PUI:SrIpUrtI:SrIpUrti:t
 PE:SrIbimbaki:SrIbimbaki:n
 ACC:SrISEladakziRadvArasTalakalpa:SrISEladakziRadvArasTalakalpa:n
 ACC:SrISElanATa:SrISElanATa:n
@@ -3533,7 +3532,7 @@ CAE:aparAhla:aparAhRa:t
 CCS:aparAhla:aparAhRa:t
 GST:aparAhla:aparAhRa:t
 GST:aparAhlaka:aparAhRaka:t
-GST:aparAhlakfta:aparARlakfta:t
+GST:aparAhlakfta:aparAhRakfta:t
 GST:aparAhlatana:aparAhRatana:t
 PW:aparikleSa:aparikleSa:n
 STC:aparikleSa:aparikleSa:n

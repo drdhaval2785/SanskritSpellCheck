@@ -39,3 +39,8 @@ WIL:saumdvahat:samudvahat:t
 CAE:brAhymya:brAhmya:p
 ACC:tkAvAda:ktvAvAda:t
 PD:aDaHSayy:aDaHSayyA:t
+PUI:cidvanhi:cidvahni:p
+PUI:janhu:jahnu:p
+PUI:janhugaRa:jahnugaRa:p
+PUI:jAnhavI:jAhnavI:p
+PUI:maDyAnhA:maDyAhnA:p
