@@ -902,7 +902,7 @@ PUI:parIzadpavamAna:parIzadpavamAna:n
 IEG:palaYjalAgEaccu:palaYjalAgEaccu:n
 IEG:palaYSalAgE:palaYSalAgE:n
 IEG:palamudalAnEaccu:palamudalAnEaccu:n
-AP90:pazRi:pfzRi:t
+AP90:pazRi:pazRi:n
 VEI:pAkasTAmankOrayARa:pAkasTAmankOrayARa:n
 IEG:pAwyuparika:pAwyuparika:n
 BUR:pApacmi:pApacmi:n
