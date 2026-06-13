@@ -24,6 +24,7 @@
 """
 import sys,re
 import codecs
+import functools
 
 # dictyear has all dictionary codes, with the 'year'.
 # This 'year' is required to locate the files
@@ -52,7 +53,7 @@ def extracthw_mw(filein):
  try: 
   f = codecs.open(filein,"r","utf-8")
  except:
-  print "ERROR extracthw_mw file not found:",filein
+  print("ERROR extracthw_mw file not found:",filein)
   exit(1)
  hws = []
  for line in f:
@@ -100,7 +101,7 @@ def addhw(code,d):
  try:
   year = dictyear[code]
  except:
-  print "ERROR dictyear has no code",code
+  print("ERROR dictyear has no code",code)
   exit(1)
  # dirmain example:  PWGScan/2013/  if code == PWG
  dirmain = "%sScan/%s/" %(code,year)
@@ -114,11 +115,11 @@ def addhw(code,d):
   hw2name = "%shw2.txt" % code.lower()
   filein = dirbase + "pywork/" + hw2name
   hws = extracthw(filein)
- print "%s hws extracted from dict %s" %(len(hws),filein)
+ print("%s hws extracted from dict %s" %(len(hws),filein))
  # add these to 'd'
  for hw0 in hws:
   # hw0 is a unicode string. Convert.
-  hw = hw0.encode('ascii','replace')
+  hw = hw0.encode('ascii','replace').decode('ascii')
   if not hw in d:
    d[hw] = [code]
   else:
@@ -130,15 +131,15 @@ import string
 # Not sure where they go
 tranfrom="aAiIuUfFxXeEoOMHkKgGNcCjJYwWqQRtTdDnpPbBmyrlvSzsh"
 tranto = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvw"
-trantable = string.maketrans(tranfrom,tranto)
+trantable = str.maketrans(tranfrom,tranto)
 
 def slp_cmp_pairs(a,b):
  return slp_cmp(a[1],b[1]) # normalized
 
 def slp_cmp(a,b):
- a1 = string.translate(a,trantable)
- b1 = string.translate(b,trantable)
- return cmp(a1,b1)
+ a1 = a.translate(trantable)
+ b1 = b.translate(trantable)
+ return (a1 > b1) - (a1 < b1)
 
 slp1_cmp1_helper_data = {
  'k':'N','K':'N','g':'N','G':'N','N':'N',
@@ -160,9 +161,9 @@ def slp_cmp1_helper(a):
 def slp_cmp1(a,b):
  a = slp_cmp1_helper(a)
  b = slp_cmp1_helper(b)
- a1 = string.translate(a,trantable)
- b1 = string.translate(b,trantable)
- return cmp(a1,b1)
+ a1 = a.translate(trantable)
+ b1 = b.translate(trantable)
+ return (a1 > b1) - (a1 < b1)
 
 def sanhw1(fileout):
  # d is a dictionary
@@ -178,11 +179,11 @@ def sanhw1(fileout):
  opt=2 # controls which way
  if opt==1:
   # previous way
-  sortedhws = sorted(hws,cmp=slp_cmp1)
+  sortedhws = sorted(hws,key=functools.cmp_to_key(slp_cmp1))
  else:
   # new way
   hwpairs = [(hw,slp_cmp1_helper(hw)) for hw in hws]
-  sorted_hwpairs = sorted(hwpairs,cmp=slp_cmp_pairs)
+  sorted_hwpairs = sorted(hwpairs,key=functools.cmp_to_key(slp_cmp_pairs))
   sortedhws = [hw for (hw,hwadj) in sorted_hwpairs]
  # output 
  fout = codecs.open(fileout,"w","utf-8")
@@ -191,7 +192,7 @@ def sanhw1(fileout):
   codestr = ','.join(codes)
   fout.write("%s:%s\n"%(hw,codestr))
  fout.close()
- print "%s hws written to %s" %(len(hws),fileout)
+ print("%s hws written to %s" %(len(hws),fileout))
 if __name__=="__main__":
  fileout = sys.argv[1] # output path
  sanhw1(fileout)

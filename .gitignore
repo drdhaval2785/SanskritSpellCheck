@@ -4,6 +4,10 @@ ehthumbs.db
 ngram/data/test.txt
 ngram/data/error.txt
 
+# Python bytecode
+__pycache__/
+*.pyc
+
 # Folder config file
 Desktop.ini
 
@@ -28,7 +32,7 @@ $RECYCLE.BIN/
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
 
 # Thumbnails
 ._*

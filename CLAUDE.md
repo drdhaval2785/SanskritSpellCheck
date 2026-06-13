@@ -19,11 +19,10 @@ repo (this repo never edits dictionary source itself).
 
 All Sanskrit text in this repo is in **SLP1** transliteration.
 
-**Active work** (as of this writing): the repo is being modernized to run on
-**Python 3 + PHP 8** (see "Runtime & porting status" below), while continuing to
-(a) generate suspect lists for more base dictionaries and (b) refine the detection
-methods. New code should be Python 3 / PHP 8 native, not written to match the
-legacy style.
+**Runtime** (modernized June 2026): the toolset now runs on **Python 3 + PHP 8**.
+All scripts were ported from the original Python 2 / PHP 5–7 (see "Runtime &
+porting status" below for exactly what changed and how it was verified). New code
+should stay Python 3 / PHP 8 native.
 
 ## Core methodology
 
@@ -115,45 +114,55 @@ cd ngram && python ngramspellcheck.py data/test.txt data/error.txt 2
 
 There is no build, no test suite, and no package manifest — the "tests" are the
 generated suspect lists, verified by human reviewers against the scanned dictionaries.
-The **PHP pipelines run on PHP 8 today**; the **Python helpers** (`chg_nchg_sep.py`,
-`ngram/`, `o_vs_O/sortlen.py`) **must be ported to Python 3 first** — see below.
+All PHP pipelines and Python helpers run under PHP 8 / Python 3 (see below).
 
-## Runtime & porting status — **Python 3 + PHP 8 only**
+## Runtime & porting status
 
-The only available runtimes are Python 3 and PHP 8, but the committed code was
-written for Python 2 / PHP 5–7. The two languages are in very different shape.
+Local runtimes: **PHP 8.2** (`C:\xampp\php\php.exe`, *not* on PATH) and **Python
+3.14** (`python`), with `lxml` installed. The code was originally Python 2 / PHP 5–7
+and was ported in June 2026; what changed and how it was verified:
 
-**PHP side — runs today, one deprecation to clean up.** The faultfinder and o_vs_O
-pipelines work on PHP 8. The single rough edge is
-`preg_split($pattern, $value, null, PREG_SPLIT_DELIM_CAPTURE)` in
-[faultfinder3a.php](faultfinder3a.php) (lines 129 and 150): passing `null` for the
-`$limit` argument is deprecated on PHP 8.1+ — change it to `-1`. Scripts set
-`memory_limit=1000M` and read all of `sanhw1.txt` (~9 MB) into memory.
+**PHP (faultfinder pipeline) — runs and reproduces output exactly.** Verified by
+regenerating VCP: `faultfinder3a.php VCP` emits **6856** suspects, byte-identical to
+the committed [AllvsVCP/AllvsVCP.txt](AllvsVCP/AllvsVCP.txt), with zero warnings.
+Two output-neutral PHP 8 fixes in [faultfinder3a.php](faultfinder3a.php):
+- `preg_split(..., null, ...)` → `-1` (null `$limit` is deprecated on 8.1+).
+- `array_diff()` (line ~98) preserves original keys, so the by-index check loop hit
+  the gaps and flooded PHP 8 with "Undefined array key" + `preg_match(null)`
+  warnings. Guarded with `if (!isset($file1[$j])) continue;` — those gaps were
+  already no-ops, so output is unchanged. (Scripts set `memory_limit=1000M` and read
+  all ~431 k lines of `sanhw1.txt` into memory.)
 
-**Python side — every script is Python 2 and won't even parse under Python 3.**
-All `.py` files use `print` statements (a hard `SyntaxError` in Python 3), so none
-run as-is. Concrete porting checklist:
+**Heads-up — re-running an *old* base dict now yields almost nothing, and that is
+correct, not a regression.** The tool's purpose is to surface errors that then get
+fixed upstream in CORRECTIONS and folded back into a regenerated `sanhw1.txt`. The
+early dicts are now clean: fresh `MW`=0, `PW`=3, `PWG`=11 vs the committed 2017 files
+(1705 / 1853 / 1984). VCP (processed last, 2017) still reproduces 6856. A small/empty
+result for MW/PW/PWG means "already corrected," **not** "pipeline broken." A *small*
+base also flags more (narrow pattern inventory): SKD (17 k entries) → 29 411 flags,
+many against specialized dicts — prefer a large clean base for high-precision lists.
 
-- All files: `print "x"` → `print("x")`.
-- [sanhw1/sanhw1.py](sanhw1/sanhw1.py), [sanhw2/sanhw2.py](sanhw2/sanhw2.py):
-  - `string.maketrans` → `str.maketrans`; `string.translate(a, t)` → `a.translate(t)`.
-  - builtin `cmp(a, b)` was removed → `(a > b) - (a < b)`.
-  - `sorted(…, cmp=fn)` was removed → `sorted(…, key=functools.cmp_to_key(fn))`.
-  - `hw0.encode('ascii','replace')` returns **bytes** in Py3, so dict keys become
-    `b'…'` — these were Py2 unicode→str shims; drop the encode or decode back to `str`.
-- [ngram/ngramspellcheck.py](ngram/ngramspellcheck.py): `from HTMLParser import HTMLParser`
-  → `from html.parser import HTMLParser` (line 22); `is not 0` → `!= 0` (line 155);
-  have `MLStripper.__init__` call `super().__init__()`.
-- [o_vs_O/sortlen.py](o_vs_O/sortlen.py): `print` statements; also needs `lxml`.
+**Python — all scripts ported to Python 3** (`py_compile` clean on 3.14; the
+runnable ones were executed):
+- `print` statements → `print(...)` everywhere.
+- [sanhw1.py](sanhw1/sanhw1.py) / [sanhw2.py](sanhw2/sanhw2.py): `string.maketrans`→`str.maketrans`,
+  `string.translate(a,t)`→`a.translate(t)`, `cmp(a,b)`→`(a>b)-(a<b)`,
+  `sorted(…,cmp=fn)`→`sorted(…,key=functools.cmp_to_key(fn))`,
+  `encode('ascii','replace')`→`….decode('ascii')` (keep keys as `str`).
+- [ngramspellcheck.py](ngram/ngramspellcheck.py): `HTMLParser` import → `html.parser`,
+  `MLStripper.__init__` calls `super().__init__()`, `is not 0`→`!= 0`, invalid `\(`
+  regex escapes doubled. Runs against its `data/` fixtures (found 25 suspects).
+- [sortlen.py](o_vs_O/sortlen.py): `readlines(fin)`→`readlines()`; reproduces the
+  committed `o_vs_O/output3/composite*a.txt` exactly.
+- [chg_nchg_sep.py](chg_nchg_sep.py): runs (716 nchg lines on `AllvsMW_sf.txt`).
+- Remaining `codecs.open()` DeprecationWarnings are cosmetic (still works on 3.14) —
+  optional future cleanup to `open(encoding=…)`.
 
-**`sanhw1.txt` / `sanhw2.txt` are regenerated on the Cologne server, not here.**
-`sanhw*.py`'s `addhw()` reads sibling `<CODE>Scan/<year>/pywork/<code>hw2.txt` trees
-that aren't on this machine, so porting them is not on the critical path for local
-work — treat the two `.txt` files as fixed inputs and let the refresh happen
-server-side (the org's standard server-side artefact-refresh model).
+**`sanhw1.py` / `sanhw2.py` were ported for correctness but not run here** — their
+`addhw()` reads sibling `<CODE>Scan/<year>/pywork/<code>hw2.txt` trees that exist only
+on the Cologne server, where `sanhw1.txt` / `sanhw2.txt` are regenerated. Treat the
+two `.txt` files as fixed local inputs.
 
-**Tooling already wired up:** [.pre-commit-config.yaml](.pre-commit-config.yaml)
-(ruff `E9,F63,F7,F8` + yaml/whitespace hooks) and
-[.github/dependabot.yml](.github/dependabot.yml) (github-actions). Default branch is
-`master`. Note the ruff rule set is syntax/undefined-name only — it will **not** flag
-Py2 `print` statements, so it won't catch un-ported files for you.
+**Tooling:** [.pre-commit-config.yaml](.pre-commit-config.yaml) (ruff `E9,F63,F7,F8`)
++ [.github/dependabot.yml](.github/dependabot.yml). Default branch `master`. The ruff
+rule set is syntax/undefined-name only, so it won't catch Py2 `print` statements.

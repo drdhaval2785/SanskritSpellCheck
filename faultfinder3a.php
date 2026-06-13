@@ -126,7 +126,7 @@ function comparepatterns($filea,$pattern_datum,$filec,$outfile,$sffile)
 	{
 		if(preg_match($pattern,$value))
 		{
-			$vccccvraw = preg_split($pattern,$value,null,PREG_SPLIT_DELIM_CAPTURE);
+			$vccccvraw = preg_split($pattern,$value,-1,PREG_SPLIT_DELIM_CAPTURE);
 			$i=2;
 			while($i<count($vccccvraw))
 			{
@@ -143,11 +143,12 @@ function comparepatterns($filea,$pattern_datum,$filec,$outfile,$sffile)
 		$file1 = $filec;
 		for ($j=0;$j<count($file1);$j++)
 		{
+			if (!isset($file1[$j])) { continue; } // skip array_diff key gaps (PHP 8: avoids undefined-key warning + preg_match(null) deprecation)
 			$value=$file1[$j];
 			$wpats=array(); // Patterns flagged for this word
 			if(preg_match($pattern,$value))
 			{
-				$vccccvex = preg_split($pattern,$value,null,PREG_SPLIT_DELIM_CAPTURE);        
+				$vccccvex = preg_split($pattern,$value,-1,PREG_SPLIT_DELIM_CAPTURE);        
 				$i=2;
 				while ($i<count($vccccvex))
 				{

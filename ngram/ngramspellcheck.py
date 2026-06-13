@@ -19,11 +19,12 @@ import sys, re
 import codecs
 import string
 import datetime
-from HTMLParser import HTMLParser
+from html.parser import HTMLParser
 import collections
 
 class MLStripper(HTMLParser):
     def __init__(self):
+        super().__init__()
         self.reset()
         self.fed = []
     def handle_data(self, d):
@@ -82,7 +83,7 @@ def commons(lstoflist,n):
 		if all(member in lst for lst in lstoflist):
 			commons.append(member)
 			filestore.write(member+"\n")
-	print "Common ngrams are", len(commons)
+	print("Common ngrams are", len(commons))
 	filestore.close()
 	return commons
 def stripper(text):
@@ -98,10 +99,10 @@ def commonngram(n):
 	majordicts = ["MW","PW"]
 	ngrams = []
 	for dict in majordicts:
-		print dict
+		print(dict)
 		[basewords,otherwords] = getbasewords(dict)
 		ngram = getngrams(basewords,n)
-		print len(ngram)
+		print(len(ngram))
 		ngrams.append(ngram)
 	commonngrams = commons(ngrams,n)
 def whiteterm(ends,word,diff,basengrams,n):
@@ -147,22 +148,22 @@ def testwithcommonngrams(test,error,n):
 		testwords = line.split(' ')
 		for testword in testwords:
 			testword = testword.replace(u'’',u'')
-			testword = re.sub('[\'",.?0-9!/*_\(\)\[\]\{\}<>;:*’#$+%^@–=“”|॒]','',testword)
+			testword = re.sub('[\'",.?0-9!/*_\\(\\)\\[\\]\\{\\}<>;:*’#$+%^@–=“”|॒]','',testword)
 			testngrams = ngrams(testword,n)
 			diff = set(testngrams)-set(basengrams)
 			if not diff <= whitelist and not whiteterm(whiteends,testword,diff,basengrams,n):
 				diff = list(diff)
-				if len(diff) is not 0:
+				if len(diff) != 0:
 					if not (spaceignore and diff[0][0]=='n'):
-						print testword.encode('utf-8'), diff
+						print(testword, diff)
 						diffgrand += diff
 						errorfile.write(testword+':'+','.join(diff)+'\n')
 						counter += 1
 	errorfile.close()
 	com = collections.Counter(diffgrand)
 	mostcom = com.most_common(20)
-	print mostcom
-	print "Total potential errors by ngram method are", counter
+	print(mostcom)
+	print("Total potential errors by ngram method are", counter)
 def lessusedngrams(test,error,n):
 	testfile = codecs.open(test,'r','utf-8')
 	lines = testfile.read().split()
@@ -176,12 +177,12 @@ def lessusedngrams(test,error,n):
 		testwords = line.split(' ')
 		for testword in testwords:
 			testword = testword.replace(u'’',u'')
-			testword = re.sub('[\'",.?0-9!/*_\(\)\[\]\{\}<>;:*’#$+%^@–=“”|]','',testword)
+			testword = re.sub('[\'",.?0-9!/*_\\(\\)\\[\\]\\{\\}<>;:*’#$+%^@–=“”|]','',testword)
 			ng += ngrams(testword,n)
 	counter = collections.Counter(ng)
-	print counter
+	print(counter)
 	errorfile.close()
-	print "Total ngrams are", len(ng)
+	print("Total ngrams are", len(ng))
 		
 if __name__=="__main__":
 	fin = sys.argv[1]
