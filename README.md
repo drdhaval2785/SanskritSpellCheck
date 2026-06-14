@@ -40,7 +40,8 @@ the V/C skeleton) — that is what the `detectors/` package addresses.
 ## Documentation
 
 - **[USE_CASES.md](USE_CASES.md)** — pick a goal, get the commands and the verify→submit path.
-- **[detectors/readme.md](detectors/readme.md)** — the six newer algorithms.
+- **[detectors/readme.md](detectors/readme.md)** — the seven newer algorithms (DCS-grounded).
+- **[ROADMAP.md](ROADMAP.md)** — phased plan for what's next.
 - **[CLAUDE.md](CLAUDE.md)** — architecture, runtime/porting status, conventions.
 - **[changelog.md](changelog.md)** — dated change history.
 
