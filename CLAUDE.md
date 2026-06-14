@@ -96,6 +96,11 @@ don't refactor them. They use no PHP-8-removed constructs (`each()`,
   `noise` (specialized-dict-only), `priority` (non-rcc anomalies — review first), and
   `gemination` (the rcc/post-repha subset — low priority). The 2026 re-run packages
   live in [Allvs_2026/](Allvs_2026); the historical `AllvsXX/` dirs are the 2017 runs.
+- **[detectors/](detectors)** — six newer algorithms on a shared `slp1util.py`
+  confusion model: `spell_correct`, `consensus`, `intra_dup` (correctors, emit
+  `DICT:wrong:right:n`) and `phonotactic_check`, `charset_check`, `order_check`
+  (flaggers, emit `X:CODE=Y:D`). They target the skeleton-preserving substitutions
+  faultfinder is blind to. Task-oriented recipes: **[USE_CASES.md](USE_CASES.md)**.
 
 ## Commands
 

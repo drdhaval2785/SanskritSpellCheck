@@ -3,6 +3,48 @@ SanskritSpellCheck
 
 from faultfinder3a.php - the machine is commandline tool now.
 
+> **Runtime:** modernized June 2026 to run on **Python 3 + PHP 8** — see
+> [CLAUDE.md](CLAUDE.md). For task-oriented recipes see **[USE_CASES.md](USE_CASES.md)**;
+> for the newer algorithms see **[detectors/readme.md](detectors/readme.md)**.
+
+## Detection methods
+
+| method | finds | output |
+|---|---|---|
+| **faultfinder** (`faultfinder3a.php`) | headwords with a vowel/consonant cluster absent from a base dictionary | `X:P=Y:D` |
+| **o_vs_O** (`o_vs_O/`) | single-letter near-spelling confusions across dictionaries | pair list |
+| **ngram** (`ngram/`) | running-text words whose bigrams are absent from MW∩PW | error list |
+| **spell_correct** (`detectors/`) | misspelling whose neighbour is a trusted MW/PW/VCP headword (corpus-ranked) | `DICT:wrong:right:n` |
+| **consensus** (`detectors/`) | minority spelling vs the N-way cross-dictionary majority | `DICT:wrong:right:n` |
+| **intra_dup** (`detectors/`) | a dictionary holding a word and a rare variant of it | `DICT:wrong:right:n` |
+| **phonotactic** (`detectors/`) | impossible anusvara/visarga/double-vowel forms | `X:PH-…=…:D` |
+| **charset** (`detectors/`) | non-SLP1 characters (encoding errors) | `X:CHS=…:D` |
+| **order** (`detectors/`) | headwords out of Sanskrit collation order | `X:ORD=…` |
+
+## Real error distribution (what the corrections actually are)
+
+Measured from the [o_vs_O](o_vs_O/o_vs_O2.txt) confusion pairs (single-letter class):
+
+| class | share | example |
+|---|---|---|
+| vowel length (a/A, i/I, u/U) | **75%** | `vira` → `vIra` |
+| aspiration (k/K, t/T) | 13% | `kaPila` → `kapila` |
+| sibilant (s/S/z) | 8% | `Amfz` → `AmfS` |
+| diphthong (o/O, e/E) | 4% | `koSika` → `kOSika` |
+
+The CORRECTIONS history adds v↔b, ṛ↔ri, encoding, duplicates, misordering, and
+anti-sandhi. Note **faultfinder is blind to the top three classes** (they preserve
+the V/C skeleton) — that is what the `detectors/` package addresses.
+
+## Documentation
+
+- **[USE_CASES.md](USE_CASES.md)** — pick a goal, get the commands and the verify→submit path.
+- **[detectors/readme.md](detectors/readme.md)** — the six newer algorithms.
+- **[CLAUDE.md](CLAUDE.md)** — architecture, runtime/porting status, conventions.
+- **[changelog.md](changelog.md)** — dated change history.
+
+## faultfinder pipeline (detail)
+
 The program sequence is 
 ```
 php faultfinder3a.php MW sanhw1.txt AllvsMW/AllvsMW.txt AllvsMW/AllvsMW_sf.txt

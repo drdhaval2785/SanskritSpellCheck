@@ -53,3 +53,56 @@ forms in particular need eyes on the print.
   (anu/aRu, pAda/pada) out of the results.
 - `spell_correct.py`: trusted lexicon = MW+PW+VCP; corpus = CountVowels texts.
 - All detectors skip [../nochange/nochange.txt](../nochange/nochange.txt) whitelisted words.
+
+## How each detector works (algorithm + rationale)
+
+**spell_correct — noisy-channel correction.** For every headword *not* in the
+trusted lexicon (MW ∪ PW ∪ VCP stems), generate confusion-neighbours — one
+`CONFUSION_PAIRS` substitution at each position, plus the two-character `f`↔`ri`/`ru`
+vocalic-r variant — and keep any neighbour that *is* a trusted headword. Rank by
+corpus support: the suggestion appears in the SLP1 corpus and the headword does not.
+*Why:* the big scholarly dictionaries are curated ground truth and the corpus
+(inflected MBh/Rāmāyaṇa/Veda forms) confirms the suggestion is a real word, so this
+catches a spelling that is wrong across several minor dictionaries at once — which
+vote-based consensus would miss. The `f`↔`ri` op is the only multi-character rule;
+it expresses the `SfNg`/`SriNg` class that a same-length substitution cannot.
+
+**consensus — N-way voting.** Group all headwords by `confusion_key` (so confusable
+spellings share a bucket), take the spelling in the most dictionaries as the
+consensus, and flag a near-variant that differs by exactly one `confusion_sub`, sits
+in ≤ `MINORITY_MAX` dictionaries, and trails the consensus by ≥ `MARGIN`.
+*Why:* `confusion_key` makes candidate grouping O(n) instead of O(n²); but it
+over-merges distinct words (`ata`/`aTa`) and would treat a trailing case ending
+(`aNgaH`/`aNga`) as a typo — so `confusion_sub` (one *same-length* confusion
+substitution) plus the rarity/margin gates restore precision.
+
+**intra_dup — self-contradiction.** Same grouping as consensus, but flag the rare
+variant only in the dictionaries that *also* contain the consensus spelling
+(set intersection non-empty). *Why:* if one dictionary holds both `kapila` and a rare
+`kaPila`, it already attests the right form, so its near-variant is almost certainly
+an internal typo — the highest-precision corrector, and it names the dictionary to fix.
+
+**phonotactic — absolute rules.** Per-character checks: anusvara/visarga/candrabindu
+must sit on a vowel; an anusvara may not precede a vowel; identical vowels may not be
+adjacent. *Why:* the statistical faultfinder only knows "absent from a base"; these
+rules catch forms that are *impossible* even when they appear in the base dictionary.
+Only near-certain rules are used, so the false-positive rate is ~0.
+
+**charset — structural validity.** Flag any character outside the SLP1 alphabet and
+categorise it (Latin-diacritic, Greek, Devanāgarī, digit, whitespace, danda).
+*Why:* nothing else validates the character set; it needs no base dictionary and can
+run on raw dictionary text before it ever reaches `sanhw1.txt`.
+
+**order_check — collation.** Walk a *source-order* headword list and flag any pair
+where `sanskrit_sort_key(cur) < sanskrit_sort_key(prev)`. The key mirrors `sanhw1.py`
+(SLP1 sort alphabet + anusvara-before-varga sorting as the homorganic nasal), verified
+by reporting 0 violations on the 431 k already-sorted `sanhw1` headwords.
+
+### Shared design principles
+- One confusion model in [slp1util.py](slp1util.py) — no per-detector copies (the
+  bug the code-review caught in the original tools).
+- `confusion_key` for cheap grouping, `confusion_sub` for precise confirmation:
+  group loosely, then verify strictly.
+- Rarity + attestation gates over raw similarity — similarity alone flags distinct
+  real words.
+- Everything is a **candidate** for human + scan verification, never an auto-fix.
