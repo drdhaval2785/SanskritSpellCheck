@@ -81,6 +81,24 @@ def confusion_sub(a, b):
     return len(diff) == 1 and frozenset(diff[0]) in CONFUSION_PAIRS
 
 
+# Sanskrit collation key (mirrors sanhw1.py's slp_cmp1): map SLP1 to a sort
+# alphabet, and treat anusvara M before a varga consonant as the homorganic nasal
+# (so aMga sorts as aNga).
+import re as _re
+_SORT_TAB = str.maketrans(
+    "aAiIuUfFxXeEoOMHkKgGNcCjJYwWqQRtTdDnpPbBmyrlvSzsh",
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvw")
+_HOMORGANIC = {c: n for n, grp in
+               (('N', 'kKgGN'), ('Y', 'cCjJY'), ('R', 'wWqQR'),
+                ('n', 'tTdDn'), ('m', 'pPbBm')) for c in grp}
+_M_BEFORE_VARGA = _re.compile('(M)([kKgGNcCjJYwWqQRtTdDnpPbBm])')
+
+
+def sanskrit_sort_key(w):
+    w = _M_BEFORE_VARGA.sub(lambda m: _HOMORGANIC[m.group(2)] + m.group(2), w)
+    return w.translate(_SORT_TAB)
+
+
 def edit_distance(a, b, cap=3):
     """Levenshtein distance, short-circuited once it exceeds `cap`."""
     if abs(len(a) - len(b)) > cap:
