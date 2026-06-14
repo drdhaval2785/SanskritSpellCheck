@@ -62,7 +62,7 @@ while(! feof($fin)) {
  list($key,$pat0,$dicts) = explode(':',$line);
  list($patabbrev,$patvalue) = explode('=',$pat0);
  $dictnumbers = count(explode(',',$dicts)); // added by Dr. Dhaval Patel for removing words occurring in more than one dicts. 6 Dec 2014
-    if ($repeat==='1')
+    if ($repeat==='1' || $repeat==='2') // bugfix: repeat=2 (rCC mode) was never storing records
     {
         $inrecs[] = array($key,$patabbrev,$patvalue,$dicts); // original by ejf.        
     }
@@ -106,7 +106,7 @@ foreach($pattern_data as $pattern_datum) {
  fputs($outfile,"<b style=\"color:red\">This is $pattern_name pattern.</b></br>");
  // filter the inrecs for those with this pattern_abbrev
  foreach($inrecs as $inrec) {
-     if ($repeat==='1')
+     if ($repeat==='1' || $repeat==='2') // bugfix: repeat=2 (rCC mode) was never destructuring records
      {
         list($key,$patabbrev,$patvalue,$dicts) = $inrec; // original by ejf.         
      }

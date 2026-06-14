@@ -25,11 +25,18 @@ vRtta, -dd- in uddeSa) are perfectly legitimate Sanskrit geminates; restricting 
 post-`r` doubling drops those false positives. Highest-precision view; most useful on
 noisy (medium/small) bases where SIGNAL alone is still large.
 
-Signal/gemination are sorted by headword length descending then alphabetically.
+PRIORITY is SIGNAL minus GEMINATION -- the non-post-repha anomalies, and the real
+verify-first targets. faultfinder3a-html.php's own rcc() filter sets post-repha words
+aside by default precisely because they are usually the faithful printed form, so the
+genuinely-suspicious clusters are the non-rcc ones.
+
+Signal/priority/gemination are sorted by headword length descending then alphabetically.
 
 Usage:
   python triage_suspects.py <AllvsXX.txt> <signal_out.txt> <noise_out.txt>
-  (a *-gemination.txt file is written alongside signal_out)
+  Also writes, alongside signal_out:
+    *-priority.txt   = signal minus post-repha (non-rcc anomalies; VERIFY FIRST)
+    *-gemination.txt = the post-repha subset (likely faithful print; low priority)
 """
 import sys
 import collections
@@ -79,27 +86,29 @@ def main(infile, signal_out, noise_out):
 
     signal.sort(key=lambda r: (-len(r[0]), r[0]))
     gem = [r for r in signal if has_gemination(r[2])]
+    priority = [r for r in signal if not has_gemination(r[2])]
 
-    if 'signal' in signal_out:
-        gem_out = signal_out.replace('signal', 'gemination')
-    else:
-        gem_out = signal_out + '.gemination'
+    def derive(name):
+        return signal_out.replace('signal', name) if 'signal' in signal_out else signal_out + '.' + name
+
+    gem_out = derive('gemination')
+    priority_out = derive('priority')
 
     write(signal_out, signal)
     write(noise_out, noise)
     write(gem_out, gem)
+    write(priority_out, priority)
 
     total = len(signal) + len(noise)
-    print("total suspects   : %d" % total)
-    print("signal (general) : %d  -> %s" % (len(signal), signal_out))
-    print("  of which gemination: %d  -> %s" % (len(gem), gem_out))
-    print("noise (special)  : %d  -> %s" % (len(noise), noise_out))
-    pats = collections.Counter(r[1] for r in gem)
-    print("gemination by pattern: " + ", ".join("%s=%d" % (k, v) for k, v in pats.most_common()))
-    gdicts = collections.Counter(c for r in gem for c in r[3] if c not in SPECIALIZED)
-    print("gemination by dict   : " + ", ".join("%s=%d" % (k, v) for k, v in gdicts.most_common(10)))
-    print("--- top 15 gemination suspects (longest first) ---")
-    for r in gem[:15]:
+    print("total suspects        : %d" % total)
+    print("signal (general)      : %d  -> %s" % (len(signal), signal_out))
+    print("  priority (non-rcc)  : %d  -> %s   [VERIFY FIRST]" % (len(priority), priority_out))
+    print("  gemination (post-r) : %d  -> %s   [likely faithful print, low priority]" % (len(gem), gem_out))
+    print("noise (specialized)   : %d  -> %s" % (len(noise), noise_out))
+    pats = collections.Counter(r[1] for r in priority)
+    print("priority by pattern   : " + ", ".join("%s=%d" % (k, v) for k, v in pats.most_common()))
+    print("--- top 12 priority suspects (longest first) ---")
+    for r in priority[:12]:
         print("  " + r[4])
 
 

@@ -86,6 +86,16 @@ don't refactor them. They use no PHP-8-removed constructs (`each()`,
   into `chg.txt` (real corrections) and `nchg.txt` (false positives → feed back to whitelist).
 - The `o_vs_O` composite outputs rank candidate pairs by likelihood
   (composite1 = highest … composite3 = near-nil); see [o_vs_O/readme.md](o_vs_O/readme.md).
+- **HTML reports** ([faultfinder3a-html.php](faultfinder3a-html.php)) take a 3rd
+  `repeat` arg: `0` (default) keeps only single-dictionary words *and* excludes
+  post-repha words via `rcc()` (`r` + doubled consonant); `1` allows multi-dict; `2`
+  renders every input row (including rcc). The default rcc exclusion encodes a real
+  editorial judgment — post-repha doublings (sūryya, varṇṇa, ūrmma) are usually the
+  faithful printed form, *not* errors. (`repeat=2` was dead code until fixed June 2026.)
+- **[triage_suspects.py](triage_suspects.py)** post-processes an `AllvsXX.txt` into
+  `noise` (specialized-dict-only), `priority` (non-rcc anomalies — review first), and
+  `gemination` (the rcc/post-repha subset — low priority). The 2026 re-run packages
+  live in [Allvs_2026/](Allvs_2026); the historical `AllvsXX/` dirs are the 2017 runs.
 
 ## Commands
 

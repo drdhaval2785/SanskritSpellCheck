@@ -15,10 +15,12 @@ orthographic variants (`r` + doubled consonant: varṇa→varṇṇa, durda→du
 -rya→-ryya, ūrma→ūrmma), all in general dictionaries (VCP/SHS/WIL/YAT/SKD).
 
 ## Files
-- [AllvsMW72-gemination.txt](AllvsMW72-gemination.txt) — **the review list (9)**.
-- [AllvsMW72-gemination.html](AllvsMW72-gemination.html),
-  [AllvsMW72-gemination-table.html](AllvsMW72-gemination-table.html) — clickable
-  Cologne-link reports for verifying against the scans.
+- [AllvsMW72-gemination.txt](AllvsMW72-gemination.txt) — **the review list (9)**:
+  post-repha variants, with clickable [report](AllvsMW72-gemination.html). Note these
+  are usually the faithful printed form (the generator's `rcc()` excludes them by
+  default), so they're low-confidence-as-errors — mostly a normalization-policy
+  question. (MW72's non-rcc signal is the 8.5k-row noise, so there's no useful
+  priority list for this base — unlike MW/PW/PWG.)
 - [AllvsMW72.txt](AllvsMW72.txt) — full raw 15,402-suspect list, kept so the triage
   can be re-run with a different filter without re-running PHP.
 
@@ -28,5 +30,5 @@ precision, multi-MB). Regenerate them with:
 php faultfinder3a.php      MW72 sanhw1.txt Allvs_2026/MW72/AllvsMW72.txt Allvs_2026/MW72/AllvsMW72_sf.txt
 python triage_suspects.py Allvs_2026/MW72/AllvsMW72.txt Allvs_2026/MW72/AllvsMW72-signal.txt Allvs_2026/MW72/AllvsMW72-noise.txt
 # -> also writes AllvsMW72-gemination.txt
-php faultfinder3a-html.php Allvs_2026/MW72/AllvsMW72-gemination.txt Allvs_2026/MW72/AllvsMW72-gemination.html
+php faultfinder3a-html.php Allvs_2026/MW72/AllvsMW72-gemination.txt Allvs_2026/MW72/AllvsMW72-gemination.html 2  # 3rd arg 2 = render rCC words
 ```

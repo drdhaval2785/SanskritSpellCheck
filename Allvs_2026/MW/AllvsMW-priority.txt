@@ -1,0 +1,12 @@
+suvaRnakadalI:VCCV=aRna:SKD
+sihRaBUmikA:VCCV=ihRa:SHS,WIL,YAT
+suradIrDikA:VCCV=IrDi:WIL,YAT
+hftsuas:VV=ua:GRA
+sihRakI:VCCV=ihRa:SHS,WIL,YAT
+havuzA:VCV=avu:PW,PWG,SKD
+stanBa:VCCV=anBa:VCP
+suhmAH:VCCV=uhmA:AP,AP90
+sOhva:VCCV=Ohva:PW
+sihRa:VCCV=ihRa:SHS,WIL,YAT
+stFha:VCV=Fha:SKD,WIL
+hehE:VCV=ehE:PW,PWG,SKD,VCP
