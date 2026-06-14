@@ -57,6 +57,30 @@ def confusion_key(w):
     return ''.join(out)
 
 
+# Unordered single-character confusion pairs (the real classes: vowel-length,
+# diphthong, retroflex/dental, sibilant, aspiration, v/b, nasal). Used to confirm
+# that two same-length spellings differ by ONE genuine confusion -- which excludes
+# morphological endings (a trailing visarga/anusvara is an indel, not a confusion).
+CONFUSION_PAIRS = {frozenset(p) for p in (
+    "aA iI uU fF xX eE oO "
+    "tw TW dq DQ nR "
+    "sS sz Sz "
+    "kK gG cC jJ wW qQ tT dD pP bB "
+    "bv Bv "
+    "nm nN nY mN mY mR NY NR YR"
+).split()}
+
+
+def confusion_sub(a, b):
+    """True iff a and b are the same length and differ in exactly one position by a
+    known confusion pair (so a/A, k/K, s/S, o/O, v/b, t/w ... but NOT a trailing
+    case ending, which is a length difference)."""
+    if len(a) != len(b):
+        return False
+    diff = [(x, y) for x, y in zip(a, b) if x != y]
+    return len(diff) == 1 and frozenset(diff[0]) in CONFUSION_PAIRS
+
+
 def edit_distance(a, b, cap=3):
     """Levenshtein distance, short-circuited once it exceeds `cap`."""
     if abs(len(a) - len(b)) > cap:
