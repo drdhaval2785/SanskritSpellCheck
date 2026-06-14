@@ -14,9 +14,10 @@ from faultfinder3a.php - the machine is commandline tool now.
 | **faultfinder** (`faultfinder3a.php`) | headwords with a vowel/consonant cluster absent from a base dictionary | `X:P=Y:D` |
 | **o_vs_O** (`o_vs_O/`) | single-letter near-spelling confusions across dictionaries | pair list |
 | **ngram** (`ngram/`) | running-text words whose bigrams are absent from MW∩PW | error list |
-| **spell_correct** (`detectors/`) | misspelling whose neighbour is a trusted MW/PW/VCP headword (corpus-ranked) | `DICT:wrong:right:n` |
+| **spell_correct** (`detectors/`) | misspelling whose neighbour is a trusted MW/PW/VCP headword (DCS-frequency-ranked) | `DICT:wrong:right:n` |
 | **consensus** (`detectors/`) | minority spelling vs the N-way cross-dictionary majority | `DICT:wrong:right:n` |
 | **intra_dup** (`detectors/`) | a dictionary holding a word and a rare variant of it | `DICT:wrong:right:n` |
+| **dict_vs_corpus** (`detectors/`) | a form all dictionaries agree on but the DCS corpus contradicts (collective error) | `DICT:wrong:right:n` |
 | **phonotactic** (`detectors/`) | impossible anusvara/visarga/double-vowel forms | `X:PH-…=…:D` |
 | **charset** (`detectors/`) | non-SLP1 characters (encoding errors) | `X:CHS=…:D` |
 | **order** (`detectors/`) | headwords out of Sanskrit collation order | `X:ORD=…` |

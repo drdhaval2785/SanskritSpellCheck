@@ -6,6 +6,25 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.2.0] - 2026-06-14
+
+### Added
+- DCS corpus grounding: vendored `detectors/dcs_lemma_summary.json` (83,239 SLP1
+  lemmas + frequency bands 1–5; DCS-2021, Oliver Hellwig, CC-BY, via VisualDCS).
+  `slp1util.py` gains `load_dcs_lemmas`, `normalize_lemma` (DCS join key), and a shared
+  `confusion_candidates`.
+- New detector `dict_vs_corpus.py` — catches **collective** dictionary errors (a form
+  every dictionary agrees on but the DCS corpus contradicts). Lowest-precision /
+  exploratory by design.
+
+### Changed
+- `spell_correct.py` ranks suggestions by DCS frequency band and **suppresses**
+  headwords that are attested DCS lemmas (9921→9173 flagged, 4001 real words
+  suppressed, 704 suggest a band-≥4 DCS lemma); refactored onto shared
+  `confusion_candidates`.
+- `consensus.py` / `intra_dup.py` suppress minority/variant spellings that are
+  attested DCS lemmas (consensus 8918→7548, intra_dup 10443→8945).
+
 ## [1.1.0] - 2026-06-14
 
 ### Added

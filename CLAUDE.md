@@ -96,11 +96,14 @@ don't refactor them. They use no PHP-8-removed constructs (`each()`,
   `noise` (specialized-dict-only), `priority` (non-rcc anomalies — review first), and
   `gemination` (the rcc/post-repha subset — low priority). The 2026 re-run packages
   live in [Allvs_2026/](Allvs_2026); the historical `AllvsXX/` dirs are the 2017 runs.
-- **[detectors/](detectors)** — six newer algorithms on a shared `slp1util.py`
-  confusion model: `spell_correct`, `consensus`, `intra_dup` (correctors, emit
-  `DICT:wrong:right:n`) and `phonotactic_check`, `charset_check`, `order_check`
-  (flaggers, emit `X:CODE=Y:D`). They target the skeleton-preserving substitutions
-  faultfinder is blind to. Task-oriented recipes: **[USE_CASES.md](USE_CASES.md)**.
+- **[detectors/](detectors)** — seven newer algorithms on a shared `slp1util.py`
+  confusion model, several grounded in the **DCS corpus** (vendored
+  `dcs_lemma_summary.json`, 83k SLP1 lemmas + frequency bands, DCS-2021 CC-BY, used
+  to suppress real-word headwords and rank suggestions): correctors `spell_correct`
+  (DCS-ranked), `consensus`, `intra_dup`, `dict_vs_corpus` (collective errors) emit
+  `DICT:wrong:right:n`; flaggers `phonotactic_check`, `charset_check`, `order_check`
+  emit `X:CODE=Y:D`. They target the skeleton-preserving substitutions faultfinder is
+  blind to. Task-oriented recipes: **[USE_CASES.md](USE_CASES.md)**.
 
 ## Commands
 

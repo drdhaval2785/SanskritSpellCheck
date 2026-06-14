@@ -13,17 +13,40 @@ catches when the correct variant already exists in another dictionary.
 
 [slp1util.py](slp1util.py) is the shared module: the SLP1 alphabet, the confusion
 model (`confusion_key` folds 99.2% of real confusion pairs to one key; `confusion_sub`
-tests a single confusion substitution), `sanskrit_sort_key`, `edit_distance`, and the
-lexicon/corpus/whitelist loaders.
+tests a single confusion substitution; `confusion_candidates` generates correction
+neighbours), `sanskrit_sort_key`, `edit_distance`, and the lexicon/corpus/DCS/whitelist
+loaders.
+
+### Corpus grounding (DCS)
+
+Four detectors use the **DCS corpus** as ground truth via the vendored
+[`dcs_lemma_summary.json`](dcs_lemma_summary.json) — 83,239 SLP1 lemmas with frequency
+bands 1–5 (1 = hapax … 5 = ≥1000 occurrences). It is used two ways:
+
+- **suppress** — a headword that is itself an attested DCS lemma is a real word, so
+  `spell_correct`/`consensus`/`intra_dup` skip it (a large false-positive cut: ~4000
+  for spell_correct, ~1400 each for consensus/intra_dup).
+- **rank/flag** — `spell_correct` orders suggestions by the suggested lemma's band
+  (very-common corrections first); `dict_vs_corpus` uses DCS as an external oracle.
+
+Headwords are normalized to the DCS join key with `normalize_lemma()` (strip accents
+`/ \ ^ ~` and trailing homonym digits; SLP1 case preserved), per the VisualDCS
+consumption contract.
+
+> **Attribution.** `dcs_lemma_summary.json` is a frequency-banded derivative of the
+> **Digital Corpus of Sanskrit** (DCS-2021, © Oliver Hellwig, **CC BY**), produced by
+> [VisualDCS](https://github.com/gasyoun/VisualDCS) and vendored here read-only (bands
+> only, no passages/counts) as an optional enrichment.
 
 | # | script | catches | result on sanhw1 | output |
 |---|---|---|---|---|
-| 1 | [spell_correct.py](spell_correct.py) | misspelling whose confusion-neighbour is a trusted (MW/PW/VCP) headword; ranked by corpus attestation | 9921 (906 corpus-corroborated) | `DICT:wrong:right:n` |
-| 2 | [consensus.py](consensus.py) | minority spelling vs the N-way cross-dict consensus | 8918 | `DICT:wrong:right:n` |
-| 3 | [intra_dup.py](intra_dup.py) | one dict holding both a word and a rare confusion-variant of it | 10443 | `DICT:wrong:right:n` |
-| 4 | [phonotactic_check.py](phonotactic_check.py) | hard phonotactic violations (anusvara/visarga mis-placed, double vowel) | 60 (0 false positives) | `X:PH-<rule>=…:D` |
-| 5 | [charset_check.py](charset_check.py) | non-SLP1 characters (encoding errors) | 28 | `X:CHS=…:D` |
-| 6 | [order_check.py](order_check.py) | headwords out of Sanskrit collation order | n/a (needs source-order input) | `X:ORD=…:line` |
+| 1 | [spell_correct.py](spell_correct.py) | misspelling whose confusion-neighbour is a trusted (MW/PW/VCP) headword; **DCS-ranked**, DCS-attested headwords suppressed | 9173 (4001 suppressed; 704 → common DCS lemma) | `DICT:wrong:right:n` |
+| 2 | [consensus.py](consensus.py) | minority spelling vs the N-way cross-dict consensus (DCS-attested minorities suppressed) | 7548 | `DICT:wrong:right:n` |
+| 3 | [intra_dup.py](intra_dup.py) | one dict holding both a word and a rare confusion-variant of it (DCS-attested variants suppressed) | 8945 | `DICT:wrong:right:n` |
+| 4 | [dict_vs_corpus.py](dict_vs_corpus.py) | **collective** dict errors: a form all dicts agree on but the DCS corpus contradicts (lowest precision) | 1350 (646 in ≥5 dicts) | `DICT:wrong:right:n` |
+| 5 | [phonotactic_check.py](phonotactic_check.py) | hard phonotactic violations (anusvara/visarga mis-placed, double vowel) | 60 (0 false positives) | `X:PH-<rule>=…:D` |
+| 6 | [charset_check.py](charset_check.py) | non-SLP1 characters (encoding errors) | 28 | `X:CHS=…:D` |
+| 7 | [order_check.py](order_check.py) | headwords out of Sanskrit collation order | n/a (needs source-order input) | `X:ORD=…:line` |
 
 ## Output formats (reuse the existing pipeline)
 - **Flaggers** (4, 5, 6) emit faultfinder-style `X:CODE=detail:D`, so
@@ -60,9 +83,10 @@ forms in particular need eyes on the print.
 trusted lexicon (MW ∪ PW ∪ VCP stems), generate confusion-neighbours — one
 `CONFUSION_PAIRS` substitution at each position, plus the two-character `f`↔`ri`/`ru`
 vocalic-r variant — and keep any neighbour that *is* a trusted headword. Rank by
-corpus support: the suggestion appears in the SLP1 corpus and the headword does not.
-*Why:* the big scholarly dictionaries are curated ground truth and the corpus
-(inflected MBh/Rāmāyaṇa/Veda forms) confirms the suggestion is a real word, so this
+the suggestion's DCS frequency band (very-common corrections first); a headword that
+is itself a DCS lemma is suppressed as a real word.
+*Why:* the big scholarly dictionaries are curated ground truth and DCS frequency tells
+you which correction is the common, expected word, so this
 catches a spelling that is wrong across several minor dictionaries at once — which
 vote-based consensus would miss. The `f`↔`ri` op is the only multi-character rule;
 it expresses the `SfNg`/`SriNg` class that a same-length substitution cannot.
@@ -81,6 +105,16 @@ variant only in the dictionaries that *also* contain the consensus spelling
 (set intersection non-empty). *Why:* if one dictionary holds both `kapila` and a rare
 `kaPila`, it already attests the right form, so its near-variant is almost certainly
 an internal typo — the highest-precision corrector, and it names the dictionary to fix.
+
+**dict_vs_corpus — collective error detection.** For a headword absent from the DCS
+lemma set (in ≥ `MIN_DICTS` dictionaries), if a confusion-neighbour is a DCS lemma of
+band ≥ `MIN_BAND`, flag it; rank by dictionary count then band. *Why:* this is the
+only detector that can catch an error the dictionaries make *unanimously* — there is
+no cross-dict disagreement to exploit, so an external corpus is the only witness.
+*Lowest precision by design* (DCS-absence is a weak signal): the output mixes genuine
+collective errors with distinct real word-pairs (`guha`/`guhA`), ī/i citation
+differences (`sUcI`/`sUci`), and rare lexicon DCS omits — treat it as a ranked
+exploration list, not a correction feed.
 
 **phonotactic — absolute rules.** Per-character checks: anusvara/visarga/candrabindu
 must sit on a vowel; an anusvara may not precede a vowel; identical vowels may not be

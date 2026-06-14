@@ -66,6 +66,22 @@ Flags a single dictionary that holds both a word and a rare confusion-variant of
 (the "compounds stated twice" class). Highest precision — it names the offending
 dictionary and the word already proves the dictionary knows the right spelling.
 
+## 3b. "Find an error every dictionary shares" (corpus-grounded)
+
+```sh
+cd detectors && python dict_vs_corpus.py
+```
+Uses the **DCS corpus** as an external witness: flags a headword absent from DCS whose
+confusion-neighbour is a common DCS lemma, ranked by how many dictionaries carry the
+suspect form. The only detector that can catch an error the dictionaries make
+*unanimously* (there is no cross-dict disagreement to exploit). **Lowest precision** —
+the list mixes real collective errors with distinct word-pairs (`guha`/`guhA`) and ī/i
+citation differences; filter heavily.
+
+DCS also strengthens the §2/§3 detectors: `spell_correct` ranks suggestions by DCS
+frequency band (very-common corrections first), and all three correctors **suppress**
+any headword that is itself an attested DCS lemma (a real word, not a typo).
+
 ## 4. "Validate encoding / charset"
 
 ```sh
