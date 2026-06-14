@@ -1,0 +1,17 @@
+suvaRnakadalI:VCCV=aRna:SKD
+sihRaBUmikA:VCCV=ihRa:SHS,WIL,YAT
+sudurddarSa:VCCCV=urdda:WIL,YAT
+suradIrDikA:VCCV=IrDi:WIL,YAT
+sPurjjakaH:VCCCV=urjja:SKD
+sunASIryya:VCCCV=Iryya:VCP
+sOvIryya:VCCCV=Iryya:SHS
+hftsuas:VV=ua:GRA
+sihRakI:VCCV=ihRa:SHS,WIL,YAT
+havuzA:VCV=avu:PW,PWG,SKD
+sUrmma:VCCCV=Urmma:VCP
+stanBa:VCCV=anBa:VCP
+suhmAH:VCCV=uhmA:AP,AP90
+sOhva:VCCV=Ohva:PW
+sihRa:VCCV=ihRa:SHS,WIL,YAT
+stFha:VCV=Fha:SKD,WIL
+hehE:VCV=ehE:PW,PWG,SKD,VCP
