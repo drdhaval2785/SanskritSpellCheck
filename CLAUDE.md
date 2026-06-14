@@ -122,25 +122,36 @@ Local runtimes: **PHP 8.2** (`C:\xampp\php\php.exe`, *not* on PATH) and **Python
 3.14** (`python`), with `lxml` installed. The code was originally Python 2 / PHP 5–7
 and was ported in June 2026; what changed and how it was verified:
 
-**PHP (faultfinder pipeline) — runs and reproduces output exactly.** Verified by
-regenerating VCP: `faultfinder3a.php VCP` emits **6856** suspects, byte-identical to
-the committed [AllvsVCP/AllvsVCP.txt](AllvsVCP/AllvsVCP.txt), with zero warnings.
-Two output-neutral PHP 8 fixes in [faultfinder3a.php](faultfinder3a.php):
+**PHP (faultfinder pipeline) — runs clean on PHP 8.2.** Two changes in
+[faultfinder3a.php](faultfinder3a.php):
 - `preg_split(..., null, ...)` → `-1` (null `$limit` is deprecated on 8.1+).
-- `array_diff()` (line ~98) preserves original keys, so the by-index check loop hit
-  the gaps and flooded PHP 8 with "Undefined array key" + `preg_match(null)`
-  warnings. Guarded with `if (!isset($file1[$j])) continue;` — those gaps were
-  already no-ops, so output is unchanged. (Scripts set `memory_limit=1000M` and read
-  all ~431 k lines of `sanhw1.txt` into memory.)
+- The check loop iterated `for ($j=0; $j<count($file1); $j++)` over `$file1` =
+  `array_diff($worddata, $whitelistwords)`. `array_diff()` keeps the original (now
+  gappy) keys, so this both (a) flooded PHP 8 with "Undefined array key" +
+  `preg_match(null)` warnings on the gaps and (b) **stopped at the survivor count**,
+  never testing survivors whose original index exceeded it — silently dropping the
+  tail of the Sanskrit alphabetical order. Replaced with
+  `foreach ($file1 as $j => $value)`, which skips gaps and covers every survivor
+  (`$j` stays the original key, so `$worddata[$j]`/`$dictdata[$j]` stay aligned).
+  Scripts set `memory_limit=1000M` and read all ~431 k lines of `sanhw1.txt`.
 
-**Heads-up — re-running an *old* base dict now yields almost nothing, and that is
-correct, not a regression.** The tool's purpose is to surface errors that then get
-fixed upstream in CORRECTIONS and folded back into a regenerated `sanhw1.txt`. The
-early dicts are now clean: fresh `MW`=0, `PW`=3, `PWG`=11 vs the committed 2017 files
-(1705 / 1853 / 1984). VCP (processed last, 2017) still reproduces 6856. A small/empty
-result for MW/PW/PWG means "already corrected," **not** "pipeline broken." A *small*
-base also flags more (narrow pattern inventory): SKD (17 k entries) → 29 411 flags,
-many against specialized dicts — prefer a large clean base for high-precision lists.
+The `foreach` change is a **deliberate behaviour change, not output-neutral** — but
+strictly additive: verified on VCP, all 6856 previously-found suspects still appear,
+plus **555** newly-covered ones (all `s…`/`h…`, i.e. the alphabet tail), 0 warnings.
+The committed `AllvsMW/PW/PWG/VCP` files are left as their historical 2017 runs;
+re-running now legitimately finds more.
+
+**Heads-up — re-running an *old* base dict now yields far fewer hits than its
+committed file, and that is expected, not a regression.** The tool's purpose is to
+surface errors that get fixed upstream in CORRECTIONS and folded back into a
+regenerated `sanhw1.txt`, so the head of the alphabet is now largely clean: fresh
+`MW`=110, `PW`=183, `PWG`=256 vs the committed 2017 files (1705 / 1853 / 1984). Those
+fresh counts are *post*-`foreach`-fix, and most of each is now alphabet-tail (`s…`/
+`h…`) suspects that the old loop never tested — i.e. genuinely worth a review pass,
+not "already-corrected leftovers." A small result still means "mostly corrected,"
+**not** "pipeline broken." A *small* base flags more (narrow pattern inventory): SKD
+(17 k entries) → 31 959 flags, many against specialized dicts — prefer a large clean
+base for high-precision lists.
 
 **Python — all scripts ported to Python 3** (`py_compile` clean on 3.14; the
 runnable ones were executed):

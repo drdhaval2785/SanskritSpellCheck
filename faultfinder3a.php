@@ -141,10 +141,14 @@ function comparepatterns($filea,$pattern_datum,$filec,$outfile,$sffile)
 	$vccccv = array_values($vccccv);
 		// checking the second file.
 		$file1 = $filec;
-		for ($j=0;$j<count($file1);$j++)
+		// foreach over surviving keys: skips array_diff() key gaps automatically AND
+		// covers every survivor. The old `for ($j<count($file1))` loop bound equalled
+		// the survivor count, so it never reached survivors whose original index was
+		// >= that count -- silently dropping the last ~count(whitelist) entries (the
+		// tail of the Sanskrit alphabetical order). $j stays the original key, so
+		// $worddata[$j] / $dictdata[$j] remain aligned with $value.
+		foreach ($file1 as $j => $value)
 		{
-			if (!isset($file1[$j])) { continue; } // skip array_diff key gaps (PHP 8: avoids undefined-key warning + preg_match(null) deprecation)
-			$value=$file1[$j];
 			$wpats=array(); // Patterns flagged for this word
 			if(preg_match($pattern,$value))
 			{
