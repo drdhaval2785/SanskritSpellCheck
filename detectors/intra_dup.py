@@ -31,6 +31,7 @@ MINORITY_MAX = 2  # the variant must be attested in <= this many dicts overall
 
 def main(sanhw1, outfile):
     whitelist = u.load_whitelist(os.path.join(os.path.dirname(sanhw1) or '.', 'nochange', 'nochange.txt'))
+    dcs = u.load_dcs_lemmas(u.dcs_path())  # suppress variants that are real attested words
     groups = collections.defaultdict(dict)  # key -> {hw: set(dicts)}
     for hw, dicts in u.parse_sanhw1(sanhw1):
         groups[u.confusion_key(hw)][hw] = set(dicts)
@@ -43,6 +44,8 @@ def main(sanhw1, outfile):
         cons_d = members[cons]
         for hw, d in members.items():
             if hw == cons or hw in whitelist:
+                continue
+            if u.normalize_lemma(hw) in dcs:   # the variant is an attested DCS lemma -> a real word
                 continue
             if len(d) > MINORITY_MAX:
                 continue

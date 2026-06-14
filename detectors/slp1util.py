@@ -11,6 +11,8 @@ SLP1 quick reference (the chars actually used in sanhw1.txt headwords):
   consonants  k K g G N | c C j J Y | w W q Q R | t T d D n | p P b B m | y r l v | S z s h | L (Vedic l-bar)
 """
 import sys
+import os
+import collections
 
 VOWELS = set("aAiIuUfFxXeEoO")
 MARKS = set("MH~")
@@ -99,6 +101,33 @@ def sanskrit_sort_key(w):
     return w.translate(_SORT_TAB)
 
 
+# char -> confusion partners, for generating correction candidates
+_PARTNERS = collections.defaultdict(set)
+for _pair in CONFUSION_PAIRS:
+    _a, _b = tuple(_pair)
+    _PARTNERS[_a].add(_b)
+    _PARTNERS[_b].add(_a)
+
+
+def confusion_candidates(w):
+    """Spelling neighbours of w: one confusion substitution at each position, plus
+    the two-character vocalic-r variants f <-> ri / ru (and rI/rU -> F)."""
+    cs = set()
+    for i, ch in enumerate(w):
+        for p in _PARTNERS.get(ch, ()):
+            cs.add(w[:i] + p + w[i + 1:])
+        if ch == 'f':
+            cs.add(w[:i] + 'ri' + w[i + 1:])
+            cs.add(w[:i] + 'ru' + w[i + 1:])
+    for i in range(len(w) - 1):
+        if w[i] == 'r' and w[i + 1] in 'iu':
+            cs.add(w[:i] + 'f' + w[i + 2:])
+        if w[i] == 'r' and w[i + 1] in 'IU':
+            cs.add(w[:i] + 'F' + w[i + 2:])
+    cs.discard(w)
+    return cs
+
+
 def edit_distance(a, b, cap=3):
     """Levenshtein distance, short-circuited once it exceeds `cap`."""
     if abs(len(a) - len(b)) > cap:
@@ -146,6 +175,32 @@ def load_corpus(paths):
                     if tok:
                         s.add(tok)
     return s
+
+
+def normalize_lemma(w):
+    """Normalize an SLP1 headword to the DCS join key (per VisualDCS consumption
+    contract): strip accents (/ \\ ^ ~) and trailing homonym digits; SLP1 case is
+    preserved (it is phonemic)."""
+    w = w.translate(str.maketrans('', '', '/\\^~'))
+    return w.rstrip('0123456789')
+
+
+def load_dcs_lemmas(path):
+    """Return {normalized SLP1 lemma: freqBand 1..5} for the attested lemmas in a
+    vendored dcs_lemma_summary.json (VisualDCS / DCS-2021, Oliver Hellwig, CC-BY).
+    freqBand: 1=hapax, 2=rare(2-9), 3=uncommon(10-99), 4=common(100-999), 5=1000+.
+    Returns {} if the file is absent (the summary is an optional enrichment)."""
+    import json
+    if not os.path.exists(path):
+        return {}
+    with open(path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    return {k: v['freqBand'] for k, v in data['lemmas'].items() if v.get('attested')}
+
+
+def dcs_path():
+    """Default path to the vendored DCS lemma summary, next to this module."""
+    return os.path.join(os.path.dirname(os.path.abspath(__file__)), 'dcs_lemma_summary.json')
 
 
 def load_whitelist(path='nochange/nochange.txt'):

@@ -34,6 +34,7 @@ MARGIN = 3          # consensus must have >= MINORITY count + MARGIN dictionarie
 
 def main(sanhw1, outfile):
     whitelist = u.load_whitelist(os.path.join(os.path.dirname(sanhw1) or '.', 'nochange', 'nochange.txt'))
+    dcs = u.load_dcs_lemmas(u.dcs_path())  # suppress minorities that are real attested words
     groups = collections.defaultdict(list)
     for hw, dicts in u.parse_sanhw1(sanhw1):
         groups[u.confusion_key(hw)].append((hw, set(dicts)))
@@ -46,6 +47,8 @@ def main(sanhw1, outfile):
         cons_hw, cons_d = members[0]
         for hw, d in members[1:]:
             if hw == cons_hw or hw in whitelist:
+                continue
+            if u.normalize_lemma(hw) in dcs:   # the "minority" is an attested DCS lemma -> a real word
                 continue
             if len(d) > MINORITY_MAX:
                 continue
