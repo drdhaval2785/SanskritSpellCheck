@@ -120,7 +120,20 @@ Flags words whose bigrams are absent from MW∩PW. Use `n=2`; trigrams over-flag
 
 ## 8. "Build a review package for a human"
 
-After generating any flagger output:
+**Easiest — the unified runner.** [detectors/run_all.py](detectors/run_all.py) runs
+every detector, dedups across them, tiers each candidate A/B/C (cross-detector
+agreement = higher tier), and writes an accept/reject **review UI** plus the standard
+format:
+
+```sh
+cd detectors && python run_all.py        # --rerun to regenerate detector outputs
+# -> combined_review.html (open it: ✓/✗ per row, scan links, Export accepted/rejected)
+#    combined_candidates.txt (full ranked list)   combined_sf.txt (DICT:wrong:right:n)
+```
+The exported `accepted_sf.txt` (rows flipped to `:y`) feeds [chg_nchg_sep.py](chg_nchg_sep.py)
+(use case §10). Tier A = flagged by several detectors at once — verify those first.
+
+**Per-detector / faultfinder route.** For a single flagger output:
 
 ```sh
 php faultfinder3a-html.php  suspects.txt  suspects.html  2      # clickable Cologne links (repeat=2 renders every row)

@@ -33,16 +33,19 @@ ten tools with no unified, deduplicated, confidence-ranked view.
 
 ## Phase 1 — near-term (weeks): consolidate & sharpen
 
-1. **Unified runner** `detectors/run_all.py` — run all detectors, **dedup across
-   them**, and merge into one list. A word flagged by several detectors (e.g. both
-   consensus and spell_correct) is far more likely a real error — surface that.
-2. **One confidence score + tiers (A/B/C)** per candidate from: DCS band, number of
-   detectors agreeing, dictionary count/margin, and the confusion-type prior (the
-   measured 75/13/8/4 distribution). One ranked report instead of ten.
-3. **Review workflow** — an accept/reject HTML over the ranked list: clickable scan
-   link per row, keyboard accept/reject, emits the `:y`/`:n` standard format straight
-   into [chg_nchg_sep.py](chg_nchg_sep.py) → a submission file. Tracks progress so a
-   reviewer can stop and resume.
+**Status: 1–3 shipped** ([detectors/run_all.py](detectors/run_all.py), June 2026:
+17,098 deduped candidates, 7,618 multi-detector, tiers A/B/C, review HTML). 4–6 open.
+
+1. ✅ **Unified runner** `detectors/run_all.py` — runs all detectors, **dedups across
+   them**, merges into one list. A word flagged by several detectors (e.g. both
+   consensus and spell_correct) is far more likely a real error — surfaced as tier A.
+2. ✅ **One confidence score + tiers (A/B/C)** per candidate from number of detectors
+   agreeing, DCS band of the suggestion, high-precision-flagger presence, and
+   dictionary count. One ranked report instead of ten.
+3. ✅ **Review workflow** — `combined_review.html`: accept/reject over the ranked list,
+   per-row scan links, keyboard a/r/s, decisions in localStorage, **Export
+   accepted/rejected** → the `:y`/`:n` standard format for
+   [chg_nchg_sep.py](chg_nchg_sep.py).
 4. **Run charset / phonotactic / order on raw csl-orig sources** (they validate raw
    text, not just the merged `sanhw1.txt`) — wire them to the dictionary source repo.
 5. **Precision spot-check** — hand-verify ~100 band-5 `spell_correct` rows to get a

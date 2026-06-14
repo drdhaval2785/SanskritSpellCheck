@@ -48,6 +48,28 @@ consumption contract.
 | 6 | [charset_check.py](charset_check.py) | non-SLP1 characters (encoding errors) | 28 | `X:CHS=…:D` |
 | 7 | [order_check.py](order_check.py) | headwords out of Sanskrit collation order | n/a (needs source-order input) | `X:ORD=…:line` |
 
+## Unified runner & review (start here)
+
+[run_all.py](run_all.py) runs every detector, **deduplicates across them** by suspect
+headword, scores each candidate, and assigns an **A/B/C tier** — cross-detector
+agreement is the main signal (a word flagged by several detectors is far more likely a
+real error). It emits:
+
+- `combined_candidates.txt` — full ranked list (tier, score, suspect → suggestion, evidence)
+- `combined_review.html` — accept/reject UI: per-row scan links, ✓/✗ buttons (keys
+  a/r/s), decisions persisted to `localStorage`, and **Export accepted / rejected** →
+  the `DICT:wrong:right:y|n` standard format for [chg_nchg_sep.py](../chg_nchg_sep.py)
+- `combined_sf.txt` — standard format for the best suggestion per suspect
+
+```sh
+cd detectors && python run_all.py        # uses cached detector outputs; --rerun to regenerate
+```
+
+On `sanhw1`: **17,098** deduped candidates, **7,618** flagged by ≥2 detectors; tiers
+A/B/C ≈ 7.7k / 4.7k / 4.7k. Tier A (e.g. `brahmaRa→brAhmaRa`, `jiv→jIv`, `zas→zaz`) is
+flagged by several detectors at once — the verify-first queue. Outputs are gitignored
+(regenerable); the review HTML shows the top 1500 by score (full list in the .txt).
+
 ## Output formats (reuse the existing pipeline)
 - **Flaggers** (4, 5, 6) emit faultfinder-style `X:CODE=detail:D`, so
   [../faultfinder3a-html.php](../faultfinder3a-html.php) (with the `repeat=2` arg)

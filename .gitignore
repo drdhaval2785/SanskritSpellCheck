@@ -11,6 +11,7 @@ __pycache__/
 # detector generated outputs (regenerable)
 detectors/*_suspects.txt
 detectors/*_corrections.txt
+detectors/combined_*
 
 # Folder config file
 Desktop.ini

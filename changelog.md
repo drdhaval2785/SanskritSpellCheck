@@ -6,6 +6,18 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.3.0] - 2026-06-14
+
+### Added
+- `detectors/run_all.py` — unified runner (roadmap Phase 1.1–1.3): runs every
+  detector, **deduplicates across them** by suspect headword, scores each candidate
+  and assigns an **A/B/C tier** (cross-detector agreement is the main signal). Emits
+  `combined_candidates.txt` (ranked), `combined_sf.txt` (CORRECTIONS standard format),
+  and `combined_review.html` — an accept/reject review UI with per-row scan links,
+  localStorage, and export of accepted/rejected rows to the `:y`/`:n` standard format.
+  On sanhw1: 17,098 deduped candidates, 7,618 flagged by ≥2 detectors.
+- `ROADMAP.md` (phased plan).
+
 ## [1.2.0] - 2026-06-14
 
 ### Added
