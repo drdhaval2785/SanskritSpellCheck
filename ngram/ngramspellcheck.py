@@ -22,6 +22,9 @@ import datetime
 from html.parser import HTMLParser
 import collections
 
+sys.stdout.reconfigure(encoding='utf-8')
+sys.stderr.reconfigure(encoding='utf-8')
+
 class MLStripper(HTMLParser):
     def __init__(self):
         super().__init__()

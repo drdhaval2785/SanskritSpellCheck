@@ -23,7 +23,10 @@ surya->suryya, varNa->varRRa) that Cologne normalizes inconsistently across
 dictionaries. Plain doubled consonants are NOT used, because most (-tt- in citta /
 vRtta, -dd- in uddeSa) are perfectly legitimate Sanskrit geminates; restricting to
 post-`r` doubling drops those false positives. Highest-precision view; most useful on
-noisy (medium/small) bases where SIGNAL alone is still large.
+noisy (medium/small) bases where SIGNAL alone is still large. (faultfinder3a-html.php's
+rcc() applies the same r+CC test to the whole headword; here we test only the flagged
+cluster Y, so the two can differ if a word's flagged anomaly is non-rcc while the word
+has r+CC elsewhere -- in the current data they agree.)
 
 PRIORITY is SIGNAL minus GEMINATION -- the non-post-repha anomalies, and the real
 verify-first targets. faultfinder3a-html.php's own rcc() filter sets post-repha words
@@ -52,6 +55,8 @@ CONSONANTS = set('kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSsh')
 
 def parse(line):
     line = line.rstrip('\r\n')
+    if line.count(':') < 2 or '=' not in line:
+        return None  # not the expected X:P=Y:D shape
     x = line[:line.index(':')]
     d = line[line.rindex(':') + 1:]
     mid = line[line.index(':') + 1:line.rindex(':')]
@@ -73,13 +78,18 @@ def write(path, recs):
 
 
 def main(infile, signal_out, noise_out):
-    signal, noise = [], []
+    signal, noise, skipped = [], [], 0
     with open(infile, 'r', encoding='utf-8') as f:
         for line in f:
             if not line.strip():
                 continue
             rec = parse(line)
-            if all(code in SPECIALIZED for code in rec[3]):
+            if rec is None:
+                skipped += 1
+                continue
+            # noise = only when there ARE dicts and all are specialized;
+            # an empty dict list falls through to signal rather than being buried.
+            if rec[3] and all(code in SPECIALIZED for code in rec[3]):
                 noise.append(rec)
             else:
                 signal.append(rec)
@@ -89,7 +99,12 @@ def main(infile, signal_out, noise_out):
     priority = [r for r in signal if not has_gemination(r[2])]
 
     def derive(name):
-        return signal_out.replace('signal', name) if 'signal' in signal_out else signal_out + '.' + name
+        # rewrite only the LAST 'signal' (the filename token), not a 'signal' that
+        # might appear in a parent directory.
+        if 'signal' in signal_out:
+            head, _, tail = signal_out.rpartition('signal')
+            return head + name + tail
+        return signal_out + '.' + name
 
     gem_out = derive('gemination')
     priority_out = derive('priority')
@@ -101,6 +116,8 @@ def main(infile, signal_out, noise_out):
 
     total = len(signal) + len(noise)
     print("total suspects        : %d" % total)
+    if skipped:
+        print("skipped (malformed)   : %d" % skipped)
     print("signal (general)      : %d  -> %s" % (len(signal), signal_out))
     print("  priority (non-rcc)  : %d  -> %s   [VERIFY FIRST]" % (len(priority), priority_out))
     print("  gemination (post-r) : %d  -> %s   [likely faithful print, low priority]" % (len(gem), gem_out))
