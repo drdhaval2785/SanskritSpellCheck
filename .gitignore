@@ -8,6 +8,10 @@ ngram/data/error.txt
 __pycache__/
 *.pyc
 
+# detector generated outputs (regenerable)
+detectors/*_suspects.txt
+detectors/*_corrections.txt
+
 # Folder config file
 Desktop.ini
 
