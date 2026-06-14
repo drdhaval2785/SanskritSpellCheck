@@ -1,12 +1,12 @@
 """triage_suspects.py  (Python 3)
 
 Split a faultfinder AllvsXX.txt suspect list into a high-signal review list and a
-low-value noise list, and print a summary.
+low-value noise list, plus a tighter "gemination" subset, and print a summary.
 
 Input line format (from faultfinder3a.php):  X:P=Y:D
   X = suspect headword (SLP1)
   P = pattern abbreviation (e.g. SCC, VV, CCE)
-  Y = the offending substring
+  Y = the offending substring (the actual flagged cluster)
   D = comma-separated dictionaries that contain X (never the base dict)
 
 A line is NOISE if every dictionary in D is a specialized dictionary: such words are
@@ -15,11 +15,21 @@ foreign names) and rarely real general-Sanskrit spelling errors. Otherwise SIGNA
 The specialized set is sanhw2.py's `san_spc_dicts` (INM, VEI, PUI, ACC, KRM, IEG,
 SNP, PE, PGN, MCI) plus PD/BHS/BUR, which README.md also calls "not worthwhile".
 
-Signal is sorted by headword length descending then alphabetically -- longer words
-are higher-probability real errors (the o_vs_O method uses the same heuristic).
+GEMINATION here means **post-repha doubling**: the offending substring Y has the
+consonant `r` immediately followed by a doubled consonant (`r C C`, e.g. -rdd-,
+-rjj-, -ryy-, -rmm-, -rRR-). This is the recurring real-error signature -- the
+manuscript convention of doubling a consonant after `r` (dharma->dharmma,
+surya->suryya, varNa->varRRa) that Cologne normalizes inconsistently across
+dictionaries. Plain doubled consonants are NOT used, because most (-tt- in citta /
+vRtta, -dd- in uddeSa) are perfectly legitimate Sanskrit geminates; restricting to
+post-`r` doubling drops those false positives. Highest-precision view; most useful on
+noisy (medium/small) bases where SIGNAL alone is still large.
+
+Signal/gemination are sorted by headword length descending then alphabetically.
 
 Usage:
   python triage_suspects.py <AllvsXX.txt> <signal_out.txt> <noise_out.txt>
+  (a *-gemination.txt file is written alongside signal_out)
 """
 import sys
 import collections
@@ -30,6 +40,7 @@ sys.stderr.reconfigure(encoding='utf-8')
 # sanhw2.py san_spc_dicts + PD/BHS/BUR (README "not worthwhile")
 SPECIALIZED = {'INM', 'VEI', 'PUI', 'ACC', 'KRM', 'IEG', 'SNP', 'PE', 'PGN', 'MCI',
                'PD', 'BHS', 'BUR'}
+CONSONANTS = set('kKgGNcCjJYwWqQRtTdDnpPbBmyrlvzSsh')
 
 
 def parse(line):
@@ -37,9 +48,21 @@ def parse(line):
     x = line[:line.index(':')]
     d = line[line.rindex(':') + 1:]
     mid = line[line.index(':') + 1:line.rindex(':')]
-    p = mid.split('=')[0]
+    p, _, y = mid.partition('=')
     dicts = [t for t in d.split(',') if t]
-    return x, p, dicts, line
+    return x, p, y, dicts, line
+
+
+def has_gemination(y):
+    # post-repha doubling: consonant 'r' followed by a doubled consonant (r C C)
+    return any(y[i] == 'r' and y[i + 1] == y[i + 2] and y[i + 1] in CONSONANTS
+               for i in range(len(y) - 2))
+
+
+def write(path, recs):
+    with open(path, 'w', encoding='utf-8') as f:
+        for r in recs:
+            f.write(r[4] + '\n')
 
 
 def main(infile, signal_out, noise_out):
@@ -48,32 +71,36 @@ def main(infile, signal_out, noise_out):
         for line in f:
             if not line.strip():
                 continue
-            x, p, dicts, raw = parse(line)
-            if all(code in SPECIALIZED for code in dicts):
-                noise.append((x, p, dicts, raw))
+            rec = parse(line)
+            if all(code in SPECIALIZED for code in rec[3]):
+                noise.append(rec)
             else:
-                signal.append((x, p, dicts, raw))
+                signal.append(rec)
 
     signal.sort(key=lambda r: (-len(r[0]), r[0]))
+    gem = [r for r in signal if has_gemination(r[2])]
 
-    with open(signal_out, 'w', encoding='utf-8') as f:
-        for _, _, _, raw in signal:
-            f.write(raw + '\n')
-    with open(noise_out, 'w', encoding='utf-8') as f:
-        for _, _, _, raw in noise:
-            f.write(raw + '\n')
+    if 'signal' in signal_out:
+        gem_out = signal_out.replace('signal', 'gemination')
+    else:
+        gem_out = signal_out + '.gemination'
+
+    write(signal_out, signal)
+    write(noise_out, noise)
+    write(gem_out, gem)
 
     total = len(signal) + len(noise)
-    print("total suspects : %d" % total)
-    print("signal (review): %d  -> %s" % (len(signal), signal_out))
-    print("noise (special): %d  -> %s" % (len(noise), noise_out))
-    pats = collections.Counter(p for _, p, _, _ in signal)
-    print("signal by pattern: " + ", ".join("%s=%d" % (k, v) for k, v in pats.most_common()))
-    gdicts = collections.Counter(c for _, _, dd, _ in signal for c in dd if c not in SPECIALIZED)
-    print("signal by dict   : " + ", ".join("%s=%d" % (k, v) for k, v in gdicts.most_common(10)))
-    print("--- top 12 signal suspects (longest first) ---")
-    for _, _, _, raw in signal[:12]:
-        print("  " + raw)
+    print("total suspects   : %d" % total)
+    print("signal (general) : %d  -> %s" % (len(signal), signal_out))
+    print("  of which gemination: %d  -> %s" % (len(gem), gem_out))
+    print("noise (special)  : %d  -> %s" % (len(noise), noise_out))
+    pats = collections.Counter(r[1] for r in gem)
+    print("gemination by pattern: " + ", ".join("%s=%d" % (k, v) for k, v in pats.most_common()))
+    gdicts = collections.Counter(c for r in gem for c in r[3] if c not in SPECIALIZED)
+    print("gemination by dict   : " + ", ".join("%s=%d" % (k, v) for k, v in gdicts.most_common(10)))
+    print("--- top 15 gemination suspects (longest first) ---")
+    for r in gem[:15]:
+        print("  " + r[4])
 
 
 if __name__ == "__main__":

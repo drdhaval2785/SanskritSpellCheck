@@ -1,0 +1,8 @@
+suvarRRabindu:VCCCV=arRRa:VCP
+sudurddarSa:VCCCV=urdda:WIL,YAT
+svarRRakAya:VCCCV=arRRa:VCP
+sPurjjakaH:VCCCV=urjja:SKD
+sunASIryya:VCCCV=Iryya:VCP
+sOvIryya:VCCCV=Iryya:SHS
+suvarRRa:VCCCV=arRRa:VCP
+sUrmma:VCCCV=Urmma:VCP

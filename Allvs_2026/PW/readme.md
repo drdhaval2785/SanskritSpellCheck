@@ -10,6 +10,9 @@ gemination signature (`-uttra-`, `-aRna-`, `-artti-`, `-urdda-`, `-fRRA-`).
 
 ## Files
 - [AllvsPW.txt](AllvsPW.txt) — all 183 suspects (`X:P=Y:D`).
+- [AllvsPW-gemination.txt](AllvsPW-gemination.txt) — **highest-precision subset (6)**:
+  post-repha doubling variants (`r` + doubled consonant), with clickable
+  [report](AllvsPW-gemination.html). Verify these first.
 - [AllvsPW-signal.txt](AllvsPW-signal.txt) — **review list (58)**: appears in ≥1
   general dictionary, sorted longest-word-first.
 - [AllvsPW-noise.txt](AllvsPW-noise.txt) — 125 specialized-dict-only suspects.

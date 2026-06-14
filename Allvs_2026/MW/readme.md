@@ -11,6 +11,9 @@ the old loop never tested, so these are largely new, not "already-corrected".
 
 ## Files
 - [AllvsMW.txt](AllvsMW.txt) — all 110 suspects, `X:P=Y:D` format.
+- [AllvsMW-gemination.txt](AllvsMW-gemination.txt) — **highest-precision subset (5)**:
+  post-repha doubling variants (`r` + doubled consonant), with clickable
+  [report](AllvsMW-gemination.html). Verify these first.
 - [AllvsMW-signal.txt](AllvsMW-signal.txt) — **the review list (17)**: suspects that
   appear in at least one *general* dictionary, sorted longest-word-first.
 - [AllvsMW-noise.txt](AllvsMW-noise.txt) — 93 suspects found only in specialized

@@ -11,6 +11,9 @@ proper-name compounds.
 
 ## Files
 - [AllvsPWG.txt](AllvsPWG.txt) — all 256 suspects (`X:P=Y:D`).
+- [AllvsPWG-gemination.txt](AllvsPWG-gemination.txt) — **highest-precision subset (8)**:
+  post-repha doubling variants (`r` + doubled consonant), with clickable
+  [report](AllvsPWG-gemination.html). Verify these first.
 - [AllvsPWG-signal.txt](AllvsPWG-signal.txt) — **review list (107)**: appears in ≥1
   general dictionary, sorted longest-word-first.
 - [AllvsPWG-noise.txt](AllvsPWG-noise.txt) — 149 specialized-dict-only suspects.

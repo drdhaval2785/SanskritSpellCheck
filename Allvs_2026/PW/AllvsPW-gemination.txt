@@ -1,0 +1,6 @@
+hastavarttin:VCCCV=artti:SHS,WIL,YAT
+sudurddarSa:VCCCV=urdda:WIL,YAT
+sPurjjakaH:VCCCV=urjja:SKD
+sunASIryya:VCCCV=Iryya:VCP
+sOvIryya:VCCCV=Iryya:SHS
+sUrmma:VCCCV=Urmma:VCP
