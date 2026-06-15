@@ -15,6 +15,7 @@ detectors/combined_*
 detectors/*_hw.txt
 detectors/spotcheck_sample.txt
 detectors/changefiles/
+detectors/campaigns/
 
 # Folder config file
 Desktop.ini

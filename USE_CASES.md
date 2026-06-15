@@ -133,6 +133,11 @@ cd detectors && python run_all.py        # --rerun to regenerate detector output
 The exported `accepted_sf.txt` (rows flipped to `:y`) feeds [chg_nchg_sep.py](chg_nchg_sep.py)
 (use case §10). Tier A = flagged by several detectors at once — verify those first.
 
+**Per dictionary (campaign mode).** [detectors/run_campaign.py](detectors/run_campaign.py)
+splits the suite per dictionary into `campaigns/<DICT>/review.html` + a dashboard
+ranking dicts by tier-A count — work one dictionary's queue at a time, then
+`make_changefiles.py` for that dict (§10).
+
 **Per-detector / faultfinder route.** For a single flagger output:
 
 ```sh

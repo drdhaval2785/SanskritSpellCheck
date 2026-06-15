@@ -6,6 +6,16 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.6.0] - 2026-06-14
+
+### Added
+- `detectors/run_campaign.py` (Phase 2.4) — per-dictionary campaigns: splits the
+  unified detector suite per dictionary into `campaigns/<DICT>/{review.html,
+  candidates.txt}` and a tier-A-ranked dashboard `campaign_summary.txt` (MW 1977,
+  PD 1045, BHS 737, SCH 678, PW 657 …), so corrections can be worked one dictionary
+  at a time (matching the per-dict CORRECTIONS issue layout). Reuses run_all's
+  aggregation/scoring/review-HTML. Outputs gitignored.
+
 ## [1.5.0] - 2026-06-14
 
 ### Added

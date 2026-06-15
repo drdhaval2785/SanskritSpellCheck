@@ -97,6 +97,11 @@ flagged by several detectors at once — the verify-first queue. Outputs are git
   confusion weights from the 3884 o_vs_O pairs → [confusion_weights.json](confusion_weights.json)
   (a/A 41%, i/I 24%, u/U 9%, s/S 8% …); `run_all` uses them to rank common confusions
   higher.
+- [run_campaign.py](run_campaign.py) — **per-dictionary campaigns**: splits the
+  unified suite per dictionary into `campaigns/<DICT>/{review.html,candidates.txt}` so
+  you can work one dictionary's queue at a time, plus `campaigns/campaign_summary.txt`,
+  a dashboard ranking dicts by tier-A count (MW 1977, PD 1045, BHS 737, SCH 678,
+  PW 657 …) — campaign the biggest high-confidence queues first.
 - [make_changefiles.py](make_changefiles.py) — turn accepted corrections
   (`accepted_sf.txt` exported from the review UI) into per-dictionary **draft**
   change-files in the CORRECTIONS updateByLine format: locates the source line in
