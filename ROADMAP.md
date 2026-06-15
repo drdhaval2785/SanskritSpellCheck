@@ -60,6 +60,14 @@ tiers A/B/C, review HTML); extract_csl_hw.py + raw-source flagger runs; eval.py
 
 ## Phase 2 — one quarter: scale the verify loop & coverage
 
+**Status (June 2026): 5 + 6 shipped** — submission-prep (`make_changefiles.py`,
+per-dict draft change-files from accepted rows) and the data-driven confusion model
+(`gen_confusion_weights.py` → `confusion_weights.json`, used in run_all ranking).
+**Blocked on external deps:** 1 OCR (needs tesseract + scan fetch), 2 full DCS (the
+local `dcs_full.sqlite` is an empty placeholder; needs the VisualDCS release + respect
+the consumption-contract boundary), 3 GRETIL (external download). **Open:** 4 per-dict
+campaigns (mechanical PHP batch).
+
 1. **OCR-assisted pre-verification** — fetch the scanned page (`servepdf`), OCR the
    headword region, compare to the digital spelling, and pre-label each candidate
    confirm/deny. This is the single biggest lever on the bottleneck. *Caveat:* OCR on

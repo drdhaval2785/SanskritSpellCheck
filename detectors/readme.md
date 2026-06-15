@@ -91,6 +91,21 @@ flagged by several detectors at once — the verify-first queue. Outputs are git
   - writes `spotcheck_sample.txt` (top-100 tier-A) for human precision verification
     (true precision needs eyes on the scans).
 
+## Submission & tuning (Phase 2, in progress)
+
+- [gen_confusion_weights.py](gen_confusion_weights.py) — derive empirical single-char
+  confusion weights from the 3884 o_vs_O pairs → [confusion_weights.json](confusion_weights.json)
+  (a/A 41%, i/I 24%, u/U 9%, s/S 8% …); `run_all` uses them to rank common confusions
+  higher.
+- [make_changefiles.py](make_changefiles.py) — turn accepted corrections
+  (`accepted_sf.txt` exported from the review UI) into per-dictionary **draft**
+  change-files in the CORRECTIONS updateByLine format: locates the source line in
+  csl-orig and proposes the `<k1>`/`<k2>` edit. **Prep only** — never edits dictionary
+  source or files an issue; verify each `new` line against the scan before submitting.
+- Blocked locally: OCR-assisted verification (needs tesseract + scan fetch), full DCS
+  via `dcs_full.sqlite` (the local copy is an empty placeholder — detectors use the
+  vendored banded summary), and GRETIL corpus expansion (external download).
+
 ## Output formats (reuse the existing pipeline)
 - **Flaggers** (4, 5, 6) emit faultfinder-style `X:CODE=detail:D`, so
   [../faultfinder3a-html.php](../faultfinder3a-html.php) (with the `repeat=2` arg)

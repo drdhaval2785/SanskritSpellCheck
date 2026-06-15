@@ -104,7 +104,7 @@ def aggregate():
     return cands
 
 
-def score_tier(c, dcs):
+def score_tier(c, dcs, weights):
     ndet = len(c.detectors)
     # best suggestion = most detector support, then highest DCS band
     best, best_band, best_supp = '', 0, -1
@@ -113,7 +113,8 @@ def score_tier(c, dcs):
         if (len(dets), band) > (best_supp, best_band):
             best, best_band, best_supp = sugg, band, len(dets)
     hpf = bool(c.detectors & HIGH_PRECISION)
-    score = ndet * 100 + best_band * 10 + (50 if hpf else 0) + len(c.dicts)
+    cw = u.confusion_weight(c.suspect, best, weights) if best else 0.0  # common confusion -> rank up
+    score = ndet * 100 + best_band * 10 + (50 if hpf else 0) + len(c.dicts) + round(cw * 20)
     if c.detectors == {'dict_vs_corpus'}:
         tier = 'C'                              # exploratory alone
     elif ndet >= 2 or hpf or best_band == 5:
@@ -128,11 +129,12 @@ def score_tier(c, dcs):
 def main(sanhw1, rerun):
     ensure_outputs(sanhw1, rerun)
     dcs = u.load_dcs_lemmas(u.dcs_path())
+    weights = u.load_confusion_weights()
     cands = aggregate()
 
     rows = []
     for c in cands.values():
-        score, tier, best, band = score_tier(c, dcs)
+        score, tier, best, band = score_tier(c, dcs, weights)
         rows.append((score, tier, band, best, c))
     rows.sort(key=lambda r: (-r[0], r[4].suspect))
 

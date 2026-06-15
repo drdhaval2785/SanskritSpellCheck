@@ -6,6 +6,22 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.5.0] - 2026-06-14
+
+### Added
+- `detectors/gen_confusion_weights.py` + `confusion_weights.json` (Phase 2.6) —
+  data-driven single-char confusion weights from the 3884 o_vs_O pairs (a/A 41%,
+  i/I 24%, u/U 9%, s/S 8% …); `run_all` ranks common confusions higher.
+- `detectors/make_changefiles.py` (Phase 2.5) — submission-prep: turns accepted
+  corrections into per-dictionary **draft** change-files in the CORRECTIONS
+  updateByLine format, locating the source line in csl-orig and proposing the
+  `<k1>`/`<k2>` edit (both key fields). Prep only — no source edits, no auto-filing.
+
+### Notes
+- Phase 2 items blocked on external deps: OCR-assisted verification (tesseract +
+  scan fetch), full DCS via `dcs_full.sqlite` (local copy is an empty placeholder),
+  GRETIL corpus expansion (external download).
+
 ## [1.4.0] - 2026-06-14
 
 ### Added

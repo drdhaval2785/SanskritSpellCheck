@@ -160,14 +160,17 @@ treat those as an editorial-normalization question for the maintainers, not bugs
 
 ## 10. "Submit corrections"
 
-The corrector detectors already emit `DICT:wrong:right:n`. After a human flips
-verified rows to `:y`, split and route them:
+The review UI (§8) exports `accepted_sf.txt` (verified rows as `DICT:wrong:right:y`).
+Turn it into per-dictionary **draft change-files** in the CORRECTIONS updateByLine
+format — each case's source line located in csl-orig with a proposed `<k1>`/`<k2>` edit:
 
 ```sh
-python chg_nchg_sep.py corrected_sf.txt chg.txt nchg.txt   # chg = real corrections, nchg -> whitelist
+cd detectors && python make_changefiles.py accepted_sf.txt   # -> changefiles/<DICT>_draft.txt
 ```
-Submit `chg.txt` per the [CORRECTIONS](https://github.com/sanskrit-lexicon/CORRECTIONS/issues)
-workflow.
+These are **drafts** — verify each `new` line against the scan, then file per the
+[CORRECTIONS](https://github.com/sanskrit-lexicon/CORRECTIONS/issues) workflow. (Older
+route: `python chg_nchg_sep.py corrected_sf.txt chg.txt nchg.txt` splits real
+corrections from false positives, the latter feeding the whitelist.)
 
 ---
 

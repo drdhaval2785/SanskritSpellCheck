@@ -203,6 +203,29 @@ def dcs_path():
     return os.path.join(os.path.dirname(os.path.abspath(__file__)), 'dcs_lemma_summary.json')
 
 
+def load_confusion_weights(path=None):
+    """{'<c1c2 sorted>': fraction} empirical single-char confusion weights from
+    gen_confusion_weights.py. Returns {} if absent."""
+    import json
+    if path is None:
+        path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'confusion_weights.json')
+    if not os.path.exists(path):
+        return {}
+    with open(path, 'r', encoding='utf-8') as f:
+        return json.load(f).get('weights', {})
+
+
+def confusion_weight(a, b, weights):
+    """Empirical weight (0..1) of the single confusion edit turning a into b; 0 if a,b
+    differ by more than one character or the pair is unknown."""
+    if len(a) != len(b):
+        return 0.0
+    diff = [(x, y) for x, y in zip(a, b) if x != y]
+    if len(diff) != 1:
+        return 0.0
+    return weights.get(''.join(sorted(diff[0])), 0.0)
+
+
 def load_whitelist(path='nochange/nochange.txt'):
     try:
         return {w for w in _read_words(path) if w}
