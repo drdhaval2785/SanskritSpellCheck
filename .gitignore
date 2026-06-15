@@ -18,6 +18,7 @@ detectors/changefiles/
 detectors/campaigns/
 detectors/ocrcache/
 detectors/ocr_verify_report.txt
+detectors/vidyut_stems.txt
 
 # Folder config file
 Desktop.ini

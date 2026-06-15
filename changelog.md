@@ -6,6 +6,21 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.8.0] - 2026-06-14
+
+### Added
+- `detectors/gen_vidyut_stems.py` + vidyut morphology signal (Phase 3.2): generate the
+  205k vidyut pratipadika (stem) inventory; `run_all` tags `morph✓` and nudges rank when
+  a correction's suggestion is a valid vidyut stem the suspect isn't. `slp1util` gains
+  `load_vidyut_stems`. Stems from vidyut (ambuda-org, MIT).
+
+### Notes
+- Honest finding: vidyut-stem validation is **weak on dictionary headwords** — only
+  ~6.6% are pratipadikas, and an inflected suspect (`rAjA`) looks non-stem — so morph is
+  a ranking nudge + tag, **not** a tier promoter (an `or morph` tier-A trigger
+  over-promoted A 7717→11220, including inflection non-errors like `rAjA→rAja`).
+  `vidyut_stems.txt` is gitignored (opt-in regenerate; the tag is off if absent).
+
 ## [1.7.0] - 2026-06-14
 
 ### Added

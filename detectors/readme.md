@@ -111,6 +111,15 @@ flagged by several detectors at once — the verify-first queue. Outputs are git
   cached as a review aid and the label is MANUAL. Polite by design (cached,
   rate-limited, 429 backoff) — run small batches, ideally server-side where the scans
   live. OCR of old Devanagari scans is unreliable, so a human always confirms.
+- [gen_vidyut_stems.py](gen_vidyut_stems.py) → `vidyut_stems.txt` — **morphology gate**
+  (Phase 3.2): the 205k vidyut pratipadika (stem) inventory. `run_all` tags `morph✓`
+  when a correction's suggestion is a valid vidyut stem the suspect isn't (a
+  grammatical-validity signal) and nudges its rank. **Honest caveat:** weak on
+  dictionary headwords — only ~6.6% are pratipadikas (most are compounds / proper
+  names / Vedic), and an inflected suspect (e.g. `rAjA`) looks "not a stem", so morph
+  is a ranking nudge + informational tag, **not** a tier promoter. Regenerate where
+  vidyut is installed (`gen_vidyut_stems.py`); the tag is simply off if the file is
+  absent. Stems from vidyut (Arun Prasad / ambuda-org, MIT).
 - [make_changefiles.py](make_changefiles.py) — turn accepted corrections
   (`accepted_sf.txt` exported from the review UI) into per-dictionary **draft**
   change-files in the CORRECTIONS updateByLine format: locates the source line in

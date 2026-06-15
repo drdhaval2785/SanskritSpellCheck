@@ -94,9 +94,13 @@ placeholder; needs the VisualDCS release + the consumption-contract boundary), 3
 
 1. **Continuous detection** — run the suite on every `sanhw1.txt` refresh / dictionary
    update and surface only the *new* candidates (live Cologne integration).
-2. **Morphological-analyzer gate** — wire in **vidyut** (already used in sibling
-   projects) to confirm a headword/correction is a well-formed stem: a high-precision
-   phonotactic + morphology check beyond the current rules.
+2. ✅ **Morphological-analyzer gate** — wired vidyut (`gen_vidyut_stems.py` → 205k
+   pratipadika stems; `run_all` `morph✓` tag + rank nudge when a correction yields a
+   valid stem the suspect lacks). **Finding: weaker than hoped on dictionary
+   headwords** — only ~6.6% are pratipadikas (most are compounds/names/Vedic) and an
+   inflected suspect (`rAjA`) looks non-stem, so it's an informational/ranking signal,
+   not the high-precision gate envisioned (an `or morph` tier-A trigger over-promoted
+   A 7717→11220 incl. inflection non-errors). Kept conservative.
 3. **Canonical-lemma layer** — align all dictionaries onto canonical lemmas (ties into
    csl-atlas), so a correction propagates across dicts and Patel-convention variants
    resolve once.

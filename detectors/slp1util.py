@@ -247,6 +247,23 @@ def dcs_path():
     return os.path.join(os.path.dirname(os.path.abspath(__file__)), 'dcs_lemma_summary.json')
 
 
+def vidyut_stems_path():
+    return os.path.join(os.path.dirname(os.path.abspath(__file__)), 'vidyut_stems.txt')
+
+
+def load_vidyut_stems(path=None):
+    """Set of morphologically-valid SLP1 nominal stems (pratipadikas) from vidyut,
+    vendored by gen_vidyut_stems.py. {} if absent. A *sparse* oracle for dictionary
+    headwords (many are compounds/names/Vedic, not stems), so use stem PRESENCE as a
+    grammar signal, never absence as proof of error."""
+    if path is None:
+        path = vidyut_stems_path()
+    if not os.path.exists(path):
+        return set()
+    with open(path, 'r', encoding='utf-8') as f:
+        return {ln.strip() for ln in f if ln.strip()}
+
+
 def load_confusion_weights(path=None):
     """{'<c1c2 sorted>': fraction} empirical single-char confusion weights from
     gen_confusion_weights.py. Returns {} if absent."""

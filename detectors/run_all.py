@@ -40,7 +40,7 @@ SCAN = "http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php
 
 
 class Cand:
-    __slots__ = ('suspect', 'detectors', 'sugg_dets', 'sugg_dicts', 'reasons', 'dicts')
+    __slots__ = ('suspect', 'detectors', 'sugg_dets', 'sugg_dicts', 'reasons', 'dicts', 'morph')
 
     def __init__(self, suspect):
         self.suspect = suspect
@@ -49,6 +49,7 @@ class Cand:
         self.sugg_dicts = collections.defaultdict(set)  # suggestion -> {dicts that a corrector tied to it}
         self.reasons = []                               # (detector, code, detail)
         self.dicts = set()
+        self.morph = False                              # vidyut: suggestion is a valid stem, suspect is not
 
 
 def ensure_outputs(sanhw1, rerun):
@@ -104,7 +105,7 @@ def aggregate():
     return cands
 
 
-def score_tier(c, dcs, weights):
+def score_tier(c, dcs, weights, stems):
     ndet = len(c.detectors)
     # best suggestion = most detector support, then highest DCS band
     best, best_band, best_supp = '', 0, -1
@@ -114,7 +115,12 @@ def score_tier(c, dcs, weights):
             best, best_band, best_supp = sugg, band, len(dets)
     hpf = bool(c.detectors & HIGH_PRECISION)
     cw = u.confusion_weight(c.suspect, best, weights) if best else 0.0  # common confusion -> rank up
-    score = ndet * 100 + best_band * 10 + (50 if hpf else 0) + len(c.dicts) + round(cw * 20)
+    # vidyut morphology signal: the correction yields a valid stem the suspect lacks.
+    # WEAK on dictionary headwords (most aren't pratipadikas, and an inflected suspect
+    # looks "not a stem"), so it is a ranking nudge + tag only -- NOT a tier promoter.
+    c.morph = bool(best) and (best in stems) and (c.suspect not in stems)
+    score = (ndet * 100 + best_band * 10 + (50 if hpf else 0) + len(c.dicts)
+             + round(cw * 20) + (15 if c.morph else 0))
     if c.detectors == {'dict_vs_corpus'}:
         tier = 'C'                              # exploratory alone
     elif ndet >= 2 or hpf or best_band == 5:
@@ -130,11 +136,12 @@ def main(sanhw1, rerun):
     ensure_outputs(sanhw1, rerun)
     dcs = u.load_dcs_lemmas(u.dcs_path())
     weights = u.load_confusion_weights()
+    stems = u.load_vidyut_stems()
     cands = aggregate()
 
     rows = []
     for c in cands.values():
-        score, tier, best, band = score_tier(c, dcs, weights)
+        score, tier, best, band = score_tier(c, dcs, weights, stems)
         rows.append((score, tier, band, best, c))
     rows.sort(key=lambda r: (-r[0], r[4].suspect))
 
@@ -148,8 +155,9 @@ def main(sanhw1, rerun):
     with open(os.path.join(HERE, 'combined_candidates.txt'), 'w', encoding='utf-8') as f:
         for score, tier, band, best, c in rows:
             dets = ",".join(sorted(c.detectors))
-            f.write("%s\t%d\t%s -> %s\t[%s]\t[%s]\n"
-                    % (tier, score, c.suspect, best or "(flag)", dets, ",".join(sorted(c.dicts))))
+            f.write("%s\t%d\t%s -> %s\t[%s]\t[%s]%s\n"
+                    % (tier, score, c.suspect, best or "(flag)", dets, ",".join(sorted(c.dicts)),
+                       "\tmorph" if c.morph else ""))
 
     # combined_sf.txt -- standard format; emit only the dicts a corrector tied to
     # the chosen suggestion (not flagger-contributed dicts with no correction evidence)
@@ -223,6 +231,8 @@ def write_review_html(rows, path, cap=1500):
     data = []
     for score, tier, band, best, c in rows[:cap]:
         reason = "; ".join("%s:%s" % (d, code) for d, code, _ in c.reasons)
+        if c.morph:
+            reason = (reason + " morph✓").strip()
         data.append({'w': c.suspect, 's': best, 'tier': tier, 'score': score,
                      'dets': sorted(c.detectors), 'dicts': sorted(c.dicts), 'reason': reason})
     payload = html.escape(json.dumps(data, ensure_ascii=False)).replace('</', '<\\/')
