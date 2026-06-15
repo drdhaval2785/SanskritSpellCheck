@@ -24,6 +24,7 @@ import os
 import re
 import io
 import time
+import hashlib
 import urllib.request
 import urllib.parse
 import urllib.error
@@ -46,35 +47,64 @@ except Exception:
     OCR_OK = False
 
 
+_last_fetch = [0.0]
+
+
 def http_get(url, tries=3):
+    """Cached (disk), rate-limited and retrying GET. Cache-read spares the server on
+    re-runs; the throttle bounds the REAL request rate (every network hit, not just
+    once per candidate); retries cover 429 and transient connection/timeout errors."""
+    os.makedirs(CACHE, exist_ok=True)
+    cache = os.path.join(CACHE, 'net_' + hashlib.md5(url.encode('utf-8')).hexdigest())
+    if os.path.exists(cache):
+        with open(cache, 'rb') as f:
+            return f.read()
     for k in range(tries):
         try:
-            return urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=30).read()
+            wait = RATE_S - (time.time() - _last_fetch[0])
+            if wait > 0:
+                time.sleep(wait)
+            _last_fetch[0] = time.time()
+            data = urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=30).read()
+            with open(cache, 'wb') as f:
+                f.write(data)
+            return data
         except urllib.error.HTTPError as e:
             if e.code == 429 and k < tries - 1:
-                time.sleep(5 * (k + 1))   # back off on rate-limit
+                time.sleep(5 * (k + 1))
+                continue
+            raise
+        except (urllib.error.URLError, TimeoutError):
+            if k < tries - 1:
+                time.sleep(2 * (k + 1))
                 continue
             raise
 
 
 def resolve_scan_url(dictcode, key):
+    """The scan URL from servepdf's HTML -- either <object data='...'> (PDF dicts) or
+    <img src='...'> (jpg/png dicts: WIL, MD, CCS, PWKVN, FRI)."""
     html = http_get(SERVEPDF % (dictcode, urllib.parse.quote(key))).decode('utf-8', 'replace')
-    m = re.search(r"""data=['"]([^'"]+\.pdf)['"]""", html)
+    m = re.search(r"""(?:data|src)=['"]([^'"]+\.(?:pdf|jpe?g|png))['"]""", html, re.I)
     if not m:
         return None
     url = m.group(1)
     return ('https:' + url) if url.startswith('//') else url
 
 
-def page_slp1(pdf_bytes, pngpath):
-    """Return (source, slp1_text). source in {pdftext, ocr, image}. Caches the page PNG."""
-    import fitz
-    doc = fitz.open(stream=pdf_bytes, filetype='pdf')
-    pg = doc.load_page(0)
-    txt = pg.get_text().strip()
-    if txt:
-        return 'pdftext', u.devanagari_to_slp1(txt)
-    png = pg.get_pixmap(dpi=200).tobytes('png')
+def page_slp1(url, pngpath):
+    """Fetch the scan (PDF or image) and return (source, slp1_text). source in
+    {pdftext, ocr, image}. Caches the page PNG as a review aid."""
+    data = http_get(url)
+    if url.lower().endswith('.pdf'):
+        import fitz
+        pg = fitz.open(stream=data, filetype='pdf').load_page(0)
+        txt = pg.get_text().strip()
+        if txt:
+            return 'pdftext', u.devanagari_to_slp1(txt)
+        png = pg.get_pixmap(dpi=200).tobytes('png')
+    else:
+        png = data   # already a raster scan (jpg/png)
     with open(pngpath, 'wb') as f:
         f.write(png)
     if OCR_OK:
@@ -115,15 +145,13 @@ def main(infile, n):
     out = open(os.path.join(HERE, 'ocr_verify_report.txt'), 'w', encoding='utf-8')
     labels = {}
     for i, (dictc, wrong, right) in enumerate(cands):
-        if i:
-            time.sleep(RATE_S)
         png = os.path.join(CACHE, "%s_%s.png" % (dictc, re.sub(r'[^A-Za-z0-9]', '_', wrong)))
         try:
-            url = resolve_scan_url(dictc, wrong)
+            url = resolve_scan_url(dictc, wrong)   # http_get throttles+caches internally
             if not url:
                 label, src = 'NO-SCAN', '-'
             else:
-                src, page = page_slp1(http_get(url), png)
+                src, page = page_slp1(url, png)
                 label = verify(page, wrong, right) if src != 'image' else 'MANUAL'
         except Exception as e:
             label, src = 'ERROR', repr(e)[:60]

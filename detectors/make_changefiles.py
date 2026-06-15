@@ -37,10 +37,12 @@ def load_dict_index(csl_root, dictcode):
             line = line.rstrip('\n')
             m1 = re.search('<k1>([^<]*)', line)
             m2 = re.search('<k2>([^<]*)', line)
-            if m1 and m1.group(1) not in k1:
-                k1[m1.group(1)] = (i, line)
-            if m2 and m2.group(1) not in k2:
-                k2[m2.group(1)] = (i, line)
+            k1v = m1.group(1).strip() if m1 else ''
+            k2v = m2.group(1).strip() if m2 else ''
+            if k1v and k1v not in k1:
+                k1[k1v] = (i, line)
+            if k2v and k2v not in k2:
+                k2[k2v] = (i, line)
     return k1, k2
 
 
@@ -71,7 +73,9 @@ def main(infile, csl_root, outdir):
         out = os.path.join(os.path.dirname(os.path.abspath(__file__)), outdir, "%s_draft.txt" % dictcode)
         with open(out, 'w', encoding='utf-8') as f:
             f.write("; DRAFT corrections for %s — SanskritSpellCheck; VERIFY each against the scan before filing.\n" % dictcode)
-            f.write("; updateByLine format; only the <k1>/<k2> key field is edited (check the entry body too).\n;\n")
+            f.write("; updateByLine format; only the <k1>/<k2> key field is edited (check the entry body too).\n")
+            f.write("; NOTE: each case targets the FIRST entry with that headword -- check for homographs\n")
+            f.write(";       (multiple entries sharing a key) and that no two cases edit the same line.\n;\n")
             for n, (wrong, right) in enumerate(by_dict[dictcode], 1):
                 f.write("; Case %d.  %s -> %s   scan=%s\n" % (n, wrong, right, SCAN % (dictcode, wrong)))
                 hit = None

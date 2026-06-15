@@ -132,7 +132,7 @@ def confusion_candidates(w):
 _DEVA_INDEP = {'अ': 'a', 'आ': 'A', 'इ': 'i', 'ई': 'I', 'उ': 'u', 'ऊ': 'U', 'ऋ': 'f',
                'ॠ': 'F', 'ऌ': 'x', 'ॡ': 'X', 'ए': 'e', 'ऐ': 'E', 'ओ': 'o', 'औ': 'O'}
 _DEVA_MATRA = {'ा': 'A', 'ि': 'i', 'ी': 'I', 'ु': 'u', 'ू': 'U', 'ृ': 'f', 'ॄ': 'F',
-               'ॢ': 'x', 'े': 'e', 'ै': 'E', 'ो': 'o', 'ौ': 'O'}
+               'ॢ': 'x', 'ॣ': 'X', 'े': 'e', 'ै': 'E', 'ो': 'o', 'ौ': 'O'}
 _DEVA_CONS = {'क': 'k', 'ख': 'K', 'ग': 'g', 'घ': 'G', 'ङ': 'N', 'च': 'c', 'छ': 'C',
               'ज': 'j', 'झ': 'J', 'ञ': 'Y', 'ट': 'w', 'ठ': 'W', 'ड': 'q', 'ढ': 'Q',
               'ण': 'R', 'त': 't', 'थ': 'T', 'द': 'd', 'ध': 'D', 'न': 'n', 'प': 'p',
@@ -166,7 +166,7 @@ def devanagari_to_slp1(s):
             out.append(_DEVA_INDEP[ch])
         elif ch in _DEVA_SIGN:
             out.append(_DEVA_SIGN[ch])
-        elif ch.isspace():
+        elif ch.isspace() or ch in '।॥':   # danda / double danda are word separators
             out.append(' ')
         i += 1
     return ''.join(out)
@@ -186,7 +186,7 @@ def edit_distance(a, b, cap=3):
         if best > cap:
             return cap + 1
         prev = cur
-    return prev[-1]
+    return min(prev[-1], cap + 1)   # honor the documented cap+1 ceiling
 
 
 # --- loaders ---------------------------------------------------------------
@@ -239,7 +239,7 @@ def load_dcs_lemmas(path):
         return {}
     with open(path, 'r', encoding='utf-8') as f:
         data = json.load(f)
-    return {k: v['freqBand'] for k, v in data['lemmas'].items() if v.get('attested')}
+    return {k: v.get('freqBand', 1) for k, v in data['lemmas'].items() if v.get('attested')}
 
 
 def dcs_path():
