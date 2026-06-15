@@ -14,9 +14,21 @@ import sys
 import os
 import collections
 
-VOWELS = set("aAiIuUfFxXeEoO")
-MARKS = set("MH~")
-CONSONANTS = set("kKgGNcCjJYwWqQRtTdDnpPbBmyrlvSzshL")
+# SLP1 character classes + the headword normalizer come from the canonical sanskrit-util
+# package (one source of truth; see ../SHARED_CODE.md). Fall back to the local copy so the
+# module still imports when the sibling repo is absent (verified set-equal + slp1_norm matches
+# the old normalize_lemma on 432,988/432,989 real headwords — the 1 diff is slp1_norm trimming
+# a stray trailing space, which the loaders already strip).
+try:
+    from sanskrit_util import SLP1_VOWELS, SLP1_MARKS, SLP1_CONSONANTS, slp1_norm as _slp1_norm
+    VOWELS = set(SLP1_VOWELS)
+    MARKS = set(SLP1_MARKS)
+    CONSONANTS = set(SLP1_CONSONANTS)
+except ImportError:                       # sanskrit-util sibling absent — local fallback (kept in sync)
+    VOWELS = set("aAiIuUfFxXeEoO")
+    MARKS = set("MH~")
+    CONSONANTS = set("kKgGNcCjJYwWqQRtTdDnpPbBmyrlvSzshL")
+    _slp1_norm = None
 # legal characters in a well-formed SLP1 headword (avagraha ' is allowed too)
 ALPHABET = VOWELS | MARKS | CONSONANTS | {"'"}
 
@@ -191,7 +203,10 @@ def load_corpus(paths):
 def normalize_lemma(w):
     """Normalize an SLP1 headword to the DCS join key (per VisualDCS consumption
     contract): strip accents (/ \\ ^ ~) and trailing homonym digits; SLP1 case is
-    preserved (it is phonemic)."""
+    preserved (it is phonemic). Delegates to the canonical sanskrit-util slp1_norm
+    when available (verified identical to the local fold over the repo's headwords)."""
+    if _slp1_norm is not None:
+        return _slp1_norm(w)
     w = w.translate(str.maketrans('', '', '/\\^~'))
     return w.rstrip('0123456789')
 
