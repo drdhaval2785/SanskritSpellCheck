@@ -6,6 +6,44 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.9.0] - 2026-06-15
+
+### Added
+- **Body-grounded precision triage** for the engine's tier-A correction candidates —
+  four new tools under [detectors/](detectors) that judge each candidate against the
+  dictionary's *own entry text*, not spelling alone:
+  - `triage_enrich.py` — attach deterministic evidence per candidate (the `<k2>`
+    accent/hyphen field, DCS frequency band of the suggestion, cross-dict count,
+    confusion class + empirical weight, historical-pair flag) → `<DICT>_evidence.jsonl`.
+  - `triage_bodies.py` — build a headword→entry-body index from csl-orig and classify
+    each candidate's MW body: `wr` / `variant` / `xref` (MW documents the spelling on
+    purpose), `realword` (a real gloss), `thin`, `missing` (not in the current source).
+  - `triage_body_batches.py` — split the `realword` set into body-aware batches.
+  - `triage_synthesize.py` — combine deterministic + LLM + source-confirmation into a
+    six-bucket ranked review queue (`<DICT>_triaged.txt`) and the FILE-FIRST candidates
+    in CORRECTIONS standard format (`<DICT>_file_first_sf.txt`).
+- Applied to **MW** ([corrections_draft/MW/](corrections_draft/MW)): the body-aware
+  triage was run via a two-stage multi-agent workflow (adjudicate → adversarial verify,
+  then body-aware classify → source-confirm).
+
+### Notes
+- **FINDING: of 1,954 MW tier-A candidates, only 4 (0.2%) are body-confirmed fileable
+  typos.** 1,161 are real distinct words; 630 are spellings MW documents deliberately
+  (`w.r. for…`, `v.l.`, `in comp. for…`, cross-refs) where a "fix" would *corrupt* MW;
+  11 are stale (absent from current source); 148 need human eyes. Tier-A is high *engine*
+  confidence, not precision — do not bulk-apply it.
+- The engine's **vowel-length** flags (≈77% of tier-A) are almost all false (Sanskrit
+  uses vowel length lexically); the rarer **consonant-class** flags (retroflex/sibilant/
+  aspirate) are far higher-precision (3 of the 4 confirmed: ṇatva, `aṃśa` morpheme,
+  `voḍhavya` sandhi).
+- The adversarial/body-aware design caught false positives that spelling- and
+  memory-based passes confirmed: `marga→mArga` (MW marks `marga` as `w.r. for mArga`),
+  `muka→mUka` (MW glosses `muka` "the smell of cow-dung"), `vinAsa→vinASa`
+  (`vi-nāsa` "noseless" is real). The original MW draft readme's worked examples were
+  corrected accordingly.
+- Triage intermediates (`<DICT>_evidence.jsonl`, `triage_work/`) are gitignored; the
+  committed artifacts are `<DICT>_triaged.txt` and `<DICT>_file_first_sf.txt`.
+
 ## [1.8.2] - 2026-06-15
 
 ### Fixed

@@ -1,0 +1,8 @@
+; MW body-confirmed fileable typos -- CORRECTIONS standard format (DICT:wrong:right:n)
+; 4 candidates: classified TYPO from MW's entry body AND source-confirmed.
+; VERIFY each on the scan, flip trailing n->y for confirmed ones, then:
+;   python chg_nchg_sep.py MW_file_first_sf.txt chg.txt nchg.txt
+MW:kattfna:kattfRa:n
+MW:Bawwaraka:BawwAraka:n
+MW:akzAMsa:akzAMSa:n
+MW:prativoDavya:prativoQavya:n
