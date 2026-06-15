@@ -6,6 +6,22 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.8.2] - 2026-06-15
+
+### Fixed
+- **Retroflex `ळ` (U+0933) regression in `detectors/slp1util.devanagari_to_slp1`** introduced by
+  the 1.8.1 dedup. The 1.8.1 form `to_slp1(deva_to_iast(s))` mis-mapped `ळ` to SLP1 `x` (vocalic
+  ḷ) instead of `L`: `deva_to_iast` renders both `ळ` and vocalic `ऌ` as IAST `ḷ` (U+1E37), so the
+  retroflex/vocalic distinction was lost before `to_slp1` ran and could not be recovered. Fixed at
+  the source: `sanskrit-util` gains a direct `deva_to_slp1` (makes the `ळ`→`L` decision before the
+  IAST step; vocalic `ऌ`/`◌ॢ` stay `x`), and `devanagari_to_slp1` now calls it. The danda /
+  double-danda→space post-step is unchanged, and output is byte-identical to 1.8.1 on every input
+  **except** those containing `ळ` (e.g. RV 1.1.1 `अग्निमीळे` → `agnimILe`, was `agnimIxe`; Marathi
+  `खेळ` → `KeLa`, was `Kexa`). Impact was low — `devanagari_to_slp1` is used only by `ocr_verify`'s
+  fuzzy comparison and `ळ` is rare — but it was a real correctness regression vs the pre-1.8.1 map.
+  (The 1.8.1 "behavior unchanged" claim below held for the tested agni/kapila/Darma words but not
+  for `ळ`.) Requires the `sanskrit-util` sibling at ≥ the commit adding `deva_to_slp1`.
+
 ## [1.8.1] - 2026-06-15
 
 ### Changed

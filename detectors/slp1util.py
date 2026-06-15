@@ -146,9 +146,11 @@ def confusion_candidates(w):
 def devanagari_to_slp1(s):
     """Devanagari -> SLP1 via the shared sanskrit-util package (single source of truth),
     then map danda / double-danda to spaces so OCR page text splits into word tokens.
-    Used only by ocr_verify; needs the sanskrit-util sibling (or the pip-installed pkg)."""
-    from sanskrit_util import to_slp1, deva_to_iast
-    return to_slp1(deva_to_iast(s)).replace('।', ' ').replace('॥', ' ')
+    Used only by ocr_verify; needs the sanskrit-util sibling (or the pip-installed pkg).
+    Calls the package's direct deva_to_slp1 (ळ -> L); to_slp1(deva_to_iast(·)) mis-mapped ळ
+    onto vocalic ḷ -> 'x' because both share the IAST glyph ḷ (U+1E37)."""
+    from sanskrit_util import deva_to_slp1
+    return deva_to_slp1(s).replace('।', ' ').replace('॥', ' ')
 
 
 def edit_distance(a, b, cap=3):
