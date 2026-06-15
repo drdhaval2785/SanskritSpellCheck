@@ -40,24 +40,27 @@ SCAN = "http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php
 
 
 class Cand:
-    __slots__ = ('suspect', 'detectors', 'sugg_dets', 'reasons', 'dicts')
+    __slots__ = ('suspect', 'detectors', 'sugg_dets', 'sugg_dicts', 'reasons', 'dicts')
 
     def __init__(self, suspect):
         self.suspect = suspect
         self.detectors = set()
-        self.sugg_dets = collections.defaultdict(set)  # suggestion -> {detectors}
-        self.reasons = []                              # (detector, code, detail)
+        self.sugg_dets = collections.defaultdict(set)   # suggestion -> {detectors}
+        self.sugg_dicts = collections.defaultdict(set)  # suggestion -> {dicts that a corrector tied to it}
+        self.reasons = []                               # (detector, code, detail)
         self.dicts = set()
 
 
 def ensure_outputs(sanhw1, rerun):
     for name, script, out, kind in DETECTORS:
         path = os.path.join(HERE, out)
-        if rerun or not os.path.exists(path):
+        if rerun or not os.path.exists(path) or os.path.getsize(path) == 0:
             print("running %s ..." % name)
-            subprocess.run([sys.executable, os.path.join(HERE, script), sanhw1, path],
-                           cwd=HERE, check=True,
-                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            r = subprocess.run([sys.executable, os.path.join(HERE, script), sanhw1, path],
+                               cwd=HERE, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, text=True)
+            if r.returncode != 0:
+                sys.stderr.write("ERROR: %s failed (exit %d):\n%s\n" % (name, r.returncode, (r.stderr or '')[-1500:]))
+                raise SystemExit(1)
         else:
             print("using cached %s" % out)
 
@@ -85,8 +88,11 @@ def aggregate():
                 c = get(wrong)
                 c.detectors.add(name)
                 c.sugg_dets[right].add(name)
+                c.sugg_dicts[right].add(code)
                 c.dicts.add(code)
             else:                              # X:CODE=Y:D
+                if ':' not in line:            # guard: skip malformed/colon-less lines
+                    continue
                 x = line[:line.index(':')]
                 d = line[line.rindex(':') + 1:]
                 mid = line[line.index(':') + 1:line.rindex(':')]
@@ -143,12 +149,13 @@ def main(sanhw1, rerun):
             f.write("%s\t%d\t%s -> %s\t[%s]\t[%s]\n"
                     % (tier, score, c.suspect, best or "(flag)", dets, ",".join(sorted(c.dicts))))
 
-    # combined_sf.txt -- standard format for the best suggestion (correctors only)
+    # combined_sf.txt -- standard format; emit only the dicts a corrector tied to
+    # the chosen suggestion (not flagger-contributed dicts with no correction evidence)
     with open(os.path.join(HERE, 'combined_sf.txt'), 'w', encoding='utf-8') as f:
         for score, tier, band, best, c in rows:
             if not best:
                 continue
-            for code in sorted(c.dicts):
+            for code in sorted(c.sugg_dicts.get(best, ())):
                 f.write("%s:%s:%s:n\n" % (code, c.suspect, best))
 
     write_review_html(rows, os.path.join(HERE, 'combined_review.html'))
