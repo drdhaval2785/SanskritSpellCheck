@@ -12,6 +12,8 @@ __pycache__/
 detectors/*_suspects.txt
 detectors/*_corrections.txt
 detectors/combined_*
+detectors/*_hw.txt
+detectors/spotcheck_sample.txt
 
 # Folder config file
 Desktop.ini

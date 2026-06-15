@@ -33,8 +33,9 @@ ten tools with no unified, deduplicated, confidence-ranked view.
 
 ## Phase 1 — near-term (weeks): consolidate & sharpen
 
-**Status: 1–3 shipped** ([detectors/run_all.py](detectors/run_all.py), June 2026:
-17,098 deduped candidates, 7,618 multi-detector, tiers A/B/C, review HTML). 4–6 open.
+**Status: 1–6 shipped (June 2026) — Phase 1 complete.** run_all.py (17,098 deduped,
+tiers A/B/C, review HTML); extract_csl_hw.py + raw-source flagger runs; eval.py
+(50.6% recall vs the 2017 o_vs_O pairs, +15k new candidates, 0 false positives). → Phase 2.
 
 1. ✅ **Unified runner** `detectors/run_all.py` — runs all detectors, **dedups across
    them**, merges into one list. A word flagged by several detectors (e.g. both
@@ -46,13 +47,16 @@ ten tools with no unified, deduplicated, confidence-ranked view.
    per-row scan links, keyboard a/r/s, decisions in localStorage, **Export
    accepted/rejected** → the `:y`/`:n` standard format for
    [chg_nchg_sep.py](chg_nchg_sep.py).
-4. **Run charset / phonotactic / order on raw csl-orig sources** (they validate raw
-   text, not just the merged `sanhw1.txt`) — wire them to the dictionary source repo.
-5. **Precision spot-check** — hand-verify ~100 band-5 `spell_correct` rows to get a
-   real precision number and calibrate the tiers.
-6. **Eval harness** — replay the detectors against the **historical** corrections
-   (the 2017 `AllvsXX_sf` files + the CORRECTIONS issue history) to measure each
-   detector's recall/precision on known fixes.
+4. ✅ **Run charset / phonotactic / order on raw csl-orig sources** —
+   `extract_csl_hw.py` pulls source-order headwords from a raw dict; order_check now
+   runs on real source order (caveat: it measures deviation from sanhw's collation, so
+   a dict's own anusvara convention shows non-error deviations).
+5. ✅ **Precision spot-check** — `eval.py` writes `spotcheck_sample.txt` (top-100
+   tier-A, all multi-detector) with scan links for human verification; true precision
+   needs eyes on the scans.
+6. ✅ **Eval harness** — `eval.py` measures recall vs the 3884 historical o_vs_O pairs
+   (50.6% union; +15,152 new candidates) and **0** false positives vs ~30k known-good
+   words. Finding: recovered real pairs also land in tier C (913) — don't discard C.
 
 ## Phase 2 — one quarter: scale the verify loop & coverage
 

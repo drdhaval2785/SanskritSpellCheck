@@ -70,6 +70,27 @@ A/B/C ≈ 7.7k / 4.7k / 4.7k. Tier A (e.g. `brahmaRa→brAhmaRa`, `jiv→jIv`, `
 flagged by several detectors at once — the verify-first queue. Outputs are gitignored
 (regenerable); the review HTML shows the top 1500 by score (full list in the .txt).
 
+## Evaluation & raw-source runs (Phase 1.4–1.6)
+
+- [extract_csl_hw.py](extract_csl_hw.py) — pull headwords in **source order** from a
+  raw csl-orig dictionary (`<k1>`/`<k2>` fields) so charset/phonotactic/**order_check**
+  can run on the raw text, not just the cleaned `sanhw1.txt`:
+  ```sh
+  python extract_csl_hw.py ../../csl-orig/v02/ap90/ap90.txt ap90_hw.txt
+  python order_check.py ap90_hw.txt ap90_order.txt   # real source-order check
+  ```
+  *Caveat:* order_check measures deviation from **sanhw's** collation (anusvara sorts
+  as the homorganic nasal); a dictionary using a different anusvara convention shows
+  many non-error deviations — verify against that dict's own ordering.
+- [eval.py](eval.py) — measures the suite against local ground truth:
+  - **recall** vs the 3884 historical o_vs_O pairs: union **50.6%** (spell_correct
+    44.6%, consensus 25%), plus **15,152 new** candidate pairs beyond the 2017 method;
+  - **false positives**: **0** against 29.5k known-good (`nochange`) words;
+  - tiers of recovered known pairs: A=809 / B=245 / **C=913** (tier C still holds real
+    corrections — don't discard it);
+  - writes `spotcheck_sample.txt` (top-100 tier-A) for human precision verification
+    (true precision needs eyes on the scans).
+
 ## Output formats (reuse the existing pipeline)
 - **Flaggers** (4, 5, 6) emit faultfinder-style `X:CODE=detail:D`, so
   [../faultfinder3a-html.php](../faultfinder3a-html.php) (with the `repeat=2` arg)

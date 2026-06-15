@@ -6,6 +6,19 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.4.0] - 2026-06-14
+
+### Added
+- `detectors/extract_csl_hw.py` (Phase 1.4) — extract source-order headwords from a raw
+  csl-orig dictionary (`<k1>`/`<k2>`), so charset/phonotactic/**order_check** run on the
+  raw text, not just the cleaned sanhw1.txt. (order_check on raw sources measures
+  deviation from sanhw's collation — verify against the dict's own anusvara convention.)
+- `detectors/eval.py` (Phase 1.5–1.6) — evaluation harness: **recall** vs the 3884
+  historical o_vs_O pairs (union 50.6%; spell_correct 44.6%, consensus 25%) and **15,152
+  new** candidate pairs; **0** false positives vs ~30k known-good (nochange) words; tier
+  distribution of recovered pairs (A=809/B=245/C=913); and a top-100 tier-A
+  `spotcheck_sample.txt` for human precision verification.
+
 ## [1.3.0] - 2026-06-14
 
 ### Added
