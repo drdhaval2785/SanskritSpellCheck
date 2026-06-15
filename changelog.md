@@ -6,6 +6,17 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.8.1] - 2026-06-15
+
+### Changed
+- Cross-repo dedup: `detectors/slp1util.devanagari_to_slp1` now **delegates to the shared
+  `sanskrit-util` package** (via `detectors/sanskrit_util.py`, a relative-path shim
+  mirroring WhitneyRoots) instead of carrying its own Devanagari→SLP1 maps — single
+  source of truth for transliteration. Behavior unchanged (verified equivalent on
+  agni/kapila/Darma, and the danda→space step from 1.7.0 is preserved as a post-step).
+  The SLP1 alphabet/char-classes stay local (sanskrit-util does not expose them). The
+  shim raises a clear error only if the sibling is absent *and* the OCR path is used.
+
 ## [1.8.0] - 2026-06-14
 
 ### Added

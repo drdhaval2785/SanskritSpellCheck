@@ -128,48 +128,15 @@ def confusion_candidates(w):
     return cs
 
 
-# --- Devanagari -> SLP1 (for comparing OCR output against SLP1 candidates) -------
-_DEVA_INDEP = {'अ': 'a', 'आ': 'A', 'इ': 'i', 'ई': 'I', 'उ': 'u', 'ऊ': 'U', 'ऋ': 'f',
-               'ॠ': 'F', 'ऌ': 'x', 'ॡ': 'X', 'ए': 'e', 'ऐ': 'E', 'ओ': 'o', 'औ': 'O'}
-_DEVA_MATRA = {'ा': 'A', 'ि': 'i', 'ी': 'I', 'ु': 'u', 'ू': 'U', 'ृ': 'f', 'ॄ': 'F',
-               'ॢ': 'x', 'ॣ': 'X', 'े': 'e', 'ै': 'E', 'ो': 'o', 'ौ': 'O'}
-_DEVA_CONS = {'क': 'k', 'ख': 'K', 'ग': 'g', 'घ': 'G', 'ङ': 'N', 'च': 'c', 'छ': 'C',
-              'ज': 'j', 'झ': 'J', 'ञ': 'Y', 'ट': 'w', 'ठ': 'W', 'ड': 'q', 'ढ': 'Q',
-              'ण': 'R', 'त': 't', 'थ': 'T', 'द': 'd', 'ध': 'D', 'न': 'n', 'प': 'p',
-              'फ': 'P', 'ब': 'b', 'भ': 'B', 'म': 'm', 'य': 'y', 'र': 'r', 'ल': 'l',
-              'व': 'v', 'श': 'S', 'ष': 'z', 'स': 's', 'ह': 'h', 'ळ': 'L'}
-_DEVA_SIGN = {'ं': 'M', 'ः': 'H', 'ँ': '~'}
-_VIRAMA = '्'
+# --- Devanagari -> SLP1 (delegated to the shared sanskrit-util package) -----------
 
 
 def devanagari_to_slp1(s):
-    """Best-effort Devanagari -> SLP1 (handles implicit 'a', matras, virama, conjuncts,
-    anusvara/visarga). Imperfect by design -- meant for fuzzy OCR comparison, not roundtrip."""
-    out = []
-    i, n = 0, len(s)
-    while i < n:
-        ch = s[i]
-        if ch in _DEVA_CONS:
-            out.append(_DEVA_CONS[ch])
-            j = i + 1
-            if j < n and s[j] == _VIRAMA:
-                i = j + 1
-                continue
-            if j < n and s[j] in _DEVA_MATRA:
-                out.append(_DEVA_MATRA[s[j]])
-                i = j + 1
-                continue
-            out.append('a')          # implicit vowel
-            i += 1
-            continue
-        if ch in _DEVA_INDEP:
-            out.append(_DEVA_INDEP[ch])
-        elif ch in _DEVA_SIGN:
-            out.append(_DEVA_SIGN[ch])
-        elif ch.isspace() or ch in '।॥':   # danda / double danda are word separators
-            out.append(' ')
-        i += 1
-    return ''.join(out)
+    """Devanagari -> SLP1 via the shared sanskrit-util package (single source of truth),
+    then map danda / double-danda to spaces so OCR page text splits into word tokens.
+    Used only by ocr_verify; needs the sanskrit-util sibling (or the pip-installed pkg)."""
+    from sanskrit_util import to_slp1, deva_to_iast
+    return to_slp1(deva_to_iast(s)).replace('।', ' ').replace('॥', ' ')
 
 
 def edit_distance(a, b, cap=3):

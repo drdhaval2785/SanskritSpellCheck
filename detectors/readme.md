@@ -15,7 +15,10 @@ catches when the correct variant already exists in another dictionary.
 model (`confusion_key` folds 99.2% of real confusion pairs to one key; `confusion_sub`
 tests a single confusion substitution; `confusion_candidates` generates correction
 neighbours), `sanskrit_sort_key`, `edit_distance`, and the lexicon/corpus/DCS/whitelist
-loaders.
+loaders. Devanagari→SLP1 transliteration is **delegated to the shared `sanskrit-util`
+package** (via [sanskrit_util.py](sanskrit_util.py), a relative-path shim) rather than
+re-implemented — single source of truth. (The SLP1 alphabet/char classes stay local;
+`sanskrit-util` does not expose them.)
 
 ### Corpus grounding (DCS)
 
