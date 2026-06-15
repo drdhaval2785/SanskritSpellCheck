@@ -16,6 +16,8 @@ detectors/*_hw.txt
 detectors/spotcheck_sample.txt
 detectors/changefiles/
 detectors/campaigns/
+detectors/ocrcache/
+detectors/ocr_verify_report.txt
 
 # Folder config file
 Desktop.ini

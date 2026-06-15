@@ -6,6 +6,18 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.7.0] - 2026-06-14
+
+### Added
+- `detectors/ocr_verify.py` (Phase 2.1) — OCR-assisted pre-verification pipeline:
+  resolve the Cologne `servepdf` page → fetch the scan PDF → PDF text layer or OCR →
+  closest-match compare the print to the suspect vs suggested spelling →
+  CONFIRM/DENY/UNCERTAIN triage label. Fetch+render, the closest-match decision, and
+  `slp1util.devanagari_to_slp1` are verified here; the OCR step is pluggable and needs
+  tesseract + a Devanagari model (`san`/`hin`). Polite: cached, rate-limited, 429
+  backoff — small batches, ideally server-side. Triage prior, not a verdict (a human
+  always confirms against the scan).
+
 ## [1.6.0] - 2026-06-14
 
 ### Added

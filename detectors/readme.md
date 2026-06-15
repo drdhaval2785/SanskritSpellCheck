@@ -102,6 +102,15 @@ flagged by several detectors at once — the verify-first queue. Outputs are git
   you can work one dictionary's queue at a time, plus `campaigns/campaign_summary.txt`,
   a dashboard ranking dicts by tier-A count (MW 1977, PD 1045, BHS 737, SCH 678,
   PW 657 …) — campaign the biggest high-confidence queues first.
+- [ocr_verify.py](ocr_verify.py) — **OCR-assisted pre-verification** (triage prior, not
+  a verdict): for a candidate, resolve the Cologne `servepdf` page → fetch the scan PDF
+  → text layer or OCR → compare the print to the suspect vs the suggested spelling →
+  pre-label CONFIRM / DENY / UNCERTAIN, reordering the human queue. Fetch+render and the
+  closest-match decision (+ Devanagari→SLP1 in slp1util) are verified here; the OCR step
+  needs **tesseract + a Devanagari model** (`san`/`hin`) — without it the page image is
+  cached as a review aid and the label is MANUAL. Polite by design (cached,
+  rate-limited, 429 backoff) — run small batches, ideally server-side where the scans
+  live. OCR of old Devanagari scans is unreliable, so a human always confirms.
 - [make_changefiles.py](make_changefiles.py) — turn accepted corrections
   (`accepted_sf.txt` exported from the review UI) into per-dictionary **draft**
   change-files in the CORRECTIONS updateByLine format: locates the source line in

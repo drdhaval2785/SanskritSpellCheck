@@ -65,10 +65,13 @@ per-dict draft change-files from accepted rows) and the data-driven confusion mo
 (`gen_confusion_weights.py` → `confusion_weights.json`, used in run_all ranking).
 **4 also shipped** — `run_campaign.py` splits the unified suite per dictionary into
 `campaigns/<DICT>/` review packages + a tier-A-ranked dashboard (MW 1977, PD 1045,
-BHS 737 …), so corrections can be worked one dictionary at a time. **Blocked on
-external deps:** 1 OCR (needs tesseract + scan fetch), 2 full DCS (the local
-`dcs_full.sqlite` is an empty placeholder; needs the VisualDCS release + respect the
-consumption-contract boundary), 3 GRETIL (external download).
+BHS 737 …), so corrections can be worked one dictionary at a time. **1 OCR pipeline built** — `ocr_verify.py` (servepdf → fetch scan PDF → text/OCR →
+closest-match CONFIRM/DENY/UNCERTAIN; fetch+render + decision logic + Devanagari→SLP1
+verified). The auto-OCR step is gated on **tesseract + a Devanagari model** (absent in
+this env) and the server rate-limits (429) → run small batches, ideally server-side.
+**Still blocked on external deps:** 2 full DCS (the local `dcs_full.sqlite` is an empty
+placeholder; needs the VisualDCS release + the consumption-contract boundary), 3 GRETIL
+(external download).
 
 1. **OCR-assisted pre-verification** — fetch the scanned page (`servepdf`), OCR the
    headword region, compare to the digital spelling, and pre-label each candidate

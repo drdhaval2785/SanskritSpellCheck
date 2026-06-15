@@ -163,6 +163,12 @@ printed dictionary. Compare the printed spelling to the digital one:
 The post-repha doublings (`sūryya`, `varṇṇa`) are usually the faithful printed form —
 treat those as an editorial-normalization question for the maintainers, not bugs.
 
+**Pre-triage with OCR (optional).** [detectors/ocr_verify.py](detectors/ocr_verify.py)
+fetches each scan and (with tesseract + a Devanagari model installed) pre-labels
+candidates CONFIRM/DENY/UNCERTAIN to reorder the queue — and even without OCR it
+pre-caches the scan image next to each candidate. It is a triage prior only; a human
+still confirms. Run small batches (the server rate-limits).
+
 ## 10. "Submit corrections"
 
 The review UI (§8) exports `accepted_sf.txt` (verified rows as `DICT:wrong:right:y`).
