@@ -17,7 +17,6 @@ Usage:  cd detectors && python triage_body_batches.py [MW]
 import sys
 import os
 import json
-import glob
 
 sys.stdout.reconfigure(encoding='utf-8')
 sys.stderr.reconfigure(encoding='utf-8')
@@ -31,28 +30,17 @@ def main():
     pkg = os.path.join(ROOT, 'corrections_draft', dict_code)
     work = os.path.join(pkg, 'triage_work')
 
-    adj = {}
-    for p in sorted(glob.glob(os.path.join(work, 'adj_*.json'))):
-        t = open(p, encoding='utf-8').read().strip()
-        if t.startswith('```'):
-            t = t.split('```')[1].lstrip('json').strip()
-        for v in json.loads(t):
-            adj[v['suspect']] = v
-
     rows = [json.loads(l) for l in open(os.path.join(pkg, '%s_evidence.jsonl' % dict_code), encoding='utf-8')]
     need = [r for r in rows if r['body_kind'] in ('realword', 'thin', 'multi-mixed')]
 
     batch = []
     for r in need:
-        a = adj.get(r['suspect'], {})
         batch.append({
             'suspect': r['suspect'],
             'suggestion': r['suggestion'],
             'body': r['body_text'],
             'body_count': r['body_count'],
             'dcs_sugg_band': r['dcs_sugg_band'],
-            'prior_label': a.get('label'),
-            'prior_reason': a.get('reason'),
         })
 
     BATCH = 30

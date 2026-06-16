@@ -20,13 +20,17 @@ MARKERS = {
         'wrong-reading':   r'\bw\.\s?r\.|wrong reading|incorrect(?:ly)? for|wrongly',
         'varia-lectio':    r'\bv\.\s?l\.|\bvar\.|various reading',
         'in-composition':  r'in comp\.|before \S+ for|for \S+ before|\bsandhi\b|metric(?:ally)?\.? for',
-        'cross-reference': r'¦\s*(See\b|cf\.|=)|\bq\.v\.|=\s*[˚\-<]',
+        # ¦-independent: body_text has the ¦ separator stripped, so markers must not need it
+        # (classify_one guards body_kind with len<50 so a bare "See" can't mislabel a long body).
+        'cross-reference': r'\bSee\b|\bcf\.|\bq\.v\.|=\s*[˚\-<]',
     },
     'de': {  # Böhtlingk–Roth Petersburg conventions
-        'wrong-reading':   r'fehlerhaft|verschrieben|verlesen|falsche?\s+(Lesart|Schreib\w*)|falsch f[üu]r|Druckfehler|\blies\b|verbessere|unrichtig|zu lesen|verdorben',
+        # incl. PW correction-note apparatus: "Richtig {#X#}" / "lies {#X#}" (the headword is the
+        # form-as-found, X is PW's noted correct form -> intentional apparatus, do NOT file).
+        'wrong-reading':   r'fehlerhaft|verschrieben|verlesen|falsche?\s+(Lesart|Schreib\w*)|falsch f[üu]r|Druckfehler|\blies\b|verbessere|unrichtig|zu lesen|verdorben|Richtig \{#|richtiger \{#',
         'varia-lectio':    r'\bv\.\s?l\.|Nebenform|andere Lesart|Lesart',
         'in-composition':  r'im Compositum|in comp\.|metrisch|metri causa|am Ende eines',
-        'cross-reference': r'¦\s*=|¦\s*<?ab>?s\.|¦\s*s\.\s|\bvgl\.|s\.\su\.',
+        'cross-reference': r'\bs\.\su\.|\bs\.\s+\{#|\bvgl\.|=\s*\{#|<ab>s\.',
     },
     'sa': {  # Vācaspatyam Sanskrit (SLP1 body)
         'wrong-reading':   r'aSudDa|apapAWa|asADu',
@@ -46,6 +50,33 @@ def lang(dictcode):
 
 def lang_name(dictcode):
     return _LANG_NAME[lang(dictcode)]
+
+
+# human-readable marker hint for the body-aware workflow rubric (ONE source of truth, so
+# the unified workflow builds its language-specific rubric from here, not hand-copied prose)
+_HINT = {
+    'en': ('English glosses. Intentional-spelling markers: "w.r. for" (wrong reading), '
+           '"v.l." (varia lectio), "in comp. for" / "for X before Y" (sandhi/compounding), '
+           '"= X" / "See X" / "q.v." (cross-reference). A real definition (a <lex> POS tag + '
+           'meaning) means the suspect is a real word.'),
+    'de': ('German glosses (Boehtlingk-Roth Petersburg). Sanskrit forms appear in {#...#}, '
+           'German glosses in {%...%}. Intentional-spelling markers: "fehlerhaft fuer" / '
+           '"verschrieben fuer" / "falsche/schlechte Lesart" / "verlesen" (erroneous/false '
+           'reading for); "v.l." / "Nebenform"; "lies" / "verbessere" (read!/correct to); '
+           '"s." / "s. u." / "vgl." (see/compare, cross-reference); "= {#X#}"; "im Compositum". '
+           'A normal German gloss describing the suspect itself means it is a real word.'),
+    'sa': ('Sanskrit glosses (Vacaspatyam, SLP1, abbreviated with "0": pu0=masc, strI=fem, '
+           'tri0=adj, n0=neut; a ROOT entry = meaning + gana (BvA0/ada0/tu0/cu0...) + '
+           'para0/Atma0 + saka0 + sew, then conjugation -> a real distinct word). A '
+           '{{Lbody=N}} body is a REDIRECT (variant headword sharing entry N) = intentional '
+           'cross-reference; aSudDa/apapAWa = wrong reading; pAWAntara/iti pAWaH = variant.'),
+}
+
+
+def marker_hint(dictcode):
+    """One-paragraph description of this dictionary's documented-intentional markers,
+    for the body-aware workflow rubric."""
+    return _HINT[lang(dictcode)]
 
 
 def _src(dictcode):

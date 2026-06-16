@@ -22,48 +22,22 @@ import sys
 import os
 import re
 import json
-import glob
 
 sys.stdout.reconfigure(encoding='utf-8')
 sys.stderr.reconfigure(encoding='utf-8')
 
 import triage_lang
+import triage_util
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 GITHUB = os.path.dirname(ROOT)
 
-_K1 = re.compile(r'<k1>([^<]*)')
 _TAGS = re.compile(r'<[^>]+>')
 _LEX = re.compile(r'<lex>')
-# MW's own text says the spelling is a wrong reading -> intentional error apparatus
-_WR = re.compile(r'\bw\.\s?r\.|wrong reading|incorrect(?:ly)? for|wrongly (?:for|written)', re.I)
-# MW documents the spelling as a deliberate variant / sandhi / compounding form
-_VARIANT = re.compile(
-    r'\bv\.\s?l\.|in comp\. for|metric(?:ally)?\.? for|\bq\.v\.|for \S+ before|'
-    r'=\s*[˚\-]|=\s*<s>|\bvar\.|prā\b', re.I)
-# pure cross-reference pointer
-_XREF = re.compile(r'¦\s*(See\b|cf\.|=)', re.I)
-
-
-def build_index(mw_path):
-    """headword (k1) -> list of raw body strings (text between the <L> line and <LEND>)."""
-    idx = {}
-    cur_k1 = None
-    buf = []
-    with open(mw_path, encoding='utf-8') as f:
-        for line in f:
-            if line.startswith('<L>'):
-                m = _K1.search(line)
-                cur_k1 = m.group(1) if m else None
-                buf = []
-            elif line.startswith('<LEND>'):
-                if cur_k1 is not None:
-                    idx.setdefault(cur_k1, []).append(' '.join(buf).strip())
-                cur_k1 = None
-            elif cur_k1 is not None:
-                buf.append(line.rstrip('\n'))
-    return idx
+# documented-intentional markers: default to English, overwritten per-dictionary in main()
+# from triage_lang so the regex literals live in ONE place (triage_lang.py).
+_WR, _VARIANT, _XREF = triage_lang.wr_re('MW'), triage_lang.variant_re('MW'), triage_lang.xref_re('MW')
 
 
 def classify_one(b):
@@ -112,20 +86,19 @@ def main():
     print("body language: %s (%s markers)" % (triage_lang.lang_name(dict_code), triage_lang.lang(dict_code)))
     pkg = os.path.join(ROOT, 'corrections_draft', dict_code)
     ev_path = os.path.join(pkg, '%s_evidence.jsonl' % dict_code)
-    mw_path = os.path.join(GITHUB, 'csl-orig', 'v02', dict_code.lower(),
-                           '%s.txt' % dict_code.lower())
+    csl_root = os.path.join(GITHUB, 'csl-orig')
 
-    print("building %s entry index from %s ..." % (dict_code, os.path.relpath(mw_path, GITHUB)))
-    idx = build_index(mw_path)
-    print("  %d distinct headwords indexed" % len(idx))
+    print("building %s entry index from csl-orig/v02/%s ..." % (dict_code, dict_code.lower()))
+    idx = triage_util.build_entry_index(csl_root, dict_code)
+    print("  %d distinct headwords indexed" % (len(idx.by_k1) if idx else 0))
 
     rows = [json.loads(l) for l in open(ev_path, encoding='utf-8')]
     for r in rows:
-        bodies = idx.get(r['suspect'], [])
+        bodies = idx.bodies(r['suspect']) if idx else []
         kind, text = classify(bodies)
         r['body_kind'] = kind
         r['body_count'] = len(bodies)
-        r['body_text'] = text
+        r['body_text'] = triage_util.resolve_redirect(text, idx)
     with open(ev_path, 'w', encoding='utf-8') as f:
         for r in rows:
             f.write(json.dumps(r, ensure_ascii=False) + '\n')
@@ -133,7 +106,6 @@ def main():
 
     # body_kind distribution (drives the triage)
     from collections import Counter
-    by = {r['suspect']: r for r in rows}
     c = Counter(r['body_kind'] for r in rows)
     print("\nbody_kind across all %d tier-A:" % len(rows))
     for k, n in c.most_common():
@@ -142,33 +114,6 @@ def main():
           % sum(c[k] for k in ('realword', 'thin', 'multi-mixed')))
     print("  -> settled intentional (wr/variant/xref): %d ; unlocatable (missing): %d"
           % (sum(c[k] for k in ('wr', 'variant', 'xref')), c['missing']))
-
-    # optional cross-check vs a first-pass FILE-labeled set, if one exists (MW only)
-    adj = {}
-    for p in sorted(glob.glob(os.path.join(pkg, 'triage_work', 'adj_*.json'))):
-        try:
-            t = open(p, encoding='utf-8').read().strip()
-            if t.startswith('```'):
-                t = t.split('```')[1].lstrip('json').strip()
-            for v in json.loads(t):
-                adj[v['suspect']] = v
-        except Exception:
-            pass
-    if adj:
-        ver = {}
-        for p in sorted(glob.glob(os.path.join(pkg, 'triage_work', 'verify_*.json'))):
-            try:
-                t = open(p, encoding='utf-8').read().strip()
-                if t.startswith('```'):
-                    t = t.split('```')[1].lstrip('json').strip()
-                for v in json.loads(t):
-                    ver[v['suspect']] = v
-            except Exception:
-                pass
-        confirmed = [s for s, v in adj.items() if v['label'] == 'FILE' and ver.get(s, {}).get('real_typo')]
-        bad = [s for s in confirmed if by[s]['body_kind'] not in ('thin', 'missing')]
-        print("\n(first-pass cross-check) %d FILE-confirmed -> %d have a real/intentional %s body "
-              "(false positives the body catches)" % (len(confirmed), len(bad), dict_code))
 
 
 if __name__ == '__main__':

@@ -138,22 +138,15 @@ def load_ndicts(sanhw_path):
 
 
 def provisional(ev):
-    """Conservative deterministic bucket -- a PRIOR for prioritisation, not a verdict."""
-    s_band = ev['dcs_suspect_band']
-    g_band = ev['dcs_sugg_band']
-    nd = ev['ndicts']
-    k2_conf = ev['k2_confirms_suspect']
-    if ev['known_real']:
-        return 'FILE', 'in the 3884 human-curated o_vs_O pairs (historically confirmed)'
-    if k2_conf:
+    """Rough deterministic pre-filter hint. SUPERSEDED by the body_kind from triage_bodies
+    (the dictionary's own entry text is the real signal); kept only for the enrich summary.
+    Note: the suspect's own DCS band is always 0 -- attested-lemma suspects are suppressed
+    upstream by the detectors -- so 'suspect is a real word' can only be read from the body."""
+    if ev['k2_confirms_suspect']:
         return 'DROP', 'k2 markup (accent/hyphen) confirms the suspect long/disputed form is editorial'
-    if s_band >= 3:
-        return 'DROP', 'suspect is a DCS corpus lemma band>=%d (a real word)' % s_band
-    if g_band >= 3 and s_band == 0 and nd <= 1:
-        return 'FILE', 'suggestion is a DCS lemma band>=%d, suspect unattested, single dict' % g_band
-    if nd >= 4 and s_band >= 1:
-        return 'DROP', 'in %d dicts and DCS-attested -> likely a real variant' % nd
-    return 'GRAY', 'mixed/weak signals -- needs lexical judgment'
+    if ev['dcs_sugg_band'] >= 3 and ev['ndicts'] <= 1:
+        return 'FILE', 'suggestion is a common DCS lemma in a single dictionary'
+    return 'GRAY', 'mixed/weak signals -- needs body/lexical judgment'
 
 
 def main():
@@ -168,16 +161,6 @@ def main():
     dcs = u.load_dcs_lemmas(u.dcs_path())
     weights = u.load_confusion_weights()
     ndicts = load_ndicts(os.path.join(ROOT, 'sanhw1.txt'))
-    # historical ground-truth pairs (reuse eval.py's source)
-    known = set()
-    kp = os.path.join(ROOT, 'o_vs_O', 'o_vs_O2.txt')
-    if os.path.exists(kp):
-        for line in u._read_words(kp):
-            if ':' in line:
-                w1 = line.split(':', 1)[0]
-                w2 = line.split(':', 1)[1].split('-', 1)[0]
-                if w1 and w2 and w1 != w2:
-                    known.add(frozenset((w1, w2)))
 
     def band(w):
         return dcs.get(u.normalize_lemma(w), 0)
@@ -213,7 +196,6 @@ def main():
             'k2_confirms_suspect': bool(k2 is not None and k2 != suspect and k2_clean == suspect),
             'lineno': d.get('lineno'),
             'located': suspect in draft,
-            'known_real': frozenset((suspect, sugg)) in known,
         }
         bucket, reason = provisional(ev)
         ev['provisional'] = bucket
@@ -250,11 +232,9 @@ def main():
     for k, n in cls.most_common():
         print("  %-18s %5d" % (k, n))
     print("\nDCS evidence:")
-    print("  suspect attested  (band>=1): %5d" % sum(1 for r in rows if r['dcs_suspect_band']))
-    print("  suspect band>=3 (real word): %5d" % sum(1 for r in rows if r['dcs_suspect_band'] >= 3))
+    print("  suspect attested (band>=1, ~0: suppressed upstream): %5d" % sum(1 for r in rows if r['dcs_suspect_band']))
     print("  suggestion attested:         %5d" % sum(1 for r in rows if r['dcs_sugg_band']))
     print("  k2 confirms suspect:         %5d" % sum(1 for r in rows if r['k2_confirms_suspect']))
-    print("  in historical o_vs_O pairs:  %5d" % sum(1 for r in rows if r['known_real']))
 
 
 if __name__ == '__main__':

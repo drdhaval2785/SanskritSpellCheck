@@ -9,17 +9,19 @@ but the entry can.
 
 ## The finding
 
-> **Of 563 engine "tier-A" candidates, 0 are fileable typos.** 155 are real distinct words
-> or **verbal roots** (dhātus); **408 are spellings VCP documents on purpose** — chiefly
-> **362 `{{Lbody=…}}` redirects**: variant-spelling headwords that VCP deliberately
-> cross-references to the canonical entry (e.g. `vrAhmaRa` → the body of `brAhmaRa`).
-> Filing a "correction" for any of these would *break VCP's cross-reference web*.
+> **Of 563 engine "tier-A" candidates, just 1 is a body-confirmed fileable typo**
+> (`camIkara → cAmIkara` "gold"). 153 are real distinct words or **verbal roots** (dhātus);
+> **408 are spellings VCP documents on purpose** — chiefly **362 `{{Lbody=…}}` redirects**:
+> variant-spelling headwords that VCP deliberately cross-references to the canonical entry
+> (e.g. `vrAhmaRa` → the body of `brAhmaRa`). Filing a "correction" for any of those would
+> *break VCP's cross-reference web*.
 
 The Vācaspatyam is the clearest case yet that spelling-pattern "tier A" is **not** a list
 of typos: it is a Sanskrit thesaurus that (a) systematically lists variant spellings as
 redirects and (b) contains thousands of real roots/derivatives that merely *resemble*
-commoner words. Across the three dictionaries triaged, fileable-typo precision is
-**MW 4/1954 (0.2%) · PW 2/657 (0.3%) · VCP 0/563 (0.0%)** — do **not** bulk-apply tier-A.
+commoner words. Across the three dictionaries triaged, fileable-typo precision is tiny —
+**MW 4/1954 · PW 2/657 · VCP 1/563** — do **not** bulk-apply tier-A. (The body-aware
+TYPO pass is stochastic and low-yield; the durable deliverable is the do-not-file list.)
 
 ## The authoritative artifact
 
@@ -29,7 +31,9 @@ commoner words. Across the three dictionaries triaged, fileable-typo precision i
   408 deliberate spellings (cross-reference/redirect **362**, other 43, `v.l.` 2,
   in-composition 1), grouped by sub-type. Use it as a suppression list so future runs never
   re-flag them.
-- [VCP_file_first_sf.txt](VCP_file_first_sf.txt) — empty: no body-confirmed typos.
+- **[VCP_file_first_sf.txt](VCP_file_first_sf.txt)** — the 1 body-confirmed candidate
+  (`camIkara → cAmIkara`): VCP glosses `camIkara` with gold terms (*kṛtasvara*, *svarṇa*),
+  but the word for gold is *cāmīkara* (long ā) — verify on the scan, flip `n`→`y`, file.
 
 ## Why every candidate is safe (worked examples)
 

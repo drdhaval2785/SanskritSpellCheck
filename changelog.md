@@ -6,6 +6,47 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.12.0] - 2026-06-16
+
+### Changed
+- **Unified + deduplicated the triage pipeline** (the "improve the scripts" pass, guided
+  by a 4-dimension multi-agent review of the MW/PW/VCP runs, with each proposal
+  adversarially verified against the code — 15 confirmed, 2 refuted):
+  - `triage_util.py` — ONE tolerant JSON loader + ONE csl-orig `EntryIndex` (were
+    duplicated across triage_bodies/body_batches/synthesize + make_changefiles), with an
+    L-number→headword map that resolves VCP `{{Lbody=N}}` redirects to the target headword
+    in the wrong-readings list (`vrAhmaRa → (redirect -> brAhmaRa)`).
+  - `bodyaware_workflow.js` — ONE canonical body-aware workflow (was copy-pasted per
+    dictionary). It **discovers its batch count at runtime** (no `nbatch` arg, so the
+    args-undefined→0-agents failure mode is gone) and builds its language rubric from
+    `triage_lang.marker_hint()`.
+  - `triage_dict.py` — single driver running the four deterministic steps and emitting the
+    workflow args; `--finish` synthesizes.
+  - `test_triage.py` — 15 marker unit checks across en/de/sa.
+  - Removed dead code (enrich `provisional` `dcs_suspect_band`/`known_real` branches; the
+    legacy MW-only first-pass cross-check in triage_bodies; duplicated regex literals).
+  - `triage_synthesize` prints the correct dict code (was a hardcoded `MW:` label).
+
+### Added
+- `triage_lang` markers: PW correction-note apparatus `Richtig {#X#}` / `lies {#X#}` is now
+  classified INTENTIONAL — the headword is the form-as-found and X is PW's noted correct
+  form (apparatus, do NOT file: e.g. `veRatawa`, `helarAja`, `SAraRa`). Cross-reference
+  markers made separator-independent so `q.v.`/`See`/`=` cross-refs sub-type correctly.
+
+### Notes
+- VCP: a re-run on the unified workflow surfaced a genuine typo `camIkara → cAmIkara`
+  ("gold") — VCP FILE-FIRST 0→1.
+- **HONEST FINDING: the body-aware TYPO pass is STOCHASTIC and low-yield.** Re-runs surface
+  a different small handful of candidates (across runs MW 4↔0, PW 2↔0, VCP 0↔1) and
+  re-running is NOT idempotent — it can *lose* genuine typos (an MW re-run refuted the 4
+  verified ones). So the committed MW/PW packages were KEPT (their verified candidates beat
+  a fresh draw); only VCP was updated (its re-run strictly added the genuine `camIkara`).
+  The DETERMINISTIC layers (do-not-file lists, intentional/realword/redirect separation)
+  are stable and are the durable deliverable. Proper recall fix = union across runs (future).
+- The adversarial review REFUTED, and we dropped, two proposals: a confusion-class re-rank
+  (vowel-length is 75% of *confirmed* historical corrections — down-weighting it is wrong)
+  and a bodies-before-enrich reorder (k2 already comes from the package-time draft).
+
 ## [1.11.0] - 2026-06-16
 
 ### Added

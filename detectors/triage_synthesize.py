@@ -34,31 +34,13 @@ sys.stdout.reconfigure(encoding='utf-8')
 sys.stderr.reconfigure(encoding='utf-8')
 
 import triage_lang
+import triage_util
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 SCAN = ("http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/"
         "servepdf.php?dict=%s&key=%s")
 _CONF = {'high': 3, 'medium': 2, 'low': 1}
-
-
-def load_dir(pattern):
-    out = {}
-    for p in sorted(glob.glob(pattern)):
-        try:
-            t = open(p, encoding='utf-8').read().strip()
-            if t.startswith('```'):
-                t = t.split('```')[1].lstrip('json').strip()
-            try:
-                data = json.loads(t)
-            except json.JSONDecodeError:
-                m = re.search(r'\[.*\]', t, re.S)
-                data = json.loads(m.group(0)) if m else []
-            for v in data:
-                out[v['suspect']] = v
-        except Exception as e:
-            print("  WARN: %s: %s" % (os.path.basename(p), str(e)[:60]))
-    return out
 
 
 def main():
@@ -71,8 +53,8 @@ def main():
         for line in f:
             r = json.loads(line)
             ev[r['suspect']] = r
-    bcls = load_dir(os.path.join(work, 'body_adj_*.json'))
-    bconf = load_dir(os.path.join(work, 'body_conf_*.json'))
+    bcls = triage_util.load_verdicts(work, 'body_adj_*.json')
+    bconf = triage_util.load_verdicts(work, 'body_conf_*.json')
 
     buckets = {k: [] for k in ('FILE', 'TYPO_UNSURE', 'REVIEW', 'REALWORD', 'INTENTIONAL', 'UNLOCATABLE')}
     for s, e in ev.items():

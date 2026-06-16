@@ -1,4 +1,5 @@
 ; VCP body-confirmed fileable typos -- CORRECTIONS standard format (DICT:wrong:right:n)
-; 0 candidates: classified TYPO from MW's entry body AND source-confirmed.
+; 1 candidates: classified TYPO from MW's entry body AND source-confirmed.
 ; VERIFY each on the scan, flip trailing n->y for confirmed ones, then:
 ;   python chg_nchg_sep.py VCP_file_first_sf.txt chg.txt nchg.txt
+VCP:camIkara:cAmIkara:n

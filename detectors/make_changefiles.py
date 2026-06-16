@@ -19,31 +19,10 @@ import re
 import collections
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import slp1util as u
+import triage_util
 
 u.reconfigure_stdio()
 SCAN = "http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=%s&key=%s"
-
-
-def load_dict_index(csl_root, dictcode):
-    """Map headword -> (line_no, line, kfield) from a csl-orig dict file; None if absent."""
-    path = os.path.join(csl_root, 'v02', dictcode.lower(), dictcode.lower() + '.txt')
-    if not os.path.exists(path):
-        return None
-    k1, k2 = {}, {}
-    with open(path, 'r', encoding='utf-8') as f:
-        for i, line in enumerate(f, 1):
-            if '<L>' not in line:
-                continue
-            line = line.rstrip('\n')
-            m1 = re.search('<k1>([^<]*)', line)
-            m2 = re.search('<k2>([^<]*)', line)
-            k1v = m1.group(1).strip() if m1 else ''
-            k2v = m2.group(1).strip() if m2 else ''
-            if k1v and k1v not in k1:
-                k1[k1v] = (i, line)
-            if k2v and k2v not in k2:
-                k2[k2v] = (i, line)
-    return k1, k2
 
 
 def corrected(line, wrong, right):
@@ -68,7 +47,7 @@ def main(infile, csl_root, outdir):
     os.makedirs(os.path.join(os.path.dirname(os.path.abspath(__file__)), outdir), exist_ok=True)
     manifest = []
     for dictcode in sorted(by_dict):
-        idx = load_dict_index(csl_root, dictcode)
+        idx = triage_util.build_entry_index(csl_root, dictcode)
         located = 0
         out = os.path.join(os.path.dirname(os.path.abspath(__file__)), outdir, "%s_draft.txt" % dictcode)
         with open(out, 'w', encoding='utf-8') as f:
@@ -78,11 +57,9 @@ def main(infile, csl_root, outdir):
             f.write(";       (multiple entries sharing a key) and that no two cases edit the same line.\n;\n")
             for n, (wrong, right) in enumerate(by_dict[dictcode], 1):
                 f.write("; Case %d.  %s -> %s   scan=%s\n" % (n, wrong, right, SCAN % (dictcode, wrong)))
-                hit = None
-                if idx:
-                    hit = idx[0].get(wrong) or idx[1].get(wrong)   # (lineno, src); prefer k1
-                if hit:
-                    lineno, src = hit
+                e = idx.first(wrong) if idx else None   # first entry under k1 (or k2)
+                if e:
+                    lineno, src = e['lineno'], e['line']
                     f.write("%d old %s\n" % (lineno, src))
                     f.write("%d new %s\n;\n" % (lineno, corrected(src, wrong, right)))
                     located += 1
