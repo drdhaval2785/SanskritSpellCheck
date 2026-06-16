@@ -80,6 +80,15 @@ def main():
         else:
             buckets['REVIEW'].append(e)
 
+    # fail-loud: a confirmed typo with no Opus review verdict means the false-positive gate did
+    # not run for it (missing/unloadable body_review_*.json). Don't silently file it -- warn.
+    unreviewed = [e for e in buckets['FILE'] if e.get('_rev') is None]
+    if unreviewed:
+        sys.stderr.write("  WARNING: %d FILE-FIRST candidate(s) have NO Opus review verdict -- the "
+                         "false-positive gate was not applied to them%s; re-run the workflow's Review "
+                         "phase (body_review_*.json) before filing.\n"
+                         % (len(unreviewed), " (no body_review files found)" if not brev else ""))
+
     def conf_rank(e):
         c = e.get('_cls') or {}
         return (_CONF.get(c.get('confidence'), 0), e['dcs_sugg_band'], e['confusion_weight'])

@@ -74,10 +74,31 @@ def main():
     if not ok:
         fails.append(('redirect', '{{Lbody=35976}}', 'brAhmaRa', r))
 
+    # EntryIndex.bodies() falls back to k2 (mirrors first()) for a k2-only headword
+    idx.by_k2['k2only'] = [{'body': 'a real gloss for a k2-only headword'}]
+    b = idx.bodies('k2only')
+    ok = b == ['a real gloss for a k2-only headword']
+    print("  bodies() k2-fallback -> %r %s" % (b, 'OK' if ok else 'FAIL'))
+    if not ok:
+        fails.append(('bodies-k2', 'k2only', 'k2 fallback', b))
+
+    # load_json_array tolerates prose/brackets around the JSON array (non-greedy scan)
+    import tempfile
+    fd, tp = tempfile.mkstemp(suffix='.json')
+    os.close(fd)
+    with open(tp, 'w', encoding='utf-8') as _f:
+        _f.write('Note: I rejected option [A]. Verdicts:\n[{"suspect": "x", "ok": true}]\nThat is all.')
+    arr = triage_util.load_json_array(tp)
+    os.remove(tp)
+    ok = arr == [{"suspect": "x", "ok": True}]
+    print("  load_json_array prose-tolerant -> %r %s" % (arr, 'OK' if ok else 'FAIL'))
+    if not ok:
+        fails.append(('load_json_array', 'prose+brackets', '[{...}]', arr))
+
     if fails:
         print("\n%d FAILURE(S)" % len(fails))
         sys.exit(1)
-    print("\nall %d checks passed" % (len(BODY_CASES) + len(SUBTYPE_CASES) + 1))
+    print("\nall %d checks passed" % (len(BODY_CASES) + len(SUBTYPE_CASES) + 3))
 
 
 if __name__ == '__main__':

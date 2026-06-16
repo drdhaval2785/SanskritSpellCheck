@@ -30,7 +30,8 @@ def main():
     pkg = os.path.join(ROOT, 'corrections_draft', dict_code)
     work = os.path.join(pkg, 'triage_work')
 
-    rows = [json.loads(l) for l in open(os.path.join(pkg, '%s_evidence.jsonl' % dict_code), encoding='utf-8')]
+    with open(os.path.join(pkg, '%s_evidence.jsonl' % dict_code), encoding='utf-8') as f:
+        rows = [json.loads(l) for l in f]
     need = [r for r in rows if r['body_kind'] in ('realword', 'thin', 'multi-mixed')]
 
     batch = []

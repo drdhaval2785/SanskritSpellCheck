@@ -92,7 +92,8 @@ def main():
     idx = triage_util.build_entry_index(csl_root, dict_code)
     print("  %d distinct headwords indexed" % (len(idx.by_k1) if idx else 0))
 
-    rows = [json.loads(l) for l in open(ev_path, encoding='utf-8')]
+    with open(ev_path, encoding='utf-8') as f:
+        rows = [json.loads(l) for l in f]
     for r in rows:
         bodies = idx.bodies(r['suspect']) if idx else []
         kind, text = classify(bodies)

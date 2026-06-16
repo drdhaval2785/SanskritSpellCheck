@@ -6,6 +6,28 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.16.0] - 2026-06-16
+
+### Fixed
+Correctness fixes from a recall-focused multi-agent code review of the triage pipeline:
+- **Review gate is now fail-loud** (`triage_synthesize.py`): a confirmed typo with no Opus
+  review verdict (missing/unloadable `body_review_*.json`) was silently filed to FILE-FIRST —
+  the false-positive gate could no-op invisibly. Synthesize now warns on stderr (count, and
+  whether any `body_review` files were found at all).
+- **`load_verdicts` no longer swallows errors** (`triage_util.py`): the `except Exception: pass`
+  that silently dropped a malformed/unreadable verdict file now prints a WARNING per file
+  (silent verdict loss skews the buckets and can disable the review gate).
+- **Non-greedy JSON fallback** (`triage_util.load_json_array`): the greedy `\[.*\]` (first `[`
+  to last `]`) over-captured when an agent wrapped its array in prose containing other brackets;
+  it now scans `[` candidates with `JSONDecoder.raw_decode` and returns the first valid array.
+- **`EntryIndex.bodies()` ↔ `first()` consistency** (`triage_util.py`): `bodies()` read only
+  `by_k1` while `first()` falls back to `by_k2`, so a k2-only headword silently got an empty body
+  (→ mis-classified `missing`). `bodies()` now mirrors the k1→k2 fallback.
+- **Unguarded file reads** use context managers (`triage_util`, `triage_bodies`, `triage_body_batches`).
+- `test_triage.py`: +2 checks (k2-fallback, prose-tolerant JSON) → 17. Behavior-preserving —
+  PWG re-synthesizes to the same 12 fileable / 248 do-not-file. (Lower-severity cleanup findings —
+  duplicated boilerplate, magic numbers, the hardcoded `_LANG`/INTENTIONAL-tuple — left as-is.)
+
 ## [1.15.0] - 2026-06-16
 
 ### Added

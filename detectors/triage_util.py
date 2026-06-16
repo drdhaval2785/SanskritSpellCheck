@@ -13,14 +13,16 @@ Two things that were duplicated across triage_*.py / make_changefiles.py:
 """
 import os
 import re
+import sys
 import json
 import glob
 
 
 # --- workflow-output JSON ---------------------------------------------------
 def load_json_array(path):
-    """Load a JSON array an agent wrote, tolerating a ```json fence or trailing text."""
-    t = open(path, encoding='utf-8').read().strip()
+    """Load a JSON array an agent wrote, tolerating a ```json fence or trailing prose."""
+    with open(path, encoding='utf-8') as f:
+        t = f.read().strip()
     if t.startswith('```'):
         t = t.split('```')[1]
         if t.lstrip().startswith('json'):
@@ -29,8 +31,20 @@ def load_json_array(path):
     try:
         return json.loads(t)
     except json.JSONDecodeError:
-        m = re.search(r'\[.*\]', t, re.S)   # last-ditch: grab the array
-        return json.loads(m.group(0)) if m else []
+        # Parse the FIRST valid JSON array, scanning '[' candidates. A greedy first-'[' to
+        # last-']' span over-captures when surrounding prose also contains brackets.
+        dec, start = json.JSONDecoder(), 0
+        while True:
+            i = t.find('[', start)
+            if i < 0:
+                return []
+            try:
+                obj, _ = dec.raw_decode(t, i)
+                if isinstance(obj, list):
+                    return obj
+            except json.JSONDecodeError:
+                pass
+            start = i + 1
 
 
 def load_verdicts(workdir, pattern, key='suspect'):
@@ -41,8 +55,10 @@ def load_verdicts(workdir, pattern, key='suspect'):
             for v in load_json_array(p):
                 if key in v:
                     out[v[key]] = v
-        except Exception:
-            pass
+        except Exception as e:
+            # Do NOT swallow silently -- a dropped verdict file skews the downstream buckets
+            # (and can silently disable the review gate). Make the loss visible.
+            print("  WARNING: could not load %s: %s" % (os.path.basename(p), str(e)[:80]), file=sys.stderr)
     return out
 
 
@@ -64,7 +80,8 @@ class EntryIndex:
         return self.by_k1.get(hw, [])
 
     def bodies(self, hw):
-        return [e['body'] for e in self.by_k1.get(hw, [])]
+        # mirror first(): prefer k1, fall back to k2 so a k2-only headword still yields its body
+        return [e['body'] for e in (self.by_k1.get(hw) or self.by_k2.get(hw) or [])]
 
     def first(self, hw):
         """First entry under k1 (or k2) for hw, preferring k1; None if absent."""
