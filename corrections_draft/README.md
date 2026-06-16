@@ -67,6 +67,8 @@ text the triage reads); **PD has no csl-orig source, so it cannot be body-triage
 
 ## How to triage a pending dictionary
 
+> **Handing off to a new chat?** Paste-ready prompt + the one-line form in **[HANDOFF.md](HANDOFF.md)**.
+
 ```sh
 # from the repo root (csl-orig must be a sibling):
 cd detectors && python triage_dict.py <DICT>     # build package + emit hybrid launch args
