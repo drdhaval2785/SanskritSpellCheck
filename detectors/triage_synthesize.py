@@ -39,6 +39,26 @@ SCAN = ("http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/"
         "servepdf.php?dict=%s&key=%s")
 _CONF = {'high': 3, 'medium': 2, 'low': 1}
 
+# sub-type the documented-intentional spellings for the wrong-readings list
+_WRT = re.compile(r'\bw\.\s?r\.|wrong reading|incorrect(?:ly)? for|wrongly', re.I)
+_VLT = re.compile(r'\bv\.\s?l\.|\bvar\.|various reading', re.I)
+_INC = re.compile(r'in comp\.|before \S+ for|\bsandhi\b', re.I)
+_XRF = re.compile(r'\bSee\b|\bcf\.|q\.v\.|=\s*[˚\-<]', re.I)
+
+
+def intentional_subtype(body):
+    """Classify a documented-intentional spelling for the wrong-readings list."""
+    b = body or ''
+    if _WRT.search(b):
+        return 'wrong-reading'        # MW's own "w.r." apparatus
+    if _VLT.search(b):
+        return 'varia-lectio'         # v.l. / variant reading
+    if _INC.search(b):
+        return 'in-composition'       # sandhi / compounding form
+    if _XRF.search(b):
+        return 'cross-reference'      # See / cf. / = X q.v.
+    return 'other-intentional'        # Vedic/metrical/grammatical note
+
 
 def load_dir(pattern):
     out = {}
@@ -154,12 +174,42 @@ def main():
         for e in buckets['FILE']:
             f.write("%s:%s:%s:n\n" % (dict_code, e['suspect'], e['suggestion']))
 
+    # ---- the standing wrong-readings / do-not-file list -----------------
+    # Every documented-intentional spelling MW carries on purpose: filing a
+    # "correction" for any of these CORRUPTS the dictionary. Kept as a per-dict
+    # reference so future runs (and humans) never re-flag them. Grouped by sub-type.
+    from collections import defaultdict
+    groups = defaultdict(list)
+    for e in buckets['INTENTIONAL']:
+        groups[intentional_subtype(e['body_text'])].append(e)
+    wr = os.path.join(pkg, '%s_wrong_readings.txt' % dict_code)
+    order_sub = ['wrong-reading', 'varia-lectio', 'in-composition', 'cross-reference', 'other-intentional']
+    with open(wr, 'w', encoding='utf-8') as f:
+        f.write("# %s -- DOCUMENTED-INTENTIONAL spellings (NOT typos -- do NOT file corrections)\n#\n" % dict_code)
+        f.write("# %d headwords that LOOK like misspellings but which %s records on purpose:\n"
+                % (len(buckets['INTENTIONAL']), dict_code))
+        f.write("# wrong-reading apparatus (w.r.), variae lectiones (v.l.), in-composition /\n")
+        f.write("# sandhi forms (in comp. for...), cross-references (See / = X q.v.), and other\n")
+        f.write("# grammatical/Vedic notes. Filing a 'correction' for any of these CORRUPTS %s.\n" % dict_code)
+        f.write("# Use this as a suppression list: such headwords should not be re-flagged.\n")
+        f.write("# Format per row:  headword -> would-be 'correction'  |  the %s entry text\n" % dict_code)
+        for sub in order_sub:
+            rows = sorted(groups.get(sub, []), key=lambda e: e['suspect'])
+            if not rows:
+                continue
+            f.write("\n# ===== %s (%d) =====\n" % (sub.upper(), len(rows)))
+            for e in rows:
+                f.write("%-14s -> %-14s | %s\n" % (e['suspect'], e['suggestion'], (e['body_text'] or '')[:160]))
+
     print("triaged %d candidates -> %s" % (len(ev), os.path.relpath(out, ROOT)))
     order = [('FILE-FIRST', 'FILE'), ('TYPO-UNSURE', 'TYPO_UNSURE'), ('REVIEW', 'REVIEW'),
              ('REAL-WORD', 'REALWORD'), ('INTENTIONAL', 'INTENTIONAL'), ('UNLOCATABLE', 'UNLOCATABLE')]
     for name, k in order:
         print("  %-12s %5d" % (name, len(buckets[k])))
     print("  -> %s (%d rows)" % (os.path.relpath(sf, ROOT), len(buckets['FILE'])))
+    print("  -> %s (%d documented-intentional, by sub-type: %s)" % (
+        os.path.relpath(wr, ROOT), len(buckets['INTENTIONAL']),
+        ', '.join('%s=%d' % (s, len(groups[s])) for s in order_sub if groups.get(s))))
 
 
 if __name__ == '__main__':

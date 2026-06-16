@@ -20,8 +20,11 @@ ready for a dated entry.
     purpose), `realword` (a real gloss), `thin`, `missing` (not in the current source).
   - `triage_body_batches.py` — split the `realword` set into body-aware batches.
   - `triage_synthesize.py` — combine deterministic + LLM + source-confirmation into a
-    six-bucket ranked review queue (`<DICT>_triaged.txt`) and the FILE-FIRST candidates
-    in CORRECTIONS standard format (`<DICT>_file_first_sf.txt`).
+    six-bucket ranked review queue (`<DICT>_triaged.txt`), the FILE-FIRST candidates in
+    CORRECTIONS standard format (`<DICT>_file_first_sf.txt`), and a standing **do-not-file
+    list** `<DICT>_wrong_readings.txt` — every spelling the dictionary documents on purpose
+    (wrong-reading apparatus / `v.l.` / in-composition / cross-reference), grouped by
+    sub-type, emitted for every dictionary triaged so future runs never re-flag them.
 - Applied to **MW** ([corrections_draft/MW/](corrections_draft/MW)): the body-aware
   triage was run via a two-stage multi-agent workflow (adjudicate → adversarial verify,
   then body-aware classify → source-confirm).

@@ -28,6 +28,11 @@ flags (retroflex, sibilant, aspirate) are far higher-precision (3 of the 4 confi
 - **[MW_file_first_sf.txt](MW_file_first_sf.txt)** — the 4 FILE-FIRST candidates in
   CORRECTIONS standard format (`MW:wrong:right:n`). Verify each on the scan, flip the
   trailing `n`→`y`, then `python chg_nchg_sep.py …`.
+- **[MW_wrong_readings.txt](MW_wrong_readings.txt)** — the standing **do-not-file** list:
+  630 headwords MW documents on purpose (wrong-reading apparatus `w.r.` 45, `v.l.` 54,
+  in-composition/sandhi 105, cross-reference 204, other 222), grouped by sub-type with
+  the entry text. Filing a "correction" for any of these *corrupts* MW; use it as a
+  suppression list so future runs never re-flag them. (Generated for every dict triaged.)
 
 ### The 4 FILE-FIRST candidates (still verify on the scan)
 

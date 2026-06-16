@@ -1,0 +1,648 @@
+# MW -- DOCUMENTED-INTENTIONAL spellings (NOT typos -- do NOT file corrections)
+#
+# 630 headwords that LOOK like misspellings but which MW records on purpose:
+# wrong-reading apparatus (w.r.), variae lectiones (v.l.), in-composition /
+# sandhi forms (in comp. for...), cross-references (See / = X q.v.), and other
+# grammatical/Vedic notes. Filing a 'correction' for any of these CORRUPTS MW.
+# Use this as a suppression list: such headwords should not be re-flagged.
+# Format per row:  headword -> would-be 'correction'  |  the MW entry text
+
+# ===== WRONG-READING (45) =====
+BAvakA         -> BAvaka         | BAvakA  f. N. of a female demon (prob. w.r. for BAvukA), Vcar.
+DAnyatA        -> DanyatA        | DAnya—tA  f. w.r. for Danya-tA.
+DfzitA         -> Dfzita         | DfzitA/  (A/), ind., RV. viii, 52, 3 = (or w.r. for) ˚zatA/ (see above).
+PalguRI        -> PalgunI        | Palgu˚RI  w.r. for Palguna, ˚naka, ˚nI.
+PalguRaka      -> Palgunaka      | Palgu˚Raka  w.r. for Palguna, ˚naka, ˚nI.
+SORqA          -> SORqa          | SORqA  (A), f. spirituous liquor (ifc. perhaps w.r. for SuRqa), R.
+SUci           -> Suci           | SUci  w.r. for Suci (also SUci and SUcI for sUcI).
+SakvarA        -> Sakvara        | SakvarA  (A), f. gravel, L. (prob. w.r. for SarkarA).
+SalakA         -> SalAkA         | SalakA  f. w.r. for SalAkA, Pañcat.
+SaradAtilaka   -> SAradAtilaka   | SaradA-tilaka  w.r. for SAr˚.
+Saravana       -> SaravaRa       | Sara—vana  w.r. for -vaRa.
+SinIvAlI       -> sinIvAlI       | SinIvAlI  w.r. for sin˚.
+Svapaka        -> SvapAka        | Sva—paka  w.r. for -paca, Rājat.
+bARAparRi      -> bARaparRi      | bARAparRi  w.r. for ˚Ra-p˚, q.v.
+hariSravA      -> hariSrAvA      | hari—SravA  w.r. for next, VP.
+hawaka         -> hAwaka         | hawaka  w.r. for hAwaka.
+hawaparRI      -> haWaparRI      | hawaparRI  w.r. for haWa-parRI.
+lozWaka        -> lozwaka        | lozWaka  incorrect for lozwa, ˚waka.
+mUkA           -> mUka           | mU/kA  (A), f. a crucible, L. (= or w.r. for mUzA).
+mahAdevA       -> mahAdeva       | mahA—devA  f. N. of a daughter of Devaka, VP. (w.r. for saha-devA)
+mahAmagna      -> mahAnagna      | mahA—magna  w.r. for -nagna (q.v.), Kāraṇḍ.
+mahAmahA       -> mahAmaha       | mahA—mahA  (A), f. N. of a constellation, SkandaP. || a species of plant (w.r. for -sahA), Car. (cf. the similar forms GanAGana, patApata, vadAvada.)
+mahAmani       -> mahAmaRi       | mahA—mani  m. N. of a king, VP. (w.r. for -maRi, q.v.)
+marga          -> mArga          | marga  w.r. for mArga, ĀpGṛ.
+nirUpAKya      -> nirupAKya      | nir—UpAKya  w.r. for -ud˚, -up &c.
+pArzwika       -> pArzWika       | pArzwika  w.r. for pArzWika.
+parikzita      -> parIkzita      | pari-kzita  w.r. for pari-cita, or -kzit.
+praSAsta       -> praSasta       | pra-˚SAsta  w.r. for ˚Sasta, ĀpŚr.
+prahAna        -> prahARa        | pra-˚hAna  w.r. for ˚hARa
+prahAni        -> prahARi        | pra-˚hAni  w.r. for ˚hARi.
+pratyavaBAza   -> pratyavaBAsa   | praty—avaBAza or praty—avaBA˚zA,  w.r. for -BAsa, q.v., Uttarar.
+pratyudyata    -> pratyudyAta    | praty-˚udyata  mfn. presented, offered, BhP. || w.r. for ˚udgata.
+pravizwA       -> pravizwa       | pra/-vizwA  (A), f. N. of the mother of Paippalādi and Kauśika, Hariv. (prob. w.r. for SravizWA).
+rizwA          -> rizwa          | rizwA  (A), f. N. of the mother of the Apsarasas, ib. (prob. w.r. for a-rizwA)
+sOnahotra      -> SOnahotra      | sOnahotra  incorrect for SOn˚.
+sUrApagA       -> surApagA       | sUrApagA  w.r. for sur˚.
+saMvADa        -> saMvAda        | saM-vADa  √ vAD incorrect for sambADa, q.v.
+samudraPeRa    -> samudraPena    | sam-udra—PeRa (w.r.) or sam-udra—Pena,  m. ‘sea-foam’, the bone of the cuttle-fish (so light that it floats), Ragh.; Suśr.; Bhpr.
+satyasravas    -> satyaSravas    | satya—srava/s  m. N. of a teacher, VP. (prob. w.r. for -Sravas).
+vAratrA        -> varatrA        | vAratrA  f. a species of bird (= or w.r. for vArawA), Car.
+vareRA         -> vareRa         | vareRA  f. (prob.) w.r. for vareRya.
+varzarAtra     -> varzArAtra     | varza—rAtra or varza—rA˚tri,  w.r. for varzA-r˚ below, R.
+viSvaggati     -> vizvaggati     | viSvag-gati  &c. w.r. for vizvag-aSva &c.
+vyAmarSa       -> vyAmarza       | vy-A-marSa  m. (√ mfS) rubbing out, erasure, W. (wrongly written vy-A-marza).
+zaRqAmarka     -> SaRqAmarka     | za/RqA-ma/rka  (MaitrS.) w.r. for Sa/RqA-ma/rka.
+
+# ===== VARIA-LECTIO (54) =====
+ApastamBa      -> Apastamba      | ApastamBa  m. v.l. for Apastamba.
+BftyADyApana   -> BftyaDyApana   | BftyADyApana  n. teaching the Veda for hire, Mn. xi, 63 (v.l. Bf/tAD˚).
+ElA            -> elA            | ElA  f. N. of a river (v.l. elA), Hariv.
+KARqaka        -> KaRqaka        | KARqaka  mfn. fr. KaRqa, g. DUmAdi (v.l.) and arIhaRAdi (Kāś.)
+OpalA          -> Opala          | OpalA  f. N. of a Śakti, NṛsUp. || (v.l. omalA.)
+PalakA         -> Palaka         | PalakA  f. (A or ikA) See below. || PalakA  f. v.l. for halakA, g. prekzAdi.
+SUlIka         -> SUlika         | SUlIka  m. pl. N. of a people (v.l. sUlIka), Car.
+SiroDAman      -> SirodAman      | Siro—DAman  n. the head (of a bed), Kād. (v.l. -BAga).
+bidura         -> vidura         | bidura  v.l. for Bidura, q.v.
+cIvillikA      -> civillikA      | cIvillikA  v.l. for civ˚, L.
+cattra         -> Cattra         | cattra  n. v.l. for cAttra.
+dadrUrogin     -> dadrurogin     | dadrU—rogin  mfn. = dru-, L., Sch. (v.l. dard˚).
+dattAmitrA     -> dattAmitra     | dattAmitrA  f. N. of a place (cf. dattAmitrIya), R. iv, 43, 20 (v.l. daRqAm˚).
+dfzwaraTa      -> DfzwaraTa      | dfzwa—raTa  m. N. of a king, MBh. xiii, 7678 (v.l. dfQa- and Dfzwa-).
+gOBila         -> goBila         | gOBila  n. Gobhila's Gṛhya-sūtra, Gṛhyās. ii, 94 (v.l. goB˚).
+gOraTa         -> goraTa         | gOraTa  m. patr. fr. go-r˚, Pravar. vi, 2 (v.l. gor˚).
+ganDikA        -> ganDika        | ganDikA  f. v.l. for gabdikA (N. of a country) q.v.
+jAlapada       -> jAlapAda       | jAla—pada  mfn. N. of a locality g. varaRAdi (v.l. ˚dI) || jAla—pada  mfn., ib.
+kElikila       -> kelikila       | kElikila  m. pl. N. of a people (perhaps a Yavana tribe; v.l. kElak˚), VP.
+kOwiryA        -> kOwIryA        | kOwiryA  v.l. for ˚wIryA.
+kalaya         -> kalAya         | 1. kalaya  Nom. P. (fr. kali) kalayati, to take hold of the die called Kali, Kāś. on Pāṇ. iii, 1, 21. || 2. kalaya  v.l. for kala-ja, q.v.
+kasAra         -> kAsAra         | kasAra  n. (v.l. kaṉsāra or kaMsAra) = kfsara, q.v., Gal.
+kevalA         -> kevala         | ke/valA  f. N. of a locality, MBh. iii, 254, 10 (v.l. ˚lI)
+kowirA         -> kowira         | kowirA  f. N. of one of the mothers in Skanda's retinue, MBh. ix, 2632 (kowarA v.l.)
+kuwuka         -> kutuka         | kuwuka  v.l. for kuwaka, q.v.
+layA           -> laya           | layA  f. N. of a Yoginī, Hcat. (v.l. jayA)
+mitraGnA       -> mitraGna       | mitra—GnA  f. N. of a river, Hariv. (v.l. citra-GnI).
+nAgaPalA       -> nAgaPala       | nAga—PalA  f. Momordica Monadelpha, Var.
+nAgadantA      -> nAgadanta      | nAga—dantA  f. N. of an Apsaras, R. (v.l. -dattA)
+nAmra          -> namra          | nAmra  v.l. for namra, ĀśvŚr.
+nIvArA         -> nIvAra         | nI—vArA  v.l. for nivArA (see under ni-vf). || nIvA/rA  f. N. of a river, MBh.; VP. (v.l. ni-v˚).
+niScira        -> niScirA        | niScira  m. N. of a Ṛṣi in the 2nd Manv-antara (v.l. for ˚cara)
+nilaNgu        -> nIlaNgu        | ni/laNgu  m. a species of worm, TS. (v.l. for nIl˚).
+pAsI           -> pASI           | pAsI  f. v.l. for pASI.
+paRAya         -> paRAyA         | paRAya  Nom. P. Ā. ˚yati, to honour, praise, L. || paRAya  Nom. P. Ā. ˚yati id., Pāṇ. iii, 1, 28; Naigh. iii, 14 (v.l. ˚te); to sell (inf. ˚yitum), Kathās.
+parapuzwA      -> parapuzwa      | para—puzwA  (A), f. a female cuckoo, Var. || a harlot, L. || a parasitical plant, L. || N. of a daughter of a king of Kauśāmbi, Kathās.
+paricakrA      -> paricakra      | pari-cakrA  f. N. of a town (v.l. ˚vakra), L.
+pippIkA        -> pippikA        | pippIkA  f. a species of bird, Var.
+plavagA        -> plavaga        | plava—gA  (A), f. the sign of the zodiac Virgo, Var.
+prAkPAlgunI    -> prAkPalgunI    | prAk—PAlgunI  f. = pUrva-P˚ (q.v.), Var. (v.l. -PalgunI).
+rakzaRA        -> rakzaRa        | rakzaRA  f. guarding, protection, Śak. (v.l.), Pañcar.
+sAhajit        -> sahajit        | sAhajit  m. v.l. for sAhaYji, VP.
+sadASva        -> sadaSva        | sadASva  m. N. of a man (v.l. for sad-aSva), VP.
+sutasomA       -> sutasoma       | suta/—somA  (A), f. N. of a wife of Kṛṣṇa (v.l. Sruta-s˚), Hariv.
+svopaSa        -> svOpaSa        | sv-opaSa  mf(A/)n. having beautiful locks of hair (?), MaitrS. (v.l. sv-OpaSa).
+tArRi          -> tarRi          | tArRi  pl. id., Pravar. vi, 3 (v.l. ˚Reya).
+talaSabda      -> tAlaSabda      | tala—Sabda  m. = -tAla, Hariv. 15742; VarBṛS. xliii, 28 (v.l. ˚la-yudDa).
+tamapraBA      -> tamapraBa      | tama—praBA  f. v.l. for ˚maH-pr˚, L.
+udArAkza       -> udarAkza       | udArAkza  m. N. of a demon that causes diseases, MBh. (ed. Bomb. ix, 45, 63; v.l. udarAkza, q.v.)
+vaRita         -> vanita         | vaRita  mfn. v.l. for vezwita, KātyŚr., Sch. || = vyUta, ib.
+vanazad        -> vanasad        | vana—zad  v.l. for -sa/d, PārGṛ.
+vetaRqA        -> vetaRqa        | vetaRqA  f. a form of Durgā, Vās. (v.l. for vetAlA).
+viPalASa       -> vipalASa       | vi-Pa˚lASa  mfn. one whose hopes are disappointed, Hariv. (v.l. nizPal˚).
+vilohitA       -> vilohita       | vi/—lohitA  (A), f. N. of one of the 7 tongues of fire (v.l. su-lohitA), MuṇḍUp.
+
+# ===== IN-COMPOSITION (105) =====
+ASIr           -> ASir           | ASIr  (in comp. for 1. ASi/s).
+AkaRWa         -> akaRWa         | AkaRWa  (in comp. for A-kaRWam).
+Aviz           -> Avis           | Avi/z  See Avi/s. || Avi/z  (in comp. for Avi/s).
+Ayuz           -> Ayus           | Ayuz  (in comp. for Ayus below).
+BAgavatI       -> BagavatI       | BAgavatI  f. of ˚vata, in comp.
+BUyaS          -> BUyas          | BUyaS  in comp. for BUyas.
+BavA           -> Bava           | BavA  in comp. before d for Bavat.
+Danuz          -> Danus          | Danuz  in comp. for ˚nus.
+DanvA          -> Danva          | DanvA  in comp. for ˚van.
+GawIGawa       -> GawiGawa       | GawI—Gawa  in comp. and ifc. smaller and larger pots, Hariv. 3415; MārkP. viii, 205.
+SArNgi         -> SArNgI         | SArNgi  in comp. for SArNgin.
+SIrzaR         -> SIrzan         | SIrzaR  in comp. for SIrzan.
+SanES          -> SanEs          | SanES  in comp. for SanEs.
+SiKaRqi        -> SiKaRqI        | SiKaRqi  in comp. for ˚Rqin.
+SiraS          -> Siras          | SiraS  in comp. for Siras.
+Sociz          -> Socis          | Sociz  in comp. for Soci/s.
+SvAvid         -> SvAviD         | SvAvid  in comp. for SvA-viD below.
+aRU            -> aRu            | aRU  (with √ BU, &c.) See s.v. || aRU  (for aRu in comp. with √ BU and its derivatives).
+amanI          -> amani          | a-manI/  (for a-mana/s in comp. with √ BU and its derivatives).
+apAzWi         -> apAzwi         | apAzWi  = apAzwi in comp. with -ha/ or -ha/n, mfn. killing with the claws, ŚBr.
+ayaS           -> ayas           | ayaS  (in comp. for ayas).
+bArhas         -> barhas         | bArhas  Vṛddhi form of bfhas in comp.
+bahiS          -> bahis          | bahiS  in comp. for bahis.
+bahiz          -> bahis          | bahiz  in comp. for bahis.
+banDU          -> banDu          | banDU  in comp. for ˚Du.
+barhiz         -> barhis         | barhiz  in comp. for ˚his.
+bfhaw          -> bfhat          | bfhaw  in comp. for bfha/t.
+cIt            -> cit            | cIt  ind. (cf. 6. cit) only in comp.
+cakzuS         -> cakzus         | cakzuS  in comp. for ˚kzus.
+cakzuz         -> cakzus         | cakzuz  in comp. for ˚kzus.
+catuS          -> catus          | catuS  in comp. for ˚tu/r.
+caturantA      -> caturanta      | catur—antA  f. ‘the earth’, in comp. ˚teSa m. ‘earth-lord’, a king, Ragh. x, 86 (or catur-anteSa = -dig-ISa, q.v. Sch.)
+catuz          -> catus          | catuz  in comp. for ˚tu/r.
+dfN            -> dfn            | dfN  in comp. for 2. dfS.
+dor            -> Dor            | dor  in comp. for dos
+fN             -> fR             | fN  (by Sandhi for 2. f/c below).
+fjU            -> fju            | fjU  (in comp. for fju/ above).
+ftI            -> fti            | ftI  (in comp. for fti/ above).
+gIr            -> gir            | gIr  (in comp. for 1. gi/r).
+grAva          -> grABa          | grAva  in comp. for ˚van.
+guRi           -> guRI           | guRi  in comp. for ˚Rin.
+gurU           -> guru           | gurU  in comp.
+haviz          -> havis          | haviz  in comp. for havis.
+huraS          -> huras          | huraS  in comp. for huras.
+jano           -> janO           | jano  in comp. for ˚nas.
+jyotI          -> jyoti          | jyotI  in comp. for ˚tis.
+jyotiS         -> jyotis         | jyotiS  in comp. for ˚tis.
+jyotiz         -> jyotis         | jyotiz  in comp. for ˚tis.
+kaRwaki        -> kaRwakI        | kaRwaki  (in comp. for kaRwakin, col. 3).
+kakub          -> kakuB          | kakub  (in comp. for kaku/B).
+kumBi          -> kumBI          | kumBi  (in comp. for ˚Bin, q.v.)
+mADu           -> maDu           | mADu  Vṛddhi form of maDu in comp.
+mARi           -> maRi           | mARi  Vṛddhi form of maRi in comp.
+mAdri          -> mAdrI          | mAdri  m. c. for mAdrI in comp.
+mandura        -> mandurA        | mandura  in comp. = mandurA.
+marma          -> narma          | marma  in comp. for marman.
+medaS          -> medas          | medaS  in comp. for medas.
+mfn            -> mfR            | mfn  in comp. for mfd.
+muhuS          -> muhus          | muhuS  in comp. for muhur.
+nAndi          -> nAndI          | nAndi  for ˚ndI in comp.
+nEz            -> nez            | nEz  Vṛddhi form of niz (for nis) in comp.
+naBaS          -> naBas          | naBaS  in comp. for ˚Bas.
+pARI           -> pARi           | pARI  in comp. for 2. pARi.
+pArama         -> parama         | pArama  Vṛddhi form of parama in comp.
+pAtnI          -> patnI          | pAtnI  Vṛddhi form of patnI (f. of pati) in comp.
+pUzaR          -> pUzan          | pUzaR  in comp. for ˚zan.
+paraS          -> paras          | paraS  in comp. for ˚ras.
+payaS          -> payas          | payaS  in comp. for ˚yas.
+plIha          -> plIhA          | plIha  in comp. for plIhan.
+prAyaS         -> prAyas         | prAyaS  in comp. for 1. prAyas.
+premA          -> prema          | premA  f. See below. || premA  in comp. for prema/n.
+puMS           -> puMs           | puMS  in comp. for 2. puMs (cf. Pāṇ. viii, 3, 6).
+puraS          -> puras          | puraS  in comp. for puras.
+rATa           -> raTa           | 1. rATa  Vṛddhi form of 1. raTa, in comp. || 2. rATa  Vṛddhi form of 2. raTa, in comp.
+raSana         -> raSanA         | raSana  in comp. for raSanA
+sAmAna         -> samAna         | sAmAna  Vṛddhi form of 2. samAna in comp.
+sOganDikA      -> sOganDika      | sOganDikA  (A), f. See below || sOganDikA  f. in comp.
+sPItI          -> sPIti          | sPItI  in comp. for sPIta.
+sadyaS         -> sadyas         | sadyaS  in comp. for sadyas.
+sanad          -> samad          | sanad  in comp. for sanat (pr.p. of √ 1. san).
+sarasi         -> sarasI         | sarasi  (loc. of saras), in comp.
+sarpiz         -> sarpis         | sarpiz  in comp. for sarpis.
+sarvataS       -> sarvatas       | sarvataS  in comp. for sarvatas.
+syAd           -> syad           | syAd  in comp. for syAt.
+tapaS          -> tapas          | tapaS  in comp. for ˚pas.
+uBA            -> uBa            | uBA  (in comp. for uBa above).
+uBayataS       -> uBayatas       | uBayataS  (in comp. for uBaya/tas below).
+udBij          -> udvij          | ud-Bij  (in comp. for 2. ud-Bi/d below).
+udaN           -> udan           | udaN  (in comp. for u/dac below).
+uraS           -> uras           | uraS  (in comp. for u/ras above).
+vAcas          -> vacas          | 1. vAcas  See vi/-vAcas and sa/-vAcas. || 2. vAcas  gen. of vAc, in comp.
+vAntI          -> vAnti          | vAntI  in comp. for vAnta.
+vajri          -> vajrI          | vajri  in comp. for vajrin.
+vakzaS         -> vakzas         | vakzaS  in comp. for vakzas.
+vapuz          -> vapus          | vapuz  in comp. for vapus.
+vfzaR          -> vfzan          | vfzaR  in comp. for vfzan.
+viSvataS       -> viSvatas       | viSva-taS  in comp. for viSva-tas.
+vitatI         -> vitati         | vitatI,  in comp. for vi-tata.
+viyan          -> viyam          | viyan  in comp. for vi-yat.
+yATA           -> yaTA           | yATA  Vṛddhi form of yaTA, in comp.
+yaSaS          -> yaSas          | yaSaS  in comp. for yaSas.
+yac            -> yAc            | yac  in comp. for yad
+yajuz          -> yajus          | yajuz  in comp. for yajus.
+yud            -> yuD            | yud  in comp. for 2. yuD.
+yuzmA          -> yuzma          | yuzmA  in comp. for yuzma or yuzmad.
+
+# ===== CROSS-REFERENCE (204) =====
+Adat           -> adat           | A/dat  impf. fr. A- √ 1. dA, q.v.
+Ami            -> ARi            | A-√ mi  See A-√ mI.
+AnusUka        -> AnuzUka        | AnusUka  = AnuzUka (?) q.v.
+Arjuna         -> arjuna         | Arjuna  m. N. of Indra (= arjuna, q.v.), Kāṭh. 34, 3.
+BUmIBuj        -> BUmiBuj        | BUmI—Buj  m. = BUmi-B˚, q.v., Śṛṅgār.
+BUmIpati       -> BUmipati       | BUmI—pati  m. = BUmi-p˚, q.v., Uṇ., Sch.
+BaktAruci      -> Baktaruci      | BaktAruci  f. = ˚ta-dveza, Suśr.
+BedadarSin     -> vedadarSin     | Beda—darSin  mfn. = -dfzwi, A.
+Bizaya         -> vizaya         | Bizaya  ˚yati. See √ BI.
+CandaS         -> Candas         | CandaS  = ˚das.
+Cikkika        -> CikkikA        | Cikkika  mfn. sneezing, W. || Cikkika  See ˚kkana.
+DAyin          -> dAyin          | DAyin  See amfta-D˚ (add.)
+DruvakA        -> Druvaka        | DruvakA  f. (in music) = DruvA f. (cf. DuvakA) || N. of a woman g. bAhv-Adi.
+Dvajahfta      -> DvajAhfta      | Dvaja—hfta  mfn. = ˚jAhfta, L.
+GAwala         -> GAwAla         | GAwala  See ˚wAla.
+GanArava       -> Ganarava       | GanArava  m. (= ˚na-r˚) the bird Cātaka, Gal.
+GawIkara       -> GawIkAra       | GawI—kara  m. = -kAra, Divyāv.
+GozAdI         -> gozAdI         | GozAdI/  See go-zAdI/. || Go˚zAdI/  &c. See ib.
+IrRa           -> Irma           | IrRa  mfn. See ud-IrRa.
+JampA          -> Jampa          | JampA  f. of ˚pa, q.v.
+KaRqIka        -> KaRqika        | KaRqIka  m. See ˚Rqika.
+OqavA          -> Oqava          | OqavA  f. a particular Rāgiṇī q.v. (cf. oqava.)
+SAmbava        -> SAmBava        | SAmbava  m. (fr. Sambu) See next.
+SUpakAra       -> sUpakAra       | SUpa-kAra  See sUpa-kAra.
+SUrpanaKA      -> SUrpaRaKA      | SUrpa—naKA  See -RaKA, ˚KI.
+SaNKiRI        -> SaNKinI        | SaNKiRI  f. See next.
+SamBara        -> Sambara        | Sam—Bara  m. N. of a man (cf. SAmBara).
+Sasitf         -> SAsitf         | Sasi˚tf  See vi-S˚.
+SiMhARaka      -> siMhARaka      | SiMhA˚Raka  See SiNGARa &c.
+SilABAva       -> SilABava       | SilA—BAva  m. = -tva, Kathās.
+SilpakarI      -> SilpakArI      | Silpa—ka˚rI  f. = -kAra, ˚rI, MW.
+Sriv           -> sriv           | Sriv  See √ sriv.
+SroRibimba     -> SroRivimba     | SroRi—bimba  n. round hips (see bimba), Kālid. || a waist-band (= kawi-sUtra), L.
+SumBAna        -> SumBana        | Su/mBAna  See √ 1. SuB, p. 1083, col. 1.
+SvaDiti        -> svaDiti        | SvaDiti  see svaD˚, p. 1280.
+UrDvatA        -> UrDvaTA        | UrDva—tA  f. = -tva below.
+aBIcAra        -> aBicAra        | aBI-cAra  m. exorcising, incantation, Āp. || aBI-cAra  See aBi-√ car.
+aBIpAda        -> aBIpada        | aBI-pAda or aBI-pada  See 1. a-BI.
+aSvArohA       -> aSvAroha       | aSvArohA  f. = aSva-ganDA, q.v., L.
+aSvaBAra       -> aSvavAra       | aSva—BAra  m. the load of a horse, (g. vaMSAdi, q.v.)
+abdA           -> abda           | a/b-dA/  f., see abdayA/ below.
+akzanvat       -> akzaRvat       | akzan-vat  see akzaR-vat.
+alolA          -> alola          | a-lolA  f. (also lolA, q.v.), N. of a metre (containing four lines, each of fourteen syllables).
+anvetave       -> anvetavE       | a/nv-etave  &c. See anv-√ i.
+anyarAzwriya   -> anyarAzwrIya   | anya—rAzwriya  mfn. (= ˚wrIya), Kāṭh.
+apAmitya       -> apamitya       | apA-mi/tya  n. (cf. apa-mi/tya), equivalent, MaitrS.
+arAlA          -> arAla          | arAlA  f. (g. bahv-Adi, q.v.) a disloyal or unchaste woman, L. || a modest woman, L.
+arAlI          -> arAli          | arAlI  f. (g. bahv-Adi, q.v.) a disloyal or unchaste woman, L. || a modest woman, L.
+araRyakarpAsI  -> araRyakArpAsI  | araRya—karpAsI  f. = -kApAsI below.
+asaMDita       -> asaMdita       | a-saMDita  mfn. for a-saMdita, q.v. (NBD.)
+atiSvA         -> atiSva         | ati-SvA  m. N. of a tribe (?), (g. pakzAdi, q.v.)
+avamanya       -> avamAnya       | ava-manya  ind.p. = -matya, MBh. v, 7533; xvi, 73 and 75.
+avarya         -> avArya         | avarya  Nom. P. ˚ryati, to become lower, (g. kaRqv-Adi, q.v.)
+avat           -> Avat           | a/vat  mfn. pr. p. See √ av.
+ayAva          -> ayava          | 1. a/-yAva, as, or a/-yAvan, A,  m. id., TS. || 2. a-yAva  mfn. not made of barley, KātyŚr. || 1. and 2. a-yAva .  See 1. and 2. a-yava.
+ayAvan         -> ayavan         | {{Lbody=14755}} || a/-yAvan  See 1. a-yava.
+azwAdiS        -> azwadiS        | azwA—diS  f. pl. = azwaqiS, q.v., Hcat.
+azwakapAla     -> azwAkapAla     | azwa—kapAla  mfn. = azwA/-kap˚, q.v., Pāṇ. vi, 3, 46 Comm.
+bAsteya        -> vAsteya        | bAsteya  see vAsteya.
+bahAdura       -> bAhAdura       | bahAdura  See bAhAdura.
+bastya         -> vastya         | bastya  See vA/ja-bastya.
+binda          -> vinda          | binda  See kusuru-bi/nda.
+bopadeva       -> vopadeva       | bopadeva  See vopadeva.
+brUs           -> vrUs           | brUs  (see vrUs).
+cEtayata       -> cEwayata       | cEtayata  (fr. cetayat) See cEkay˚.
+caRqika        -> caRqikA        | caRqika  mfn. (= ˚qa) circumcised, Gal.
+cakrAhvA       -> cakrAhva       | cakrAhvA  f. See ˚krANkA.
+cakraDAra      -> cakraDara      | cakra—DAra  for -Dara, q.v.
+canDana        -> candana        | canDana  See cAnDanAyana.
+candramasa     -> cAndramasa     | candra—˚masa  See ava-
+carATa         -> caraTa         | carA/Ta  n. See ˚ra/Ta. || carA/Ta  &c. See ib.
+carawI         -> cArawI         | carawI  f. (= ˚raRwI, cirawI, ciraRwI) a woman married or single who after maturity resides in her father's house, L., Sch.
+caturaNgA      -> caturaNga      | ca/tur—aNgA  f. (scil. senA) = ˚Nga-bala, AV.Pariś.
+cintitA        -> cintita        | cintitA  f. See cEntita.
+dAvat          -> DAvat          | dAvat  See prARa-.
+dEvanirmita    -> devanirmita    | dEva—nirmita  mfn. = -krita, MBh.
+dIkzaRIyA      -> dIkzaRIya      | dIk˚zaRI/yA  f. (Vait.) = ˚yezwi f. the sacrifice of consecration or initiation, Br.; ŚrS.
+dUragA         -> dUraga         | dUra—gA  mfn. = -ga, TāṇḍyaBr.
+dantASlizwa    -> dantaSlizwa    | dantASlizwa  mfn. = ˚ta-S˚, Mn. v, 141; Kull.
+diDIzu         -> diDizu         | diDIzu  f. = diDizU, L. See diDizu
+duHzparSa      -> duHsparSa      | duH—zparSa  See -sparSa.
+duScyAvana     -> duScyavana     | duS—cyA˚vana  mfn. shaking the unshaken, MBh. viii, 1506 = -cyavana, W.
+durhanA        -> durhaRA        | dur—hanA  &c. See haRA.
+durvala        -> durbala        | dur—vala  See bala.
+gOkakzyA       -> gOkakzya       | gOkakzyA  f. g. krOqy-Adi. || gOkakzyA  f. of ˚kzya, q.v.
+gaDita         -> gadita         | ga/Dita  mfn., Naigh. iv, 2 (cf. A/-, pa/ri-.)
+gaReruka       -> gaRerukA       | gaReruka  m. (= ˚ru) Pterospermum acerifolium, L.
+gaRitA         -> gaRita         | gaRitA  f. of ˚ta, q.v.
+gantavE        -> gantave        | ga/ntavE/  See ib.
+gla            -> glA            | gla  See √ glE. || gla  mfn. ifc. See su-gla.
+grAmIna        -> grAmIRa        | grAmIna  for ˚mIRa, q.v.
+grAmeyakA      -> grAmeyaka      | grAmeyakA  f. = ˚yA, Hcar. vii.
+haRqa          -> haRqA          | haRqa  See kUla-haRqa.
+hiRqi          -> hiRqI          | hiRqi  (prob.) f. = -rAtrO rakzA-cAra, L.
+jANgalI        -> jANgali        | jANgalI  f. Mucuna pruritus, L. || for ˚gulI, q.v.
+jirvi          -> jIrvi          | ji/rvi  See ji/vri.
+kOzIdya        -> kOsIdya        | kOzIdya  See kOsIdya.
+kUwaSAlmalI    -> kUwaSAlmali    | kUwa—SAlmalI  f. See -SAlmali.
+kalindI        -> kAlindI        | kalindI  f. N. of the river Yamunā (= kAlindI, q.v.), R.
+kftasApatnIkA  -> kftasApatnikA  | kfta—sApatnIkA  f. = -sapatnikA, L.
+kfzRasarpA     -> kfzRasarpa     | kfzRa—sarpA  f. = -kApotI, Suśr.
+kiriwa         -> kirIwa         | kiriwa  See a/ti-kir˚.
+kiwaka         -> kIwaka         | kiwaka  n. See kiwika.
+koNkaRA        -> koNkaRa        | koNkaRA  f. a Koṅkaṇa woman, W. || N. of the mother of ParaśuRāma, L. || koNkaRA  (f. of ˚Ra, q.v.)
+kumAri         -> kumArI         | kumAri  (shortened for ˚rI, q.v.; cf. Pāṇ. vi, 3, 63).
+kzIrapAna      -> kzIrapARa      | kzIra—pAna  mf(I)n. = -pARa (q.v.), L.
+kzayadvira     -> kzayadvIra     | kzaya/d-vira  See √ 1. kzi.
+kzeRa          -> kzema          | kzeRa/  See 1. kzayaRa/.
+kzora          -> kzOra          | kzora  m. the act of shaving, Vop. (Dhātup. xxviii, 52). || kzora  See √ kzur.
+mAtfbanDU      -> mAtfbanDu      | mAtf—banDU/  (U/), f. an unnatural m˚, Mcar. (cf. brahmab˚).
+mAtsyapurARa   -> matsyapurARa   | mAtsya—purARa  n. = -matsya-p˚.
+maRiSara       -> maRisara       | maRi—Sara  See -sara.
+mahyA          -> mahya          | mahyA  f. See under mahnyA, p. 804, col. 1.
+manoraTA       -> manoraTa       | mano—raTA/  (A/), f. N. of a woman (= -praBA), Kathās.
+meDajit        -> meDAjit        | me/Da—jit  See meDA-jit.
+mokya          -> mOkya          | mokya  See a-mokya/.
+muYjA          -> muYja          | mu/YjA  (A), f. N. of a river, VP. || = m. (see comp. below).
+pAdavI         -> padavI         | pAdavI  see pada-vI under pada/, p. 583, cols. 2, 3.
+padapadma      -> pAdapadma      | pada—padma  n. = -kamala, L.
+parIveza       -> pariveza       | parI—veza  m. a halo round the sun or moon, Hariv. (cf. pari-v˚).
+pariRi         -> pariRI         | pari-Ri  for pari-ni, according to Pāṇ. viii, 4, 17 before a number of roots, viz. gad, ci, dA, dih, drA, DA (see below), nad, pat, pad, psA, mA, me, yam, yA, v
+pariSrut       -> parisrut       | pari-Sru/t  f. = -sru/t, AV. xx, 127, 9.
+parvatI        -> pArvatI        | parvatI/  (I/), f. a rock, stone, VS. || 1. parvatI/  f. of parvata, q.v. || 2. parvatI  ind. for ˚ta.
+pattrANgulI    -> pattrANguli    | pattrANgulI or pattrANguli  f. = ˚tra-BaNga, L.
+potalikA       -> powalikA       | potalikA  f. See go-potalikA.
+prAn           -> prAR           | {{Lbody=139498}} || prAn  See prAR, p. 705, col. 1.
+prUz           -> pruz           | prUz  (for pruz). See azwA/-pruz.
+praRi          -> praRI          | pra-Ri  for pra-ni, according to Pāṇ. viii, 4, 17 before a number of roots, viz. gad (see below), ci, 1. dA, dih, de, do, drA, DA (see below), De, nad (see belo
+praniMsita     -> praRiMsita     | pra-niMsita  -niMsitavya = -RiMsita, -RiMsitavya, q.v.
+pratIhartf     -> pratihartf     | pratI—hartf  m. (cf. prati-h˚) a doorkeeper, porter, Rājat.
+pravaBra       -> prabaBra       | pravaBra/  m. N. of Indra, MaitrS. (cf. prabaBra).
+rARI           -> rAmI           | rARI  f. (corruption of rAjYI, q.v.) a queen.
+rIwi           -> rIti           | rIwi  See BfNgirIwi.
+rOra           -> rora           | {{Lbody=179999}} || rOra  See 2. rora, p. 890, col. 1.
+raTANgA        -> raTANga        | raTANgA  (A), f. See raTAhvA
+raTavAhaRa     -> raTavAhana     | raTa—vAhaRa  See next.
+raktavIjakA    -> raktabIjakA    | rakta—vIjakA  See -bIjakA
+ravasa         -> raBasa         | ravasa  See purU-r˚.
+ruzat          -> ruSat          | ruzat  mf(atI)n. (cf. 1. ruSat) hurting, injuring, displeasing, MBh.; Hariv.
+sAlivAhana     -> SAlivAhana     | {{Lbody=243334}} || sAlivAhana .  See sAlav˚ above.
+sOvalya        -> sObalya        | sOvalya  See sObalya, p. 1253.
+sTf            -> stf            | sTf  See savya-zWf/, p. 1191, col. 3 (where read savya-zWf/)
+sTura          -> sTUra          | sTura  See apa-zWura, p. 53, col. 1.
+saMkziptA      -> saMkzipta      | saM-kziptA  (A), f. = -gati, VarBṛS.
+sahasrARIka    -> sahasrAnIka    | sahasrARIka  m. = ˚rAnIka, MW.
+sahasranITa    -> sahasraRITa    | sahasra—nITa  See -nITa.
+sahavratA      -> sahavrata      | saha—vratA  (A), f. = -DarmacAriRI, col. 1 Hariv. || a religious community, sect, Lalit.
+samAvApti      -> samavApti      | sam-AvApti  f. (m.c. for sam-av˚, q.v. under sam-avAp, p. 157), Hcat.
+sampUrRA       -> sampUrRa       | sam-pUrRA  (am), f. a partic. Ekādaśī (q.v.)
+sarvarAsa      -> sarvarasa      | sarva—rAsa  m. (cf. -rasa above) the resinous exudation of the V˚ R˚ L. || a sort of musical instrument, ib.
+senAvindu      -> senAbindu      | senA—vindu  See -bindu.
+somApa         -> somapa         | somA-pa  mfn. or m., AitBr. (cf. sOmApa/).
+somarOdra      -> somArOdra      | soma—rOdra  n. N. of a sacred text (cf. somA-r˚), MW.
+spfSyA         -> spfSya         | spfSyA  f. N. of one of the Samidhs (q.v.), KātyŚr., Sch.
+stavAna        -> stavana        | stavAna  See root.
+stritamA       -> strItamA       | stri-tamA,  stri-tarA. See stri-t˚ under strI.
+suBadrakA      -> suBadraka      | su/—BadrakA  (su/BadrikA) f. a courtezan, VS. || a kind of metre, Ked. || of a younger sister of Kṛṣṇa (see next), Pañcar.
+suyaSa         -> suyaSA         | su—yaSa  mfn. = -yaSas below, MW.
+svasAra        -> svasara        | sva/—sAra  (sva/-), n. = -sara, RV. || svasAra  n. = svasara, RV. i, 178, 2.
+tAlA           -> tAla           | tAlA  (A), f. (g. kuRqAdi) See mAsa-
+tAmraparRi     -> tAmraparRI     | tAmra—parRi  for ˚rRI, q.v.
+tapanatanayA   -> tapanatanaya   | tapana—tanayA  f. = -sutA, L. || = ˚pantI, W. || = ˚pasvIzwA, L.
+tarAyaRa       -> tArAyaRa       | tarAyaRa  See tAr˚.
+tarItf         -> taritf         | tarItf  mfn. = ˚ritf, Pāṇ. vii, 2, 34, Kāś.
+tarkAri        -> tarkArI        | tarkAri  f. = ˚rI, Suśr. vi, 17, 49.
+tfRapulI       -> tfRapUlI       | tfRa—pu˚lI  See -pUl˚.
+tintilIkA      -> tintilikA      | tintilIkA  f. = ˚likA, ĀpGṛ. vi, 5, Sch.
+tiraSci        -> tiraScI        | tiraSci  loc. of ˚rya/Yc, q.v. || ti˚raSci/  (˚raSci/), loc. ind. id., ŚBr. ii, 3, 2, 12; KātyŚr. xvii, 8, 14 and 12, 1.
+trayaS         -> trayas         | trayaS  = ˚yas.
+triBARqI       -> triBaRqI       | tri—BARqI  f. = -BaRqI, Car. vii, 7.
+tripUruza      -> tripuruza      | tri—pUruza/  See -pur˚.
+tuvI           -> tuvi           | tuvI  = ˚vi/.
+udvfMhaRa      -> udbfMhaRa      | ud-vfMhaRa  See ud-bfMhaRa.
+upoQA          -> upoQa          | upoQA  f. ‘brought home in addition to’, a second or inferior but favourite wife, R. i, 13, 37 (ed. Schlegel; vAvAtA [q.v.] R. ed. Bombay i, 14, 35).
+urmilA         -> UrmilA         | urmilA  = UrmilA, q.v.
+vADin          -> vAdin          | vADin  See loka-vADin.
+vAwIya         -> vAtIya         | vAwIya  See brahma- and sfgAla-v˚.
+vEhInari       -> bEhInari       | vEhInari  See bEh˚
+vEjavApa       -> bEjavApa       | vEjavApa  &c. See bEj˚.
+vEzka          -> vezka          | vEzka  See bEzka.
+vaDira         -> baDira         | vaDira  See baDira.
+vaMSIvAdya     -> vaMSivAdya     | vaMSI—vAdya  (?) n. a flute, Tithyād. (cf. vaMSi-v˚).
+vacaka         -> vAcaka         | vacaka  See dur-v˚.
+vahli          -> vAhli          | vahli,  vahlika &c. See balhi.
+valasUdana     -> balasUdana     | vala—sUdana  &c. See under bala.
+vanDula        -> banDula        | vanDula  m. N. of a Ṛṣi (see banDula).
+varuRadEva     -> varuRadeva     | varuRa—dEva or varuRa—dEvata,  n. = -deva, VarBṛS.
+veS            -> ves            | veS  See √ ves.
+vekuri         -> Bekuri         | vekuri  See bekuri.
+vfSI           -> vfzI           | vf/SI  (I), f. See bfsI
+vfdDagArga     -> vfdDagarga     | vfdDa—gArga  mf(I)n. = -gArgIya, Cat.
+vfkalA         -> vfkala         | vfkalA/  (A/), f. a partic. intestine, ŚBr. || N. of a woman g. bAhv-Adi (cf. vArkali, vArkaleya).
+vfsaya         -> vfzaya         | vfsaya  vfsI. See bfsaya, bfsI.
+vicAlita       -> vicalita       | vi-˚cAlita  See a-vicAlita &c.
+vihavyA        -> vihavya        | vi-˚ha/vyA  (A), f. N. of partic. bricks, TS. || (scil. sUkta) N. of RV. x, 128 (cf. ˚havIya), TS.; Kāṭh.; Lāṭy.
+vijAna         -> vijana         | vi-jAna  &c. See under vi-√ jYA. || vi-jAna  m. N. of a man, TāṇḍBr.
+viti           -> vIti           | viti  f. = vIti, in gO/rI-viti, q.v.
+vizPar         -> visPar         | vi-zPar,  vi-zPAra. See vi-√ sPar.
+vizparDA       -> visparDA       | vi-˚zparDA  f. (cf. vi-sparDA) contest for superiority, Vait.
+vorasidDi      -> borasidDi      | vora—sidDi  See bora-s˚.
+vrAjin         -> BrAjin         | vrAjin  See vizWA-vrAjin, p. 999, col. 1.
+wiRwiRIkA      -> wiRwiRikA      | wiRwi˚RIkA  See wiRqiR˚.
+yaTASrAdDam    -> yaTASradDam    | yaTA—SrAdDam  ind. acc˚ to the Śrāddha (q.v.), Kauś.
+zahasAna       -> sahasAna       | zahasAna,  zAc. See sahasAna, sAc.
+
+# ===== OTHER-INTENTIONAL (222) =====
+ASIna          -> AsIna          | ASIna  mfn. = ASina/ (p. 157), MaitrS.
+ASad           -> Asad           | A-√ Sad  to go, Vop. on Dhātup. xx, 25.
+ASfta          -> aSfta          | A-Sfta  mfn. (√ SrA), slightly cooked, ŚāṅkhŚr. iv, 3, 7.
+AkrayA         -> Akraya         | {{Lbody=22337}} || A-krayA/  (A/), f. id., VS. xxx, 5.
+AmA            -> Ama            | A-√ 2. mA  P. (Pot. -mimIyAt, Kāṭh. xix, 13) to bleat at.
+Amah           -> Anah           | A-√ mah  Ā. (3. sg. A/-mahe, RV. vii, 97, 2 [= A-mahate, A-datte, Sāy.]) to give, grant (?); to take (?).
+Aparuza        -> aparuza        | A-paruza  mfn. a little rough, Jātakam.
+Bandra         -> vandra         | Bandra  n. = Badra, L.
+BetAla         -> vetAla         | BetAla  = vetAla, Siṃhās.
+KArIjaNGa      -> KarIjaNGa      | KArI—jaNGa  for Kar˚, Kāś.
+Kalidruma      -> kalidruma      | Kali—druma  m. (= Kalla) Pinus longifolia, Npr.
+Ola            -> ola            | Ola  m. Arum Campanulatum (= ola), Nigh.
+OpavasTa       -> Opavasta       | OpavasTa  n. = Opavasta above.
+PalaKelA       -> PAlaKelA       | Pala—KelA  f. a quail (= PAla-K˚), L.
+ParParIkA      -> ParParIka      | ParParIkA  f. a shoe, L. || = madana, L.
+SAkalin        -> Sakalin        | {{Lbody=214810}}
+SEvAlin        -> SEvalin        | SEvAlin  mfn. = SEvalin, Bhām.
+SIrzAhArya     -> SIrzahArya     | SIrzAhArya  mfn. = SIrza-h˚, MaitrS.
+SItaparRi      -> SItaparRI      | SIta—parRi (m.c. Suśr.) or SIta—parRI (L.),  f. Gynandropsis Pentaphylla
+SItasahA       -> SItasaha       | SIta—sahA  f. Vitex Negundo || = vAsantI.
+SaRqikA        -> SaRqika        | SaRqikA  f. = yudDa (in the language of the Draviḍas), Nīlak.
+SamasTalI      -> samasTalI      | Sama—sTalI  f. = antarvedI, Gal.
+SataGni        -> SataGnI        | Sata—Gni  f. m.c. for -GnI, Hariv.; VarYogay.; BhP.
+SrImati        -> SrImatI        | SrI—mati  f. (for matI ?) N. of Rādhā, MW.
+aByavasTita    -> avyavasTita    | aBy-ava-sTita  mfn. resisting (with acc.), BhP.
+aByuditA       -> aByudita       | aBy-uditA  f. N. of the ceremony (to be performed at the aByu/dita), KauṣBr.
+aDIkzepa       -> aDikzepa       | aDI-kzepa  m. = aDi-kz˚, Hāla, Sch.
+aSmayu         -> asmayu         | aSmayu  (prob.) m. a ray of light (= mayUKa), L.
+aSvaya         -> aSvayA         | aSvaya  Nom. Ā. ˚yate = aSvataram Acazwe, L.
+acCAyA         -> acCAya         | a/cCA-√ yA or a/cCa-√ yA,  to approach, RV.; TS.
+ahina          -> ahIna          | ahi/na  = 1. a/hIna, MaitrS.
+alAka          -> alaka          | alAka  m. (= alarka) the plant Calotropis Gigantea, Car.
+anakadunduBi   -> AnakadunduBi   | anaka-dunduBi  or better AnakadunduBi, m. N. of Kṛṣṇa's father (Vasudeva; said to be derived from the beating of drums at his birth).
+apAhAya        -> apahAya        | apA-hAya  ind.p. (fr. √ 3. hA with apa, the a being metrically lengthened), quitting, MBh. || disregarding, ib. || excepting, except, ib.
+apAvfkta       -> apavfkta       | apA/-vfkta  (√ vfj), removed, avoided, RV. viii, 80, 8.
+asuri          -> Asuri          | asuri  (prob.) m. (said to be fr. √ 2. as) war, battle (= saMgrAma), L.
+atiSi          -> atiSI          | ati-√ Si  cl. 3. Ā. -si/SIte, to sharpen up (a weapon) for attacking, RV. i, 36, 16.
+avAlamba       -> avalamba       | avAlamba  m. = apAl˚, ĀpŚr.
+avAruh         -> avaruh         | avA-√ ruh  Caus. (fut. sg. -rohayitA) to bring down from (abl.)
+avAsic         -> avasic         | avA-√ sic  to pour into (loc.), Gobh.
+awawyA         -> awAwyA         | awawyA  f. constant roaming (= awAtyA), Subh.
+bariSI         -> variSI         | bariSI  f. (also written var˚) a fishhook, L.
+bilAsin        -> vilAsin        | bilAsin  m. (for bila-vAsin?) a serpent, Kuṭṭanīm.
+brAhmadeya     -> brahmadeya     | brAhma—deya  mfn. = brahma-d˚ mfn., MBh. iii, 12729 (B.), Kull. on Mn. iii, 585.
+brAhmapurARa   -> brahmapurARa   | brAhma—purARa  n. = brahma-p˚, VP.
+brahmakanyaka  -> brahmakanyakA  | brahma—kanyaka  m. (prob.) id., L.
+cawulA         -> cawula         | cawulA  f. (= caYcalA) lightning, L.
+cetAya         -> cetaya         | cetAya  Nom. (fr. ˚tas), ˚yate, xxi, 8.
+dIrGavfntA     -> dIrGavfnta     | dIrGa—vfntA  f. = indra-cirBiwI, L.
+darSanIyA      -> darSanIya      | darSanIyA  f. of ˚ya.
+durbalA        -> durbala        | dur—balA  f. a species of plant (= ambu-SirIzikA), Bhpr.
+durgadatta     -> durgAdatta     | durga—datta  (for ˚gA-d˚, Pāṇ. vi, 3, 63) m. N. of a man, Cat.
+dviguRA        -> dviguRa        | dvi—gu˚RA  ind., with √ kf, to plough twice, Pāṇ. v, 4, 59, Kāś.
+gAruqapurARa   -> garuqapurARa   | gAruqa—purARa  n. = gar˚.
+gAruqopanizad  -> garuqopanizad  | gAruqopanizad  f. = gar˚.
+gOhya          -> gohya          | gOhya  mf(I)n. of gohi, or ˚hya, g. suvAstv-Adi.
+gOmatI         -> gomatI         | gOmatI  f. for gOtamI (N. of a river).
+gargI          -> gArgI          | gargI  f. (for gArgI), N. of the learned woman Vācaknavī, ĀśvGṛ.
+grahaDAra      -> grahADAra      | graha—DAra  m. = grahAD˚, Gal.
+granTakUwI     -> granTakuwI     | granTa—kUwI  for -kuwI.
+guqodana       -> guqOdana       | guqodana  = guqOd˚, xiii, 6162.
+hAlaBft        -> halaBft        | hAla—Bft  m. N. of Bala-rāma (= hala-Bft), MW.
+hOmIya         -> homIya         | hOmIya  mfn. = homIya, Saṃskārak.
+harIman        -> hariman        | harIman  m. = mAtariSvan, L.
+hemANgA        -> hemANga        | hemANgA  (A), f. a partic. plant (= svarRa-kzIrI), L.
+hiramya        -> hiraRya        | hi/ramya  n. (a word formed for explaining hi/raRya), ŚBr.
+hriRiyA        -> hriRIyA        | hriRiyA, hriRIyA,  f. = hfn˚, L.
+jAmbavozWa     -> jAmbavOzWa     | jAmbavozWa  n. ‘lip (ozWa) made of Jambū wood’, a cauterizing needle or probe, Suśr. (also ˚bozWa and ˚baUzWa).
+jAvanikA       -> javanikA       | jAvanikA  f. = jav˚, a curtain, screen, HPariś. ix, 45.
+jamat          -> janat          | jama/t  mfn. (derived fr. ˚ma/d-agni) = jvalat, Naigh. i, 17.
+jumaranandin   -> jUmaranandin   | jumara—nandin  m. id.
+kAkani         -> kAkaRi         | kAkani and kAkanI,  f. a small coin (= kAkiRI), L.
+kAzi           -> kASi           | kAzi  m. a ploughman (= karzaka),L.
+kaNgU          -> kaNgu          | kaNgU  f. = kaNguka, L.
+kaRqa          -> KaRqa          | kaRqa  n. an ornament, L. || a joint (= parvan), L.
+kakzApuwa      -> kakzapuwa      | {{Lbody=41553}}
+ketaki         -> ketakI         | ketaki  f. metrically for ˚kI f., Suśr.; Bhartṛ.; Gīt.
+kftAntA        -> kftAnta        | kftAntA  f. a kind of medicinal drug or perfume (= reRukA), L.
+kftaPalA       -> kftaPala       | kfta—PalA  f. N. of a plant (= kola-SimbI), L.
+kftaSrAma      -> kftaSrama      | kfta—SrAma  for -Srama, R. i, 21, 6.
+kilina         -> kilima         | kilina  mfn. = klinna, Gobh., Sch.
+koSIDAnya      -> kOSIDAnya      | koSI-DAnya  n. = koSa-D˚, ĀpŚr. iv, 2 f., Sch.
+kulawApatI     -> kulawApati     | kulawA-patI  f. (= kunawI) red arsenic, L.
+kurasA         -> kurasa         | ku—rasA  f. a wild creeping plant (species of hieracium, = go-jihvA), L.
+kuvalayA       -> kuvalaya       | kuvalayA  (ifc. f. A) Kathās.
+lUta           -> lUtA           | lU/ta  mfn. = pUrva-vicCinna, TS. (Sch.)
+mADuri         -> mADurI         | mADuri  f. = mADurI, sweetness, loveliness, Bhojapr.
+mAyavat        -> mAyAvat        | mAya—vat  mfn. (comp. mAya/-vattara) m.c. for mAyA/-vat, Br.
+mOKaryA        -> mOKarya        | mOKaryA  f. of mOKari above, Pāṇ. iv, 1, 79, Sch.
+maRqapA        -> maRqapa        | maRqa—pA  f. a sort of leguminous plant (= nizpAvI), L.
+mahASUdrA      -> mahASUdra      | mahA—SUdrA  f. = mahatI SUdrA, ib.
+malapu         -> malapU         | mala—pu  n. (prob. u) = SfNgI and nala, L.
+manayitf       -> mAnayitf       | manayitf  mf(trI)n., Sāy. on RV. i, 124, 3.
+manota         -> manotA         | manota, prob. n. (ĀpŚr., Sch.) or mano/tA, f. (ŚāṅkhBr. &c.)  the hymn RV. vi, i, (containing the word mano/tA nom. of manotf and used in sacrificing; also ˚tA-
+masUrA         -> masUra         | masUrA  f. = masurA, L.
+matkuRA        -> matkuRa        | matkuRA  f. pudendum (of a young girl = ajAta-loma-Baga), L. || N. of a river, VP.
+meGarAji       -> meGarAjI       | meGa—rAji (MW.) or meGa—rA˚jI (Mālav.),  f. a line of cl˚.
+nAmAvali       -> nAmAvalI       | nAmAvali (or nAmAvalI)  f. N. of a dictionary.
+nIvezya        -> nivezya        | nI—vezya^  mfn. = ni-v˚, MaitrS.
+nIvid          -> nivid          | nI—vi/d  f. = ni-v˚, AV.
+nadija         -> nadIja         | nadi—ja  m. (for ˚dI-) Lablab Vulgaris, L.
+nalini         -> nalinI         | nalini  metric. for ˚nI in
+namrA          -> namra          | namrA/  (A), f. N. of 2 verses addressed to Agni, ŚrS.
+niBftA         -> niBfta         | ni/-BftA  (A), f. a kind of riddle, Kāvyād.
+niraR          -> niram          | ni-√ raR  (only -raRya/Tas), to rejoice or delight in (instr.), RV. i, 112, 18.
+nirguRqi       -> nirguRqI       | {{Lbody=109522}}
+nizkASanIya    -> nizkAsanIya    | niz-˚kASanIya  mfn. for ˚kAsanIya, above.
+nudita         -> mudita         | nudita  mfn. = nutta or nunna, MBh.
+pAMsulA        -> pAMsula        | pAMsulA  (A), f. the earth || a licentious woman, Vcar. || = pAMsukA, L.
+pAYcajanyA     -> pAYcajanya     | pA/Yca—janyA  (A), f. patr. of Asiknī, ib.
+pAYjara        -> paYjara        | pAYjara  (fr. paYjara) mfn. relating or belonging to a cage, Nalac.
+pArampara      -> parampara      | pAra—m-para  mfn. further, future (world), Kād.
+pEzwikA        -> pEzwika        | pEzwikA  f. = pEzwI
+pIz            -> piz            | pIz  = √ piz in apIzan, AV. iv, 6, 7.
+paSuka         -> pASuka         | paSuka  = paSu in eka-
+parIdA         -> paridA         | parI-dA  = pari- √ 1. -dA, ĀpGṛ.
+parIsaryA      -> parisaryA      | parI—saryA  f. = pari-s˚, L.
+pariBAs        -> pariBAz        | pari-√ BAs  Ā. -BAsate, to appear, ŚBr.
+parikfS        -> parikfz        | pari-√ kfS  only Caus. -karSayati, to harass, afflict, BhP.
+parikzIba      -> parikzIva      | pari-kzIba or pari-kzIva,  mfn. drunk, quite intoxicated, W.
+parizyandana   -> parisyandana   | pari-zyandana or pari-syandana,  n. dropping, oozing, W.
+paryAyA        -> paryAya        | pary-A-√ yA  (only Impv. -yAhi, -yAtam), to approach from (abl.), come near, RV.
+pfTivizWA      -> pfTivizWa      | pfTivi—zWA/  -zWa or -zWA/, mfn. standing on the e˚, stepping firmly (as a horse), RV.
+pfTukA         -> pfTuka         | pf/TukA  (A), f. a girl, L. || a species of plant (= hiNgu-pattrI), L.
+piwAkyA        -> piwakyA        | piwAkyA or piwakyA,  f. a multitude of baskets g. pASAdi.
+plAkzI         -> plAkzi         | plAkzI  (I), f., Pāṇ. iv, 1, 65, Sch.
+prAcyA         -> prAcya         | prAcyA  (A), f. (with or scil. BAzA) the dialect spoken in the east of India, Sāh.
+prAvft         -> pravft         | prA-√ vft  (prA mc. for pra), Caus. -vartayati, to produce, create, MBh.; Hariv.
+prAviS         -> praviS         | prA-√ viS  (pra-A-√ viS) P. -viSati, to come or resort to (acc.), ŚāṅkhŚr. : Caus. -veSayati, to let or lead in (loc.), MBh.; Daś.
+prabAlikA      -> prabAlika      | pra-bAlikA  f. N. of a woman, Vāsav. introd. (printed ˚vAlikA).
+pragE          -> prage          | pra-√ gE  P. -gAyati (ep. also Ā. ˚te), to begin to sing, sing, celebrate, praise, extol; to sound, resound, RV.; MBh.; BhP.
+prahelI        -> praheli        | pra-˚helI  f. id.
+pramodamAnA    -> pramodamAna    | {{Lbody=136037}}
+prapAdIka      -> prapAdika      | {{Lbody=135184}}
+prapaTA        -> prapaTa        | pra/-paTA  (ifc. f. A) a broad road or street, Kāṭh.; BhP.
+pratilomA      -> pratiloma      | prati—lomA  (A), f. a partic. incantation (to be recited from the end to the beginning), Kathās.
+pratyara       -> pratyarA       | praty—ara, m. (ŚvetUp. Comm.) or praty—arA, f. (ŚvetUp.)  an intermediate spoke of a wheel.
+purunizWA      -> purunizWa      | puru—nizWA/ or puru-nizWa/,  mfn. excelling among many, ib.
+qoraka         -> doraka         | qoraka  n. (= dor˚) id., ib.
+rAtriMdivA     -> rAtriMdiva     | rAtri—M-divA  ind. by n˚ and day, Kāv.; Kām.
+raktANgA       -> raktANga       | raktANgA  f. a species of plant (= jIvantI), L.
+rasnA          -> rAsnA          | rasnA  f. = rasanA, the tongue, L.
+rolA           -> rola           | rolA  f. a kind of metre (= lolA), Col.
+rudrIya        -> rudriya        | rudrIya  mfn. = rudri/ya, Kapiṣṭh.
+sADAraRyA      -> sADAraRya      | sADAraRyA/  (A/), ind. commonly, all together, RV.
+sAMvarga       -> saMvarga       | sAMvarga  m. (fr. saM-varga) N. of a Sāman (with indrasya), ĀrṣBr.
+sAkala         -> SAkala         | sAkala  n. N. of a town in Madras (also written SAkala), MW.
+sAmakza        -> samakza        | sA/makza  n. (fr. sam-akza) the being before the eyes, MaitrS.
+sAmiDeni       -> sAmiDenI       | sAmiDeni  f. = sAmiDenI, Kauś.
+sAriPala       -> SAriPala       | sAri—Pala (Siṃhās.) and sAri—Palaka (L.),  n. = SAri-P˚.
+sArvakAma      -> sarvakAma      | sArva—kAma  mfn. (fr. sarva-kAma) designed for one who wishes for all things, ĀpŚr.
+sIrRa          -> SIrRa          | sIrRa  mfn. = SIrRa, hurt, injured, L.
+sTUlAkzA       -> sTUlAkza       | sTUlAkzA  f. = veRu-yazwi, Laghuk.
+sUcanA         -> sUcana         | sUcanA  (A), f. (= sUcA) pointing out, indication, communication, Suśr.; Sāh. || piercing &c., L.
+sUraTa         -> sUrata         | sU-raTa  m. (for su-r˚) N. of an author, Cat.
+saMcAla        -> saMcala        | saM-cAla  m. (of unknown meaning), BrahmaP.
+saMjAvana      -> saMjavana      | saM-jAvana  n. (perhaps for saM-yAvana) pouring a little buttermilk into warm milk, L.
+saMsArataraRI  -> saMsArataraRi  | {{Lbody=226867}}
+saMsTApanA     -> saMsTApana     | saM-˚sTApanA  (A), f. comforting, encouraging, Mṛcch.
+saMsparSAna    -> saMsparSana    | saM-˚sparSAna  m. = manaH, L.
+saman          -> sAman          | sam-√ an  P. -aniti, to breathe, live, RV.
+saptaSivA      -> saptaSiva      | sapta—SivA  (A), f. a kind of plant (= nAga-vallI), ib.
+sarvatanU      -> sarvatanu      | {{Lbody=238312}} || sa/rva—ta˚nU  (U), m. one who is born again with his whole body, MW.
+sarveSA        -> sarveSa        | sarveSA  (A), f. the mistress of all, Pañcar.
+sfjayA         -> sfjaya         | sfjayA/  (A/), f. = nIla-makzikA, Sukla-sarpa, or nIla-mahiza, TS. (Sch.)
+siMhAsyA       -> siMhAsya       | siMhAsyA  (A), f. Gend˚ Vulg˚ or Adhatoda Vasika, L.
+sindukA        -> sinduka        | sindukA  f. id., L.
+sitivAra       -> SitivAra       | siti—vAra  m. = Siti-v˚, MW.
+skanDavaha     -> skanDavAha     | skanDa—vaha, skanDa—vAha or skanDa—vA˚haka,  m. ‘carrying burdens on the shoulders’ (as an ox &c.), L.
+smA            -> sma            | {{Lbody=257061}}
+sparSAna       -> sparSana       | sparSAna  m. = manas, L.
+stavi          -> sTavi          | stavi  m. = udgAtf, a chanter, L.
+suKAsparSa     -> suKasparSa     | suKAsparSa  mfn. = suKa-sparSa, MW.
+supArA         -> supAra         | su—pArA  (A), f. (in Sāṃkhya) one of the 9 kinds of Tuṣṭi, Tattvas.
+surezwA        -> surezwa        | surezwA  (A), f. a kind of plant = brAhmI, L. || Asclepias Acida, W.
+suyamA         -> suyama         | su—ya/mA  (A), f. the Priyaṅgu plant, L.
+svAyamBU       -> svayamBU       | svAyamBU  = svAyamBuva above, MW.
+tAmraliptA     -> tAmralipta     | tAmra—liptA  f. their capital, Kathās. xiii, 54
+tamAlakA       -> tamAlaka       | tamAlakA  f. = tamakA, Npr.
+tanukA         -> tanuka         | tanukA  f. Diospyros embryopteris, ib.
+tarasA         -> tarasa         | ta/rasA  (sA), instr. ind. (g. svar-Adi, not in Kāś.) speedily, directly, MBh.; R.; Ragh.; BhP.; Śiś. ix; Kathās.; Prab. iv, 24
+tiraScA        -> tiraSca        | ti˚raScA/  (˚raScA/), instr. ind. id., RV. i, 61, 12; ii, 10, 4; x, 70, 4
+tryakzAyaRa    -> tryAkzAyaRa    | tryakzAyaRa  for tryAkz˚, Gaṇar. 269, Sch.
+tyajita        -> tyAjita        | tyajita  mfn. = tyakta, Hariv. ii, 2, 22.
+ucCuzmA        -> ucCuzma        | uc-CuzmA  f. N. of a plant, Kauś.
+udIta          -> udita          | ud-Ita  mfn. = 1. ud-ita, Naiṣ. i, 83; vi, 52; 74.
+ujjfmBaRA      -> ujjfmBaRa      | uj-jfmBaRA  f. coming forth, arising, Bālar.
+ukzARa         -> ukzaRa         | ukzARa  m. (= ukzan) a bull, R. (B.).
+unnAmita       -> unnamita       | un-nAmita  mfn. = un-namita above.
+upADmA         -> upaDmA         | upA-√ DmA  P. (aor. -aDmAsIt) to blow into, MBh.; Hariv.
+upAdru         -> upadru         | upA-√ dru  P. (Impv. 2. sg. -drava) to run or hasten near to, RV. vi, 48, 16.
+upAvah         -> upavah         | upA-√ vah  P. -vahati, to bring or convey near, RV. i, 74, 6; iii, 35, 2.
+upAvanam       -> upavanam       | upAva-√ nam
+upAyuj         -> upayuj         | upA-√ yuj  P. (1. sg. -yunajmi) to put to, harness, RV. iii, 35, 2.
+upaKyA         -> upAKyA         | upa-√ KyA  Pass. -KyAyate, to be seen or perceived, ŚBr. iv, 1, 2, 13.
+upaviz         -> upaviS         | upa-√ viz  P. -vivezwi (RV.; -vevezwi, ŚBr.; Impv. 2. sg. -viqQi, TBr.) to be active for; to obtain or gain by activity, RV. x, 61, 12.; to perform service, be 
+utKAlI         -> utKalI         | {{Lbody=31010}}
+uttarapUrvA    -> uttarapUrva    | uttara—pUrvA  f. (scil. diS) the north-east.
+vAguji         -> vAgujI         | vAguji or vAgujI  f. = vAkucI, L.
+vaMSakarA      -> vaMSakara      | vaMSa—karA  (A), f. N. of a river rising in the Mahendra mountains, MārkP.
+varcasyA       -> varcasya       | varcasyA  (A), f. (scil. izwakA) N. of partic. sacrificial bricks (at the laying of which certain Mantras containing the word varcas are used), Pāṇ. iv, 4, 125,
+varzyA         -> varzya         | va/rzyA  f. pl. rain-water, Kauś.
+viDI           -> viDi           | vi-√ DI (or dIDI, only Subj. -dIDayaH and -dIDyaH),  to be uncertain, hesitate, RV.; AV.
+viSAstf        -> viSastf        | vi-˚SAstf  m. id., PañcavBr.
+viSala         -> viSAla         | vi-Sala  m. (for viSAla) N. of the son of Abja, MW.
+viSvaDenA      -> viSvaDena      | viSva/—DenA  (A), f. N. of the earth, MW.
+viSvaTa        -> viSvaTA        | viSvaTa (ŚāṅkhŚr.) or viSva/TA (RV. &c.),  ind. in every way, at all times.
+vicCedanA      -> vicCedana      | vi-˚cCedanA  f. breaking off (pl.), Bālar.
+vijjalA        -> vijjala        | vijjalA  f. N. of a woman, Rājat.
+vikfS          -> vikfz          | vi-√ kfS  Caus. -karSayati (only p.p. -karSita), to emaciate, distort, deform, BhP.
+vikfzwA        -> vikfzwa        | vi-kfzwA  f. a partic. method of beating a drum, Saṃgīt.
+vilApita       -> vilapita       | vi-˚lApita  mfn. = next, BhP., Sch.
+vilambanA      -> vilambana      | vi-˚lambanA  f. slowness, delay, procrastination, MBh.; Kāv. &c.
+vilodita       -> viloqita       | vi-˚lodita  n. = takra or daDi, L.
+vizU           -> vizu           | vizU  = 1. vizu above. || vi-zU √  (2. sU; only impf. Ā. vyasUyata), to bring forth (a child), Bālar.
+wuRwukA        -> wuRwuka        | wuRwukA  f. = waNginI, L.
+wvAla          -> wvala          | wvAla  g. jvalAdi.
+yAjYadatta     -> yajYadatta     | yAjYa—datta  mfn. (fr. yajYa-datta), Pāṇ. i, 1, 73, Vārtt. 5, Pat.
+yaTa           -> yaTA           | yaTa  for yaTA before f and r = f.
+yahvA          -> yahva          | yahvA  f. understanding, intelligence (= budDi), L.
+yamakowI       -> yamakowi       | {{Lbody=170405}}
+zaqgranTI      -> zaqgranTi      | zaq—granTI  f. = vacA, L.
