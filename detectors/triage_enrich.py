@@ -240,7 +240,7 @@ def main():
     from collections import Counter
     prov = Counter(r['provisional'] for r in rows)
     cls = Counter(r['confusion_class'] for r in rows)
-    print("MW tier-A candidates enriched: %d" % len(rows))
+    print("%s tier-A candidates enriched: %d" % (dict_code, len(rows)))
     print("wrote %s" % os.path.relpath(out_path, ROOT))
     print("split into %d batch files of %d in %s" % (nbatch, BATCH, os.path.relpath(work, ROOT)))
     print("\nprovisional buckets (deterministic prior):")

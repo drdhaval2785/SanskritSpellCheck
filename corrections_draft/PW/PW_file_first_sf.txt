@@ -1,0 +1,6 @@
+; PW body-confirmed fileable typos -- CORRECTIONS standard format (DICT:wrong:right:n)
+; 2 candidates: classified TYPO from MW's entry body AND source-confirmed.
+; VERIFY each on the scan, flip trailing n->y for confirmed ones, then:
+;   python chg_nchg_sep.py PW_file_first_sf.txt chg.txt nchg.txt
+PW:hemana:hEmana:n
+PW:Bagama:BagaRa:n

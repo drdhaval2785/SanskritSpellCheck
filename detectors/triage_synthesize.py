@@ -33,31 +33,13 @@ import glob
 sys.stdout.reconfigure(encoding='utf-8')
 sys.stderr.reconfigure(encoding='utf-8')
 
+import triage_lang
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 SCAN = ("http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/"
         "servepdf.php?dict=%s&key=%s")
 _CONF = {'high': 3, 'medium': 2, 'low': 1}
-
-# sub-type the documented-intentional spellings for the wrong-readings list
-_WRT = re.compile(r'\bw\.\s?r\.|wrong reading|incorrect(?:ly)? for|wrongly', re.I)
-_VLT = re.compile(r'\bv\.\s?l\.|\bvar\.|various reading', re.I)
-_INC = re.compile(r'in comp\.|before \S+ for|\bsandhi\b', re.I)
-_XRF = re.compile(r'\bSee\b|\bcf\.|q\.v\.|=\s*[˚\-<]', re.I)
-
-
-def intentional_subtype(body):
-    """Classify a documented-intentional spelling for the wrong-readings list."""
-    b = body or ''
-    if _WRT.search(b):
-        return 'wrong-reading'        # MW's own "w.r." apparatus
-    if _VLT.search(b):
-        return 'varia-lectio'         # v.l. / variant reading
-    if _INC.search(b):
-        return 'in-composition'       # sandhi / compounding form
-    if _XRF.search(b):
-        return 'cross-reference'      # See / cf. / = X q.v.
-    return 'other-intentional'        # Vedic/metrical/grammatical note
 
 
 def load_dir(pattern):
@@ -181,7 +163,7 @@ def main():
     from collections import defaultdict
     groups = defaultdict(list)
     for e in buckets['INTENTIONAL']:
-        groups[intentional_subtype(e['body_text'])].append(e)
+        groups[triage_lang.subtype(e['body_text'], dict_code)].append(e)
     wr = os.path.join(pkg, '%s_wrong_readings.txt' % dict_code)
     order_sub = ['wrong-reading', 'varia-lectio', 'in-composition', 'cross-reference', 'other-intentional']
     with open(wr, 'w', encoding='utf-8') as f:

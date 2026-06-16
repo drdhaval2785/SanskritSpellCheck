@@ -27,6 +27,8 @@ import glob
 sys.stdout.reconfigure(encoding='utf-8')
 sys.stderr.reconfigure(encoding='utf-8')
 
+import triage_lang
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 GITHUB = os.path.dirname(ROOT)
@@ -103,6 +105,11 @@ def classify(bodies):
 
 def main():
     dict_code = sys.argv[1] if len(sys.argv) > 1 else 'MW'
+    # select the documented-intentional markers for this dictionary's body language
+    global _WR, _VARIANT, _XREF
+    _WR, _VARIANT, _XREF = (triage_lang.wr_re(dict_code), triage_lang.variant_re(dict_code),
+                            triage_lang.xref_re(dict_code))
+    print("body language: %s (%s markers)" % (triage_lang.lang_name(dict_code), triage_lang.lang(dict_code)))
     pkg = os.path.join(ROOT, 'corrections_draft', dict_code)
     ev_path = os.path.join(pkg, '%s_evidence.jsonl' % dict_code)
     mw_path = os.path.join(GITHUB, 'csl-orig', 'v02', dict_code.lower(),
@@ -124,7 +131,19 @@ def main():
             f.write(json.dumps(r, ensure_ascii=False) + '\n')
     print("augmented %s with body_kind/body_count/body_text" % os.path.relpath(ev_path, ROOT))
 
-    # report against the LLM FILE labels
+    # body_kind distribution (drives the triage)
+    from collections import Counter
+    by = {r['suspect']: r for r in rows}
+    c = Counter(r['body_kind'] for r in rows)
+    print("\nbody_kind across all %d tier-A:" % len(rows))
+    for k, n in c.most_common():
+        print("  %-12s %4d" % (k, n))
+    print("  -> need body-aware judgment (realword/thin/multi): %d"
+          % sum(c[k] for k in ('realword', 'thin', 'multi-mixed')))
+    print("  -> settled intentional (wr/variant/xref): %d ; unlocatable (missing): %d"
+          % (sum(c[k] for k in ('wr', 'variant', 'xref')), c['missing']))
+
+    # optional cross-check vs a first-pass FILE-labeled set, if one exists (MW only)
     adj = {}
     for p in sorted(glob.glob(os.path.join(pkg, 'triage_work', 'adj_*.json'))):
         try:
@@ -135,38 +154,21 @@ def main():
                 adj[v['suspect']] = v
         except Exception:
             pass
-    ver = {}
-    for p in sorted(glob.glob(os.path.join(pkg, 'triage_work', 'verify_*.json'))):
-        try:
-            t = open(p, encoding='utf-8').read().strip()
-            if t.startswith('```'):
-                t = t.split('```')[1].lstrip('json').strip()
-            for v in json.loads(t):
-                ver[v['suspect']] = v
-        except Exception:
-            pass
-
-    by = {r['suspect']: r for r in rows}
-    from collections import Counter
-    file_labeled = [s for s, v in adj.items() if v['label'] == 'FILE']
-    confirmed = [s for s in file_labeled if ver.get(s, {}).get('real_typo')]
-    print("\nbody_kind of the %d FILE-labeled candidates:" % len(file_labeled))
-    for k, n in Counter(by[s]['body_kind'] for s in file_labeled).most_common():
-        print("  %-12s %4d" % (k, n))
-    print("\nbody_kind of the %d adversarially-CONFIRMED (current FILE-FIRST):" % len(confirmed))
-    for k, n in Counter(by[s]['body_kind'] for s in confirmed).most_common():
-        print("  %-12s %4d" % (k, n))
-    bad = [s for s in confirmed if by[s]['body_kind'] not in ('thin', 'missing')]
-    keep = [s for s in confirmed if by[s]['body_kind'] in ('thin', 'missing')]
-    print("\n%d 'confirmed' typos whose MW body shows a real/intentional entry (FALSE POSITIVES)"
-          % len(bad))
-    print("%d 'confirmed' typos with a thin/missing body (genuine file-candidates):" % len(keep))
-    for s in keep:
-        print("  %-12s -> %-12s [%s] %s" % (s, by[s]['suggestion'], by[s]['body_kind'],
-                                            by[s]['body_text'][:70]))
-    print("\nbody-grounded FILE-CANDIDATES across ALL %d tier-A (thin/missing body):" % len(rows))
-    fc = [r for r in rows if r['body_kind'] in ('thin', 'missing')]
-    print("  %d candidates have a thin/missing MW body" % len(fc))
+    if adj:
+        ver = {}
+        for p in sorted(glob.glob(os.path.join(pkg, 'triage_work', 'verify_*.json'))):
+            try:
+                t = open(p, encoding='utf-8').read().strip()
+                if t.startswith('```'):
+                    t = t.split('```')[1].lstrip('json').strip()
+                for v in json.loads(t):
+                    ver[v['suspect']] = v
+            except Exception:
+                pass
+        confirmed = [s for s, v in adj.items() if v['label'] == 'FILE' and ver.get(s, {}).get('real_typo')]
+        bad = [s for s in confirmed if by[s]['body_kind'] not in ('thin', 'missing')]
+        print("\n(first-pass cross-check) %d FILE-confirmed -> %d have a real/intentional %s body "
+              "(false positives the body catches)" % (len(confirmed), len(bad), dict_code))
 
 
 if __name__ == '__main__':

@@ -6,6 +6,31 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.10.0] - 2026-06-16
+
+### Added
+- **Multilingual body-grounded triage + applied to PW.** The triage now handles
+  dictionaries whose entry bodies are not English:
+  - `triage_lang.py` — per-dictionary language profiles (MW=English, PW/PWG=German,
+    VCP=Sanskrit) for the documented-intentional markers (wrong-reading / varia-lectio /
+    in-composition / cross-reference). `triage_bodies.py` + `triage_synthesize.py` select
+    markers by dict; the body-aware workflow uses a language-specific rubric.
+  - `make_dict_package.py <DICT>` — one command to build any dict's tier-A package from
+    `combined_candidates.txt` (extract tier-A rows + `make_changefiles` draft).
+- **PW** ([corrections_draft/PW/](corrections_draft/PW)): the full pipeline run on the
+  Sanskrit–German Petersburger Wörterbuch (Böhtlingk–Roth). German markers
+  (`fehlerhaft für`, `v.l.`, `Lesart`, `s. u.`, `vgl.`) drive the classification.
+
+### Notes
+- **PW FINDING: of 657 tier-A candidates, only 2 (0.3%) are body-confirmed fileable typos**
+  (`Bagama→BagaRa` "der Umlauf der Gestirne" = *bhagaṇa*; `hemana→hEmana` "Adj. von heman").
+  369 are real words; **255 are documented-intentional** — notably **95 explicit
+  `fehlerhaft für` wrong-readings** (PW's apparatus is denser/more explicit than MW's
+  45); 1 stale; 30 need eyes. Bulk-applying tier-A would delete 95 of Böhtlingk–Roth's
+  own wrong-reading cross-references.
+- The per-dict `<DICT>_wrong_readings.txt` do-not-file list (a user convention) is now
+  produced for every dictionary triaged, grouped by sub-type in the body's language.
+
 ## [1.9.0] - 2026-06-15
 
 ### Added
