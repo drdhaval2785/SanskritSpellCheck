@@ -1,0 +1,29 @@
+# SNP tier-A -- BODY-GROUNDED triage  (DRAFT; verify every kept case against the scan)
+#
+# The 4 engine tier-A candidates were judged against MW's OWN entry text (csl-orig),
+# not spelling alone. A spelling detector cannot tell a typo from a real word, an
+# intentional variant / compounding form, or wrong-reading apparatus -- the entry can.
+# Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM
+# pass over the 'realword' set + source confirmation of every TYPO verdict.
+#
+# FINDING: of 4 tier-A candidates, 0 are body-confirmed fileable typos (0.0%).
+# 1 are real distinct words, 3 are spellings MW documents on purpose (w.r./v.l./
+# in-comp./cross-ref -- filing them would CORRUPT MW), 0 are not in the current
+# source, and 0 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
+# do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.
+
+# ===== BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file) (0) =====
+
+# ===== BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted (0) =====
+
+# ===== BUCKET 3  REVIEW -- undecidable without the printed page (0) =====
+
+# ===== BUCKET 4  REAL-WORD -- a distinct real word; the fix would merge two words (1) =====
+nAgaramusta   -> nAgaramustA   | SNP: {%nāgaramusta%} CYPERUS SCARIOSUS R. BR. (Bpn, p. 243-244; Chopra; Dutt; DWH 3, p. 554-555 | Body defines nāgaramusta directly (Cyperus scariosus) with no 'w.r. for' marker; short-a f
+
+# ===== BUCKET 5  INTENTIONAL -- MW documents the spelling on purpose; NEVER file (3) =====
+marubaka      -> maruvaka      | SNP: {%marubaka = maruva (ka)%} (1) MAJORANA HORTENSIS MOENCH. [Intern. Code] (Chopra: {%maru%} | Body opens '{%marubaka = maruva(ka)%}' — explicit cross-ref equating suspect to suggestion
+kumBAkArI     -> kumBakArI     | SNP: kumbhākārī Yc., p. 168: kumbhakārī (Hindī comm.: bhāṣā meṃ puraïna). | Body head is 'kumbhākārī Yc., p. 168: kumbhakārī' — suspect is attested form in Yc. source
+pArISa        -> pArIza        | SNP: {%pārī̆śa, pārīṣa%} (1) THESPESIA POPULNEA (LINN.) SOLAND. EX CORREA [Intern. Code] (Bpn,  | Body header lists '{%pārī̆śa, pārīṣa%}' — both palatal-ś (pArISa) and retroflex-ṣ (pArIza)
+
+# ===== BUCKET 6  UNLOCATABLE -- not in the current MW source (stale/different key) (0) =====

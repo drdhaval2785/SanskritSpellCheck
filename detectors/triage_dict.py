@@ -55,7 +55,7 @@ def main():
     payload = {'scriptPath': wf,
                'args': {'dict': dict_code, 'dir': work, 'src': src,
                         'hint': triage_lang.marker_hint(dict_code),
-                        'clsModel': 'sonnet', 'confModel': 'opus'}}
+                        'clsModel': 'sonnet', 'confModel': 'opus', 'revModel': 'opus'}}
     print("\n" + "=" * 70)
     print("NEXT: launch the body-aware workflow (%s body) with:" % triage_lang.lang_name(dict_code))
     print(json.dumps(payload, ensure_ascii=False, indent=2))

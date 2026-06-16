@@ -7,7 +7,8 @@ tier-A spelling candidates can be turned into a verified **FILE-FIRST** queue + 
 run it with the **[`/dict-triage <DICT>`](../.claude/commands/dict-triage.md)** skill
 (Sonnet classifies, Opus source-confirms, a human verifies).
 
-**4 of 33 triaged so far** (MW · PW · VCP · PWG). Headline finding: tier-A precision is
+**5 of 33 triaged** (MW · PW · VCP · PWG, plus SNP as the Review-phase validation dict).
+Headline finding: tier-A precision is
 **near-zero** on these mature dictionaries — the durable deliverable is the do-not-file list
 and *preventing bad bulk edits*, not the handful of real typos.
 
@@ -58,7 +59,7 @@ text the triage reads); **PD has no csl-orig source, so it cannot be body-triage
 | [CCS](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/ccs) — Cappeller, Sanskrit-English | 35 | — pending |
 | [MCI](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/mci) | 24 | — pending |
 | [PGN](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/pgn) | 10 | — pending |
-| [SNP](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/snp) | 4 | — pending |
+| [SNP](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/snp) | 4 | ✅ **0 fileable · 3 do-not-file** (Review-phase validation dict) — [readme](SNP/readme.md) · [do-not-file](SNP/SNP_wrong_readings.txt) · [queue](SNP/SNP_triaged.txt) |
 
 > Names are given where well-established (per the CDSL catalogue); uncertain ones show the
 > code only. ~10 further csl-orig dictionaries (abch, acph, acsj, ae, armh, bor, lan, lrv,
@@ -77,7 +78,7 @@ python triage_dict.py <DICT> --finish            # synthesize the package
 Or just run the **[`/dict-triage <DICT>`](../.claude/commands/dict-triage.md)** skill, which
 drives the whole sequence (incl. the source-verification rubric and the do-not-file list).
 
-### Ready to run — the 28 pending dictionaries (highest tier-A first)
+### Ready to run — the 27 pending dictionaries (highest tier-A first)
 
 Type any line into Claude Code (a slash-command is run by typing, not by clicking):
 
@@ -109,9 +110,8 @@ Type any line into Claude Code (a slash-command is run by typing, not by clickin
 /dict-triage CCS
 /dict-triage MCI
 /dict-triage PGN
-/dict-triage SNP
 ```
 
-That accounts for all 33: **already triaged** (4, re-runs are stochastic — don't blindly
-overwrite): `MW` `PW` `VCP` `PWG`; **no csl-orig source** (1, not body-triageable here): `PD`.
+That accounts for all 33: **already triaged** (5, re-runs are stochastic — don't blindly
+overwrite): `MW` `PW` `VCP` `PWG` `SNP`; **no csl-orig source** (1, not body-triageable here): `PD`.
 

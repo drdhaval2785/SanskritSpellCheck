@@ -6,8 +6,8 @@ This package triages them against PWG's *own German entry text* (from
 [csl-orig](https://github.com/sanskrit-lexicon/csl-orig)).
 
 Run with a **hybrid model split**: Sonnet 4.6 classified the 306 `realword` candidates,
-Opus 4.8 source-confirmed the TYPO pile, and a human (this pass) verified every confirmed
-candidate against the PWG entry.
+Opus 4.8 source-confirmed the TYPO pile, and an **Opus Review phase** ran the adversarial
+false-positive gate (reviewing out the 2 below); a human spot-checks before filing.
 
 ## The finding
 

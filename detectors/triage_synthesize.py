@@ -55,12 +55,13 @@ def main():
             ev[r['suspect']] = r
     bcls = triage_util.load_verdicts(work, 'body_adj_*.json')
     bconf = triage_util.load_verdicts(work, 'body_conf_*.json')
+    brev = triage_util.load_verdicts(work, 'body_review_*.json')  # Opus false-positive gate
 
     buckets = {k: [] for k in ('FILE', 'TYPO_UNSURE', 'REVIEW', 'REALWORD', 'INTENTIONAL', 'UNLOCATABLE')}
     for s, e in ev.items():
         bk = e['body_kind']
         c = bcls.get(s)
-        e = dict(e, _cls=c, _conf=bconf.get(s))
+        e = dict(e, _cls=c, _conf=bconf.get(s), _rev=brev.get(s))
         if bk == 'missing':
             buckets['UNLOCATABLE'].append(e)
         elif bk in ('wr', 'variant', 'xref'):
@@ -68,8 +69,10 @@ def main():
         elif c is None:
             buckets['REVIEW'].append(e)          # realword set but no body verdict -> eyes
         elif c['label'] == 'TYPO':
-            cf = bconf.get(s)
-            buckets['FILE' if (cf and cf.get('is_typo')) else 'TYPO_UNSURE'].append(e)
+            cf, rv = e['_conf'], e['_rev']
+            # FILE only if source-confirmed AND it survives the Opus false-positive review
+            survives = (cf and cf.get('is_typo')) and (rv is None or rv.get('fileable'))
+            buckets['FILE' if survives else 'TYPO_UNSURE'].append(e)
         elif c['label'] == 'REALWORD':
             buckets['REALWORD'].append(e)
         elif c['label'] == 'INTENTIONAL':
@@ -131,12 +134,19 @@ def main():
 
     sf = os.path.join(pkg, '%s_file_first_sf.txt' % dict_code)
     with open(sf, 'w', encoding='utf-8') as f:
+        revout = [e for e in buckets['TYPO_UNSURE'] if e.get('_rev') and not e['_rev'].get('fileable')]
         f.write("; %s body-confirmed fileable typos -- CORRECTIONS standard format (DICT:wrong:right:n)\n" % dict_code)
-        f.write("; %d candidates: classified TYPO from the %s entry body AND source-confirmed.\n" % (len(buckets['FILE']), dict_code))
-        f.write("; VERIFY each on the scan, flip trailing n->y for confirmed ones, then:\n")
+        f.write("; %d fileable (classified TYPO + source-confirmed + survived the Opus false-positive review)" % len(buckets['FILE']))
+        f.write((" + %d reviewed-out (commented below)\n" % len(revout)) if revout else "\n")
+        f.write("; VERIFY each remaining case on the scan, flip trailing n->y for confirmed ones, then:\n")
         f.write(";   python chg_nchg_sep.py %s_file_first_sf.txt chg.txt nchg.txt\n" % dict_code)
         for e in buckets['FILE']:
             f.write("%s:%s:%s:n\n" % (dict_code, e['suspect'], e['suggestion']))
+        for e in revout:   # auto-curated: the Opus review judged these intentional, not typos
+            r = e['_rev']
+            f.write("; REVIEWED-OUT (%s): %s\n;%s:%s:%s:n\n"
+                    % (r.get('false_positive_type', '?'), (r.get('reason', '') or '')[:120],
+                       dict_code, e['suspect'], e['suggestion']))
 
     # ---- the standing wrong-readings / do-not-file list -----------------
     # Every documented-intentional spelling MW carries on purpose: filing a

@@ -1,17 +1,11 @@
 ; PWG body-confirmed fileable typos -- CORRECTIONS standard format (DICT:wrong:right:n)
-; 12 fileable + 2 reviewed-out (commented below): classified TYPO from the PWG entry body,
-; source-confirmed, then human-reviewed against the PWG entries. The 2 commented lines are
-; intentional vrddhi/variant forms (do NOT file) -- see PWG/readme.md.
+; 12 fileable (classified TYPO + source-confirmed + survived the Opus false-positive review) + 2 reviewed-out (commented below)
 ; VERIFY each remaining case on the scan, flip trailing n->y for confirmed ones, then:
 ;   python chg_nchg_sep.py PWG_file_first_sf.txt chg.txt nchg.txt
 PWG:avakaSa:avakASa:n
 PWG:tarAvalI:tArAvalI:n
 PWG:dIvAkIrtya:divAkIrtya:n
-; REVIEWED-OUT (attested variant -- PWG records both ketunAlin and ketumAli in HARIV. verses):
-;PWG:ketunAlin:ketumAlin:n
 PWG:yajYamus:yajYamuz:n
-; REVIEWED-OUT (vrddhi derivative -- entry reads "wohl dASaSirasa von daSaSiras"):
-;PWG:dASaSiras:daSaSiras:n
 PWG:tfzitottara:tfzitottarA:n
 PWG:paRavanDa:paRabanDa:n
 PWG:BAvavanDana:BAvabanDana:n
@@ -20,3 +14,7 @@ PWG:duzwu:duzWu:n
 PWG:arTavanDa:arTabanDa:n
 PWG:pfzwavanDu:pfzwabanDu:n
 PWG:biBedayisu:biBedayizu:n
+; REVIEWED-OUT (variant): N.pr. of a Danava; entry cites 'Auch ketumAli' as an attested variant in different HARIV verses; both spellings attested
+;PWG:ketunAlin:ketumAlin:n
+; REVIEWED-OUT (vrddhi): Entry: '(wohl dASaSirasa von daSaSiras)' -- dASaSiras is an intentional vrddhi derivative of daSaSiras, must not be 'cor
+;PWG:dASaSiras:daSaSiras:n

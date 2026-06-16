@@ -1,0 +1,21 @@
+; DRAFT corrections for SNP — SanskritSpellCheck; VERIFY each against the scan before filing.
+; updateByLine format; only the <k1>/<k2> key field is edited (check the entry body too).
+; NOTE: each case targets the FIRST entry with that headword -- check for homographs
+;       (multiple entries sharing a key) and that no two cases edit the same line.
+;
+; Case 1.  marubaka -> maruvaka   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SNP&key=marubaka
+3163 old <L>198<pc>588<k1>marubaka<k2>marubaka
+3163 new <L>198<pc>588<k1>maruvaka<k2>maruvaka
+;
+; Case 2.  kumBAkArI -> kumBakArI   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SNP&key=kumBAkArI
+4644 old <L>303<pc>434<k1>kumBAkArI<k2>kumBAkArI
+4644 new <L>303<pc>434<k1>kumBakArI<k2>kumBakArI
+;
+; Case 3.  nAgaramusta -> nAgaramustA   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SNP&key=nAgaramusta
+2188 old <L>141<pc>567<k1>nAgaramusta<k2>nAgaramusta
+2188 new <L>141<pc>567<k1>nAgaramustA<k2>nAgaramustA
+;
+; Case 4.  pArISa -> pArIza   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SNP&key=pArISa
+2500 old <L>160<pc>574<k1>pArISa<k2>pArISa
+2500 new <L>160<pc>574<k1>pArIza<k2>pArIza
+;

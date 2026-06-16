@@ -1,0 +1,13 @@
+# SNP -- DOCUMENTED-INTENTIONAL spellings (NOT typos -- do NOT file corrections)
+#
+# 3 headwords that LOOK like misspellings but which SNP records on purpose:
+# wrong-reading apparatus (w.r.), variae lectiones (v.l.), in-composition /
+# sandhi forms (in comp. for...), cross-references (See / = X q.v.), and other
+# grammatical/Vedic notes. Filing a 'correction' for any of these CORRUPTS SNP.
+# Use this as a suppression list: such headwords should not be re-flagged.
+# Format per row:  headword -> would-be 'correction'  |  the SNP entry text
+
+# ===== OTHER-INTENTIONAL (3) =====
+kumBAkArI      -> kumBakArI      | kumbhākārī Yc., p. 168: kumbhakārī (Hindī comm.: bhāṣā meṃ puraïna).
+marubaka       -> maruvaka       | {%marubaka = maruva (ka)%} (1) MAJORANA HORTENSIS MOENCH. [Intern. Code] (Chopra: {%maru%}) = ORIGANUM MAJORANA LINN. (Avk; Bpn, p. 510; Chopra; Dgv, nr. 251; D
+pArISa         -> pArIza         | {%pārī̆śa, pārīṣa%} (1) THESPESIA POPULNEA (LINN.) SOLAND. EX CORREA [Intern. Code] (Bpn, p. 514-515; Chopra; Dutt; KB 1, p. 340-343; MW; Na 1, nr. 61; Nadk. 1,

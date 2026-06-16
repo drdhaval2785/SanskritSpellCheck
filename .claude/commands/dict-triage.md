@@ -36,9 +36,11 @@ the **do-not-file list** and *preventing bad bulk edits*, not the handful of rea
 
 2. **Launch the body-aware workflow** with the printed args **verbatim** — call the **Workflow**
    tool with `scriptPath` = `detectors/bodyaware_workflow.js` and `args` = the printed object.
-   It self-discovers its batches, **classifies on Sonnet**, **source-confirms the TYPO pile on
-   Opus**, and writes `body_adj_*.json` / `body_conf_*.json` into `corrections_draft/$ARGUMENTS/triage_work/`.
-   (Models are pinned per-phase in the script — no manual model toggling.) Wait for completion.
+   Four phases, models pinned per-phase (no manual toggling): self-discover batches →
+   **classify on Sonnet** → **source-confirm the TYPO pile on Opus** → **review the confirmed pile
+   on Opus** (an adversarial false-positive gate — `revModel=opus`, regardless of your session
+   model). It writes `body_adj_*.json` / `body_conf_*.json` / `body_review_*.json` into
+   `corrections_draft/$ARGUMENTS/triage_work/`. Wait for completion.
 
 3. **Synthesize** the package:
    ```sh
@@ -46,23 +48,22 @@ the **do-not-file list** and *preventing bad bulk edits*, not the handful of rea
    ```
    → `$ARGUMENTS_triaged.txt`, `$ARGUMENTS_file_first_sf.txt`, `$ARGUMENTS_wrong_readings.txt`.
 
-4. **HUMAN-VERIFY every FILE-FIRST candidate against the source** — the irreducible step.
-   For each `suspect → suggestion`, grep `<k1>SUSPECT<` in `csl-orig/v02/<dict>/<dict>.txt` and
-   read the entry body. Then:
-   - **KEEP** if the entry's *own* derivation / citation / gloss confirms the suggestion. The
-     strongest signal is internal contradiction — e.g. headword `arTavanDa` but the entry quotes
-     `lalitArTabanDaM` (b), or the derivation reads `(paRa + ba°)`, or the citation uses the
-     long-vowel form. **b/v (व/ब)** and **vowel-length** are the highest-yield, scan-confirmable
-     classes.
-   - **DROP** (comment the line out in the `_file_first_sf.txt` with a one-line reason) if it is
-     an intentional form the engine misfired on:
-     - **wrong-reading apparatus** — MW `w.r. for X`; PW/PWG `fehlerhaft für X` / `Richtig {#X#}` / `v.l.`; VCP `aSudDa`.
-     - **redirect / cross-reference** — VCP `{{Lbody=N}}`; `See`/`s.`/`vgl.`/`= X q.v.`
-     - **vṛddhi derivative** — `Vṛddhi form of Y` / `(wohl …-a von Y)`.
-     - **attested variant** — the entry lists both forms (e.g. PWG `ketunAlin` + `ketumAli`).
-     - **a real distinct word** — it has its own gloss/root entry (e.g. VCP `garba` = √garb, not `garBa`).
-   - If apparatus is **leaking into FILE-FIRST**, the deterministic marker is missing — add it to
-     `triage_lang.py` (and a `test_triage.py` case), then re-run `triage_bodies` + `--finish`.
+4. **Spot-check, then scan-confirm.** The Opus **Review** phase already ran the false-positive
+   gate on every confirmed candidate, and `--finish` auto-comments the rejected ones in
+   `$ARGUMENTS_file_first_sf.txt` (`; REVIEWED-OUT (vrddhi|variant|apparatus|redirect|realword): …`),
+   so FILE-FIRST is pre-curated. Your job:
+   - **Spot-check** a sample of the FILE-FIRST survivors *and* the reviewed-out lines by grepping
+     `<k1>SUSPECT<` in `csl-orig/v02/<dict>/<dict>.txt`. The keep/drop rubric the review applied:
+     **KEEP** only when the entry's *own* derivation/citation confirms the suggestion (e.g.
+     `arTavanDa` quoted as `lalitArTabanDaM`; derivation `(paRa + ba°)`; **b/v (व/ब)** and
+     **vowel-length** are the highest-yield classes). **DROP** for wrong-reading
+     (`w.r.`/`fehlerhaft für`/`Richtig`/`v.l.`/`aSudDa`), redirect (`{{Lbody}}`/`See`/`s.`/`= X`),
+     **vṛddhi** (`X von Y` / `Vṛddhi form of Y`), **attested variant** (both forms cited), or a
+     **real distinct word**. If you disagree with a review verdict, flip the line by hand.
+   - If apparatus is **systematically leaking into FILE-FIRST**, a deterministic marker is missing
+     — add it to `triage_lang.py` (+ a `test_triage.py` case), then re-run `triage_bodies` + `--finish`.
+   - **The scan is the final arbiter** — before filing, open the servepdf scan for each kept case
+     (b/v: check व vs ब on the page). This step is irreducible.
 
 5. **Write `corrections_draft/$ARGUMENTS/readme.md`** (model it on `corrections_draft/PW/readme.md`
    or `PWG/readme.md`): the finding (N fileable / tier-A), a FILE-FIRST table with **each

@@ -6,6 +6,26 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.15.0] - 2026-06-16
+
+### Added
+- **Opus-pinned Review phase** — a 4th phase in `bodyaware_workflow.js` (after Confirm): an
+  adversarial false-positive gate that re-reads each *confirmed* TYPO from the source and drops
+  intentional forms (vṛddhi derivatives, attested variants, wrong-reading/correction apparatus,
+  redirects, real distinct words). Pinned to `revModel` (default **opus**) **regardless of the
+  session model**, so the highest-judgment step no longer depends on what the operator's session
+  is running. `triage_synthesize.py` consumes `body_review_*.json` (review-rejected candidates
+  are excluded from FILE-FIRST and **auto-commented** into the `_file_first_sf.txt` as
+  `; REVIEWED-OUT (vrddhi|variant|apparatus|redirect|realword): …`), automating the per-dict
+  human false-positive review. Driver emits `revModel=opus`; skill step 4 is now a spot-check.
+
+### Notes
+- **Validated** by resuming the PWG run (classify+confirm served from cache) over its 14 confirmed
+  typos: the automated Opus Review **reproduced the manual curation exactly** — kept the same 12,
+  reviewed out the same 2 (`dASaSiras` vṛddhi `(wohl dASaSirasa von daSaSiras)`, `ketunAlin`
+  variant `Auch ketumAli`). PWG regenerated via the automated review.
+- **SNP** triaged as the validation dictionary (4 tier-A, 0 fileable) — 5 of 33 dicts now done.
+
 ## [1.14.0] - 2026-06-16
 
 ### Added

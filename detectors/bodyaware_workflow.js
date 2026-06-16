@@ -12,6 +12,7 @@ export const meta = {
     { title: 'Discover', detail: 'list the body_batch files on disk' },
     { title: 'Classify', detail: 'judge each candidate from the dictionary entry body' },
     { title: 'Confirm', detail: 'read the full source entry to confirm each TYPO verdict' },
+    { title: 'Review', detail: 'Opus-pinned false-positive gate over the confirmed pile' },
   ],
 }
 
@@ -123,6 +124,61 @@ Then return the same verdicts as structured output.`,
 const allConf = confResults.filter(Boolean).flatMap((r) => r.verdicts)
 const confirmed = allConf.filter((v) => v.is_typo)
 
+// --- Review: an Opus-pinned (regardless of session model) adversarial false-positive gate
+// over the confirmed pile. Catches intentional forms the Confirm pass let through -- vrddhi
+// derivatives, attested variants, correction/wrong-reading apparatus, redirects, real words.
+const REV_MODEL = A.revModel || 'opus'
+const REVIEW_SCHEMA = {
+  type: 'object', additionalProperties: false, required: ['verdicts'],
+  properties: { verdicts: { type: 'array', items: {
+    type: 'object', additionalProperties: false,
+    required: ['suspect', 'fileable', 'false_positive_type', 'reason'],
+    properties: {
+      suspect: { type: 'string' }, fileable: { type: 'boolean' },
+      false_positive_type: { type: 'string', enum: ['none', 'vrddhi', 'variant', 'apparatus', 'redirect', 'realword', 'other'] },
+      reason: { type: 'string' },
+    } } } } }
+const sugg = {}
+for (const v of typoPile) sugg[v.suspect] = v.suggestion
+let reviewed = confirmed
+if (confirmed.length) {
+  phase('Review')
+  const rb = []
+  for (let i = 0; i < confirmed.length; i += VB) rb.push(confirmed.slice(i, i + VB))
+  const revResults = await parallel(rb.map((items, j) => () => {
+    const list = items.map((v) => `${v.suspect} -> ${sugg[v.suspect] || '?'}`).join('\n')
+    return agent(
+      `Each line is a candidate that two prior passes judged a fileable TYPO in ${DICT} (suspect -> suggested correction). You are the FINAL gate: re-read each entry from the source and TRY TO REFUTE it -- find any reason \`suspect\` is an INTENTIONAL form that must NOT be "corrected".
+
+Find each entry: use the Grep tool, pattern "<k1>SUSPECT<" on the file
+  ${SRC}
+(output_mode "content", -n true), then Read the entry body. ${HINT}
+
+Set fileable=false (and classify false_positive_type) if ANY holds:
+- vrddhi: the entry derives it from a base -- "Vrddhi form of Y" / "X von Y" / "(wohl ...-a von Y)".
+- variant: the entry lists BOTH spellings as attested (e.g. "Auch X", both cited in different verses).
+- apparatus: a wrong-reading/correction note -- w.r. / fehlerhaft / Richtig / v.l. / lies / verbessere / aSudDa.
+- redirect: {{Lbody=N}} / "See X" / "s. X" / "= X".
+- realword: the entry is a genuine definition of \`suspect\` as its own distinct word or verbal root.
+Set fileable=true ONLY for a clean digitization typo whose own derivation/citation supports the suggestion and shows none of the above. DEFAULT false when uncertain -- this gate protects the dictionary.
+${SLP1}
+
+Candidates:
+${list}
+
+Write a JSON array (and nothing else) to:
+  ${DIR}/body_review_${String(j).padStart(3, '0')}.json
+each {"suspect":"..","fileable":true|false,"false_positive_type":"none|vrddhi|variant|apparatus|redirect|realword|other","reason":"<=150 chars citing the entry"}
+Then return the same verdicts as structured output.`,
+      { label: `review:${String(j).padStart(3, '0')}`, phase: 'Review', schema: REVIEW_SCHEMA, model: REV_MODEL }
+    )
+  }))
+  const rev = {}
+  for (const v of revResults.filter(Boolean).flatMap((r) => r.verdicts)) rev[v.suspect] = v
+  reviewed = confirmed.filter((v) => !rev[v.suspect] || rev[v.suspect].fileable)
+}
+const reviewedOut = confirmed.filter((v) => !reviewed.includes(v))
+
 return {
   dict: DICT,
   classified: allCls.length,
@@ -131,5 +187,8 @@ return {
   intentional: allCls.filter((v) => v.label === 'INTENTIONAL').length,
   unsure: allCls.filter((v) => v.label === 'UNSURE').length,
   confirmedTypos: confirmed.length,
-  confirmedSuspects: confirmed.map((v) => v.suspect),
+  fileFirst: reviewed.length,
+  fileFirstSuspects: reviewed.map((v) => v.suspect),
+  reviewedOut: reviewedOut.length,
+  reviewedOutSuspects: reviewedOut.map((v) => v.suspect),
 }

@@ -6,13 +6,13 @@
 # Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM
 # pass over the 'realword' set + source confirmation of every TYPO verdict.
 #
-# FINDING: of 497 tier-A candidates, 14 are body-confirmed fileable typos (2.8%).
+# FINDING: of 497 tier-A candidates, 12 are body-confirmed fileable typos (2.4%).
 # 196 are real distinct words, 248 are spellings MW documents on purpose (w.r./v.l./
 # in-comp./cross-ref -- filing them would CORRUPT MW), 2 are not in the current
-# source, and 37 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
+# source, and 39 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
 # do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.
 
-# ===== BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file) (14) =====
+# ===== BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file) (12) =====
 
 avakaSa       -> avakASa        [dcs=4 ndicts=1 body=realword]
     PWG: {#avakaSa#} {%das Herableuchten%}: {#nakzatrARAmavakASena puRqarIkaM jAyate#} PAÑCAV. BR. 18,9,6. — 2) {#(anayoH stanayoH) avakASo na paryAptastava bAhulatAntare#} {%kein Platz, kein Raum für%} Spr. 3
@@ -32,23 +32,11 @@ dIvAkIrtya    -> divAkIrtya     [dcs=2 ndicts=1 body=realword]
     confirm: Body decomposes ({#divA + kI˚#}) and all forms use divA (short i): divAkIrtyam, divAkIrtyEs. Headword dIvAkIrtya (long I) contradicts.
     scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=dIvAkIrtya
 
-ketunAlin     -> ketumAlin      [dcs=2 ndicts=1 body=realword]
-    PWG: {#ketunAlin#} (wie eben) m. N. pr. eines Dānava HARIV. 9291. 9322. Auch {#ketumAli#} 9313. 9327. 9329.
-    judged: Body cites 'ketumAli' (with m) as the attested form in HARIV; 'n' in the headword vs 'm' everywhere in the text indicates a typo.
-    confirm: N.pr. of a Danava; body says 'Auch {#ketumAli#}' (m) as attested HARIV form. Key ketunAlin (n) contradicts the m everywhere.
-    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=ketunAlin
-
 yajYamus      -> yajYamuz       [dcs=2 ndicts=1 body=realword]
     PWG: {#yajYamu/s#} ({#yajYa#} + 2. {#muz#}) adj. {%das Opfer raubend%}; m. {%ein dem Opfer nachstellender Dämon%} TS. 3,5,4,1. KĀṬH. 32,6. MBH. 3,14165. fg. VARĀH. BṚH. S. 19,13. — Vgl. {#izwimuz#} .
     judged: Body derives yajYamus from yajYa + 2. muz, glosses 'das Opfer raubend' — root muz in SLP1 is muz not mus; suspect 's' is a typo for 'z'.
     confirm: Body: '({#yajYa#} + 2. {#muz#})' from muz (z); cross-ref {#izwimuz#} ends in z. Final s is typo for z (retroflex).
     scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=yajYamus
-
-dASaSiras     -> daSaSiras      [dcs=1 ndicts=2 body=realword]
-    PWG: {#dASaSiras#} (wohl {#dASaSirasa#} von {#daSaSiras#}) n. N. eines Sāman ebend.
-    judged: Body explicitly derives 'dASaSiras' from '{#daSaSiras#}' (short a); long A in headword contradicts the stated etymon.
-    confirm: Body: '(wohl dASaSirasa von {#daSaSiras#})' — explicitly derives from daSaSiras (short a); long A in headword contradicts etymon.
-    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=dASaSiras
 
 tfzitottara   -> tfzitottarA    [dcs=0 ndicts=1 body=realword]
     PWG: {#tfzitottara#} ({#tfzita#} n. + {#uttara#} 4, {%e%}) f. N. einer Pflanze ({#aSanaparRI#}) ŚABDAC. im ŚKDR.
@@ -98,7 +86,19 @@ biBedayisu    -> biBedayizu     [dcs=0 ndicts=1 body=realword]
     confirm: (vom desid. des caus. von Bid) adj. 'zu entzweien beabsichtigend' (MBH.); gloss is the desiderative biBedayizu; dental -isu vs retroflex -izu, no variant documented = bare spelling error.
     scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=biBedayisu
 
-# ===== BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted (8) =====
+# ===== BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted (10) =====
+
+ketunAlin     -> ketumAlin      [dcs=2 ndicts=1 body=realword]
+    PWG: {#ketunAlin#} (wie eben) m. N. pr. eines Dānava HARIV. 9291. 9322. Auch {#ketumAli#} 9313. 9327. 9329.
+    judged: Body cites 'ketumAli' (with m) as the attested form in HARIV; 'n' in the headword vs 'm' everywhere in the text indicates a typo.
+    confirm: N.pr. of a Danava; body says 'Auch {#ketumAli#}' (m) as attested HARIV form. Key ketunAlin (n) contradicts the m everywhere.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=ketunAlin
+
+dASaSiras     -> daSaSiras      [dcs=1 ndicts=2 body=realword]
+    PWG: {#dASaSiras#} (wohl {#dASaSirasa#} von {#daSaSiras#}) n. N. eines Sāman ebend.
+    judged: Body explicitly derives 'dASaSiras' from '{#daSaSiras#}' (short a); long A in headword contradicts the stated etymon.
+    confirm: Body: '(wohl dASaSirasa von {#daSaSiras#})' — explicitly derives from daSaSiras (short a); long A in headword contradicts etymon.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=dASaSiras
 
 prozitaBartfka -> prozitaBartfkA  [dcs=0 ndicts=1 body=realword]
     PWG: {#prozitaBartfka#} (von {#pro˚ + Bartar#}) adj. f. {#A#} {%deren Gatte verreist ist%} PRATĀPAR. 5,b,1. {#deSAntaragate kAnte KinnA prozitaBartfkA#} 6,a,4. SĀH. D. 119. {#pramadAjana#} ṚT. 6,9.

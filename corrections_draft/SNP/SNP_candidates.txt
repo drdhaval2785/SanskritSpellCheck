@@ -1,0 +1,5 @@
+# SNP tier-A correction candidates (unified engine) — score	wrong -> right	detectors	morph
+347	marubaka -> maruvaka	[consensus,intra_dup,spell_correct]	morph✓
+244	kumBAkArI -> kumBakArI	[consensus,spell_correct]	morph✓
+244	nAgaramusta -> nAgaramustA	[consensus,spell_correct]	morph✓
+216	pArISa -> pArIza	[consensus,spell_correct]	morph✓
