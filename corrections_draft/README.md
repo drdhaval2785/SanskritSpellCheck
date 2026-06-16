@@ -76,3 +76,42 @@ python triage_dict.py <DICT> --finish            # synthesize the package
 
 Or just run the **[`/dict-triage <DICT>`](../.claude/commands/dict-triage.md)** skill, which
 drives the whole sequence (incl. the source-verification rubric and the do-not-file list).
+
+### Ready to run — the 28 pending dictionaries (highest tier-A first)
+
+Type any line into Claude Code (a slash-command is run by typing, not by clicking):
+
+```
+/dict-triage BHS
+/dict-triage SCH
+/dict-triage PUI
+/dict-triage SKD
+/dict-triage MW72
+/dict-triage YAT
+/dict-triage SHS
+/dict-triage ACC
+/dict-triage BUR
+/dict-triage IEG
+/dict-triage INM
+/dict-triage PE
+/dict-triage AP
+/dict-triage STC
+/dict-triage WIL
+/dict-triage CAE
+/dict-triage AP90
+/dict-triage MD
+/dict-triage GST
+/dict-triage KRM
+/dict-triage GRA
+/dict-triage BEN
+/dict-triage VEI
+/dict-triage BOP
+/dict-triage CCS
+/dict-triage MCI
+/dict-triage PGN
+/dict-triage SNP
+```
+
+That accounts for all 33: **already triaged** (4, re-runs are stochastic — don't blindly
+overwrite): `MW` `PW` `VCP` `PWG`; **no csl-orig source** (1, not body-triageable here): `PD`.
+
