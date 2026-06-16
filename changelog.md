@@ -6,6 +6,32 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.13.0] - 2026-06-16
+
+### Added
+- **PWG** ([corrections_draft/PWG/](corrections_draft/PWG)): the large Sanskrit–German
+  Petersburger Wörterbuch triaged via a **hybrid model split** — Sonnet 4.6 classified the
+  306 `realword` candidates, Opus 4.8 source-confirmed the TYPO pile, and a human reviewed
+  every confirmed candidate against the PWG entry.
+- `bodyaware_workflow.js` per-phase model pinning (`clsModel` / `confModel`, defaulting to
+  sonnet/opus via `triage_dict.py`) — the hybrid is set in the script, no manual model
+  toggling. Discover+Classify run on `clsModel`, Confirm on `confModel`.
+
+### Fixed
+- `triage_synthesize.py` file-first-sf header hardcoded `MW's` → now the actual dict code.
+
+### Notes
+- **PWG FINDING: 12 fileable typos of 497 tier-A** (14 body-confirmed; 2 reviewed out —
+  `dASaSiras` is a vṛddhi derivative `(wohl dASaSirasa von daSaSiras)`, `ketunAlin` is an
+  attested HARIV. variant of `ketumAli`). The genuine 12 are mostly **b/v (व/ब)** and
+  vowel-length errors, each confirmed by the **entry's own derivation/citation** (e.g.
+  `arTavanDa` is quoted as `lalitArTabanDaM`; `paRavanDa` has derivation `(paRa + ba°)`).
+  248 are documented-intentional (71 `fehlerhaft für`); 196 real words; 2 stale.
+- 4-dictionary fileable-typo counts: **MW 4 · PW 2 · VCP 1 · PWG 12** — PWG (the large
+  Petersburg) genuinely carries more digitization errors. The **hybrid tiering worked**:
+  Sonnet's bulk classification + Opus's source-confirm + human review caught the real typos
+  *and* the 2 vṛddhi/variant false positives, at ~40% lower model cost on the bulk phase.
+
 ## [1.12.0] - 2026-06-16
 
 ### Changed

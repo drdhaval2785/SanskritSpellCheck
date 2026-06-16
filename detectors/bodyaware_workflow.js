@@ -20,6 +20,10 @@ const DICT = A.dict || 'MW'
 const DIR = A.dir
 const SRC = A.src
 const HINT = A.hint || ''
+// Hybrid tiering: cheaper model for the bulk classify (+discover), stronger model for the
+// small source-confirm gate. Pinned per-phase here -> no manual model toggling, one run.
+const CLS_MODEL = A.clsModel || 'sonnet'
+const CONF_MODEL = A.confModel || 'opus'
 if (!DIR || !SRC) throw new Error('bodyaware-triage: args must include {dict, dir, src, hint}')
 
 const CLS_SCHEMA = {
@@ -62,7 +66,7 @@ function idxOf(fn) { const m = fn.match(/(\d+)/); return m ? m[1] : '000' }
 phase('Discover')
 const disc = await agent(
   `List every file matching body_batch_*.jsonl in the directory:\n  ${DIR}\nUse the Glob tool (pattern "body_batch_*.jsonl", path "${DIR}"), or Bash ls. Return {"files":[...]} with ONLY the base filenames (e.g. "body_batch_000.jsonl"), sorted ascending.`,
-  { label: 'discover', phase: 'Discover', schema: DISC_SCHEMA })
+  { label: 'discover', phase: 'Discover', schema: DISC_SCHEMA, model: CLS_MODEL })
 const files = ((disc && disc.files) || []).filter((f) => /body_batch_\d+\.jsonl/.test(f)).sort()
 if (!files.length) throw new Error('no body_batch_*.jsonl files found in ' + DIR)
 log(`discovered ${files.length} batch files`)
@@ -83,7 +87,7 @@ STEP 3 - write your verdicts as a JSON array (and nothing else) to:
   ${DIR}/body_adj_${idxOf(fn)}.json
 one element per input row, same order: {"suspect":"..","suggestion":"..","label":"TYPO|REALWORD|INTENTIONAL|UNSURE","confidence":"high|medium|low","reason":".."}
 Then return the same verdicts as structured output.`,
-    { label: `cls:${idxOf(fn)}`, phase: 'Classify', schema: CLS_SCHEMA }
+    { label: `cls:${idxOf(fn)}`, phase: 'Classify', schema: CLS_SCHEMA, model: CLS_MODEL }
   )
 ))
 const allCls = clsResults.filter(Boolean).flatMap((r) => r.verdicts)
@@ -113,7 +117,7 @@ Write your verdicts as a JSON array (and nothing else) to:
   ${DIR}/body_conf_${String(j).padStart(3, '0')}.json
 each {"suspect":"..","is_typo":true|false,"reason":"<=150 chars citing the entry text you read"}
 Then return the same verdicts as structured output.`,
-    { label: `confirm:${String(j).padStart(3, '0')}`, phase: 'Confirm', schema: CONF_SCHEMA }
+    { label: `confirm:${String(j).padStart(3, '0')}`, phase: 'Confirm', schema: CONF_SCHEMA, model: CONF_MODEL }
   )
 }))
 const allConf = confResults.filter(Boolean).flatMap((r) => r.verdicts)

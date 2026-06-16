@@ -1,0 +1,748 @@
+# PWG tier-A -- BODY-GROUNDED triage  (DRAFT; verify every kept case against the scan)
+#
+# The 497 engine tier-A candidates were judged against MW's OWN entry text (csl-orig),
+# not spelling alone. A spelling detector cannot tell a typo from a real word, an
+# intentional variant / compounding form, or wrong-reading apparatus -- the entry can.
+# Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM
+# pass over the 'realword' set + source confirmation of every TYPO verdict.
+#
+# FINDING: of 497 tier-A candidates, 14 are body-confirmed fileable typos (2.8%).
+# 196 are real distinct words, 248 are spellings MW documents on purpose (w.r./v.l./
+# in-comp./cross-ref -- filing them would CORRUPT MW), 2 are not in the current
+# source, and 37 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
+# do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.
+
+# ===== BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file) (14) =====
+
+avakaSa       -> avakASa        [dcs=4 ndicts=1 body=realword]
+    PWG: {#avakaSa#} {%das Herableuchten%}: {#nakzatrARAmavakASena puRqarIkaM jAyate#} PAÑCAV. BR. 18,9,6. — 2) {#(anayoH stanayoH) avakASo na paryAptastava bAhulatAntare#} {%kein Platz, kein Raum für%} Spr. 3
+    judged: Body glosses avakaSa as 'Platz, Raum' (space/room/opportunity) — this gloss belongs to avakASa; avakaSa with palatal S appears to be a misspelling.
+    confirm: Gloss 'Platz, Raum, Gelegenheit'; every cited form uses avakAS- (avakASena, avakASo, 'vakASaM). Key avakaSa misspells avakASa.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=avakaSa
+
+tarAvalI      -> tArAvalI       [dcs=2 ndicts=1 body=realword]
+    PWG: {#tarAvalI#}  1) {%eine Menge von Sternen%} KATHĀS. 73,340. — 2) {%eine best. rhetorische Figur%}: {#tArARAM saMKyayA padyEryuktA tArAvalI matA#} PRATĀPAR. 19,b,5. — 3) N. pr. verschiedener göttlicher
+    judged: Gloss 'Menge von Sternen' (collection of stars) = tArA+valI; body def 2 cites 'tArARAM'; short tarA contradicts meaning.
+    confirm: Gloss 'eine Menge von Sternen'; def 2 citation 'tArAvalI matA' uses long A. tArA=star; tarAvalI misspells tArAvalI.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=tarAvalI
+
+dIvAkIrtya    -> divAkIrtya     [dcs=2 ndicts=1 body=realword]
+    PWG: {#dIvAkI/rtya#} ({#divA + kI˚#})  1) adj. {%was bei Tage herzusagen, auszusprechen ist%}; n. Bez. {%bestimmter Recitationen%} oder {%Gesänge%}: {#divAkIrtyamadivA kIrtayantaH sUryo jyotirna tadA jyoti
+    judged: Body analysis '{#divA + kI˚#}' and all cited text forms use 'divA' (short i); headword 'dIvAkIrtya' (long I) contradicts its own compound decomposition.
+    confirm: Body decomposes ({#divA + kI˚#}) and all forms use divA (short i): divAkIrtyam, divAkIrtyEs. Headword dIvAkIrtya (long I) contradicts.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=dIvAkIrtya
+
+ketunAlin     -> ketumAlin      [dcs=2 ndicts=1 body=realword]
+    PWG: {#ketunAlin#} (wie eben) m. N. pr. eines Dānava HARIV. 9291. 9322. Auch {#ketumAli#} 9313. 9327. 9329.
+    judged: Body cites 'ketumAli' (with m) as the attested form in HARIV; 'n' in the headword vs 'm' everywhere in the text indicates a typo.
+    confirm: N.pr. of a Danava; body says 'Auch {#ketumAli#}' (m) as attested HARIV form. Key ketunAlin (n) contradicts the m everywhere.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=ketunAlin
+
+yajYamus      -> yajYamuz       [dcs=2 ndicts=1 body=realword]
+    PWG: {#yajYamu/s#} ({#yajYa#} + 2. {#muz#}) adj. {%das Opfer raubend%}; m. {%ein dem Opfer nachstellender Dämon%} TS. 3,5,4,1. KĀṬH. 32,6. MBH. 3,14165. fg. VARĀH. BṚH. S. 19,13. — Vgl. {#izwimuz#} .
+    judged: Body derives yajYamus from yajYa + 2. muz, glosses 'das Opfer raubend' — root muz in SLP1 is muz not mus; suspect 's' is a typo for 'z'.
+    confirm: Body: '({#yajYa#} + 2. {#muz#})' from muz (z); cross-ref {#izwimuz#} ends in z. Final s is typo for z (retroflex).
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=yajYamus
+
+dASaSiras     -> daSaSiras      [dcs=1 ndicts=2 body=realword]
+    PWG: {#dASaSiras#} (wohl {#dASaSirasa#} von {#daSaSiras#}) n. N. eines Sāman ebend.
+    judged: Body explicitly derives 'dASaSiras' from '{#daSaSiras#}' (short a); long A in headword contradicts the stated etymon.
+    confirm: Body: '(wohl dASaSirasa von {#daSaSiras#})' — explicitly derives from daSaSiras (short a); long A in headword contradicts etymon.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=dASaSiras
+
+tfzitottara   -> tfzitottarA    [dcs=0 ndicts=1 body=realword]
+    PWG: {#tfzitottara#} ({#tfzita#} n. + {#uttara#} 4, {%e%}) f. N. einer Pflanze ({#aSanaparRI#}) ŚABDAC. im ŚKDR.
+    judged: Body says f. (feminine noun); the feminine entry should end in long -A; the key lacks it.
+    confirm: Body marks it <lex>f.</lex> (feminine N. of a plant); feminine lemma should end in long -A. Key lacks final A.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=tfzitottara
+
+paRavanDa     -> paRabanDa      [dcs=0 ndicts=1 body=realword]
+    PWG: {#paRavanDa#} ({#paRa + ba˚#}) m. {%das Abschliessen eines Vertrags%} RAGH. 8,21. 10,87. Schol. zu P. 3,4,8. 6,2,154.
+    judged: Body analyses as {#paRa + ba˚#} — the etymology explicitly uses ba˚ (banDa), contradicting the v in the headword.
+    confirm: Body analysis ({#paRa + ba˚#}) uses ba (banDa); gloss 'Abschliessen eines Vertrags'. Headword v contradicts ba etymology.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=paRavanDa
+
+BAvavanDana   -> BAvabanDana    [dcs=0 ndicts=1 body=realword]
+    PWG: {#BAvavanDana#} ({#BAva + ba˚#}) adj. {%die Herzen verbindend%}: {#preman#} RAGH. 3,24.
+    judged: Body's own analysis shows {#BAva + ba˚#} confirming second member is banDana; v in headword is a typo for b.
+    confirm: Body analysis ({#BAva + ba˚#}) confirms second member banDana; gloss 'die Herzen verbindend'. Headword v is typo for b.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=BAvavanDana
+
+Dabalapakza   -> Davalapakza    [dcs=0 ndicts=1 body=realword]
+    PWG: {#Dabalapakza#} ({#Da˚ + pakza#}) m. {%Gans%} RĀJAN. im ŚKDR. — Nach ŚKDR. und WILS. auch {%die lichte Hälfte eines Mondmonats, die Zeit des zunehmenden Mondes.%}
+    judged: Body glosses 'Gans' (white goose) and bright fortnight; Davala = white/bright fits both; Dabala is a misspelling.
+    confirm: Body ({#Da˚ + pakza#}), gloss 'Gans' and bright fortnight = Davala (white); neighbor entries DavalapurARa, DavalamfttikA confirm Davala. Dabala misspells it.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=Dabalapakza
+
+duzwu         -> duzWu          [dcs=1 ndicts=2 body=realword]
+    PWG: {#duzwu/#} (2. {#duz + sTu#} von {#sTA#}) UṆĀDIS. 1,26. gaṇa {#udgAtrAdi#} zu P. 5,1,129. adj. {%sich schlecht betragend%} UJJVAL. adv. einen {%Tadel%} bezeichnend gaṇa {#svarAdi#} zu P. 1,1,37. gaṇa 
+    judged: Body derives from {#sTA#} (sthā); duḥ+sthā yields duzWu (retroflex Wh). duzwu (plain w) contradicts the derivation.
+    confirm: Body: '(2. duz + sTu von {#sTA#})'; cross-ref {#dOzWava, suzWu#} uses zW. duz+sthu yields duzWu (retroflex Wh); plain w contradicts.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=duzwu
+
+arTavanDa     -> arTabanDa      [dcs=0 ndicts=1 body=realword]
+    PWG: {#arTavanDa#}, {#lalitArTabanDaM pattre niveSitamudAharaRaM priyAyAH#} VIKR. 32.
+    judged: Body's own example citation contains lalitArTabanDaM with banDa (b), contradicting the headword's vanDa (v).
+    confirm: Body's own example 'lalitArTabanDaM' uses banDa (b); headword arTavanDa (v) contradicts the b in its citation.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=arTavanDa
+
+pfzwavanDu    -> pfzwabanDu     [dcs=0 ndicts=1 body=realword]
+    PWG: {#pfzwavanDu#} vielleicht {%der seine Sippe aufgesucht hat, Gast seiner Verwandtschaft%}; vgl. {#banDupfcC#} .
+    judged: Body cross-references {#banDupfcC#}, using banDu (b form); the v in the headword contradicts the b in the comparison.
+    confirm: Body cross-refs {#banDupfcC#} (banDu, b); gloss about Sippe/Verwandtschaft = bandhu. Headword v contradicts b.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=pfzwavanDu
+
+biBedayisu    -> biBedayizu     [dcs=0 ndicts=1 body=realword]
+    PWG: {#biBedayisu#} (vom desid. des caus. von {#Bid)#} adj. {%zu entzweien beabsichtigend%} MBH. 5,5822.
+    judged: Desiderative of causative of Bid should end in -izu (retroflex z); -isu with dental s appears to be a transcription error; gloss fits biBedayizu.
+    confirm: (vom desid. des caus. von Bid) adj. 'zu entzweien beabsichtigend' (MBH.); gloss is the desiderative biBedayizu; dental -isu vs retroflex -izu, no variant documented = bare spelling error.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=biBedayisu
+
+# ===== BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted (8) =====
+
+prozitaBartfka -> prozitaBartfkA  [dcs=0 ndicts=1 body=realword]
+    PWG: {#prozitaBartfka#} (von {#pro˚ + Bartar#}) adj. f. {#A#} {%deren Gatte verreist ist%} PRATĀPAR. 5,b,1. {#deSAntaragate kAnte KinnA prozitaBartfkA#} 6,a,4. SĀH. D. 119. {#pramadAjana#} ṚT. 6,9.
+    judged: Body defines as adj. f. {#A#} and verse example uses prozitaBartfkA; the feminine form with long A is the attested form.
+    confirm: Body gives it as adj. with f. {#A#}; headword is the adjective stem (correct lemma form), feminine -A explicitly stated separately. Not a spelling error.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=prozitaBartfka
+
+daRqabaDa     -> daRqavaDa      [dcs=0 ndicts=1 body=realword]
+    PWG: {#daRqabaDa/#} ({#da˚ + ba˚#}) m. {%Tod durch die Strafgewalt%} ŚAT. BR. 5,4,4,7.
+    judged: Gloss 'Tod durch die Strafgewalt' fits daRqavaDa (vaDa=slaying); baDa is not the Sanskrit word for death/killing.
+    confirm: Own entry: ({#da˚ + ba˚#}) m. 'Tod durch die Strafgewalt' (ŚAT. BR.); analyzed b/va variant (cf. next entry 'mit va st. ba'), defined as own word, not bare typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=daRqabaDa
+
+gagaRANganA   -> gaganANganA    [dcs=0 ndicts=1 body=realword]
+    PWG: {#gagaRANganA#} ({#ga˚ + aNganA#}) f. Name eines Metrums, 4Mal 25 Moren (5 Längen und 15 Kürzen, Ausgang ⏑ –) COLEBR. Misc. Ess. II,156 (III,21).
+    judged: Body's own compound analysis 'ga˚+aNganA' and metre context require gagana (sky); gagaRa is not a word here.
+    confirm: ({#ga˚ + aNganA#}) f., metre name (COLEBR.); gagaRa is PWG's systematic R-for-n variant of gagana used across many neighbouring headwords; own gloss, not bare typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=gagaRANganA
+
+gagaRagaYja   -> gaganagaYja    [dcs=0 ndicts=1 body=realword]
+    PWG: {#gagaRagaYja#} ({#ga˚ + gaYja#}) m. N. pr. eines Bodhisattva VYUTP. 22. 40.
+    judged: Body compound 'ga˚+gaYja'; first element must be gagana (sky); gagaRa is a misprint of gagana (n→R).
+    confirm: ({#ga˚ + gaYja#}) m. N.pr. eines Bodhisattva (VYUTP.); gagaRa is PWG's systematic variant of gagana, used interchangeably in this column; own word/gloss.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=gagaRagaYja
+
+gagaRagati    -> gaganagati     [dcs=0 ndicts=1 body=realword]
+    PWG: {#gagaRagati#} ({#ga˚ + gati#}) adj. subst. {%im Himmelsraum sich bewegend; Bewohner des Himmelsraums%} MEGH. 47.
+    judged: Gloss 'im Himmelsraum sich bewegend' (moving in sky) requires gagana (sky); gagaRa is a misprint of gagana.
+    confirm: ({#ga˚ + gati#}) adj. 'im Himmelsraum sich bewegend' (MEGH.); gagaRa is PWG's systematic R-for-n variant of gagana; defined as own word with own gloss.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=gagaRagati
+
+nAgabaDU      -> nAgavaDU       [dcs=0 ndicts=1 body=realword]
+    PWG: {#nAgabaDU#} (1. {#nAga + baDU#}) f. {%Elephantenweibchen%} R. 2,55,28. 65,24.
+    judged: Gloss 'Elephantenweibchen' (female elephant) fits nAgavaDU (vaDU=female/wife); baDU is not the Sanskrit word for female.
+    confirm: Own entry: (1. {#nAga + baDU#}) f. 'Elephantenweibchen' (R.); body's own compound spells baDU; documented b/va variant defined as own word.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=nAgabaDU
+
+pARivanDa     -> pARibanDa      [dcs=0 ndicts=1 body=realword]
+    PWG: {#pARivanDa#} ({#pA˚ + ba˚#}) m. {%die Verbindung der Hände%} (bei der Heirath) MBH. 12,9516.
+    judged: Body's compound analysis explicitly shows 'pA˚+ba˚'; second element is banDa (binding), but headword spells it vanDa.
+    confirm: Own entry: ({#pA˚ + ba˚#}) m. 'die Verbindung der Haende' (MBH.); body's compound analysis shows ba˚=banDa; b/va variant defined as own word with own gloss.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=pARivanDa
+
+pArAsa        -> pArasa         [dcs=0 ndicts=1 body=realword]
+    PWG: {#pArAsa#} {%Persien%} Verz. d. Oxf. H. 339,b,31. 340,a,9.
+    judged: Gloss is 'Persien' (Persia); standard Sanskrit is pArasa. No explanation for the long A in second syllable.
+    confirm: Body defines pArAsa itself as 'Persien'; long A consistent across whole family (pArAsapuli=Persepolis, pArAsu). No error marker; real word.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=pArAsa
+
+# ===== BUCKET 3  REVIEW -- undecidable without the printed page (29) =====
+
+gawa          -> Gawa           [dcs=4 ndicts=1 body=realword]
+    PWG: {#gawa#} N. pr. einer Oertlichkeit Verz. d. Oxf. H. 339,b,36.
+    judged: Body only gives N. pr. of a locality — proper noun; cannot judge whether short g or long G is correct from body alone.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=gawa
+
+SarikA        -> SArikA         [dcs=3 ndicts=1 body=realword]
+    PWG: {#SarikA#} f. N. eines Palastes SCHIEFNER, Lebensb. 305 (75).
+    judged: Body only gives N. pr. of a palace — proper noun; cannot verify short S vs long S from body alone.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=SarikA
+
+Adana         -> AdAna          [dcs=4 ndicts=2 body=realword]
+    PWG: {#Adana#} N. pr. einer Oertlichkeit Verz. d. Oxf. H. 339,a,9. 39. b,32. 340,a,17.
+    judged: Proper noun (place name); body gives no spelling comment. Short a vs long A indeterminate for a toponym.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=Adana
+
+ezARa         -> ezaRa          [dcs=3 ndicts=1 body=realword]
+    PWG: {#ezARa#} N. pr. einer Oertlichkeit Verz. d. Oxf. H. 339,a,36.
+    judged: Proper noun (N.pr. locality) with terse body; cannot judge whether long A is correct or a typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=ezARa
+
+vAyuna        -> vayuna         [dcs=3 ndicts=2 body=realword]
+    PWG: {#vAyuna#} (?) m. {%ein Gott%} H. ś. 3.
+    judged: Body is '(?) m. ein Gott H.ś.3' with question mark — too uncertain to confirm as TYPO or REALWORD.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=vAyuna
+
+puraka        -> pUraka         [dcs=3 ndicts=2 body=realword]
+    PWG: {#puraka#} (von {#pura#} {%Burg%}) s. {#arGAzwa˚#} .
+    judged: Body is terse cross-ref only ('s. arGAzwa˚'); cannot determine if puraka (from pura) or pUraka is correct.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=puraka
+
+kuwAra        -> kuWAra         [dcs=3 ndicts=2 body=realword]
+    PWG: {#kuwAra?#} in {#avakuwAra#} .
+    judged: Body is a single stub 'in avakuwAra' with a question mark — too terse to determine if typo or real word.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=kuwAra
+
+kalava        -> kalaBa         [dcs=3 ndicts=1 body=realword x2]
+    PWG: {#kalava#} MBH. 13,7363. {#kfzRaH kalavaDarmaH (kevalaDarmaH?) kzitimevAjagAma#} . || {#kalava#}, die ed. Bomb. liest: {#kfzRaH kalO tvaDarmaH#} .
+    judged: Body records manuscript variant readings; uncertain if kalava is a real word or textual corruption.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=kalava
+
+yapya         -> yApya          [dcs=2 ndicts=2 body=realword]
+    PWG: {#yapya#} (?) BHAR. NĀṬYAŚ. 20,22.
+    judged: Body is just '(?) BHAR. NĀṬYAŚ. 20,22' — single citation with question mark, too terse to classify reliably.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=yapya
+
+ceka          -> Ceka           [dcs=2 ndicts=2 body=realword]
+    PWG: {#ceka(?)#} N. pr. eines Landes HIOUEN-THSANG I,189. fgg.
+    judged: Body is a bare proper noun 'N. pr. eines Landes' with '(?)'; 'c' vs 'C' difference cannot be judged from terse entry alone.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=ceka
+
+pracIvala     -> pracIbala      [dcs=2 ndicts=1 body=realword]
+    PWG: {#pracIvala#} {%eine best. Pflanze%} SUŚR. 2,391,5.
+    judged: Body only gives 'eine best. Pflanze SUŚR.' — too terse to confirm whether pracIvala is a variant of pracIbala or its own plant name.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=pracIvala
+
+tatAra        -> tatara         [dcs=1 ndicts=1 body=realword]
+    PWG: {#tatAra#} N. pr. einer Oertlichkeit Verz. d. Oxf. H. 338,b,3 v. u. 340,a,5.
+    judged: Body is a bare proper noun 'N. pr. einer Oertlichkeit'; long A vs short a in a place-name cannot be judged from the terse entry.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=tatAra
+
+danuza        -> Danuza         [dcs=1 ndicts=2 body=realword]
+    PWG: {#danuza#} (?) m. {%ein%} Rākṣasa H. ś. 36. — Vgl. {#danu#} 2.
+    judged: Body has '(?)' marking uncertainty; 'd' vs 'D' (dental vs retroflex) cannot be judged from the terse entry for a Rākṣasa name.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=danuza
+
+acCuka        -> AcCuka         [dcs=0 ndicts=2 body=realword]
+    PWG: {#acCuka#} m. {%ein best. Baum%}; s. u. {#raYjanadru#} .
+    judged: Body only gives 's. u. raYjanadru'; initial 'a' vs 'A' cannot be determined from the cross-reference alone without reading the target entry.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=acCuka
+
+Aloha         -> aloha          [dcs=0 ndicts=1 body=realword]
+    PWG: {#Aloha#} N. pr. Verz. d. B. H. 58,9. Vielleicht wie das folg. Wort patron. von {#aloha#} .
+    judged: Body suggests possible patronymic of 'aloha'; 'A' vs 'a' initial in a proper noun is uncertain without further textual evidence.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=Aloha
+
+astuMkara     -> astuMkAra      [dcs=0 ndicts=1 body=realword]
+    PWG: {#astuMkara#} eher {%zugebend, einwilligend.%}
+    judged: Body gives terse gloss 'zugebend, einwilligend'; 'kara' vs 'kAra' suffix ambiguity cannot be resolved from the body alone.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=astuMkara
+
+kurAwa        -> kurawa         [dcs=0 ndicts=1 body=realword]
+    PWG: {#kurAwa#} N. pr. einer Oertlichkeit Verz. d. Oxf. H. 339,b,16. so im Index, im Text {#kurAta#} .
+    judged: Proper noun; body notes 'im Text kurAta', showing textual uncertainty. Cannot judge long vs short a.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=kurAwa
+
+nAlAnda       -> nAlanda        [dcs=0 ndicts=1 body=realword]
+    PWG: {#nAlAnda#} N. pr. eines Dorfes in der Nähe von Rājagṛha, welches ein berühmtes buddhistisches Kloster enthielt, BURN. Intr. 49 in der N. 456. SCHIEFNER, Lebensb. 255 (25). WASSILJEW 30 u. s. w. HIOUE
+    judged: Proper noun (Buddhist monastery). Body gives no spelling comment. Standard form unclear without source check.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=nAlAnda
+
+pratiyogijYAnakaraRatAvAda -> pratiyogijYAnakAraRatAvAda  [dcs=0 ndicts=1 body=realword]
+    PWG: {#pratiyogijYAnakaraRatAvAda#} m. Titel einer Schrift HALL 44.
+    judged: Title of a work (Titel einer Schrift); cannot judge karaRa vs kAraRa without the source text.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=pratiyogijYAnakaraRatAvAda
+
+izwahotrIya   -> izwAhotrIya    [dcs=0 ndicts=1 body=realword]
+    PWG: {#izwahotrIya#} n. N. eines Sāman Ind. St. 3,209,b.
+    judged: Body only gives 'n. N. eines Sāman' with Ind. St. citation; too terse to determine if izwahotrIya vs izwAhotrIya is typo or variant.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=izwahotrIya
+
+AtiSAyika     -> AtiSayika      [dcs=0 ndicts=2 body=realword]
+    PWG: {#AtiSAyika#} (von {#atiSaya#}) dass. PAT. a. a. O. 2,345,b. 346,a.b. 4,32,a. 5,62,b.
+    judged: Body derives from atiSaya (short a); long A in SAyika is unexpected but body does not flag it as error; could be a documented long-vowel variant.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=AtiSAyika
+
+guRqikA       -> guRqika        [dcs=0 ndicts=2 body=realword]
+    PWG: {#guRqikA#} (?), {#˚saMBUtA (lipi)#}; s. u. {#mudrAlipi#} .
+    judged: Body has '(?)' marking uncertainty about the form itself; only a cross-reference entry, insufficient information to classify.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=guRqikA
+
+ariti         -> arIti          [dcs=0 ndicts=1 body=realword]
+    PWG: {#ariti#} N. pr. LALIT. 194.
+    judged: Body is only 'N. pr. LALIT. 194' — too terse to determine if short i vs long I is correct.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=ariti
+
+galu          -> galU           [dcs=0 ndicts=2 body=realword]
+    PWG: {#galu#} vgl. {#galvarka#} 1), {#masAra#}  1) und {#musAragalva#} .
+    judged: Body only cross-references galvarka and masAra with no gloss; cannot determine correct vowel length.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=galu
+
+rAmapUjASaraRi -> rAmapUjAsaraRi  [dcs=0 ndicts=1 body=realword]
+    PWG: {#rAmapUjASaraRi#} f. Titel eines Werkes, = {#rAmapadDati#} Verz. d. B. H. No. 1324. WEBER, RĀMAT. UP. 277. 282. 301. fgg.
+    judged: Proper title name; body gives no etymology clarifying palatal S vs dental s in ASaraRi/asaraRi.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=rAmapUjASaraRi
+
+wOwa          -> wowa           [dcs=0 ndicts=1 body=realword]
+    PWG: {#wOwa#} (?): {#wOweSakzetrapAlamAhAtmya#} ŚIVA-P. in Verz. d. Oxf. H. 67,b,4.
+    judged: Proper noun in a compound title with body-internal '?'; no etymology. Cannot judge long O vs short o.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=wOwa
+
+pUsa          -> pUza           [dcs=0 ndicts=1 body=realword]
+    PWG: {#pUsa#} m. {%Papagei%} HĀLA 265.
+    judged: Body gives only 'Papagei' (parrot) without etymology. Cannot confirm whether pUsa or pUza is standard.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=pUsa
+
+bUvaSarman    -> bUbaSarman     [dcs=0 ndicts=1 body=realword]
+    PWG: {#bUvaSarman#} ({#bUba + Sa˚#}) m. N. pr. eines Mannes Verz. d. B. H. No. 1088. Verz. d. Oxf. H. No. 798. {#vUva˚#} an beiden Stellen.
+    judged: Proper name; body's compound analysis says 'bUba+Sa˚' yet headword has 'v'; also notes 'vUva˚' variant. Cannot determine correct spelling.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=bUvaSarman
+
+arI|a         -> (flag)         [dcs=0 ndicts=6 body=realword]
+    PWG: {#a/rI|a#} (3. {#a + rI˚#} von {#rih = lih#}) adj. {%ungeleckt%}: {#va\tsam#} ṚV. 4,18,10.
+    judged: Suspect contains pipe character '|' which may be a markup artifact; suggestion is '(flag)' not a real word; cannot classify as typo/realword.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PWG&key=arI|a
+
+# ===== BUCKET 4  REAL-WORD -- a distinct real word; the fix would merge two words (196) =====
+paka          -> pAka          | PWG: 1. {#paka#} = 1. {#pa#} in {#tElapaka#} . || 2. {#paka#} = 2. {#pa#} in {#hastipaka#} . | Body defines paka as short form (= pa) in compounds tElapaka and hastipaka — own entry as 
+nila          -> nIla          | PWG: {#nila#} m. N. pr. eines Rākṣasa, eines Ministers Vibhīṣaṇa's, R. 7,5,43. | Body defines it as m. N. pr. of a Rākṣasa, minister of Vibhīṣaṇa — proper noun with short 
+Az            -> As            | PWG: {#Az#} onomat. {%vom Laute des Niesens%} PAÑCAV. BR. 8,2,2. | Body defines Az as onomat. 'vom Laute des Niesens' (sound of sneezing) — distinct onomatop
+Agnihotra     -> agnihotra     | PWG: {#Agnihotra#} adj. f. {#I#} {%zum%} Agnihotra {%geeignet, dazu dienend%}: {#˚trI gOH#} ŚAT | Body defines it as adj. 'zum Agnihotra geeignet' (suitable for the Agnihotra) — its own ad
+antyA         -> antya         | PWG: {#antyA#} f. {%day-measure, raduis ± the sine of ascensional difference%} SŪRYAS. 3,34. 38 | Body defines it as f. 'day-measure, radius ± sine of ascensional difference' — own astrono
+kevAla        -> kevala        | PWG: {#kevAla#} und {#kevAlI/#} gaṇa {#gOrAdi#} zu P. 4,1,41. {#kevAlA#} und {#kevAsI#} indecll | Body lists kevAla and kevAlI as gaṇa gOrAdi to P. 4,1,41 — documented grammatical forms in
+nApuMsaka     -> napuMsaka     | PWG: {#nApuMsaka#} (von {#napuMsaka#}) adj. {%neutral%}: {#liNga#} PAT. a. a. O. 4,7,b. | Body defines nApuMsaka as 'von {#napuMsaka#}' adj. 'neutral' — correctly a vrddhi-derived 
+satkara       -> satkAra       | PWG: {#satkara#} (von {#satkar#}) adj. s. {#a˚#} in den Nachträgen. | Body derives satkara from satkar (verbal root) as adj. — own entry derived from satkar, di
+vAkra         -> vakra         | PWG: {#vAkra#} (von {#vakra), vAkraM suvAtram#} N. eines Sāman Ind. St. 3,234,a. | Body derives vAkra from vakra and gives a Sāman name — vrddhi-derived adjective, distinct 
+vikrAya       -> vikraya       | PWG: {#vikrAya#} (von 1. {#krI#} mit {#vi#}) nom. ag. {%Verkäufer%}: {#DAnya˚#} P. 3,2,93, Vārt | Body defines vikrAya as nom. ag. 'Verkäufer' (seller) from 1.krI+vi — own agent noun, not 
+An            -> an            | PWG: {#An#} (!) gaṇa {#saMkalAdi#} zu P. 4,2,75. | Body lists An as gaṇa saMkalAdi to P. 4,2,75 — documented in Pāṇinian gaṇa as its own item
+AriMdama      -> ariMdama      | PWG: {#AriMdama#} (von {#ariMdama#}) patron. des Fürsten Sanaśruta AIT. BR. 7,34. | Body defines AriMdama as patronymic (patron.) of Sanaśruta derived from ariMdama — vrddhi 
+guRAy         -> guRay         | PWG: {#guRAy#} (von {#guRa), ˚yate#} {%wie ein Vorzug erscheinen%} Spr. 851. || {#guRAy#} {%zu  | Body defines guRAy (von guRa) as denominative verb; long A is the denominative suffix, not
+prasAd        -> prasad        | PWG: {#prasAd#} (von {#prasAda), prasAdati#} {%klar —, hell sein%}: {#prasAdizyati sarvASA#} ŚA | Body derives 'von {#prasAda#}'; prasAd is a denominator verb (to be bright/clear) distinct
+atrI          -> atri          | PWG: {#atrI/#} adj. f. {%essend, fressend%} TS. 6,4,10,4. 5. Wohl f. zu {#attar#} . | Body defines it as adj. f. 'essend, fressend' (eating, devouring) — genuine feminine adjec
+UtI           -> Uti           | PWG: 2. {#UtI#} (von {#vA, vayati#}) f. {%das Weben, Gewebe%} MED. t. 5. BHĀG. P. 2,10,1. 4. =  | Body defines 2. UtI as f. 'das Weben, Gewebe' (weaving/textile) from vA/vayati — own lexic
+marIcI        -> marIci        | PWG: {#marIcI#} f. gaṇa {#bAhvAdi#} zu P. 4,1,96. | Body defines marIcI f. in gaṇa bAhvAdi; long final I is the feminine form, not a typo.
+pAYcAli       -> pAYcAlI       | PWG: {#pA/YcAli#} patron. von {#paYcAla#} (eines Brahmanen) P. 4,1,168, Sch. | Body defines pAYcAli as patronymic from paYcAla; short final i is the regular patronymic e
+DAyaka        -> dAyaka        | PWG: {#DAyaka/#} nom. ag. von 1. {#DA#} Schol. zu P. 7,3,33. | Body defines DAyaka as nom. ag. from 1.DA (to place/give) — vrddhi nom. ag., distinct from
+ED            -> eD            | PWG: {#E/D#} f. oder {#EDa/#} m. oder {#EDA/#} f. (von {#iD#} mit {#A#}) {%das Flammen, die Fla | Body defines E/D as f. or EDa/m. or EDA/f. 'das Flammen, die Flamme' (flame) from iD+A — d
+EkAnta        -> ekAnta        | PWG: {#EkAnta#} (von {#ekAnta)#} adj. {#anEkAnta#} {%nicht absolut, nicht vollständig, nicht al | Body defines EkAnta as vrddhi-derived adj. in anEkAnta 'nicht absolut' — own derived form 
+mayana        -> nayana        | PWG: {#mayana#} (wie eben) n.  1) {%Rast, Ruhe%} MALLIN. zu ŚIŚ. 4,57. — 2) {%Ruhestätte%} PRAB | Body defines mayana as n. 'Rast, Ruhe / Ruhestätte / Haus' (rest/resting-place/house) with
+uq            -> ud            | PWG: {#uq#} ({#saMhatO#}) eine aus {#uqupa#} abstrahirte Sautra- Wurzel. | Body derives 'uq' as a Sautra root abstracted from 'uqupa' — defined as its own verbal roo
+ajaganDa      -> ajaganDA      | PWG: {#ajaganDa#} ({#aja + ganDa#})  1) m. {%Bocksgeruch.%} — 2) adj. {%Bocksgeruch habend.%} — | Body defines ajaganDa as m. 'Bocksgeruch' (goat-smell) and adj., with f. ajaganDA separate
+akzamAla      -> akzamAlA      | PWG: {#akzamAla#} (2. {#a/kza#} 10. + {#mAlA#})  1) adj. {%mit einem Kranz von Elaeocarpus-Saam | Body defines akzamAla as adj. 'with a garland of Elaeocarpus seeds' and gives f. akzamAlA 
+awwahAsA      -> awwahAsa      | PWG: {#awwahAsA#} f. Bein. der Durgā MBH. 6,800. | Body defines awwahAsA as f. epithet of Durgā — feminine proper noun/epithet, distinct from
+pacAna        -> pacana        | PWG: {#pacAna#} partic. praes. med. von 1. {#pac#}; s. u. {#pac#} und vgl. {#kiMpacAna#} . | Body defines pacAna as pres. part. med. of 1.pac — genuine grammatical form (middle partic
+arvavasu      -> arvAvasu      | PWG: {#arvavasu#} ({#arva + vasu#}) m. N. eines der 7 Hauptstrahlen der Sonne VP. 236, N. 3.  — | Body gives own gloss (N. of sun ray) for arvavasu; 'vgl.' is compare, not a correction mar
+kANkola       -> kaNkola       | PWG: {#kANkola#} n. {%eine Art Stahl%} ŚKDR. u. {#vajra#} . | Body gives own gloss 'eine Art Stahl' for kANkola; no correction marker.
+pratisAraRA   -> pratisAraRa   | PWG: {#pratisAraRA#} f. Bez. {%eines best. Processes, dem Mineralien%} (insbes. {%Quecksilber)  | Body defines pratisAraRA f. with own gloss; long final A is the feminine form, not a missp
+vyAvahArin    -> vyavahArin    | PWG: {#vyAvahArin#} (wie eben) adj. {%zur Anwendung kommend%} VARĀH. BṚH. S. 104,2; vgl. Ind. S | Body defines vyAvahArin with own gloss 'zur Anwendung kommend'; different vowel grade from
+yaTecCA       -> yaTecCa       | PWG: {#yaTecCA#} ({#yaTA + i˚#}) f. {%ein entsprechender Wunsch%}; instr. {#yaTecCayA#} {%nach  | Body defines yaTecCA f. 'ein entsprechender Wunsch'; long final A is the feminine noun for
+Ajeya         -> ajeya         | PWG: {#Ajeya#} (von {#ajaya)#} m. patron. des Nandivardhana BHĀG. P. 12,1,6. | Body derives 'von {#ajaya#}' — Ajeya is a patronymic, distinct from ajeya (unconquerable =
+Asaha         -> asaha         | PWG: {#Asaha#} (von {#sah#} mit {#A)#} s. {#urAsaha#} . | Body derives 'von {#sah#} mit {#A#}' — Asaha (A+sah) is distinct from asaha (a+saha = not 
+balasa        -> balAsa        | PWG: {#balasa/#} (von 1. {#bala)#} gaṇa {#tfRAdi#} zu P. 4,2,80. | Body derives 'von 1. {#bala#}' with gaṇa reference; balasa is a distinct derivative from b
+pAlASaka      -> palASaka      | PWG: {#pAlASaka/#} adj. von {#palASa#} gaṇa {#varAhAdi#} zu P. 4,2,80. | Body defines pAlASaka as a distinct adj. derived from palASa (gaṇa varAhAdi), not a misspe
+jAyantI       -> jayantI       | PWG: {#jAyantI#} (wohl von {#jayant#}, partic. von {#ji#}, oder von {#jayanta#}) f. N. pr. {#˚p | Body gives its own derivation ('wohl von jayant oder jayanta') and defines it as a proper 
+ekalavyA      -> ekalavya      | PWG: {#ekalavyA#} f. N. pr. einer Stadt KATHĀS. 69,163. 74,24. | Body defines ekalavyA f. as N.pr. of a city — a real feminine proper noun, distinct from t
+rAjaputrA     -> rAjaputra     | PWG: {#rA/japutrA#} f. {%Mutter von Königen%} ({%Könige zu Söhnen habend%}) ṚV. 2,27,7. | Body defines rAjaputrA f. as 'Mutter von Königen' (ṚV 2,27,7) — a real distinct feminine f
+ulleKA        -> ulleKa        | PWG: {#ulleKA#} f. = {#reKA, leKA#} {%Linie, Strich%} H. an. 2,24. | Body defines ulleKA f. as '= reKA, leKA Linie, Strich' — a real feminine noun with its own
+vilambitA     -> vilambita     | PWG: {#vilambitA#} (von {#vilambin#}) f. {%Langsamkeit, Gemessenheit%}: {#nAtivilambitA vAcaH#} | Body defines vilambitA (f.) as derived from vilambin, gloss 'Langsamkeit, Gemessenheit' — 
+gOzWI         -> gozWI         | PWG: {#gOzWI#} (von {#gozWa#}) f. N. pr. eines {#udIcyagrAma#}; davon adj. (f. {#I) gOzWa/#} ga | Body defines gOzWI as a proper noun N.pr. of a udIcyagrAma derived from gozWa — a distinct
+AvIra         -> ABIra         | PWG: {#AvIra#} (aus dem arab. عبير ) {%ein best. rothes Pulver%}: {#˚cUrRa#} BRAHMAVAIV. P. im  | Body defines AvIra as 'ein best. rothes Pulver' from Arabic; entirely different word from 
+aBijYeya      -> avijYeya      | PWG: {#aBijYeya#} (von 1. {#jYA#} mit {#aBi), anaBijYeya#} {%nicht wiederzuerkennen%}: {#˚rUpAR | Body defines aBijYeya (aBi+jYA) as 'nicht wiederzuerkennen' — a real distinct compound, no
+valasUdana    -> balasUdana    | PWG: {#valasUdana#} m. {%der Vernichter%} Vala's d. i. Indra HALĀY. 1,52. MBH. 1,1285. 7706. 13 | Body defines valasUdana as 'Vernichter Vala's = Indra' with many citations; v/b confusion 
+avahelA       -> avahela       | PWG: {#avahelA#}, instr. {#avahelayA#} {%mit geringschätziger Behandlung%} so v. a. {%mit der g | Body defines avahelA f. with full gloss and many citations; long final A is the feminine f
+druhA         -> druha         | PWG: {#druhA/#} (von 1. {#druh#}) f. = 2. {#druh#} 1 : {#pra yA jigA^ti Ka\rgale^va\ nakta\mapa | Body defines druhA/ (with accent) f. citing RV; a real Vedic word form, not a misspelling 
+durhaRa       -> durhaRA       | PWG: {#durha/Ra#} (2. {#duz + hana#}) adj. f. {#A#} {%schwer zu überwältigen, unaufhaltbar%}: { | Body defines durhaRa adj. f.{#A#} 'schwer zu überwältigen'; suspect is the masculine form,
+KAYjana       -> KaYjana       | PWG: {#KAYjana/#} patron. von {#KaYjana#} gaṇa {#SivAdi#} zu P. 4,1,112. | Body defines KAYjana as patronymic of KaYjana; long A is the vrddhi in patronymic formatio
+sOmanA        -> sOmana        | PWG: {#sOmanA#} (von {#sumanas#}) f. {%Blüthe%} SUŚR. 2,69,1. könnte auch masc. sein. | Body defines sOmanA f. 'Blüthe'; long final A is the feminine noun form, not a misspelling
+viBAja        -> viBaja        | PWG: {#viBAja#} (von {#Baj#} mit {#vi#}) adj. {%vertheilend, zutheilend%} ĀPAST. 1,23,2. | Body defines viBAja (von Baj mit vi) adj. 'vertheilend'; long A is vrddhi grade in the der
+anuhrada      -> anuhrAda      | PWG: {#anuhrada#} m. N. pr. eines Bruders des Anuhrāda HARIV. 12460. | Body defines anuhrada as N.pr. of a brother of Anuhrāda — a distinct proper name, not a mi
+kArtra        -> kartra        | PWG: {#kArtra#} patron. von {#kartar#}; davon patron. {#kA/rtrAyaRi#} P. 4,1,156, Sch. | Body defines kArtra as a patronymic from kartar — a derived form (patron.), not a misspell
+mAhizikA      -> mAhizika      | PWG: {#mAhizikA#} f. N. pr. eines Flusses R. 4,40,21. {#˚kI#} 41,16. | Body defines mAhizikA f. as N.pr. of a river — the feminine form is legitimately distinct 
+ftusnAta      -> ftusnAtA      | PWG: {#ftusnAta#} ({#ftu + snAta#} von {#snA#}) adj. f. {%in der Menstruation%} ({%am Ende der  | Body defines ftusnAta (ftu+snAta) as adj. f. 'gebadet (am Ende der Menstruation)' with man
+kecukA        -> kecuka        | PWG: {#kecukA#} f. {%Colocasia antiquorum Schott%}, mit essbarer Wurzelknolle SUŚR. 2,116,16. A | Body defines kecukA f. as Colocasia antiquorum and kecuka m./n. separately — kecukA is a r
+kulapa        -> kulapA        | PWG: {#kulapa/#} oder {#kulapA/ (kula + pa#} oder {#pA#}) m. {%Geschlechts —, Gemeindehaupt%}:  | Body explicitly lists both 'kulapa/ oder kulapA/' as valid forms of 'Geschlechtshaupt' — k
+pUyavAha      -> pUyavaha      | PWG: {#pUyavAha#} ({#pUya + vAha#}) m. N. einer Hölle, {%in der Jauche fliesst%}, VP. 207. fg.  | Body defines pUyavAha (pUya+vAha) as m. N. of a hell 'in der Jauche fliesst' — vAha (carri
+purAja        -> purAjA        | PWG: {#purAja/#} und {#˚jA (pu˚ + ja, jA)#} adj. {%vormalig, von früher her —, von jeher seiend | Body explicitly covers both 'purAja/ und ˚jA' as adj. 'vormalig' — purAja is a documented 
+supiNgala     -> supiNgalA     | PWG: {#supiNgala#} gaṇa {#saMkalAdi#} zu P. 4,2,75. f. {#A#} Bez. zweier Pflanzen: = {#jyotizma | Body defines supiNgala (gaṇa saMkalAdi) m. and f. A separately — the masculine form supiNg
+yavapraKya    -> yavapraKyA    | PWG: {#yavapraKya#} (1. {#yava + praKyA#}) adj. {%gerstenähnlich%}; f. {#A#} Bez. {%eines best. | Body defines yavapraKya as adj. 'gerstenähnlich' and f. A as a rash name — the adj. form i
+alolA         -> alola         | PWG: {#alolA#} oder {#lolA#} f. Name eines Metrums (4 Mal – – – ⏑ ⏑ – –, – – – ⏑ ⏑ – –) COLEBR. | Body defines alolA f. as a metre name — a real feminine noun, not a misspelling of alola.
+catuzpAdI     -> catuzpadI     | PWG: {#catuzpAdI#} f. {%ein Complex von 4 Füssen%} WEBER, JYOT. 92. | Body defines catuzpAdI f. as 'ein Complex von 4 Füssen' — real feminine noun with long A, 
+jyezWatarA    -> jyezWatara    | PWG: {#jyezWatarA#} f. {%Wärterin, Aufseherin über ein junges Mädchen%} KATHĀS. 75,94. {#jyezWa | Body defines jyezWatarA f. as 'Wärterin, Aufseherin' with citations — real feminine noun.
+parivezwanA   -> parivezwana   | PWG: {#parivezwanA#} f. {%das Umbinden, Verbinden%} SĀH. D. 344,3. | Body defines parivezwanA f. as 'das Umbinden, Verbinden' — real feminine noun with its own
+vIrAy         -> vIray         | PWG: {#vIrAy#} (von {#vIra#}) {%den Helden spielen%}: {#vIrAyitamanena#} (impers.) UTTARAR. 109 | Body derives vIrAy from vIra 'den Helden spielen' with citation — real denominative verb f
+nIrasana      -> nirasana      | PWG: {#nIrasana#} ({#nis + rasanA#}) adj. {%keinen Gürtel habend%}: {#anIrasanEH — jaTanEH#} KI | Body defines nIrasana (nis+rasanA) adj. 'keinen Gürtel habend'; long I is regular sandhi o
+BAgurI        -> BAguri        | PWG: {#BAgurI#} f. Titel eines das Lokāyata schildernden Werkes PAT. a. a. O. 7,116,a. | Body defines BAgurI f. as title of a text on Lokāyata — real feminine noun/title, not a mi
+raTatUr       -> raTatur       | PWG: {#raTatU/r#} adj. {%den Wagen befördernd%}: {#Su\Be kaM yA^nti raTa\tUrBi\raSvE^H#} ṚV. 1, | Body defines 'raTatU/r' as 'den Wagen befördernd' with two RV citations; long U is the Ved
+EkIya         -> ekIya         | PWG: {#EkI/ya#} adj. von {#Eka#} gaṇa {#gahAdi#} zu P. 4,2,138. | Body defines EkIya as an adjective from Eka in gaṇa gahAdi — a real derived word distinct 
+hemana        -> hEmana        | PWG: {#hemana/#} adj. von (wohl 2.) {#heman#} gaṇa {#pAmAdi#} zu P. 5,2,100. | Body defines hemana as adj. from heman in gaṇa pAmAdi — own derivation, real word.
+avyati        -> avyaTi        | PWG: {#a/vyati#} (von {#av#}) f. {%Sättigung, Befriedigung%} oder {%Begierde%}: {#triH sma\ mAh | Body derives 'avyati' from root 'av', glossed 'Sättigung/Begierde'; 't' vs 'T' are distinc
+jyotIrata     -> jyotIraTa     | PWG: {#jyotIrata#} ({#jyotis + rata#}) m. N. pr. eines Schlangendämons VYUTP. 87 ({#jyotirata#} | Body explicitly gives etymology 'jyotis + rata' supporting the suspect spelling; jyotIrata
+sTar          -> star          | PWG: {#sTar#} = {#sTa#} in {#savyazWar#} und {#savye˚#} . | Body defines sTar = sTa in compounds (savyazWar etc.); entirely unrelated to star.
+Anarda        -> Amarda        | PWG: {#Anarda#} (von {#nard#} mit {#A)#} m. {%Gebrüll%}: {#AnardaM#} (kann auch als absol. aufg | Body derives 'Anarda' from root 'nard' with prefix 'A', glossed 'Gebrüll'; independent der
+yaBya         -> yavya         | PWG: {#yaBya#} (wie eben) adj. {#a/yaByA#} {%non futuenda%} AV. 20,128,8. {#su/yaByA#} {%bene f | Body gives 'yaBya' its own AV gloss 'non futuenda/bene futuenda'; 'B' vs 'v' are distinct 
+aSvabaqava    -> aSvavaqava    | PWG: {#aSvabaqava#} oder {#˚vaqava#} ({#a˚ + baqavA#}) n. sg. {%Hengste und Stuten%} P. 2,4,12. | Body defines aSvabaqava (or ˚vaqava) as 'Hengste und Stuten' with P. grammar refs — a real
+amftin        -> anftin        | PWG: {#amftin#} (von {#amfta#} {%Unsterblichkeit)%} adj. {%unsterblich%} WEBER, RĀMAT. UP. 329. | Body derives amftin from amfta 'Unsterblichkeit', glosses 'unsterblich' — clearly defines 
+banDur        -> vanDur        | PWG: 2. {#banDur#} {#Sra\va\syuM Suzma^M kAba\vaM vaDri^M kfRvantu ba\nDura^H#} AV. 3,9,3 und m | Body cites banDur in AV. 3,9,3 with Sanskrit verse — a real attested word with its own Ved
+vaqavAgni     -> vaqabAgni     | PWG: {#vaqavAgni#} m. {%das am Südpol gedachte Höllenfeuer, welches kein Wasser des Meeres zu l | Body fully glosses vaqavAgni as 'Höllenfeuer' with multiple citations and cross-ref vAqavA
+amaraka       -> anaraka       | PWG: {#amaraka#} m. N. pr. eines Fürsten Verz. d. Oxf. H. 256,a,8. | Body defines amaraka as N. pr. of a prince; unrelated to anaraka (not-hell); independent p
+satrAsAha     -> sAtrAsAha     | PWG: {#satrAsAha/#} ({#˚saha#} Padap.) adj. dass.: Indra ṚV. 2,21,3. — Vgl. {#sAtrAsAha#} . | Body defines 'satrAsAha/' with its own RV citation (2,21,3) and Padapāṭha note; 'Vgl. sAtr
+anantavIryA   -> anantavIrya   | PWG: {#anantavIryA#} f. N. pr. einer Göttin KĀLACAKRA 4,38. | Body defines 'anantavIryA' as 'f. N. pr. einer Göttin'; the final A is the regular Sanskri
+meGasvana     -> meGasvanA     | PWG: {#meGasvana#} ({#meGa + svana#}) adj. {%wie eine Wolke donnernd%}: {#mahA˚#} MBH. 3,1718.  | Body defines meGasvana as adj. 'wie eine Wolke donnernd' with citations; meGasvanA is the 
+sasvarta      -> sasvartA      | PWG: {#sasva/rta#} adj. {%heimlich thuend%}: {#yatsa\svartA^ jihILi\re yadA\viH#} ṚV. 7,58,5. — | Body defines sasvarta as adj. 'heimlich thuend' with RV citation — own attested Vedic word
+sutEla        -> sutElA        | PWG: {#sutEla#} adj. {%gutes Oel gebend%}; f. {#A#} ein N. der {#mahAjyotizmatI#} RĀJAN. 3,71. | Body defines sutEla as adj. 'gutes Oel gebend' with its own feminine sutElA noted — real w
+bahusuta      -> bahusutA      | PWG: {#bahusuta#} ({#bahu + suta#})  1) adj. {%viele Kinder —, vielen Nachwuchs habend.%} — 2)  | Body gives stem entry: 1) adj., 2) f. A; bahusuta is the correct stem headword encompassin
+mAhAkulIna    -> mahAkulIna    | PWG: {#mA/hAkulIna#} (wie eben) adj. dass. P. 4,1,141. | Body derives mAhAkulIna via vRddhi prefix mAhA- under P.4,1,141; long A is phonologically 
+ayopAzWi      -> ayopAzwi      | PWG: {#a/yo'pAzWi#} ({#ayas + a˚#}) adj. {%mit eisernen Krallen versehen%}: {#Sye\naH#} ṚV. 10, | Body defines 'ayopAzWi' as 'mit eisernen Krallen versehen' with RV citation; 'W' (aspirate
+DanAyus       -> danAyus       | PWG: {#DanAyus#} ({#Dana + Ayus#}) m. N. pr. eines Sohnes des Dṛḍhāyus MATSYAP. in VP. 398, N.  | Body defines DanAyus as m. proper noun 'N. pr. eines Sohnes des Dṛḍhāyus' — D (=Dh) is cor
+Ezya          -> ESya          | PWG: {#Ezya#} (von 3. {#i + A)#} adj. {%kommend, künftig%} SŪRYAS. 4,8. 8,15 ({#ezya#}). VARĀH. | Body distinguishes Ezya 'kommend, künftig' from ezya 'gehend' — explicitly a real word wit
+savarduh      -> sabarduh      | PWG: {#savardu/h#} adj. dass.: {#˚Duk#} ṚV. 10,69,8. | Body gives own gloss 'adj. dass.' with RV citation; savardu/h is independently attested, n
+valArAti      -> balArAti      | PWG: {#valArAti#} m. Vala's {%Feind%} d. i. Indra AK. 1,1,1,38. | Body defines valArAti as 'Vala's Feind d. i. Indra' — v/b alternation in Vala compounds is
+valadviz      -> baladviz      | PWG: {#valadviz#} m. Vala's {%Feind%} d. i. Indra H. 174, Schol. | Body defines valadviz as 'Vala's Feind d. i. Indra' with H. 174 citation; independent atte
+aDyAropaRA    -> aDyAropaRa    | PWG: {#aDyAropaRA#} f. {%Uebertragung%} ŚAṂK. zu BṚH. ĀR. UP. S. 155. | Body marks 'aDyAropaRA' as 'f.' (feminine noun); final A is the regular feminine ending, n
+acCupta       -> acCuptA       | PWG: {#acCupta#} (3. {#a + Cupta#} von {#Cup#})  1) adj. {%unberührt.%} — 2) f. {#˚ptA#} N. pr. | Body defines 'acCupta' in sense 1 as adj. 'unberührt' and sense 2 'acCuptA' f. as proper n
+akzArAlavaRASin -> akzAralavaRASin | PWG: {#akzArAlavaRASin#} ({#akzArAlavaRa[akzAra + alavaRa]+ASin#}) adj. {%nichts Gesalzenes ess | Body bracket analysis '[akzAra + alavaRa]' shows sandhi a+a→A; 'akzArAlavaRASin' is the co
+ananyamAnasA  -> ananyamAnasa  | PWG: {#ananyamAnasA#} adj. f. {%an keinen Andern%} (als an den Gatten) {%denkend%} [Page5-0979] | Body defines 'ananyamAnasA' as 'adj. f.' with KATHĀS citation; the A-final form is the reg
+atikASa       -> atikaSa       | PWG: {#atikASa/#} (von {#kAS#} mit {#ati)#} m.  1) {%Schein%}: {#nakza^trARAM mAtIkA\SAtpA^hi#} | Body derives from root {#kAS#}; long A matches the root. Vedic citations confirm kASAt for
+uttaMsikA     -> uttaMsika     | PWG: {#uttaMsikA#} f. von {#uttaMsa#} in {#aSokottaMsikA#} . | Body says 'f. von {#uttaMsa#}' — feminine noun with long A ending is correct; suggestion d
+yOvanikA      -> yOvanika      | PWG: {#yOvanikA#} f. = {#yUnAM BAvaH#} ebend. 6 (4),47,b. | Body defines as 'f. = yUnAM BAvaH' — a feminine noun; long A ending is the correct feminin
+AkiMcana      -> akiMcana      | PWG: {#AkiMcana/#} (von {#akiMcana#}) n. {%Mangel an jeglichem Besitz, Armuth%} gaṇa {#pfTvAdi# | Body derives 'von {#akiMcana#}' — AkiMcana is a legitimate A-prefix abstract noun from aki
+tandray       -> tandrAy       | PWG: {#tandray#} (von 1. {#tandra), tandrayate#} {%matt werden%}: {#sUryasya paSya SremARaM yo  | Body (2 entries) defines tandray as a verbal root 'matt werden' with its own conjugation; 
+akzapAd       -> akzapad       | PWG: {#akzapAd#} m. = {#akzapAda#} Verz. d. B. H. No. 823. | Body defines akzapAd as '= akzapAda' — it is an attested variant form; cross-reference sho
+indravaMSa    -> indravaMSA    | PWG: {#indravaMSa#} Indra's {%Geschlecht%} VARĀH. BṚH. S. 104,18 mit Anspielung auf den Namen d | Body defines indravaMSa as 'Indra's Geschlecht' (neuter concept) with VARĀH. citation; mas
+izetvAka      -> izetvaka      | PWG: {#i/zetvAka#} adj. (ein Adhyāya oder Anuvāka) {%in dem die Worte%} {#ize tvA#} ( VS. 1,1)  | Body defines izetvAka as adj. with long A, citing Panini gaṇa; the form with long A is att
+kxptakIla     -> kxptakIlA     | PWG: {#kxptakIla#} ({#kxpta + kIla#}) f. {%Rechtsurkunde%} TRIK. 2,2,2. HĀR. 175. | Body explicitly says f. 'Rechtsurkunde' TRIK. — but the entry head is kxptakIla (no final 
+siMhavijfmBitA -> siMhavijfmBita | PWG: {#siMhavijfmBitA#} f. {%eine best. Meditation%} VYUTP. 17. | Body defines siMhavijfmBitA as f. 'eine best. Meditation' VYUTP — the final long A marks i
+DUmaSiKa      -> DUmaSiKA      | PWG: {#DUmaSiKa/#} ({#DUma + SiKA#}) adj. {%von Rauch als einer Mähne umgeben%}: {#a\gni\ji\hvA | Body defines DUmaSiKa as adj. 'von Rauch als einer Mähne umgeben' with AV. citation; mascu
+SaSivadana    -> SaSivadanA    | PWG: {#SaSivadana#}  1) adj. (f. {#A#}) {%mondantlitzig%} CHANDOM. 10. — 2) f. {#A#} N. zweier  | Body defines SaSivadana as adj. (f. A) 'mondantlitzig' and separately f. A as metre names;
+SukrapUtapa   -> SukrapUtapA   | PWG: {#SukrapUtapa#} adj. {%hellen geläuterten%} (Soma) {%trinkend%} ṚV. 8,46,26. | Body defines SukrapUtapa as adj. 'hellen geläuterten (Soma) trinkend' with RV citation; ma
+avatoka       -> avatokA       | PWG: {#a/vatoka#} ({#ava + toka#}) adj. f. {#A#} {%die eine Fehlgeburt gemacht hat%}: {#striyam | Body defines a/vatoka as adj. f. A 'die eine Fehlgeburt gemacht hat'; base form avatoka is
+citrikA       -> citrika       | PWG: {#citrikA#} (von {#citrA#} {%spica virginis%}) m. = {#cEtrika#} {%der Monat%} Caitra ŚABDA | Body defines citrikA as m. 'der Monat Caitra' derived from citrA; citrikA with long A is t
+jayASraya     -> jayASrayA     | PWG: {#jayASraya#} ({#jaya + ASraya#})  1) adj. {%woran Sieg haftet.%} — 2) f. {#A#} {%ein best | Body defines jayASraya as adj. 'woran Sieg haftet' and f. A as a grass; base masculine/neu
+mfdugamana    -> mfdugamanA    | PWG: {#mfdugamana#} ({#mfdu + gamana#}) adj. {%einen sanften Gang habend%}; f. {#A#} {%das Weib | Body defines mfdugamana as adj. 'einen sanften Gang habend'; f. A separately noted; base m
+niHsvAmika    -> niHsvAmikA    | PWG: {#niHsvAmika#} (von {#nis + svAmin)#} adj. (f. {#A#}) {%herrenlos, gattenlos%} KATHĀS. 98, | Body defines niHsvAmika as adj. (f. A) 'herrenlos, gattenlos' KATHĀS.; base form without f
+pAlAlina      -> palAlina      | PWG: {#pAlAlina/#} adj. ({#matvarTe#}) von {#palAlI#} PAT. zu P. 5,2,100. | Body defines pAlAlina with long initial PAlA- citing PAT.; distinct form from palAlina wit
+pUtiPala      -> pUtiPalA      | PWG: {#pUtiPala#} (2. {#pU˚ + pAla#})  1) adj. {%übelriechende Frucht habend.%} — 2) f. {%Serra | Body defines pUtiPala as adj. 'übelriechende Frucht habend' and then f. as plant name; bas
+padajYa       -> padajYA       | PWG: {#padajYa/#} ({#pada + jYa#}) adj. {%ortskundig, die Heimath kennend%}: {#yenA^ na\H pUrve | Body defines padajYa as adj. 'ortskundig' with RV and AV citations; masculine adjective fo
+upoditA       -> upodita       | PWG: {#upoditA#} (von 3. {#i#} mit {#upa + ud#}) f. N. pr. zu schliessen aus {#Opoditeya#} . | Body defines a feminine noun (f.) ending in long -A; that spelling is correct for the femi
+vArvaraka     -> varvaraka     | PWG: {#vA/rvaraka#} ({#bArbaraka#}) adj. von {#varvara#} ({#barbara#}) gaṇa {#DUmAdi#} zu P. 4, | Body derives vArvaraka from varvara via gana DUmAdi P.4,2,127; initial long A is the expec
+vizaGa        -> vizaGA        | PWG: {#vizaGa#}  1) adj. {%Gift zerstörend.%} — 2) f. {#A#} {%Cocculus cordifolius Dc.%} ({#guq | Body gives stem entry covering 1) adj. and 2) f. A; vizaGa is the correct stem headword, n
+AhicCatra     -> ahicCatra     | PWG: {#AhicCatra/#} adj. vom N. pr. {#ahicCatra#} P. 1,1,75, Sch. 3,1,7, Kār., Sch. Davon ein n | Body defines as derivative adj 'vom N. pr. ahicCatra'; long initial A is derivational (pat
+SilABAva      -> SilABava      | PWG: {#SilABAva#} m. {%das Steinsein, die Natur eines Steins%}: {#˚BAvamavApnuhi#} {%werde zu S | Gloss 'das Steinsein' = SilA (stone) + BAva (state of being); long A+B in BAva is standard
+amftapraBA    -> amftapraBa    | PWG: {#amftapraBA#} ({#a˚ + pra˚#}) f. N. pr. verschiedener Frauen RĀJA-TAR. 3,9. 463. 4,658. | Proper name (N. pr.) of women; praBA is the feminine form (light/splendour), distinct from
+atimuktakamAlA -> atimuktakamalA | PWG: {#atimuktakamAlA#} ({#atimuktaka + mAlA#}) f. N. pr. eines Mädchens LALITAV. 255. | Proper name of a girl; mAlA (garland) is the correct component; long A in mAlA is lexicall
+carajyA       -> cArajyA       | PWG: {#carajyA#} f. = {#carajA#} Comm. zu GOLĀDHY. 7,1 und zu SŪRYAS. 3,34. | Body equates to carajA (short initial c, no long A); the suggestion cArajyA with long init
+ciraMjIvA     -> ciraMjIva     | PWG: {#ciraMjIvA#} f. {%Trigonella corniculata%} ŚABDAC. im ŚKDR. u. {#ratisatvarA#} . | Gloss is a plant name (Trigonella corniculata); ciraMjIvA is the feminine form, distinct f
+devapAda      -> devapada      | PWG: {#devapAda#} und {#devapAdamUla#} s. u. {#pAda#} und {#pAdamUla#} . | Body cross-references 'pAda' and 'pAdamUla'; long A in pAda is the standard Sanskrit word 
+kASmIrikA     -> kASmIrika     | PWG: {#kASmIrikA#} f. {%eine Prinzessin der%} Kaśmīra RĀJA-TAR. 6,254. | Body defines as 'eine Prinzessin der Kaśmīra'; kASmIrikA is the feminine form of kASmIrika
+kAYcanapraBA  -> kAYcanapraBa  | PWG: {#kAYcanapraBA#} f. N. pr. der Gattin eines Fürsten der Vidyādhara KATHĀS. 51,16. | Proper name (N. pr.) of a Vidyādhara's wife; praBA is the feminine of praBa (radiance); th
+kAlUtara      -> kalUtara      | PWG: {#kAlUtara/#} und {#kA/lUtaraka#} adjj. von {#kalUtara#} gaṇa {#kacCAdi#} zu P. 4,2,133. f | Body says 'adjj. von kalUtara'; kAlUtara is the derivative (taddhita) adjective from kalUt
+mAtaNgaja     -> mataNgaja     | PWG: {#mAtaNgaja#} adj. {%vom Elephanten kommend%}: {#carman#} SUŚR. 2,66,15. Zu zerlegen in {# | Body explicitly discusses both derivations (mAtaNga+ja or from mataNgaja); the long A form
+mahAhrasva    -> mahAhrasvA    | PWG: {#mahAhrasva#} ({#ma˚ + hra˚#})  1) adj. {%überaus kurz, — niedrig.%} — 2) f. {#A#} {%Mucu | Body defines mahAhrasva as adj 'überaus kurz' (masc) and notes feminine A; the masculine h
+nalvavartmaga -> nalvavartmagA | PWG: {#nalvavartmaga#} ({#nalva — vartman#} + 1. {#ga#}) adj. {%einen%} Nalva {%weit gehend%}:  | Body defines adj 'einen Nalva weit gehend' (masc), feminine A noted separately; headword i
+paramezWA     -> paramezWa     | PWG: {#paramezWA#} f. {%ein best. Metrum%} Ind. St. 8,107; vgl. {#paramezWin#} 3). | Body defines as 'ein best. Metrum' (f.); paramezWA is the feminine metre name; the final l
+piwAkyA       -> piwakyA       | PWG: {#piwAkyA/#} f. collect. von {#piwAka#} gaṇa {#pASAdi#} zu P. 4,2,49. | piwAkyA is a feminine collective derived from piwAka (gaṇa pASAdi); long A is phonological
+prAkPAlgunI   -> prAkPalgunI   | PWG: {#prAkPAlgunI#} f. pl. = {#pUrvaPAlgunI#} VARĀH. BṚH. S. 15,9. | prAkPAlgunI is equated with pUrvaPAlgunI; long A in PAlgunI parallels PAlgunI spelling; ow
+pruzwA        -> pruzwa        | PWG: {#pruzwA#} P. 3,1,17, Vārtt. 1. Davon denom. {#pruzwAyate = pruzwAM karoti#} ebend. {#pruz | pruzwA is a feminine form (basis for denom. pruzwAyate); distinct grammatical entry with i
+saMBAva       -> saMBava       | PWG: {#saMBAva#} (von 1. {#BU#} mit {#sam#}) m. {%Stand%}: {#rAja˚#} R. 5,51,10. | saMBAva 'Stand' derives from BU+sam with vrddhi (BA); distinct from saMBava 'origin/arisin
+saMBavya      -> saMBAvya      | PWG: {#saMBavya#} (wie eben) m. {%Feronia elephantum Corr.%} ŚABDAC. in Verz. d. Oxf. H. 195,b, | saMBavya has its own distinct botanical gloss (Feronia elephantum); not a misspelling of s
+smarya        -> smArya        | PWG: {#smarya#} (wie eben) adj. dass. PAÑCAR. 3,7,29. — Vgl. {#smara˚#} . | smarya is an adjective with its own citation; 'dass.' refers to the preceding entry's mean
+upajIvA       -> upajIva       | PWG: {#upajIvA/#} f. {%Lebensmittel%} TBR. 1,5,6,4. | upajIvA is feminine (f.) 'Lebensmittel'; the long final A marks feminine gender, not a typ
+vikAritA      -> vikArita      | PWG: {#vikAritA#} (von {#vikArin#}) f. {#a˚#} {%Unwandelbarkeit, Beständigkeit%} KĀM. NĪTIS. 2, | vikAritA is a feminine abstract noun (f.) derived from vikArin; final long A is the femini
+aBray         -> aBrAy         | PWG: {#aBray#} (von {#aBra)#}, partic. praes. f. {#aBra/yantI#} {%Gewitterwolken bildend%} TS.  | aBray is a distinct denominal verb from aBra (cloud), with participle aBrayantI; Vgl. refe
+asUryaMpaSyA  -> asUryaMpaSya  | PWG: {#asUryaMpaSyA#} (3. {#a + sUryam#} [acc. von {#sUrya] — paSyA#}) f. {%die Gemahlin eines  | asUryaMpaSyA is feminine (f.) 'queen'; long A is the feminine ending of the compound adjec
+azwApAd       -> azwapAd       | PWG: {#azwA/pAd#} ({#a˚ + pAd#})  1) adj. f. {#˚padI#} {%achtfüssig, achttheilig%} ṚV. 1,164,41 | azwApAd (with vrddhi azwA-) is a Vedic compound attested in RV; distinct from azwapAd; lon
+balay         -> balAy         | PWG: {#balay#} (von 1. {#bala)#} {%kräftigen%}; s. {#balana#} und {#upodbalay#} . | balay is a denominal verb from bala 'strength'; Vgl. balAy confirms two distinct denominat
+gosaMBavA     -> gosaMBava     | PWG: {#gosaMBavA#} ({#go + saMBava#}) f. N. einer Pflanze, = {#SvetadUrvA#} (vgl. {#golomI#}) R | gosaMBavA is feminine (f.) plant name; long final A is the feminine gender marker, not a t
+kzudrapatra   -> kzudrapatrA   | PWG: {#kzudrapatra#} ({#kzudra + patra#})  1) f. {#˚patrA#} {%eine Art Sauerampfer%} ({#cANgerI | kzudrapatra is the base compound form; kzudrapatrA is the feminine variant cited within th
+meGay         -> meGAy         | PWG: {#meGay#} (von {#meGa), meGa/yati#} {%trübes Wetter machen%}: {#a\Braya^ntI me\Gaya^ntI va | meGay is a distinct denominal verb from meGa; the entry itself cross-references meGAy as a
+nanandar      -> nanAndar      | PWG: {#na/nandar#} UJJVAL. zu UṆĀDIS. 2,99. f. Decl. VOP. 3,65. {%des Mannes Schwester%} H. 554 | nanandar is an attested form (Uṇādisūtra) meaning husband's sister; Vgl. nanAndar confirms
+varitar       -> varItar       | PWG: {#varitar#} nom. ag. von 1. {#var#} P. 7,2,34, Schol. — Vgl. {#varItar, varutar, varUtar#} | varitar is a nomen agentis from var, grammatically derived (P. 7,2,34); Vgl. varItar confi
+kUwatUlA      -> kUwatulA      | PWG: {#kUwatUlA#} (1. {#kUwa#} 10. + {#tUlA#}) f. {%eine falsche Wage%}: {#kUwatUlAmAnam#} PAÑC | Body analyses kUwatUlA as kUwa+tUlA; second member tUlA has long U; compound faithfully pr
+mAtfbanDU     -> mAtfbanDu     | PWG: {#mAtfbanDU#} (wie eben) adj. f. so v. a. {%nur den Namen einer Mutter führend, Rabenmutte | mAtfbanDU is feminine adjective (f.) with its own distinct gloss 'Rabenmutter'; long U is 
+OraSAyani     -> OrasAyani     | PWG: {#O/raSAyani#} patron. von {#uraSa#} und {#OraSa#} gaṇa {#tikAdi#} zu P. 4,1,154. | Body derives OraSAyani from uraSa/OraSa via gana tikAdi; retroflex S follows from the base
+puruzakeSarin -> puruzakesarin | PWG: {#puruzakeSarin#} ({#pu˚ + ke˚#}) m. {%halb Mensch, halb Löwe%}, Viṣṇu in seiner 4ten Ersc | keSarin = maned one/lion (from keSa, hair) with palatal S; correct Sanskrit spelling for t
+samudrarasana -> samudraraSana | PWG: {#samudrarasana#} adj. (f. {#A#}) {%meerumgürtet%}: die Erde RAGH. 15,83. VARĀH. BṚH. S. 4 | Body glosses 'meerumgUrtet' (sea-girdled); rasanA = girdle (dental s) is the correct etymo
+vikramakeSarin -> vikramakesarin | PWG: {#vikramakeSarin#} m. N. pr. eines Fürsten von Pāṭaliputra Verz. d. Oxf. H. 152,b,13. KATH | keSarin = lion/maned (from keSa) with palatal S; N. pr. uses the correct Sanskrit spelling
+saMBu         -> SaMBu         | PWG: {#saMBu#} (von 1. {#BU#} mit {#sam#}) P. 3,2,180 (= {#janitar#} Schol.). VOP. 26,168.  1)  | saMBu derives from BU+sam 'originating from'; SaMBu is a name of Shiva; completely differe
+yogaka        -> yOgaka        | PWG: {#yogaka#} (von {#yoga#}) m. Bein. des Agni als {%Hochzeitsfeuers%} GṚHYASAṂGR. 1,5. | Body derives 'von {#yoga#}' (short o); gloss fits yoga-derived word, not yOga (long O/au).
+somadEvata    -> somadevata    | PWG: {#somadEvata#} adj. dass. AK. 3,4,24,163. {#nakzatra = mfgaSiras#} MBH. 13,3258. | somadEvata = having Soma as deity; long E in dEvata is standard Sanskrit; not a misspellin
+somadevatya   -> somadEvatya   | PWG: {#somadevatya#} adj. dass. ĀŚV. GṚHY. 4,7,11. | somadevatya (soma+devatya) is a regular adjective with short e; somadEvatya with diphthong
+aDogaRwA      -> aDoGaRwA      | PWG: {#aDogaRwA#} ({#aDas + gaRwA#}) f. N. einer Pflanze, {%Achyranthes aspera%}, RATNAM. im ŚK | Body analyses as {#aDas + gaRwA#} with lowercase g (unaspirated); headword spelling is con
+klIvatA       -> klIbatA       | PWG: {#klIvatA#} (von {#klIva#}) f. {%Unvermögen%} SUŚR. 1,366,8. {#aklIvatA#} {%Männlichkeit,  | Body derives from {#klIva#}; klIvatA is the correct abstract noun from klIva. klIba is a s
+Barmas        -> BarRas        | PWG: {#Ba/rmas#} (von {#Barj#} = φλέγω) UṆĀDIS. 4,215. n.  1) = {#Barga#} {%strahlender Glanz%} | Body derives from {#Barj#}=φλέγω, glossed 'strahlender Glanz'; Barmas is a known n-stem. B
+aBivAha       -> avivAha       | PWG: {#aBivAha#} (von {#vah#} mit {#aBi)#} m. {%das Heranfliessen%}: {#˚ta/s#} TS. 6,6,5,4. | Body derives aBivAha from vah+aBi, meaning 'das Heranfliessen'; unrelated to avivAha (non-
+svayaMBfta    -> svayaMvfta    | PWG: {#svayaMBfta#} adj. {%selbsterhalten, — ernährt%} BHĀG. P. 3,30,15. | Body glosses 'selbsterhalten/ernahrt' from Bf (to bear/support); vfta would be from vR (to
+bArdala       -> vArdala       | PWG: {#bArdala#}  1) {%ein trüber Tag, Regenwetter%}; m. TRIK. 3,3,402. n. H. an. 3,674. MED. l | Body gives own glosses 'trüber Tag/Regenwetter' and 'Schwärze/Dinte'; a distinct word, not
+sunAyaka      -> sumAyaka      | PWG: {#sunAyaka#} m. {%ein guter Führer%} u. s. w., f. {#sunAyikA#} P. 7,3,46, Vārtt., Schol. | Gloss 'ein guter Führer' (good guide) = su+nAyaka; sumAyaka (good māyā?) would be entirely
+valapura      -> balapura      | PWG: {#valapura#} n. Vala's {%Burg%} ṚV. ANUKR.; s. HOEFER, Z. f. d. W. d. Sprache I,288. | Body glosses 'Vala's Burg' — Vedic demon Vala's fortress; distinct from balapura (city of 
+valavftrahan  -> balavftrahan  | PWG: {#valavftrahan#} m. dass. MBH. 3,2240. | Body says 'dass.' (same as Vala-compound); genuine proper-name compound referring to Vala 
+pratAn        -> pratAm        | PWG: {#pratAn#} indecl. gaṇa {#svarAdi#} zu P. 1,1,37. — Vgl. {#pratAm#} . | pratAn is an indeclinable in gaṇa svarAdi; Vgl. pratAm confirms both are distinct document
+dAzAy         -> dAsAy         | PWG: {#dAzAy#} (von 1. {#doza), ˚yate#} {%wie ein Mangel erscheinen%} Spr. 851. | dAzAy is a denominal from doza (fault/defect) meaning 'to appear as a fault'; z is correct
+ja|u          -> (flag)        | PWG: {#ja|u/#} adj. NIR. 6,25 erklärt durch {#jvalanena hInaH#}, also wohl für verwandt mit {#j | Body gives genuine gloss 'jvalanena hīnaḥ' (devoid of flame) and ṚV 8,50,11 citation; '|' 
+goopaSa       -> (flag)        | PWG: {#go/opaSa#} ({#go + o˚#}) adj. {%mit einer Flechte%} oder {%einem Büschel von rindsledern | Body glosses 'mit einer Flechte oder einem Büschel von rindsledernen Riemen versehen'; dou
+sahasramI|a   -> (flag)        | PWG: {#saha/sramI|a#} adj. {%tausend Kämpfe habend%}: {#Aji#} ṚV. 1,112,10. | Body glosses 'tausend Kämpfe habend' with ṚV 1,112,10 citation; '|' is Vedic accent notati
+svarmI|a      -> (flag)        | PWG: {#sva^rmI|a#}  1) adj. {%wobei es den Kampf um Sonne%} oder {%Licht gilt%} (vgl. unter {#s | Body gives full gloss (adj. 'Kampf um Sonne/Licht' + n. 'Kampf um Licht') with multiple ṚV
+nF~HpraRetra  -> (flag)        | PWG: {#nF/~HpraRetra#} {#(nFn#}, acc. pl. von 1. {#nar, + pra˚ = praRetar)#} adj. {%Männer führ | Body explicitly parses compound: nFn (acc. pl. of nar) + praRetar, gloss 'Männer führend',
+sAmU|ika      -> (flag)        | PWG: {#sAmU|ika#} adj. {%mit%} {#samU|acCandas#} {%versehen%} ŚĀṄKH. ŚR. 16,30,4. | Body glosses 'mit samU|acCandas versehen' with ŚĀṄKH. ŚR. citation; '|' is accent/metrical
+mahAbahu      -> mahAbAhu      | PWG: {#mahAbahu#} ({#ma˚ + bAhu#})  1) adj. {%langarmig%} (vgl. {#dIrGabAhu#}) INDR. 1,9. HIḌ.  | Body has full entry with many citations; body notes component bAhu but mahAbahu is documen
+dorganDya     -> dOrganDya     | PWG: {#dorganDya#} (von {#durganDa#}) n. {%übler Geruch%} MBH. 3,15454. HARIV. 7280. SUŚR. 1,19 | Body defines dorganDya with full gloss and citations; dOrganDi noted as WILS form; main en
+Kadya         -> KAdya         | PWG: {#Ka/dya#} ({#Kawya?#}) adj. von {#Kada (Kawa?)#} gaṇa {#gavAdi#} zu P. 5,1,2. | Body defines Kadya adj. from Kada with gaṇa reference; treated as its own entry, not a vrd
+nIraNga       -> niraNga       | PWG: {#nIraNga#} ({#nis + raNga#}) neben {#saraNga#} Z. d. d. m. G. 14,569,16. | Body defines 'nIraNga' ({#nis + raNga#}) as its own entry alongside 'saraNga' without call
+grezma        -> grEzma        | PWG: {#grezma#}  1) {#astra#} KATHĀS. 116,71. | Body defines 'grezma' as 'astra' from KATHĀS without error marker; 'e' vs 'E' (e/ai) are d
+varkarakarkara -> barkarakarkara | PWG: {#varkarakarkara#} viell. adj. so v. a. {%von allen Sorten%} Spr. 1555. | Body gives its own gloss 'viell. adj. so v. a. von allen Sorten' with Spr. citation; v/b a
+ahnaya        -> ahnAya        | PWG: {#ahnaya#} desgl. in {#tiro'hnaya, devaraTAhnaya#} (n. {%Tagereise des Sonnenwagens%} BṚH. | Body documents 'ahnaya' in compounds ('tiro'hnaya', 'devaraTAhnaya') without error markers
+balacandra    -> bAlacandra    | PWG: {#balacandra#} ({#bala + ca˚#}) m. N. pr. eines Fürsten WASSILJEW 53. | Body analyses as {#bala + ca˚#} (bala=strength, not bAla=child); short a is the intended c
+JaMkfta       -> JAMkfta       | PWG: {#JaMkfta#} pl. vom {%Gesumme%} der Bienen PAÑCAR. 3,5,2. | Body gives own definition 'pl. vom Gesumme der Bienen' with PAÑCAR. citation; short J vs l
+mAlArizwa     -> mAlArizwA     | PWG: {#mAlArizwa#} (wohl {#mAlA + a˚)#} f. {%eine best. Pflanze%}, = {#pAcI#} RĀJAN. im ŚKDR. | Body defines mAlArizwa as f. 'eine best. Pflanze = pAcI'; if f., expected final A; but the
+surAgfha      -> suragfha      | PWG: {#surAgfha#} n. dass. TRIK. 3,3,82. | surAgfha 'house/abode of the gods' (surA+gfha with long A) is a plausible compound; terse 
+yOzmAkIRa     -> yOzmAkIna     | PWG: {#yO/zmAkIRa#} (wie eben) adj. dass. P. 4,3,1. 2. VOP. 7,22. DURGA zu NIR. 5,4. | Body gives adj. under P.4,3,1; retroflex R is a valid Paninian suffix variant alongside de
+libikara      -> livikara      | PWG: {#libikara#} ({#livi˚#}) m. = {#lipikara#} P. 3,2,21. {%Schreiber, Abschreiber%} [Page6-05 | Body cites 'livi˚' as etymology and equates to lipikara (scribe); libikara is documented a
+masIDanI      -> mazIDanI      | PWG: {#masIDanI#} f. = {#masiDAnI#} {%Dintenfass%} TRIK. 2,8,27. | Body equates to masiDAnI without marking suspect as erroneous; regular s vs retroflex z is
+pitfvAnDava   -> pitfbAnDava   | PWG: {#pitfvAnDava#} ({#pitar + vA˚#}) m. = {#pitfvanDu#} 1. UDVĀHAT. im ŚKDR. | Body uses 'pitar+vA˚' and cross-refs pitfvanDu; the v-form is consistent throughout; bAnDa
+dABI          -> qABI          | PWG: {#dABI#} adj. f. in folg. Stelle: {#tAM (gAyatrIM) vya^hvayanta\ viSva^karma\nniti^ de\vA  | dABI is an adjective from daB with its own Vedic citation and gloss; qABI would use retrof
+
+# ===== BUCKET 5  INTENTIONAL -- MW documents the spelling on purpose; NEVER file (248) =====
+idAm          -> idam          | PWG: {#idAm#}, {#idAmati#} künstliches denom. von {#idam#} SIDDH. K. zu P. 6,4,15. | Body says 'künstliches denom. von {#idam#}' — artificial denominative formed from idam; in
+rAjAn         -> rAjan         | PWG: {#rAjAn#}, {#˚nati#} denom. von {#rAjan#} SIDDH. K. zu P. 6,4,15. | Body says 'denom. von {#rAjan#}' — artificial denominative formed from rAjan; same pattern
+cinta         -> cintA         | PWG: {#cinta#} m. angeblich = {#cintA#} 1. LOIS. zu AK. 1,1,7,29. | Body says 'angeblich = {#cintA#}' (allegedly = cintA) — documented pseudo-masculine listed
+sanu          -> sAnu          | PWG: {#sanu#} in 2. {#sanutar#} fgg. | Body says 'in 2. {#sanutar#} fgg.' — cross-reference entry (s.) only, documenting the form
+parasvaDa     -> paraSvaDa     | PWG: {#parasvaDa#} m. = {#paraSvaDa#} RĀYAM. zu AK. ŚKDR. | Body explicitly states 'm. = {#paraSvaDa#}' — parasvaDa is documented as an alternate spel
+SvAdaMzwrA    -> SvadaMzwrA    | PWG: {#SvAdaMzwrA#} (1. {#Svan + daM˚#}) f. KĀŚ. zu P. 6,3,137. — Vgl. {#SvadaMzwrA#} . | Body gives 'Vgl. {#SvadaMzwrA#}' (compare SvadaMzwrA) — cross-reference to SvadaMzwrA; the
+pArva         -> parva         | PWG: {#pArva#} adj. = {#pArvaRa#} WILS. Wohl eine falsche Form. | Body explicitly states 'Wohl eine falsche Form' (probably a false form) — the headword is 
+nirvaha       -> nirvAha       | PWG: {#nirvaha#} adj. {%fest%}, = {#dfQa#} TRIK. 3,1,19. ŚKDR. und WILSON lesen hier {#nirBawa# | Cross-ref 'Vgl. nirBawa' signals variant reading; body defines suspect on its own ('fest'=
+aGay          -> aGAy          | PWG: {#aGay#} (denom. von {#aGa) aGa/yati#} {%sündigen%} DHĀT. 35,84. — Vgl. {#aGAy#} . | Body cross-refs 'Vgl. aGAy' at the end — aGay is a documented denom. form alongside the lo
+somApa        -> somapa        | PWG: {#somApa#} entweder adj. = {#somapa#} oder m. N. pr. eines Mannes AIT. BR. 7,34. — Vgl. {# | Body states 'entweder adj. = somapa oder m. N.pr.' and 'Vgl. sOmApa' — somApa is documente
+wikA          -> wIkA          | PWG: {#wikA#} in der Stelle: {#svargagrAmawikAviluRWana#} SĀH. D. 3,2. BALLANT. : {%the spoils  | Body says 'zu streichen' (to be deleted); entry is marked for deletion, not corrected to w
+ASirvAda      -> ASIrvAda      | PWG: {#ASirvAda#} (1. {#ASis + vAda#}) m. {%Ausdruck einer Bitte%}: {#aTApi stutireva Bavati nA | Body cross-refs 'Vgl. ASIrvAda', treating ASirvAda as a documented variant or alternate sp
+BUmIpati      -> BUmipati      | PWG: {#BUmIpati#} m. = {#BUmipati#} UJJVAL. zu UṆĀDIS. 4,45. | Body states '= BUmipati' with cross-ref marker; documents BUmIpati as a variant form equal
+kisora        -> kiSora        | PWG: {#kisora#} m. = {#kiSora#}  1)  2) Schol. zu KĀTY. ŚR. 976,6. | Body explicitly states '= {#kiSora#}', equating suspect to suggestion; documented cross-re
+jAvAla        -> jAbAla        | PWG: {#jAvAla#} und {#jAvAli#} s. u. {#jAbAla#} und {#jAbAli#} . | Body uses 's. u. {#jAbAla#}' (see under jAbAla); explicit cross-reference to suggestion.
+vADaka        -> bADaka        | PWG: {#vADaka#} die richtigere Schreibart für 2. {#bADaka#}; s. u. {#vaDaka#} 3). | Body says 'die richtigere Schreibart für 2. bADaka' — vADaka IS the correct spelling over 
+viskamBa      -> vizkamBa      | PWG: {#viskamBa#} und {#viskumBu#} s. u. {#vizkamBa, viskara#} unter {#vizkira#} . | Body uses 's. u. vizkamBa' — explicit cross-reference directing to the correct form vizkam
+Sipibizwa     -> Sipivizwa     | PWG: {#Sipibizwa/#} adj.  1) {%kahl%} AK. 3,4,9,37. H. 453. an. 4,65. MED. ṭ. 65. HALĀY. 2,453. | Body itself uses 'Sipivizwa' in the text (atiriktaM Sipivizwa, SvitraH SipivizwaH, Sipiviz
+ananukftya    -> anAnukftya    | PWG: {#ananukftya#} und {#ananuda#} s. {#anAnukftya#} und {#anAnuda#} . | Body uses 's. {#anAnukftya#}' (see anAnukftya); explicit cross-reference to suggestion.
+darBya        -> dArBya        | PWG: {#darBya#} m. N. pr. eines Mannes MÜLLER, SL. 383. Wie es scheint irrig für {#darBa#}; vgl | Body says 'irrig für darBa' (erroneous for darBa) and cites dalBya/dAlBya; not a correctio
+vyapayana     -> vyapayAna     | PWG: {#vyapayana#} (von 3. {#i#} mit {#vyapa#}) n. {%das Verschwinden, Aufhören%}; s. u. {#vyap | Body cross-refs 's. u. vyapanaya' — unclear canonical form; but body defines vyapayana (3.
+dIkzaRA       -> dIkzaRa       | PWG: {#dIkzaRA#} f. = {#dIkzaRa#} in {#kratu˚#} {%religiöse Vorbereitung zu einem Opfer%} VARĀH | Body states dIkzaRA f. = dIkzaRa in compound — explicitly equates the two; documented femi
+CardIkA       -> CardikA       | PWG: {#CardIkA#} f. = {#CardikA#} 1. RĀJAN. im ŚKDR. u. {#Cardi#} . | Body explicitly states '= {#CardikA#} 1.'; documented as equal to suggestion CardikA.
+avIkzit       -> avikzit       | PWG: {#avIkzit#} m. N. pr. = {#avikzit#} ein Sohn Karaṃdhama's MĀRK. P. 123. fgg. {#avIkzita#}  | Body states '= avikzit' and notes 'avIkzita in den Unterschriften' — avIkzit is documented
+grAvastotriya -> grAvastotrIya | PWG: {#grAvastotriya#} = {#˚stotrIya#}, f. {#A#} (sc. {#hotrA)#} ŚĀṄKH. BR. 29,1. | Body gives '= ˚stotrIya' — explicit equation to grAvastotrIya, marking suspect as a varian
+prastUta      -> prastuta      | PWG: {#prastUta#} m. N. einer best. Klasse von Göttern unter dem Manu Cākṣuṣa VP. 263. Offenbar | Body says 'Offenbar eine falsche Form' (obviously a false form); recorded intentionally wi
+sAradAtilaka  -> SAradAtilaka  | PWG: {#sAradAtilaka#} n. = {#SAradAtilaka#} Verz. d. B. H. No. 1288. Notices of Skt. Mss. 2,145 | Body says '= {#SAradAtilaka#}' — cross-reference documenting this lowercase-s variant as e
+Durvaha       -> durvaha       | PWG: {#Durvaha#} und {#DurvoQar#} falsche Formen für {#DU˚#} . | 'falsche Formen für DU˚' — explicitly documents Durvaha as an erroneous form for DUrv-; in
+vidiTa        -> vidita        | PWG: {#vidiTa#} m. = {#vidaTa#}  2)  a) und  b) ŚKDR. nach ŚABDAC. und einer Hdschr. der MED. | Body equates vidiTa = vidaTa (not vidita), citing ŚKDR — documents it as a variant/alterna
+druGana       -> druGaRa       | PWG: {#druGana/#} m. angeblich eine von {#druGaRa#} verschiedene Bed. habend P. 3,3,82, Sch. Na | Body says druGana 'angeblich eine von druGaRa verschiedene Bed. habend' then '= druGaRa' —
+masUrabidalA  -> masUravidalA  | PWG: {#masUrabidalA#} ({#ma˚ + bidala#}) f. {%Ipomoea Turpethum R. Br.%} AK. 2,4,3,27. {%Ichnoc | Body explicitly notes 'Ueberall masUravi˚ geschr.' — documents masUrabidalA as attested bu
+Barezuja      -> BarezujA      | PWG: {#Barezuja/#} oder {#˚jA/#} adj. {%in Kämpfen vorhanden%} so v. a. {%dienlich.%} | Body explicitly documents both forms: 'Barezuja/ oder ˚jA/' — the feminine A-final variant
+kuwwaparAnta  -> kuwwAparAnta  | PWG: {#kuwwaparAnta#} m. pl. N. pr. eines Volkes VP. 190. — Vgl. {#kuwwAparAnta#} . | Body ends 'Vgl. {#kuwwAparAnta#}' — cross-reference documenting the short-a variant alongs
+SAkapUta      -> SakapUta      | PWG: {#SAkapUta#} (von {#SakapUta#}) n. N. eines Sāman Ind. St. 3,239,a. | Body states SAkapUta derives 'von SakapUta' — explicitly documents it as derived from/refe
+elapura       -> elApura       | PWG: {#elapura#} n. N. pr. einer Stadt VET. 21,15. — Vgl. {#elApura#} . | Body cross-references 'Vgl. elApura' — documents elapura as a known variant with explicit 
+pItasAla      -> pItaSAla      | PWG: {#pItasAla#} und {#pItasAlaka#} s. u. {#pItaSAla#} . | Body says 's. u. {#pItaSAla#}' — explicitly redirects to the palatal-S form; dental-s vari
+vanazad       -> vanasad       | PWG: {#vanazad#} adj. = {#vanasad#}, Rudra PĀR. GṚHY. 3,15. | Body states vanazad = vanasad citing Rudra — explicitly equates the two via '=' cross-refe
+mayUrabidalA  -> mayUravidalA  | PWG: {#mayUrabidalA#} ({#ma˚ + bi˚#}) f. {%eine best. Staude%}, = {#ambazWA#} ŚKDR. nach dem VA | Body says '(˚vidalA geschr.)' — explicitly notes vidalA spelling as the written form; susp
+kakzyapra     -> kakzyaprA     | PWG: {#kakzyapra/#} ({#kakzyA + pra#} mit Kürzung des Auslauts) adj. {%den Gurt füllend%}, von  | Body explicitly states 'mit Kürzung des Auslauts' — the short final vowel is a documented 
+antarvedika   -> Antarvedika   | PWG: {#antarvedika#} adj. {%innerhalb der%} Vedi {%geschehend u. s. w.%} KULL. zu M. 4,227. — V | Body explicitly cross-references both 'Antarvedika' and 'bahirvedika' — lowercase form is 
+vAjasa        -> vAjasA        | PWG: {#vAjasa#} (wohl von {#vAjasA#}) n. N. eines Sāman Ind. St. 3,234,a. | Body says 'wohl von vAjasA' — explicitly derives suspect from suggestion; vAjasa is derive
+atiliha       -> atilihA       | PWG: {#atiliha#} ({#atilihA?#}) N. eines Metrums COLEBR. Misc. Ess. II,156. | Body itself queries 'atilihA?' suggesting the A-form may be correct; documents uncertainty
+ekavyavahArika -> ekavyAvahArika | PWG: {#ekavyavahArika#} (Nachträge), wohl {#˚vyAvahArika#} zu verbessern. | Body explicitly says 'wohl ˚vyAvahArika zu verbessern' — PWG itself flags this as needing 
+kalikAta      -> kalikAtA      | PWG: {#kalikAta#} oder {#˚kAtA#} {%Calcutta%} KṢITĪŚ. 50,9. | Body says 'kalikAta oder ˚kAtA' — explicitly documents both forms as alternatives for 'Cal
+sidDAntadIpika -> sidDAntadIpikA | PWG: {#sidDAntadIpika#} (!) n. desgl. Verz. d. B. H. No. 609. | Body has '(!)' after the headword, signaling PWG itself flagged this form as irregular; do
+girIyaka      -> giriyaka      | PWG: {#girIyaka#} m. {%Spielball%} H. 688, Sch. — Vgl. {#giriyaka#} . | Body gives gloss Spielball and cross-refs 'Vgl. {#giriyaka#}'; the two spellings (long/sho
+mAninDa       -> mAnInDa       | PWG: {#mAninDa#} m. N. pr. eines Astronomen Z. f. d. K. d. M. 4,324. {#maninDa#} 313; vgl. Ind. | Body records both mAninDa and maninDa (short I) as variant spellings of the astronomer's n
+maTIn         -> maTin         | PWG: {#maTIn#}, {#˚nati#} künstliches Denominativ von {#maTin#} SIDDH. K. zu P. 6,4,15. | Body shows maTIn as artificial denominative stem from maTin; long-I form is explicitly der
+masijala      -> masIjala      | PWG: {#masijala#} ({#ma˚ + jala#}) n. {%Dinte%} ŚKDR. angeblich nach TRIK. — Vgl. {#masIjala#}  | Vgl. masIjala cross-reference signals masijala is a documented variant spelling; the entry
+granTakUwI    -> granTakuwI    | PWG: {#granTakUwI#} ({#granTa + kUwI#}) f. {%Bibliothek%} TRIK. 2,8,29. {#˚kuwI#} WILS. ŚKDR. | Body defines granTakUwI (long U) as Bibliothek and explicitly notes variant {#˚kuwI#} (sho
+pattraSirA    -> pattrasirA    | PWG: {#pattraSirA#} ({#pa˚ + Si˚#}) f. = {#mAQi#} HĀR. 150. HALĀY. 4,98. {#˚sirA#} H. an. 2,130 | Body gives pattraSirA (palatal S) as main entry and documents {#˚sirA#} (dental s) as H.an
+otsa          -> Otsa          | PWG: {#otsa#} ({#Otsa?#}) N. eines Agrahāra RĀJA-TAR. 1,174. | Body itself shows {#otsa#} ({#Otsa?#}), documenting both spellings and questioning Otsa; v
+bidalIkfta    -> vidalIkfta    | PWG: {#bidalIkfta#} (von {#bidala#} + 1. {#kar)#} adj. {%gespalten, zerspalten%}: {#te gajAH —  | Body explicitly states 'Ueberall mit {#va#} geschrieben' — the b/v variant is documented; 
+vahusAhasra   -> bahusAhasra   | PWG: {#vahusAhasra#}, {#izwakA ˚srI#} (so Comm.) {%viele tausend Ziegelsteine%} R. ed. Bomb. 1, | Body says 'richtiger verbände man wohl {#izwakAbahusAhasrI#}' — explicitly gives bahu as t
+devakilviza   -> devakilbiza   | PWG: {#devakilviza/#} ({#deva + ki˚#}) m. {%ein Vergehen gegen die Götter%} ṚV. 10,97,16. | kilviza is an attested Sanskrit variant of kilbiza (sin/offence); the body uses it as the 
+kusuruvinda   -> kusurubinda   | PWG: {#kusuruvi/nda#} m. N. pr. eines Nachkommen des Uddālaka TS. 7,2,2,1. {#kusurubinda#} ṢAḌV | Body explicitly records both kusuruvinda and kusurubinda as variant spellings of the same 
+ArgayaRa      -> Argayana      | PWG: {#ArgayaRa#} oder {#Argayana#} adj. ({#Bave vyAKyAne ca#}) von {#fgayana#} P. 4,3,73. gaṇa | Entry itself presents ArgayaRa oder Argayana as alternative forms; both are explicitly doc
+aprayAvan     -> aprayAvam     | PWG: {#a/prayAvan#} in der Stelle AV. 3,5,1 (vgl. AV. PRĀT. 4,56) wohl entstellt aus {#˚yAvam#} | 'wohl entstellt aus ˚yAvam' = probably corrupted from yAvam; body documents aprayAvan as a
+aRuvedAntarasaprakaraRa -> anuvedAntarasaprakaraRa | PWG: {#aRuvedAntarasaprakaraRa#} n. Titel eines Werkes HALL 95 {#(anu˚#}, im Ind. aber {#aRu˚)# | Body explicitly records both aRu˚ and anu˚ as variants of the title; aRu˚ is the index spe
+mAd           -> mad           | PWG: {#mAd#} und {#mAda#} s. {#saDa˚#} . | 
+SUrya         -> sUrya         | PWG: {#SU/rya#} UṆĀDIS. 3,26.  1) m. n. gaṇa {#arDarcAdi#} zu P. 2,4,31. SIDDH. K. 249,a,11.  a | 
+dEvatA        -> devatA        | PWG: {#dEvatA#} am Ende eines comp. nom. abstr. von {#dEva#}; s. u. {#dEva#} 3, {%c%} gegen das | 
+SASvat        -> SaSvat        | PWG: {#SASvat#} m. N. pr. eines Lexicographen MED. Anh. 1 wohl nur fehlerhaft für {#SASvata#},  | 
+anam          -> Anam          | PWG: {#anam#} Z. 2 lies {#dU\rAdana^sA\#} . | 
+candrAyaRa    -> cAndrAyaRa    | PWG: {#candrAyaRa#} bei WEBER, RĀMAT. UP. 356 (14) fehlerhaft für {#cA˚#} . | 
+dARqaka       -> daRqaka       | PWG: {#dARqaka#} m. N. pr. eines Bhoja Verz. d. Oxf. H. 216,b,13. {#dARqakya#} v. l. | 
+hAraRa        -> haraRa        | PWG: {#hAraRa#}  1) adj. HEM. YOGAŚ. 2,43 fehlerhaft für {#hAriRa#} . — 2) f. {#hAraRA/#} nom.  | 
+lAkza         -> lakza         | PWG: {#lAkza#} adj. Ind. St. 1,110,7 nach KUHN fehlerhaft für {#lAkzma#} {%an die%} Lakṣmī {%ge | 
+nizpAd        -> nizpad        | PWG: {#nizpAd#} s. 1. {#nizpad#} . | 
+santva        -> sAntva        | PWG: {#santva/#} n. nom. abstr. von {#sam#} TBR. 1,1,9,8. dagegen ist {#SantvAya#} zu lesen 3,3 | 
+anukampa      -> anukampA      | PWG: {#anukampa#} s. {#anukampA#} . | 
+prasAh        -> prasah        | PWG: {#prasAh#} s. {#prasah#} . | 
+medini        -> medinI        | PWG: {#medini#} s. u. {#medin#} 2,d. | 
+suBra         -> SuBra         | PWG: {#suBra#} MBH. 8,1765 fehlerhaft für {#SuBra#} (so ed. Bomb.). | 
+pratIkAsa     -> pratIkASa     | PWG: {#pratIkAsa#} fehlerhafte Schreibart für {#pratIkASa#} bei den Erklärern zu AK. 2,10,38. | 
+arsas         -> arSas         | PWG: {#arsas#} = {#arSas#} AK. 2,6,2,5, Sch. | 
+manorata      -> manoraTa      | PWG: {#manorata#} m. N. pr. eines buddhistischen Patriarchen LIA. II, Anh. VIII. Wohl fehlerhaf | 
+ukTi          -> ukti          | PWG: {#ukTi#} vgl. {#bfhadukTi#} . | 
+artay         -> arTay         | PWG: {#artay#} s. {#anvartitar#} . | 
+goza          -> Goza          | PWG: {#goza#} s. u. {#gozA#} . | 
+Barya         -> varya         | PWG: {#Barya#} HARIV. 8831 fehlerhaft für {#BArya#}, wie die neuere Ausg. hat. | 
+sanIpa        -> samIpa        | PWG: {#sanIpa#} m. pl. N. pr. eines Volkes MBH. 6,371 nach der Lesart der ed. Bomb. {#sanIya#}  | 
+vARaprasTa    -> vAnaprasTa    | PWG: {#vARaprasTa#} AK. ed. COLEBR. 2,7,3. MĀRK. P. 119,17. 135,8. 11. PAÑCAR. 1,10,80 fehlerha | 
+aB            -> av            | PWG: {#aB#} s. {#amB#} . | 
+ahnika        -> Ahnika        | PWG: {#ahnika#} adj. von {#ahan#} am Ende eines comp. nach Zahlwörtern P. 5,1,87. {#dvEyahnika# | 
+anASana       -> anaSana       | PWG: {#anASana#} R. 2,92,20 fehlerhaft für {#anaSana#}, wie die ed. Bomb. hat. | 
+ayasya        -> ayAsya        | PWG: {#ayasya^#} ved. von {#ayas#} KĀŚ. zu P. 5,4,30 : {#ayasyo vasAnAH#} . || {#ayasya#} fehle | 
+dAyA          -> dAya          | PWG: {#dAyA#}, {#dAyayA#} KATHĀS. 71,191 fehlerhaft für {#dayayA#} . | 
+akiMcanya     -> AkiMcanya     | PWG: {#akiMcanya#} s. {#A˚#} . | 
+amayAvin      -> AmayAvin      | PWG: {#amayAvin#} beim Schol. zu AV. PRĀT. 4,18 fehlerhaft für {#AmayAvin#} . | 
+kzAp          -> kzap          | PWG: {#kzAp#} s. {#kzi, kziRAti#} caus. | 
+tApatI        -> tapatI        | PWG: {#tApatI#} s. u. {#tapatI#} . | 
+vfzay         -> vfzAy         | PWG: {#vfzay#} = {#vfzAy#}; s. {#vfzayu#} . | 
+kAnyAkubja    -> kAnyakubja    | PWG: {#kAnyAkubja#} wohl fehlerhaft für {#kAnyakubja#} KATHĀS. 61,219. | 
+nIrajana      -> nIrAjana      | PWG: {#nIrajana#} Verz. d. Oxf. H. 31,a,23 fehlerhaft für {#nIrAjana#} . | 
+paradArika    -> pAradArika    | PWG: {#paradArika#} KĀŚ. zu P. 5,2,92 fehlerhaft für {#pAradArika#} . | 
+prAgalBa      -> pragalBa      | PWG: {#prAgalBa#} SĀH. D. 133 fehlerhaft für {#prAgalBya#}, wie die ältere Ausg. liest. | 
+qambAra       -> qambara       | PWG: {#qambAra#} s. {#udita˚#} . | 
+sArUpa        -> sarUpa        | PWG: {#sArUpa#} KĀM. NĪTIS. 4,54. 61 fehlerhaft für {#sAnUpa#} . | 
+vIpsa         -> vIpsA         | PWG: {#vIpsa#} adj. = {#yo vIpsati#} ebend. 8,7,a. | 
+valmIki       -> vAlmIki       | PWG: {#valmIki#} m. = {#valmIka#} ŚABDAM. im ŚKDR. | 
+arAlu         -> aralu         | PWG: {#arAlu#} n. vgl. weiter unten u. {#ArAlika#} . | 
+urja          -> Urja          | PWG: {#urja#} u. s. w. s. u. {#Urja#} . | 
+mahAsAla      -> mahASAla      | PWG: {#mahAsAla#} s. u. {#mahASAla#} . | 
+kAsmarI       -> kASmarI       | PWG: {#kAsmarI#} s. {#kASmarI#} . | 
+kAsmarya      -> kASmarya      | PWG: {#kAsmarya^#} ŚĀNT. 4,8 fehlerhafte Schreibart für {#kArzmarya^#} . || {#kAsmarya#}, in de | 
+visvasfj      -> viSvasfj      | PWG: {#visvasf/j#} (nom. {#˚sfg; ˚sfq#} H. 212, Sch. {#˚sfw yatra#} MBH. 7,1464 fehlerhaft für  | 
+pIwikA        -> pIWikA        | PWG: {#pIwikA#} s. u. {#pIWikA#} . | 
+vetAna        -> vEtAna        | PWG: {#vetAna#} RĀJA-TAR. 6,48 fehlerhaft für {#vetana#} . | 
+anekAntika    -> anEkAntika    | PWG: {#anekAntika#} s. {#EkAntika#} . | 
+AzAqI         -> AzAQI         | PWG: {#AzAqI#} [vgl. [Page1-0728]] streiche den {#AzAqI#}, da a. a. O. {#AzAQI#} in der gangbar | 
+cakrabAla     -> cakravAla     | PWG: {#cakrabAla#} und {#˚vAla#}  1) {%Reif, Ring%}: {#kirIwahArANgadacakrabAlErviBUzitANgAH#}  | 
+suBita        -> suvita        | PWG: {#suBita#} ved. adj. = {#suhita#} PAT. a. a. O. 1,271,b. st. dessen richtig {#SuBita = SuD | 
+BuzuRqi       -> BuSuRqi       | PWG: {#BuzuRqi#} s. {#BuSuRqi#} . | 
+Sazya         -> Sasya         | PWG: {#Sazya#} fehlerhafte Schreibung für {#Sazpa#} und {#sasya#} . | 
+kfzara        -> kfsara        | PWG: {#kfzara#} s. {#kfsara#} . | 
+ahiPeRa       -> ahiPena       | PWG: {#ahiPeRa#} n. {%Opium%} RĀJAN. im ŚKDR. — Vgl. {#aPena#}, wo {#ahiPeRa#} für {#ahiPenaka# | 
+ahika         -> Ahika         | PWG: 1. {#ahika#} (von {#ahi#})  1) m. s. {#anDAhika#} . — 2) f. {#A#} N. eines Baumes, {%Salma | 
+pAwalikA      -> pAwalika      | PWG: {#pAwalikA#} demin. von {#pAwalA#}; s. {#sita˚#} . || {#pAwalikA#} vgl. {#lavaRa˚#} . | 
+AntarjAnu     -> antarjAnu     | PWG: {#AntarjAnu#} adj. fehlerhaft für {#antarjAnu#} MĀRK. P. 34,27. | 
+drORikA       -> drORika       | PWG: {#drORikA#} KATHĀS. 3,33 fehlerhaft für {#dro˚#} . | 
+mAnasikA      -> mAnasika      | PWG: {#mAnasikA#} s. {#mahA˚#} . | 
+nAgnajit      -> nagnajit      | PWG: {#nAgnajit#} Z. 7 die ed. Bomb. {#nagnajitastvayA#}; Z. 9 die neuere Ausg. des HARIV. über | 
+marin         -> mArin         | PWG: {#marin#} s. {#kara˚#} . | 
+utkAlita      -> utkalita      | PWG: {#utkAlita#} s. {#utkalita#} 3. | 
+ASItika       -> aSItika       | PWG: {#ASItika#} (von {#aSIti)#} adj. {%achtzigjährig%}: {#puruzAH#} KĀM. NĪTIS. 7,44. Wohl feh | 
+SakawAyana    -> SAkawAyana    | PWG: {#SakawAyana#}, {#˚nAH#} R. 2,89,15 fehlerhaft für {#SakawApaRAH#}; s. u. {#Sakawa#} 1). | 
+devatiTi      -> devAtiTi      | PWG: {#devatiTi#} s. u. {#devAtiTi#} . | 
+nizWana       -> nizWAna       | PWG: {#nizWana#} s. u. {#nizwana#} . | 
+prAjvalana    -> prajvalana    | PWG: {#prAjvalana#} s. u. {#prAYjali#} . | 
+sOkArya       -> sOkarya       | PWG: {#sOkArya#} s. u. 1. {#sOkarya#} . | 
+upasAda       -> upasada       | PWG: {#upasAda#} PADMA-P. 8,19 fehlerhaft für {#upANga#} . | 
+vfzaRASva     -> vfzaRaSva     | PWG: {#vfzaRASva#} s. u. {#vfzaRaSva#} 2) {%b).%} | 
+wAMkara       -> wAMkAra       | PWG: {#wAMkara#} m. {%Wüstling%} TRIK. 2,7,29. — Vgl. {#wAra#} . || {#wAMkara#} lies {%Heiraths | 
+avasAnikA     -> avasAnika     | PWG: {#avasAnikA#} (von 1. {#avasAna#}) am Ende eines adj. comp.: {#ozaDiH PalapAkAvasAnikA#} { | 
+arizwakA      -> arizwaka      | PWG: {#arizwakA#} und {#arizwikA#} f. {%eine best. Pflanze%} VARĀH. BṚH. S. 48,40, v. l. für {# | 
+upajIkA       -> upajIka       | PWG: {#upajIkA#} s. {#upadIkA#} . | 
+aBivarga      -> aBIvarga      | PWG: {#aBivarga#} und {#aBivarta#} s. u. {#aBI˚#} . | 
+goRi          -> goRI          | PWG: {#goRi#} s. u. {#goRI#} . | 
+SIlI          -> SilI          | PWG: {#SIlI#} s. {#pAda˚#} . | 
+vaNkU         -> vaNku         | PWG: {#vaNkU#} MBH. 2,1846 fehlerhafte Lesart für {#vaNkzu#}; die ed. Bomb. liest {#bAlhIcInasa | 
+daseraka      -> daSeraka      | PWG: {#daseraka#} s. u. {#daSeraka#} . | 
+vAtarasana    -> vAtaraSana    | PWG: {#vAtarasana#} s. u. {#vAtaraSana#} . | 
+viSraMsana    -> visraMsana    | PWG: {#viSraMsana#} s. {#visraMsana#} . | 
+kunaWa        -> kunawa        | PWG: {#kunaWa#} m. pl. N. pr. eines Volkes VARĀH. BṚH. S. 14,10. {#kunaha#} v. l. | 
+maDuGa        -> maduGa        | PWG: {#maDuGa#} s. {#maduGa#} . | 
+odarika       -> Odarika       | PWG: {#odarika#} MBH. 7,6390 fehlerhaft für {#Odarika#} . | 
+mARimanta     -> mARimanTa     | PWG: {#mARimanta#} n. = {#mARimanTa#} H. 942, Sch. | 
+barhiska      -> barhizka      | PWG: {#barhiska#} s. {#barhizka#} . | 
+wowaka        -> towaka        | PWG: {#wowaka#} {%ein best. Metrum%} (4 Mal ⏑ ⏑ – ⏑ ⏑ – ⏑ ⏑ – ⏑ ⏑ –) COLEBR. Misc. Ess. II,160  | 
+karbawa       -> karvawa       | PWG: {#karbawa#} vgl. {#karvawa#} . | 
+nikilviza     -> nikilbiza     | PWG: {#nikilviza#} vgl. {#nizkilviza#} . | 
+caSAla        -> cazAla        | PWG: {#caSAla#} = {#cazAla#} KĀṬH. 26,4. | 
+saMbalana     -> saMvalana     | PWG: {#saMbalana#} s. u. {#saMvanana#} am Ende. | 
+trizuparRa    -> trisuparRa    | PWG: {#trizuparRa#} s. u. {#trisuparRa#} . | 
+mahAmani      -> mahAmaRi      | PWG: {#mahAmani#} m. N. pr. eines Fürsten VP. 444. Wohl fehlerhaft für {#˚mati#} oder {#˚maRi#} | 
+visahya       -> vizahya       | PWG: {#visahya#} s. {#vizahya#} . | 
+acirapraBa    -> acirapraBA    | PWG: {#acirapraBa#} ({#acira + praBA#})  1) adj. {%von kurzem Glanze.%} — 2) f. {#˚praBA#} {%Bl | 
+tatfpi        -> tAtfpi        | PWG: {#tatfpi#} s. {#tAtfpi#} . | 
+vAcasa        -> vacasa        | PWG: {#vAcasa#} s. {#vi˚, sa˚#} . | 
+AkArika       -> Akarika       | PWG: {#AkArika/#} adj. = {#AkAre niyuktaH#} P. 4,4,69, Sch. Es ist wohl {#Akarika#} zu lesen. | 
+apratirUpya   -> aprAtirUpya   | PWG: {#apratirUpya#} MBH. 7,1487 fehlerhaft für {#aprA˚#} . | 
+gadagada      -> gadAgada      | PWG: {#gadagada#} SUŚR. 1,260,17 wohl nur fehlerhaft für {#gadgada#} . | 
+parAvarya     -> pArAvarya     | PWG: {#parAvarya#} HARIV. 7202 wohl nur fehlerhaft für {#parAvara#} . || {#parAvarya#}, die neu | 
+arupita       -> Arupita       | PWG: {#a/rupita#} s. {#Arupita#} . || {#arupita#} u. s. w. zu streichen. | 
+brAhmAdrijAtA -> brahmAdrijAtA | PWG: {#brAhmAdrijAtA#} s. u. {#brahmAdijAtA#} . | 
+vEpAdikA      -> vEpAdika      | PWG: {#vEpAdikA#} f. = {#vipAdikA#}  1) WISE 261. | 
+ganDamUzikA   -> ganDamUzika   | PWG: {#ganDamUzikA#} f. = {#ganDamUzika#} HALĀY. 2,80. | 
+pEtfyajYiya   -> pEtfyajYIya   | PWG: {#pEtfyajYiya#}, so zu lesen st. {#pEtfyajYIya#} . | 
+BUmIBuj       -> BUmiBuj       | PWG: {#BUmIBuj#} m. = {#BUmiBuj#} Spr. 2518. | 
+sUlika        -> SUlika        | PWG: {#sUlika#} s. {#SUlika#} 2) b). | 
+ekAdaSina     -> EkAdaSina     | PWG: {#ekAdaSina#} (von {#ekAdaSinI#}) adj. {%zu einer Eilfzahl gehörig%}: {#paSu#} ŚĀṄKH. ŚR.  | 
+ewata         -> Ewata         | PWG: {#ewata#} s. {#Ewata#} . | 
+karozwI       -> KarozwI       | PWG: {#karozwI#} vgl. {#Karosti#} . | 
+raNGanATa     -> raNganATa     | PWG: {#raNGanATa#} s. u. {#raNganATa#} (2). | 
+acirABa       -> acirABA       | PWG: {#acirABa#} ({#acira + ABA#})  1) adj. {%von kurzem Glanze.%} — 2) f. {#˚BA#} {%Blitz%} HĀ | 
+BamBasAra     -> BamBAsAra     | PWG: {#BamBasAra#} wohl = {#bimbisAra#} . | 
+bAlaja        -> balaja        | PWG: {#bAlaja#} s. {#bAlbaja#} . | 
+ganDASuRqinI  -> ganDaSuRqinI  | PWG: {#ganDASuRqinI#} s. {#ganDaSuRqinI#} . | 
+jambUnadamaya -> jAmbUnadamaya | PWG: {#jambUnadamaya#} KATHĀS. 120,107 fehlerhaft für {#jA˚#} . | 
+kANgula       -> kaNgula       | PWG: {#kANgula#} m. Bez. {%einer best. Stellung der Hand%} Verz. d. Oxf. H. 202,a,3. {#kANgUla# | 
+prastAvika    -> prAstAvika    | PWG: {#prastAvika#} adj. {#aprastAvikI#} {%nicht der Gelegenheit entsprechend, ungelegen, unzei | 
+ArDya         -> arDya         | PWG: {#ArDya#} vgl. {#arGya#} 3). | 
+niviqA        -> niviqa        | PWG: {#niviqA/#} P. 5,2,32.  1) adj. f. {#A#} {%dicht, keinen Zwischenraum darbietend%} H. 1446 | 
+prAjita       -> prajita       | PWG: {#prAjita#} s. u. {#prajita#} . | 
+AlaNGana      -> alaNGana      | PWG: {#AlaNGana#} bei BENFEY fehlerhaft für {#laNGana#} . | 
+DarANkura     -> DArANkura     | PWG: {#DarANkura#} MED. r. 271 und HĀR. 231 fehlerhaft für {#DArANkura#} . | 
+aSvasUkti     -> ASvasUkti     | PWG: {#aSvasUkti#} ({#a˚ + sU˚#}) m. N. pr. nach ṚV. ANUKR. Verfasser von ṚV. 8,14. 15. aus dem | 
+apomaya       -> Apomaya       | PWG: {#apomaya#} BṚH. ĀR. UP. (POL.) 4,4,5. und DEV. 1,75. falsche Lesart für {#Apomaya#} . | 
+avarikA       -> avArikA       | PWG: {#avarikA#} = {#avArikA#} ŚKDR. u. {#avArikA#} . | 
+daRqAyAma     -> daRqayAma     | PWG: {#daRqAyAma#} s. {#daRqayAma#} . | 
+daSAdaSin     -> daSadaSin     | PWG: {#daSAdaSin#} s. u. {#daSadaSin#} . | 
+kArpawin      -> karpawin      | PWG: {#kArpawin#} KATHĀS. 124,69 fehlerhaft für {#karpawin#} . | 
+saMsargika    -> sAMsargika    | PWG: {#saMsargika#} s. u. {#saMsargin#} 1). | 
+susTAla       -> susTala       | PWG: {#susTAla#} s. {#susTala#} . | 
+veRatawa      -> veRAtawa      | PWG: {#veRatawa#} m. pl. N. pr. eines Volkes AV. PARIŚ. in Verz. d. B. H. 93 (56). wohl richtig | 
+adyakAlaka    -> AdyakAlaka    | PWG: {#adyakAlaka#} s. {#AdyakAlaka#} . | 
+ajAkfpaRIya   -> ajAkfpARIya   | PWG: {#ajAkfpaRI/ya#} (von {#ajA + kfpaRa#}) adj. {%nach Art der Ziege und des Geizhalses (?) g | 
+apaSrayin     -> apASrayin     | PWG: {#apaSrayin#} MBH. 3,3076 fehlerhaft für {#apA˚#} . | 
+darSanavaraRIya -> darSanAvaraRIya | PWG: {#darSanavaraRIya#}, lies {#darSanA˚#} und vgl. {#darSanAvaraRa#} WILSON, Sel. Works 1,317 | 
+darvan        -> dArvan        | PWG: {#darvan#} s. u. {#darva#} 6. | 
+jYAnavaraRIya -> jYAnAvaraRIya | PWG: {#jYAnavaraRIya#} s. u. {#jYAnAvaraRIya#} . | 
+nAgasvarUpiRI -> nagasvarUpiRI | PWG: {#nAgasvarUpiRI#} (von 1. {#nAga + svarUpa#}) f. {%ein best. Metrum, 4 Mal%} ⏑ – ⏑ – ⏑ – ⏑ | 
+tripadyA      -> tripadya      | PWG: {#tripadyA#} s. WEBER, JYOT. 52. fgg. | 
+varAwaki      -> vArAwaki      | PWG: {#varAwaki#} ({#varAtaki#} gedr.) PRAVARĀDHY. in Verz. d. B. H. 55,32 fehlerhaft für {#vAr | 
+parAYjana     -> paraYjana     | PWG: {#parAYjana#} n. TRIK. 2,8,27 fehlerhaft für {#pattrAYjana#} . | 
+pitfgaRA      -> pitfgaRa      | PWG: {#pitfgaRA#} (wie eben) f. Bein. der Durgā; so ist viell. st. {#pitagfRA#} H. ś. 53 zu les | 
+sumaha        -> sumahA        | PWG: {#sumaha#} m. N. pr. eines Sohnes des Jahnu HARIV. 1423 nach der Lesart der neueren Ausg., | 
+tamapraBA     -> tamapraBa     | PWG: {#tamapraBA#} s. u. {#tamaHpraBA#} . | 
+ASitar        -> aSitar        | PWG: {#ASitar#} nom. ag. {%gefrässig%} H. 394 schlechte Lesart für {#ASita#} . | 
+admanI        -> admani        | PWG: {#admanI#} s. {#duradmanI#} . | 
+sAkzIBUta     -> sAkziBUta     | PWG: {#sAkzIBUta#} R. 3,51,34 wohl fehlerhaft für {#sAkziBUta#} . | 
+kuwIka        -> kuwika        | PWG: {#kuwIka#} am Ende eines adj. comp. (von {#kuwI): sakuwIkA (senA)#} vielleicht {%mit beweg | 
+pratisAram    -> pratIsAram    | PWG: {#pratisAram#} s. u. {#sar#} mit {#prati#} . | 
+pAdukft       -> pAdUkft       | PWG: {#pAdukft#} s. {#pAdUkft#} . | 
+jUq           -> juq           | PWG: {#jUq#} mit {#ud#} s. u. {#Jaw#} . | 
+calU          -> calu          | PWG: {#calU#} s. {#puMScalU#} . | 
+kAMSyanIla    -> kAMsyanIla    | PWG: {#kAMSyanIla#} s. u. {#kAMsyanIla#} . | 
+kOSalaka      -> kOsalaka      | PWG: {#kOSalaka#} s. {#kOsalaka#} . | 
+karRaSrotas   -> karRasrotas   | PWG: {#karRaSrotas#} (1. {#karRa + Sro˚)#} n. {%Gehörgang, Ohrloch%} VARĀH. BṚH. S. 58,7. {#˚sr | 
+samAntaka     -> SamAntaka     | PWG: {#samAntaka#} m. {%der Liebesgott%} H. ś. 77 fehlerhaft für {#SamAntaka#} . | 
+sudaMSas      -> sudaMsas      | PWG: {#sudaMSas#} Z. 2 lies 2, 2, 3. | 
+vaSIyaMs      -> vasIyaMs      | PWG: {#vaSIyaMs#} s. {#vasIyaMs#} . | 
+maRiSara      -> maRisara      | PWG: {#maRiSara#} s. {#maRisara#} . | 
+nisrAvin      -> niSrAvin      | PWG: {#nisrAvin#} (wie eben) adj. so ist wohl st. {#niSrAvin#} zu lesen im gaṇa {#grahAdi#} zu  | 
+taptaSUrmi    -> taptasUrmi    | PWG: {#taptaSUrmi#} s. u. {#taptasUrmi#} . | 
+samitar       -> Samitar       | PWG: {#samitar#} MBH. 10,357 fehlerhaft für {#Samitar#} {%Schlächter.%} | 
+upasiMhana    -> upaSiMhana    | PWG: {#upasiMhana#} s. {#upaSiMhana#} . | 
+apAzWi        -> apAzwi        | PWG: {#apAzWi#} s. {#ayo'pAzWi#} . || {#apAzWi#} = {#apAzWa#} in {#apAzWi/han#} ŚAT. BR. 12,7,1 | 
+garDaBi       -> gardaBi       | PWG: {#garDaBi#} s. {#gardaBi#} . | 
+narDawaka     -> nardawaka     | PWG: {#narDawaka#} s. u. {#nardawaka#} . | 
+kolUta        -> kOlUta        | PWG: {#kolUta#} s. u. {#kolUka#} . | 
+lOhitASva     -> lohitASva     | PWG: {#lOhitASva#} s. {#lohitASva#} . | 
+SoDikA        -> SODikA        | PWG: {#SoDikA#} s. u. {#SoDaka#} . | 
+antarvESika   -> antarveSika   | PWG: {#antarvESika#} m. wohl nur fehlerhaft für {#antarvaMSika#} Schol. zu R. bei GORR. VII,341 | 
+maRiraTa      -> maRirata      | PWG: {#maRiraTa#} s. u. {#maRirata#} . | 
+hoQ           -> hoq           | PWG: {#hoQ#}, {#hoQate#} und {#hoQAyate = hoQa iva Acarati#} VOP. 21,7. fehlerhaft für {#hoq, h | 
+kAmatva       -> kARatva       | PWG: {#kAmatva#} in LA. 40,5 fehlerhaft für {#kAmatattva#}, wie die neuere Ausg. 33,19 liest. | 
+jYAnadarpana  -> jYAnadarpaRa  | PWG: {#jYAnadarpana#} ({#jYAna + da˚#}) m. {%Spiegel der Erkenntniss%}, Bein. Mañjuśrī's TRIK.  | 
+todalatantra  -> toqalatantra  | PWG: {#todalatantra#} s. u. {#toqala˚#} . | 
+udvila        -> udbila        | PWG: {#udvila#} s. {#udbila#} . | 
+KarvUja       -> KarbUja       | PWG: {#KarvUja#} vgl. {#tarambuja#} . | 
+vAgvali       -> vAgbali       | PWG: {#vAgvali#} s. {#vAgbali#} . | 
+vAwIya        -> vAtIya        | PWG: {#vAwIya#} s. {#brahma˚, SfgAla˚#} . | 
+wup           -> tup           | PWG: {#wup#} s. {#Awopa#} . | 
+lAvAkza       -> lAbAkza       | PWG: {#lAvAkza#}, {#˚ka#} s. u. {#lAbAkza#} . | 
+ajavasta      -> ajabasta      | PWG: {#ajavasta#} m. N. pr. eines Lehrers Verz. d. Oxf. H. 55,b,23. Wohl fehlerhaft für {#˚vast | 
+vizoQa        -> viSoQa        | PWG: {#vizoQa#} s. u. {#sah#} mit {#vi#} . | 
+
+# ===== BUCKET 6  UNLOCATABLE -- not in the current MW source (stale/different key) (2) =====
+prEpa         -> prepa         | PWG:  | 
+GanDakAlikA   -> ganDakAlikA   | PWG:  | 

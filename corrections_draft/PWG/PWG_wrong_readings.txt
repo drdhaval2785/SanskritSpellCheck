@@ -1,0 +1,266 @@
+# PWG -- DOCUMENTED-INTENTIONAL spellings (NOT typos -- do NOT file corrections)
+#
+# 248 headwords that LOOK like misspellings but which PWG records on purpose:
+# wrong-reading apparatus (w.r.), variae lectiones (v.l.), in-composition /
+# sandhi forms (in comp. for...), cross-references (See / = X q.v.), and other
+# grammatical/Vedic notes. Filing a 'correction' for any of these CORRUPTS PWG.
+# Use this as a suppression list: such headwords should not be re-flagged.
+# Format per row:  headword -> would-be 'correction'  |  the PWG entry text
+
+# ===== WRONG-READING (71) =====
+ASItika        -> aSItika        | {#ASItika#} (von {#aSIti)#} adj. {%achtzigjährig%}: {#puruzAH#} KĀM. NĪTIS. 7,44. Wohl fehlerhaft für {#aSItika#} .
+AkArika        -> Akarika        | {#AkArika/#} adj. = {#AkAre niyuktaH#} P. 4,4,69, Sch. Es ist wohl {#Akarika#} zu lesen.
+AlaNGana       -> alaNGana       | {#AlaNGana#} bei BENFEY fehlerhaft für {#laNGana#} .
+AntarjAnu      -> antarjAnu      | {#AntarjAnu#} adj. fehlerhaft für {#antarjAnu#} MĀRK. P. 34,27.
+AzAqI          -> AzAQI          | {#AzAqI#} [vgl. [Page1-0728]] streiche den {#AzAqI#}, da a. a. O. {#AzAQI#} in der gangbaren Bed. zu lesen ist. || {#AzAqI#} zu streichen, da an der angeführten
+Barya          -> varya          | {#Barya#} HARIV. 8831 fehlerhaft für {#BArya#}, wie die neuere Ausg. hat.
+DarANkura      -> DArANkura      | {#DarANkura#} MED. r. 271 und HĀR. 231 fehlerhaft für {#DArANkura#} .
+SASvat         -> SaSvat         | {#SASvat#} m. N. pr. eines Lexicographen MED. Anh. 1 wohl nur fehlerhaft für {#SASvata#}, das gleichfalls in's Metrum passt.
+SakawAyana     -> SAkawAyana     | {#SakawAyana#}, {#˚nAH#} R. 2,89,15 fehlerhaft für {#SakawApaRAH#}; s. u. {#Sakawa#} 1).
+Sazya          -> Sasya          | {#Sazya#} fehlerhafte Schreibung für {#Sazpa#} und {#sasya#} .
+aSvasUkti      -> ASvasUkti      | {#aSvasUkti#} ({#a˚ + sU˚#}) m. N. pr. nach ṚV. ANUKR. Verfasser von ṚV. 8,14. 15. aus dem Kaṇva-Geschlecht. || {#aSvasUkti#} [vgl. [Page1-0527]] lies {#aSvasUk
+acirABa        -> acirABA        | {#acirABa#} ({#acira + ABA#})  1) adj. {%von kurzem Glanze.%} — 2) f. {#˚BA#} {%Blitz%} HĀR. 58. || {#acirABa#} [vgl. [Page1-0061]] lies: {#acira#} + {#ABA#}. |
+acirapraBa     -> acirapraBA     | {#acirapraBa#} ({#acira + praBA#})  1) adj. {%von kurzem Glanze.%} — 2) f. {#˚praBA#} {%Blitz%} H. 1104. VIKR. 137. — Vgl. {#aciradyuti#} . || {#acirapraBa#} Z.
+ahiPeRa        -> ahiPena        | {#ahiPeRa#} n. {%Opium%} RĀJAN. im ŚKDR. — Vgl. {#aPena#}, wo {#ahiPeRa#} für {#ahiPenaka#} zu lesen ist.
+ajAkfpaRIya    -> ajAkfpARIya    | {#ajAkfpaRI/ya#} (von {#ajA + kfpaRa#}) adj. {%nach Art der Ziege und des Geizhalses (?) geschehen%} P. 5,3,106, Sch. || {#ajAkfpaRIya#} lies mit der ed. Calc. 
+ajavasta       -> ajabasta       | {#ajavasta#} m. N. pr. eines Lehrers Verz. d. Oxf. H. 55,b,23. Wohl fehlerhaft für {#˚vasti#} .
+amayAvin       -> AmayAvin       | {#amayAvin#} beim Schol. zu AV. PRĀT. 4,18 fehlerhaft für {#AmayAvin#} .
+anASana        -> anaSana        | {#anASana#} R. 2,92,20 fehlerhaft für {#anaSana#}, wie die ed. Bomb. hat.
+anam           -> Anam           | {#anam#} Z. 2 lies {#dU\rAdana^sA\#} .
+antarvESika    -> antarveSika    | {#antarvESika#} m. wohl nur fehlerhaft für {#antarvaMSika#} Schol. zu R. bei GORR. VII,341.
+apaSrayin      -> apASrayin      | {#apaSrayin#} MBH. 3,3076 fehlerhaft für {#apA˚#} .
+apomaya        -> Apomaya        | {#apomaya#} BṚH. ĀR. UP. (POL.) 4,4,5. und DEV. 1,75. falsche Lesart für {#Apomaya#} .
+apratirUpya    -> aprAtirUpya    | {#apratirUpya#} MBH. 7,1487 fehlerhaft für {#aprA˚#} .
+avasAnikA      -> avasAnika      | {#avasAnikA#} (von 1. {#avasAna#}) am Ende eines adj. comp.: {#ozaDiH PalapAkAvasAnikA#} {%die%} O. {%erreicht ihr Ende mit dem Reifwerden der Frucht%} H. 1117.
+ayasya         -> ayAsya         | {#ayasya^#} ved. von {#ayas#} KĀŚ. zu P. 5,4,30 : {#ayasyo vasAnAH#} . || {#ayasya#} fehlerhaft für {#apasya#}, wie die Hdschrr. nach GOLD. lesen sollen.
+candrAyaRa     -> cAndrAyaRa     | {#candrAyaRa#} bei WEBER, RĀMAT. UP. 356 (14) fehlerhaft für {#cA˚#} .
+dAyA           -> dAya           | {#dAyA#}, {#dAyayA#} KATHĀS. 71,191 fehlerhaft für {#dayayA#} .
+darSanavaraRIya -> darSanAvaraRIya | {#darSanavaraRIya#}, lies {#darSanA˚#} und vgl. {#darSanAvaraRa#} WILSON, Sel. Works 1,317. 310 (hier fälschlich {#darSanAvasAna#}). SARVADARŚANAS. 38.
+drORikA        -> drORika        | {#drORikA#} KATHĀS. 3,33 fehlerhaft für {#dro˚#} .
+ekAdaSina      -> EkAdaSina      | {#ekAdaSina#} (von {#ekAdaSinI#}) adj. {%zu einer Eilfzahl gehörig%}: {#paSu#} ŚĀṄKH. ŚR. 6,9,3. 4. 10,12. — Wohl {#EkAdaSina#} zu lesen.
+gadagada       -> gadAgada       | {#gadagada#} SUŚR. 1,260,17 wohl nur fehlerhaft für {#gadgada#} .
+hAraRa         -> haraRa         | {#hAraRa#}  1) adj. HEM. YOGAŚ. 2,43 fehlerhaft für {#hAriRa#} . — 2) f. {#hAraRA/#} nom. act. vom caus. von 1. {#har#} P. 3,3,107, Schol.
+hoQ            -> hoq            | {#hoQ#}, {#hoQate#} und {#hoQAyate = hoQa iva Acarati#} VOP. 21,7. fehlerhaft für {#hoq, hoqa#} .
+jYAnadarpana   -> jYAnadarpaRa   | {#jYAnadarpana#} ({#jYAna + da˚#}) m. {%Spiegel der Erkenntniss%}, Bein. Mañjuśrī's TRIK. 1,1,20. || {#jYAnadarpana#} [vgl. [Page3-0151]] lies: {#jYAnadarpaRa#}
+jambUnadamaya  -> jAmbUnadamaya  | {#jambUnadamaya#} KATHĀS. 120,107 fehlerhaft für {#jA˚#} .
+kAmatva        -> kARatva        | {#kAmatva#} in LA. 40,5 fehlerhaft für {#kAmatattva#}, wie die neuere Ausg. 33,19 liest.
+kAnyAkubja     -> kAnyakubja     | {#kAnyAkubja#} wohl fehlerhaft für {#kAnyakubja#} KATHĀS. 61,219.
+kArpawin       -> karpawin       | {#kArpawin#} KATHĀS. 124,69 fehlerhaft für {#karpawin#} .
+kAsmarya       -> kASmarya       | {#kAsmarya^#} ŚĀNT. 4,8 fehlerhafte Schreibart für {#kArzmarya^#} . || {#kAsmarya#}, in der Ausg. von KIELHORN richtig {#kArzmarya#} .
+lAkza          -> lakza          | {#lAkza#} adj. Ind. St. 1,110,7 nach KUHN fehlerhaft für {#lAkzma#} {%an die%} Lakṣmī {%gerichtet.%}
+mahAmani       -> mahAmaRi       | {#mahAmani#} m. N. pr. eines Fürsten VP. 444. Wohl fehlerhaft für {#˚mati#} oder {#˚maRi#}; andere Autt. haben {#mahASAla#} und {#mahASIla#} .
+manorata       -> manoraTa       | {#manorata#} m. N. pr. eines buddhistischen Patriarchen LIA. II, Anh. VIII. Wohl fehlerhaft für {#˚raTa#} .
+nAgnajit       -> nagnajit       | {#nAgnajit#} Z. 7 die ed. Bomb. {#nagnajitastvayA#}; Z. 9 die neuere Ausg. des HARIV. überall richtig {#nA˚#} .
+nIrajana       -> nIrAjana       | {#nIrajana#} Verz. d. Oxf. H. 31,a,23 fehlerhaft für {#nIrAjana#} .
+nisrAvin       -> niSrAvin       | {#nisrAvin#} (wie eben) adj. so ist wohl st. {#niSrAvin#} zu lesen im gaṇa {#grahAdi#} zu P. 3,1,134.
+odarika        -> Odarika        | {#odarika#} MBH. 7,6390 fehlerhaft für {#Odarika#} .
+pEtfyajYiya    -> pEtfyajYIya    | {#pEtfyajYiya#}, so zu lesen st. {#pEtfyajYIya#} .
+parAYjana      -> paraYjana      | {#parAYjana#} n. TRIK. 2,8,27 fehlerhaft für {#pattrAYjana#} .
+parAvarya      -> pArAvarya      | {#parAvarya#} HARIV. 7202 wohl nur fehlerhaft für {#parAvara#} . || {#parAvarya#}, die neuere Ausg. {#pArA˚#}, welches NĪLAK. durch {#lokamaryAdA#} erklärt.
+paradArika     -> pAradArika     | {#paradArika#} KĀŚ. zu P. 5,2,92 fehlerhaft für {#pAradArika#} .
+pitfgaRA       -> pitfgaRa       | {#pitfgaRA#} (wie eben) f. Bein. der Durgā; so ist viell. st. {#pitagfRA#} H. ś. 53 zu lesen.
+prAgalBa       -> pragalBa       | {#prAgalBa#} SĀH. D. 133 fehlerhaft für {#prAgalBya#}, wie die ältere Ausg. liest.
+prastAvika     -> prAstAvika     | {#prastAvika#} adj. {#aprastAvikI#} {%nicht der Gelegenheit entsprechend, ungelegen, unzeitig%} MĀLATĪM. 39,7 fehlerhaft für {#aprA˚#} .
+pratIkAsa      -> pratIkASa      | {#pratIkAsa#} fehlerhafte Schreibart für {#pratIkASa#} bei den Erklärern zu AK. 2,10,38.
+sAkzIBUta      -> sAkziBUta      | {#sAkzIBUta#} R. 3,51,34 wohl fehlerhaft für {#sAkziBUta#} .
+sArUpa         -> sarUpa         | {#sArUpa#} KĀM. NĪTIS. 4,54. 61 fehlerhaft für {#sAnUpa#} .
+samAntaka      -> SamAntaka      | {#samAntaka#} m. {%der Liebesgott%} H. ś. 77 fehlerhaft für {#SamAntaka#} .
+samitar        -> Samitar        | {#samitar#} MBH. 10,357 fehlerhaft für {#Samitar#} {%Schlächter.%}
+santva         -> sAntva         | {#santva/#} n. nom. abstr. von {#sam#} TBR. 1,1,9,8. dagegen ist {#SantvAya#} zu lesen 3,3,10,2.
+suBita         -> suvita         | {#suBita#} ved. adj. = {#suhita#} PAT. a. a. O. 1,271,b. st. dessen richtig {#SuBita = SuDita#} 3,46,a; vgl. TS. 4,4,12,2.
+suBra          -> SuBra          | {#suBra#} MBH. 8,1765 fehlerhaft für {#SuBra#} (so ed. Bomb.).
+sudaMSas       -> sudaMsas       | {#sudaMSas#} Z. 2 lies 2, 2, 3.
+upasAda        -> upasada        | {#upasAda#} PADMA-P. 8,19 fehlerhaft für {#upANga#} .
+vARaprasTa     -> vAnaprasTa     | {#vARaprasTa#} AK. ed. COLEBR. 2,7,3. MĀRK. P. 119,17. 135,8. 11. PAÑCAR. 1,10,80 fehlerhaft für {#vAna˚#} .
+vaNkU          -> vaNku          | {#vaNkU#} MBH. 2,1846 fehlerhafte Lesart für {#vaNkzu#}; die ed. Bomb. liest {#bAlhIcInasamudBavam#} st. {#vaNkUtIranivAsinaH#} .
+varAwaki       -> vArAwaki       | {#varAwaki#} ({#varAtaki#} gedr.) PRAVARĀDHY. in Verz. d. B. H. 55,32 fehlerhaft für {#vArAwaki#} .
+veRatawa       -> veRAtawa       | {#veRatawa#} m. pl. N. pr. eines Volkes AV. PARIŚ. in Verz. d. B. H. 93 (56). wohl richtiger {#veRAtawa#} ({%an den Ufern der%} Veṇā {%wohnend%}) MBH. 2,1117 na
+vetAna         -> vEtAna         | {#vetAna#} RĀJA-TAR. 6,48 fehlerhaft für {#vetana#} .
+visvasfj       -> viSvasfj       | {#visvasf/j#} (nom. {#˚sfg; ˚sfq#} H. 212, Sch. {#˚sfw yatra#} MBH. 7,1464 fehlerhaft für {#˚sfgyatra#}, wie die ed. Bomb. liest) adj. {%allschaffend%}, m. {%Sc
+wAMkara        -> wAMkAra        | {#wAMkara#} m. {%Wüstling%} TRIK. 2,7,29. — Vgl. {#wAra#} . || {#wAMkara#} lies {%Heirathstifter%} ({#nAgavIwa#}) .
+wowaka         -> towaka         | {#wowaka#} {%ein best. Metrum%} (4 Mal ⏑ ⏑ – ⏑ ⏑ – ⏑ ⏑ – ⏑ ⏑ –) COLEBR. Misc. Ess. II,160 (VII,4). 74. 110. || {#wowaka#}, {#wotalA#} und {#wodalatantra#} [vgl.
+
+# ===== VARIA-LECTIO (8) =====
+ASitar         -> aSitar         | {#ASitar#} nom. ag. {%gefrässig%} H. 394 schlechte Lesart für {#ASita#} .
+arizwakA       -> arizwaka       | {#arizwakA#} und {#arizwikA#} f. {%eine best. Pflanze%} VARĀH. BṚH. S. 48,40, v. l. für {#kawukA#} .
+dARqaka        -> daRqaka        | {#dARqaka#} m. N. pr. eines Bhoja Verz. d. Oxf. H. 216,b,13. {#dARqakya#} v. l.
+kANgula        -> kaNgula        | {#kANgula#} m. Bez. {%einer best. Stellung der Hand%} Verz. d. Oxf. H. 202,a,3. {#kANgUla#} v. l.
+karRaSrotas    -> karRasrotas    | {#karRaSrotas#} (1. {#karRa + Sro˚)#} n. {%Gehörgang, Ohrloch%} VARĀH. BṚH. S. 58,7. {#˚srotas#} v. l. || {#karRaSrotas#} und {#˚srotas#} (Nachträge) vgl. u. {#
+kunaWa         -> kunawa         | {#kunaWa#} m. pl. N. pr. eines Volkes VARĀH. BṚH. S. 14,10. {#kunaha#} v. l.
+sanIpa         -> samIpa         | {#sanIpa#} m. pl. N. pr. eines Volkes MBH. 6,371 nach der Lesart der ed. Bomb. {#sanIya#} ed. Calc. (VP. 193).
+sumaha         -> sumahA         | {#sumaha#} m. N. pr. eines Sohnes des Jahnu HARIV. 1423 nach der Lesart der neueren Ausg., {#sunaha#} die ältere.
+
+# ===== IN-COMPOSITION (4) =====
+ahika          -> Ahika          | 1. {#ahika#} (von {#ahi#})  1) m. s. {#anDAhika#} . — 2) f. {#A#} N. eines Baumes, {%Salmalia malabarica Sch. u. Endl.%} ({#SAlmalI#}), ŚABDAC. im ŚKDR. || 2. {
+ahnika         -> Ahnika         | {#ahnika#} adj. von {#ahan#} am Ende eines comp. nach Zahlwörtern P. 5,1,87. {#dvEyahnika#} {%zweitägig%} Sch.
+dEvatA         -> devatA         | {#dEvatA#} am Ende eines comp. nom. abstr. von {#dEva#}; s. u. {#dEva#} 3, {%c%} gegen das Ende.
+kuwIka         -> kuwika         | {#kuwIka#} am Ende eines adj. comp. (von {#kuwI): sakuwIkA (senA)#} vielleicht {%mit beweglichen Hütten —, mit Zelten versehen%} HARIV. 15829. Der ganze Śloka f
+
+# ===== CROSS-REFERENCE (137) =====
+ASirvAda       -> ASIrvAda       | {#ASirvAda#} (1. {#ASis + vAda#}) m. {%Ausdruck einer Bitte%}: {#aTApi stutireva Bavati nASirvAdaH#} NIR. 7,3. — Vgl. {#ASIrvAda#} .
+ArDya          -> arDya          | {#ArDya#} vgl. {#arGya#} 3).
+BUmIBuj        -> BUmiBuj        | {#BUmIBuj#} m. = {#BUmiBuj#} Spr. 2518.
+BUmIpati       -> BUmipati       | {#BUmIpati#} m. = {#BUmipati#} UJJVAL. zu UṆĀDIS. 4,45.
+BamBasAra      -> BamBAsAra      | {#BamBasAra#} wohl = {#bimbisAra#} .
+BuzuRqi        -> BuSuRqi        | {#BuzuRqi#} s. {#BuSuRqi#} .
+CardIkA        -> CardikA        | {#CardIkA#} f. = {#CardikA#} 1. RĀJAN. im ŚKDR. u. {#Cardi#} .
+KarvUja        -> KarbUja        | {#KarvUja#} vgl. {#tarambuja#} .
+SIlI           -> SilI           | {#SIlI#} s. {#pAda˚#} .
+SoDikA         -> SODikA         | {#SoDikA#} s. u. {#SoDaka#} .
+SvAdaMzwrA     -> SvadaMzwrA     | {#SvAdaMzwrA#} (1. {#Svan + daM˚#}) f. KĀŚ. zu P. 6,3,137. — Vgl. {#SvadaMzwrA#} .
+aB             -> av             | {#aB#} s. {#amB#} .
+aBivarga       -> aBIvarga       | {#aBivarga#} und {#aBivarta#} s. u. {#aBI˚#} .
+aGay           -> aGAy           | {#aGay#} (denom. von {#aGa) aGa/yati#} {%sündigen%} DHĀT. 35,84. — Vgl. {#aGAy#} .
+admanI         -> admani         | {#admanI#} s. {#duradmanI#} .
+adyakAlaka     -> AdyakAlaka     | {#adyakAlaka#} s. {#AdyakAlaka#} .
+akiMcanya      -> AkiMcanya      | {#akiMcanya#} s. {#A˚#} .
+ananukftya     -> anAnukftya     | {#ananukftya#} und {#ananuda#} s. {#anAnukftya#} und {#anAnuda#} .
+anekAntika     -> anEkAntika     | {#anekAntika#} s. {#EkAntika#} .
+antarvedika    -> Antarvedika    | {#antarvedika#} adj. {%innerhalb der%} Vedi {%geschehend u. s. w.%} KULL. zu M. 4,227. — Vgl. {#Antarvedika#} und {#bahirvedika#} .
+anukampa       -> anukampA       | {#anukampa#} s. {#anukampA#} .
+apAzWi         -> apAzwi         | {#apAzWi#} s. {#ayo'pAzWi#} . || {#apAzWi#} = {#apAzWa#} in {#apAzWi/han#} ŚAT. BR. 12,7,1,6. 2,5.
+aprayAvan      -> aprayAvam      | {#a/prayAvan#} in der Stelle AV. 3,5,1 (vgl. AV. PRĀT. 4,56) wohl entstellt aus {#˚yAvam#} .
+arAlu          -> aralu          | {#arAlu#} n. vgl. weiter unten u. {#ArAlika#} .
+arsas          -> arSas          | {#arsas#} = {#arSas#} AK. 2,6,2,5, Sch.
+artay          -> arTay          | {#artay#} s. {#anvartitar#} .
+arupita        -> Arupita        | {#a/rupita#} s. {#Arupita#} . || {#arupita#} u. s. w. zu streichen.
+avIkzit        -> avikzit        | {#avIkzit#} m. N. pr. = {#avikzit#} ein Sohn Karaṃdhama's MĀRK. P. 123. fgg. {#avIkzita#} in den Unterschriften der Adhyāya.
+avarikA        -> avArikA        | {#avarikA#} = {#avArikA#} ŚKDR. u. {#avArikA#} .
+bAlaja         -> balaja         | {#bAlaja#} s. {#bAlbaja#} .
+barhiska       -> barhizka       | {#barhiska#} s. {#barhizka#} .
+brAhmAdrijAtA  -> brahmAdrijAtA  | {#brAhmAdrijAtA#} s. u. {#brahmAdijAtA#} .
+caSAla         -> cazAla         | {#caSAla#} = {#cazAla#} KĀṬH. 26,4.
+cakrabAla      -> cakravAla      | {#cakrabAla#} und {#˚vAla#}  1) {%Reif, Ring%}: {#kirIwahArANgadacakrabAlErviBUzitANgAH#} MBH. 1,7021. 7024. Vgl. {#bAlI, bAlaka#} . — 2) m. N. {%eines mythisch
+calU           -> calu           | {#calU#} s. {#puMScalU#} .
+cinta          -> cintA          | {#cinta#} m. angeblich = {#cintA#} 1. LOIS. zu AK. 1,1,7,29.
+dIkzaRA        -> dIkzaRa        | {#dIkzaRA#} f. = {#dIkzaRa#} in {#kratu˚#} {%religiöse Vorbereitung zu einem Opfer%} VARĀH. BṚH. S. 98,14.
+daRqAyAma      -> daRqayAma      | {#daRqAyAma#} s. {#daRqayAma#} .
+daSAdaSin      -> daSadaSin      | {#daSAdaSin#} s. u. {#daSadaSin#} .
+darBya         -> dArBya         | {#darBya#} m. N. pr. eines Mannes MÜLLER, SL. 383. Wie es scheint irrig für {#darBa#}; vgl. {#dalBya, dAlBya#} .
+darvan         -> dArvan         | {#darvan#} s. u. {#darva#} 6.
+daseraka       -> daSeraka       | {#daseraka#} s. u. {#daSeraka#} .
+devatiTi       -> devAtiTi       | {#devatiTi#} s. u. {#devAtiTi#} .
+druGana        -> druGaRa        | {#druGana/#} m. angeblich eine von {#druGaRa#} verschiedene Bed. habend P. 3,3,82, Sch. Nach COLEBR. und LOIS. zu AK. 2,8,2,59 = {#druGaRa#} .
+elapura        -> elApura        | {#elapura#} n. N. pr. einer Stadt VET. 21,15. — Vgl. {#elApura#} .
+ewata          -> Ewata          | {#ewata#} s. {#Ewata#} .
+ganDASuRqinI   -> ganDaSuRqinI   | {#ganDASuRqinI#} s. {#ganDaSuRqinI#} .
+ganDamUzikA    -> ganDamUzika    | {#ganDamUzikA#} f. = {#ganDamUzika#} HALĀY. 2,80.
+garDaBi        -> gardaBi        | {#garDaBi#} s. {#gardaBi#} .
+girIyaka       -> giriyaka       | {#girIyaka#} m. {%Spielball%} H. 688, Sch. — Vgl. {#giriyaka#} .
+goRi           -> goRI           | {#goRi#} s. u. {#goRI#} .
+goza           -> Goza           | {#goza#} s. u. {#gozA#} .
+grAvastotriya  -> grAvastotrIya  | {#grAvastotriya#} = {#˚stotrIya#}, f. {#A#} (sc. {#hotrA)#} ŚĀṄKH. BR. 29,1.
+jAvAla         -> jAbAla         | {#jAvAla#} und {#jAvAli#} s. u. {#jAbAla#} und {#jAbAli#} .
+jUq            -> juq            | {#jUq#} mit {#ud#} s. u. {#Jaw#} .
+jYAnavaraRIya  -> jYAnAvaraRIya  | {#jYAnavaraRIya#} s. u. {#jYAnAvaraRIya#} .
+kAMSyanIla     -> kAMsyanIla     | {#kAMSyanIla#} s. u. {#kAMsyanIla#} .
+kAsmarI        -> kASmarI        | {#kAsmarI#} s. {#kASmarI#} .
+kOSalaka       -> kOsalaka       | {#kOSalaka#} s. {#kOsalaka#} .
+karbawa        -> karvawa        | {#karbawa#} vgl. {#karvawa#} .
+karozwI        -> KarozwI        | {#karozwI#} vgl. {#Karosti#} .
+kfzara         -> kfsara         | {#kfzara#} s. {#kfsara#} .
+kisora         -> kiSora         | {#kisora#} m. = {#kiSora#}  1)  2) Schol. zu KĀTY. ŚR. 976,6.
+kolUta         -> kOlUta         | {#kolUta#} s. u. {#kolUka#} .
+kusuruvinda    -> kusurubinda    | {#kusuruvi/nda#} m. N. pr. eines Nachkommen des Uddālaka TS. 7,2,2,1. {#kusurubinda#} ṢAḌV. BR. in Ind. St. 1,39 (vgl. 191). Schol. zu JAIM. 1,3,28. {#kusurubin
+kuwwaparAnta   -> kuwwAparAnta   | {#kuwwaparAnta#} m. pl. N. pr. eines Volkes VP. 190. — Vgl. {#kuwwAparAnta#} .
+kzAp           -> kzap           | {#kzAp#} s. {#kzi, kziRAti#} caus.
+lAvAkza        -> lAbAkza        | {#lAvAkza#}, {#˚ka#} s. u. {#lAbAkza#} .
+lOhitASva      -> lohitASva      | {#lOhitASva#} s. {#lohitASva#} .
+mARimanta      -> mARimanTa      | {#mARimanta#} n. = {#mARimanTa#} H. 942, Sch.
+mAd            -> mad            | {#mAd#} und {#mAda#} s. {#saDa˚#} .
+mAnasikA       -> mAnasika       | {#mAnasikA#} s. {#mahA˚#} .
+mAninDa        -> mAnInDa        | {#mAninDa#} m. N. pr. eines Astronomen Z. f. d. K. d. M. 4,324. {#maninDa#} 313; vgl. Ind. St. 2,251. — Vgl. {#maRitTa#} .
+maDuGa         -> maduGa         | {#maDuGa#} s. {#maduGa#} .
+maRiSara       -> maRisara       | {#maRiSara#} s. {#maRisara#} .
+maRiraTa       -> maRirata       | {#maRiraTa#} s. u. {#maRirata#} .
+mahAsAla       -> mahASAla       | {#mahAsAla#} s. u. {#mahASAla#} .
+marin          -> mArin          | {#marin#} s. {#kara˚#} .
+masijala       -> masIjala       | {#masijala#} ({#ma˚ + jala#}) n. {%Dinte%} ŚKDR. angeblich nach TRIK. — Vgl. {#masIjala#} .
+mayUrabidalA   -> mayUravidalA   | {#mayUrabidalA#} ({#ma˚ + bi˚#}) f. {%eine best. Staude%}, = {#ambazWA#} ŚKDR. nach dem VAIDYAKA {#(˚vidalA#} geschr.).
+medini         -> medinI         | {#medini#} s. u. {#medin#} 2,d.
+nAgasvarUpiRI  -> nagasvarUpiRI  | {#nAgasvarUpiRI#} (von 1. {#nAga + svarUpa#}) f. {%ein best. Metrum, 4 Mal%} ⏑ – ⏑ – ⏑ – ⏑ – COLEBR. Misc. Ess. II,159 (III,5). || {#nAgasvarUpiRI#} zu streiche
+narDawaka      -> nardawaka      | {#narDawaka#} s. u. {#nardawaka#} .
+nikilviza      -> nikilbiza      | {#nikilviza#} vgl. {#nizkilviza#} .
+nirvaha        -> nirvAha        | {#nirvaha#} adj. {%fest%}, = {#dfQa#} TRIK. 3,1,19. ŚKDR. und WILSON lesen hier {#nirBawa#} .
+nizWana        -> nizWAna        | {#nizWana#} s. u. {#nizwana#} .
+pAdukft        -> pAdUkft        | {#pAdukft#} s. {#pAdUkft#} .
+pArva          -> parva          | {#pArva#} adj. = {#pArvaRa#} WILS. Wohl eine falsche Form.
+pAwalikA       -> pAwalika       | {#pAwalikA#} demin. von {#pAwalA#}; s. {#sita˚#} . || {#pAwalikA#} vgl. {#lavaRa˚#} .
+pItasAla       -> pItaSAla       | {#pItasAla#} und {#pItasAlaka#} s. u. {#pItaSAla#} .
+pIwikA         -> pIWikA         | {#pIwikA#} s. u. {#pIWikA#} .
+parasvaDa      -> paraSvaDa      | {#parasvaDa#} m. = {#paraSvaDa#} RĀYAM. zu AK. ŚKDR.
+pattraSirA     -> pattrasirA     | {#pattraSirA#} ({#pa˚ + Si˚#}) f. = {#mAQi#} HĀR. 150. HALĀY. 4,98. {#˚sirA#} H. an. 2,130. Nach MED. ḍh. 2 wird {#mAQi#} durch {#pattrapaNgO#} d. i. {#pattraBa
+prAjita        -> prajita        | {#prAjita#} s. u. {#prajita#} .
+prAjvalana     -> prajvalana     | {#prAjvalana#} s. u. {#prAYjali#} .
+prasAh         -> prasah         | {#prasAh#} s. {#prasah#} .
+pratisAram     -> pratIsAram     | {#pratisAram#} s. u. {#sar#} mit {#prati#} .
+qambAra        -> qambara        | {#qambAra#} s. {#udita˚#} .
+raNGanATa      -> raNganATa      | {#raNGanATa#} s. u. {#raNganATa#} (2).
+sAradAtilaka   -> SAradAtilaka   | {#sAradAtilaka#} n. = {#SAradAtilaka#} Verz. d. B. H. No. 1288. Notices of Skt. Mss. 2,145. fg.
+sOkArya        -> sOkarya        | {#sOkArya#} s. u. 1. {#sOkarya#} .
+sUlika         -> SUlika         | {#sUlika#} s. {#SUlika#} 2) b).
+saMbalana      -> saMvalana      | {#saMbalana#} s. u. {#saMvanana#} am Ende.
+saMsargika     -> sAMsargika     | {#saMsargika#} s. u. {#saMsargin#} 1).
+somApa         -> somapa         | {#somApa#} entweder adj. = {#somapa#} oder m. N. pr. eines Mannes AIT. BR. 7,34. — Vgl. {#sOmApa#} .
+susTAla        -> susTala        | {#susTAla#} s. {#susTala#} .
+tApatI         -> tapatI         | {#tApatI#} s. u. {#tapatI#} .
+tamapraBA      -> tamapraBa      | {#tamapraBA#} s. u. {#tamaHpraBA#} .
+taptaSUrmi     -> taptasUrmi     | {#taptaSUrmi#} s. u. {#taptasUrmi#} .
+tatfpi         -> tAtfpi         | {#tatfpi#} s. {#tAtfpi#} .
+todalatantra   -> toqalatantra   | {#todalatantra#} s. u. {#toqala˚#} .
+trizuparRa     -> trisuparRa     | {#trizuparRa#} s. u. {#trisuparRa#} .
+udvila         -> udbila         | {#udvila#} s. {#udbila#} .
+ukTi           -> ukti           | {#ukTi#} vgl. {#bfhadukTi#} .
+upajIkA        -> upajIka        | {#upajIkA#} s. {#upadIkA#} .
+upasiMhana     -> upaSiMhana     | {#upasiMhana#} s. {#upaSiMhana#} .
+urja           -> Urja           | {#urja#} u. s. w. s. u. {#Urja#} .
+utkAlita       -> utkalita       | {#utkAlita#} s. {#utkalita#} 3.
+vADaka         -> bADaka         | {#vADaka#} die richtigere Schreibart für 2. {#bADaka#}; s. u. {#vaDaka#} 3).
+vAcasa         -> vacasa         | {#vAcasa#} s. {#vi˚, sa˚#} .
+vAgvali        -> vAgbali        | {#vAgvali#} s. {#vAgbali#} .
+vAtarasana     -> vAtaraSana     | {#vAtarasana#} s. u. {#vAtaraSana#} .
+vAwIya         -> vAtIya         | {#vAwIya#} s. {#brahma˚, SfgAla˚#} .
+vEpAdikA       -> vEpAdika       | {#vEpAdikA#} f. = {#vipAdikA#}  1) WISE 261.
+vIpsa          -> vIpsA          | {#vIpsa#} adj. = {#yo vIpsati#} ebend. 8,7,a.
+vaSIyaMs       -> vasIyaMs       | {#vaSIyaMs#} s. {#vasIyaMs#} .
+valmIki        -> vAlmIki        | {#valmIki#} m. = {#valmIka#} ŚABDAM. im ŚKDR.
+vanazad        -> vanasad        | {#vanazad#} adj. = {#vanasad#}, Rudra PĀR. GṚHY. 3,15.
+vfzaRASva      -> vfzaRaSva      | {#vfzaRASva#} s. u. {#vfzaRaSva#} 2) {%b).%}
+vfzay          -> vfzAy          | {#vfzay#} = {#vfzAy#}; s. {#vfzayu#} .
+viSraMsana     -> visraMsana     | {#viSraMsana#} s. {#visraMsana#} .
+vidiTa         -> vidita         | {#vidiTa#} m. = {#vidaTa#}  2)  a) und  b) ŚKDR. nach ŚABDAC. und einer Hdschr. der MED.
+visahya        -> vizahya        | {#visahya#} s. {#vizahya#} .
+viskamBa       -> vizkamBa       | {#viskamBa#} und {#viskumBu#} s. u. {#vizkamBa, viskara#} unter {#vizkira#} .
+vizoQa         -> viSoQa         | {#vizoQa#} s. u. {#sah#} mit {#vi#} .
+vyapayana      -> vyapayAna      | {#vyapayana#} (von 3. {#i#} mit {#vyapa#}) n. {%das Verschwinden, Aufhören%}; s. u. {#vyapanaya#} .
+wup            -> tup            | {#wup#} s. {#Awopa#} .
+
+# ===== OTHER-INTENTIONAL (28) =====
+ArgayaRa       -> Argayana       | {#ArgayaRa#} oder {#Argayana#} adj. ({#Bave vyAKyAne ca#}) von {#fgayana#} P. 4,3,73. gaṇa {#girinadyAdi#} zu 8,4,10 , Vārtt.
+Barezuja       -> BarezujA       | {#Barezuja/#} oder {#˚jA/#} adj. {%in Kämpfen vorhanden%} so v. a. {%dienlich.%}
+Durvaha        -> durvaha        | {#Durvaha#} und {#DurvoQar#} falsche Formen für {#DU˚#} .
+SAkapUta       -> SakapUta       | {#SAkapUta#} (von {#SakapUta#}) n. N. eines Sāman Ind. St. 3,239,a.
+SUrya          -> sUrya          | {#SU/rya#} UṆĀDIS. 3,26.  1) m. n. gaṇa {#arDarcAdi#} zu P. 2,4,31. SIDDH. K. 249,a,11.  a) {%ein geflochtener Korb zum Schwingen des Getraides. Wanne%} NIR. 6,
+Sipibizwa      -> Sipivizwa      | {#Sipibizwa/#} adj.  1) {%kahl%} AK. 3,4,9,37. H. 453. an. 4,65. MED. ṭ. 65. HALĀY. 2,453. {#atiriktaM Sipivizwam#} KĀṬH. 13,10. — 2) {%hautkrank%} ({#duScarman
+aRuvedAntarasaprakaraRa -> anuvedAntarasaprakaraRa | {#aRuvedAntarasaprakaraRa#} n. Titel eines Werkes HALL 95 {#(anu˚#}, im Ind. aber {#aRu˚)#}.{# anu˚#} WILSON, Sel. Works 1,141.
+atiliha        -> atilihA        | {#atiliha#} ({#atilihA?#}) N. eines Metrums COLEBR. Misc. Ess. II,156.
+bidalIkfta     -> vidalIkfta     | {#bidalIkfta#} (von {#bidala#} + 1. {#kar)#} adj. {%gespalten, zerspalten%}: {#te gajAH — nArArcErvimuKA ˚kftAH#} MBH. 7,1134. 8,5020. {#tEstu pUrvamayaM setuH 
+devakilviza    -> devakilbiza    | {#devakilviza/#} ({#deva + ki˚#}) m. {%ein Vergehen gegen die Götter%} ṚV. 10,97,16.
+ekavyavahArika -> ekavyAvahArika | {#ekavyavahArika#} (Nachträge), wohl {#˚vyAvahArika#} zu verbessern.
+granTakUwI     -> granTakuwI     | {#granTakUwI#} ({#granTa + kUwI#}) f. {%Bibliothek%} TRIK. 2,8,29. {#˚kuwI#} WILS. ŚKDR.
+idAm           -> idam           | {#idAm#}, {#idAmati#} künstliches denom. von {#idam#} SIDDH. K. zu P. 6,4,15.
+kakzyapra      -> kakzyaprA      | {#kakzyapra/#} ({#kakzyA + pra#} mit Kürzung des Auslauts) adj. {%den Gurt füllend%}, von wohlgenährten Rossen ṚV. 1,10,3.
+kalikAta       -> kalikAtA       | {#kalikAta#} oder {#˚kAtA#} {%Calcutta%} KṢITĪŚ. 50,9.
+maTIn          -> maTin          | {#maTIn#}, {#˚nati#} künstliches Denominativ von {#maTin#} SIDDH. K. zu P. 6,4,15.
+masUrabidalA   -> masUravidalA   | {#masUrabidalA#} ({#ma˚ + bidala#}) f. {%Ipomoea Turpethum R. Br.%} AK. 2,4,3,27. {%Ichnocarpus frutescens R. Br.%} RATNAM. 27. Die Samen haben Aehnlichkeit mit
+niviqA         -> niviqa         | {#niviqA/#} P. 5,2,32.  1) adj. f. {#A#} {%dicht, keinen Zwischenraum darbietend%} H. 1446. HALĀY. 4,33. VAIJ. beim Schol. zu ŚIŚ. 7,20. {#sUryarUpARi#} MBH. 5,
+nizpAd         -> nizpad         | {#nizpAd#} s. 1. {#nizpad#} .
+otsa           -> Otsa           | {#otsa#} ({#Otsa?#}) N. eines Agrahāra RĀJA-TAR. 1,174.
+prastUta       -> prastuta       | {#prastUta#} m. N. einer best. Klasse von Göttern unter dem Manu Cākṣuṣa VP. 263. Offenbar eine falsche Form, statt deren andere Schriften {#praBUta#} und {#pra
+rAjAn          -> rAjan          | {#rAjAn#}, {#˚nati#} denom. von {#rAjan#} SIDDH. K. zu P. 6,4,15.
+sanu           -> sAnu           | {#sanu#} in 2. {#sanutar#} fgg.
+sidDAntadIpika -> sidDAntadIpikA | {#sidDAntadIpika#} (!) n. desgl. Verz. d. B. H. No. 609.
+tripadyA       -> tripadya       | {#tripadyA#} s. WEBER, JYOT. 52. fgg.
+vAjasa         -> vAjasA         | {#vAjasa#} (wohl von {#vAjasA#}) n. N. eines Sāman Ind. St. 3,234,a.
+vahusAhasra    -> bahusAhasra    | {#vahusAhasra#}, {#izwakA ˚srI#} (so Comm.) {%viele tausend Ziegelsteine%} R. ed. Bomb. 1,13,9. richtiger verbände man wohl {#izwakAbahusAhasrI#} .
+wikA           -> wIkA           | {#wikA#} in der Stelle: {#svargagrAmawikAviluRWana#} SĀH. D. 3,2. BALLANT. : {%the spoils of the poor villages of Heaven.%} || {#wikA#} zu streichen, da an der 

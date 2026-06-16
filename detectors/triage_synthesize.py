@@ -132,7 +132,7 @@ def main():
     sf = os.path.join(pkg, '%s_file_first_sf.txt' % dict_code)
     with open(sf, 'w', encoding='utf-8') as f:
         f.write("; %s body-confirmed fileable typos -- CORRECTIONS standard format (DICT:wrong:right:n)\n" % dict_code)
-        f.write("; %d candidates: classified TYPO from MW's entry body AND source-confirmed.\n" % len(buckets['FILE']))
+        f.write("; %d candidates: classified TYPO from the %s entry body AND source-confirmed.\n" % (len(buckets['FILE']), dict_code))
         f.write("; VERIFY each on the scan, flip trailing n->y for confirmed ones, then:\n")
         f.write(";   python chg_nchg_sep.py %s_file_first_sf.txt chg.txt nchg.txt\n" % dict_code)
         for e in buckets['FILE']:
