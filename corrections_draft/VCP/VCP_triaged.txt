@@ -1,0 +1,588 @@
+# VCP tier-A -- BODY-GROUNDED triage  (DRAFT; verify every kept case against the scan)
+#
+# The 563 engine tier-A candidates were judged against MW's OWN entry text (csl-orig),
+# not spelling alone. A spelling detector cannot tell a typo from a real word, an
+# intentional variant / compounding form, or wrong-reading apparatus -- the entry can.
+# Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM
+# pass over the 'realword' set + source confirmation of every TYPO verdict.
+#
+# FINDING: of 563 tier-A candidates, 0 are body-confirmed fileable typos (0.0%).
+# 155 are real distinct words, 408 are spellings MW documents on purpose (w.r./v.l./
+# in-comp./cross-ref -- filing them would CORRUPT MW), 0 are not in the current
+# source, and 0 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
+# do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.
+
+# ===== BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file) (0) =====
+
+# ===== BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted (0) =====
+
+# ===== BUCKET 3  REVIEW -- undecidable without the printed page (0) =====
+
+# ===== BUCKET 4  REAL-WORD -- a distinct real word; the fix would merge two words (155) =====
+antAra        -> antara        | VCP: antAra pu0 antaM vanaparyyantadeSamfcCati f--aR upa0 . “aGizWAtAramantAraM paSUnAM puruzaM | Own deriv 'antaM...mfcCati f-aR' + gloss 'paSupAlake' (herdsman), BAratokta citation; defi
+garba         -> garBa         | VCP: garba gatO BvA0 para0 saka0 sew . garbati agarbIt jagarba . || garba darpe ada0 curA0 Atma | Dhatu entries 'garba gatO BvA0' + 'garba darpe' + pu0 'darpe/ahaNkAre'; root+noun, distinc
+nUtra         -> mUtra         | VCP: nUtra tri0 nava eva nava + nUtanavat tnap nUrAdeSaSca . navIne amaraH “nUtrA indra! te raT | 'nUtra tri0 nava eva...navIne' = 'new' (Vedic, fcveda cite); not mUtra 'urine'.
+Amanda        -> Ananda        | VCP: Amanda pu0 AmaM rogaM dyati do--qa bA0 mum . vAsudeve . | 'Amanda pu0 AmaM rogaM dyati do-qa...vAsudeve' = cutter of Ama-disease, epithet; own deriv
+Biza          -> viza          | VCP: Biza rogapratIkAre sO0 para0 saka0 sew . Bezati aBezIt . | Dhatu: 'Biza rogapratIkAre sO0 para0 saka0 sew, Bezati aBezIt' = root 'in counteracting di
+sarba         -> sarva         | VCP: sarba sarpaRe BvA0 para0 saka0 sew . sarbati asarbIt azopadeSa- tvAn na zatvamityeke zopad | Dhatu: 'sarba sarpaRe BvA0 para0 saka0 sew, sarbati asarbIt' = root 'in creeping'.
+DavalA        -> Davala        | VCP: DavalA strI anudAttatvAnna NIz . SuBravarRAyAM striyAm . amaraH . | 'DavalA strI...SuBravarRAyAM striyAm' = distinct feminine 'white-colored woman', amara cit
+dAruRA        -> dAruRa        | VCP: dAruRA strI “tftIyA'kzayasaMjYA yA dAruRA sA prakIrtitA” ityukte 1 tiTiBede . 2 narmadAKaR | 'dAruRA strI' = a tithi + Narmada goddess; distinct feminine with own gloss.
+nizpAd        -> nizpad        | VCP: nizpAd pu0 nirgatO pAdO yasya pA0 ba0 antyalopaH samA0 visargasya zaH . nirgatapAdake taH  | 'nizpAd pu0 nirgatO pAdO yasya' = whose feet are out, own bahuvrihi derivation.
+Asta          -> asta          | VCP: Asta tri0 A + asa + vikzepe kta . samyakkzipte . | 'Asta tri0 A+asa+vikzepe kta, samyakkzipte' = well-thrown; own A-prefixed derivation.
+aprAptA       -> aprApta       | VCP: aprAptA strI na prAptaH vivAhapraSastakAlo'syAH pf0 uttarapada lopaH . aprAptavivAhapraSas | 'aprAptA strI...aprAptavivAhapraSastakAlAyAM kumAryyAm' = under-age girl (fem), Manu cite.
+arhA          -> arha          | VCP: arhA strI cu0 arha--aN . pUjAyAm . yuc ktinaeva bADakaH | 'arhA strI cu0 arha-aN, pUjAyAm' = feminine derivative 'worship'.
+icCa          -> icCA          | VCP: icCa tri0 icCati iza--u ni0 icCAdeSaH . icCASIle “vasta- carmmaRi puzwIcCaH” “umayecCaraBa | 'icCa tri0 icCati iza-u...icCASIle' = adjective 'of wishing nature', distinct from noun ic
+kIyat         -> kiyat         | VCP: kIyat tri0 kiyat + pfzo0 vede ni0 dIrGaH . kiyadityarTe “AH kIyataH lalUkaM cakarTa” f0 3, | 'kIyat tri0 kiyat+pfzo vede ni0 dIrGaH' = Vedic lengthened nipatana of kiyat; own deriv + 
+kliba         -> klIba         | VCP: kliba pu0 klap kvip pfzo0 . loke . “oM krato! smara klive- smara kftaM smara” yaju0 40, 15 | 'kliba pu0 klap kvip pfzo...loke' with Yajurveda 'klive-smara' cites; Vedic/loke form, own
+yuza          -> yUza          | VCP: yuza Bajane sO0 para0 saka0 sew . yozayati ayozIt . yozA yuzmad | Dhatu: 'yuza Bajane sO0 para0 saka0 sew, yozayati ayozIt' = root 'in serving'.
+araTi         -> arati         | VCP: araTi pu0 fcCvati raTinA saha yudDaBUmim f--raTin sAraTiH na0 ta0 . sAraTiBinne! “astvanaS | 'araTi pu0...sAraTiBinne' = distinct from charioteer; own deriv, fcveda cite.
+Bila          -> bila          | VCP: Bila Bedane vA cu0 u0 pakze tu0 para0 saka0 sew . Belayati--te Bilati abIBilat ta aBelIt . | Dhatu: 'Bila Bedane vA cu0 u0...Belayati Bilati' = root 'in splitting'.
+Guqa          -> guqa          | VCP: Guqa vyAGAte tu0 ku0 para0 saka0 sew . Guqati aGuqIt juGoqa . | Dhatu: 'Guqa vyAGAte tu0 ku0 para0 saka0 sew, Guqati aGuqIt' = root.
+stanBa        -> stamBa        | VCP: stanBa roDane kryA0 svA0 pa0 saka0 sew udit ktvA vew . staBrAti staBroti irit astaBat asta | Dhatu: 'stanBa roDane kryA0 svA0 pa0 saka0 sew' = root 'in obstructing'.
+tuSa          -> tuza          | VCP: tuSa baDe BvA0 A0 saka0 sew . toSate atoSizwa tutuSe . “indurindrAya toSate nitoSate” f0 9 | Dhatu: 'tuSa baDe BvA0 A0 saka0 sew, toSate atoSizwa' = root 'in killing', fcveda cites.
+aSaNkA        -> ASaNkA        | VCP: aSaNkA strI aBAve na0 ta0 . 1 saSayABAve 2 trAsABAve ca na0 ta0 . 3 tacCUnye tri0 . | 'aSaNkA strI aBAve na0 ta0...saSayABAve/trAsABAve' = absence of doubt/fear, neg-compound; 
+gostanA       -> gostana       | VCP: gostanA(nI) strI goH stanEva PalamasyAH svANgatvAt vA NIz . 1 kapiladrAkzAyAmasara wAvanta | strI with own derivation goH stana+NIz, distinct glosses: a grape, a Kumara-follower (prop
+harivAt       -> harivat       | VCP: harivAt pu0 hariRA zowakena uccEsravasA vAti pacCati vA--Satf . indre halAyuDaH . | Derivation hariRA...vAti+Satf gives long A; gloss 'indre' (Indra). Form correct from vA-Sa
+ASizwa        -> aSizwa        | VCP: ASizwa tri0 A + SAsa--kta . kftASIrvvAde . | Own derivation A+SAsa+kta, gloss 'kftASIrvvAde' (one blessed); real derivative ASizwa.
+ASmaka        -> aSmaka        | VCP: ASmaka pu0 aSmanA kAyati kE--ka . sAlvadeSAvayava grAmaBede “sAlvAvayavapratyagraTakalakUw | Own derivation aSmanA kAyati+ka, gloss a village in Salva country; real derivative with iY
+ApIqA         -> ApIqa         | VCP: ApIqA strI A + pIqa--a . samyakpIqate “tatra tUrRaM galApIqaM kuryyAccApyaDUnanam” suSru0  | strI, own derivation A+pIqa+a, gloss massage/pressing (galasyApIqA marddanaM).
+ira           -> irA           | VCP: ira--IrzAyAM kaRqvA0 yak uBa0 . iryati iryyate . | ROOT entry: ira IrzAyAM kaRqvA0 uBa0, conjugated iryati iryyate. Verbal root, distinct wor
+nIrAja        -> nIraja        | VCP: nIrAja pu0 nIramajati aYa--ac zyaBAvaH . jalaviqAle hArA0 . | Own derivation nIram+aj+ac, gloss 'jalaviqAle' (water-cat). Distinct noun.
+KaYjA         -> KaYja         | VCP: KaYjA strI “SiKiguRitadaSalaGuracitamapagatalaGuyugalamapara- midamaKilam . saguru Sakalay | strI, defined as a mAtrAvftta metre type with its own lakzaRa verse; distinct feminine wor
+dohA          -> doha          | VCP: dohA strI mAtrAvfttaBede “zawkalaturagO trikalamapi vizama- pade viniDehi . samapAdAnte cE | strI, a mAtrAvftta metre type with its own definitional verse; distinct feminine word.
+kvaTitA       -> kvaTita       | VCP: kvaTitA strI BAvapra0 ukte (kaqI) itiKyAte padArTe “sTAlyAM Gfte vA tEle vA haridrAhiNgu B | strI per BAvaprakASa, a named medical preparation (kaqI) with its own gloss and verses; fe
+aBIlApa       -> aBilApa       | VCP: aBIlApa pu0 aBi + lapa--BAve zaY dIrGaH . aBimuKakaTana- rUpe Sabde . “AlApASca pralApAScA | Derivation aBi+lapa+zaY dIrGaH explicitly lengthens to aBIlApa; gloss speech. Long form de
+IlA           -> ilA           | VCP: IlA strI Iqa--ka qasya laH . 1 pfTivyAM, 2 vAci, 3 gavi, ca . asya hrasvAditvameveti bahav | strI Iqa+ka, glosses earth/speech/cow; body defends long reading per SabdArthacintAmaRi.
+kulIka        -> kulika        | VCP: kulIka puMstrI0 kula--bA0 Ikan kicca . pakzimAtre striyAM jA- titve'pi wAp . “somAya lavAn | Derivation kula+Ikan (long I) kicca, gloss 'pakzimAtre' (any bird); Vedic cites.
+urja          -> Urja          | VCP: u(U)rja jIvane vA cu0 uBa0 aka0 pakze BvA0 para0 sew . u(U)rjjayati te u(U)rjjati . Orjjij | ROOT entry: u(U)rja jIvane cu0 uBa0, both u/U noted, conjugated forms. Verbal root.
+sUrpaRaKA     -> SUrpaRaKA     | VCP: sUrpaRaKA strI SUrpa iva naKA asyAH pfzo0 Sasya zaH Ratvam . rAvaRaBaginyAm . | Derivation explicitly via pfzodarAdi (Sasya zaH, Ratvam) from SUrpa; legitimate variant fo
+sikya         -> Sikya         | VCP: sikya na0 sika--yat . (sike) rajjunirmite padArTe . | Own derivation sika+yat, gloss rope-made object (sling/net). Distinct word.
+agnimaT       -> agnimat       | VCP: agnimaT pu0 agniM maTnAti araRidvayaGarzaRena nizpAdayati manTa--kvip nalopaH . agnyADAnAr | Derivation agniM maTnAti, manTa+kvip nalopaH; agent 'fire-kindler', gloss yAjYike. Distinc
+arba          -> arBa          | VCP: arba(rva) hiMsane BvAdi0 para0 saka0 sew . arba(rva)ti ArbI(rvI)t Ana(rba)rba . | ROOT entry: arba hiMsane BvAdi0 para0 saka0 sew, conjugated arbati ArbIt. Verbal root.
+reba          -> reBa          | VCP: reba(va) gatO saka0 plutO aka0 BvA0 A0 sew . reba(va)te arebi(vi)zwa . fdit caNi na hrasva | ROOT entry: reba gatO/plutO BvA0 A0 sew, conjugated rebate. Verbal root.
+kfzara        -> kfsara        | VCP: kfzara na0 kfza--karan . kfSaraSabdArTe pfzo0 kfsaro'pyatra kecit | Own derivation kfza+karan; notes kfsara alternate by pfzodarAdi. Variant of kfSara, real w
+PeRila        -> Penila        | VCP: PeRi(ni)la tri0 Pe0--(Ra) + atyarTe ilac . Pena(Ra)vi- [Page4556-b+ 36] Sizwe . 2 kIdikale | tri0 adjective 'foamy', both PeRila/Penila forms shown, R/n variant; multiple gendered mea
+karvudAra     -> karbudAra     | VCP: karvudAra pu0 karva darpe uR taM dArayati df--aR . kovidAravfRe | Own derivation karva(darpe)+dArayati+aR, gloss Kovidara tree. Distinct word.
+tadit         -> taqit         | VCP: tadit tri0 tadeti iRa--kvip tuk . tadvizayake stotre . “vayamu tvA tadidarTAH” f0 8 . 2 .  | Own derivation tat+i+kvip tuk, gloss 'concerning that hymn'; distinct from taqit (lightnin
+tiRiSa        -> tiniSa        | VCP: tiRiSa pu0 tilvakavfkze loDradume . “nyagroDASvatTatilvaka- haridrumayoH” kAtyA0 SrO0 sUtr | Gloss tilvaka/lodhra tree, quoted 'tilvakastiRiSaH'; R/n variant, own entry.
+uSa           -> uza           | VCP: uSa tri0 vaSa--ka . kAmayamAne “apo yadagna uSaDag vanezu” f0 3, 6, 7 . “kAmayamAnadAhI” B | tri0 derivation vaSa+ka, gloss 'kAmayamAne' (desiring) with Vedic cite uSaDag. Distinct wo
+sahasrARIka   -> sahasrAnIka   | VCP: sahasrARIka pu0 6 va0 saMjYAtvAt Ratvam . SatAnIkanfpasute rAjaBede vahnipu0 . | Body explains R via 'saMjYAtvAt Ratvam' (Ratva by proper-name rule); deliberate retroflex 
+aroDana       -> AroDana       | VCP: aroDana na0 aBAve na0 ta0 . 1 roDABAve 2 AvaraRABAve 3 gatiroDake vyApAre . na0 ba0 . 4 ta | naY-tatpuruza a+roDana = 'absence of obstruction'; own derivation clearly for a- form, dis
+gaRqalI       -> gaRqAlI       | VCP: gaRqalI pu0 gaRqa iva BUmerucCUnapradeSaH kzudraSElastatra lI- yate lA--kvip . 1 mahAdeve  | Own derivation gaRqa+lA+kvip, gloss name of MahAdeva (Siva); 'sulopaH ArzaH' notes form. D
+karagrAha     -> karagraha     | VCP: karagrAha pu0 karaM gfhRAti graha--aR . 1 patyO Barttari 2 hastagrAhakamAtre 3 rAjasvAdAya | Own derivation graha--aR (vrddhi->long A) glossed patyO/Barttari/hastagrAhaka; the aR suff
+pUrvadakziRA  -> pUrvadakziRa  | VCP: pUrva(rba)dakziRA strI pUrva(rba)syA dakziRasyAScAntarAlA dik “diNnAmAnyantarAle” pA0 sa0  | strI; defines the SE direction (agnikoRa) as pUrva+dakziRA antarAla dik; feminine word wit
+klizwA        -> klizwa        | VCP: klizwA strI klizwaM kleSaH astyasyAm ac . pAtaYjalokte cittavfttiBede yaTA “vfttayaH paYca | Feminine klizwA strI deriv klizwaM kleSaH astyasyAm+ac; own Patanjala cittavrtti gloss, di
+lelihA        -> leliha        | VCP: lelihA strI sarvadevajIvanyAsANge mudrABede tallakzaRaM yaTA tarjanImaDyamA'nAmAH samaM ku | lelihA strI defined as a named mudra (gesture) in jivanyasa; own feminine gloss, not typo 
+kani          -> kanI          | VCP: kani nAmaDAtu yuvAnaM alpaM vA karoti Ric--kanAdeSaH u- Baya0 saka0 sew . kanayati te . “k | nAmaDAtu (denominative) entry: Ric--kanAdeSaH ubaya0 saka0 sew, conjugated kanayati te; re
+sPurja        -> sPUrja        | VCP: sPurja vajraSabde BvA0 pa0 aka0 sew . sPUrjati asPU- rjIt dvit sPUrjaTuH . Adit sPUrjitaM  | Root entry: vajraSabde BvA0 pa0 aka0 sew, forms sPUrjati asPUrjIt; a dhatu, not a typo.
+kIkaSa        -> kIkasa        | VCP: kIkaSa pu0 kIti kaSati kaSa--Sabde ac . caRqAle . Sabdaci0 . | Own derivation kaSa--Sabde ac (root kaS), glossed caRqAla; the palatal S spelling fits its
+Amiz          -> Amis          | VCP: Amiz na0 Amizati siYcati sneham A + miza--kvip . mAMse “Ayevayo navarvftatyAmiziH” f0 6, 4 | Derivation A+miza--kvip, glossed mAMsa (flesh) with Rgveda citation; retroflex z fits the 
+Kuda          -> Kuqa          | VCP: Kuda Bedane saka0 para0 aniw . Kodati aKodIt cuKoda . “codayata Kudata vAjasAtaye” f0 10 . | Root entry: Bedane saka0 para0 aniw, forms Kodati aKodIt cuKoda with Rgveda citation; a dh
+guqapAka      -> gudapAka      | VCP: guqapAka pu0 6 ta0 . guqasya pAke vEdyakokte OzaDapAkaBede tatpAkaprakAraH cakradattenokto | 6 ta0 guqasya pAke; entire gloss is about guqa (jaggery) cooking per Cakradatta; retroflex
+agrajihvA     -> agrajihva     | VCP: agrajihvA strI agrA jihvA agrahastavat ka0 . jihvAgraBAge . | strI, derivation agrA jihvA (jihvA is feminine), glossed jihvAgraBAga (tongue-tip); femini
+anaNgaleKa    -> anaNgaleKA    | VCP: anaNgaleKa pu0 anaNgasya tadvyaYjako leKaH . kAmavyaYjakaleKe . “anaNgaleKakriyayopayogami | pu0, derivation anaNgasya leKaH (leKa masc), glossed kAma-revealing line; masculine word w
+gadagada      -> gadAgada      | VCP: gadagada na0 gadgada + pfzo0 . gadgadaBAzaRe “vaktrajezu kaRWA- zWatAlUnAmanyatame gadagad | From gadgada by pfzodarAdi, glossed gadgada-BAzaRa; note 'gadagadetyeva pAWaH samyak' expl
+mAkarI        -> makarI        | VCP: mAkarI strI makarasya tatsTaravikakAlasya iyam aR . ma- karasTitaravikakAle tadArabDamAGam | strI, derivation makarasya + aR (vrddhi->mAkarI), glossed Makara/Capricorn time; the aR ta
+piYjAla       -> piYjala       | VCP: piYjAla na0 piji--bA0 Alac . svarRe rAjani0 . | Body glosses piYjAla=svarRe(gold) with own deriv piji+bA0+Alac; defines the suspect spelli
+ullasana      -> ullAsana      | VCP: ullasana na0 ud + lasa--lyuw . 1 ullAse harzajanakavyApAre ADAre lyuw . saMjYAyAM kan . 2  | Deriv ud+lasa(short a)--lyuw, gloss ullAse/romAYce; valid noun from root las, distinct fro
+Acatura       -> acatura       | VCP: Acatura avya0 catuHparyyantam avyayI0 ac samA0 . catuHparyyante “AcaturaM hIme paSavodvand | avyayI0; quote 'AcaturaM hIme' uses long A; defines Acatura as own avyayibhava form.
+AraRyamudga   -> araRyamudga   | VCP: AraRyamudga pu0 ni0 karma0 . vanamudge . AraRyamudgasyevAkAraH parRe'styasyAH ac wAp . (mu | Gloss vanamudge(wild mung) with long A throughout; real karmadharaya for the suspect spell
+apAkftya      -> apakftya      | VCP: apAkftya avya0 apa + A + kf--lyap . 1 nirAkftyetyarTe “fRatrayamapAkftya manomokze niveSay | Deriv apa+A+kf--lyap (the A is part of the prefix); gerund 'nirAkftya', genuine for apAkft
+apAkriyA      -> apakriyA      | VCP: apAkriyA strI apa + A + kf--BAve Sa . 1 apAkaraRe 2 apa- sAraRe “fRAnAma napAkriyeti” upap | Deriv apa+A+kf--BAve Sa; gloss apAkaraRe/apasAraRe; the long A is structural, defines apAk
+kapikacCUPalopamA -> kapikacCuPalopamA | VCP: kapikacCUPalopamA strI kapikacCUPalasya upamA yatra tulya [Page1659-a+ 38] PalatvAt . jatu | Deriv 'kapikacCUPalasya upamA' with long U; genuine compound, gloss jatukAlatA.
+tUrva         -> turva         | VCP: tUrva na0 turva ac--rePe pUrvARo dIrGaH . 1 kzipre tUrRe “tUrva- yARo gUrttavacastamaH” f0 | Body: 'turva ac--rePe pUrvARo dIrGaH'—long U formed by lengthening; defines tUrva with RV 
+SErIya        -> sErIya        | VCP: SErIya pu0 SirA + CaR . nIlaJiRWyAM ratnamA0 . QakaY SEreyaka tatrArTe . | Deriv SirA+CaR with palatal S; gloss nIlaJiRWyAM(a ratna); genuine taddhita for the S-spel
+kuYjarAsana   -> kuYjarASana   | VCP: kuYjarAsana na0 kuYjarasyevAsanamatra . “aTa vakzye mahA- kAla! kuYjarAsanamuttamam . kara | Deriv kuYjarasyeva Asana(seat/posture, dental s); elephant-posture in AsanaBede; matches s
+danAyu        -> DanAyu        | VCP: danAyu pu0 dAnavaBede dAnavaSabde dfSyam . ayaM SabdaH danA- yum SabdAt prAk pAWyaH . | Defined as a danava (dAnavaBede); placement note 'prAk pAWyaH'; real demon name, dental d 
+ucCala        -> uccala        | VCP: ucCala tri0 ud--Sala ac . ADArAtikrameRa sarvvataH plute . Satf . ucCalat tatrEva “CawocCa | Deriv ud+Sala(palatal S->cC)+ac; adj 'leaping up'; Magha/kavyaprakasa citations; genuine f
+visakusuma    -> bisakusuma    | VCP: visakusuma na0 visayuktaM kusumam . padme rAjani0 . | Deriv 'visayuktaM kusumam'=lotus; visa(lotus-fiber) attested alongside bisa; deriv matches
+niha          -> miha          | VCP: niha tri0 nihanti ni + hana--qa . nihantari “ati niho ati striDaH” yaju0 27 . 6 | Derivation nihanti ni+hana-qa, glossed nihantari (slayer); own derivation, real word.
+pUrvavAh      -> pUrvavah      | VCP: pUrva(rba)vAh pu0 pUrve vayasi vahati vaha--Rvi 7 ta0 . pUrva- vayasi vAhake Sata0 brA0 2  | 'pUrvavAh pu0 pUrve vayasi vahati vaha-Rvi' = one who carries in early age; own deriv, Sat
+aDaHkAra      -> aDaHkara      | VCP: aDaHkAra pu0 aDaramityarTe aDaH tasya kAraH . nyUnIkaraRe, tiraskAre, aDarIkaraRe ca . | Deriv 'aDaH tasya kAraH'(long A, GaY act-noun); gloss nyUnIkaraRe/tiraskAre; genuine for t
+anumfta       -> anumftA       | VCP: anumfta tri0 anu paScAt SokAdinA mftaH . SokAdinA mftasya paScAt mfte . anu + mf--karmmaRi | tri0 ppl 'anu+mf+karmaRi kta' = one after whom another dies; real adjective stem anumfta, 
+apomaya       -> Apomaya       | VCP: apomaya tri0 apaH jalaM tadAtmakaM tadvikAratvAt apas + mayaw . jalamaye . | tri0 'apaH jalam... apas+mayaw' = made of water; own derivation from apas. Real adjective
+vahalA        -> vahala        | VCP: vahalA strI vahalAni puzpAdIni mantyasya arSa Adyac . 1 SatapuzpAyAM rAjani0 . 2 sTUlElAyA | strI 'arSa Adyac', glossed as Satapuzpa/sthUlElA plants; distinct feminine noun with own g
+AtmarAma      -> AtmArAma      | VCP: AtmarAma pu0 Atmani ramate saMjYAyAM karttari GaY . Atma- jYAnamAtreRa tfpte yogIndre . | pu0 'Atmani ramate GaY' = yogi content in Self-knowledge; derivation fits AtmarAma
+Davani        -> DAvani        | VCP: Davani strI DU--karaRe ani . anale pAraskarani0 . | strI 'DU-karaRe ani' = fire (anala); own derivation, distinct word
+araRyarASi    -> AraRyarASi    | VCP: araRyarASi araRyasaMjYako rASiH . “makarAdimArdDasiMhO vanyO divase'javfzaBO ceti” jyotizo | 'araRyasaMjYako rASiH' = forest-named zodiac sign (Leo etc.); compound araRya+rASi
+bAhutra       -> bahutra       | VCP: bAhutra pu0 na0 bAhuM trAyate trE--ka . astrAGAtavAraRArTaM hasta- badDe lOhavarmAdO hemac | 'bAhuM trAyate trE-ka' = arm-guard/armor; derivation from bAhu (long A) fits bAhutra
+cakrapada     -> cakrapAda     | VCP: cakrapada na0 “cakrapadamiha manananaguruBiH” vf0 ra0 wI0 ukte trayodaSAkzarapAde Candomed | na0, a 13-syllable meter named cakrapada (verse cites 'cakrapadamiha'); metrical term
+nAgaramardin  -> nagaramardin  | VCP: nAgaramardin tri0 nAgaraM mfdnAti mfda--Rini . nAgara- mardake tataH bAhvA0 apatyAdO WaY . | tri0 'nAgaraM mfdnAti mfda-Rini' = crusher of nAgara; derivation from nAgara (long A)
+nirmretukA    -> nirmretuka    | VCP: nirmretukA strI nir + mlA--tun saMjYAyAM kan pfzo0 . mlAni- SUnye ozaDiBede “niBretukAstat | strI 'nir+mlA-tun' = an herb free from withering; feminine word w/ derivation+brAhmaRa cit
+paYcapatra    -> paYcapAtra    | VCP: paYcapatra pu0 paYca paYca patrARyasya . (CAndalA) vfkzaBede rAjani0 | pu0 'paYca patrARyasya' = five-leaved tree; from patra (leaf, short a), not pAtra (vessel)
+prAdozaka     -> pradozaka     | VCP: prAdoza(zi)ka tri0 pradoze BavaH vA aRWaYO . pradozaBave striyAM NIp . | tri0 'pradoze BavaH vA aRWaYO' = evening-occurring; vrddhi taddhita gives long A prAdozaka
+puzkarasada   -> puzkarasAda   | VCP: puzkarasada tri0 puzkare sIdati sada--kvip . 1 padmavAsini . 2 gotrapravarttakarziBede pu0 | tri0 'puzkare sIdati sada-kvip' = lotus-dwelling; base form, vrddhi patronym is pOzkarasAd
+AhicCatra     -> ahicCatra     | VCP: AhicCatra tri0 ahicCatradeSe BavaH aR . ahicCatradeSe Bave | Vrddhi taddhita ahicCatra-deSe BavaH aR, 'of Ahicchatra country'; distinct derivative, not
+dAGa          -> daGa          | VCP: dAGa pu0 daha--BAve GaY nyaNgvA0 kuH . dAhe SabdArTaci0 . | Derivation daha-BAve GaY with kutva (h>G), glossed dAha (burning); own derivation, real wo
+kARqapuzpA    -> kARqapuzpa    | VCP: kARqapuzpA strI kARqAt puzpamasyAH “kARqaprAntaSatEkeByaH puzpAt” pA0 WAp . droRavfkze Sab | Feminine kARqAt puzpam asyAH + WAp, glossed droRa tree; distinct fem word (neuter noted se
+parIRasA      -> parIRasa      | VCP: parIRasA avya0 pari + nasa--vyAptO bA0 At dIrzaH . bahu- padArTe niGaRwuH f0 9979 udA0 . | Indeclinable pari+nasa vyAptO bA0, final A by At dIrgha; glossed 'in abundance'; own deriv
+sarvaBakzA    -> sarvaBakza    | VCP: sarvaBakzA strI Bakza--aR upa0 . 1 ajAyAM hemaca0 2 sarvaBakzake tri0 3 vahnO pu0 . | strI, deriv Bakza--aR upa0, glossed ajA (she-goat) and vahni; distinct feminine word, not 
+tIrRA         -> tIrRa         | VCP: tIrRA strI pratizWAKyavfttiviSeze yaTA “yasmin vftte karRaH karRaH vedErvarReH sA syAt tIr | strI naming a metrical vftti-variety (also called kanyA) with verse citation; distinct fem
+aByupetyA     -> aByupetya     | VCP: aByupetyA strI aBi + upa + iRa--BAve kyap . sevAyAm . | strI, deriv aBi+upa+i BAve kyap, gloss sevA (service); distinct feminine abstract noun, no
+jArita        -> jarita        | VCP: jArita tri0 jF--Ric--kta . 1 SoDite 2 mArite DAtvAdO . | tri0, deriv jF--Ric--kta (causative ppp), gloss SoDita/mArita; long A is the Ric causative
+pataNgA       -> pataNga       | VCP: pataNgA pu0 aSve niRaRwuH . | pu0, glossed aSva (horse) per Nighantu; distinct Vedic word for horse though -A ending, no
+balIka        -> balika        | VCP: balIka pu0 na0 bAlayati SrAvfRIti bala--Ikan ni0 . pawala prAnte (CAca) amarA . | pu0/na0 'bala-Ikan ni0' = edge of thatch/roof; Ikan suffix gives long I, fits balIka
+KamUlI        -> KamUli        | VCP: KamUlI strI KaM SUnyaBUtaM mUlamasyAH NIz . kumBikAyAM (pAnA) trikA0 tasyAH mUlaSUnyatvAt  | strI with NIz (long I), plant kumBikA; body says pfzo vA hrasvaH KamUli tatrArTa = KamUli 
+Iga           -> iga           | VCP: Iga gatO idit igivat . INgati ENgIt INgate ityeke . | Root entry: gatO (motion) + idit + forms INgati/ENgIt/INgate; a verbal dhAtu, distinct rea
+jAtipatrI     -> jAtIpatrI     | VCP: jAti(tI)patrI stro jAteH(tyAH)jAtIPalasya patrI gOrA0 NIz . (jAyatrI) KyAte ganDadravyaBed | strI, mace (nutmeg leaf) with BAvapra verses; headword jAti(tI)patrI marks jAti/jAtI varia
+DOrita        -> Dorita        | VCP: DOrita na0 DIritameva aR . “DoritaM gatimAtraM yadyo- jitaM valgitaM punaH . agrakAyasamul | Own derivation DOrita = DIritam eva aR (vrddhi), a distinct horse-gait term; not typo of D
+KiNkira       -> kiNkira       | VCP: KiNkira pu0 KimityavyaktaM SabdaM kirati kF--ka . (KyAkSeAlI) SivABede trikA0 . | Derivation Kim ity avyaktaM SabdaM kirati (kf-ka), name of Siva; own derivation, distinct 
+PaYji         -> paYji         | VCP: PaYji(YjI) strI Banja--iva pfzo0 vA NIp . BArgyAm (vAmanahAwi) rAjani0 . | Derivation Banja-iva pfzo0, glossed BAryA / a king's name; own pfzodara derivation, real w
+Jiri          -> jiri          | VCP: Jiri strI JirityavyaktaSabdo'styasyAH bA0 in . cillyAM vA NIp . tatrArTe Sabdara0 . | Derivation 'having the indistinct sound Jiri' (in suffix), glossed cilli bird; own derivat
+agrARIka      -> agrAnIka      | VCP: agrARIka na0 agraYca tadanIkaM ceti guRaguRinoraBedAt [Page0067-a+ 38] karmma0 Ratvam . ag | Body explicitly derives agra+anIka with Ratvam (n>R rule), justifying the R spelling; real
+devakilviza   -> devakilbiza   | VCP: devakilviza na0 devena kftaM kilvizamanizwakarma . devakfte anizwe kArye yaTA varuRakftapA | Own gloss deva-kfta anizwa-karma from kilviza; RV 10.97.16 quote reads devakilvizAt with v
+dora          -> qora          | VCP: dora pu0 qora + qasya raH . (qora) iti KyAtAyAM rajjvAm . | Derivation dora = qora + q>r (qasya raH), glossed a rope; distinct word formed by sound ch
+nakza         -> makza         | VCP: nakza gatO BvA0 para0 saka0 sew niGaRwuH . nakzati anakzI manakza . “nakzaddABaM taturiM p | Root entry: gatO BvA0 para0 saka0 sew with forms nakzati/anakzI; verbal dhatu, real word.
+dvimAsya      -> dvimAzya      | VCP: dvimAsya tri0 dvO mAsO BUtaH “dvigoryapr” pA0 yapa . mAsadvayaM vyApya 1 BUte 2 taTABUtava | Gloss 'lasting two months', dvO mAsO BUtaH (mAsa=month, dental s); body fits suspect, not 
+kavatI        -> kavawI        | VCP: kavatI strI kaSabdaH astyasyA matup striyAM NIp . “kayA naScitra” ityAdikAsu fkzu . “kavat | Derivation kaSabdaH astyasyA (matup), refers to kayA-verses; body uses dental t throughout
+vazkayiRI     -> bazkayiRI     | VCP: vazkayiRI strI vazkaya ekahAyano vatso'styasyA ini . ciraprasUtAyAM gavi amaraH vazkayaRIt | Derivation from vazkaya (ekahAyana calf), glossed long-calved cow; body uses v throughout;
+avineya       -> aBineya       | VCP: avineya tri0 na vinetuM SakyaH . durdame aSvAdO . | tri0 'na vinetuM SakyaH' (untrainable), gloss durdama for horses; clearly a-vi-neya, not a
+preRa         -> prema         | VCP: preRa gatipreraRASlezaRezu BvA0 para0 saka0 sew mADavaH . pre- Rati apreRIt fdit apipreRat | Root entry: gati-preraRa-Slezana meanings + BvA0 para0 saka0 sew + forms preRati/apreRIt; 
+bfhadvIja     -> vfhadvIja     | VCP: bf(vf)hadvIja 6 ba0 . mahAzwiyute AmrAtavfkze Sabdaca0 . | na0, AmrAta tree with large seeds; headword bf(vf)hadvIja marks b/v variants, defines the 
+pUrvadigbala  -> pUrbadigbala  | VCP: pUrva(rba)digbala na0 digbalaSabde 3573 pf0 ukte sUryyA- digrahARAM kAlaBede pUrbasyAM diS | na0 astrological strength in east direction; headword pUrva(rba) marks v/b variants, defin
+pUrvadigvadana -> pUrbadigvadana | VCP: pUrva(rba)digvadana na0 pUrvadiSi vadanamasya . digvadanaSabde 35 75 pf0 ukte mezasiMhaDan | na0 'pUrvadiSi vadanam' (facing east), astrological; headword pUrva(rba) marks v/b variant
+pUrvanadI     -> pUrbanadI     | VCP: pUrva(rba)nadI strI karma0 . kUrmaviBAge uktAyAM pUrvadiksTAyAM nadyAm tato nadyantatvAt Q | strI karma0, river in eastern region per kUrmaviBAga; headword pUrva(rba) marks v/b varian
+anAha         -> AnAha         | VCP: anAha pu0 naha--GaY na0 ta0 . malAdibanDABAvopalakzite- grahaRIroge . | 'anAha pu0 naha-GaY na0 ta0...grahaRIroge' = grahaNi disease, neg-compound deriv; own glos
+sutaka        -> sUtaka        | VCP: su(sU)taka na0 su--(sU)--BAve kta su(sU)taM jananaM tasmAdAgatam kan . 1 jananASOce 2 aSOc | Entry gives su(sU) variant, gloss 'jananASOce', smfti cite 'sutake mftake'; genuine varian
+arizWa        -> arizwa        | VCP: arizWa tri0 araye tizWate sTA--ka vede zatvam . SatranASAyasTAtari . | 'arizWa tri0 araye tizWate sTA-ka vede zatvam' = Vedic retroflex form, own deriv + gloss.
+lawA          -> latA          | VCP: lawA strI lawa--va . (nAwAkaramacA) 1 karaYjaBede, 2 vAdyaBede, 3 grAmacawake, medi0 4 kus | 'lawA strI lawa-va' own deriv + multiple glosses (karaYja, vAdya, etc.); distinct retrofle
+agrayaRa      -> AgrayaRa      | VCP: agrayaRa na0 agramayanAt uttarAyaRAt Ratvam Saka0 tat viDA nakAlo'sya ac . mArge mAsi sAgn | 'agrayaRa na0 agramayanAt...Ratvam' = first-fruits istis; own deriv + smfti cites.
+camIkara      -> cAmIkara      | VCP: camIkara pu0 kftasvarABiDe svarRasyotpattisTAne SabdArTaci0 yadyogAt svarRaM cAmIkaramityu | Own gloss 'kftasvarABiDe' (refined gold); derivation present though body quotes cAmIkaram.
+puYjikAsTalA  -> puYjikasTalA  | VCP: puYjikAsTalA strI apsaroBede yaju0 15 . 15 vedadI0 . | strI, gloss 'apsaroBede' (name of an apsaras); attested proper-noun spelling.
+pisaNga       -> piSaNga       | VCP: pisaNga pu0 pisa--aNgac kicca . piSaNgaSabdArTe | Own derivation pisa+aNgac kicca; gloss refers to piSaNga meaning but headword has own form
+proQi         -> prOQi         | VCP: pro(prO)Qi strI pra + vaha--ktin vA vfdDiH . 1 sAmarTye 2 sAmarTyaM hetuke kriyAsu yogyatA | strI pra+vaha+ktin 'vA vfdDiH' (optional vfddhi); both pro/prO shown; gloss capability. Va
+karvura       -> karbura       | VCP: karvu(rvU)ra pu0 karbu(rbU)raSabdArTe . | Own headword with v/b variant noted (rvU/rbU); 'karburaSabdArTe' cross-ref of meaning. Rec
+kikira        -> kikirA        | VCP: kikira stri0 kF--GaYarTe karmmaRi ka vede pfzo0 AdO kyAgamaH . kIrRRe “AviSya kikirA kfRu  | VCP defends kikira: derivation kF+ka, and body says positing kikirA is doubtful ('kikirASa
+ajjUkA        -> ajjukA        | VCP: ajjUkA strI arjayati yA sA arjji--Uka, pf0 rakArasya jatvam . veSyAyAm . nAwya evAsya pray | Own derivation arjji--Uka (r->j), glossed veSyA (courtesan), nAwya usage; distinct word wi
+antarapuruza  -> antarapUruza  | VCP: antarapu(pU)ruza pu0 antaraH maDyavarttI puruzaH vA dIrGaH . antayAmini parameSvare . “man | Derivation 'puruzaH vA dIrGaH' explicitly licenses the short-u form; antaryAmin gloss; bot
+tfRapulI      -> tfRapUlI      | VCP: tfRapulI strI tfRanirmitA pulI . caYcAyAM (cA~ca) hArA0 svArTe ka . tfRapulikA'pyatra strI | strI, derivation tfRanirmitA pulI, glossed caYcA (scarecrow); own derivation with short u.
+sitivAra      -> SitivAra      | VCP: sitivAra pu0 sitiM SvetatAM vfRoti vf--aR . sunizaRRake (susuni) SAke BAvapra0 . | pu0 'sitiM SvetatAM vfRoti vf-aR' = a vegetable; derivation from siti (white) fits sitivAr
+Buvanakoza    -> BuvanakoSa    | VCP: Buvanakoza pu0 Buvanasya koza iva . 1 BUgole 2 jyotizagranya- Bede ca . purARasarvapo vizR | Derivation Buvanasya koza, glossed BUgola/jyotiza-text; koza (retroflex z, 'sphere/treasur
+sambarAri     -> SambarAri     | VCP: sambarAri pu0 sambarasya dEtyaviSezasya ariH . kAmadeve amaraH | Deriv 'sambarasya dEtyasya ariH'=Kamadeva; demon Sambara/sambara both attested, deriv uses
+upADeya       -> upAdeya       | VCP: upADeya tri0 upa + A + DA--karmaRi yat . 1 aBiniveSanIye 2 Aropye 3 upADinA viSezye ca . “ | Derived upa+A+DA (root dhA, aspirated) karmaRi yat, glossed Aropya/upADi-qualified; distin
+BakUwa        -> BAkUwa        | VCP: BakUwa na0 6 ta0 . vivAhe dampatyoH SuBASuBasUcake rASisamUhe tasya SuBASuBatvaM ca upayam | na0 6ta0, zodiac-sign cluster for marriage matching (kUta); real astrological term
+ukTaSAs       -> ukTaSas       | VCP: ukTaSAs pu0 ukTAni SaMsati Sansa--Rvi ni0 nalopaH upa0 sa0 . SastraSaMsake . “SucIdayandID | pu0 'ukTAni SaMsati Sansa-Rvi' = hymn-reciter; Vedic, note explains short pada-form ukTaSa
+masijala      -> masIjala      | VCP: masi(sI)jala na0 masimiSritaM jalam . (kAlI) leKanadravye trikA0 | na0 'masimiSritaM jalam' (ink-water); headword masi(sI)jala marks masi/masI as attested va
+kAmAvaSAyitA  -> kAmAvasAyitA  | VCP: kAmAvaSAyitA strI kAmena icCayA avaSAyayati padArTAn svacitte ava + SI--Ric--Rini tasya BA | 'ava + SI--Ric--Rini' derivation (yogic siddhi) fits S-spelling; coherent own gloss.
+tElacorikA    -> tElacOrikA    | VCP: tElacorikA strI tElaM corayati cura--Rvul pfzo0 . tEla- pAyikAyAm (telApokA) . pfzo0! tEla | Derivation tElaM corayati cura-Rvul pfzo0, glossed tailapAyikA insect; own pfzodara deriva
+diRqira       -> qiRqira       | VCP: diRqira pu0 diRqira + pfzo0 . vAdyaBede amaraH . | Derivation diRqira + pfzo0, glossed a musical instrument; formed by pfzodara, real word.
+pfzadbala     -> pfzadvala     | VCP: pfzadbala pu0 pfzanneva balamasya . vAyoraSve SabdamAlA . | Derivation pfzat eva balam asya, glossed Vayu's horse; own derivation with bala, real word
+Darmakoza     -> DarmakoSa     | VCP: Darmakoza pu0 DarmaH koza iva Darmasya kozaH samUho vA . Darma- rUpe rakzaRIye 1 vastuni 2 | pu0, deriv koza iva / kozaH samUho, Manu cite Darmakozasya; body consistently uses koza sp
+viSvac        -> vizvac        | VCP: viSva(zva)c avya0 vizu viSvaM vA aYcati kvip pfzo0 viSvasya viSuH tataH saptamyAdyarTe asi | avya0, deriv vizu/viSva + aYc kvip; headword viSva(zva)c marks S/z variants, body defines 
+daseraka      -> daSeraka      | VCP: daseraka pu0 daSerakaSabdArTe marudeSe “daserakAH kekayAH sakEkeyAH vf0 sa0 4 a0 . so'Bija | Attested dental-s form (MBh 'daserakAH'); note 'ayaM tAlavyamaDyaSca' records both s and S
+nIlalOha      -> nIlaloha      | VCP: nIlalOha na0 nityaka0 . varttalohe rAjani0 . | na0 nityaka0, glossed varttaloha (brass); lOha/lauha (vrddhi 'metallic') is a real form; o
+aSvabaqava    -> aSvavaqava    | VCP: aSvabaqava pu0 aSvaSca baqavA ca . aSvavaqavarUpasamAsArTe na paravalliNgam . | Derivation aSvaSca baqavA ca; baqavA/vaqavA is a standard b/v variant of 'mare'; own dvand
+nfgaDUma      -> mfgaDUma      | VCP: nfgaDUma pu0 tIrTaBede SabdArTa0 . | Terse but glosses nfgaDUma as a tirtha name; nfga(king Nrga) plausible first member; own g
+kxptakIla     -> kxptakIlA     | VCP: kxptakIla strI kxptaM kIlayati kIli--aR . vyavasTAli pO trikA0 | strI 'kxptaM kIlayati kIli-aR'; own derivation given though strI vs -a ending terse
+
+# ===== BUCKET 5  INTENTIONAL -- MW documents the spelling on purpose; NEVER file (408) =====
+DaraRiruha    -> DaraRIruha    | VCP: DaraRi(RI)ruha pu0 DaraRyAM rohati ruha--ka 7 ta0 . vfkze “DaraRiruhADiruho baDUrlatAyAH”  | Headword written DaraRi(RI)ruha with (RI) parenthetical = both-spelling/pAWAntara note.
+kuveRi        -> kuveRI        | VCP: kuveRi(RI) strI Izat veRante matsyA asyAm veRa--in, vA NIp) matsyaDAnyAm (KAlui) amaraH | Headword kuveRi(RI) with parenthetical variant + vA NIp note; both spellings shared entry.
+kzipaRI       -> kzipaRi       | VCP: kzipa(Ri)RI strI kzipyate'nayA kzipa--ani kicca vA NIp . 1 nOkAdaRqe (dA~qa) amarawIkA . k | Headword kzipa(Ri)RI with parenthetical; 'kicca vA NIp' both forms in one entry.
+romAvali      -> romAvalI      | VCP: romAvali(lI) strI 6 ta0 . 1 romaSreRO 2 nABerurDvasTaro- mapaqktO tadupalakzite 3 tAruRyAv | Headword romAvali(lI) parenthetical = both-spelling variant note, shared entry.
+DaraRiDft     -> DaraRIDft     | VCP: DaraRi(RI)Dft pu0 DaraRiM(RIM) Darati Df--kvip tuk . 1 parvate 2 anante deve ca “mAhAtmyaM | Headword DaraRi(RI)Dft with parenthetical both-spelling variant note in one entry.
+tIrTarAji     -> tIrTarAjI     | VCP: tIrTarAji(jI) strI tIrTAnAM rAjiratra . avimukte kASyAM trikA0 vA NIp . nindanAtatrAzwazaz | Headword tIrTarAji(jI) parenthetical + 'vA NIp' = both spellings shared entry.
+SruvAvfkza    -> sruvAvfkza    | VCP: Sru(sru)vAvfkza pu0 Sru(sru)vArTo vfkzaH . (va~ici) vikaNkatavfkze rAjani0 . | Headword Sru(sru)vAvfkza parenthetical = both-spelling variant; deriv repeats Sru(sru)va.
+PeRadugDA     -> PenadugDA     | VCP: PeRa(na)dugDA strI PeRaH(naH) iva dugDaM niryAso'sya . (duDaPeRA) kzupaBede rAjani0 . | Headword PeRa(na)dugDA + PeRaH(naH) parenthetical = both-spelling variant note in one entr
+amlalonikA    -> amlaloRikA    | VCP: amlaloni(Ri)kA strI amnaM rasaM lAti gfhRAti amlalaH tamUnayati atyugrAmlatvAt hInayati Un | Headword amlaloni(Ri)kA parenthetical = both-spelling variant; 'pf0 Ratvam' notes the R al
+nirvarhaRa    -> nirbarhaRa    | VCP: nirva(rba)rhaRa na0 nir + va(va)rha--BAve lyuw . nivarhaRe mAraRe nIlakaRWaH . | Headword nirva(rba)rhaRa + deriv nir+va(va)rha parenthetical = both-spelling v/b variant n
+paripana      -> paripaRa      | VCP: paripana(Ra) na0 paripanya(Rya)te vyavahriyate'tena pana(Ra)- GaY . mUlaDane amaraH . | Headword paripana(Ra) + deriv pana(Ra) parenthetical = both-spelling n/R variant note, glo
+CattraDara    -> CattraDAra    | VCP: CattraDa(DA)ra pu0 CattraM Darati DArayati vA ac aR vA . CAyAkaraRAya niyukte dAmaBede tat | body writes CattraDa(DA)ra with 'Darati DArayati vA, ac aR vA' = pAWAntara variant-spellin
+avantIbrahma  -> avantibrahma  | VCP: ava(nti)ntIbrahma pu0 avantizu brahmA ac samA0 . avantisTe brAhmaRe . | body writes ava(nti)ntIbrahma showing both avanti/avantI spellings = variant note
+kAYcipada     -> kAYcIpada     | VCP: kAYci(YcI)pada na0 6 ta0 . jaGane . hemaca0 . | body writes kAYci(YcI)pada showing both spellings = pAWAntara variant note
+kavayi        -> kavayI        | VCP: kavayi(yI) strI kAjjalAt vayate gacCati sTAnAntaraM vaya- gatO in kfdikArAntatvAt vA NIp . | body writes kavayi(yI) both spellings, 'in vA NIp' optional long I = variant note
+maDumalli     -> maDumallI     | VCP: maDumalli(llI) strI malla--in vA NIp maDupraDAnA malliH (llI) mAlatyAM SabdamAlA . | body writes maDumalli(llI) both spellings, 'malla-in vA NIp' = variant note
+tUlanAli      -> tUlanAlI      | VCP: tUlanAli(lI) strI0 tUlanirmmitA nAlI . piYjikAyAm (pAija) svArTe ka . atrEvArTe strI trikA | body writes tUlanAli(lI) both spellings = variant note
+ataptatanu    -> ataptatanU    | VCP: ataptatanu(nU) tri0 na taptA payovratAdinA tanurasya . payo- vratAdinA dehakArSyakArake .  | body writes ataptatanu(nU) both, explicitly notes 'dIrGAntapAWopyatrEva' = variant note
+jambUvanaja   -> jambuvanaja   | VCP: jambU(mbu)vanaja na0 jambuvana iva jAyate jana--qa 7 ta0 . [Page3049-b+ 38] SvetajavApuzpe | body writes jambU(mbu)vanaja both spellings, derivation uses jambuvana (short u) = variant
+kalambu       -> kalambU       | VCP: kalambu(mbU) strI ke jale lambate lavi--uR 7 ta0 . (kalamI) SAkaBede Sabdara0 . aprARijAti | body writes kalambu(mbU) both spellings, 'vA UN' optional long U = variant note
+tarutulikA    -> tarutUlikA    | VCP: tarutu(tU)likA strI tarO tolayati dolayati vA tanum, tula--unmitO dula--utkzepe vA Rvul wA | Body tarutu(tU)likA marks tu/tU as variant readings; pAWAntara note, not a misspelling.
+kASUtarI      -> kAsUtarI      | VCP: {{kASU(sU)taro->kASU(sU)tarI||20170901|SergeA|https://github.com/sanskrit-lexicon/alternat | Body opens with {{kASU(sU)taro->kASU(sU)tarI||...alternateheadwords/issues/23}} redirect m
+SruGna        -> sruGna        | VCP: Sru(sru)Gna pu0 deSaBede . | body writes Sru(sru)Gna showing both S/s spellings, a country = variant note
+keSarisuta    -> kesarisuta    | VCP: keSa(sa)risuta pu0 6 ta0 . hanumati keSarikzetre aYjanAyAM pavanAt tasyotpattestaTAtvam ya | body writes keSa(sa)risuta + ke(sa)SariRaH throughout = S/s variant note (Hanuman, son of 
+pAMSukzAra    -> pAMsukzAra    | VCP: pAMSu(su)kzAra na0 pAMSu(su)riva kzAram . kzAralavaRe (pA- NgAlona) pAra0 niGaRwuH . | body writes pAMSu(su)kzAra both S/s spellings = variant note
+pAMSumardana  -> pAMsumardana  | VCP: pAMSu(su)mardana pu0 zAMSuH(suH) mfdyate'tra mfda--ADAre lyuw . kedAre kzetraBede trikA0 . | Body writes pAMS(s)umardana / zAMS(s)uH with (su) marking both spellings as pAWAntara vari
+proQapAda     -> prOQapAda     | VCP: pro(prO)QapAda tri0 prOQaH pAdo yasya . AsanAropitapAdA- dike “AsanArUQapAdastu jAnunIrjaN | Body pro(prO)QapAda marks o/O as variant readings; pAWAntara note, not a typo.
+baDUwI        -> vaDUwI        | VCP: ba(va)DUwI strI alpA ba(va)DUH alpArTe wi vA NIp . alpa- vayaskAyAM nAryyAm “gopabaDUwIkdu | Body ba(va)DUwI marks b/v as variant readings throughout; pAWAntara, not a typo.
+PeRAgra       -> PenAgra       | VCP: PeRA(nA)gra na0 6 ta0 . budbude . hArA0 . | Body PeRA(nA)gra marks R/n as variant readings; pAWAntara note, not a typo.
+PeRavAhin     -> PenavAhin     | VCP: PeRa(na)vAhin pu0 (PeRa(na)miva vahati SvetatAma . vaha--Rini . vastre SabdamAlA . | Body PeRa(na)vAhin marks R/n as variant readings; pAWAntara note, not a typo.
+maDuvIjapUra  -> maDubIjapUra  | VCP: maDu(bI)vIjapUra pu0 karma0 . maDukarkawikAyAm rAjani0 . | Body maDu(bI)vIjapUra marks vIja/bIja v/b as variant readings; pAWAntara, not a typo.
+padmavIjABa   -> padmabIjABa   | VCP: padmavI(bI)jABa na0 padmavI(bI)jamivABAti A + BA--ka . (mAKanA) KyAte maKAnne rAjani0 . | Body padmavI(bI)jABa marks vIja/bIja v/b as variant readings; pAWAntara, not a typo.
+vidyAcana     -> vidyAcaRa     | VCP: vidyAcana(Ra) tri0 vidyayA KyAtaH . vidyA + cana(Ra) vidyayA viKyAte . | Body vidyAcana(Ra) and vidyA+cana(Ra) mark cana/caRa n/R as variant readings; pAWAntara no
+avantIsoma    -> avantisoma    | VCP: ava(nti)ntIsoma pu0 avantizu soma iva . kAYjike . | Lemma 'ava(nti)ntIsoma' carries a parenthetical pAWAntara marker on the i/I syllable; vari
+jambuKaRqa    -> jambUKaRqa    | VCP: jambu(mbU)KaRqa pu0 jambudvIpe “Berostu paScime pArSve ketu- mAlo mahIpate! . jambUKaRqe c | Lemma 'jambu(mbU)KaRqa' has a parenthetical pAWAntara marker on the u/U; cited verse uses 
+nisunDa       -> nisunda       | VCP: nisunDa(nda) pu0 asuraBede “svAditA BOravAH kASA ni- sunDa(nda) nftakO hatO” mA0 va0 12 a0 | Lemma 'nisunDa(nda)' has parenthetical D/d pAWAntara markers; proper noun (asura) with rec
+kerava        -> kErava        | VCP: kerava puMstrI haMhe Sabdaci0 . kEravaSabde vyutpattirdfSyA . | Gloss 'haMhe' then draSya 'kEravaSabde vyutpattirdfSyA' (see kErava for derivation); cross
+trizuparRa    -> trisuparRa    | VCP: trizu(su)parRa pu0 trayaH suparRAstadvAcakaSabdA yatra . 1 bahvf- cavedaBAgaBede trisOparR | Lemma 'trizu(su)parRa' has parenthetical z/s marker plus draSya cross-ref 'trisuparRaSabde
+puzkaravIja   -> puzkarabIja   | VCP: puzkaravI(bI)ja na0 6 ta0 . padmavIje . | Lemma 'puzkaravI(bI)ja' has parenthetical v/b pAWAntara marker; glossed padmavIja (lotus-s
+puzpavARa     -> puzpabARa     | VCP: puzpavA(bA)Ra pu0 puzpaM bARo'sya . 1 kandarpe 2 kuSadvIpasTa- parvataBede BA0 va0 12 a0 . | Lemma 'puzpavA(bA)Ra' has parenthetical v/b pAWAntara marker; derivation puzpaM bARo'sya (
+kArzmarI      -> kArSmarI      | VCP: kArzmarI strI kfza--Ric--manin kArzma karzaRaM rAti dadAti rA--ka gOrA0 NIz . SrIparRIvfkz | Body notes kArSmarI as alt pAWa (tAlavyamaDyo'pi tatrArTe) alongside main kArzmarI; pAWAnt
+SyomAka       -> SyoRAka       | VCP: Syo(RA)mAka pu0 Sye--onA(RA)ka . (SoRA) kzupeBede . “SyonAko dIpanaH pAke kawukastuvaro hi | Lemma 'Syo(RA)mAka' with parenthetical variant marker; plant SyonAka/SyoRAka; recorded var
+vrAhmaRa      -> brAhmaRa      | VCP: {{Lbody=35976}} | 
+zarva         -> sarva         | VCP: {{Lbody=44528}} | 
+vahu          -> bahu          | VCP: {{Lbody=35385}} | 
+ditI          -> diti          | VCP: {{Lbody=24920}} | 
+laSUna        -> laSuna        | VCP: {{Lbody=40059}} | 
+hanU          -> hanu          | VCP: {{Lbody=47778}} | 
+kASIsa        -> kAsIsa        | VCP: {{Lbody=13503}} | 
+arsas         -> arSas         | VCP: {{Lbody=4571}} | 
+parasvaDa     -> paraSvaDa     | VCP: {{Lbody=30756}} | 
+arvuda        -> arbuda        | VCP: {{Lbody=4546}} | 
+prabaRa       -> pravaRa       | VCP: {{Lbody=34274}} | 
+vahuDA        -> bahuDA        | VCP: {{Lbody=35403}} | 
+vahuSas       -> bahuSas       | VCP: {{Lbody=35448}} | 
+vahula        -> bahula        | VCP: {{Lbody=35432}} | 
+vrAhma        -> brAhma        | VCP: {{Lbody=35973}} | 
+vrahmARqa     -> brahmARqa     | VCP: {{Lbody=35949}} | 
+vrahmaRya     -> brahmaRya     | VCP: {{Lbody=35843}} | 
+vrahmacArin   -> brahmacArin   | VCP: {{Lbody=35833}} | 
+vrahmahatyA   -> brahmahatyA   | VCP: {{Lbody=35943}} | 
+vrahmarzi     -> brahmarzi     | VCP: {{Lbody=35892}} | 
+vrahmavarcasa -> brahmavarcasa | VCP: {{Lbody=35896}} | 
+sawI          -> satI          | VCP: {{Lbody=44929}} | 
+Ajana         -> ajana         | VCP: {{Lbody=6511}} | 
+dfSI          -> dfSi          | VCP: {{Lbody=25773}} | 
+navatI        -> navati        | VCP: {{Lbody=28163}} | 
+svaDitI       -> svaDiti       | VCP: {{Lbody=47538}} | 
+CavI          -> Cavi          | VCP: {{Lbody=20288}} | 
+mattakAsinI   -> mattakASinI   | VCP: {{Lbody=37394}} | 
+dOhada        -> dohada        | VCP: {{Lbody=26304}} | 
+meqa          -> meda          | VCP: {{Lbody=38642}} | 
+vfhadaSva     -> bfhadaSva     | VCP: {{Lbody=35745}} | 
+vfhatPala     -> bfhatPala     | VCP: {{Lbody=35737}} | 
+kozAmra       -> koSAmra       | VCP: {{Lbody=15245}} | 
+mahAbIra      -> mahAvIra      | VCP: {{Lbody=37963}} | 
+parizpanda    -> parispanda    | VCP: {{Lbody=31060}} | 
+vahurUpa      -> bahurUpa      | VCP: {{Lbody=35429}} | 
+vahutiTa      -> bahutiTa      | VCP: {{Lbody=35399}} | 
+vahuvrIhi     -> bahuvrIhi     | VCP: {{Lbody=35445}} | 
+vahvfca       -> bahvfca       | VCP: {{Lbody=35466}} | 
+vfhatkzatra   -> bfhatkzatra   | VCP: {{Lbody=35725}} | 
+vrAhmaRAcCaMsin -> brAhmaRAcCaMsin | VCP: {{Lbody=35991}} | 
+vrAhmya       -> brAhmya       | VCP: {{Lbody=35998}} | 
+vrahmARI      -> brahmARI      | VCP: {{Lbody=35948}} | 
+vrahmAstra    -> brahmAstra    | VCP: {{Lbody=35959}} | 
+vrahmOdana    -> brahmOdana    | VCP: {{Lbody=35972}} | 
+vrahmaGoza    -> brahmaGoza    | VCP: {{Lbody=35829}} | 
+vrahmaRaspati -> brahmaRaspati | VCP: {{Lbody=35842}} | 
+vrahmaSiras   -> brahmaSiras   | VCP: {{Lbody=35919}} | 
+vrahmabanDu   -> brahmabanDu   | VCP: {{Lbody=35868}} | 
+vrahmadaRqa   -> brahmadaRqa   | VCP: {{Lbody=35848}} | 
+vrahmadatta   -> brahmadatta   | VCP: {{Lbody=35850}} | 
+vrahmakUrca   -> brahmakUrca   | VCP: {{Lbody=35819}} | 
+vrahmaloka    -> brahmaloka    | VCP: {{Lbody=35895}} | 
+vrahmapurohita -> brahmapurohita | VCP: {{Lbody=35866}} | 
+vrahmaranDra  -> brahmaranDra  | VCP: {{Lbody=35887}} | 
+vrahmasUtra   -> brahmasUtra   | VCP: {{Lbody=35938}} | 
+vrahmasaras   -> brahmasaras   | VCP: {{Lbody=35926}} | 
+vrahmasuvarcalA -> brahmasuvarcalA | VCP: {{Lbody=35936}} | 
+vrahmatIrTa   -> brahmatIrTa   | VCP: {{Lbody=35844}} | 
+vrahmatva     -> brahmatva     | VCP: {{Lbody=35845}} | 
+vrahmavfkza   -> brahmavfkza   | VCP: {{Lbody=35909}} | 
+vrahmayajYa   -> brahmayajYa   | VCP: {{Lbody=35882}} | 
+vrahmizWa     -> brahmizWa     | VCP: {{Lbody=35962}} | 
+zAmba         -> sAmba         | VCP: {{Lbody=45978}} | 
+vimbI         -> bimbI         | VCP: {{Lbody=41702}} | 
+vrahmadaRqI   -> brahmadaRqI   | VCP: {{Lbody=35849}} | 
+vrahmasAman   -> brahmasAman   | VCP: {{Lbody=35929}} | 
+durhaRa       -> durhaRA       | VCP: {{Lbody=25538}} | 
+aBiSrava      -> aBiSrAva      | VCP: {{Lbody=3504}} | 
+badarapacana  -> badarapAcana  | VCP: {{Lbody=35229}} | 
+elAvAlu       -> elavAlu       | VCP: {{Lbody=10811}} | 
+devatiTi      -> devAtiTi      | VCP: deva(vA)tiTi pu0 puruvaMSye akroDanaputre nfpaBede “akro- DanaH Kalu kAliNgIM karagBAM nAm | 
+goja          -> gojA          | VCP: goja pu0 “nfpAyAM nfpasaMsargAt pramAdAdgUQajAtakaH . so- 'pi kzatriya eva syAdamizeke ca  | 
+trowI         -> trowi         | VCP: {{Lbody=23934}} | 
+AmAtIsAra     -> AmAtisAra     | VCP: {{Lbody=7227}} | 
+rASikfta      -> rASIkfta      | VCP: {{Lbody=39625}} | 
+rudantIkA     -> rudantikA     | VCP: {{Lbody=39717}} | 
+sutanU        -> sutanu        | VCP: {{Lbody=46361}} | 
+uqUpati       -> uqupati       | VCP: {{Lbody=8734}} | 
+qahU          -> qahu          | VCP: {{Lbody=21759}} | 
+candrasUra    -> candraSUra    | VCP: {{Lbody=19336}} | 
+nirudDaprakasa -> nirudDaprakaSa | VCP: {{Lbody=28988}} | 
+aBiDipsu      -> aBidipsu      | VCP: {{Lbody=3307}} | 
+BadravalA     -> BadrabalA     | VCP: {{Lbody=36161}} | 
+vfhatpuzpI    -> bfhatpuzpI    | VCP: {{Lbody=35736}} | 
+gosAti        -> gozAti        | VCP: {{Lbody=18278}} | 
+jAtikoza      -> jAtikoSa      | VCP: {{Lbody=21076}} | 
+suraRadI      -> suranadI      | VCP: {{Lbody=46554}} | 
+udvAhu        -> udbAhu        | VCP: {{Lbody=9274}} | 
+vARaliNga     -> bARaliNga     | VCP: {{Lbody=35479}} | 
+vadarikASrama -> badarikASrama | VCP: {{Lbody=35233}} | 
+vahuDAra      -> bahuDAra      | VCP: {{Lbody=35404}} | 
+vahuPala      -> bahuPala      | VCP: {{Lbody=35415}} | 
+vahuSalya     -> bahuSalya     | VCP: {{Lbody=35447}} | 
+vahuganDa     -> bahuganDa     | VCP: {{Lbody=35393}} | 
+vahukaRwaka   -> bahukaRwaka   | VCP: {{Lbody=35387}} | 
+vahukarRikA   -> bahukarRikA   | VCP: {{Lbody=35391}} | 
+vahumaYjarI   -> bahumaYjarI   | VCP: {{Lbody=35419}} | 
+vahupattra    -> bahupattra    | VCP: {{Lbody=35407}} | 
+vahupraja     -> bahupraja     | VCP: {{Lbody=35412}} | 
+vahuputra     -> bahuputra     | VCP: {{Lbody=35410}} | 
+vahusAra      -> bahusAra      | VCP: {{Lbody=35457}} | 
+vahuvalka     -> bahuvalka     | VCP: {{Lbody=35439}} | 
+vfhacCravas   -> bfhacCravas   | VCP: {{Lbody=35708}} | 
+vfhadDanus    -> bfhadDanus    | VCP: {{Lbody=35759}} | 
+vfhadbrahman  -> bfhadbrahman  | VCP: {{Lbody=35764}} | 
+vfhaddyumna   -> bfhaddyumna   | VCP: {{Lbody=35758}} | 
+vfhadukTa     -> bfhadukTa     | VCP: {{Lbody=35748}} | 
+vfhatkaTA     -> bfhatkaTA     | VCP: {{Lbody=35716}} | 
+vfhatsena     -> bfhatsena     | VCP: {{Lbody=35740}} | 
+vrAhmaRabruva -> brAhmaRabruva | VCP: {{Lbody=35985}} | 
+vrAhmaRaka    -> brAhmaRaka    | VCP: {{Lbody=35977}} | 
+vrAhmaRapriya -> brAhmaRapriya | VCP: {{Lbody=35984}} | 
+vrahmAYjali   -> brahmAYjali   | VCP: {{Lbody=35947}} | 
+vrahmAnanda   -> brahmAnanda   | VCP: {{Lbody=35953}} | 
+vrahmApeta    -> brahmApeta    | VCP: {{Lbody=35954}} | 
+vrahmAraRya   -> brahmAraRya   | VCP: {{Lbody=35955}} | 
+vrahmArpaRa   -> brahmArpaRa   | VCP: {{Lbody=35956}} | 
+vrahmAsana    -> brahmAsana    | VCP: {{Lbody=35958}} | 
+vrahmI        -> brahmI        | VCP: {{Lbody=35963}} | 
+vrahmadAru    -> brahmadAru    | VCP: {{Lbody=35853}} | 
+vrahmadarBA   -> brahmadarBA   | VCP: {{Lbody=35851}} | 
+vrahmagarBa   -> brahmagarBa   | VCP: {{Lbody=35823}} | 
+vrahmagiri    -> brahmagiri    | VCP: {{Lbody=35825}} | 
+vrahmagranTi  -> brahmagranTi  | VCP: {{Lbody=35827}} | 
+vrahmajawA    -> brahmajawA    | VCP: {{Lbody=35837}} | 
+vrahmakuRqa   -> brahmakuRqa   | VCP: {{Lbody=35817}} | 
+vrahmapAdapa  -> brahmapAdapa  | VCP: {{Lbody=35861}} | 
+vrahmapurARa  -> brahmapurARa  | VCP: {{Lbody=35864}} | 
+vrahmapura    -> brahmapura    | VCP: {{Lbody=35863}} | 
+vrahmaputra   -> brahmaputra   | VCP: {{Lbody=35862}} | 
+vrahmarAta    -> brahmarAta    | VCP: {{Lbody=35889}} | 
+vrahmarIti    -> brahmarIti    | VCP: {{Lbody=35891}} | 
+vrahmasTAna   -> brahmasTAna   | VCP: {{Lbody=35941}} | 
+vrahmasU      -> brahmasU      | VCP: {{Lbody=35937}} | 
+vrahmasadana  -> brahmasadana  | VCP: {{Lbody=35925}} | 
+vrahmasteya   -> brahmasteya   | VCP: {{Lbody=35940}} | 
+vrahmatuNga   -> brahmatuNga   | VCP: {{Lbody=35846}} | 
+vrahmaveda    -> brahmaveda    | VCP: {{Lbody=35911}} | 
+vrahmavidyA   -> brahmavidyA   | VCP: {{Lbody=35907}} | 
+vrahmavrata   -> brahmavrata   | VCP: {{Lbody=35915}} | 
+vrahmayAmala  -> brahmayAmala  | VCP: {{Lbody=35838}} | 
+vrahmayoni    -> brahmayoni    | VCP: {{Lbody=35886}} | 
+vrahmodya     -> brahmodya     | VCP: {{Lbody=35969}} | 
+vrahmojJa     -> brahmojJa     | VCP: {{Lbody=35966}} | 
+vahupAd       -> bahupAd       | VCP: {{Lbody=35409}} | 
+vrahmasAvarRi -> brahmasAvarRi | VCP: {{Lbody=35932}} | 
+vfhadelA      -> bfhadelA      | VCP: {{Lbody=35751}} || vfhadelA strI karma0 . sTUlElAyAm rAjani0 . | 
+vfhadvAruRI   -> bfhadvAruRI   | VCP: {{Lbody=35777}} || vfhadvAruRI strI karma0 . mahendravAruRyAm rAjAna0 . | 
+pItavIjA      -> pItabIjA      | VCP: {{Lbody=32303}} | 
+tribali       -> trivali       | VCP: {{Lbody=23727}} | 
+vfhattiktA    -> bfhattiktA    | VCP: {{Lbody=35727}} || vfhattiktA strI karma0 . pAWAyAm (AkanAdi) rAjani0 . | 
+vrahmacAriRI  -> brahmacAriRI  | VCP: {{Lbody=35834}} | 
+nAndiGoza     -> nandiGoza     | VCP: {{Lbody=28467}} | 
+DaraRIja      -> DaraRija      | VCP: {{Lbody=27004}} | 
+maNKu         -> maNku         | VCP: {{Lbody=37230}} | 
+vfhaka        -> bfhaka        | VCP: {{Lbody=35704}} | 
+SiNGAna       -> SiNGARa       | VCP: {{Lbody=46098}} | 
+kozakft       -> koSakft       | VCP: {{Lbody=15228}} | 
+kozasTa       -> koSasTa       | VCP: {{Lbody=15241}} | 
+kozavAsin     -> koSavAsin     | VCP: {{Lbody=15237}} | 
+vEbaDika      -> vEvaDika      | VCP: {{Lbody=42549}} | 
+vahuSiKA      -> bahuSiKA      | VCP: {{Lbody=35450}} | 
+vahudugDa     -> bahudugDa     | VCP: {{Lbody=35402}} | 
+vahukaRwA     -> bahukaRwA     | VCP: {{Lbody=35388}} | 
+vahukanda     -> bahukanda     | VCP: {{Lbody=35389}} | 
+vahulIkfta    -> bahulIkfta    | VCP: {{Lbody=35437}} | 
+vahulacCada   -> bahulacCada   | VCP: {{Lbody=35434}} | 
+vahumala      -> bahumala      | VCP: {{Lbody=35420}} | 
+vahupAda      -> bahupAda      | VCP: {{Lbody=35409}} | 
+vahuparRa     -> bahuparRa     | VCP: {{Lbody=35408}} | 
+vahupuzpa     -> bahupuzpa     | VCP: {{Lbody=35411}} | 
+vahusutA      -> bahusutA      | VCP: {{Lbody=35458}} | 
+vahutvac      -> bahutvac      | VCP: {{Lbody=35401}} | 
+vfhadambAlikA -> bfhadambAlikA | VCP: {{Lbody=35743}} | 
+vfhadrUpa     -> bfhadrUpa     | VCP: {{Lbody=35773}} | 
+vfhatketu     -> bfhatketu     | VCP: {{Lbody=35724}} | 
+vfhatpArevata -> bfhatpArevata | VCP: {{Lbody=35733}} | 
+vrAhmaRacARqAla -> brAhmaRacARqAla | VCP: {{Lbody=35980}} | 
+vrahmAdanI    -> brahmAdanI    | VCP: {{Lbody=35951}} | 
+vrahmAhuti    -> brahmAhuti    | VCP: {{Lbody=35960}} | 
+vrahmaBUmijA  -> brahmaBUmijA  | VCP: {{Lbody=35875}} | 
+vrahmaSAlA    -> brahmaSAlA    | VCP: {{Lbody=35917}} | 
+vrahmabindu   -> brahmabindu   | VCP: {{Lbody=35869}} | 
+vrahmaparRI   -> brahmaparRI   | VCP: {{Lbody=35859}} | 
+vrahmapavitra -> brahmapavitra | VCP: {{Lbody=35860}} | 
+vrahmasaMhitA -> brahmasaMhitA | VCP: {{Lbody=35921}} | 
+vrahmasatI    -> brahmasatI    | VCP: {{Lbody=35922}} | 
+vrahmavAda    -> brahmavAda    | VCP: {{Lbody=35901}} | 
+vrahmavid     -> brahmavid     | VCP: {{Lbody=35906}} | 
+vrahmeSaya    -> brahmeSaya    | VCP: {{Lbody=35965}} | 
+vrahmodumbara -> brahmodumbara | VCP: {{Lbody=35967}} | 
+vrahmottara   -> brahmottara   | VCP: {{Lbody=35968}} | 
+kozI          -> koSI          | VCP: {{Lbody=15248}} | 
+Danusa        -> Danuza        | VCP: Danusa na0 Dana--Sabde usi . 1 cApe SaranikzepayantraBede amaraH . jyAkarzaRotTaSabdayogAt | 
+vahuvAraka    -> bahuvAraka    | VCP: {{Lbody=35440}} | 
+vfhadrAvin    -> bfhadrAvin    | VCP: {{Lbody=35772}} || vfhadrAvin pu0 vfhat rOti--ru--Rini . kzudrolUke rAjani0 . | 
+vfhadvalka    -> bfhadvalka    | VCP: {{Lbody=35775}} || vfhadvalka pu0 vfhat valkamasya . pawwikAloDre rAjavallaBaH . | 
+vfhadvat      -> bfhadvat      | VCP: {{Lbody=35774}} | 
+vfhatpAlin    -> bfhatpAlin    | VCP: {{Lbody=35734}} || vfhatpAlin pu0 vfhataH pAlayati pAla--Rini . vana- jIrake rAjani0 . | 
+vfhatpIlu     -> bfhatpIlu     | VCP: {{Lbody=35735}} || vfhatpIlu pu0 karma0 . mahApIlO rAjani0 . | 
+vfhattAla     -> bfhattAla     | VCP: {{Lbody=35726}} || vfhattAla pu0 karma0 . hintAle rAjani0 . | 
+vrahmakoSI    -> brahmakoSI    | VCP: {{Lbody=35822}} | 
+vrahmopanetf  -> brahmopanetf  | VCP: {{Lbody=35970}} | 
+vadaraPalI    -> badaraPalI    | VCP: {{Lbody=35230}} | 
+nfpasaBA      -> nfpasaBa      | VCP: {{Lbody=29660}} | 
+OmAka         -> Omaka         | VCP: {{Lbody=11143}} | 
+nfsenA        -> nfsena        | VCP: {{Lbody=29694}} | 
+tulApragrAha  -> tulApragraha  | VCP: {{Lbody=23081}} | 
+upakvARa      -> upakvaRa      | VCP: {{Lbody=9460}} | 
+cilamilikA    -> cilamIlikA    | VCP: {{Lbody=19936}} | 
+dalasUcI      -> dalasUci      | VCP: {{Lbody=24490}} | 
+durmallIkA    -> durmallikA    | VCP: {{Lbody=25482}} | 
+marIcapattraka -> maricapattraka | VCP: {{Lbody=37724}} | 
+nagarOzaDI    -> nagarOzaDi    | VCP: {{Lbody=27814}} | 
+parIyoga      -> pariyoga      | VCP: {{Lbody=30982}} | 
+pratibanDI    -> pratibanDi    | VCP: {{Lbody=33749}} | 
+rAjIPalA      -> rAjiPalA      | VCP: {{Lbody=39553}} | 
+kraTakESIka   -> kraTakESika   | VCP: {{Lbody=15467}} | 
+netrOzaDi     -> netrOzaDI     | VCP: {{Lbody=29735}} | 
+indI          -> indi          | VCP: {{Lbody=8186}} | 
+jAtIkozI      -> jAtikozI      | VCP: {{Lbody=21077}} | 
+maDUlagna     -> maDulagna     | VCP: {{Lbody=37573}} | 
+kukUda        -> kukuda        | VCP: {{Lbody=13782}} | 
+tanUruw       -> tanuruw       | VCP: {{Lbody=22040}} | 
+dAsaPalI      -> dASaPalI      | VCP: {{Lbody=24837}} | 
+kAsUkAra      -> kASUkAra      | VCP: {{Lbody=13505}} | 
+SAlvahan      -> sAlvahan      | VCP: {{Lbody=46054}} | 
+kusIraka      -> kuSIraka      | VCP: {{Lbody=14437}} | 
+pAMsupatra    -> pAMSupatra    | VCP: {{Lbody=31432}} | 
+sUrmma        -> SUrmma        | VCP: {{Lbody=43902}} | 
+vfhatkAsa     -> vfhatkASa     | VCP: {{Lbody=35721}} | 
+vikaSita      -> vikasita      | VCP: {{Lbody=41313}} | 
+SaktuPalI     -> saktuPalI     | VCP: {{Lbody=42860}} | 
+pattraSirA    -> pattrasirA    | VCP: {{Lbody=30428}} | 
+kosalAtmajA   -> koSalAtmajA   | VCP: {{Lbody=15234}} | 
+dAsanadinI    -> dASanadinI    | VCP: {{Lbody=24835}} | 
+kOsalyAtanaya -> kOSalyAtanaya | VCP: {{Lbody=15396}} | 
+kisarAdi      -> kiSarAdi      | VCP: {{Lbody=13709}} | 
+gAnDinIsuta   -> gAndinIsuta   | VCP: {{Lbody=17416}} | 
+kolUta        -> kOlUta        | VCP: ko(kO)lUta pu0 kulUtaSabdArTe vf0 sa0 pAWAntaram . tasya rAjA aR kOlUta tannfpe | 
+akzEtrajYa    -> akzetrajYa    | VCP: {{Lbody=6321}} | 
+meKalAdrijA   -> mekalAdrijA   | VCP: {{Lbody=38620}} | 
+parARasA      -> parAnasA      | VCP: {{Lbody=30793}} | 
+vfhajjIvantI  -> bfhajjIvantI  | VCP: {{Lbody=35711}} | 
+cAnUrasUdana  -> cARUrasUdana  | VCP: {{Lbody=19576}} | 
+duHsupta      -> duHzupta      | VCP: {{Lbody=25272}} | 
+kOzIDAnya     -> kOSIDAnya     | VCP: {{Lbody=15411}} | 
+kfzRavalakza  -> kfzRabalakza  | VCP: {{Lbody=14853}} | 
+kozANga       -> koSANga       | VCP: {{Lbody=15243}} | 
+kozAgAra      -> koSAgAra      | VCP: {{Lbody=15242}} | 
+kozaskft      -> koSaskft      | VCP: {{Lbody=15240}} | 
+kozilA        -> koSilA        | VCP: {{Lbody=15247}} | 
+kuvrahma      -> kubrahma      | VCP: {{Lbody=14091}} | 
+netrABisyanda -> netrABizyanda | VCP: {{Lbody=29728}} | 
+vadarAmalaka  -> badarAmalaka  | VCP: {{Lbody=35232}} | 
+vadarIcCadA   -> badarIcCadA   | VCP: {{Lbody=35235}} | 
+vahuSAla      -> bahuSAla      | VCP: {{Lbody=35449}} | 
+vahugranTi    -> bahugranTi    | VCP: {{Lbody=35395}} | 
+vahuroman     -> bahuroman     | VCP: {{Lbody=35431}} | 
+vahusUti      -> bahusUti      | VCP: {{Lbody=35460}} | 
+vahutra       -> bahutra       | VCP: {{Lbody=35400}} | 
+vahutvakka    -> bahutvakka    | VCP: {{Lbody=35401}} | 
+vahvfc        -> bahvfc        | VCP: {{Lbody=35466}} | 
+vfhadBaya     -> bfhadBaya     | VCP: {{Lbody=35766}} | 
+vfhadagni     -> bfhadagni     | VCP: {{Lbody=35741}} | 
+vfhaddarBa    -> bfhaddarBa    | VCP: {{Lbody=35756}} | 
+vfhadrAja     -> bfhadrAja     | VCP: {{Lbody=35771}} | 
+vfhadraRa     -> bfhadraRa     | VCP: {{Lbody=35768}} | 
+vfhadukza     -> bfhadukza     | VCP: {{Lbody=35749}} | 
+vfhajjAtaka   -> bfhajjAtaka   | VCP: {{Lbody=35709}} | 
+vfhaspatistoma -> bfhaspatistoma | VCP: {{Lbody=35788}} | 
+vfhatsaMhitA  -> bfhatsaMhitA  | VCP: {{Lbody=35738}} | 
+vrAhmIkanda   -> brAhmIkanda   | VCP: {{Lbody=35997}} | 
+vrAhmaRAyana  -> brAhmaRAyana  | VCP: {{Lbody=35993}} | 
+vrAhmaRajAtIya -> brAhmaRajAtIya | VCP: {{Lbody=35981}} | 
+vrAhmaRajIvikA -> brAhmaRajIvikA | VCP: {{Lbody=35982}} | 
+vrAhmaRayajYa -> brAhmaRayajYa | VCP: {{Lbody=35986}} | 
+vrAhmaRika    -> brAhmaRika    | VCP: {{Lbody=35994}} | 
+vrAhmaka      -> brAhmaka      | VCP: {{Lbody=35974}} | 
+vrahmAtmaBU   -> brahmAtmaBU   | VCP: {{Lbody=35950}} | 
+vrahmaBAga    -> brahmaBAga    | VCP: {{Lbody=35873}} | 
+vrahmaBUti    -> brahmaBUti    | VCP: {{Lbody=35874}} | 
+vrahmaBUya    -> brahmaBUya    | VCP: {{Lbody=35876}} | 
+vrahmaBadrA   -> brahmaBadrA   | VCP: {{Lbody=35872}} | 
+vrahmaGAtaka  -> brahmaGAtaka  | VCP: {{Lbody=35828}} | 
+vrahmaGna     -> brahmaGna     | VCP: {{Lbody=35830}} | 
+vrahmaSAsana  -> brahmaSAsana  | VCP: {{Lbody=35918}} | 
+vrahmaSalya   -> brahmaSalya   | VCP: {{Lbody=35916}} | 
+vrahmabruvARa -> brahmabruvARa | VCP: {{Lbody=35871}} | 
+vrahmacakra   -> brahmacakra   | VCP: {{Lbody=35831}} | 
+vrahmadAya    -> brahmadAya    | VCP: {{Lbody=35852}} | 
+vrahmada      -> brahmada      | VCP: {{Lbody=35847}} | 
+vrahmadviz    -> brahmadviz    | VCP: {{Lbody=35854}} | 
+vrahmagArgya  -> brahmagArgya  | VCP: {{Lbody=35824}} | 
+vrahmagItA    -> brahmagItA    | VCP: {{Lbody=35826}} | 
+vrahmahan     -> brahmahan     | VCP: {{Lbody=35945}} | 
+vrahmajIvin   -> brahmajIvin   | VCP: {{Lbody=35840}} | 
+vrahmajYAna   -> brahmajYAna   | VCP: {{Lbody=35841}} | 
+vrahmajYa     -> brahmajYa     | VCP: {{Lbody=35836}} | 
+vrahmaja      -> brahmaja      | VCP: {{Lbody=35835}} | 
+vrahmakUwa    -> brahmakUwa    | VCP: {{Lbody=35818}} | 
+vrahmakarmasamADi -> brahmakarmasamADi | VCP: {{Lbody=35816}} | 
+vrahmakft     -> brahmakft     | VCP: {{Lbody=35820}} | 
+vrahmakfta    -> brahmakfta    | VCP: {{Lbody=35821}} | 
+vrahmamImAMsA -> brahmamImAMsA | VCP: {{Lbody=35881}} | 
+vrahmamaRqUkI -> brahmamaRqUkI | VCP: {{Lbody=35877}} | 
+vrahmamaha    -> brahmamaha    | VCP: {{Lbody=35879}} | 
+vrahmamaya    -> brahmamaya    | VCP: {{Lbody=35878}} | 
+vrahmamitra   -> brahmamitra   | VCP: {{Lbody=35880}} | 
+vrahmanAla    -> brahmanAla    | VCP: {{Lbody=35856}} | 
+vrahmanirvARa -> brahmanirvARa | VCP: {{Lbody=35857}} | 
+vrahmaprasUta -> brahmaprasUta | VCP: {{Lbody=35867}} | 
+vrahmapuruza  -> brahmapuruza  | VCP: {{Lbody=35865}} | 
+vrahmarAtra   -> brahmarAtra   | VCP: {{Lbody=35890}} | 
+vrahmarzideSa -> brahmarzideSa | VCP: {{Lbody=35893}} | 
+vrahmasArzwitA -> brahmasArzwitA | VCP: {{Lbody=35931}} | 
+vrahmasAyujya -> brahmasAyujya | VCP: {{Lbody=35930}} | 
+vrahmasUnu    -> brahmasUnu    | VCP: {{Lbody=35939}} | 
+vrahmasaMSita -> brahmasaMSita | VCP: {{Lbody=35920}} | 
+vrahmasamBava -> brahmasamBava | VCP: {{Lbody=35933}} | 
+vrahmasarpa   -> brahmasarpa   | VCP: {{Lbody=35927}} | 
+vrahmasidDAnta -> brahmasidDAnta | VCP: {{Lbody=35934}} | 
+vrahmasuta    -> brahmasuta    | VCP: {{Lbody=35935}} | 
+vrahmasva     -> brahmasva     | VCP: {{Lbody=35942}} | 
+vrahmavAdin   -> brahmavAdin   | VCP: {{Lbody=35902}} | 
+vrahmavAluka  -> brahmavAluka  | VCP: {{Lbody=35903}} | 
+vrahmavAwIya  -> brahmavAwIya  | VCP: {{Lbody=35900}} | 
+vrahmavedi    -> brahmavedi    | VCP: {{Lbody=35912}} | 
+vrahmavedin   -> brahmavedin   | VCP: {{Lbody=35913}} | 
+vrahmavftti   -> brahmavftti   | VCP: {{Lbody=35910}} | 
+vrahmayazwi   -> brahmayazwi   | VCP: {{Lbody=35883}} | 
+vrahmayoga    -> brahmayoga    | VCP: {{Lbody=35885}} | 
+vrahmayuga    -> brahmayuga    | VCP: {{Lbody=35884}} | 
+vrahmin       -> brahmin       | VCP: {{Lbody=35961}} | 
+vrahmopanizad -> brahmopanizad | VCP: {{Lbody=35971}} | 
+PeRikA        -> PenikA        | VCP: {{Lbody=35196}} | 
+vahuvIja      -> bahuvIja      | VCP: {{Lbody=35443}} | 
+vfhadgarBa    -> bfhadgarBa    | VCP: {{Lbody=35752}} | 
+vrahmajAmala  -> brahmajAmala  | VCP: {{Lbody=35838}} | 
+vrahmasAt     -> brahmasAt     | VCP: {{Lbody=35928}} | 
+vadaravallI   -> badaravallI   | VCP: {{Lbody=35231}} | 
+vfhaqQakkA    -> bfhaqQakkA    | VCP: {{Lbody=35712}} | 
+vfhaccaYcu    -> bfhaccaYcu    | VCP: {{Lbody=35705}} || vfhaccaYcu pu0 vfhato caYcuriva maYjarI yasya . mahAcaYcuSAke rAjani0 . | 
+vrAhmaRakAmyA -> brAhmaRakAmyA | VCP: {{Lbody=35978}} | 
+vrAhmaRalakzaRa -> brAhmaRalakzaRa | VCP: {{Lbody=35988}} | 
+vrahmANgaBU   -> brahmANgaBU   | VCP: {{Lbody=35946}} | 
+vrahmajijYAsA -> brahmajijYAsA | VCP: {{Lbody=35839}} | 
+ArgayaRa      -> Argayana      | VCP: {{Lbody=7447}} | 
+ahivuDna      -> ahibuDna      | VCP: {{Lbody=6161}} | 
+bAliKilya     -> vAliKilya     | VCP: {{Lbody=35506}} | 
+vaDUtsava     -> baDUtsava     | VCP: {{Lbody=35256}} | 
+vahusravA     -> bahusravA     | VCP: {{Lbody=35461}} | 
+vfhaccitra    -> bfhaccitra    | VCP: {{Lbody=35706}} | 
+vfhadDana     -> bfhadDana     | VCP: {{Lbody=35762}} | 
+vfhadgu       -> bfhadgu       | VCP: {{Lbody=35753}} | 
+vfhadraTantara -> bfhadraTantara | VCP: {{Lbody=35770}} | 
+vfhaduttaratApanI -> bfhaduttaratApanI | VCP: {{Lbody=35750}} | 
+vfhajjAbAla   -> bfhajjAbAla   | VCP: {{Lbody=35710}} | 
+vrAhmaRasama  -> brAhmaRasama  | VCP: {{Lbody=35990}} | 
+vrahmABijAtA  -> brahmABijAtA  | VCP: {{Lbody=35952}} | 
+vrahmahatyAsama -> brahmahatyAsama | VCP: {{Lbody=35944}} | 
+vrahmalakzaRa -> brahmalakzaRa | VCP: {{Lbody=35894}} | 
+vrahmasattA   -> brahmasattA   | VCP: {{Lbody=35923}} | 
+vrahmavarcasvin -> brahmavarcasvin | VCP: {{Lbody=35897}} | 
+asUrkzaRa     -> (flag)        | VCP: {{Lbody=5925}} | 
+
+# ===== BUCKET 6  UNLOCATABLE -- not in the current MW source (stale/different key) (0) =====

@@ -30,9 +30,11 @@ MARKERS = {
     },
     'sa': {  # Vācaspatyam Sanskrit (SLP1 body)
         'wrong-reading':   r'aSudDa|apapAWa|asADu',
-        'varia-lectio':    r'pAWAntara|iti pAWaH|\bpAWe\b|kvacit',
-        'in-composition':  r'samAse|samAsa|samAsAnta',
-        'cross-reference': r'drazwavya|draSyam|=\s',
+        'varia-lectio':    r'pAWAntara|iti pAWaH|\bpAWe\b|kvacit pAWaH',
+        'in-composition':  r'samAse|samAsAnta|samAsfta',
+        # {{Lbody=N}} = VCP redirect (a variant/cross-ref headword sharing another entry's
+        # body, e.g. vrAhmaRa -> brAhmaRa); draSya/drazwavya = "is to be seen" (see X).
+        'cross-reference': r'\{\{Lbody=|drazwavya|draSyam|tatra draSyam',
     },
 }
 _SUBTYPE_ORDER = ['wrong-reading', 'varia-lectio', 'in-composition', 'cross-reference']

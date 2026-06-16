@@ -6,6 +6,29 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.11.0] - 2026-06-16
+
+### Added
+- **VCP** ([corrections_draft/VCP/](corrections_draft/VCP)): the body-grounded triage run on
+  the *Vācaspatyam* (Sanskrit–Sanskrit thesaurus). The Sanskrit `triage_lang.py` profile was
+  tuned to VCP's conventions — chiefly the **`{{Lbody=N}}` redirect** marker (a variant-spelling
+  headword pointing to the canonical entry) — and the body-aware workflow used a Sanskrit rubric
+  (dhātu/root shape, gender/POS abbreviations).
+
+### Fixed
+- `triage_synthesize.py` printed a hardcoded `MW:` body label for every dictionary; it now uses
+  the actual dict code (regenerated PW_triaged.txt; VCP correct from the start).
+
+### Notes
+- **VCP FINDING: of 563 tier-A candidates, 0 are fileable typos.** 155 are real distinct words /
+  verbal roots (e.g. `garba` = √garb, distinct from `garBa` "womb"; `nUtra` "new" ≠ `mUtra`);
+  **408 are documented-intentional — 362 of them `{{Lbody=}}` redirects** (variant spellings VCP
+  cross-references, e.g. `vrAhmaRa` → `brAhmaRa`). Bulk-applying tier-A would break VCP's
+  cross-reference web.
+- Across the three dictionaries triaged, spelling-pattern tier-A fileable-typo precision is
+  **MW 4/1954 (0.2%) · PW 2/657 (0.3%) · VCP 0/563 (0.0%)** — the body-grounded triage's value is
+  preventing bad bulk edits and producing the per-dict do-not-file lists, not the handful of typos.
+
 ## [1.10.0] - 2026-06-16
 
 ### Added

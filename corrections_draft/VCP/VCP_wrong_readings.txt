@@ -1,0 +1,424 @@
+# VCP -- DOCUMENTED-INTENTIONAL spellings (NOT typos -- do NOT file corrections)
+#
+# 408 headwords that LOOK like misspellings but which VCP records on purpose:
+# wrong-reading apparatus (w.r.), variae lectiones (v.l.), in-composition /
+# sandhi forms (in comp. for...), cross-references (See / = X q.v.), and other
+# grammatical/Vedic notes. Filing a 'correction' for any of these CORRUPTS VCP.
+# Use this as a suppression list: such headwords should not be re-flagged.
+# Format per row:  headword -> would-be 'correction'  |  the VCP entry text
+
+# ===== VARIA-LECTIO (2) =====
+devatiTi       -> devAtiTi       | deva(vA)tiTi pu0 puruvaMSye akroDanaputre nfpaBede “akro- DanaH Kalu kAliNgIM karagBAM nAmopayeme tasyAmasya jajYe deva(vA)tiTiH” BA0 A0 95 a0 “tataScAkro- Dana
+kolUta         -> kOlUta         | ko(kO)lUta pu0 kulUtaSabdArTe vf0 sa0 pAWAntaram . tasya rAjA aR kOlUta tannfpe
+
+# ===== IN-COMPOSITION (1) =====
+goja           -> gojA           | goja pu0 “nfpAyAM nfpasaMsargAt pramAdAdgUQajAtakaH . so- 'pi kzatriya eva syAdamizeke ca varjitaH . aBizekaM vinA cAyaM goja ityaBiDIyate . sarvaM ca rAjavatta
+
+# ===== CROSS-REFERENCE (362) =====
+Ajana          -> ajana          | {{Lbody=6511}}
+AmAtIsAra      -> AmAtisAra      | {{Lbody=7227}}
+ArgayaRa       -> Argayana       | {{Lbody=7447}}
+BadravalA      -> BadrabalA      | {{Lbody=36161}}
+CavI           -> Cavi           | {{Lbody=20288}}
+DaraRIja       -> DaraRija       | {{Lbody=27004}}
+OmAka          -> Omaka          | {{Lbody=11143}}
+PeRikA         -> PenikA         | {{Lbody=35196}}
+SAlvahan       -> sAlvahan       | {{Lbody=46054}}
+SaktuPalI      -> saktuPalI      | {{Lbody=42860}}
+SiNGAna        -> SiNGARa        | {{Lbody=46098}}
+aBiDipsu       -> aBidipsu       | {{Lbody=3307}}
+aBiSrava       -> aBiSrAva       | {{Lbody=3504}}
+ahivuDna       -> ahibuDna       | {{Lbody=6161}}
+akzEtrajYa     -> akzetrajYa     | {{Lbody=6321}}
+arsas          -> arSas          | {{Lbody=4571}}
+arvuda         -> arbuda         | {{Lbody=4546}}
+asUrkzaRa      -> (flag)         | {{Lbody=5925}}
+bAliKilya      -> vAliKilya      | {{Lbody=35506}}
+badarapacana   -> badarapAcana   | {{Lbody=35229}}
+cAnUrasUdana   -> cARUrasUdana   | {{Lbody=19576}}
+candrasUra     -> candraSUra     | {{Lbody=19336}}
+cilamilikA     -> cilamIlikA     | {{Lbody=19936}}
+dAsaPalI       -> dASaPalI       | {{Lbody=24837}}
+dAsanadinI     -> dASanadinI     | {{Lbody=24835}}
+dOhada         -> dohada         | {{Lbody=26304}}
+dalasUcI       -> dalasUci       | {{Lbody=24490}}
+dfSI           -> dfSi           | {{Lbody=25773}}
+ditI           -> diti           | {{Lbody=24920}}
+duHsupta       -> duHzupta       | {{Lbody=25272}}
+durhaRa        -> durhaRA        | {{Lbody=25538}}
+durmallIkA     -> durmallikA     | {{Lbody=25482}}
+elAvAlu        -> elavAlu        | {{Lbody=10811}}
+gAnDinIsuta    -> gAndinIsuta    | {{Lbody=17416}}
+gosAti         -> gozAti         | {{Lbody=18278}}
+hanU           -> hanu           | {{Lbody=47778}}
+indI           -> indi           | {{Lbody=8186}}
+jAtIkozI       -> jAtikozI       | {{Lbody=21077}}
+jAtikoza       -> jAtikoSa       | {{Lbody=21076}}
+kASIsa         -> kAsIsa         | {{Lbody=13503}}
+kAsUkAra       -> kASUkAra       | {{Lbody=13505}}
+kOsalyAtanaya  -> kOSalyAtanaya  | {{Lbody=15396}}
+kOzIDAnya      -> kOSIDAnya      | {{Lbody=15411}}
+kfzRavalakza   -> kfzRabalakza   | {{Lbody=14853}}
+kisarAdi       -> kiSarAdi       | {{Lbody=13709}}
+kosalAtmajA    -> koSalAtmajA    | {{Lbody=15234}}
+kozANga        -> koSANga        | {{Lbody=15243}}
+kozAgAra       -> koSAgAra       | {{Lbody=15242}}
+kozAmra        -> koSAmra        | {{Lbody=15245}}
+kozI           -> koSI           | {{Lbody=15248}}
+kozakft        -> koSakft        | {{Lbody=15228}}
+kozasTa        -> koSasTa        | {{Lbody=15241}}
+kozaskft       -> koSaskft       | {{Lbody=15240}}
+kozavAsin      -> koSavAsin      | {{Lbody=15237}}
+kozilA         -> koSilA         | {{Lbody=15247}}
+kraTakESIka    -> kraTakESika    | {{Lbody=15467}}
+kukUda         -> kukuda         | {{Lbody=13782}}
+kusIraka       -> kuSIraka       | {{Lbody=14437}}
+kuvrahma       -> kubrahma       | {{Lbody=14091}}
+laSUna         -> laSuna         | {{Lbody=40059}}
+maDUlagna      -> maDulagna      | {{Lbody=37573}}
+maNKu          -> maNku          | {{Lbody=37230}}
+mahAbIra       -> mahAvIra       | {{Lbody=37963}}
+marIcapattraka -> maricapattraka | {{Lbody=37724}}
+mattakAsinI    -> mattakASinI    | {{Lbody=37394}}
+meKalAdrijA    -> mekalAdrijA    | {{Lbody=38620}}
+meqa           -> meda           | {{Lbody=38642}}
+nAndiGoza      -> nandiGoza      | {{Lbody=28467}}
+nagarOzaDI     -> nagarOzaDi     | {{Lbody=27814}}
+navatI         -> navati         | {{Lbody=28163}}
+netrABisyanda  -> netrABizyanda  | {{Lbody=29728}}
+netrOzaDi      -> netrOzaDI      | {{Lbody=29735}}
+nfpasaBA       -> nfpasaBa       | {{Lbody=29660}}
+nfsenA         -> nfsena         | {{Lbody=29694}}
+nirudDaprakasa -> nirudDaprakaSa | {{Lbody=28988}}
+pAMsupatra     -> pAMSupatra     | {{Lbody=31432}}
+pItavIjA       -> pItabIjA       | {{Lbody=32303}}
+parARasA       -> parAnasA       | {{Lbody=30793}}
+parIyoga       -> pariyoga       | {{Lbody=30982}}
+parasvaDa      -> paraSvaDa      | {{Lbody=30756}}
+parizpanda     -> parispanda     | {{Lbody=31060}}
+pattraSirA     -> pattrasirA     | {{Lbody=30428}}
+prabaRa        -> pravaRa        | {{Lbody=34274}}
+pratibanDI     -> pratibanDi     | {{Lbody=33749}}
+qahU           -> qahu           | {{Lbody=21759}}
+rASikfta       -> rASIkfta       | {{Lbody=39625}}
+rAjIPalA       -> rAjiPalA       | {{Lbody=39553}}
+rudantIkA      -> rudantikA      | {{Lbody=39717}}
+sUrmma         -> SUrmma         | {{Lbody=43902}}
+sawI           -> satI           | {{Lbody=44929}}
+suraRadI       -> suranadI       | {{Lbody=46554}}
+sutanU         -> sutanu         | {{Lbody=46361}}
+svaDitI        -> svaDiti        | {{Lbody=47538}}
+tanUruw        -> tanuruw        | {{Lbody=22040}}
+tribali        -> trivali        | {{Lbody=23727}}
+trowI          -> trowi          | {{Lbody=23934}}
+tulApragrAha   -> tulApragraha   | {{Lbody=23081}}
+udvAhu         -> udbAhu         | {{Lbody=9274}}
+upakvARa       -> upakvaRa       | {{Lbody=9460}}
+uqUpati        -> uqupati        | {{Lbody=8734}}
+vARaliNga      -> bARaliNga      | {{Lbody=35479}}
+vEbaDika       -> vEvaDika       | {{Lbody=42549}}
+vaDUtsava      -> baDUtsava      | {{Lbody=35256}}
+vadarAmalaka   -> badarAmalaka   | {{Lbody=35232}}
+vadarIcCadA    -> badarIcCadA    | {{Lbody=35235}}
+vadaraPalI     -> badaraPalI     | {{Lbody=35230}}
+vadaravallI    -> badaravallI    | {{Lbody=35231}}
+vadarikASrama  -> badarikASrama  | {{Lbody=35233}}
+vahu           -> bahu           | {{Lbody=35385}}
+vahuDA         -> bahuDA         | {{Lbody=35403}}
+vahuDAra       -> bahuDAra       | {{Lbody=35404}}
+vahuPala       -> bahuPala       | {{Lbody=35415}}
+vahuSAla       -> bahuSAla       | {{Lbody=35449}}
+vahuSalya      -> bahuSalya      | {{Lbody=35447}}
+vahuSas        -> bahuSas        | {{Lbody=35448}}
+vahuSiKA       -> bahuSiKA       | {{Lbody=35450}}
+vahudugDa      -> bahudugDa      | {{Lbody=35402}}
+vahuganDa      -> bahuganDa      | {{Lbody=35393}}
+vahugranTi     -> bahugranTi     | {{Lbody=35395}}
+vahukaRwA      -> bahukaRwA      | {{Lbody=35388}}
+vahukaRwaka    -> bahukaRwaka    | {{Lbody=35387}}
+vahukanda      -> bahukanda      | {{Lbody=35389}}
+vahukarRikA    -> bahukarRikA    | {{Lbody=35391}}
+vahulIkfta     -> bahulIkfta     | {{Lbody=35437}}
+vahula         -> bahula         | {{Lbody=35432}}
+vahulacCada    -> bahulacCada    | {{Lbody=35434}}
+vahumaYjarI    -> bahumaYjarI    | {{Lbody=35419}}
+vahumala       -> bahumala       | {{Lbody=35420}}
+vahupAd        -> bahupAd        | {{Lbody=35409}}
+vahupAda       -> bahupAda       | {{Lbody=35409}}
+vahuparRa      -> bahuparRa      | {{Lbody=35408}}
+vahupattra     -> bahupattra     | {{Lbody=35407}}
+vahupraja      -> bahupraja      | {{Lbody=35412}}
+vahuputra      -> bahuputra      | {{Lbody=35410}}
+vahupuzpa      -> bahupuzpa      | {{Lbody=35411}}
+vahurUpa       -> bahurUpa       | {{Lbody=35429}}
+vahuroman      -> bahuroman      | {{Lbody=35431}}
+vahusAra       -> bahusAra       | {{Lbody=35457}}
+vahusUti       -> bahusUti       | {{Lbody=35460}}
+vahusravA      -> bahusravA      | {{Lbody=35461}}
+vahusutA       -> bahusutA       | {{Lbody=35458}}
+vahutiTa       -> bahutiTa       | {{Lbody=35399}}
+vahutra        -> bahutra        | {{Lbody=35400}}
+vahutvac       -> bahutvac       | {{Lbody=35401}}
+vahutvakka     -> bahutvakka     | {{Lbody=35401}}
+vahuvAraka     -> bahuvAraka     | {{Lbody=35440}}
+vahuvIja       -> bahuvIja       | {{Lbody=35443}}
+vahuvalka      -> bahuvalka      | {{Lbody=35439}}
+vahuvrIhi      -> bahuvrIhi      | {{Lbody=35445}}
+vahvfc         -> bahvfc         | {{Lbody=35466}}
+vahvfca        -> bahvfca        | {{Lbody=35466}}
+vfhacCravas    -> bfhacCravas    | {{Lbody=35708}}
+vfhaccaYcu     -> bfhaccaYcu     | {{Lbody=35705}} || vfhaccaYcu pu0 vfhato caYcuriva maYjarI yasya . mahAcaYcuSAke rAjani0 .
+vfhaccitra     -> bfhaccitra     | {{Lbody=35706}}
+vfhadBaya      -> bfhadBaya      | {{Lbody=35766}}
+vfhadDana      -> bfhadDana      | {{Lbody=35762}}
+vfhadDanus     -> bfhadDanus     | {{Lbody=35759}}
+vfhadaSva      -> bfhadaSva      | {{Lbody=35745}}
+vfhadagni      -> bfhadagni      | {{Lbody=35741}}
+vfhadambAlikA  -> bfhadambAlikA  | {{Lbody=35743}}
+vfhadbrahman   -> bfhadbrahman   | {{Lbody=35764}}
+vfhaddarBa     -> bfhaddarBa     | {{Lbody=35756}}
+vfhaddyumna    -> bfhaddyumna    | {{Lbody=35758}}
+vfhadelA       -> bfhadelA       | {{Lbody=35751}} || vfhadelA strI karma0 . sTUlElAyAm rAjani0 .
+vfhadgarBa     -> bfhadgarBa     | {{Lbody=35752}}
+vfhadgu        -> bfhadgu        | {{Lbody=35753}}
+vfhadrAja      -> bfhadrAja      | {{Lbody=35771}}
+vfhadrAvin     -> bfhadrAvin     | {{Lbody=35772}} || vfhadrAvin pu0 vfhat rOti--ru--Rini . kzudrolUke rAjani0 .
+vfhadrUpa      -> bfhadrUpa      | {{Lbody=35773}}
+vfhadraRa      -> bfhadraRa      | {{Lbody=35768}}
+vfhadraTantara -> bfhadraTantara | {{Lbody=35770}}
+vfhadukTa      -> bfhadukTa      | {{Lbody=35748}}
+vfhadukza      -> bfhadukza      | {{Lbody=35749}}
+vfhaduttaratApanI -> bfhaduttaratApanI | {{Lbody=35750}}
+vfhadvAruRI    -> bfhadvAruRI    | {{Lbody=35777}} || vfhadvAruRI strI karma0 . mahendravAruRyAm rAjAna0 .
+vfhadvalka     -> bfhadvalka     | {{Lbody=35775}} || vfhadvalka pu0 vfhat valkamasya . pawwikAloDre rAjavallaBaH .
+vfhadvat       -> bfhadvat       | {{Lbody=35774}}
+vfhajjAbAla    -> bfhajjAbAla    | {{Lbody=35710}}
+vfhajjAtaka    -> bfhajjAtaka    | {{Lbody=35709}}
+vfhajjIvantI   -> bfhajjIvantI   | {{Lbody=35711}}
+vfhaka         -> bfhaka         | {{Lbody=35704}}
+vfhaqQakkA     -> bfhaqQakkA     | {{Lbody=35712}}
+vfhaspatistoma -> bfhaspatistoma | {{Lbody=35788}}
+vfhatPala      -> bfhatPala      | {{Lbody=35737}}
+vfhatkAsa      -> vfhatkASa      | {{Lbody=35721}}
+vfhatkaTA      -> bfhatkaTA      | {{Lbody=35716}}
+vfhatketu      -> bfhatketu      | {{Lbody=35724}}
+vfhatkzatra    -> bfhatkzatra    | {{Lbody=35725}}
+vfhatpAlin     -> bfhatpAlin     | {{Lbody=35734}} || vfhatpAlin pu0 vfhataH pAlayati pAla--Rini . vana- jIrake rAjani0 .
+vfhatpArevata  -> bfhatpArevata  | {{Lbody=35733}}
+vfhatpIlu      -> bfhatpIlu      | {{Lbody=35735}} || vfhatpIlu pu0 karma0 . mahApIlO rAjani0 .
+vfhatpuzpI     -> bfhatpuzpI     | {{Lbody=35736}}
+vfhatsaMhitA   -> bfhatsaMhitA   | {{Lbody=35738}}
+vfhatsena      -> bfhatsena      | {{Lbody=35740}}
+vfhattAla      -> bfhattAla      | {{Lbody=35726}} || vfhattAla pu0 karma0 . hintAle rAjani0 .
+vfhattiktA     -> bfhattiktA     | {{Lbody=35727}} || vfhattiktA strI karma0 . pAWAyAm (AkanAdi) rAjani0 .
+vikaSita       -> vikasita       | {{Lbody=41313}}
+vimbI          -> bimbI          | {{Lbody=41702}}
+vrAhmIkanda    -> brAhmIkanda    | {{Lbody=35997}}
+vrAhma         -> brAhma         | {{Lbody=35973}}
+vrAhmaRAcCaMsin -> brAhmaRAcCaMsin | {{Lbody=35991}}
+vrAhmaRAyana   -> brAhmaRAyana   | {{Lbody=35993}}
+vrAhmaRa       -> brAhmaRa       | {{Lbody=35976}}
+vrAhmaRabruva  -> brAhmaRabruva  | {{Lbody=35985}}
+vrAhmaRacARqAla -> brAhmaRacARqAla | {{Lbody=35980}}
+vrAhmaRajAtIya -> brAhmaRajAtIya | {{Lbody=35981}}
+vrAhmaRajIvikA -> brAhmaRajIvikA | {{Lbody=35982}}
+vrAhmaRakAmyA  -> brAhmaRakAmyA  | {{Lbody=35978}}
+vrAhmaRaka     -> brAhmaRaka     | {{Lbody=35977}}
+vrAhmaRalakzaRa -> brAhmaRalakzaRa | {{Lbody=35988}}
+vrAhmaRapriya  -> brAhmaRapriya  | {{Lbody=35984}}
+vrAhmaRasama   -> brAhmaRasama   | {{Lbody=35990}}
+vrAhmaRayajYa  -> brAhmaRayajYa  | {{Lbody=35986}}
+vrAhmaRika     -> brAhmaRika     | {{Lbody=35994}}
+vrAhmaka       -> brAhmaka       | {{Lbody=35974}}
+vrAhmya        -> brAhmya        | {{Lbody=35998}}
+vrahmABijAtA   -> brahmABijAtA   | {{Lbody=35952}}
+vrahmANgaBU    -> brahmANgaBU    | {{Lbody=35946}}
+vrahmARI       -> brahmARI       | {{Lbody=35948}}
+vrahmARqa      -> brahmARqa      | {{Lbody=35949}}
+vrahmAYjali    -> brahmAYjali    | {{Lbody=35947}}
+vrahmAdanI     -> brahmAdanI     | {{Lbody=35951}}
+vrahmAhuti     -> brahmAhuti     | {{Lbody=35960}}
+vrahmAnanda    -> brahmAnanda    | {{Lbody=35953}}
+vrahmApeta     -> brahmApeta     | {{Lbody=35954}}
+vrahmAraRya    -> brahmAraRya    | {{Lbody=35955}}
+vrahmArpaRa    -> brahmArpaRa    | {{Lbody=35956}}
+vrahmAsana     -> brahmAsana     | {{Lbody=35958}}
+vrahmAstra     -> brahmAstra     | {{Lbody=35959}}
+vrahmAtmaBU    -> brahmAtmaBU    | {{Lbody=35950}}
+vrahmI         -> brahmI         | {{Lbody=35963}}
+vrahmOdana     -> brahmOdana     | {{Lbody=35972}}
+vrahmaBAga     -> brahmaBAga     | {{Lbody=35873}}
+vrahmaBUmijA   -> brahmaBUmijA   | {{Lbody=35875}}
+vrahmaBUti     -> brahmaBUti     | {{Lbody=35874}}
+vrahmaBUya     -> brahmaBUya     | {{Lbody=35876}}
+vrahmaBadrA    -> brahmaBadrA    | {{Lbody=35872}}
+vrahmaGAtaka   -> brahmaGAtaka   | {{Lbody=35828}}
+vrahmaGna      -> brahmaGna      | {{Lbody=35830}}
+vrahmaGoza     -> brahmaGoza     | {{Lbody=35829}}
+vrahmaRaspati  -> brahmaRaspati  | {{Lbody=35842}}
+vrahmaRya      -> brahmaRya      | {{Lbody=35843}}
+vrahmaSAlA     -> brahmaSAlA     | {{Lbody=35917}}
+vrahmaSAsana   -> brahmaSAsana   | {{Lbody=35918}}
+vrahmaSalya    -> brahmaSalya    | {{Lbody=35916}}
+vrahmaSiras    -> brahmaSiras    | {{Lbody=35919}}
+vrahmabanDu    -> brahmabanDu    | {{Lbody=35868}}
+vrahmabindu    -> brahmabindu    | {{Lbody=35869}}
+vrahmabruvARa  -> brahmabruvARa  | {{Lbody=35871}}
+vrahmacAriRI   -> brahmacAriRI   | {{Lbody=35834}}
+vrahmacArin    -> brahmacArin    | {{Lbody=35833}}
+vrahmacakra    -> brahmacakra    | {{Lbody=35831}}
+vrahmadAru     -> brahmadAru     | {{Lbody=35853}}
+vrahmadAya     -> brahmadAya     | {{Lbody=35852}}
+vrahmada       -> brahmada       | {{Lbody=35847}}
+vrahmadaRqI    -> brahmadaRqI    | {{Lbody=35849}}
+vrahmadaRqa    -> brahmadaRqa    | {{Lbody=35848}}
+vrahmadarBA    -> brahmadarBA    | {{Lbody=35851}}
+vrahmadatta    -> brahmadatta    | {{Lbody=35850}}
+vrahmadviz     -> brahmadviz     | {{Lbody=35854}}
+vrahmagArgya   -> brahmagArgya   | {{Lbody=35824}}
+vrahmagItA     -> brahmagItA     | {{Lbody=35826}}
+vrahmagarBa    -> brahmagarBa    | {{Lbody=35823}}
+vrahmagiri     -> brahmagiri     | {{Lbody=35825}}
+vrahmagranTi   -> brahmagranTi   | {{Lbody=35827}}
+vrahmahan      -> brahmahan      | {{Lbody=35945}}
+vrahmahatyA    -> brahmahatyA    | {{Lbody=35943}}
+vrahmahatyAsama -> brahmahatyAsama | {{Lbody=35944}}
+vrahmajAmala   -> brahmajAmala   | {{Lbody=35838}}
+vrahmajIvin    -> brahmajIvin    | {{Lbody=35840}}
+vrahmajYAna    -> brahmajYAna    | {{Lbody=35841}}
+vrahmajYa      -> brahmajYa      | {{Lbody=35836}}
+vrahmaja       -> brahmaja       | {{Lbody=35835}}
+vrahmajawA     -> brahmajawA     | {{Lbody=35837}}
+vrahmajijYAsA  -> brahmajijYAsA  | {{Lbody=35839}}
+vrahmakUrca    -> brahmakUrca    | {{Lbody=35819}}
+vrahmakUwa     -> brahmakUwa     | {{Lbody=35818}}
+vrahmakarmasamADi -> brahmakarmasamADi | {{Lbody=35816}}
+vrahmakft      -> brahmakft      | {{Lbody=35820}}
+vrahmakfta     -> brahmakfta     | {{Lbody=35821}}
+vrahmakoSI     -> brahmakoSI     | {{Lbody=35822}}
+vrahmakuRqa    -> brahmakuRqa    | {{Lbody=35817}}
+vrahmalakzaRa  -> brahmalakzaRa  | {{Lbody=35894}}
+vrahmaloka     -> brahmaloka     | {{Lbody=35895}}
+vrahmamImAMsA  -> brahmamImAMsA  | {{Lbody=35881}}
+vrahmamaRqUkI  -> brahmamaRqUkI  | {{Lbody=35877}}
+vrahmamaha     -> brahmamaha     | {{Lbody=35879}}
+vrahmamaya     -> brahmamaya     | {{Lbody=35878}}
+vrahmamitra    -> brahmamitra    | {{Lbody=35880}}
+vrahmanAla     -> brahmanAla     | {{Lbody=35856}}
+vrahmanirvARa  -> brahmanirvARa  | {{Lbody=35857}}
+vrahmapAdapa   -> brahmapAdapa   | {{Lbody=35861}}
+vrahmaparRI    -> brahmaparRI    | {{Lbody=35859}}
+vrahmapavitra  -> brahmapavitra  | {{Lbody=35860}}
+vrahmaprasUta  -> brahmaprasUta  | {{Lbody=35867}}
+vrahmapurARa   -> brahmapurARa   | {{Lbody=35864}}
+vrahmapura     -> brahmapura     | {{Lbody=35863}}
+vrahmapurohita -> brahmapurohita | {{Lbody=35866}}
+vrahmapuruza   -> brahmapuruza   | {{Lbody=35865}}
+vrahmaputra    -> brahmaputra    | {{Lbody=35862}}
+vrahmarAta     -> brahmarAta     | {{Lbody=35889}}
+vrahmarAtra    -> brahmarAtra    | {{Lbody=35890}}
+vrahmarIti     -> brahmarIti     | {{Lbody=35891}}
+vrahmaranDra   -> brahmaranDra   | {{Lbody=35887}}
+vrahmarzi      -> brahmarzi      | {{Lbody=35892}}
+vrahmarzideSa  -> brahmarzideSa  | {{Lbody=35893}}
+vrahmasAman    -> brahmasAman    | {{Lbody=35929}}
+vrahmasArzwitA -> brahmasArzwitA | {{Lbody=35931}}
+vrahmasAt      -> brahmasAt      | {{Lbody=35928}}
+vrahmasAvarRi  -> brahmasAvarRi  | {{Lbody=35932}}
+vrahmasAyujya  -> brahmasAyujya  | {{Lbody=35930}}
+vrahmasTAna    -> brahmasTAna    | {{Lbody=35941}}
+vrahmasU       -> brahmasU       | {{Lbody=35937}}
+vrahmasUnu     -> brahmasUnu     | {{Lbody=35939}}
+vrahmasUtra    -> brahmasUtra    | {{Lbody=35938}}
+vrahmasaMSita  -> brahmasaMSita  | {{Lbody=35920}}
+vrahmasaMhitA  -> brahmasaMhitA  | {{Lbody=35921}}
+vrahmasadana   -> brahmasadana   | {{Lbody=35925}}
+vrahmasamBava  -> brahmasamBava  | {{Lbody=35933}}
+vrahmasaras    -> brahmasaras    | {{Lbody=35926}}
+vrahmasarpa    -> brahmasarpa    | {{Lbody=35927}}
+vrahmasatI     -> brahmasatI     | {{Lbody=35922}}
+vrahmasattA    -> brahmasattA    | {{Lbody=35923}}
+vrahmasidDAnta -> brahmasidDAnta | {{Lbody=35934}}
+vrahmasteya    -> brahmasteya    | {{Lbody=35940}}
+vrahmasuta     -> brahmasuta     | {{Lbody=35935}}
+vrahmasuvarcalA -> brahmasuvarcalA | {{Lbody=35936}}
+vrahmasva      -> brahmasva      | {{Lbody=35942}}
+vrahmatIrTa    -> brahmatIrTa    | {{Lbody=35844}}
+vrahmatuNga    -> brahmatuNga    | {{Lbody=35846}}
+vrahmatva      -> brahmatva      | {{Lbody=35845}}
+vrahmavAda     -> brahmavAda     | {{Lbody=35901}}
+vrahmavAdin    -> brahmavAdin    | {{Lbody=35902}}
+vrahmavAluka   -> brahmavAluka   | {{Lbody=35903}}
+vrahmavAwIya   -> brahmavAwIya   | {{Lbody=35900}}
+vrahmavarcasa  -> brahmavarcasa  | {{Lbody=35896}}
+vrahmavarcasvin -> brahmavarcasvin | {{Lbody=35897}}
+vrahmaveda     -> brahmaveda     | {{Lbody=35911}}
+vrahmavedi     -> brahmavedi     | {{Lbody=35912}}
+vrahmavedin    -> brahmavedin    | {{Lbody=35913}}
+vrahmavfkza    -> brahmavfkza    | {{Lbody=35909}}
+vrahmavftti    -> brahmavftti    | {{Lbody=35910}}
+vrahmavid      -> brahmavid      | {{Lbody=35906}}
+vrahmavidyA    -> brahmavidyA    | {{Lbody=35907}}
+vrahmavrata    -> brahmavrata    | {{Lbody=35915}}
+vrahmayAmala   -> brahmayAmala   | {{Lbody=35838}}
+vrahmayajYa    -> brahmayajYa    | {{Lbody=35882}}
+vrahmayazwi    -> brahmayazwi    | {{Lbody=35883}}
+vrahmayoga     -> brahmayoga     | {{Lbody=35885}}
+vrahmayoni     -> brahmayoni     | {{Lbody=35886}}
+vrahmayuga     -> brahmayuga     | {{Lbody=35884}}
+vrahmeSaya     -> brahmeSaya     | {{Lbody=35965}}
+vrahmin        -> brahmin        | {{Lbody=35961}}
+vrahmizWa      -> brahmizWa      | {{Lbody=35962}}
+vrahmodumbara  -> brahmodumbara  | {{Lbody=35967}}
+vrahmodya      -> brahmodya      | {{Lbody=35969}}
+vrahmojJa      -> brahmojJa      | {{Lbody=35966}}
+vrahmopanetf   -> brahmopanetf   | {{Lbody=35970}}
+vrahmopanizad  -> brahmopanizad  | {{Lbody=35971}}
+vrahmottara    -> brahmottara    | {{Lbody=35968}}
+zAmba          -> sAmba          | {{Lbody=45978}}
+zarva          -> sarva          | {{Lbody=44528}}
+
+# ===== OTHER-INTENTIONAL (43) =====
+CattraDara     -> CattraDAra     | CattraDa(DA)ra pu0 CattraM Darati DArayati vA ac aR vA . CAyAkaraRAya niyukte dAmaBede tatra aRantasya “aRi- niyukte” pA0 pUrvvapadamAdyudAttam .
+Danusa         -> Danuza         | Danusa na0 Dana--Sabde usi . 1 cApe SaranikzepayantraBede amaraH . jyAkarzaRotTaSabdayogAttasya taTAtvam . tallakzaRam . “Danustu dviviDaM proktaM SArNgaM vAMSa
+DaraRiDft      -> DaraRIDft      | DaraRi(RI)Dft pu0 DaraRiM(RIM) Darati Df--kvip tuk . 1 parvate 2 anante deve ca “mAhAtmyaM SrotumicCAmi . Sezasya DaraRIDftaH” harivaM0 120 a0 .
+DaraRiruha     -> DaraRIruha     | DaraRi(RI)ruha pu0 DaraRyAM rohati ruha--ka 7 ta0 . vfkze “DaraRiruhADiruho baDUrlatAyAH” mAGaH .
+PeRAgra        -> PenAgra        | PeRA(nA)gra na0 6 ta0 . budbude . hArA0 .
+PeRadugDA      -> PenadugDA      | PeRa(na)dugDA strI PeRaH(naH) iva dugDaM niryAso'sya . (duDaPeRA) kzupaBede rAjani0 .
+PeRavAhin      -> PenavAhin      | PeRa(na)vAhin pu0 (PeRa(na)miva vahati SvetatAma . vaha--Rini . vastre SabdamAlA .
+SruGna         -> sruGna         | Sru(sru)Gna pu0 deSaBede .
+SruvAvfkza     -> sruvAvfkza     | Sru(sru)vAvfkza pu0 Sru(sru)vArTo vfkzaH . (va~ici) vikaNkatavfkze rAjani0 .
+SyomAka        -> SyoRAka        | Syo(RA)mAka pu0 Sye--onA(RA)ka . (SoRA) kzupeBede . “SyonAko dIpanaH pAke kawukastuvaro himaH . grAhI tikto'nimalezmapittakAsAmanASanaH . kawu tasya PalaM bAlaM
+amlalonikA     -> amlaloRikA     | amlaloni(Ri)kA strI amnaM rasaM lAti gfhRAti amlalaH tamUnayati atyugrAmlatvAt hInayati Una--Rvul pf0 Ratvam . (Amarula) iti KyAte latABede . amlonIpyatra .
+ataptatanu     -> ataptatanU     | ataptatanu(nU) tri0 na taptA payovratAdinA tanurasya . payo- vratAdinA dehakArSyakArake . dIrGAntapAWopyatrEva “viSvato- 'taptatanUrna tadAma” iti tA0 brA0 . na
+avantIbrahma   -> avantibrahma   | ava(nti)ntIbrahma pu0 avantizu brahmA ac samA0 . avantisTe brAhmaRe .
+avantIsoma     -> avantisoma     | ava(nti)ntIsoma pu0 avantizu soma iva . kAYjike .
+baDUwI         -> vaDUwI         | ba(va)DUwI strI alpA ba(va)DUH alpArTe wi vA NIp . alpa- vayaskAyAM nAryyAm “gopabaDUwIkdukUlacOrAya” BAzApa0 .
+jambUvanaja    -> jambuvanaja    | jambU(mbu)vanaja na0 jambuvana iva jAyate jana--qa 7 ta0 . [Page3049-b+ 38] SvetajavApuzpe . “pAriBadraM pAwalA ca bakulaM giri- SAlinI . tilakaM jambuvanajaM p
+jambuKaRqa     -> jambUKaRqa     | jambu(mbU)KaRqa pu0 jambudvIpe “Berostu paScime pArSve ketu- mAlo mahIpate! . jambUKaRqe ca tatrEva mahAjanapado nfpa!” BA0 BI0 7 a0 .
+kASUtarI       -> kAsUtarI       | {{kASU(sU)taro->kASU(sU)tarI||20170901|SergeA|https://github.com/sanskrit-lexicon/alternateheadwords/issues/23|*+}} strI0 hrasvA kASUH (sUH) hrasvArTe zwarac NI
+kAYcipada      -> kAYcIpada      | kAYci(YcI)pada na0 6 ta0 . jaGane . hemaca0 .
+kArzmarI       -> kArSmarI       | kArzmarI strI kfza--Ric--manin kArzma karzaRaM rAti dadAti rA--ka gOrA0 NIz . SrIparRIvfkze tasyAH vikAraH yat . kArzmaryya SrIparRIvfkzAvayave . “pAlASavEkaNga
+kalambu        -> kalambU        | kalambu(mbU) strI ke jale lambate lavi--uR 7 ta0 . (kalamI) SAkaBede Sabdara0 . aprARijAtivAcakatvAt vA UN .
+kavayi         -> kavayI         | kavayi(yI) strI kAjjalAt vayate gacCati sTAnAntaraM vaya- gatO in kfdikArAntatvAt vA NIp . (kE) matsyaBede . trikA0 . tasyA balAtikrameRa gamanAttaTAtvam . “kav
+keSarisuta     -> kesarisuta     | keSa(sa)risuta pu0 6 ta0 . hanumati keSarikzetre aYjanAyAM pavanAt tasyotpattestaTAtvam yaTA “ahaM ke(sa)Sa- riRaH kzetre vAyunA jagadAyunA . jAtaH kamalapatrAk
+kerava         -> kErava         | kerava puMstrI haMhe Sabdaci0 . kEravaSabde vyutpattirdfSyA .
+kuveRi         -> kuveRI         | kuveRi(RI) strI Izat veRante matsyA asyAm veRa--in, vA NIp) matsyaDAnyAm (KAlui) amaraH
+kzipaRI        -> kzipaRi        | kzipa(Ri)RI strI kzipyate'nayA kzipa--ani kicca vA NIp . 1 nOkAdaRqe (dA~qa) amarawIkA . karmmaRi aniM . 2 jAlaBede 3 AyuDe ca ujjvala 4 vaqiSe Sabdaci0 . 5 aDv
+maDumalli      -> maDumallI      | maDumalli(llI) strI malla--in vA NIp maDupraDAnA malliH (llI) mAlatyAM SabdamAlA .
+maDuvIjapUra   -> maDubIjapUra   | maDu(bI)vIjapUra pu0 karma0 . maDukarkawikAyAm rAjani0 .
+nirvarhaRa     -> nirbarhaRa     | nirva(rba)rhaRa na0 nir + va(va)rha--BAve lyuw . nivarhaRe mAraRe nIlakaRWaH .
+nisunDa        -> nisunda        | nisunDa(nda) pu0 asuraBede “svAditA BOravAH kASA ni- sunDa(nda) nftakO hatO” mA0 va0 12 a0 “hayagrIvo nisu(nda)nDaSca vIraH paYcanaKastaTA” harivaM0 122 a0 .
+pAMSukzAra     -> pAMsukzAra     | pAMSu(su)kzAra na0 pAMSu(su)riva kzAram . kzAralavaRe (pA- NgAlona) pAra0 niGaRwuH .
+pAMSumardana   -> pAMsumardana   | pAMSu(su)mardana pu0 zAMSuH(suH) mfdyate'tra mfda--ADAre lyuw . kedAre kzetraBede trikA0 .
+padmavIjABa    -> padmabIjABa    | padmavI(bI)jABa na0 padmavI(bI)jamivABAti A + BA--ka . (mAKanA) KyAte maKAnne rAjani0 .
+paripana       -> paripaRa       | paripana(Ra) na0 paripanya(Rya)te vyavahriyate'tena pana(Ra)- GaY . mUlaDane amaraH .
+proQapAda      -> prOQapAda      | pro(prO)QapAda tri0 prOQaH pAdo yasya . AsanAropitapAdA- dike “AsanArUQapAdastu jAnunIrjaNGayostaTA . kftAva sakTiko yastu prOQapAdaH sa ucyate . snAnamAcamanaM
+puzkaravIja    -> puzkarabIja    | puzkaravI(bI)ja na0 6 ta0 . padmavIje .
+puzpavARa      -> puzpabARa      | puzpavA(bA)Ra pu0 puzpaM bARo'sya . 1 kandarpe 2 kuSadvIpasTa- parvataBede BA0 va0 12 a0 . 3 dEtyaBede BA0 SA0 227 a0 . 4 nAyakaBede puzpabARacarite dfSyam .
+romAvali       -> romAvalI       | romAvali(lI) strI 6 ta0 . 1 romaSreRO 2 nABerurDvasTaro- mapaqktO tadupalakzite 3 tAruRyAvasTAyAYca hemaca0 .
+tIrTarAji      -> tIrTarAjI      | tIrTarAji(jI) strI tIrTAnAM rAjiratra . avimukte kASyAM trikA0 vA NIp . nindanAtatrAzwazazwitIrTAnA- mAnayanAttaTAtvam . yaToktaM kASI0 69 a0 . “sarvaratnamayA 
+tUlanAli       -> tUlanAlI       | tUlanAli(lI) strI0 tUlanirmmitA nAlI . piYjikAyAm (pAija) svArTe ka . atrEvArTe strI trikA0 .
+tarutulikA     -> tarutUlikA     | tarutu(tU)likA strI tarO tolayati dolayati vA tanum, tula--unmitO dula--utkzepe vA Rvul wAp kApi ata- ittvam pfzo0 . (vAduqa) KagaBede hArA0 . tasya vfkze svade
+trizuparRa     -> trisuparRa     | trizu(su)parRa pu0 trayaH suparRAstadvAcakaSabdA yatra . 1 bahvf- cavedaBAgaBede trisOparRaSabde dfSyaM 2 tadvrate ca tadyo- gAt 3 tadbrataDAriRi puruze “triRAc
+vidyAcana      -> vidyAcaRa      | vidyAcana(Ra) tri0 vidyayA KyAtaH . vidyA + cana(Ra) vidyayA viKyAte .

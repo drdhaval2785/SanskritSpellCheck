@@ -131,7 +131,7 @@ def main():
                         head, e['dcs_sugg_band'], e['ndicts'], e['body_kind'],
                         ' x%d' % e['body_count'] if e['body_count'] > 1 else ''))
                     if e['body_text']:
-                        w("    MW: %s\n" % e['body_text'][:200])
+                        w("    %s: %s\n" % (dict_code, e['body_text'][:200]))
                     if c.get('reason'):
                         w("    judged: %s\n" % c['reason'])
                     if cf and cf.get('reason'):
@@ -139,7 +139,7 @@ def main():
                     w("    scan: %s\n" % (SCAN % (dict_code, e['suspect'])))
                 else:
                     note = (c.get('reason') or '')
-                    w("%s | MW: %s | %s\n" % (head, (e['body_text'] or '')[:90], note[:90]))
+                    w("%s | %s: %s | %s\n" % (head, dict_code, (e['body_text'] or '')[:90], note[:90]))
         block("BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file)", buckets['FILE'], True)
         block("BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted", buckets['TYPO_UNSURE'], True)
         block("BUCKET 3  REVIEW -- undecidable without the printed page", buckets['REVIEW'], True)
