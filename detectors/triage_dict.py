@@ -18,14 +18,11 @@ import os
 import json
 import subprocess
 
-sys.stdout.reconfigure(encoding='utf-8')
-sys.stderr.reconfigure(encoding='utf-8')
-
 import triage_lang
+import triage_util
 
-HERE = os.path.dirname(os.path.abspath(__file__))
-ROOT = os.path.dirname(HERE)
-GITHUB = os.path.dirname(ROOT)
+triage_util.reconfigure_stdio()
+HERE = triage_util.HERE
 
 
 def run(script, dict_code):
@@ -48,9 +45,8 @@ def main():
                    'triage_body_batches.py'):
         run(script, dict_code)
 
-    work = os.path.join(ROOT, 'corrections_draft', dict_code, 'triage_work').replace('\\', '/')
-    src = os.path.join(GITHUB, 'csl-orig', 'v02', dict_code.lower(),
-                       '%s.txt' % dict_code.lower()).replace('\\', '/')
+    work = triage_util.work_dir(dict_code).replace('\\', '/')
+    src = triage_util.csl_dict_file(dict_code).replace('\\', '/')
     wf = os.path.join(HERE, 'bodyaware_workflow.js').replace('\\', '/')
     payload = {'scriptPath': wf,
                'args': {'dict': dict_code, 'dir': work, 'src': src,

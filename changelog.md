@@ -6,6 +6,33 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.17.0] - 2026-06-16
+
+### Changed
+Lower-severity cleanup from the same code review -- a behavior-preserving refactor of the
+triage pipeline (the committed MW/PW/VCP/PWG packages are byte-identical after it):
+- **Shared boilerplate consolidated into `triage_util.py`** (the stdlib-only triage core):
+  `HERE`/`ROOT`/`GITHUB`, `reconfigure_stdio()`, `dict_arg()`, `package_dir()`/`work_dir()`,
+  and `csl_root()`/`csl_dict_file()`. Removes the path triple + UTF-8 stdio preamble + the
+  `argv[1] ... else 'MW'` idiom that were copy-pasted across all seven `triage_*.py` steps,
+  and unifies the **three divergent ways `csl-orig` was located** (`GITHUB/csl-orig`,
+  `ROOT/../csl-orig`, `HERE/../../csl-orig` -- all the same dir, expressed three ways).
+- **Magic numbers named.** `BATCH_SIZE = 30` (was duplicated in `triage_enrich` and
+  `triage_body_batches`), the `INTENTIONAL_KINDS` / `NEEDS_JUDGMENT` body-kind tuples, and the
+  `SCAN_URL` deep-link template now live once in `triage_util`; the body-classifier thresholds
+  (`_XREF_MAX_CHARS` / `_REALWORD_MIN_CHARS` / `_THIN_MAX_CHARS` / `_BODY_TEXT_CAP`) and
+  `triage_synthesize`'s display widths are named module constants.
+- **Single source for language config.** The wrong-readings sub-type order is now
+  `triage_lang.subtype_order()` (was a hardcoded list re-stated in `triage_synthesize`).
+  `lang()` already defaults an unknown dict code to English, so the `_LANG` map stays the one
+  place a dictionary's language is registered.
+- Dropped dead imports (`re`/`glob` in `triage_synthesize`; `sys` in `triage_bodies` /
+  `triage_body_batches` / `triage_enrich`).
+- Verified: `py_compile` + 17 unit checks + PWG re-synthesizes byte-identical (12 fileable /
+  248 do-not-file) + the full deterministic feeder chain
+  (`make_dict_package` -> `enrich` -> `bodies` -> `body_batches`) re-runs clean on a throwaway
+  dictionary, touching no committed package.
+
 ## [1.16.0] - 2026-06-16
 
 ### Fixed

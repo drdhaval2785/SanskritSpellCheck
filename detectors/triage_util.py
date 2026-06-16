@@ -1,7 +1,13 @@
 #!/usr/bin/env python3
 """triage_util.py -- shared helpers for the body-grounded triage pipeline.
 
-Two things that were duplicated across triage_*.py / make_changefiles.py:
+The triage core. Stdlib-only (no dependency on the SLP1 confusion model in slp1util.py),
+so every triage_*.py step can import it cheaply. Collects what was otherwise copy-pasted
+across the steps:
+
+  paths / CLI / tunables -- HERE/ROOT/GITHUB, reconfigure_stdio(), dict_arg(),
+      package_dir() / work_dir(), csl_root() / csl_dict_file(), and the shared constants
+      (BATCH_SIZE, INTENTIONAL_KINDS, NEEDS_JUDGMENT) that several steps must agree on.
 
   load_json_array / load_verdicts -- read the JSON arrays the body-aware workflow
       agents write (tolerant of a stray ```json fence or trailing prose).
@@ -16,6 +22,63 @@ import re
 import sys
 import json
 import glob
+
+
+# --- shared paths, CLI, and tunables ---------------------------------------
+HERE = os.path.dirname(os.path.abspath(__file__))   # detectors/
+ROOT = os.path.dirname(HERE)                         # repo root
+GITHUB = os.path.dirname(ROOT)                       # GitHub/ (sibling checkout: csl-orig/)
+
+# Rows per agent batch. The body-aware workflow spawns one agent per batch file, so this
+# trades agent count against per-agent context. Shared by triage_enrich (batch_*.jsonl) and
+# triage_body_batches (body_batch_*.jsonl) so the two stay in lockstep.
+BATCH_SIZE = 30
+
+# body_kind values (set by triage_bodies.classify) that mean the dictionary documents the
+# spelling ON PURPOSE -> never file. Used by triage_bodies + triage_synthesize + triage_body_batches.
+INTENTIONAL_KINDS = ('wr', 'variant', 'xref')
+
+# body_kind values that a deterministic pass cannot settle -> hand to the body-aware LLM.
+NEEDS_JUDGMENT = ('realword', 'thin', 'multi-mixed')
+
+# Cologne scanned-page deep-link template: SCAN_URL % (dict_code, headword_key).
+SCAN_URL = ("http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/"
+            "servepdf.php?dict=%s&key=%s")
+
+
+def reconfigure_stdio():
+    """Force UTF-8 on stdout/stderr (Windows consoles default to cp1252)."""
+    sys.stdout.reconfigure(encoding='utf-8')
+    sys.stderr.reconfigure(encoding='utf-8')
+
+
+def dict_arg(default='MW'):
+    """The <DICT> code shared by every triage step's CLI: argv[1], defaulting to MW."""
+    return sys.argv[1] if len(sys.argv) > 1 else default
+
+
+def package_dir(dict_code):
+    """corrections_draft/<DICT>/ -- the per-dictionary triage package."""
+    return os.path.join(ROOT, 'corrections_draft', dict_code)
+
+
+def work_dir(dict_code, create=False):
+    """<package>/triage_work/ -- gitignored intermediates (batch files, agent verdicts)."""
+    w = os.path.join(package_dir(dict_code), 'triage_work')
+    if create:
+        os.makedirs(w, exist_ok=True)
+    return w
+
+
+def csl_root():
+    """The csl-orig checkout (a sibling of this repo): GitHub/csl-orig."""
+    return os.path.join(GITHUB, 'csl-orig')
+
+
+def csl_dict_file(dict_code):
+    """csl-orig/v02/<dict>/<dict>.txt -- the canonical source text for a dictionary."""
+    d = dict_code.lower()
+    return os.path.join(csl_root(), 'v02', d, d + '.txt')
 
 
 # --- workflow-output JSON ---------------------------------------------------

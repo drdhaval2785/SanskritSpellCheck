@@ -111,6 +111,12 @@ don't refactor them. They use no PHP-8-removed constructs (`each()`,
   hybrid models (Sonnet classify / Opus confirm). Output: `corrections_draft/<DICT>/`. Done for
   MW/PW/VCP/PWG. ⚠️ Tier-A precision is near-zero on mature dicts; the LLM TYPO pass is
   stochastic (don't blindly re-run a verified package) — the do-not-file list is the real value.
+  All steps share `detectors/triage_util.py`, the stdlib-only triage core: paths
+  (`csl_root()`/`csl_dict_file()`, `package_dir()`/`work_dir()`), CLI helpers
+  (`reconfigure_stdio()`, `dict_arg()`), the tunables every step must agree on (`BATCH_SIZE`,
+  `INTENTIONAL_KINDS`, `NEEDS_JUDGMENT`, `SCAN_URL`), the JSON-verdict loaders, and the csl-orig
+  `EntryIndex`. Per-dictionary language markers live in `detectors/triage_lang.py` (`_LANG`
+  maps the dict code to en/de/sa and defaults unknown codes to English).
 
 ## Commands
 

@@ -42,6 +42,7 @@ MARKERS = {
     },
 }
 _SUBTYPE_ORDER = ['wrong-reading', 'varia-lectio', 'in-composition', 'cross-reference']
+_SUBTYPE_FALLBACK = 'other-intentional'   # an intentional spelling matching no specific marker
 
 
 def lang(dictcode):
@@ -102,10 +103,17 @@ def xref_re(dictcode):
     return re.compile(_src(dictcode)['cross-reference'], re.I)
 
 
+def subtype_order():
+    """The wrong-readings sub-types in display order, plus the catch-all that subtype()
+    returns for an intentional spelling matching no specific marker. ONE source of truth
+    for the do-not-file list's grouping (triage_synthesize)."""
+    return _SUBTYPE_ORDER + [_SUBTYPE_FALLBACK]
+
+
 def subtype(body, dictcode):
     """Classify a documented-intentional spelling into a wrong-readings sub-type."""
     b = body or ''
     for name, rx in subtype_res(dictcode):
         if rx.search(b):
             return name
-    return 'other-intentional'
+    return _SUBTYPE_FALLBACK

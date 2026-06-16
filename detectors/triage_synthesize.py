@@ -26,27 +26,26 @@ Usage:  cd detectors && python triage_synthesize.py [MW]
 """
 import sys
 import os
-import re
 import json
-import glob
-
-sys.stdout.reconfigure(encoding='utf-8')
-sys.stderr.reconfigure(encoding='utf-8')
 
 import triage_lang
 import triage_util
 
-HERE = os.path.dirname(os.path.abspath(__file__))
-ROOT = os.path.dirname(HERE)
-SCAN = ("http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/"
-        "servepdf.php?dict=%s&key=%s")
+triage_util.reconfigure_stdio()
+ROOT = triage_util.ROOT
+SCAN = triage_util.SCAN_URL
 _CONF = {'high': 3, 'medium': 2, 'low': 1}
+# how much entry body text to show, per output context (chars):
+_BODY_DETAIL_CHARS = 200    # detailed blocks (buckets 1-3, one field per line)
+_BODY_COMPACT_CHARS = 90    # compact one-line rows (buckets 4-6) + the judged reason
+_WR_BODY_CHARS = 160        # the wrong-readings do-not-file list
+_REVIEW_REASON_CHARS = 120  # a reviewed-out reason in the file_first sf comment
 
 
 def main():
-    dict_code = sys.argv[1] if len(sys.argv) > 1 else 'MW'
-    pkg = os.path.join(ROOT, 'corrections_draft', dict_code)
-    work = os.path.join(pkg, 'triage_work')
+    dict_code = triage_util.dict_arg()
+    pkg = triage_util.package_dir(dict_code)
+    work = triage_util.work_dir(dict_code)
 
     ev = {}
     with open(os.path.join(pkg, '%s_evidence.jsonl' % dict_code), encoding='utf-8') as f:
@@ -64,7 +63,7 @@ def main():
         e = dict(e, _cls=c, _conf=bconf.get(s), _rev=brev.get(s))
         if bk == 'missing':
             buckets['UNLOCATABLE'].append(e)
-        elif bk in ('wr', 'variant', 'xref'):
+        elif bk in triage_util.INTENTIONAL_KINDS:
             buckets['INTENTIONAL'].append(e)
         elif c is None:
             buckets['REVIEW'].append(e)          # realword set but no body verdict -> eyes
@@ -125,7 +124,7 @@ def main():
                         head, e['dcs_sugg_band'], e['ndicts'], e['body_kind'],
                         ' x%d' % e['body_count'] if e['body_count'] > 1 else ''))
                     if e['body_text']:
-                        w("    %s: %s\n" % (dict_code, e['body_text'][:200]))
+                        w("    %s: %s\n" % (dict_code, e['body_text'][:_BODY_DETAIL_CHARS]))
                     if c.get('reason'):
                         w("    judged: %s\n" % c['reason'])
                     if cf and cf.get('reason'):
@@ -133,7 +132,8 @@ def main():
                     w("    scan: %s\n" % (SCAN % (dict_code, e['suspect'])))
                 else:
                     note = (c.get('reason') or '')
-                    w("%s | %s: %s | %s\n" % (head, dict_code, (e['body_text'] or '')[:90], note[:90]))
+                    w("%s | %s: %s | %s\n" % (head, dict_code, (e['body_text'] or '')[:_BODY_COMPACT_CHARS],
+                                              note[:_BODY_COMPACT_CHARS]))
         block("BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file)", buckets['FILE'], True)
         block("BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted", buckets['TYPO_UNSURE'], True)
         block("BUCKET 3  REVIEW -- undecidable without the printed page", buckets['REVIEW'], True)
@@ -154,7 +154,7 @@ def main():
         for e in revout:   # auto-curated: the Opus review judged these intentional, not typos
             r = e['_rev']
             f.write("; REVIEWED-OUT (%s): %s\n;%s:%s:%s:n\n"
-                    % (r.get('false_positive_type', '?'), (r.get('reason', '') or '')[:120],
+                    % (r.get('false_positive_type', '?'), (r.get('reason', '') or '')[:_REVIEW_REASON_CHARS],
                        dict_code, e['suspect'], e['suggestion']))
 
     # ---- the standing wrong-readings / do-not-file list -----------------
@@ -166,7 +166,7 @@ def main():
     for e in buckets['INTENTIONAL']:
         groups[triage_lang.subtype(e['body_text'], dict_code)].append(e)
     wr = os.path.join(pkg, '%s_wrong_readings.txt' % dict_code)
-    order_sub = ['wrong-reading', 'varia-lectio', 'in-composition', 'cross-reference', 'other-intentional']
+    order_sub = triage_lang.subtype_order()
     with open(wr, 'w', encoding='utf-8') as f:
         f.write("# %s -- DOCUMENTED-INTENTIONAL spellings (NOT typos -- do NOT file corrections)\n#\n" % dict_code)
         f.write("# %d headwords that LOOK like misspellings but which %s records on purpose:\n"
@@ -182,7 +182,7 @@ def main():
                 continue
             f.write("\n# ===== %s (%d) =====\n" % (sub.upper(), len(rows)))
             for e in rows:
-                f.write("%-14s -> %-14s | %s\n" % (e['suspect'], e['suggestion'], (e['body_text'] or '')[:160]))
+                f.write("%-14s -> %-14s | %s\n" % (e['suspect'], e['suggestion'], (e['body_text'] or '')[:_WR_BODY_CHARS]))
 
     print("triaged %d candidates -> %s" % (len(ev), os.path.relpath(out, ROOT)))
     order = [('FILE-FIRST', 'FILE'), ('TYPO-UNSURE', 'TYPO_UNSURE'), ('REVIEW', 'REVIEW'),

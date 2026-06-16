@@ -22,7 +22,7 @@ import slp1util as u
 import triage_util
 
 u.reconfigure_stdio()
-SCAN = "http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=%s&key=%s"
+SCAN = triage_util.SCAN_URL
 
 
 def corrected(line, wrong, right):
@@ -76,7 +76,7 @@ def main(infile, csl_root, outdir):
 if __name__ == "__main__":
     args = [a for a in sys.argv[1:] if not a.startswith('--')]
     infile = args[0] if args else "accepted_sf.txt"
-    csl_root = args[1] if len(args) > 1 else os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'csl-orig')
+    csl_root = args[1] if len(args) > 1 else triage_util.csl_root()
     outdir = args[2] if len(args) > 2 else "changefiles"
     if not os.path.exists(infile):
         print("input %s not found — export accepted rows from combined_review.html first "

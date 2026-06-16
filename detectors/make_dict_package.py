@@ -20,11 +20,11 @@ import re
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import slp1util as u
+import triage_util
 import make_changefiles
 
 u.reconfigure_stdio()
-HERE = os.path.dirname(os.path.abspath(__file__))
-ROOT = os.path.dirname(HERE)
+HERE = triage_util.HERE
 
 
 def main():
@@ -36,9 +36,8 @@ def main():
     if not os.path.exists(combined):
         print("combined_candidates.txt not found — run: python run_all.py ../sanhw1.txt")
         sys.exit(1)
-    pkg = os.path.join(ROOT, 'corrections_draft', dict_code)
-    work = os.path.join(pkg, 'triage_work')
-    os.makedirs(work, exist_ok=True)
+    pkg = triage_util.package_dir(dict_code)
+    work = triage_util.work_dir(dict_code, create=True)
 
     rows = []
     with open(combined, encoding='utf-8') as f:
@@ -72,8 +71,8 @@ def main():
         for sc, wsp, rsp, dets, mo in rows:
             f.write("%s:%s:%s:n\n" % (dict_code, wsp, rsp))
 
-    print("%s: %d tier-A candidates -> %s" % (dict_code, len(rows), os.path.relpath(cand, ROOT)))
-    csl_root = os.path.join(ROOT, '..', 'csl-orig')
+    print("%s: %d tier-A candidates -> %s" % (dict_code, len(rows), os.path.relpath(cand, triage_util.ROOT)))
+    csl_root = triage_util.csl_root()
     make_changefiles.main(sf, csl_root, os.path.relpath(pkg, HERE))
 
 

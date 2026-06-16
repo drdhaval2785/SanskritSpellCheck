@@ -28,18 +28,15 @@ Usage:
     cd detectors && python triage_enrich.py            # MW (default)
     cd detectors && python triage_enrich.py PW         # another dict, if a package exists
 """
-import sys
 import os
 import re
 import json
 
-sys.stdout.reconfigure(encoding='utf-8')
-sys.stderr.reconfigure(encoding='utf-8')
-
 import slp1util as u
+import triage_util
 
-HERE = os.path.dirname(os.path.abspath(__file__))
-ROOT = os.path.dirname(HERE)
+triage_util.reconfigure_stdio()
+ROOT = triage_util.ROOT
 
 # --- confusion classification ---------------------------------------------
 _CLASS = {}
@@ -150,8 +147,8 @@ def provisional(ev):
 
 
 def main():
-    dict_code = sys.argv[1] if len(sys.argv) > 1 else 'MW'
-    pkg = os.path.join(ROOT, 'corrections_draft', dict_code)
+    dict_code = triage_util.dict_arg()
+    pkg = triage_util.package_dir(dict_code)
     cand_path = os.path.join(pkg, '%s_candidates.txt' % dict_code)
     draft_path = os.path.join(pkg, '%s_draft.txt' % dict_code)
     out_path = os.path.join(pkg, '%s_evidence.jsonl' % dict_code)
@@ -208,9 +205,8 @@ def main():
 
     # split into small per-batch files so each adjudication agent reads one whole
     # file (no line-offset math, no giant args/returns).
-    BATCH = 30
-    work = os.path.join(pkg, 'triage_work')
-    os.makedirs(work, exist_ok=True)
+    BATCH = triage_util.BATCH_SIZE
+    work = triage_util.work_dir(dict_code, create=True)
     nbatch = 0
     for i in range(0, len(rows), BATCH):
         with open(os.path.join(work, 'batch_%03d.jsonl' % (i // BATCH)), 'w', encoding='utf-8') as f:
