@@ -6,6 +6,18 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.14.0] - 2026-06-16
+
+### Added
+- **`/dict-triage <DICT>` skill** ([.claude/commands/dict-triage.md](.claude/commands/dict-triage.md)) —
+  packages the full hybrid body-grounded triage as a repeatable repo command: build the package
+  (`triage_dict.py <DICT>`) → launch `bodyaware_workflow.js` with hybrid models (Sonnet classify /
+  Opus confirm) → synthesize → human-verify each FILE-FIRST candidate against the entry → write the
+  package → commit. Encodes the judgment rubric (KEEP when the entry's own derivation/citation
+  confirms the suggestion; DROP wrong-reading/redirect/vṛddhi/variant apparatus) and the hard-won
+  lessons (the TYPO pass is stochastic — don't blindly re-run a verified package; tier-A precision
+  is near-zero; extend `triage_lang` markers when apparatus leaks). Includes a "new language" recipe.
+
 ## [1.13.0] - 2026-06-16
 
 ### Added

@@ -104,6 +104,13 @@ don't refactor them. They use no PHP-8-removed constructs (`each()`,
   `DICT:wrong:right:n`; flaggers `phonotactic_check`, `charset_check`, `order_check`
   emit `X:CODE=Y:D`. They target the skeleton-preserving substitutions faultfinder is
   blind to. Task-oriented recipes: **[USE_CASES.md](USE_CASES.md)**.
+- **Body-grounded triage** (`detectors/triage_*.py` + `bodyaware_workflow.js`) — turns a
+  dictionary's tier-A candidates into a verified FILE-FIRST queue + a do-not-file list by
+  judging each against the dictionary's *own entry text* (not spelling alone). Run it with the
+  **`/dict-triage <DICT>`** skill ([.claude/commands/dict-triage.md](.claude/commands/dict-triage.md));
+  hybrid models (Sonnet classify / Opus confirm). Output: `corrections_draft/<DICT>/`. Done for
+  MW/PW/VCP/PWG. ⚠️ Tier-A precision is near-zero on mature dicts; the LLM TYPO pass is
+  stochastic (don't blindly re-run a verified package) — the do-not-file list is the real value.
 
 ## Commands
 
