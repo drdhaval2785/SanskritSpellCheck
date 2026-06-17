@@ -1,0 +1,12 @@
+# MW RESIDUAL pattern candidates (token<TAB>pattern<TAB>count) -> LLM classify pass
+flexion	xion	1
+defluxion	xion	1
+effluxion	xion	1
+fluxion	xion	1
+ædhm	ligature	1
+cætera	ligature	1
+rathæst	ligature	1
+wæjen	ligature	1
+sacæ	ligature	1
+præ	ligature	1
+sæp	ligature	1

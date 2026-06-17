@@ -1,0 +1,13 @@
+# English orthographic-drift across dictionaries -- DOCUMENTATION ONLY
+# drift/1k = reform-drift occurrences per 1000 gloss tokens
+dict	tokens	modern%	drift	drift/1k	xion	ligature	ick	archaic
+AP	540653	64	0	0.00	0	0	0	0
+AP90	471172	64	39	0.08	0	39	0	0
+BEN	222874	48	31	0.14	2	27	1	1
+CAE	179477	67	0	0.00	0	0	0	0
+GST	152728	41	48	0.31	0	42	3	3
+MD	277933	62	44	0.16	39	4	0	1
+MW	993495	56	14	0.01	2	0	0	12
+MW72	1222406	47	107	0.09	0	92	1	14
+SHS	471445	56	147	0.31	14	109	16	8
+WIL	432117	57	246	0.57	19	46	103	78

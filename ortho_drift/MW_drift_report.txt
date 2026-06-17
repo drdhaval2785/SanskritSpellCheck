@@ -1,0 +1,28 @@
+# MW (English) orthographic-drift -- DOCUMENTATION ONLY (never edits the source)
+# FULL corpus
+# modern word-list: ORTHO_EN_DIC, 56571 stems
+# gloss tokens: 993495 ; already-modern: 558897 ; reform-drift: 14 (transform 0 + map 14)
+# drift occurrences by era: archaic=12, xion=2
+#
+# ===== reform-drift CONFIRMED by transform (+ wordlist, where available) =====
+
+# ===== reform-drift from the curated/accumulated map =====
+ancle                  -> ankle                  archaic          12  , m. or , n. ¦ a part of the foot between the ancle and the heel,
+reflexion              -> reflection             xion              2  ¦ m. reflexion, resemblance, appearance, ;
+
+# ===== RESIDUAL pattern candidates (-> LLM pass) =====
+# -- xion: 4 distinct (top 15) --
+   flexion                     1
+   defluxion                   1
+   effluxion                   1
+   fluxion                     1
+# -- ligature: 7 distinct (top 15) --
+   ædhm                        1
+   cætera                      1
+   rathæst                     1
+   wæjen                       1
+   sacæ                        1
+   præ                         1
+   sæp                         1
+# -- ick: 0 distinct (top 15) --
+# -- shew: 0 distinct (top 15) --

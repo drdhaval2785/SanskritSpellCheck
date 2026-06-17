@@ -1,0 +1,57 @@
+# MW72 (English) orthographic-drift -- DOCUMENTATION ONLY (never edits the source)
+# FULL corpus
+# modern word-list: ORTHO_EN_DIC, 56571 stems
+# gloss tokens: 1222406 ; already-modern: 574755 ; reform-drift: 107 (transform 93 + map 14)
+# drift occurrences by era: ligature=92, archaic=14, ick=1
+#
+# ===== reform-drift CONFIRMED by transform (+ wordlist, where available) =====
+phœnix                 -> phoenix                ligature         22  ¦ kiriṭi, n. the fruit of the marshy date tree, Phœnix Paludosa.
+fœtus                  -> foetus                 ligature         22  Kīla, as, ā, ¦ m. f. a sharp piece of wood, a stake, a pin, a peg, a bolt, a wedge, &c.; a
+diarrhœa               -> diarrhoea              ligature         20  2¦. anna, as, ā, am (fr. rt. ad ), eaten; ( am ), n. food or victual in general; food in a
+perinæum               -> perineum               ligature          4  Bhaga, as, ¦ m. a liberal or wealthy master (‘ap- portioner of food’), gracious lord, patr
+manœuvre               -> manoeuvre              ligature          3  Upa-sañcara, as, ¦ m. manœuvre, flattery (?).
+cæsura                 -> caesura                ligature          3  ¦ pāṭha, as, m. (fr. rt. paṭh ), recitation, recital; reading, perusal, study; reading sac
+œsophagus              -> oesophagus             ligature          2  2¦. anna, as, ā, am (fr. rt. ad ), eaten; ( am ), n. food or victual in general; food in a
+gonorrhœa              -> gonorrhoea             ligature          2  Kacchapikā, ¦ f. a pimple, a blotch or wart; a wart accompanying gonorrhœa.
+bœnd                   -> bend                   ligature          2  ¦ bandh [cf. rt. bundh ], cl. 9. P. (ep. also A.) badhnāti (badhnīte), Impv. 2nd sing. bad
+bœst                   -> best                   ligature          2  ¦ bandh [cf. rt. bundh ], cl. 9. P. (ep. also A.) badhnāti (badhnīte), Impv. 2nd sing. bad
+lyræ                   -> lyre                   ligature          1  Abhi-jit, t, t, t, ¦ victorious; born under the con- stellation Abhijit; ( t ), m., N. of 
+œdematous              -> oedematous             ligature          1  1¦. kara, as, ā or ī, am (fr. rt. kṛ, to do; for 2. kara see p. 205), who or what does or 
+turmerick              -> turmeric               ick               1  Dārva, as, ī, am, ¦ wooden, made of wood; ( ās ), m. pl., N. of a people to the north-east
+dinœ                   -> dine                   ligature          1  3. div, dyaus, ¦ m. f. (in the Veda usually m., rarely f., but in later Sanskrit only f. I
+chimæra                -> chimera                ligature          1  Bandhya, as, ā, am, ¦ to be bound or fettered, to be confined or imprisoned; to be bound t
+brœw                   -> brew                   ligature          1  ¦ bhrū, ūs, f. (said to be fr. rt. bhram ), an eyebrow, the brow; [cf. agre-bh˚, su-bh˚, b
+mœte                   -> mete                   ligature          1  2¦. mad [cf. rts. mand, mud ], cl. 4. P. (rarely A. in Ved.) mādyati (-te), ma- māda, amād
+bœr                    -> boer                   ligature          1  Rakta, as, ā, am, ¦ coloured, dyed, painted, tinged, stained; reddened, red, crimson, of a
+lœn                    -> len                    ligature          1  ¦ ric, cl. 7. P. A. riṇakti, riṅkte, rireca, ririce, rekṣyati, -te, aricat or araikṣīt (Ve
+wœd                    -> wed                    ligature          1  ¦ ve, cl. 1. P. A. vayati, -te, vavau or uvāya (2nd sing. uvayitha, uvitha, uvātha, 3rd pl
+nœd                    -> ned                    ligature          1  ¦ snā (probably connected with rt. 1. snu ), cl. 2. P. (ep. also A.) snāti (-te), Pot. P. 
+
+# ===== reform-drift from the curated/accumulated map =====
+ancle                  -> ankle                  archaic          13  Aṃhri, is, ¦ m. a foot, the root of a tree [cf. aṅghri ]. —Aṃhri-pa, as, m. a tree (foot-d
+shewn                  -> shown                  archaic           1  Vakra, as, ā, am, ¦ crooked, winding, tortuous, curved, bent, bowed, meandering, curled, c
+
+# ===== RESIDUAL pattern candidates (-> LLM pass) =====
+# -- xion: 4 distinct (top 15) --
+   plexion                     3
+   defluxion                   2
+   nexion                      1
+   effluxion                   1
+# -- ligature: 160 distinct (top 15) --
+   fœtida                     57
+   nymphæa                    36
+   diœca                      32
+   gærtnera                   24
+   ipomœa                     24
+   tabernæmontana             18
+   pæderia                    16
+   cratæva                    14
+   cæsalpina                  13
+   fœnum                      13
+   græcum                     13
+   gavæus                     12
+   cypræa                     11
+   cærulea                    10
+   gynæceum                   10
+# -- ick: 0 distinct (top 15) --
+# -- shew: 0 distinct (top 15) --

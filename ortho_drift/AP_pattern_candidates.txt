@@ -1,0 +1,4 @@
+# AP RESIDUAL pattern candidates (token<TAB>pattern<TAB>count) -> LLM classify pass
+defluxion	xion	1
+effluxion	xion	1
+fluxion	xion	1

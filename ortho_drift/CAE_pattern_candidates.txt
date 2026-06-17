@@ -1,0 +1,3 @@
+# CAE RESIDUAL pattern candidates (token<TAB>pattern<TAB>count) -> LLM classify pass
+fluxion	xion	1
+churningstick	ick	1

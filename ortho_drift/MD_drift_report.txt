@@ -1,0 +1,20 @@
+# MD (English) orthographic-drift -- DOCUMENTATION ONLY (never edits the source)
+# FULL corpus
+# modern word-list: ORTHO_EN_DIC, 56571 stems
+# gloss tokens: 277933 ; already-modern: 171312 ; reform-drift: 44 (transform 43 + map 1)
+# drift occurrences by era: xion=39, ligature=4, archaic=1
+#
+# ===== reform-drift CONFIRMED by transform (+ wordlist, where available) =====
+reflexion              -> reflection             xion             38  ¦ anu-cint-ana, n. reflexion; f. id. .
+onomatopœic            -> onomatopoeic           ligature          4  ¦ phut, onomatopœic ij. always with 🞄puff, blow; shriek, yell: m. puffing, 🞄blowing, hissi
+disconnexion           -> disconnection          xion              1  ¦ vi‿abhi-caraṇa, n. uncertainty; 🞄 m. divergence, disconnexion; variability; 🞄failure; tr
+
+# ===== reform-drift from the curated/accumulated map =====
+gulph                  -> gulf                   archaic           1  ¦ gulphá, m. ankle; pp. reaching 🞄to the ankles; a. id. .
+
+# ===== RESIDUAL pattern candidates (-> LLM pass) =====
+# -- xion: 0 distinct (top 15) --
+# -- ligature: 0 distinct (top 15) --
+# -- ick: 1 distinct (top 15) --
+   churningstick               2
+# -- shew: 0 distinct (top 15) --

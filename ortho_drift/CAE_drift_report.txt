@@ -1,0 +1,17 @@
+# CAE (English) orthographic-drift -- DOCUMENTATION ONLY (never edits the source)
+# FULL corpus
+# modern word-list: ORTHO_EN_DIC, 56571 stems
+# gloss tokens: 179477 ; already-modern: 120697 ; reform-drift: 0 (transform 0 + map 0)
+# drift occurrences by era: (none)
+#
+# ===== reform-drift CONFIRMED by transform (+ wordlist, where available) =====
+
+# ===== reform-drift from the curated/accumulated map =====
+
+# ===== RESIDUAL pattern candidates (-> LLM pass) =====
+# -- xion: 1 distinct (top 15) --
+   fluxion                     1
+# -- ligature: 0 distinct (top 15) --
+# -- ick: 1 distinct (top 15) --
+   churningstick               1
+# -- shew: 0 distinct (top 15) --

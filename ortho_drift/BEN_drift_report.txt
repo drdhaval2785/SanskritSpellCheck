@@ -1,0 +1,42 @@
+# BEN (English) orthographic-drift -- DOCUMENTATION ONLY (never edits the source)
+# FULL corpus
+# modern word-list: ORTHO_EN_DIC, 56571 stems
+# gloss tokens: 222874 ; already-modern: 107522 ; reform-drift: 31 (transform 2 + map 29)
+# drift occurrences by era: ligature=27, xion=2, archaic=1, ick=1
+#
+# ===== reform-drift CONFIRMED by transform (+ wordlist, where available) =====
+æon                    -> aeon                   ligature          1  ¦ parārdha i. e. para-ardha, m. The ulterior part, 2, 1864. The other part, 382. m. and n.
+hyæna                  -> hyena                  ligature          1  ¦ mṛgādana, i. e. mṛga-ad + ana, m. A leopard. A hyæna.
+
+# ===== reform-drift from the curated/accumulated map =====
+æther                  -> ether                  ligature         12  ¦ ā-kāś + a, m. The fifth element, æther, 1, 75. Sky. [Page0069-a+ 41] 47, 14. The open ai
+fœtus                  -> foetus                 ligature          6  ¦ arbuda. m. , n. The shape of the fœtus in the second month after the conception, 3, 75. 
+diarrhœa               -> diarrhoea              ligature          5  ¦ and atī̆sāra, i. e. ati-sṛ + a, m. Diarrhœa.
+reflexion              -> reflection             xion              2  ¦ arka, i. e. arc + a, m. A [Page0048-b+ 43] ray of light, 291, 2 = i. 85, 2. The sun, 36,
+phœnix                 -> phoenix                ligature          1  ¦ kharjūra, m. and f. rī, A tree, Phœnix sylvestris. Piṇḍa-, m. and f. rī, A sort of date 
+ancle                  -> ankle                  archaic           1  ¦ gulpha, m. The ancle, 6, 23, 12. Ucca-, adj. , f. phā, having high ancles, 4, 253.
+panick                 -> panic                  ick               1  ¦ priyaṃgu, m. A medicinal plant and perfume. Panick seed, Panicum italicum. Black mustard
+perinæum               -> perineum               ligature          1  ¦ vījya, i. e. vīja + ya, adj. Sprung from seed. Sprung from some family. Mahā-, n. the se
+
+# ===== RESIDUAL pattern candidates (-> LLM pass) =====
+# -- xion: 2 distinct (top 15) --
+   flexion                     2
+   nexion                      1
+# -- ligature: 33 distinct (top 15) --
+   fæces                       9
+   nymphæa                     5
+   ipomœa                      3
+   gynæceum                    3
+   hæmorrhoids                 2
+   cærulea                     2
+   phœniceus                   2
+   ætherial                    2
+   fœtida                      2
+   assafœtida                  2
+   fœtor                       2
+   hæmor                       1
+   præ                         1
+   cœpi                        1
+   amœnus                      1
+# -- ick: 0 distinct (top 15) --
+# -- shew: 0 distinct (top 15) --

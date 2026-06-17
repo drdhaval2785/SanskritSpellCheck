@@ -1,0 +1,23 @@
+# GST RESIDUAL pattern candidates (token<TAB>pattern<TAB>count) -> LLM classify pass
+nexion	xion	4
+gynæceum	ligature	9
+gynæ	ligature	3
+cratœva	ligature	2
+gærtnera	ligature	2
+schœnanthus	ligature	1
+hœmorrhoids	ligature	1
+ptolemæus	ligature	1
+nymphæa	ligature	1
+cærulea	ligature	1
+laminæ	ligature	1
+arrhœa	ligature	1
+œso	ligature	1
+asafœtida	ligature	1
+fæces	ligature	1
+pœderia	ligature	1
+fœtida	ligature	1
+cæsalpinia	ligature	1
+amphisbœna	ligature	1
+kœppen	ligature	1
+hœberlin	ligature	1
+goldstick	ick	1

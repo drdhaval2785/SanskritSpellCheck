@@ -1,0 +1,39 @@
+# AP90 (English) orthographic-drift -- DOCUMENTATION ONLY (never edits the source)
+# FULL corpus
+# modern word-list: ORTHO_EN_DIC, 56571 stems
+# gloss tokens: 471172 ; already-modern: 300775 ; reform-drift: 39 (transform 0 + map 39)
+# drift occurrences by era: ligature=39
+#
+# ===== reform-drift CONFIRMED by transform (+ wordlist, where available) =====
+
+# ===== reform-drift from the curated/accumulated map =====
+fœtus                  -> foetus                 ligature         25  ¦ [ ] The belly; ; cf. &c. The interior or inside of anything, cavity; ; ; , 4. 29 ; ; ; ;
+diarrhœa               -> diarrhoea              ligature          8  ¦ [ ; according to Yāska, from ; or from ] Food (in general); ; ; I am your prey &c.; Food
+cæsura                 -> caesura                ligature          3  ¦ [ ] Reciting recitation, repeating. Reading, perusal, study. Studying or reciting the Ve
+perinæum               -> perineum               ligature          2  ¦ [ ] One of the twelve forms of the sun; the sun. The moon. A form of Śiva. Good fortune,
+gonorrhœa              -> gonorrhoea             ligature          1  ¦ Pimple, blotch. A wart accompanying gonorrhœa.
+
+# ===== RESIDUAL pattern candidates (-> LLM pass) =====
+# -- xion: 2 distinct (top 15) --
+   defluxion                   1
+   effluxion                   1
+# -- ligature: 17 distinct (top 15) --
+   fœtida                     19
+   fæces                       5
+   formulæ                     3
+   gavœus                      3
+   gærtn                       2
+   cætera                      2
+   vitæ                        2
+   asafœtida                   1
+   onamatopœia                 1
+   nymphæa                     1
+   gavæus                      1
+   mœnorrhagia                 1
+   œquus                       1
+   fœtal                       1
+   fœaida                      1
+# -- ick: 2 distinct (top 15) --
+   churningstick               8
+   swordstick                  1
+# -- shew: 0 distinct (top 15) --

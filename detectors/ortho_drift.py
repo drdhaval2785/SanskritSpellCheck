@@ -51,6 +51,7 @@ _SKT = re.compile(r'\{#.*?#\}|\{@.*?@\}', re.S)      # Sanskrit spans -> drop
 _ANNO = re.compile(r'\{\{.*?\}\}', re.S)             # {{old->new||date|editor|github-url|}} -> drop
 _BOT = re.compile(r'<bot>.*?</bot>', re.S | re.I)    # botanical Latin species -> drop
 _LS = re.compile(r'<ls>.*?</ls>', re.S | re.I)       # literary-source sigla -> drop
+_S = re.compile(r'<s>.*?</s>', re.S | re.I)          # <s>SLP1</s> Sanskrit (MW etc.) -> drop
 _ITAL = re.compile(r'\{%(.*?)%\}', re.S)             # italic gloss -> unwrap
 _TAG = re.compile(r'<[^>]+>')
 _DEVA = re.compile(r'[ऀ-ॿ]+')              # Devanagari -> drop (ru jsonl carries it)
@@ -61,6 +62,7 @@ def clean_gloss(body):
     t = _ANNO.sub(' ', t)
     t = _BOT.sub(' ', t)
     t = _LS.sub(' ', t)
+    t = _S.sub(' ', t)
     t = _ITAL.sub(r' \1 ', t)
     t = _TAG.sub(' ', t)
     return _DEVA.sub(' ', t)
@@ -140,6 +142,34 @@ def fr_transforms(w):
     return out
 
 
+# ============================ English (en) -- convention drift, no legislated reform =========
+# Reference = en_GB (British: these are British/Indian-English dicts, so honour/-ise/-re are
+# CORRECT, not drift). Curated map = irregular archaic forms; transforms = rule-derivable classes,
+# all dic-guarded (e.g. complexion->complection is rejected; connexion->connection kept).
+EN_REFORM = {
+    'shew': ('show', 'archaic'), 'shews': ('shows', 'archaic'), 'shewn': ('shown', 'archaic'),
+    'shewing': ('showing', 'archaic'), 'gulph': ('gulf', 'archaic'), 'cloathing': ('clothing', 'archaic'),
+    'controul': ('control', 'archaic'), 'compleat': ('complete', 'archaic'), 'ancle': ('ankle', 'archaic'),
+    'chace': ('chase', 'archaic'), 'cyder': ('cider', 'archaic'), 'sceptic': ('sceptic', 'archaic'),
+}
+EN_REFORM.pop('sceptic', None)   # sceptic is current British -- guard against accidental entry
+
+
+def en_transforms(w):
+    out = []
+    if w.endswith('xion'):                       # connexion->connection, inflexion->inflection
+        out.append(('xion', w[:-4] + 'ction'))
+    if 'æ' in w:                                 # mediæval -> medieval / mediaeval
+        out.append(('ligature', w.replace('æ', 'e')))
+        out.append(('ligature', w.replace('æ', 'ae')))
+    if 'œ' in w:
+        out.append(('ligature', w.replace('œ', 'e')))
+        out.append(('ligature', w.replace('œ', 'oe')))
+    if w.endswith('ick') and len(w) > 4:         # musick->music (brick->bric rejected by the dic)
+        out.append(('ick', w[:-3] + 'ic'))
+    return out
+
+
 # ============================ Russian (ru) -- 1918, WORDLIST-FREE ============================
 _RU_1918 = [('ѣ', 'е'), ('Ѣ', 'Е'), ('і', 'и'), ('І', 'И'), ('ѳ', 'ф'), ('Ѳ', 'Ф'),
             ('ѵ', 'и'), ('Ѵ', 'И')]
@@ -179,6 +209,14 @@ PROFILES = {
                patterns=[('trema', re.compile(r'[ëï]')), ('oi', re.compile(r'oi(s|t|ent|x)?$')),
                          ('ph', re.compile(r'^ph'))],
                canon=['oi-ai', 'trema', 'ph-f'], wordlist_free=False),
+    'en': dict(name='English', source='csl', wordlist=_dic('en_GB'), wordlist_env='ORTHO_EN_DIC',
+               enc='latin-1', seed=EN_REFORM, transforms=en_transforms, skip=None,
+               word=re.compile(r'[A-Za-zÆæŒœ][A-Za-zÆæŒœ]{2,}'),
+               abbr=set('adj mfn nom acc voc gen dat loc abl ibid cf viz etc fig lit comp '
+                        'masc fem neut sing plur du adv pron'.split()),
+               patterns=[('xion', re.compile(r'xion$', re.I)), ('ligature', re.compile(r'[æœ]')),
+                         ('ick', re.compile(r'ick$', re.I)), ('shew', re.compile(r'shew', re.I))],
+               canon=['xion', 'ligature', 'ick', 'archaic'], wordlist_free=False),
     'la': dict(name='Latin', source='csl', wordlist=None, wordlist_env='ORTHO_LA_DIC', enc='utf-8',
                seed={}, transforms=lambda w: [], skip=None,
                word=re.compile(r'[A-Za-zæœÆŒ][A-Za-zæœÆŒ]{2,}'), abbr=set(),
@@ -195,7 +233,9 @@ PROFILES = {
                wordlist_free=True),
 }
 LANG_OF = {'PW': 'de', 'PWG': 'de', 'GRA': 'de', 'CCS': 'de', 'SCH': 'de',
-           'BUR': 'fr', 'STC': 'fr', 'BOP': 'la', 'KOSSOVICH': 'ru', 'KOCHERGINA': 'ru'}
+           'BUR': 'fr', 'STC': 'fr', 'BOP': 'la', 'KOSSOVICH': 'ru', 'KOCHERGINA': 'ru',
+           'MW': 'en', 'MW72': 'en', 'AP': 'en', 'AP90': 'en', 'WIL': 'en', 'BEN': 'en',
+           'GST': 'en', 'CAE': 'en', 'MD': 'en', 'SHS': 'en'}
 
 
 def load_wordlist(prof):

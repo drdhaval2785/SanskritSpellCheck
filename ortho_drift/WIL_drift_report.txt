@@ -1,0 +1,77 @@
+# WIL (English) orthographic-drift -- DOCUMENTATION ONLY (never edits the source)
+# FULL corpus
+# modern word-list: ORTHO_EN_DIC, 56571 stems
+# gloss tokens: 432117 ; already-modern: 246434 ; reform-drift: 246 (transform 118 + map 128)
+# drift occurrences by era: ick=103, archaic=78, ligature=46, xion=19
+#
+# ===== reform-drift CONFIRMED by transform (+ wordlist, where available) =====
+æther                  -> ether                  ligature         19  ¦ n. ( ) Æther, the sky or atmosphere. E. to throw, to send, Uṇādi aff.
+garlick                -> garlic                 ick              10  ¦ m. ( ) .²1 The soap-berry plant, ( , &c. ) .²2 Garlick. .²3 The Nimb tree, ( .) .²4 A cr
+patronymick            -> patronymic             ick               9  ¦ m. ( ) .²1 The patronymick of JAYANTA the son of INDRA. .²2 A name of the monkey BĀLĪ. .
+panick                 -> panic                  ick               9  ¦ f. ( ) A kind of Panick seed, ( ); several varieties of it are cultivated, and form arti
+aquatick               -> aquatic                ick               9  ¦ m. ( ) .²1 Any aquatick bird, as a crane, a gull, &c. feeding upon fish. .²2 A crow. .²3
+traffick               -> traffic                ick               8  ¦ m. ( ) .²1 A town, a city. .²2 A market, a fair. .²3 Holy-writ, the Vedas collectively. 
+æra                    -> era                    ligature          6  ¦ m. ( ) A Bauddha teacher; also MAÑJUGHOṢA. m. plu. ( ) The twenty-four Jinas or Jaina sa
+arsenick               -> arsenic                ick               5  ¦ m. ( ) .²1 A dancer, a mime, an actor, a Nut , &c. in modern times: in caste, the son of
+panegyrick             -> panegyric              ick               5  ¦ mfn. ( ) New. m. ( ) Praise, panegyrick, celebration. E. to praise, &c. affix .
+chamæleon              -> chameleon              ligature          5  ¦ f. ( ) .²1 A necklace hanging as low as the navel. .²2 A lizard, a chamæleon. E. sportin
+generick               -> generic                ick               4  ¦ mfn. ( ) Special, individual, peculiar. E. neg. generick.
+ascetick               -> ascetic                ick               4  ¦ mfn. ( ) .²1 Initiated. .²2 Performed, (as the Dīkṣa ceremony.) .²3 One by whom the prep
+heretick               -> heretic                ick               4  ¦ m. ( ) A heretick, a heterodox Hindu , adopting the exterior marks of the classes, but n
+aromatick              -> aromatic               ick               3  ¦ mfn. ( ) .²1 Making luminous or beautiful. .²2 Kindling, inflaming. .²3 Exciting, render
+characteristick        -> characteristic         ick               3  ¦ mfn. ( ) .²1 Twice born. .²2 Oviparous. m. ( ) .²1 A man of either of the three first cl
+frolick                -> frolic                 ick               3  ¦ mfn. ( ) .²1 Shaking, tremulous. .²2 Licking, lapping, stirring or touching with the ton
+perinœum               -> perineum               ligature          2  ¦ f. ( ) Sharp pain in the perinœum and lower part of the abdomen.
+musick                 -> music                  ick               2  ¦ n. ( ) The science or art of dancing or acting, or the union of song, dance, and instrum
+heroick                -> heroic                 ick               1  ¦ f. ( ) Heroick valor, prowess. E. power, and aff.
+magick                 -> magic                  ick               1  ¦ n. ( ) .²1 A net. .²2 A window, a lattice, an eyelet or loophole. .²3 A multitude, an as
+terræ                  -> terre                  ligature          1  ¦ m. ( ) The planet Mars or its regent. E. the earth, and son, terræ-filius; also similar 
+erotick                -> erotic                 ick               1  ¦ m. ( ) .²1 A guide, a leader, a conductor. .²2 A chief, a head, pre-eminent, principal. 
+logick                 -> logic                  ick               1  ¦ m. ( ) .²1 A complete sentence, one having no ellipsis. .²2 Certainty, ascertainment. .²
+specifick              -> specific               ick               1  ¦ m. ( ) .²1 A place for preparing or holding a sacrificial fire. .²2 Sacrificial fire in 
+majestick              -> majestic               ick               1  ¦ mfn. ( ) Majestick, glorious. E. , and aff.
+anapæst                -> anapaest               ligature          1  ¦ m. ( ) .²1 The hand. .²2 An elephant's trunk. .²3 The thirteenth lunar asterism, designa
+
+# ===== reform-drift from the curated/accumulated map =====
+shew                   -> show                   archaic          33  ¦ n. or ind. ( ) Intermediate space, half a point of the compass. E. , and to shew, aff.
+reflexion              -> reflection             xion             19  ¦ mfn. ( ) Insensible, inanimate. E. neg. reflexion.
+turmerick              -> turmeric               ick              19  ¦ f. ( ) Turmerick.
+shewn                  -> shown                  archaic          13  ¦ ind. .²1 Dispersing, going or having gone to various quarters. .²2 Having shewn or state
+shewing                -> showing                archaic          10  ¦ m. ( ) .²1 Salutation, courtesy, civility, shewing respect or adoration to a guest or a 
+ancle                  -> ankle                  archaic          10  ¦ m. ( ) .²1 A ring or chain worn on the ancle. .²2 The chain for an elephant's feet. E. t
+controul               -> control                archaic           9  ¦ n. ( ) Inward restraint, mental controul. E. , and restraining.
+fœtus                  -> foetus                 ligature          6  ¦ n. ( ) .²1 The fœtus, the embryo, sometimes confounded with the womb. .²2 The period of 
+shews                  -> shows                  archaic           3  ¦ m. ( ) .²1 A doorkeeper. .²2 A guide. E. and who shews.
+diarrhœa               -> diarrhoea              ligature          3  ¦ n. ( ) Purging, diarrhœa. E. before to go, aff. .
+gonorrhœa              -> gonorrhoea             ligature          1  ¦ m. ( ) Urinary affection, as change in the colour, quantity, or consistence of the urine
+cæsura                 -> caesura                ligature          1  ¦ f. ( ) .²1 Cutting, cutting off, excision. .²2 Dividing, fracture. .²3 Separation or abs
+perinæum               -> perineum               ligature          1  ¦ mn. ( ) .²1 The branch of a tree with its new sprout or shoot. .²2 A new shoot. .²3 A br
+
+# ===== RESIDUAL pattern candidates (-> LLM pass) =====
+# -- xion: 1 distinct (top 15) --
+   defluxion                   1
+# -- ligature: 27 distinct (top 15) --
+   fæces                      31
+   asafœtida                  13
+   amphisbæna                  5
+   formulæ                     5
+   gavæus                      2
+   hæmorrhoids                 2
+   fœtor                       2
+   amphisbœna                  2
+   elæocarpus                  2
+   nymphæa                     2
+   fœtid                       2
+   palæstrum                   2
+   fœculent                    1
+   fœtal                       1
+   scibulæ                     1
+# -- ick: 7 distinct (top 15) --
+   herpetick                   7
+   pleonastick                 5
+   emblick                     3
+   strick                      2
+   unheroick                   1
+   gangetick                   1
+   churningstick               1
+# -- shew: 0 distinct (top 15) --

@@ -1,0 +1,69 @@
+# SHS (English) orthographic-drift -- DOCUMENTATION ONLY (never edits the source)
+# FULL corpus
+# modern word-list: ORTHO_EN_DIC, 56571 stems
+# gloss tokens: 471445 ; already-modern: 265364 ; reform-drift: 147 (transform 12 + map 135)
+# drift occurrences by era: ligature=109, ick=16, xion=14, archaic=8
+#
+# ===== reform-drift CONFIRMED by transform (+ wordlist, where available) =====
+phænomenon             -> phenomenon             ligature          3  ¦ m. ( ) 1. Rahu, the ascending node. 2. A portent or natural phænomenon so considered. 3.
+alœ                    -> ale                    ligature          3  ¦ n. ( ) Alœ wood or Agallochum. E. to remove, affix; dissipating bad smells.
+phœnomenon             -> phenomenon             ligature          2  ¦ m. ( ) 1. A portent, some natural prodigy or phœnomenon. 2. Any public calamity, as an e
+æthereal               -> ethereal               ligature          1  ¦ mn. ( ) 1. The fifth element, æther, the sky or atmosphere. 2. Brahma as identical with 
+physick                -> physic                 ick               1  ¦ m. ( ) 1. Deliberate commencement or undertaking; providing means, and anticipating cons
+ærial                  -> aerial                 ligature          1  ¦ mfn. ( ) Celestial, ærial, heavenly, ethereal, E. , and what stays; also
+spiculæ                -> spicule                ligature          1  ¦ mn. ( ) 1. The awn of barley, &c. 2. A bristle, a spiculæ. 3. Compassion, clemency, tend
+
+# ===== reform-drift from the curated/accumulated map =====
+fœtus                  -> foetus                 ligature         28  ¦ n. ( ) 1. The womb. 2. The embryo. 3. The membranes investing the fœtus. 4. A cavity. E.
+æther                  -> ether                  ligature         26  ¦ mfn. ( ) Bodiless, incorporeal. m. ( ) A name of KĀMA, the Hindu deity of love. n. ( ) 1
+diarrhœa               -> diarrhoea              ligature         15  ¦ m. ( ) Diarrhœa or dysentery. E. , and what goes; from to go, with affix; also .
+reflexion              -> reflection             xion             14  ¦ mfn. ( ) Insensible, inanimate. E. neg. reflexion.
+æra                    -> era                    ligature          9  ¦ m. ( ) 1. The fourth age of the world, according to the Hindus, the iron age, or that of
+panick                 -> panic                  ick               6  ¦ f. ( ) A kind of Panick seed, (Panicum Italicum;) several varieties of it are cultivated
+gonorrhœa              -> gonorrhoea             ligature          5  ¦ f. ( ) 1. A pimple, a blotch or wart. 2. A wart accompany- ing gonorrhœa. E. a tortoise,
+patronymick            -> patronymic             ick               4  ¦ m. ( ) 1. The patronymick of JAYANTA the son of INDRA. 2. A name of the monkey BALI. 3. 
+phœnix                 -> phoenix                ligature          4  ¦ n. ( ) 1. Silver. 2. The fruit of the date. 3. Yellow orpiment. m. ( ) 1. The date tree.
+shewn                  -> shown                  archaic           3  ¦ mfn. ( ) 1. Famous, celebrated. 2. Made known, declared. 3. Increased, extended. 4. Publ
+shewing                -> showing                archaic           3  ¦ n. ( ) 1. Shewing. 2. Explaining generally, not exclusively. 3. Explaining or specifying
+chamæleon              -> chameleon              ligature          3  ¦ m. ( ) A lizard, a chamæleon. E. a tree, to sleep, aff.
+ancle                  -> ankle                  archaic           2  ¦ m. ( ) 1. A ring or chain worn on the ancle. 2. The chain for an elephant's feet. E. to 
+cæsura                 -> caesura                ligature          2  ¦ f. ( ) 1. Cutting, cutting off, excision. 2. Dividing, frac- ture. 3. Separation or abse
+œsophagus              -> oesophagus             ligature          1  ¦ n. ( ) The œsophagus. E. , and what conveys, canal.
+garlick                -> garlic                 ick               1  ¦ m. ( ) 1. The soap-berry plant, (Sapindus saponaria, &c.) 2. Garlick. 3. The Nimb tree, 
+generick               -> generic                ick               1  ¦ mfn. ( ) Special, individual, peculiar. E. neg. generick.
+turmerick              -> turmeric               ick               1  ¦ f. ( ) Turmerick.
+œdematous              -> oedematous             ligature          1  ¦ m. ( ) Œdematous swelling of the hands. E. , and swelling.
+perinœum               -> perineum               ligature          1  ¦ f. ( ) Sharp pain in the perinœum and lower part of the abdomen.
+ascetick               -> ascetic                ick               1  ¦ mfn. ( ) 1. Initiated. 2. Performed, (as the Diksha cere- mony.) 3. One by whom the prep
+terræ                  -> terre                  ligature          1  ¦ m. ( ) The planet Mars or its regent. E. the earth, and son, terræ-filius; also similar 
+frolick                -> frolic                 ick               1  ¦ mfn. ( ) 1. Shaking, tremulous. 2. Licking, lapping, stirring or touching with the tongu
+perinæum               -> perineum               ligature          1  ¦ mn. ( ) 1. The branch of a tree or creeper with its new sprout or shoot. 2. A new shoot.
+anapæst                -> anapaest               ligature          1  ¦ m. ( ) 1. The hand. 2. An elephant's trunk. 3. The thirteenth lunar asterism, designated
+
+# ===== RESIDUAL pattern candidates (-> LLM pass) =====
+# -- xion: 4 distinct (top 15) --
+   nexion                      2
+   flexion                     2
+   defluxion                   1
+   effluxion                   1
+# -- ligature: 88 distinct (top 15) --
+   asafœtida                  42
+   fæces                      36
+   nymphæa                    22
+   diœca                      14
+   cæsalpinia                 14
+   hœmorrhoids                11
+   gærtnera                   11
+   formulæ                    10
+   cratæva                    10
+   fœtida                     10
+   pœderia                     9
+   phœnicea                    9
+   tabernæmontana              8
+   schœnanthus                 7
+   pæderia                     6
+# -- ick: 3 distinct (top 15) --
+   herpetick                   6
+   nymick                      1
+   emblick                     1
+# -- shew: 0 distinct (top 15) --

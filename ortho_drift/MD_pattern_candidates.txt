@@ -1,0 +1,2 @@
+# MD RESIDUAL pattern candidates (token<TAB>pattern<TAB>count) -> LLM classify pass
+churningstick	ick	2

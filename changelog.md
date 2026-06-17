@@ -6,6 +6,21 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.27.0] - 2026-06-17
+
+### Added
+- **Phase 2: English orthographic-drift — the 10-dict cluster.** Added the `en` profile to
+  `ortho_drift.py` (reference = **en_GB**, so British `honour`/`-ise`/`-re` are correctly *not*
+  flagged; the tokenizer now strips `<s>…</s>` Sanskrit, which MW-family dicts use instead of
+  `{#…#}`). Ran MW/MW72/AP/AP90/WIL/BEN/GST/CAE/MD/SHS (`en_drift_summary.tsv`, 71-form `en_reform_map.tsv`).
+  - English drift is **convention-based and editor/age-dependent** (no legislated reform): Wilson
+    (1832, oldest) tops at **0.57/1k** with Johnsonian `-ick` (`garlick→garlic`, `musick`, `aquatick`),
+    the æ ligature (`æther→ether`, `chamæleon→chameleon`) and `reflexion→reflection`; the
+    heavily-standardised MW (1899) ≈ **0.01** and AP/CAE = **0**. Range 0.00–0.57/1k.
+  - **Completes the 5-language picture. Drift magnitude is a function of reform _type_:** legislated
+    (Russian 358, German 10 /1k) ≫ convention (English ≤0.57, French ≤0.31) ≫ none (Latin 0) — 1–3
+    orders of magnitude between tiers. German/French/Latin/Russian outputs untouched. Documentation only.
+
 ## [1.26.0] - 2026-06-17
 
 ### Added

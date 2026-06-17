@@ -1,0 +1,22 @@
+# AP90 RESIDUAL pattern candidates (token<TAB>pattern<TAB>count) -> LLM classify pass
+defluxion	xion	1
+effluxion	xion	1
+fœtida	ligature	19
+fæces	ligature	5
+formulæ	ligature	3
+gavœus	ligature	3
+gærtn	ligature	2
+cætera	ligature	2
+vitæ	ligature	2
+asafœtida	ligature	1
+onamatopœia	ligature	1
+nymphæa	ligature	1
+gavæus	ligature	1
+mœnorrhagia	ligature	1
+œquus	ligature	1
+fœtal	ligature	1
+fœaida	ligature	1
+monœuvres	ligature	1
+sacæ	ligature	1
+churningstick	ick	8
+swordstick	ick	1

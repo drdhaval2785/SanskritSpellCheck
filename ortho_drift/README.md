@@ -82,38 +82,42 @@ The per-dict drift reports above are left as the deterministic-pass snapshot, so
 comparison stays stable; re-running any dict now would reclassify its share of these 1,831 from
 *residual* into *drift*.
 
-## Cross-language — French, Latin, Russian
+## Cross-language — English, French, Latin, Russian
 
 The same profile-driven tool applied to the corpus's other gloss languages (per-language
-`<lang>_reform_map.tsv` + `<lang>_drift_summary.tsv`):
+`<lang>_reform_map.tsv` + `<lang>_drift_summary.tsv`). All **five** gloss languages, ~13 decades:
 
 | dictionary (era) | gloss lang | tokens | drift/1k | reform regime |
 |---|---|--:|--:|---|
 | **Kossovich** (pre-1918) | Russian | 87,636 | **358** | 1918 — radical (ѣ/і/ѳ/ѵ + word-final ъ abolished) |
-| PW (1855–75) | German | 845,888 | 10.26 | 1901 + 1996 — moderate |
+| PW (1855–75) | German | 845,888 | 10.26 | 1901 + 1996 — moderate, legislated |
+| **WIL · Wilson** (1832) | English | 432,117 | **0.57** | convention — most archaic of 10 (`-ick`, æ) |
 | BUR · Burnouf (1866) | French | 229,053 | 0.31 | convention — minor |
-| STC · Stchoupak (1932) | French | 281,418 | 0.02 | essentially modern |
+| MW · Monier-Williams (1899) | English | 993,495 | 0.01 | convention — heavily standardised (min of 10) |
 | BOP · Bopp (1847) | Latin | 76,933 | **0.00** | none — stable |
 
-**The drift rate tracks the *scope* of each language's orthographic reform** — across five
-languages and ~13 decades the tool quantifies how much the spelling standard moved:
+**Drift magnitude is a function of reform *type*** — across five languages it falls into three
+tiers: **legislated** reform (Russian 358, German 10) ≫ **convention** drift (English ≤0.57,
+French ≤0.31) ≫ **none** (Latin 0). Legislated reforms outdrift convention by 1–3 orders of magnitude.
 
 - **Russian (Kossovich)** — the dramatic case: **31,389 drift occurrences (358/1k ≈ 36% of all
   Russian tokens)**, detected **wordlist-free** because the 1918-abolished letters (ѣ/і/ѳ/ѵ) and
-  word-final ъ are pre-1918 by definition: `въ→в`, `съ→с`, `родъ→род` (hard-sign — the
-  high-frequency bulk), `растеніе→растение` (decimal і), `имѣющій→имеющий` (yat). The 1918 reform
-  was by far the most sweeping in the corpus. Source: SamudraManthanam `kossovich.jsonl` (not csl-orig).
-- **French (Burnouf 1866, Stchoupak 1932)** — minimal: 0.31 and 0.02 /1k (`poëte→poète`,
-  `phlegme→flegme`, `françois→français`). Romance convention-drift is **~30–1,500× smaller** than
-  German legislated reform; Burnouf/Stchoupak French is essentially modern. ⚠️ BUR/STC inline their
-  Sanskrit in IAST (not `{#…#}` braces), so a few IAST fragments (`pha`) leak as "French" — the
-  macro-rate is robust, individual forms less so.
+  word-final ъ are pre-1918 by definition: `въ→в`, `родъ→род` (hard-sign — the high-frequency bulk),
+  `растеніе→растение` (decimal і), `имѣющій→имеющий` (yat). The most sweeping reform in the corpus.
+  Source: SamudraManthanam `kossovich.jsonl` (not csl-orig).
+- **English (10 dicts, en_GB reference)** — convention-drift, **editor/age-dependent, not a single
+  reform date**. Wilson (1832, oldest) tops at 0.57/1k with classic Johnsonian forms (`garlick→garlic`,
+  `musick`, `æther→ether`, `chamæleon→chameleon`); the heavily-standardised MW (1899) ≈ 0.01 and
+  AP/CAE = 0. Range across 10: 0.00–0.57/1k. (Reference = **en_GB**, so British `honour`/`-ise`/`-re`
+  are correctly *not* flagged.)
+- **French (Burnouf 1866, Stchoupak 1932)** — minimal: 0.31 / 0.02 /1k (`poëte→poète`,
+  `phlegme→flegme`, `françois→français`). ⚠️ BUR/STC inline their Sanskrit in IAST (not `{#…#}`), so a
+  few IAST fragments (`pha`) leak — the macro-rate is robust, individual forms less so.
 - **Latin (Bopp 1847)** — the **negative control: 0 drift.** Latin had no orthographic reform, so
-  there is no rule-set and the tool (correctly) flags nothing — confirming the method's specificity
-  (it doesn't manufacture drift where none exists).
+  there is no rule-set and the tool (correctly) flags nothing — confirming the method's specificity.
 
-Hunspell `fr_FR` is wired as the French membership filter; Latin has no word-list (none exists) and
-Russian needs none. Documentation only.
+Hunspell `de_DE`/`fr_FR`/`en_GB` are wired as membership filters; Latin has no word-list (none exists)
+and Russian needs none (the 1918 letters are definitional). Documentation only.
 
 ## Pilot validation (sampled + LLM) — how the method was proven first
 
