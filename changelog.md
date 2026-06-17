@@ -6,6 +6,21 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.23.0] - 2026-06-17
+
+### Added
+- **German-cluster orthographic-drift + the SCH-1928 control.** Ran PWG / GRA / CCS / SCH
+  (`ortho_drift.py <DICT> --full`); the reform map accumulated to **981 forms**, and per-dict
+  drift-by-era is written to `ortho_drift/de_drift_summary.tsv`.
+  - **Control validated.** The four pre-1901 dictionaries are 1901-`th→t`-dominated
+    (PW 6203, PWG 6508, GRA 1460, CCS 341) with almost no 1996-`ß` drift. **SCH (Schmidt 1928)
+    flips the profile** — 1901-`th` collapses to 76 while the 1996-`ß` reform dominates at 319
+    (`Kuß→Kuss`, `Bewußtsein→Bewusstsein`, `Mißgunst→Missgunst`). The method correctly dates each
+    dictionary's orthographic epoch from its own text; drift/1k declines monotonically with
+    publication date (10.26 → 8.86 → 7.90 → 4.72 → 2.52).
+  - Added a per-era occurrence summary to each report + the cross-dictionary `de_drift_summary.tsv`.
+  - Documentation only; never edits csl-orig.
+
 ## [1.22.0] - 2026-06-17
 
 ### Added

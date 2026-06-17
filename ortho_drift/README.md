@@ -30,8 +30,30 @@ Top: `gerathen→geraten` (253), `personificirt→personifiziert` (191), `theilh
 
 **PW's German is pervasively pre-1901, confirmed at scale** — 672 distinct drift forms across
 the dictionary, dominated by 1901 `th→t` and `c→k/z`. These (plus the curated seed) are persisted
-to **[de_reform_map.tsv](de_reform_map.tsv)** — a 715-form German reform lexicon that accumulates
-across runs and is the expandable container for DTA/RIDGES pairs.
+to **[de_reform_map.tsv](de_reform_map.tsv)** — a German reform lexicon (now **981 forms** after
+the whole cluster) that accumulates across runs and is the expandable container for DTA/RIDGES pairs.
+
+## German cluster — drift across dictionaries, and the SCH-1928 control
+
+All five German dictionaries run (`ortho_drift.py <DICT> --full`); per-dict drift-by-era in
+[de_drift_summary.tsv](de_drift_summary.tsv):
+
+| dict (era) | tokens | modern % | drift/1k | 1901 `th` | 1901 `c` | 1996 `ß` |
+|---|--:|--:|--:|--:|--:|--:|
+| PW (1855–75) | 845,888 | 59 | **10.26** | 6203 | 1752 | 15 |
+| PWG (1855–75) | 1,070,124 | 60 | 8.86 | 6508 | 2275 | 12 |
+| GRA (1873) | 254,745 | 45 | 7.90 | 1460 | 507 | 0 |
+| CCS (1887) | 117,976 | 65 | 4.72 | 341 | 126 | 84 |
+| **SCH (1928)** | 192,039 | 42 | **2.52** | **76** | **86** | **319** |
+
+**The control works.** The four pre-1901 dictionaries are dominated by the 1901 `th→t` reform
+(6203 / 6508 / 1460 / 341) with almost no 1996 `ß` drift — the signature of pre-1901 orthography.
+**SCH (Schmidt's 1928 *Nachträge*) flips the profile**: 1901-`th` collapses to 76 (Schmidt
+already wrote *Tier*, *Kapitel*), while the 1996 `ß→ss` reform becomes *dominant* at 319 (he
+still wrote *Kuß*, *Bewußtsein*, *Mißgunst*, *naß* — all pre-1996). So the method doesn't merely
+find drift; it **correctly dates each dictionary's orthographic epoch from its own text**. The
+overall drift rate also declines monotonically with publication date (10.26 → 8.86 → 7.90 → 4.72
+→ 2.52 per 1k) — the corpus modernising across ~70 years.
 
 ## Pilot validation (sampled + LLM) — how the method was proven first
 
@@ -124,5 +146,6 @@ python ortho_drift.py PW --full     # every entry
    works even without the Hunspell dic. **DTA/RIDGES** historical→modern pairs are online and
    this environment has no outbound internet — merge them into this file when reachable (or drop
    the files locally, like the Hunspell dic).
-4. **Run the rest of the German cluster** — PWG / GRA / CCS, and **SCH (1928) as the internal
-   control** (should show 1996-era drift but little 1901-era, unlike pre-1901 PW).
+4. ✅ **German cluster done + SCH-1928 control validated** (see the comparison above). SCH's
+   profile flips to 1996-`ß`-dominant (319) with 1901-`th` collapsed (76) — confirming the method
+   dates orthography from the text. Reform map now 981 forms.

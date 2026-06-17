@@ -34,6 +34,7 @@ from collections import Counter, defaultdict
 
 OUT = os.path.join(triage_util.ROOT, 'ortho_drift')
 MAP_FILE = os.path.join(OUT, 'de_reform_map.tsv')   # persistent, expandable German reform map
+SUMMARY_FILE = os.path.join(OUT, 'de_drift_summary.tsv')   # cross-dictionary drift-rate comparison
 SAMPLE_N = 2500
 
 # --- German reform map: pre-reform spelling -> (2026 form, era) ------------------------------
@@ -225,6 +226,9 @@ def main():
     os.makedirs(OUT, exist_ok=True)
     rep = os.path.join(OUT, '%s_drift_report.txt' % dict_code)
     drift_total, dic_total = sum(drift.values()), sum(dicdrift.values())
+    era_occ = Counter()
+    for (o, nw, era), c in list(drift.items()) + list(dicdrift.items()):
+        era_occ[era] += c
     with open(rep, 'w', encoding='utf-8') as f:
         f.write('# %s orthographic-drift -- DOCUMENTATION ONLY (never edits csl-orig)\n' % dict_code)
         f.write('# %s\n' % ('FULL corpus' if full else 'SAMPLE: every %d-th entry (~%d of %d)'
@@ -235,6 +239,8 @@ def main():
         f.write('# German gloss tokens: %d ; already-2026-modern: %d ; reform-drift: %d '
                 '(dic-confirmed %d + map %d)\n'
                 % (n_tokens, n_modern, drift_total + dic_total, dic_total, drift_total))
+        f.write('# drift occurrences by era: %s\n'
+                % ', '.join('%s=%d' % (e, era_occ[e]) for e in sorted(era_occ, key=lambda k: -era_occ[k])))
         f.write('#\n# ===== reform-drift CONFIRMED by transform + modern Hunspell dic =====\n')
         f.write('# pre-reform -> 2026             era          count  example entry\n')
         for (old, new, era), c in dicdrift.most_common():
@@ -274,15 +280,37 @@ def main():
             new, era = acc[old]
             f.write('%s\t%s\t%s\n' % (old, new, era))
 
+    # cross-dictionary comparison row (SCH-1928 = the control: it should show LOW 1901-era drift
+    # but retain 1996-ss, unlike the pre-1901 PW/PWG/GRA/CCS). Keyed by dict; rewritten each run.
+    CANON = ['1901-th', '1901-c', '1901-c-iren', '1901-iren', '1996-ss', 'archaic-ey']
+    summ = {}
+    if os.path.exists(SUMMARY_FILE):
+        for ln in open(SUMMARY_FILE, encoding='utf-8'):
+            if not ln.startswith('#') and '\t' in ln and not ln.startswith('dict\t'):
+                summ[ln.split('\t', 1)[0]] = ln.rstrip('\n')
+    total = drift_total + dic_total
+    cols = ([dict_code, str(n_tokens), '%.0f' % (100.0 * n_modern / max(1, n_tokens)),
+             str(total), '%.2f' % (1000.0 * total / max(1, n_tokens))]
+            + [str(era_occ.get(e, 0)) for e in CANON])
+    summ[dict_code] = '\t'.join(cols)
+    with open(SUMMARY_FILE, 'w', encoding='utf-8') as f:
+        f.write('# German orthographic-drift across dictionaries -- DOCUMENTATION ONLY\n')
+        f.write('# drift/1k = reform-drift occurrences per 1000 German gloss tokens\n')
+        f.write('dict\ttokens\tmodern%%\tdrift\tdrift/1k\t%s\n' % '\t'.join(CANON))
+        for k in sorted(summ):
+            f.write(summ[k] + '\n')
+
     print('%s: %d German tokens in %d entries; modern-filtered %d%s'
           % (dict_code, n_tokens, len(sample), n_modern,
              '' if modern is not None else ' (Hunspell NOT wired)'))
-    print('  reform-drift: %d  (dic-confirmed %d in %d forms + map %d in %d forms)'
-          % (drift_total + dic_total, dic_total, len(dicdrift), drift_total, len(drift)))
-    print('  top dic-confirmed: %s'
-          % ', '.join('%s->%s(%d)' % (o, n, c) for (o, n, e), c in dicdrift.most_common(8)))
-    print('  residual candidates: %d distinct -> %s' % (len(seen), os.path.relpath(cand, triage_util.ROOT)))
-    print('  report -> %s' % os.path.relpath(rep, triage_util.ROOT))
+    print('  reform-drift: %d (%.2f/1k tokens); by era: %s'
+          % (total, 1000.0 * total / max(1, n_tokens),
+             ', '.join('%s=%d' % (e, era_occ[e]) for e in CANON if era_occ.get(e))))
+    print('  dic-confirmed %d in %d forms + map %d in %d forms; residual %d -> %s'
+          % (dic_total, len(dicdrift), drift_total, len(drift), len(seen),
+             os.path.relpath(cand, triage_util.ROOT)))
+    print('  report -> %s ; comparison -> %s'
+          % (os.path.relpath(rep, triage_util.ROOT), os.path.relpath(SUMMARY_FILE, triage_util.ROOT)))
 
 
 if __name__ == '__main__':

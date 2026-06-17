@@ -1,37 +1,54 @@
 # PW orthographic-drift -- DOCUMENTATION ONLY (never edits csl-orig)
 # FULL corpus
 # modern word-list: Hunspell de_DE 2006, 103756 stems
-# German gloss tokens: 845888 ; already-2026-modern: 502882 ; reform-drift: 8683 (dic-confirmed 6352 + map 2331)
+# German gloss tokens: 845888 ; already-2026-modern: 502882 ; reform-drift: 8683 (dic-confirmed 0 + map 8683)
+# drift occurrences by era: 1901-th=6203, 1901-c=1752, 1901-c-iren=341, 1901-iren=293, 1901=67, 1996-ss=15, 1901-th-adjacent=10, archaic-ey=2
 #
 # ===== reform-drift CONFIRMED by transform + modern Hunspell dic =====
 # pre-reform -> 2026             era          count  example entry
+
+# ===== reform-drift from the curated map (incl. inflected forms) =====
+theil              -> teil               1901-th       558  ¦ m. — 1〉 Theil: 139,1 . — 2〉 Antheil, Erbtheil . — 3〉 Einsatz bei Wetten . . — 4〉 Partei 
+thun               -> tun                1901-th       326  ¦ n. das nicht kläglich Thun, — nicht Jammern . .
+thier              -> tier               1901-th       259  * ¦ m. — 1〉 Vogel . — 2〉 Löwe . — 3〉 das genannte Thier .
 gerathen           -> geraten            1901-th       253  ¦ m. — 1〉 Hinübergang . — 2〉 Vorübergang, das Verstreichen, zu Ende Gehen 84,9 . 16 . — 3〉
 personificirt      -> personifiziert     1901-c-iren   191  2. ¦ — 1〉 Adj. schrankenlos, ungebunden, unendlich; unaufhörlich, unerschöpflich . — 2〉 f.
+blüthe             -> blüte              1901-th       190  ¦ — 1〉 Adj. dessen Spitze wie Feuer brennt, von Pfeilen. — 2〉 m. — a〉 * Pfeil . — b〉 * Lam
 theilhaftig        -> teilhaftig         1901-th       190  √ ¦ Nur in den Präsensformen vorhanden. — 1〉 auf Jmd oder Etwas stossen, begegnen, gerathe
 theilen            -> teilen             1901-th       164  *!√ ¦ theilen .
+theile             -> teile              1901-th       144  ¦ n. die Herabkunft der Theile (der Götter).
 ceremonie          -> zeremonie          1901-c        138  ¦ n. das Anschirren des Feueraltars (eine best. Ceremonie) .
+werth              -> wert               1901-th       117  * ¦ Adj. über sechzig werth u. s. w.
+noth               -> not                1901-th       112  ¦ f. — 1〉 Bedrängniss, Noth . — 2〉 * Krankheit . — 3〉 * Gabe, Geschenk (auch * ).
 thuend             -> tuend              1901-th       108  2. ¦ Adj. — 1〉 Nichts thuend, faulenzend . — 2〉 kein gutes Werk übend, ruchlos .
 thätigkeit         -> tätigkeit          1901-th       102  ¦ Adj. — 1〉 was nicht gethan werden kann oder darf; n. Unthat, eine unerlaubte Handlung 41
 mittheilen         -> mitteilen          1901-th        95  1. ¦ nur im Perf. u. s. w. — 1〉 sagen, sprechen, mit Dat. oder Acc. der Person und Acc. de
 thränen            -> tränen             1901-th        90  1. ¦ m. verhaltene Thränen 308,23 .
+muth               -> mut                1901-th        83  ¦ n. gehobene Stimmung, guter Muth .
 reichthum          -> reichtum           1901-th        81  ¦ Adj. unvergänglichen Reichthum besitzend .
 antheil            -> anteil             1901-th        80  ¦ m. — 1〉 Theil: 139,1 . — 2〉 Antheil, Erbtheil . — 3〉 Einsatz bei Wetten . . — 4〉 Partei 
 that               -> tat                1901-th        79  ¦ — 1〉 Adj. ( f. ) — a〉 ungethan, unvollbracht 32,33 . 38,15 . 161,24 . 163,8 . — b〉 unbea
 vermuthen          -> vermuten           1901-th        77  ¦ Adj. nicht zu vermuthen, — zu befürchten, — anzunehmen .
 casus              -> kasus              1901-c         76  ¦ — 1〉 * Adj. nahe . — 2〉 * f. — a〉 im Drama ältere Schwester . — b〉 eine best. Pflanze . 
+thiere             -> tiere              1901-th        73  ¦ Adj. ( f. ) nicht vom Thiere Eḍaka kommend .
 recitation         -> rezitation         1901-c         68  ¦ Adj. zum gehörig, — erforderlich 38,6 . 7 . . das Opfer, welches der Lehrer vollzieht, w
 constellation      -> konstellation      1901-c         67  ¦ — 1〉 Adj. aus einem Ei geboren 268,12 . 17 . — 2〉 m. — a〉 Vogel ( fehlerhaft für ). — b〉
+giebt              -> gibt               1901           67  ¦ Adj. für den es kein «dort» giebt .
+thür               -> tür                1901-th        65  ¦ f. was keine Thür —, kein Thor ist . .
 personification    -> personifikation    1901-c         64  2. ¦ m. in der Personification nach der Etym. des werfend, ausstreuend .
 blüthen            -> blüten             1901-th        63  ¦ Adj. mit Blüthen bedeckt .
 composition        -> komposition        1901-c         62  ¦ f. composition by the difference .
 athem              -> atem               1901-th        60  2. √ ¦, und — 1〉 athmen 19,17 . — 2〉 nach Luft schnappen, lechzen . — 3〉 * gehen . — Mit a
 röthlich           -> rötlich            1901-th        58  ¦ — 1〉 Adj. ( f. , ved. auch ) — a〉 röthlich, hellbraun, goldgelb . in Folge von 86,9 . 83
+gethan             -> getan              1901-th        55  2. vor Consonanten, vor Vocalen¦ = ἀ, ἀν priv. kein Brahman, kein Lesen, schweisslos, körp
 thätig             -> tätig              1901-th        51  ( ) und ( 43,10 . )¦ Adj. unermüdlich thätig .
+vocal              -> vokal              1901-c         51  ¦ — 1〉 Adj. nicht zerrinnend, unvergänglich 284,32 . — 2〉 n. — a〉 (ausnahmsweise auch m. )
 muthig             -> mutig              1901-th        51  * ( ), * , * ( ) und * ¦ Adj. muthig den Feind angreifend . f. eine günstige Gelegenheit d
 heirathen          -> heiraten           1901-th        48  ¦ n. das Heirathen einer zweiten Frau bei Lebzeiten der ersten .
 identificirt       -> identifiziert      1901-c-iren    48  ¦ — 1〉 * Adj. — a〉 ungehemmt, frei Med. ( zu lesen). — b〉 beweglich . — 2〉 m. — a〉 N. pr. 
 mercur             -> merkur             1901-c         48  ¦ — 1〉 m. der Planet Mercur . — 2〉 * f. Patron. des Flusses Revā .
 vertheilen         -> verteilen          1901-th        46  ¦ — 1〉 Adj. hinterdrein herauszunehmen, — zu vertheilen . — 2〉 f. eine best. Ceremonie .
+rath               -> rat                1901-th        46  ¦ Adj. Jmds Rath nicht befolgend .
 process            -> prozess            1901-c         45  5. * ¦ m. — 1〉 Schlange . — 2〉 Bein. Garuḍa ʼs. — 3〉 Process . — 4〉 Kenntniss . — 5〉 ein B
 zugethan           -> zugetan            1901-th        45  ¦ Adj. keinem oder keiner Anderen zugethan .
 citat              -> zitat              1901-c         45  ¦ Adj. f. bruderlos . in einem Citat in
@@ -42,6 +59,7 @@ anthun             -> antun              1901-th        39  ¦ n. das Anthun ein
 commentar          -> kommentar          1901-c         38  ¦ f. Titel des 4ten Prakaraṇa von Gauḍapāda ʼs Commentar zur Māṇḍūkyopaniṣad .
 verrathen          -> verraten           1901-th        38  !√ ¦, (metrisch auch Med. ) — 1〉 sich mit Jmd ( Instr. oder Instr. mit ) unterhalten . — 2
 wachsthum          -> wachstum           1901-th        37  ¦ f. Wachsthum, Zuwachs, Gedeihen .
+theils             -> teils              1901-th        37  ¦ Adv. achtfach, in acht Theils (Theilen). [Page1-141-c] Adj.
 ertheilen          -> erteilen           1901-th        37  ¦ n. das Ertheilen eines Befehls .
 citrone            -> zitrone            1901-c         36  ¦ — 1〉 Adj. Würmer tödtend . — 2〉 * m. Citrone . — 3〉 * f. und n. . — 4〉 * n. Asa foetida 
 scorpion           -> skorpion           1901-c         34  ¦ — 1〉 Adj. mit einer wammenähnlichen Verzierung versehen . — 2〉 m. oder n. ein best. gift
@@ -50,6 +68,7 @@ irrthum            -> irrtum             1901-th        34  ¦ Adj. nicht dem Ir
 zertheilen         -> zerteilen          1901-th        34  ¦ n. das Zertheilen, Zersplittern, Zerstückeln .
 eigenthümlichkeit  -> eigentümlichkeit   1901-th        33  ¦ Adj. nicht von dessen Eigenthümlichkeit . Davon Nom. abstr. n. .
 sclave             -> sklave             1901-c         33  ¦ m. kein Sclave, freier Mann .
+vocale             -> vokale             1901-c         33  ¦ — 1〉 Adj. — a〉 von Speien begleitet . — b〉 mit fest geschlossenen Lippen ausgesprochen .
 armuth             -> armut              1901-th        32  f. und n. ¦ Besitzlosigkeit, Armuth .
 recitiren          -> rezitieren         1901-c-iren    31  ¦ — 1〉 Adj. — a〉 zu recitiren . — b〉 nachzusprechen . — 2〉 f. der von dem Hotar oder Maitr
 compositum         -> kompositum         1901-c         31  ¦ Adj. wobei die Bedeutung eines andern (nicht im Compositum befindlichen) Wortes die Haup
@@ -61,6 +80,7 @@ passiren           -> passieren          1901-iren      29  ¦ Adj. überaus sch
 fluth              -> flut               1901-th        29  ¦ — 1〉 Adj. — a〉 wallend, wogend . — b〉 aufbrausend, [Page1-110-a] unruhig . — 2〉 m. — a〉 
 eigenthümlich      -> eigentümlich       1901-th        29  * ¦ — 1〉 Adj. eigenthümlich . — 2〉 m. Gast . — 3〉 n. gastfreundliche Aufnahme .
 ocean              -> ozean              1901-c         28  ¦ m. der westliche Ocean .
+accent             -> akzent             1901-c         28  ¦ Adj. nicht mit dem Svarita - Accent versehen . Davon Nom. abstr. n. 228,3 .
 athmen             -> atmen              1901-th        26  *√ ¦ tönen, athmen .
 übermüthig         -> übermütig          1901-th        26  ¦ Adj. — 1〉 sehr vorgerückt (alter) 49,13 . — 2〉 allzu übermüthig 208,9 .
 röthe              -> röte               1901-th        26  ¦ (am Ende eines adj. Comp. f. ) m. — 1〉 Färbung . — 2〉 Röthe . — 3〉 Zuneigung 96,9 . Wohl
@@ -100,6 +120,7 @@ theilnehmer        -> teilnehmer         1901-th        17  ¦ m. Theilnehmer an
 cocosnuss          -> kokosnuss          1901-c         17  ¦ — 1〉 Adj. ( f. ) emporstehend, gewölbt, hoch (auch in übertr. Bed. ). — 2〉 m. — a〉 Anhöh
 wohlgemuth         -> wohlgemut          1901-th        16  ¦ Adj. nicht niedergedrückt, wohlgemuth .
 schamtheile        -> schamteile         1901-th        16  ¦ m. Schamtheile .
+wuth               -> wut                1901-th        16  ¦ m. Wuth .
 subtrahiren        -> subtrahieren       1901-iren      16  2. √ ¦, — 1〉 schleudern, werfen, schiessen auf [Page1-143-c] ( Loc. , Dat. oder Gen. ); sc
 statuiren          -> statuieren         1901-iren      16  1. ¦ nur im Perf. u. s. w. — 1〉 sagen, sprechen, mit Dat. oder Acc. der Person und Acc. de
 verrath            -> verrat             1901-th        16  ¦ m. — 1〉 Durchbruch, das Hervorbrechen, zum Vorschein Kommen — 2〉 * Spross, Sprössling — 
@@ -111,6 +132,7 @@ unmuth             -> unmut              1901-th        15  1. ¦ m. — 1〉 da
 errathen           -> erraten            1901-th        15  ¦ f. das Kommen auf Etwas, das Erkennen, Errathen .
 einmüthig          -> einmütig           1901-th        15  2. ¦ Adj. ( f. ) — 1〉 einen und denselben Gedanken habend, einmüthig . Nom. abstr. f. — 2〉
 demüthigen         -> demütigen          1901-th        15  √ ¦, ( ausnahmsweise) — 1〉 prahlen . du prahlst damit, dass du wahrhaft seiest . — 2〉 lobe
+dintenfass         -> tintenfass         1996-ss        15  * ¦ n. Dintenfass
 abscess            -> abszess            1901-c         14  ¦ f. ein blinder (sich nicht öffnender) Abscess im Auge .
 declination        -> deklination        1901-c         14  1. ¦ m. — 1〉 Weggang . — 2〉 * Flucht . — 3〉 Declination ( astron. )
 unrath             -> unrat              1901-th        14  1. ¦ Adj. — 1〉 nicht lobenswerth, tadelhaft . — 2〉 verrufen, Unglück verheissend . — 3〉 ma
@@ -124,6 +146,7 @@ rasiren            -> rasieren           1901-iren      13  ¦ n. die vier zum R
 austheilen         -> austeilen          1901-th        13  2. ¦ m. — 1〉 das Austheilen insbes. von Speise; insbes. Mahl, Opfermahl . — 2〉 das Verthei
 unverheirathet     -> unverheiratet      1901-th        12  ¦ Adj. ( f. ) ledig, unverheirathet . Pl. f. Bez. der Finger .
 acut               -> akut               1901-c         12  ¦ Adj. — 1〉 einen schnellen Verlauf habend, acut . — 2〉 überholend 97,18 . — 3〉 versäumend
+cultus             -> kultus             1901-c         12  ¦ m. dienstthuender Priester 16,4 . Bez. eines best. beim Cultus thätigen Priesters . In d
 einathmen          -> einatmen           1901-th        12  2. √ ¦, und — 1〉 athmen 19,17 . — 2〉 nach Luft schnappen, lechzen . — 3〉 * gehen . — Mit a
 hungersnoth        -> hungersnot         1901-th        12  ¦ m. — 1〉 Unzeit . — 2〉 schlechte Zeit, Hungersnoth . m. in schlechter Zeit unterhalten .
 masculinum         -> maskulinum         1901-c         12  ¦ Adj. kein entsprechendes Masculinum habend .
@@ -138,9 +161,11 @@ verheirathen       -> verheiraten        1901-th        12  ¦ n. das Verheirath
 contemplation      -> kontemplation      1901-c         12  ¦ m. halb Schlaf halb Contemplation, ein Zustand zwischen Wachen und Schlafen .
 unthätigkeit       -> untätigkeit        1901-th        11  1. ¦ n. Unthätigkeit .
 geröthet           -> gerötet            1901-th        11  !√ ¦ röthen . geröthet .
+thal               -> tal                1901-th        11  ¦ — 1〉 m. Geflecht, Matte . — 2〉 m. n. ( adj. Comp. f. ) — a〉 Strang . — b〉 Armband . — c〉
 zusammenthun       -> zusammentun        1901-th        11  2. √ ¦, (selten Med. ) — 1〉 treiben, antreiben . — 2〉 halten, tragen . — 3〉 sich hinbegebe
 aphrodisiacum      -> aphrodisiakum      1901-c         11  ¦ m. ein best. Aphrodisiacum .
 procession         -> prozession         1901-c         11  ¦ — 1〉 * Adj. — a〉 sich abmühend, eifrig beschäftigt mit ( Loc. ). — b〉 = gaṇa in der — 2〉
+dinte              -> tinte              1901-th-adjacent   10  ¦ — 1〉 n. — a〉 das Salben, Bestreichen, Beschmieren . — b〉 das Offenbaren, Klarmachen, ins
 reduciren          -> reduzieren         1901-c-iren    10  ¦ Adj. durch Division auf die geringsten [Page1-073-c] Grössen zu reduciren .
 heiligthum         -> heiligtum          1901-th        10  2. ¦ n. — 1〉 Einschliessung, Belagerung . — 2〉 das Einsperren . — 3〉 verschlossener Ort, i
 medicament         -> medikament         1901-c         10  ¦ Adj. in der Sonne gekocht . ein best. Medicament . 136 .
@@ -152,6 +177,7 @@ ermuthigen         -> ermutigen          1901-th        10  √ ¦, — 1〉 ant
 incarnation        -> inkarnation        1901-c         10  ¦ m. Vater der Welt . Bein. — 1〉 Brahman ʼs. — 2〉 Viṣṇu ʼs. — 3〉 Śiva ʼs. — 4〉 Rāma ʼs (al
 mitgetheilt        -> mitgeteilt         1901-th        10  1. ¦, Präsensstämme: ( Act. ), ( Act. Med. ), ( Act. Med. ) und ( Act. Med. ); Absol. ( 2 
 thorheit           -> torheit            1901-th         9  ¦ f. — 1〉 Thorheit, Verblendung . — 2〉 ein Verblendeter .
+thurm              -> turm               1901-th         9  * ¦ m. Thurm .
 speciell           -> speziell           1901-c          9  ¦ — 1〉 m. Pl. — a〉 die Geschlechter des Atharvan und Aṅgira . — b〉 die ihnen zugeschrieben
 unbetheiligt       -> unbeteiligt        1901-th         9  ¦ Adj. unbetheiligt bei ( Loc. ) .
 composita          -> komposita          1901-c          9  ¦ Adj. — 1〉 unverwundet; undurchbohrt . unversehrt . — 2〉 keine langen Composita enthalten
@@ -171,6 +197,7 @@ theilnehmen        -> teilnehmen         1901-th         8  1. ¦ — 1〉 Adj. 
 nachtheilig        -> nachteilig         1901-th         8  ¦ — 1〉 Adj. — a〉 ungeeignet, untauglich . — b〉 nicht erspriesslich, — frommend, nachtheili
 eigenthümer        -> eigentümer         1901-th         8  ¦ — 1〉 Adj. Subst. ( f. ) — a〉 Eigenthümer . — b〉 verfügen könnend über ( Gen. ), Ansprüch
 nöthigen           -> nötigen            1901-th         8  ¦ — 1〉 Adj. das Nöthige herbeischaffend — 2〉 m. — a〉 Beisetzung, Beifügung . — b〉 das Herb
+thau               -> tau                1901-th         8  ¦ n. Pl. Thau .
 absorbiren         -> absorbieren        1901-iren       8  √ , und √ , ¦ sich zusammenziehen, — krümmen . zusammengezogen, gekrümmt, kraus, geringelt
 wüthen             -> wüten              1901-th         8  1. √ ¦, — 1〉 in Bewegung —, in Aufregung —, in Wallung gerathen . Statt liest , und der Co
 collegium          -> kollegium          1901-c          8  * ¦ m. Schule, Collegium
@@ -213,6 +240,7 @@ calamität          -> kalamität          1901-c          6  ¦ m. ( adj. Comp.
 unterthänig        -> untertänig         1901-th         6  ¦ Adj. zu Jmds Füssen sitzend, unterthänig .
 wünschenswerth     -> wünschenswert      1901-th         6  ( ) ¦ Adj. wünschenswerth .
 casusendung        -> kasusendung        1901-c          6  ¦ Adj. auf eine Casusendung des Singulars ausgehend . Nom. abstr. f. und n. .
+cur                -> kur                1901-c          6  ¦ (* m. ) n. — 1〉 Handlung, Thätigkeit, Arbeit, [Page2-029-c] Werk, That, Verrichtung, Ges
 abgethan           -> abgetan            1901-th         6  ¦ — 1〉 Adj. — a〉 gemacht, gethan, ausgeführt u. s. w. ; vgl. 1. . Im Comp. bisweilen in ve
 darthun            -> dartun             1901-th         6  √ ¦, (selten Med. ), Partic. und . — 1〉 sich regen, — bewegen, umherstreichen, fahren, wan
 secretär           -> sekretär           1901-c          6  ¦ m. — 1〉 N. pr. eines der Verzeichner der menschlichen Thaten in Yama ʼs Reiche , . — 2〉 
@@ -677,33 +705,6 @@ copulation         -> kopulation         1901-c          1  * ¦ f. Copulation .
 casuistik          -> kasuistik          1901-c          1  ¦ m. Casuistik, Logik .
 sabbath            -> sabbat             1901-th         1  ¦ IV. so v. a. Sabbath . 6 . 9 . m. Sabbathfeier 6,6 .
 residiren          -> residieren         1901-iren       1  ¦ n. das Verweilen, Residiren .
-
-# ===== reform-drift from the curated map (incl. inflected forms) =====
-theil              -> teil               1901-th       558  ¦ m. — 1〉 Theil: 139,1 . — 2〉 Antheil, Erbtheil . — 3〉 Einsatz bei Wetten . . — 4〉 Partei 
-thun               -> tun                1901-th       326  ¦ n. das nicht kläglich Thun, — nicht Jammern . .
-thier              -> tier               1901-th       259  * ¦ m. — 1〉 Vogel . — 2〉 Löwe . — 3〉 das genannte Thier .
-blüthe             -> blüte              1901-th       190  ¦ — 1〉 Adj. dessen Spitze wie Feuer brennt, von Pfeilen. — 2〉 m. — a〉 * Pfeil . — b〉 * Lam
-theile             -> teile              1901-th       144  ¦ n. die Herabkunft der Theile (der Götter).
-werth              -> wert               1901-th       117  * ¦ Adj. über sechzig werth u. s. w.
-noth               -> not                1901-th       112  ¦ f. — 1〉 Bedrängniss, Noth . — 2〉 * Krankheit . — 3〉 * Gabe, Geschenk (auch * ).
-muth               -> mut                1901-th        83  ¦ n. gehobene Stimmung, guter Muth .
-thiere             -> tiere              1901-th        73  ¦ Adj. ( f. ) nicht vom Thiere Eḍaka kommend .
-giebt              -> gibt               1901           67  ¦ Adj. für den es kein «dort» giebt .
-thür               -> tür                1901-th        65  ¦ f. was keine Thür —, kein Thor ist . .
-gethan             -> getan              1901-th        55  2. vor Consonanten, vor Vocalen¦ = ἀ, ἀν priv. kein Brahman, kein Lesen, schweisslos, körp
-vocal              -> vokal              1901-c         51  ¦ — 1〉 Adj. nicht zerrinnend, unvergänglich 284,32 . — 2〉 n. — a〉 (ausnahmsweise auch m. )
-rath               -> rat                1901-th        46  ¦ Adj. Jmds Rath nicht befolgend .
-theils             -> teils              1901-th        37  ¦ Adv. achtfach, in acht Theils (Theilen). [Page1-141-c] Adj.
-vocale             -> vokale             1901-c         33  ¦ — 1〉 Adj. — a〉 von Speien begleitet . — b〉 mit fest geschlossenen Lippen ausgesprochen .
-accent             -> akzent             1901-c         28  ¦ Adj. nicht mit dem Svarita - Accent versehen . Davon Nom. abstr. n. 228,3 .
-wuth               -> wut                1901-th        16  ¦ m. Wuth .
-dintenfass         -> tintenfass         1996-ss        15  * ¦ n. Dintenfass
-cultus             -> kultus             1901-c         12  ¦ m. dienstthuender Priester 16,4 . Bez. eines best. beim Cultus thätigen Priesters . In d
-thal               -> tal                1901-th        11  ¦ — 1〉 m. Geflecht, Matte . — 2〉 m. n. ( adj. Comp. f. ) — a〉 Strang . — b〉 Armband . — c〉
-dinte              -> tinte              1901-th-adjacent   10  ¦ — 1〉 n. — a〉 das Salben, Bestreichen, Beschmieren . — b〉 das Offenbaren, Klarmachen, ins
-thurm              -> turm               1901-th         9  * ¦ m. Thurm .
-thau               -> tau                1901-th         8  ¦ n. Pl. Thau .
-cur                -> kur                1901-c          6  ¦ (* m. ) n. — 1〉 Handlung, Thätigkeit, Arbeit, [Page2-029-c] Werk, That, Verrichtung, Ges
 
 # ===== RESIDUAL pattern candidates (not modern, not transform-confirmable;
 #       inflected drift / foreign / names / fragments -> the LLM pass) =====
