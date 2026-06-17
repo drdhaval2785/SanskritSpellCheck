@@ -6,6 +6,27 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.21.0] - 2026-06-17
+
+### Added
+- **Wired Hunspell `de_DE` + ran the full PW orthographic-drift scan.** `detectors/ortho_drift.py`
+  now loads the modern German Hunspell word-list (Adobe InDesign's bundled `de_DE` 2006,
+  103,756 stems — a **local dependency**, overridable via `$ORTHO_DE_DIC`, **not committed**) and
+  detects drift by **transform-and-check**: apply a reform rule to a flagged token and accept it
+  as drift *iff the transformed form is in the modern dic and the original is not*.
+  - **Full PW** (170,556 entries / **845,888 German tokens**): 502,882 (59%) filtered as already-
+    2026-modern; **8,683 reform-drift occurrences — 6,352 dic-confirmed in 672 distinct forms** +
+    2,331 curated-map in 25 forms; 2,171 residual candidates for the LLM. Top: `gerathen→geraten`
+    (253), `personificirt→personifiziert` (191), `theilhaftig→teilhaftig` (190), `ceremonie→zeremonie`
+    (138). **PW's German is pervasively pre-1901, confirmed at scale.**
+  - Transform-and-check deterministically rejects the `t+h`-boundary / Greek-loan false positives
+    (`Theater`, `Gottheit`) that the sampled LLM pass had to catch — so the dic-confirmed list is
+    high-precision without the LLM.
+  - Finding: the Adobe `1901/1996/2006` variants are *modern* dicts differing only in the 1996
+    ss-rule (not 19th-c. word-lists), so era set-diff captures only the ß-reform — hence
+    transform-and-check, not diff. Degrades gracefully (map + patterns) if the dic is absent.
+  - **Documentation only; never edits csl-orig.**
+
 ## [1.20.0] - 2026-06-17
 
 ### Added

@@ -7,7 +7,31 @@ German slice (the cleanest case — German's reforms are legislated and rule-def
 > **Documentation only.** This never edits `csl-orig`. It is a search-normalization /
 > historical-linguistics layer; see the roadmap's guardrail.
 
-## Result (sampled)
+## Result — full PW (Hunspell-wired)
+
+`detectors/ortho_drift.py PW --full` against the modern **Hunspell `de_DE` 2006** word-list
+(103,756 stems; Adobe InDesign's bundled dic — a **local dependency, not committed**; override
+via `$ORTHO_DE_DIC`). Across **all 170,556 PW entries / 845,888 German gloss tokens**:
+
+| | |
+|---|--:|
+| already-2026-modern (filtered by the dic) | **502,882 (59%)** |
+| **reform-drift** | **8,683 occurrences** |
+| &nbsp;&nbsp;• dic-confirmed (reform transform → lands in the modern dic) | 6,352 in **672 distinct forms** |
+| &nbsp;&nbsp;• curated map (incl. inflected forms) | 2,331 in 25 forms |
+| residual candidates (→ LLM pass) | 2,171 distinct |
+
+The **dic-confirmed** list is high-precision — each old form is *absent* from the 2026 dic and a
+reform transform lands *in* it (so `Theater`/`Gottheit` are rejected; `Thier`/`gerathen` kept).
+Top: `gerathen→geraten` (253), `personificirt→personifiziert` (191), `theilhaftig→teilhaftig`
+(190), `theilen→teilen` (164), `ceremonie→zeremonie` (138), `thätigkeit→tätigkeit` (102),
+`mittheilen→mitteilen` (95), `reichthum→reichtum` (81), `casus→kasus` (76),
+`constellation→konstellation` (67). Full list → [PW_drift_report.txt](PW_drift_report.txt).
+
+**PW's German is pervasively pre-1901, confirmed at scale** — 672 distinct drift forms across
+the dictionary, dominated by 1901 `th→t` and `c→k/z`.
+
+## Pilot validation (sampled + LLM) — how the method was proven first
 
 `detectors/ortho_drift.py PW` on **every 68th PW entry (2,509 of 170,556)**, 12,917 German
 gloss tokens scanned:
@@ -88,8 +112,9 @@ python ortho_drift.py PW --full     # every entry
 
 1. ✅ **LLM classify the 163 candidates vs 2026 Duden** — done: **114 reform-drift** confirmed,
    noise correctly bucketed → [PW_drift_classified.txt](PW_drift_classified.txt).
-2. **Wire the Hunspell `de_DE` word-list** as the deterministic pre-filter (reduces LLM load,
-   catches non-pattern drift + OCR errors). Setup dependency, like the OCR `san` model.
+2. ✅ **Wired the Hunspell `de_DE` word-list** (2006/Duden, 103,756 stems — Adobe's bundled dic,
+   a local dependency) as the deterministic filter + transform-and-check drift detector → 672
+   dic-confirmed drift forms on full PW. The residual LLM target is now 2,171 candidates.
 3. **Expand the reform map** from DTA / RIDGES resources (the curated map is a starter).
-4. **Run the rest of the German cluster** — full PW, then PWG / GRA / CCS, and **SCH (1928) as
-   the internal control** (should show 1996-era drift but little 1901-era, unlike pre-1901 PW).
+4. **Run the rest of the German cluster** — PWG / GRA / CCS, and **SCH (1928) as the internal
+   control** (should show 1996-era drift but little 1901-era, unlike pre-1901 PW).
