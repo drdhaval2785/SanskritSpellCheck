@@ -1,0 +1,74 @@
+# PW orthographic-drift pilot -- DOCUMENTATION ONLY (never edits csl-orig)
+# SAMPLE: every 68-th entry (~2509 of 170556)
+# German gloss tokens scanned: 12917
+# REFORM-MAP drift occurrences: 48 (0.37% of tokens) in 13 distinct forms
+#
+# ===== CONFIRMED reform-drift (curated map; high precision) =====
+# pre-reform -> 2026          era         count   example entry
+thier          -> tier           1901-th         10   ¦ — 1〉 Adj. unbesiegt . — 2〉 m. — a〉 ein best. mächtiges Gegengift (auch genannt). — b〉 ei
+theil          -> teil           1901-th          6   ¦ — 1〉 m. — a〉 Stück, Theil . — b〉 Zucker in Stücken, Candiszucker . — c〉 eine Art Tanz (?
+noth           -> not            1901-th          5   ¦ f. Nicht-Noth . ohne Noth, in normalen Verhältnissen .
+thun           -> tun            1901-th          5   *!√ ¦, Böses thun .
+thiere         -> tiere          1901-th          4   ¦ Adj. wobei zwei Thiere geopfert werden . Nom. abstr. n. Comm.
+werth          -> wert           1901-th          3   * ¦ Adj. über sechzig werth u. s. w.
+roth           -> rot            1901-th          3   * ¦ — 1〉 m. eine roth blühende Moringa . — 2〉 n. Wassermelone .
+vocal          -> vokal          1901-c           3   ¦ — 1〉 Adj. ( f. ) — a〉 lang, weitreichend (im Raume). Adv. — b〉 lang, lange dauernd . und
+blüthe         -> blüte          1901-th          3   ¦ — 1〉 m. . — 2〉 n. — a〉 die Blüthe von . — b〉 * eine Art Stahl .
+theils         -> teils          1901-th          2   ¦ Adv. achtfach, in acht Theils (Theilen). [Page1-141-c] Adj.
+gethan         -> getan          1901-th          2   ¦ Adj. — 1〉 kein Leid verursachend, nicht verletzend . — 2〉 kein Leid verursachend, so v. 
+vocale         -> vokale         1901-c           1   √ ¦, , metrisch und bisweilen auch sonst Act. — 1〉 schwimmen, sich über dem Wasser erhalte
+thor           -> tor            1901-th          1   * ¦ — 1〉 m. — a〉 Thor, Dummkopf . — b〉 ein Thier des Waldes, Gazelle . — c〉 = . — d〉 N. pr
+
+# ===== PATTERN candidates (need 2026 Duden/Hunspell or the LLM pass to confirm;
+#       OVER-flags: Greek "th" loans, long-vowel "ß", etc. -> NOT decided here) =====
+# -- th: 103 distinct candidate tokens (top 15) --
+   rtha                     14
+   enthaltend                8
+   gottheit                  7
+   gerathen                  7
+   theilen                   6
+   rothe                     6
+   wasserthier               4
+   getheilt                  4
+   lotusblüthe               4
+   verrathen                 4
+   vermuthen                 4
+   thu                       3
+   thuend                    3
+   koloquinthengurke         3
+   tha                       3
+# -- c-hard: 43 distinct candidate tokens (top 15) --
+   commentars                5
+   curcuma                   3
+   correlation               2
+   sclave                    2
+   correlativen              2
+   mercur                    2
+   clitoris                  1
+   complement                1
+   acut                      1
+   aphrodisiacum             1
+   cadv                      1
+   sclavin                   1
+   conjunction               1
+   lexicographen             1
+   macula                    1
+# -- -iren: 16 distinct candidate tokens (top 15) --
+   personificirt             2
+   multiplicirt              1
+   identificirt              1
+   kuhhirt                   1
+   oberhirt                  1
+   recitiren                 1
+   qualificirt               1
+   personificirte            1
+   hirt                      1
+   durchstudirt              1
+   first                     1
+   passiren                  1
+   specialisiren             1
+   inhärirt                  1
+   dividiren                 1
+# -- ss-eszett: 0 distinct candidate tokens (top 15) --
+# -- ey: 1 distinct candidate tokens (top 15) --
+   japeya                    1

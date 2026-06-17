@@ -6,6 +6,26 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.20.0] - 2026-06-17
+
+### Added
+- **Orthographic-drift pilot — Phase 0 (PW / German)** ([`detectors/ortho_drift.py`](detectors/ortho_drift.py),
+  outputs in [`ortho_drift/`](ortho_drift/README.md)). First slice of the
+  [orthographic-drift study](ORTHO_DRIFT_ROADMAP.md): extend the body-grounded method from
+  Sanskrit headwords to the **gloss language**, checking German tokens against 2026 Duden.
+  - On a 2,509-entry PW sample (12,917 German tokens): **48 confirmed reform-drift occurrences
+    in 13 forms** (`Thier→Tier`, `Theil→Teil`, `Noth→Not`, `thun→tun`, `Vocal→Vokal`, …; eras
+    1901 `th→t`/`c→k`, archaic `ey`, 1996 `ß→ss`) + 163 pattern-candidates for the LLM/wordlist.
+  - Reuses `triage_util` (entry index, paths, stdio); a curated reform map (high precision) +
+    recall patterns. **Documentation only — never edits csl-orig.**
+  - **Tokenizer-hardening discovered live:** PW glosses embed editorial-correction records
+    `{%<bot>{{old->new||date|editor|github-url|}}</bot>%}` — leaking `github`, editor names and
+    botanical Latin. The tokenizer now strips `{{…}}`, `<bot>…</bot>`, `<ls>` sigla, and filters
+    abbreviations case-insensitively.
+  - Decisions recorded: 2026 = Duden (Hunspell `de_DE`); sampled by default; proper-noun
+    strategy = LLM-bucket + sigla stop-list (capitalisation is useless for German); documentary
+    now, OCR-error subset only could graduate to a sign-off-gated correction queue later.
+
 ## [1.19.0] - 2026-06-17
 
 ### Added
