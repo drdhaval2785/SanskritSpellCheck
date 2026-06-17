@@ -23,12 +23,13 @@ and *preventing bad bulk edits*, not the handful of real typos.
 
 `tier-A` = engine tier-A candidate count (per-dict, from `combined_candidates.txt`). The dict
 code links to its [csl-orig](https://github.com/sanskrit-lexicon/csl-orig) source (the entry
-text the triage reads); **PD has no csl-orig source, so it cannot be body-triaged here.**
+text the triage reads); **PD is not in `csl-orig`, but two external sources exist (to be
+provided) — it becomes triageable once they are wired into the pipeline.**
 
 | dictionary | tier-A | triage status |
 |---|--:|---|
 | [MW](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/mw) — Monier-Williams (1899) | 1954 | ✅ **4 fileable · 630 do-not-file** — [readme](MW/readme.md) · [file-first](MW/MW_file_first_sf.txt) · [do-not-file](MW/MW_wrong_readings.txt) · [queue](MW/MW_triaged.txt) |
-| PD | 1045 | ⛔ no csl-orig source — not body-triageable here |
+| PD | 1045 | ⏳ source not in csl-orig — **two external sources to be provided**, then triageable |
 | [BHS](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/bhs) — Edgerton, Buddhist Hybrid Sanskrit | 737 | — pending |
 | [SCH](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/sch) — Schmidt, Nachträge | 678 | — pending |
 | [PW](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/pw) — Böhtlingk–Roth, Petersburg | 657 | ✅ **2 fileable · 255 do-not-file** — [readme](PW/readme.md) · [file-first](PW/PW_file_first_sf.txt) · [do-not-file](PW/PW_wrong_readings.txt) · [queue](PW/PW_triaged.txt) |
@@ -115,5 +116,6 @@ Type any line into Claude Code (a slash-command is run by typing, not by clickin
 ```
 
 That accounts for all 33: **already triaged** (5, re-runs are stochastic — don't blindly
-overwrite): `MW` `PW` `VCP` `PWG` `SNP`; **no csl-orig source** (1, not body-triageable here): `PD`.
+overwrite): `MW` `PW` `VCP` `PWG` `SNP`; **source not in csl-orig** (1): `PD` — two external
+sources to be provided, then triageable.
 
