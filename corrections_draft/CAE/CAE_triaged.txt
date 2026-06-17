@@ -1,0 +1,179 @@
+# CAE tier-A -- BODY-GROUNDED triage  (DRAFT; verify every kept case against the scan)
+#
+# The 89 engine tier-A candidates were judged against CAE's OWN entry text (csl-orig),
+# not spelling alone. A spelling detector cannot tell a typo from a real word, an
+# intentional variant / compounding form, or wrong-reading apparatus -- the entry can.
+# Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM
+# pass over the 'realword' set + source confirmation of every TYPO verdict.
+#
+# FINDING: of 89 tier-A candidates, 0 are body-confirmed fileable typos (0.0%).
+# 67 are real distinct words, 8 are spellings CAE documents on purpose (w.r./v.l./
+# in-comp./cross-ref -- filing them would CORRUPT CAE), 0 are not in the current
+# source, and 14 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
+# do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.
+
+# ===== BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file) (0) =====
+
+# ===== BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted (9) =====
+
+pratamam      -> praTamam       [dcs=4 ndicts=1 body=realword]
+    CAE: {#pratama/m#} adv. chiefly, particularly.
+    judged: Body gloss 'chiefly, particularly' belongs to praTamam (adv. of praTama 'first'). dental t in pratamam is a misspelling of palatal T.
+    confirm: Entry L20253 {#pratama/m#} <ab>adv.</ab> 'chiefly, particularly' — real defined CAE headword (accented form), not a bare typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CAE&key=pratamam
+
+prANgana      -> prANgaRa       [dcs=3 ndicts=2 body=realword]
+    CAE: {#prANga˚na#} n. fore-court, court-yard.
+    judged: 'fore-court, court-yard' is the meaning of prANgaRa (retroflex n). prANgana with dental n is a misspelling of the same word.
+    confirm: Entry L21195 {#prANga˚na#} <lex>n.</lex> 'fore-court, court-yard' — fully defined headword in CAE, not a documented variant or redirect.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CAE&key=prANgana
+
+udAharana     -> udAharaRa      [dcs=3 ndicts=1 body=realword]
+    CAE: {#udAharana#} n. saying, speech; example.
+    judged: 'saying, speech; example' is the gloss for udAharaRa (retroflex n). Dental n in the key is a misspelling.
+    confirm: Entry L5506 {#udAharana#} <lex>n.</lex> 'saying, speech; example' — real defined headword in CAE, no variant/wrong-reading marker.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CAE&key=udAharana
+
+kaSikA        -> kASikA         [dcs=1 ndicts=2 body=realword]
+    CAE: {#kaSikA#} f. a whip.*
+    judged: Gloss 'a whip' = kāśikā (kASikA, long A); kaSikA with short a has no semantic fit.
+    confirm: Entry L7368 {#kaSikA#} <lex>f.</lex> 'a whip.*' — real defined CAE headword with its own gloss, not a redirect to kASikA.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CAE&key=kaSikA
+
+paryayana     -> paryayaRa      [dcs=1 ndicts=2 body=realword]
+    CAE: {#paryayana#} n. going round, circumambulation.
+    judged: Body gives 'n. going round, circumambulation' — this is the meaning of paryayaRa (retroflex R). Dental n in paryayana is a misspelling.
+    confirm: Entry L18503 {#paryayana#} <lex>n.</lex> 'going round, circumambulation' — real defined CAE headword, no variant marker.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CAE&key=paryayana
+
+upADAya       -> upAdAya        [dcs=0 ndicts=2 body=realword]
+    CAE: {#upADA/ya#} ger. taking, i.e. along with (acc.).
+    judged: Gerund upa+ādāya uses dental d (SLP1: d); body '{#upADA/ya#}' has retroflex D; suggestion upAdAya is correct.
+    confirm: Entry L5925 {#upADA/ya#} <ab>ger.</ab> 'taking, i.e. along with (acc.)' — real defined CAE headword (Cappeller's own spelling), not a typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CAE&key=upADAya
+
+pUyaSonita    -> pUyaSoRita     [dcs=0 ndicts=1 body=realword]
+    CAE: {#pUyaSonita#} n. purulent blood.
+    judged: Sanskrit śoṇita (blood) requires retroflex ṇ = R in SLP1; 'purulent blood' fits pUyaSoRita, not dental n.
+    confirm: Entry L19680 {#pUyaSonita#} <lex>n.</lex> 'purulent blood' — real defined CAE headword as spelled, no wrong-reading marker.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CAE&key=pUyaSonita
+
+samarANgana   -> samarANgaRa    [dcs=0 ndicts=2 body=realword]
+    CAE: {#samarA˚Ngana#} n. field of battle.
+    judged: Sanskrit āṅgaṇa (field/court) has retroflex ṇ = R in SLP1; 'field of battle' fits NgaRa not dental Ngana.
+    confirm: Entry L35179 {#samarA˚Ngana#} <lex>n.</lex> 'field of battle' — real defined CAE headword as spelled, no variant marker.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CAE&key=samarANgana
+
+padaSabda     -> pAdaSabda      [dcs=0 ndicts=2 body=realword]
+    CAE: {#padaSabda#} m. the sound of footsteps.*
+    judged: Gloss 'sound of footsteps' fits pāda (foot, long A); pada (word/step, short a) is a weaker semantic match.
+    confirm: Entry L17831 {#padaSabda#} <lex>m.</lex> 'the sound of footsteps.*' — real defined CAE headword, not a redirect to pAdaSabda.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CAE&key=padaSabda
+
+# ===== BUCKET 3  REVIEW -- undecidable without the printed page (5) =====
+
+mutiba        -> mUtiba         [dcs=0 ndicts=2 body=realword]
+    CAE: {#mutiba#} m. pl. N. of a people.
+    judged: Proper noun (people's name); short u vs long U indeterminate from gloss alone.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CAE&key=mutiba
+
+arI|a         -> (flag)         [dcs=0 ndicts=6 body=realword]
+    CAE: {#a/rI|a#} a. unlicked.
+    judged: Pipe character in key likely an encoding artifact; cannot evaluate spelling without clean form.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CAE&key=arI|a
+
+svarmI|a      -> (flag)         [dcs=0 ndicts=4 body=realword]
+    CAE: {#svarmI|a#} n. or as adj. w. {#Aji#} m. the contest for light; contest, fight i.g.
+    judged: Pipe character in key likely an encoding artifact; cannot evaluate spelling without clean form.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CAE&key=svarmI|a
+
+raTo|a        -> (flag)         [dcs=0 ndicts=3 body=realword]
+    CAE: {#†raTo|a#} a. carried on a chariot.
+    judged: Pipe character in key likely an encoding artifact; cannot evaluate spelling without clean form.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CAE&key=raTo|a
+
+azA|a         -> (flag)         [dcs=0 ndicts=1 body=realword]
+    CAE: {#a/zA|a#} a. unconquerable; m. a man's name.
+    judged: Pipe character in key likely an encoding artifact; cannot evaluate spelling without clean form.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CAE&key=azA|a
+
+# ===== BUCKET 4  REAL-WORD -- a distinct real word; the fix would merge two words (67) =====
+atrA          -> atra          | CAE: {#a/trA#} adv. here, hither; herein, in this case or matter; there, then; also = loc. of 1 | Body defines atrA/ as its own adv. 'here, hither' with Vedic accent; distinct from atra.
+adyA          -> adya          | CAE: {#adyA/#} adv. to-day, now. — {#adya pUrvam#} & {#adya˚yAvat#} till now. {#adya praBfti#}  | Body defines adyA/ as adv. 'to-day, now' with Vedic accent; long-A form is a genuine Vedic
+evA           -> eva           | CAE: {#evA/#} adv. so, even so; certainly, really; even, just, exactly, emphasizing the prec. w | Body defines evA/ as adv. 'so, even so' with Vedic accent mark; distinct Vedic adverb form
+yadI          -> yadi          | CAE: ({#ya/dI#}) conj. if, when (also {#yadi cid, yadi ced, ya/dId#}, {#ya/dyu#}, in the correl | Body defines ya/dI as conj. 'if, when' with Vedic accent; long-I form is genuine.
+dAruRA        -> dAruRa        | CAE: {#dAruRA#} ({#I#}) hard, rough, harsh, cruel, severe; n. & {#˚tdAruRA#}† f. abstr. | Body is the adj. entry with (I) feminine and abstr.; dAruRA is the feminine/headword form,
+yatrA         -> yAtrA         | CAE: ({#ya/trA#}) adv. ( = loc. of {#ya/#}) where, when, [Page426] while, as, if. — {#yatra kut | Body defines ya/trA as relative adv. 'where, when'; entirely different word from yAtrA (jo
+saMjYakA      -> saMjYaka      | CAE: {#saMjYakA#} f. {#˚ikA#} (adj. —˚) named, termed. | Body gives f. {#˚ikA#} with a real adj. gloss 'named, termed'; feminine form saMjYakA is i
+JarA          -> jarA          | CAE: {#JarA#} f. waterfall, cascade. | Body glosses 'waterfall, cascade'; jarA means 'old age'. Distinct words with distinct mean
+aramya        -> araRya        | CAE: {#aramya#} a. unpleasant, disagreeable. | Body glosses 'unpleasant, disagreeable' — a genuine adj. from a-ramya (not-pleasing); araR
+ABakta        -> aBakta        | CAE: {#A/Bakta#} a. partaking of (loc.). | Body defines A/Bakta 'partaking of (loc.)'; prefix A- distinguishes it from aBakta (not-pa
+BAsita        -> Basita        | CAE: {#BAsita/#} a. shining, brilliant. | Body defines BAsita/ as 'shining, brilliant' (root BAs); different root from Bas (ashes/ba
+katiDa        -> katiDA        | CAE: {#katiDa/#} w. {#cida#} (pron. indef.) the so and so maniest. | Body defines katiDa/ 'the so and so maniest'; short-a form is the genuine entry, not a lon
+likza         -> likzA         | CAE: {#likza#} s.  nit (louse-egg). | Body has 's. nit (louse-egg)' — a real noun entry. likzA (f.) and likza (m./n.) are both a
+viyonI        -> viyoni        | CAE: {#viyo˚nI#} f. womb of animals, also = {#˚ja#} animal. | Body entry is for viyonI f. 'womb of animals'; long-I is the feminine noun ending, a real 
+devayU        -> devayu        | CAE: {#deva˚yU/#} (f. {#U/#}) loving the gods; religious, pious. | Body shows accent mark {#deva˚yU/#} with a full gloss 'loving the gods; religious'. Accent
+ftIzAh        -> ftIzah        | CAE: ({#ftI˚zA/h#}) a. enduring or defying assault; durable, lasting. | Body defines ftI˚zA/h 'enduring assault; durable' with accent on long A; genuine compound 
+fBukzA        -> fBukza        | CAE: {#fBu˚kzA/#} m. N. of the first Ribhu, E. of Indra and the Maruts. | Body gives m. 'N. of the first Ribhu, E. of Indra and the Maruts' with accent; long-A form
+ASfta         -> aSfta         | CAE: {#ASfta#} a. little boiled. | Body gives 'a. little boiled'. ASfta (with initial A-) and aSfta are distinct forms; A- pr
+avalokitA     -> avalokita     | CAE: {#avalokitA#} f. a woman's name. | Body gives 'f. a woman's name' — feminine form avalokitA is a documented proper noun, not 
+uttaravedI    -> uttaravedi    | CAE: {#uttarave˚dI#} f. the northern altar ((r.)). | Body defines uttaravedI f. 'northern altar'; long-I is the feminine noun form, not a missp
+SarArI        -> SarAri        | CAE: {#SarA˚rI#} f. a kind of heron. | Body gives 'f. a kind of heron' with long-I {#SarA˚rI#}. The long-I feminine form is a dis
+CucCUndara    -> CucCundara    | CAE: {#CucCUndara#} m. {#˚rI#} f. the same. | Body entry is for CucCUndara (long U) m. as its own entry; not flagged as a variant of Cuc
+OpanizaDa     -> Opanizada     | CAE: {#OpanizaDa/#} f. {#I#} contained or taught in the Upaniṣads. | Body gives f. {#I#} 'contained or taught in the Upaniṣads'. OpanizaDa with retroflex D is 
+saMBIta       -> saMvIta       | CAE: {#saMBIta#} a. afraid of (gen.). | Body defines saMBIta 'afraid of (gen.)'; B vs v and different meaning from saMvIta (covere
+karketaRa     -> karketana     | CAE: {#karketaRa#} m.  the cat's eye (a sort of gem). | Body defines 'the cat's eye (a sort of gem)' — retroflex R is well-attested for this gem n
+tryenI        -> tryeRI        | CAE: {#trye/nI#} f. spotted in three places. | Body gives 'f. spotted in three places' — a genuine feminine adjective with dental n. trye
+vyUQA         -> vyUQa         | CAE: {#vyUQA#} f. led-away, married. | Body defines vyUQA f. 'led-away, married'; long A is the feminine form, not a misspelling.
+pallavakA     -> pallavaka     | CAE: {#pallavakA#} f. a woman's name.* | Body 'f.' marks a genuine feminine form; long-A feminine of pallavaka is an intentional in
+SItalAy       -> SItalay       | CAE: {#SItalAy#} {#SItalA˚yate#}  become cool.* | Body '{#SItalA˚yate#}' shows denominative verb from SItalA-stem; long A is part of the ste
+DaraRiBft     -> DaraRIBft     | CAE: {#DaraRi˚Bft#} m. prince king. | Body '{#DaraRi˚Bft#}' explicitly shows short i before compound-break marker; entry is its 
+pattrANgulI   -> pattrANguli   | CAE: {#*pattrANgu˚lI#} f. = {#pattraBaNga#}. | Body heading has long I (lI) matching suspect; long-I feminine form is the entry; = pattra
+udDuta        -> udDUta        | CAE: {#udDuta#} a. shaken, brandished. | Body defines udDuta 'shaken, brandished' with short u; genuine entry, not a typo for udDUt
+Sitodara      -> sitodara      | CAE: {#Sitodara#} f. {#I#} thin-bellied. | Body gives f. {#I#} 'thin-bellied'. Sita- (SLP1 capital S = palatal) means 'thin/white'; s
+BUrjakaRWaka  -> BUrjakaRwaka  | CAE: {#BUrjakaRWaka#} m. a cert. mixed caste. | Body gives 'm. a cert. mixed caste'. Both retroflex W and retroflex w spellings appear in 
+kavanDin      -> kabanDin      | CAE: {#kavanDi/n#} a. having casks (of water), driving the rain clouds (the Maruts). | Body gives 'a. having casks (of water), driving the rain clouds' with accent. kavanDin (v)
+pUrvavAh      -> pUrvavah      | CAE: ({#pUrva˚vA/h#}) a. drawing in front or for the first time. | Body defines pUrva˚vA/h 'drawing in front' with long A; compound-final vAh is the genuine 
+SitipAd       -> Sitipad       | CAE: ({#Siti˚pA/d#}) a. white-footed. | Body defines Siti˚pA/d 'white-footed' with accent; long pAd is the genuine Vedic compound 
+gaganANgana   -> gaganANganA   | CAE: {#gaganANgana#} n. the space (lit. court) of heaven.* | Body says n. (neuter) 'court of heaven'; neuter short-a ending is correct; long-A would be
+prARApriya    -> prARapriya    | CAE: {#prARA˚priya#} a. dearer than life. | Body defines prARA˚priya 'dearer than life'; long A in prARA (prāṇā-) is the genuine compo
+vajravAh      -> vajravah      | CAE: ({#vajra˚vA/h#}) a. wielding the thunderbolt. | Body defines vajra˚vA/h 'wielding the thunderbolt' with accent; compound-final vAh is genu
+zawpAd        -> zawpad        | CAE: ({#za/w˚pAd#}) f. {#za/wpadI#} having six feet or containing six verses. | Body defines za/w˚pAd f. 'having six feet'; also gives zawpadI; long pAd is the genuine co
+apANganetrA   -> apANganetra   | CAE: {#apANganetrA#} f. having eyes with beautiful outer corners. | Body gives 'f. having eyes with beautiful outer corners' — feminine form apANganetrA is a 
+cakrANkita    -> cakrANkitA    | CAE: {#cakrANkita#} a. marked with a (mystic) circle. | Body gives 'a. marked with a (mystic) circle' — masculine/neuter adj. form cakrANkita; the
+indraputra    -> indraputrA    | CAE: {#indraputra#} m. Indra's son*; f. {#A#} I.'s mother (lit. having I. as son). | Body gives 'm. Indra's son; f. {#A#} I.'s mother' — the masculine form indraputra is fully
+jyAGozA       -> jyAGoza       | CAE: {#jyAGozA/#} m. twang of the bow-string. | Body gives 'm. twang of the bow-string' with accent mark. The form jyAGozA has long-A fina
+KawvANgaDAra  -> KawvANgaDara  | CAE: {#KawvANga˚DAra#} m. E. of Śiva (lit. bearer of the Khaṭvāṅga, v. prec.). | Body heading '{#KawvANga˚DAra#}' has long A (DAra) matching suspect; 'bearer' = dhāra (lon
+jAlamArga     -> jalamArga     | CAE: {#jAlamArga#} m. the way of the window; instr. through the window. | Gloss 'way of the window' fits jāla (net/lattice/window), not jala (water); long A is corr
+rayidA        -> rayida        | CAE: {#rayi˚dA/#} a. bestowing riches. | Body '{#rayi˚dA/#} a. bestowing riches' shows dA (long A) = giving; long A is the correct 
+vizAkta       -> vizakta       | CAE: {#vizAkta#} a. = {#vizadigDa#}. | Body heading has vizAkta (long A) with own cross-ref gloss '= vizadigDa'; entry is a genui
+udUQA         -> udUQa         | CAE: {#udUQA#} f. married, taken to wife. | Body 'f. married, taken to wife' marks genuine feminine; long-A feminine of udUQa is an in
+mOktikAvalI   -> mOktikAvali   | CAE: {#mOktikAva˚lI#} f. string of pearls, necklace. | Body heading has long I (lI) matching suspect; long-I feminine AvAlI (string/garland) is t
+sarvatanU     -> sarvatanu     | CAE: {#sa/rva˚tanU#} a. complete of body or person. | Body '{#sa/rva˚tanU#}' shows long U; tanU (long U) = body/person, giving 'complete of body
+etavE         -> etave         | CAE: {#e/tavE/#} dat. inf. to 2 {#i#}. | Body defines e/tavE/ as Vedic dative infinitive to root i; long E is the genuine Vedic inf
+sravitavE     -> sravitave     | CAE: {#sra/vitavE/#} dat. infin. to {#sru#}. | Body defines sra/vitavE/ as Vedic dat. infin. to sru; long E is the genuine Vedic infiniti
+dEvanirmita   -> devanirmita   | CAE: {#dEvanirmita#} a. formed by destiny or nature. | dEva (SLP1 E=ai) = daiva = destiny/divine; gloss 'formed by destiny or nature' confirms dE
+dAtavE        -> dAtave        | CAE: {#dA/tavE/#} dat. inf. to 1 {#dA#}. | Body '{#dA/tavE/#} dat. inf.' shows Vedic dative infinitive with long E (-tavE); this form
+bARaSabda     -> vARaSabda     | CAE: {#bARaSabda#} m. the sound of an arrow. | Body defines bARaSabda m. 'the sound of an arrow'; bARa (arrow) is a real b-initial varian
+viprahIna     -> viprahIRa     | CAE: {#vipra˚hIna#} a. excluded from (abl.); disappeared, gone; destitute of (instr.). | Body defines viprahIna 'excluded from; destitute'; hIna (n) means forsaken, unrelated to h
+IqeRya        -> Iqenya        | CAE: {#Iqe/Rya#} a.  to be asked for (dat.); also = seq. | Body '{#Iqe/Rya#}' uses R (retroflex ṇ) matching suspect; 'to be asked for' is the entry's
+daRqAy        -> daRqay        | CAE: {#daRqAy#} resembling  the stem of (—˚).* | Body defines daRqAy 'resembling the stem of'; the long-A denominative form has its own ent
+aviSrAma      -> aviSrama      | CAE: {#avi˚SrAma#} a. unwearied, restless. | Body gives adj. 'unwearied, restless'. Both long-A (aviSrAma) and short-a (aviSrama) spell
+kAryakaraRa   -> kAryakAraRa   | CAE: {#kAryakaraRa#} n. performing one's duty. | Body gives 'n. performing one's duty' — kAryakaraRa (doing + action) vs kAryakAraRa (cause
+sarpaSattra   -> sarpasattra   | CAE: {#sarpaSattra#} n. serpent-sacrifice. | Body gives 'n. serpent-sacrifice'. SarpaSattra with palatal S is a compound sarpas+Sattra;
+BarAkrAnta    -> BArAkrAnta    | CAE: {#BarAkrAnta#} a. heavy (lit. oppressed by a load).* | Body defines BarAkrAnta 'heavy, oppressed by a load'; Bara (short a) and BAra both mean we
+andolAy       -> andolay       | CAE: {#andolAy#} pp. {#˚yamAna#} wavering.* | Body defines andolAy pp. yamAna 'wavering'; long-A denominative form has its own entry.
+adattadAyin   -> adattAdAyin   | CAE: {#adattadAyin#} m. thief (lit. who takes what is not given). | Body gives 'm. thief (lit. who takes what is not given)'. adattadAyin and adattAdAyin diff
+DAnyada       -> DAnyAda       | CAE: {#DAnyada#} m. a giver of grain. | DAnya+da is a valid compound 'giver of grain'; long A in DAnyAda not required; gloss fits 
+
+# ===== BUCKET 5  INTENTIONAL -- CAE documents the spelling on purpose; NEVER file (8) =====
+nABI          -> nABi          | CAE: {#nABI#} v. {#nA/Bi#}. | Body is 'v. {#nA/Bi#}' — explicit cross-reference redirect; the suspect key is intentional
+SAntvay       -> sAntvay       | CAE: {#SAntvay#} v. {#sAntvay#}. | Body is 'v. {#sAntvay#}' — explicit cross-reference to the correct spelling; intentional r
+vilva         -> bilva         | CAE: {#vilva#} v. {#bilva#}. | Body says 'v. {#bilva#}' — cross-reference marker 'v.' (vide) intentionally documents vilv
+sarATin       -> saraTin       | CAE: {#{{sarATa/n->sarATi/n||20160418|Jim Funderburk|https://github.com/sanskrit-lexicon/CORREC | Body contains a CORRECTIONS markup block with 'sarATan->sarATin' and a correction note abo
+ASIna         -> AsIna         | CAE: {#ASIna/#} a. = {#ASina/#}. | Body '= {#ASina/#}' is a documented cross-reference; entry intentionally records this spel
+Sivika        -> Sibika        | CAE: {#Sivika#} v.  {#Sibi#} etc. | Body 'v. {#Sibi#} etc.' is a vide/cross-reference; entry documents this spelling as a vari
+sudIdIti      -> sudIditi      | CAE: {#sudI/dIti#} a.  = prec. a. | 
+nizyandin     -> nisyandin     | CAE: {#nizya˚ndin#} v. {#nisyanda#} & {#˚ndin#}. || {#nizyandin#} a. = prec. adj., also trans.  | 
+
+# ===== BUCKET 6  UNLOCATABLE -- not in the current CAE source (stale/different key) (0) =====

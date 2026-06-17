@@ -1,0 +1,19 @@
+# GRA -- DOCUMENTED-INTENTIONAL spellings (NOT typos -- do NOT file corrections)
+#
+# 7 headwords that LOOK like misspellings but which GRA records on purpose:
+# wrong-reading apparatus (w.r.), variae lectiones (v.l.), in-composition /
+# sandhi forms (in comp. for...), cross-references (See / = X q.v.), and other
+# grammatical/Vedic notes. Filing a 'correction' for any of these CORRUPTS GRA.
+# Use this as a suppression list: such headwords should not be re-flagged.
+# Format per row:  headword -> would-be 'correction'  |  the GRA entry text
+
+# ===== WRONG-READING (2) =====
+SritI          -> Sriti          | {@śritī́,@} {726,6}, wo wol śritvī́ [Absolutiv von śri] zu lesen ist áti 〰 tiraścátā gavyā́ jigāti áṇviā.
+nivana         -> nivanA         | {@nivaná,@} n. [von ní] = nimná, {%Thal, Tiefe%}. -ā́ ā́‿asmai rīyante 〰 ‿iva síndhavas {866,9}, vgl. die Parallelstelle {57,2} ā́pas nimnā́‿iva; an beiden Stel
+
+# ===== OTHER-INTENTIONAL (5) =====
+Asat           -> asat           | {@ā́sat,@} a., s. ásat.
+Bavayu         -> BAvayu         | {@bhavayú@} siehe bhāvayú.
+SAtavat        -> Satavat        | {@śā́tavat (?),@} a., = śatávat (?). -anā-antā [du.] mitrā́‿iva ṛtā́ śatárā 〰 {932,5} (der Text hat das unverständliche cā́tapantā). || 1391,14: -antā st. -anā
+fBukzA         -> fBukza         | {@ṛbhukṣā́,@} {@ṛbhukṣán,@} a., m., die {%Ribhuʼs%} [ṛbhú] {%beherrschend%} [von kṣā = kṣi], {%Beherrscher der Ribhuʼs%}. So werden 1〉 Indra, Vata, die Marutʼs 
+kunamnama      -> kunannama      | {@ku-namnamá,@} a., {%schwer zu beugen%} [namnama vom Intens. namnamīti, von nam]. -ā́ [p. n.] {962,7}. || {@kunamnamá:@} Text kunannamá.

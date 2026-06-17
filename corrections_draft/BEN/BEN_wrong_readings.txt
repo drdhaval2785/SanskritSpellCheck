@@ -1,0 +1,26 @@
+# BEN -- DOCUMENTED-INTENTIONAL spellings (NOT typos -- do NOT file corrections)
+#
+# 14 headwords that LOOK like misspellings but which BEN records on purpose:
+# wrong-reading apparatus (w.r.), variae lectiones (v.l.), in-composition /
+# sandhi forms (in comp. for...), cross-references (See / = X q.v.), and other
+# grammatical/Vedic notes. Filing a 'correction' for any of these CORRUPTS BEN.
+# Use this as a suppression list: such headwords should not be re-flagged.
+# Format per row:  headword -> would-be 'correction'  |  the BEN entry text
+
+# ===== CROSS-REFERENCE (6) =====
+baDUyu         -> vaDUyu         | {#baDUyu#} {%badhūyu,%} see {%vadhūyu.%}
+ban            -> van            | {#ban#} {%BAN,%} see {%van.%}
+bas            -> vas            | {#bas#} {%BAS,%} see 3. {%vas.%}
+cakrabAla      -> cakravAla      | {#cakrabAla#} {%cakra-bāla,%} and {#cakravAla#} {%cakra-vāla%} (cf. {%vālaka,%} A finger ring). {@I.@} (m. or n.) A ring, MBh. 1, 7021. {@II.@} m. A range of mo
+mImAMsa        -> mImAMsA        | {#mImAMsa#} {%MĪMĀṂSA,%} see {%man.%}
+padI           -> padi           | {#padI#} {%padī,%} see 3. {%pad%} and {%pada.%}
+
+# ===== OTHER-INTENTIONAL (8) =====
+DUzaratva      -> DUsaratva      | {#DUzaratva#} {%dhūṣaratva,%} read {%dhūsa-%} {%ratva,%} Lass. 72, 11.
+Sastrika       -> SAstrika       | {#'Sastrika#} {%-śastrika,%} substituted for {%śastra,%} as latter part of a comp. adj., Daśak. in Chr. 189, 6 in {%kaṇṭha%} {%-nyasta-,%} Having put a knife to
+SrutI          -> Sruti          | {#SrutI#} {%śrutī,%} Rām. 3, 55, 34, for {%śruti,%} on account of the metre.
+cIcIkucI       -> cIcIkUcI       | {#cIcIkucI#} and {#cIcIkUcI#} {%cīcī-%} {%kūcī,%} a word imitative of the chirping of birds, Rām. 6, 11, 42; MBh. 16, 38.
+jAmbunadamaya  -> jAmbUnadamaya  | {#jAmbunadamaya#} and {#jAmbUnadamaya#}  [Page0331-a+ 39] {%jāmbū̆nada + maya,%} adj., f. {%yī,%} Golden, Pañc. 175, 8.
+pAdukft        -> pAdUkft        | {#pAdukft#} and {#pAdUkft#} {%pādū̆kṛt,%} i. e. {%pad + u-kṛ + t,%} m. A shoemaker.
+sikata         -> sikatA         | {#sikata#} {%sikata,%} {@I.@} m. pl. Sand. {@II.@} f. {%tā.%} {@1.@} Sandy soil. {@2.@} Sand, Vikr. d. 79 (pl.); Pañc. ii. d. 62. {@3.@} Gravel or stone (the di
+sraMS          -> sraMs          | {#sraMS#} {%SRAṂŚ,%} v. r. of the next.

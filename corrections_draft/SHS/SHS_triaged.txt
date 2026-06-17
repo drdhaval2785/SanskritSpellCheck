@@ -1,0 +1,632 @@
+# SHS tier-A -- BODY-GROUNDED triage  (DRAFT; verify every kept case against the scan)
+#
+# The 246 engine tier-A candidates were judged against SHS's OWN entry text (csl-orig),
+# not spelling alone. A spelling detector cannot tell a typo from a real word, an
+# intentional variant / compounding form, or wrong-reading apparatus -- the entry can.
+# Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM
+# pass over the 'realword' set + source confirmation of every TYPO verdict.
+#
+# FINDING: of 246 tier-A candidates, 37 are body-confirmed fileable typos (15.0%).
+# 122 are real distinct words, 31 are spellings SHS documents on purpose (w.r./v.l./
+# in-comp./cross-ref -- filing them would CORRUPT SHS), 19 are not in the current
+# source, and 37 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
+# do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.
+
+# ===== BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file) (37) =====
+
+saptAtitama   -> saptatitama    [dcs=2 ndicts=1 body=realword]
+    SHS: {#saptAtitama#} mfn. ({#-maH-mA-maM#}) The seventieth.
+    judged: Ordinal of saptati (70) is saptatitama; long A between saptA- and -titama is a typo.
+    confirm: Body glosses 'The seventieth.' = ordinal of saptati(70)=saptatitama; no etymology/spelling note documents the spurious long A. Bare typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=saptAtitama
+
+maYjarinamra  -> maYjarInamra   [dcs=2 ndicts=1 body=realword]
+    SHS: {#maYjarinamra#} m. ({#-mraH#}) The Vetasa plant.
+    judged: First element is maYjarI (spray/cluster) with long I; suspect short i in maYjari- is a typo.
+    confirm: Body 'm.(-mraH) The Vetasa plant'; compound of maYjarI(spray,long I)+namra; no spelling note; short i in first element is a bare error.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=maYjarinamra
+
+murali        -> muralI         [dcs=2 ndicts=1 body=realword]
+    SHS: {#murali#} f. ({#-lI#}) A flute, a pipe. E. {#mura#} surrounding, {#lA#} to get or have, affs. {#ka#} and {#NIz .#}
+    judged: Body gives f. (-lI) with NIz affix; long I confirmed by inflection; suspect short i is a typo.
+    confirm: Body 'f.(-lI) A flute', E. mura+lA aff. NIz; NIz feminine gives long I (muralI); next entry muralIDara confirms long I. Short i is a typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=murali
+
+vAcanIka      -> vAcanika       [dcs=2 ndicts=1 body=realword]
+    SHS: {#vAcanIka#} mfn. ({#-kaH-kI-kaM#}) 1. Verbal. 2. Textual. E. {#vacana#} and {#Wak#} aff.
+    judged: Body etymology 'vacana + Wak aff.'; Wak taddhita gives short-i ika; long I in suspect is a typo.
+    confirm: Body 'mfn.(-kaH-kI-kaM) Verbal/Textual, E. vacana and Wak aff.'; Wak taddhita yields short-i -ika (vAcanika); long I is a typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=vAcanIka
+
+ditisUta      -> ditisuta       [dcs=2 ndicts=1 body=realword]
+    SHS: {#ditisUta#} m. ({#-taH#}) 1. Titan or giant. E. {#diti#} as above, and {#suta#} a son.
+    judged: Gloss='son of Diti (Titan)'; E. gives suta=son, so compound ditisuta is correct; long U in headword is error.
+    confirm: Body 'm.(-taH) Titan or giant, E. diti and suta a son'; etymology gives suta (short u); diti+suta=ditisuta; long U is a typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=ditisUta
+
+natyuha       -> natyUha        [dcs=2 ndicts=1 body=realword]
+    SHS: {#natyuha#} m. ({#-haH#}) A gallinule.
+    judged: Gloss='gallinule'; standard SLP1 for this bird is natyUha (long U); short u in headword is a typo.
+    confirm: Body 'm.(-haH) A gallinule'; standard form natyUha has long U (-yUha); no spelling note documents short u; gloss belongs to natyUha. Bare typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=natyuha
+
+kARqapfzwa    -> kARqapfzWa     [dcs=2 ndicts=1 body=realword]
+    SHS: {#kARqapfzwa#} mfn. ({#-zWaH-zWA-zWaM#}) Of the military profession, a soldier. m. ({#-zWaH#}) 1. The husband of a Vaiśya female. 2. An adopted or any other than the natural son. n. ({#-zWaM#}) The bo
+    judged: Body inflections use W throughout (-zWaH-zWA-zWaM); headword has dental w but forms/gloss require retroflex W.
+    confirm: All inflections -zWaH-zWA-zWaM (retroflex W) and etymology gives pfzWa (retroflex); headword dental w (pfzwa) contradicts every form. Typo for W.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=kARqapfzwa
+
+kzIraballI    -> kzIravallI     [dcs=2 ndicts=1 body=realword]
+    SHS: {#kzIraballI#} f. ({#-llI#}) The dark Bhuincaonra, (Convolvulus paniculatus) E. {#kzIra#} water, and {#vallI#} pedicle: see {#kzIrakandA#}.
+    judged: Etymology explicitly gives vallI not ballI; body confirms kzIra+vallI, so b in headword is a typo for v.
+    confirm: Etymology explicitly 'kzIra water and vallI pedicle'; body confirms kzIra+vallI; the b in headword is a bare typo for v.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=kzIraballI
+
+divaspfTibI   -> divaspfTivI    [dcs=2 ndicts=1 body=realword]
+    SHS: {#divaspfTibI#} f. du. ({#-vyO#}) Heaven and earth. E. {#diva#} heaven, and {#pfTivI#} earth, {#sa#} inserted for the sake of euphony.
+    judged: Body gives f. du. '({#-vyO#})' and etym '{#pfTivI#} earth'; the word contains pfTivI; -bI vs -vI is a consonant typo (b/v).
+    confirm: f. du. ({#-vyO#}) and etym {#pfTivI#} 'earth' (v); gloss 'Heaven and earth' belongs to divaspfTivI; -bI (b) in key contradicts pfTivI.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=divaspfTibI
+
+klItakika     -> klItakikA      [dcs=1 ndicts=1 body=realword]
+    SHS: {#klItakika#} f. ({#-kA#}) The indigo plant, (Indigofera Indica.) E. {#krItaka#} traffic, {#kan#} pleonastic, the fem. form; {#ra#} is changed to {#la#}.
+    judged: Gender is f. with form {-kA} (long A nom sg); headword ends in short a but the feminine form requires long A.
+    confirm: Body 'f.(-kA) The indigo plant'; feminine A-stem nom sg is -kA (long A); headword ends short a but the fem form requires klItakikA. Typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=klItakika
+
+nyaNkuBUrUha  -> nyaNkuBUruha   [dcs=1 ndicts=1 body=realword]
+    SHS: {#nyaNkuBUrUha#} m. ({#-haH#}) A tree, (Cassia fistula.) E. {#nyaNku#} a deer, and {#BUruha#} a tree. {#SyonAkavfkze .#}
+    judged: E. nyaNku+BUruha; body gives BUruha (short u in second syllable); headword's second U is spurious.
+    confirm: Etymology 'nyaNku a deer and BUruha a tree' gives BUruha (short u 2nd syll); headword's second long U (BUrUha) is spurious. Typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=nyaNkuBUrUha
+
+laGizwa       -> laGizWa        [dcs=1 ndicts=1 body=realword]
+    SHS: {#laGizwa#} mfn. ({#-zWaH-zWA-zWaM#}) 1. Lightest, very light. 2. Very small, least. E. {#laGa#} light, {#izWan#} aff. of the irr. superlative.
+    judged: Body inflections use W throughout (-zWaH-zWA-zWaM); dental w in headword contradicts retroflex W superlative suffix.
+    confirm: Body inflections {#-zWaH-zWA-zWaM#} use retroflex W and etym {#izWan#} (superlative iṣṭha); gloss 'Lightest' belongs to laGizWa; dental w in key contradicts body.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=laGizwa
+
+padazwIva     -> padazWIva      [dcs=1 ndicts=1 body=realword]
+    SHS: {#padazwIva#} n. ({#-vaM#}) The feet and knees. E. {#pad#} a foot, and {#azWIvat#} the knee, deriv. irr.
+    judged: E. pad+azWIvat (knee); etymology gives azWIvat with retroflex W; headword's dental w contradicts this component.
+    confirm: Etym {#azWIvat#} 'the knee' uses retroflex W; gloss 'feet and knees' belongs to padazWIva; dental w in key contradicts etym.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=padazwIva
+
+BadraballI    -> BadravallI     [dcs=1 ndicts=1 body=realword]
+    SHS: {#BadraballI#} f. ({#-llI#}) 1. Arabian jasmine, (Jasminum zambac.) 2. The large Bengal creeper, (Gærtnera, racemosa.) E. {#Badra#} lucky, {#vallI#} a creeper.
+    judged: E. Badra+vallI (creeper); etymology gives vallI with v; headword has b instead of v, contradicting the derivation.
+    confirm: Etym {#Badra#}+{#vallI#} 'a creeper' (v) and inflection {#-llI#}; gloss 'jasmine/creeper' belongs to BadravallI; b in key contradicts vallI.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=BadraballI
+
+SilAbalkA     -> SilAvalkA      [dcs=1 ndicts=1 body=realword]
+    SHS: {#SilAbalkA#} f. ({#-lkA#}) A medicinal substance said to be of cooling and lithonthriptic properties, commonly termed Silabāk; a sort of lichen or moss. E. {#SilA#} a stone or rock, and {#valka#} bar
+    judged: Body cross-ref uses SilAvalkala (with v); b in headword contradicts the v consistently used in related terms.
+    confirm: Etym {#valka#} 'bark' (v) and 'also termed {#SilAvalkala#}' (v); gloss 'medicinal substance/lichen' belongs to SilAvalkA; b in key contradicts.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=SilAbalkA
+
+drabaja       -> dravaja        [dcs=1 ndicts=1 body=realword]
+    SHS: {#drabaja#} m. ({#-jaH#}) Treacle. E. {#drava#}, and {#ja#} born. {#dravAt jAyate jana-qa .#}
+    judged: E. drava+ja (born from liquid); etymology gives drava (v), but headword has draba (b); b is a typo for v.
+    confirm: Etym {#drava#}+{#ja#} born, Sanskrit {#dravAt jAyate#} (drava, v); gloss 'Treacle' belongs to dravaja; draba (b) in key contradicts etym.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=drabaja
+
+akASadIpa     -> AkASadIpa      [dcs=0 ndicts=1 body=realword]
+    SHS: {#akASadIpa#} m. ({#-paH#}) 1. A lamp or torch lighted in honour of LAKṢMĪ or VIṢṆU, and elevated on a pole in the open air at the Dewali festival, in the month Kartik. 2. A beacon, a lantern on a pol
+    judged: Etym explicitly cites '{#AkASa#} and {#dIpa#}' and synonym 'AkASapradIpaH'; entry key with short 'a' contradicts its own etym.
+    confirm: Etym {#AkASa#} (long A) and synonym {#AkASapradIpaH#}; gloss 'lamp in honour of Lakṣmī/Viṣṇu' belongs to AkASadIpa; short a in key contradicts its own etym.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=akASadIpa
+
+kAlyaRineya   -> kAlyARineya    [dcs=0 ndicts=1 body=realword]
+    SHS: {#kAlyaRineya#} mfn. ({#-yaH-yI-yaM#}) Sprung from a virtuous or fortunate woman. E. {#kalyARI#}, and {#Qak#} affix, {#inaYa#} inserted.
+    judged: Etym cites '{#kalyARI#}' as base; derivative should be kAlyARineya (long A+R); short R in key contradicts etym.
+    confirm: Etym base {#kalyARI#}, vṛddhi derivative kAlyARineya (long A); gloss 'sprung from a virtuous woman' fits; short a (kAlya-) in key contradicts derivation.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=kAlyaRineya
+
+navakArika    -> navakArikA     [dcs=0 ndicts=1 body=realword]
+    SHS: {#navakArika#} f. ({#-kA#}) 1. A bride, a woman newly married. 2. A new com- ment. E. {#nava#} new, and {#kArikA#} agent.
+    judged: f. gender with '({#-kA#})' explicitly marks feminine -kA; the headword should end in long A; short a in key is a typo.
+    confirm: f. ({#-kA#}) and etym {#kArikA#} agent mark feminine long A; gloss 'a bride / new comment' belongs to navakArikA; short a in key is a typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=navakArika
+
+vArttayana    -> vArttAyana     [dcs=0 ndicts=1 body=realword]
+    SHS: {#vArttayana#} m. ({#-naH#}) A spy, an emissary, an agent, an ambassador, an intelligencer, a news-monger. E. {#vArttA#} news, {#ayana#} going.
+    judged: Etym '{#vArttA#} news + {#ayana#} going'; vArttA+ayana compound should give vArttAyana; short a in key contradicts etym.
+    confirm: Etym {#vArttA#} news (long A)+{#ayana#}; compound vArttA+ayana = vArttAyana; gloss 'spy, emissary, news-monger' fits; short a in key contradicts.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=vArttayana
+
+pAniyavarRikA -> pAnIyavarRikA  [dcs=0 ndicts=1 body=realword]
+    SHS: {#pAniyavarRikA#} f. ({#-kA#}) Sand. {#pAnIyamiva varRavati-varRi-Rvul .#}
+    judged: Body cites '{#pAnIyamiva#}' in the gloss itself; the long I form pAnIya appears in the entry's own definition; short i in key is a typo.
+    confirm: Entry's own Sanskrit gloss {#pAnIyamiva#} has long I (pAnIya); gloss 'Sand' belongs to pAnIyavarRikA; short i (pAniya-) in key contradicts its own gloss.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=pAniyavarRikA
+
+jAmbunadamaya -> jAmbUnadamaya  [dcs=0 ndicts=2 body=realword]
+    SHS: {#jAmbunadamaya#} mfn. ({#-yaH-yI-yaM#}) Golden, made of gold. E. {#jAmbUnada#} and {#mayaw#} aff.
+    judged: Etym cites '{#jAmbUnada#}' (gold from Jambu river, standard form with long U); short u in key contradicts the etym base.
+    confirm: Etym {#jAmbUnada#} (long U, gold from Jambu river); gloss 'Golden, made of gold' belongs to jAmbUnadamaya; short u in key contradicts etym base.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=jAmbunadamaya
+
+diDizupati    -> diDizUpati     [dcs=0 ndicts=1 body=realword]
+    SHS: {#diDizupati#} m. ({#-tiH#}) The husband of a woman remarried. E. {#diDizU#} as above, and {#pati#} a husband.
+    judged: Etym cites '{#diDizU#} as above' as the base; diDizU (woman remarried) + pati should yield diDizUpati; short u in key contradicts etym.
+    confirm: Body etym 'E. {#diDizU#} as above, and {#pati#}' uses long-U base; key short-u contradicts own etym; gloss 'husband of a remarried woman'=diDizUpati.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=diDizupati
+
+jalarupa      -> jalarUpa       [dcs=0 ndicts=1 body=realword]
+    SHS: {#jalarupa#} m. ({#-paH#}) The fish of KĀMADEVA. E. {#jala#}, and {#rUpa#} form. {#jalasya rUzam#} {#iva rUpam asya SuBratvAt . makare .#}
+    judged: Etym gloss 'jalasya rUpam iva' uses long U (rUpam); the body's own Sanskrit explanation has rUpa; short u in key is a typo.
+    confirm: Body 'and {#rUpa#} form' + Skt 'rUpam asya' use long U; key short rupa is the slip; gloss 'fish of Kamadeva'=jalarUpa.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=jalarupa
+
+pitfrupa      -> pitfrUpa       [dcs=0 ndicts=1 body=realword]
+    SHS: {#pitfrupa#} m. ({#-paH#}) An epithet of SĪVA.
+    judged: Gloss 'epithet of SĪVA' fits pitṛrūpa (long U); short -upa is a misspelling of -Upa.
+    confirm: Gloss 'epithet of Siva'=pitfrUpa (pitṛrūpa, long U); key short -upa is a bare spelling slip; no etym documents it.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=pitfrupa
+
+purUzadantikA -> puruzadantikA  [dcs=0 ndicts=1 body=realword]
+    SHS: {#purUzadantikA#} f. ({#-kA#}) A medicinal root; see {#medA#}.
+    judged: Medicinal root entry; long U in purUza vs standard puruzadantikA — spurious long vowel in key.
+    confirm: Gloss 'a medicinal root; see medA'=puruzadantikA; spurious long U in purUza; adjacent entries all read puruza.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=purUzadantikA
+
+hastisuRqA    -> hastiSuRqA     [dcs=0 ndicts=1 body=realword]
+    SHS: {#hastisuRqA#} f. ({#-RqA#} or {#-RqI#}) 1. An elephant's trunk. 2. A flower, (Heliotropium Indicum.) E. {#hastin#} an elephant, {#SuRqA#} the trunk.
+    judged: Etym cites '{#SuRqA#} the trunk'; the compound is hasti+SuRqA; s/S (dental vs palatal) in key contradicts explicit etym form.
+    confirm: Body etym 'E. {#hastin#}..., {#SuRqA#} the trunk' uses palatal S; key dental suRqA contradicts; gloss 'elephant's trunk'=hastiSuRqA.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=hastisuRqA
+
+kAzwakuddAla  -> kAzWakuddAla   [dcs=0 ndicts=1 body=realword]
+    SHS: {#kAzwakuddAla#} m. ({#-laH#}) A kind of wooden shovel or scraper used for baling water out of a boat. or for scraping and cleaning its bottom, &c. E. {#kAzWa#} wood, and {#kuddAla#} shovel; also with
+    judged: Body's own etymology reads 'E. {#kAzWa#} wood'; suspect key drops retroflex W; gloss fits kAzWakuddAla.
+    confirm: Body etym 'E. {#kAzWa#} wood' + variant 'kAzWakUddAla' use retroflex W; key drops it (kAzwa); gloss fits kAzWakuddAla.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=kAzwakuddAla
+
+paNKagrAha    -> paNkagrAha     [dcs=0 ndicts=1 body=realword]
+    SHS: {#paNKagrAha#} m. ({#-haH#}) The makara, a marine monster. E. {#paNka#} mud, and {#grAha#} a shark.
+    judged: Body's etymology reads 'E. paNka mud'; paNK- in key is a misprint of paNka; gloss fits paNkagrAha.
+    confirm: Body etym 'E. {#paNka#} mud, and {#grAha#} a shark'; key paNK- (retroflex Kh) misprint of paNka; gloss 'makara'=paNkagrAha.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=paNKagrAha
+
+jAmbabat      -> jAmbavat       [dcs=0 ndicts=2 body=realword]
+    SHS: {#jAmbabat#} m. ({#-vAn#}) A fabulous bear, father-in-law to KṚṢṆA. E. {#jAmba#} the Jambu tree, and {#matup#} affix; also {#jAmbuvat#}.
+    judged: Body gives inflected form -vAn and 'also jAmbuvat'; -bab- is a misprint for -vav-; content fits jAmbavat.
+    confirm: Inflected '-vAn' + 'also {#jAmbuvat#}'; bear father-in-law to Krsna fits jAmbavat; -bab- is misprint for -vav-.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=jAmbabat
+
+BUnaya        -> BUmaya         [dcs=0 ndicts=1 body=realword]
+    SHS: {#BUnaya#} mfn. ({#-yaH-yI-yaM#}) Made of or consisting the earth. f. ({#-yI#}) A name of Chāyā or shadow personified, the wife of the sun. E. {#BU#} earth, and {#mayaw#} aff.
+    judged: Body's own etymology reads 'E. BU earth, and mayaw aff.', proving BUmaya is correct; BUnaya is a misprint.
+    confirm: Body etym 'E. {#BU#} earth, and {#mayaw#} aff.' proves BUmaya; key -n- is misprint for -m-; gloss 'made of earth / Chaya'.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=BUnaya
+
+ninittakAla   -> nimittakAla    [dcs=0 ndicts=1 body=realword]
+    SHS: {#ninittakAla#} m. ({#-laH#}) Any given or specific time. E. {#nimitta#}, and {#kAla#} time.
+    judged: Body's own etymology reads 'E. nimitta and kAla'; ninitt- is a misprint of nimitta-.
+    confirm: Body etym 'E. {#nimitta#}, and {#kAla#} time' proves nimittakAla; key ninitt- is misprint of nimitta-.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=ninittakAla
+
+pratipaTan    -> pratipaTam     [dcs=0 ndicts=1 body=realword]
+    SHS: {#pratipaTan#} Ind. Along the road.
+    judged: Indeclinable 'along the road'; -n ending is a misprint of indeclinable -m (pratipaTam).
+    confirm: Gloss 'Ind. Along the road' = avyayibhava pratipaTam; final -n is misprint of indeclinable -m; body documents no -n spelling.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=pratipaTan
+
+pratyupaveza  -> pratyupaveSa   [dcs=0 ndicts=1 body=realword]
+    SHS: {#pratyupaveza#} m. ({#-zaH#}) Besetting any one in order to bring him to compliance.
+    judged: Gloss 'besetting any one'; standard SLP1 for upaveśa is upaveSa; -veza is a misprint of -veSa.
+    confirm: Gloss 'Besetting any one...'=pratyupaveSa; standard SLP1 upaveSa has palatal S; key retroflex -veza is misprint of -veSa.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=pratyupaveza
+
+svarRabalkala -> svarRavalkala  [dcs=0 ndicts=1 body=realword]
+    SHS: {#svarRabalkala#} m. ({#-laH#}) A plant, (Bignonia Indica.) E. {#svarRa#} gold, {#valkala#} bark.
+    judged: Body's own etymology reads 'E. svarRa gold, valkala bark'; -balkala in key is a misprint of valkala.
+    confirm: Body's own etymology 'E. svarRa gold, valkala bark' spells second element valkala, contradicting headword -balkala; bare misprint of valkala.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=svarRabalkala
+
+viSamaSIla    -> vizamaSIla     [dcs=0 ndicts=1 body=realword]
+    SHS: {#viSamaSIla#} mfn. ({#-laH-lA-laM#}) 1. Uneven. 2. Uneasy. E. {#vizama, SIla#} having.
+    judged: Body etymology 'vizama, SIla' uses retroflex z, contradicting headword viSama (palatal S); gloss fits vizamaSIla.
+    confirm: Etymology 'E. vizama, SIla having' uses retroflex z (vizama), contradicting palatal-S headword viSama; gloss 'Uneven' fits vizamaSIla; bare misprint.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=viSamaSIla
+
+zuh           -> suh            [dcs=0 ndicts=1 body=realword]
+    SHS: {#zuh#} r. 4th cl. ({#suhyati#}) 1. To bear, to endure. 2. To be content or satisfied. 3. To be able.
+    judged: Body verbal form 'suhyati' uses dental s, not retroflex z; root should be suh not zuh.
+    confirm: Verb form given '(suhyati)' with dental s, contradicting retroflex-z headword; root should be suh not zuh; bare misprint.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=zuh
+
+# ===== BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted (28) =====
+
+dibA          -> divA           [dcs=4 ndicts=1 body=realword]
+    SHS: {#dibA#} ind. By day, the day. E. {#div#} to play, &c. affix {#kA#}.
+    judged: Body 'By day, the day' from div — this is divA's definition; b/v confusion in key; etym cites div, confirming divA is correct.
+    confirm: Defined as own headword 'ind. By day, the day. E. div to play, affix kA.' with full etymology; not documented as a wrong reading of divA.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=dibA
+
+SatAhva       -> SatAhvA        [dcs=3 ndicts=1 body=realword]
+    SHS: {#SatAhva#} f. ({#-hvA-hvI#}) A sort of dill or fennel, (Anethum sowa.) E. {#Sata#} a hun- dred, and {#AhvA#} name, appellation.
+    judged: Body flex (-hvA-hvI) and etymology 'AhvA name' confirm long-A stem; suspect short-a ending is a typo.
+    confirm: Real entry: 'f. (-hvA-hvI) A sort of dill or fennel. E. Sata hundred, AhvA name.' Full definition + etymology, own word.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=SatAhva
+
+nErASyA       -> nErASya        [dcs=3 ndicts=1 body=realword]
+    SHS: {#nErASyA#} n. ({#-SyaM#}) Despair. E. {#nirASa#}, and {#zyaY#} aff.
+    judged: Body gives n. (-SyaM), neuter gender; neuter a-stem matches 'nErASya', not the long-A suspect.
+    confirm: Defined as own word: 'n. (-SyaM) Despair. E. nirASa, zyaY aff.' Full POS+gloss+etymology, no spelling marker.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=nErASyA
+
+pratiBAsA     -> pratiBAsa      [dcs=3 ndicts=1 body=realword]
+    SHS: {#pratiBAsA#} m. ({#-sAH#}) 1. Occurring to the mind at once. 2. Illusion. 3. Look, appearance.
+    judged: Body gives m. (-sAH); nominative of masc. a-stem = pratiBAsa (short a); long-A ending is spurious.
+    confirm: Defined as own word: 'm. (-sAH) 1. Occurring to mind at once. 2. Illusion. 3. Look, appearance.' Full 3-sense definition.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=pratiBAsA
+
+parikzaRa     -> parIkzaRa      [dcs=3 ndicts=1 body=realword]
+    SHS: {#parikzaRa#} n. ({#-RaM#}) Trial, experiment, examination. E. {#pari#} about, {#Ikz#} to see, aff. {#lyuw#}.
+    judged: Body etymology 'pari + Ikz to see'; pari+ikṣ regularly gives parIkzaRa (parīkṣaṇa); short i is a typo.
+    confirm: Defined as own word: 'n. (-RaM) Trial, experiment, examination. E. pari, Ikz to see, lyuw.' Full definition + etymology.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=parikzaRa
+
+virukzaRa     -> virUkzaRa      [dcs=3 ndicts=2 body=realword]
+    SHS: {#virukzaRa#} mfn. ({#-RaH-RI-RaM#}) Astringent, drying. n. ({#-RaM#}) 1. Censure, blame, reviling, abuse. 2. Oath, imprecation. 3. Contracting, roughening, acting as an astringent. E. {#vi#} before {
+    judged: Body etymology 'vi + rUkz to be rough'; long-U root confirms virUkzaRa; suspect short u is a typo.
+    confirm: Defined as own word: 'mfn. (-RaH-RI-RaM) Astringent...; n. censure, oath...' E. vi+rUkz. Full multi-sense definition.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=virukzaRa
+
+sitikaRWa     -> SitikaRWa      [dcs=3 ndicts=2 body=realword]
+    SHS: {#sitikaRWa#} Adj. 1. Having a white throat. 2. Dark-necked. m. ({#-RWaH#}) ŚIVA.
+    judged: Body identifies this as a name of SIVA; the standard epithet is SitikaRWa (palatal S); dental s in headword is a typo.
+    confirm: Adjacent SHS entries sitiman, sitivAsas use dental 'siti' for white/black; the dental-s spelling is SHS's systematic orthographic family, not an isolated typo for SitikaRWa.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=sitikaRWa
+
+metrAvaruRa   -> mEtrAvaruRa    [dcs=3 ndicts=2 body=realword]
+    SHS: {#metrAvaruRa#} m. ({#-RaH#}) 1. A name of the saint AGASTYA. 2. VĀLMĪKI. 3. One of the officiating priests at a sacrifice. E. {#mitra#} the sun, {#varuRa#} the deity of water, {#aR#} aff.
+    judged: Body etymology 'mitra + varuRa + aR'; vṛddhi of mitra→maitra gives mEtrA-; short e is a typo.
+    confirm: Defined as own word: 'm. (-RaH) name of Agastya, Valmiki, priest. E. mitra, varuRa, aR.' Full definition + etymology.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=metrAvaruRa
+
+gaNgAdbAra    -> gaNgAdvAra     [dcs=3 ndicts=1 body=realword]
+    SHS: {#gaNgAdbAra#} n. ({#-raM#}) The place where the Ganga enters the plains; also Haridwar. E. {#gaNgA#}, and {#dvAra#} gate.
+    judged: Body etymology 'gaNgA + dvAra gate'; confirms dvAra (dv); suspect dbAra is a typo.
+    confirm: Defined as own word: 'n. (-raM) place where Ganga enters plains; Haridwar. E. gaNgA, dvAra gate.' Full definition + etymology.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=gaNgAdbAra
+
+parinala      -> parimala       [dcs=3 ndicts=1 body=realword]
+    SHS: {#parinala#} m. ({#-laH#}) 1. An exquisite scent, especially arising from the trituration of fragrant substances. 2. The trituration of perfumes. 3. Copulation. 4. A meeting of learned men. 5. Soil, s
+    judged: Body etymology 'pari + mal to increase'; confirms 'm' not 'n'; suspect parinala is a typo.
+    confirm: Defined as own word: 'm. (-laH)' 5 senses (scent, trituration...). E. pari, mal to increase, ac. Full definition + etymology.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=parinala
+
+pranipAta     -> praRipAta      [dcs=3 ndicts=1 body=realword]
+    SHS: {#pranipAta#} m. ({#-taH#}) 1. Salutation, reverence, obeisance. 2. Falling at one's feet, prostration. E. {#pra#} and {#ni#} before, {#pat#} to go, aff. {#GaY .#}
+    judged: Body gloss 'salutation, prostration' and etymology 'pra+ni+pat'; ṇatva rule gives praRipAta; 'n' is a typo.
+    confirm: Defined as own word: 'm. (-taH) 1. Salutation, reverence, obeisance. 2. Prostration. E. pra+ni+pat, GaY.' Full definition + etymology.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=pranipAta
+
+jvAlajihva    -> jvAlAjihva     [dcs=2 ndicts=1 body=realword]
+    SHS: {#jvAlajihva#} m. ({#-hvaH#}) AGNI, or fire. E. {#jAlA#}, and {#jihvA#} a tongue; whose tongue is flame.
+    judged: Body gloss 'tongue is flame'; compound jvAlA+jihvA requires long A in first element; short a is a typo.
+    confirm: Defined as own word: 'm. (-hvaH) AGNI, or fire. E. jAlA, jihvA a tongue; whose tongue is flame.' Full definition + etymology.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=jvAlajihva
+
+krOYcAdAna    -> krOYcAdana     [dcs=2 ndicts=1 body=realword]
+    SHS: {#krOYcAdAna#} m. ({#-naH#}) 1. Long pepper. 2. The fibres of the stalk of the lotus. 3. An esculent root, commonly Ghenchu. 4. An acquatic plant, commonly Chinchata. E. {#krOYca#} the heron, and {#ad
+    judged: Body etymology 'krOYca + adana eating'; confirms short-a adana; long-A dAna in suspect is a typo.
+    confirm: Defined as own word: 'm. (-naH)' 4 senses (long pepper, lotus fibres...). E. krOYca heron, adana eating. Full definition + etymology.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=krOYcAdAna
+
+kzaRadAcAra   -> kzaRadAcara    [dcs=2 ndicts=1 body=realword]
+    SHS: {#kzaRadAcAra#} mfn. ({#-raH-rI-raM#}) Nocturnal, nightwalker. mf. ({#-raH-rI#}) A fiend, a goblin, E. {#kzaRadA#} night, and {#cara#} who or what goes.
+    judged: Body etymology 'kzaRadA + cara who goes'; confirms short-a cara; long-A cAra in suspect is a typo.
+    confirm: Defined as own word: 'mfn. Nocturnal, nightwalker; mf. fiend, goblin. E. kzaRadA night, cara who goes.' Full definition + etymology.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=kzaRadAcAra
+
+pravyahAra    -> pravyAhAra     [dcs=2 ndicts=1 body=realword]
+    SHS: {#pravyahAra#} m. ({#-raH#}) Prolongation of discourse.
+    judged: Word is pra+vi+ā+hṛ; ā-prefix requires long A: pravyAhAra; suspect short a before hAra is a typo.
+    confirm: Defined as own word: 'm. (-raH) Prolongation of discourse.' Full POS+gloss for this spelling, no w.r./v.l./cross-ref marker.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=pravyahAra
+
+jampati       -> jampatI        [dcs=2 ndicts=1 body=realword]
+    SHS: {#jampati#} m. du. ({#-tI#}) Husband and wife. E. {#jaM#} for {#jAyA#} a wife, and {#pati#} a husband: see {#dampatI#} &c. {#jAyA ca patiSca dva0 jAyAyAH jam .#}
+    judged: Body gives m. du. (-tI) and 'see dampatI'; long I confirmed by inflection and cross-ref; short i is a typo.
+    confirm: Full entry: m.du.(-tI) 'Husband and wife', E. jaM(=jAyA)+pati 'see dampatI'; -tI is the dual ending, lemma jampati is a real i-stem compound, fully defined.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=jampati
+
+yajYavalli    -> yajYavallI     [dcs=2 ndicts=1 body=realword]
+    SHS: {#yajYavalli#} f. ({#-lliH-llI#}) The Soma plant; also {#yajYaSrezWA .#}
+    judged: Body gives f. (-lliH-llI); the feminine long-I form is canonical; suspect short i is a typo.
+    confirm: Body 'f.(-lliH-llI) The Soma plant'; entry sanctions BOTH -lliH (i-stem) and -llI; the short-i lemma matches a documented valid form, not a bare error.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=yajYavalli
+
+tEmana        -> temana         [dcs=2 ndicts=1 body=realword]
+    SHS: {#tEmana#} n. ({#-naM#}) 1. Wetting, moistening, moisture. 2. A sauce or condi- ment. f. ({#-nI#}) A chimney, a fireplace. E. {#tim#} to be or become wet, affix {#lyuw .#}
+    judged: E. tim+lyuw yields temana (short e); long E (=ai) is incompatible with this derivation; headword vowel is wrong.
+    confirm: Full entry n.(-naM) 'moistening; a sauce', f.(-nI) chimney, E. tim+lyuw; tEmana(=taimana) is a real attested word fully defined; vowel not documented as error. Uncertain.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=tEmana
+
+paRyajIva     -> paRyAjIva      [dcs=1 ndicts=1 body=realword]
+    SHS: {#paRyajIva#} m. ({#-vaH#}) A trader. n. ({#-vaM#}) A market, a fair, E. {#paRya#} a vendible, and {#AjIva#} a livelihood.
+    judged: E. paRya+AjIva; sandhi of paRya+AjIva yields paRyAjIva (long A); headword has short a, contradicting etymology.
+    confirm: Next entry paRyAjIvaka explicitly notes 'also paRyajIvakaM' (short a); lexicon documents the short-a sandhi-less form as a valid variant, not a bare error.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=paRyajIva
+
+vAgvanDana    -> vAgbanDana     [dcs=1 ndicts=1 body=realword]
+    SHS: {#vAgvanDana#} n. ({#-naM#}) Stopping any one's speech. E. {#vAk, vanDana#} obstructing.
+    judged: Etym gives 'vAk, vanDana obstructing'; 'b/v' swap in compound initial; gloss 'Stopping speech' fits vAgbanDana (vAk+banDana).
+    confirm: Etym itself spells the component {#vanDana#} 'obstructing' with v, consistent with the headword; body does not contradict the v-spelling, so not a bare error.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=vAgvanDana
+
+SreRiBUta     -> SreRIBUta      [dcs=0 ndicts=1 body=realword]
+    SHS: {#SreRiBUta#} mfn. ({#-taH-tA-taM#}) 1. Made or become a heap. 2. Arranged, set in rows. E. {#SreRi#} a range, {#BUta#} become, {#cvi#} augment.
+    judged: Etym '{#SreRi#} a range + {#BUta#}'; but SreRi in compound before BUta → SreRIBUta with long I by cvi; short i in key is a typo.
+    confirm: Etym {#SreRi#}+{#BUta#}+{#cvi#} augment; cvi lengthens i→ī giving SreRIBUta; gloss 'set in rows' fits; short i in key fails to apply the cvi noted.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=SreRiBUta
+
+Sabdakoza     -> SabdakoSa      [dcs=0 ndicts=1 body=realword]
+    SHS: {#Sabdakoza#} m. ({#-zaH#}) A lexicon.
+    judged: Gloss 'a lexicon' fits SabdakoSa (standard SLP1 for śabdakośa); -koza is misspelling of -koSa.
+    confirm: Gloss 'A lexicon'=SabdakoSa (śabdakośa); key retroflex -koza is misprint of palatal -koSa.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=Sabdakoza
+
+paravrahman   -> parabrahman    [dcs=0 ndicts=1 body=realword]
+    SHS: {#paravrahman#} n. ({#-hma#}) The supreme Being. E. {#para#}, and {#vrahma#} the same.
+    judged: Body's own etymology reads 'E. para and vrahma'; vrahma is a SHS quirk for brahma; parabrahman is standard.
+    confirm: Body etym 'E. {#para#}, and {#vrahma#} the same' uses vr- consistently; SHS-internal v/b convention documented in the entry, not a bare slip.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=paravrahman
+
+pracayaRa     -> pracayana      [dcs=0 ndicts=1 body=realword]
+    SHS: {#pracayaRa#} n. ({#-RaM#}) Collecting, gathering.
+    judged: Gloss 'collecting, gathering' fits pracayana; -Ra (retroflex n) is a misprint of -na.
+    confirm: Real def 'n. (-RaM) Collecting, gathering' with consistent retroflex inflection; defined as its own word, not a one-off slip; cannot confirm bare typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=pracayaRa
+
+saMbarjana    -> saMvarjana     [dcs=0 ndicts=1 body=realword]
+    SHS: {#saMbarjana#} n. ({#-naM#}) 1. The act of appropriating to oneself. 2. Consuming.
+    judged: Gloss 'appropriating, consuming' fits saMvarjana (from √vṛj); -bar- is a misprint of -var-.
+    confirm: Entry has its own POS + definition 'n. The act of appropriating to oneself. 2. Consuming.' No etymology contradicting spelling; stands as own word. Default false.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=saMbarjana
+
+vyApada       -> vyApAda        [dcs=3 ndicts=1 body=realword]
+    SHS: {#vyApada#} m. ({#-daH#}) 1. Ruin. 2. Evil design, malice.
+    judged: Gloss 'evil design, malice' fits vyApAda (long A, vy-ā-pāda); no etymology supports short-a vyApada.
+    confirm: Defined as own word: 'm. (-daH) 1. Ruin. 2. Evil design, malice.' Full POS+gloss for this spelling, no w.r./v.l. marker.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=vyApada
+
+aByupetyaSuSrUzA -> aByupetyASuSrUzA  [dcs=0 ndicts=1 body=realword]
+    SHS: {#aByupetyaSuSrUzA#} f. ({#-zA#}) A head or title of law, disputes between master and servant. E. {#aByupetya#} having engaged, {#a#} neg. {#SuSrUzA#} service.
+    judged: Etym cites 'aByupetya + a neg. + SuSrUzA'; the long A in suggestion matches 'aByupetya+A+SuSrUzA' sandhi; short a looks like a typo.
+    confirm: Etym lists short {#a#} neg.+{#SuSrUzA#} service; headword matches the body's own short-a negative particle; body does not contradict the spelling.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=aByupetyaSuSrUzA
+
+brUvARa       -> bruvARa        [dcs=0 ndicts=1 body=realword]
+    SHS: {#brUvARa#} mfn. ({#-RaH-RA-RaM#}) Speaking, saying. E. {#brU#} to speak, {#SAnac#} aff.
+    judged: Body etymology 'brU to speak + SAnac aff.' yields present participle bruvARa (short u); brUvARa (long U) is the misspelling.
+    confirm: Real definition 'mfn. Speaking, saying' + etymology 'E. brU to speak, SAnac aff.' is consistent with long-U headword; no internal contradiction. Default false.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=brUvARa
+
+# ===== BUCKET 3  REVIEW -- undecidable without the printed page (9) =====
+
+vajravarAhI   -> vajravArAhI    [dcs=0 ndicts=1 body=realword]
+    SHS: {#vajravarAhI#} f. ({#-hI#}) A female personification of Māyā or unreality, amongst the Bauddhas.
+    judged: Body gives gloss (Buddhist deity) but no etym; varAhI (boar) vs vArAhI both exist in Sanskrit; cannot determine without etym.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=vajravarAhI
+
+vyaDita       -> vyADita        [dcs=4 ndicts=3 body=realword]
+    SHS: {#vyaDita#} mfn. ({#-taH-tA-taM#}) Made, done, caused.
+    judged: Body gives 'made, done, caused' with no etymology; gloss fits neither root clearly without more context.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=vyaDita
+
+nizWiva       -> nizWIva        [dcs=3 ndicts=1 body=realword]
+    SHS: {#nizWiva#} m. ({#-vaH#}) Spitting; see {#nizWeva#}.
+    judged: Body only says 'spitting; see nizWeva'; no inflection given to confirm short i vs long I.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=nizWiva
+
+Basada        -> BAsada         [dcs=2 ndicts=1 body=realword]
+    SHS: {#Basada#} f. ({#-sad#}) 1. The sun. 2. Pudendum muliebre. 3. The mons veneris. 4. Time. 5. A sort of duck. 6. A float, a raft. 7. Flesh. n. ({#-sat#}) The hinder parts. E. {#Bas#} to shine, {#adi#} U
+    judged: Body etymology 'Bas to shine' supports short-a stem; but gloss 'the sun' also fits BAsada; ambiguous.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=Basada
+
+kuliSANkuSa   -> kuliSANkuSA    [dcs=1 ndicts=1 body=realword]
+    SHS: {#kuliSANkuSa#} f. ({#-Sa#}) A kind of female deity. E. {#kuliSa#} the thunderbolt, and {#aNkuSa#} a goad.
+    judged: Body gives f.({-Sa}) which is ambiguous; feminine a-stems take long A nom sg, but form string is terse.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=kuliSANkuSa
+
+wakkAdeSIya   -> wakkadeSIya    [dcs=1 ndicts=1 body=realword]
+    SHS: {#wakkAdeSIya#} m. ({#-yaH#}) A potherb, (Chenopodium album.)
+    judged: Body gives only gloss (potherb Chenopodium album) with no etymology to confirm long A or short a.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=wakkAdeSIya
+
+lokacaritra   -> lokacAritra    [dcs=0 ndicts=1 body=realword]
+    SHS: {#lokacaritra#} n. ({#-traM#}) The ways of the world.
+    judged: Body only gives gloss 'ways of the world' with no etym; cannot determine if short 'a' is a typo vs variant spelling.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=lokacaritra
+
+nirDa         -> nirDA          [dcs=0 ndicts=1 body=realword x2]
+    SHS: {#nirDa(rdDa)na#} mfn. ({#-naH-nA-naM#}) Poor, indigent. m. ({#-naH#}) An old ox. E. {#nir#} priv. and {#Dana#} wealth. || {#nirDa(rdDa)rmma#} mfn. ({#-rmmaH-rmmA-rmmaM#}) 1. Impious, unrighteous, imm
+    judged: body_count=2; body entries show 'nirDa(rdDa)na' and 'nirDa(rdDa)rmma' — truncated/incomplete display; cannot judge the suspect key alone.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=nirDa
+
+colukya       -> cOlukya        [dcs=0 ndicts=1 body=realword]
+    SHS: {#colukya#} m. ({#-kyaH#}) One of the Rajarshis or royal saints.
+    judged: Body gives minimal gloss 'royal saint'; short o vs long O unclear; proper name, cannot verify vowel length.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SHS&key=colukya
+
+# ===== BUCKET 4  REAL-WORD -- a distinct real word; the fix would merge two words (122) =====
+pramaRa       -> pramARa       | SHS: {#pramaRa(na)s#} mfn. ({#RAH-RAH-RaH#}) Joyful, cheerful. E. {#pra#} implying pleasure, su | Body defines 'joyful, cheerful' from pra+manas with optional Ra/na; different word from pr
+arda          -> arDa          | SHS: {#arda#} r. 1st cl. ({#ardati#}) 1. To ask or beg. 2. To go. 1st and 10th cls. ({#ardati-t | Body defines arda as a verbal root 'To ask, To go, To kill' with ardati; arDa means 'half'
+zas           -> zaz           | SHS: {#zas#} r. 2nd cl. ({#sasti#}) To sleep. | Body defines own verbal root: r. 2nd cl. (sasti) 'to sleep'; distinct from zaz.
+dosa          -> doza          | SHS: {#dosa#} m. ({#-doH#}) 1. The arm. 2. The side of a triangle, or square, &c. E. {#dam#} to | Body defines 'the arm; side of triangle' from dam+qom affix; own word distinct from doza (
+zarva         -> sarva         | SHS: {#zarva#} r. 1st cl. ({#sarvati#}) 1. To go, to move. 2. To injure, to hurt; also read {#s | Body defines zarva as verbal root 'To go, to move; To injure' — distinct from sarva (all/e
+BABa          -> BAva          | SHS: {#BABa#} mfn. ({#-BaH-BA-BaM#}) Bright, (as a planet.) E. {#Ba#} and {#ABA#} light. | Body 'Bright (as a planet)' from Ba + ABA (light) — BABa has its own gloss; BAva means 'st
+Bad           -> vad           | SHS: {#Bad (i) Badi#} r. 1st and 10th cls. ({#Bandati-te Bandayati#}) 1. To do an auspici- ous  | Body defines Bad as verbal root 'To do auspicious act; To be happy; To shine' with conjuga
+mAT           -> maT           | SHS: {#mAT (i) mATi#} r. 1st cl. ({#mAnTati#}) To hurt or kill, to afflict, to suffer pain. | Body defines own verbal root mAT (long A): r. 1st cl. (mAnTati) 'to hurt or kill'; distinc
+SuSrUza       -> SuSrUzA       | SHS: {#SuSrUza#} mfn. ({#-zaH-zA-zaM#}) Obedient, serving, attending. E. {#Sru#} to hear, desid | Body defines mfn adjective 'obedient' from Sru desid.; short-a form is the adjective, long
+vasAna        -> vasana        | SHS: {#vasAna#} mfn. ({#-naH-nA-naM#}) Wearing, putting on, (as clothes.) E. {#vas#} to clothe, | Body 'Wearing, putting on (as clothes)' with aff. SAnac — vasAna is the present participle
+sattrA        -> sattra        | SHS: {#sattrA#} Ind. With, together with. E. {#sa#} for {#saha#} with, {#trA#} to preserve, aff | Body 'With, together with' (indeclinable) from sa+trA — own meaning distinct from sattra (
+jAnana        -> janana        | SHS: {#jAnana#} n. ({#-naM#}) Knowing, understanding. E. {#jYA#} to know, {#lyuw#} aff. | Body 'Knowing, understanding' from jYA to know — jAnana is a real gerund/noun; janana mean
+AmAlaka       -> Amalaka       | SHS: {#AmAlaka#} mn. ({#-kaH-kaM#}) Land near a mountain. | Body defines AmAlaka as 'Land near a mountain' — distinct meaning from Amalaka (emblic myr
+AcCa          -> acCa          | SHS: {#AcCa#} r. 1st. cl. {#(-i) AcCi (AcCati)#} To lengthen or stretch. | Body defines AcCa as verbal root 'To lengthen or stretch' with AcCati — distinct from acCa
+Svid          -> svid          | SHS: {#Svid(i)Svidi#} r. 1st cl. ({#Svindati#}) To be white, to become or continue so. | Body defines own root Svid (palatal S): r. 1st cl. (Svindati) 'to be white'; distinct from
+DayA          -> dayA          | SHS: {#DayA#} mfn. ({#-yaH-yA-yI-yaM#}) Who or what drinks. f. ({#-yA#}) A little girl, female  | Body 'Who drinks; A little girl' from De to drink — DayA is a real word; dayA means 'compa
+lub           -> luB           | SHS: {#lub(i)lubi#} r. 1st and 10th cls. ({#lumbati lumbayati-te#}) To hurt, to pain, to afflic | Body defines own verbal root lub: r. 1st/10th cls. (lumbati) 'to hurt'; distinct from luB.
+laG           -> lag           | SHS: {#laG#} r. 10th cl. ({#lAGayati-te#}) 1. To taste. 2. To obtain. {#(i) laGi#} r. 1st cl. ( | Body defines own verbal root laG with multiple classes/meanings; entirely distinct from la
+ucCa          -> ucca          | SHS: {#ucCa#} r. 1st and 6th cls. {#(i) ucCi (uYCatiH)#} 1. To glean. 2. To gather little by li | Body defines ucCa as verbal root 'To glean; To end or terminate' — distinct from ucca (hig
+vuD           -> buD           | SHS: {#vuD(i)vuDi#} r. 10th cl. ({#vunDayati-te#}) To injure, to hurt, to kill. | Body defines own root vuD: r. 10th cl. (vunDayati) 'to injure'; distinct from buD.
+zap           -> Sap           | SHS: {#zap#} r. 1st. cl. ({#sapati#}) 1. To be connected. 2. To understand thoroughly. | Body defines own root zap (retroflex s): r. 1st cl. (sapati) 'to be connected'; distinct f
+zuB           -> SuB           | SHS: {#zuB#} r. 1st cl. ({#soBati#}) r. 6th cl. ({#suBati#}) 1. To speak. 2. To shine. 3. To hu | Body defines own root zuB (retroflex s): r. 1st/6th cls. 'to shine'; distinct from SuB (pa
+aramya        -> araRya        | SHS: {#aramya#} mfn. ({#-myaH-myA-myaM#}) Disagreeable. E. {#a#} neg. {#ramya#} pleasing. | Body 'Disagreeable' from a + ramya (pleasing) — own derivation and meaning; araRya means '
+hasya         -> hAsya         | SHS: {#hasya#} mfn. ({#-styaH-styA-styaM#}) 1. Given with the hand. 2. Done with the hand, manu | Body defines 'done/given with the hand' from hasta+yat; distinct from hAsya (laughter/comi
+sUkAra        -> sUkara        | SHS: {#sUkAra#} n. ({#-raM#}) Snorting, roaring, any sound expressive of impatience or aversion | Body's own etymology: 'sUt + kAra making'; headword sUkAra with long A is self-consistent 
+SuSravas      -> suSravas      | SHS: {#SuSravas#} mfn. ({#-vAn-SruzI-vaH#}) Heard, having heard. E. {#Sru#} to hear, aff. {#kva | Body derives from root Sru (capital S = palatal); SuSravas with S is correct; suSravas (lo
+tOka          -> toka          | SHS: {#tOka (f) tOkf#} r. 1st cl. ({#tOkate#}) To go or move. | Body defines own verbal root tOka r. 1st cl. (tOkate) 'to go'; distinct from toka (offspri
+garGa         -> garga         | SHS: {#garGa#} r. 1st cl. ({#garGati#}) To go or move. | Body defines own verbal root garGa r. 1st cl. (garGati) 'to go'; distinct from garga (a na
+luT           -> luW           | SHS: {#luT(i)luTi#} r. 1st cl. ({#lunTati#}) 1. To hurt, to injure, to wound or kill. 2. To aff | Body defines own root luT (retroflex t): r. 1st cl. (lunTati) 'to hurt'; distinct from luW
+vUz           -> BUz           | SHS: {#vUz#} r. 10th cl. ({#vUzayati-te#}) To kill, to hurt or injure. | Body defines own root vUz (v-) r. 10th cl. 'to kill'; entirely different from BUz (bh-, to
+Binda         -> vinda         | SHS: {#Binda(ndi)pAla#} m. ({#-laH#}) 1. A short arrow thrown from the hand, or shot through a  | Body defines compound Bindapala 'short arrow / sling' from root Bidi/Bindi (bh-); differen
+pawita        -> patita        | SHS: {#pawita#} mfn. ({#-taH-tA-taM#}) 1. Read, studied. 2. Recited, repeated. E. {#paW#} to re | Body defines 'read, studied, recited' from root paW (paṭh) + kta; entirely different from 
+azwApAda      -> azwapAda      | SHS: {#azwApAda#} mfn. ({#-daH-dA-daM#}) Quartered by eight, having eight for the root. E. {#az | Body defines 'having eight for the root/quartered by eight'; azwAn+pAda compound is its ow
+cAmpa         -> campa         | SHS: {#cAmpa#} n. ({#-mpaM#}) Food, &c. E. {#cam#} to eat, {#Ryat#} aff. | Body gives a real definition 'Food' with POS derivation cam+Ryat; this is its own distinct
+vartta        -> vArtta        | SHS: {#vartta#} m. ({#-rttaH#}) Living, livelihood, (generally at the end of a compound.) | Body defines 'Living, livelihood' with POS; vartta is a distinct word from vArtta (which m
+saMSlezaRA    -> saMSlezaRa    | SHS: {#saMSlezaRA#} f. ({#-RA#}) Means of binding together. | Body gives f. (-RA); feminine ā-stem headword ends in long A; saMSlezaRA is correctly spel
+ambukfta      -> ambUkfta      | SHS: {#ambukfta#} mfn. ({#-taH-tA-taM#}) Sputtered, (speech, discourse.) E. {#ambu#} water, and | Body etymology 'ambu (water) + kfta'; ambu has short u in standard Sanskrit; suspect short
+BreSa         -> Breza         | SHS: {#BreSa#} m. ({#-SaH#}) 1. Going. 2. Loss. 3. Deviation. | Body defines 'Going, Loss, Deviation' with full POS; S (palatal) vs z (retroflex) is a rea
+viBitsu       -> biBitsu       | SHS: {#viBitsu#} mfn. ({#-tsuH-tsuH-tsu#}) Wishing or purposing to hit or pierce. E. {#vi#} bef | Etym '{#vi#} before {#Bid#} to break, desid.'; viBitsu = vi+desid(bhid) is a legitimate Sa
+navaratra     -> navarAtra     | SHS: {#navaratra#} n. ({#-traM#}) 1. Nine precious gems, or a pearl, ruby, topaz, diamond, emer | Body defines 'nine precious gems / nine men of letters' with E. nava+ratra (jewel); the et
+piRqAla       -> piRqala       | SHS: {#piRqAla#} m. ({#-luH#}) An esculent and medical root, described as sweet, cooling, and d | Body gives full definition 'esculent medical root' with piRqa+Alu etymology; Alu suffix vs
+piYjAla       -> piYjala       | SHS: {#piYjAla#} n. ({#-laM#}) Gold. E. {#piji, Alac#} aff. | E. piji+Alac affix; the Alac suffix supplies the long A, making piYjAla the correctly deri
+DarmaBAginI   -> DarmaBaginI   | SHS: {#DarmaBAginI#} f. ({#-nI#}) A virtuous and amiable wife. E. {#Darma#}, and {#BAginI#} who | Etymology explicitly gives BAginI (long A); headword DarmaBAginI is self-consistent with t
+atyazwI       -> atyazwi       | SHS: {#atyazwI#} f. ({#-zwI#}) A kind of metre, a stanza of four lines, with seventeen syllable | E. ati+azwI; body gives {-zwI} (long I); headword atyazwI is self-consistent; short i in s
+anudyuta      -> anudyUta      | SHS: {#anudyuta#} mfn. ({#-taH-tA-taM#}) Inactive, idle, destitute of perseverance. E. {#an#} n | E. an+udyuta (active); body confirms udyuta as the base; short u in headword matches the d
+brahmAhUti    -> brahmAhuti    | SHS: {#brahmAhUti#} f. ({#-tiH#}) An oblation of ghee. E. {#brahma#} the Veda, and {#AhUti#} an | E. brahma+AhUti; body explicitly gives AhUti (long U), confirming brahmAhUti as the correc
+rAjamaRquka   -> rAjamaRqUka   | SHS: {#rAjamaRquka#} m. ({#-kaH#}) A large kind of frog. E. {#rAja#} a king, {#maRquka#} a frog | E. rAja+maRquka; body gives maRquka (short u), confirming rAjamaRquka; long U in suggestio
+Svf           -> svf           | SHS: {#Svf#} r. 9th cl. ({#SvfRAti#}) To hurt, to injure, to wound or kill. | Body gives root definition '9th cl. SvfRAti, to hurt/injure'; capital S (palatal) vs lower
+Turva         -> turva         | SHS: {#Turva (I) TurvI#} r. 1st cl. ({#Turvati#}) To kill, to injure or hurt. {#BvA-para-saka-# | Body gives root definition '1st cl. Turvati, to kill'; capital T (retroflex) vs lowercase 
+BreS          -> Brez          | SHS: {#BreS (f) BreSf#} r. 1st cl. ({#BreSati-te#}) 1. To go. 2. To fall. 3. To be angry. 4. To | Body gives root definition '1st cl. BreSati-te, to go/fall/be angry'; S (palatal) vs z (re
+bAhika        -> vAhika        | SHS: {#bAhika#} m. plu. ({#-kaH#}) The people of Punjab. | Body defines 'the people of Punjab'; bAhika is a well-known ethnonym distinct from vAhika;
+pravAhukam    -> prabAhukam    | SHS: {#pravAhukam#} Ind. 1. At the same time. 2. Above, over. | Body gives real definition 'at the same time / above, over'; pravAhukam is its own indecli
+aparADita     -> aparADitA     | SHS: {#aparADita#} mfn. ({#-taH-tA-taM#}) Criminated, condemned. E. {#aparADa#} and {#kta#} aff | Body defines mfn. 'Criminated, condemned' with all three genders (-taH-tA-taM); suspect is
+brAhmahuta    -> brahmahuta    | SHS: {#brAhmahuta#} n. ({#-taM#}) Respect shown to guests, especially to Brāhmans, hos- pitalit | Body defines 'hospitality to Brahmans' with brAhmya+huta etymology; brAhma- prefix is dist
+nAgadantika   -> nAgadantikA   | SHS: {#nAgadantika#} m. ({#-kaH#}) A wooden pin or bracket, projecting from a wall, a shelf. E. | Body defines masculine 'm. a wooden pin/bracket' with nAgadanta+kan; suspect is masculine 
+santapana     -> sAntapana     | SHS: {#santapana#} n. ({#-naM#}) Inflaming, torturing. | Body defines 'Inflaming, torturing' — santapana (sam+tap) is a valid Sanskrit noun; gloss 
+sAlAkArI      -> sAlAkarI      | SHS: {#sAlAkArI#} f. ({#-rI#}) 1. A female overcome or won in battle. 2. A house- worker. E. {# | Body gives full gloss 'female overcome in battle / house-worker' with etym {#sAlA#} + {#kf
+navagrahA     -> navagraha     | SHS: {#navagrahA#} m. plu. ({#-hAH#}) The nine planets, or sun, moon, five planets, and the asc | Body gives m. plu. '{#-hAH#}' = masculine plural, long A is the nom. pl. stem form; genuin
+paRasTi       -> paRAsTi       | SHS: {#paRasTi#} n. ({#-sTi#}) The small shell used as coin, a Cowri. E. {#paRa#} busi- ness, a | Body etym '{#paRa#} business + {#asTi#} a bone'; short a is compositional paRa+asTi; no lo
+pahlika       -> pahlikA       | SHS: {#pahlika#} m. plu. ({#-kaH#}) Name of a people, (perhaps the Persians.) | Body gives m. plu. '({#-kaH#})' — masculine; short a is the correct masc. ending; pahlikA 
+dakziRapUrvA  -> dakziRapUrva  | SHS: {#dakziRapUrvA#} f. ({#-rvA#}) The south-east quarter. E. {#dakziRa#} south and {#pUrva#}  | Body marks f. (-rvA) explicitly; dakziRapUrvA is the feminine form, distinct from the base
+vyutkrAntA    -> vyutkrAnta    | SHS: {#vyutkrAntA#} f. ({#-ntA#}) 1. Overstepped. 2. Departed, left. | Body marks f. (-ntA); vyutkrAntA is the feminine form, legitimately distinct from vyutkrAn
+balIka        -> balika        | SHS: {#balIka#} m. ({#-kaH#}) The edge of a thatched roof. E. {#vf#} to cover, {#ikan#} aff.; s | Body defines 'edge of thatched roof' and explicitly cross-references 'see {#balika#}', mar
+paripadIn     -> paripadin     | SHS: {#paripadIn#} m. ({#-dI#}) An enemy. E. {#pari#} against, {#pad#} to go, {#ini#} aff. | Body gives m. '({#-dI#})' with long I nom. sg.; etym '{#pad#} to go + {#ini#}'; -In suffix
+dvindriyagrAhya -> dvIndriyagrAhya | SHS: {#dvindriyagrAhya#} mfn. ({#-hyaH-hyA-hyaM#}) Perceptible by two senses or forms, by sight | Body etymology 'dvi, indriya' uses short i in dvi, supporting the headword spelling dvindr
+sUdatta       -> sudatta       | SHS: {#sUdatta#} mfn. ({#-ttaH-ttA-ttaM#}) Well or entirely given. E. {#su, datta#} given, form | Body defines 'well or entirely given' from su+datta with note 'form irr.'; sU- prefix is t
+DanacCu       -> DanacCU       | SHS: {#DanacCu#} m. ({#-cCuH#}) The Numidian crane. E. {#Dana#} the wealth, (of fields,) and {# | Body gives m. '({#-cCuH#})' with short u nom. sg.; the entry explicitly spells -cCu (short
+nataBru       -> nataBrU       | SHS: {#nataBru#} mfn. ({#-BruH-BruH-Bru#}) Frowning. E. {#nata#}, and {#Bru#} the brow. | Body gives mfn. '({#-BruH-BruH-Bru#})' — all three genders with short u; this is correct u
+parRarUh      -> parRaruh      | SHS: {#parRarUh#} m. ({#-ruw#}) The spring. | Body gives m. '({#-ruw#})' — the nom. sg. marker -ruw matches long U stem (parRarUh); shor
+praSruta      -> prasruta      | SHS: {#praSruta#} mfn. ({#-taH-tA-taM#}) Flowing, oozing, issuing. E. {#pra#} before, {#Sru#} t | Body's etym cites 'pra + Sru to drop', directly supporting suspect spelling praSruta as it
+muW           -> muw           | SHS: {#muW (i) muWi#} r. 1st cl. ({#muRWate#}) 1. To guard, to protect, to defend or cherish. 2 | Body gives root definition '1st cl. muRWate, to guard/protect/fly'; W (retroflex) vs w is 
+hroq          -> hrOq          | SHS: {#hroq (f) hroqf#} r. 1st cl. ({#hroqati#}) To go, to move. | Body defines 'To go, to move'; conjugation hroqati uses lowercase o matching the suspect —
+srotovaha     -> srOtovaha     | SHS: {#srotovaha#} mfn. ({#-haH-hA-haM#}) Flowing like a stream or river. f. ({#-hA#}) A river  | Body defines {#srotovaha#} with E. srotas + vaha; srotas (long o, short s) confirms srotov
+JUza          -> jUza          | SHS: {#JUza#} r. 1st cl. ({#JUzati#}) To hurt or kill. | Body gives root definition '1st cl. JUzati, to hurt or kill'; J (palatal affricate) vs j i
+Jarja         -> jarja         | SHS: {#Jarja#} r. 6th cl. ({#Jarjati#}) 1. To say, to speak. 2. To censure, to blame. E. {#tudA | Body gives conjugation Jarjati (class 6) — Jarja (palatal nasal initial) is a distinct roo
+zUr           -> SUr           | SHS: {#zUr(I)zUrI#} r. 4th cl. ({#sUryyate#}) 1. To be stopped or fixed. 2. To hurt or kill. | Body gives root definition '4th cl. sUryyate, to be stopped/hurt'; z (retroflex s) vs S (p
+zal           -> Sal           | SHS: {#zal#} r. 1st cl. ({#salati#}) 1. To go, to move. 2. To shake. | Body gives root definition '1st cl. salati, to go/shake'; z (retroflex s) vs S (palatal s)
+zfB           -> sfB           | SHS: {#zfB(u)zfBu#} r. 1st cl. ({#sarBati#}) To hurt or kill. | Body gives root definition '1st cl. sarBati, to hurt or kill'; z (retroflex s) vs s is a r
+syan          -> syam          | SHS: {#syan#} r. 10th cl. ({#syanayati-te#}) To think, to consider, to reflect. | Body gives root definition '10th cl. syanayati-te, to think/consider'; n vs m is a real ph
+vinnaka       -> Binnaka       | SHS: {#vinnaka#} m. ({#-kaH#}) An epithet of the saint AGASTYA. | Body defines 'epithet of the saint AGASTYA'; v vs B (labial) is a large phonemic differenc
+viBrat        -> biBrat        | SHS: {#viBrat#} mfn. ({#-Bran-BratI-Brat#}) Having, possessing. E. {#vi, Bf#} to support, {#Sat | Body defines 'Having, possessing' with etym 'vi + Bf to support' — viBrat is a real vi-com
+vuw           -> buw           | SHS: {#vuw#} r. 10th cl. ({#vuRwayati-te#}) To hurt, to kill. | Body defines 'To hurt, to kill' with conjugation vuRwayati — body consistently uses v, def
+AsutIbala     -> AsutIvala     | SHS: {#AsutIbala#} m. ({#-laH#}) 1. A sacrificer at the full and change of the moon. 2. A disti | Body defines {#AsutIbala#} with E. Asuti + balac aff., confirming -bala as the intended ro
+BrAtfbala     -> BrAtfvala     | SHS: {#BrAtfbala#} mfn. ({#-laH-lA-laM#}) Having a brother. E. {#BrAtf, valac#} aff. | Body defines {#BrAtfbala#} with E. BrAtf, valac aff.; -bala ending confirmed by etymology 
+kAyabalana    -> kAyavalana    | SHS: {#kAyabalana#} n. ({#-naM#}) Armour, mail. E. {#kAya#} the body, and {#balana#} protecting | Body etymologises from {#bal#} 'to be strong' with affix lyuwa, confirming -balana as the 
+kekAbala      -> kekAvala      | SHS: {#kekAbala#} m. ({#-laH#}) A peacock. E. {#kekA#} his cry, and {#balac#} aff. | Body gives E. kekA + balac aff., confirming -bala as the correct suffix form in this entry
+vErAnuvanDin  -> vErAnubanDin  | SHS: {#vErAnuvanDin#} m. ({#-nDI#}) 1. VIṢṆU. 2. The solar ray which is charged with heat. E. { | Body gives E. vEra + anuvanDin; -vanDin (v) is explicit in etymology, confirming the suspe
+vArabaDU      -> vAravaDU      | SHS: {#vArabaDU#} f. ({#-DUH#}) The chief of a set of harlots. E. {#vAra#} a number, and {#baDU | Body etymology 'vAra + baDU wife' defines vArabaDU as its own compound; baDU≠vaDU.
+halIma        -> halIna        | SHS: {#halIma(sa)ka#} n. ({#-kaM#}) A sort of jaundice. | Body defines halIma(sa)ka 'a sort of jaundice'; halIma is attested as part of this compoun
+ramat         -> raRat         | SHS: {#ramat#} mfn. ({#-man-mantI-mat#}) Playing, sporting. E. {#ram#} to play, {#Satf#} aff. | Body 'E. ram to play, Satf aff.' — ramat is the present participle of ram; raRat is an unr
+samAnayama    -> samAnayana    | SHS: {#samAnayama#} m. ({#-maH#}) The same pitch of voice. | Body defines samAnayama 'the same pitch of voice' = samAna+yama; distinct compound from sa
+vipratisidDa  -> vipratizidDa  | SHS: {#vipratisidDa#} mfn. ({#-dDaH-dDA-dDaM#}) 1. Contradicted, opposed. 3. Prohibited, for- b | Body etymology 'sidDa proved' uses dental s, matching suspect vipratisidDa; retroflex z in
+prARinizu     -> prARiRizu     | SHS: {#prARinizu#} mfn. ({#-zuH-zuH-zu#}) Wishing for life. E. {#prARa#} nom. v., desid, form,  | Body defines prARinizu as desiderative of prARa 'wishing for life'; the form with dental n
+yaTAtaTA      -> yaTAtaTa      | SHS: {#yaTAtaTA#} Adv. In any way, any how. E. {#yaTA#} and {#taTA#}, &c. | Body 'In any way, anyhow' from yaTA + taTA — indeclinable with long final A; own entry wit
+mulya         -> mUlya         | SHS: {#mulya#} mfn. ({#-lyaH-lyA-lyaM#}) Meriting or pounding to death: see {#musalya .#} | Body defines 'meriting pounding to death' and cross-refs musalya (not mUlya); own distinct
+vfMhaRa       -> bfMhaRa       | SHS: {#vfMhaRa#} mfn. ({#-RaH-RA#} or {#RI-RaM#}) Nourishing, fattening, nutritious. m. ({#-RaH | Body 'Nourishing, fattening' with etym vfhi to increase — v-initial root vfh treated as ow
+vidiSa        -> vidiSA        | SHS: {#vidiSa#} f. ({#-dik#}) An intermediate point of the compass. E. {#vi#} implying separati | Body defines own word 'intermediate point of the compass' from vi+diS; short-a form with i
+svargAta      -> svargata      | SHS: {#svargAta#} f. ({#-tiH#}) 1. Going to heaven, future felicity. 2. Death. E. {#svar#} and  | Body defines svargAta f. 'going to heaven / death' from svar+gati; own entry with long A.
+harivAt       -> harivat       | SHS: {#harivAt#} m. ({#-vAn#}) INDRA. E. {#hari#} the horse of INDRA, {#vAt#} to go, aff. {#Sat | Body defines 'harivAt' m. from 'vAt to go'; long-A kṛt suffix is its own form, not a missp
+sikya         -> Sikya         | SHS: {#sikya#} n. ({#-kyaM#}) A sling made of ropes. E. {#sika-yat#} aff. {#“sike itiBAzA” .#} | Body defines 'a sling made of ropes' with its own etymology 'sika-yat'; treated as an inde
+jamBari       -> jamBAri       | SHS: {#jamBari#} m. ({#-riH#}) 1. INDRA'S thunderbolt. 2. Fire or its deity. 3. INDRA. E. {#jam | Body etymology 'jamBa + ari (foe)' with short-a ari; Sanskrit gloss confirms ariH with sho
+BadrapIwa     -> BadrapIWa     | SHS: {#BadrapIwa#} n. ({#-waM#}) 1. A splendid seat, a throne. 2. A king of winged-insect. | Body inflects as {-waM} matching headword's wa; entry is self-consistent with dental w thr
+devaballaBa   -> devavallaBa   | SHS: {#devaballaBa#} m. ({#-BaH#}) A tree used in dying, (Rottleria tinctoria, Rox.) See {#punn | Body gives a real tree definition with deva+ballaBa etymology; but b/v swap could be typo.
+nizkozana     -> nizkozaRa     | SHS: {#nizkozana#} n. ({#-naM#}) 1. Taking away. 2. Extracting, extirpating. 3. Hus- king, shel | E. nir+kuz+lyuw gives -ana (dental n); body is self-consistent with n; retroflex R not req
+svarbaDU      -> svarvaDU      | SHS: {#svarbaDU#} f. ({#-DUH#}) An Apsaras. E. {#svar#} heaven, and {#baDU#} wife. | Body's own etymology gives baDU as the component; entry self-consistently defines svarbaDU
+varhi         -> barhi         | SHS: {#varhi(-rhiH)kusuma#} n. ({#-maM#}) Granthiparna, also {#varhipuzpa .#} | Body shows 'varhi(-rhiH)kusuma' — the entry itself normalizes varhi/varhi as the headword 
+dvijabraRa    -> dvijavraRa    | SHS: {#dvijabraRa#} m. ({#-RaH#}) Gumboil, toothache. E. {#dvija#} a tooth, {#braRa#} a sore. | E. dvija+braRa; body's own etymology consistently uses braRa (b); entry is self-consistent
+svargibaDU    -> svargivaDU    | SHS: {#svargibaDU#} f. ({#-DUH#}) A nymph of paradise. E. {#svagi#} a celestial, and {#baDU#} w | E. svagi+baDU; body gives baDU as the component (cf. svarbaDU row 8); entry self-consisten
+wANkAra       -> wANkara       | SHS: {#wANkAra#} m. ({#-raH#}) A clang, a twang. | Body defines 'a clang, a twang'; A vs a could be long/short vowel distinction. No cross-re
+maRivaka      -> maRIvaka      | SHS: {#maRivaka#} n. ({#-kaM#}) A flower. E. {#maR#} to sound. deriv. irr. | Body gives n. 'a flower' with etym '{#maR#} to sound'; short i form appears intentional; n
+BUjajyA       -> BujajyA       | SHS: {#BUjajyA#} f. ({#-jyA#}) The base sine, (in astronomy.) | Body gives f. 'base sine (in astronomy)'; BUja (arm/base) is a distinct Sanskrit word from
+dudyuzu       -> dudyUzu       | SHS: {#dudyuzu#} mfn. ({#-zuH-zuH-zu#}) Wishing to play with or brandish. E. {#div#} to play, d | Body defines dudyuzu with 'irr.' (irregular desiderative); short-u form is explicitly atte
+saMyuyuzu     -> saMyuyUzu     | SHS: {#saMyuyuzu#} mfn. ({#-zuH-zuH-zu#}) Wishing to mix, join, unite, to bring together in any | Body explicitly defines saMyuyuzu as its own entry (desid. of yu); short-u form is the doc
+rAjasaPara    -> rAjaSaPara    | SHS: {#rAjasaPara#} m. ({#-raH#}) The Iliśa or Hilsā fish, (Clupanodon Ilisha, HAM.) E. {#rAja# | Body spells {#rAjasaPara#} and gives E. rAja + saPara (another fish); compound key matches
+samacaturasra -> samacaturaSra | SHS: {#samacaturasra#} mn. ({#-sraH-sraM#}) An equilateral tetragon. Adj. Equally quadrangular, | Body uses {#samacaturasra#} and gives a full definition 'equilateral tetragon'; the body k
+yAmunezWaka   -> yAmunezwaka   | SHS: {#yAmunezWaka#} n. ({#-kaM#}) Lead. | Body headword is {#yAmunezWaka#} exactly; W vs w distinction may reflect SHS orthography; 
+pAripAWya     -> pAripAwya     | SHS: {#pAripAWya#} n. ({#-WyaM#}) Regularity, methodicalness, successiveness. E. {#pari-#} {#pA | Body defines {#pAripAWya#} 'regularity' with E. pari-pAwI + zyaY; W in key matches body's 
+mEnAda        -> menAda        | SHS: {#mEnAda#} m. ({#-daH#}) A fisherman. | Body defines 'a fisherman'; E (ai diphthong) vs e is a real SLP1 phonemic distinction; mEn
+SANkika       -> SANKika       | SHS: {#SANkika#} mfn. ({#-kaH-kI-kaM#}) Made from, relating to, &c. the Śankha or conch. m. ({# | Body defines {#SANkika#} via E. SaNka + WaY; lowercase k in body's own headword and etymol
+kujJiSa       -> kujjiSa       | SHS: {#kujJiSa#} m. ({#-SaH#}) A sort of fish. | Body defines {#kujJiSa#} as 'a sort of fish' with full headword; palatal J vs j may be int
+DubakA        -> DuvakA        | SHS: {#DubakA#} f. ({#-kA#}) The introductory stanza to a song, forming afterwards the burthen  | Body defines {#DubakA#} with E. DU + kvun Unādi aff.; -baka form confirmed by etymology in
+padminIballaBa -> padminIvallaBa | SHS: {#padminIballaBa#} m. ({#-BaH#}) The sun. E. {#padminI#} a lotus, and {#ballaBa#} a friend | Body defines {#padminIballaBa#} with 'E. padminI + ballaBa a friend'; -balla- appears in t
+
+# ===== BUCKET 5  INTENTIONAL -- SHS documents the spelling on purpose; NEVER file (31) =====
+bAhU          -> bAhu          | SHS: {#bAhU(hA)bAhavi#} Ind. Arm to arm, hand to hand, (fighting, &c.) E. {#bAhu#} the arm, (re | Entry defines reduplicated indeclinable 'arm to arm' (ic aff.) derived from bAhu — a legit
+bA            -> vA            | SHS: {#bA#} Ind. 1. As, like. 2. Or, either: see {#vA#}. || {#bA(vA)dara#} mfn. ({#-raH-rI-raM# | Body: 'As, like. Or, either: see vA' — explicit 'see vA' cross-reference documents bA as a
+zev           -> sev           | SHS: {#zev(f)zevf#} r. 1st cl. ({#sevati-te#}) 1. To serve, to gratify by service. 2. To rely o | SHS convention: roots beginning with s listed under z; body conjugation sevati-te matches 
+ziD           -> siD           | SHS: {#ziD#} r. 1st cl. ({#seDati#}) To go. {#(U) ziDU#} r. 1st cl. ({#seDati#}) 1. To command, | SHS z-head convention; body conjugation seDati/siDyati matches siD — ziD is the SHS entry-
+pUtI          -> pUti          | SHS: {#pUtI(ti)ka#} m. ({#-kaH#}) 1. A plant, (Cæsalpinia bonducella.) 2. The pole-cat or civet | Entry pUtI(ti)ka documents optionally long I in compound; variant form explicitly shown al
+sutaka        -> sUtaka        | SHS: {#sutaka#} n. ({#-kaM#}) 1. Birth. 2. Impurity from child-birth or mis-carriage: see {#sUt | Body cross-references 'see sUtaka' — variant/secondary form pointing to sUtaka as main ent
+arsas         -> arSas         | SHS: {#arsas#} m. ({#-rsaH#}) Hœmorrhoids. See {#arSas#}. | Body: 'Haemorrhoids. See arSas' — explicit 'See X' cross-reference documenting arsas as a 
+parasvaDa     -> paraSvaDa     | SHS: {#parasvaDa#} m. ({#-DaH#}) An axe: see {#paraSvaDa#}. | Body: 'An axe: see paraSvaDa' — explicit 'see' cross-reference pointing to the suggestion 
+zvap          -> svap          | SHS: {#zvap(Yi O)YizvapO#} r. 2nd cl. ({#svapiti#}) To sleep. | Conjugation form (svapiti) uses s not z; zvap is documented z/s variant of root svap.
+zvid          -> svid          | SHS: {#zvid(Yi A)YizvidA#} r. 1st cl. ({#svedate#}) r. 4th cl. ({#svidyati#}) 1. To perspire, t | Conjugation (svedate/svidyati) uses s; zvid is documented z/s variant of root svid.
+zad           -> sad           | SHS: {#zad(O x)Ozadx#} r. 1st and 6th cls. ({#sIdati#}) 1. To wither, to wane, to perish gradua | SHS z-head convention; body conjugation sIdati matches sad — zad is the SHS entry-head not
+zah           -> sah           | SHS: {#zah#} r. 1st cl. ({#sahate#}) r. 4th cl. ({#sahmati#}) r. 10th cl. ({#sAhayati-te#}) 1.  | SHS z-head convention; body conjugation sahate matches sah — zah is the SHS entry-head not
+zic           -> sic           | SHS: {#zic(O)zicO#} r. 6th cl. ({#siYcati-te#}) 1. To sprinkle. 2. To moisten, to water, (as pl | SHS z-head convention; body conjugation siYcati-te matches sic — zic is the SHS entry-head
+stari         -> starI         | SHS: {#stari(rI)man#} m. ({#-mA#}) A bed, a couch. E. {#stf#} to spread, {#imanic#} Unādi aff. | Entry stari(rI)man explicitly documents optional long I; variant form intentionally shown.
+pisaNga       -> piSaNga       | SHS: {#pisaNga#} m. ({#-NgaH#}) Tawny (the colour): see {#piSaNga#}. E. {#pisa, aNgac#} aff. | Body says 'see piSaNga'; cross-reference marker documents pisaNga as a variant spelling of
+sUrpaRaKA     -> SUrpaRaKA     | SHS: {#sUrpaRaKA#} f. ({#-KA#}) The sister of RĀVAṆA. E. {#sUrpa, naKa#} a nail.; also {#SUrpaR | Body says 'also SUrpaRaKA'; explicitly documents sUrpaRaKA as an alternate of SUrpaRaKA.
+zAD           -> sAD           | SHS: {#zAD(u)sADu#} r. 4th cl. ({#sADyati#}) r. 5th cl. ({#sADnoti#}) 1. To effect, to accom- p | Entry zAD(u)sADu and 'also sAD' explicitly cross-reference sAD as the main form; z/s varia
+zvad          -> svad          | SHS: {#zvad#} r. 1st cl. ({#svadate#}) r. 10th cl. ({#svAdayati-te#}) 1. To taste. 2. To be ple | Conjugation (svadate) uses s; 'also svAda' cross-references main form; z/s variant documen
+brA           -> vrA           | SHS: {#brA (vrA) hma#} mfn. ({#hmaH-hmI-hmaM#}) Relating or belonging to BRAHMĀ, the Vedas, &c. | Body reads '{#brA (vrA) hma#}' — documents vrA as the alternative spelling in parentheses 
+romAvali      -> romAvalI      | SHS: {#romAvali#} f. ({#-liH-lI#}) A line of hair across the middle of the belly or navel. E. { | Body explicitly gives both forms {-liH-lI}; romAvali (short i) is documented as a valid va
+Soli          -> SolI          | SHS: {#Soli#} f. ({#-liH#} or {#-lI#}) Wild turmeric. E. {#SUla-ac pfzo0 NIz .#} | Body explicitly gives both {-liH or -lI}; Soli (short i) is documented as a variant alongs
+muzwimuzwi    -> muzwImuzwi    | SHS: {#muzwimuzwi#} Ind. Fist to fist, (fighting,) fisticuffs. E. {#muzwi#} repeated in this se | Body documents: 'the final made long' — explicitly notes the short/long alternation as an 
+praTivi       -> praTivI       | SHS: {#praTivi#} f. ({#-vi#}) The earth; also {#praTivI .#} | Body says 'also praTivI' — documents short-i form explicitly as a variant alongside long-I
+paraSva       -> parasva       | SHS: {#paraSva(sva)Da#} m. ({#-DaH#}) An axe, a hatchet. E. {#para#} another, an enemy, {#Sva#} | Body explicitly lists 'also pAraSvaDa and parasvaDa' as variants; the entry documents the 
+prO           -> pro           | SHS: {#prO(pro)Qa#} mfn. ({#-QaH-QA-QaM#}) 1. Full-grown. 2. Confident, bold, arrogant. 3. Impu | Headword itself is 'prO(pro)Qa' — the entry explicitly documents both prO and pro as varia
+zel           -> Sel           | SHS: {#zel(f)zex#} r. 1st cl. ({#selati#}) To go, to move; also {#Sel#}, and {#sel .#} | Body explicitly documents 'also Sel and sel' as variants; zel and Sel are treated as varia
+zil           -> Sil           | SHS: {#zil#} r. 6th cl. ({#silati#}) To glean: more usually {#sil .#} | Body says 'more usually sil'; cross-references the standard spelling, documenting zil as a
+zek           -> sek           | SHS: {#zek(f)zekf#} r. 1st cl. ({#sekate#}) To go, to move; preferably {#sek .#} | Body says 'preferably sek'; cross-references sek as preferred spelling, documenting zek as
+ziv           -> siv           | SHS: {#ziv(u)zivu#} r. 4th cl. ({#sIvyati#}) 1. To sew, to stitch. 2. To sow, as seed. 3. To jo | Verbal root entry; inflected form sIvyati (with s-) indicates ziv is the root form; root e
+vilva         -> bilva         | SHS: {#vilva#} m. ({#-lvaH#}) A fruit tree, commonly named Bel, (Ægle marmelos.) n. ({#-lvaM#}) | Body gives the bel-tree (Aegle marmelos) gloss — bilva's definition — but assigns etym to 
+dArA          -> DArA          | SHS: {#dArA#} f. ({#-rA#}) A wife: see {#dAra .#} | 
+
+# ===== BUCKET 6  UNLOCATABLE -- not in the current SHS source (stale/different key) (19) =====
+Aqaka         -> AQaka         | SHS:  | 
+Pakva         -> pakva         | SHS:  | 
+asvasTya      -> asvAsTya      | SHS:  | 
+andra         -> anDra         | SHS:  | 
+adasa         -> adAsa         | SHS:  | 
+kandalu       -> kandAlu       | SHS:  | 
+sAsrA         -> sAsra         | SHS:  | 
+ADUnika       -> ADunika       | SHS:  | 
+kalavfkza     -> kAlavfkza     | SHS:  | 
+atmaSakti     -> AtmaSakti     | SHS:  | 
+KaNgapAtra    -> KaNgapatra    | SHS:  | 
+kaRwakIja     -> kaRwakija     | SHS:  | 
+KaNgika       -> KaNgIka       | SHS:  | 
+karaSuka      -> karaSUka      | SHS:  | 
+atuhinarasmi  -> atuhinaraSmi  | SHS:  | 
+kawinatA      -> kaWinatA      | SHS:  | 
+pARokaraRa    -> pAROkaraRa    | SHS:  | 
+kawiSfNkalA   -> kawiSfNKalA   | SHS:  | 
+aDyAropana    -> aDyAropaRa    | SHS:  | 

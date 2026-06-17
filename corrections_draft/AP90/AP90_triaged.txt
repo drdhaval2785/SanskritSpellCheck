@@ -1,0 +1,139 @@
+# AP90 tier-A -- BODY-GROUNDED triage  (DRAFT; verify every kept case against the scan)
+#
+# The 53 engine tier-A candidates were judged against AP90's OWN entry text (csl-orig),
+# not spelling alone. A spelling detector cannot tell a typo from a real word, an
+# intentional variant / compounding form, or wrong-reading apparatus -- the entry can.
+# Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM
+# pass over the 'realword' set + source confirmation of every TYPO verdict.
+#
+# FINDING: of 53 tier-A candidates, 0 are body-confirmed fileable typos (0.0%).
+# 32 are real distinct words, 8 are spellings AP90 documents on purpose (w.r./v.l./
+# in-comp./cross-ref -- filing them would CORRUPT AP90), 0 are not in the current
+# source, and 13 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
+# do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.
+
+# ===== BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file) (0) =====
+
+# ===== BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted (9) =====
+
+prasAh        -> prasah         [dcs=4 ndicts=3 body=realword]
+    AP90: {{Lbody=20876}}  (redirect -> prasah)
+    judged: Body is a redirect '-> prasah'; confirms prasAh (long A) is a misspelling of prasah.
+    confirm: Lbody=20876 redirect; target <k2>prasa(sA)h documents 'sA' (long A) as a parenthetical variant reading. Documented variant.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=AP90&key=prasAh
+
+biBIzaRa      -> viBIzaRa       [dcs=4 ndicts=4 body=realword]
+    AP90: {#biBIzaRa#} {%a.%} {@1@} Terrifying,  frightening, intimidating. {@--2@} Formidable, terrible. {@--3@} Bullying or blustering (as language). {#--RaM, --RA#} {@1@}  Terrifying. {@--2@} A means of terr
+    judged: Body defines Vibhisana (brother of Ravana) — full viBIzaRa content; b/v confusion; biBIzaRa is a misspelling.
+    confirm: Own full entry: <ab>a.</ab> 'Terrifying...', --RaH <ab>N.</ab> of a demon, brother of Ravana. Independently-defined real word, not a redirect.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=AP90&key=biBIzaRa
+
+karvura       -> karbura        [dcs=3 ndicts=2 body=realword]
+    AP90: {{Lbody=10430}}  (redirect -> karbura)
+    judged: Body is a redirect '-> karbura'; confirms karvura is a misspelling of karbura.
+    confirm: Lbody=10430 redirect; target <k2>karbu(rvu)ra documents 'rvu' as a parenthetical variant reading. Documented variant.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=AP90&key=karvura
+
+ajjUkA        -> ajjukA         [dcs=2 ndicts=2 body=realword]
+    AP90: {{Lbody=413}}  (redirect -> ajjukA)
+    judged: Body is a redirect '-> ajjukA'; confirms ajjUkA (long U) is a misspelling of ajjukA.
+    confirm: Lbody=413 redirect; target <k2>ajju(jjU)kA documents 'jjU' (long U) as a parenthetical variant reading. Documented variant.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=AP90&key=ajjUkA
+
+BraMsana      -> BraMSana       [dcs=2 ndicts=1 body=realword]
+    AP90: {{Lbody=22375}}  (redirect -> BraMSana)
+    judged: Body is a redirect '-> BraMSana'; confirms BraMsana is a misspelling of BraMSana.
+    confirm: Lbody=22375 redirect; target <k2>BraMSa(sa)na documents 'sa' as a parenthetical variant reading. Documented spelling variant, not a bare typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=AP90&key=BraMsana
+
+biBIzaka      -> viBIzaka       [dcs=2 ndicts=2 body=realword]
+    AP90: {#biBIzaka#} {%a.%} Frightening,  terrifying.
+    judged: Body defines 'Frightening, terrifying' — content of viBIzaka; b/v confusion parallels biBIzaRa; key is misspelled.
+    confirm: Own full entry with definition: {%<ab>a.</ab>%} 'Frightening, terrifying.' Independently-defined real word, not a redirect to viBIzaka.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=AP90&key=biBIzaka
+
+cilamilikA    -> cilamIlikA     [dcs=0 ndicts=2 body=realword]
+    AP90: {{Lbody=13373}}  (redirect -> cilamIlikA)
+    judged: Body is a redirect '-> cilamIlikA'; confirms cilamilikA is a misspelling of cilamIlikA.
+    confirm: Lbody=13373 redirect; target <k2>cilamI(mi)likA documents 'mi' as a parenthetical variant reading. Documented variant, not a bare typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=AP90&key=cilamilikA
+
+parARasA      -> parAnasA       [dcs=0 ndicts=2 body=realword]
+    AP90: {{Lbody=17818}}  (redirect -> parAnasA)
+    judged: Body is a redirect '-> parAnasA'; retroflex R vs dental n — confirms parARasA is a misspelling.
+    confirm: Lbody=17818 redirect; target <k2>parAna(Ra)sA documents 'Ra' (retroflex) as a parenthetical variant reading. Documented variant.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=AP90&key=parARasA
+
+bazkayinI     -> bazkayiRI      [dcs=0 ndicts=1 body=realword]
+    AP90: {{Lbody=21639}}  (redirect -> bazkayaRI)
+    judged: Redirect entry points to bazkayaRI (retroflex R); suspect has dental n where retroflex R is expected, consistent with a transcription typo.
+    confirm: Lbody=21639 redirect; target <k2>bazkaya(yi)RI(nI) documents 'yi' and 'nI' as parenthetical variant readings. Documented variant.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=AP90&key=bazkayinI
+
+# ===== BUCKET 3  REVIEW -- undecidable without the printed page (4) =====
+
+alasya        -> Alasya         [dcs=4 ndicts=2 body=realword]
+    AP90: {#alasya#} {%a.%} Idle, lazy.
+    judged: Body gives adj 'Idle, lazy'; Alasya=laziness (noun); alasya=not-playful? Terse body can't confirm direction.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=AP90&key=alasya
+
+ArvAk         -> arvAk          [dcs=4 ndicts=3 body=realword]
+    AP90: {#ArvAk#} {%ind.%} After, afterwards; behind.
+    judged: Body gives 'After, afterwards; behind' — meaning doesn't match standard arvAk (hither/this-side); long A vs short a unclear.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=AP90&key=ArvAk
+
+pUpAlikA      -> pUpAlika       [dcs=0 ndicts=2 body=realword]
+    AP90: {{Lbody=19238.1}}  (redirect -> pUpalA)
+    judged: Redirect to pUpalA; neither suspect nor suggestion clearly matches the redirect target well enough to determine which is the erroneous key.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=AP90&key=pUpAlikA
+
+arI|a         -> (flag)         [dcs=0 ndicts=6 body=realword]
+    AP90: {#arI|a#} {%a.%} (= {#arIQa#}) Ved. Not licked.
+    judged: Pipe '|' in key is likely an OCR/encoding artifact; body cross-refs arIQa 'Not licked'. No clean suggestion available to classify as TYPO.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=AP90&key=arI|a
+
+# ===== BUCKET 4  REAL-WORD -- a distinct real word; the fix would merge two words (32) =====
+sattrA        -> sattra        | AP90: {#sattrA#} {%ind.%} With, together with. {@--Comp.@} {#--han#} {%m.%} an epithet of  Indra | Body defines sattrA as indeclinable 'With, together with' — distinct from sattra (Soma sac
+sTalA         -> sTala         | AP90: {#sTalA#} A spot of dry ground  artificially raised and drained (opp. {#sTalI#} q. v. belo | Body defines sTalA as 'spot of dry ground artificially raised', contrasted with sTalI; fem
+fS            -> fz            | AP90: {#fS#} (A Sautra root) {@1@} To go. {@--2@} To kill. | Body defines fS as a Sautra root with its own meanings (go, kill); not a redirect to fz.
+saMBf         -> saMvf         | AP90: {#saMBf#} {c3c} U. {@1@} To collect, hoard, place or bring together; {#tyAgAya#}  {#saMBft | Body defines saMBf as 'To collect, hoard; maintain; prepare' — sam+bhr root, distinct from
+saMBid        -> saMvid        | AP90: {#saMBid#} {c7c} U. {@1@} To break or tear asunder, break to pieces. {@--2@} To mingle, me | Body defines saMBid as 'To break asunder; mingle; contract' — sam+bhid root; saMvid=sam+vi
+kusIdA        -> kusIda        | AP90: {#kusIdA#} A female usurer. | Body defines 'A female usurer' — feminine form of kusIda; own distinct feminine entry.
+rajakA        -> rajaka        | AP90: {#rajakA#} A washerwoman. | Body defines 'A washerwoman' — feminine form of rajaka (washerman); genuine distinct femin
+saMpuwakA     -> saMpuwaka     | AP90: {#saMpuwakA, saMpuwikA#} A box, casket; Pt. 2. 165. | Body lists 'saMpuwakA, saMpuwikA' as feminine forms meaning 'box, casket'; own distinct fe
+marUvaka      -> maruvaka      | AP90: {#marUva(ba)ka#}  {%a.%} Terrible,  formidable {#--kaH#} {@1@} A kind of plant (Marjoram). | Body header shows 'marUva(ba)ka' — entry acknowledges variant; word has own definitions (p
+gavizWi       -> gavizwi       | AP90: {#gavizWi#} {%a.%} Ved. {@1@} Wishing for cows. {@--2@} Desirous, eager, ardent. {#--zWiH# | Body defines 'Wishing for cows; Desire, battle' with full entry; gavizWi (long Wh) vs gavi
+avacAra       -> avacara       | AP90: {#avacAra#} {%a.%} Going or moving down in or upon. {#--raH#} A place of descent, road; fi | Body defines avacAra as 'Going down; place of descent; field of action' with own gloss; lo
+aBikzipta     -> avikzipta     | AP90: {#aBikzipta#} {%p. p.%} Thrown, surpassed. | Body defines 'Thrown, surpassed' — past participle of aBi+kzip; gloss fits aBikzipta, not 
+Amiz          -> Amis          | AP90: {#Amiz#} {%n.%} [{#A-miz-kvip#}] Flesh. | Body defines 'Flesh' with etymology A-miz-kvip confirming retroflex z (ṣ); Amiz is the cor
+picCakA       -> picCaka       | AP90: {#picCakA#} The feathers of a  peacock's tail tied in a bunch, a  feather-brush (used by c | Body defines 'peacock feathers tied in a bunch' — picCakA is feminine form of picCaka; gen
+aBimeTika     -> aBimeTikA     | AP90: {#aBimeTika#} {%a.%} Ved. {#--meTikA#} {@1@} Use of words or language calculated to secure | Entry keys aBimeTika as adjective (a.) with '--meTikA' as feminine; the suspect is a real 
+anunAyika     -> anunAyikA     | AP90: {#anunAyika#} {%a.%} Conciliating; {#priyatamezu#} {#vaDUranunAyikA#} Śi. 6. 7. {#--kA#} A | Body gives anunAyika as adj. 'Conciliating'; '--kA' is the feminine form. Suspect is a rea
+apasfta       -> apAsfta       | AP90: {#apasfta#} {%p. p.%} {@1@} Gone away,  retreated &c.; dropped or fallen down;   {#apasfta | Body defines apasfta (short a) as p.p. 'Gone away, retreated'; the gloss fits the suspect 
+dvEvArzika    -> dvEvarzika    | AP90: {#dvEvArzika#} {%a.%} ({#kI#} {%f.%}) Biennial. | Body keys dvEvArzika (long A) as adj. 'Biennial'; the entry spelling matches the suspect, 
+sPAl          -> sPal          | AP90: {#sPAl#} {c1c} P. ({#sPalati#}) To tremble quiver, throb, palpitate. --{c10c} U. or {%Caus | Body keys sPAl (long A) as a verbal root (c1 P. sPalati, c10 sPAlayati); the suspect is a 
+somala        -> somAla        | AP90: {#somala#} {%a.%} Soft, bland, placid. | Body keys somala (short o) as adj. 'Soft, bland, placid'; the gloss fits the suspect spell
+upanAyikA     -> upanAyika     | AP90: {#upanAyikA#} A character in a dramatic or any other work of art next in importance to the | Body keys upanAyikA as a feminine noun (secondary heroine role); the long-A ending is gram
+KarparIkA     -> KarparikA     | AP90: {#KarparIkA, KarparI#} A kind of  collyrium. | Body keys 'KarparIkA, KarparI' (long I) as 'a kind of collyrium'; the body uses the suspec
+lOhitika      -> lOhitIka      | AP90: {#lOhitika#} {%a.%} Reddish. | Body keys lOhitika (short i) as adj. 'Reddish'; the gloss fits the suspect spelling, not t
+daMpatI       -> daMpati       | AP90: {#daMpatI#} {%m.%} du. (comp. of {#jAyA#} and {#pati#}) Husband and wife; R. 1. 35,   2. 7 | Body keys daMpatI as m. du. 'Husband and wife'; the long-I is the grammatical dual of daMp
+apIju         -> apIjU         | AP90: {#apIju#} {%a.%} Ved. Impelling,  stirring up. | Body keys apIju (short u) as adj. 'Impelling, stirring up' (Vedic); the body defines the s
+viSaMkawa     -> visaMkawa     | AP90: {#viSaMkawa#} {%a.%} ({#wA-wI#} {%f.%}) {@1@} Great, large, big; {#viSaMkawo vakzAsi bARa# | Body gives full entry 'Great, large; Strong; Vehemently' with citations; viS- (with palata
+SAMBavI       -> sAMBavI       | AP90: {#SAMBavI#} {@1@} N. of Pārvatī. {@--2@} N. of a plant ({#nIladUrvA#}). {@--3@} The openin | Body keys SAMBavI (palatal S=Ś) as N. of Pārvatī (from Śambhu); Śāmbhavī with Ś is the cor
+nivirISa      -> nibirISa      | AP90: {#nivirI(qI)Sa-sa#}  {%a.%} {@1@}  Compact, close; {#urunivirIsanitaMbaBAraKedi#}  [Page06 | Body keys nivirI(qI)Sa with 'v', glosses 'Compact, close'; suggestion has 'b' instead of '
+vawurin       -> vawUrin       | AP90: {#vawurin#} {%a.%} Ved. Broad, wide. | Body defines 'Broad, wide' (Vedic adj) as its own entry; vawurin (short u) vs vawUrin (lon
+astamike      -> astamIke      | AP90: {#astamike, astA#} {%ind.%} Ved. At hand, near. | Body keys 'astamike, astA' (short i) as ind. 'At hand, near' (Vedic); the body uses the su
+SAmilI        -> SAmIlI        | AP90: {#SAmilI#} A sacrificial ladle; ({#strac#}). | Body defines 'A sacrificial ladle' with its own gloss; SAmilI (short i) vs SAmIlI (long I)
+savyezwf      -> savyezWf      | AP90: {#savyezwf#} {%m.%} A charioteer. | Body keys savyezwf (dental w) as m. 'A charioteer' and defines it; no indication the denta
+
+# ===== BUCKET 5  INTENTIONAL -- AP90 documents the spelling on purpose; NEVER file (8) =====
+SrutI         -> Sruti         | AP90: {#SrutI#} = {#SrutiH#} above. | Body says '= SrutiH above' — documented cross-reference; SrutI is an intentional variant f
+aBIGAta       -> aBiGAta       | AP90: {#aBIGAta#} = {#aBiGAta#} q. v. | Body says '= aBiGAta q.v.' — explicitly documents aBIGAta as a variant pointing to aBiGAta
+amitrIya      -> amitriya      | AP90: {#amitrIya, --trya#} {%a.%} Hostile, inimical. | Body headword lists '{#amitrIya, --trya#}' — both spellings documented in same entry; inte
+Avaritf       -> AvarItf       | AP90: {#Avari(rI)tf#} {%a.%} One that covers or envelops; Ki. 18. 40. | Entry head 'Avari(rI)tf' explicitly documents both Avaritf (short i) and AvarItf (long I) 
+tardu         -> tardU         | AP90: {#tardu-rdU#} {%f.%} A wooden ladle. | Entry head 'tardu-rdU' documents both short-u and long-U forms as alternates for 'a wooden
+vilva         -> bilva         | AP90: {#vilva#} See {#bilva#}. | 
+bAlukA        -> vAlukA        | AP90: {#bAlukA#} See {#vAlukA#}. | 
+vezyA         -> veSyA         | AP90: {#vezyA#} See {#veSyA#}. | 
+
+# ===== BUCKET 6  UNLOCATABLE -- not in the current AP90 source (stale/different key) (0) =====

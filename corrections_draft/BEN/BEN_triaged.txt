@@ -1,0 +1,76 @@
+# BEN tier-A -- BODY-GROUNDED triage  (DRAFT; verify every kept case against the scan)
+#
+# The 43 engine tier-A candidates were judged against BEN's OWN entry text (csl-orig),
+# not spelling alone. A spelling detector cannot tell a typo from a real word, an
+# intentional variant / compounding form, or wrong-reading apparatus -- the entry can.
+# Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM
+# pass over the 'realword' set + source confirmation of every TYPO verdict.
+#
+# FINDING: of 43 tier-A candidates, 0 are body-confirmed fileable typos (0.0%).
+# 25 are real distinct words, 14 are spellings BEN documents on purpose (w.r./v.l./
+# in-comp./cross-ref -- filing them would CORRUPT BEN), 2 are not in the current
+# source, and 2 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
+# do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.
+
+# ===== BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file) (0) =====
+
+# ===== BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted (0) =====
+
+# ===== BUCKET 3  REVIEW -- undecidable without the printed page (2) =====
+
+sahasramI|a   -> (flag)         [dcs=0 ndicts=4 body=realword]
+    BEN: {#sahasramI|a#} {%sahasra-mīḷha%} (ved. for {%mīḍha,%} vb. {%mih%}), adj. Yielding a thousand treasures, Chr. 296, 10 = Rigv. i. 112, 10.
+    judged: Suspect contains a pipe '|' which is a malformed/corrupt key. Body defines sahasra-mīḷha (Vedic); cannot classify spelling without a clean candidate.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BEN&key=sahasramI|a
+
+svedanika     -> svedanikA      [dcs=0 ndicts=1 body=realword]
+    BEN: {#svedanika#} {%svedanika,%} i. e. {%svedanī +%} {%ka,%} f. An iron plate for cooking and frying.
+    judged: Body uses svedanika as headword but marks gender f. — ambiguous whether short-a is the lemma form or a typo for -ikā.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BEN&key=svedanika
+
+# ===== BUCKET 4  REAL-WORD -- a distinct real word; the fix would merge two words (25) =====
+nivAs         -> nivas         | BEN: {#nivAs#} NIVĀS, i. 10 (rather a de- nomin. derived from {%nivāsa%}), Par. To put on. | Body defines NIVĀS (denom. from nivāsa) 'To put on' — its own root/verb entry, not a missp
+Sayin         -> SAyin         | BEN: {#'Sayin#} {%-śayin,%} i. e. {%śī + in,%} adj. Re- posing, Daśak. in Chr. 199, 7. | Body: -śayin, śī+in, adj. Reposing — etymology gives short a; SAyin (long A) would be a di
+mOlI          -> mOli          | BEN: {#mOlI#} {%maulī%} (akin to {%mūla%}), f. The earth. | Body: maulī (f. The earth) — long-ī form is the headword's own gloss; suspect mOlI = maulī
+vilva         -> bilva         | BEN: {#vilva#} {%vilva,%} {@I.@} m. A fruit tree,  [Page0869-b+ 43] Aegle marmelos, Bhartṛ. 2,  | Body: vilva, m. Aegle marmelos — BEN uses vilva as a real entry with full gloss; variant s
+vfMhaRa       -> bfMhaRa       | BEN: {#vfMhaRa#} {%vṛṃhaṇa,%} i. e. 1. {%vṛṃh + ana,%} {@I.@} adj. Nourishing. {@II.@} m. A kin | Body: vṛṃhaṇa, adj. Nourishing / m. sweetmeat — own POS+gloss; v- vs b- is a documented Sa
+kapAlika      -> kApAlika      | BEN: {#kapAlika#} {%kapālika,%} {@I.@} = {%kāpālika%} II. (q. cf.), Pañc. i. d. 239 (with short | Body gives kapālika two distinct senses (I. = kāpālika w/ shortened a for metre; II. f. A 
+sanad         -> samad         | BEN: {#sanad#} {%sa + na + d%} (properly acc. sing. n. of {%sa + na,%} adj. ved. Old, eternal ( | Body: sa+na+d, adv. Always (vedic) — full etymology and gloss; samad is a completely diffe
+parigaRanA    -> parigaRana    | BEN: {#parigaRanA#} {%pari-gaṇ + anā,%} f. Enu- meration, Megh. 22. | Body: pari-gaṇ+anā, f. Enumeration — feminine noun with long-ā; parigaRanA = parigaṇanā co
+rAtrikA       -> rAtrika       | BEN: {#rAtrikA#} {%rātri + kā,%} f. Night, Rājat. 5, 482. {@ -- Comp.@} {%Pañca(n)-,%} adj. epi | Body: rātri+kā, f. Night — feminine form with long-ā; rAtrikA = rātrikā correct heading.
+viGawwanA     -> viGawwana     | BEN: {#viGawwanA#} {%vi-ghaṭṭ + anā%} f. Separa- tion, Nalod. 4, 45. | Body: vi-ghaṭṭ+anā, f. Separation — feminine -ā form is the correct noun; viGawwanA is rig
+kurpAsaka     -> kUrpAsaka     | BEN: {#kurpAsaka#} {%kurpāsa + ka,%} m. A bodice, Ṛt. 4, 16. | Body: kurpāsa+ka, m. A bodice — defines short-u form as its own word, not a typo for kUrpA
+kAl           -> kal           | BEN: {#† kAl#} {%KĀL,%} i. 10 (rather a denom. derived from the next), Par. To count time. | Body defines KĀL (long A) 'To count time' as its own root entry (i.10 denom.); separate fr
+paYcA         -> paYca         | BEN: {#paYcA#} {%pañc + ā,%} f. Spreading; in {%cañcatpañca,%} i. e. {%cañcant-,%} adj. Shaking | Body: pañc+ā, f. Spreading — feminine noun with its own gloss; not a misspelling of pañca.
+hfdayaviD     -> hfdayAviD     | BEN: {#hfdayaviD#} {%hṛdayavidh,%} i. e. {%hṛ-%} {%daya-vyadh,%} adj. Heart-piercing. | Body: hṛdaya-vyadh, adj. Heart-piercing — short a in compound hṛdaya; hfdayAviD (long A) u
+pEtfyajYiya   -> pEtfyajYIya   | BEN: {#pEtfyajYiya#} {%paitṛyajñiya,%} i. e. {%pitṛ%} {%-yajña + iya,%} adj. Referring to the s | Body: paitṛyajñiya < pitṛ-yajña+iya, adj. — suffix -iya (short i); long-I suggestion contr
+anuzRaSIta    -> anuzRASIta    | BEN: {#anuzRaSIta#} {%an-uṣṇa-śīta,%} adj. Neither hot nor cold, Bhāṣāp. 103. | Body: an-uṣṇa-śīta, adj. Neither hot nor cold — etymology an+uzRa+SIta fits suspect; no lo
+AlaNGana      -> alaNGana      | BEN: {#AlaNGana#} {%ā-laṅgh + ana,%} n. Cover- ing, Daśak. in Chr. 182, 11. | Body: ā-laṅgh+ana, n. — prefix ā (long) confirmed; AlaNGana = ālaṅghana correct; alaNGana 
+UrRamaya      -> UrRAmaya      | BEN: {#UrRamaya#} {%ūrṇa + maya,%} adj., f. {%yī,%} Woollen. | Body: ūrṇa+maya — short a in maya; UrRAmaya (long A) contradicts the etymology shown.
+karuRaveditA  -> karuRAveditA  | BEN: {#karuRaveditA#} {%karuṇaveditā,%} i. e. {%ka-%} {%ruṇa-vedin + tā,%} f. Benignity of hear | Body: karuṇa-vedin+tā, f. Benignity — short a in karuṇa confirmed; karuRAveditA (long A) c
+nIlajA        -> nIlaja        | BEN: {#nIlajA#} {%nīlajā,%} i. e. {%nīla-ja,%} f. The river Vitastā, Rājat. 5, 91. | Body defines 'nīlajā' (f., river Vitastā); the final 'A' is the feminine long-ā. Suspect i
+saMpraDAraRA  -> saMpraDAraRa  | BEN: {#saMpraDAraRA#} {%saṃpradhāraṇā,%} i. e. {%sam-pra-dhṛ,%} Caus., {%+ ana,%} f. De- libera | Body defines 'saṃpradhāraṇā' (f., deliberation); final 'A' is the feminine ā. Distinct fem
+anIrasana     -> anIraSana     | BEN: {#anIrasana#} {%anīrasana,%} i. e. {%a-nis%} {%-rasanā,%} adj. Girded, Kir. 5, 11. | Body: a-nis-rasanā — dental s in rasanā confirmed; anIrasana (dental s) is correct; anIraS
+kAmatva       -> kARatva       | BEN: {#kAmatva#} {%kāma-tva,%} n. Love of plea- sure, Lass. 40, 5. | Body: kāma-tva, n. Love of pleasure — clearly derived from kāma; kARatva (kāṇa-tva) is an 
+qInaka        -> dInaka        | BEN: {#qInaka#} {%ḍīna + ka%} (vb. {%ḍī%}) in {%ḍīna%} {%-ḍīnaka,%} A kind of flying, MBh. 8, 1 | Body glosses 'ḍīna+ka' (vb. ḍī), a kind of flying. SLP1 'q'=retroflex ḍ, so suspect is cor
+vIjavant      -> bIjavant      | BEN: {#vIjavant#} {%vīja + vant,%} adj., f. {%vatī,%} Who or what has seed. | Body defines 'vīja+vant, adj., who/what has seed'. SLP1 'v'=v not b; vīja is a legitimate 
+
+# ===== BUCKET 5  INTENTIONAL -- BEN documents the spelling on purpose; NEVER file (14) =====
+sikata        -> sikatA        | BEN: {#sikata#} {%sikata,%} {@I.@} m. pl. Sand. {@II.@} f. {%tā.%} {@1.@} Sandy soil. {@2.@} Sa | Body documents sikata (m. pl. Sand) AND sikatā (f.) as two sub-senses — both forms intenti
+SrutI         -> Sruti         | BEN: {#SrutI#} {%śrutī,%} Rām. 3, 55, 34, for {%śruti,%} on account of the metre. | Body: 'for śruti, on account of the metre' — metrically-conditioned long-ī form explicitly
+sraMS         -> sraMs         | BEN: {#sraMS#} {%SRAṂŚ,%} v. r. of the next. | Body: 'SRAṂŚ, v. r. of the next.' — documented as variant reading (v.r.), intentional cros
+cakrabAla     -> cakravAla     | BEN: {#cakrabAla#} {%cakra-bāla,%} and {#cakravAla#} {%cakra-vāla%} (cf. {%vālaka,%} A finger r | Body lists both cakrabāla and cakravāla as co-heads in one entry — both spellings intentio
+Sastrika      -> SAstrika      | BEN: {#'Sastrika#} {%-śastrika,%} substituted for {%śastra,%} as latter part of a comp. adj., D | Body: 'substituted for śastra, as latter part of a comp. adj.' — compound-final substituti
+cIcIkucI      -> cIcIkUcI      | BEN: {#cIcIkucI#} and {#cIcIkUcI#} {%cīcī-%} {%kūcī,%} a word imitative of the chirping of bird | Body lists both cIcIkucI and cIcIkUcI as co-heads (onomatopoeia for bird chirping) — both 
+pAdukft       -> pAdUkft       | BEN: {#pAdukft#} and {#pAdUkft#} {%pādū̆kṛt,%} i. e. {%pad + u-kṛ + t,%} m. A shoemaker. | Body lists both pādukft and pādUkft as co-heads: pādū̆kṛt with ū̆ marking vowel length var
+jAmbunadamaya -> jAmbUnadamaya | BEN: {#jAmbunadamaya#} and {#jAmbUnadamaya#}  [Page0331-a+ 39] {%jāmbū̆nada + maya,%} adj., f.  | Body lists both jAmbunadamaya and jAmbUnadamaya as co-heads with ū̆ vowel-length variant —
+DUzaratva     -> DUsaratva     | BEN: {#DUzaratva#} {%dhūṣaratva,%} read {%dhūsa-%} {%ratva,%} Lass. 72, 11. | Body says 'read dhūsaratva' — i.e. 'DUzaratva' is the wrong reading in the printed source;
+bas           -> vas           | BEN: {#bas#} {%BAS,%} see 3. {%vas.%} | 
+ban           -> van           | BEN: {#ban#} {%BAN,%} see {%van.%} | 
+mImAMsa       -> mImAMsA       | BEN: {#mImAMsa#} {%MĪMĀṂSA,%} see {%man.%} | 
+padI          -> padi          | BEN: {#padI#} {%padī,%} see 3. {%pad%} and {%pada.%} | 
+baDUyu        -> vaDUyu        | BEN: {#baDUyu#} {%badhūyu,%} see {%vadhūyu.%} | 
+
+# ===== BUCKET 6  UNLOCATABLE -- not in the current BEN source (stale/different key) (2) =====
+nABI          -> nABi          | BEN:  | 
+purIzaDAna    -> purIzADAna    | BEN:  | 

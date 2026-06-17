@@ -1,0 +1,46 @@
+# GRA tier-A correction candidates (unified engine) — score	wrong -> right	detectors	morph
+465	jAGana -> jaGana	[consensus,dict_vs_corpus,intra_dup,spell_correct]	morph✓
+364	Asat -> asat	[consensus,intra_dup,spell_correct]	morph✓
+350	abdA -> abda	[consensus,dict_vs_corpus,intra_dup]	
+350	havyA -> havya	[consensus,dict_vs_corpus,intra_dup]	
+341	soBarI -> soBari	[consensus,intra_dup,spell_correct]	morph✓
+339	mUr -> mur	[consensus,intra_dup,spell_correct]	morph✓
+336	vanarsad -> vanarzad	[consensus,intra_dup,spell_correct]	morph✓
+335	satrAsAha -> sAtrAsAha	[consensus,intra_dup,spell_correct]	morph✓
+334	Bavayu -> BAvayu	[consensus,intra_dup,spell_correct]	morph✓
+324	devagopa -> devagopA	[consensus,intra_dup,spell_correct]	morph✓
+324	svaveSa -> svAveSa	[consensus,intra_dup,spell_correct]	morph✓
+266	ajya -> Ajya	[dict_vs_corpus,spell_correct]	morph✓
+254	indragopA -> indragopa	[consensus,spell_correct]	morph✓
+254	treDa -> treDA	[consensus,spell_correct]	morph✓
+254	vasavi -> vAsavi	[consensus,spell_correct]	morph✓
+251	viSvacarzaRI -> viSvacarzaRi	[consensus,spell_correct]	morph✓
+248	raS -> ras	[consensus,spell_correct]	morph✓
+245	fBukzA -> fBukza	[consensus,spell_correct]	morph✓
+244	SAtavat -> Satavat	[intra_dup,spell_correct]	morph✓
+244	pUrvaBaj -> pUrvaBAj	[consensus,spell_correct]	morph✓
+244	satyavac -> satyavAc	[consensus,spell_correct]	morph✓
+237	aDakza -> adakza	[consensus,spell_correct]	morph✓
+237	lABika -> lAvika	[consensus,spell_correct]	morph✓
+236	akzIyamAna -> akzIyamARa	[consensus,spell_correct]	morph✓
+236	jesa -> jeza	[consensus,spell_correct]	morph✓
+236	pradakzinit -> pradakziRit	[consensus,spell_correct]	morph✓
+236	puruSaka -> puruzaka	[consensus,spell_correct]	morph✓
+234	nivana -> nivanA	[consensus,spell_correct]	morph✓
+234	svayaMjA -> svayaMja	[consensus,spell_correct]	morph✓
+231	SritI -> Sriti	[consensus,spell_correct]	morph✓
+227	yAcCrezwa -> yAcCrezWa	[consensus,spell_correct]	morph✓
+226	kunamnama -> kunannama	[consensus,spell_correct]	morph✓
+224	bahupayya -> bahupAyya	[consensus,spell_correct]	morph✓
+224	maDuDa -> maDuDA	[consensus,spell_correct]	morph✓
+224	naBanU -> naBanu	[consensus,intra_dup]	
+224	pituBaj -> pituBAj	[consensus,spell_correct]	morph✓
+224	svastiga -> svastigA	[consensus,spell_correct]	morph✓
+224	vftraputra -> vftraputrA	[consensus,spell_correct]	morph✓
+221	nfjIt -> nfjit	[consensus,spell_correct]	morph✓
+218	svac -> Svac	[consensus,spell_correct]	morph✓
+216	fzidvis -> fzidviz	[consensus,spell_correct]	morph✓
+210	apAvfkta -> apavfkta	[consensus,intra_dup]	
+210	pfTivizWA -> pfTivizWa	[intra_dup,spell_correct]	
+209	mAtarApitf -> mAtarapitf	[consensus,spell_correct]	
+154	goopaSa -> (flag)	[phonotactic]	

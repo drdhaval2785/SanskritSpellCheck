@@ -1,0 +1,15 @@
+# CCS -- DOCUMENTED-INTENTIONAL spellings (NOT typos -- do NOT file corrections)
+#
+# 3 headwords that LOOK like misspellings but which CCS records on purpose:
+# wrong-reading apparatus (w.r.), variae lectiones (v.l.), in-composition /
+# sandhi forms (in comp. for...), cross-references (See / = X q.v.), and other
+# grammatical/Vedic notes. Filing a 'correction' for any of these CORRUPTS CCS.
+# Use this as a suppression list: such headwords should not be re-flagged.
+# Format per row:  headword -> would-be 'correction'  |  the CCS entry text
+
+# ===== CROSS-REFERENCE (1) =====
+yakzi          -> yakzI          | {#yakzi#} s. {#yaj#}.
+
+# ===== OTHER-INTENTIONAL (2) =====
+vakulAvalikA   -> bakulAvalikA   | {#vakulAvalikA#} {%s.%} {#bakulAvalikA#}.
+vilva          -> bilva          | {#vilva#} {%s.%} {#bilva#}.

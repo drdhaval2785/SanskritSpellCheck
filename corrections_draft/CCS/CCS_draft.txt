@@ -1,0 +1,142 @@
+; DRAFT corrections for CCS — SanskritSpellCheck; VERIFY each against the scan before filing.
+; updateByLine format; only the <k1>/<k2> key field is edited (check the entry body too).
+; NOTE: each case targets the FIRST entry with that headword -- check for homographs
+;       (multiple entries sharing a key) and that no two cases edit the same line.
+;
+; Case 1.  brahmaRa -> brAhmaRa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=brahmaRa
+78108 old <L>17023<pc>298-2<k1>brahmaRa<k2>brahmaRa/<h>1
+78108 new <L>17023<pc>298-2<k1>brAhmaRa<k2>brahmaRa/<h>1
+;
+; Case 2.  Sukfta -> sukfta   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=Sukfta
+115436 old <L>24912<pc>449-1<k1>Sukfta<k2>Su/kfta
+115436 new <L>24912<pc>449-1<k1>sukfta<k2>Su/kfta
+;
+; Case 3.  nUtra -> mUtra   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=nUtra
+58502 old <L>12738<pc>225-1<k1>nUtra<k2>nU/tra
+58502 new <L>12738<pc>225-1<k1>mUtra<k2>nU/tra
+;
+; Case 4.  AgniDra -> AgnIDra   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=AgniDra
+11069 old <L>2528<pc>039-2<k1>AgniDra<k2>A/gniDra
+11069 new <L>2528<pc>039-2<k1>AgnIDra<k2>A/gniDra
+;
+; Case 5.  kAlhAra -> kalhAra   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=kAlhAra
+21944 old <L>4860<pc>083-2<k1>kAlhAra<k2>kAlhAra
+21944 new <L>4860<pc>083-2<k1>kalhAra<k2>kalhAra
+;
+; Case 6.  yakzi -> yakzI   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=yakzi
+89369 old <L>19419<pc>343-1a<k1>yakzi<k2>yakzi
+89369 new <L>19419<pc>343-1a<k1>yakzI<k2>yakzI
+;
+; Case 7.  jYas -> jYAs   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=jYas
+36060 old <L>7869<pc>139-2<k1>jYas<k2>jYas
+36060 new <L>7869<pc>139-2<k1>jYAs<k2>jYAs
+;
+; Case 8.  patitasavitrIka -> patitasAvitrIka   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=patitasavitrIka
+60483 old <L>13159<pc>232-2<k1>patitasavitrIka<k2>patitasavitrIka
+60483 new <L>13159<pc>232-2<k1>patitasAvitrIka<k2>patitasAvitrIka
+;
+; Case 9.  dvAdaSavarzika -> dvAdaSavArzika   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=dvAdaSavarzika
+48940 old <L>10677<pc>188-1<k1>dvAdaSavarzika<k2>dvAdaSavarzika
+48940 new <L>10677<pc>188-1<k1>dvAdaSavArzika<k2>dvAdaSavArzika
+;
+; Case 10.  DUmya -> DUmyA   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=DUmya
+51403 old <L>11173<pc>199-1<k1>DUmya<k2>DUmya
+51403 new <L>11173<pc>199-1<k1>DUmyA<k2>DUmyA
+;
+; Case 11.  jayAGoza -> jayaGoza   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=jayAGoza
+34299 old <L>7478<pc>133-1<k1>jayAGoza<k2>jayAGoza
+34299 new <L>7478<pc>133-1<k1>jayaGoza<k2>jayaGoza
+;
+; Case 12.  suKaprasavA -> suKaprasava   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=suKaprasavA
+128152 old <L>27651<pc>499-1<k1>suKaprasavA<k2>suKaprasavA<h>2
+128152 new <L>27651<pc>499-1<k1>suKaprasava<k2>suKaprasava<h>2
+;
+; Case 13.  vakulAvalikA -> bakulAvalikA   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=vakulAvalikA
+97720 old <L>21116<pc>379-1a<k1>vakulAvalikA<k2>vakulAvalikA
+97720 new <L>21116<pc>379-1a<k1>bakulAvalikA<k2>bakulAvalikA
+;
+; Case 14.  nEzwa -> nezwa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=nEzwa
+59125 old <L>12883<pc>227-1<k1>nEzwa<k2>nEzwa
+59125 new <L>12883<pc>227-1<k1>nezwa<k2>nezwa
+;
+; Case 15.  arda -> arDa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=arda
+;   [NOT LOCATED in csl-orig — locate the entry manually]
+;
+; Case 16.  vilva -> bilva   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=vilva
+106011 old <L>22848<pc>413-2<k1>vilva<k2>vilva
+106011 new <L>22848<pc>413-2<k1>bilva<k2>bilva
+;
+; Case 17.  mfttika -> mfttikA   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=mfttika
+88354 old <L>19186<pc>340-1<k1>mfttika<k2>(mfttika)
+88354 new <L>19186<pc>340-1<k1>mfttikA<k2>(mfttika)
+;
+; Case 18.  nABI -> nABi   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=nABI
+54252 old <L>11797<pc>209-2<k1>nABI<k2>nABI
+54252 new <L>11797<pc>209-2<k1>nABi<k2>nABi
+;
+; Case 19.  aramya -> araRya   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=aramya
+7651 old <L>1757<pc>027-1<k1>aramya<k2>aramya
+7651 new <L>1757<pc>027-1<k1>araRya<k2>araRya
+;
+; Case 20.  JarA -> jarA   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=JarA
+36590 old <L>7970<pc>142-1<k1>JarA<k2>JarA
+36590 new <L>7970<pc>142-1<k1>jarA<k2>jarA
+;
+; Case 21.  godAvari -> godAvarI   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=godAvari
+29210 old <L>6415<pc>112-1<k1>godAvari<k2>godAvari
+29210 new <L>6415<pc>112-1<k1>godAvarI<k2>godAvarI
+;
+; Case 22.  apratizwa -> apratizWa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=apratizwa
+6157 old <L>1415<pc>022-1<k1>apratizwa<k2>apratizwa
+6157 new <L>1415<pc>022-1<k1>apratizWa<k2>apratizWa
+;
+; Case 23.  devakinandana -> devakInandana   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=devakinandana
+47156 old <L>10270<pc>182-1<k1>devakinandana<k2>devakinandana
+47156 new <L>10270<pc>182-1<k1>devakInandana<k2>devakInandana
+;
+; Case 24.  aSrika -> aSrIka   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=aSrika
+9743 old <L>2232<pc>034-2<k1>aSrika<k2>aSrika
+9743 new <L>2232<pc>034-2<k1>aSrIka<k2>aSrIka
+;
+; Case 25.  trihAyana -> trihAyaRa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=trihAyana
+41873 old <L>9117<pc>162-1<k1>trihAyana<k2>trihAyana
+41873 new <L>9117<pc>162-1<k1>trihAyaRa<k2>trihAyaRa
+;
+; Case 26.  SiSula -> SiSUla   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=SiSula
+114385 old <L>24688<pc>445-1<k1>SiSula<k2>SiSu/la
+114385 new <L>24688<pc>445-1<k1>SiSUla<k2>SiSu/la
+;
+; Case 27.  paryayana -> paryayaRa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=paryayana
+63455 old <L>13787<pc>244-2<k1>paryayana<k2>paryayana
+63455 new <L>13787<pc>244-2<k1>paryayaRa<k2>paryayaRa
+;
+; Case 28.  Akta -> akta   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=Akta
+11316 old <L>2585<pc>040-1<k1>Akta<k2>Akta
+11316 new <L>2585<pc>040-1<k1>akta<k2>akta
+;
+; Case 29.  tiraScA -> tiraSca   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=tiraScA
+39418 old <L>8567<pc>153-1<k1>tiraScA<k2>tiraScA/
+39418 new <L>8567<pc>153-1<k1>tiraSca<k2>tiraScA/
+;
+; Case 30.  mutiba -> mUtiba   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=mutiba
+87477 old <L>18993<pc>336-2<k1>mutiba<k2>mutiba
+87477 new <L>18993<pc>336-2<k1>mUtiba<k2>mUtiba
+;
+; Case 31.  nirnikti -> nirRikti   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=nirnikti
+;   [NOT LOCATED in csl-orig — locate the entry manually]
+;
+; Case 32.  apasAritA -> apasArita   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=apasAritA
+5767 old <L>1326<pc>020-2<k1>apasAritA<k2>apasAritA
+5767 new <L>1326<pc>020-2<k1>apasArita<k2>apasArita
+;
+; Case 33.  jUrva -> jurva   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=jUrva
+;   [NOT LOCATED in csl-orig — locate the entry manually]
+;
+; Case 34.  preRa -> prema   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=preRa
+74623 old <L>16267<pc>285-2<k1>preRa<k2>preRa/
+74623 new <L>16267<pc>285-2<k1>prema<k2>preRa/
+;
+; Case 35.  svarmI|a -> (flag)   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=svarmI|a
+134590 old <L>29020<pc>523-2<k1>svarmI|a<k2>sva^rmI|a
+134590 new <L>29020<pc>523-2<k1>(flag)<k2>sva^rmI|a
+;

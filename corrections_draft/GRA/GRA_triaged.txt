@@ -1,0 +1,75 @@
+# GRA tier-A -- BODY-GROUNDED triage  (DRAFT; verify every kept case against the scan)
+#
+# The 45 engine tier-A candidates were judged against GRA's OWN entry text (csl-orig),
+# not spelling alone. A spelling detector cannot tell a typo from a real word, an
+# intentional variant / compounding form, or wrong-reading apparatus -- the entry can.
+# Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM
+# pass over the 'realword' set + source confirmation of every TYPO verdict.
+#
+# FINDING: of 45 tier-A candidates, 0 are body-confirmed fileable typos (0.0%).
+# 28 are real distinct words, 7 are spellings GRA documents on purpose (w.r./v.l./
+# in-comp./cross-ref -- filing them would CORRUPT GRA), 9 are not in the current
+# source, and 1 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
+# do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.
+
+# ===== BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file) (0) =====
+
+# ===== BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted (1) =====
+
+pradakzinit   -> pradakziRit    [dcs=2 ndicts=1 body=realword]
+    GRA: {@pradakṣinít,@} Adv. (von pradakṣiṇá), etwas {%so%} thun, {%dass man den Gegenstand,%} dem man seine Ehrerbietung erweisen will, {%zur Rechten hat%} {234,1}; {266,15}; {414,1}; {848,14}; 〰 devátātim 
+    judged: Body headword is pradakṣinít = pradakziRit (R=ṇ); suspect has n instead of R(ṇ). Gloss fits the ṇ-spelling.
+    confirm: Body headword pradakṣinít (k1=pradakzinit, plain n); gloss 'etwas so thun, dass man den Gegenstand zur Rechten hat' = pradakṣiṇá circumambulation, fits ṇ-spelling pradakziRit. No variant/v.l. documented.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=pradakzinit
+
+# ===== BUCKET 3  REVIEW -- undecidable without the printed page (0) =====
+
+# ===== BUCKET 4  REAL-WORD -- a distinct real word; the fix would merge two words (28) =====
+jAGana        -> jaGana        | GRA: {@jāghána,@} m., {%Hüfte, Lende%} [= jaghána], enthalten in pṛthujāghana; aber auch in {28 | Body defines jāghána as 'Hüfte, Lende' [= jaghána]; the long-ā form is the actual headword
+havyA         -> havya         | GRA: {@(hávyā),@} {@háviā,@} f., {%Anrufung%} [von hvā]. -ās [N. p.] {462,1} imā́s tvā hávyam 〰 | Body lists (hávyā)/háviā as f. 'Anrufung' [from hvā]; long-ā feminine is the headword itse
+ajya          -> Ajya          | GRA: {@(ájya),@} n., das {%Eilen%} (von aj), enthalten in pṛtanā́jya, pṛtanā́jia. | Body defines (ájya) n. 'das Eilen' [from aj]; completely different word from Ājya (ghee). 
+indragopA     -> indragopa     | GRA: {@índra-gopā,@} a., den Indra zum Hüter [gopá] habend, {%von Indra behütet%}. (-ās), -aas  | Body headword is índra-gopā (long ā feminine adjective) 'von Indra behütet'; indragopA IS 
+vasavi        -> vAsavi        | GRA: {@vasávi@} oder {@vasā́vī,@} f., {%Schatzkammer%} [von vásu]. -yām [L.] 〰 indra dhārayas s | Body gives 'vasávi oder vasā́vī' — both forms listed; vasavi is one of the documented head
+raS           -> ras           | GRA: {@(*raś),@} etwa {%binden,%} enthalten in raśanā́, raśmán, raśmí, rāśí. | Body defines (*raś) 'etwa binden' — palatal ś (=S) IS the root; ras would be a different r
+pUrvaBaj      -> pUrvaBAj      | GRA: {@pūrva-bháj,@} a., stark pūrvabhā́j {%den vorzüglichsten%} (pūrvá 4) {%Antheil darreichen | Body gives pūrva-bháj (weak stem) with strong form pūrvabhā́j; pUrvaBaj is the weak-stem e
+satyavac      -> satyavAc      | GRA: {@satya-vác,@} stark {@satya-vā́c,@} a., {%Wahrheit%} [satyá 8] {%redend%} [vác von vac].  | Body gives 'satya-vác, stark satya-vā́c' — both weak and strong stems in one entry; satyav
+soBarI        -> soBari        | GRA: {@sóbharī,@} m., dass. -ayas {639,32}. -īṇaam {640,8} vāṇás. -ī [N. s.] {642,15}. -yās [G. | Body defines sóbharī (long ī) as a masculine noun with verse citations; a proper clan name
+mUr           -> mur           | GRA: {@(*√mūr),@} {%erstarren%} u. s. w. (Bugge in Ku. 〔19,447〕). | Body defines (*√mūr) 'erstarren' — the root has long ū; this is the headword itself.
+naBanU        -> naBanu        | GRA: {@nabhanū́,@} f., dasselbe. -úas [A. pl.], 〰 ná vákvās dhvasrā́s (wie wogende, spritzende  | Body headword is nabhanū́ (long ū); naBanU IS the headword with long U.
+vanarsad      -> vanarzad      | GRA: {@vanar-sád,@} a., vielleicht {%mit Wagenkasten%} (vanar = vána 10) {%versehen%}. -ádam rá | Body headword is vanar-sád (s not ṣ); gloss 'mit Wagenkasten versehen' fits vanarsad direc
+lABika        -> lAvika        | GRA: {@(lābhika),@} m., {%Gewinn, Vortheil%} s. su-lābhika. | Body defines (lābhika) 'Gewinn, Vortheil' [from lābha]; lAvika (from lāva=reaping) would b
+jesa          -> jeza          | GRA: {@jesá,@} m., {%Erlangung, Erwerbung%} [von 1. ji]. -é apā́m tokásya tánayasya 〰 {100,11}; | Body defines jesá 'Erlangung' [from 1. ji]; s (not ṣ) is correct for this root; jesa IS th
+satrAsAha     -> sAtrAsAha     | GRA: {@satrā-sāhá,@} a., dass. (P. satrā-sahá, Prāt. 〔566〕). -ás yudhmás (índras) {212,3}. | Body headword is satrā-sāhá; note '(P. satrā-sahá)' is a Paninian note. satrAsAha IS the h
+svayaMjA      -> svayaMja      | GRA: {@svayaṃ-jā́,@} a., {%von selbst entsprungen%}. -ā́s [N. p. f.] ā́pas {565,2} (Gegenastz k | Body headword is svayaṃ-jā́ 'von selbst entsprungen' (long ā feminine); svayaMjA IS the he
+yAcCrezwa     -> yAcCrezWa     | GRA: {@yā́cchreṣṭá,@} a., {%bestmöglich,%} wie (yā́t) es am heilsamsten (śréṣṭha) ist (vgl. lat | Body has yā́cchreṣṭá ending in ṭa (=wa not Wa=ṭha); suspect yAcCrezwa matches the body hea
+devagopa      -> devagopA      | GRA: {@devá-gopa,@} a., davon das f. -ā, {%göttliche Hüterin%} [siehe gopá]. -ā {889,16} suāveś | Body defines devá-gopa as adjective (masculine base); feminine -ā is just a form suffix, n
+svaveSa       -> svAveSa       | GRA: {@(sva-veśa),@} a., {%sein eigen Haus%} [veśá] {%habend,%} in á-svaveśa. | Body headword is (sva-veśa) 'sein eigen Haus habend,' contained in á-svaveśa; svaveSa IS t
+maDuDa        -> maDuDA        | GRA: {@madhu-dhá@} oder {@madhu-dhā́,@} a., {%Süssigkeit, liebliches Gut%} [mádhu 4] {%gebend%} | Body gives 'madhu-dhá oder madhu-dhā́' — both forms listed; maDuDa is the short-ā form of 
+pituBaj       -> pituBAj       | GRA: {@pitu-bháj,@} a., stark {@pitu-bháj,@} {%Nahrung geniessend%} [bháj von bhaj]. -ā́jas [N. | Body gives pitu-bháj 'Nahrung geniessend'; pituBaj is the weak stem of the entry.
+vftraputra    -> vftraputrA    | GRA: {@vṛtrá-putra,@} a., {%den Vritra zum Sohne%} [putrá] {%habend%}. -ā [f.] {32,9}. | Body defines vṛtrá-putra as adjective (masculine base) 'den Vritra zum Sohne habend'; masc
+apAvfkta      -> apavfkta      | GRA: {@apā́vṛkta@} s. vṛj. | Body headword is apā́vṛkta (long ā prefix ā-) with cross-ref 's. vṛj'; long ā IS the headw
+pfTivizWA     -> pfTivizWa     | GRA: {@pṛthiví-ṣṭhā́,@} a., {%den Erdboden%} [pṛthivi = pṛthivī́] {%betretend, fest auftretend% | Entry header pṛthiví-ṣṭhā́ and fem. form -ā́s confirm long ā (A); suspect spelling is corr
+mAtarApitf    -> mAtarapitf    | GRA: {@mātárā-pitṛ́,@} {%Vater und Mutter%}. -árā {302,7}. | Entry header mātárā-pitṛ́ confirms long ā in mātarā; suspect A is correct; suggestion shor
+nfjIt         -> nfjit         | GRA: {@nṛ-jīt,@} a., {%Männer besiegend%} [jít von ji]. -íte índrāya {212,1}. | Body has nṛ-jīt 'Männer besiegend' — jīt (long ī = jIt) matches suspect nfjIt; long I is c
+svac          -> Svac          | GRA: {@(svác),@} {@su-ác,@} stark {@su-áñc,@} a., {%sich leicht%} (nach einem Ziele) {%hinricht | Body headword is (svác), su-ác 'sich leicht hinrichtend'; svac IS the headword, Svac would
+goopaSa       -> (flag)        | GRA: {@(gó-opaśa),@} {@gáv-opaśa,@} a., {%mit Riemengeflecht versehen%} [s. gó (15) und opaśá]. | Entry defines gó-opaśa / gáv-opaśa 'mit Riemengeflecht versehen' — a genuine compound; no 
+
+# ===== BUCKET 5  INTENTIONAL -- GRA documents the spelling on purpose; NEVER file (7) =====
+Asat          -> asat          | GRA: {@ā́sat,@} a., s. ásat. | 's. ásat' — cross-reference marker; body documents Āsat as a distinct entry redirecting to
+SAtavat       -> Satavat       | GRA: {@śā́tavat (?),@} a., = śatávat (?). -anā-antā [du.] mitrā́‿iva ṛtā́ śatárā 〰 {932,5} (der | Body says 'śā́tavat (?) = śatávat (?)' — explicit '=' equation marker with question marks 
+Bavayu        -> BAvayu        | GRA: {@bhavayú@} siehe bhāvayú. | 'bhavayú siehe bhāvayú' — 'siehe' (see) is a cross-reference marker; intentionally documen
+kunamnama     -> kunannama     | GRA: {@ku-namnamá,@} a., {%schwer zu beugen%} [namnama vom Intens. namnamīti, von nam]. -ā́ [p. | Body notes '|| kunamnamá: Text kunannamá' — kunannamá is the text reading documented as a 
+fBukzA        -> fBukza        | GRA: {@ṛbhukṣā́,@} {@ṛbhukṣán,@} a., m., die {%Ribhuʼs%} [ṛbhú] {%beherrschend%} [von kṣā = kṣi | 
+nivana        -> nivanA        | GRA: {@nivaná,@} n. [von ní] = nimná, {%Thal, Tiefe%}. -ā́ ā́‿asmai rīyante 〰 ‿iva síndhavas {8 | 
+SritI         -> Sriti         | GRA: {@śritī́,@} {726,6}, wo wol śritvī́ [Absolutiv von śri] zu lesen ist áti 〰 tiraścátā gavyā | 
+
+# ===== BUCKET 6  UNLOCATABLE -- not in the current GRA source (stale/different key) (9) =====
+abdA          -> abda          | GRA:  | 
+treDa         -> treDA         | GRA:  | 
+viSvacarzaRI  -> viSvacarzaRi  | GRA:  | 
+aDakza        -> adakza        | GRA:  | 
+akzIyamAna    -> akzIyamARa    | GRA:  | 
+puruSaka      -> puruzaka      | GRA:  | 
+bahupayya     -> bahupAyya     | GRA:  | 
+svastiga      -> svastigA      | GRA:  | 
+fzidvis       -> fzidviz       | GRA:  | 

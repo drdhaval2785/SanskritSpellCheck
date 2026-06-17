@@ -1,0 +1,100 @@
+# CCS tier-A -- BODY-GROUNDED triage  (DRAFT; verify every kept case against the scan)
+#
+# The 35 engine tier-A candidates were judged against CCS's OWN entry text (csl-orig),
+# not spelling alone. A spelling detector cannot tell a typo from a real word, an
+# intentional variant / compounding form, or wrong-reading apparatus -- the entry can.
+# Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM
+# pass over the 'realword' set + source confirmation of every TYPO verdict.
+#
+# FINDING: of 35 tier-A candidates, 0 are body-confirmed fileable typos (0.0%).
+# 20 are real distinct words, 3 are spellings CCS documents on purpose (w.r./v.l./
+# in-comp./cross-ref -- filing them would CORRUPT CCS), 3 are not in the current
+# source, and 9 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
+# do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.
+
+# ===== BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file) (0) =====
+
+# ===== BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted (4) =====
+
+brahmaRa      -> brAhmaRa       [dcs=5 ndicts=2 body=realword]
+    CCS: 1. {#brahmaRa/#} {%m.%} ein heiliger Mann, Priester, Brahmane.
+    judged: Body gloss 'heiliger Mann, Priester, Brahmane' fits brAhmaRa (Brahmin); suspect missing long A in brAh-.
+    confirm: L17023 own headword <h>1 glossed 'ein heiliger Mann, Priester, Brahmane'; separate L17024 brAhmaRa <h>2 has distinct gloss. Distinct lemma, no error marker.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=brahmaRa
+
+godAvari      -> godAvarI       [dcs=3 ndicts=2 body=realword]
+    CCS: {#godAvari#} {%f. N. eines Flusses.%}
+    judged: Body 'f. N. eines Flusses' — river Godāvarī canonically ends in long ī; short-i suspect is a typo of godAvarI.
+    confirm: L6415 headword self-glossed '{%f. N. eines Flusses.%}'; suspect defined as its own word, no variant/error marker.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=godAvari
+
+devakinandana -> devakInandana  [dcs=2 ndicts=2 body=realword]
+    CCS: {#devakinandana#} {#devakIputra#} {%u.%} {#˚sUnu#} {%m. Bein.%} {%Kṛṣṇa's.%}
+    judged: Body 'Bein. Kṛṣṇa's' = son of DevakI; compound stem devakI- requires long I; short i in suspect is a typo.
+    confirm: L10270 headword glossed 'm. Bein. Kṛṣṇa's' grouping devakIputra/˚sUnu; own lemma, no fehlerhaft/v.l./lies marker.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=devakinandana
+
+dvAdaSavarzika -> dvAdaSavArzika  [dcs=0 ndicts=2 body=realword]
+    CCS: {#dvAdaSavarzika#} {%f.%} {#I#} zwölfjährig.
+    judged: Body 'zwölfjährig' fits dvAdaSavArzika; vArzika (annual) requires long A; suspect has short a.
+    confirm: L10677 headword self-glossed {%f.%} {#I#} 'zwölfjährig'; suspect is Cappeller's own lemma, no fehlerhaft/v.l./lies marker.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=dvAdaSavarzika
+
+# ===== BUCKET 3  REVIEW -- undecidable without the printed page (5) =====
+
+apratizwa     -> apratizWa      [dcs=3 ndicts=1 body=realword]
+    CCS: {#apratizwa#} {%u.%} {#˚zwita#} nicht feststehend.
+    judged: Body also uses ˚zwita with lowercase w; unclear if w vs W (dental vs retroflex) is intentional or consistent error.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=apratizwa
+
+aSrika        -> aSrIka         [dcs=2 ndicts=1 body=realword]
+    CCS: {#aSrika#} {%(adj.%} —˚) {%dass.%}
+    judged: Body '(adj. —˚) dass.' is too terse; 'dass.' refers to preceding entry not shown; cannot judge i vs I here.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=aSrika
+
+trihAyana     -> trihAyaRa      [dcs=2 ndicts=2 body=realword]
+    CCS: {#trihAyana#} {%f.%} {#I#} dreijährig.
+    judged: Both hAyana (year) and hAyaRa (annual adj.) exist; body form 'dreijährig' fits either; n vs R ambiguous.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=trihAyana
+
+patitasavitrIka -> patitasAvitrIka  [dcs=1 ndicts=1 body=realword]
+    CCS: {#patitasavitrIka#} der Sāvitrī verlustig {%(r.).%}
+    judged: Body gloss fits sAvitrI (long A expected in compound), but body does not explicitly flag the short a as erroneous.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=patitasavitrIka
+
+mutiba        -> mUtiba         [dcs=0 ndicts=2 body=realword]
+    CCS: {#mutiba#} {%m. Pl. Volksname.%}
+    judged: Body 'm. Pl. Volksname' — proper ethnic name; cannot judge short vs long U in a proper noun from gloss alone.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=CCS&key=mutiba
+
+# ===== BUCKET 4  REAL-WORD -- a distinct real word; the fix would merge two words (20) =====
+nUtra         -> mUtra         | CCS: {#nU/tra#} {%dass.%}, kunftig. | Body 'kunftig' (future) fits nUtra (nūtra=future/next); mUtra means urine; completely diff
+mfttika       -> mfttikA       | CCS: {#(mfttika)#} {%u.%} {#mf/ttikA#} {%f.%} Lehm, Thon, Schiefer. | Body lists '(mfttika) u. mfttikA f.' — both forms cited; mfttika is a documented alternate
+nABI          -> nABi          | CCS: {#nABI#} {%f.%} Nabel, Nabe {%(cf.%} {#nABi)#}. | Body 'nABI f. Nabel, Nabe (cf. nABi)' — long-I form defined with own gloss; nABi cited onl
+Sukfta        -> sukfta        | CCS: {#Su/kfta#} {%n. dass.; Adj.%} gescheucht, gehetzt. | Body defines Sukfta as 'gescheucht, gehetzt' (chased/hunted); distinct from sukfta 'well-d
+JarA          -> jarA          | CCS: {#JarA#} {%f.%} Wasserfall. | Body 'JarA f. Wasserfall' — Jh- initial (waterfall) is distinct from jarA (old age); diffe
+aramya        -> araRya        | CCS: {#aramya#} unangenehm, unliebenswürdig. | Body 'unangenehm, unliebenswürdig' fits aramya (a+ramya = not pleasant); araRya means fore
+AgniDra       -> AgnIDra       | CCS: {#A/gniDra#} {%m.%} der Feueranzünder, {%n.%} der Feueraltar; {#AgnIDrI/ya#} {%m.%} das au | Body headword is AgniDra 'Feueranzünder'; AgnIDra with long I is a derived form cited sepa
+jYas          -> jYAs          | CCS: {#jYas#} {%Gen. zu%} {#jYA#} = {%folg. (g.).%} | Body documents jYas as 'Gen. zu jYA'; a genuine grammatical genitive form, not a misspelli
+tiraScA       -> tiraSca       | CCS: {#tiraScA/#} {%u.%} {#tiraScI#} {%s.%} {#tiryaYc#}. | Body 'tiraScA u. tiraScI s. tiryaYc' — feminine forms of tiryaYc documented; long A marks 
+SiSula        -> SiSUla        | CCS: {#SiSu/la#} {%m.%} Kindchen. | Body 'SiSu/la m. Kindchen' shows short u in headword; SiSula is the documented diminutive 
+DUmya         -> DUmyA         | CCS: {#DUmya#} zu durchräuchern mit (—˚). | Body 'zu durchräuchern mit' defines DUmya as a gerundive (neut.); DUmyA would be feminine;
+suKaprasavA   -> suKaprasava   | CCS: 2. {#suKaprasavA#} {%f.%} glücklich gebärend.* | Body '2. suKaprasavA f. glücklich gebärend' — feminine long-A form explicitly marked f.; n
+apasAritA     -> apasArita     | CCS: {#apasAritA#} f. Ausgang, Ende.* | Body 'apasAritA f. Ausgang, Ende' — long A marks feminine form; suggestion apasArita is ne
+preRa         -> prema         | CCS: {#preRa/#} {%Instr.%} = {#preBRA#}, s. {#preman#}. | Body 'preRa Instr. = preBRA, s. preman' — documented instrumental of preman; unrelated to 
+svarmI|a      -> (flag)        | CCS: {#sva^rmI|a#} {%n.%} Kampf um Licht; {%Adj.%} auf dens. bezüglich. | Body gives own German gloss 'Kampf um Licht' (n.) + 'auf dens. bezüglich' (Adj.); headword
+kAlhAra       -> kalhAra       | CCS: {#kAlhAra#} von der weißen Wasserlilie kommend. | Body defines kAlhAra as 'von der weißen Wasserlilie kommend'; taddhita adjective from kalh
+paryayana     -> paryayaRa     | CCS: {#paryayana#} {%n.%} das Umwandeln. | Body 'paryayana n. das Umwandeln' — action noun with dental -na; paryayaRa (with retroflex
+jayAGoza      -> jayaGoza      | CCS: {#jayAGoza#} {%m.%} siegesruf. | Body headword is jayAGoza 'Siegesruf'; long A after jaya is documented; not flagged as err
+Akta          -> akta          | CCS: {#Akta#} {%s.%} {#dA#}. | Body 'Akta s. dA' — long-A form cross-referenced to root dA; Akta is a valid past particip
+nEzwa         -> nezwa         | CCS: {#nEzwa#} {%s.%} {#nI#}. | Body 'nEzwa s. nI' — documented form cross-referenced to root nI; nE- diphthong is its own
+
+# ===== BUCKET 5  INTENTIONAL -- CCS documents the spelling on purpose; NEVER file (3) =====
+vilva         -> bilva         | CCS: {#vilva#} {%s.%} {#bilva#}. | Body 'vilva s. bilva' is a cross-reference; alternate spelling of bilva documented intenti
+vakulAvalikA  -> bakulAvalikA  | CCS: {#vakulAvalikA#} {%s.%} {#bakulAvalikA#}. | Body 's. bakulAvalikA' is a cross-reference (= {#X#} pattern); variant spelling documented
+yakzi         -> yakzI         | CCS: {#yakzi#} s. {#yaj#}. | 
+
+# ===== BUCKET 6  UNLOCATABLE -- not in the current CCS source (stale/different key) (3) =====
+arda          -> arDa          | CCS:  | 
+jUrva         -> jurva         | CCS:  | 
+nirnikti      -> nirRikti      | CCS:  | 

@@ -1,0 +1,79 @@
+# MD tier-A -- BODY-GROUNDED triage  (DRAFT; verify every kept case against the scan)
+#
+# The 50 engine tier-A candidates were judged against MD's OWN entry text (csl-orig),
+# not spelling alone. A spelling detector cannot tell a typo from a real word, an
+# intentional variant / compounding form, or wrong-reading apparatus -- the entry can.
+# Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM
+# pass over the 'realword' set + source confirmation of every TYPO verdict.
+#
+# FINDING: of 50 tier-A candidates, 0 are body-confirmed fileable typos (0.0%).
+# 48 are real distinct words, 1 are spellings MD documents on purpose (w.r./v.l./
+# in-comp./cross-ref -- filing them would CORRUPT MD), 0 are not in the current
+# source, and 1 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
+# do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.
+
+# ===== BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file) (0) =====
+
+# ===== BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted (0) =====
+
+# ===== BUCKET 3  REVIEW -- undecidable without the printed page (1) =====
+
+vo|um         -> (flag)         [dcs=0 ndicts=1 body=realword]
+    MD: {#vo|um#} vołhum, V. inf. √ vah.
+    judged: Body shows 'vołhum, V. inf. √vah'; the '|' in the key is a non-SLP1 charset artifact, not a standard spelling error.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MD&key=vo|um
+
+# ===== BUCKET 4  REAL-WORD -- a distinct real word; the fix would merge two words (48) =====
+jAya          -> jaya          | MD: {#jAya#} jā́-ya, pr. st. {%of%} √ jan. | Body: 'jā́-ya, pr. st. of √ jan' — a present-stem form, distinct word, not a misspelling o
+kekAya        -> kekaya        | MD: {#kekAya#} kekā-ya, den. Ā. cry ({%as a peacock%}). | Body: 'kekā-ya, den. Ā. cry (as a peacock)' — a real denominative verb, distinct from keka
+SrutA         -> Sruta         | MD: {#SrutA#} śrutā, (pp.) f. N.: {@a‿artha,@} a. having 🞄heard {%something%} (g.): {@ā,@} f.  | Body: 'śrutā, (pp.) f. N.' — a real feminine proper noun/pp form, distinct from neuter/mas
+parokzA       -> parokza       | MD: {#parokzA#} parokṣā, f. past completed action; 🞄personal ending of the perfect (gr.). | Body: 'parokṣā, f. past completed action; personal ending of the perfect (gr.)' — feminine
+sTalA         -> sTala         | MD: {#sTalA#} sthálā, f. mound (V., {%rare%}). | Body: 'sthálā, f. mound (V., rare)' — real feminine noun with independent gloss; not missp
+cikitsa       -> cikitsA       | MD: {#cikitsa#} ci-kit-sa, des. {%of%} √ cit (q. v.); {@-saka,@} 🞄m. physician; {@-sana,@} n.  | Body: 'ci-kit-sa, des. of √ cit' — desiderative stem (present base) with its own sub-entri
+tira          -> tIra          | MD: {#tira#} tira, pr. {%base of%} √ tṝ. | Body: 'tira, pr. base of √ tṝ' — a present base form; entirely distinct from tīra (bank/sh
+nABI          -> nABi          | MD: {#nABI#} nābhī, f. navel, navel-cord; nave {%of a 🞄wheel%}. | Body: 'nābhī, f. navel, navel-cord; nave of a wheel' — real feminine long-ī form with inde
+JarA          -> jarA          | MD: {#JarA#} jhar-ā, f. waterfall; {@-i,@} f. id.; river. | Body: 'jhar-ā, f. waterfall; river' — Jha-initial root (retroflex); semantically and phono
+aramya        -> araRya        | MD: {#aramya#} a-ramya, fp. unpleasant, unamiable. | Body: 'a-ramya, fp. unpleasant, unamiable' — clearly a-ramya (not pleasant); entirely dist
+atiBft        -> ativft        | MD: {#atiBft#} ati-bhṛt, a. heavily burdened. | Body: 'ati-bhṛt, a. heavily burdened' — ati+√bhṛ compound with real gloss; wholly differen
+vakzya        -> Bakzya        | MD: {#vakzya#} vak-ṣya, ft. {%base of%} √ vah & √ vac: 🞄{@-māṇa-tva,@} n. subsequent mention ( | Body: 'vak-ṣya, ft. base of √ vah & √ vac' — future base from vac/vah; not misspelling of 
+aDarmika      -> aDArmika      | MD: {#aDarmika#} a-dharmika, m. id.. | Body: 'a-dharmika, m. id.' — real adjective/noun with prefix a- and root dharma; not missp
+Ipsa          -> IpsA          | MD: {#Ipsa#} ī́p-sa, des. (√ āp) wish to obtain, desire. | Body: 'ī́p-sa, des. (√ āp) wish to obtain' — a desiderative stem (m./n. present base), dis
+avat          -> Avat          | MD: {#avat#} áv-at, pr. pt. friendly; m. N.. | Body: 'áv-at, pr. pt. friendly; m. N.' — present participle of √av (to favour); distinct f
+pfcCa         -> pfcCA         | MD: {#pfcCa#} pṛccha, pr. st. {%of%} √ prach. | Body: 'pṛccha, pr. st. of √ prach' — a present stem (masculine/neuter base); distinct from
+cAtuzpaTa     -> catuzpaTa     | MD: {#cAtuzpaTa#} cātuṣ-patha, a. being at a place 🞄where four roads meet; {@-prāśyá,@} a. suf | Body: 'cātuṣ-patha, a. being at a place where four roads meet' — cātuṣ- compound (from cat
+rajikA        -> rAjikA        | MD: {#rajikA#} raj-ikā, f. ({%of%} -aka) washerwoman. | Body: 'raj-ikā, f. (of -aka) washerwoman' — from √raj (to wash/colour); distinct from rāji
+cikIrza       -> cikIrzA       | MD: {#cikIrza#} ci-kīr-ṣa, des. {%of%} √ kṛ, do; {@-ṣā,@} 🞄f. desire to do {%or%} make, longin | Body: 'ci-kīr-ṣa, des. of √ kṛ' — desiderative stem (present base); distinct from feminine
+pArzRI        -> pArzRi        | MD: {#pArzRI#} pārṣṇī, f. = pārṣṇi. | Body: 'pārṣṇī, f. = pārṣṇi' — long-ī feminine form explicitly equated to pārṣṇi; a real fe
+saMgawa       -> saMgata       | MD: {#saMgawa#} saṃga-ṭa, m. [-ṭa = bhaṭa] N.. | Body: 'saṃga-ṭa, m. [-ṭa = bhaṭa] N.' — a proper name with its own etymology [-ṭa=bhaṭa]; 
+ABogya        -> aBogya        | MD: {#ABogya#} ā-bhogya, fp. to enjoyed; to be 🞄perceived. | Body: 'ā-bhogya, fp. to be enjoyed; to be perceived' — ā-prefix compound with real gloss; 
+vIraya        -> vIrayA        | MD: {#vIraya#} vīrá-ya, den. Ā. act like a hero, display 🞄heroism (V.). | Body: 'vīrá-ya, den. Ā. act like a hero' — denominative verbal stem; not misspelling of in
+SitIkf        -> SItIkf        | MD: {#SitIkf#} śitī-kṛ, whet, sharpen. | IAST gloss 'śitī-kṛ' = ś+i+t+ī+k+ṛ → SLP1 SitIkf (short i, long I); suspect spelling is co
+CucCUndara    -> CucCundara    | MD: {#CucCUndara#} chucchūndara, m., {@ī,@} f. id.. | Body: 'chucchūndara, m., ī f. id.' — long-U form with its own entry and gender forms; a re
+mUr           -> mur           | MD: [{#mUr#} MŪR, become rigid {%or%} solid]. | Body: 'MŪR, become rigid or solid' — a distinct verbal root with long-U; not a misspelling
+aDivinna      -> aDivinnA      | MD: {#aDivinna#} adhi-vinna, pp. {%of%} √ 2. vid. | Body: 'adhi-vinna, pp. of √ 2. vid' — past participle (masculine/neuter); distinct from lo
+iNganA        -> iNgana        | MD: {#iNganA#} iṅg-anā, f. designation of (g.); {@-ita,@} 🞄(pp.) n. gesture, sign, hint, look; | Body: 'iṅg-anā, f. designation of (g.)' — real feminine noun with independent gloss; disti
+pUraya        -> puraya        | MD: {#pUraya#} pūr-aya, cs. {%of%} √ 1. pṛ, fill. | Body: 'pūr-aya, cs. of √ 1. pṛ, fill' — causative stem with long-ū; distinct from puraya (
+Sabdaya       -> SabdAya       | MD: {#Sabdaya#} śabda-ya, den. give forth sounds, cry 🞄aloud; call, invoke; ps. {@śabdyate,@}  | Body: 'śabda-ya, den. give forth sounds, cry aloud' — denominative verbal stem; not misspe
+AkumAra       -> akumAra       | MD: {#AkumAra#} ā-kumāra, ad. from boyhood upwards 🞄(˚—). | IAST 'ā-kumāra' = long initial ā → SLP1 AkumAra; suspect is correct, suggestion drops the 
+hriRIya       -> hriRIyA       | MD: {#hriRIya#} hriṇī-ya, Ā. be ashamed of {%any one%} 🞄(in.): w. {@na,@} not be ashamed in th | IAST 'hriṇī-ya' ends in short a → SLP1 hriRIya; suggestion hriRIyA wrongly adds final long
+vizamAya      -> vizamaya      | MD: {#vizamAya#} viṣamā-ya, den. Ā. become {%or%} 🞄appear uneven ({%path%}). | IAST 'viṣamā-ya' has long ā before -ya → SLP1 vizamAya; suggestion drops the long A.
+jAtApatya     -> jAtApatyA     | MD: {#jAtApatya#} jāta‿apatya, a. having offspring; 🞄{@-amarṣa,@} a. having oneʼs anger roused | IAST 'jātāpatya' ends in short a → SLP1 jAtApatya; suggestion adds spurious final long A.
+kfkAlika      -> kfkAlikA      | MD: {#kfkAlika#} kṛkālika, f. {%kind of bird%}. | IAST 'kṛkālika' ends in short a → SLP1 kfkAlika; suggestion adds spurious final long A.
+Andolaya      -> andolaya      | MD: {#Andolaya#} āndolaya, den. P. swing: pp. {@ita@}. | IAST 'āndolaya' has long initial ā → SLP1 Andolaya; suggestion drops the long A.
+asikta        -> Asikta        | MD: {#asikta#} a-sikta, pp. unwatered. | Body 'a-sikta, pp. unwatered' = privative a- + sikta; SLP1 asikta is correct. Asikta = āsi
+paRAya        -> paRAyA        | MD: {#paRAya#} paṇā-ya, den. sell. | IAST 'paṇāya', den. sell, ends in short a → SLP1 paRAya; suggestion adds spurious final lo
+Srapaya       -> SrApaya       | MD: {#Srapaya#} śrap-aya, cs. (√ śrā): pp. {@ita@}. | IAST 'śrap-aya', cs. of √śrā, has short a after śr → SLP1 Srapaya; suggestion SrApaya has 
+gfBaya        -> gfBAya        | MD: {#gfBaya#} gṛbhá-ya, den. P. grasp, seize. | IAST 'gṛbhá-ya', den. grasp, ends in short a → SLP1 gfBaya; suggestion adds spurious final
+parakfta      -> parAkfta      | MD: {#parakfta#} para-kṛta, pp. done {%or%} committed by 🞄another; {@-kṛtti,@} f. act of anoth | Body 'para-kṛta, pp. done by another' = para+kṛta → SLP1 parakfta; parAkfta = parākṛta is 
+parAyatI      -> parAyati      | MD: {#parAyatI#} parā-yat-ī́, f. pr. pt. (√ i) gone by, 🞄departed ({%dawn%}; RV.). | IAST 'parā-yat-ī́', f. pr. pt. feminine ending is long ī → SLP1 parAyatI; suggestion drops
+tve           -> tvE           | MD: {#tve#} tvé, V. lc. {%of%} tvam, thou. | IAST 'tvé', V. lc. of tvam, short e → SLP1 tve; suggestion tvE = tvai (diphthong ai) is wr
+Kar           -> kar           | MD: [{#Kar#} KHAR, be rough {%or%} broken.]. | Bracketed root entry '[KHAR, be rough or broken]'; kh ≠ k — Kar (khar) and kar are distinc
+BAvaya        -> vAvaya        | MD: {#BAvaya#} bhāv-aya, cs. {%of%} √ bhū; {@-ay-itavya,@} 🞄fp. to be cherished {%or%} further | IAST 'bhāvaya', cs. of √bhū → SLP1 BAvaya (B=bh); suggestion vAvaya is a different word en
+puzpARanAda   -> puzpARanAqa   | MD: {#puzpARanAda#} puṣpāṇanāda, m. N. {%of a village%}. | IAST 'puṣpāṇanāda' has dental d at end → SLP1 puzpARanAda; suggestion has retroflex q (ḍ),
+vAraya        -> BAraya        | MD: {#vAraya#} vāra-ya, cs. (√ 1. vṛ) present etc.. | IAST 'vāraya', cs. of √vṛ → SLP1 vAraya (v-); suggestion BAraya (bh-) is a different root 
+varRaya       -> varmaya       | MD: {#varRaya#} varṇa-ya, den. P. (Ā. metr.) colour, 🞄paint; depict, delineate, describe, rela | IAST 'varṇa-ya', den. colour/describe → SLP1 varRaya (ṇ=R); suggestion varmaya is a comple
+
+# ===== BUCKET 5  INTENTIONAL -- MD documents the spelling on purpose; NEVER file (1) =====
+SAraRa        -> SaraRa        | MD: {#SAraRa#} śāraṇá, m. N. incorr. {%for%} sāraṇa. | Body: 'N. incorr. for sāraṇa' — intentionally documents an incorrect form with explicit 'i
+
+# ===== BUCKET 6  UNLOCATABLE -- not in the current MD source (stale/different key) (0) =====

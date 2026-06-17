@@ -6,6 +6,30 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.19.0] - 2026-06-17
+
+### Added
+- **Tier-2 dictionary triage runs** — the 19th-c. European-language cluster (9 dicts), taking
+  coverage from 9/33 to **18/33**. All hybrid (Sonnet classify / Opus confirm / Opus review):
+  - **SHS** (*Śabda-Sāgara*, English 1900, 246 tier-A) — **37 fileable** (~15%, the highest-yield
+    dictionary so far), 31 do-not-file, 2 reviewed out. A genuine outlier: Śabda-Sāgara is a
+    poorly-digitised source, and nearly every entry carries an explicit `E. <etymology>` /
+    inflectional paradigm that confirms the correct spelling — the body-grounded method's ideal
+    case. The 37 are b/v, retroflex w/W, vowel-length and sibilant errors, each contradicted by
+    the entry's own text.
+  - **WIL** (Wilson, English 1832, 108) — **3 fileable** (`boDidruna→boDidruma`,
+    `jAmbabat→jAmbavat`, `kaNkalodya→kaNkaloqya`), 17 do-not-file, 1 reviewed out.
+  - **GST** (Goldstücker, English 1856, 48) — **1 fileable** (`aprakaraRika→aprAkaraRika`,
+    confirmed by the entry's own etymology + quoted example), 22 do-not-file.
+  - **CAE / AP90 / MD / GRA / BEN / CCS** — **0 fileable** each (8/8/1/7/14/3 do-not-file;
+    GRA reviewed out `pradakzinit`). Well-curated or small.
+  - Registered all 9 in `triage_lang._LANG` (CAE/AP90/MD/SHS/WIL/GST/BEN→en, GRA/CCS→de) — a
+    one-line edit.
+- **Cumulative: 18/33 triaged, 63 fileable typos across 8 dicts, ~1,976 documented-intentional
+  spellings catalogued.** Confirms the thesis: tier-A precision is near-zero on mature dicts;
+  the do-not-file list is the deliverable. The exceptions are poorly-digitised sources
+  (SHS 15%, PWG 2.4%), where the entry's own etymology makes each error high-confidence.
+
 ## [1.18.0] - 2026-06-17
 
 ### Added

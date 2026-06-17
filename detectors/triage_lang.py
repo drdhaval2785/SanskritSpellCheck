@@ -12,9 +12,12 @@ import re
 
 # dict code -> language (the ONE place to register a dictionary; unknown codes default to 'en')
 _LANG = {
-    'MW': 'en', 'MW72': 'en', 'AP': 'en',          # Monier-Williams 1899/1872, Apte Practical
-    'PW': 'de', 'PWG': 'de', 'SCH': 'de',           # Petersburg (Boehtlingk-Roth) + Schmidt Nachtraege
-    'VCP': 'sa', 'SKD': 'sa',                        # Vacaspatyam, Sabdakalpadruma (Sanskrit-Sanskrit)
+    'MW': 'en', 'MW72': 'en', 'AP': 'en', 'AP90': 'en',   # Monier-Williams 1899/1872, Apte 1957/1890
+    'WIL': 'en', 'BEN': 'en', 'GST': 'en', 'CAE': 'en',   # Wilson, Benfey, Goldstuecker, Cappeller (Eng)
+    'MD': 'en', 'SHS': 'en',                              # Macdonell, Shabda-Sagara
+    'PW': 'de', 'PWG': 'de', 'SCH': 'de',                # Petersburg (Boehtlingk-Roth) + Schmidt Nachtraege
+    'GRA': 'de', 'CCS': 'de',                            # Grassmann (Rigveda), Cappeller (German)
+    'VCP': 'sa', 'SKD': 'sa',                            # Vacaspatyam, Sabdakalpadruma (Sanskrit-Sanskrit)
 }
 _LANG_NAME = {'en': 'English', 'de': 'German', 'sa': 'Sanskrit'}
 

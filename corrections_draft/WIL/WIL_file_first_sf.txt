@@ -1,0 +1,9 @@
+; WIL body-confirmed fileable typos -- CORRECTIONS standard format (DICT:wrong:right:n)
+; 3 fileable (classified TYPO + source-confirmed + survived the Opus false-positive review) + 1 reviewed-out (commented below)
+; VERIFY each remaining case on the scan, flip trailing n->y for confirmed ones, then:
+;   python chg_nchg_sep.py WIL_file_first_sf.txt chg.txt nchg.txt
+WIL:boDidruna:boDidruma:n
+WIL:jAmbabat:jAmbavat:n
+WIL:kaNkalodya:kaNkaloqya:n
+; REVIEWED-OUT (realword): <lex>r.</lex> 1st cl. (saYcati) 'To go'; genuine root ṣañc, ṣopadeśa root cited with ṣ but conjugates to dental s. Inten
+;WIL:zaYca:saYca:n

@@ -7,21 +7,23 @@ tier-A spelling candidates can be turned into a verified **FILE-FIRST** queue + 
 run it with the **[`/dict-triage <DICT>`](../.claude/commands/dict-triage.md)** skill
 (Sonnet classifies, Opus source-confirms, a human verifies).
 
-**9 of 33 triaged** (MW · PW · VCP · PWG · SKD · AP · MW72 · SCH, plus SNP as the Review-phase validation dict).
-Headline finding: tier-A precision is
-**near-zero** on these mature dictionaries — the durable deliverable is the do-not-file list
-and *preventing bad bulk edits*, not the handful of real typos.
+**18 of 33 triaged — 63 fileable typos across 8 dicts; ~1,976 documented-intentional spellings catalogued.**
+Tier-A precision stays **near-zero** on mature, much-corrected dictionaries — the durable
+deliverable is the do-not-file list and *preventing bad bulk edits*, not the handful of real
+typos. The exception is **poorly-digitised sources**: SHS (15%) and PWG (2.4%) carry many real
+OCR errors, each confirmed by the entry's own etymology/inflection.
 
-| triaged | tier-A | fileable typos | do-not-file | combined precision |
-|---|--:|--:|--:|--:|
-| MW (English) | 1954 | **4** | 630 | 0.2% |
-| PW (German) | 657 | **2** | 255 | 0.3% |
-| VCP (Sanskrit) | 563 | **1** | 408 | 0.2% |
-| PWG (German) | 497 | **12** | 248 | 2.4% |
-| SKD (Sanskrit) | 412 | **3** | 103 | 0.7% |
-| AP (English) | 152 | **0** | 32 | 0.0% |
-| MW72 (English) | 360 | **0** | 77 | 0.0% |
-| SCH (German) | 678 | **0** | 109 | 0.0% |
+| triaged (fileable > 0) | tier-A | fileable typos | do-not-file |
+|---|--:|--:|--:|
+| SHS (English, 1900) | 246 | **37** | 31 |
+| PWG (German) | 497 | **12** | 248 |
+| MW (English, 1899) | 1954 | **4** | 630 |
+| SKD (Sanskrit) | 412 | **3** | 103 |
+| WIL (English, 1832) | 108 | **3** | 17 |
+| PW (German) | 657 | **2** | 255 |
+| VCP (Sanskrit) | 563 | **1** | 408 |
+| GST (English, 1856) | 48 | **1** | 22 |
+| _10 others_ — AP · MW72 · SCH · AP90 · MD · CAE · GRA · BEN · CCS · SNP | — | **0** | 262 |
 
 ## Status — all 33 dictionaries (by tier-A volume)
 
@@ -43,7 +45,7 @@ provided) — it becomes triageable once they are wired into the pipeline.**
 | [SKD](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/skd) — Śabdakalpadruma (Sanskrit) | 412 | ✅ **3 fileable · 103 do-not-file** — [readme](SKD/readme.md) · [file-first](SKD/SKD_file_first_sf.txt) · [do-not-file](SKD/SKD_wrong_readings.txt) · [queue](SKD/SKD_triaged.txt) |
 | [MW72](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/mw72) — Monier-Williams (1872, 1st ed) | 360 | ✅ **0 fileable · 77 do-not-file** — [readme](MW72/readme.md) · [do-not-file](MW72/MW72_wrong_readings.txt) · [queue](MW72/MW72_triaged.txt) |
 | [YAT](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/yat) | 247 | — pending |
-| [SHS](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/shs) | 246 | — pending |
+| [SHS](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/shs) — Śabda-Sāgara (English, 1900) | 246 | ✅ **37 fileable · 31 do-not-file** — [readme](SHS/readme.md) · [file-first](SHS/SHS_file_first_sf.txt) · [do-not-file](SHS/SHS_wrong_readings.txt) · [queue](SHS/SHS_triaged.txt) |
 | [ACC](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/acc) | 174 | — pending |
 | [BUR](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/bur) — Burnouf | 162 | — pending |
 | [IEG](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/ieg) — Sircar, Indian Epigraphical Glossary | 162 | — pending |
@@ -51,17 +53,17 @@ provided) — it becomes triageable once they are wired into the pipeline.**
 | [PE](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/pe) | 158 | — pending |
 | [AP](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/ap) — Apte, Practical (English) | 152 | ✅ **0 fileable · 32 do-not-file** — [readme](AP/readme.md) · [do-not-file](AP/AP_wrong_readings.txt) · [queue](AP/AP_triaged.txt) |
 | [STC](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/stc) | 111 | — pending |
-| [WIL](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/wil) — Wilson | 108 | — pending |
-| [CAE](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/cae) | 89 | — pending |
-| [AP90](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/ap90) — Apte (1890) | 53 | — pending |
-| [MD](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/md) — Macdonell | 50 | — pending |
-| [GST](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/gst) | 48 | — pending |
+| [WIL](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/wil) — Wilson (English, 1832) | 108 | ✅ **3 fileable · 17 do-not-file** — [readme](WIL/readme.md) · [file-first](WIL/WIL_file_first_sf.txt) · [do-not-file](WIL/WIL_wrong_readings.txt) · [queue](WIL/WIL_triaged.txt) |
+| [CAE](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/cae) — Cappeller, Sanskrit-English (1891) | 89 | ✅ **0 fileable · 8 do-not-file** — [readme](CAE/readme.md) · [do-not-file](CAE/CAE_wrong_readings.txt) · [queue](CAE/CAE_triaged.txt) |
+| [AP90](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/ap90) — Apte (1890) | 53 | ✅ **0 fileable · 8 do-not-file** — [readme](AP90/readme.md) · [do-not-file](AP90/AP90_wrong_readings.txt) · [queue](AP90/AP90_triaged.txt) |
+| [MD](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/md) — Macdonell (1893) | 50 | ✅ **0 fileable · 1 do-not-file** — [readme](MD/readme.md) · [do-not-file](MD/MD_wrong_readings.txt) · [queue](MD/MD_triaged.txt) |
+| [GST](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/gst) — Goldstücker (English, 1856) | 48 | ✅ **1 fileable · 22 do-not-file** — [readme](GST/readme.md) · [file-first](GST/GST_file_first_sf.txt) · [do-not-file](GST/GST_wrong_readings.txt) · [queue](GST/GST_triaged.txt) |
 | [KRM](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/krm) | 47 | — pending |
-| [GRA](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/gra) — Grassmann, Wörterbuch zum Rig-Veda | 45 | — pending |
-| [BEN](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/ben) — Benfey | 43 | — pending |
+| [GRA](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/gra) — Grassmann, Wörterbuch zum Rig-Veda (German, 1873) | 45 | ✅ **0 fileable · 7 do-not-file** — [readme](GRA/readme.md) · [do-not-file](GRA/GRA_wrong_readings.txt) · [queue](GRA/GRA_triaged.txt) |
+| [BEN](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/ben) — Benfey (English, 1866) | 43 | ✅ **0 fileable · 14 do-not-file** — [readme](BEN/readme.md) · [do-not-file](BEN/BEN_wrong_readings.txt) · [queue](BEN/BEN_triaged.txt) |
 | [VEI](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/vei) | 43 | — pending |
 | [BOP](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/bop) — Bopp, Glossarium | 39 | — pending |
-| [CCS](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/ccs) — Cappeller, Sanskrit-English | 35 | — pending |
+| [CCS](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/ccs) — Cappeller, Sanskrit-German | 35 | ✅ **0 fileable · 3 do-not-file** — [readme](CCS/readme.md) · [do-not-file](CCS/CCS_wrong_readings.txt) · [queue](CCS/CCS_triaged.txt) |
 | [MCI](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/mci) | 24 | — pending |
 | [PGN](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/pgn) | 10 | — pending |
 | [SNP](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/snp) | 4 | ✅ **0 fileable · 3 do-not-file** (Review-phase validation dict) — [readme](SNP/readme.md) · [do-not-file](SNP/SNP_wrong_readings.txt) · [queue](SNP/SNP_triaged.txt) |
@@ -85,7 +87,7 @@ python triage_dict.py <DICT> --finish            # synthesize the package
 Or just run the **[`/dict-triage <DICT>`](../.claude/commands/dict-triage.md)** skill, which
 drives the whole sequence (incl. the source-verification rubric and the do-not-file list).
 
-### Ready to run — the 23 pending dictionaries (highest tier-A first)
+### Ready to run — the 14 pending dictionaries (highest tier-A first)
 
 Type any line into Claude Code (a slash-command is run by typing, not by clicking):
 
@@ -93,29 +95,21 @@ Type any line into Claude Code (a slash-command is run by typing, not by clickin
 /dict-triage BHS
 /dict-triage PUI
 /dict-triage YAT
-/dict-triage SHS
 /dict-triage ACC
 /dict-triage BUR
 /dict-triage IEG
 /dict-triage INM
 /dict-triage PE
 /dict-triage STC
-/dict-triage WIL
-/dict-triage CAE
-/dict-triage AP90
-/dict-triage MD
-/dict-triage GST
 /dict-triage KRM
-/dict-triage GRA
-/dict-triage BEN
 /dict-triage VEI
 /dict-triage BOP
-/dict-triage CCS
 /dict-triage MCI
 /dict-triage PGN
 ```
 
-That accounts for all 33: **already triaged** (9, re-runs are stochastic — don't blindly
-overwrite): `MW` `PW` `VCP` `PWG` `SNP` `SKD` `AP` `MW72` `SCH`; **source not in csl-orig**
-(1): `PD` — two external sources to be provided, then triageable.
+That accounts for all 33: **already triaged** (18, re-runs are stochastic — don't blindly
+overwrite): `MW` `PW` `VCP` `PWG` `SNP` `SKD` `AP` `MW72` `SCH` `SHS` `WIL` `GST` `CAE` `AP90`
+`MD` `GRA` `BEN` `CCS`; **source not in csl-orig** (1): `PD` — two external sources to be
+provided, then triageable.
 

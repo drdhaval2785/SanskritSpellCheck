@@ -1,0 +1,197 @@
+; DRAFT corrections for GST — SanskritSpellCheck; VERIFY each against the scan before filing.
+; updateByLine format; only the <k1>/<k2> key field is edited (check the entry body too).
+; NOTE: each case targets the FIRST entry with that headword -- check for homographs
+;       (multiple entries sharing a key) and that no two cases edit the same line.
+;
+; Case 1.  abdi -> abDi   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=abdi
+43606 old <L>5785<pc>229-b<k1>abdi<k2>abdi
+43606 new <L>5785<pc>229-b<k1>abDi<k2>abDi
+;
+; Case 2.  anda -> anDa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=anda
+27082 old <L>4031<pc>131-a<k1>anda<k2>anda
+27082 new <L>4031<pc>131-a<k1>anDa<k2>anDa
+;
+; Case 3.  apavada -> apavAda   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=apavada
+34757 old <L>4887<pc>175-b<k1>apavada<k2>apavada
+34757 new <L>4887<pc>175-b<k1>apavAda<k2>apavAda
+;
+; Case 4.  agnivAhu -> agnibAhu   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=agnivAhu
+2734 old <L>435<pc>012-b<k1>agnivAhu<k2>agnivAhu
+2734 new <L>435<pc>012-b<k1>agnibAhu<k2>agnibAhu
+;
+; Case 5.  aBilAsin -> aBilAzin   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=aBilAsin
+49112 old <L>6314<pc>263-b<k1>aBilAsin<k2>aBilAsin
+49112 new <L>6314<pc>263-b<k1>aBilAzin<k2>aBilAzin
+;
+; Case 6.  aBIruc -> aBiruc   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=aBIruc
+54119 old <L>6592<pc>300-a<k1>aBIruc<k2>aBIruc
+54119 new <L>6592<pc>300-a<k1>aBiruc<k2>aBiruc
+;
+; Case 7.  aBivarga -> aBIvarga   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=aBivarga
+49183 old <L>6325<pc>264-a<k1>aBivarga<k2>aBivarga
+49183 new <L>6325<pc>264-a<k1>aBIvarga<k2>aBIvarga
+;
+; Case 8.  anDU -> anDu   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=anDU
+27469 old <L>4084<pc>133-a<k1>anDU<k2>anDU
+27469 new <L>4084<pc>133-a<k1>anDu<k2>anDu
+;
+; Case 9.  antarveSmam -> antarveSman   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=antarveSmam
+26234 old <L>3919<pc>126-b<k1>antarveSmam<k2>antarveSmam
+26234 new <L>3919<pc>126-b<k1>antarveSman<k2>antarveSman
+;
+; Case 10.  anyatABAva -> anyaTABAva   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=anyatABAva
+28749 old <L>4215<pc>141-a<k1>anyatABAva<k2>anyatABAva
+28749 new <L>4215<pc>141-a<k1>anyaTABAva<k2>anyaTABAva
+;
+; Case 11.  apOgaRqa -> apogaRqa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=apOgaRqa
+39435 old <L>5322<pc>205-a<k1>apOgaRqa<k2>apOgaRqa
+39435 new <L>5322<pc>205-a<k1>apogaRqa<k2>apogaRqa
+;
+; Case 12.  apakaraka -> apakAraka   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=apakaraka
+31387 old <L>4477<pc>157-a<k1>apakaraka<k2>apakaraka
+31387 new <L>4477<pc>157-a<k1>apakAraka<k2>apakAraka
+;
+; Case 13.  anupaja -> anUpaja   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=anupaja
+19685 old <L>3042<pc>092-a<k1>anupaja<k2>anupaja
+19685 new <L>3042<pc>092-a<k1>anUpaja<k2>anUpaja
+;
+; Case 14.  akzArAlavaRa -> akzAralavaRa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=akzArAlavaRa
+1595 old <L>244<pc>007-b<k1>akzArAlavaRa<k2>akzArAlavaRa
+1595 new <L>244<pc>007-b<k1>akzAralavaRa<k2>akzAralavaRa
+;
+; Case 15.  anunAsikAtva -> anunAsikatva   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=anunAsikAtva
+19584 old <L>3024<pc>092-a<k1>anunAsikAtva<k2>anunAsikAtva
+19584 new <L>3024<pc>092-a<k1>anunAsikatva<k2>anunAsikatva
+;
+; Case 16.  apalAza -> apalASa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=apalAza
+34691 old <L>4878<pc>175-a<k1>apalAza<k2>apalAza
+34691 new <L>4878<pc>175-a<k1>apalASa<k2>apalASa
+;
+; Case 17.  apavfta -> apAvfta   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=apavfta
+35169 old <L>4928<pc>178-a<k1>apavfta<k2>apavfta
+35169 new <L>4928<pc>178-a<k1>apAvfta<k2>apAvfta
+;
+; Case 18.  atitvAm -> atitvam   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=atitvAm
+7473 old <L>1182<pc>034-a<k1>atitvAm<k2>atitvAm
+7473 new <L>1182<pc>034-a<k1>atitvam<k2>atitvam
+;
+; Case 19.  antarikzajala -> antarIkzajala   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=antarikzajala
+25357 old <L>3805<pc>122-a<k1>antarikzajala<k2>antarikzajala
+25357 new <L>3805<pc>122-a<k1>antarIkzajala<k2>antarIkzajala
+;
+; Case 20.  aBIGAta -> aBiGAta   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=aBIGAta
+53873 old <L>6569<pc>298-b<k1>aBIGAta<k2>aBIGAta
+53873 new <L>6569<pc>298-b<k1>aBiGAta<k2>aBiGAta
+;
+; Case 21.  aB -> av   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=aB
+44013 old <L>5831<pc>231-b<k1>aB<k2>aB (aBi-udAtta-anudAttet)
+44013 new <L>5831<pc>231-b<k1>av<k2>aB (aBi-udAtta-anudAttet)
+;
+; Case 22.  aBiKya -> aBiKyA   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=aBiKya
+44974 old <L>5919<pc>238-a<k1>aBiKya<k2>aBiKya
+44974 new <L>5919<pc>238-a<k1>aBiKyA<k2>aBiKyA
+;
+; Case 23.  aBIlApa -> aBilApa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=aBIlApa
+54147 old <L>6596<pc>300-a<k1>aBIlApa<k2>aBIlApa
+54147 new <L>6596<pc>300-a<k1>aBilApa<k2>aBilApa
+;
+; Case 24.  abanti -> avanti   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=abanti
+43000 old <L>5705<pc>226-a<k1>abanti<k2>abanti
+43000 new <L>5705<pc>226-a<k1>avanti<k2>avanti
+;
+; Case 25.  abidvas -> avidvas   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=abidvas
+43217 old <L>5734<pc>227-b<k1>abidvas<k2>abidvas
+43217 new <L>5734<pc>227-b<k1>avidvas<k2>avidvas
+;
+; Case 26.  akftabraRa -> akftavraRa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=akftabraRa
+944 old <L>134<pc>004-b<k1>akftabraRa<k2>akftabraRa
+944 new <L>134<pc>004-b<k1>akftavraRa<k2>akftavraRa
+;
+; Case 27.  antaraMsa -> antarAMsa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=antaraMsa
+24942 old <L>3754<pc>119-b<k1>antaraMsa<k2>antaraMsa
+24942 new <L>3754<pc>119-b<k1>antarAMsa<k2>antarAMsa
+;
+; Case 28.  apoSAna -> ApoSAna   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=apoSAna
+39358 old <L>5316<pc>204-b<k1>apoSAna<k2>apoSAna
+39358 new <L>5316<pc>204-b<k1>ApoSAna<k2>ApoSAna
+;
+; Case 29.  anakadunduBi -> AnakadunduBi   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=anakadunduBi
+13955 old <L>2176<pc>065-a<k1>anakadunduBi<k2>anakadunduBi
+13955 new <L>2176<pc>065-a<k1>AnakadunduBi<k2>AnakadunduBi
+;
+; Case 30.  aprasUtA -> aprasUta   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=aprasUtA
+41741 old <L>5588<pc>218-a<k1>aprasUtA<k2>aprasUtA
+41741 new <L>5588<pc>218-a<k1>aprasUta<k2>aprasUta
+;
+; Case 31.  aBEdika -> avEdika   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=aBEdika
+54721 old <L>6638<pc>304-a<k1>aBEdika<k2>aBEdika
+54721 new <L>6638<pc>304-a<k1>avEdika<k2>avEdika
+;
+; Case 32.  abAsas -> avAsas   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=abAsas
+43208 old <L>5732<pc>227-b<k1>abAsas<k2>abAsas
+43208 new <L>5732<pc>227-b<k1>avAsas<k2>avAsas
+;
+; Case 33.  agarba -> agarBa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=agarba
+2007 old <L>318<pc>009-a<k1>agarba<k2>agarba
+2007 new <L>318<pc>009-a<k1>agarBa<k2>agarBa
+;
+; Case 34.  adevatrA -> adevatra   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=adevatrA
+10619 old <L>1673<pc>049-a<k1>adevatrA<k2>adevatrA
+10619 new <L>1673<pc>049-a<k1>adevatra<k2>adevatra
+;
+; Case 35.  apiSali -> ApiSali   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=apiSali
+37864 old <L>5196<pc>194-b<k1>apiSali<k2>apiSali
+37864 new <L>5196<pc>194-b<k1>ApiSali<k2>ApiSali
+;
+; Case 36.  aprakaraRika -> aprAkaraRika   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=aprakaraRika
+41820 old <L>5597<pc>218-b<k1>aprakaraRika<k2>aprakaraRika
+41820 new <L>5597<pc>218-b<k1>aprAkaraRika<k2>aprAkaraRika
+;
+; Case 37.  abaBrawa -> avaBrawa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=abaBrawa
+43067 old <L>5714<pc>226-b<k1>abaBrawa<k2>abaBrawa
+43067 new <L>5714<pc>226-b<k1>avaBrawa<k2>avaBrawa
+;
+; Case 38.  anagnitra -> anagnitrA   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=anagnitra
+14028 old <L>2187<pc>065-b<k1>anagnitra<k2>anagnitra
+14028 new <L>2187<pc>065-b<k1>anagnitrA<k2>anagnitrA
+;
+; Case 39.  antaratA -> antarata   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=antaratA
+25038 old <L>3767<pc>120-a<k1>antaratA<k2>antaratA
+25038 new <L>3767<pc>120-a<k1>antarata<k2>antarata
+;
+; Case 40.  aBIrapalli -> ABIrapalli   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=aBIrapalli
+54083 old <L>6589<pc>300-a<k1>aBIrapalli<k2>aBIrapalli
+54083 new <L>6589<pc>300-a<k1>ABIrapalli<k2>ABIrapalli
+;
+; Case 41.  antyAyana -> AntyAyana   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=antyAyana
+26915 old <L>4009<pc>130-a<k1>antyAyana<k2>antyAyana
+26915 new <L>4009<pc>130-a<k1>AntyAyana<k2>AntyAyana
+;
+; Case 42.  antaHkoWarapuzpI -> antaHkowarapuzpI   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=antaHkoWarapuzpI
+24207 old <L>3676<pc>115-a<k1>antaHkoWarapuzpI<k2>antaHkoWarapuzpI
+24207 new <L>3676<pc>115-a<k1>antaHkowarapuzpI<k2>antaHkowarapuzpI
+;
+; Case 43.  aDoGaRWA -> aDoGaRwA   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=aDoGaRWA
+12738 old <L>1999<pc>059-a<k1>aDoGaRWA<k2>aDoGaRWA
+12738 new <L>1999<pc>059-a<k1>aDoGaRwA<k2>aDoGaRwA
+;
+; Case 44.  aDyAropana -> aDyAropaRa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=aDyAropana
+13347 old <L>2089<pc>062-a<k1>aDyAropana<k2>aDyAropana
+13347 new <L>2089<pc>062-a<k1>aDyAropaRa<k2>aDyAropaRa
+;
+; Case 45.  abaDyatA -> avaDyatA   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=abaDyatA
+42983 old <L>5701<pc>226-a<k1>abaDyatA<k2>abaDyatA
+42983 new <L>5701<pc>226-a<k1>avaDyatA<k2>avaDyatA
+;
+; Case 46.  anyavIjaja -> anyabIjaja   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=anyavIjaja
+29563 old <L>4303<pc>145-b<k1>anyavIjaja<k2>anyavIjaja
+29563 new <L>4303<pc>145-b<k1>anyabIjaja<k2>anyabIjaja
+;
+; Case 47.  apAvartita -> apavartita   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=apAvartita
+37086 old <L>5141<pc>189-a<k1>apAvartita<k2>apAvartita
+37086 new <L>5141<pc>189-a<k1>apavartita<k2>apavartita
+;
+; Case 48.  aBizAvakIy -> aBisAvakIy   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=aBizAvakIy
+50676 old <L>6434<pc>274-a<k1>aBizAvakIy<k2>aBizAvakIy
+50676 new <L>6434<pc>274-a<k1>aBisAvakIy<k2>aBisAvakIy
+;

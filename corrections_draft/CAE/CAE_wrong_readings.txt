@@ -1,0 +1,18 @@
+# CAE -- DOCUMENTED-INTENTIONAL spellings (NOT typos -- do NOT file corrections)
+#
+# 8 headwords that LOOK like misspellings but which CAE records on purpose:
+# wrong-reading apparatus (w.r.), variae lectiones (v.l.), in-composition /
+# sandhi forms (in comp. for...), cross-references (See / = X q.v.), and other
+# grammatical/Vedic notes. Filing a 'correction' for any of these CORRUPTS CAE.
+# Use this as a suppression list: such headwords should not be re-flagged.
+# Format per row:  headword -> would-be 'correction'  |  the CAE entry text
+
+# ===== OTHER-INTENTIONAL (8) =====
+ASIna          -> AsIna          | {#ASIna/#} a. = {#ASina/#}.
+SAntvay        -> sAntvay        | {#SAntvay#} v. {#sAntvay#}.
+Sivika         -> Sibika         | {#Sivika#} v.  {#Sibi#} etc.
+nABI           -> nABi           | {#nABI#} v. {#nA/Bi#}.
+nizyandin      -> nisyandin      | {#nizya˚ndin#} v. {#nisyanda#} & {#˚ndin#}. || {#nizyandin#} a. = prec. adj., also trans. (—˚).
+sarATin        -> saraTin        | {#{{sarATa/n->sarATi/n||20160418|Jim Funderburk|https://github.com/sanskrit-lexicon/CORRECTIONS/issues/289|'i' incompletely formed in print; cf mw, etc.}}#} a. 
+sudIdIti       -> sudIditi       | {#sudI/dIti#} a.  = prec. a.
+vilva          -> bilva          | {#vilva#} v. {#bilva#}.

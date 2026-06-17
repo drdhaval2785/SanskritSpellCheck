@@ -1,0 +1,176 @@
+; DRAFT corrections for GRA — SanskritSpellCheck; VERIFY each against the scan before filing.
+; updateByLine format; only the <k1>/<k2> key field is edited (check the entry body too).
+; NOTE: each case targets the FIRST entry with that headword -- check for homographs
+;       (multiple entries sharing a key) and that no two cases edit the same line.
+;
+; Case 1.  jAGana -> jaGana   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=jAGana
+22046 old <L>3471<pc>0482<k1>jAGana<k2>jAGa/na
+22046 new <L>3471<pc>0482<k1>jaGana<k2>jAGa/na
+;
+; Case 2.  Asat -> asat   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=Asat
+9419 old <L>1652<pc>0190<k1>Asat<k2>A/sat
+9419 new <L>1652<pc>0190<k1>asat<k2>A/sat
+;
+; Case 3.  abdA -> abda   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=abdA
+;   [NOT LOCATED in csl-orig — locate the entry manually]
+;
+; Case 4.  havyA -> havya   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=havyA
+73640 old <L>10618<pc>1657<k1>havyA<k2>ha/vyA
+73640 new <L>10618<pc>1657<k1>havya<k2>ha/vyA
+;
+; Case 5.  soBarI -> soBari   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=soBarI
+69874 old <L>10158<pc>1579<k1>soBarI<k2>so/BarI
+69874 new <L>10158<pc>1579<k1>soBari<k2>so/BarI
+;
+; Case 6.  mUr -> mur   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=mUr
+46454 old <L>6901<pc>1053<k1>mUr<k2>*mUr
+46454 new <L>6901<pc>1053<k1>mur<k2>*mUr
+;
+; Case 7.  vanarsad -> vanarzad   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=vanarsad
+52580 old <L>7626<pc>1208<k1>vanarsad<k2>vanar-sa/d
+52580 new <L>7626<pc>1208<k1>vanarzad<k2>vanar-sa/d
+;
+; Case 8.  satrAsAha -> sAtrAsAha   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=satrAsAha
+63735 old <L>9202<pc>1455<k1>satrAsAha<k2>satrA-sAha/
+63735 new <L>9202<pc>1455<k1>sAtrAsAha<k2>satrA-sAha/
+;
+; Case 9.  Bavayu -> BAvayu   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=Bavayu
+41881 old <L>6334<pc>0930<k1>Bavayu<k2>Bavayu/
+41881 new <L>6334<pc>0930<k1>BAvayu<k2>Bavayu/
+;
+; Case 10.  devagopa -> devagopA   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=devagopa
+29050 old <L>4427<pc>0632<k1>devagopa<k2>deva/-gopa
+29050 new <L>4427<pc>0632<k1>devagopA<k2>deva/-gopa
+;
+; Case 11.  svaveSa -> svAveSa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=svaveSa
+72561 old <L>10473<pc>1634<k1>svaveSa<k2>sva-veSa
+72561 new <L>10473<pc>1634<k1>svAveSa<k2>sva-veSa
+;
+; Case 12.  ajya -> Ajya   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=ajya
+1148 old <L>204<pc>0023<k1>ajya<k2>a/jya
+1148 new <L>204<pc>0023<k1>Ajya<k2>a/jya
+;
+; Case 13.  indragopA -> indragopa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=indragopA
+10066 old <L>1709<pc>0214<k1>indragopA<k2>i/ndra-gopA
+10066 new <L>1709<pc>0214<k1>indragopa<k2>i/ndra-gopA
+;
+; Case 14.  treDa -> treDA   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=treDa
+;   [NOT LOCATED in csl-orig — locate the entry manually]
+;
+; Case 15.  vasavi -> vAsavi   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=vasavi
+53769 old <L>7795<pc>1234<k1>vasavi<k2>vasa/vi
+53769 new <L>7795<pc>1234<k1>vAsavi<k2>vasa/vi
+;
+; Case 16.  viSvacarzaRI -> viSvacarzaRi   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=viSvacarzaRI
+;   [NOT LOCATED in csl-orig — locate the entry manually]
+;
+; Case 17.  raS -> ras   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=raS
+50174 old <L>7341<pc>1151<k1>raS<k2>*raS
+50174 new <L>7341<pc>1151<k1>ras<k2>*raS
+;
+; Case 18.  fBukzA -> fBukza   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=fBukzA
+13497 old <L>2242<pc>0291<k1>fBukzA<k2>fBukzA/
+13497 new <L>2242<pc>0291<k1>fBukza<k2>fBukzA/
+;
+; Case 19.  SAtavat -> Satavat   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=SAtavat
+60587 old <L>8741<pc>1391<k1>SAtavat<k2>SA/tavat
+60587 new <L>8741<pc>1391<k1>Satavat<k2>SA/tavat
+;
+; Case 20.  pUrvaBaj -> pUrvaBAj   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=pUrvaBaj
+38086 old <L>5713<pc>0846<k1>pUrvaBaj<k2>pUrva-Ba/j
+38086 new <L>5713<pc>0846<k1>pUrvaBAj<k2>pUrva-Ba/j
+;
+; Case 21.  satyavac -> satyavAc   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=satyavac
+63655 old <L>9187<pc>1454<k1>satyavac<k2>satya-va/c
+63655 new <L>9187<pc>1454<k1>satyavAc<k2>satya-va/c
+;
+; Case 22.  aDakza -> adakza   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=aDakza
+;   [NOT LOCATED in csl-orig — locate the entry manually]
+;
+; Case 23.  lABika -> lAvika   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=lABika
+51716 old <L>7525<pc>1187<k1>lABika<k2>lABika
+51716 new <L>7525<pc>1187<k1>lAvika<k2>lAvika
+;
+; Case 24.  akzIyamAna -> akzIyamARa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=akzIyamAna
+;   [NOT LOCATED in csl-orig — locate the entry manually]
+;
+; Case 25.  jesa -> jeza   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=jesa
+22807 old <L>3561<pc>0499<k1>jesa<k2>jesa/
+22807 new <L>3561<pc>0499<k1>jeza<k2>jesa/
+;
+; Case 26.  pradakzinit -> pradakziRit   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=pradakzinit
+39363 old <L>5914<pc>0875<k1>pradakzinit<k2>pradakzini/t
+39363 new <L>5914<pc>0875<k1>pradakziRit<k2>pradakzini/t
+;
+; Case 27.  puruSaka -> puruzaka   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=puruSaka
+;   [NOT LOCATED in csl-orig — locate the entry manually]
+;
+; Case 28.  nivana -> nivanA   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=nivana
+33305 old <L>5017<pc>0734<k1>nivana<k2>nivana/
+33305 new <L>5017<pc>0734<k1>nivanA<k2>nivana/
+;
+; Case 29.  svayaMjA -> svayaMja   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=svayaMjA
+72185 old <L>10423<pc>1628<k1>svayaMjA<k2>svayaM-jA/
+72185 new <L>10423<pc>1628<k1>svayaMja<k2>svayaM-jA/
+;
+; Case 30.  SritI -> Sriti   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=SritI
+62270 old <L>8980<pc>1424<k1>SritI<k2>SritI/
+62270 new <L>8980<pc>1424<k1>Sriti<k2>SritI/
+;
+; Case 31.  yAcCrezwa -> yAcCrezWa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=yAcCrezwa
+48236 old <L>7093<pc>1108<k1>yAcCrezwa<k2>yA/cCrezwa/
+48236 new <L>7093<pc>1108<k1>yAcCrezWa<k2>yA/cCrezwa/
+;
+; Case 32.  kunamnama -> kunannama   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=kunamnama
+15446 old <L>2597<pc>0329<k1>kunamnama<k2>ku-namnama/
+15446 new <L>2597<pc>0329<k1>kunannama<k2>ku-namnama/
+;
+; Case 33.  bahupayya -> bahupAyya   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=bahupayya
+;   [NOT LOCATED in csl-orig — locate the entry manually]
+;
+; Case 34.  maDuDa -> maDuDA   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=maDuDa
+43938 old <L>6554<pc>0986<k1>maDuDa<k2>maDu-Da/
+43938 new <L>6554<pc>0986<k1>maDuDA<k2>maDu-Da/
+;
+; Case 35.  naBanU -> naBanu   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=naBanU
+32069 old <L>4831<pc>0708<k1>naBanU<k2>naBanU/
+32069 new <L>4831<pc>0708<k1>naBanu<k2>naBanU/
+;
+; Case 36.  pituBaj -> pituBAj   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=pituBaj
+36612 old <L>5476<pc>0812<k1>pituBaj<k2>pitu-Ba/j
+36612 new <L>5476<pc>0812<k1>pituBAj<k2>pitu-Ba/j
+;
+; Case 37.  svastiga -> svastigA   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=svastiga
+;   [NOT LOCATED in csl-orig — locate the entry manually]
+;
+; Case 38.  vftraputra -> vftraputrA   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=vftraputra
+58004 old <L>8369<pc>1335<k1>vftraputra<k2>vftra/-putra
+58004 new <L>8369<pc>1335<k1>vftraputrA<k2>vftra/-putra
+;
+; Case 39.  nfjIt -> nfjit   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=nfjIt
+33874 old <L>5087<pc>0751<k1>nfjIt<k2>nf-jIt
+33874 new <L>5087<pc>0751<k1>nfjit<k2>nf-jIt
+;
+; Case 40.  svac -> Svac   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=svac
+71804 old <L>10374<pc>1621<k1>svac<k2>sva/c
+71804 new <L>10374<pc>1621<k1>Svac<k2>sva/c
+;
+; Case 41.  fzidvis -> fzidviz   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=fzidvis
+;   [NOT LOCATED in csl-orig — locate the entry manually]
+;
+; Case 42.  apAvfkta -> apavfkta   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=apAvfkta
+3675 old <L>665<pc>0075<k1>apAvfkta<k2>apA/vfkta
+3675 new <L>665<pc>0075<k1>apavfkta<k2>apA/vfkta
+;
+; Case 43.  pfTivizWA -> pfTivizWa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=pfTivizWA
+38470 old <L>5759<pc>0855<k1>pfTivizWA<k2>pfTivi/-zWA/
+38470 new <L>5759<pc>0855<k1>pfTivizWa<k2>pfTivi/-zWA/
+;
+; Case 44.  mAtarApitf -> mAtarapitf   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=mAtarApitf
+45455 old <L>6770<pc>1029<k1>mAtarApitf<k2>mAta/rA-pitf/
+45455 new <L>6770<pc>1029<k1>mAtarapitf<k2>mAta/rA-pitf/
+;
+; Case 45.  goopaSa -> (flag)   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GRA&key=goopaSa
+18896 old <L>3037<pc>0410<k1>goopaSa<k2>go/-opaSa
+18896 new <L>3037<pc>0410<k1>(flag)<k2>go/-opaSa
+;

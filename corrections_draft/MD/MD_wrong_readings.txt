@@ -1,0 +1,11 @@
+# MD -- DOCUMENTED-INTENTIONAL spellings (NOT typos -- do NOT file corrections)
+#
+# 1 headwords that LOOK like misspellings but which MD records on purpose:
+# wrong-reading apparatus (w.r.), variae lectiones (v.l.), in-composition /
+# sandhi forms (in comp. for...), cross-references (See / = X q.v.), and other
+# grammatical/Vedic notes. Filing a 'correction' for any of these CORRUPTS MD.
+# Use this as a suppression list: such headwords should not be re-flagged.
+# Format per row:  headword -> would-be 'correction'  |  the MD entry text
+
+# ===== OTHER-INTENTIONAL (1) =====
+SAraRa         -> SaraRa         | {#SAraRa#} śāraṇá, m. N. incorr. {%for%} sāraṇa.

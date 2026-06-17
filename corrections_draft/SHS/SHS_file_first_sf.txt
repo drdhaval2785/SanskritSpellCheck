@@ -1,0 +1,45 @@
+; SHS body-confirmed fileable typos -- CORRECTIONS standard format (DICT:wrong:right:n)
+; 37 fileable (classified TYPO + source-confirmed + survived the Opus false-positive review) + 2 reviewed-out (commented below)
+; VERIFY each remaining case on the scan, flip trailing n->y for confirmed ones, then:
+;   python chg_nchg_sep.py SHS_file_first_sf.txt chg.txt nchg.txt
+SHS:saptAtitama:saptatitama:n
+SHS:maYjarinamra:maYjarInamra:n
+SHS:murali:muralI:n
+SHS:vAcanIka:vAcanika:n
+SHS:ditisUta:ditisuta:n
+SHS:natyuha:natyUha:n
+SHS:kARqapfzwa:kARqapfzWa:n
+SHS:kzIraballI:kzIravallI:n
+SHS:divaspfTibI:divaspfTivI:n
+SHS:klItakika:klItakikA:n
+SHS:nyaNkuBUrUha:nyaNkuBUruha:n
+SHS:laGizwa:laGizWa:n
+SHS:padazwIva:padazWIva:n
+SHS:BadraballI:BadravallI:n
+SHS:SilAbalkA:SilAvalkA:n
+SHS:drabaja:dravaja:n
+SHS:akASadIpa:AkASadIpa:n
+SHS:kAlyaRineya:kAlyARineya:n
+SHS:navakArika:navakArikA:n
+SHS:vArttayana:vArttAyana:n
+SHS:pAniyavarRikA:pAnIyavarRikA:n
+SHS:jAmbunadamaya:jAmbUnadamaya:n
+SHS:diDizupati:diDizUpati:n
+SHS:jalarupa:jalarUpa:n
+SHS:pitfrupa:pitfrUpa:n
+SHS:purUzadantikA:puruzadantikA:n
+SHS:hastisuRqA:hastiSuRqA:n
+SHS:kAzwakuddAla:kAzWakuddAla:n
+SHS:paNKagrAha:paNkagrAha:n
+SHS:jAmbabat:jAmbavat:n
+SHS:BUnaya:BUmaya:n
+SHS:ninittakAla:nimittakAla:n
+SHS:pratipaTan:pratipaTam:n
+SHS:pratyupaveza:pratyupaveSa:n
+SHS:svarRabalkala:svarRavalkala:n
+SHS:viSamaSIla:vizamaSIla:n
+SHS:zuh:suh:n
+; REVIEWED-OUT (variant): L41164: E. {SreRi} a range -- base SreRi (short i) is dict lemma; family SreRi/SreRika/SreRiDarma all short. Intentional
+;SHS:SreRiBUta:SreRIBUta:n
+; REVIEWED-OUT (variant): 'A lexicon' (Sabdakoza=Sabdakoza); koSa/koza (kosa/kosa) are both standard attested spellings of the word for treasury/l
+;SHS:Sabdakoza:SabdakoSa:n

@@ -1,0 +1,36 @@
+# CCS tier-A correction candidates (unified engine) — score	wrong -> right	detectors	morph
+475	brahmaRa -> brAhmaRa	[consensus,dict_vs_corpus,intra_dup,spell_correct]	morph✓
+459	Sukfta -> sukfta	[consensus,dict_vs_corpus,intra_dup,spell_correct]	morph✓
+367	nUtra -> mUtra	[consensus,dict_vs_corpus,intra_dup]	morph✓
+352	AgniDra -> AgnIDra	[consensus,intra_dup,spell_correct]	morph✓
+339	kAlhAra -> kalhAra	[consensus,intra_dup,spell_correct]	
+337	yakzi -> yakzI	[consensus,intra_dup,spell_correct]	
+334	jYas -> jYAs	[consensus,intra_dup,spell_correct]	morph✓
+334	patitasavitrIka -> patitasAvitrIka	[consensus,intra_dup,spell_correct]	morph✓
+325	dvAdaSavarzika -> dvAdaSavArzika	[consensus,intra_dup,spell_correct]	morph✓
+324	DUmya -> DUmyA	[consensus,intra_dup,spell_correct]	morph✓
+324	jayAGoza -> jayaGoza	[consensus,intra_dup,spell_correct]	morph✓
+324	suKaprasavA -> suKaprasava	[consensus,intra_dup,spell_correct]	morph✓
+316	vakulAvalikA -> bakulAvalikA	[consensus,intra_dup,spell_correct]	morph✓
+301	nEzwa -> nezwa	[consensus,intra_dup,spell_correct]	
+272	arda -> arDa	[dict_vs_corpus,spell_correct]	morph✓
+267	vilva -> bilva	[dict_vs_corpus,spell_correct]	morph✓
+265	mfttika -> mfttikA	[consensus,dict_vs_corpus]	morph✓
+265	nABI -> nABi	[dict_vs_corpus,spell_correct]	morph✓
+263	aramya -> araRya	[dict_vs_corpus,spell_correct]	morph✓
+259	JarA -> jarA	[dict_vs_corpus,spell_correct]	morph✓
+252	godAvari -> godAvarI	[consensus,spell_correct]	morph✓
+247	apratizwa -> apratizWa	[consensus,spell_correct]	morph✓
+242	devakinandana -> devakInandana	[consensus,intra_dup]	morph✓
+241	aSrika -> aSrIka	[consensus,spell_correct]	morph✓
+237	trihAyana -> trihAyaRa	[consensus,intra_dup]	morph✓
+228	SiSula -> SiSUla	[consensus,spell_correct]	morph✓
+227	paryayana -> paryayaRa	[consensus,spell_correct]	morph✓
+225	Akta -> akta	[consensus,intra_dup]	morph✓
+220	tiraScA -> tiraSca	[consensus,intra_dup]	
+219	mutiba -> mUtiba	[consensus,spell_correct]	morph✓
+216	nirnikti -> nirRikti	[consensus,spell_correct]	morph✓
+210	apasAritA -> apasArita	[consensus,intra_dup]	
+203	jUrva -> jurva	[consensus,spell_correct]	
+202	preRa -> prema	[consensus,intra_dup]	
+154	svarmI|a -> (flag)	[charset]	

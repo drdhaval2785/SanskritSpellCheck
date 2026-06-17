@@ -1,0 +1,92 @@
+# GST tier-A -- BODY-GROUNDED triage  (DRAFT; verify every kept case against the scan)
+#
+# The 48 engine tier-A candidates were judged against GST's OWN entry text (csl-orig),
+# not spelling alone. A spelling detector cannot tell a typo from a real word, an
+# intentional variant / compounding form, or wrong-reading apparatus -- the entry can.
+# Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM
+# pass over the 'realword' set + source confirmation of every TYPO verdict.
+#
+# FINDING: of 48 tier-A candidates, 1 are body-confirmed fileable typos (2.1%).
+# 22 are real distinct words, 22 are spellings GST documents on purpose (w.r./v.l./
+# in-comp./cross-ref -- filing them would CORRUPT GST), 0 are not in the current
+# source, and 3 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
+# do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.
+
+# ===== BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file) (1) =====
+
+aprakaraRika  -> aprAkaraRika   [dcs=1 ndicts=1 body=realword]
+    GST: {#aprakaraRika#} Tatpur. m. f. n. ({#-kaH-kI-kam#}) Not being, or belonging to, the subject matter; e. g. in the {%Kāvyapr.:%} {#aprAkaraRikasyABiDAnena prAkariRakasyAkzepo'prastutapraSaMsA#}. E. {#a#
+    judged: E. says 'a neg. and prAkaraRika' (long A); quoted example aprAkaraRikasyA... also has long A; suspect short-a key is a typo.
+    confirm: Entry's own etymology 'E. a neg. and prAkaraRika' and example 'aprAkaraRikasyABiDAnena...' both use long A; short-a headword is undocumented, matches suggestion aprAkaraRika.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=aprakaraRika
+
+# ===== BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted (2) =====
+
+akzArAlavaRa  -> akzAralavaRa   [dcs=0 ndicts=1 body=realword]
+    GST: {#akzArAlavaRa#} Dvandva. n. ({#-Ram#}) See the preceding, under II. E. {#akzAra#} and {#alavaRa#}.
+    judged: Body E. gives akzAra + alavaRa (short a), supporting akzAralavaRa; the long A in AlavaRa contradicts the stated etymology.
+    confirm: Real defined entry (Dvandva n.); akzAralavaRa entry says 'occurs also written akzArAlavaRa' and akzAra cross-refs both forms — documented variant spelling.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=akzArAlavaRa
+
+aBiKya        -> aBiKyA         [dcs=3 ndicts=2 body=realword]
+    GST: {#aBiKya#} I. Tatpur. f. ({#-KyA#}) 1 A name or appellation. 2 A word; e. g. {%Viśvapr.:%} {#BavedvizRupadABiKyA kzIrode#} &c. 3 Fame, glory; e. g. {%Ṛgv.:%} {#anDA apaSyA na daBannaBiKyA nityAsa IM#}
+    judged: Body entry is f. (-KyA) with all meanings (name, word, fame, beauty) fitting the feminine aBiKyA; stem form aBiKya lacks the canonical long A.
+    confirm: Section II defines aBiKya itself: Bahuvr. m.f.n. (-KyaH-KyA-Kyam) 'Renowned, celebrated', E. aBi and KyA. A distinct word, not a bare typo for aBiKyA.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=aBiKya
+
+# ===== BUCKET 3  REVIEW -- undecidable without the printed page (1) =====
+
+antaHkoWarapuzpI -> antaHkowarapuzpI  [dcs=2 ndicts=1 body=realword]
+    GST: {#antaHkoWarapuzpI#} Bahuvr. f. ({#-zpI#}) A plant. See {#aRqakowara-#} {#puzpI#}. E. {#antar-koWara#} and {#puzpa#}, fem. aff. {#NIz#}.
+    judged: Body only cross-refs aRqakowara-puzpI; W vs w (retroflex aspirate vs plain) difference unclear without attestation; dcs_sugg_band=2.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=GST&key=antaHkoWarapuzpI
+
+# ===== BUCKET 4  REAL-WORD -- a distinct real word; the fix would merge two words (22) =====
+abdi          -> abDi          | GST: {#abdi#} Tatpur. m. ({#-bdiH#}) (ved.) A cloud; comp. the fol- lowing. E. {#ap#} and {#di# | Body gives own definition 'A cloud' with etymology ap+di; Vedic form documented with its o
+anda          -> anDa          | GST: {#anda#} 1. m. ({#-ndaH#}) Binding. 2. f. ({#-ndA#}) Perhaps the same as {#andikA#}. (Both | Body gives two definitions (Binding m.; same as andikA f.) with etymology from root 'and';
+aB            -> av            | GST: {#aB (aBi-udAtta-anudAttet)#} r. 1. cl. See {#amB#}. | Body lists aB as a verbal root (r. 1. cl.) with cross-ref to amB; a genuine root entry, no
+apavada       -> apavAda       | GST: {#apavada#} Tatpur. (?) m. ({#-daH#}) A proper name (mentioned by the {%Gaṇaratnam.%} amon | Body defines a proper name (Gaṇaratnam/utsādi) with its own etymology; apavAda means censu
+aprasUtA      -> aprasUta      | GST: {#aprasUtA#} Tatpur. f. ({#-tA#}) A woman who has not borne; comp. {#aprajA#} and {#aprajA | Body defines 'a woman who has not borne' as f. (-tA); aprasUtA is the feminine form, a gen
+aBIlApa       -> aBilApa       | GST: {#aBIlApa#} Tatpur. m. ({#-paH#}) (ved. Probably.) Talking on a subject, discoursing, eloq | Body gives a distinct Vedic definition ('talking on a subject, eloquence') with Atharva-ve
+akftabraRa    -> akftavraRa    | GST: {#akftabraRa#} Tatpur. m. ({#-RaH#}) The name of an expounder of the Purāṇas, one of the p | Body defines a Purāṇic proper name with E. a-neg. + kftabraRa; the etymology supports braR
+apakaraka     -> apakAraka     | GST: {#apakaraka#} m. f. n. ({#-rakaH-rikA-rakam#}) Born in {#apakara#}. Com- pare {#Apakara#}. | Body defines 'Born in apakara' with E. apakara + taddh. aff. kan; distinct patronymic/demo
+antaraMsa     -> antarAMsa     | GST: {#antaraMsa#} Tatpur. m. n. ({#-saH-sam#}) The space between the shoulders, the breast. E. | Body E. antar + aMsa (short a) supports suspect spelling antaraMsa; definition 'space betw
+anDU          -> anDu          | GST: {#anDU#} f. ({#-nDUH#}) I. A kind of a tie. E. {#and#}, uṇ. aff. {#U#}. See the Preface. I | Body defines anDU (long U) as its own word (tie; well) with uṇādi aff. U; the long U is th
+anyatABAva    -> anyaTABAva    | GST: {#anyatABAva#} Tatpur. m. ({#-vaH#}) Non-existence of otherness; comp. the passage s. v. { | Body defines 'non-existence of otherness' with E. anyatA + aBAva, supporting the suspect s
+aBEdika       -> avEdika       | GST: {#aBEdika#} Tatpur. m. f. n. ({#-kaH-kI-kam#}) Not fit to be di- vided, broken, separated  | Body defines 'not fit to be divided' with E. a-neg. + BEdika (from Beda=division); the con
+adevatrA      -> adevatra      | GST: {#adevatrA#} Tatpur. ind. (ved.) Not towards or amongst the gods. E. {#a#} and {#devatrA#} | Body defines adevatrA 'Not towards or amongst the gods' with E. a+devatrA; long A in devat
+anunAsikAtva  -> anunAsikatva  | GST: {#anunAsikAtva#} n. ({#-tvam#}) The nasality of {#A#}. E. {#anunAsika-#} {#A#}, taddh. aff | Body E. anunAsika-A + tva documents the long-A stem extension; 'nasality of A' fits anunAs
+atitvAm       -> atitvam       | GST: {#atitvAm#} Tatpur. The accusative in the singular and dual of {#atitvam#}. | Body says 'accusative in singular and dual of atitvam'; atitvAm is a case form of atitvam,
+anagnitra     -> anagnitrA     | GST: {#anagnitra#} Tatpur. m. f. ({#-traH-trA#}) (ved.) 1 Not having Agni or the divinity of fi | Body gives full gloss 'Not having Agni as protector' with m.f. forms (-traH-trA); anagnitr
+antyAyana     -> AntyAyana     | GST: {#antyAyana#} Karmadh. n. ({#-nam#}) The last resort. Comp. {#AntyA-#} {#yana#}. E. {#anty | Body defines antyAyana 'The last resort' with own etymology antya+ayana; compound note Ant
+apAvartita    -> apavartita    | GST: {#apAvartita#} Tatpur. m. f. n. ({#-taH-tA-tam#}) 1 Turned away or from, driven away; e. g | Body defines 'Turned away, driven away' with E. vft+A+apa; long A is from the prefix A, ma
+apalAza       -> apalASa       | GST: {#apalAza#} Tatpur. m. ({#-zaH#}) The same as {#apalazaRa#}. E. {#laz#} with {#apa#}, kṛt  | Body E. root laz + apa + kṛt aff. GaY supports z (retroflex s); apalAza is distinct from a
+agarba        -> agarBa        | GST: {#agarba#} Bahuvr. m. f. n. ({#-rbaH-rbA-rbam#}) Modest, humble, void of pride. E. {#a#} n | Body defines 'modest, humble, void of pride' with E. a-neg. + garba (unaspirated b); etymo
+aDoGaRWA      -> aDoGaRwA      | GST: {#aDoGaRWA#} Bahuvr. f. ({#-RwA#}) A plant (Acheranthes aspera). See {#apAmArga#}. E. {#aD | Body gives full gloss 'A plant (Acheranthes aspera)' for aDoGaRWA; W/w (aspirate/unaspirat
+anyavIjaja    -> anyabIjaja    | GST: {#anyavIjaja#} Tatpur. m. ({#-jaH#}) Liter. born from another's seed, i. e. a boy who may  | Body gives full gloss 'born from another's seed'; vIja is a valid Sanskrit variant of bIja
+
+# ===== BUCKET 5  INTENTIONAL -- GST documents the spelling on purpose; NEVER file (22) =====
+aBIGAta       -> aBiGAta       | GST: {#aBIGAta#} Tatpur. m. ({#-taH#}) The same as {#aBiGAta#} q. v.; e. g. {%Suśruta:%} {#vidI | Body says 'same as aBiGAta' with 'second vowel protracted' — explicitly documents the long
+anakadunduBi  -> AnakadunduBi  | GST: {#anakadunduBi#} Bahuvr. m. ({#-BiH#}) A name of Vasudeva, the father of Kṛṣṇa. More usual | Body says 'more usually AnakadunduBi, but given also with short initial by some commentato
+agnivAhu      -> agnibAhu      | GST: {#agnivAhu#} I. Tatpur. m. ({#-huH#}) Smoke. II. Bahuvr. m. ({#-huH#}) A proper name of 1  | Body defines agnivAhu (smoke; proper name) and closes 'Also agnibAhu' — both spellings doc
+aBilAsin      -> aBilAzin      | GST: {#aBilAsin#} Tatpur. m. f. n. ({#-sI-sinI-si#}) The same as {#aBilAzin#} of which it is a  | Body explicitly states 'various but objectionable reading' of aBilAzin — documented varian
+abidvas       -> avidvas       | GST: {#abidvas#} Tatpur. m. f. n. ({#-dvAn-duzI-dvat#}) See {#avidvas#}. | Body says 'See avidvas' — pure cross-reference; abidvas is a documented alternate spelling
+aBIruc        -> aBiruc        | GST: {#aBIruc#} Tatpur. f. ({#-k#}) Probably the same as {#aBiruci#} q. v. (The word is mention | Body documents the long-I prefix as a specific grammatical phenomenon (Pāṇ. VI.3.116 vowel
+apOgaRqa      -> apogaRqa      | GST: {#apOgaRqa#} Tatpur. m. f. n. ({#-RqaH-RqA-Rqam#}) The same as {#apogaRqa#} II. q. v. E. { | Body says 'same as apogaRqa II' — the long-O form is a cross-reference to the short-o main
+antarveSmam   -> antarveSman   | GST: {#antarveSmam#} Avyayībh. The same as {#antarveSma#}. E. {#antar#} and {#veSman#}, samās.  | Body says 'same as antarveSma' with aff. wac — this is the avyayībhāva accusative form, do
+abAsas        -> avAsas        | GST: {#abAsas#} Bahuvr. m. f. n. ({#-sAH-sAH-saH#}) See {#avAsas#}. | Body says 'See avAsas' — pure cross-reference to the suggestion; abAsas is a documented al
+apiSali       -> ApiSali       | GST: {#apiSali#} m. ({#-liH#}) A proper name, the same as {#ApiSali#} q. v. ({%Viśva:%} {#apiSa | 'The same as ApiSali q.v.' cross-ref; E. notes first syllable shortened from A-piSali; doc
+anupaja       -> anUpaja       | GST: {#anupaja#} Tatpur. n. ({#-jam#}). See {#anUpaja#}. | Body says 'See anUpaja' — pure cross-reference to the suggestion; intentional short-u vari
+abaBrawa      -> avaBrawa      | GST: {#abaBrawa#} m. f. n. ({#-waH-wA-wam#}) See {#avaBrawa#}. | 'See avaBrawa' — pure cross-reference documenting b/v as a variant spelling, not an indepe
+apavfta       -> apAvfta       | GST: {#apavfta#} Tatpur. m. f. n. ({#-taH-tA-tam#}) Opened, laid open. The {%Ṛgv. Prātiśākhya%} | Body defines 'Opened' and notes apAvfta is the Ṛgvedic form; both documented — body treats
+antarikzajala -> antarIkzajala | GST: {#antarikzajala#} Tatpur. n. ({#-lam#}) Heavenly water. Also written {#antarIkzajala#}. E. | Body defines 'Heavenly water' and closes 'Also written antarIkzajala'; both spellings docu
+aDyAropana    -> aDyAropaRa    | GST: {#aDyAropana#} Tatpur. n. ({#-nam#}). The same as the preceding. E. {#ruh#}, in the caus., | 'The same as the preceding' cross-references aDyAropaRa; documents aDyAropana as a variant
+abaDyatA      -> avaDyatA      | GST: {#abaDyatA#} f. ({#-tA#}) or {#abaDyatva#} n. ({#-tvam#}) See {#abaDyatA#} or {#avaDyatva# | Body is 'See abaDyatA or avaDyatva' — self-ref + cross-ref; intentional documented alterna
+aBizAvakIy    -> aBisAvakIy    | GST: {#aBizAvakIy#} denom. parasm. ({#-yati#}) To have a desire for one who presses out the jui | Body explicitly explains Paninian rule: s of su becomes z (retroflex) after aBi; the z spe
+abanti        -> avanti        | GST: {#abanti#} f. ({#-ntiH#}) See {#avanti#}. | 
+apoSAna       -> ApoSAna       | GST: {#apoSAna#}. A wrong reading in the Calc. edition of the {%Mitā-%} {%kshara%} {#A˚#} fol.  | 
+aBivarga      -> aBIvarga      | GST: {#aBivarga#}. See {#aBIvarga#}. | 
+antaratA      -> antarata      | GST: {#antaratA#} See the following. | 
+aBIrapalli    -> ABIrapalli    | GST: {#aBIrapalli#}. See {#ABIrapalli#}. | 
+
+# ===== BUCKET 6  UNLOCATABLE -- not in the current GST source (stale/different key) (0) =====

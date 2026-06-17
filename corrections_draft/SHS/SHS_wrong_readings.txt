@@ -1,0 +1,43 @@
+# SHS -- DOCUMENTED-INTENTIONAL spellings (NOT typos -- do NOT file corrections)
+#
+# 31 headwords that LOOK like misspellings but which SHS records on purpose:
+# wrong-reading apparatus (w.r.), variae lectiones (v.l.), in-composition /
+# sandhi forms (in comp. for...), cross-references (See / = X q.v.), and other
+# grammatical/Vedic notes. Filing a 'correction' for any of these CORRUPTS SHS.
+# Use this as a suppression list: such headwords should not be re-flagged.
+# Format per row:  headword -> would-be 'correction'  |  the SHS entry text
+
+# ===== CROSS-REFERENCE (6) =====
+arsas          -> arSas          | {#arsas#} m. ({#-rsaH#}) Hœmorrhoids. See {#arSas#}.
+bA             -> vA             | {#bA#} Ind. 1. As, like. 2. Or, either: see {#vA#}. || {#bA(vA)dara#} mfn. ({#-raH-rI-raM#}) Made of cotton, mf. ({#-raH-rA#}) The cotton plant. n. ({#-raM#}) 1
+dArA           -> DArA           | {#dArA#} f. ({#-rA#}) A wife: see {#dAra .#}
+parasvaDa      -> paraSvaDa      | {#parasvaDa#} m. ({#-DaH#}) An axe: see {#paraSvaDa#}.
+pisaNga        -> piSaNga        | {#pisaNga#} m. ({#-NgaH#}) Tawny (the colour): see {#piSaNga#}. E. {#pisa, aNgac#} aff.
+sutaka         -> sUtaka         | {#sutaka#} n. ({#-kaM#}) 1. Birth. 2. Impurity from child-birth or mis-carriage: see {#sUtaka .#}
+
+# ===== OTHER-INTENTIONAL (25) =====
+Soli           -> SolI           | {#Soli#} f. ({#-liH#} or {#-lI#}) Wild turmeric. E. {#SUla-ac pfzo0 NIz .#}
+bAhU           -> bAhu           | {#bAhU(hA)bAhavi#} Ind. Arm to arm, hand to hand, (fighting, &c.) E. {#bAhu#} the arm, (repeated.) {#ic#} aff.
+brA            -> vrA            | {#brA (vrA) hma#} mfn. ({#hmaH-hmI-hmaM#}) Relating or belonging to BRAHMĀ, the Vedas, &c. n. ({#-hyaM#}) 1. The part of the hand under the root of the thumb. 2
+muzwimuzwi     -> muzwImuzwi     | {#muzwimuzwi#} Ind. Fist to fist, (fighting,) fisticuffs. E. {#muzwi#} repeated in this sense, and the final made long.
+pUtI           -> pUti           | {#pUtI(ti)ka#} m. ({#-kaH#}) 1. A plant, (Cæsalpinia bonducella.) 2. The pole-cat or civet-cat. f. ({#-kA#}) A potherb, (Basella rubra, and lucida.) E. {#pUti#}
+paraSva        -> parasva        | {#paraSva(sva)Da#} m. ({#-DaH#}) An axe, a hatchet. E. {#para#} another, an enemy, {#Sva#} derived from {#Svi#}, to grow or thrive; {#paraSva#} the prosperity o
+prO            -> pro            | {#prO(pro)Qa#} mfn. ({#-QaH-QA-QaM#}) 1. Full-grown. 2. Confident, bold, arrogant. 3. Impudent. 4. Full-grown, (as the moon.) 5. Thick, heavy, (darkness, &c.) 6
+praTivi        -> praTivI        | {#praTivi#} f. ({#-vi#}) The earth; also {#praTivI .#}
+romAvali       -> romAvalI       | {#romAvali#} f. ({#-liH-lI#}) A line of hair across the middle of the belly or navel. E. {#roma#} and {#AvalI#} a line.
+sUrpaRaKA      -> SUrpaRaKA      | {#sUrpaRaKA#} f. ({#-KA#}) The sister of RĀVAṆA. E. {#sUrpa, naKa#} a nail.; also {#SUrpaRaKA#}.
+stari          -> starI          | {#stari(rI)man#} m. ({#-mA#}) A bed, a couch. E. {#stf#} to spread, {#imanic#} Unādi aff.
+vilva          -> bilva          | {#vilva#} m. ({#-lvaH#}) A fruit tree, commonly named Bel, (Ægle marmelos.) n. ({#-lvaM#}) 1. The fruit of the Bel. 2. A measure, the same as the Pala. E. {#vil
+zAD            -> sAD            | {#zAD(u)sADu#} r. 4th cl. ({#sADyati#}) r. 5th cl. ({#sADnoti#}) 1. To effect, to accom- plish or complete. 2. To succeed; also {#sAD .#}
+zad            -> sad            | {#zad(O x)Ozadx#} r. 1st and 6th cls. ({#sIdati#}) 1. To wither, to wane, to perish gradually. 2. To be low-spirited, to despond, to be wearied or distressed, t
+zah            -> sah            | {#zah#} r. 1st cl. ({#sahate#}) r. 4th cl. ({#sahmati#}) r. 10th cl. ({#sAhayati-te#}) 1. To bear, to endure, to suffer or support, to forbear, to have patience
+zek            -> sek            | {#zek(f)zekf#} r. 1st cl. ({#sekate#}) To go, to move; preferably {#sek .#}
+zel            -> Sel            | {#zel(f)zex#} r. 1st cl. ({#selati#}) To go, to move; also {#Sel#}, and {#sel .#}
+zev            -> sev            | {#zev(f)zevf#} r. 1st cl. ({#sevati-te#}) 1. To serve, to gratify by service. 2. To rely or depend on. 3. To worship. 4. To follow, to practise, to be addicted 
+ziD            -> siD            | {#ziD#} r. 1st cl. ({#seDati#}) To go. {#(U) ziDU#} r. 1st cl. ({#seDati#}) 1. To command, to order. 2. To ordain, especially with respect to holy observances. 
+zic            -> sic            | {#zic(O)zicO#} r. 6th cl. ({#siYcati-te#}) 1. To sprinkle. 2. To moisten, to water, (as plants.) 3. To pour out. 4. To pour in. With {#aBi#} prefixed, 1. To ano
+zil            -> Sil            | {#zil#} r. 6th cl. ({#silati#}) To glean: more usually {#sil .#}
+ziv            -> siv            | {#ziv(u)zivu#} r. 4th cl. ({#sIvyati#}) 1. To sew, to stitch. 2. To sow, as seed. 3. To join. With {#anu#}, To string together.
+zvad           -> svad           | {#zvad#} r. 1st cl. ({#svadate#}) r. 10th cl. ({#svAdayati-te#}) 1. To taste. 2. To be pleas- ing. 3. To cover; also {#svAda .#}
+zvap           -> svap           | {#zvap(Yi O)YizvapO#} r. 2nd cl. ({#svapiti#}) To sleep.
+zvid           -> svid           | {#zvid(Yi A)YizvidA#} r. 1st cl. ({#svedate#}) r. 4th cl. ({#svidyati#}) 1. To perspire, to sweat. 2. To be greasy or unctuous. 3. To be fascinated, to be tempt

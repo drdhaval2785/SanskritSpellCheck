@@ -1,0 +1,20 @@
+# AP90 -- DOCUMENTED-INTENTIONAL spellings (NOT typos -- do NOT file corrections)
+#
+# 8 headwords that LOOK like misspellings but which AP90 records on purpose:
+# wrong-reading apparatus (w.r.), variae lectiones (v.l.), in-composition /
+# sandhi forms (in comp. for...), cross-references (See / = X q.v.), and other
+# grammatical/Vedic notes. Filing a 'correction' for any of these CORRUPTS AP90.
+# Use this as a suppression list: such headwords should not be re-flagged.
+# Format per row:  headword -> would-be 'correction'  |  the AP90 entry text
+
+# ===== CROSS-REFERENCE (3) =====
+bAlukA         -> vAlukA         | {#bAlukA#} See {#vAlukA#}.
+vezyA          -> veSyA          | {#vezyA#} See {#veSyA#}.
+vilva          -> bilva          | {#vilva#} See {#bilva#}.
+
+# ===== OTHER-INTENTIONAL (5) =====
+Avaritf        -> AvarItf        | {#Avari(rI)tf#} {%a.%} One that covers or envelops; Ki. 18. 40.
+SrutI          -> Sruti          | {#SrutI#} = {#SrutiH#} above.
+aBIGAta        -> aBiGAta        | {#aBIGAta#} = {#aBiGAta#} q. v.
+amitrIya       -> amitriya       | {#amitrIya, --trya#} {%a.%} Hostile, inimical.
+tardu          -> tardU          | {#tardu-rdU#} {%f.%} A wooden ladle.

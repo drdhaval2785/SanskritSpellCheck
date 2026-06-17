@@ -1,0 +1,183 @@
+# WIL tier-A -- BODY-GROUNDED triage  (DRAFT; verify every kept case against the scan)
+#
+# The 108 engine tier-A candidates were judged against WIL's OWN entry text (csl-orig),
+# not spelling alone. A spelling detector cannot tell a typo from a real word, an
+# intentional variant / compounding form, or wrong-reading apparatus -- the entry can.
+# Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM
+# pass over the 'realword' set + source confirmation of every TYPO verdict.
+#
+# FINDING: of 108 tier-A candidates, 3 are body-confirmed fileable typos (2.8%).
+# 80 are real distinct words, 17 are spellings WIL documents on purpose (w.r./v.l./
+# in-comp./cross-ref -- filing them would CORRUPT WIL), 0 are not in the current
+# source, and 8 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
+# do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.
+
+# ===== BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file) (3) =====
+
+boDidruna     -> boDidruma      [dcs=1 ndicts=1 body=realword]
+    WIL: {#boDidruna#} m. ({#-maH#}) The holy fig tree, (Ficus religiosa.) E. {#boDi#} knowledge, {#druma#} a tree.
+    judged: Body etymology shows '{#druma#} a tree' but headword spells it 'druna'; 'druma'=tree fits the gloss 'holy fig tree'; key is misspelled.
+    confirm: Infl '{#-maH#}' and E. '{#druma#} a tree' both show m; gloss 'holy fig tree' fits druma; headword 'druna' contradicts body, undefined as own word.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=WIL&key=boDidruna
+
+jAmbabat      -> jAmbavat       [dcs=0 ndicts=2 body=realword]
+    WIL: {#jAmbabat#} m. ({#-vAn#}) A fabulous bear, father-in-law to KṚṢṆA. E. {#jAmba#} the {%Jambu%} tree, and {#matup#} affix; also {#jAmbuvat#}.
+    judged: Body cross-ref 'also {#jAmbuvat#}' shows 'v' form; 'jAmbavat' is the standard (-mat suffix) form; 'jAmbabat' with 'b' is a key misspelling.
+    confirm: Infl '{#-vAn#}' and 'also {#jAmbuvat#}' both show v; E. jAmba+matup yields jAmbavat; headword 'jAmbabat' with b contradicts body, undefined.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=WIL&key=jAmbabat
+
+kaNkalodya    -> kaNkaloqya     [dcs=0 ndicts=1 body=realword]
+    WIL: {#kaNkalodya#} n. ({#-qyaM#}) A kind of drug.
+    judged: Body paradigm gives '-qyaM' (retroflex q) matching suggestion, while headword uses 'd' (dental); body contradicts the headword spelling.
+    confirm: Infl '{#-qyaM#}' uses retroflex q, headword 'kaNkalodya' uses dental d; body paradigm contradicts headword; gloss 'a kind of drug' fits kaNkaloqya.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=WIL&key=kaNkalodya
+
+# ===== BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted (3) =====
+
+suvarRavindu  -> suvarRabindu   [dcs=1 ndicts=2 body=realword]
+    WIL: {#suvarRavindu#} m. ({#-nduH#}) VIṢṆU. E. {#suvarRa#}, gold, and {#vindu#} a dot or spot.
+    judged: Etymology in body shows '{#vindu#} a dot or spot'; standard Sanskrit word for dot is 'bindu'; 'vindu' is a misspelling of the key.
+    confirm: Etymology defines component '{#vindu#} a dot or spot'; headword 'vindu' matches its own etymology and infl '{#-nduH#}'; self-consistent, vindu treated as the word's spelling, not a bare error.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=WIL&key=suvarRavindu
+
+pawakuwi      -> pawakuwI       [dcs=0 ndicts=2 body=realword]
+    WIL: {#pawakuwi#} f. ({#-wiH#}) A tent. E. {#pawa#} cloth, {#kuwi#} a house.
+    judged: Inflection '{#-wiH#}' indicates feminine with long I; body etymology shows '{#kuwi#}' but the feminine noun ending requires long I; headword should be 'pawakuwI'.
+    confirm: Infl '{#-wiH#}' is SHORT i (not long I) and E. '{#kuwi#} a house' uses short i; body fully consistent with short-i 'pawakuwi'; real word, not a typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=WIL&key=pawakuwi
+
+zaYca         -> saYca          [dcs=0 ndicts=1 body=realword]
+    WIL: {#zaYca#} r. 1st cl. ({#saYcati#}) To go.
+    judged: Body conjugates root as 'saYcati' (dental s), contradicting headword 'zaYca' (retroflex z); gloss fits saYca, not zaYca.
+    confirm: Conjugation '{#saYcati#}' uses dental s, contradicting retroflex z in headword 'zaYca'; gloss 'To go' fits saYca; not documented as variant.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=WIL&key=zaYca
+
+# ===== BUCKET 3  REVIEW -- undecidable without the printed page (5) =====
+
+drAvana       -> drAvaRa        [dcs=3 ndicts=2 body=realword]
+    WIL: {#drAvana#} n. ({#-naM#}) .²1 The clearing nut. .²2 Causing to fly or retreat. .²3 Fusing. .²4 Distilling. E. {#dru#} to go or retreat, in the causal form, {#ac#} aff.
+    judged: Body gives 'Fusing, Distilling' from dru causal — gloss fits drAvaRa (retroflex R). But body has POS tag and full definition; n vs R ambiguous.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=WIL&key=drAvana
+
+lakzmIpala    -> lakzmIPala     [dcs=2 ndicts=2 body=realword]
+    WIL: {#lakzmIpala#} m. ({#-laH#}) A fruit tree, (Ægle marmelos.)
+    judged: Body gives only 'A fruit tree (Aegle marmelos)' with no etymology to clarify pala vs Pala (short vs long a). Cannot determine intent.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=WIL&key=lakzmIpala
+
+paYcaSErizaka -> paYcaSErIzaka  [dcs=1 ndicts=2 body=realword]
+    WIL: {#paYcaSErizaka#} n. ({#-kaM#}) The bark of five trees. E. {#paYca#}, and {#SirIza#} Mimosa sirisha, {#WaY#} aff.
+    judged: Body's etymology uses SirIza (long I in rIza), suggesting paYcaSErIzaka (long I) may be correct. Short i in suspect may be a typo, but not conclusive.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=WIL&key=paYcaSErizaka
+
+paYcaprasAda  -> paYcaprAsAda   [dcs=0 ndicts=2 body=realword]
+    WIL: {#paYcaprasAda#} m. ({#-daH#}) A temple with four pinnacles and a steeple. E. {#paYca#}, and {#prasAda#} a palace.
+    judged: Body etymology shows '{#prasAda#}' (short a); 'prAsAda' (long A) is more standard for temple/palace; ambiguous whether short-a form is intentional in WIL.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=WIL&key=paYcaprasAda
+
+yAmunezWaka   -> yAmunezwaka    [dcs=0 ndicts=2 body=realword]
+    WIL: {#yAmunezWaka#} n. ({#-kaM#}) Lead.
+    judged: Body only says 'Lead.' with no etymology; cannot determine whether W (retroflex Th) or w (dental th) is correct from body alone.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=WIL&key=yAmunezWaka
+
+# ===== BUCKET 4  REAL-WORD -- a distinct real word; the fix would merge two words (80) =====
+arda          -> arDa          | WIL: {#arda#} r. 1st cl. ({#ardati#}) .²1 To ask or beg. .²2 To go. 1st and 10th cls. ({#ardati | Body defines 'arda' as its own verbal root (r. 1st cl. ardati 'to ask/beg/go') with multip
+zuBa          -> SuBa          | WIL: {#zuBa#} r. 1st cl. ({#soBati#}) r. 6th cl. ({#suBati#}) .²1 To speak. .²2 To shine. .²3 T | Body gives own verbal root entries (r. 1st/6th cl. sobati/subhati) with distinct glosses; 
+zarva         -> sarva         | WIL: {#zarva#} r. 1st cl. ({#sarvati#}) .²1 To go, to move. .²2 To injure, to hurt. | Body defines 'zarva' as its own verbal root (r. 1st cl. sarvati 'to go/injure'); independe
+BABa          -> BAva          | WIL: {#BABa#} mfn. ({#-BaH-BA-BaM#}) Bright, (as a planet.) E. {#Ba#}, and {#ABA#} light. | Body defines 'BABa' as mfn. 'bright (as a planet)' with etymology from Ba + ABA (light); r
+vasAna        -> vasana        | WIL: {#vasAna#} mfn. ({#-naH-nA-naM#}) Wearing, putting on, (as clothes.) E. {#vasa#} to clothe | Body defines 'vasAna' as mfn. 'wearing, putting on clothes' with its own etymology (vasa +
+sattrA        -> sattra        | WIL: {#sattrA#} ind. With, together with. E. {#sa#} for {#saha#} with, {#trA#} to preserve, aff | Body gives own gloss 'With, together with' + derivation from sa+trA; also notes variant sa
+jAnana        -> janana        | WIL: {#jAnana#} mfn. ({#-naH-nA-naM#}) Knowing, understanding. E. {#jYA#} to know, {#taN#} aff. | Body gives 'Knowing, understanding' from root jYA. janana means 'birth/generation'; entire
+AmAlaka       -> Amalaka       | WIL: {#AmAlaka#} mn. ({#-kaH-kaM#}) Land near a mountain. | Body gives 'Land near a mountain.' Amalaka = emblic myrobalan (tree/fruit). Distinct meani
+AcCa          -> acCa          | WIL: {#AcCa#} r. 1st cl. ({#i#}.) {#AcCi#} ({#AYCati#}) To lengthen or stretch. | Body gives 'r. 1st cl. ... To lengthen or stretch.' acCa means clear/transparent. Verbal r
+yaTAtaTA      -> yaTAtaTa      | WIL: {#yaTAtaTA#} adv. In any way, any how. E. {#yaTA#} and {#taTA#}, &c. | Body gives 'adv. In any way, any how' with own derivation. Long final A is an attested adv
+misra         -> miSra         | WIL: {#misra#} r. 10th cl. ({#misrayati#}) To mix, to mingle or join. | Body gives a verbal root (r. 10th cl. misrayati 'to mix'), defining 'misra' as its own dha
+BraMsa        -> BraMSa        | WIL: {#BraMsa#} ({#u#}) {#BraMsu#} r. 1st cl. ({#BraMsate#}) To fall down. | Body defines 'BraMsa' as its own verbal root (r. 1st cl. BraMsate 'to fall down'); indepen
+Bila          -> bila          | WIL: {#Bila#} r. 10th cl. ({#Bilayati#}) To divide or separate. | Body defines 'Bila' as its own verbal root (r. 10th cl. Bilayati 'to divide'); independent
+varGa         -> varga         | WIL: {#varGa#} r. 1st cl. ({#varGati#}) To go. | Body gives 'r. 1st cl. (varGati) To go.' varga = class/group. Verbal root with different m
+ucCa          -> ucca          | WIL: {#ucCa#} r. 1st and 6th cls. ({#i#}.) {#ucCi#} ({#uYCati#}) .²1 To glean. .²2 To gather li | Body gives 'r. 1st cl. ... To glean / gather / terminate / bind.' ucca = high/lofty. Verba
+vuDa          -> buDa          | WIL: {#vuDa#} ({#i#}) {#buDi#} r. 10th cl. ({#vunDayati#}) To injure, to hurt, to kill. | Body defines 'vuDa' as its own root (r. 10th cl. vunDayati 'to injure'); distinct dhatu en
+aramya        -> araRya        | WIL: {#aramya#} mfn. ({#-myaH-myA-myaM#}) Disagreeable. E. {#a#} neg. {#ramya#} pleasing. | Body gives 'Disagreeable' from a+ramya. araRya = forest/wilderness. Completely different m
+vapuzmAt      -> vapuzmat      | WIL: {#vapuzmAt#} mfn. ({#-zmAn-zmantI-zmat#}) Having a body, {{coporeal->corporeal||20210731|D | Body gives mfn. 'Having a body, corporeal, incarnate' with full paradigm {-zmAn-zmantI-zma
+tOka          -> toka          | WIL: {#tOka#} ({#f#}) {#tOkf#} r. 1st cl. ({#tOkate#}) To go or move. | Body defines 'tOka' as its own verbal root (r. 1st cl. tOkate 'to go or move'); independen
+reba          -> reBa          | WIL: {#reba#} ({#f#}) {#rebf#} r. 1st cl. ({#rebate#}) To go, to move. | Body gives 'r. 1st cl. (rebate) To go, to move.' reBa = praising/singer (Vedic). Verbal ro
+garGa         -> garga         | WIL: {#garGa#} r. 1st cl. ({#garGati#}) To go or move. | Body defines 'garGa' as its own verbal root (r. 1st cl. garGati 'to go or move'); independ
+CikkaRa       -> cikkaRa       | WIL: {#CikkaRa#} n. ({#-RaM#}) Sneezing. f. ({#-RI#}) A small plant, (Artemisia sternutatoria). | Body gives full noun definition ('sneezing'; Artemisia plant) with etymology from nominal 
+agnivAhu      -> agnibAhu      | WIL: {#agnivAhu#} m. ({#-huH#}) Smoke. E. {#agni#} and {#vAhu#} the arm. | Body gives its own definition 'smoke' with etymology agni + vAhu (arm); 'agnivAhu' is a di
+zumBa         -> SumBa         | WIL: {#zumBa#} r. 1st and 6th cls. ({#sumBati#}) .²1 To speak. .²2 To shine. .²3 To be beautifu | Body defines 'zumBa' as its own verbal root (r. 1st and 6th cls.) with glosses; independen
+zarDa         -> SarDa         | WIL: {#zarDa#} r. 1st cl. ({#sardDati#}) .²1 To go. | Body gives 'r. 1st cl. (sardDati) To go.' SarDa = herd/multitude. Verbal root with differe
+azwApAda      -> azwapAda      | WIL: {#azwApAda#} mfn. ({#-daH-dA-daM#}) Quartered by eight, having eight for the root. E. {#az | Body gives full adjective definition 'quartered by eight, having eight for the root' with 
+hantAkAra     -> hantakAra     | WIL: {#hantAkAra#} m. ({#-raH#}) Rice to be given to a guest. E. {#hantA#} a measure of food, a | Body defines 'Rice to be given to a guest' and etymology explicitly uses hantA (long A), c
+noDAs         -> noDas         | WIL: {#noDAs#} m. ({#-DAH#}) The name of a saint. E. {#nu#} to praise, {#asi#} Uṇādi aff. and { | Body gives 'The name of a saint' with derivation using Duwa augment. Long A in DAH (acc.) 
+Svaja         -> svaja         | WIL: {#Svaja#} r. 1st cl. ({#Svajate#}) also ({#i#}) {#Svaji#} ({#SvaMjate#}) To go, to move. | Body defines 'Svaja' as its own verbal root (r. 1st cl. Svajate 'to go, to move'); indepen
+cInapizWa     -> cInapizwa     | WIL: {#cInapizWa#} m. ({#-zWaH#}) .²1 Minium or red-lead. .²2 Lead. E. {#cIna#} {%China%}, and  | Body gives 'Minium / red-lead / Lead' with own etymology. W (retroflex Tha) vs w (dental t
+itkaWa        -> itkawa        | WIL: {#itkaWa#} mf. ({#-waH-wA#}) A kind of reed or grass; also {#vahUmUla#}. E. {#ut#} and {#k | Body gives 'A kind of reed or grass' with derivation. W (retroflex) vs w (dental) is a rea
+zazWihAyana   -> zazwihAyana   | WIL: {#zazWihAyana#} m. ({#-naH#}) .²1 An elephant. .²2 A kind of rice. E. {#zazWi#} sixth, {#h | Body gives 'An elephant / rice' and etymology uses zazWi (long W = retroflex), confirming 
+apAWava       -> apAwava       | WIL: {#apAWava#} n. ({#-vaM#}) .²1 Sickness, disease. .²2 Awkwardness, inelegance. E. {#a#} pri | Body gives 'Sickness / Awkwardness' from a+pAwaba. Both W forms appear in head and etymolo
+heQa          -> heqa          | WIL: {#heQa#} r. 9th cl. ({#heQaRAti#}) .²1 To be past birth. .²2 To produce young. .²3 To puri | Body defines 'heQa' as its own verbal root (r. 9th cl. heQaRAti) with distinct glosses; in
+nirBidya      -> nirvidya      | WIL: {#nirBidya#} ind. Having pierced or penetrated. E. {#nir#} before {#Bida#} to break, {#lya | Body defines 'nirBidya' as indeclinable 'having pierced or penetrated' from nir+Bida to br
+zaYja         -> saYja         | WIL: {#zaYja#} r. 1st cl. ({#sajati#}) To embrace, to cling or adhere to, to be in contact or c | Body gives full verbal root entry (r. 1st cl. sajati) 'to embrace, cling to' with multiple
+AparAhnika    -> AparAhRika    | WIL: {#AparAhnika#} mfn. ({#-kaH-kI-kaM#}) Occurring in the afternoon, &c. E. {#aparAhna#} and  | Body gives 'Occurring in the afternoon' derived from aparAhna+WaY. Dental n in the derivat
+atyazwI       -> atyazwi       | WIL: {#atyazwI#} f. ({#-zwI#}) A kind of metre, a stanza of four lines, with seventeen syllable | Body gives 'A kind of metre' and etymology uses azwI (long I), confirming the long I in th
+raktaSrAva    -> raktasrAva    | WIL: {#raktaSrAva#} m. ({#-vaH#}) .²1 Venesection, bleeding. .²2 A kind of dock or sorrel. E. { | Body gives 'Venesection, bleeding' and etymology explicitly uses SrAva (palatal S), confir
+Turva         -> turva         | WIL: {#Turva#} ({#I#}) {#TurvI#} r. 1st cl. ({#Turvati#}) To kill, to injure or hurt. | Body defines 'Turva' as its own verbal root (r. 1st cl. Turvati 'to kill, to injure'); ind
+mahAvila      -> mahAbila      | WIL: {#mahAvila#} n. ({#-laM#}) .²1 Sky, heaven, atmosphere. .²2 A water jar. .²3 The heart, th | Body gives 'Sky / water jar / heart / cave' and etymology uses vila (v-spelling) a chasm, 
+aparADita     -> aparADitA     | WIL: {#aparADita#} mfn. ({#-taH-tA-taM#}) Criminated, condemned. E. {#aparADa#} and {#kta#} aff | Body defines 'aparADita' as mfn. adjective 'criminated, condemned' (-taH-tA-taM); the susp
+maYja         -> maYjA         | WIL: {#maYja#} r. 10th cl. ({#maYjayati#}) .²1 To sound. .²2 To clean, to purify. | Body defines 'maYja' as its own verbal root (r. 10th cl. maYjayati) with two senses; indep
+brahmAsva     -> brahmasva     | WIL: {#brahmAsva#} n. ({#-svaM#}) .²1 The BRAHMĀ weapon, a fabulous weapon originally from BRAH | Body etymology '{#brahma#}' + '{#asva#} a weapon' defines 'brahmAsva' as the BRAHMA weapon
+apakAragIr    -> apakAragir    | WIL: {#apakAragIr#} f. ({#-gIH#}) Reproach and menace. E. {#apakAra#} hatred, and {#gIr#} speec | Body etymology shows '{#gIr#} speech' with long I; inflection '{#-gIH#}' confirms long I; 
+Svaga         -> svaga         | WIL: {#Svaga#} ({#i#}) {#Svagi#} r. 1st cl. ({#SvaMgati#}) To go or move. | Body defines 'Svaga' as its own verbal root (r. 1st cl. SvaMgati 'to go or move'); indepen
+SvasanAsana   -> SvasanASana   | WIL: {#SvasanAsana#} m. ({#-naH#}) A snake. E. {#Svasana#} breathing, {#asana#} food; eating ai | Body etymology '{#Svasana#} breathing + {#asana#} food; eating air' supports compound 'Sva
+kftAvaSakTika -> kftAvasakTika | WIL: {#kftAvaSakTika#} mfn. ({#-kaH-kA-kaM#}) Seated on the hams with the knees tied together,  | Body etymology explicitly shows '{#avaSakTikA#}' with capital S (palatal); headword 'kftAv
+madyapAsana   -> madyapASana   | WIL: {#madyapAsana#} n. ({#-naM#}) Eating a relish, or what excites thirst. E. {#madya#} wine,  | Body etymology shows '{#pasa#} to go' (lowercase s, not palatal S); 'madyapAsana' is the i
+hewa          -> heWa          | WIL: {#hewa#} r. 1st cl. ({#hewate#}) To resist, to oppose. | Body defines 'hewa' as its own verbal root (r. 1st cl. hewate 'to resist, to oppose'); ind
+asOzwava      -> asOzWava      | WIL: {#asOzwava#} n. ({#-vaM#}) .²1 Ugliness, deformity. .²2 Demerit, worthlessness. E. {#a#} n | Body etymology '{#sOzwava#} beauty' uses lowercase w; 'asOzwava' = negation of 'sOzwava' (
+astrakaRWaka  -> astrakaRwaka  | WIL: {#astrakaRWaka#} m. ({#-kaH#}) An arrow. E. {#astra#} and {#kaRWaka#} a thorn, a thorn-lik | Body etymology explicitly shows '{#kaRWaka#} a thorn' with capital W (retroflex Th); headw
+gAQamuzWi     -> gAQamuzwi     | WIL: {#gAQamuzWi#} mfn. ({#-zWiH-zWiH-zWi#}) Miserly, niggard, avaricious, closefisted. m. ({#- | Body etymology shows '{#muzWi#} gripe' with capital W; inflections '{#-zWiH#}' confirm; 'g
+karakaRWaka   -> karakaRwaka   | WIL: {#karakaRWaka#} m. ({#-kaH#}) The finger nail. {#kara#} the hand, and {#kaRWaka#} a thorn. | Body etymology explicitly shows '{#kaRWaka#} a thorn' with capital W; headword 'karakaRWak
+zazWimatta    -> zazwimatta    | WIL: {#zazWimatta#} m. ({#-ttaH#}) An elephant. E. {#zazWi#} sixth, (year,) and {#matta#} furio | Body etymology shows '{#zazWi#} sixth' with capital W; 'zazWimatta' matches its own etymol
+srotovaha     -> srOtovaha     | WIL: {#srotovaha#} mfn. ({#-haH-hA-haM#}) Flowing like a stream or river. f. ({#-hA#}) A river  | Body etymology shows '{#srotas#} a stream' with short o; 'srotovaha' is the correct compou
+JUza          -> jUza          | WIL: {#JUza#} r. 1st cl. ({#JUzati#}) To hurt or kill. | Body defines 'JUza' as its own verbal root (r. 1st cl. JUzati 'to hurt or kill'); independ
+Jarja         -> jarja         | WIL: {#Jarja#} r. 6th cl. ({#Jarjati#}) .²1 To say, to speak. .²2 To censure, to blame. | Body defines 'Jarja' as its own verbal root (r. 6th cl. Jarjati 'to say, to censure'); ind
+kzIrapAyiR    -> kzIrapAyin    | WIL: {#kzIrapAyiR#} m. {%plu.%} ({#-yiRaH#}) The people called {%Usinaras%}, the milk-drinkers. | Body defines 'kzIrapAyiR' as a noun (the Usinara people, milk-drinkers) explaining final R
+AsutIbala     -> AsutIvala     | WIL: {#AsutIbala#} m. ({#-laH#}) .²1 A sacrificer at the full and change of the moon. .²2 A dis | Body etymology shows '{#balac#} aff.' deriving from '{#bala#}'; headword 'AsutIbala' is co
+SAkavAleya    -> SAkabAleya    | WIL: {#SAkavAleya#} m. ({#-yaH#}) A plant, commonly {%Bamanaiṭhi%}; also {#vAleyaSAka#}. | Body cross-reference 'also {#vAleyaSAka#}' confirms 'vAleya' with 'v'; 'SAkavAleya' is con
+drORAyaRa     -> drORAyana     | WIL: {#drORAyaRa#} m. ({#-RaH#}) A name of AŚVATTHĀMA, son of {%Droṇa%}. E. {#droRa#} as above, | Body etymology shows '{#droRa#}' with R (retroflex n); cross-refs '{#drORAyaRi#}'/'{#drORi
+kAyabalana    -> kAyavalana    | WIL: {#kAyabalana#} n. ({#-naM#}) Armour, mail. E. {#kAya#} the body, and {#balana#} protecting | Body etymology shows '{#balana#} protecting; from {#bala#} to be strong'; 'kAyabalana' mat
+kekAbala      -> kekAvala      | WIL: {#kekAbala#} m. ({#-laH#}) A peacock. E. {#kekA#} his cry, and {#balac#} aff. | Body etymology shows '{#balac#} aff.' forming the compound; 'kekAbala' with 'b' matches it
+mARavIRa      -> mARavIna      | WIL: {#mARavIRa#} mfn. ({#-RaH-RA-RaM#}) Boyish, childish, fit or suitable for a child. E. {#mA | Body inflection '{#-RaH-RA-RaM#}' consistently uses R (retroflex n); 'mARavIRa' with capit
+pakzipARIyaSAlikA -> pakzipAnIyaSAlikA | WIL: {#pakzipARIyaSAlikA#} f. ({#-kA#}) A trough for watering birds, cattle, &c. E. {#pakzin#}  | Body etymology shows '{#pARIya#} water' with R (retroflex n); 'pakzipARIyaSAlikA' matches 
+prAkPAlguRa   -> prAkPAlguna   | WIL: {#prAkPAlguRa#} m. ({#-naH#}) VṚHASPATI. E. {#prAkPalguRI#}, and {#aR#} aff. | Body etymology shows '{#prAkPalguRI#}' with R (retroflex n); 'prAkPAlguRa' is consistent w
+prAkPalguRIBava -> prAkPalgunIBava | WIL: {#prAkPalguRIBava#} m. ({#-vaH#}) A name of VṚHASPATI. E. {#prAkPalguRI#}, and {#Baya#} bo | Body etymology shows '{#prAkPalguRI#}' with R; cross-ref '{#prAkPalguRIya#}' also uses R; 
+rAjaSana      -> rAjaSaRa      | WIL: {#rAjaSana#} m. ({#-naH#}) A plant, from the fibres of which a coarse cordage and canvas a | Body etymology shows '{#Sana#} Crotolaria' with dental n; 'rAjaSana' matches its own etymo
+sTAlIvila     -> sTAlIbila     | WIL: {#sTAlIvila#} n. ({#-laM#}) The interior or hollow of a boiler. E. {#sTAlI#} a pot, and {# | Body etymology shows '{#vila#} vacuity' with 'v'; 'sTAlIvila' matches its own etymology; '
+vErAnuvanDin  -> vErAnubanDin  | WIL: {#vErAnuvanDin#} m. ({#-nDI#}) .²1 VIṢṆU. .²2 The solar ray which is charged with heat. E. | Body etymology shows '{#anuvanDin#} connected with' using 'v'; 'vErAnuvanDin' matches its 
+meba          -> meva          | WIL: {#meba#} ({#f#}) {#mebf#} r. 1st cl. ({#mebate#}) To serve. | Body defines root 'mebf' with conjugation 'mebate'; WIL's b-spelling is consistent through
+ramat         -> raRat         | WIL: {#ramat#} mfn. ({#-man-mantI-mat#}) Playing, sporting. E. {#rama#} to play, {#Satf#} aff. | Body defines 'Playing, sporting' from root 'rama' with suffix Satf; ramat is correct parti
+spfhanIya     -> spfhaRIya     | WIL: {#spfhanIya#} mfn. ({#-yaH-yA-yaM#}) Desirable, to be wished. E. {#spfha#} to wish, {#anIy | Body defines 'Desirable, to be wished' from 'spfha to wish' with suffix 'anIyar' (dental n
+vipratisidDa  -> vipratizidDa  | WIL: {#vipratisidDa#} mfn. ({#-dDaH-dDA-dDaM#}) .²1 Contradicted, opposed. .²2 Prohibited, forb | Body defines 'Contradicted, opposed; Prohibited' from 'sidDa proved'; body consistently us
+vilva         -> bilva         | WIL: {#vilva#} m. ({#-lvaH#}) A fruit tree, commonly named {%Bel%}, (Ægle marmelos.) n. ({#-lva | Body gives own definition (Bel tree, Aegle marmelos) and derivation from vila. Documented 
+vfMhaRa       -> bfMhaRa       | WIL: {#vfMhaRa#} mfn. ({#-RaH-RA#} or {#-RI-RaM#}) Nourishing, fattening, nutritious. m. ({#-Ra | Body gives 'Nourishing, fattening' + sweetmeat, derived from vfhi (v-root). Own entry with
+devaballaBa   -> devavallaBa   | WIL: {#devaballaBa#} m. ({#-BaH#}) A tree used in dying, (Rottleria tinctoria, Rox.) see {#yunn | Body gives own definition (tree Rottleria tinctoria) with etymology deva + ballaBa; 'devab
+marSaRa       -> marzaRa       | WIL: {#marSaRa#} n. ({#-RaM#}) Advising, counselling, deliberating. E. {#mfSa#} to counsel, {#l | Body defines 'marSaRa' as noun 'advising, counselling' with etymology from mfSa + lyuw; co
+garabrata     -> garavrata     | WIL: {#garabrata#} m. ({#-taH#}) A peacock. E. {#gara#} sprinkling, (of rain,) and {#brata#} re | Body etymology explicitly shows '{#brata#} religious observance' not '{#vrata#}'; WIL uses
+
+# ===== BUCKET 5  INTENTIONAL -- WIL documents the spelling on purpose; NEVER file (17) =====
+bA            -> vA            | WIL: {#bA#} ind. .²1 As, like. .²2 Or, either: see {#vA#}. | Body glosses 'as, like; or, either' then explicitly cross-references 'see {#vA#}', marking
+arsas         -> arSas         | WIL: {#arsas#} m. ({#-rsaH#}) Hoemorrhoids. See {#arSas#}. | Body: 'Haemorrhoids. See {#arSas#}.' Cross-reference marker 'See X' shows arsas is a docum
+parasvaDa     -> paraSvaDa     | WIL: {#parasvaDa#} m. ({#-DaH#}) An axe: see {#paraSvaDa#}. | Body: 'An axe: see {#paraSvaDa#}.' Explicit 'see X' cross-reference; parasvaDa is a docume
+prAcInavarhis -> prAcInabarhis | WIL: {#prAcInavarhis#} m. ({#-rhiH#}) .²1 A name of INDRA. .²2 A king. E. {#prAcIna#} eastern,  | Body gives definition 'name of INDRA / a king' and etymology explicitly uses 'varhis light
+Apastamva     -> Apastamba     | WIL: {#Apastamva#} m. ({#-mvaH#}) The name of a sage and legislator. | Body gives proper noun 'name of a sage and legislator.' WIL uses v-spelling Apastamva; the
+Agantabya     -> Agantavya     | WIL: {#Agantabya#} mfn. ({#-byaH-byA-byaM#}) What will come, what is likely to arrive. E. {#AN# | WIL spells suffix as 'tabya' (-byaH-byA-byaM) throughout; b/v substitution is WIL's own or
+Aguraba       -> Agurava       | WIL: {#Aguraba#} mfn. ({#-baH-bI-baM#}) .²1 Consisting of or containing Agallochum. .²2 Very he | Body uses -baH-bI-baM paradigm; b for v is WIL's systematic convention, internally consist
+aDolamva      -> aDolamba      | WIL: {#aDolamva#} m. ({#-mvaH#}) A perpendicular. E. {#aDas#} below, {#lamva#} a straight line. | Body defines 'perpendicular' and cites etymology 'lamva a straight line'; v for b is WIL's
+ajalamvana    -> ajalambana    | WIL: {#ajalamvana#} n. ({#-naM#}) Antimony. | WIL defines 'Antimony' under 'ajalamvana'; v for b is WIL's systematic orthographic conven
+anavalamva    -> anavalamba    | WIL: {#anavalamva#} mfn. ({#-mvaH-mvA-mvaM#}) Without support or dependance. E. {#an#} neg. {#a | Body defines 'without support' and cites 'avalamva support'; v for b is WIL's consistent c
+cAruvAhu      -> cArubAhu      | WIL: {#cAruvAhu#} m. ({#-huH#}) One of KṚṢṆA'S sons. E. {#cAru#}, and {#vAhu#} an arm. | Body gives etymology 'vAhu an arm'; WIL spells bAhu as vAhu throughout — v for b is WIL's 
+svalpavala    -> svalpabala    | WIL: {#svalpavala#} mfn. ({#-laH-lA-laM#}) Weak, feeble. E. {#svalpa#}, and {#vala#} strong. | Body defines 'Weak, feeble' citing 'vala strong'; WIL spells bala as vala — v for b is WIL
+tAlapralamva  -> tAlapralamba  | WIL: {#tAlapralamva#} n. ({#-mvaM#}) The fibres that grow on the cocoanut and other palms, unde | Body defines palm-tree fibres, cites 'pralamva what depends'; v for b throughout is WIL's 
+vIRAnuvanDa   -> vIRAnubanDa   | WIL: {#vIRAnuvanDa#} m. ({#-nDaH#}) The tie of a lute or lower part of the tail piece, where th | Body defines 'tie of a lute' citing 'anuvanDa appendage, tie'; v for b is WIL's systematic
+apralamva     -> apralamba     | WIL: {#apralamva#} mfn. ({#-mvaH-mvA-mvaM#}) Quick, expeditious. E. {#a#} neg. {#pralamba#} slo | Body defines 'Quick, expeditious' citing neg. 'pralamba slow'; v for b in headword is WIL'
+dArA          -> DArA          | WIL: {#dArA#} f. ({#-rA#}) A wife: see {#dAra#}. | 
+udIci         -> udIcI         | WIL: {#udIci#} f. ({#-cI#}) The north: see {#udaca#}. | 
+
+# ===== BUCKET 6  UNLOCATABLE -- not in the current WIL source (stale/different key) (0) =====

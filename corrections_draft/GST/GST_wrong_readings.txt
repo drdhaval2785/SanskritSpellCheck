@@ -1,0 +1,36 @@
+# GST -- DOCUMENTED-INTENTIONAL spellings (NOT typos -- do NOT file corrections)
+#
+# 22 headwords that LOOK like misspellings but which GST records on purpose:
+# wrong-reading apparatus (w.r.), variae lectiones (v.l.), in-composition /
+# sandhi forms (in comp. for...), cross-references (See / = X q.v.), and other
+# grammatical/Vedic notes. Filing a 'correction' for any of these CORRUPTS GST.
+# Use this as a suppression list: such headwords should not be re-flagged.
+# Format per row:  headword -> would-be 'correction'  |  the GST entry text
+
+# ===== WRONG-READING (1) =====
+apoSAna        -> ApoSAna        | {#apoSAna#}. A wrong reading in the Calc. edition of the {%Mitā-%} {%kshara%} {#A˚#} fol. 16{%a,%} 1. 15 and 16 (comp. also {%Stenzler'%}s v. 1. to {%Yājnav.%} 
+
+# ===== CROSS-REFERENCE (11) =====
+aBIGAta        -> aBiGAta        | {#aBIGAta#} Tatpur. m. ({#-taH#}) The same as {#aBiGAta#} q. v.; e. g. {%Suśruta:%} {#vidIryate sIdati hIyate vA nfRAmaBIGAtahatA#} {#tu dfzwiH#}. E. See {#aBiG
+aBIrapalli     -> ABIrapalli     | {#aBIrapalli#}. See {#ABIrapalli#}.
+aBilAsin       -> aBilAzin       | {#aBilAsin#} Tatpur. m. f. n. ({#-sI-sinI-si#}) The same as {#aBilAzin#} of which it is a various but objectionable read- ing; see the remark s. v. {#aBilAza#}.
+aBivarga       -> aBIvarga       | {#aBivarga#}. See {#aBIvarga#}.
+abAsas         -> avAsas         | {#abAsas#} Bahuvr. m. f. n. ({#-sAH-sAH-saH#}) See {#avAsas#}.
+abaBrawa       -> avaBrawa       | {#abaBrawa#} m. f. n. ({#-waH-wA-wam#}) See {#avaBrawa#}.
+abaDyatA       -> avaDyatA       | {#abaDyatA#} f. ({#-tA#}) or {#abaDyatva#} n. ({#-tvam#}) See {#abaDyatA#} or {#avaDyatva#}.
+abanti         -> avanti         | {#abanti#} f. ({#-ntiH#}) See {#avanti#}.
+abidvas        -> avidvas        | {#abidvas#} Tatpur. m. f. n. ({#-dvAn-duzI-dvat#}) See {#avidvas#}.
+antaratA       -> antarata       | {#antaratA#} See the following.
+anupaja        -> anUpaja        | {#anupaja#} Tatpur. n. ({#-jam#}). See {#anUpaja#}.
+
+# ===== OTHER-INTENTIONAL (10) =====
+aBIruc         -> aBiruc         | {#aBIruc#} Tatpur. f. ({#-k#}) Probably the same as {#aBiruci#} q. v. (The word is mentioned by the {%Kāśikā%} and {%Siddhk.%} as an instance, besides {#nIruk#}
+aBizAvakIy     -> aBisAvakIy     | {#aBizAvakIy#} denom. parasm. ({#-yati#}) To have a desire for one who presses out the juice of the Soma plant. [This denom. is an example to the {%Vārtt.%} {#n
+aDyAropana     -> aDyAropaRa     | {#aDyAropana#} Tatpur. n. ({#-nam#}). The same as the preceding. E. {#ruh#}, in the caus., with {#A#} and {#aDi#}, kṛt aff. {#lyuw#}.
+agnivAhu       -> agnibAhu       | {#agnivAhu#} I. Tatpur. m. ({#-huH#}) Smoke. II. Bahuvr. m. ({#-huH#}) A proper name of 1 the son of Pri- yavrata by Kāmyā, and 2 one of the ten sons of Svāyam-
+anakadunduBi   -> AnakadunduBi   | {#anakadunduBi#} Bahuvr. m. ({#-BiH#}) A name of Vasudeva, the father of Kṛṣṇa. More usually written {#AnakadunduBi#}, but given also with the short initial by 
+antarikzajala  -> antarIkzajala  | {#antarikzajala#} Tatpur. n. ({#-lam#}) Heavenly water. Also written {#antarIkzajala#}. E. {#antarikza#} and {#jala#}.
+antarveSmam    -> antarveSman    | {#antarveSmam#} Avyayībh. The same as {#antarveSma#}. E. {#antar#} and {#veSman#}, samās. aff. {#wac#}.
+apOgaRqa       -> apogaRqa       | {#apOgaRqa#} Tatpur. m. f. n. ({#-RqaH-RqA-Rqam#}) The same as {#apogaRqa#} II. q. v. E. {#a#} neg. and {#pOgaRqa#}.
+apavfta        -> apAvfta        | {#apavfta#} Tatpur. m. f. n. ({#-taH-tA-tam#}) Opened, laid open. The {%Ṛgv. Prātiśākhya%} notices that this word occurs in the Ṛgveda in the form {#apAvfta#}. 
+apiSali        -> ApiSali        | {#apiSali#} m. ({#-liH#}) A proper name, the same as {#ApiSali#} q. v. ({%Viśva:%} {#apiSalirmunerBede BavedApiSalistaTA#}). E. {#A-#} {#piSali#} with the first

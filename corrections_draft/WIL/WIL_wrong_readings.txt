@@ -1,0 +1,29 @@
+# WIL -- DOCUMENTED-INTENTIONAL spellings (NOT typos -- do NOT file corrections)
+#
+# 17 headwords that LOOK like misspellings but which WIL records on purpose:
+# wrong-reading apparatus (w.r.), variae lectiones (v.l.), in-composition /
+# sandhi forms (in comp. for...), cross-references (See / = X q.v.), and other
+# grammatical/Vedic notes. Filing a 'correction' for any of these CORRUPTS WIL.
+# Use this as a suppression list: such headwords should not be re-flagged.
+# Format per row:  headword -> would-be 'correction'  |  the WIL entry text
+
+# ===== CROSS-REFERENCE (5) =====
+arsas          -> arSas          | {#arsas#} m. ({#-rsaH#}) Hoemorrhoids. See {#arSas#}.
+bA             -> vA             | {#bA#} ind. .²1 As, like. .²2 Or, either: see {#vA#}.
+dArA           -> DArA           | {#dArA#} f. ({#-rA#}) A wife: see {#dAra#}.
+parasvaDa      -> paraSvaDa      | {#parasvaDa#} m. ({#-DaH#}) An axe: see {#paraSvaDa#}.
+udIci          -> udIcI          | {#udIci#} f. ({#-cI#}) The north: see {#udaca#}.
+
+# ===== OTHER-INTENTIONAL (12) =====
+Agantabya      -> Agantavya      | {#Agantabya#} mfn. ({#-byaH-byA-byaM#}) What will come, what is likely to arrive. E. {#AN#} and {#gama#} to go, {#tabya#} aff.
+Aguraba        -> Agurava        | {#Aguraba#} mfn. ({#-baH-bI-baM#}) .²1 Consisting of or containing Agallochum. .²2 Very heavy. E. {#aguru#} and {#aR#} aff.
+Apastamva      -> Apastamba      | {#Apastamva#} m. ({#-mvaH#}) The name of a sage and legislator.
+aDolamva       -> aDolamba       | {#aDolamva#} m. ({#-mvaH#}) A perpendicular. E. {#aDas#} below, {#lamva#} a straight line.
+ajalamvana     -> ajalambana     | {#ajalamvana#} n. ({#-naM#}) Antimony.
+anavalamva     -> anavalamba     | {#anavalamva#} mfn. ({#-mvaH-mvA-mvaM#}) Without support or dependance. E. {#an#} neg. {#avalamva#} support.
+apralamva      -> apralamba      | {#apralamva#} mfn. ({#-mvaH-mvA-mvaM#}) Quick, expeditious. E. {#a#} neg. {#pralamba#} slow.
+cAruvAhu       -> cArubAhu       | {#cAruvAhu#} m. ({#-huH#}) One of KṚṢṆA'S sons. E. {#cAru#}, and {#vAhu#} an arm.
+prAcInavarhis  -> prAcInabarhis  | {#prAcInavarhis#} m. ({#-rhiH#}) .²1 A name of INDRA. .²2 A king. E. {#prAcIna#} eastern, and {#varhis#} light; presiding over the eastern quarter.
+svalpavala     -> svalpabala     | {#svalpavala#} mfn. ({#-laH-lA-laM#}) Weak, feeble. E. {#svalpa#}, and {#vala#} strong.
+tAlapralamva   -> tAlapralamba   | {#tAlapralamva#} n. ({#-mvaM#}) The fibres that grow on the cocoanut and other palms, under the outer rind, and from which {%Coir%}, a sort of cordage, is prepa
+vIRAnuvanDa    -> vIRAnubanDa    | {#vIRAnuvanDa#} m. ({#-nDaH#}) The tie of a lute or lower part of the tail piece, where the wires are fixed. E. {#vIRA#} the lute, and {#anuvanDa#} appendage, t
