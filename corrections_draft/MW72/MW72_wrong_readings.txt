@@ -1,0 +1,95 @@
+# MW72 -- DOCUMENTED-INTENTIONAL spellings (NOT typos -- do NOT file corrections)
+#
+# 77 headwords that LOOK like misspellings but which MW72 records on purpose:
+# wrong-reading apparatus (w.r.), variae lectiones (v.l.), in-composition /
+# sandhi forms (in comp. for...), cross-references (See / = X q.v.), and other
+# grammatical/Vedic notes. Filing a 'correction' for any of these CORRUPTS MW72.
+# Use this as a suppression list: such headwords should not be re-flagged.
+# Format per row:  headword -> would-be 'correction'  |  the MW72 entry text
+
+# ===== WRONG-READING (2) =====
+pArva          -> parva          | {#pArva#} {%pārva, as, ī, am%} (fr. {%parvan%}), {%= pār-%} {%vaṇa;%} (probably an incorrect form.)
+prastUta       -> prastuta       | {#prastUta#} {%pra-stūta, as,%} m., N. of a class of deities under Manu Cākṣuṣa; (an incorrect form for {%pra-bhūta%} or {%pra-sūta.%})
+
+# ===== VARIA-LECTIO (1) =====
+pIwikA         -> pIWikA         | {#pIwikA#} {%pīṭikā,%} a various reading for {%pīṭhikā,%} q. v.
+
+# ===== IN-COMPOSITION (1) =====
+sanDya         -> sanDyA         | {%Sandhya, as, ā, am,%} of or belonging to Sandhi, relating to euphonic conjunction, joined together by Sandhi.
+
+# ===== CROSS-REFERENCE (36) =====
+ArvAk          -> arvAk          | {#ArvAk#} {%ārvāk,%} ind. after, afterwards, be- hind. See {%arvāk.%}
+SAlina         -> SAlIna         | {%Śālina, as, ā, am,%} for {%śālīna%} below. {%—Śālinī-%} {%karaṇa,%} see {%śālīnī-karaṇa.%}
+SIr            -> Sir            | {#SIr#} {%śīr.%} See {%śir.%}
+SaMrAj         -> saMrAj         | 2. {%śaṃ-rāj, ṭ,%} m. (properly written with {%m%} by Pāṇ. VIII. 3, 25). See {%sam-rāj%} s. v.
+SaktI          -> Sakti          | {%Śaktī,%} f. {%= śakti,%} see Vopa-deva IV. 27.
+SrIta          -> Srita          | {%Śrīta, as, ā, am,%} cooked; dressed, prepared, mixed (said of the Soma juice, Sāy. {%= paya-ādibhiḥ%} {%śrayaṇa-dravyair miśritaḥ%} or {%saṃskṛtaḥ,%} Ṛg- veda
+SrotoYjana     -> srotoYjana     | {#SrotoYjana#} {%śroto-'ñjana.%} See under 2. {%śro-%} {%tas,%} p. 1028.
+aB             -> av             | {#aB#} {%abh.%} See {%ambh.%}
+aBIGAta        -> aBiGAta        | {#aBIGAta#} {%abhī-ghāta.%} See {%abhi-ghāta.%}
+aBIruc         -> aBiruc         | {#aBIruc#} {%abhī-ruc.%} See {%abhi-ruci.%}
+aDamarRA       -> aDamarRa       | {#aDamarRA, aDamarRika#}, &c. See above, under {%adhama.%}
+apAm           -> apAn           | {#apAm#} {%apām.%} See under {%ap,%} p. 48.
+arsas          -> arSas          | {#arsas#} {%arsas, as,%} n. hemorrhoids. See {%arśas%} above.
+cinta          -> cintA          | {%Cinta, as,%} m. (?) thought; [cf. {%cintā.%}]
+df|a           -> (flag)         | {#df|a#} {%dṛḷha.%} See {%dṛḍha,%} p. 427, col. 2.
+hanU           -> hanu           | {%Hanū, ūs,%} f. See under {%hanu.%}
+jAvAli         -> jAbAli         | {#jAvAli#} {%jāvāli.%} See {%jābāli.%}
+mAyavat        -> mAyAvat        | {#mAyavat#} {%māya-vat.%} See col. I.
+pArAvara       -> parAvara       | {#pArAvara#} {%pārāvara.%} See p. 566, col. 3.
+prAn           -> prAR           | {#prAn#} {%prān.%} See 1. {%prāṇ,%} p. 654, col. 3.
+prasAh         -> prasah         | {%Pra-sāh.%} See 2. {%pra-sah%} above.
+puraka         -> pUraka         | {%Puraka = pura.%} See {%arghāṣṭa-puraka,%} p. 83.
+sA|f           -> (flag)         | {%Sāḷhṛ, ḷhā,%} m., Ved. one who overcomes or conquers, a conqueror. || {#sA|f#} {%sāḷhṛ.%} See under rt. 1. {%sah.%}
+sUtI           -> sUti           | {%Sūtī.%} See under 2. {%sūta%} above.
+sampramad      -> sampraRad      | {#sampramad#} {%sam-pra-mad.%} See rt. 2. {%mad.%}
+sutAraka       -> sutArakA       | {#sutAraka#} {%su-tāraka.%} See p. 1120, col. 1.
+svaSura        -> SvaSura        | {#svaSura#} {%svaśura.%} See {%śvaśura.%}
+vADana         -> bADana         | {%Vādhana, am,%} n. the act of oppressing, paining, vexing, &c. (See {%bādhana.%})
+vAhirvedika    -> bAhirvedika    | {#vAhirvedika#} {%vāhirvedika.%} See {%bāhirvedika.%}
+veS            -> ves            | {#veS#} {%veś.%} See under rt. 1. {%ves,%} p. 967.
+vekuri         -> Bekuri         | {#vekuri#} {%vekuri.%} See {%bekuri.%}
+viSala         -> viSAla         | {#viSala#} {%viśala, as,%} m. (for {%viśāla?%}), N. of the son of Abja; ({%ā%}), f., N. of a town; [cf. {%vaiśalī.%}]
+vicAkasat      -> vicAkaSat      | {%Vi-cākasat, at, atī, at,%} Ved. See s. v.
+vilva          -> bilva          | {#vilva#} {%vilva, as,%} m. (fr. rt. {%vil,%} also written {%bilva,%} q. v.), the tree Ægle Marmelos (commonly called Bel); ({%am%}), n. the fruit of the Bel; a
+wikA           -> wIkA           | {#wikA#} {%ṭikā%} in {%svarga-grāma-ṭikā-viluṇṭhana,%} the spoils of the poor villages of heaven (?). || {%Ṭikā,%} in {%svarga-grāma-ṭikā-viluṇṭhana,%} to be er
+yatI           -> yati           | {%Yatī.%} See under 2. {%yati,%} col. 1.
+
+# ===== OTHER-INTENTIONAL (37) =====
+SAntvana       -> sAntvana       | {%Śāntvana, am,%} n. (less correctly written {%sāntvana%}), the act of appeasing or reconciling, conciliation, reconcilement; mildness; (at the end of an adj. c
+SArNgazWA      -> SArNgazwA      | {#SArNgazWA#} {%śārṅgaṣṭhā,%} f. a kind of tree ({%=%} {%mahā-karañja;%} also written {%śāṅgoṣṭhā%}).
+SUpakAra       -> sUpakAra       | {#SUpakAra#} {%śūpa-kāra, as,%} m. (for {%sūpa-kāra,%} q. v.), one who lives by cooking for Śūdras ({%= śūdra-%} {%pākopajīvin%}).
+SrutI          -> Sruti          | {%Śrutī,%} f. {%= śruti.%}
+aDiBOtika      -> ADiBOtika      | {%Adhi-bhautika%} (better {%ādhibhautika,%} q. v.), {%as,%} {%ī, am,%} natural (?).
+anugrAhita     -> anugrahita     | {%Anu-grāhita%} or {%anu-grahita (?), as, ā, am,%} favoured.
+apramARika     -> aprAmARika     | {%A-pramāṇika, as, ā, am,%} unauthorized; properly {%a-prāmāṇika,%} q. v.
+arI|a          -> (flag)         | {#arI|a#} {%a-rīḷha, as, ā, am%} (for {%a-rīḍha,%} rt. {%rih = lih%}), Ved. not licked.
+bUkkan         -> bukkan         | {%Būkkan = bukkan,%} q. v.
+barhiska       -> barhizka       | {%Barhiska = barhiṣka%} above.
+hIta           -> hita           | {#hIta#} {%hīta, as, ā, am,%} Ved. {%= hita%} (accord- ing to some).
+hItvA          -> hitvA          | {%Hītvā,%} ind., Ved. = 1. {%hitvā,%} (Pāṇ. VII. 4, 44.)
+hrad           -> hrAd           | {#hrad#} {%hrad,%} an older form of rt. {%hrād,%} q. v.
+hriRiyA        -> hriRIyA        | {#hriRiyA#} {%hriṇiyā%} or {%hriṇīyā,%} f. ({%= hṛṇīyā%} [Page1179-c+ 73] at p. 1175, col. 3), reproach, censure; shame, bashfulness.
+kusuruvinda    -> kusurubinda    | {#kusuruvinda#} {%kusuruvinda%} or {%kusurubinda, as,%} m., N. of a descendant of Uddālaka.
+mARimanta      -> mARimanTa      | {%Māṇimanta, am,%} n. {%= māṇimantha%} above.
+maMhanezWa     -> maMhanezWA     | {%Maṃhane-ṣṭha%} or {%-ṣṭhā%} (?), according to Sāy. on Ṛg-veda X. 61, 1 {%= pradāne pravartamāna.%}
+narDawaka      -> nardawaka      | {#narDawaka#} {%nardhaṭaka,%} wrong form for {%nar-%} {%daṭaka.%}
+praniMsita     -> praRiMsita     | {#praniMsita#} {%pra-niṃsita, pra-niṃsitavya = pra-%} {%ṇiṃsita, pra-ṇiṃsitavya,%} p. 609, col. 3.
+sAKowa         -> SAKowa         | {#sAKowa#} {%sākhoṭa%} for {%śākhoṭa,%} q. v.
+sPurjaka       -> sPUrjaka       | {%Sphurjaka = sphūrjaka%} below.
+sTura          -> sTUra          | {%Sthura%} in {%apa-ṣṭh˚,%} q. v.
+suz            -> Suz            | {#suz#} {%suṣ%} = rt. {%śuṣ,%} p. 1016.
+svAyamBU       -> svayamBU       | {%Svāyambhū = svāyambhuva%} above.
+tatfpi         -> tAtfpi         | {#tatfpi#} {%tatṛpi%} for {%tātṛpi,%} q. v.
+vIvfta         -> vivfta         | {#vIvfta#} {%vīvṛta, as, ā, am, = vi-vṛta,%} revealed, published.
+vIviDa         -> viviDa         | {#vIviDa#} {%vīvidha%} for {%vi-vidha,%} q. v.
+vahli          -> vAhli          | {#vahli#} {%vahli, is,%} m., N. of a country, (more correctly written {%balhi.%})
+vanDula        -> banDula        | {#vanDula#} {%vandhula, as,%} m. (also written {%ban-%} {%dhula,%} q. v.), N. of a Ṛṣi.
+vfsaya         -> vfzaya         | {#vfsaya#} {%vṛsaya = bṛsaya,%} q. v.
+vikftI         -> vikfti         | {%Vi-kṛtī,%} f. {%= vi-kṛti%} above.
+vilAya         -> vilaya         | {%Vi-lāya,%} ind. {%= vi-līya,%} Pāṇ. VI. 1, 51.
+vinduka        -> binduka        | {%Vinduka, as,%} m. {%= vindu,%} a drop, &c.
+vizPul         -> visPul         | {#vizPul#} {%vi-ṣphul = vi-sphul,%} q. v.
+vo|f           -> (flag)         | {#vo|f#} {%voḷhṛ, ḷhā,%} m., Ved. {%= voḍhṛ,%} a bearer, carrier; an animal used for draught.
+vratatI        -> vratati        | {%Vratatī,%} f. {%= vratati%} above.
+zah            -> sah            | {#zah#} {%ṣah%} = rt. 1. {%sah.%}

@@ -1,0 +1,10 @@
+; SCH body-confirmed fileable typos -- CORRECTIONS standard format (DICT:wrong:right:n)
+; 0 fileable (classified TYPO + source-confirmed + survived the Opus false-positive review) + 3 reviewed-out (commented below)
+; VERIFY each remaining case on the scan, flip trailing n->y for confirmed ones, then:
+;   python chg_nchg_sep.py SCH_file_first_sf.txt chg.txt nchg.txt
+; REVIEWED-OUT (realword): Entry defines Uluka as 'm. N. pr. eines Schlangendaemons' (Mahavy.); 'Vgl. uluuka, Ulluka' is a compare cross-ref, not a
+;SCH:uluka:ulUka:n
+; REVIEWED-OUT (realword): Entry defines Ayodhana as 'm. N. eines Fuersten' (S II,350,22); '(oder degha-na?)' questions 2nd element, not the initia
+;SCH:ayoDana:AyoDana:n
+; REVIEWED-OUT (variant): Schmidt gives kosalika 'Geschenk' (Srik. XXII,39) with '[pw kau~]' flagging pw's kausalika as a variant spelling; delibe
+;SCH:koSalikA:kOSalikA:n

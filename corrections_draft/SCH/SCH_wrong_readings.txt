@@ -1,0 +1,127 @@
+# SCH -- DOCUMENTED-INTENTIONAL spellings (NOT typos -- do NOT file corrections)
+#
+# 109 headwords that LOOK like misspellings but which SCH records on purpose:
+# wrong-reading apparatus (w.r.), variae lectiones (v.l.), in-composition /
+# sandhi forms (in comp. for...), cross-references (See / = X q.v.), and other
+# grammatical/Vedic notes. Filing a 'correction' for any of these CORRUPTS SCH.
+# Use this as a suppression list: such headwords should not be re-flagged.
+# Format per row:  headword -> would-be 'correction'  |  the SCH entry text
+
+# ===== WRONG-READING (18) =====
+Bagini         -> BaginI         | °{%bhagini%} f. = {%˚nī%}, Schwester, S II,340,6 wohl Druckfehler. {part=,seq=20685,type=˚,n=2}
+Ijya           -> ijya           | {%ījya%} MBh. 7,9458 fehlerhaft für {%īḍya%}. {part=,seq=7900,type=,n=2}
+aRUka          -> anUka          | {%aṇūka%} in {%ṛṣyaṇūka%} und {%devatāṇūka%}, Baudh. Gṛhy. 2,2 bei Har. zu Āpast. Gṛhy. 15,9 fehlerhaft für {%anūka%}. {part=,seq=930,type=,n=3}
+ahAta          -> ahata          | {%[ahāta%} H 43,145 ist falsche Lesart.] {part=,seq=6538,type=,n=1}
+anAtyaya       -> anatyaya       | {%anātyaya%} m. Āpast. fehlerhaft für {%anatyaya%}. {part=,seq=2372,type=,n=2}
+anulepaRa      -> anulepana      | {%anulepaṇa%} Āpast. fehlerhaft für {%˚lepana%}. {part=,seq=2878,type=,n=2}
+avaskAra       -> avaskara       | {%avaskāra%} m. = {%avaskara%} 3., Sāy. zu Ait. Br. 3,26,3. Vielleicht nur fehlerhaft. {part=,seq=5518,type=,n=3}
+avedita        -> Avedita        | {%avedita%} Adj. Kathās. 123,158 fehlerhaft für {%avidita%}. {part=,seq=5795,type=,n=2}
+bahuniHsfta    -> bAhuniHsfta    | {%bahuniḥsṛta%} n. Hariv. 15977 fehlerhaft für {%bāhu˚%}. {part=,seq=20399,type=,n=2}
+marga          -> mArga          | {%marga%} Āpast. Gṛhy. 20,12 fehlerhaft für {%mārga%}. {part=,seq=21583,type=,n=2}
+pfzWi          -> pfzwi          | °{%pṛṣṭhi%} Prabandh. 15,6; 291,2 v.u. wohl Druckfehler für {%pṛṣṭi%} (Rücken)? {part=,seq=19191,type=˚,n=2}
+prayogi        -> prAyogi        | {%práyogi%} m. Maitr. S. 3,1,9 (12,11) fehlerhaft für {%prā́˚%}, Patron. von {%prayoga%}. {part=,seq=19798,type=,n=3}
+saMSrAvaRa     -> saMSravaRa     | {%saṃśrāvaṇa%} Hemādri 3, a,974,5 fehlerhaft für {%saṃsrāvaṇa%}. {part=,seq=25879,type=,n=1} || {%saṃśrāvaṇa%} gedr. {part=,seq=25880,type=,n=1}
+upoti          -> upotI          | {%úpoti%} f. Maitr. S. 1,5,5 scheinbar Nom. act. von {%av%} mit {%upa%}, aber wohl fehlerhaft für {%úpéti (úpa + íti)%}. {part=,seq=8883,type=,n=3}
+valiBuj        -> baliBuj        | °{%valibhuj%} , S I,102,11 (Ko.) lies {%balibhuj%}. {part=,seq=23638,type=˚,n=2}
+vapIha         -> vApIha         | °{%vapīha%} m. = {%cātaka%}, S I,571,5 v.u. (Ko.) Druckfehler für {%*vappīha?%} Vgl. {%bappīha!%} {part=,seq=23512,type=˚,n=3}
+vardAlikA      -> vArdAlikA      | {%vardālikā%} f. Divyāvad. 500,20 fehlerhaft für {%vār˚%}. {part=,seq=23596,type=,n=2}
+vismAyin       -> vismayin       | °{%vismāyin%} Adj. H XVI,64; XXXVIII,29. Druckfehler für {%vismāpin?%} {part=,seq=24618,type=˚,n=2}
+
+# ===== VARIA-LECTIO (7) =====
+Apali          -> ApAli          | {%Āpali%} m. eine best. Jaina-Sekte, Bhadrab. 4 in der Unterschrift (v. l.). {part=,seq=7122,type=,n=2}
+anudBAsin      -> anUdBAsin      | {%anudbhāsin%} Adj. nicht glänzend, Āpast. 1,30,12 v.l. {part=,seq=2719,type=,n=2}
+asikta         -> Asikta         | {%asikta%} Adj. unbegossen, Śāk. 84 v.l. {part=,seq=6330,type=,n=1}
+atisvan        -> atiSvan        | *{%atisvan%} v.l. für {%atiśvan gaṇa pakṣādi%} in der Kāś. {part=,seq=1412,type=*,n=2}
+jANgalIka      -> jANgalika      | {%jāṅgalīka%} m. Giftbeschwörer, Harṣac 30,3. v.l. (95,7) {%jāṅgulika%}. {part=,seq=14045,type=,n=2}
+kUyava         -> kuyava         | {%kūyava%} m. Pl. eine Art Körnerfrucht, TS. 4,7,4,2. {part=,seq=11252,type=,n=1} || {%kū́yava%} n. Sg. Maitr. S. 2,11,4 (142,1), v.l. Vgl. {%kúyava%} oben. {pa
+kalAci         -> kalAcI         | {%kalāci%} Vorderarm, Śiś. 13,41 (Vallabha's Lesart). [Z.] — Rasas. 41b; Śṛṅgārasarv. 91a; S I,532,5. {part=,seq=10236,type=,n=3}
+
+# ===== IN-COMPOSITION (6) =====
+Adarin         -> AdArin         | {%ādarin%} Adj. ein großes Gewicht auf etwas legend, nicht gleichgültig, Naiṣ. 3,62. Am Ende eines Komp. berücksichtigend, hervorhebend,6,95. {part=,seq=6970,ty
+ganDamAMsi     -> ganDamAMsI     | {%gandhamāṃsi%} (metrisch) f. = {%˚māṃsī%}, Varāh. Bṛh. S. 51,15. {part=,seq=12291,type=,n=2}
+kamBAri        -> kamBArI        | °{%kambhāri%} (f.) Kaṃs. V,14b metrisch für {%*kambhārī%}, Gmelina arborea. {part=N,seq=28766,type=˚,n=2}
+mahASAntI      -> mahASAnti      | {%mahāśāntī%} f. metrisch = {%˚śānti%} 1., Varāh. Bṛh. S. 46,81. {part=,seq=21718,type=,n=2}
+pattI          -> patti          | {%pattī%} metrisch statt {%patti%}, Fußgänger, Fußknecht, R. ed. Bomb. 4,25,23. {part=,seq=17903,type=,n=2}
+praRAli        -> praRAlI        | °{%praṇāli%} f. (metrisch für {%˚lī%}), Wasserrinne, Padyac. II,17c. {part=,seq=19375,type=˚,n=2}
+
+# ===== CROSS-REFERENCE (3) =====
+juka           -> jUka           | {%juka%} m. ζυγόν die Wage im Tierkreise, M. Müller, Ren. 326. Richtig {%jūka%}, vgl. Ind. St. 2,259. {part=,seq=14185,type=,n=3}
+triSara        -> trisara        | °{%triśara%} [vgl. pw {%trisara!%}] aus drei Schnuren bestehend, S I,462,1. {part=,seq=15201,type=˚,n=2}
+utsadana       -> utsAdana       | *{%utsadana%} n. das Einreiben, Mahāvy. 245,379. Richtig wäre {%utsādana%}; vgl. {%ucchādana%}. {part=,seq=8303,type=*,n=3}
+
+# ===== OTHER-INTENTIONAL (75) =====
+ASuSukzaRI     -> ASuSukzaRi     | °{%āśuśukṣaṇī%} [pw {%˚ṇi%}] Feuer, Śuk. t. o. 19 [p. 33,19]. {part=,seq=7568,type=˚,n=2}
+AliNganA       -> AliNgana       | {%āliṅganā%} f. = {%āliṅgana%} n. Naiṣ. 6,78. {part=,seq=7445,type=,n=1}
+ApastamBa      -> Apastamba      | {%Āpastambha%} und {%˚stambhīya = ˚stamba%} und {%˚stambīya%}, Bühler, Introd. to Āpast. Transl. XXXIII. {part=,seq=7125,type=,n=3}
+AvESika        -> AveSika        | °{%āvaiśika%} m. Gast, S II,261,8 [pw {%āveśika]%}. {part=,seq=7521,type=˚,n=2}
+BogAvali       -> BogAvalI       | °{%bhogāvali%} f. [pw. {%˚lī%}] Preislied, Śrīk. XVI,1. {part=,seq=21072,type=˚,n=2}
+Caraka         -> caraka         | °{%charaka%} m. = {%tilaka%} (Baum), S I,528. 2 v.u. (Ko.) wohl verdruckt für {%kṣuraka%} (s. d.). {part=,seq=13747,type=˚,n=3}
+GonA           -> GoRA           | °{%ghonā%} s. {%ghoṇā%}. {part=,seq=13007,type=˚,n=1}
+KurASAna       -> KurAsAna       | °{%Khurāśāna%} = {%Khurāsāna%}, S I,469,10 v.u. (Ko.); 568,7 (Ko.). {part=,seq=12109,type=˚,n=2}
+SrAk           -> srAk           | °{%śrāk%} = {%*srāk%}, eiligst, schnell, Prabandh. 124,4 v.u. {part=,seq=25697,type=˚,n=2}
+Sriv           -> sriv           | {%śriv%} s. {%sriv%}. {part=,seq=25702,type=,n=1}
+Ura            -> ura            | {%ūra%} = {%ūru%} 1. im Lok. {%ūre%}, Bhāg. P. 7,8,29. {part=,seq=9041,type=,n=1}
+aYjalIkArikA   -> aYjalikArikA   | {%añjalīkārikā%} a kind of statue, Harṣac. 163,12. {part=,seq=897,type=,n=2}
+abAleya        -> avAleya        | {%abāleya%} m. kein Bāleya, Kāty. Śr. 10,2,21 ({%avāleya%}). {part=,seq=3972,type=,n=2}
+ahIraRI        -> ahIraRi        | °{%ahīraṇī%} = {%ahīramaṇī%}, Harṣac. 260,6 [pw hat {%*ahīraṇi%} m., Thomas {%*ahīraṇī!%}]. {part=,seq=6587,type=˚,n=3}
+ahina          -> ahIna          | {%ahína%} = 1. {%ahīna%}, Maitr. S. 3,8,2 (94,13. 14). {part=,seq=6554,type=,n=2}
+alAka          -> alaka          | {%alāka%} m. = {%alarka%} 3. [Calotropis gigantea], Caraka 8,10. — {%alākā%} f. eine best. Pflanze, Kauś. 31,28. {part=,seq=5182,type=,n=3}
+anOkaha        -> anokaha        | °{%anaukaha%} m. Baum [pw {%anokaha%}] H 17,61. {part=,seq=3029,type=˚,n=2}
+anyarAzwriya   -> anyarAzwrIya   | {%anyarāṣṭriya%} Adj. = {%anyarāṣṭrī́ya%}, Kāṭh. 37,11. {part=,seq=3229,type=,n=2}
+apratIGa       -> apratiGa       | {%apratīgha%} Adj. = {%apratigha%}, Vāyu-P. 1,5,23. {part=,seq=3838,type=,n=2}
+avAlamba       -> avalamba       | {%avālamba%} m. = {%apālambá%}, Āpast. Śr. 12,25,27. {part=,seq=5576,type=,n=2}
+avala          -> abala          | °{%avala%} Adj. im yamaka = {%abala (balarahita)%}, Yudh. 5,51. {part=,seq=5448,type=˚,n=2}
+avaraRa        -> AvaraRa        | °{%avaraṇa%} m. der Wind(gott), Yudh. 8,78 {%[avidyamānaṃ varaṇam ācchādanaṃ yasya saḥ avaraṇo vāyuh]%}. Kann nach Ratnakaṇṭha auch {%āvaraṇa%} sein (s. d.). {p
+azWIla         -> azWIlA         | {%aṣṭhīla%} m. oder n. = {%aṣṭhīlā%} 5., Hemādri 1,725,5. {part=,seq=6109a,type=,n=2} || {%aṣṭhīla%} n. ˚ = {%garbha, madhyadeśa%} nach dem Ko., S I,67,5 (es ka
+baWara         -> vaWara         | {%baṭhara%} {%(vaṭhara)%}, Harṣac. 103,3; 236,9; 288 letzte Zeile; Prabandhacintāmaṇi 148 letzte Zeile {%(baṭharayati)%}. [Z.] {part=,seq=20255,type=,n=4}
+bahitra        -> vahitra        | °{%bahitra%} n. Schiff, S II,303,12 [pw {%vahitra%}]. {part=,seq=20378,type=˚,n=2}
+bariSI         -> variSI         | *{%bariśī%} f. Angel. {%va˚%} geschrieben. {part=,seq=20316,type=*,n=1}
+bilAsin        -> vilAsin        | {%bilāsin%} m. Schlange, Śrīk. XII,65 [{%vilāsin%} gedruckt wegen des Wortspiels mit {%vilāsin = śṛṅgārin%}]; Kuṭṭanīm. 18. {part=,seq=20538,type=,n=4}
+bisara         -> visara         | °{%bisara%} m. Menge [pw {%visara%}], Śrīk. IX,28. {part=,seq=20545,type=˚,n=2}
+daSatI         -> daSati         | °{%daśatī%} f. = {%daśati%} (Dekade), Kauṭ. 131,5. {part=,seq=15438,type=˚,n=2}
+ekaDyam        -> EkaDyam        | *{%ekadhyam%} Adv. zusammen, Mahāvy. 245. {%ekadhye%} dass., Divyāvad. 35,24; 40,22. Richtig {%aika˚%}. {part=,seq=9208,type=*,n=3}
+gajapippali    -> gajapippalI    | °{%gajapippali%} f. [pw {%˚lī%}] Scindapsus officinalis, E 864 (S). {part=,seq=12158,type=˚,n=2}
+gavAsana       -> gavASana       | °{%gavāsana%} n. S I,175,8 v.u. (Ko.) = {%nyāsāsana%}. {part=,seq=12422,type=˚,n=2}
+jAwAmAMsI      -> jawAmAMsI      | °{%jāṭāmāṃsī%} = {%jaṭā˚%}, S I,206,6 v.u. (Ko.). {part=,seq=14048,type=˚,n=2}
+jalaDI         -> jalaDi         | °{%jaladhī%} Adj. = {%jaḍadhī (laḍayor aikyam)%}, Yudh. 5,22. {part=,seq=13986,type=˚,n=2}
+jitakAsin      -> jitakASin      | °{%jitakāsin%} Adj. = {%jitakāśin%} siegesbewußt, Prabandh. 119,4/5. {part=,seq=14126,type=˚,n=2}
+kAkAndI        -> kAkandI        | °{%Kākāndī%} = {%Kākandī%}, S II,331,26/27. {part=,seq=10414,type=˚,n=1}
+kAkanantikA    -> kAkaRantikA    | °{%kākanantikā%} = {%kākaṇantikā%}, S I,398,4. {part=,seq=10405,type=˚,n=2}
+kAlapfzwa      -> kAlapfzWa      | {%Kālapṛṣṭa%} ({%˚ṣṭha%} die anderen Ausgaben), m. N. pr. eines Schlangendämons, MBh. 8,34,29. {part=,seq=10649,type=,n=3}
+kaYculIkA      -> kaYculikA      | °{%kañculīkā%} f. = {%kañculikā%} (Mieder), Padyac. VI,5a. {part=,seq=9629,type=˚,n=2}
+karasIkara     -> karaSIkara     | °{%karasīkara%} = {%˚śīkara%}, Śrīk. 7,11. {part=,seq=10015,type=˚,n=1}
+kiMsAru        -> kiMSAru        | °{%kiṃsāru%} Pfeil [pw {%kiṃśaru%}], S II,363,9 in {%kusuma˚%}. {part=,seq=10760,type=˚,n=2}
+kiNkinI        -> kiNkiRI        | °{%kiṅkinī%} ein best. Baum, S II,219,11 (Ko.; = {%kiṅkiṇī%} *Flacourtia sapida?). {part=,seq=10771,type=˚,n=2}
+laspUjani      -> laspUjanI      | {%laspūjani%} = {%˚nī%}, Kāty. Śr. 8,4,21. {part=,seq=23205,type=,n=1}
+mAYjizwa       -> mAYjizWa       | °{%[˚māñjiṣṭa%} S I,532,6 und 3 v.u. (Ko.) 1. {%māñjiṣṭha%}.] {part=,seq=21774,type=˚,n=2}
+mAnasIka       -> mAnasika       | °{%mānasīka%} Adj., imaginär, S II,62,15 wohl verdruckt für {%mānasika%}. {part=,seq=21834,type=˚,n=2}
+manota         -> manotA         | {%manota%} m. = {%manotā%} 1., Zitat im Komm. zu Āpast. Śr. 14,7,6. {part=,seq=21457,type=,n=2}
+marubaka       -> maruvaka       | °{%marubaka%} = {%maruvaka%}, S I,532,4/5. {part=,seq=21573,type=˚,n=1}
+moqita         -> modita         | {%moḍita%} s. {%goṇḍita%}. {part=,seq=22338,type=,n=1}
+muSalya        -> musalya        | °{%muśalya%} = {%musalya%}, mit der Keule zu erschlagen, S II,341,7. {part=,seq=22146,type=˚,n=2}
+nApatya        -> mApatya        | °{%[˚nāpatya%} n. Herrschaft ({%aiśvarya%}), S II,56,10 v.u. (Ko.) verdruckt für {%nārpatya%}.] {part=,seq=16871,type=˚,n=3}
+pUrowi         -> purowi         | *{%pūroṭi%} = {%puroṭi%}, Zach. Beitr. {part=,seq=19105,type=*,n=1}
+parImala       -> parimala       | °{%parīmala%} = {%parimala%} (Wohlgeruch), Muk. 28a. {part=,seq=18306,type=˚,n=2}
+pawolA         -> pawola         | °{%paṭolā%} a species of cucumber, Pūrṇabh. 100,28 [pro {%*paṭolī%} und {%paṭolikā%}]. {part=,seq=17827,type=˚,n=2}
+prakAmya       -> prAkAmya       | °{%prakāmya%} n. Kauṭ. 131,5 v.u. = {%prākāmya%}. {part=,seq=19275,type=˚,n=2}
+praticCAya     -> praticCAyA     | {%praticchāya%} ˚m. Ebenbild, S I,316,4 v.u. (Ko.) verdruckt für {%˚cchāyā?%} {part=,seq=19429,type=,n=2}
+sAmiDeni       -> sAmiDenI       | {%sāmidheni˚%} = {%˚nī%}, Kāty. Śr. 5,8,33. {part=,seq=26781,type=,n=1}
+sIlana         -> SIlana         | °{%Sīlana%} m. N. eines {%kautukin%} (jester), Prabandh. 184,9 (7 v.u. steht {%Sīlaṇa%}). {part=,seq=26967,type=˚,n=2}
+sOlkikeya      -> SOlkikeya      | °{%saulkikeya%} [pw. {%*śaulkikeya%} m.] ein best. vegetabilisches Gift, S II,263,15. {part=,seq=27389,type=˚,n=2}
+sUhava         -> suhava         | °{%Sūhava%} (so!) N. einer Frau, Prabandh. 292,8 v.u.; 294,5 v.u. {part=,seq=27294,type=˚,n=2}
+saNKa          -> SaNKa          | °{%saṅkha%} = {%śaṅkha%} Muschel (im Yamaka; {%śasayor aikyāt%}), Yudh. 7,12. {part=,seq=25966,type=˚,n=2}
+samavaSaraRa   -> samavasaraRa   | °{%samavaśaraṇa%} n. = {%˚saraṇa%}, S II,301,12. {part=,seq=26297,type=˚,n=2}
+sapatni        -> sapatnI        | {%sapatni%} f. = 1. {%sapatnī%}, R. ed. Bomb. 2,8,26. {part=,seq=26180,type=,n=2}
+smaSAna        -> SmaSAna        | °{%smaśāna%} = {%śma˚%}, S II,289,16. {part=,seq=27601,type=˚,n=1}
+tAlAvacAra     -> tAlAvacara     | °{%tālāvacāra%} = {%˚cara%} (Tänzer), Kauṭ. 55,11. {part=,seq=14761,type=˚,n=2}
+talpalA        -> talpala        | °{%talpalā%} = {%talpala%}, H 32,7; 44,9 [nach dem Ko. beide Male ˚f.!). {part=,seq=14643,type=˚,n=2}
+udAhara        -> udAhAra        | °{%udāhara%} m. = {%kathā%}, S I,612,8 v.u. (Ko.; im Texte 620,13 steht aber {%*udāhāra!%}). {part=,seq=8412,type=˚,n=3}
+upAroDa        -> uparoDa        | °{%upārodha%} m. Rücksicht, S II,361,12 verdruckt für {%uparodha%}? {part=,seq=8861,type=˚,n=2}
+urubUka        -> uruvUka        | °{%urubūka%} (m. n.) S II,368,26 = {%uruvūka%}, Ricinus communis. {part=,seq=8945,type=˚,n=2}
+usIra          -> uSIra          | °{%usīra%} = {%uśīra%}, S I,528,1. {part=,seq=9023,type=˚,n=1}
+valAna         -> valana         | °{%valāna%} = {%valana%}, das Zutagetreten, S I,467,1: {%khaḍgā nistriṃśās teṣāṃ valanavisāriṇī ucchalanaprasaraṇaśīlā yā dhārā agrabhāgas%} etc. {part=,seq=236
+vasatIvari     -> vasatIvarI     | {%vasatīvari%} = {%˚rī%}, Kāty. Śr. 8,9,7; 9,3,21; 12,4,2; 13,4,28; 14,1,13. {part=,seq=23688,type=,n=2}
+vekawika       -> vEkawika       | °{%vekaṭika%} m. = {%vai˚%}, S I,434,2 v.u. (Ko.) {part=,seq=24743,type=˚,n=2}
+veri           -> Beri           | {%veri%} Kauṭ. 102,9 v.u. s. {%peṭī%}. {part=,seq=24779,type=,n=1}
+viSrARa        -> viSrAma        | °{%viśrāṇa%} S I,160,2 v.u. (Ko.) verdruckt für {%viśrāṇana?%} {part=,seq=24495,type=˚,n=2}
+virukza        -> virUkza        | °{%virukṣa%} = {%virūkṣa%}, S I,116,8. {part=,seq=24392,type=˚,n=1}

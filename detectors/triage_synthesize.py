@@ -99,17 +99,17 @@ def main():
         w = f.write
         nfile = len(buckets['FILE'])
         w("# %s tier-A -- BODY-GROUNDED triage  (DRAFT; verify every kept case against the scan)\n#\n" % dict_code)
-        w("# The %d engine tier-A candidates were judged against MW's OWN entry text (csl-orig),\n" % len(ev))
+        w("# The %d engine tier-A candidates were judged against %s's OWN entry text (csl-orig),\n" % (len(ev), dict_code))
         w("# not spelling alone. A spelling detector cannot tell a typo from a real word, an\n")
         w("# intentional variant / compounding form, or wrong-reading apparatus -- the entry can.\n")
         w("# Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM\n")
         w("# pass over the 'realword' set + source confirmation of every TYPO verdict.\n#\n")
         w("# FINDING: of %d tier-A candidates, %d are body-confirmed fileable typos (%.1f%%).\n"
           % (len(ev), nfile, 100 * nfile / len(ev)))
-        w("# %d are real distinct words, %d are spellings MW documents on purpose (w.r./v.l./\n"
-          % (len(buckets['REALWORD']), len(buckets['INTENTIONAL'])))
-        w("# in-comp./cross-ref -- filing them would CORRUPT MW), %d are not in the current\n"
-          % len(buckets['UNLOCATABLE']))
+        w("# %d are real distinct words, %d are spellings %s documents on purpose (w.r./v.l./\n"
+          % (len(buckets['REALWORD']), len(buckets['INTENTIONAL']), dict_code))
+        w("# in-comp./cross-ref -- filing them would CORRUPT %s), %d are not in the current\n"
+          % (dict_code, len(buckets['UNLOCATABLE'])))
         w("# source, and %d need eyes. 'Tier A' is high ENGINE confidence, NOT precision:\n"
           % (len(buckets['REVIEW']) + len(buckets['TYPO_UNSURE'])))
         w("# do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.\n")
@@ -138,8 +138,8 @@ def main():
         block("BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted", buckets['TYPO_UNSURE'], True)
         block("BUCKET 3  REVIEW -- undecidable without the printed page", buckets['REVIEW'], True)
         block("BUCKET 4  REAL-WORD -- a distinct real word; the fix would merge two words", buckets['REALWORD'], False)
-        block("BUCKET 5  INTENTIONAL -- MW documents the spelling on purpose; NEVER file", buckets['INTENTIONAL'], False)
-        block("BUCKET 6  UNLOCATABLE -- not in the current MW source (stale/different key)", buckets['UNLOCATABLE'], False)
+        block("BUCKET 5  INTENTIONAL -- %s documents the spelling on purpose; NEVER file" % dict_code, buckets['INTENTIONAL'], False)
+        block("BUCKET 6  UNLOCATABLE -- not in the current %s source (stale/different key)" % dict_code, buckets['UNLOCATABLE'], False)
 
     sf = os.path.join(pkg, '%s_file_first_sf.txt' % dict_code)
     with open(sf, 'w', encoding='utf-8') as f:

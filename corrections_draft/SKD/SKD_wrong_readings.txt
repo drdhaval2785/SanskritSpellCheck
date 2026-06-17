@@ -1,0 +1,117 @@
+# SKD -- DOCUMENTED-INTENTIONAL spellings (NOT typos -- do NOT file corrections)
+#
+# 103 headwords that LOOK like misspellings but which SKD records on purpose:
+# wrong-reading apparatus (w.r.), variae lectiones (v.l.), in-composition /
+# sandhi forms (in comp. for...), cross-references (See / = X q.v.), and other
+# grammatical/Vedic notes. Filing a 'correction' for any of these CORRUPTS SKD.
+# Use this as a suppression list: such headwords should not be re-flagged.
+# Format per row:  headword -> would-be 'correction'  |  the SKD entry text
+
+# ===== VARIA-LECTIO (3) =====
+aDvA           -> aDva           | aDvA [n] puM, (atti gamanena balaM nASayati, ad + bAhulyAt kvanip, pfzodarAditvAt dakArasya DaH .) panTAH . kAlaH . saMsTAnaM . avaskandaH . iti medinI .. SAstr
+haritakI       -> harItakI       | haritakI, strI, (hari pItavarRaM PalamitA prAptA iti harItA . tataH saMjYAyAM kan gOrAdi- ttvAt NIz .) svanAmaKyAtavfkzaH . haraqA iti hindI BAzA . tatparyyAyaH
+viviktA        -> vivikta        | viviktA, strI, durBagA . iti trikARqaSezaH .. mudrANkitapustake viriktA iti pAWaH ..
+
+# ===== CROSS-REFERENCE (14) =====
+Buvanakoza     -> BuvanakoSa     | Buvanako(Sa)za, puM, (Buvanasya koza iva .) BUgolaH . (asya vivaraRaM SrIBAgavate paYcamaskanDe . 16 . 17 . 18 . aDyAye drazwavyam .. taTAca . “jambuplakzaSAlma
+bARI           -> vARI           | {{Lbody=31844}}  (redirect -> vARI)
+bfhadrAvI      -> vfhadrAvI      | {{Lbody=33964}}  (redirect -> vfhadrAvI)
+bimbA          -> bimba          | {{Lbody=32988}}  (redirect -> vimbA)
+meKalAdrijA    -> mekalAdrijA    | {{Lbody=27979}}  (redirect -> mekalAdrijA)
+sinIbAlI       -> sinIvAlI       | {{Lbody=39125}}  (redirect -> sinIvAlI)
+vARagaNgA      -> bARagaNgA      | {{Lbody=24218}}  (redirect -> bARagaNgA)
+vARapuNKA      -> bARapuNKA      | {{Lbody=24220}}  (redirect -> bARapuNKA)
+vAluNgI        -> bAluNgI        | {{Lbody=24318}}  (redirect -> bAluNgI)
+vadaraPalI     -> badaraPalI     | {{Lbody=23931}}  (redirect -> badaraPalI)
+vadaravallI    -> badaravallI    | {{Lbody=23932}}  (redirect -> badaravallI)
+vakulA         -> vakula         | {{Lbody=23903}}  (redirect -> bakulA)
+vakulI         -> bakulI         | {{Lbody=23904}}  (redirect -> bakulI)
+valipodakI     -> balipodakI     | {{Lbody=24063}}  (redirect -> balipodakI)
+
+# ===== OTHER-INTENTIONAL (86) =====
+BUmA           -> BUma           | BUmA, [n] puM, bahutvam . yaTA . “BUyoBUma- BUyizWAH .” bahorIyasviman izWAntasya ete nipAtyante . iti mugDaboDavyAkaraRam .. Iya- soryas IyasvAdO bahorBUrAdeSa
+BaraRyA        -> BaraRya        | BaraRyA, strI, (BaraRya + ajAditvAt wAp .) vetanam . ityamarawIkAyAM svAmI ..
+ESI            -> ESi            | ESI tri, (ISasya ISvarasya ca iyam . ISa + ISvara + aR + NIp .) ISvara- sambanDI . ISvarera iti BAzA ..
+Guqa           -> guqa           | Guqa, Si vyAGAte . iti kavikalpadrumaH .. (tudA- paraM-sakaM-sew .) Si, Guqati aGuqIt . iti durgAdAsaH ..
+RATa           -> nATa           | RATa, f Na ASizi . davESye'rTe . iti kavi- kalpadrumaH .. (BvAM-AtmaM-sakaM-akaM ca-sew .) [Page2-576-c+ 52] RopadeSaviDO varjjane'pyAdyasya pAWaH kasya cidanur
+SElAlI         -> SElAli         | SElAlI, [n] puM, (SilAlinA proktaM nawasUtra- maDIte iti . SilAli + “pArASaryyaSilA- liByAM BikzunawasUtrayoH .” 4 . 3 . 110 iti RiniH .) nawaH . ityamaraH ..
+SaraRyA        -> SaraRya        | SaraRyA, strI, (SaraRya + wAp .) durgA . yaTA, -- “vizAgniBayaGorezu SaraRyaM smaraRAdyataH . SaraRyA tena sA devI purARe paripaWyate ..” iti devIpurARe devInir
+SudDAntA       -> SudDAnta       | SudDAntA, strI, (SudDAntaH ASrayatvenAstyasyA- iti ac . wAp .) rAjYo . yaTA, -- “SudDAntaSca viSudDAnte SudDAntA rAjayozitaH ..” iti DaraRiH ..
+SvaniSA        -> SvaniSa        | SvaniSA, strI, (SunAM niSA . “surAsenA- cCAyASAlAniSA striyAYca .” iti liNgAnuSAsanasUtreRa viBAgayA klIva- tvam .) SunAM niSA . ityamaraBaratO .. matta- [Page5
+aBiyAtI        -> aBiyAti        | aBiyAtI, [n] puM, (yudDArTamaBiyAnaM gamanaM, aBi + yA + BAve ktaH; ini .) SatruH . ityamara- wIkAyAM rAyamukuwaH ..
+aDamA          -> aDama          | aDamA, strI, (aDama + striyAM wAp .) svIyAdyanta- rgatanAyikABedaH . asyA lakzaRaM . hitakAri- priyatame ahitakAritvaM . asyAH kriyA aDamA . asyA nizkAraRakopat
+aSvaKurA       -> aSvaKura       | aSvaKurA, strI, aparAjitAlatA . iti rAjanirGaRwaH ..
+arAlA          -> arAla          | arAlA, strI, (arAla + striyAM wAp) aDfzwA . kulawA . iti SabdaratnAvalI ..
+bAlukA         -> vAlukA         | bA(vA)lukA, strI, (bAluka + wAp .) reRuviSezaH . bAli iti BAzA . tatparyyAyaH . sikatA 2 siktA 3 SItalA 4 sUkzmaSarkarA 5 pravAhI 6 mahAsUkzmA 7 sUkzmA 8 pARIya
+baDUwI         -> vaDUwI         | baDUwI, strI, (alpavayaskA baDUH . alpArTe wIH . pakze NIz . yadbA, baDU + “vayasya- carama iti vAcyam .” 4 . 1 . 20 . ityasya vArtti0 iti NIp .) puttraBAryyA .
+baRik          -> vaRik          | ba(va)Rik, [j] puM, (paRate krayavikrayAdinA vyava- haratIti . paRa + “paRerAdeSca baH .” uRA0 2 . 70 . iti ijiH pasya ca baH .) kraya- vikrayakarttA . bARijyak
+balimAn        -> baliman        | ba(va)limAn, [t] tri, (baliScarmmasaMkoco'stya- syeti . bali + matup .) balinaH . jarayA SlaTa- carmmayuktaH . ityamarawIkA .. (baliH pUjopahAraM vidyate'syeti 
+cIllakA        -> cillakA        | cIllakA, strI, (cIlikA + pfzodarAt sADuH . cIditi Sabdena lakzyate iti . lakza + GaY . tataH pfzodarAditvAt sADuH iti vA .) JillI . iti SabdaratnAvalI ..
+citrataRqulA   -> citrataRqula   | citrataRqulA, strI, (citro nAnAvarRastaRqulo yasyAH .) viqaNgam . ityamaraH . 2 . 4 . 106 .. (yaTAsyAH paryyAyAH . “puMsi klIve viqaNgaH syAt kfmiGno jantunASan
+daRqakA        -> daRqaka        | daRqakA, strI, (daRqaka + strIliNgatvAdatra wAp .) janasTAnam . daRqakAraRyam . iti jawADaraH .. (yaTA, rAmAyaRe . 2 . 30 . 39 . “mama sannA matiH sIte ! netuM 
+dfSI           -> dfSi           | dfSI, strI, (dfSyate'nayeti . dfS + in . sa ca kit . vA NIz .) cakzuH . iti Sabda- ratnAvalI .. (yaTA, -- “kiM samBUtaM rucirayordvijaSfNgayoste maDye kfSo vaha
+dfSat          -> dfzat          | dfSat, [d] strI, (dfzat . pfzodarAditvAt sADuH .) pAzARaH . ityamaraH . 2 . 3 . 4 .. nizpezaRaSilApawwam . iti medinI . de, 32 ..
+duHsamam       -> duHzamam       | duHsamam, tri, (duHzamam . bAhulakAt zatvA- BAvaH .) asamaYjasam . iti trikARqaSezaH ..
+duzwA          -> duzwa          | duzwA, strI, (duzyati sma yonidozeReti . duz + kta + wAp .) puMScalI . iti SabdaratnAvalI ..
+dvimuKA        -> dvimuKa        | dvimuKA, strI, (dve muKe yasyAH .) karkarI . iti SabdacandrikA .. gAqu iti BAzA . jalOkAH . [Page2-770-a+ 52] iti halAyuDaH .. jo~ka iti BAzA .. (yaTA, suSrute 
+granTiparRA    -> granTiparRa    | granTiparRA, strI, (granTiparRa + wAp .) jatukAlatA . iti rAjanirGaRwaH ..
+haMsArUQA      -> haMsArUQa      | haMsArUQA, strI, (haMsamArUQA .) brahmARI . yaTA, “caturmuKIM jagadDAtrIM haMsArUQAM varapradAm . sfzwirUpAM mahABAgAM brahmARIM tAM namA myaham ..” iti bfhanna
+hfdayeSA       -> hfdayeSa       | hfdayeSA, strI, (hfdayasya ISA .) BAryyA . yaTA, “preyasI dayitA kAntA prAReSA vallaBA priyA . hfdayeSA prARasamA prezWA praRayinI ca sA ..” iti hemacandraH ..
+jYAtA          -> jYAta          | jYAtA, [f] tri, (jYA + tfc .) jYAnaSIlaH . tat- paryyAyaH . viduraH 2 binduH 3 . ityamaraH . 3 . 1 . 30 .. viditaH 4 jYAnasamanvitaH 5 . iti SabdaratnAvalI ..
+janakArI       -> janakarI       | janakArI, [n], puM, (janAn kirati AcCA- dayati svavarReneti . kF AcCAdane + RiniH .) alaktakaH . iti rAjanirGaRwaH .. [Page2-506-a+ 52] janaNgamaH, puM, (janeBy
+kOzikI         -> kOSikI         | kOzikI, strI, (kOSikI + pfzodarAt zakArA- deSaH .) kOSikI . iti medinI .. kAlikA- kAyakozaniHsftadevIviSezaH . yaTA, -- “kAyakozAnniHsftA yA kAlikAyAstu BErava 
+kacA           -> kaca           | kacA, strI, (kacyate ruDyate lOhaSfNKalAdiBiriti yadvA kacate SoBate rAjagfhe iti .) kaca + ac + wAp .) hastinI iti medinI .. SoBA . iti SabdaratnAvalI ..
+kanyasA        -> kanyasa        | kanyasA, strI, (kanyasa + wAp .) kanizWaBaginI . ityamarawIkA ..
+kapilADArA     -> kapilaDArA     | kapilADArA, strI, (kapilAnAM DArA iva dugDaDArA- sadfSI SudDA DArA yasyAH . yadvA kapilAnAM dugDaDArABiH samBUtA nirmmalA DArA yasyAH . saMjYAyAM NyAporiti pARi
+karacCadA      -> karacCada      | karacCadA, strI, (kara iva kiraRa iva lIhitavarRaH CadaH puzpaM yasyAH . kara iva AvarakaSCado vA yasyAH .) sindUrapuzpIvfkzaH . iti rAjanirGaRwaH ..
+karpAsI        -> kArpAsI        | karpAsI, strI, (karpAsa iti jAtitvAt gOrA- ditvAt vA NIz .) kArpAsI . iti BarataH .. kApAsagACa iti BAzA ..
+karzaPalA      -> karzaPala      | karzaPalA, strI, (karzaPala + wAp .) AmalakIvfkzaH . iti ratnamAlA .. (AmalakISabde'syA guRAdikaM jYAtavyam ..)
+kelikilA       -> kelikila       | kelikilA, strI, (kelinA vihAreRa kilatIti kil + kaH . tataH wAp .) ratiH . sA tu kAma- devapatnI . iti trikARqaSezaH ..
+kftaPalA       -> kftaPala       | kftaPalA, strI, (kftaM PalaM asyAH .) kolaSimbI iti rAjanirGaRwaH ..
+kzmAyitA       -> kzmAyita       | kzmAyitA, [f] tri, (kzmAya + tfcpratyayaH .) kampakaH . iti vyAkaraRam ..
+mAtariSvA      -> mAtariSva      | mAtariSvA, puM, (mAtari antarIkze Svayati vardDate iti . yadbA, mAtari jananyAM Svayati vardDate saptasaptakatvAditi . Svi + “Svan ukza- nniti .” uRA0 1 . 158 .
+maDurakaRwakA  -> maDurakaRwaka  | maDurakaRwakA, strI, (maDurAH kaRwakA yasyAH .) matsyaviSezaH . tatparyyAyaH . kajjalI 2 kajjalA 3 anantA 4 mADvI 5 . iti SabdaratnAvalI ..
+maGavAn        -> maGavan        | maGavAn, [t] puM, (BaGavat . “maGavA bahulam .” 6 . 4 . 128 . iti pakze tf-AdeSaH . f it .) indraH . ityamarawIkAyAM ramAnATaH . vyAkaraRaYca .. (yaTA, mahABAra
+madodagrA      -> madodagra      | madodagrA, strI, (madena udagrA .) nArI . iti Sabda mAlA .. (madodDate, tri . yaTA, raGO . 4 . 22 . “madodagrAH kakudmantaH saritAM kulamudrujAH .”)
+mallikAKyA     -> mallikAKya     | mallikAKyA, strI, (malliketi AKyA yasyAH .) tripuramAlIpuzpam . tatparyyAyaH . mohinI 2 vawapatrA 3 mohanA 4 . iti ratnamAlA ..
+misra          -> miSra          | misra t ka yutyAm . iti kavikalpadrumaH .. (curA0- para0-saka0-sew .) tAlavyamaDyo'yam . dantya- maDya iti varRadeSanAyAm . yutiH saMyojanam . misrayati misrApa
+muktAsPowA     -> muktAsPowa     | muktAsPowA, strI, (muktAsPowa + wAp .) SuktiH . iti rAjanirGaRwaH ..
+nABI           -> nABi           | nABI, strI, (nABi + vA NIz .) nABiH . iti SabdaratnAvalI .. (yaTA, AryyAsaptaSatyAm . 608 . [Page2-861-c+ 52] “sanaKapadamaDikagOraM nABImUlaM niraMSukaM kftvA 
+nIcikI         -> nicikI         | nIcikI, strI, nEcikI . ityamarawIkAyAM BarataH ..
+nIlapiNgalA    -> nIlapiNgala    | nIlapiNgalA, strI, (nIlA piNgalA ceti karmma- DArayaH .) gojAtiviSezaH . yaTA, -- “gavAM jAtintu vakzyAmi SfRuzvEkamanA dvija ! . praTamA gOrakapilA dbitIyA gOr
+navatI         -> navati         | navatI, strI, (navatiH + kfdikArAditi vA NIz .) navatiH . iti SabdaratnAvalI ..
+nfpAtmajA      -> nfpAtmaja      | nfpAtmajA, strI, (nfpasya Atmajeva . sudfSyatvAt taTAtvam .) kawutumbI . iti ratnamAlA .. (nfpasya AtmajA kanyA .) rAjakanyA . yaTA, “svayambaraM BImanfpAtmajAy
+nirUQA         -> nirUQa         | nirUQA, strI, (nirUQa + striyAM wAp .) lakzaRA- viSezaH . yaTA . “kAcit lakzatAvacCedakI- BUtatattadrUpeRa pUrvvapUrvvaM pratyAyakatvAt nirUQA . yaTA AruRyAdipr
+padvA          -> padva          | padvA, [n] puM, (padyate gamyate yatra . pada gatO + “snAmadipadIti .” uRAM . 4 . 112 . iti vanip .) patTAH . iti saMkziptasAroRAdivfttiH ..
+pavitA         -> pavita         | pavitA [f], tri, (punAtIti . pU + tfc .) pavitratAkArakaH . yaTA, nEzaDe . “tanuSriyA yasya tfRaM sa manmaTaH kulaSriyA yaH pavitAsmadanvayam ..”
+piYjA          -> piYja          | piYjA, strI, (piYjyate sPowyate iti . piYja + guroScetyaH . tatazwAp .) tUlam . haridrA . iti trikARqaSezaH .. CaqI . CaqA iti BAzA .. yaTA, SabdamAlAyAm . “pro
+puzyA          -> puzya          | puzyA, strI, (puzRAti kAryyARIti . puz + kyap yat vA . nipAtanAt sADuH . tatazwAp .) puzya- nakzatram . iti SabdaratnAvalI .. (yaTA, indra- jAlatantrasaMgrahe .
+rAjA           -> rAja           | rAjA, [n] puM, (rAjate SoBate iti . rAj + “kaRin yuvfzitakzirAjIti .” uRA0 1 . 156 . iti kaRin .) praBuH . nfpatiH . (yaTA- raGuH . 4 . 11 . “yaTA prahlAdanAt c
+rasADikA       -> rasADika       | rasADikA, strI, (rasena aDikA .) kAkolI- drAkzA . iti rAjanirGaRwaH ..
+sPurja         -> sPUrja         | sPu(sPU)rja, wu o A vajranirzoze .. (BvA0-sara0- aka0-sew .) wu, sPurjaTuH . o, sPUrRaH . A, sPUjitaM sPURe tena . vajranirGozo vajrakarttfka- SabdaH . sTUrjati
+sTUlaSAwakA    -> sTUlaSAwaka    | sTUlaSAwakA, strI, sTUlavastram . ityamarawIkA . 2 . 6 . 116 ..
+saYjA          -> saYja          | saYjA, strI, CAgI . iti trikARqaSezaH ..
+samarTanA      -> samarTana      | samarTanA, strI, (sam + arTa + yuc . wAp .) aSakye'DyavasAyaH . yaTA . sinDumapi Soza- yARi . iti mugDaboDavyAkaraRam .. samarTanam . iti SabdaratnAvalI .. (yaT
+sampUrRA       -> sampUrRa       | sampUrRA, strI, (sampUrRa + wAp .) ekAdaSI- viSezaH . sA tu pUrvvAruRodayavyApinI satI zazwidaRqAtmikA . yaTA, -- “AdityodayavelAyAH prANmuhUrttadbayAnvitA . sE
+satyApanA      -> satyApana      | satyApanA, strI, (satyasya karaRam . satya + satyApapASeti . 3 . 1 . 25 . iti Ric Apuk ca tato yuc .) satyAkftiH . ityamara- wIkAyAM vopAlitaH ..
+surezwA        -> surezwa        | surezwA, strI, (surARAmizwA .) brAhmI . iti rAjanirGaRwaH ..
+svIyA          -> svIya          | svIyA, strI, (svasyeyamiti . sva + CaH . wAp .) nAyikABedaH . tasyA lakzaRam . svAminye- vAnuraktA pativratA iti yAvat . asyAScezwA svAmiSuSrUzA SIlarakzA saral
+tAlaDvajA      -> tAlaDvaja      | tAlaDvajA, strI, (tAlastAlavfkzo DvajaScihnaM yasyAH .) purIviSezaH . yaTA, kriyAyogasAre . “asti tAlaDvajA nAma nagarI tridivopamA ..”
+tAmravarRA     -> tAmravarRa     | tAmravarRA, strI, (tAmrasyeva varRamasyA iti . wAp .) oqrapuzpavfkzaH . iti SabdacandrikA ..
+tfzAhA         -> tfzAha         | tfzAhA, strI, (tfzAM hantIti . hana + qaH + wAp .) maDurikA . iti SabdacandrikA ..
+trapuzI        -> trapusI        | trapuzI, strI, (trapuza + gOrAditvAt NIz .) karkkawI . iti hemacandraH . 4 . 255 .. (yaTA, “pawolakErvvArutrapuzyalAvUH ..” iti hArIte praTamesTAne daSame'DyAye
+trowI          -> trowi          | trowI, strI, (trowi + kfdikArAditi vA NIz .) trowiH . iti SabdaratnAvalI ..
+tvaksuganDA    -> tvaksuganDa    | tvaksuganDA, strI, (tvaci suganDo yasyAH .) ela- bAlukanAmaganDadravyam . iti jawADaraH ..
+udvahA         -> udvaha         | udvahA, strI, (udvaha + wAp .) kanyA . puttrI . iti hemacandraH ..
+vahalA         -> vahala         | vahalA, strI, (vahalAni pracurARi puzpARi santyasyA iti . arSaAditvAdac .) Sata- puzpA . iti rAjanirGaRwaH .. sTUlElA . iti BAvaprakASaH .. (asyAH paryyAyo yaTA
+vfhadelA       -> bfhadelA       | vf(bf)hadelA, strI, (vfhatI elA .) sTUlElA . iti rAjanirGaRwaH ..
+vfhadvAruRI    -> bfhadvAruRI    | vf(bf)hadvAruRI, strI, mahendravAruRI . iti rAja- nirGaRwaH ..
+vfhajjIvantI   -> bfhajjIvantI   | vf(bf)hajjIvantI, strI, vfhajjIvantikAvfkzaH . tatparyyAyaH . patraBadrA 2 priyaNkarI 3 maDurA 4 jIvapuzwA 5 bfhajjIvA 6 yaSaskarI 7 . asyA guRAH . bahuvIryyadA
+vfhatpuzpI     -> bfhatpuzpI     | vf(bf)hatpuzpI, strI, (vfhat puzpaM yasyAH . NIz .) GaRwAravA . iti jawADaraH ..
+viSvasahA      -> viSvasaha      | viSvasahA, strI, agnijihvAviSezaH . yaTA, -- “hetiH SiKA ca saptAgnerjihvAstA eva kIrttitAH . kAlI karAlI suhitA DUmravarRA manojavA . sPuliNginI viSvasahA saMj
+vijitA         -> vijita         | vijitA, [f] tri, (vija + tfc .) pfTak . BItaH . kampitaH . rati vijaDAtvarTadarSanAt ..
+vimbI          -> bimbI          | vi(bi)mbI, strI, (vimba + gOrAditvAt NIz .) bimbikA . iti SabdaratnAvalI .. (yaTA, -- “kAkAdanIM citraPalAM vimbIM guYjASca DArayet ..” iti suSrute uttaratantre
+vratatI        -> vratati        | vratatI, strI, (vratati + pakze NIz .) vistAraH . latA . iti BaratadvirUpakozaH .. (yaTA, raGuH . 14 . 1 . “apaSyatAM dASaraTI jananyO CedAdivopaGnatarorvrataty
+yAmaGozA       -> yAmaGoza       | yAmaGozA, strI, (yAme yAme Gozo'syAH . yAmAn praharAn Gozati SabdAyata iti vA . Guz + ac . wAp .) yantraviSezaH . GaqI iti BAzA . tatpayAryyaH . nAlI 2 GawI 3 y
+yud            -> yuD            | yud, [D] strI, (yoDanamiti . yuD + kvip .) yudDam . ityamaraH . 2 . 8 . 106 .. (yaTA, rAmAyaRe . 2 . 51 . 10 . “yo na devAsurEH sarvvEH SakyaH prasahituM yuDi .
+yuza           -> yUza           | yuza, Bajane . iti kavikalpadrumaH .. sOtraDAtu- rayam . (para0-saka0-sew .) yozit yuzmad . iti durgAdAsaH ..

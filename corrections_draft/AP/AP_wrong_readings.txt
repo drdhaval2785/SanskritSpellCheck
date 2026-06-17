@@ -1,0 +1,44 @@
+# AP -- DOCUMENTED-INTENTIONAL spellings (NOT typos -- do NOT file corrections)
+#
+# 32 headwords that LOOK like misspellings but which AP records on purpose:
+# wrong-reading apparatus (w.r.), variae lectiones (v.l.), in-composition /
+# sandhi forms (in comp. for...), cross-references (See / = X q.v.), and other
+# grammatical/Vedic notes. Filing a 'correction' for any of these CORRUPTS AP.
+# Use this as a suppression list: such headwords should not be re-flagged.
+# Format per row:  headword -> would-be 'correction'  |  the AP entry text
+
+# ===== CROSS-REFERENCE (8) =====
+Param          -> param          | {#Param#} A shield; cf. {#Palaka#}.
+bAlukA         -> vAlukA         | {#bAlukA#} See {#vAlukA#}. .━{@Comp.@}: {#bAlukAyantram#}
+nivirISa       -> nibirISa       | {#nivirI(qI)Sa, -sa#} {%a.%} See {#nibirIsa#}. ∙²1 Compact, close; {#urunivirIsanitambaBAraKedi#} Śi. 7. 20. ∙²2 Coarse, gross.
+sevanA         -> sevana         | {#sevanA#} See {#sevanam#} (1); {#tAneva te madanusevanayAvarudDAn#}  Bhāg. 3. 23. 7.
+uzmam          -> uzman          | {#uzmam, uzpa#} &c. See under {#uz#}.
+varzmam        -> varzman        | {#varzmam#} The body; see below.
+vezyA          -> veSyA          | {#vezyA#} See {#veSyA#}.
+vilva          -> bilva          | {#vilva#} See {#bilva#}.
+
+# ===== OTHER-INTENTIONAL (24) =====
+AgUr           -> Agur           | {{Lbody=6532}} || {#AgUr#} ({%f.%}) An agreement, promise.  (redirect -> Agur)
+Avaritf        -> AvarItf        | {#Avari(rI)tf#} {%a.%} One that covers or envelops; {#SarErAvAritastasya#}  {#saMyuge patageSvaraH#} Rām. 3. 51. 12; {#yaH sarvezAmAvarItA varIyAn#} Ki. 18. 40.
+Danvam         -> Danvan         | {#Danvam#} A bow (rarely used in classical literature); {#DanvAnyAduDuvustamAm#}  Śiva B. 13. 83.
+KarparIkA      -> KarparikA      | {#KarparIkA, -KarparI#}  A kind of collyrium.
+SIrzam         -> SIrzan         | {#SIrzam#} [{#Siras-pfzo˚ SIrzAdeSaH, SF-ka suk ca vA#}] ∙²1 The head; {#SIrze sarpo deSAntare vEdyaH#} Karpūr.; Mu. 1. 21. ∙²2 The black variety of aloe-wood. 
+SrutI          -> Sruti          | {#SrutI#} = {#Sruti#} above.
+aBIGAta        -> aBiGAta        | {#aBIGAta#} = {#aBiGAta#} q. v.
+apIju          -> apIjU          | {#apIju#} {%a.%} Ved. Impelling, stirring up. (MW. {#apIjU#}) {#uzAsAnaktA#}  {#jagatAmapIjuvA#} Rv. 2. 31. 5.
+arI|a          -> (flag)         | {#arI|a#} {%a.%} (= {#arIQa#}) Ved. Not licked; {#arI|aM vatsaM caraTAya#}  {#mAtA#} Rv. 4. 18. 10.
+banDyA         -> vanDyA         | {#banDyA#} (= {#vanDyA#}) ∙²1 A barren woman; {#na hi banDyA vijAnAti gurvI prasavavedanAm#} Subhāṣ. ∙²2 A barren cow. ∙²3 A kind of perfume ({#bAla#}). .━{@Com
+brahmam        -> brahman        | {#brahmam#} The Supreme Spirit, the Absolute.
+carmam         -> carman         | {#carmam#} ∙²1 A shield. ∙²2 Ved. A skin.
+dAmam          -> dAman          | {#dAmam#} (At the end of a compound) Wreath, garland.
+hemam          -> heman          | {#hemam#} [{#hi-man#}] ∙²1 Gold. ∙²2 The thorn-apple.
+janmam         -> janman         | {#janmam#} Birth.
+klomam         -> kloman         | {#klomam, kloman#} {%n.%} [{#klu gatO manin#}] ∙²1 The lungs; Vāj. 25. 8; {#yakfcca klomAnaSca parvatAH#} Bṛ. Up. 1. 1. 1. ∙²2 The bladder; Mv. 3. 32.
+kuRqira        -> kuRqIra        | {#kuRqi(RqI)ra#} {%a.%} Strong, powerful.
+savyezwf       -> savyezWf       | {#savyezwf, savyezWaH, savyezWf, savyezWAtf#} {%m.%}  A charioteer.
+sfkkam         -> sfkkan         | {#sfkkam, sfkkaRI, sfkkan#} {%n.%}, {#sfkkiRI, sfkkin#} {%n.%}, {#sfkvam, sfkvaRI, sfkvan#} {%n.%}, {#sfkviRI, sfkvin#} {%n.%} The corner of the mouth; {#sfkkaR
+siDmam         -> siDman         | {#siDmam, siDman#} {%n.%} [{#siD-man kicca#} Uṇ. 1. 137] ∙²1 Blotch, scab. ∙²2 Leprosy. ∙²3 A leprous spot.
+somala         -> somAla         | {#somala#} {%a.%} Soft, bland, placid (MW. gives {#somAla#} in this sense).
+tardu          -> tardU          | {#tardu, -rdU#} {%f.%}  A wooden ladle.
+timI           -> timi           | {#timI#} {%f.%} (= {#timiH#} q. v.); L. D. B.
+udam           -> udan           | {#udam#} Water.

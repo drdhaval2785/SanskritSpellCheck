@@ -10,8 +10,12 @@ wrong-readings list groups by.
 """
 import re
 
-# dict code -> language
-_LANG = {'MW': 'en', 'PW': 'de', 'PWG': 'de', 'VCP': 'sa'}
+# dict code -> language (the ONE place to register a dictionary; unknown codes default to 'en')
+_LANG = {
+    'MW': 'en', 'MW72': 'en', 'AP': 'en',          # Monier-Williams 1899/1872, Apte Practical
+    'PW': 'de', 'PWG': 'de', 'SCH': 'de',           # Petersburg (Boehtlingk-Roth) + Schmidt Nachtraege
+    'VCP': 'sa', 'SKD': 'sa',                        # Vacaspatyam, Sabdakalpadruma (Sanskrit-Sanskrit)
+}
 _LANG_NAME = {'en': 'English', 'de': 'German', 'sa': 'Sanskrit'}
 
 # language -> {sub-type: regex source}. Order matters (most specific first when sub-typing).

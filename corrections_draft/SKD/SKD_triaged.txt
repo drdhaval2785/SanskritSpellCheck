@@ -1,0 +1,508 @@
+# SKD tier-A -- BODY-GROUNDED triage  (DRAFT; verify every kept case against the scan)
+#
+# The 412 engine tier-A candidates were judged against SKD's OWN entry text (csl-orig),
+# not spelling alone. A spelling detector cannot tell a typo from a real word, an
+# intentional variant / compounding form, or wrong-reading apparatus -- the entry can.
+# Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM
+# pass over the 'realword' set + source confirmation of every TYPO verdict.
+#
+# FINDING: of 412 tier-A candidates, 3 are body-confirmed fileable typos (0.7%).
+# 290 are real distinct words, 103 are spellings SKD documents on purpose (w.r./v.l./
+# in-comp./cross-ref -- filing them would CORRUPT SKD), 3 are not in the current
+# source, and 13 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
+# do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.
+
+# ===== BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file) (3) =====
+
+hitAbalI      -> hitAvalI       [dcs=0 ndicts=1 body=realword]
+    SKD: hitAbalI, strI, (hitAnAM AvalI yatra .) OzaDaviSezaH . hiyAvalI iti hindI BAzA . tatparyyAyaH . hfdgAtrI 2 kuzWaGnaH 3 aNgAra- kuzWakaH 4 aNgAragranTiH 5 granTiH 6 granTilaH 7 . asyA guRAH . sArakatva
+    judged: Body derivation explicitly says 'hitAnAM AvalI yatra' (with v), and Hindi gloss 'hiyAvalI' both support v; headword b is a scribal error.
+    confirm: Body derivation '(hitAnAM AvalI yatra.)' uses v; Hindi gloss 'hiyAvalI' also v. Headword b contradicts its own derivation. Bare error for hitAvalI.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SKD&key=hitAbalI
+
+pUzaBAzA      -> pUzaBAsA       [dcs=0 ndicts=1 body=realword]
+    SKD: pUzaBAzA, strI, (pUzeva sUryya iva BAsate iti . BAsa + ac . wAp .) indranagarI . tatparyyAyaH . surapurI 2 . iti SabdaratnAvalI ..
+    judged: Body derivation explicitly says 'BAsa + ac . wAp' → BAsA (palatal s); headword BAzA (retroflex z) contradicts the derivation.
+    confirm: Derivation '(...BAsa + ac . wAp.)' uses palatal s (BAsA); headword z contradicts it. Bare spelling error for pUzaBAsA.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SKD&key=pUzaBAzA
+
+vfzaBAzA      -> vfzaBAsA       [dcs=0 ndicts=1 body=realword]
+    SKD: vfzaBAzA, strI, (vfzeRa DarmmeRa BAsate iti . BAsa + ac . striyAM wAp .) amarAvatI . iti trikARqaSezaH ..
+    judged: Body derivation explicitly says 'BAsa + ac . striyAM wAp' → BAsA (palatal s); headword BAzA (retroflex z) contradicts derivation.
+    confirm: Derivation '(...BAsa + ac . striyAM wAp.)' uses palatal s (BAsA); headword z contradicts it. Bare spelling error for vfzaBAsA.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SKD&key=vfzaBAzA
+
+# ===== BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted (5) =====
+
+SvAvid        -> SvAviD         [dcs=3 ndicts=2 body=realword]
+    SKD: SvAvid, (D) puM, (SvAnaM viDyatIti . vyaDa + kvip . “nahivftAti .” 6 . 3 . 116 . iti dIrGaH .) SalyaH . ityamaraH .. sajAru iti BAzA ..
+    judged: Body explicitly marks '(D)' after headword SvAvid, showing stem-final is retroflex D; gloss=SalyaH confirms SvAviD.
+    confirm: Entry itself documents the D-final via marker 'SvAvid, (D) puM'; gloss SalyaH. Spelling is documented in-entry, not a bare error to correct.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SKD&key=SvAvid
+
+mahotka       -> mahotkA        [dcs=0 ndicts=1 body=realword]
+    SKD: mahotka, strI, (mahAn utkaH darSanotsuko loko yasyAH .) vidyut . iti kecit ..
+    judged: Body tags strI but headword ends in -a (not -A). Gloss 'vidyut' (lightning) is feminine. Headword should be mahotkA.
+    confirm: Headword 'mahotka' but tagged strI with feminine derivation 'loko yasyAH' and gloss vidyut (fem); requires -A stem mahotkA. Bare spelling error.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SKD&key=mahotka
+
+vizayi        -> vizayI         [dcs=0 ndicts=1 body=realword]
+    SKD: vizayi, [n] klI, (vizayAH santyasyeti . vizaya + iniH .) indriyam . iti medinI . ne, 211 ..
+    judged: Body derives via 'vizaya + iniH' which yields vizayI (long ī); short-i vizayi is a misspelling of the iniH-derived form.
+    confirm: Real distinct word: own entry '(vizayAH santyasyeti . vizaya + iniH .) indriyam' = sense-organ; vizayI is a separate entry (king/attached). Not a misspelling.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SKD&key=vizayi
+
+viBrat        -> biBrat         [dcs=0 ndicts=2 body=realword]
+    SKD: vi(bi)Brat, tri, (Bf + Satf .) biBartti yaH . DAraRapozaRakarttA . yaTA, -- “caturddaSaM nArasiMhaM biBraddEtyendramUrjjitam . dadAra karajErUrAverakAM kawakfdyaTA ..” iti SrIBAgavate 1 skanDe 3 aDyAy
+    judged: Body headword is 'vi(bi)Brat'; quote uses biBrat; closing note states 'pavargIyabakArAdiH sADureva' (labial ba is correct) — bi is right.
+    confirm: Documented variant: headword 'vi(bi)Brat'; note '(pavargIyabakArAdiH sADureva)' affirms ba form; biBrat is {{Lbody}} redirect.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SKD&key=viBrat
+
+karRaSaskulI  -> karRaSazkulI   [dcs=1 ndicts=1 body=realword]
+    SKD: karRaSaskulI, strI, (karRayoH karRasya vA SaskulIva .) karRagolakam . tatparyyAyaH . vezwanam 2 . iti hema- candraH ..
+    judged: Standard Sanskrit SazkulI (oyster/ear-cup) uses retroflex z; dental s in Saskulī appears to be a scribal error for Sazkulī.
+    confirm: Entry internally consistent: derivation '(...SaskulIva.) karRagolakam' uses dental s throughout. No variant documented; uncertain it is an error. Default false.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SKD&key=karRaSaskulI
+
+# ===== BUCKET 3  REVIEW -- undecidable without the printed page (8) =====
+
+BadravalA     -> BadrabalA      [dcs=2 ndicts=2 body=realword]
+    SKD: BadravalA, strI, (BadrA valA .) latAviSezaH . ganDaBAdAliyA iti BAzA . tatparyyAyaH . saraRA 2 prasAraRI 3 kawamBarA 4 rAjabalA 5 . ityamaraH . 2 . 4 . 153 .. asyAH paryyA- yAntaraM guRASca prasAriRIS
+    judged: Body analyses BadrA+valA (v) but synonyms include balA/rAjabalA (b). May be v/b variant of same plant or typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SKD&key=BadravalA
+
+jyezWavalA    -> jyezWabalA     [dcs=1 ndicts=1 body=realword]
+    SKD: jyezWavalA, strI, (jyezWAKyA valA .) sahadevI . iti rAjanirGaRwaH ..
+    judged: Body glosses as sahadevI and derives from valA (v), but balA is a distinct plant name; v/b confusion possible. Cannot confirm from body alone.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SKD&key=jyezWavalA
+
+IrikA         -> irikA          [dcs=0 ndicts=1 body=realword]
+    SKD: IrikA, strI, vfkzaviSezaH . yaTA . IrikAvaRam . iti RatvaprakaraRe durgAdAsaH ..
+    judged: Body only names a tree species and cites durgAdAsa on retroflexion. Long I vs short i — spelling unclear from this terse entry.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SKD&key=IrikA
+
+srAvaRI       -> SrAvaRI        [dcs=3 ndicts=1 body=realword]
+    SKD: srAvaRI, strI, fdDivfkzaH . iti kecit ..
+    judged: Body: fdDivfkzaH (a plant), sourced only from 'kecit'. Too terse; s vs S distinction unclear.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SKD&key=srAvaRI
+
+sAlAkArI      -> sAlAkarI       [dcs=0 ndicts=2 body=realword]
+    SKD: sAlAkArI, strI, yudDe parAjitanArI . iti kecit ..
+    judged: Body too terse (yudDe parAjitanArI only); cannot determine if kArI (long A, doer) vs karI (short a) is correct from context.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SKD&key=sAlAkArI
+
+SaktuPalI     -> saktuPalI      [dcs=0 ndicts=2 body=realword]
+    SKD: SaktuPalI, strI, SamIvfkzaH . iti SabdaratnAvalI ..
+    judged: Initial S (palatal) vs s (dental) substitution. Body identifies SamIvfkza (Mimosa) but no etymology clarifying correct sibilant.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SKD&key=SaktuPalI
+
+varAsI        -> barAsI         [dcs=0 ndicts=2 body=realword]
+    SKD: varAsI, strI, mlAnavAsaH . iti SabdamAlA ..
+    judged: Body only says mlAnavAsaH (worn garment); no etymology to confirm v- vs b-. Both possible in Sanskrit; too terse to judge.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SKD&key=varAsI
+
+vfhaqQakkA    -> bfhaqQakkA     [dcs=0 ndicts=2 body=realword]
+    SKD: vf(bf)haqQakkA, strI, (vfhatI QakkA .) QakkA- viSezaH . yaTA, -- “vfhaqQakkA tu BerI strI pumAn dunduBirA- nakaH . dragaqaH pratipattUryyamAnakaH pawaho'striyAm ..” iti jawADaraH ..
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SKD&key=vfhaqQakkA
+
+# ===== BUCKET 4  REAL-WORD -- a distinct real word; the fix would merge two words (290) =====
+prARA         -> prARa         | SKD: prARA, strI, (prARiti bahukAlamiti . pra + ana + ac . wAp .) pakziRIviSezaH . sA cAruRagar | Body: strI, = a specific bird (Garuda's kin). prARa = breath/life-force (masc). prARA is a
+GftA          -> Gfta          | SKD: GftA, strI, (Gftavat niryyAso'styAsyAH . “arSa AdiByo'c .” 5 . 2 . 127 . ityac .) GftamaRq | Body: strI, = GftamaRqA (ghee-residue substance), Gfta+ac. Gfta = ghee. GftA is a distinct
+sahitA        -> sahita        | SKD: sahitA, [f] tri, (sahate iti . saha + tfc . “tIzasaheti .” 7 . 2 . 48 . iti pakze iw .) sa | Body: tri, = sahanaSIlaH (patient/enduring), saha+tfc. sahita = accompanied. Different der
+snehA         -> sneha         | SKD: snehA, [n] puM, (snihyatIti . sniha + “Svannukzan pUzanniti .” uRA0 1 . 158 . iti kanin- [ | Body derives snehA via 'sniha + kanin' as puM; glosses rogaviSezaH, banDuH, candraH — own 
+Sma           -> sma           | SKD: Sma, [n] klI, muKam . iti SmaSruSabdawIkAyAM BarataH .. (SarIram . iti niruktiH . 3 . 5 .. | Body: klI, = muKam/SarIram/SavaH (face/body/corpse). sma is a particle. Sma (palatal S) is
+arda          -> arDa          | SKD: arda yAtanAgatiyAcanezu . (gatO, sakaM pIqAyAM akaM BvAdi paraM sew .) iti kavikalpadrumaH | Body records arda as three verbal roots (BvA0/curA0/ka) meaning harm/going/beseeching; ent
+Cit           -> cit           | SKD: Cit, [d] tri, (CinattIti . Cid + kvip .) CedanakarttA .. | Body: tri, = CedanakarttA (cutter), Cid+kvip. cit = consciousness. Cit (retroflex C) is di
+krut          -> kft           | SKD: krut, [D] strI, (kruD + sampadAditvAt kvip BAve .) kroDaH . ityamarahemacandrO .. asyA rUp | Body derives krut from kruD+kvip (BAva), gloss kroDaH (anger), cited Amara+Hemacandra; unr
+hantA         -> hanta         | SKD: hantA, [f] tri, (hantIti . hana + tfc . hananakarttA . yaTA, BawwO 5 sarge . “BavantaM kAr | Body: tri, 'hananakarttA' (agent noun, hana+tfc). hanta is an interjection; hantA is a dis
+DavalA        -> Davala        | SKD: DavalA, strI, (DAvatIti . DAva + kalaH hrasvaSca . anudAttatvABAvAt na NIz .) SuklA gOH .  | Body: strI, = SuklA gOH (white cow). Davala is the adjective 'white'; DavalA feminine is a
+locanA        -> locana        | SKD: locanA, strI, (locate paryyAlocayatIti . loca + lyuH . wAp .) budDaSaktiBedaH . asyAH pram | Body: strI, = budDaSaktiBedaH (a Buddhist divine power). locana = eye. locanA is a distinc
+mandirA       -> mandira       | SKD: mandirA, strI, (mandira + striyAM wAp .) mandi- ram . yaTA, mandirAyAstvarAvAniti maDumuku | Body: strI, mandira+wAp = feminine form meaning mansion/temple. Distinct feminine entry, n
+matsarA       -> matsara       | SKD: matsarA, strI, (mad + saran . striyAM wAp .) makzikA . iti medinI . re, 193 . | Body: strI, = makzikA (bee/fly). matsara = jealousy. matsarA is a distinct feminine word w
+potA          -> pota          | SKD: potA, [f] puM, (punAtIti . pU + “naptfnezwf- tvazwfhotfpotfBrAtfjAmAtfmAtfpitfduhitf .” uR | Body: puM, = vizRuH and ftvik (priest), with uRA0 2.96 derivation (pU+tfn). pota = young a
+triguRA       -> triguRa       | SKD: triguRA, strI, (trayo guRA yasyAH .) durgA . yaTA, devIpurARe 45 aDyAye . “padEstriBirvval | Body: strI, = durgA and a seed variety. triguRa is the adjective 'three-quality'; triguRA 
+vatsalA       -> vatsala       | SKD: vatsalA, strI, (vatse kAmo'styasyA iti . lac . yadvA, vatsaM lAtIti . lA + kaH .) vatsakAm | Body: strI, = vatsakAmA gOH (cow desiring her calf). vatsala = affectionate (adj). vatsalA
+SuzmA         -> Suzma         | SKD: SuzmA, [n] puM, (Suzyatyaneneti . Suza Soze + manin .) agniH . citrakavfkzaH . ityamaraH . | Body: puM, = agniH/citrakavfkzaH (fire/tree), Suza+manin. SuzmA is a masculine noun; Suzma
+lakzA         -> lakza         | SKD: lakzA, strI, (lakzayatIti . lakz + ac . wAp .) lakzam . daSAyutasaMKyA . iti medinI . ze,  | Body: strI, = daSAyutasaMKyA (100,000). lakza = target/lac resin. lakzA (lakh-number, femi
+sPuwA         -> sPuwa         | SKD: sPuwA, strI, (sPuwati vikASate iti . sPuwa + kaH . wAp .) PawA . PaRA . ityamarawIkAyAM rA | Body: strI, = PawA/PaRA (snake hood), sPuwa+kaH+wAp. sPuwa = clear/distinct. sPuwA is a di
+aSvatTA       -> aSvatTa       | SKD: aSvatTA, strI, pUrRimAtiTiH . iti medinI .. | Body: strI, pUrRimAtiTiH — its own gloss as a lunar tithi; not merely the feminine of aSva
+apriyA        -> apriya        | SKD: apriyA, strI, (na priyA na prItikarI lokAnAM, naYsamAsaH .) SfNgImatsyaH . iti SabdaratnAv | Body: strI, SfNgImatsyaH — own gloss (a spiny fish). Distinct meaning from the adj apriya 
+dInA          -> dIna          | SKD: dInA, strI, (dIna + wAp . satataM BItaBIteva dfSyatvAt taTAtvam .) mUzikastrI . iti medinI | Body: dIna+wAp, mUzikastrI (female mouse) — own distinct zoological gloss beyond just fem 
+kadalA        -> kadala        | SKD: kadalA, strI, (kadala + wAp .) pfSnI . cAkuliyA iti BAzA . qimbikA . SAlmalIvfkzaH . iti m | Body: kadala+wAp, pfSnI/qimbikA/SAlmalIvfkzaH — multiple plant glosses distinct from kadal
+maRqapA       -> maRqapa       | SKD: maRqapA, strI, nizpAvI . iti rAjanirGaRwaH .. (maRqapItyapi dfSyate .) | Body: strI, nizpAvI (a pulse/bean) — own gloss completely distinct from maRqapa (pavilion)
+pAdapA        -> pAdapa        | SKD: pAdapA, strI, (pAdO pAti rakzatIti . pA + kaH + wAp .) pAdukA . iti medinI . pe, 21 .. | Body: pA+kaH+wAp = pAdukA (sandal/shoe). Derived from pA root, not pAdapa (tree); distinct
+vinDyA        -> vinDya        | SKD: vinDyA, strI, lavalIvfkzaH . iti medinI .. truwiH . iti hemacandraH .. elAci iti BAzA .. | Body: strI, lavalIvfkzaH/truwiH/elAci — plant glosses distinct from vinDya (the Vindhya mo
+sTalA         -> sTala         | SKD: sTalA, strI, (sTala + wAp .) jalaSUnyAkftrima- BUmiH . ityamarawIkAyAM BarataH . 2 . 1 . 5 | Body derives sTalA from 'sTala + wAp' glossing jalaSUnyAkftrimaBUmiH — a legitimate femini
+vAhA          -> vAha          | SKD: vAhA, strI, (vAha + ajAditvAt wAp .) vAhuH . ityajayapAladvirUpakozO .. | Body derives vAhA from 'vAha + ajAditvAt wAp' glossing vAhuH (arm) — a feminine form disti
+saKA          -> saKa          | SKD: saKA, [i] puM, (samAnaH KyAyate iti . samAna + KyA + “samAne KyaH sacodAttaH .” uRA0 4 . 1 | Body derives saKA via samAna+KyA+iY with etymology; nom.sg. of sakhi (friend); sOhArdayukt
+kledA         -> kleda         | SKD: kledA [n] puM, (kledayati SItaraSmiBirjanam . klida + Ric + “Svan ukzan pUzan plIhanniti”  | Body derives kledA via 'klida + Ric + kanin, na lope pUrvvadIrGaH' (compensatory lengtheni
+maRqUkA       -> maRqUka       | SKD: maRqUkA, strI, (maRqUka + striyAM wAp .) maYjizWA . yaTA, SabdamAlAyAm . “maRqUkA ca latA  | Body derives maRqUkA via 'maRqUka + striyAM wAp' glossing maYjizWA (mañjiṣṭhā) — feminine 
+pradakziRA    -> pradakziRa    | SKD: pradakziRA, strI, (pragatA dakziRamiti . “tizWadgu praBftIni ca . 2 . 1 . 17 .” iti samAsa | strI entry: feminine of pradakziRa formed with wAp; defines the ritual circumambulation ac
+pretA         -> preta         | SKD: pretA, strI, (preta + striyAM wAp .) pretaBAvA- pannA . yaTA . vizRurom tat sadityAdi amuk | strI entry: preta+wAp, defines a deceased woman (pretaBAvApannA); own feminine with legal 
+svayaMvarA    -> svayaMvara    | SKD: svayaMvarA, strI, (svaya + vf + ac . wAp .) svayaM vfRote patiM yA . svecCayA patyanveziRI | strI entry: svayaM+vf+ac+wAp, woman who chooses her own husband; synonyms patiMvarA/varyyA
+upADyAyA      -> upADyAya      | SKD: upADyAyA, strI, (upetyADIyate'syAH . iNaSceti- sUtre apAdAne striyAmupasaMKyAnaM tadantAcc | strI entry: upetyADIyate'syAH with GaY+wAp; aDyApikA/vidyopadeSinI — female teacher; own f
+varizWA       -> varizWa       | SKD: varizWA, strI, (varizwa + wAp .) AdityaBaktA . iti rAjanirGaRwaH .. | strI entry: varizwa+wAp, glossed as AdityaBaktA from rAjanirGaRwa; genuine feminine form w
+vasanA        -> vAsanA        | SKD: vasanA, strI, (vasa + yucM .) strIkawIBUzaRam . yaTA, -- “sArasanaM sAraSanaM vasanA vaSan | strI entry: vasa+yucM, strIkawIBUzaRam (woman's hip ornament); distinct from vAsanA; Sabda
+viGAtA        -> viGAta        | SKD: viGAtA, [f] puM, (vidaDAtIti . vi + DA + tfc .) brahmA . ityamaraH .. (vizRuH . yaTA, mahA | puM entry: vi+DA+tfc, glossed as brahmA/vizRu/maheSvara/kAmadeva/madirA; distinct word fro
+zazwikA       -> zazwika       | SKD: zazwikA, strI, (zazwika + striyAM wAp .) zazwika- DAnyam . yaTA, -- “hEmantikaM sitAsvinna | strI entry: zazwika+wAp, zazwikADAnyam (a type of grain); own feminine form with smfti cit
+kalI          -> kali          | SKD: kalI, strI, (kal + “sarvvaDAtuBya in” tataH vA NIp .) kalikA . ityamarawIkAyAM BarataH .. | Body: strI, NIp feminine suffix, = kalikA (bud). kali is masc (Kali Yuga); kalI is a disti
+dampatI       -> dampati       | SKD: dampatI, puM, (jAyA ca patiSca . rAjadantAdigaRe pAWAt jAyAyA damBAvo vA nipAtyate .) BAry | Body defines dampatI as BAryyApatI (husband and wife dvandva); dampatI is the standard nom
+yatI          -> yati          | SKD: yatI, strI, (yatiH . kfdikArAditi striyAM NIz .) viDavA . iti SabdaratnAvalI .. || yatI, [ | Two entries: strI (viDavA, widow, from yatiH+NIz) and puM (jitendriyaH from yat+iniH); bot
+kavI          -> kavi          | SKD: kavI, strI, (kavi vA NIz .) KalInaH . iti medinI BarataSca .. | strI entry: kavi+NIz, glossed as KalInaH (a type of bit/bridle) from medinI/Barata; own di
+pItI          -> pIti          | SKD: pItI, [n] puM, (pItaM pAnaM prAcuryyenAstyasyeti . iniH .) pItiH . GowakaH . ityamarawIkAy | puM entry: pIta+iniH, GowakaH (horse); own derivation; rAyamukuwa from amarakosa commentar
+tUlA          -> tulA          | SKD: tUlA, strI, (tUlayate pUrayati sTAnamiti . tUla + ac + tataH striyAM wAp .) kArpAsI . iti  | Body: tUla+ac+wAp = kArpAsI (cotton), varttiH. Long U in derivation from tUla; distinct fr
+dAtrI         -> DAtrI         | SKD: dAtrI, strI, (dadAtIti . dA + tfc + NIp .) dAnakartrI . iti vyAkaraRam .. (gaNgA . yaTA, k | Body: strI, = dAnakartrI (female giver), dA+tfc+NIp. DAtrI = wet nurse/earth (long DA). dA
+dArA          -> DArA          | SKD: dArA, strI, (dArayati jYAtibanDUniti . dF + Ric + ac + wAp .) dArAH . ityamara- wIkAvAM Ba | strI entry: dF+Ric+ac+wAp, wife (dArAH); own derivation distinct from DArA (stream/edge); 
+praTimA       -> pratimA       | SKD: praTimA, [n] puM, (pfTorBAvaH . “pfzvAdiBya ima- nijvA .” 5 . 1 . 122 . iti imanic . “fto- | Body: puM, = pfTorBAvaH (breadth/wideness), from pfTu+imanic. pratimA = image/statue. Comp
+rekA          -> reKA          | SKD: rekA, strI, (reka SaNkAyAm + ac . striyAM wAp .) sandehaH . iti hemacandraH .. | Body: strI, = sandehaH (doubt), from reka SaNkAyAm+ac. reKA = line/mark. Differs in conson
+ucCa          -> ucca          | SKD: ucCa, i Sa uYCe . iti kavikalpadrumaH .. (tudAM- idit -paraM -sakaM -sew .) hrasvAdiH . i  | Two root entries: ucCa i-Sa 'to glean' (tudAdi, uYCati) and ucCa I-Sa 'to bind/end/transgr
+JarA          -> jarA          | SKD: JarA, strI, (Jara + wAp .) JaraH . ityamara- wIkAyAM BarataH .. | strI entry: Jara+wAp, glossed as JaraH; feminine of Jara (distinct from jarA=old age); ama
+banDyA        -> vanDyA        | SKD: banDyA, strI, (banDa + “aGnyAdayaSca .” uRA0 4 . 111 . iti yak .) aprajastrI . iti medinI  | Body: strI, = barren woman (aprajastrI) and cow (vaSA). Well-attested banDyA; vanDyA (b→v)
+sawI          -> satI          | SKD: sawI, strI, (sawi + vA NIz .) ganDadravyaviSezaH .. vana AdA iti amlaharidrA iti ca BAzA . | strI entry: sawi+NIz, a fragrant plant (ganDadravyaviSezaH) with synonyms SiwI/ganDaSawI/s
+ruq           -> rud           | SKD: ruq, [z] strI, (ruza kruDi + kvip .) ruw . iti vyAkaraRam .. | Entry ruq [z] strI: ruza-kruDi+kvip = ruw; a grammatical (vyAkaraRa) form; own entry, not 
+kaYcI         -> kAYcI         | SKD: kaYcI, strI, (kacate dIpyate SoBate . kac un . tataH kacuSabdAt NIp .) kandaviSezaH . kacu | Body: strI, = kandaviSezaH (a tuber plant), kac+un+NIp. kAYcI = Kanchipuram/girdle (long A
+utkA          -> utka          | SKD: utkA, strI, (udgataM mano yasyAH . ut + kan + wAp .) utkaRWitA nAyikA . iti rasamaYjarI .. | Body: strI, = utkaRWitA nAyikA (yearning heroine), ut+kan+wAp. utka = longing (adj). utkA 
+gostanA       -> gostana       | SKD: gostanA, strI, (goH stana iva PalamasyAH . NIza- BAvapakze wAp .) gostanI . ityamarawIkA . | strI entry: goH stana iva PalamasyAH + wAp, = gostanI; feminine of gostana with own wAp de
+preraRA       -> preraRa       | SKD: preraRA, strI, (pra + Ir + Ric + “RyAsaSranTo yuc .” 3 . 3 . 107 . iti yuc .) codanA . (ya | strI entry: pra+Ir+Ric+yuc, codanA/PalaBAvanA; feminine noun from Meghaduta 70; own word d
+yakzmA        -> yakzma        | SKD: yakzmA, [n] puM, (yakza + “bAhulakAt yakzayate- rapi .” uRA0 4 . 150 . ityatra ujjvaladatt | puM entry: yakza+manin (uRA 4.150), rogaviSezaH = tuberculosis; own masculine form; Caraka
+SAleyA        -> SAleya        | SKD: SAleyA, strI, (SAleya + wAp .) miSreyA . iti rAjanirGaRwaH .. | strI entry: SAleya+wAp, miSreyA (a plant); feminine of SAleya from rAjanirGaRwa; own femin
+SikyA         -> Sikya         | SKD: SikyA, strI, (Sikya + striyAM wAp .) Sikyam . iti SabdaratnAvalI .. | strI entry: Sikya+wAp = Sikyam; feminine/redirect to neuter; SabdaratnAvalI citation; own 
+anukarzA      -> anukarza      | SKD: anukarzA, [n] puM, (anu + kfz + an .) anu- karzaH . raTADaHsTitakAzWaM . ityamarawIkAyAM r | puM entry: anu+kfz+an, anukarzaH = raTADaHsTitakAzWa (part of chariot under the axle); own
+cAmarI        -> camarI        | SKD: cAmarI, strI, (cAmara + saMjYAyAM NIz .) cAmaram . ityamarawIkAyAM BarataH .. || cAmarI, [ | Two entries: strI cAmara+NIz = cAmaram (fly-whisk); puM cAmara+iniH = GowakaH (horse). Own
+dIkzitA       -> dIkzita       | SKD: dIkzitA, [f] puM, (dIkza + “sUdadIpadIkzaSca .” 3 . 2 . 153 . iti yucaM vADitvA SInArTe tf | puM entry: dIkza+tfc = somayAjI / dIkzAviSizwa; a consecrated officiant; own word formed b
+gaRqUzA       -> gaRqUza       | SKD: gaRqUzA, {{puM,->strI,||20160917||https://github.com/sanskrit-lexicon/CORRECTIONS/issues/3 | Entry documents correction puM->strI with correction URL; gaRqUzA strI = moutful of water;
+kzutA         -> kzuta         | SKD: kzutA, strI, (kzuta + wAp .) kzutam . iti Sabda- ratnAvalI .. | strI entry: kzuta+wAp = kzutam; feminine redirect documented in SabdaratnAvalI; own femini
+mAnyA         -> manyA         | SKD: mAnyA, strI, (mAnya + striyAM wAp .) marunmAlA . yaTA, -- “anirmAnyA tu mAnyA ca marunmAlA | strI entry: mAnya+wAp, marunmAlA (a plant/garland of Maruts) from SabdamAlA; own word dist
+mUzakA        -> mUzaka        | SKD: mUzakA, strI, (mUzaka + striyAM wAp . kzipakA- ditvAt na ata itvam .) mUzikA . iti Sabda-  | strI entry: mUzaka+wAp (kzipakAditvAt no ata itva), = mUzikA (female mouse); own feminine 
+mahAmedA      -> mahAmeda      | SKD: mahAmedA, strI, (medayatIti . mida + Ric + GaY . wAp . mahatI medA .) azwavarge prasidDO-  | Body defines mahAmedA as fem. strI (wAp from mahAmeda), a plant in azwAvarga; own headword
+masfRA        -> masfRa        | SKD: masfRA, strI, (masfRa + striyAM wAp .) umA . iti medinI . Re, 70 . masInA iti BAzA .. | Body: 'masfRA, strI, (masfRa + striyAM wAp .) umA' — fem. form of masfRa with its own glos
+nibanDA       -> nibanDa       | SKD: nibanDA, [f] puM, nibanDakarttA . granTakarttA . iti vyAkaraRam .. | Body: 'nibanDA, puM, nibanDakarttA, granTakarttA' — agentive noun (author/composer), disti
+paRavA        -> paRava        | SKD: paRavA, strI, (paRava + wAp .) paRavaH . yaTA, -- “paRavaH paRavA ca syAt praRavo'pyatra v | Body: 'paRavA, strI, (paRava + wAp)'; BaratadvirUpakozaH confirms paRavA as feminine of pa
+recanA        -> recana        | SKD: recanA, strI, (ric + Ric + yuc . wAp .) kAmpillaH . iti SabdaratnAvalI .. | Body: 'recanA, strI, (ric + Ric + yuc + wAp) kAmpillaH' — fem. noun for a plant, full deri
+sPuraRA       -> sPuraRa       | SKD: sPuraRA, strI, (sPura + Ric + yuc . wAp .) sPuraRam . ityamarawIkA . 3 . 2 . 10 .. | Body: 'sPuraRA, strI, (sPura + Ric + yuc + wAp) sPuraRam' — fem. form with wAp; amarakoSa 
+saMSayitA     -> saMSayita     | SKD: saMSayitA, [f] tri, (saM + SI + tfc .) saMSayakarttA . iti hemacandraH .. | Body: 'saMSayitA, tri, (saM + SI + tfc) saMSayakarttA' — tri-gender adj via tfc suffix, di
+sodarA        -> sodara        | SKD: sodarA, strI, sahodarA BaginI . iti sodara- SabdAdAppratyayena nizpannA .. | Body: 'sodarA, strI, sahodarA BaginI' — sister; derived from sodara + App (wAp); full glos
+sukeSA        -> sukeSa        | SKD: sukeSA, strI, (SoBanaH keSo yasyAH .) sundara- keSayuktA . yaTA . “sukeSI sukeSA raTyA .”  | Body: 'sukeSA, strI, sundara-keSayuktA'; mugDaboDa quote confirms sukeSA as fem. form. Own
+viqambanA     -> viqambana     | SKD: viqambanA, strI, (vi + qamba + Ric + yuc . wAp .) anukaraRam . (yaTA, kumAre . 4 . 12 . “a | Body: 'viqambanA, strI, (vi + qamba + Ric + yuc + wAp) anukaraRam, pratAraRam, parihAsaH' 
+yantraRA      -> yantraRa      | SKD: yantraRA, strI, (yantri + “RyAsaSranTo yuc .” 3 . 3 . 107 . iti yuc . wAp .) pIqA . yaTA,  | Body: 'yantraRA, strI, ... pIqA' — fem. noun meaning pain/torment, with NaiZaDa verse. Ful
+BUmijA        -> BUmija        | SKD: BUmijA, strI, (BUmerjAyate iti . jan + qaH . wAp) sItA . iti trikARqaSezaH medinI ca . je, | strI; BUmer+jan+qaH+wAp → BUmijA. Fem. = Sītā. wAp suffix gives long -A intentionally.
+DAnuzkA       -> DAnuzka       | SKD: DAnuzkA, strI, (Danuriva avayavo'syA iti Wak wAp ca .) apAmArgavfkzaH . iti SabdacandrikA  | strI; Danu+Wak+wAp → DAnuzkA. Fem. plant name (apAmārga). wAp is correct.
+DruvakA       -> Druvaka       | SKD: DruvakA, strI, (Druvaka + wAp .) DuvakA . DuyA iti BAzA . saMjYA . ityuRAdikozaH .. | strI; Druvaka+wAp → DruvakA. Fem. noun (DuvakA, a plant name). wAp suffix; distinct fem. e
+SuktA         -> Sukta         | SKD: SuktA, strI, (Sukta + striyAM wAp .) cukrikA . iti SabdaratnAvalI .. | strI; Sukta+striyAM wAp → SuktA. Fem. = cukrikā (vinegar). wAp suffix; real fem. headword.
+banDurA       -> banDura       | SKD: banDurA, strI, (banDura + wAp .) paRyayozA . iti medinI . re, 190 .. | strI; banDura+wAp → banDurA. Fem. = a type of woman (paRyayozA). Distinct fem. entry.
+brahmizWA     -> brahmizWa     | SKD: brahmizWA, strI, (atiSayena brahma . brahma + izWan + wAp ca .) durgA . yaTA, -- “brahmizW | strI; brahma+izWan+wAp → brahmizWA. Fem. name of Durgā. wAp suffix; distinct fem. headword
+caritrA       -> caritra       | SKD: caritrA, strI, (caritra + wAp .) tintiqI- vfkzaH . iti SabdaratnAvalI .. | strI; caritra+wAp → caritrA. Fem. = tintidī tree. wAp suffix; real fem. entry.
+caturaNgA     -> caturaNga     | SKD: caturaNgA, strI, (catvAri aNgAni yasyAH .) GowikAvfkzaH . iti rAjanirGaRwaH .. | strI; bahuvrīhi fem. → caturaNgA. Plant name (ghoṭikā tree). Distinct fem. headword.
+cawulA        -> cawula        | SKD: cawulA, strI, (cawula + “ajAdyatazwAp .” 4 . 1 . 4 . iti wAp .) vidyut . iti jawADaraH ..  | strI; cawula+wAp (pāṇ. 4.1.4) → cawulA. Fem. = lightning/Gāyatrī form. Real fem. entry.
+dEvajYA       -> dEvajYa       | SKD: dEvajYA, strI, (dEvaM jAnAtIti . jYA + kaH . tata- zwAp .) dEvajYaBAryyA . praSnAdinA SuBA | strI; dEva+jYA+ka+wAp → dEvajYA. Fem. = astrologer's wife / female diviner. Distinct fem. 
+dIrGavfntA    -> dIrGavfnta    | SKD: dIrGavfntA, strI, (dIrGaM vfntaM yasyAH .) indra- cirBiwI . iti rAjanirGaRwaH .. | strI; bahuvrīhi fem. → dIrGavfntA. Plant name (indracirbiṭī). Distinct fem. headword.
+hayagrIvA     -> hayagrIva     | SKD: hayagrIvA, strI, durgA . yaTA, -- “nArasiMhI hayagrIvA hiraRyAkzavinASinI .” iti tasyAH sa | strI; fem. = Durgā (sahasranāma). Intentional fem. form of the name. Distinct fem. headwor
+kftAntA       -> kftAnta       | SKD: kftAntA, strI, (kftAnta + wAp .) reRukAnAmaganDa- dravyam . iti SabdacandrikA .. | strI; kftAnta+wAp → kftAntA. Fem. = reṇukā-type fragrant substance. Distinct fem. entry.
+matkuRA       -> matkuRa       | SKD: matkuRA, strI, ajAtalomaBagam . iti Sabda- ratnAvalI .. | strI; fem. = 'ajātalomabhagam' (hairless female part). Distinct fem. headword.
+nIlAYjanA     -> nIlAYjana     | SKD: nIlAYjanA, strI, (nIlaM meGaM aYjayatIti . aYja + Ric + lyuH .) vidyut . iti jawADaraH .. | strI; nIla+aYja+Ric+lyuH → nIlAYjanA. Fem. = lightning. Own derivation; distinct fem. entr
+nIlalohitA    -> nIlalohita    | SKD: nIlalohitA, strI, (nIlA lohitA ca .) BUmijambuH . iti SabdacandrikA . SivA ca .. | strI; fem. compound = bhūmijambu (plant) and Śivā. Distinct fem. headword.
+nadIjA        -> nadIja        | SKD: nadIjA, strI, (nadyA jAyate yA sA . jana + qaH + wAp .) agnimanTavfkzaH . iti rAja- nirGaR | strI; nadI+jan+qaH+wAp → nadIjA. Fem. = agnimanṭha tree. wAp suffix; distinct fem. entry.
+niHsnehA      -> niHsneha      | SKD: niHsnehA, strI, (nirgataH snehaH raso yasyAH .) atasI . iti trikARqaSezaH .. (anurAgarahit | strI; bahuvrīhi fem. = atasī plant; also tri adj. 'without affection'. Distinct fem./adj. 
+padmodBavA    -> padmodBava    | SKD: padmodBavA, strI, (padme padmAdvA udBavo yasyAH .) manasA devI . yaTAsyAH pOrARikaDyAnam . | strI; bahuvrīhi fem. = Manasā Devī. Distinct fem. headword; wAp implied by strī gender.
+parakIyA      -> parakIya      | SKD: parakIyA, strI, (parakIya + wAp .) nAyikA- BedaH . asyA lakzaRaM yaTA . aprakawapara- puru | strI; parakIya+wAp → parakIyA. Nāyikā type (another's woman). Distinct fem. literary term.
+parapuzwA     -> parapuzwa     | SKD: parapuzwA, strI, (pareRa parapuruzeRa puzwA pAlitA .) veSyA . iti medinI .. parASrayA . it | strI; 'pareRa puzwA' compound fem. = veśyā (courtesan). Distinct fem. headword.
+pfTukA        -> pfTuka        | SKD: pfTukA, strI, (pfTuH sTUlEva . pfTu + kan + wAp .) hiNgupatrI . iti SabdacandrikA .. (asyA | strI; pfTu+kan+wAp → pfTukA. Fem. = hiṅgupatrī plant or 'little girl'. Distinct fem. entry
+prasahA       -> prasaha       | SKD: prasahA, strI, (pra + sah + ac . wAp .) bfha- tikA . iti ratnamAlA .. (guRAdayo'syA bfhatI | strI; pra+sah+ac+wAp → prasahA. Fem. = bṛhatikā plant. wAp suffix; distinct fem. entry.
+prezWA        -> prezWa        | SKD: prezWA, strI, (prezWa + wAp .) preyasI . iti hemacandraH .. jaNGA . iti SabdacandrikA .. | strI; prezWa+wAp → prezWA. Fem. = 'beloved woman' (preyasī) or 'thigh'. Distinct fem. entr
+puRyaSlokA    -> puRyaSloka    | SKD: puRyaSlokA, strI, (puRyaH puRyajanakaH Sloko yaSa- ScaritraM vA yasyAH .) drOpadI . iti Sa | strI entry; defines Draupadi and Sita as puRyaSlokA (f. of puRyaSloka). Legitimate feminin
+sUcanA        -> sUcana        | SKD: sUcanA, strI, (sUca + Ric + yuc . wAp .) vyaDanam . dfzwiH . manDanam . aBinayaH iti . [Pa | strI; (sUca+Ric+yuc+wAp) — regular feminine of sUcana. Own glosses: vyaDanam, dfzwiH, etc.
+udrekA        -> udreka        | SKD: udrekA, strI, (udreka + wAp .) mahAnimbaH . iti rAjanirGaRwaH .. | strI; (udreka+wAp) — feminine of udreka, glossed as mahAnimbaH.
+wuRwukA       -> wuRwuka       | SKD: wuRwukA, strI, waNgiRIvfkzaH . iti SabdacandrikA .. | strI; defines waNgiRIvfkzaH (a tree). Feminine form of wuRwuka.
+yAsA          -> yAsa          | SKD: yAsA, strI, (yAsaH prayatno'styasyA iti arSa- Adyac . wAp .) madanaSalAkApakzI . iti Sabda | strI; (yAsaH prayatno'styasyA+arSAdyac+wAp) — derived feminine, glossed as madanaSalAkApak
+durganDI      -> durganDi      | SKD: durganDI, [n] tri, (durganDo'styasyeti . durganDa + iniH .) durganDayuktaH . ityamarawIkAy | Body: 'durganDI, tri, (durganDa + iniH)' — iniH suffix forms separate adjective; distinct 
+misI          -> misi          | SKD: misI, strI, (masyati pariRamatIti + in bAhulakAdata ikAraH . pakze NIz .) maDurikA . (yaTA | Body: 'misI, strI, (in bAhulakAdata ikAraH; pakze NIz) maDurikA' — full derivation with mu
+grAhI         -> grAhi         | SKD: grAhI, [n] puM, (gfhRAtIti . graha + RiniH .) kapitTaH . iti SabdacandrikA .. || grAhI, [n | puM; (graha+RiniH) — RiniH suffix yields -I ending. Two entries both define grAhI as a rea
+ulupI         -> ulUpI         | SKD: ulupI, [n] puM, (ulupEvAkftirvidyate yasya . ulupa + ini .) SiSukaH . ityamaraH .. tadAkf- | Body: puM, ulupa+ini = SiSukaH (a porpoise). Distinct word/derivation from ulUpI (Nāga pri
+meqa          -> meda          | SKD: meqa, f unmAde . iti kavikalpadrumaH .. (BvA0- para0-aka0-sew .) f, amimeqat . meqati unmA | Body: f unmAde, BvA0-para0-sew, amimeqat — verbal root meq meaning 'to be mad'; entirely d
+AsPowA        -> AsPotA        | SKD: AsPowA, strI, (AsPowayatIti . AN + sPuw + ac + wAp .) navamallI . vanamallI . iti Sabda- [ | Body: 'AsPowA, strI, (AN + sPuw + ac + wAp) navamallI' — derived from root sPuw, not sPot;
+rAjayakzmA    -> rAjayakzma    | SKD: rAjayakzmA, [n] puM, (rAjYaScandrasya kzayakArako yakzmA . rAjA cAsO yakzmA ceti vA .) kza | Body: puM, kzayarogaH — rAjayakzmA (with -A) is the standard masc form cited in Amara/Māgh
+takzA         -> takza         | SKD: takzA, [n] puM, (takzati tanUkarotIti . takza + “kavin yuvfzitakzirAjIti .” uRAM 1 . 156 . | Body: takz+kanin = tvazwA (divine craftsman). Own masculine noun with mythological gloss; 
+ukzA          -> ukza          | SKD: ukzA, [n] puM, (ukza + kanin .) vfzaH . ityamaraH . (yaTA, fgvede 8 . 71 . 9 . “ukzA mimAt | Body derives ukzA via 'ukza + kanin' (uṇādi); glosses vfzaH and fzaBOzaDiH — a distinct ma
+DanvA         -> Danva         | SKD: DanvA, [n] puM, (Danvati jalABAvaM gacCatIti . Danva + “kanin yuvfzIti .” uRAM 1 . 156 . i | Body: 'DanvA, puM, (Danva + kanin) marudeSaH' — kanin suffix forms DanvA; Rgveda citations
+nizpAdanA     -> nizpAdana     | SKD: nizpAdanA, strI, (nir + pada + Ric + yuc . striyAM wAp .) nizpattipreraRam . yaTA, -- “yad | Body: 'nizpAdanA, strI, (nir + pada + Ric + yuc + wAp) nizpattipreraRam' — fem. noun, full
+vftrahA       -> vftraha       | SKD: vftrahA, [n] puM, (vftraM hatavAn . han + “brahma- BrURavftrezu kvip .” 3 . 2 . 87 . iti k | Body: 'vftrahA, puM, (vftraM hatavAn, han + kvip) indraH' — Indra epithet via kvip; Rgveda
+SaNKanaKA     -> SaNKanaKa     | SKD: SaNKanaKA, strI, SaNKanaKI . yaTA, -- “dviDA SaNKanaKAKyAnyA SuktyAKyA vadarI- cCadaH .” i | Body: 'SaNKanaKA, strI, SaNKanaKI'; ratnamAlA quote uses SaNKanaKAKyAnyA — fem. form docum
+SiKAvalA      -> SiKAvala      | SKD: SiKAvalA, strI, (SiKA + valac . wAp .) mayUraSiKA . iti rAjanirGaRwaH .. | Body: 'SiKAvalA, strI, (SiKA + valac + wAp) mayUraSiKA' — fem. derivation with valac+wAp. 
+SocanA        -> Socana        | SKD: SocanA, strI, SokotpAdanA . Soci RiNantAt NanapratyayAntAdAtpratyayanizpannA . iti saMkzip | Body: 'SocanA, strI, SokotpAdanA' — fem. noun meaning 'causing grief'; yuc+wAp derivation 
+cirBiwA       -> cirBiwa       | SKD: cirBiwA, strI, karkawIBedaH . ciBiqA iti velaseda iti ca deSAntarIyaBAzA .. tat- paryyAyaH | Body: 'cirBiwA, strI, karkawIBedaH' — a cucumber variety with full synonyms and guRAH; own
+jAgaritA      -> jAgarita      | SKD: jAgaritA, [f] tri, (jAgarttIti . jAgf + tfc .) jAgaraRaSIlaH . ityamaraH . 3 . 1 . 32 .. | Body: 'jAgaritA, tri, (jAgf + tfc) jAgaraRaSIlaH' — tri-gender adj via tfc suffix; amarako
+madAQyA       -> madAQya       | SKD: madAQyA, strI, (madena AQyA .) lohitaJiRwI . iti SabdacandrikA .. | Body: 'madAQyA, strI, (madena AQyA) lohitaJiRwI' — fem. bahuvrIhi compound; own gloss.
+mfgaSIrzA     -> mfgaSIrza     | SKD: mfgaSIrzA, strI, (mfgaSIrza + wAp .) mfgaSiro- nakzatram . iti trikARqe vopAlitaH . ityama | Body has two entries: fem. nakshatra name and puM form; both fully glossed. Distinct from 
+tEttirIyA     -> tEttirIya     | SKD: tEttirIyA, strI, (tittiriRA proktA . CaR .) yajurvvedasya SAKAviSezaH . yaTA, -- “devarAta | Body: 'tEttirIyA, strI, yajurvvedasya SAKAviSezaH' — fem. form of tEttirIya; BhAgavata ety
+vaMSajA       -> vaMSaja       | SKD: vaMSajA, strI, (vaMSe jAyate iti . jan + qaH + wAp .) vaMSarocanA . iti SabdaratnAvalI ..  | Body: 'vaMSajA, strI, (vaMSe jAyate + qaH + wAp) vaMSarocanA' — fem. noun with full gloss 
+vastukI       -> vAstukI       | SKD: vastukI, strI, (vastuka + gOrAditvAt NIz .) SvetacillISAkaH . iti rAjanirGaRwaH .. | strI; NIz on vastuka → vastukI (fem.). Distinct fem. form, not a misspelling of vAstukI.
+vigarhaRA     -> vigarhaRa     | SKD: vigarhaRA, strI, (vi + garha + Ric + yuc . wAp .) nindanam . Bartsanam . (yaTA, mahA- BAra | strI; vi+garha+Ric+yuc+wAp → vigarhaRA. Fem. action noun 'blame/censure'. Not a typo.
+DUmravarRA    -> DUmravarRa    | SKD: DUmravarRA, strI, (DUmraM varRamasyAH wAp .) agneH saptajihvAntargatajihvAviSezaH . iti ja | strI; one of Agni's seven tongues (from MuRqaka Up.). (DUmraM varRamasyAH+wAp) — own gloss
+GanAGanA      -> GanAGana      | SKD: GanAGanA, strI, (GanAGana + wAp .) kAkamAcI . iti SabdacandrikA .. | strI; (GanAGana+wAp) — feminine of GanAGana, glossed as kAkamAcI. Legitimate feminine form
+SItasahA      -> SItasaha      | SKD: SItasahA, strI, (SItasaha + wAp .) nIlasinDu- vAraH . vAsantI . iti rAjanirGaRwaH .. | strI; (SItasaha+wAp) — feminine of SItasaha, glossed as nIlasinDuvAraH etc. Legitimate fem
+janitA        -> janita        | SKD: janitA [f] puM, (janayatIti . jana + Ric + tfc . “janitA mantre .” 6 . 4 . 53 . iti nipAta | puM (masculine) entry: janitA = jana+Ric+tfc, nipAtanAt RilopaH, meaning pitA (father). Wh
+vivasvAn      -> vivasvan      | SKD: vivasvAn, [t] puM, (viSezeRa vaste AcCAdaya- tIti . vi + vas + kvip . vivastejo'syA- stIti | puM entry with [t] stem: vivasvAn = vivas+matup, nom. sg. vivasvAn; means sūrya. Correct n
+vAdI          -> vAdi          | SKD: vAdI, [n] tri, (vadatIti . vad + RiniH .) vaktA . (yaTA, manuH . 7 . 91 . “na ca hanyAt sT | tri; vad+RiniH → vAdIn- stem, nom. sg. vAdI. Adj. 'speaker/disputant'. Own derivation; dis
+brahmayonI    -> brahmayoni    | SKD: brahmayonI, stro, (brahmA yonirutpattikAraRaM yasyAH . striyAM pakze NIp .) kurukzetre sar | stro; striyAM pakze NIp → long -I. Fem. tīrtha name at Kurukṣetra. Not a typo.
+karowI        -> karowi        | SKD: karowI, strI, (karowa + gOrAditvAt NIz .) Si- ro'sTi . iti Barato dvirUpakozaSca .. | strI; karowa+gOrAditvAt NIz → karowI. Fem. form for 'skull bone'. Not a typo.
+sukftI        -> sukfti        | SKD: sukftI, [n] tri, (sukftamasyAstIti . iniH .) puRyavAn . ityamaraH . 3 . 1 . 3 .. SuBayukta | tri; sukfta+iniH → sukftIn- stem, nom. sg. sukftI. Adj. 'virtuous'. Own derivation; distin
+gORI          -> goRI          | SKD: gORI, strI, (guRaM sAdfSyamaDikftya pravfttA . guRa + aRa + striyAM NIp .) aSItiprakAra- l | Body derives gORI from guRa+aRa+NIp; glosses a rhetorical category based on guṇa-sādṛśya —
+gomI          -> goRI          | SKD: gomI, [n] tri, (gOrastyasya . “jyotsnA- tamisrASfNgiRorjasvinniti .” 5 . 2 . 114 . iti min | Body defines gomI as gomAn (cow-owner), śṛgāla (jackal), buddhabhikṣuśiṣya — completely un
+elabAlu       -> elavAlu       | SKD: elabAlu, klI, (elatIti . ila preraRe pacAdyac . wAp . eleva balate . bala prARane . bAhula | Own etymology (ila preraRe + bala prARane) supports elabAlu as distinct spelling; no varia
+aNgirA        -> aNgira        | SKD: aNgirA, [s] puM, (aNgati brahmaRo muKAnniHsarati agi gatO + as iras ca) muniviSezaH . sa c | Body defines muniviSezaH with etymology aNgati brahmaRo muKAt; aNgirA is standard masculin
+mAkarI        -> makarI        | SKD: mAkarI, strI, (makarayuktA pOrRamAsyatreti . makara + aR + NIz .) mAGaSuklasaptamI . atra  | strI; (makara+aR+NIz) — mAkarI is regularly derived 'relating to Capricorn/makara'; not a 
+bahukandA     -> bahukanda     | SKD: bahukandA, strI, (bahavaH kandA yasyAH .) karkawI . iti rAjanirGaRwaH .. | strI; (bahavaH kandA yasyAH) — feminine form with own gloss karkawI. Legitimate feminine.
+mAtfzvasrIyA  -> mAtfzvasrIya  | SKD: mAtfzvasrIyA, strI, (mAtfzvasrIya + wAp .) mAtfBaginIkanyA . ityamaraH . 2 . 6 . 25 . mAsi | strI; (mAtfzvasrIya+wAp) — regular feminine of the adj mAtfzvasrIya, glossed via Amara.
+mAyI          -> mayI          | SKD: mAyI, [n] puM, (mAyA'styasya . mAyA + “brIhyAdiByaSca .” 5 . 2 . 116 . iti iniH .) mAyAkAr | puM; (mAyA+iniH) — 'one possessing mAyA'. Entirely distinct derivation/meaning from mayI.
+maGavatI      -> mAGavatI      | SKD: maGavatI, strI, (maGavat + NIp . indrARI . iti mugDaboDavyAkaraRam .. | strI; (maGavat+NIp) — feminine of maGavat (Indra), = IndrARI. Regular derivation, not a ty
+prajYI        -> prAjYI        | SKD: prajYI, [n] tri, (prajYAstyasyeti . prajYA + iniH .) paRqitaH . iti BaratadvirUpakozaH .. | tri; (prajYA+iniH) — derived from prajYA (wisdom), meaning 'wise one'. Different base from
+prakzveqanA   -> prakzveqana   | SKD: {{pakzveqanA->prakzveqanA||20160503|Jim Funderburk|https://github.com/sanskrit-lexicon/COR | strI; (prakzveqana+wAp) — feminine of prakzveqana. Correction marker shows 'r' was restore
+pratAraRA     -> pratAraRa     | SKD: pratAraRA, strI, (pra + tF + Ric + yuc . wAp .) baYcanA . yaTA, -- “yadIcCasi vaSIkarttuM  | strI; (pra+tF+Ric+yuc+wAp) — feminine of pratAraRa, glossed as baYcanA. Legitimate feminin
+savyezWA      -> savyezWa      | SKD: savyezWA, [f] puM, (savye tizWatIti . sTA + “savye sTaSCandasi .” uRA0 2 . 102 . iti Canda | puM; (savye tizWatIti+sTA+Chandasi fH) — own etymology and gloss sAraTiH. Legitimate entry
+vAyusaKA      -> vAyusaKa      | SKD: vAyusaKA, [Ki] puM, (vAyuH saKA yasyeti vigrahe wajaBAvAt . “anaN sO .” 7 . 1 . 93 . iti a | puM; (vAyuH saKA yasyeti+anaNAdeSaH) — compound with special sandhi, glossed as agniH. Own
+vidDakarRA    -> vidDakarRa    | SKD: vidDakarRA, strI, vidDakarRI . iti BaratadvirUpa- kozaH .. | strI; redirects to vidDakarRI as feminine. Legitimate feminine headword.
+DarzitA       -> Darzita       | SKD: DarzitA, strI, (Dfzyate'sO . Dfza + ktaH . wAp .) asatI . iti SabdaratnAvalI .. | Feminine noun via Dfza+ktaH+wAp meaning 'unchaste woman.' The -A ending is the regular fem
+bahudugDA     -> bahudugDa     | SKD: bahudugDA, strI, (bahu dugDaM yasyAH .) bahukzIrA gOH . tatparyyAyaH . vyaYjulA 2 . iti he | Feminine of bahudugDa via wAp suffix; means 'cow with much milk.' Also a plant name. Regul
+carpawA       -> carpawa       | SKD: carpawA, strI, (carpawa + wAp .) BAdraSuklazazWI . cApaqAzazWI iti BAzA .. asyA vivaraRaM  | Feminine of carpawa via wAp; names BAdraSuklazazWI (a calendar festival). Regular feminine
+granTanA      -> granTana      | SKD: granTanA, strI, (granTa + BAve yuc . striyAM wAp .) granTanam . iti mugDaboDam .. | Feminine via granTa+yuc+wAp; meaning 'binding/composition,' synonym of neuter granTanam. R
+mahABogA      -> mahABoga      | SKD: mahABogA, strI, (mahAn ABogaH paripUrRa- tAsyAH . yadvA, mahAn BogaH suKarUpamasyAH .) dur | Feminine form: (1) epithet of Durga with derivation mahAn ABogaH; (2) adj. 'great-coiled.'
+siDmalA       -> siDmala       | SKD: siDmalA, strI, (siDmamasyA astIti . lac + wAp .) matsyavikftiH . iti medinI .. (OzaDaviSez | Feminine of siDmala via lac+wAp; means 'skin disease' and a medicinal plant. Regular femin
+smaraDvajA    -> smaraDvaja    | SKD: smaraDvajA, strI, (smarasya Dvajo garvvo yayA) jyotsnArAtriH . iti kecit .. | Feminine bahuvrIhi 'she whose banner is Smara'; means 'moonlit night.' Regular feminine vi
+sugahanA      -> sugahana      | SKD: sugahanA, strI, kumbA . sugahanetiviSezaRamiti kecit . nAma ityanye . ityamarawIkAyAM ramA | Plant name (kumbA/kumbhI); body notes it as viSezaRa or nAma. Regular feminine botanical t
+suganDikusumA -> suganDikusuma | SKD: suganDikusumA, strI, (suganDi kusumaM yasyAH .) pfkkA . iti jawADaraH .. | BahuvrIhi feminine 'having fragrant flowers'; identifies Prkka plant. Regular feminine for
+trimuKA       -> trimuKa       | SKD: trimuKA, strI, (trIRi muKAni yasyAH .) budDa- devatABedaH . sA mAyAdevI . tatparyyAyaH . m | Feminine bahuvrIhi 'three-faced'; a Buddhist goddess identified with Mayadevi. Regular fem
+vaSikA        -> vaSika        | SKD: vaSikA, strI, (vaSo vaSIkaraRaM sADyatvenAstyasyA iti . vaS + Wan .) aguruH . iti Sabda- c | Derives from vaS+Wan+wAp; means 'Aguru' (fragrant wood). Regular feminine form with own de
+vanatiktA     -> vanatikta     | SKD: vanatiktA, strI, (vanezu vanodBavezu maDye tiktA .) vanatiktikA . iti ratnamAlA .. | Feminine 'bitter forest plant'; synonym vanatiktikA. Regular feminine form; botanical name
+daRqI         -> daRqi         | SKD: daRqI, [n] puM, (daRqo'styasyeti . daRqa + “ata- iniWanO .” 5 . 2 . 115 . iti iniH .) jina | puM; (daRqa+iniH) — names the poet DaRqin. Own gloss and citation. Distinct real word.
+kzipaRI       -> kzipaRi       | SKD: kzipaRI, strI, (kzip + aniH NIz .) kzipaRiH . ityamarawIkAyAM BarataH .. | strI; (kzip+aniH+NIz) — feminine derivation. Redirects to kzipaRiH per Amara commentary.
+homI          -> homi          | SKD: homI, [n] puM, (homaH asyAtIti . in .) homakarttA . yaTA, tiTyAditattve . “tilodvarttI til | puM; (homaH asyAtIti+in) — 'one who performs homa'. Own etymology and citations.
+sTUrI         -> sTUri         | SKD: sTUrI, [n] puM, sAdfSyena sTUro vfzo'syAstIti . iniH .) KaravfzaBavat pfzWena BAravAhako'S | puM; complex etymology deriving sTUrI as a horse carrying loads on its back. Own distinct 
+kujJawI       -> kujJawi       | SKD: kujJawI, strI, (kujJawi + striyAM vA NIp .) kujJawiH . iti SabdaratnAvalI .. | Derives from kujJawi+NIp giving long-I; body gives kujJawiH as the base entry (redirect). 
+zaqgranTI     -> zaqgranTi     | SKD: zaqgranTI, strI, (zaw granTA yasyAH . NIz .) vacA . iti SabdaratnAvalI .. | Derives from zaw granTA yasyAH + NIz giving long-I; means 'having six knots'; identifies V
+hastI         -> hasti         | SKD: hastI, [n] puM, suhotrarAjaputtraH . yaTA . bfhat- kzattrasya suhotraH puttraH suhotrAdDas | Body defines hastI as a proper name (son of suhotra, builder of hastinapura) and a plant (
+kozI          -> koSI          | SKD: kozI, strI, (kuz + ac . gOrAditvAt NIz .) pAdukA . iti SabdaratnAvalI .. SuNgA . iti tAlav | Entry derives kozI from root kuz + ac + NIz (dental s throughout); distinct from koSI (pal
+hindolA       -> hindola       | SKD: hindolA, strI, (hindola + GaY + wAp .) dolikA . he~dalA iti BAzA . iti hArA- valI .. | Body derives hindolA via 'hindola + GaY + wAp'; feminine gloss dolikā — a legitimate femin
+kavAwI        -> kavawI        | SKD: kavAwI, strI, (kavAwa + alpArTe + NIp .) kapA- wam . ityamarawIkAyAM BarataH .. | Body derives kavAwI from kavAwa+alpArTe+NIp (diminutive); the long ā in kavAwa is inherite
+vyavahArI     -> vyAvahArI     | SKD: vyavahArI, [n] tri, (vyavahAro'syAstIti . iniH .) vyavahAraviSizwaH . vyavahAraSabdA- dast | Body explicitly derives from 'vyavahAro'syAstIti + iniH' (no vṛddhi of prefix); vyavahArI 
+AtmA          -> Atma          | SKD: AtmA, [n] puM, (atati santataBAvena jAgradAdi- sarvvAvasTAsu anuvarttate, ata sAtatyagaman | Body gives full multi-gloss entry (yatnaH, DftiH, brahma, etc.); AtmA is nom.sg. of ātman 
+krozwA        -> krozwa        | SKD: krozwA, [zwu] puM, strI, (kroSati rOtIti . kruS + “sitanigamimasIti” . uRAM 1 . 70 . iti t | Entry has [zwu] stem marker; tfjvat krozwuH confirms u-stem; krozwA is regular nom. sg. of
+kamitA        -> kAmitA        | SKD: kamitA, [f] tri, (kama + RiNaBAve tfc .) kA- mukaH . iyamaraH . 3 . 1 . 23 .. | tri entry: 'kama + RiNaBAve tfc' — agent of desiring (kAmukaH). Short 'a' is the root kama
+mahAvratI     -> mAhAvratI     | SKD: mahAvratI, [n] puM, (mahAvrataM yoganiyamAnuzWAnA- dikamasyAstIti . vrata + iniH .) SivaH  | puM entry: 'mahAvrataM ... iniH' — one who has mahāvrata; short 'a' compound is standard. 
+yaTAkAmI      -> yATAkAmI      | SKD: yaTAkAmI, [n] tri, (yaTA kAmayate iti . kAmi + RiniH . yadvA, kAmamanatikramya pravftti- r | tri entry: 'yaTA kAmayate ... RiniH' — acting as one wishes (svecCAcArI). Short 'a' in yaT
+BUkeSA        -> BUkeSa        | SKD: BUkeSA, strI, (BUkeSa + WAp .) rAkzasI . iti SabdaratnAvalI .. | Body derives 'BUkeSa + WAp' → BUkeSA; the long-A feminine of BUkeSa, a grammatically regul
+KaRqitA       -> KaRqita       | SKD: KaRqitA, strI, (KaRqita + wAp .) svIyAdi- nAyikAyA BedaH . asyA lakzaRam . anyopa- Bogacih | Body explicitly derives 'KaRqita + wAp' → KaRqitA; a defined nAyikA type (heroine-class), 
+ParParIkA     -> ParParIka     | SKD: ParParIkA, strI, (ParParIka + wAp .) pAdukA . (sPuratIti Ikan . wAp . manasi sPuraRA- deva | Body derives 'ParParIka + wAp' → ParParIkA; standard feminine formation with distinct glos
+SrapitA       -> Srapita       | SKD: SrapitA, strI, (Srapa + ktaH . wAp .) kAYjikam . iti kecit .. | Body derives 'Srapa + ktaH . wAp' → SrapitA; regular feminine of Srapita, glossed as kAYji
+aSvArohA      -> aSvAroha      | SKD: aSvArohA, strI, aSvaganDAvfkzaH . aSvavAhake tri . iti medinI .. (aSvaganDASabde'syAH guRA | Body defines aSvArohA as a plant (aSvaganDA vrksha) and as adjective (tri); a grammaticall
+badDaSiKA     -> badDaSiKa     | SKD: badDaSiKA, strI, (badDA SiKA yasyAH .) uccawA . iti medinI . Ke, 15 .. (badDA SiKA keSa- k | Body derives 'badDA SiKA yasyAH' → badDaSiKA; regular feminine with gloss uccawA and samba
+balajA        -> balaja        | SKD: balajA, strI, (balAt balakftasAhasayudDAdikAt jAyate yA . bala + jana + qa + wAp .) varayo | Body derives 'bala + jana + qa + wAp' → balajA; feminine meaning varayozA / yUTI, with ful
+caRqilA       -> caRqila       | SKD: caRqilA, strI, (caRqila + striyAM wAp .) nadI- BedaH . ityuRAdikozaH .. | Body derives 'caRqila + striyAM wAp' → caRqilA; feminine river-name (nadIBedaH) from uRAdi
+candracaYcalA -> candracaYcala | SKD: candracaYcalA, strI, (candra iva calajjalasTacandravat caYcalA .) candrakamatsyaH . iti Sa | Body derives 'candra iva caYcalA' → candracaYcalA; feminine noun (candrakamatsya) with ful
+dUzitA        -> dUzita        | SKD: dUzitA, strI, (dUzita + wAp .) dUzaRaprAptA kanyA . tatparyyAyaH . sasvedA 2 DarzakAriRI 3 | Body derives 'dUzita + wAp' → dUzitA; a defined nAyikA subtype (dUzaRaprAptA kanyA) with s
+himavatsutA   -> himavatsuta   | SKD: himavatsutA, strI, (himavataH sutA .) gaNgA . iti DanaYjayaH .. (yaTA, mahABArate . 3 . 10 | Body derives 'himavataH sutA' → himavatsutA; glossed as Ganga and Uma; regular feminine co
+kaRerA        -> kaRera        | SKD: kaRerA, strI, (kaRa + erazwAp ca .) veSyA . hastinI . ityuRAdikozaH .. | Body derives 'kaRa + erazwAp ca' → kaRerA; glossed as veSyA and hastinI from uRAdikoza; re
+kiNkirA       -> kiNkira       | SKD: kiNkirA, strI, (kiYcit kutsitaM vA kirati SarI- rAt niHsarati . kiM + kF + kaH wAp ca .) r | Body derives 'kiM + kF + kaH wAp ca' → kiNkirA; feminine gloss raktam from sArasvata; full
+kurasA        -> kurasa        | SKD: kurasA, strI, (kutsitaH Izat vA raso yasyAH .) gojihvA latA . iti SabdacandrikA .. | Body derives 'kutsitaH Izat vA raso yasyAH' → kurasA; feminine plant name (gojihvA latA) f
+kzIrAbDijA    -> kzIrAbDija    | SKD: kzIrAbDijA, strI, (kzIrAbDija + wAp .) lakzmIH . iti medinI .. (yaTA, BAgavate 8 . 8 . 8 . | Body derives 'kzIrAbDija + wAp' → kzIrAbDijA; goddess Lakshmi from the milk-ocean; regular
+kzipakA       -> kzipaka       | SKD: kzipakA, strI, (kzip + kan + wAp ato netvam . “na yAsayoH” . 7 . 3 . 45 . ityasya vArttike | Body derives 'kzip + kan + wAp' → kzipakA; feminine grammatical form (kzepaRam) with Panin
+labDA         -> labDa         | SKD: labDA, strI, (laB + ktaH . wApa .) nAyikA- BedaH . yaTA, -- “KaRqitotkaRWitA labDA taTA pr | Body derives 'laB + ktaH . wApa' → labDA; a nAyikA type (heroine who has attained her love
+masUrA        -> masUra        | SKD: masUrA, strI, (masyati pariRamatIti . mas + Uran . striyAM wAp .) veSyA . masUrakalAyaH .  | Body derives 'mas + Uran . striyAM wAp' → masUrA; feminine glossed as veSyA and masUrakalA
+narakasTA     -> narakasTa     | SKD: narakasTA, strI, (narake tizWatIti . sTA + “supi sTaH .” 3 . 2 . 4 . iti kaH .) vEtaraRI n | Body derives 'sTA + kaH' → narakasTA; a river name (vEtaraRI) and adjective 'staying in he
+nityayOvanA   -> nityayOvana   | SKD: nityayOvanA, strI, (nityaM sTiraM yOvanaM yasyAH .) drOpadI . iti hemacandraH . 3 . 374 .. | Body: strI; defines Draupadi and 'stable-youth' adj. Feminine form of nityayOvana, own hea
+pUtiganDikA   -> pUtiganDika   | SKD: pUtiganDikA, strI, (pUtiganDo'styasyA iti . pUtiganDa + Wan .) vAkucI . iti rAja- nirGaRwa | Body: strI, derives pUtiganDa+Wan, defines vAkucI (a plant). Genuine feminine form.
+padmalAYCanA  -> padmalAYCana  | SKD: padmalAYCanA, strI, (padmaM lAYCanaM yasyAH .) tArA . lakzmIH . svarasvatI . iti medinI .. | Body: strI; defines Tara/Lakshmi/Sarasvati. Legitimate Sanskrit feminine headword.
+piRqilA       -> piRqila       | SKD: piRqilA, strI, (piRqila + wAp .) goqumbA . iti SabdacandrikA .. | Body: strI, derives piRqila+wAp, defines goqumbA. Feminine form, own entry.
+premA         -> prema         | SKD: premA, [n] puM, (priya + imanic . prI tarpaRe + manin vA .) snehaH . ityamaraH . 1 . 7 . 2 | Body: puM (masculine); defines snehaH, cites Amara. premA = nom.sg. of preman, genuine mas
+puzpahInA     -> puzpahIna     | SKD: puzpahInA, strI, (puzpeRa hInA .) uqumbara- vfkzaH . iti SabdacandrikA .. nizkalA . rajaH- | Body: strI; defines uqumbaravfkza and nizkalA. Feminine form, own headword.
+sahasraBujA   -> sahasraBuja   | SKD: sahasraBujA, strI, (sahasaM BujA yasyAH .) mahA- lakzmIH . sA ca mahizAsuramarddinI . yaTA | Body: strI; defines MahaLakshmi (thousand-armed goddess). Genuine feminine proper noun.
+sindUratilakA -> sindUratilaka | SKD: sindUratilakA, strI, (sindUrasya tilako yasyAH .) sADavA nArI . iti modanI .. | Body: strI; defines sADavA nArI (married woman). Feminine form, own headword.
+suSAntA       -> suSAnta       | SKD: suSAntA, strI, SaSiDvajarAjapatnI . yaTA, kalkipurARe 22 aDyAye . “SaSiDvajo mahAtejA gajA | Body: strI; defines wife of SaSidhvaja (proper name). Legitimate feminine headword.
+suhitA        -> suhita        | SKD: suhitA, strI, (su + DA + ktaH . wAp .) agni- jihvAviSezaH . iti jawADaraH .. | Body: strI, derives su+DA+kta+wAp, defines agni-jihvAviSezaH. Feminine form, own entry.
+suvidallA     -> suvidalla     | SKD: suvidallA, strI, UQA nArI . ityamare sOvidalla- SabdawIkAyAM rAyamukuwaH .. | Body: strI; defines UQA nArI (married woman). Feminine form, own headword.
+tAmravfntA    -> tAmravfnta    | SKD: tAmravfntA, strI, (tAmramiva raktavarRaM vfntamasyAH iti wAp .) kulatTikA . iti hemacandra | Body: strI, derives tAmra+vfnta+wAp, defines kulatTikA. Feminine form, own entry.
+takilA        -> takila        | SKD: takilA, strI, (takila + wAp .) OzaDam . ityuRAdikozaH .. | Body: strI, derives takila+wAp, defines OzaDam (medicine). Feminine form, own headword.
+tapanatanayA  -> tapanatanaya  | SKD: tapanatanayA, strI, (tapanastApako vahnistanayo yasyAH . vahnigarBatvAdasyAstaTAtvam .) Sa | Body: strI; defines SamI-tree and Yamuna river. Genuine feminine headword with two senses.
+utkaRWitA     -> utkaRWita     | SKD: utkaRWitA, strI, (utkaRWA saYjAtAsyAH . utkaRWA + itac + wAp .) svIyAdinAyikABedaH . asyAH | Body: strI; defines a nAyikA type (heroine longing for lover). Feminine form, own headword
+vahnigarBA    -> vahnigarBa    | SKD: vahnigarBA, strI, (vahniragnirgarBe yasyAH .) SamI- vfkzaH . iti SabdacandrikA .. | Body: strI; defines SamI-tree (fire-womb plant). Feminine form, own headword.
+vijAtA        -> vijAta        | SKD: vijAtA, strI, (viSezeRa jAtaH puttro yasyAH .) jAtApatyA . yaTA, -- “vijAtA ca prajAtA ca  | Body: strI; defines jAtApatyA (woman who has given birth). Feminine form, own headword.
+vipralabDA    -> vipralabDa    | SKD: vipralabDA, strI, (viSezeRa pralabDA pratAritA .) svIyAdinAyikABedaH . tasyA lakzaRaM yaTA | Body: strI; defines deceived nAyikA type with laksana. Feminine form, own headword.
+vizAsyA       -> vizAsya       | SKD: vizAsyA, strI, BallAtakaH . iti SabdacandrikA .. (BallAtakaSabde'syA vizayo vijYeyaH ..) | Body: strI; defines BallAtakaH (marking nut). Feminine form, own headword.
+vraRahA       -> vraRaha       | SKD: vraRahA, strI, (vraRaM hantIti . hana + qaH . striyAM wAp .) guqucI . iti SabdacandrikA .. | Body: strI, derives hana+qa+wAp, defines guqucI. Feminine form, own headword.
+ASaMsitA      -> ASaMsita      | SKD: ASaMsitA, [f] tri, (AN + Sansa + tfc .) ASaMsAkarttA .. AkANkzASIlaH . ityamaraH .. | Body: [f] tri (adj); defines ASaMsAkarttA (one who desires). Trilinear adjective, own head
+arkapatrA     -> arkapatra     | SKD: arkapatrA, strI, (arkaH sUryyEva tIkzRaM patraM yasyAH sA .) vfkzaviSezaH . iSera mUla iti | Body: strI; defines a plant (iSera mUla). Feminine form, own headword.
+dIpitA        -> dIpita        | SKD: dIpitA, [f] tri, (dIpayatIti . dIpa + Ric + tfc .) dIptikarttA . iti vyAkaraRam .. | Body: [f] tri; defines dIptikarttA. Trilinear adj from dIpa+Ric+tfc, own headword.
+daridritA     -> daridrita     | SKD: daridritA, [f] tri, (daridrA + tfc .) dari- drAyakaH . daridrADAtoH karttari tfnpratyayaH  | Body: [f] tri; defines daridrAyakaH. Adj derived daridrA+tfc, own headword.
+ganDapatrA    -> ganDapatra    | SKD: ganDapatrA, strI, (ganDAQyaM patramasyAH .) SawIBedaH . palASa iti mAlave prasidDA . tatpa | Body: strI; defines SawIBedaH plant with many synonyms. Genuine feminine headword.
+guruhA        -> guruha        | SKD: guruhA, [n] puM, (guruM hanti iti . han + kvip .) guruGnaH . tatparyyAyaH . narakIlakaH 2  | Body: puM; derives han+kvip, defines guruGnaH. guruhA = nom.sg. of guruhan (masc.), not a 
+jakzmA        -> jakzma        | SKD: jakzmA, [n] puM, (jakziti Bakzayati SarIraM nASayatItyarTaH . jakza + “sarvvaDAtuByo manin | Body: puM; derives jakza+manin, defines yakzmarogaH. jakzmA = nom.sg. of jakzman, genuine 
+kUlaNkazA     -> kUlaNkaza     | SKD: kUlaNkazA, strI, (kUlaNkaza + wAp .) nadI . iti halAyuDaH .. (yaTA, SAkuntale 5 mANke . “v | Body: strI; defines nadI (river), cited in Shakuntala. Feminine form, own headword.
+kalaNkazA     -> kalaNkaza     | SKD: kalaNkazA, strI, (kalaNkaza + wAp .) karatAlI . iti SabdaratnAvalI .. | Body: strI; defines karatAlI (cymbal). Feminine form, own headword.
+lakzitA       -> lakzita       | SKD: lakzitA, strI, (lakza + ktaH . striyAM wAp .) parakIyAntargatanAyikABedaH . asyA lakzaRam  | Body: strI; defines parakIyAntargata nAyikA type (cunning heroine). Feminine form, own hea
+oNkArA        -> oNkAra        | SKD: oNkArA, strI, budDaSaktiviSezaH . iti trikARqaSezaH .. | Body: 'oNkArA, strI' — explicit feminine form (long A = strī); a distinct Buddhist śakti c
+palaNkazA     -> palaNkaza     | SKD: palaNkazA, strI, (palaNkaz + wAp .) gokzurakaH . rAsnA . gugguluH . kiMSukaH . muRqIrI . l | Body: 'palaNkazA, strI, (palaNkaz + wAp .)' — regular feminine via tāp suffix; long A is t
+paraBuktA     -> paraBukta     | SKD: paraBuktA, strI, (pareRa parapuruzeRa BuktA .) anya- puruzasamBogaviSizwA . yaTA, -- “para | Body: 'paraBuktA, strI, (pareRa ... BuktA .)' — feminine agent meaning 'woman enjoyed by a
+pulAkI        -> pulakI        | SKD: pulAkI, [n] puM, (pulAkaH kzipratA vfdDO vizaye astyasyeti . pulAka + iniH .) vfkzaH . iti | Body: 'pulAkI, puM, (pulAka + iniH .)' — iniH on pulAka giving pulAkI; long A is in the ba
+purandarA     -> purandara     | SKD: purandarA, strI, (puraM dArayati pravAhEriti . dAri + Kac . nipAtanAt sADuH . tatazwAp .)  | Body: 'purandarA, strI, (puraM dArayati ... tatazwAp .)' — feminine via tAp = Gaṅgā; disti
+satyasanDA    -> satyasanDa    | SKD: satyasanDA, strI, (satye sanDABisanDiryasyAH .) drOpadI . iti SabdaratnAvalI .. | Body: 'satyasanDA, strI, (satye sanDABisanDiryasyAH .)' — feminine form glossed as Draupad
+tazwA         -> tazwa         | SKD: tazwA, [f] puM, (takzakArSye + tfc pfzodarAt kalope sADuH .) tvazwA . CutAra iti BAzA . vi | Body: 'tazwA, [f] puM, (takzakArSye + tfc .)' — agentive tṛc noun = Viśvakarman/Tvaṣṭṛ; di
+upataptA      -> upatapta      | SKD: upataptA, [f] puM, (upa + tap + tfc .) upatApaka- mAtram . tatparyyAyaH . sparSaH 2 sprazw | Body: 'upataptA, [f] puM, (upa + tap + tfc .)' — agentive tṛc noun = 'one who heats'; dist
+utpatitA      -> utpatita      | SKD: utpatitA, [f] tri, (ut + pat + tfc .) UrdDva- gamanaSIlaH . uparigamanakarttA ityamaraH .. | Body: 'utpatitA, [f] tri, (ut + pat + tfc .) UrdDvagamanaSIlaH' — agentive tṛc = 'one who 
+viSastA       -> viSasta       | SKD: viSastA, [f] puM, (vi + Sasa hiMsAyAm + tfc .) cARqAlaH . iti saMkziptasAroRAdi- vfttiH .. | Body: 'viSastA, [f] puM, (vi + Sasa + tfc .) cARqAlaH' — agentive tṛc = slaughterer/cāṇḍāl
+vihaNgamA     -> vihaNgama     | SKD: vihaNgamA, strI, BArayazwiH . iti SabdaratnAvalI .. vA~ka iti BAzA .. | Body: 'vihaNgamA, strI, BArayazwiH' — feminine form = a specific staff/rod; distinct femin
+viraktA       -> virakta       | SKD: viraktA, strI, durBagA . iti trikARqaSezaH .. ananukUlA . yaTA, nItiSatake . 1 . “yAM cint | Body: 'viraktA, strI, durBagA' — feminine = unlucky/averse woman; verse uses 'sA viraktA';
+yUnI          -> yUni          | SKD: yUnI, strI, (yuvan + NIz . “SvayuvamaGonAma- tadDite .” 6 . 4 . 133 . iti vasya utvam .) y | Body derives yUnI from 'yuvan + NIz' giving yuvatī; an ī-stem feminine headword, not a loc
+antevAsI      -> antevAsi      | SKD: antevAsI, [n] puM, (ante vidyAmaDyetumaDyApaka- samIpe vasati . caRqAlapakze tu nIcajAtita | Derives from anta+vas+Rini; nom. sg. of Rini-suffix gives long-I. Means 'pupil/disciple.' 
+jitakASI      -> jitakASi      | SKD: jitakASI [n] tri, (jitena jayena kASate iti . kASa + RiniH .) jayayuktaH . tat- paryyAyaH  | Derives from kASa+RiniH; Rini suffix gives long-I nom. sg. Means 'victorious.' Cited in Ha
+kzvelI        -> kzveli        | SKD: kzvelI, strI, (kzvela + gOrAditvAt NIz .) krIqA . yaTA, SrIBAgavate . 10 . 29 . 46 . “bAhu | Derives from kzvela+gOrAditvAt NIz giving long-I. Body notes kzvelya is the erroneous form
+maRIva        -> maRiva        | SKD: maRIva, vya, maRitulyam . maRiSabdena saha iva- Sabdasya zazWItatpuruzasamAsaH . praTamAdv | Avyaya 'like a jewel'; long-I due to sasthI-tatpurusa of maRi+iva. Siddhantakaumudi explic
+mantrI        -> mantri        | SKD: mantrI, [n] puM, (mantro guptaBAzaRamasyAsti . mantra + iniH . yadbA, mantrayate iti . man | Standard word for 'minister/counsellor'; derives from mantra+iniH/RiniH giving long-I nom.
+nandakI       -> nandaki       | SKD: nandakI, [n] puM, (nandrakaH Kaqgo'styasyeti . nandaka + iniH .) vizRuH . yaTA, -- “SaNKaB | Derives from nandaka+iniH giving long-I nom. sg.; epithet of Vishnu (his sword). Cited in 
+nizkalI       -> nizkali       | SKD: nizkalI, strI, (nizkala + NIz .) ftuhInA . nivfttarajaskA . iti SabdaratnAvalI .. | Derives from nizkala+NIz giving long-I. Means 'woman past menstruation.' Attested in Sabda
+somapItI      -> somapIti      | SKD: somapItI, [n] puM, (somasya pItaM pAnamasyA- stIti . iniH .) somapaH . ityamaraH . 2 . 7 . | Derives with iniH suffix giving long-I; means 'soma-drinker.' Body notes variant somapITI 
+vAravARI      -> vAravARi      | SKD: vAravARI, strI, (vAravARi + pakze NIz .) vAra- muKyA . iti SabdaratnAvalI .. | Derives from vAravARi+NIz giving long-I; means 'courtesan.' Attested in Sabdaratnavali.
+PelI          -> Peli          | SKD: PelI, strI, (Peli + “kfdikArAdaktinaH .” iti pakze NIz .) BuktasamujJitam . iti Sabda- rat | Body: 'PelI, strI, (Peli + NIz .) BuktasamujJitam' — NIz suffix on Peli gives long I; dist
+jANgalI       -> jANgali       | SKD: jANgalI, strI, (jaNgale BavA . jaNgala + aR . tato NIp .) SUkaSimbI . iti . medinI . le, 9 | Body: 'jANgalI, strI, (jaNgala + aR . tato NIp .)' — NIp suffix gives long I; regular femi
+mocI          -> moci          | SKD: mocI, strI, (mucyate rogo yayeti . muc + GaY . NIz .) hilamocikA . iti ratnamAlA .. (vivft | Body: 'mocI, strI, (muc + GaY . NIz .)' — NIz suffix gives long I; hilamocikā plant; disti
+pAkalI        -> pAkali        | SKD: pAkalI, strI, (pAkali + NIz .) karkawI . iti SabdamAlA .. | Body: 'pAkalI, strI, (pAkali + NIz .) karkawI' — NIz suffix on pAkali gives long I; regula
+sattrI        -> sattri        | SKD: sattrI, [n] puM, (sattramastyasyeti . iniH .) gfhapatiH . ityamaraH .. dve gfhasTe . sattr | Body: 'sattrI, puM, (sattramastyasyeti . iniH .)' — iniH on sattra = one who perpetually g
+tintilIkA     -> tintilikA     | SKD: tintilIkA, strI, (tintiqIkA . qasya latvam .) tintiqI . ityamarawIkA .. | Body: '(tintiqIkA . qasya latvam .)' — long I in tintilIkA comes from tintiqIkA by q→l; do
+vadantI       -> vadanti       | SKD: vadantI, strI, (vad + “vadeSca .” ityujjnala- dattoktyA JicpratyayaH . 3 . 50 .. kfdi- kAr | Body: 'vadantI, strI, (vad + JicpratyayaH ... NIz .) kaTA' — NIz on Jic-derived form gives
+varRI         -> varRi         | SKD: varRI, [n] puM, (varRA akzarARi leKyatvena santya- syeti . varRa + iniH .) leKakaH . (varR | Body: 'varRI, puM, (varRa + iniH .)' — iniH on varṇa gives varRI = writer/painter/brahmaca
+varRatUlI     -> varRatUli     | SKD: varRatUlI, strI, (varRAnAM tUlIva .) leKanI . iti trikARqaSezaH .. | Body: 'varRatUlI, strI, (varRAnAM tUlIva .) leKanI' — feminine compound = pen; long I is t
+masiDAnI      -> masIDAnI      | SKD: masiDAnI, strI, (maserDAnI .) masyADAraH . doyAti iti BAzA .. tatparyyAyaH . masimaRiH 2 m | Body headword is masiDAnI (short i in masi); body confirms this form: '(maserDAnI .)' — th
+yogI          -> yogi          | SKD: yogI, [n] puM, (yogaH astyasyeti . yoga + iniH . yadbA, yuja samADO . yujir yoge vA + “saM | Body: 'yogI, puM, (yoga + iniH .)' — standard iniH derivation = one engaged in yoga; entir
+kolanASikA    -> kolanAsikA    | SKD: kolanASikA, strI, (kolasya SUkarasya nASikA nASinI . naS + Rvul wAp ata itvam .) vaNkiRIvf | Body derives from naS+Rvul = 'destroyer of boar's snout.' nASikA from naS is distinct from
+brahmavadyA   -> brahmavaDyA   | SKD: brahmavadyA, tri, (brahmaRA vedena udyate yA . “vadaH supi kyap ca .” 3 . 1 . 106 . iti ka | Derives from vad+kyap+wAp = 'speech/narrative of brahman'; completely distinct from brahma
+sanDAnikA     -> sandAnikA     | SKD: sanDAnikA, strI, (sanDAnamastyasyA iti sanDAna + Wan .) KAdyadravyaviSezaH . AcAra iti BAz | Body: 'sanDAnikA, strI, (sanDAna + Wan .)' — retroflex D (Dh) in sanDAnikA confirmed by et
+row           -> rOw           | SKD: row, [z] tri, (ruz + “anyeByo'pi dfSyante .” 3 . 2 . 75 . iti vic .) hiMsraH . vaDakaH . r | Body: 'row, tri, (ruz + vic .) hiMsraH . vaDakaH' — agentive vic-derivative from root ruz 
+CowI          -> cowI          | SKD: CowI [n] puM, (Cuwati nIcajAtitayA svalpI- BavatIti . Cuwa + RiniH .) kEvarttaH . iti trik | Body derives CowI from 'Cuwa + RiniH' (capital C = ch, capital Uw); kaivartta gloss fits; 
+sfPa          -> sfpa          | SKD: sfPa, u hiMse . iti kavikalpadrumaH .. (BvA0-para- saka0-sew . kvAvew .) saptamasvarI . u, | Body records sfPa as a verbal root (BvA0, u hiMse); capital P = aspirated retroflex ph, ma
+jarI          -> JarI          | SKD: jarI, [n] tri, (jarAstyasyeti . jarA + iniH .) vfdDaH . iti hemacandraH . 3 . 4 .. | Body derives jarI from 'jarA + iniH' meaning vfdDaH (old); j≠J (ja vs jha); jarI from jarA
+kaSerukA      -> kazerukA      | SKD: kaSerukA, strI, (kaSeru + svArTe kan wAp ca .) pfzWAsTi . iti ratnamAlA . piwera dA~qA iti | Body derives from 'kaSeru + kan + wAp'; kaSeru has palatal ś (capital S), making kaSerukA 
+viSayI        -> vizayI        | SKD: viSayI, [n] tri, (viSayo'styasyeti . viSaza + iniH .) saMSayI . iti viSayaSabdArTadarSa- n | Body derives viSayI from 'viSaza + iniH' glossing as saMSayI (doubtful); S≠z, entirely dif
+AmrapezI      -> AmrapeSI      | SKD: AmrapezI, strI, (Amrasya pezI .) SuzkAmraKaRqaM . AmzI iti BAzA . asyA guRAH . amlatvaM .  | Body derives from 'Amrasya pezI' (mango-piece) with retroflex z throughout; pezI is a cons
+melAnandA     -> melAmandA     | SKD: melAnandA, strI, (melayA masyA AnandI yasyAH .) masyADAraH . iti hArAvalI .. | Body derivation 'masyA AnandI yasyAH' uses AnandI (with n), supporting the suspect form me
+mut           -> muw           | SKD: mut, strI, (modate'nayA iti . mud + kvip .) vfdDinAmOzaDam . iti rAjanirGaRwaH .. || mut,  | Body derives from 'mud + kvip' → dental t; two entries both support mut; muw (retroflex) i
+nAkI          -> mAkI          | SKD: nAkI, [n] puM, (nAkaH svargo vAsasTAnatvenA- styasyeti . nAka + iniH .) devatA . iti hemac | Body derives from 'nAka + iniH' (heaven-dweller = deity); completely different etymology f
+vyAvaBAsI     -> vyAvaBAzI     | SKD: vyAvaBAsI, strI, (vi + ava + BAsa + Rac . svArTe aY . NIp .) vyAvakroSI . ityamara- wIkAyA | Body derivation 'vi + ava + BAsa + Rac' supports BAs (palatal s); the suspect vyAvaBAsI is
+waNgiRI       -> waNginI       | SKD: waNgiRI, strI, (waki banDe + RiniH . tataH pfzo- darAt Ratve NIzi ca sADuH .) vfkzaviSezaH | Body derivation 'waki banDe + RiniH... Ratve NIzi ca sADuH' explicitly justifies retroflex
+gahanA        -> gahana        | SKD: gahanA, strI, alaNkAraH . iti devIpurARam .. | Body: strI, alaNkAraH (a figure of speech). Own gloss distinct from gahana (dense/thicket)
+muzalI        -> musalI        | SKD: muzalI, strI, (muzyata iti . muz + kalaH NIz .) tAlamUlikA . gfhagoDikA . iti Sabda- ratnA | Body: muz+kala+NIz = tAlamUlikA/gfhagoDikA; own derivation from muz root, own gloss. May b
+prasaraRI     -> prasAraRI     | SKD: prasaraRI, strI, (pra + sf + “arttisfGrityaniH .” iti aniH . kfdikAditi vA NIz .) prasa- r | Body: 'prasaraRI, strI, (pra + sf + aniH)' — aniH suffix gives short-a form; 'kfdikAditi v
+BUvadarI      -> BUbadarI      | SKD: BUvadarI, strI, (BUlagnA vadarI SAkapArTivAdivat samAsaH .) kzudrakolI . Jaqavera iti hind | Own etymology (BUlagnA vadarI); BU+vadarI compound distinct from BU+badarI; no variant not
+vipAw         -> vipaw         | SKD: vipAw, [S] strI, vipASAnadI . ityamaraH .. (yaTA, fgvede . 3 . 33 . 1 . “gAveva SuBre mAta | Body: 'vipAw, strI, vipASAnadI' with etymology 'vipAw pawagatO' — defined as the Vipāś riv
+vAzpIkA       -> vAzpikA       | SKD: vAzpIkA, strI, hiNgupatrI . iti rAjanirGaRwaH .. rA~DunI iti KyAtaSca . asya guRAH . kawu- | Body defines vAzpIkA as hiNgupatrI / rA~DunI with properties; long ī vs short i — full ind
+Sik           -> SIk           | SKD: Sik, [c] strI, Sikyam . iti SabdaratnA- valI .. | Entry: 'Sik = Sikyam' (a sling/net). Short 'i' vs long 'I' — body treats Sik as real headw
+manohAri      -> manohArI      | SKD: manohAri, [n] tri, (mano harati mano harttuM SIlamasyeti vA . hf + RiniH .) manoharam . it | Entry listed as tri (adj.); derives from hf+RiniH but compound adj. can surface as short-i
+viSvak        -> vizvak        | SKD: viSvak, vya, sarvvataH . ityamarawIkA .. | Body glosses 'sarvvataH' (in all directions); viSvak (ś) is the standard form from viSva (
+sUtrabIRA     -> sUtravIRA     | SKD: sUtrabIRA, strI, (sUtrabadDA bIRA .) bIRA- BedaH . tatparyyAyaH . lAvukI 2 . iti hArA- val | Body uses bIRA consistently in headword and derivation 'sUtrabadDA bIRA'; SKD records this
+
+# ===== BUCKET 5  INTENTIONAL -- SKD documents the spelling on purpose; NEVER file (103) =====
+rAjA          -> rAja          | SKD: rAjA, [n] puM, (rAjate SoBate iti . rAj + “kaRin yuvfzitakzirAjIti .” uRA0 1 . 156 . iti k | Body: puM, derives rAjA via kaRin suffix (uRA0 156). Nominative sg of masc rAja — document
+yud           -> yuD           | SKD: yud, [D] strI, (yoDanamiti . yuD + kvip .) yudDam . ityamaraH . 2 . 8 . 106 .. (yaTA, rAmA | Body: strI, = yuDDam (war) from yuD+kvip. kvip-derived form of root yuD; yud is the correc
+maGavAn       -> maGavan       | SKD: maGavAn, [t] puM, (BaGavat . “maGavA bahulam .” 6 . 4 . 128 . iti pakze tf-AdeSaH . f it . | Body cites Paninian rule 6.4.128 for tf-AdeSa giving nominative maGavAn from stem maGavan.
+SaraRyA       -> SaraRya       | SKD: SaraRyA, strI, (SaraRya + wAp .) durgA . yaTA, -- “vizAgniBayaGorezu SaraRyaM smaraRAdyata | Body: SaraRya + wAp = strI, durgA. Feminine of SaraRya formed by wAp suffix; own entry for
+aDamA         -> aDama         | SKD: aDamA, strI, (aDama + striyAM wAp .) svIyAdyanta- rgatanAyikABedaH . asyA lakzaRaM . hitak | Body: aDama + striyAM wAp = a type of nAyikA. Grammatical feminine with specialised poetic
+daRqakA       -> daRqaka       | SKD: daRqakA, strI, (daRqaka + strIliNgatvAdatra wAp .) janasTAnam . daRqakAraRyam . iti jawADa | Body: daRqaka + wAp = janasTAnam, daRqakAraRyam — documented proper-name feminine; Rāmāyaṇ
+duzwA         -> duzwa         | SKD: duzwA, strI, (duzyati sma yonidozeReti . duz + kta + wAp .) puMScalI . iti SabdaratnAvalI  | Body: duz+kta+wAp = puMScalI. Grammatical feminine with wAp; documented derivation.
+kacA          -> kaca          | SKD: kacA, strI, (kacyate ruDyate lOhaSfNKalAdiBiriti yadvA kacate SoBate rAjagfhe iti .) kaca  | Body: kac+ac+wAp = hastinI (female elephant). Grammatical feminine with wAp.
+puzyA         -> puzya         | SKD: puzyA, strI, (puzRAti kAryyARIti . puz + kyap yat vA . nipAtanAt sADuH . tatazwAp .) puzya | Body: puz+kyap+wAp = puzyaNakzatram. Grammatical feminine of puzya used as the nakṣatra na
+udvahA        -> udvaha        | SKD: udvahA, strI, (udvaha + wAp .) kanyA . puttrI . iti hemacandraH .. | Body: udvaha+wAp = kanyA/puttrI. Grammatical feminine with wAp; hemacandra cited.
+nABI          -> nABi          | SKD: nABI, strI, (nABi + vA NIz .) nABiH . iti SabdaratnAvalI .. (yaTA, AryyAsaptaSatyAm . 608  | Body derives nABI via 'nABi + vA NIz' and glosses nABiH — documented optional-suffix varia
+yuza          -> yUza          | SKD: yuza, Bajane . iti kavikalpadrumaH .. sOtraDAtu- rayam . (para0-saka0-sew .) yozit yuzmad  | Body: verbal root entry sOtraDAtu, para0-saka0-sew, = to sprinkle. yUza = broth/soup. yuza
+misra         -> miSra         | SKD: misra t ka yutyAm . iti kavikalpadrumaH .. (curA0- para0-saka0-sew .) tAlavyamaDyo'yam . d | Body: verbal root entry curA0-para0-saka0-sew, dental s explicitly noted ('dantya-maDya').
+Guqa          -> guqa          | SKD: Guqa, Si vyAGAte . iti kavikalpadrumaH .. (tudA- paraM-sakaM-sew .) Si, Guqati aGuqIt . it | Body: verbal root entry tudA-paraM-sakaM-sew = to injure. guqa = jaggery. Guqa (aspirate G
+RATa          -> nATa          | SKD: RATa, f Na ASizi . davESye'rTe . iti kavi- kalpadrumaH .. (BvAM-AtmaM-sakaM-akaM ca-sew .) | Body: verbal root BvAM-AtmaM entry = to torment/pray. nATa = actor. RATa (retroflex R) is 
+bAlukA        -> vAlukA        | SKD: bA(vA)lukA, strI, (bAluka + wAp .) reRuviSezaH . bAli iti BAzA . tatparyyAyaH . sikatA 2 s | Entry headword is bA(vA)lukA — the dict explicitly documents BOTH spellings bAlukA and vAl
+vijitA        -> vijita        | SKD: vijitA, [f] tri, (vija + tfc .) pfTak . BItaH . kampitaH . rati vijaDAtvarTadarSanAt .. | Body: tri0 adj, strI form vijitA = regular wAp feminine of vijita (frightened). Grammatica
+karpAsI       -> kArpAsI       | SKD: karpAsI, strI, (karpAsa iti jAtitvAt gOrA- ditvAt vA NIz .) kArpAsI . iti BarataH .. kApAs | Body defines karpAsI as = kArpAsI (the suggestion); it is a documented variant/redirect, n
+dfSI          -> dfSi          | SKD: dfSI, strI, (dfSyate'nayeti . dfS + in . sa ca kit . vA NIz .) cakzuH . iti Sabda- ratnAva | Body: dfS+in+NIz; long-I variant explicitly documented. Both dfSi and dfSI are listed; NIz
+navatI        -> navati        | SKD: navatI, strI, (navatiH + kfdikArAditi vA NIz .) navatiH . iti SabdaratnAvalI .. | Body: navatiH + kfdikArAditi vA NIz — long-I form explicitly a documented optional (vA) de
+kOzikI        -> kOSikI        | SKD: kOzikI, strI, (kOSikI + pfzodarAt zakArA- deSaH .) kOSikI . iti medinI .. kAlikA- kAyakoza | Body explicitly: kOSikI + pfzodarAt zakArAdesaH = kOzikI — phonological S→z substitution d
+vimbI         -> bimbI         | SKD: vi(bi)mbI, strI, (vimba + gOrAditvAt NIz .) bimbikA . iti SabdaratnAvalI .. (yaTA, -- “kAk | Body header 'vi(bi)mbI' documents both spellings deliberately; derivation from vimba; quot
+trapuzI       -> trapusI       | SKD: trapuzI, strI, (trapuza + gOrAditvAt NIz .) karkkawI . iti hemacandraH . 4 . 255 .. (yaTA, | Body: 'trapuzI, strI, (trapuza + NIz)'; explicitly notes 'dantyasAnto'pi pAWaH' = dental-s
+aSvaKurA      -> aSvaKura      | SKD: aSvaKurA, strI, aparAjitAlatA . iti rAjanirGaRwaH .. | Body: strI, aparAjitAlatA — feminine form of aSvaKura with its own plant gloss; standard w
+SudDAntA      -> SudDAnta      | SKD: SudDAntA, strI, (SudDAntaH ASrayatvenAstyasyA- iti ac . wAp .) rAjYo . yaTA, -- “SudDAntaS | strI entry: SudDAntA derives via wAp from SudDAntaH; feminine form of SudDAnta is a distin
+arAlA         -> arAla         | SKD: arAlA, strI, (arAla + striyAM wAp) aDfzwA . kulawA . iti SabdaratnAvalI .. | strI entry: arAlA = arAla + striyAM wAp; feminine of arAla is a distinct word (aDfzwA, kul
+citrataRqulA  -> citrataRqula  | SKD: citrataRqulA, strI, (citro nAnAvarRastaRqulo yasyAH .) viqaNgam . ityamaraH . 2 . 4 . 106  | strI entry: citrataRqulA is feminine of citrataRqula via bahuvrihi; defined as viqaNgam (a
+dvimuKA       -> dvimuKa       | SKD: dvimuKA, strI, (dve muKe yasyAH .) karkarI . iti SabdacandrikA .. gAqu iti BAzA . jalOkAH  | strI entry: dvimuKA = feminine via dve muKe yasyAH; defines karkarI, jalOkAH. Genuine femi
+granTiparRA   -> granTiparRa   | SKD: granTiparRA, strI, (granTiparRa + wAp .) jatukAlatA . iti rAjanirGaRwaH .. | strI entry: granTiparRA = granTiparRa + wAp; feminine of granTiparRa defining a plant (jat
+hfdayeSA      -> hfdayeSa      | SKD: hfdayeSA, strI, (hfdayasya ISA .) BAryyA . yaTA, “preyasI dayitA kAntA prAReSA vallaBA pri | strI entry: hfdayeSA = hfdayasya ISA (mistress of the heart); defines BAryyA. Genuine femi
+kanyasA       -> kanyasa       | SKD: kanyasA, strI, (kanyasa + wAp .) kanizWaBaginI . ityamarawIkA .. | strI entry: kanyasA = kanyasa + wAp; feminine of kanyasa meaning kanizWaBaginI (younger si
+karacCadA     -> karacCada     | SKD: karacCadA, strI, (kara iva kiraRa iva lIhitavarRaH CadaH puzpaM yasyAH . kara iva AvarakaS | strI entry: karacCadA = feminine bahuvrihi of karacCada; defines sindUrapuzpIvfkzaH. Genui
+karzaPalA     -> karzaPala     | SKD: karzaPalA, strI, (karzaPala + wAp .) AmalakIvfkzaH . iti ratnamAlA .. (AmalakISabde'syA gu | strI entry: karzaPalA = karzaPala + wAp; feminine defining AmalakIvfkzaH. Intentional femi
+kelikilA      -> kelikila      | SKD: kelikilA, strI, (kelinA vihAreRa kilatIti kil + kaH . tataH wAp .) ratiH . sA tu kAma- dev | strI entry: kelikilA = kil+kaH then wAp; defines ratiH (Kāmadeva's wife). Genuine feminine
+kftaPalA      -> kftaPala      | SKD: kftaPalA, strI, (kftaM PalaM asyAH .) kolaSimbI iti rAjanirGaRwaH .. | strI entry: kftaPalA = kftaM PalaM asyAH; defines kolaSimbI. Intentional feminine bahuvrih
+muktAsPowA    -> muktAsPowa    | SKD: muktAsPowA, strI, (muktAsPowa + wAp .) SuktiH . iti rAjanirGaRwaH .. | strI entry: muktAsPowA = muktAsPowa + wAp; defines SuktiH (oyster). Intentional feminine.
+nfpAtmajA     -> nfpAtmaja     | SKD: nfpAtmajA, strI, (nfpasya Atmajeva . sudfSyatvAt taTAtvam .) kawutumbI . iti ratnamAlA ..  | strI entry: nfpAtmajA = feminine of nfpAtmaja (daughter of a king); defines kawutumbI and 
+piYjA         -> piYja         | SKD: piYjA, strI, (piYjyate sPowyate iti . piYja + guroScetyaH . tatazwAp .) tUlam . haridrA .  | strI entry: piYjA = piYja + guroScetyaH + wAp; defines tUlam, haridrA etc. Genuine feminin
+rasADikA      -> rasADika      | SKD: rasADikA, strI, (rasena aDikA .) kAkolI- drAkzA . iti rAjanirGaRwaH .. | strI entry: rasADikA = rasena aDikA; defines kAkolIdrAkzA. Intentional feminine form of ra
+saYjA         -> saYja         | SKD: saYjA, strI, CAgI . iti trikARqaSezaH .. | strI entry: saYjA defines CAgI (goat). Though body is terse, strI gender and -A form indic
+samarTanA     -> samarTana     | SKD: samarTanA, strI, (sam + arTa + yuc . wAp .) aSakye'DyavasAyaH . yaTA . sinDumapi Soza- yAR | strI entry: samarTanA = sam+arTa+yuc+wAp; defines aSakye'DyavasAyaH. Genuine feminine abst
+sampUrRA      -> sampUrRa      | SKD: sampUrRA, strI, (sampUrRa + wAp .) ekAdaSI- viSezaH . sA tu pUrvvAruRodayavyApinI satI zaz | strI entry: sampUrRA = sampUrRa + wAp; defines a specific EkAdaSI type. Intentional femini
+surezwA       -> surezwa       | SKD: surezwA, strI, (surARAmizwA .) brAhmI . iti rAjanirGaRwaH .. | strI entry: surezwA = surARAmizwA; defines brAhmI (a plant). Intentional feminine of surez
+tAlaDvajA     -> tAlaDvaja     | SKD: tAlaDvajA, strI, (tAlastAlavfkzo DvajaScihnaM yasyAH .) purIviSezaH . yaTA, kriyAyogasAre  | strI entry: tAlaDvajA = city named after palm-banner symbol; cited in kriyAyogasAra. Inten
+tAmravarRA    -> tAmravarRa    | SKD: tAmravarRA, strI, (tAmrasyeva varRamasyA iti . wAp .) oqrapuzpavfkzaH . iti SabdacandrikA  | strI entry: tAmravarRA = tAmrasyeva varRamasyA + wAp; defines oqrapuzpavfkzaH. Intentional
+tvaksuganDA   -> tvaksuganDa   | SKD: tvaksuganDA, strI, (tvaci suganDo yasyAH .) ela- bAlukanAmaganDadravyam . iti jawADaraH .. | strI entry: tvaksuganDA = tvaci suganDo yasyAH; defines a fragrant substance. Intentional 
+viSvasahA     -> viSvasaha     | SKD: viSvasahA, strI, agnijihvAviSezaH . yaTA, -- “hetiH SiKA ca saptAgnerjihvAstA eva kIrttitA | strI entry: viSvasahA = one of the seven tongues of fire (saptAgnerjihvA); cited in jawADa
+trowI         -> trowi         | SKD: trowI, strI, (trowi + kfdikArAditi vA NIz .) trowiH . iti SabdaratnAvalI .. | Body: trowi+NIz = trowI. Long-I variant explicitly documented via NIz suffix.
+vratatI       -> vratati       | SKD: vratatI, strI, (vratati + pakze NIz .) vistAraH . latA . iti BaratadvirUpakozaH .. (yaTA,  | Body: vratati+NIz = vistAraH/latA. Long-I form documented; Raghuvaṃśa 14.1 cited confirms 
+sPurja        -> sPUrja        | SKD: sPu(sPU)rja, wu o A vajranirzoze .. (BvA0-sara0- aka0-sew .) wu, sPurjaTuH . o, sPUrRaH .  | Body sPu(sPU)rja documents BOTH short-u and long-U as forms of the same root; not a typo.
+vfhatpuzpI    -> bfhatpuzpI    | SKD: vf(bf)hatpuzpI, strI, (vfhat puzpaM yasyAH . NIz .) GaRwAravA . iti jawADaraH .. | Body headword is 'vf(bf)hatpuzpI' — SKD explicitly records both spellings; parenthetical d
+Buvanakoza    -> BuvanakoSa    | SKD: Buvanako(Sa)za, puM, (Buvanasya koza iva .) BUgolaH . (asya vivaraRaM SrIBAgavate paYcamas | Body Buvanako(Sa)za explicitly brackets both koSa and koza as variants of the same entry.
+vfhadelA      -> bfhadelA      | SKD: vf(bf)hadelA, strI, (vfhatI elA .) sTUlElA . iti rAjanirGaRwaH .. | Body vf(bf)hadelA explicitly documents both vf- and bf- variants in same entry.
+vfhadvAruRI   -> bfhadvAruRI   | SKD: vf(bf)hadvAruRI, strI, mahendravAruRI . iti rAja- nirGaRwaH .. | Body vf(bf)hadvAruRI explicitly documents both vf- and bf- variants in same entry.
+vahalA        -> vahala        | SKD: vahalA, strI, (vahalAni pracurARi puzpARi santyasyA iti . arSaAditvAdac .) Sata- puzpA . i | strI entry with wAp suffix: 'vahalA + wAp' = feminine of vahala. Correct feminine form, no
+BaraRyA       -> BaraRya       | SKD: BaraRyA, strI, (BaraRya + ajAditvAt wAp .) vetanam . ityamarawIkAyAM svAmI .. | strI entry: 'BaraRya + ajAditvAt wAp' — feminine of BaraRya via wAp suffix. Intentional fe
+SvaniSA       -> SvaniSa       | SKD: SvaniSA, strI, (SunAM niSA . “surAsenA- cCAyASAlAniSA striyAYca .” iti liNgAnuSAsanasUtreR | strI entry: 'SunAM niSA' (night of dogs). Quote 'SvaniSaM SvaniSA ca sA' shows both forms 
+balimAn       -> baliman       | SKD: ba(va)limAn, [t] tri, (baliScarmmasaMkoco'stya- syeti . bali + matup .) balinaH . jarayA S | Spelled 'ba(va)limAn' with matup suffix. Quote from Raghu confirms 'balimanniketam' — vari
+haMsArUQA     -> haMsArUQa     | SKD: haMsArUQA, strI, (haMsamArUQA .) brahmARI . yaTA, “caturmuKIM jagadDAtrIM haMsArUQAM varap | strI entry: '(haMsamArUQA)' — feminine form of the compound meaning Brahmaṇī riding a swan
+jYAtA         -> jYAta         | SKD: jYAtA, [f] tri, (jYA + tfc .) jYAnaSIlaH . tat- paryyAyaH . viduraH 2 binduH 3 . ityamaraH | tri entry: 'jYA + tfc' — agent noun 'knower' (jYAnaSIlaH). Distinct from jYAta (known/past
+janakArI      -> janakarI      | SKD: janakArI, [n], puM, (janAn kirati AcCA- dayati svavarReneti . kF AcCAdane + RiniH .) alakt | puM entry: 'janAn kirati AcCAdayati ... kF + RiniH' — alaktaka (lac dye). Distinct word fr
+kapilADArA    -> kapilaDArA    | SKD: kapilADArA, strI, (kapilAnAM DArA iva dugDaDArA- sadfSI SudDA DArA yasyAH . yadvA kapilAnA | strI entry: 'kapilAnAM DArA' — river of tawny cows; long A in kapilA is etymologically cor
+kzmAyitA      -> kzmAyita      | SKD: kzmAyitA, [f] tri, (kzmAya + tfcpratyayaH .) kampakaH . iti vyAkaraRam .. | tri entry: 'kzmAya + tfcpratyayaH' — agent noun via tfc. Feminine/adj form ending -A is co
+mAtariSvA     -> mAtariSva     | SKD: mAtariSvA, puM, (mAtari antarIkze Svayati vardDate iti . yadbA, mAtari jananyAM Svayati va | puM entry: 'kanin' suffix + 'nAmni saptamyA aluk' — vāyu, standard Vedic form mAtariSvA. I
+maDurakaRwakA -> maDurakaRwaka | SKD: maDurakaRwakA, strI, (maDurAH kaRwakA yasyAH .) matsyaviSezaH . tatparyyAyaH . kajjalI 2 k | strI entry: '(maDurAH kaRwakA yasyAH)' — a fish species. Feminine form via wAp of maDuraka
+madodagrA     -> madodagra     | SKD: madodagrA, strI, (madena udagrA .) nArI . iti Sabda mAlA .. (madodDate, tri . yaTA, raGO . | strI entry: 'madena udagrA' (one who is proud/excited by intoxication). Feminine adj. Quot
+mallikAKyA    -> mallikAKya    | SKD: mallikAKyA, strI, (malliketi AKyA yasyAH .) tripuramAlIpuzpam . tatparyyAyaH . mohinI 2 va | strI entry: 'malliketi AKyA yasyAH' — a flower called mallikā. Feminine form of mallikAKya
+nIlapiNgalA   -> nIlapiNgala   | SKD: nIlapiNgalA, strI, (nIlA piNgalA ceti karmma- DArayaH .) gojAtiviSezaH . yaTA, -- “gavAM j | strI entry: karmaDAraya compound of nIlA and piNgalA. Quote confirms 'caturTI nIlapiNgalA'
+nirUQA        -> nirUQa        | SKD: nirUQA, strI, (nirUQa + striyAM wAp .) lakzaRA- viSezaH . yaTA . “kAcit lakzatAvacCedakI-  | strI entry: 'nirUQa + striyAM wAp' — a type of lakṣaṇā (semantic relation). Feminine form,
+padvA         -> padva         | SKD: padvA, [n] puM, (padyate gamyate yatra . pada gatO + “snAmadipadIti .” uRAM . 4 . 112 . it | puM entry: 'pada gatO + vanip' — path/road. uṇādi suffix derivation gives padvA. Real dist
+pavitA        -> pavita        | SKD: pavitA [f], tri, (punAtIti . pU + tfc .) pavitratAkArakaH . yaTA, nEzaDe . “tanuSriyA yasy | tri entry: 'pU + tfc' — one who purifies (pavitratAkArakaH). Agent noun, distinct from pas
+sTUlaSAwakA   -> sTUlaSAwaka   | SKD: sTUlaSAwakA, strI, sTUlavastram . ityamarawIkA . 2 . 6 . 116 .. | strI entry: 'sTUlavastram' — a coarse garment. Feminine form of sTUlaSAwaka via wAp. Inten
+satyApanA     -> satyApana     | SKD: satyApanA, strI, (satyasya karaRam . satya + satyApapASeti . 3 . 1 . 25 . iti Ric Apuk ca  | strI entry: 'satya + Ric Apuk + yuc' — act of verifying/affirming. Verbal noun in -anA. Re
+tfzAhA        -> tfzAha        | SKD: tfzAhA, strI, (tfzAM hantIti . hana + qaH + wAp .) maDurikA . iti SabdacandrikA .. | strI entry: 'tfzAM hantIti . hana + qaH + wAp' — maDurikA plant. Feminine agent cpd. Inten
+yAmaGozA      -> yAmaGoza      | SKD: yAmaGozA, strI, (yAme yAme Gozo'syAH . yAmAn praharAn Gozati SabdAyata iti vA . Guz + ac . | strI entry: 'yAme yAme Gozo'syAH ... wAp' — a time-measuring instrument (ghaṭī). Feminine 
+ESI           -> ESi           | SKD: ESI tri, (ISasya ISvarasya ca iyam . ISa + ISvara + aR + NIp .) ISvara- sambanDI . ISvarer | tri entry: 'ISasya ISvarasya ... aR + NIp' — belonging to Īśvara. Long I from NIp (fem. su
+SElAlI        -> SElAli        | SKD: SElAlI, [n] puM, (SilAlinA proktaM nawasUtra- maDIte iti . SilAli + “pArASaryyaSilA- liByA | puM entry: 'SilAli + RiniH' — student of Śilāli's drama-sūtra (naṭa). Long I from RiniH su
+aBiyAtI       -> aBiyAti       | SKD: aBiyAtI, [n] puM, (yudDArTamaBiyAnaM gamanaM, aBi + yA + BAve ktaH; ini .) SatruH . ityama | puM entry: 'aBiyAnaM gamanaM ... ini' — enemy/aggressor. Long I from iniH suffix. Intentio
+cIllakA       -> cillakA       | SKD: cIllakA, strI, (cIlikA + pfzodarAt sADuH . cIditi Sabdena lakzyate iti . lakza + GaY . tat | Body: '(cIlikA + pfzodarAt sADuH .)' — explicitly documents long I by pfṣodara rule; a san
+vfhajjIvantI  -> bfhajjIvantI  | SKD: vf(bf)hajjIvantI, strI, vfhajjIvantikAvfkzaH . tatparyyAyaH . patraBadrA 2 priyaNkarI 3 ma | Body headword is 'vf(bf)hajjIvantI' — SKD explicitly records both spellings; parenthetical
+baRik         -> vaRik         | SKD: ba(va)Rik, [j] puM, (paRate krayavikrayAdinA vyava- haratIti . paRa + “paRerAdeSca baH .”  | Body headword is 'ba(va)Rik' — explicitly documents both b and v spellings as variants in 
+dfSat         -> dfzat         | SKD: dfSat, [d] strI, (dfzat . pfzodarAditvAt sADuH .) pAzARaH . ityamaraH . 2 . 3 . 4 .. nizpe | Body: '(dfzat . pfzodarAditvAt sADuH .)' — explicitly derives dfSat from dfzat by pfṣodara
+duHsamam      -> duHzamam      | SKD: duHsamam, tri, (duHzamam . bAhulakAt zatvA- BAvaH .) asamaYjasam . iti trikARqaSezaH .. | Body: '(duHzamam . bAhulakAt zatvABAvaH .)' — explicitly states absence of ṣatva by bāhula
+nIcikI        -> nicikI        | SKD: nIcikI, strI, nEcikI . ityamarawIkAyAM BarataH .. | Body is 'nEcikI . ityamarawIkAyAM BarataH' — a one-line redirect/gloss equating nIcikI to 
+baDUwI        -> vaDUwI        | SKD: baDUwI, strI, (alpavayaskA baDUH . alpArTe wIH . pakze NIz . yadbA, baDU + “vayasya- caram | Entry derives from baDU (not vaDU) consistently; own derivation baDU+wIH given; variant sp
+bimbA         -> bimba         | SKD: {{Lbody=32988}}  (redirect -> vimbA) | 
+viviktA       -> vivikta       | SKD: viviktA, strI, durBagA . iti trikARqaSezaH .. mudrANkitapustake viriktA iti pAWaH .. | 
+haritakI      -> harItakI      | SKD: haritakI, strI, (hari pItavarRaM PalamitA prAptA iti harItA . tataH saMjYAyAM kan gOrAdi-  | 
+bARI          -> vARI          | SKD: {{Lbody=31844}}  (redirect -> vARI) | 
+svIyA         -> svIya         | SKD: svIyA, strI, (svasyeyamiti . sva + CaH . wAp .) nAyikABedaH . tasyA lakzaRam . svAminye- v | 
+sinIbAlI      -> sinIvAlI      | SKD: {{Lbody=39125}}  (redirect -> sinIvAlI) | 
+BUmA          -> BUma          | SKD: BUmA, [n] puM, bahutvam . yaTA . “BUyoBUma- BUyizWAH .” bahorIyasviman izWAntasya ete nipA | 
+vARapuNKA     -> bARapuNKA     | SKD: {{Lbody=24220}}  (redirect -> bARapuNKA) | 
+aDvA          -> aDva          | SKD: aDvA [n] puM, (atti gamanena balaM nASayati, ad + bAhulyAt kvanip, pfzodarAditvAt dakArasy | 
+vakulI        -> bakulI        | SKD: {{Lbody=23904}}  (redirect -> bakulI) | 
+vadaraPalI    -> badaraPalI    | SKD: {{Lbody=23931}}  (redirect -> badaraPalI) | 
+vakulA        -> vakula        | SKD: {{Lbody=23903}}  (redirect -> bakulA) | 
+meKalAdrijA   -> mekalAdrijA   | SKD: {{Lbody=27979}}  (redirect -> mekalAdrijA) | 
+vARagaNgA     -> bARagaNgA     | SKD: {{Lbody=24218}}  (redirect -> bARagaNgA) | 
+valipodakI    -> balipodakI    | SKD: {{Lbody=24063}}  (redirect -> balipodakI) | 
+vadaravallI   -> badaravallI   | SKD: {{Lbody=23932}}  (redirect -> badaravallI) | 
+bfhadrAvI     -> vfhadrAvI     | SKD: {{Lbody=33964}}  (redirect -> vfhadrAvI) | 
+vAluNgI       -> bAluNgI       | SKD: {{Lbody=24318}}  (redirect -> bAluNgI) | 
+
+# ===== BUCKET 6  UNLOCATABLE -- not in the current SKD source (stale/different key) (3) =====
+SraBa         -> Srava         | SKD:  | 
+SvASvH        -> (flag)        | SKD:  | 
+kacCAA        -> (flag)        | SKD:  | 

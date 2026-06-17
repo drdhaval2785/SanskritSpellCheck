@@ -6,6 +6,32 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.18.0] - 2026-06-17
+
+### Added
+- **Tier-1 dictionary triage runs** — 4 dictionaries, taking the body-grounded triage from
+  5/33 to **9/33**. All hybrid (Sonnet classify / Opus confirm / Opus review):
+  - **SKD** (*Śabdakalpadruma*, Sanskrit, 412 tier-A) — **3 fileable** (`hitAbalI→hitAvalI`,
+    `pUzaBAzA→pUzaBAsA`, `vfzaBAzA→vfzaBAsA`, each contradicted by the entry's own *vyutpatti*),
+    103 do-not-file, 1 reviewed out (`mahotka`, a real bahuvrīhi).
+  - **AP** (Apte *Practical*, English, 152) — **0 fileable**, 32 do-not-file.
+  - **MW72** (Monier-Williams **1872** 1st ed, English, 360) — **0 fileable**, 77 do-not-file,
+    1 reviewed out (`ahnika`); 42 unlocatable (1872 keys diverge from the current source).
+  - **SCH** (Schmidt *Nachträge*, German 1928, 678) — **0 fileable**, 109 do-not-file, 3
+    reviewed out (`uluka`/`ayoDana`/`koSalikA` — two proper-noun names + a pw variant).
+  - Registered the four in `triage_lang._LANG` (`SKD/SCH→sa/de`, `MW72/AP→en`) — a one-line
+    edit, the payoff of the 1.17.0 single-registration-point refactor.
+  - The **Opus review gate** pulled every confirmed typo in AP/MW72/SCH (and 1 in SKD),
+    validated across all three body languages (Sanskrit `mahotka`, English `ahnika`, German ×3).
+
+### Fixed
+- `triage_synthesize.py`: genericized the remaining hardcoded **"MW"** in the `*_triaged.txt`
+  header prose and the bucket-5/6 titles (they now use the dict code). Regenerated
+  `PWG_triaged.txt` (header-only change, all data rows + counts identical). PW/VCP keep their
+  cosmetic stale "MW" header — their on-disk `triage_work` had diverged from the committed run,
+  so re-synthesis was **not** safe and was reverted (don't regenerate a committed package from
+  drifted verdicts).
+
 ## [1.17.0] - 2026-06-16
 
 ### Changed

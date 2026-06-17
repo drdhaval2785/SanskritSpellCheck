@@ -1,14 +1,14 @@
 # PWG tier-A -- BODY-GROUNDED triage  (DRAFT; verify every kept case against the scan)
 #
-# The 497 engine tier-A candidates were judged against MW's OWN entry text (csl-orig),
+# The 497 engine tier-A candidates were judged against PWG's OWN entry text (csl-orig),
 # not spelling alone. A spelling detector cannot tell a typo from a real word, an
 # intentional variant / compounding form, or wrong-reading apparatus -- the entry can.
 # Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM
 # pass over the 'realword' set + source confirmation of every TYPO verdict.
 #
 # FINDING: of 497 tier-A candidates, 12 are body-confirmed fileable typos (2.4%).
-# 196 are real distinct words, 248 are spellings MW documents on purpose (w.r./v.l./
-# in-comp./cross-ref -- filing them would CORRUPT MW), 2 are not in the current
+# 196 are real distinct words, 248 are spellings PWG documents on purpose (w.r./v.l./
+# in-comp./cross-ref -- filing them would CORRUPT PWG), 2 are not in the current
 # source, and 39 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
 # do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.
 
@@ -493,7 +493,7 @@ masIDanI      -> mazIDanI      | PWG: {#masIDanI#} f. = {#masiDAnI#} {%Dintenfas
 pitfvAnDava   -> pitfbAnDava   | PWG: {#pitfvAnDava#} ({#pitar + vA˚#}) m. = {#pitfvanDu#} 1. UDVĀHAT. im ŚKDR. | Body uses 'pitar+vA˚' and cross-refs pitfvanDu; the v-form is consistent throughout; bAnDa
 dABI          -> qABI          | PWG: {#dABI#} adj. f. in folg. Stelle: {#tAM (gAyatrIM) vya^hvayanta\ viSva^karma\nniti^ de\vA  | dABI is an adjective from daB with its own Vedic citation and gloss; qABI would use retrof
 
-# ===== BUCKET 5  INTENTIONAL -- MW documents the spelling on purpose; NEVER file (248) =====
+# ===== BUCKET 5  INTENTIONAL -- PWG documents the spelling on purpose; NEVER file (248) =====
 idAm          -> idam          | PWG: {#idAm#}, {#idAmati#} künstliches denom. von {#idam#} SIDDH. K. zu P. 6,4,15. | Body says 'künstliches denom. von {#idam#}' — artificial denominative formed from idam; in
 rAjAn         -> rAjan         | PWG: {#rAjAn#}, {#˚nati#} denom. von {#rAjan#} SIDDH. K. zu P. 6,4,15. | Body says 'denom. von {#rAjan#}' — artificial denominative formed from rAjan; same pattern
 cinta         -> cintA         | PWG: {#cinta#} m. angeblich = {#cintA#} 1. LOIS. zu AK. 1,1,7,29. | Body says 'angeblich = {#cintA#}' (allegedly = cintA) — documented pseudo-masculine listed
@@ -743,6 +743,6 @@ lAvAkza       -> lAbAkza       | PWG: {#lAvAkza#}, {#˚ka#} s. u. {#lAbAkza#} . 
 ajavasta      -> ajabasta      | PWG: {#ajavasta#} m. N. pr. eines Lehrers Verz. d. Oxf. H. 55,b,23. Wohl fehlerhaft für {#˚vast | 
 vizoQa        -> viSoQa        | PWG: {#vizoQa#} s. u. {#sah#} mit {#vi#} . | 
 
-# ===== BUCKET 6  UNLOCATABLE -- not in the current MW source (stale/different key) (2) =====
+# ===== BUCKET 6  UNLOCATABLE -- not in the current PWG source (stale/different key) (2) =====
 prEpa         -> prepa         | PWG:  | 
 GanDakAlikA   -> ganDakAlikA   | PWG:  | 

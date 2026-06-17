@@ -1,0 +1,903 @@
+# SCH tier-A -- BODY-GROUNDED triage  (DRAFT; verify every kept case against the scan)
+#
+# The 678 engine tier-A candidates were judged against SCH's OWN entry text (csl-orig),
+# not spelling alone. A spelling detector cannot tell a typo from a real word, an
+# intentional variant / compounding form, or wrong-reading apparatus -- the entry can.
+# Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM
+# pass over the 'realword' set + source confirmation of every TYPO verdict.
+#
+# FINDING: of 678 tier-A candidates, 0 are body-confirmed fileable typos (0.0%).
+# 520 are real distinct words, 109 are spellings SCH documents on purpose (w.r./v.l./
+# in-comp./cross-ref -- filing them would CORRUPT SCH), 3 are not in the current
+# source, and 46 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
+# do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.
+
+# ===== BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file) (0) =====
+
+# ===== BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted (16) =====
+
+uluka         -> ulUka          [dcs=4 ndicts=2 body=realword]
+    SCH: *{%Uluka%} m. N. pr. eines Schlangendämons, Mahāvy. 167,53. Vgl. {%ulūka, Ulluka%}. {part=,seq=8967,type=*,n=3}
+    judged: Body displays '*Uluka' (SLP1 long U) = proper noun; cross-ref 'Vgl. ulūka' confirms key should be ulUka.
+    confirm: Body displays *{%Uluka%}=Ūluka (long u) N.pr. snake-demon and 'Vgl. ulūka'; key uluka (short u) is a bare misspelling of ulUka.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=uluka
+
+nASikA        -> nAsikA         [dcs=4 ndicts=1 body=realword]
+    SCH: °{%nāśikā%} Nase, S II,270,17. {part=,seq=16925,type=˚,n=1}
+    judged: Body gloss 'Nase' (nose) fits nāsikā (s), not nāśikā (ś); ś/s substitution with identical semantics.
+    confirm: Body displays own headword °{%nāśikā%} glossed 'Nase' (nose) S II,270,17; defines the ś-form as its own entry, normal gloss, no marker.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=nASikA
+
+ayoDana       -> AyoDana        [dcs=3 ndicts=1 body=realword]
+    SCH: °{%Ayodhana%} m. (oder {%˚ghana?%}) N. eines Fürsten, S II,350,22. {part=,seq=4743,type=˚,n=2}
+    judged: Body headword is Āyodhana (= AyoDana, long ā), not ayoDana (short a); gloss fits suggestion, not suspect.
+    confirm: Body displays °{%Ayodhana%}=Āyodhana (long ā) 'N. eines Fürsten' S II,350,22; key ayoDana (short a) is a bare misspelling of AyoDana.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=ayoDana
+
+kalindI       -> kAlindI        [dcs=3 ndicts=2 body=realword]
+    SCH: {%Kalindī%} N. pr. ˚einer Hetäre, Śṛṅgt. 49,1. v.u. {part=,seq=10265,type=,n=2}
+    judged: Body glosses 'Kalindī' (with long K=kAlindI) as a proper name; suspect 'kalindI' has short 'ka' — clear misspelling of suggestion.
+    confirm: Body displays own headword {%Kalindī%} 'N. pr. einer Hetäre' Śṛṅgt.49,1; defines short-a courtesan name as its own entry, normal gloss.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=kalindI
+
+pAYjara       -> paYjara        [dcs=3 ndicts=2 body=realword]
+    SCH: {%pāñjara%} Adj. zum Käfig gehörig, Damayantīk. 60. {part=,seq=18495,type=,n=2}
+    judged: Body glosses 'pāñjara' (short pa=paYjara); suspect 'pAYjara' has long pA — misspelling; gloss fits suggestion.
+    confirm: Body displays own headword {%pāñjara%} Adj. 'zum Käfig gehörig' Damayantīk.60; vṛddhi adjective defined as its own word, normal gloss.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=pAYjara
+
+kekasI        -> kEkasI         [dcs=3 ndicts=1 body=realword]
+    SCH: °{%Kekasī%} Mutter des Kaikaseya, S I,82,8 v.u. (Ko.). {part=,seq=11435,type=˚,n=2}
+    judged: Entry is °Kekasī (with capital K = kh, ai vowel), mother of Kaikaseya. Suspect kekasI (short e) is a misspelling; suggestion kEkasI (ai) fits the proper noun.
+    confirm: Body displays own headword °{%Kekasī%} 'Mutter des Kaikaseya' S I,82,8; defines the short-e proper noun as its own entry, normal gloss.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=kekasI
+
+kUwaSalmali   -> kUwaSAlmali    [dcs=2 ndicts=1 body=realword]
+    SCH: °{%kūṭaśalmali%} m. f. = {%kūṭaśālmali [narakasaṃbhavī taruviśeṣaḥ]%}, H 8,42 {%[yantrakṣepyaḥ praharaṇaviśeṣa ity anye]%}. {part=,seq=11227,type=˚,n=4}
+    judged: Body defines it as '= kūṭaśālmali' — the cross-reference spells the headword with long Ā (śālmali), confirming kūṭaśalmali (short a) is a misspelling.
+    confirm: Body documents redirect: °{%kūṭaśalmali%} m.f. = {%kūṭaśālmali%}; explicit cross-reference variant, not a bare typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=kUwaSalmali
+
+daSarAtrika   -> dASarAtrika    [dcs=0 ndicts=1 body=realword]
+    SCH: °{%daśarātrika%} n. Zehnnächtefeier, Y 198. {part=,seq=15462,type=˚,n=1}
+    judged: Body gloss 'Zehnnächtefeier' (ten-night celebration) fits dASarAtrika (daśa=ten + rātra=night); daSa- without long A is misspelled.
+    confirm: Body displays own headword °{%daśarātrika%} n. 'Zehnnächtefeier' Y198; defines the short-a form as its own entry, normal gloss, no marker.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=daSarAtrika
+
+kadAcitka     -> kAdAcitka      [dcs=0 ndicts=1 body=realword]
+    SCH: °{%kadācitka%} nur gelegentlich geschehend, S II,90,15 (Ko.). {part=,seq=9784,type=˚,n=2}
+    judged: Body glosses 'nur gelegentlich geschehend' (only occasionally happening); kādācitka is the standard form (from kadācit); kadācitka lacks the initial long ā.
+    confirm: Body displays own headword °{%kadācitka%} 'nur gelegentlich geschehend' S II,90,15; defines short-a form as its own entry, normal gloss (only the next entry kadAcitkatva is marked fehlerhaft).
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=kadAcitka
+
+kulABimanin   -> kulABimAnin    [dcs=0 ndicts=1 body=realword]
+    SCH: °{%kulābhimanin%} Adj. stolz auf seine Familie, Kir. I,31. {part=,seq=11115,type=˚,n=2}
+    judged: Body glosses 'stolz auf seine Familie' (proud of his family); abhimānin (proud) requires long ā; kulābhimanin with short a in -manin is a misspelling.
+    confirm: Body displays own headword °{%kulābhimanin%} Adj. 'stolz auf seine Familie' Kir.I,31; defines the short-a form as its own entry, normal gloss, no marker.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=kulABimanin
+
+mftaRqA       -> mftARqA        [dcs=0 ndicts=1 body=realword]
+    SCH: °{%Mṛtaṇḍā%} die Mutter des Sonnengottes, S I,52,15 v.u. (Ko.). {part=,seq=22241,type=˚,n=2}
+    judged: Body gives 'Mutter des Sonnengottes'; Mṛtāṇḍā (mṛta+āṇḍa) is the standard form; mṛtaṇḍā without ā is a misspelling.
+    confirm: Body displays own headword °{%Mṛtaṇḍā%} 'die Mutter des Sonnengottes' S I,52,15; defines the short form as its own entry, normal gloss, no marker.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=mftaRqA
+
+koSalikA      -> kOSalikA       [dcs=0 ndicts=1 body=realword]
+    SCH: °{%kośalikā%} [pw {%kau˚%}] Geschenk, Śrīk. XXII,39. {part=,seq=11588,type=˚,n=2}
+    judged: Body cites [pw kau˚] confirming pw has kau- (SLP1 O=au); suspect ko- contradicts pw's kau-; suggestion kOSalikA confirmed by pw cross-ref.
+    confirm: Body '°{%kośalikā%}¦ [pw {%kau˚%}] Geschenk' cites pw form kau- (=kOSalikA); suspect ko- contradicts pw spelling, gloss belongs to kOSalikA.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=koSalikA
+
+duHSasana     -> duHSAsana      [dcs=4 ndicts=2 body=realword]
+    SCH: {%duḥśasana%} evil instruction, Vās. 20,2. {part=,seq=15798,type=,n=1}
+    judged: Body gloss 'evil instruction' fits duHSAsana (śāsana=instruction/rule); duHSasana (śasana=recitation) is a different word.
+    confirm: Body displays own headword {%duḥśasana%} 'evil instruction' Vās.20,2 with normal gloss; SCH records the s-form as its own entry, no spelling marker.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=duHSasana
+
+rAjadana      -> rAjAdana       [dcs=3 ndicts=1 body=realword]
+    SCH: {%rājadana%} m. *Mimusops kanki, S I,96,6. {part=,seq=22914,type=,n=1}
+    judged: Body glosses 'Mimusops kanki'; this tree is rājādana (long ā). The short-ā spelling in the key contradicts the expected standard form.
+    confirm: Body displays own headword {%rājadana%} m. *Mimusops kanki S I,96,6; SCH records the short-a form as its own entry with normal gloss.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=rAjadana
+
+trisaraRa     -> triSaraRa      [dcs=1 ndicts=1 body=realword]
+    SCH: °{%trisaraṇa%} the Buddhist triad, Harṣac. 265,16. {part=,seq=15215,type=˚,n=2}
+    judged: Body glosses 'the Buddhist triad' which is triśaraṇa (palatal ś); plain-s spelling trisaraṇa does not match.
+    confirm: Body displays own headword °{%trisaraṇa%} 'the Buddhist triad' Harṣac.265,16; SCH records the plain-s form as its own entry, normal gloss, no marker.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=trisaraRa
+
+kaYcanapraBa  -> kAYcanapraBa   [dcs=0 ndicts=1 body=realword]
+    SCH: {%kañcanaprabha%} Adj. goldglänzend, R. 2,44,90. {part=,seq=9623,type=,n=2}
+    judged: Body glosses 'goldglänzend'; kāñcana (gold) is the standard form; kañcana- without long ā is likely a misspelling of kāñcana-.
+    confirm: Body displays own headword {%kañcanaprabha%} Adj. 'goldglänzend' R.2,44,90; defines short-a form as its own entry, normal gloss, no marker.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=kaYcanapraBa
+
+# ===== BUCKET 3  REVIEW -- undecidable without the printed page (30) =====
+
+avasana       -> avasAna        [dcs=4 ndicts=1 body=realword]
+    SCH: {%avasana%} ? S II,191,1. {part=,seq=5498,type=,n=1}
+    judged: Body merely cites avasana? with one reference; ? marker signals editor uncertainty about the form.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=avasana
+
+svanA         -> svana          [dcs=4 ndicts=1 body=realword]
+    SCH: {%svanā%} ? s. {%kaṇṭhabandhanasvanā%}. {part=,seq=27649,type=,n=1}
+    judged: Body has svanā? with ? and only a cross-reference; too terse to confirm as real word vs typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=svanA
+
+parAsara      -> parASara       [dcs=4 ndicts=1 body=realword]
+    SCH: °{%parāsara%} ? S I,426,7 [427,10 Ko.: {%parāsaraḥ parikāṅkṣīyati%}(?)]. {part=,seq=18130,type=˚,n=2}
+    judged: Body has parāsara? with ? marker; could be misreading of Parāśara (proper name) but editor uncertain.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=parAsara
+
+raNgavali     -> raNgAvali      [dcs=0 ndicts=1 body=realword]
+    SCH: °{%raṅgavali%} S II,24,5; 28,5 [= {%nānāvarṇacūrṇaracitamaṇḍanaviśeṣa%}]; 247,11. {part=,seq=22654,type=˚,n=2}
+    judged: Body cites raṅgavali with Sanskrit gloss nānāvarṇacūrṇaracitamaṇḍanaviśeṣa but gives no German gloss; cannot confirm whether short a or long ā is correct.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=raNgavali
+
+suRWi         -> SuRWi          [dcs=0 ndicts=1 body=realword]
+    SCH: °{%suṇṭhi%} S I,519,15 v.u. (Ko.) eine Art Pfeffer? {part=,seq=27018,type=˚,n=2}
+    judged: Body glosses as 'eine Art Pfeffer?' with '?' indicating uncertainty; cannot confirm initial su- vs Su- (ś-).
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=suRWi
+
+mradizwa      -> mradizWa       [dcs=0 ndicts=1 body=realword]
+    SCH: *{%mradiṣṭa%} softest, very soft, Vās. 169,4. {part=,seq=22363,type=*,n=1}
+    judged: Body gives 'mradiṣṭa softest'; IAST -ṣṭa = SLP1 -zwa matches suspect; but Sanskrit superlative suffix is -iṣṭha (-izWa); body may itself be a typo for mradiṣṭha.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=mradizwa
+
+yugA          -> yuga           [dcs=5 ndicts=2 body=realword]
+    SCH: °{%yugā%} (f.) S II,368,26 ?. {part=,seq=22562,type=˚,n=1}
+    judged: °yugā (f.) S II,368,26 ? — body too sparse with trailing question mark to determine status.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=yugA
+
+karRA         -> karRa          [dcs=5 ndicts=1 body=realword]
+    SCH: °{%karṇā%} E 893 (P) ? {part=,seq=10099,type=˚,n=1}
+    judged: °karṇā E 893 (P)? — body extremely sparse with question mark; cannot judge.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=karRA
+
+jAva          -> java           [dcs=4 ndicts=2 body=realword]
+    SCH: *{%jāva%} m.? Mahāvy. 104,82. {part=,seq=14118,type=*,n=1}
+    judged: *jāva m.? Mahāvy. — asterisk (uncertain) and question mark; body too sparse to classify.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=jAva
+
+dArika        -> dArikA         [dcs=4 ndicts=3 body=realword]
+    SCH: °{%Dārika%} m. N. eines von Rudra getöteten Asura, Rasas. 222a; 58,1 ({%˚Dārikavadha%}, Titel eines dramatischen Stückes). {part=,seq=15545,type=˚,n=3}
+    judged: Body entry is Ḍārika (retroflex Ḍ), not dārika; mismatch between suspect and body headword; uncertain.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=dArika
+
+agaqa         -> agada          [dcs=4 ndicts=2 body=realword]
+    SCH: °{%agaḍa%} ? S I,501,11 (Ko.) s. {%taḍikārgala%}. {part=,seq=351,type=˚,n=1}
+    judged: °agaḍa? with question mark and cross-ref only; body too sparse to determine if typo or real word.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=agaqa
+
+anavamA       -> anavama        [dcs=3 ndicts=2 body=realword]
+    SCH: °{%Anavamā%} f. N. eines Flusses, Padyac. IX,13b. {part=N,seq=28158,type=˚,n=2}
+    judged: Body shows Ānavamā (long Ā-), proper noun river name; suspect/suggestion vowel-length difference; cannot verify spelling from gloss alone.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=anavamA
+
+utkArika      -> utkArikA       [dcs=3 ndicts=2 body=realword]
+    SCH: *{%utkārika%} Mahāvy. 245,1210. {part=,seq=8113,type=*,n=1}
+    judged: Body is terse (just a Mahāvy. citation); cannot determine if suspect is masculine/neuter vs. feminine suggestion.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=utkArika
+
+jAGani        -> jAGanI         [dcs=3 ndicts=2 body=realword]
+    SCH: {%jāghani%} Diener, Harṣac. 229,8? Doch vgl. die engl. Übers. p. 278 (zu 200, n. 3). [Z.] {part=,seq=14042,type=,n=3}
+    judged: Body tentatively glosses 'Diener' (servant) but immediately questions it ('Doch vgl. die engl. Übers.'); too uncertain to classify.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=jAGani
+
+pravAhIkA     -> pravAhikA      [dcs=3 ndicts=1 body=realword]
+    SCH: °{%pravāhīkā%} S II,351,12 eine literarische Form? {part=,seq=19833,type=˚,n=2}
+    judged: Body says 'eine literarische Form?' with a question mark; the entry itself is uncertain and the meaning is unclear.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=pravAhIkA
+
+kUlAla        -> kulAla         [dcs=3 ndicts=1 body=realword]
+    SCH: °{%kūlāla%} (?) Wasser, Darpad. VII,73. {part=,seq=11278,type=˚,n=1}
+    judged: Body glosses '(?) Wasser' with uncertainty marker; kūlāla is very tentative and unclear, cannot determine if typo or variant.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=kUlAla
+
+maYjU         -> maYju          [dcs=3 ndicts=1 body=realword]
+    SCH: °{%mañjū%} ? E 817 (A). {part=,seq=21183,type=˚,n=1}
+    judged: Body is '? E 817 (A)' — just a question mark with a citation; entry is too terse/uncertain to classify.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=maYjU
+
+gonaSa        -> gonasa         [dcs=3 ndicts=1 body=realword]
+    SCH: °{%Gonaśa%} m. N. eines {%yakṣa%} (nach Tawney, S. 127), Prabandh. 208,2/3. {part=N,seq=29013,type=˚,n=2}
+    judged: Body glosses 'N. eines yakṣa' (proper name); proper noun in section N — cannot judge correct spelling of a name from gloss alone.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=gonaSa
+
+akaRqita      -> aKaRqita       [dcs=3 ndicts=2 body=realword]
+    SCH: °{%akaṇḍita%} S II,368,13 unenthülst? {part=,seq=28,type=˚,n=1}
+    judged: Body is very terse: 'unenthülst?' with question mark. Cannot determine whether akaṇḍita is a typo for akhaṇḍita or its own word.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=akaRqita
+
+javAnI        -> javanI         [dcs=2 ndicts=1 body=realword]
+    SCH: °{%javānī%} E 849 (A)? {part=,seq=14032,type=˚,n=1}
+    judged: Body is extremely terse: 'E 849 (A)?' with a question mark. Insufficient information to classify.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=javAnI
+
+tAtkAla       -> tatkAla        [dcs=2 ndicts=1 body=realword]
+    SCH: {%tātkāla%} ? S I,444,3 v.u. (Ko.). {part=,seq=14674,type=,n=1}
+    judged: Body has '?' and single citation (Ko.); uncertain hapax, cannot confidently judge long ā vs short a.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=tAtkAla
+
+niHsUka       -> niHSUka        [dcs=2 ndicts=1 body=realword]
+    SCH: °{%niḥsūka%} Adj. S II,337,26? {part=,seq=17464,type=˚,n=1}
+    judged: Body is extremely terse ('Adj. S II,337,26?') with query mark — too ambiguous to determine whether sibilant difference is typo or variant.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=niHsUka
+
+peWa          -> pewa           [dcs=2 ndicts=2 body=realword]
+    SCH: °{%peṭha%} [oder {%peṭhā?%}] ? S II,340,7. {part=,seq=19202,type=˚,n=1}
+    judged: Body gives only '? S II,340,7' with no gloss; also suggests 'peṭhā?' as alternative. Too ambiguous to classify.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=peWa
+
+SeKarika      -> SEKarika       [dcs=2 ndicts=1 body=realword]
+    SCH: °{%śekharika%} ? S II,69,7 v.u. (Ko.): {%apāmārgayavāgūr iva śekharikabījam iva pracaṭikeva%}. {part=,seq=25593,type=˚,n=3}
+    judged: Body contains a Sanskrit citation with '?' — extremely terse, unclear if short e vs long E (ai) is typo or variant; too ambiguous.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=SeKarika
+
+AratIya       -> ArAtIya        [dcs=0 ndicts=1 body=realword]
+    SCH: °{%āratīya%} , {%ārārtika%}, S I,350,3 (13 v.u. Ko.)? {part=,seq=7329,type=˚,n=2}
+    judged: Body cites 'āratīya, ārārtika' with query mark and Ko. ref — the reading itself is questioned; cannot confirm either form.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=AratIya
+
+gUQapada      -> gUQapAda       [dcs=0 ndicts=1 body=realword]
+    SCH: °{%gūḍhapada%} m., Schlange, H 33,32. {part=,seq=12597,type=˚,n=1}
+    judged: Body glosses 'Schlange' (snake) for gūḍhapada; both gūḍhapāda and gūḍhapada could fit; ambiguous without checking the source.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=gUQapada
+
+pUlika        -> pUlikA         [dcs=0 ndicts=2 body=realword]
+    SCH: {%pūlika%} (oder {%pūlikā?%}) ˚bundle, Harṣac. 231,6. {part=,seq=19146,type=,n=2}
+    judged: Body itself queries '(oder pūlikā?)' — the dictionary is uncertain about short vs long ā; cannot determine correct form.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=pUlika
+
+kuralI        -> KuralI         [dcs=0 ndicts=1 body=realword]
+    SCH: °{%kuralī%} s. {%śarakuralī%}. {part=,seq=11071,type=˚,n=1}
+    judged: Body only says 's. śarakuralī' — cross-reference too terse to determine whether kuralī or KuralI (khuralī) is correct.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=kuralI
+
+sfpAtI        -> sfpAwI         [dcs=0 ndicts=1 body=realword]
+    SCH: {%sṛpātī%} ˚Buch, S II,11,2; 247,13. {part=,seq=27300,type=,n=1}
+    judged: Body only gives 'Buch' (book title) with citations; proper noun/title, cannot judge t vs ṭ spelling from context.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=sfpAtI
+
+ja|u          -> (flag)         [dcs=0 ndicts=5 body=realword]
+    SCH: {%jáłhu%} , so zu betonen. {part=,seq=14024,type=,n=1}
+    judged: Suspect 'ja|u' appears to be a tokenization artifact of 'jálhu/jáłhu'; suggestion is '(flag)' with no clear correction target.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=SCH&key=ja|u
+
+# ===== BUCKET 4  REAL-WORD -- a distinct real word; the fix would merge two words (520) =====
+Atas          -> atas          | SCH: {%ātas%} (1. {%ā + atas%}) Adv. mit angefügtem {%ca%} und zwar aus folgendem Grunde, Mahāb | Body gives ātas (ā+atas) its own German gloss as adverb; first entry is a distinct word, n
+akzA          -> akza          | SCH: {%akṣā%} f. ein best. Spruch, Śāṅkh. Śr. 18,4,1; 5,1. {part=,seq=282,type=,n=2} | akṣā f. 'ein best. Spruch' — feminine noun with own gloss; distinct from akṣa.
+ABra          -> aBra          | SCH: {%ābhra%} Adj. von Talk, Naiṣ. 6,62. {part=,seq=7223,type=,n=1} || °{%ābhra%} [oder {%abhr | ābhra Adj. 'von Talk' (of talc/mica) — own gloss in first entry; ā-bhra is a distinct word
+mAnAsa        -> mAnasa        | SCH: {%mānāsa%} Adj. den Hochmut vertreibend, Śiś. 19,33. {part=,seq=21839,type=,n=2} | mānāsa Adj. 'den Hochmut vertreibend' — own distinct meaning; different from mānasa (menta
+girI          -> giri          | SCH: {%girī%} Adv. mit {%kṛ%} zu einem Berge anhäufen, Hem. Par. 12,4. {part=,seq=12497,type=,n | Body defines girī Adv. mit kṛ 'zu einem Berge anhäufen' — long-ī adverbial form, own disti
+BABa          -> BAva          | SCH: °{%bhābha%} Adj. = {%nakṣatranibha%}, H XLIII,248. 252. {part=,seq=20829,type=˚,n=2} | Body defines bhābha Adj. = nakṣatranibha; distinct word from bhāva, own meaning.
+Bastra        -> vastra        | SCH: °{%bhastra%} Köcher, S I,467,6; 558,12 (Ko.). {part=,seq=20790,type=˚,n=2} | Body defines bhastra 'Köcher' (quiver); completely different word from vastra (garment).
+anANga        -> anaNga        | SCH: {%anāṅga%} Adj. nicht das Thema betreffend, P. 1,1,63, Sch. {part=,seq=2349,type=,n=2} | anāṅga Adj. 'nicht das Thema betreffend' (not concerning the stem) — own grammatical gloss
+jAGana        -> jaGana        | SCH: °{%jāghana%} n. eine Art Umarmung, E 432 (P). 447 (A, P). 449 (A). {part=,seq=14041,type=˚ | jāghana 'eine Art Umarmung' (type of embrace) is its own word; differs from jaghana (butto
+matsarA       -> matsara       | SCH: {%matsarā%} *fly, Vās. 72,2. {part=,seq=21267,type=,n=1} | matsarā *fly, Vās. 72,2 — own noun gloss (fly, insect); distinct from matsara (envy/jealou
+Ajira         -> ajira         | SCH: °{%[˚ājira%} , f.] {%˚ājirā%} H 43,88 = {%ājiṃ rātīty ājirā saṃgrāmapradā%}; 102. {part=,s | °ājirā H 43,88 = ājiṃ rātīty ājirā saṃgrāmapradā — own etymological gloss; distinct derive
+ananyA        -> ananya        | SCH: {%ananyā%} Adj. f. ˚keinem anderen (Manne) gehörend, Kauṭ. 11,2. {part=N,seq=28144,type=,n | ananyā Adj. f. 'keinem anderen Manne gehörend' — feminine adjectival form, own entry.
+jIvakA        -> jIvaka        | SCH: °{%jīvakā%} Terminalia tomentosa oder Coccinia grandis, E 849 (A). {part=,seq=14154,type=˚ | °jīvakā Terminalia tomentosa — feminine botanical form with own gloss; distinct from jīvak
+kANka         -> kaNka         | SCH: °{%kāṅka%} Adj. reiherartig, eine Art des Trabes, Kauṭ. 134,11. {part=N,seq=28820,type=˚,n | °kāṅka Adj. 'reiherartig, eine Art des Trabes' — own meaning (heron-like gait); distinct f
+karala        -> karAla        | SCH: °{%karala%} m. Baum, S I,102,3. {part=,seq=10007,type=˚,n=1} | °karala m. Baum (tree) — own distinct gloss; different from karAla (terrible/dreadful).
+pANkaja       -> paNkaja       | SCH: °{%pāṅkaja%} Adj. zu {%paṅkaja%}, Manm. I,2a. {part=,seq=18485,type=˚,n=2} | °pāṅkaja Adj. 'zu paṅkaja' — derivative adjective with own entry; not a misspelling.
+pAdmarAga     -> padmarAga     | SCH: °{%pādmarāga%} Adj. aus Rubinen bestehend, Manm. II,11b; von Rubinen stammend, Sūryaś. 27a | °pādmarāga Adj. 'aus Rubinen bestehend' — adjectival derivative with own gloss; distinct f
+sArAsa        -> sArasa        | SCH: °{%sārāsa%} Adj. = {%saśabda%}, H V,72. {part=,seq=26823,type=˚,n=1} | °sārāsa Adj. = saśabda 'with sound' — own meaning; distinct from sārasa (crane/lake-relati
+sarAla        -> sarala        | SCH: °{%sarāla%} = {%aparyanta%}, S I,475,6. {part=,seq=26529,type=˚,n=1} | °sarāla = aparyanta — own gloss with distinct meaning; different from sarala (straight/pin
+ANgula        -> aNgula        | SCH: {%āṅgula%} Adj. (f. {%ī%}) an den Fingern haftend, Baudh. 1,8,17. {part=,seq=6774,type=,n= | Body defines āṅgula Adj. 'an den Fingern haftend' (adhering to fingers); real ā-prefixed a
+pratyagam     -> pratyAgam     | SCH: {%pratyagam%} Adv. auf jedem Berge, Dharmaśarm. 14,6. {part=,seq=19632,type=,n=2} | Body glosses 'pratyagam' as Adv. meaning 'auf jedem Berge' — a genuine word with its own d
+Ari           -> ari           | SCH: *{%āri%} f. eine khadira-Art, Rājan. 8,30. {part=,seq=7355,type=*,n=1} | Body defines 'āri' as f. a type of khadira plant — its own lexical entry, not a misspellin
+jAnana        -> janana        | SCH: *{%jānana%} n. Ursprung, Geburtsstätte, Mahāvy. 101,12. {part=,seq=14080,type=*,n=2} | Body defines jānana n. 'Ursprung, Geburtsstätte'; long-ā form is distinct from short-a jan
+AcCa          -> acCa          | SCH: °{%āccha%} = {%ā samantāt acchaḥ nirmalaḥ%}, S I,41,4. {part=,seq=6809,type=˚,n=2} | Body analyses āccha = ā + acchaḥ nirmalaḥ; own compound etymology, distinct from accha.
+anuttAra      -> anuttara      | SCH: °{%anuttāra%} Adj. having no escape, Harṣac. 213,4. {part=,seq=2692,type=˚,n=2} | Body defines anuttāra Adj. 'having no escape'; long-ā form with own gloss distinct from an
+svarRA        -> svarRa        | SCH: °{%svarṇā%} ? E 833 (A). 835 (P). {part=,seq=27683,type=˚,n=1} | Body defines svarṇā (fem.) as distinct from svarṇa (masc./neut.); own entry with citation.
+vAhA          -> vAha          | SCH: {%vāhā%} ˚f. Arm. S I,192,1. — Kauṭ. 108,2 und 1 v.u. Trächtigkeit? Vgl. J. J. Meyer, S. 1 | Body defines vāhā ˚f. 'Arm' and 'Trächtigkeit?'; feminine form as distinct entry from vāha
+AmrA          -> Amra          | SCH: {%āmrā%} ˚f. = Ambikā, S I,597,13 (Ko.). {part=,seq=7268,type=,n=1} | Body defines āmrā ˚f. = Ambikā; feminine form with own distinct meaning.
+Aruci         -> aruci         | SCH: °{%āruci%} Adj. ganz glänzend, H 5,17. {part=,seq=7359,type=˚,n=1} | Body defines āruci Adj. 'ganz glänzend'; ā-prefix form distinct from aruci (not-pleasant).
+guhyA         -> guhya         | SCH: {%guhyā%} ˚Saum, Borte, S I,398,6. {part=,seq=12589,type=,n=1} | Body defines guhyā ˚f. 'Saum, Borte' (hem/border); feminine form distinct from guhya (secr
+jAtAvedas     -> jAtavedas     | SCH: {%jātāvedas%} nach Whitney (American Journal of Philology, Vol. III, No. 12) having born o | Body discusses jātāvedas with its own scholarly gloss; long-ā form documented as own entry
+samIraRA      -> samIraRa      | SCH: °{%samīraṇā%} f. ein Organ in der Vulva, E 343 (P). {part=,seq=26373,type=˚,n=2} | Body defines samīraṇā f. 'ein Organ in der Vulva'; feminine form as distinct entry.
+upadeSA       -> upadeSa       | SCH: {%upadeśā%} m. S II,170,5 ˚ = {%upa samīpe deśaḥ pradeśaḥ%}. {part=,seq=8657,type=,n=2} | Body defines upadeśā m. with own etymology upa+deśa; treated as distinct form with own ent
+atiTI         -> atiTi         | SCH: {%atithī%} Adv. 1. mit {%kar%} a) etwas (Akk.) einem Gaste gewähren, Naiṣ. 5,23. — b) etwa | Body defines 'atithī' with compounds (kar, bhū) in its own right — a genuine long-ī form e
+cedI          -> cedi          | SCH: {%cedī%} , so zu betonen. Die Ära der Cedi beginnt 248 n. Chr. nach Kielhorn in NKGW zu Gö | Body marks cedī with accent note 'so zu betonen' and gives Cedi era date; distinct long-ī 
+nfpatI        -> nfpati        | SCH: °{%nṛpatī%} mit {%kṛ%} zum König machen, Prabandh. 286,7 v.u.; 289,5. {part=,seq=17558,typ | Body defines nṛpatī mit kṛ 'zum König machen'; adverbial long-ī form documented with own u
+aRU           -> aRu           | SCH: {%aṇū%} Adv. mit {%bhū%} klein werden, Bhaṭṭ. 8,24. {part=,seq=929,type=,n=2} | aṇū Adv. 'mit bhū klein werden' — adverbial form with bhū, own usage; distinct from aṇu (a
+rajjU         -> rajju         | SCH: {%rajjū%} so v.a. Landvermessung, Kauṭ. 60,6. {part=,seq=22693,type=,n=2} | Body defines 'rajjū' as 'so v.a. Landvermessung' (land-measurement) — a genuine long-ū for
+pawU          -> pawu          | SCH: {%paṭū%} Adv. mit {%kṛ%} schärfen, steigern, Jātakam. 29,13. — ˚gesund machen, Prabandh. 2 | Body defines paṭū Adv. mit kṛ 'schärfen'; long-ū adverbial form documented with own citati
+ASya          -> Asya          | SCH: {%āśyà%} n. impers. zu essen von (Gen.), TS. 2,5,1,4; 6,1,11,6. {part=,seq=7577,type=,n=2} | āśyà n. impers. 'zu essen von' — verbal adjective from aś (eat); distinct from āsya (mouth
+adama         -> aDama         | SCH: °{%adama%} Adj. = {%avaśin%}, H 5,135. {part=,seq=1540,type=˚,n=1} | °adama Adj. = avaśin — own gloss 'unrestrained'; distinct meaning from aDama (lowest/worst
+BAlaka        -> bAlaka        | SCH: °{%bhālaka%} (n.) Stirn, S I,611,4. {part=,seq=20850,type=˚,n=1} | Body defines bhālaka as 'Stirn' (forehead), distinct from bālaka (boy/child).
+aRita         -> amita         | SCH: °{%aṇita%} n. = {%prahāraracito dhvaniḥ%}, H 12,5 [pw. {%*aṇ%} tönen]. {part=,seq=922,type | Body defines 'aṇita n. = prahāraracito dhvaniḥ' (sound produced by a blow) — a genuine wor
+aramya        -> araRya        | SCH: {%aramya%} Adj. unangenehm, Mālav. 10 (11). {part=,seq=4791,type=,n=2} | Body defines aramya Adj. 'unangenehm'; wholly different word from araṇya (forest).
+atiBft        -> ativft        | SCH: {%atibhṛt%} Adj. schwer tragend, Kir. 5,20. {part=,seq=1191,type=,n=1} | Body defines atibhṛt Adj. 'schwer tragend'; bhṛ-root word wholly different from ativṛt (vṛ
+ayama         -> ayana         | SCH: °{%ayama%} Adj. = {%advitīya%}, H 43,230. {part=,seq=4683,type=˚,n=1} | Body defines ayama Adj. = advitīya; completely different word from ayana (going/path).
+rawi          -> rati          | SCH: °{%raṭi%} f. Geschrei, Lärm, H XIII,33. {part=,seq=22696,type=˚,n=1} | Body defines raṭi f. 'Geschrei, Lärm' (noise); retroflex ṭ form is distinct from rati (ple
+sEmika        -> sEnika        | SCH: °{%saimika%} m. Grenzbewohner, Kauṭ. 50,5. {part=,seq=27329,type=˚,n=2} | Body glosses °saimika as 'Grenzbewohner' (border-dweller); suspect is its own word with di
+Akampya       -> akampya       | SCH: *{%ākampya%} m. ein best. samādhi, Mahāvy. 24. {part=,seq=6612,type=*,n=2} | Body defines ākampya (ā- prefix) as a specific samādhi; distinct from akampya (adj. unshak
+upaDana       -> upaDAna       | SCH: °{%upadhana%} Schwert?, Śuk. t. o. 9 [p. 22,6]. {part=,seq=8664,type=˚,n=2} | Body defines upadhana as 'Schwert?' (sword), entirely distinct from upadhāna (pillow/cushi
+utkA          -> utka          | SCH: {%utkā%} ˚f. ein astrol. karaṇa, S I,318,8 v.u. (Ko.). {part=,seq=8112,type=,n=2} | Body defines utkā f. as an astrological karaṇa term; documented feminine form distinct fro
+ASAnta        -> aSAnta        | SCH: °{%āśānta%} = {%diganta%}, Padyac. III,22b. {part=N,seq=28545,type=˚,n=1} | Body defines āśānta = diganta (horizon/direction-end); real compound from āśā+anta, distin
+AvaleKana     -> avaleKana     | SCH: {%āvalekhana%} Adj. (f. {%ī%}) aus einem best. Stoffe gemacht, JAOS, Proc. 1883, Okt. VIII | Body defines āvalekhana (ā- prefix) as adj. 'made of a certain material'; real ā-prefixed 
+BArita        -> Barita        | SCH: °{%bhārita%} Adj. erklärt, deutlich gemacht, Prabandh. 254,10 ({%śakunaṃ bhāritaṃ vidhehi% | Body defines bhārita as 'erklärt, deutlich gemacht' (explained); distinct from bharita (fi
+Davana        -> DAvana        | SCH: °{%dhavana%} n. = {%kampana%}, H XIV,42. {part=,seq=16346,type=˚,n=1} | Body defines dhavana n. = kampana (trembling); distinct from dhāvana (rinsing/washing).
+GoRa          -> GoRA          | SCH: °{%ghoṇa%} (m.?) Schnabel, H XIX,17 [pw {%ghoṇā%}]. {part=,seq=13004,type=˚,n=2} | Body defines ghoṇa (m.?) 'Schnabel' (beak); pw note mentions ghoṇā as a cross-ref, not lab
+apIqa         -> ApIqa         | SCH: °{%apīḍa%} (n.) Nichtdrücken, Kuṭṭ. 103. {part=,seq=3669,type=˚,n=1} | Body defines apīḍa 'Nichtdrücken' = a-+pīḍa (non-pressing); genuine negative compound dist
+apacAya       -> apacaya       | SCH: °{%apacāya%} Sammeln, Pflücken, Rasas. 48,7; 181b; 187a. {part=,seq=3310,type=˚,n=2} | Body defines apacāya (long ā) 'Sammeln, Pflücken' (gathering); distinct from apacaya (decr
+avasAra       -> avasara       | SCH: °{%avasāra%} m. Losbrennen? H 46,80. {part=,seq=5510,type=˚,n=1} | Body defines avasāra (long ā) 'Losbrennen?' (discharge?); distinct from avasara (opportuni
+gogrAha       -> gograha       | SCH: °{%gogrāha%} m. = {%gavāṃ grāhaḥ rodhanam%}, Yudh. 6,19. {part=,seq=12674,type=˚,n=2} | Body defines gogrāha = gavāṃ grāhaḥ rodhanam; Sanskrit gloss uses grāhaḥ (long ā), confirm
+kUrcA         -> kUrca         | SCH: {%kūrcā%} ˚f. deceit, Harṣac. 44,7. {part=,seq=11258,type=,n=1} | Body defines kūrcā f. 'deceit'; documented feminine form with distinct meaning from kūrca 
+kalAguru      -> kAlAguru      | SCH: °{%kalāguru%} m. teacher of arts, Prabandh. 308,6 v.u. {part=N,seq=28799,type=˚,n=2} | Body defines kalāguru 'teacher of arts'; distinct compound from kālāguru (dark aloe wood).
+kuwwanA       -> kuwwana       | SCH: {%kuṭṭanā%} ˚f. Stampfen, H 29,34. {part=,seq=10921,type=,n=1} | Body defines kuṭṭanā f. 'Stampfen' (pounding); documented feminine form distinct from neut
+mahila        -> mahilA        | SCH: {%mahilá%} Adj. = {%malhá%}, Maitr. S. 4,4,9 (60,20). {part=,seq=21735,type=,n=2} | Body defines mahilá Adj. = malhá with Vedic accent; distinct adjective, unrelated to mahil
+pfzatA        -> pfzata        | SCH: {%pṛṣatā%} *getüpfelt, V 193; Vaij. 86,47. {part=,seq=19174,type=,n=1} | Body defines pṛṣatā 'getüpfelt' (spotted) as an adjective; real form distinct from pṛṣata 
+prasADanA     -> prasADana     | SCH: °{%prasādhanā%} Pflege, Śuk. t. o. 11 [p. 24,3]. {part=,seq=19909,type=˚,n=2} | Body defines prasādhanā f. 'Pflege' (care/grooming); documented feminine form distinct fro
+turaMgamA     -> turaMgama     | SCH: {%turaṃgamā%} ˚Galopp, Śuk. t. o. 58 [p. 63,4]. {part=,seq=14907,type=,n=2} | Body defines turaṃgamā f. 'Galopp' (gallop); real feminine with distinct meaning from tura
+varANgA       -> varANga       | SCH: °{%varāṅgā%} = {%bhambhā%}, S I,581,15 v.u. (Ko.). {part=,seq=23548,type=˚,n=2} | Body defines varāṅgā f. = bhambhā; documented feminine form with distinct botanical/plant 
+arpaRA        -> arpaRa        | SCH: *{%arpaṇā%} f. Richtung der Gedanken, Entschluß, Mahāvy. 245,1021. {part=,seq=5088,type=*, | Body glosses arpaṇā f. 'Richtung der Gedanken, Entschluß'; feminine form defined as its ow
+danturA       -> dantura       | SCH: {%Danturā%} ˚N. einer Kupplerin, Laṭ. 3,3 v.u. {part=,seq=15382,type=,n=2} | Body glosses Danturā f. as a proper name (N. einer Kupplerin); feminine form, own entry.
+kArawaka      -> karawaka      | SCH: *{%kāraṭaka%} n. eine Art śrāddha, S I,542,13 (Ko.); II,192,7 v.u. (Ko.; hier ˚Adj.!). {pa | Body glosses kāraṭaka (long ā) n. 'eine Art śrāddha'; suspect with long A defined as its o
+karzika       -> kArzika       | SCH: °{%karṣika%} Adj. ein {%karṣa%} wiegend, Kauṭ. 120,1 v.u. (in {%pañcakarṣika%}). {part=N,s | Body glosses karṣika (short a) Adj. 'ein karṣa wiegend'; suspect with short a has its own 
+kfzRAjinA     -> kfzRAjina     | SCH: {%Kṛṣṇājinā%} f. N. pr. einer Frau, Jātakam. 9. {part=,seq=11423,type=,n=2} | Body glosses Kṛṣṇājinā f. as N. pr. einer Frau; feminine proper noun, own entry.
+udAnta        -> udanta        | SCH: °{%udānta%} Adj. = {%uccair atiśayena āntā rugṇā pīḍitā%}, Yudh. 6,104. {part=,seq=8399,ty | Body glosses udānta Adj. = uccair atiśayena āntā rugṇā pīḍitā; own derivation/gloss, not a
+Alana         -> AlAna         | SCH: °{%ālana%} = {%tāḍana%}, S I,459,4. {part=,seq=7428,type=˚,n=1} | Body glosses ālana (short a) = tāḍana; own gloss, distinct from AlAna (tethering post).
+ApyAyanA      -> ApyAyana      | SCH: {%āpyāyanā%} satiety, Pūrṇabh. 78,19. {part=,seq=7172,type=,n=1} | Body glosses āpyāyanā f. 'satiety'; feminine form defined as its own word.
+Atasa         -> atasa         | SCH: °{%ātasa%} von der Pflanze atasī stammend, S I,606,9; II,16,4. {part=,seq=6894,type=˚,n=2} | Body glosses ātasa (long Ā) Adj. 'von der Pflanze atasī stammend'; long-ā form with own de
+amarzitA      -> amarzita      | SCH: °{%amarṣitā%} = {%amarṣitvam%}, H 43,162. {part=,seq=4476,type=˚,n=1} | Body glosses amarṣitā = amarṣitvam; feminine abstract form, own entry.
+avicAritA     -> avicArita     | SCH: °{%avicāritā%} Unüberlegtheit, S II,242,12 (Ko.). {part=,seq=5621,type=˚,n=2} | Body glosses avicāritā f. 'Unüberlegtheit'; feminine abstract noun defined as its own word
+bfhannaqA     -> bfhannaqa     | SCH: °{%Bṛhannaḍā%} f. Bein. Arjuna's, Ko. zu Yudh. 6,28. 29. 31. 33. 34. 35 etc. [pw {%*Bṛhann | Body glosses Bṛhannaḍā f. as Beiname Arjuna's; feminine proper noun, own entry.
+cAndrakAnta   -> candrakAnta   | SCH: °{%cāndrakānta%} Adj. zu {%candrakānta%}, Manm. II,11c. {part=,seq=13414,type=˚,n=2} | Body glosses cāndrakānta Adj. 'zu candrakānta'; taddhita adjective derived from candrakānt
+drutA         -> druta         | SCH: {%drutā%} ˚in Orgasmus geraten, E 342(A). 418(P). {part=,seq=16078,type=,n=2} | Body glosses drutā 'in Orgasmus geraten'; feminine/extended form defined with its own glos
+hutavAha      -> hutavaha      | SCH: °{%hutavāha%} m. Feuer, S I,116,8. {part=,seq=27977,type=˚,n=1} | Body glosses hutavāha (long ā) m. 'Feuer'; suspect with long A defined as its own word.
+kAlaDOta      -> kalaDOta      | SCH: °{%kāladhauta%} Adj. golden, Harṣac. 226,7. {part=,seq=10642,type=˚,n=1} | Body glosses kāladhauta (long kāla) Adj. 'golden'; suspect with long A defined as its own 
+kAmAcAra      -> kAmacAra      | SCH: °{%kāmācāra%} m. das Wandeln in Lüsten (oder nach Herzenslust), S I,40,3. {part=,seq=10538 | Body glosses kāmācāra (ā in both components) m. 'das Wandeln in Lüsten'; own compound entr
+kurAra        -> kurara        | SCH: {%kurāra%} m. = {%kulāla%} (Töpfer), Kāṭh. 17,13. {part=,seq=11074,type=,n=1} | Body glosses kurāra (long ā) m. = kulāla (Töpfer); suspect has own distinct gloss, not a m
+mAnoBava      -> manoBava      | SCH: °{%mānobhava%} Adj. auf den Liebesgott bezüglich, Unm. 23d ({%madhuvratā … mānobhavaṃ mant | Body glosses mānobhava Adj. 'auf den Liebesgott bezüglich'; long ā in māno-, own entry.
+melanA        -> melana        | SCH: °{%melanā%} f. = {%melana%} n., Praty. Hṛd. 20,4. [B.] {part=,seq=22302,type=˚,n=2} | Body glosses melanā f. = melana n.; feminine form explicitly defined as its own entry.
+pAradArikA    -> pAradArika    | SCH: {%pāradārikā%} ˚Subst. f. Ehebruch? Śṛṅgt. 11,13. {part=,seq=18629,type=,n=2} | Body glosses pāradārikā f. 'Ehebruch?'; feminine form defined as its own word.
+paYcASara     -> paYcaSara     | SCH: °{%Pañcāśara%} m. N. eines Dorfes, Prabandh. 31,7 v.u. {part=,seq=17799,type=˚,n=2} | Body glosses Pañcāśara m. as N. eines Dorfes (village name); suspect has long ā+ś, own pro
+sAhasya       -> sahasya       | SCH: °{%sāhasya%} Adj. = {%sahasi mārgaśīrṣe bhavaḥ%}, Yudh. 2,58. {part=,seq=26865,type=˚,n=2} | Body glosses 'Adj. = sahasi mārgaśīrṣe bhavaḥ' — relating to the month sahasi; sāhasya is 
+saMkocanA     -> saMkocana     | SCH: {%saṃkocanā%} (nach dem Ko. ˚f.) H XX,30. {part=,seq=25955,type=,n=1} | Body notes feminine form per commentary (Ko. ˚f.); saṃkocanā is the documented feminine va
+sahAsya       -> sahasya       | SCH: °{%sahāsya%} Adj. komisch gefärbt, Daśar. II,52b. {part=,seq=26692,type=˚,n=2} | Body glosses 'komisch gefärbt' (comically colored); sahāsya = sa + hāsya, a distinct compo
+uccAwanA      -> uccAwana      | SCH: {%uccāṭanā%} Beseitigen, Śrīk. XV,49. {part=,seq=8001,type=,n=1} | Body glosses 'Beseitigen' (removal); uccāṭanā is the feminine variant of uccāṭana, a legit
+unmIlanA      -> unmIlana      | SCH: °{%unmīlanā%} Darstellen (mit dem Pinsel etc.), H 17,96 (Ko.). {part=,seq=8594,type=˚,n=2} | Body glosses 'Darstellen' (depicting); unmīlanā is the feminine variant of unmīlana, docum
+vezwanA       -> vezwana       | SCH: {%veṣṭanā%} ˚f. Umschlingung, H XLVI,42 (Ko.) {part=,seq=24800,type=,n=2} | Body explicitly marks '˚f. Umschlingung' (feminine: embrace); veṣṭanā is the documented fe
+vivartanA     -> vivartana     | SCH: {%vivartanā%} f. = {%vivartana%} 2. b), Haravijaya 8,3.? Mahāvy. 53. — Verwandlung, Śrīk.  | Body cross-refs vivartana but also gives own glosses (Verwandlung, Haravijaya); vivartanā 
+SfNgArA       -> SfNgAra       | SCH: {%Śṛṅgārā%} f. N. pr. einer Frau, Festgr. 18. {part=,seq=25584,type=,n=2} | Body defines Śṛṅgārā (f.) as 'N. pr. einer Frau' — feminine proper name with long ā; not a
+avaGozaRA     -> avaGozaRa     | SCH: {%avaghoṣaṇā%} f. Ausrufung, öffentliche Bekanntmachung, Jātakam. 2. {part=,seq=5293,type= | Body defines avaghoṣaṇā (f.) as 'Ausrufung, öffentliche Bekanntmachung' — feminine noun wi
+avapana       -> Avapana       | SCH: {%avapana%} n. das Nichtscheeren, Pār. Gṛhy. 2,1,25. {part=,seq=5385,type=,n=2} | Body defines avapana (n.) as 'das Nichtscheeren' — own gloss with short a; not a misspelli
+avasAdanA     -> avasAdana     | SCH: {%avasādanā%} f. Herabsetzung, Erniedrigung, Demütigung, Jātakam. 31; Divyāvad. 490,5. {pa | Body defines avasādanā (f.) as 'Herabsetzung, Erniedrigung, Demütigung' — feminine noun wi
+bArbara       -> barbara       | SCH: *{%bārbara%} Adj. im Lande der Barbaren geboren. {part=,seq=20447,type=*,n=2} | Body defines bārbara (Adj.) as 'im Lande der Barbaren geboren' — own gloss with long ā; no
+baliSa        -> bAliSa        | SCH: *{%baliśa%} m. 1. Angel. — 2. ein aus einem Gelenk hervorbrechender Sproß. — {%va˚%} gesch | Body defines baliśa (m.) as 'Angel' and 'Sproß' — own gloss with short a; noted also writt
+sAmakza       -> samakza       | SCH: {%sāmakṣa%} n. das Voraugensein, Maitr. S. 3,6,1 (60,9). Vgl. {%sāmakṣya, sāmyakṣa%}. {par | Body gives its own gloss 'das Voraugensein' for 'sāmakṣa' (long sA), distinct from 'samakṣ
+saMyati       -> saMyAti       | SCH: {%saṃyati%} f. Askese, Kuṭṭanīm. 53. [Harṣac. 135,7.] {part=,seq=25830,type=,n=2} | Body glosses 'saṃyati' f. Askese — its own definition; not the same as 'saṃyāti'; this is 
+upacaraka     -> upacAraka     | SCH: {%upacaraka%} m. Spion, Śīlāṅka 2,135. {part=,seq=8630,type=,n=1} | Body glosses 'upacaraka' m. Spion (spy) — distinct gloss for suspect; not a misspelling of
+visPuliNgA    -> visPuliNga    | SCH: {%visphuliṅgā%} f. Funken, Haravijaya 8,18. {part=,seq=24612,type=,n=2} | Body defines 'visphuliṅgā' f. Funken — feminine form is its own real entry, not a misspell
+yajYadattA    -> yajYadatta    | SCH: {%Yajñadattā%} *f. N. der Frau eines purohita, S II,309,12. {part=,seq=22384,type=,n=2} | Body defines 'Yajñadattā' f. as a feminine proper name (N. der Frau), distinct from the ma
+sAmada        -> samada        | SCH: {%sāmada%} Adj. die s. schützend, H XLIII,228. {part=,seq=26770,type=,n=2} | Body gives its own gloss for 'sāmada' Adj. (long sA, protecting the sāman) — distinct from
+virahitA      -> virahita      | SCH: °{%virahitā%} Trennung vom Geliebten, Yudh. 7,90. {part=,seq=24382,type=˚,n=2} | Body defines 'virahitā' f. Trennung vom Geliebten — feminine form with its own gloss; a ge
+kariRi        -> kariRI        | SCH: °{%kariṇi%} m. Elefantenwärter, S II,45,1. {part=,seq=10032,type=˚,n=1} | Body defines kariṇi m. 'Elefantenwärter' (elephant keeper); distinct from kariṇī f. (femal
+pakzatI       -> pakzati       | SCH: *{%pakṣatī%} Ansatzstelle der Flügel, Govardh. 506. {part=,seq=17685,type=*,n=2} | Body defines pakṣatī 'Ansatzstelle der Flügel' (wing joint); distinct term with long ī doc
+upaDI         -> upaDi         | SCH: °{%upadhī%} Adj. = {%upapannā dhīr yasya%} (= {%sudhī%}), Yudh. 3,91. {part=,seq=8673,type | Body defines upadhī Adj. = upapannā dhīr yasya (= sudhī); genuine Bahuvrīhi compound, dist
+kandali       -> kandalI       | SCH: {%kandali%} Sproß, Damayantīk. 274. {part=,seq=9837,type=,n=1} | Body glosses 'Sproß' (sprout); kandali with short i is defined as its own word with a clea
+BArati        -> BAratI        | SCH: °{%bhārati%} eine Last sein, Viṣṇubh. II,13c. {part=,seq=20833,type=˚,n=1} | Body glosses 'eine Last sein' (to be a burden); bhārati is used as a verbal/adverbial comp
+SitAMSu       -> SItAMSu       | SCH: °{%śitāṃśu%} m. Sonne, H XXVIII,8. {part=,seq=25368,type=˚,n=1} | Body glosses 'm. Sonne' (sun); śitāṃśu (sharp-rayed = sun) is distinct from śītāṃśu (cool-
+aBivyaktI     -> aBivyakti     | SCH: {%abhivyaktī%} Adv. mit {%bhū%} offenbar werden, Naiṣ. 5,136. {part=,seq=4237,type=,n=2} | Body glosses 'Adv. mit bhū offenbar werden'; abhivyaktī is the adverbial (long ī) form use
+guptI         -> gupti         | SCH: {%guptī%} Adv. mit {%kṛ%} verstecken, verbergen, Uttamac. 337. {part=,seq=12551,type=,n=2} | Body glosses 'Adv. mit kṛ verstecken'; guptī is the adverbial form (long ī) used with kṛ, 
+kOSiki        -> kOSikI        | SCH: °{%Kauśiki%} m. Patron. des Arjuna, Yudh. 4,73. {part=,seq=11647,type=˚,n=2} | Body glosses 'm. Patron. des Arjuna'; Kauśiki (short i, masculine) is a patronymic, distin
+mfganABI      -> mfganABi      | SCH: °{%mṛganābhī%} Moschus, Śrīk. VIII,47. {part=,seq=22206,type=˚,n=1} | Body glosses 'Moschus' (musk); mṛganābhī with long ī is the feminine noun (deer-navel = mu
+paktI         -> pakti         | SCH: °{%paktī%} mit {%bhū%} gar werden, Gopāl. 138,15. {part=,seq=17674,type=˚,n=1} | Body glosses 'mit bhū gar werden' (to become cooked); paktī is the adverbial long-ī form u
+parIBoga      -> pariBoga      | SCH: °{%parībhoga%} m. richtiger Gebrauch, Kauṭ. II,11 (81,10). {part=,seq=18305,type=˚,n=2} | Body glosses 'richtiger Gebrauch' (correct use); parībhoga with long ī prefix is defined a
+saMyAtI       -> saMyAti       | SCH: {%saṃyātī%} Part. Präs. f. mit {%nau%} ˚Meerschiff, Kauṭ. 126,7 v.u. {part=,seq=25835,type | Body glosses 'Part. Präs. f. mit nau = Meerschiff'; saṃyātī is the feminine present partic
+virAsana      -> vIrAsana      | SCH: °{%virāsana%} n. Hemmung, S I,73,14 (Ko.) {part=,seq=24391,type=˚,n=1} | Body glosses 'Hemmung' (obstruction); virāsana (short i, vi+rāsana?) has its own gloss dis
+vAntI         -> vAnti         | SCH: *{%vāntī%} Adv. mit {%kṛ%} ausspeien, so v.a. aufgeben, entsagen, Mahāvy. 130. {part=,seq= | Body glosses 'vāntī' Adv. with kṛ (to vomit, give up) — its own entry with a real gloss; f
+Duti          -> DUti          | SCH: °{%dhuti%} f. Schütteln, H XXXI,14; XLI,48; Śrīk. V,6; XII,31; XIII,4. {part=,seq=16416,ty | Body glosses 'f. Schütteln' (shaking); dhuti (short u) is its own word meaning shaking, di
+brahmabanDU   -> brahmabanDu   | SCH: {%Brahmabandhū%} f. ˚Name einer Brahmanin, S II,149,12. {part=,seq=20633,type=,n=2} | Body glosses 'f. ˚Name einer Brahmanin'; Brahmabandhū (long ū, feminine) is a proper name 
+pratanU       -> pratanu       | SCH: {%pratanū%} Adv. mit {%kṛ%} sehr verringern, -x- schwächen, Jātakam. 14,1. {part=,seq=1938 | Body defines {%pratanū%} Adv. 'sehr verringern/schwächen'; long-ū form is the headword, no
+Samada        -> samada        | SCH: °{%śamada%} Adj. (f. {%ā%}) beruhigend, Yudh. 3,106; 6,110. {part=,seq=25151,type=˚,n=2} | Body defines 'śamada' Adj. beruhigend; Samada=śamada is the headword, distinct from samada
+apfzWa        -> apfzwa        | SCH: {%apṛṣṭha%} n. kein richtiges pṛṣṭha, Tāṇḍya-Br. 5,2,4. {part=,seq=3705,type=,n=2} | Body defines {%apṛṣṭha%} (with ṣṭha=zW) as its own word; suggestion apṛṣṭa (ṭa=w) is a dif
+kftaDAra      -> kftadAra      | SCH: {%kṛtadhāra%} Adj. geschärft, scharf, MBh. 7,87,4. {part=,seq=11295,type=,n=2} | Body defines {%kṛtadhāra%} Adj. 'geschärft, scharf'; dh-form (D) is the real headword, not
+vEtra         -> vetra         | SCH: °{%vaitra%} Adj. aus {%vetra%}-Rohr(-Fasern), Kauṭ. 115,6 (ed. Mysore 1919). {part=,seq=24 | Body defines 'vaitra' as Adj. 'aus vetra-Rohr(-Fasern)' — a genuine adjective derived from
+anasti        -> anasTi        | SCH: {%anasti%} am Anfang eines adj. Komp. nicht vorhanden, Naiṣ. 12,39 {part=,seq=2312,type=,n | Body defines 'anasti' as adj. compound prefix 'nicht vorhanden'; own gloss, not a misspell
+uttApana      -> utTApana      | SCH: {%uttāpana%} n. das Kasteien, Hemādri 2, a,6,10. {part=,seq=8214,type=,n=2} | Body defines 'uttāpana' n. das Kasteien; uttāp- (heat/torment) distinct from utthāp- (rais
+upalamba      -> upalamBa      | SCH: °{%upalamba%} m. Liane, S II,198,3. {part=,seq=8759,type=˚,n=1} | Body defines {%upalamba%} (b) m. 'Liane'; distinct from upalambha (B=bh).
+Aku           -> AKu           | SCH: °{%āku%} = {%yuddhabhūmi%}, H 43,53. {part=,seq=6661,type=˚,n=1} | Body defines 'āku' as '= yuddhabhūmi' (battlefield) — its own gloss, not a misspelling of 
+Cawaka        -> cawaka        | SCH: °{%chaṭaka%} m. = {%saṃmārjana%}, S I,340,5 v.u. (Ko.); 344,7 v.u. (Ko.). {part=,seq=13714 | Body defines {%chaṭaka%} (Ch=cha) m. = saṃmārjana; distinct from caṭaka (c=ca).
+PAli          -> pAli          | SCH: °{%phāli%} (f.) Stückchen, S I,404,7; 516,8; 579,3; H XVIII,43 (= {%khaṇḍikā)%}. — Hem. Uṇ | Body defines 'phāli' (P=ph); entirely different word from pāli (plain p); suspect matches 
+JaraRa        -> jaraRa        | SCH: °{%jharaṇa%} n. Fall (in {%jalajharaṇa)%}, S I,574,15 (Ko.). {part=,seq=14303,type=˚,n=2} | Body defines {%jharaṇa%} (J=jh) n. 'Fall'; distinct from jaraṇa (j=j).
+anugAnin      -> anugAmin      | SCH: °{%anugānin%} = {% anu paścādgāmino gāyanā yasya%}, H 43,262. {part=,seq=2640,type=˚,n=2} | Body defines 'anugānin' by its own Sanskrit gloss 'anu paścādgāmino gāyanā yasya' — a sing
+Bazita        -> Basita        | SCH: {%bhaṣita%} n. Gebell, Jātakam. 23,8. {part=,seq=20786,type=,n=1} | Body defines bhaṣita n. 'Gebell' (barking); from bhaṣ (to bark). Distinct word from bhasit
+apAm          -> apAn          | SCH: °{%apām%} {%āśaya%} m. = Ozean, Rasas. 228d. {part=,seq=3628,type=˚,n=1} | Body defines apām āśaya 'm. = Ozean'; apām is genitive plural of ap (water), a well-formed
+parisad       -> parizad       | SCH: {%parisad%} f. ˚ = {%kardama%}, S I,605,6. — ˚Umschlag (aus {%uśīra%}), S II,264,26. {part | Body defines {%parisad%} (s) f. = kardama; distinct Sanskrit word from pariṣad (z=ṣ).
+qamBodBava    -> damBodBava    | SCH: °{%Ḍambhodbhava%} m. N. eines Königs, Kauṭ. 11,16. {part=,seq=14364,type=˚,n=2} | Body defines {%Ḍambhodbhava%} (q=Ḍ) as a king's proper name; retroflex Ḍ is the correct sp
+tuSita        -> tuzita        | SCH: °{%tuśita%} ? S II,47,9 (Ko.). {part=,seq=14938,type=˚,n=1} | Body defines {%tuśita%} (S=ś) with gloss; distinct from tuṣita (z=ṣ).
+apamud        -> apanud        | SCH: {%apamud%} Adj. freudlos, kläglich, Śiś. 19,9. [Yudh. 1,86; 7,134.] {part=,seq=3388,type=, | Body defines 'apamud' Adj. freudlos/kläglich; own independent gloss; different root from a
+ABogya        -> aBogya        | SCH: {%ābhogya%} als Erklärung von {%ābhogí%}, Sāy. zu ṚV. 1,113,5. {part=,seq=7221,type=,n=2} | Body explains 'ābhogya' as an explanation of 'ābhogí' (Sāy.) — it is its own entry glossin
+anuvAha       -> anuvaha       | SCH: {%anuvāhá%} m. Maitr. S. 1,5,13 (82,9); vgl. damit {%anovāhya%} Āpast. Śr. 6,28,4. {part=, | Body cites 'anuvāhá' with accent mark from Maitr. S. — a Vedic accented form, its own genu
+anvAyin       -> anvayin       | SCH: °{%anvāyin%} m. = {%anucara%}, H 30,31. {part=,seq=3266,type=˚,n=1} | Body defines 'anvāyin' as '= anucara' (follower/attendant) — a genuine gloss for this word
+valanA        -> valana        | SCH: {%valanā%} = {%valana%} 1. a), Haravijaya 2,31; = {%patanotpatane%}, Śrīk. XII,49. {part=, | Body defines 'valanā' as '= valana 1.a)' and '= patanotpatane' — a real feminine form with
+BrAmaraka     -> Bramaraka     | SCH: {%bhrāmaraka%} m. ˚eine Art Coitus, E 559 (K). {part=,seq=21116,type=,n=2} | Body defines 'bhrāmaraka' as 'eine Art Coitus' — its own entry with ā-lengthening (bhrā- n
+aMSumatPala   -> aMSumatPalA   | SCH: °{%aṃśumatphala%} [m.] Musa sapientum, S I,159,11 v.u. (Ko.; {%aśu˚%} gedruckt); 538,11 v. | Body gives 'aṃśumatphala [m.] Musa sapientum' — the m. gender confirms the short-a form; s
+gopucCA       -> gopucCa       | SCH: {%gopucchā%} ˚eine Art Zäsur, H 26,86 (Ko.). {part=,seq=12726,type=,n=2} | Body defines 'gopucchā' (long ā, feminine) as 'eine Art Zäsur' — its own entry, feminine f
+lapanA        -> lapana        | SCH: *{%lapanā%} f. etwa Geklatsch, Mahāvy. 127,53. {part=,seq=23163,type=*,n=2} | Body defines '*lapanā f.' as 'etwa Geklatsch' (gossip/chatter) — a feminine form with its 
+svAvAsinI     -> svavAsinI     | SCH: °{%svāvāsinī%} = {%avidhavā strī%}, S II,185,5. {part=,seq=27736,type=˚,n=1} | Body defines 'svāvāsinī = avidhavā strī' (non-widow woman) — its own entry with a gloss; s
+vanapriyA     -> vanapriya     | SCH: {%vanapriyā%} ˚f. kokila-Weibchen, Padyac. VII,5b [pw {%*vanapriya%} m. Padyac. IX,63b]. { | Body defines 'vanapriyā' as 'f. kokila-Weibchen' (female cuckoo) — a genuine feminine form
+AyamAna       -> Ayamana       | SCH: °{%āyamāna%} n. Meßart des königlichen Einkommens, Kauṭ. 104,6 v.u. {part=N,seq=28519,type | Body defines {%āyamāna%} (long ā in -māna) n. 'Meßart des königlichen Einkommens'; distinc
+IzADara       -> IzADAra       | SCH: *{%Īṣādhara%} m. N. pr. eines mythischen Berges, Mahāvy. 194 ({%Īśādhara%} und {%Iṣādhāra% | Body headword is {%Īṣādhara%} (short a in -dhara) m. pr., mountain name; IzADAra (long ā) 
+jAvita        -> javita        | SCH: *{%jāvita%} n. ? Mahāvy. 217,27. {part=,seq=14119,type=*,n=1} | Body defines {%jāvita%} (A=long ā) n. ?; long-ā form is the headword, distinct from javita
+upAcaraRa     -> upacaraRa     | SCH: {%upācaraṇa%} n. ˚Bedienen, Śuk. t. o. Einl. [p. 8,30]. {part=,seq=8843,type=,n=2} | Body defines {%upācaraṇa%} (A=ā) n. 'Bedienen'; distinct Sanskrit word from upacaraṇa.
+Alepaka       -> alepaka       | SCH: °{%ālepaka%} m. plasterer, Harṣac. 157,17. {part=,seq=7452,type=˚,n=1} | Body defines {%ālepaka%} (A=ā) m. 'plasterer'; distinct from alepaka with short a.
+Amantraka     -> amantraka     | SCH: °{%āmantraka%} m. der Anredende, Dhanika zu Daśar. II,67 (S. 77, Z. 8 v.u.). {part=,seq=72 | Body defines {%āmantraka%} (A=ā) m. 'der Anredende'; distinct from amantraka with short a.
+AnuzaNgin     -> anuzaNgin     | SCH: °{%ānuṣaṅgin%} Adj. unmittelbar folgend, Prabandh. 105,5. {part=N,seq=28491,type=˚,n=2} | Body defines {%ānuṣaṅgin%} (A=ā) Adj. 'unmittelbar folgend'; distinct from anuṣaṅgin with 
+ArohaRikA     -> ArohaRika     | SCH: °{%ārohaṇikā%} Leiter, Śuk. t. s. p. 120,13. {part=,seq=7382,type=˚,n=1} | Body defines {%ārohaṇikā%} (final A=ā) f. 'Leiter' (ladder); feminine -ikā distinct from n
+SAkawikA      -> SakawikA      | SCH: °{%śākaṭikā%} Marketenderin? E 624. {part=,seq=25266,type=˚,n=1} | Body defines {%śākaṭikā%} (long ā in śā-) f. 'Marketenderin'; distinct from śakaṭikā with 
+SAtamaKa      -> SatamaKa      | SCH: °{%śātamakha%} Adj. (f. {%ī%}) zu Śatamakha (= Indra) in Beziehung stehend, Padyac. IV,26d | Body defines {%śātamakha%} (long ā in śāta-) Adj. 'zu Śatamakha (=Indra) stehend'; distinc
+aBartfka      -> aBartfkA      | SCH: {%abhartṛka%} Adj. keinen Ernährer habend, Bṛhasp. im Ko. zu Āpast. 2,27,3. {part=,seq=402 | Body defines {%abhartṛka%} (short final a) Adj. 'keinen Ernährer habend'; -ka (masc/neut a
+aByudayika    -> AByudayika    | SCH: °{%abhyudayika%} Adj. glückverheißend, Prabandh. 134,1. {part=N,seq=28270,type=˚,n=2} | Body defines {%abhyudayika%} (short a) Adj. 'glückverheißend'; distinct from ābhyudayika w
+alIQa         -> AlIQa         | SCH: {%alīḍha%} Adj. unbeleckt, Varāh. Yogay. 8,3. {part=,seq=5199,type=,n=2} | Body defines {%alīḍha%} (short a) Adj. 'unbeleckt'; distinct from ālīḍha (A=ā) which is a 
+anantarajA    -> anantaraja    | SCH: {%anantarajā%} f. jüngere Schwester, auch Yudh. 1,50. {part=,seq=2079,type=,n=2} | Body defines {%anantarajā%} (final A=ā) f. 'jüngere Schwester'; feminine -jā distinct from
+arDAhAra      -> arDahAra      | SCH: °{%ardhāhāra%} m. Lok. mitten beim Essen, Prabandh. 179,3 v.u. {part=N,seq=28347,type=˚,n= | Body defines {%ardhāhāra%} (long ā in āhāra) m. 'mitten beim Essen'; ardhāhāra vs ardhahār
+araya         -> arAya         | SCH: °{%araya%} Adj. ohne Kraft, -x- Energie ({%avidyamāno rayo vego yasya so `rayo nirbala ity | Body glosses a-raya 'ohne Kraft/Energie' with Sanskrit derivation 'avidyamāno rayo vego ya
+arkakAnta     -> arkakAntA     | SCH: {%arkakānta%} ˚m. Sonnenstein, S I,251,15 v.u. (Ko.); 475,14 v.u. (Ko.); Śrīk. XVII,64; XX | Body defines arkakānta m. 'Sonnenstein'; suspect is masculine, suggestion feminine — disti
+ayavana       -> Ayavana       | SCH: *{%ayavana%} n. das Nichtvermischen, Sāy. zu Śat. Br. 1,7,2,26 in einer Etymologie. {part= | Body defines ayavana n. 'das Nichtvermischen' (non-mixing); a-yavana is its own compound, 
+bazkayARI     -> bazkayaRI     | SCH: *{%baṣkayāṇī%} Kuh mit jungem Kalbe, S II,185,3. {part=,seq=20370,type=*,n=2} | Body defines baṣkayāṇī 'Kuh mit jungem Kalbe'; long Ā in body matches suspect spelling, no
+cAturikA      -> caturikA      | SCH: *{%cāturikā%} ˚pillow, cushion, Vās. 57,2. {part=,seq=13391,type=*,n=1} | Body defines cāturikā 'pillow, cushion'; long Ā in body matches suspect; suggestion has sh
+cAturmasI     -> cAturmAsI     | SCH: °{%cāturmasī%} S II,319,19? {part=,seq=13398,type=˚,n=1} | Body documents cāturmasī with source ref; body matches suspect spelling (short a vs long Ā
+citraleKa     -> citraleKA     | SCH: °{%Citralekha%} m. N. eines Schreibers, Śṛṅgt. 114b. {part=,seq=13520,type=˚,n=2} | Body defines Citralekha m. (masculine proper noun); suggestion citraleKA is feminine — dif
+devejyA       -> devejya       | SCH: {%devejyā%} f. Götteropfer, Nir. 12,5. {part=,seq=15930,type=,n=1} | Body defines devejyā f. 'Götteropfer'; feminine form with own gloss; suggestion devejya is
+gfhameDA      -> gfhameDa      | SCH: {%gṛhamedhā%} f. = {%gārhasthya%}, Dharmaśarmābhy. 3,73. {part=,seq=12638,type=,n=2} | Body defines gṛhamedhā f. = gārhasthya; feminine with own gloss; suggestion gfhameDa is ne
+iDmabarhis    -> iDmAbarhis    | SCH: {%idhmabarhis%} n. Streu zum Brennen (?), ZDMG 9, LXXX. {part=,seq=7741,type=,n=2} | Body defines idhmabarhis n. 'Streu zum Brennen'; body matches suspect (short a), not sugge
+jaGanePala    -> jaGanePalA    | SCH: °{%jaghanephala%} n. die Frucht der Ficus oppositifolia, S II,143,8 v.u. (Ko.; pw hat {%*j | Body defines jaghanephala n. (neuter); notes pw has feminine jaghanephalā separately — two
+kAYcikA       -> kAYcika       | SCH: °{%kāñcikā%} Gürtel, S I,15,2; 503,7. {part=,seq=10445,type=˚,n=1} | Body defines kāñcikā 'Gürtel' with feminine -ā suffix; suggestion kAYcika is masculine/neu
+kAlayApanA    -> kAlayApana    | SCH: {%kālayāpanā%} f. = {%˚yāpana%}, Spr. 4397. {part=,seq=10656,type=,n=1} | Body defines kālayāpanā f. = kālayāpana; documents feminine form as its own entry equal to
+kaYcanaka     -> kAYcanaka     | SCH: {%kañcanaka%} 4. b) f. {%˚nikā%} N. pr. einer Zofe, Ind. Str. 1,386. {part=,seq=9622,type= | Body defines kañcanaka (short a initial) as proper noun; kAYcanaka (long Ā) is a different
+kamalin       -> kAmalin       | SCH: °{%kamalin%} m. Mond, S I,41,2. {part=,seq=9918,type=˚,n=1} | Body defines kamalin m. 'Mond' (moon, from kamala=lotus); kAmalin from kāma is a different
+karkaru       -> karkAru       | SCH: *{%karkaru%} und {%*mahā˚%} eine best. Blume, Mahāvy. 240. {%karkaravaḥ%} und {%mahā˚%} wo | Body defines karkaru 'eine best. Blume'; body matches suspect spelling (short a), own entr
+krayaka       -> krAyaka       | SCH: °{%krayaka%} m. Käufer, S II,207,15 (Ko.). {part=,seq=11672,type=˚,n=2} | Body defines krayaka m. 'Käufer' (buyer, from kraya); krAyaka with long Ā would be a diffe
+mAtsyabanDa   -> matsyabanDa   | SCH: °{%mātsyabandha%} m. eine Art Coitus, E 596 (D). {part=,seq=21813,type=˚,n=2} | Body defines mātsyabandha (long Ā, adjectival derivative mātsya-); matsyabanDa (short a) i
+mahAsurA      -> mahAsura      | SCH: °{%mahāsurā%} f. eine Art Likör, Kauṭ. 121,5. {part=,seq=21728,type=˚,n=2} | Body defines mahāsurā f. 'eine Art Likör'; feminine with own gloss; suggestion mahAsura is
+nIrajaskA     -> nIrajaska     | SCH: {%nīrajaskā%} Adj. f. nicht (mehr) menstruierend, Kauṭ. 153,2 v.u. {part=,seq=17487,type=, | Body defines nīrajaskā Adj. f. 'nicht menstruierend'; feminine form with own gloss; sugges
+nagarAja      -> nAgarAja      | SCH: °{%nagarāja%} m. = {%parvatarāja%}, Yudh. 4,95. {part=,seq=16560,type=˚,n=1} | Body defines nagarāja m. = parvatarāja; nagarāja (city-king) and nāgarāja (serpent-king) a
+nizWIvitA     -> nizWIvita     | SCH: {%niṣṭhīvitā%} f. das Ausspucken, Haravijaya 10,13. {part=,seq=17388,type=,n=2} | Body defines niṣṭhīvitā f. 'das Ausspucken'; feminine with own gloss; suggestion nizWIvita
+nizpIqanA     -> nizpIqana     | SCH: {%niṣpīḍanā%} f. das Andrücken, Zusammenpressen; {%danta˚%} Komm. zu Śiś. 10,75. {part=,se | Body defines niṣpīḍanā f. 'das Andrücken'; feminine with own gloss; suggestion nizpIqana i
+padatrARa     -> pAdatrARa     | SCH: °{%padatrāṇa%} (n.) Fußschutz, Sandale oder dgl., S II,309,19. {part=,seq=17952,type=˚,n=2 | Body defines padatrāṇa 'Fußschutz'; pada- (step/word) vs pāda- (foot) are distinct Sanskri
+prAntAra      -> prAntara      | SCH: °{%prāntāra%} m. Elefantenlenker? S I,220,3 v.u. (Ko.): {%madagajeṣu mattakuñjareṣu parapr | Body defines prāntāra (long Ā) 'Elefantenlenker?' with own Sanskrit citation; distinct fro
+prabADanA     -> prabADana     | SCH: {%prabādhanā%} f. das Plagen, Quälerei, Jātakam. 33. {part=,seq=19744,type=,n=2} | Body defines prabādhanā f. 'das Plagen'; feminine with own gloss; suggestion prabADana is 
+prativarRikA  -> prativarRika  | SCH: °{%prativarṇikā%} f. dass., Kauṭ. 89,3. {part=,seq=19547,type=˚,n=1} | Body defines prativarṇikā f. 'dass.' (feminine); suggestion prativarRika is masculine/neut
+protsAraRA    -> protsAraRa    | SCH: °{%protsāraṇā%} Platzschaffen, Pārvat. p. 71,10. {part=,seq=20147,type=˚,n=2} | Body defines protsāraṇā 'Platzschaffen'; feminine -ā form with own gloss; suggestion prots
+raNkA         -> raNka         | SCH: °{%raṅkā%} S I,257,11 v.u. (Ko.) ? [{%nīcaistaraṃ sthānaṃ raṅkānarakādikaṃ padaṃ nayati pr | Body defines raṅkā = dīnā (feminine form, poor/wretched); feminine with own gloss distinct
+sAmala        -> samala        | SCH: °{%Sāmala%} m. N. eines Elefantentreibers ("mahout"), Prabandh. 143,6 v.u.; 198,1. {part=, | Body defines Sāmala m. as proper noun (elephant driver's name); long Ā distinguishes it fr
+samAnIka      -> samanIka      | SCH: °{%samānīka%} (n.) Kampf, S I,163,4. {part=,seq=26340,type=˚,n=1} | Body defines samānīka (n.) as 'Kampf' — its own gloss; long ā is the entry form, not a mis
+uddaRqA       -> uddaRqa       | SCH: °{%uddaṇḍā%} Heftigkeit, S II,20,6. {part=,seq=8466,type=˚,n=1} | Body defines uddaṇḍā (f.) as 'Heftigkeit' — feminine noun with long ā, own gloss, not a mi
+vAgurikA      -> vAgurika      | SCH: {%vāgurikā%} ˚f. eine Art Fangnetz, Padyac. VII,46d. {part=,seq=23750,type=,n=2} | Body defines vāgurikā (˚f.) as 'eine Art Fangnetz' — feminine noun with own gloss; long ā 
+vanAvAsa      -> vanavAsa      | SCH: °{%vanāvāsa%} m. das Wohnen im Walde, Yudh. 2,14. {part=,seq=23494,type=˚,n=2} | Body defines vanāvāsa (m.) as 'Wohnen im Walde' — legitimate sandhi compound (vana+āvāsa),
+vaneja        -> vanejA        | SCH: °{%vaneja%} Lotus, S I,243,4. {part=,seq=23499,type=˚,n=1} | Body defines vaneja as 'Lotus' — own gloss with short a at end; not a misspelling of vanej
+vidDA         -> vidDa         | SCH: °{%viddhā%} eine Art Schlag, V 152; E 525 (K). {part=,seq=24156,type=˚,n=2} | Body defines viddhā as 'eine Art Schlag' — feminine noun with long ā, own gloss.
+AmantraRA     -> AmantraRa     | SCH: {%āmantraṇā%} f. Anrede, Jātakam. 23. {part=,seq=7234,type=,n=2} | Body defines 'āmantraṇā' f. Anrede with long ā; suspect (long ā) is the headword, distinct
+Aparuza       -> aparuza       | SCH: {%āparuṣa%} Adj. ziemlich struppig, Jātakam. 17. {part=,seq=7120,type=,n=2} | Body defines 'āparuṣa' Adj. ziemlich struppig with long Ā; suspect=āparuṣa, suggestion=apa
+JampA         -> Jampa         | SCH: {%jhampā%} ˚ = {%abhighāta%}, H 22,17. {part=,seq=14297,type=,n=1} | Body defines 'jhampā' = abhighāta with long ā; suspect is the headword, suggestion has sho
+arDahara      -> arDahAra      | SCH: {%ardhahara%} Adj. das halbe Vermögen erbend, Viṣṇus. 18,32. {part=,seq=5072,type=,n=2} | Body defines 'ardhahara' Adj. das halbe Vermögen erbend with short a; distinct from ardhah
+indukA        -> induka        | SCH: {%Indukā%} f. N. pr. eines Flusses, Hemādri 1,315,20. {part=,seq=7756,type=,n=2} | Body defines 'Indukā' f. N. pr. eines Flusses with long ā; suspect (long ā) is the headwor
+klItakA       -> klItaka       | SCH: {%klītakā%} f. = {%klītaka%} 2. c), Āpast. Śr. 15,3,16. {part=,seq=11741,type=,n=2} | Body defines 'klītakā' f. = klītaka 2c; feminine form with long ā is its own documented en
+pratikarin    -> pratikArin    | SCH: °{%pratikarin%} m. = {%śatrugaja%}, S I,29,5; 303,4. {part=,seq=19401,type=˚,n=2} | Body defines 'pratikarin' m. = śatrugaja with short a; suspect is the headword, distinct f
+sOraBi        -> sOraBI        | SCH: °{%Saurabhi%} m. = {%Saurabheya?%} Manm. I,27b. {part=,seq=27385,type=˚,n=2} | Body defines Saurabhi (m.) as '= Saurabheya?' — masculine noun with short i, own gloss; no
+avanatI       -> avanati       | SCH: {%avanatī%} Adv. mit {%bhū%} sich verneigen, R. 7,23,1,60. {part=,seq=5353,type=,n=2} | Body defines avanatī Adv. mit bhū 'sich verneigen' — own adverbial gloss with long ī; not 
+karRisuta     -> karRIsuta     | SCH: °{%Karṇisuta%} m. = Mūladeva, S II,151,5. {part=,seq=10107,type=˚,n=2} | Body defines Karṇisuta (m.) as '= Mūladeva' — own gloss with short i; not a misspelling of
+rajanimuKa    -> rajanImuKa    | SCH: °{%rajanimukha%} n. Abend, S II,247,16/17. {part=,seq=22674,type=˚,n=2} | Body defines rajanimukha (n.) as 'Abend' — own gloss with short i; not a misspelling of ra
+rajanipati    -> rajanIpati    | SCH: °{%rajanipati%} m. Mond, Śrīk. XI,21; XVII,35. {part=,seq=22670,type=˚,n=2} | Body defines rajanipati (m.) as 'Mond' — own gloss with short i; not a misspelling of raja
+yaSomati      -> yaSomatI      | SCH: °{%Yaśomati%} m. N. eines Fürsten, S I,135,1; II,180,6. {part=,seq=22494,type=˚,n=2} | Body defines Yaśomati (m.) as 'N. eines Fürsten' — masculine proper name with short i; not
+ayajYIya      -> ayajYiya      | SCH: {%ayajñīya%} Adj. = {%ayajñiya%} 1. Kap. S. 39,4. {part=,seq=4671,type=,n=2} | Body defines 'ayajñīya' Adj. = ayajñiya 1; long-ī variant is its own documented entry.
+jAli          -> jAlI          | SCH: °{%jāli%} (m.) ein best. Baum, Prabandh. 34,1. (Vgl. {%jāla%} *m. Nauclea cadamba.) {part= | Body 'jāli (m.) ein best. Baum' has short -i, matching suspect; suggestion jālī has long ī
+kAkU          -> kAku          | SCH: °{%Kākū%} m. N. eines Mannes, Prabandh. 275,3. {part=N,seq=28819,type=˚,n=2} | Body defines Kākū as 'm. N. eines Mannes' (a proper noun / man's name), distinct from kāku
+piRqAlU       -> piRqAlu       | SCH: °{%piṇḍālū%} f. Batate? S I,516,16 (Ko.). {part=,seq=18768,type=˚,n=1} | Body glosses 'piṇḍālū' f. Batate — feminine long-U form with its own gloss, distinct from 
+UKala         -> uKala         | SCH: *{%ūkhala%} m. ein Andropogon, Rājan. 8,126. {part=,seq=9029,type=*,n=2} | Body defines 'ūkhala' (long ū, asterisk=rare) as m. 'ein Andropogon'. Own word with long ū
+praSakti      -> prasakti      | SCH: °{%praśakti%} f. besondere Kraft, S II,356,27. {part=,seq=19867,type=˚,n=2} | Body gives its own gloss 'besondere Kraft' (special strength) for praśakti; not marked as 
+aSakala       -> asakala       | SCH: °{%aśakala%} ungeteilt, S II,44,10 v.u. (Ko.). {part=,seq=5858,type=˚,n=1} | Body gives own gloss 'ungeteilt' for 'aśakala' (palatal ś); different from 'asakala'; dist
+AviD          -> Avid          | SCH: °{%āvidh%} Adj. durchbohrend, H 43,117. {part=,seq=7503,type=˚,n=1} | Body glosses 'āvidh' Adj. durchbohrend — its own definition; Dh final vs d final = differe
+vADika        -> vAdika        | SCH: °{%vādhika%} (n.?) Tötungsbuße, Kauṭ. 122,8. {part=,seq=23805,type=˚,n=2} | Body glosses 'vādhika' (with dh) as Tötungsbuße — its own gloss; dh vs d yields a distinct
+pradAraRa     -> praDAraRa     | SCH: °{%pradāraṇa%} n. völliges Vernichten, S I,253,1. {part=,seq=19702,type=˚,n=2} | Body defines 'pradāraṇa' as n. 'völliges Vernichten'. Own compound (pra+dāraṇa); not a mis
+prasADin      -> prasAdin      | SCH: °{%prasādhin%} bewirkend, S I,36,3; 73,4; 576,1. {part=,seq=19911,type=˚,n=2} | Body defines 'prasādhin' as 'bewirkend'. Own agent-noun with -dh-; not a misspelling of pr
+tOlana        -> tolana        | SCH: °{%taulana%} n. Abwägen, S I,155,4 v.u. (Ko.). {part=,seq=15055,type=˚,n=2} | Body entry IS taulana (=tOlana) n. 'Abwägen'; suspect is the correct headword key.
+gOBila        -> goBila        | SCH: {%Gaubhila%} n. Gobhila's Gṛhyasūtra, Gṛhyās. 2,94. {part=,seq=12785,type=,n=2} | Body defines 'Gaubhila' as n. = Gobhila's Gṛhyasūtra. Gau- (from go+bhila?) is the atteste
+dEvejya       -> devejya       | SCH: *{%daivejya%} Adj. dem Planeten Jupiter geweiht (Topas), Rājan. 13,199. {part=,seq=15972,t | Body defines 'daivejya' (daiV-) as Adj. 'dem Planeten Jupiter geweiht'. Own word from daiv
+kawinI        -> KawinI        | SCH: °{%kaṭinī%} = {%madhyamekhalā%}, S I,462,5 v.u. (Ko.). Heer, S I,605,16 (Ko.). — S. auch { | Body defines kaṭinī with own glosses (madhyamekhalā; Heer) and cross-ref to aṭani; clearly
+aBizAdin      -> avizAdin      | SCH: °{%abhiṣādin%} m. Elefantenlenker, S I,241,7. {part=,seq=4255,type=˚,n=2} | Body defines abhiṣādin 'm. Elefantenlenker' — its own gloss. Suggestion avizādin is a comp
+avipatti      -> aBipatti      | SCH: °{%avipatti%} Adj. unvergänglich, Kir. III,15; unbesiegbar, Kir. XV,16. {part=N,seq=28399, | Body defines avipatti 'Adj. unvergänglich; unbesiegbar' — own glosses. Different prefix av
+AGAwana       -> AGAtana       | SCH: {%āghāṭana%} n. = {%āghāṭa%} (Grenze), Ind. Antiq. 6,68. 193,13,78. {part=,seq=6759,type=, | Body glosses 'āghāṭana' n. = āghāṭa (Grenze) — its own real gloss with ṭ; distinct from 'ā
+aBilamba      -> avilamba      | SCH: °{%abhilamba%} hanging down, Harṣac. 211,12. {part=,seq=4216,type=˚,n=2} | Body glosses 'abhilamba' hanging down — prefix abhi- vs avi- yields different real words; 
+diRqika       -> qiRqika       | SCH: {%diṇḍika%} 1. m. ein nackt einhergehender Lehrer, Alaṃkārav. 28, b. — 2. f. {%ā%} Hure, e | Body gives own glosses (naked teacher, prostitute) for 'diṇḍika'; SLP1 'd' vs 'q' (retrofl
+aBisaMvAdin   -> avisaMvAdin   | SCH: {%-abhisaṃvādin%} Adj. stimmend zu, im Einklang stehend mit, Prasannar. 2,22. {part=,seq=4 | Body glosses 'abhisaṃvādin' stimmend zu — prefix abhi- vs avi- gives different real words;
+avizpazwa     -> avispazwa     | SCH: °{%aviṣpaṣṭa%} not perceptible, Harṣac. 195,11. {part=,seq=5759,type=˚,n=2} | Body glosses 'aviṣpaṣṭa' not perceptible — ṣ vs s yields distinct real words; suspect has 
+nadIBft       -> nadIvft       | SCH: °{%nadībhṛt%} Flüsse tragend, H 5,90 (Ko). {part=,seq=16585,type=˚,n=1} | Body glosses 'nadībhṛt' Flüsse tragend (river-bearing) — Bh root bhṛ vs vf root vṛ are dif
+nirGAwana     -> nirGAtana     | SCH: °{%nirghāṭana%} (oder f.?) S II,106,3 v.u. (Ko.); II,233,14 (Ko.; hier n.): {%saṃbodhanaṃ  | Body glosses 'nirghāṭana' (=nirGAwana) as 'saṃbodhanaṃ nirghāṭanam'; suspect IS the entry 
+padmakoza     -> padmakoSa     | SCH: *{%padmakoṣa%} m. = {%padmakośa%} [eine best. Fingerstellung], H XXVI,55. {%padmakośī%} Ad | Body entry IS padmakoṣa (=padmakoza); equated to padmakośa as a real variant form, own ent
+powana        -> potana        | SCH: °{%poṭana%} n. Zusammenlegen, S I,94,4 v.u. (Ko.; in {%pravālapoṭana = pallavapuṭa%}); 175 | Body entry IS poṭana (=powana) n. 'Zusammenlegen'; suspect is the correct headword key.
+vivedana      -> viBedana      | SCH: {%vivedana%} Adj. empfindungslos. Nom. abstr. {%˚tā%} f. Yudh. 7,11. {part=,seq=24464,type | Body defines vivedana Adj. 'empfindungslos' — own distinct gloss, unrelated to vibhedana.
+kilina        -> kilima        | SCH: {%kilina%} Adj. feucht, naß (Boden), Zit. im Komm. zu Gobh. 4,7,8. {part=,seq=10828,type=, | Body defines 'kilina' as Adj. 'feucht, naß'. Own word attested in commentary; -na not a mi
+avirAj        -> aBirAj        | SCH: {%avirāj%} f. ein anderes Metrum als virāj, Ait. Br. 3,22,10. {part=,seq=5712,type=,n=2} | Body defines 'avirāj' (a+virāj) as f. 'ein anderes Metrum als virāj'. Clearly its own word
+anAkara       -> anAkAra       | SCH: {%anākara%} Adj. ohne Fundort, so v.a.  [Page031.3]  nicht nachzuweisen, Komm. zu Gṛhyās.  | Body gives its own distinct gloss 'Adj. ohne Fundort / nicht nachzuweisen' (without source
+anapasAra     -> anapasara     | SCH: °{%anapasāra%} Adj. unfähig, sich (von einem Verdachte) zu entlasten, Kauṭ. 90,10. {part=N | Body gives its own gloss 'unfähig sich zu entlasten' for anapasāra (long ā); distinct word
+vAhikA        -> vAhika        | SCH: {%vāhikā%} f. ˚Reihenfolge, das Nacheinander, Kir. XV,25. {part=,seq=23956,type=,n=2} | Body defines vāhikā f. (feminine form) 'Reihenfolge, das Nacheinander'; feminine form is a
+AkArin        -> Akarin        | SCH: °{%ākārin%} Adj. ein (so und so beschaffenes) Aussehen habend, Yudh. 8,101 [in {%cārvākāri | Body glosses 'Adj. ein Aussehen habend' with compound analysis cārvākārin; ākārin (having 
+padmanetrA    -> padmanetra    | SCH: {%padmanetrā%} ˚f. eine Lotosäugige, H XX,70. {part=,seq=17979,type=,n=2} | Body defines padmanetrā f. 'eine Lotosäugige' (lotus-eyed woman); feminine form with ā is 
+udAsana       -> udasana       | SCH: °{%udāsana%} n. das Unbeteiligtsein, Śrīk. XVII,20. {part=,seq=8408,type=˚,n=2} | Body defines udāsana n. 'das Unbeteiligtsein' (non-involvement/neutrality); udāsana (from 
+upAliNga      -> upaliNga      | SCH: °{%upāliṅga%} n. böses Vorzeichen, S II,158,10; 162,8. {part=,seq=8864,type=˚,n=2} | Body defines upāliṅga n. 'böses Vorzeichen' (bad omen) with own gloss; upā- prefix form di
+aDyavasAyitA  -> aDyavasAyita  | SCH: {%adhyavasāyitā%} Trik. 137 ed. Bomb. [Z.] {part=,seq=1892,type=,n=1} | Body shows '{%adhyavasāyitā%}' (long ā = suspect aDyavasAyitA) cited in Trik.; suspect is 
+kApotikA      -> kapotikA      | SCH: °{%kāpotikā%} a kind of plant, Harṣac. 243,15. {part=,seq=10500,type=˚,n=2} | Body entry IS kāpotikā (=kApotikA), glossed as a kind of plant; suspect is the entry key.
+pUrRacandrA   -> pUrRacandra   | SCH: °{%pūrṇacandrā%} ein Organ in der Vulva, E 342 (R, A). {part=,seq=19108,type=˚,n=2} | Body entry IS pūrṇacandrā (=pUrRacandrA) f., a feminine anatomical term; suspect is the en
+ullasana      -> ullAsana      | SCH: °{%ullasana%} n. = {%ullāsa%}, S I,578,6 v.u. (Ko.). {part=,seq=8978,type=˚,n=2} | Body entry IS ullasana n. = ullāsa; suspect is the correct headword key, own entry.
+ApasnAna      -> apasnAna      | SCH: °{%āpasnāna%} n. Wasserbad, S II,110,8. 9. {part=,seq=7126,type=˚,n=1} | Body entry IS āpasnāna (=ApasnAna) n. 'Wasserbad'; suspect is the entry key with long init
+AryARI        -> aryARI        | SCH: °{%āryāṇī%} Herrin, S II,88,8. {part=,seq=7417,type=˚,n=1} | Body entry IS āryāṇī (=AryARI) 'Herrin'; suspect is the entry key with long initial ā.
+BavaBavana    -> BavaBAvana    | SCH: °{%Bhavabhavana%} n. Leichenstätte, E 906 (R). {part=,seq=20775,type=˚,n=2} | Body glosses Bhavabhavana n. 'Leichenstätte'; suspect is the entry key with its own distin
+DAnuza        -> Danuza        | SCH: °{%dhānuṣa%} Adj. zu {%dhanus%}, H 43,170. {part=,seq=16365,type=˚,n=1} | Body entry IS dhānuṣa (=DAnuza) Adj. zu dhanus; suspect is the entry key.
+Sastrita      -> SAstrita      | SCH: °{%śastrita%} Adj. Kauṭ. 16,2 (in {%aśastrita%} unbewehrt). {part=,seq=25263,type=˚,n=2} | Body entry IS śastrita (=Sastrita) Adj. Kauṭ.; suspect is the entry key.
+SivAPala      -> SivAPalA      | SCH: °{%śivāphala%} n. = {%sitāmalakam%}, S I,518,10 (Ko.) {part=,seq=25420,type=˚,n=2} | Body entry IS śivāphala (=SivAPala) n. = sitāmalakam; suspect is the neuter entry key.
+UhanA         -> Uhana         | SCH: *{%ūhanā%} ({%ūhānā%} geschr.) f. = {%ūha%}, Mahāvy. 245,1060. {part=,seq=9101,type=*,n=2} | Body entry IS ūhanā (=UhanA) f. = ūha; ūhānā noted as scribal spelling. Suspect is the ent
+aByAcara      -> aByAcAra      | SCH: {%abhyācara%} m. Bereich, Mān. Gṛhy. 2,7. Statt {%˚care%} hat Pār. Gṛhy. {%abhyācāre%}, Āś | Body defines abhyācara m. 'Bereich' with own gloss; Pār. variant abhyācāre noted but does 
+antarjAtA     -> antarjAta     | SCH: {%antarjātā%} Adj. f. trächtig, Hemādri 1,447,23; 448,3. {part=,seq=3106,type=,n=2} | Body entry IS antarjātā (=antarjAtA) Adj. f. 'trächtig'; suspect is the feminine entry key
+apARigrahaRA  -> apARigrahaRa  | SCH: {%apāṇigrahaṇā%} Adj. f. unverheiratet, Kathās. 67,85. {part=,seq=3612,type=,n=2} | Body entry IS apāṇigrahaṇā (=apARigrahaRA) Adj. f. 'unverheiratet'; suspect is the feminin
+boDakAra      -> boDakara      | SCH: °{%bodhakāra%} m. Wecker, S I,247,8 v.u. (Ko.); 320,3 v.u. (Ko.). {part=,seq=20607,type=˚, | Body entry IS bodhakāra (=boDakAra) m. 'Wecker'; suspect is the entry key.
+dviradantaka  -> dviradAntaka  | SCH: *{%dviradantaka%} m. Löwe, Śuk. t. o. 40 [p. 48,36]. {part=,seq=16181,type=*,n=2} | Body entry IS dviradantaka m. 'Löwe'; suspect is the entry key with short a (not ā).
+kAkanIla      -> kAkanIlA      | SCH: *{%kākanīla%} ein best. Baum, Zach. Beitr. {part=,seq=10406,type=*,n=1} | Body entry IS kākanīla (=kAkanIla) 'ein best. Baum'; suspect is the entry key.
+kuhUrAva      -> kuhUrava      | SCH: °{%kuhūrāva%} m. Ruf des kokila, Manm. IV,8d. {part=,seq=11216,type=˚,n=2} | Body entry IS kuhūrāva (=kuhUrAva) m. 'Ruf des kokila'; suspect is the entry key.
+naKalu        -> naKAlu        | SCH: °{%nakhalu%} Nägelbeschneider, S I,101,4 v.u. (Ko.); 208,16 (Ko.); II,9,2 v.u. (Ko.). {par | Body entry IS nakhalu (=naKalu) 'Nägelbeschneider'; suspect is the entry key with short a.
+nikaraRa      -> nikAraRa      | SCH: °{%nikaraṇa%} n. Schädigung, Śuk. t. o. 26 [p. 38,14]. {part=,seq=16940,type=˚,n=2} | Body entry IS nikaraṇa (=nikaraRa) n. 'Schädigung'; suspect is the entry key with short a.
+patAkikA      -> patAkika      | SCH: °{%patākikā%} Fähnchen, S II,21,2. {part=,seq=17893,type=˚,n=1} | Body entry IS patākikā (=patAkikA) 'Fähnchen'; suspect is the feminine entry key.
+raNgAjIvaka   -> raNgajIvaka   | SCH: °{%raṅgājīvaka%} m. Maler, S I,521,13 v.u. (Ko.). {part=,seq=22659,type=˚,n=2} | Body entry IS raṅgājīvaka (=raNgAjIvaka) m. 'Maler'; suspect is the entry key with long ā.
+sAmAloka      -> samAloka      | SCH: {%sāmāloka%} (˚Adj.) ähnlich, S II,201,1. {part=,seq=26351,type=,n=1} | Body entry IS sāmāloka (=sAmAloka) Adj. 'ähnlich'; suspect is the entry key with long sā-.
+svAduka       -> svAdukA       | SCH: °{%svāduka%} Adj. süß, S I,176,6. {part=,seq=27716,type=˚,n=1} | Body entry IS svāduka (=svAduka) Adj. 'süß'; suspect is the masc/neut entry key.
+utpalavarRa   -> utpalavarRA   | SCH: {%utpalavarṇa%} ˚Adj. von der Farbe des blauen Lotus, Kauṭ. 76,2 v.u. {part=N,seq=28611,ty | Body entry IS utpalavarṇa (=utpalavarRa) Adj. 'von der Farbe des blauen Lotus'; suspect is
+vellika       -> vellikA       | SCH: °{%vellika%} m. Knabe, S II,198,6. {part=,seq=24787,type=˚,n=1} | Body defines 'vellika' m. Knabe directly; suspect (short a) is the entry itself, not a mis
+aSvAmuKa      -> aSvamuKa      | SCH: {%aśvāmukha%} m. das unterseeische Feuer, Naiṣ. 8,81. {part=,seq=6037,type=,n=2} | Body glosses 'aśvāmukha' (long ā) as 'das unterseeische Feuer'; aśvā- (mare-faced) gives a
+apAmitya      -> apamitya      | SCH: {%apāmítya%} n. Äquivalent, Maitr. S. 1,10,2. {part=,seq=3632,type=,n=1} | Body glosses 'apāmítya' (long ā, Vedic accent marked) as 'Äquivalent'; distinct Vedic word
+azwakyA       -> azwakya       | SCH: {%aṣṭakyā%} f. aṣṭakā-Kuh, Kauś. 19,28. {part=,seq=6049,type=,n=1} | Body glosses 'aṣṭakyā' (long ā, feminine) as 'aṣṭakā-Kuh'; distinct feminine form with its
+kURika        -> kURikA        | SCH: {%Kūṇika%} m. N. pr. eines Fürsten von Campā, Hem. Par. 6,22. {%Kūnika%} VP.2 5,391. {part | Body glosses 'Kūṇika' as a proper name (prince of Campā); masculine noun, no feminine ā; t
+pariGawwanA   -> pariGawwana   | SCH: °{%parighaṭṭanā%} = {%tantrīṇāṃ kaṇṭhasya vottejanam%}, H XXXII,73. {part=,seq=18155,type= | Body glosses 'parighaṭṭanā' (long ā) as feminine noun; Sanskrit -nā is a distinct feminine
+prApaRikA     -> prApaRika     | SCH: {%prāpaṇikā%} = {% dhṛṣṭā%}, Vaij. 86,50. {part=,seq=20046,type=,n=1} | Body glosses 'prāpaṇikā' (long ā, feminine) equated to 'dhṛṣṭā' (also feminine); distinct 
+samupanayana  -> samupAnayana  | SCH: {%samupanayana%} n. das Herbeiführen, Dharmaśarm. 6,53. {part=,seq=26421,type=,n=2} | Body glosses 'samupanayana' (short a) as 'das Herbeiführen'; sam+upa+nayana is a valid com
+upAlipsu      -> upalipsu      | SCH: {%upālipsu%} Adj. (mit Akk.) jemand zu tadeln beabsichtigend, Kāś. zu P. 8,2,94. {part=,se | Body glosses 'upālipsu' (long ā) as 'intending to blame someone'; upā+lipsu from upā+labh 
+CAndya        -> Candya        | SCH: °{%chāndya%} Adj. mit {%grah%} zum Gefangenen machen (?), Prabandh. 122,4. Vgl. Tawney, S. | Body glosses 'chāndya' (long ā, with ch-) with its own meaning; ch ≠ c in SLP1, and long ā
+nirayati      -> nirAyati      | SCH: °{%niraya(ti)%} eine Hölle sein, Śrīk. VII,41. {part=,seq=17092,type=˚,n=1} | Body glosses 'niraya(ti)' (short a) as 'to be a hell'; denom. from niraya (hell) with shor
+DaraRiruha    -> DaraRIruha    | SCH: °{%dharaṇiruha%} m. Berg, Govardh. 674. {part=,seq=16278,type=˚,n=1} | Body defines 'dharaṇiruha' m. Berg with short i; suspect is the headword, not a misspellin
+avanIpa       -> avanipa       | SCH: °{%avanīpa%} m. Erdherrscher, Fürst, Prabandh. 197,3. {part=N,seq=28377,type=˚,n=2} | Body defines 'avanīpa' m. Erdherrscher with long ī; suspect is the headword, suggestion ha
+janmaBUmI     -> janmaBUmi     | SCH: {%-janmabhūmī%} Adv. mit {%bhū%} zum Geburtslande von... werden, Kād. 171,25 (294,8). {par | Body defines 'janmabhūmī' Adv. with long ī as adverbial compound; documented as its own en
+kiRI          -> kiRi          | SCH: {%kiṇī%} Adv. mit {%kṛ%} schwielig machen, Subhāṣitāv. 3217. {part=,seq=10783,type=,n=2} | Body defines 'kiṇī' Adv. mit kṛ with long ī; suspect is the headword, not a misspelling of
+kuraNganABI   -> kuraNganABi   | SCH: °{%kuraṅganābhī%} Moschus, Śrīk. III,42. {part=,seq=11058,type=˚,n=1} | Body defines 'kuraṅganābhī' Moschus with long ī; suspect is the headword, suggestion has s
+sutatA        -> sUtatA        | SCH: °{%sutatā%} f. Sohnschaft, Padyac. II,53a. {part=,seq=27020,type=˚,n=1} | Body defines 'sutatā' f. Sohnschaft (su-, short u); distinct from sūtatā (long ū); own ent
+SUrin         -> sUrin         | SCH: °{%śūrin%} — {%vikrānta%}, H XLIII,45 [Ko.: {%śūrayati sādhv iti śūrī vikrāntaḥ%}. pw {%*ś | Body defines 'śūrin' (S=palatal ś) = vikrānta; distinct from sūrin (plain s); different wo
+aSakra        -> asakra        | SCH: °{%aśakra%} Adj., Śakra's beraubt, H 43,170. {part=,seq=5865,type=˚,n=1} | Body defines 'aśakra' Adj. Śakra's beraubt (palatal ś); distinct from asakra (plain s); ow
+luRwana       -> luRWana       | SCH: °{%luṇṭana%} n. Abpflücken, S II,177,6. {part=,seq=23267,type=˚,n=1} | Body 'luṇṭana Abpflücken' uses ṭ (SLP1 w), matching suspect; suggestion has ṭh (W) which d
+Aroda         -> AroDa         | SCH: °{%āroda%} das Weinen, Yudh. 6,96. 104 (in {%sārodā%} Adj. f. weinend). {part=,seq=7377,ty | Body defines 'āroda' das Weinen (from √rud, plain d); distinct from āroḍha (retroflex ḍh);
+adva          -> aDva          | SCH: {%adva%} , {%advayos%} Lok. Du. nicht in den zwei Geschlechtern, d. i. im Neutrum, Trik. 1 | Body defines 'adva' advayos Lok. Du. im Neutrum; own grammatical entry, entirely distinct 
+ADArin        -> AdArin        | SCH: {%ādhārin%} Adj. die Stätte bildend für (Gen.), Komm. zu Āpast. Śr. 15,6,22. {part=,seq=70 | Body 'die Stätte bildend für' fits ādhārin (from ādhāra, support/site); distinct from ādār
+kzoRIBuj      -> kzORIBuj      | SCH: °{%kṣoṇībhuj%} m. Fürst, Padyac. VII,42a. {part=,seq=11924,type=˚,n=1} | Body 'kṣoṇībhuj' has kṣo- (SLP1 o, short), matching suspect; suggestion has O (au).
+kedArika      -> kEdArika      | SCH: °{%kedārika%} n. small holding, Harṣac. 49,17. {part=,seq=11457,type=˚,n=2} | Body defines kedārika n. 'small holding' with own English gloss; kedārika (from kedāra, fi
+UrDvatA       -> UrDvaTA       | SCH: °{%ūrdhvatā%} aufrechte Haltung, S II,114,13 v.u. (Ko.); Höhe, S I,292,8 (Ko.). {part=,seq | Body 'aufrechte Haltung/Höhe' defines ūrdhvatā (from ūrdhva) with plain t; suggestion has 
+KArvawika     -> kArvawika     | SCH: °{%khārvaṭika%} n. eine Art Ortschaft, Kauṭ. 46,4. {part=,seq=12100,type=˚,n=2} | Body 'khārvaṭika' has kh- initial (SLP1 K), matching suspect K; suggestion k- is a differe
+atata         -> atawa         | SCH: °{%atata%} Adj. nicht bedeckt, nicht voll von, Yudh. 7,46. {part=,seq=949,type=˚,n=2} | Body defines atata 'Adj. nicht bedeckt, nicht voll von' — own gloss. atata (not spread/cov
+saMdAmita     -> saMdAnita     | SCH: °{%saṃdāmita%} aufgebunden, durchflochten, S I,532,3. {part=,seq=26139,type=˚,n=2} | Body defines saṃdāmita 'aufgebunden, durchflochten' (bound up, interwoven) — own gloss fro
+utpAtin       -> utpAwin       | SCH: {%utpātin%} Adj. auffliegend, Naiṣ. 1,126. {part=,seq=8267,type=,n=1} | Body 'utpātin auffliegend' has dental t matching suspect; suggestion w (ṭ) is a different 
+nirmoda       -> nirRoda       | SCH: °{%nirmoda%} freudlos, S I,45,3. {part=,seq=17225,type=˚,n=1} | Body 'nirmoda freudlos' defines suspect as its own word; suggestion nirṇoda (with ṇ) is un
+ujjesa        -> ujjeza        | SCH: {%ujjesá%} m. Sieg, AV. 4,17,1. {part=,seq=8056,type=,n=1} | Body 'ujjesá Sieg' has dental s, matching suspect; suggestion has z (retroflex ṣ).
+jamBam        -> jamBan        | SCH: *{%jambham%} Absol. Kāś. zu P. 7,1,61. {part=,seq=13925,type=*,n=1} | Body '*jambham Absol.' documents absolutive form jambham directly; jamBan is a different f
+dvAdaSavarzika -> dvAdaSavArzika | SCH: {%dvādaśavarṣika%} Adj. zwölf Jahre dauernd. {part=,seq=16113,type=,n=2} | Body defines dvādaśavarṣika 'Adj. zwölf Jahre dauernd' (lasting twelve years); own gloss. 
+Ak            -> ak            | SCH: °{%āk%} genießen, S I,191,8 (Ko. zur Erklärung von {%bhikṣāka: bhikṣām ākanti āsvādayanti% | Body glosses '{%āk%}' (=Ak) as 'genießen'; the suspect form is independently defined.
+AtmasaMsTA    -> AtmasaMsTa    | SCH: {%ātmasaṃsthā%} f. das Verweilen -x-, Verbleiben bei sich (auf das Subjekt des Satzes sich | Body shows '{%ātmasaṃsthā%}' (long ā = A) glossed 'Verweilen bei sich'; suspect is the cor
+asiDAra       -> asiDArA       | SCH: *{%asidhāra%} m. eine best. Hölle, Mahāvy. 215. {part=,seq=6351,type=*,n=2} | Body shows '{%asidhāra%}' (short a at end = suspect asiDAra); glossed as a type of hell. S
+avanaha       -> avanAha       | SCH: *{%avanaha%} m. Ausstopfung, Mahāvy. 261,90. {part=,seq=5354,type=*,n=2} | Body shows '{%avanaha%}' (short a) glossed 'Ausstopfung'; matches the suspect spelling.
+balAla        -> balala        | SCH: °{%balāla%} m. Wind, S II,199,7; 232,5. {part=,seq=20347,type=˚,n=1} || °{%Balāla%} m. = V | Body (two entries) shows '{%balāla%}' (long ā = suspect balAla) glossed 'Wind' and '= Vāsu
+ekAkara       -> ekakara       | SCH: °{%ekākara%} m. = {%mukhyakhani%} (Hauptfundstätte), Padyac. VIII,42d. {part=N,seq=28698,t | Body shows '{%ekākara%}' (long ā = suspect ekAkara) glossed '= mukhyakhani'; suspect is th
+ekavarRA      -> ekavarRa      | SCH: °{%ekavarṇā%} einfarbige Kuh, E 894 (P). {part=,seq=9257,type=˚,n=1} | Body shows '{%ekavarṇā%}' (long ā at end = suspect ekavarRA) glossed 'einfarbige Kuh'; sus
+gokulikA      -> gokulika      | SCH: {%gokulikā%} ˚f. Rinderhirtin, S I,249,5 v.u. (Ko.). {part=,seq=12672,type=,n=2} | Body shows '{%gokulikā%}' (long ā = suspect gokulikA) glossed 'Rinderhirtin'; suspect is r
+jIvAjIva      -> jIvajIva      | SCH: °{%jīvājīva%} m. = {%cakora%}, S II,16,12 (Ko.). {part=,seq=14178,type=˚,n=1} | Body shows '{%jīvājīva%}' (long ā = suspect jIvAjIva) glossed '= cakora'; suspect is real.
+kAkara        -> kAkAra        | SCH: °{%Kākara%} N. eines Dorfes, Prabandh. 32,10. {part=N,seq=28817,type=˚,n=2} | Body shows '{%Kākara%}' (short a = suspect kAkara) as proper noun 'N. eines Dorfes'; suspe
+kutUhalitA    -> kutUhalita    | SCH: {%-kutūhalitā%} f. Neugier, Verlangen nach, Caṇḍak. 74,3; Pārv. 579,18. {part=,seq=10964,t | Body shows '{%kutūhalitā%}' (long ā = suspect kutUhalitA) glossed 'Neugier'; suspect is re
+pawaliman     -> pAwaliman     | SCH: °{%paṭaliman%} m. Röte, Śrīk. VIII,16. {part=,seq=17815,type=˚,n=1} | Body shows '{%paṭaliman%}' (short a = suspect pawaliman) glossed 'Röte'; suspect is real.
+uccAlana      -> uccalana      | SCH: °{%uccālana%} n. = {%uddharaṇa%}, S I,89,9 v.u. (Ko.); 432,11 (Ko. = {%pracyava)%}. {%˚ucc | Body shows '{%uccālana%}' (long ā = suspect uccAlana) glossed '= uddharaṇa'; suspect is re
+akampra       -> Akampra       | SCH: {%akampra%} Adj. nicht schwankend, Śobh. 36. {part=,seq=38,type=,n=2} | Body shows '{%akampra%}' (short a = suspect akampra) glossed 'nicht schwankend'; real word
+kAlita        -> kalita        | SCH: {%Kālita%} m. N. pr. eines Prakrit-Dichters, Hāla 63. {part=,seq=10690,type=,n=2} | Body shows '{%Kālita%}' (long ā = suspect kAlita) as proper noun Prakrit poet Hāla 63; dis
+ADyeya        -> aDyeya        | SCH: °{%ādhyeya%} Adj. = {%utkaṇṭhayā smartavya%}, H 43,284. {part=,seq=7051,type=˚,n=2} | Body shows '{%ādhyeya%}' (long ā = suspect ADyeya) glossed '= utkaṇṭhayā smartavya'; real 
+nilayin       -> nilAyin       | SCH: °{%nilayin%} Adj. liegend an, S I,548,8. {part=,seq=17275,type=˚,n=1} | Body shows '{%nilayin%}' (short i = suspect nilayin) glossed 'liegend an'; real word disti
+AkumAra       -> akumAra       | SCH: {%ākumāra˚%} vom Knaben an, Ragh. 4,20. {part=,seq=6663,type=,n=1} | Body 'ākumāra˚ vom Knaben an' has long ā- initial, matching suspect A; suggestion has shor
+AtApana       -> Atapana       | SCH: °{%ātāpana%} (m.) Sonne, S II,137,4. {part=,seq=6900,type=˚,n=1} | Body 'ātāpana Sonne' has long ā in second syllable (SLP1 A), matching suspect; suggestion 
+aditsA        -> AditsA        | SCH: {%aditsā%} f. das Nichtgebenwollen, Hem. Par. 5,10. {part=,seq=1570,type=,n=2} | Body 'aditsā f. das Nichtgebenwollen' has short a- initial, matching suspect; suggestion h
+apsarasa      -> Apsarasa      | SCH: {%apsarasa%} = {%apsaras%} in {%apsarasālaya%}, R. ed. Bomb. 4,46,15. {part=,seq=3935,type | Body 'apsarasa = apsaras in apsarasālaya' has short a- initial, matching suspect; document
+cArucarya     -> cArucaryA     | SCH: {%Cārucarya%} n. Titel eines Werkes, Opp. Cat. 1. {part=,seq=13448,type=,n=2} | Body 'Cārucarya n. Titel eines Werkes' is neuter with short final -a, matching suspect; su
+kASyapasaMhitA -> kaSyapasaMhitA | SCH: {%Kāśyapasaṃhitā%} f., {%Kāśyapasūtra%} n., Titel von Werken, Opp. Cat. 1. {part=,seq=1073 | Body 'Kāśyapasaṃhitā' has long kā- initial (SLP1 kA), matching suspect; suggestion has sho
+padmavyUhA    -> padmavyUha    | SCH: *{%padmavyūhā%} f. eine best. dhāraṇī, Mahāvy. 25,7. {part=,seq=17989,type=*,n=2} | Body 'padmavyūhā f. eine best. dhāraṇī' is feminine with long ā, matching suspect A; sugge
+Aditala       -> AditAla       | SCH: °{%āditala%} das untere Stockwerk, Kauṭ. 53,10. {part=N,seq=28480,type=˚,n=2} | Body 'āditala das untere Stockwerk' has short a in -tala, matching suspect; suggestion has
+Awwaka        -> awwaka        | SCH: °{%āṭṭaka%} n.? S II,197,15 v.u. (Ko.). {part=,seq=6865,type=˚,n=1} | Body 'āṭṭaka n.?' has long ā- initial (SLP1 A), matching suspect; suggestion has short a-.
+BUtejyA       -> BUtejya       | SCH: °{%bhūtejyā%} f. Opfer an die Gespensterwesen, Kauṭ. 135,9. {part=,seq=20988,type=˚,n=2} | Body 'bhūtejyā f. Opfer' is feminine with long ā, matching suspect A; suggestion has short
+DamanikA      -> DAmanikA      | SCH: °{%dhamanikā%} f. "Blasebalg", eine Art Schild, Kauṭ. 102,9 v.u. {part=,seq=16268,type=˚,n | Body 'dhamanikā' has short a in -mani- (SLP1 D=dh), matching suspect; suggestion has long 
+OpagrAhika    -> Opagrahika    | SCH: °{%aupagrāhika%} n. eine Aufmerksamkeit, um Wohlwollen zu erwecken, Kauṭ. 114,10. {part=N, | Body 'aupagrāhika' has long ā in -grāhi- (SLP1 A), matching suspect; suggestion has short 
+SIlitA        -> SIlita        | SCH: °{%śīlitā%} Charakter, Rasas. 188d. {part=,seq=25477,type=˚,n=1} | Body 'śīlitā Charakter' has long ā final, matching suspect A (feminine form); suggestion h
+aciroQa       -> aciroQA       | SCH: {%aciroḍha%} Śiś. 10,43. {part=,seq=744,type=,n=1} | Body 'aciroḍha' has short final -a, matching suspect; suggestion has long ā (feminine form
+ahasa         -> Ahasa         | SCH: °{%ahasa%} sorrow, Vās. 33,1. {part=,seq=6533,type=˚,n=1} | Body 'ahasa sorrow' has short a- initial, matching suspect; suggestion has long ā-.
+ambujAsana    -> ambujAsanA    | SCH: °{%ambujāsana%} m. = Brahman, S I,320,2. {part=,seq=4621,type=˚,n=1} | Body 'ambujāsana m.' is masculine with short final -a, matching suspect; suggestion has ā 
+apAdyA        -> apAdya        | SCH: {%apādyā%} Kauś. 42,22; 82,5 Bez. der Verse AV. 4,33,1 ff. {part=,seq=3618,type=,n=2} | Body 'apādyā Bez. der Verse' has long ā final, matching suspect A; suggestion has short -a
+arDArcaSasya  -> arDarcaSasya  | SCH: {%ardhārcaśasya%} n. das Rezitieren nach Halbversen, Vaitān. {part=,seq=5076,type=,n=2} | Body 'ardhārcaśasya' has long ā in ardhā- (SLP1 A), matching suspect; suggestion has short
+asurasa       -> asurasA       | SCH: {%asurasa%} ˚m. Lust am Leben, Yudh. 5,49. {part=,seq=6382,type=,n=1} | Body 'asurasa ˚m. Lust am Leben' is masculine with short final -a, matching suspect; sugge
+avagaRanA     -> avagaRana     | SCH: *{%avagaṇanā%} f. Geringschätzung, Verachtung, Deśīn. 1,17. {part=,seq=5277,type=*,n=2} | Body 'avagaṇanā f. Geringschätzung' is feminine with long ā, matching suspect A; suggestio
+avatAraRikA   -> avataraRikA   | SCH: {%avatāraṇikā%} f. Einleitung, Caṇḍīdāsa zu Kāvyapr. 1,1 (nach Aufrecht). {part=,seq=5330, | Body 'avatāraṇikā' has long ā in avatā- (SLP1 A), matching suspect; suggestion has short a
+bAlavatsA     -> bAlavatsa     | SCH: {%bālavatsā%} Adj. f. deren Kind noch ein Knabe ist. {part=,seq=20463,type=,n=2} | Body 'bālavatsā Adj. f. deren Kind noch ein Knabe ist' is feminine with long ā, matching s
+devilA        -> devila        | SCH: °{%Devilā%} N. einer Frau, S II,332,26. 1. {%devī́%} f. s. u. 1. {%devá%}. 2. {%devī%} Adv | Body gives 'N. einer Frau' (name of a woman) with ā feminine ending; Devilā is a proper na
+gatAgatika    -> gAtAgatika    | SCH: °{%gatāgatika%} n. dass., Harṣac. 59,15. {part=,seq=12262,type=˚,n=1} | Body glosses 'dass.' (same as the preceding entry, implied going-and-coming); gatāgatika f
+gotrajA       -> gotraja       | SCH: {%gotrajā%} ˚Subst. f. family goddess, Prabandh. 40,9; 41,2. {part=N,seq=29011,type=,n=2} | Body defines gotrajā as 'family goddess' (f.); the feminine form gotrajā is its own word, 
+hArAva        -> hArava        | SCH: °{%hārāva%} m. Weheschrei, S II,160,4. {part=,seq=27918,type=˚,n=1} | Body glosses 'Weheschrei' (wail/cry of woe); hārāva (with long ā in second syllable) is a 
+hastAyata     -> hastayata     | SCH: °{%hastāyata%} Adj. ein {%hasta%} lang, Kauṭ. 79,7 v.u. {part=,seq=27885,type=˚,n=2} | Body glosses 'ein hasta lang' (one hasta in length); hastāyata is a well-formed tatpuruṣa 
+hastivAhA     -> hastivAha     | SCH: °{%hastivāhā%} s. {%vāhā%}. {part=,seq=27897,type=˚,n=1} | Body cross-references 'vāhā' (feminine form); hastivāhā is the feminine of hastivāha, a re
+himApAta      -> himapAta      | SCH: °{%himāpāta%} m. Schneefall [in {%˚ahimāpāta%}, s. d.], H XXIV,38. {part=,seq=27956,type=˚ | Body glosses 'Schneefall' (snowfall); himāpāta (hima+āpāta, with sandhi ā) is a distinct c
+jumbakA       -> jumbaka       | SCH: {%jumbakā%} f. Bez. einer gāyatrī, Hārīta im Komm. zu VS. 25,9 und Hemādri 3, a,903,4. {pa | Body defines jumbakā as feminine 'Bez. einer gāyatrī'; the feminine form is a real distinc
+lANgUlika     -> lANgUlikA     | SCH: {%lāṅgūlika%} ˚Adj. geschwänzt, S I,277,4 v.u. (Ko.). {part=,seq=23215,type=,n=2} | Body glosses lāṅgūlika as Adj. 'geschwänzt' (tailed); the masculine adjective form is a re
+mATin         -> maTin         | SCH: °{%māthin%} quirlend, H XLIII,34. {part=,seq=21814,type=˚,n=1} | Body glosses 'quirlend' (churning); māthin with long ā (from math/manth to churn) is a wel
+muruRqA       -> muruRqa       | SCH: °{%muruṇḍā%} (Variante zu {%vimuṇḍā%}) E 625. {part=,seq=22144,type=˚,n=1} | Body notes muruṇḍā as 'Variante zu vimuṇḍā'; the feminine form -ā is documented as a varia
+nagaramaRqana -> nagaramaRqanA | SCH: {%nagaramaṇḍana%} adornment of a city, Vās. 142,4. {part=,seq=16557,type=,n=2} | Body glosses 'adornment of a city'; nagaramaṇḍana (n.) is a real neuter compound, distinct
+paNkajanayana -> paNkajanayanA | SCH: {%paṅkajanayana%} ˚m. lotusäugig, Beiw. Kṛṣṇa's, Yudh. 6,77. {part=,seq=17706,type=,n=2} | Body glosses paṅkajanayana as m. 'lotusäugig' (lotus-eyed), epithet of Kṛṣṇa; masculine fo
+paraSuDAra    -> paraSuDara    | SCH: °{%paraśudhāra%} m. Axtträger, S I,254,7. {part=,seq=18088,type=˚,n=1} | Body glosses 'Axtträger' (axe-bearer); paraśudhāra (with long ā in dhāra) differs from par
+paralokAgama  -> paralokagama  | SCH: °{%paralokāgama%} m. = {%mokṣaśāstra%}, S I,91,2. {part=,seq=18081,type=˚,n=2} | Body defines paralokāgama as = mokṣaśāstra; the form with ā-sandhi (loka+āgama) is a real 
+pewika        -> pewikA        | SCH: °{%peṭika%} (nach dem Ko. m.) Menge, S I,574,1; 423,4 in {%bhaṭapeṭikārtham = subhaṭagrāsa | Body glosses peṭika (m. per Ko.) 'Menge' (crowd/collection); masculine form is documented 
+pikapriya     -> pikapriyA     | SCH: °{%pikapriya%} m. Mangobaum, S II,309,25; 341,11 [pw hat {%*pikapriyā%}]. {part=,seq=18721 | Body glosses pikapriya as m. 'Mangobaum'; SCH explicitly notes pw has *pikapriyā, making t
+prAstaraRa    -> prastaraRa    | SCH: °{%prāstaraṇa%} n. eine Art Federbett, S II,30,12 v.u. (Ko.). {part=,seq=20095,type=˚,n=2} | Body glosses prāstaraṇa as 'eine Art Federbett'; prā- prefix form is distinct from pra-; b
+prAtiSIna     -> pratiSIna     | SCH: °{%prātiśīna%} = {% kaphavant%}, S I,485,7. {part=,seq=20031,type=˚,n=1} | Body defines prātiśīna as = kaphavant; prāti- (with long ā) is a distinct prefix form from
+prAtiveSman   -> prativeSman   | SCH: °{%prātiveśman%} m. Nachbar, E 759 (R). {part=,seq=20029,type=˚,n=1} | Body glosses prātiveśman as m. 'Nachbar' (neighbor); prāti- vs prati- are distinct prefix 
+pratiPAla     -> pratiPala     | SCH: °{%pratiphāla%} m. = {%pratighāta%}, H XXV,52; XLVIII,26 (= Widerhall); Ebenbild, Śrīk. IX | Body glosses pratiphāla as = pratighāta (rebuff) and Ebenbild (image/echo); dhāra with lon
+praticCAdana  -> praticCadana  | SCH: °{%praticchādana%} m. das Verbergen, Kauṭ. 110,7 v.u. {part=,seq=19428,type=˚,n=2} | Body glosses praticchādana as 'das Verbergen' (the concealing); -chādana (from chād to cov
+rAmadattA     -> rAmadatta     | SCH: °{%Rāmadattā%} N. einer Fürstin, S II,345,4; einer Hetäre II,347,13. {part=,seq=22954,type | Body gives Rāmadattā as 'N. einer Fürstin' and 'einer Hetäre'; the feminine proper name wi
+ratnacCAya    -> ratnacCAyA    | SCH: °{%ratnacchāya%} n. Edelsteinschimmer, H XLI,56 {%[`chāyā bāhulye' iti napuṃsakatvam%}, sa | Body glosses 'ratnacchāya' as n. (Edelsteinschimmer); the Ko. explicitly justifies neuter 
+sAraNgikA     -> sAraNgika     | SCH: °{%Sāraṅgikā%} N. der Tochter eines Brahmanen, Śṛṅgt. 13,4 v.u. {part=,seq=26809,type=˚,n= | Body defines 'Sāraṅgikā' as f. proper name (Tochter eines Brahmanen). Feminine ā-stem is t
+samavasrAva   -> samavasrava   | SCH: °{%samavasrāva%} Adj. mit einem Abfluß, Mgs II,11,3. {part=,seq=26300,type=˚,n=2} | Body glosses 'samavasrāva' as Adj. 'mit einem Abfluß'. Long ā is the attested form; the gl
+saraRika      -> sAraRika      | SCH: °{%saraṇika%} als Weg habend, S II,29,6. {part=,seq=26506,type=˚,n=1} | Body defines 'saraṇika' (short a) as 'als Weg habend'. Own distinct word, not a misspellin
+sarvaDAra     -> sarvADAra     | SCH: °{%sarvadhāra%} allseitig geschärft, S I,50,11 (Ko.) {part=,seq=26588,type=˚,n=2} | Body glosses 'sarvadhāra' as 'allseitig geschärft'. The gloss fits the suspect form; sarvā
+savin         -> sAvin         | SCH: °{%savin%} Adj. reich an Opfern, H XLIII,292. {part=,seq=26633,type=˚,n=2} | Body defines 'savin' as Adj. 'reich an Opfern'. Own word (sa+vin); gloss fits the suspect 
+upAkartavya   -> upakartavya   | SCH: {%upākartavya%} n. impers. an die Eröffnungsfeier zu gehen, Śāṅkh. Gṛhy. 4,5. {part=,seq=8 | Body defines 'upākartavya' (upā-) as impers. gerundive 'an die Eröffnungsfeier zu gehen'. 
+utsAra        -> utsara        | SCH: °{%utsāra%} (m.) Vertreibung = Vernichtung? S II,308,19. {part=,seq=8312,type=˚,n=2} | Body glosses 'utsāra' (long ā) as '(m.) Vertreibung = Vernichtung?'. Own entry with distin
+uzRasaha      -> uzRAsaha      | SCH: °{%uṣṇasaha%} Adj. der Hitze (der Haut) widerstehend, Kauṭ. 78,12. Oder vielleicht "sich e | Body defines 'uṣṇasaha' (short a) as 'der Hitze widerstehend'. Own compound (uṣṇa+saha); n
+vAmilA        -> vAmila        | SCH: °{%Vāmilā%} ein Fluß, S I,186,11 (Ko.) {part=,seq=23833,type=˚,n=1} | Body defines 'Vāmilā' as f. proper noun (river name). Feminine ā is the genuine form, not 
+vellanA       -> vellana       | SCH: °{%vellanā%} das Wogen, H XXXVIII,14. {part=,seq=24785,type=˚,n=1} | Body defines 'vellanā' as f. 'das Wogen'. Feminine ā-stem is the attested form; the gloss 
+vicikitsanA   -> vicikitsana   | SCH: {%vicikitsanā%} ˚f. (pw. n.), S II,294,6. {part=,seq=24041,type=,n=1} | Body glosses 'vicikitsanā' as ˚f. with note '(pw. n.)'. A real feminine form attested in s
+vipulekzaRA   -> vipulekzaRa   | SCH: °{%vipulekṣaṇā%} f. eine Großäugige, Padyac. IV,43d. {part=,seq=24280,type=˚,n=2} | Body defines 'vipulekṣaṇā' as f. 'eine Großäugige'. Feminine ā form is genuine; not a typo
+vyAstAra      -> vyastAra      | SCH: °{%vyāstāra%} m. = {%vistārakaraṇa%}, t. t. aus der {%hastiśikṣā%}, S I,495,5. {part=,seq= | Body glosses 'vyāstāra' (long ā) as m. = vistārakaraṇa, a technical term. Long ā is the at
+AleSa         -> aleSa         | SCH: {%āleśa%} m. in {%anāleśá%} (s. d.). {part=,seq=7453,type=,n=1} | Body 'm. in anāleśá (s. d.)' — cross-reference for āleśa (long ā) as its own entry, distin
+Bagavftti     -> BAgavftti     | SCH: {%bhagavṛtti%} Adj. von der vulva lebend, Nārada (a.) 2,1,183. {part=,seq=20684,type=,n=2} | Body 'von der vulva lebend' fits bhagavṛtti (bhaga+vṛtti); BAgavftti (bhāga-) would mean s
+BamBA         -> BamBa         | SCH: {%bhambhā%} eine große Trommel, auch S I,581,4; II,315,11. {part=,seq=20740,type=,n=2} | Body 'eine große Trommel' defines bhambhā f. (long ā) directly; suspect BamBA is the corre
+PAlacamasa    -> Palacamasa    | SCH: {%phālacamasa%} ein best. Teil der Pflugschar, Kauś. 35,4. {part=,seq=20216,type=,n=2} | Body 'Teil der Pflugschar' defines phālacamasa (long ā from phāla=plowshare); suspect PAla
+SabarikA      -> SAbarikA      | SCH: {%śabarikā%} f. ein Śabara-Weib, Damayantīk. 265. {part=,seq=25137,type=,n=2} | Body 'ein Śabara-Weib' defines śabarikā (short a) directly; suspect SabarikA (short S+a) m
+aNgalepA      -> aNgalepa      | SCH: {%Aṅgalepā%} f. N. pr. einer Stadt, R. ed. Bomb. 4,42,14. {part=,seq=639,type=,n=2} | Body 'N. pr. einer Stadt' — Āṅgalepā is a proper noun feminine place name (long ā end), fi
+acalApati     -> acalapati     | SCH: °{%acalāpati%} m. Herrscher, S I,154,8. {part=,seq=718,type=˚,n=1} | Body 'Herrscher' defines acalāpati (lord of mountains, long ā); suspect acalApati matches.
+adaraRIya     -> AdaraRIya     | SCH: {%adaraṇīya%} Adj. nicht zu spalten. {part=,seq=1544,type=,n=1} | Body 'nicht zu spalten' defines adaraṇīya (short a- prefix, not to be split); distinct fro
+atinIla       -> atinIlA       | SCH: {%atinīla%} Adj. dunkelblau, Hemādri 2, a,118,9. {part=,seq=1130,type=,n=2} | Body 'dunkelblau Adj.' defines atinīla (masc./neut.) directly; suggestion is feminine vari
+avasAraRA     -> avasAraRa     | SCH: *{%avasāraṇā%} f. Rehabilitation eines Mönches, Mahāvy. 281. {part=,seq=5511,type=*,n=2} | Body 'Rehabilitation eines Mönches' defines avasāraṇā f. (long ā end) directly; suspect is
+azwAdiS       -> azwadiS       | SCH: {%aṣṭādiś%} (!) f. Pl. die acht Weltgegenden, Hemādri 2, a,61,21. {part=,seq=6090,type=,n= | Body '(!) f. Pl. die acht Weltgegenden' defines aṣṭādiś (long ā) directly; the (!) is edit
+gAruqopanizad -> garuqopanizad | SCH: {%Gāruḍopaniṣad%} f. Titel einer Upaniṣad. {part=,seq=12466,type=,n=2} | Body 'Titel einer Upaniṣad' defines Gāruḍopaniṣad (long ā, from Garuḍa) directly; suspect 
+hakkA         -> hakka         | SCH: {%hakkā%} f. ˚Zuruf an einen Elefanten, Prabandh. 198,1 v.u. ({%hakvayā%} verdruckt für {% | Body 'Zuruf an einen Elefanten' defines hakkā f. directly; note about misprint is for a ci
+malanA        -> malana        | SCH: {%malanā%} = {%utpuṃsanā%}, Vall. zu Śiś. 10,110 nach Hultzsch. [Muß heißen 19,110 (Z.).]  | Body '= utpuṃsanā' defines malanā f. (long ā) as its own word via synonym cross-reference.
+pAwalya       -> pAwalyA       | SCH: {%pāṭalya%} n. Röte, Pādāravindaś. 46. {part=,seq=18510,type=,n=1} | Body 'Röte' defines pāṭalya n. (neuter, no long ā at end); suspect pAwalya matches, sugges
+prArohaka     -> prarohaka     | SCH: °{%prārohaka%} shoot of a tree, Harṣac. 230,3. {part=,seq=20066,type=˚,n=2} | Body 'shoot of a tree' defines prārohaka (long ā, pra+ruh) directly; distinct from praroha
+prayoktra     -> prAyoktra     | SCH: {%prayoktra%} n. Joch, Divyāvad. 463,9. {part=,seq=19795,type=,n=1} | Body 'Joch' (yoke) defines prayoktra n. (short a) directly; prāyoktra (long ā) would be a 
+priyAjana     -> priyajana     | SCH: {%priyājana%} m. Pl. die Geliebten (f.), Śiś. 13,55. {part=,seq=20111,type=,n=2} | Body 'die Geliebten (f.)' defines priyājana (priyā+jana, long ā) directly; distinct from p
+samaDurA      -> samaDura      | SCH: °{%samadhurā%} die gleiche Deichsel (= Ähnlichkeit), Rasas. 45,3 ({%gaganakusumaśaśaśṛṅgay | Body defines {%samadhurā%} 'die gleiche Deichsel' with long ā; suspect spelling matches th
+samavAyika    -> sAmavAyika    | SCH: {%-samavāyika%} Adj. in Zusammenhang stehend mit, Saṃsk. K. 173, b,1. {part=,seq=26301,typ | Body defines {%-samavāyika%} 'in Zusammenhang stehend mit' with short initial a; suspect s
+sucaritA      -> sucarita      | SCH: {%Sucaritā%} (*f.) ˚N. pr. einer Parkwärterin, Śṛṅgt. 50,10 v.u. {part=,seq=27014,type=,n= | Body defines {%Sucaritā%} as N. pr. of a female figure with long ā; suspect is a legitimat
+udgAla        -> udgala        | SCH: °{%udgāla%} m. Ausspeien, S I,115,12 (Ko.); 120,3; 434,1 (= Genießen von Ausgespieenem?).  | Body defines {%udgāla%} 'Ausspeien' with long ā; suspect spelling matches the gloss direct
+udvApana      -> udvapana      | SCH: {%udvāpana%} n. das Ausgehenlassen (des Feuers), Komm. zu Āpast. Śr. 9,9,7. {part=,seq=854 | Body defines {%udvāpana%} 'das Ausgehenlassen' with long ā; suspect matches body spelling.
+ukzARa        -> ukzaRa        | SCH: {%ukṣāṇa%} m. = {%ukṣan%}, Stier, R. ed. Bomb. 2,32,39. {part=,seq=7961,type=,n=2} | Body defines {%ukṣāṇa%} = ukṣan, Stier, with long ā; suspect matches body spelling.
+upasTApanA    -> upasTApana    | SCH: {%upasthāpanā%} f. bei den Jaina Mönchsweihe, Śīlāṅka 1,95. — ˚ = {%pratiṣṭhāpanā%} (Stell | Body defines {%upasthāpanā%} 'Mönchsweihe' as feminine; suspect long-ā ending matches glos
+upavI         -> upAvI         | SCH: {%upavī́%} Adj. TS. 1,3,7,1 nach dem Komm. = {%upākartuṃ veti gācchati%}. Vgl. {%upāvī́%}. | Body defines {%upavī́%} as its own Adj. with short a; 'Vgl. upāvī́' is a cross-ref, not a 
+uttarya       -> uttArya       | SCH: {%uttarya%} in {%candrottarya%}. {part=,seq=8205,type=,n=1} | Body defines {%uttarya%} in compound {%candrottarya%}; short-a form is documented as its o
+vikarya       -> vikArya       | SCH: {%vikaryá%} Adj. (f. {%ā%}), in Erdgruben befindlich (nach dem Komm.), TS. 7,4,13,1. {part | Body defines {%vikaryá%} Adj. 'in Erdgruben befindlich' with short a; suspect matches.
+AkANkzitA     -> AkANkzita     | SCH: °{%ākāṅkṣitā%} Verlangen, S II,241,5 v.u. (Ko.). {part=,seq=6635,type=˚,n=2} | Body defines {%ākāṅkṣitā%} 'Verlangen' as feminine (long ā final); suspect is the feminine
+aSyAna        -> ASyAna        | SCH: °{%aśyāna%} Adj. nicht knollend (J. J. Meyer, S. 111, Anm. 7), Kauṭ. 78,11. {part=N,seq=28 | Body defines {%aśyāna%} Adj. 'nicht knollend' with short initial a; suspect matches body s
+akzavawa      -> akzavAwa      | SCH: °{%akṣavaṭa%} Rosenkranz s. {%muktākṣa˚%}. {part=N,seq=28051,type=˚,n=1} | Body defines {%akṣavaṭa%} 'Rosenkranz' with short a (vaṭa); suspect matches body spelling.
+alipta        -> Alipta        | SCH: *{%alipta%} Adj. unbefleckt, Mahāvy. 19. {part=,seq=5193,type=*,n=1} | Body explicitly defines *{%alipta%} Adj. 'unbefleckt' with short a; distinct from long-Ā s
+jarAsa        -> jarasa        | SCH: °{%jarāsa%} (m.?) Fleisch, S II,115,7 v.u. (Ko.). {part=,seq=13954,type=˚,n=2} | Body defines {%jarāsa%} 'Fleisch' with long ā; suspect spelling matches the gloss directly
+maYcuka       -> maYcukA       | SCH: °{%mañcuka%} = {%mañcaka%}, Laube (=Warte, auf der der Feldhüter sitzt), S I,391,5. {part= | Body defines {%mañcuka%} = mañcaka 'Laube' with short a final; suspect is the masculine fo
+niGfzwA       -> niGfzwa       | SCH: °{%nighṛṣṭā%} [1. {%nighṛṣvā%} *klein, unansehnlich?], Vaij. 86,50. {part=,seq=16978,type= | Body defines {%nighṛṣṭā%} with long ā final; suspect is the feminine form of a documented 
+parimARqalya  -> pArimARqalya  | SCH: °{%parimāṇḍalya%} n. = {%pariṇāha%}, H IV,8. {part=,seq=18234,type=˚,n=1} | Body defines {%parimāṇḍalya%} = pariṇāha with short initial a; suspect matches body spelli
+prAgrIvaka    -> pragrIvaka    | SCH: {%prāgrīvaka%} Navasāhas. 16,2. [Z.] {part=,seq=19985,type=,n=1} | Body defines {%prāgrīvaka%} with long ā matching the suspect; distinct from short-a sugges
+saMmohanA     -> saMmohana     | SCH: °{%saṃmohanā%} Name einer Pille, E 917 (P). {part=,seq=26494,type=˚,n=2} | Body defines {%saṃmohanā%} 'Name einer Pille' as feminine (long ā); suspect is the feminin
+siYcita       -> siYcitA       | SCH: °{%siñcita%} Adj. (vom Präsensstamm gebildet!) Gopāl. 114,12. {part=,seq=26889,type=˚,n=2} | Body defines {%siñcita%} Adj. (from present stem) with short a final; suspect matches body
+tAraNga       -> taraNga       | SCH: °{%tāraṅga%} Adj. = {%taraṅgarūpa%}, Yudh. 2,80. {part=,seq=14727,type=˚,n=2} | Body defines {%tāraṅga%} Adj. = taraṅgarūpa with long ā; suspect is its own documented adj
+uzRAy         -> uzRay         | SCH: °{%uṣṇāy%} to be hot, Harṣac. 189,4. {part=,seq=9014,type=˚,n=1} | Body defines {%uṣṇāy%} 'to be hot' with long ā; suspect is a denominative verb form matchi
+atiSri        -> atiSrI        | SCH: {%atiśri%} Adj. die {%Śrī%} übertreffend, Festgruß 19. {part=,seq=1354,type=,n=2} | Body shows '{%atiśri%}' (short i = suspect atiSri) glossed 'die Śrī übertreffend'; suspect
+rajanijala    -> rajanIjala    | SCH: °{%rajanijala%} n. Tau, H XXVIII,25. {part=,seq=22668,type=˚,n=1} | Body shows '{%rajanijala%}' (short i = suspect rajanijala) glossed 'Tau'; suspect is real.
+haraRI        -> haraRi        | SCH: {%haraṇī%} ˚Subst. f. Rinnsal, Kauṭ. 117,10. {part=,seq=27793,type=,n=1} | Body defines 'haraṇī' as ˚Subst. f. 'Rinnsal'. Feminine ī-stem is the attested form; not a
+aNgapAlI      -> aNgapAli      | SCH: °{%aṅgapālī%} f. Umarmung, Padyac. V,43d. coḋ{part=N,seq=28079,type=˚,n=2} | Body defines 'aṅgapālī' as f. 'Umarmung'. Feminine long-ī stem is the genuine attested for
+brAhmIkA      -> brAhmikA      | SCH: °{%brāhmīkā%} = {%vāṇī%}, S I,427,1. {part=,seq=20660,type=˚,n=1} | Body defines 'brāhmīkā' as = vāṇī. Long ī is the attested form; not a typo of brāhmikā.
+indumaRI      -> indumaRi      | SCH: {%indumaṇī%} Adv. mit {%bhū%} zum Mondstein werden, Dharmaśarmābhy. 17,9. {part=,seq=7767, | Body defines 'indumaṇī' as Adv. 'zum Mondstein werden'. Long ī is the attested form; not a
+kawanI        -> kawani        | SCH: °{%kaṭanī%} Abhang, S I,146,11 (Ko.). {part=,seq=9643,type=˚,n=1} | Body glosses 'kaṭanī' (long ī) with own meaning 'Abhang'; suspect spelling matches the lon
+kzapaRi       -> kzapaRI       | SCH: °{%kṣapaṇi%} S II,346,1? {%[kṣaṇadāyāḥ kṣapaṇicaramayāmakṣaṇe]%}. {part=,seq=11790,type=˚, | Body gives short-i form 'kṣapaṇi' consistently; suspect key kzapaRi (short i) matches the 
+nEzAdI        -> nEzAdi        | SCH: {%naiṣādī%} Subst. ˚f. eine der Mischkaste der niṣāda angehörige Frau, Kauṭ. 165,9. {part= | Body glosses 'naiṣādī' (long ī) as a feminine noun meaning a woman of niṣāda caste; distin
+niraticAra    -> niratIcAra    | SCH: °{%niraticāra%} frei von Übertretungen, S I,139,13 v.u. (Ko.). {part=,seq=17083,type=˚,n=2 | Body glosses 'niraticāra' (short a) as 'frei von Übertretungen'; the gloss fits this form,
+parIvAhita    -> parivAhita    | SCH: °{%parīvāhita%} Adj. überfließend, Padyac. IX,76a (in {%karuṇāpūralaharīparīvāhitacakṣuṣe  | Body glosses 'parīvāhita' (long ī) as 'überfließend' with full Sanskrit gloss from parīvāh
+rajaniBujaMga -> rajanIBujaMga | SCH: °{%rajanibhujaṃga%} m. Mond, Śrīk. XII,74. {part=,seq=22673,type=˚,n=2} | Body glosses 'rajanibhujaṃga' (short a) as 'Mond'; rajani (short i) is a valid Sanskrit wo
+anABu         -> anABU         | SCH: {%anābhu%} Adj. als Beiw. Rudra's, Maitr. S. 1,8,5 (121,10). {%anārbhava%} st. dessen Āpas | Body shows '{%anābhu%}' (short u = suspect anABu) as Rudra epithet; suspect is real.
+udDuzita      -> udDUzita      | SCH: °{%uddhuṣita%} horripilated, Pūrṇabh. 94,12; 215,22. {part=,seq=8496,type=˚,n=2} | Body shows '{%uddhuṣita%}' (short u = suspect udDuzita) glossed 'horripilated'; suspect is
+kawapru       -> kawaprU       | SCH: °{%kaṭapru%} (m.) Zweig, S II,227,15 (Ko.). {part=,seq=9646,type=˚,n=1} | Body shows '{%kaṭapru%}' (short u = suspect kawapru) glossed 'Zweig'; suspect is real.
+viSvakadrU    -> viSvakadru    | SCH: °{%viśvakadrū%} m. Hund, S II,186,7. {part=,seq=24506,type=˚,n=2} | Body shows '{%viśvakadrū%}' (long ū = suspect viSvakadrU) glossed 'Hund'; suspect is real.
+agnitanU      -> agnitanu      | SCH: {%agnitanū%} f. Pl. Bez. bestimmter Sprüche, Āpast. Śr. 5,13,7. {part=,seq=443,type=,n=2} | Body glosses 'agnitanū' (long ū, feminine) as designation of certain sacred verses; distin
+lURiga        -> luRiga        | SCH: °{%Lūṇiga%} m. N. eines Ministers, Prabandh. 255,1 v.u.; 259,5. {part=,seq=23287,type=˚,n= | Body glosses 'Lūṇiga' (long ū) as a proper name (minister); proper noun, the long ū spelli
+sUtAtmaja     -> sutAtmaja     | SCH: °{%sūtātmaja%} m. = Karṇa, Yudh. 8,66. {part=,seq=27249,type=˚,n=1} | Body glosses 'sūtātmaja' (long ū) as Karṇa; sūta (charioteer/bard, long ū) + ātmaja = son 
+viDunita      -> viDUnita      | SCH: °{%vidhunita%} = {%vyathita%}, Śrīk. XVII,64. {part=,seq=24185,type=˚,n=1} | Body defines {%vidhunita%} = vyathita with short u; suspect spelling matches body, distinc
+ASikA         -> AsikA         | SCH: °{%āśikā%} S I,22,1 v.u. (Ko.) als Erklärung von {%śeṣa%} (Rest). {part=,seq=7550,type=˚,n | Body shows '{%āśikā%}' (ś = S, long ā = A) explaining 'śeṣa'; suspect ASikA (with palatal 
+SUkaramuKa    -> sUkaramuKa    | SCH: °{%śūkaramukha%} mit dem Gesichte des Schweines, S I,277,5 v.u. (Ko.) {part=,seq=25543,typ | Body glosses 'śūkaramukha' (with ś-) as 'with the face of a pig'; śūkara ≠ sūkara; palatal
+draviRodaS    -> draviRodas    | SCH: °{%draviṇodaś%} m. Feuer, S I,324,2. {part=,seq=16063,type=˚,n=1} | Body glosses 'draviṇodaś' (final ś) as 'Feuer'; the final ś is the nominative stem form dr
+kusumasara    -> kusumaSara    | SCH: °{%kusumasara%} (m.?) = {%puṣpamālā%}, S I,232,5; II,18,1 (hier nach dem Ko. m.). {part=,s | Body glosses 'kusumasara' (with -sara, arrow/string) as 'puṣpamālā'; both kusuma+sara and 
+sattrasAlA    -> sattraSAlA    | SCH: °{%sattrasālā%} Hospiz, S I,199,1 v.u. (Ko.); II,218,13 v.u. (Ko.) {part=,seq=26048,type=˚ | Body gives {%sattrasālā%} — IAST has plain s (not ś); suspect sattrasAlA = sattrasālā matc
+dfzwatA       -> DfzwatA       | SCH: °{%dṛṣṭatā%} das zum Vorschein Kommen, Rasas. 38a. {part=,seq=15858,type=˚,n=2} | Body gives {%dṛṣṭatā%} 'das zum Vorschein Kommen'; SLP1 d=d; suspect dfzwatA = dṛṣṭatā mat
+pATodara      -> pAToDara      | SCH: °{%pāthodara%} m. Wolke, Śrīk. XIX,57. {part=,seq=18570,type=˚,n=1} | Body has {%pāthodara%} m. Wolke; SLP1 d=d; suspect pATodara = pāthodara matches body exact
+baDva         -> badva         | SCH: *{%Badhva%} m. N. pr. eines Mannes, Komm. zu Ait. Ār. 347,13. Vgl. {%Bādhva%}. {part=,seq= | Body defines *{%Badhva%} as N. pr. of a man; D vs d difference, body defines as its own pr
+davara        -> Davara        | SCH: {%davara%} und {%˚ka%} m. Faden, Strickchen, Uttamac. 300. 316. S. 302, N. 5; Kalpas. S. 1 | Body defines {%davara%} 'Faden, Strickchen' (thread) with dental d; distinct from retrofle
+gardana       -> garDana       | SCH: °{%gardana%} n. das Yahen, Śuk. t. o. 11 [p. 24,14. 15]. {part=,seq=12356,type=˚,n=2} | Body defines {%gardana%} 'das Yahen' (yawning) with dental d; distinct from retroflex-D su
+DOrita        -> Dorita        | SCH: °{%dhaurita%} n. Trab, Manm. III,2c. Kaṃs. II,21a. {part=,seq=16481,type=˚,n=2} | Body gives {%dhaurita%} n. Trab; SLP1 D=dh, O=au; suspect DOrita = dhaurita matches body e
+kONkaRaka     -> koNkaRaka     | SCH: °{%Kauṅkaṇaka%} m. der (Fürst) von Koṅkaṇ, Prabandh. 77,2 v.u. {part=N,seq=28932,type=˚,n= | Body has Kauṅkaṇaka; SLP1 k=k, O=au; suspect kONkaRaka = kauṅkaṇaka matches body; suggesti
+kaNkarOla     -> kaNkarola     | SCH: °{%Kaṅkaraula%} m. ein Name für Vayajalladeva, Prabandh. 45,9 v.u. {part=N,seq=28730,type= | Body has Kaṅkaraula; SLP1 O=au; suspect kaNkarOla = kaṅkaraula matches body exactly; sugge
+gorAsya       -> gOrAsya       | SCH: {%gorāsya%} Adj. als Beiw. Kṛṣṇa's, Pañcar. 4,8,16. {part=,seq=12746,type=,n=2} | Body defines gorāsya as an adjective epithet of Kṛṣṇa with its own citation; genuine entry
+koSIDAnya     -> kOSIDAnya     | SCH: {%kośīdhānya%} n. Hülsenfrucht, Komm. zu Āpast. Śr. 4,2,5; 3,8. {part=,seq=11591,type=,n=2 | Body gives full gloss 'Hülsenfrucht' for kośīdhānya with two entries and citations; real d
+somAyana      -> sOmAyana      | SCH: {%somāyana%} n. eine best. Kasteiung, Vijñ. zu Yājñ. 3,265 f. 289 f. Vgl. {%cāndrāyaṇa%}.  | Body defines somāyana as a specific penance with citations and cross-ref; genuine entry, n
+vetAlIya      -> vEtAlIya      | SCH: °{%vetālīya%} Adj. Vetāla-artig, Prabandh. 162,3 v.u. {part=,seq=24759,type=˚,n=2} | Body 'Vetāla-artig' defines vetālīya (Vetāla-like) with short e; vEtAlIya would be vaitālī
+bArava        -> BArava        | SCH: °{%Bārava%} m. N. eines Heerführers, Prabandh. 40,4. {part=,seq=20445,type=˚,n=2} | Body has {%Bārava%} m. N. eines Heerführers; IAST capital B = proper noun capitalization o
+Kelita        -> kelita        | SCH: {%khelita%} ˚Subst. n. das Hinundhergehen (der Seitenblicke), S I,527,5. {part=,seq=12124, | Body uses {%khelita%}; SLP1 K=kh; suspect Kelita = khelita matches body exactly; suggestio
+GoraRa        -> goraRa        | SCH: °{%ghoraṇa%} n. Schnarchen, S II,44,6. {part=,seq=13009,type=˚,n=1} | Body defines ghoraṇa 'Schnarchen' (snoring) with citation; Gh- vs g- are distinct consonan
+calitarAma    -> CalitarAma    | SCH: {%Calitarāma%} Titel eines Werkes, Opp. Cat. 1. {part=,seq=13369,type=,n=2} | Body has {%Calitarāma%} Titel eines Werkes; IAST C = proper noun capitalization only, not 
+pramIqa       -> pramIQa       | SCH: °{%pramīḍa%} eingeschlafen, S I,456,9. {part=,seq=19778,type=˚,n=1} | Body defines pramīḍa 'eingeschlafen' with citation; q(ḍ) vs Q(ḍh) are distinct consonants;
+anavya        -> aRavya        | SCH: °{%anavya%} alt, S I,90,1. {part=,seq=2303,type=˚,n=1} | Body shows '{%anavya%}' (dental n = suspect anavya) glossed 'alt'; distinct from retroflex
+taNkaka       -> waNkaka       | SCH: {%taṅkaka%} *m. Prabandh. 64,8 (in {%suvarṇa˚%}; pw "gestempeltes Silber, Silbergeld"). {p | Body shows '{%taṅkaka%}' (dental t = suspect taNkaka) cited in Prabandh.; distinct from re
+JaYJaRa       -> JaYJana       | SCH: °{%jhañjhaṇa%} n. Klirren, Uttarar. VI,1a ed. Lakṣmaṇasūri. {part=,seq=14286,type=˚,n=2} | Body has {%jhañjhaṇa%}; SLP1 R=ṇ; suspect JaYJaRa = jhañjhaṇa matches body exactly; sugges
+bastya        -> vastya        | SCH: {%bastya%} in {%vā́jabastya%}. {part=,seq=20374,type=,n=1} | Body defines {%bastya%} in compound {%vāja-bastya%}; suspect is its own compound element w
+dora          -> qora          | SCH: °{%dora%} (n.?) Strick, Schnur, S I,532,10 (Ko.; pw {%doraka%} n.). {part=,seq=15979,type= | Body glosses {%dora%} as 'Strick, Schnur' (rope/cord); genuine word with own gloss; d vs q
+SrIBara       -> SrIvara       | SCH: {%śrībhara%} Naiṣ. 5,17. 23 vgl. {%śībhara, śīphara%} bei Böhtlingk. [Z.] {part=,seq=25714 | Body defines {%śrībhara%} with 'vgl.' cross-ref to śībhara/śīphara; B=bh vs v=v; suspect i
+SyAnatA       -> SyAmatA       | SCH: °{%śyānatā%} f. N. abstr. zu {%śyāna%}, trocken geworden, Praty. Hṛd. 9,3; 47,12. [B.] {pa | Body glosses {%śyānatā%} as 'N. abstr. zu śyāna, trocken geworden'; genuine abstract noun 
+aBayadiRqima  -> aBayaqiRqima  | SCH: {%abhayadiṇḍima%} , {%˚maṃ dā%} so v.a. unter Trommelschlag Sicherheit der Person verkündi | Body defines {%abhayadiṇḍima%} 'proclaim safety under drum-beat'; R=ṇ, q=ḍ; diṇḍima = drum
+aparigamya    -> aparigaRya    | SCH: {%aparigamya%} Adj. nicht zu umschreiten, Komm. zu Kāty. Śr. 17,4,5. {part=,seq=3441,type= | Body gives {%aparigamya%} Adj. 'nicht zu umschreiten' — genuine gerundive of pari+gam; m v
+aparus        -> aparuz        | SCH: {%aparús%} n. eine andere Stelle als das Gelenk, Maitr. S. 3,9,2 (114,16). {part=,seq=3503 | Body gives {%aparús%} n. 'eine andere Stelle als das Gelenk'; s vs z (ṣ) differ; Vedic wor
+avapuz        -> avapus        | SCH: °{%avapuṣ%} = {%avapuṣṇāti yaḥ%}, S II,64,7. {part=,seq=5388,type=˚,n=1} | Body defines {%avapuṣ%} = {%avapuṣṇāti yaḥ%}; z=ṣ; defined by own verbal derivative; genui
+avyAyuka      -> aByAyuka      | SCH: {%ávyāyuka%} Adj. nicht entlaufend, Maitr. S. 4,1,5. {part=,seq=5840,type=,n=2} | Body gives {%ávyāyuka%} Adj. 'nicht entlaufend'; prefix a-vy- vs abhy- are different; Vedi
+avyatIta      -> aByatIta      | SCH: °{%avyatīta%} Adj. nicht überschritten, -x- außer Acht gelassen, Yudh. 8,93. {part=,seq=58 | Body gives {%avyatīta%} 'nicht überschritten'; prefix a-vy- vs abhy- differ; genuine compo
+kamera        -> kaRera        | SCH: {%Kamera%} N. pr. eines Volkes oder Landes, Ind. Antiq. 9,127. 133. {part=,seq=9926,type=, | Body defines {%Kamera%} as N.pr. eines Volkes oder Landes; proper noun with own identity; 
+naBoBid       -> naBovid       | SCH: °{%nabhobhid%} H 48,60. {part=,seq=16621,type=˚,n=1} | Body gives bare citation 'H 48,60'; nabhobhid (sky-cleaving compound) is its own word, glo
+pApanaya      -> pApamaya      | SCH: °{%pāpanaya%} Adj. = {%pāpe nayo yasya saḥ%}, Yudh. 3,108. {part=,seq=18608,type=˚,n=2} | Body derivation '= pāpe nayo yasya saḥ' defines pāpanaya (he whose guidance is sinful) as 
+pAriyARika    -> pAriyAnika    | SCH: °{%pāriyāṇika%} Adj. mit {%ratha%} Reisewagen, Kauṭ. 139,2 v.u. {part=,seq=18654,type=˚,n= | Body 'pāriyāṇika ... Reisewagen' defines the suspect (ṇ=R) directly; suggestion has n inst
+sumAlaka      -> sunAlaka      | SCH: °{%sumālaka%} Adj. einen schönen Kranz tragend, H XLIII,222. {part=,seq=27112,type=˚,n=2} | Body 'einen schönen Kranz tragend' (bearing a beautiful garland) fits sumālaka (su+mālaka)
+ASyAma        -> ASyAna        | SCH: {%āśyāma%} Adj. dunkelfarbig, Hemādri 1,681,16. {part=,seq=7575,type=,n=2} | Body defines {%āśyāma%} Adj. 'dunkelfarbig'; final -ma vs -na differ by consonant, body de
+antaryAmIya   -> antaryARIya   | SCH: {%antaryāmīya%} Adj. zum antaryāma gehörig, Vaitān. {part=,seq=3134,type=,n=2} | Body itself glosses the entry as 'antaryāmīya' (m-spelling), confirming suspect spelling; 
+mitara        -> nitara        | SCH: °{%mitara%} Adj. geringen Lohn bringend, Viṣṇubh. III,6c ({%mitaṃ svalpaṃ rānti dadati te  | Body glosses mitara 'geringen Lohn bringend' with full Sanskrit etymology; distinct real w
+pAwavya       -> pAtavya       | SCH: °{%pāṭavya%} n. Verschlagenheit, Rasas. 188d. {part=,seq=18512,type=˚,n=2} | Body defines pāṭavya 'Verschlagenheit' with citation; W(ṭ) vs t are distinct consonants; o
+yudda         -> yudDa         | SCH: °{%yudda%} Adj. Kampf gewährend, H XLIII,361. {part=,seq=22569,type=˚,n=2} | Body defines yudda Adj. 'Kampf gewährend' with own gloss; not marked as variant/error.
+cAraRA        -> cAraRa        | SCH: °{%cāraṇā%} s. {%ambaracāraṇā%}. {part=,seq=13441,type=˚,n=1} | °cāraṇā s. ambaracāraṇā — cross-ref entry for feminine form; own headword.
+kftAYjalI     -> kftAYjali     | SCH: °{%kṛtāñjalī%} eine best. Pflanze, E 838 (R). {part=,seq=11324,type=˚,n=1} | °kṛtāñjalī 'eine best. Pflanze' — plant name with own gloss; long ī distinguishes it.
+muka          -> mUka          | SCH: °{%muka%} [m.] eine best. Pflanze, E 917 (P). {part=,seq=22013,type=˚,n=1} | Body defines '°muka [m.] eine best. Pflanze' — a specific plant name with its own entry, n
+srotra        -> Srotra        | SCH: °{%srotra%} [n.?] Körperöffnung, Amit. VI,20. 22; XXX,10. {part=,seq=27634,type=˚,n=2} | Body defines srotra [n.?] 'Körperöffnung' with own gloss; not marked as variant of śrotra.
+AcAraRa       -> AcaraRa       | SCH: °{%ācāraṇa%} n. Wandel, S II,265,26; 353,9. {part=,seq=6791,type=˚,n=2} | Body defines ācāraṇa 'Wandel' (conduct) as a distinct lexeme; long ā in second syllable is
+atiSItA       -> atiSIta       | SCH: °{%atiśītā%} = {%śephālitā%}, S I,577,11 (Ko.). {part=,seq=1345,type=˚,n=1} | Body glosses '= śephālitā' (a plant name); feminine form atiśītā defined on its own, not m
+parya         -> pArya         | SCH: °{%parya%} ? S II,239,5 in {%durvāraprasaraparyam aiśvaryam: durvāro durnivāraḥ prasarapar | Body provides a compound analysis for parya (short a) in context; suspect defined with own
+pratoli       -> pratolI       | SCH: °{%pratoli%} f. Hauptstraße, S II,300,25. {part=,seq=19618,type=˚,n=1} | Body defines pratoli f. 'Hauptstraße' (main street) with short i; documented form, though 
+mOza          -> moza          | SCH: °{%mauṣa%} ? S II,347,1 [{%ananyasāmānyasāhasālayamoṣamauṣadhiṣaṇānidhir%}]. {part=,seq=22 | Body defines {%mauṣa%} (O=au) with gloss, though uncertain (?); mauṣa is listed as its own
+valganA       -> valgana       | SCH: *{%valganā%} f.? Mahāvy. 245,1151. {part=,seq=23643,type=*,n=1} | Body records '*valganā f.?' from Mahāvy. — a feminine form entered in its own right (marke
+pravarDanA    -> pravarDana    | SCH: °{%pravardhanā%} Steigerung, Förderung? S II,375,9. {part=,seq=19819,type=˚,n=2} | Body defines 'pravardhanā' as 'Steigerung, Förderung?' (increase, promotion?) — a feminine
+AkzaRika      -> akzaRika      | SCH: {%ākṣaṇiká%} (?) Maitr. S. 2,9,9. {part=,seq=6692,type=,n=1} | Body gives ākṣaṇiká with accent mark and a citation; long ā prefix form attested in Maitr.
+saBApatI      -> saBApati      | SCH: °{%sabhāpatī%} mit {%kṛ%} zum Vorsitzenden einer Versammlung machen, Prabandh: 273,7. {par | Body defines sabhāpatī mit kṛ 'zum Vorsitzenden machen' — long ī form used in construction
+prAlamBana    -> pralamBana    | SCH: °{%prālambhana%} (n.) Schlachten, S II,130,2 v.u. (Ko.). {part=,seq=20070,type=˚,n=2} | Body glosses prālambhana 'Schlachten' (slaughter) with prā- prefix; different prefix prā- 
+kzvelanA      -> kzvelana      | SCH: °{%kṣvelanā%} Śṛṅgbh. 75b.? {part=,seq=11946,type=˚,n=1} | Body entry IS kṣvelanā (=kzvelanA) f.; suspect is the feminine entry key. Body terse but g
+udvacana      -> udvAcana      | SCH: °{%udvacana%} n. laute Stimme, S I,525,6 v.u. (Ko.). {part=,seq=8542,type=˚,n=2} | Body glosses 'udvacana' (short a) as 'laute Stimme'; ud+vacana is a plausible compound; no
+savikAsa      -> savikASa      | SCH: °{%savikāsa%} Adj. zur Entfaltung -x-, zum Ausbruch gekommen (Zorn), Yudh.  [Page361.2]  1 | Body defines 'savikāsa' Adj. zur Entfaltung gekommen with independent gloss; plain-s form 
+sawaNka       -> sawANka       | SCH: °{%saṭaṅka%} Adj. = {%saśobha%}, H XXVIII,49. {part=,seq=26036,type=˚,n=1} | Body defines 'saṭaṅka' as Adj. = saśobha. Own attested form; the long-ā variant sawāṅka is
+raSitASin     -> rasitASin     | SCH: °{%raśitāśin%} Adj. schon durch den Lärm verzehrend oder tötend, Kir. XV,23. {part=,seq=22 | Body glosses 'raśitāśin' (with ś) as its own adjective meaning 'destroying by noise'; not 
+doHsADika     -> dOHsADika     | SCH: °{%doḥsādhika%} = {%yāmika%}, Govardh. 133. {part=,seq=15999,type=˚,n=1} | Body defines doḥsādhika as '= yāmika' with citation; own gloss, not shown as misspelling o
+kadikA        -> KadikA        | SCH: °{%kadikā%} = {%khalīna%}, S I,337,10 (Ko.). {part=,seq=9787,type=˚,n=1} | Body gives {%kadikā%} = {%khalīna%} (bridle); equation identifies the word but doesn't mar
+kaRWatrAna    -> kaRWatrARa    | SCH: {%kaṇṭhatrāna%} Nackenschutz, MBh. 7,127,19. {part=,seq=9733,type=,n=2} | Body gives {%kaṇṭhatrāna%} 'Nackenschutz'; IAST -trāna (n) = SLP1 -trAna matches suspect; 
+reSin         -> rezin         | SCH: °{%reśin%} m. = {%siṃhaka%}, H XLIII,45. {part=,seq=23062,type=˚,n=1} | Body defines reśin '= siṃhaka' with citation; S(ś) vs z(ṣ) are distinct; own definition pr
+
+# ===== BUCKET 5  INTENTIONAL -- SCH documents the spelling on purpose; NEVER file (109) =====
+saNKa         -> SaNKa         | SCH: °{%saṅkha%} = {%śaṅkha%} Muschel (im Yamaka; {%śasayor aikyāt%}), Yudh. 7,12. {part=,seq=2 | Body states '= śaṅkha Muschel (im Yamaka; śasayor aikyāt)' — explicitly documents saṅkha a
+avaraRa       -> AvaraRa       | SCH: °{%avaraṇa%} m. der Wind(gott), Yudh. 8,78 {%[avidyamānaṃ varaṇam ācchādanaṃ yasya saḥ ava | Body explicitly notes 'Kann nach Ratnakaṇṭha auch āvaraṇa sein (s. d.)' — documents altern
+smaSAna       -> SmaSAna       | SCH: °{%smaśāna%} = {%śma˚%}, S II,289,16. {part=,seq=27601,type=˚,n=1} | Body explicitly states smaśāna = śma˚; documented as alternate spelling of śmaśāna via = e
+usIra         -> uSIra         | SCH: °{%usīra%} = {%uśīra%}, S I,528,1. {part=,seq=9023,type=˚,n=1} | Body explicitly states usīra = uśīra; documented as alternate/variant spelling via = equat
+avala         -> abala         | SCH: °{%avala%} Adj. im yamaka = {%abala (balarahita)%}, Yudh. 5,51. {part=,seq=5448,type=˚,n=2 | Body states 'im yamaka = abala (balarahita)'; yamaka form documented as intentional pun/eq
+upAroDa       -> uparoDa       | SCH: °{%upārodha%} m. Rücksicht, S II,361,12 verdruckt für {%uparodha%}? {part=,seq=8861,type=˚ | 'verdruckt für uparodha?' — body marks upārodha as possibly a misprint for uparoDa; docume
+utsadana      -> utsAdana      | SCH: *{%utsadana%} n. das Einreiben, Mahāvy. 245,379. Richtig wäre {%utsādana%}; vgl. {%ucchāda | 'Richtig wäre utsādana' — body explicitly states the correct form is the suggestion; class
+prakAmya      -> prAkAmya      | SCH: °{%prakāmya%} n. Kauṭ. 131,5 v.u. = {%prākāmya%}. {part=,seq=19275,type=˚,n=2} | '= prākāmya' — body cross-references suspect as equivalent to suggestion; documented alter
+praticCAya    -> praticCAyA    | SCH: {%praticchāya%} ˚m. Ebenbild, S I,316,4 v.u. (Ko.) verdruckt für {%˚cchāyā?%} {part=,seq=1 | 'verdruckt für ˚cchāyā?' — body flags suspect as possibly a misprint for the suggestion; i
+AliNganA      -> AliNgana      | SCH: {%āliṅganā%} f. = {%āliṅgana%} n. Naiṣ. 6,78. {part=,seq=7445,type=,n=1} | Body gives 'f. = āliṅgana n.' — explicit equation cross-referencing the neuter form; āliṅg
+alAka         -> alaka         | SCH: {%alāka%} m. = {%alarka%} 3. [Calotropis gigantea], Caraka 8,10. — {%alākā%} f. eine best. | Body gives 'alāka = alarka' — explicit cross-reference; alāka documented as variant of ala
+avAlamba      -> avalamba      | SCH: {%avālamba%} m. = {%apālambá%}, Āpast. Śr. 12,25,27. {part=,seq=5576,type=,n=2} | Body gives '= apālambá' — explicit cross-reference; avālamba documented as variant, not a 
+azWIla        -> azWIlA        | SCH: {%aṣṭhīla%} m. oder n. = {%aṣṭhīlā%} 5., Hemādri 1,725,5. {part=,seq=6109a,type=,n=2} || { | Body gives 'aṣṭhīla m./n. = aṣṭhīlā 5.' — explicit equation to aṣṭhīlā; aṣṭhīla documented
+manota        -> manotA        | SCH: {%manota%} m. = {%manotā%} 1., Zitat im Komm. zu Āpast. Śr. 14,7,6. {part=,seq=21457,type= | Body explicitly states '= {%manotā%}' — documented as equal to the long-A form, i.e. an at
+parImala      -> parimala      | SCH: °{%parīmala%} = {%parimala%} (Wohlgeruch), Muk. 28a. {part=,seq=18306,type=˚,n=2} | Body explicitly states parīmala = parimala (Wohlgeruch); '= {#X#}' cross-ref marks this as
+ahina         -> ahIna         | SCH: {%ahína%} = 1. {%ahīna%}, Maitr. S. 3,8,2 (94,13. 14). {part=,seq=6554,type=,n=2} | Body explicitly states '= 1. ahīna' — cross-reference marker equating ahina to ahīna; inte
+gajapippali   -> gajapippalI   | SCH: °{%gajapippali%} f. [pw {%˚lī%}] Scindapsus officinalis, E 864 (S). {part=,seq=12158,type= | Body itself notes '[pw ˚lī]' — explicitly cross-references the long-ī form in pw; intentio
+jalaDI        -> jalaDi        | SCH: °{%jaladhī%} Adj. = {%jaḍadhī (laḍayor aikyam)%}, Yudh. 5,22. {part=,seq=13986,type=˚,n=2} | Body gives '= jaḍadhī (laḍayor aikyam)' — explains the spelling via phonetic equation; int
+sapatni       -> sapatnI       | SCH: {%sapatni%} f. = 1. {%sapatnī%}, R. ed. Bomb. 2,8,26. {part=,seq=26180,type=,n=2} | Body explicitly states '= 1. sapatnī' — cross-reference marker equating sapatni to sapatnī
+sAmiDeni      -> sAmiDenI      | SCH: {%sāmidheni˚%} = {%˚nī%}, Kāty. Śr. 5,8,33. {part=,seq=26781,type=,n=1} | Body states '= {%˚nī%}' — explicitly equated to long-Ī form; documented cross-reference va
+sIlana        -> SIlana        | SCH: °{%Sīlana%} m. N. eines {%kautukin%} (jester), Prabandh. 184,9 (7 v.u. steht {%Sīlaṇa%}).  | Body entry is for °Sīlana (palatal Ś), not sīlana; the asterisk/seq indicates a sub-entry 
+mAYjizwa      -> mAYjizWa      | SCH: °{%[˚māñjiṣṭa%} S I,532,6 und 3 v.u. (Ko.) 1. {%māñjiṣṭha%}.] {part=,seq=21774,type=˚,n=2} | Body bracketed entry refers to 1. {%māñjiṣṭha%} (W=ṭh); suspect mAYjizwa (w=ṭ) is document
+ekaDyam       -> EkaDyam       | SCH: *{%ekadhyam%} Adv. zusammen, Mahāvy. 245. {%ekadhye%} dass., Divyāvad. 35,24; 40,22. Richt | 'Richtig {%aika˚%}' explicitly marks ekaDyam as incorrect and aikaDya (=E) as the correct 
+ApastamBa     -> Apastamba     | SCH: {%Āpastambha%} und {%˚stambhīya = ˚stamba%} und {%˚stambīya%}, Bühler, Introd. to Āpast. T | Body equates 'Āpastambha = ˚stamba' as documented variants; the spelling relationship is e
+Caraka        -> caraka        | SCH: °{%charaka%} m. = {%tilaka%} (Baum), S I,528. 2 v.u. (Ko.) wohl verdruckt für {%kṣuraka%}  | Body notes 'wohl verdruckt für kṣuraka' (probably misprint for kṣuraka) — an intentional d
+marubaka      -> maruvaka      | SCH: °{%marubaka%} = {%maruvaka%}, S I,532,4/5. {part=,seq=21573,type=˚,n=1} | Body explicitly states '= maruvaka' — this is an intentional cross-reference entry documen
+GonA          -> GoRA          | SCH: °{%ghonā%} s. {%ghoṇā%}. {part=,seq=13007,type=˚,n=1} | Body says 's. ghoṇā' — a pure cross-reference (s. = see), documenting ghonā as a variant/a
+kiNkinI       -> kiNkiRI       | SCH: °{%kiṅkinī%} ein best. Baum, S II,219,11 (Ko.; = {%kiṅkiṇī%} *Flacourtia sapida?). {part=, | Body defines kiṅkinī (n-form) as '= {%kiṅkiṇī%}'; cross-reference marks it as a documented
+urubUka       -> uruvUka       | SCH: °{%urubūka%} (m. n.) S II,368,26 = {%uruvūka%}, Ricinus communis. {part=,seq=8945,type=˚,n | Body explicitly equates: urubūka = {%uruvūka%} Ricinus communis; documented variant with c
+viSrARa       -> viSrAma       | SCH: °{%viśrāṇa%} S I,160,2 v.u. (Ko.) verdruckt für {%viśrāṇana?%} {part=,seq=24495,type=˚,n=2 | 'verdruckt für {%viśrāṇana%}' marks viśrāṇa as a misprint; but corrects to viśrāṇana, not 
+bilAsin       -> vilAsin       | SCH: {%bilāsin%} m. Schlange, Śrīk. XII,65 [{%vilāsin%} gedruckt wegen des Wortspiels mit {%vil | Body says vilāsin gedruckt wegen des Wortspiels; the variant spelling is explicitly docume
+jAwAmAMsI     -> jawAmAMsI     | SCH: °{%jāṭāmāṃsī%} = {%jaṭā˚%}, S I,206,6 v.u. (Ko.). {part=,seq=14048,type=˚,n=2} | Body says '= jaṭā˚' — a cross-reference documenting jāṭāmāṃsī as a variant spelling for ja
+tAlAvacAra    -> tAlAvacara    | SCH: °{%tālāvacāra%} = {%˚cara%} (Tänzer), Kauṭ. 55,11. {part=,seq=14761,type=˚,n=2} | Body gives '= ˚cara (Tänzer)' — explicit cross-reference to the short-a form; tālāvacāra d
+udAhara       -> udAhAra       | SCH: °{%udāhara%} m. = {%kathā%}, S I,612,8 v.u. (Ko.; im Texte 620,13 steht aber {%*udāhāra!%} | Body says 'im Texte steht aber *udāhāra!' — explicitly notes the text form is udāhāra; dis
+valAna        -> valana        | SCH: °{%valāna%} = {%valana%}, das Zutagetreten, S I,467,1: {%khaḍgā nistriṃśās teṣāṃ valanavis | Body gives '= {%valana%}' — explicit equation to valana; valāna documented as variant of v
+aYjalIkArikA  -> aYjalikArikA  | SCH: {%añjalīkārikā%} a kind of statue, Harṣac. 163,12. {part=,seq=897,type=,n=2} | Body defines 'añjalīkārikā' directly with its own gloss (a kind of statue). The long ī is 
+apratIGa      -> apratiGa      | SCH: {%apratīgha%} Adj. = {%apratigha%}, Vāyu-P. 1,5,23. {part=,seq=3838,type=,n=2} | Body explicitly: 'Adj. = apratigha'. The suspect 'apratīgha' is given as an attested Neben
+kaYculIkA     -> kaYculikA     | SCH: °{%kañculīkā%} f. = {%kañculikā%} (Mieder), Padyac. VI,5a. {part=,seq=9629,type=˚,n=2} | Body explicitly '= kañculikā' — suspect is a documented variant (long ī form) cross-refere
+ASuSukzaRI    -> ASuSukzaRi    | SCH: °{%āśuśukṣaṇī%} [pw {%˚ṇi%}] Feuer, Śuk. t. o. 19 [p. 33,19]. {part=,seq=7568,type=˚,n=2} | Body gives '[pw ˚ṇi]' — explicitly notes pw uses short i; both forms documented, long Ī is
+mAnasIka      -> mAnasika      | SCH: °{%mānasīka%} Adj., imaginär, S II,62,15 wohl verdruckt für {%mānasika%}. {part=,seq=21834 | Body says 'wohl verdruckt für mānasika' — explicitly documents mānasīka as probable mispri
+vasatIvari    -> vasatIvarI    | SCH: {%vasatīvari%} = {%˚rī%}, Kāty. Śr. 8,9,7; 9,3,21; 12,4,2; 13,4,28; 14,1,13. {part=,seq=23 | Body gives '= ˚rī' — explicitly equates vasatīvari to ˚rī (long ī); documented variant.
+virukza       -> virUkza       | SCH: °{%virukṣa%} = {%virūkṣa%}, S I,116,8. {part=,seq=24392,type=˚,n=1} | Body explicitly states '= {%virūkṣa%}' — documented as equal to the long-U form; cross-ref
+gavAsana      -> gavASana      | SCH: °{%gavāsana%} n. S I,175,8 v.u. (Ko.) = {%nyāsāsana%}. {part=,seq=12422,type=˚,n=2} | Body has '= {%nyāsāsana%}' — cross-reference equating to another form; documented variant,
+jitakAsin     -> jitakASin     | SCH: °{%jitakāsin%} Adj. = {%jitakāśin%} siegesbewußt, Prabandh. 119,4/5. {part=,seq=14126,type | Body explicitly states '= {%jitakāśin%} siegesbewußt' — documented as equal to the palatal
+kiMsAru       -> kiMSAru       | SCH: °{%kiṃsāru%} Pfeil [pw {%kiṃśaru%}], S II,363,9 in {%kusuma˚%}. {part=,seq=10760,type=˚,n= | Body notes '[pw {%kiṃśaru%}]' — cross-reference to pw form with palatal Ś; suspect is atte
+kAlapfzwa     -> kAlapfzWa     | SCH: {%Kālapṛṣṭa%} ({%˚ṣṭha%} die anderen Ausgaben), m. N. pr. eines Schlangendämons, MBh. 8,34 | Body: '(ṣṭha die anderen Ausgaben)' — the ṣṭha form (suggestion) is from other editions; s
+anOkaha       -> anokaha       | SCH: °{%anaukaha%} m. Baum [pw {%anokaha%}] H 17,61. {part=,seq=3029,type=˚,n=2} | Body states 'm. Baum [pw anokaha]' — cross-reference to pw's form shows anaukaha is an att
+AvESika       -> AveSika       | SCH: °{%āvaiśika%} m. Gast, S II,261,8 [pw {%āveśika]%}. {part=,seq=7521,type=˚,n=2} | Body: 'm. Gast, [pw āveśika]' — bracketed pw cross-reference documents āvaiśika as atteste
+vekawika      -> vEkawika      | SCH: °{%vekaṭika%} m. = {%vai˚%}, S I,434,2 v.u. (Ko.) {part=,seq=24743,type=˚,n=2} | Body: 'm. = vai˚' — abbreviated cross-reference '= vaikaṭika'; suspect explicitly equated 
+bisara        -> visara        | SCH: °{%bisara%} m. Menge [pw {%visara%}], Śrīk. IX,28. {part=,seq=20545,type=˚,n=2} | Body: 'm. Menge [pw visara]' — pw cross-reference explicitly notes visara as the pw form; 
+bahitra       -> vahitra       | SCH: °{%bahitra%} n. Schiff, S II,303,12 [pw {%vahitra%}]. {part=,seq=20378,type=˚,n=2} | Body notes '[pw {%vahitra%}]' — cross-references pw's vahitra form; bahitra is documented 
+kAkanantikA   -> kAkaRantikA   | SCH: °{%kākanantikā%} = {%kākaṇantikā%}, S I,398,4. {part=,seq=10405,type=˚,n=2} | Body explicitly states '= {%kākaṇantikā%}' — documented as equal to the retroflex-ṇ form; 
+Ura           -> ura           | SCH: {%ūra%} = {%ūru%} 1. im Lok. {%ūre%}, Bhāg. P. 7,8,29. {part=,seq=9041,type=,n=1} | Body '= ūru 1. im Lok. ūre' — cross-reference marker (= X), documents ūra as variant/Lok. 
+Sriv          -> sriv          | SCH: {%śriv%} s. {%sriv%}. {part=,seq=25702,type=,n=1} | Body says 'śriv s. sriv' — 's.' = see, a cross-reference marker; intentional spelling docu
+karasIkara    -> karaSIkara    | SCH: °{%karasīkara%} = {%˚śīkara%}, Śrīk. 7,11. {part=,seq=10015,type=˚,n=1} | Body says karasīkara = ˚śīkara; '= X' cross-reference explicitly equates the suspect to th
+kAkAndI       -> kAkandI       | SCH: °{%Kākāndī%} = {%Kākandī%}, S II,331,26/27. {part=,seq=10414,type=˚,n=1} | Body states '{%Kākāndī%} = {%Kākandī%}'; suspect documented as an equals-variant of sugges
+talpalA       -> talpala       | SCH: °{%talpalā%} = {%talpala%}, H 32,7; 44,9 [nach dem Ko. beide Male ˚f.!). {part=,seq=14643, | Body says '= talpala'; this is an explicitly documented variant form (= cross-ref), not a 
+BogAvali      -> BogAvalI      | SCH: °{%bhogāvali%} f. [pw. {%˚lī%}] Preislied, Śrīk. XVI,1. {part=,seq=21072,type=˚,n=2} | Body notes '[pw. ˚lī]' — explicitly documents that pw has long ī. The suspect short-i form
+ahIraRI       -> ahIraRi       | SCH: °{%ahīraṇī%} = {%ahīramaṇī%}, Harṣac. 260,6 [pw hat {%*ahīraṇi%} m., Thomas {%*ahīraṇī!%}] | Body cross-refs '= ahīramaṇī' and notes '[pw hat *ahīraṇi m., Thomas *ahīraṇī!]' — variant
+daSatI        -> daSati        | SCH: °{%daśatī%} f. = {%daśati%} (Dekade), Kauṭ. 131,5. {part=,seq=15438,type=˚,n=2} | Body says '= daśati (Dekade)' — the long-ī form is explicitly equated to daśati, documenti
+laspUjani     -> laspUjanI     | SCH: {%laspūjani%} = {%˚nī%}, Kāty. Śr. 8,4,21. {part=,seq=23205,type=,n=1} | Body equates laspūjani = ˚nī, explicitly documenting the short-i variant as equal to the l
+anyarAzwriya  -> anyarAzwrIya  | SCH: {%anyarāṣṭriya%} Adj. = {%anyarāṣṭrī́ya%}, Kāṭh. 37,11. {part=,seq=3229,type=,n=2} | Body says {%anyarāṣṭriya%} = {%anyarāṣṭrī́ya%}; the '=' cross-ref documents suspect as var
+pUrowi        -> purowi        | SCH: *{%pūroṭi%} = {%puroṭi%}, Zach. Beitr. {part=,seq=19105,type=*,n=1} | Body explicitly equates pūroṭi = puroṭi via '=' cross-reference; the long-ū variant is doc
+sUhava        -> suhava        | SCH: °{%Sūhava%} (so!) N. einer Frau, Prabandh. 292,8 v.u.; 294,5 v.u. {part=,seq=27294,type=˚, | Body marks '(so!)' after the form, explicitly acknowledging the unusual spelling; proper n
+juka          -> jUka          | SCH: {%juka%} m. ζυγόν die Wage im Tierkreise, M. Müller, Ren. 326. Richtig {%jūka%}, vgl. Ind. | Body says 'Richtig {%jūka%}' (correctly jūka); explicitly documents suspect as wrong, sugg
+samavaSaraRa  -> samavasaraRa  | SCH: °{%samavaśaraṇa%} n. = {%˚saraṇa%}, S II,301,12. {part=,seq=26297,type=˚,n=2} | Body gives '{%samavaśaraṇa%} = {%˚saraṇa%}'; suspect documented as a cross-referenced vari
+triSara       -> trisara       | SCH: °{%triśara%} [vgl. pw {%trisara!%}] aus drei Schnuren bestehend, S I,462,1. {part=,seq=152 | 'vgl. pw trisara!' cross-references the pw form; body explicitly documents triśara as the 
+KurASAna      -> KurAsAna      | SCH: °{%Khurāśāna%} = {%Khurāsāna%}, S I,469,10 v.u. (Ko.); 568,7 (Ko.). {part=,seq=12109,type= | Body explicitly equates Khurāśāna = Khurāsāna; the suspect is documented as an alternate s
+SrAk          -> srAk          | SCH: °{%śrāk%} = {%*srāk%}, eiligst, schnell, Prabandh. 124,4 v.u. {part=,seq=25697,type=˚,n=2} | Body explicitly equates śrāk = *srāk; ś-form is documented as variant of s-form via '=' cr
+muSalya       -> musalya       | SCH: °{%muśalya%} = {%musalya%}, mit der Keule zu erschlagen, S II,341,7. {part=,seq=22146,type | Body explicitly equates muśalya = musalya via '=' cross-reference; the ś-variant is docume
+baWara        -> vaWara        | SCH: {%baṭhara%} {%(vaṭhara)%}, Harṣac. 103,3; 236,9; 288 letzte Zeile; Prabandhacintāmaṇi 148  | Body shows '{%baṭhara%} {%(vaṭhara)%}'; suspect and suggestion both documented as variants
+moqita        -> modita        | SCH: {%moḍita%} s. {%goṇḍita%}. {part=,seq=22338,type=,n=1} | Body says 's. goṇḍita' — explicit cross-reference (s. = siehe), documenting this form inte
+nApatya       -> mApatya       | SCH: °{%[˚nāpatya%} n. Herrschaft ({%aiśvarya%}), S II,56,10 v.u. (Ko.) verdruckt für {%nārpaty | Body: 'verdruckt für nārpatya' — suspect documented as misprint for a third form; cross-re
+bariSI        -> variSI        | SCH: *{%bariśī%} f. Angel. {%va˚%} geschrieben. {part=,seq=20316,type=*,n=1} | Body states '{%va˚%} geschrieben' — explicitly notes variśī as the written form; bariśī is
+abAleya       -> avAleya       | SCH: {%abāleya%} m. kein Bāleya, Kāty. Śr. 10,2,21 ({%avāleya%}). {part=,seq=3972,type=,n=2} | Body parenthetically cites '{%avāleya%}' as the alternative reading — documented cross-ref
+veri          -> Beri          | SCH: {%veri%} Kauṭ. 102,9 v.u. s. {%peṭī%}. {part=,seq=24779,type=,n=1} | Body gives 's. {%peṭī%}' — a 'see' cross-reference; veri is intentionally documented as a 
+pawolA        -> pawola        | SCH: °{%paṭolā%} a species of cucumber, Pūrṇabh. 100,28 [pro {%*paṭolī%} und {%paṭolikā%}]. {pa | Body notes '[pro *paṭolī und paṭolikā]' — pro marker documents paṭolā as a form used in pl
+sOlkikeya     -> SOlkikeya     | SCH: °{%saulkikeya%} [pw. {%*śaulkikeya%} m.] ein best. vegetabilisches Gift, S II,263,15. {par | Body itself uses s- form {%saulkikeya%} for SCH headword, noting pw has *śaulkikeya (ś-); 
+marga         -> mArga         | SCH: {%marga%} Āpast. Gṛhy. 20,12 fehlerhaft für {%mārga%}. {part=,seq=21583,type=,n=2} | 
+Bagini        -> BaginI        | SCH: °{%bhagini%} f. = {%˚nī%}, Schwester, S II,340,6 wohl Druckfehler. {part=,seq=20685,type=˚ | 
+pattI         -> patti         | SCH: {%pattī%} metrisch statt {%patti%}, Fußgänger, Fußknecht, R. ed. Bomb. 4,25,23. {part=,seq | 
+anulepaRa     -> anulepana     | SCH: {%anulepaṇa%} Āpast. fehlerhaft für {%˚lepana%}. {part=,seq=2878,type=,n=2} | 
+avaskAra      -> avaskara      | SCH: {%avaskāra%} m. = {%avaskara%} 3., Sāy. zu Ait. Br. 3,26,3. Vielleicht nur fehlerhaft. {pa | 
+ahAta         -> ahata         | SCH: {%[ahāta%} H 43,145 ist falsche Lesart.] {part=,seq=6538,type=,n=1} | 
+pfzWi         -> pfzwi         | SCH: °{%pṛṣṭhi%} Prabandh. 15,6; 291,2 v.u. wohl Druckfehler für {%pṛṣṭi%} (Rücken)? {part=,seq | 
+aRUka         -> anUka         | SCH: {%aṇūka%} in {%ṛṣyaṇūka%} und {%devatāṇūka%}, Baudh. Gṛhy. 2,2 bei Har. zu Āpast. Gṛhy. 15 | 
+valiBuj       -> baliBuj       | SCH: °{%valibhuj%} , S I,102,11 (Ko.) lies {%balibhuj%}. {part=,seq=23638,type=˚,n=2} | 
+anAtyaya      -> anatyaya      | SCH: {%anātyaya%} m. Āpast. fehlerhaft für {%anatyaya%}. {part=,seq=2372,type=,n=2} | 
+saMSrAvaRa    -> saMSravaRa    | SCH: {%saṃśrāvaṇa%} Hemādri 3, a,974,5 fehlerhaft für {%saṃsrāvaṇa%}. {part=,seq=25879,type=,n= | 
+Ijya          -> ijya          | SCH: {%ījya%} MBh. 7,9458 fehlerhaft für {%īḍya%}. {part=,seq=7900,type=,n=2} | 
+ganDamAMsi    -> ganDamAMsI    | SCH: {%gandhamāṃsi%} (metrisch) f. = {%˚māṃsī%}, Varāh. Bṛh. S. 51,15. {part=,seq=12291,type=,n | 
+praRAli       -> praRAlI       | SCH: °{%praṇāli%} f. (metrisch für {%˚lī%}), Wasserrinne, Padyac. II,17c. {part=,seq=19375,type | 
+kUyava        -> kuyava        | SCH: {%kūyava%} m. Pl. eine Art Körnerfrucht, TS. 4,7,4,2. {part=,seq=11252,type=,n=1} || {%kū́ | 
+Adarin        -> AdArin        | SCH: {%ādarin%} Adj. ein großes Gewicht auf etwas legend, nicht gleichgültig, Naiṣ. 3,62. Am En | 
+kamBAri       -> kamBArI       | SCH: °{%kambhāri%} (f.) Kaṃs. V,14b metrisch für {%*kambhārī%}, Gmelina arborea. {part=N,seq=28 | 
+mahASAntI     -> mahASAnti     | SCH: {%mahāśāntī%} f. metrisch = {%˚śānti%} 1., Varāh. Bṛh. S. 46,81. {part=,seq=21718,type=,n= | 
+Apali         -> ApAli         | SCH: {%Āpali%} m. eine best. Jaina-Sekte, Bhadrab. 4 in der Unterschrift (v. l.). {part=,seq=71 | 
+bahuniHsfta   -> bAhuniHsfta   | SCH: {%bahuniḥsṛta%} n. Hariv. 15977 fehlerhaft für {%bāhu˚%}. {part=,seq=20399,type=,n=2} | 
+prayogi       -> prAyogi       | SCH: {%práyogi%} m. Maitr. S. 3,1,9 (12,11) fehlerhaft für {%prā́˚%}, Patron. von {%prayoga%}.  | 
+vapIha        -> vApIha        | SCH: °{%vapīha%} m. = {%cātaka%}, S I,571,5 v.u. (Ko.) Druckfehler für {%*vappīha?%} Vgl. {%bap | 
+vardAlikA     -> vArdAlikA     | SCH: {%vardālikā%} f. Divyāvad. 500,20 fehlerhaft für {%vār˚%}. {part=,seq=23596,type=,n=2} | 
+vismAyin      -> vismayin      | SCH: °{%vismāyin%} Adj. H XVI,64; XXXVIII,29. Druckfehler für {%vismāpin?%} {part=,seq=24618,ty | 
+asikta        -> Asikta        | SCH: {%asikta%} Adj. unbegossen, Śāk. 84 v.l. {part=,seq=6330,type=,n=1} | 
+avedita       -> Avedita       | SCH: {%avedita%} Adj. Kathās. 123,158 fehlerhaft für {%avidita%}. {part=,seq=5795,type=,n=2} | 
+jANgalIka     -> jANgalika     | SCH: {%jāṅgalīka%} m. Giftbeschwörer, Harṣac 30,3. v.l. (95,7) {%jāṅgulika%}. {part=,seq=14045, | 
+kalAci        -> kalAcI        | SCH: {%kalāci%} Vorderarm, Śiś. 13,41 (Vallabha's Lesart). [Z.] — Rasas. 41b; Śṛṅgārasarv. 91a; | 
+upoti         -> upotI         | SCH: {%úpoti%} f. Maitr. S. 1,5,5 scheinbar Nom. act. von {%av%} mit {%upa%}, aber wohl fehlerh | 
+anudBAsin     -> anUdBAsin     | SCH: {%anudbhāsin%} Adj. nicht glänzend, Āpast. 1,30,12 v.l. {part=,seq=2719,type=,n=2} | 
+atisvan       -> atiSvan       | SCH: *{%atisvan%} v.l. für {%atiśvan gaṇa pakṣādi%} in der Kāś. {part=,seq=1412,type=*,n=2} | 
+
+# ===== BUCKET 6  UNLOCATABLE -- not in the current SCH source (stale/different key) (3) =====
+kAmarupin     -> kAmarUpin     | SCH:  | 
+kzveda        -> kzveqa        | SCH:  | 
+nayavartMan   -> (flag)        | SCH:  | 

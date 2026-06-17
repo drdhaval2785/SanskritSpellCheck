@@ -1,0 +1,9 @@
+; SKD body-confirmed fileable typos -- CORRECTIONS standard format (DICT:wrong:right:n)
+; 3 fileable (classified TYPO + source-confirmed + survived the Opus false-positive review) + 1 reviewed-out (commented below)
+; VERIFY each remaining case on the scan, flip trailing n->y for confirmed ones, then:
+;   python chg_nchg_sep.py SKD_file_first_sf.txt chg.txt nchg.txt
+SKD:hitAbalI:hitAvalI:n
+SKD:pUzaBAzA:pUzaBAsA:n
+SKD:vfzaBAzA:vfzaBAsA:n
+; REVIEWED-OUT (realword): Genuine bahuvrihi entry: deriv 'mahAn utkaH...yasyAH'=vidyut; stem is mahat+utka (utkaH in deriv), not mahotkA.
+;SKD:mahotka:mahotkA:n

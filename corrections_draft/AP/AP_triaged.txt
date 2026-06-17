@@ -1,0 +1,211 @@
+# AP tier-A -- BODY-GROUNDED triage  (DRAFT; verify every kept case against the scan)
+#
+# The 152 engine tier-A candidates were judged against AP's OWN entry text (csl-orig),
+# not spelling alone. A spelling detector cannot tell a typo from a real word, an
+# intentional variant / compounding form, or wrong-reading apparatus -- the entry can.
+# Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM
+# pass over the 'realword' set + source confirmation of every TYPO verdict.
+#
+# FINDING: of 152 tier-A candidates, 0 are body-confirmed fileable typos (0.0%).
+# 109 are real distinct words, 32 are spellings AP documents on purpose (w.r./v.l./
+# in-comp./cross-ref -- filing them would CORRUPT AP), 3 are not in the current
+# source, and 8 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
+# do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.
+
+# ===== BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file) (0) =====
+
+# ===== BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted (2) =====
+
+arAt          -> ArAt           [dcs=3 ndicts=1 body=realword]
+    AP: {#arAt#} {%ind.%} Immediately; at once; {#vartanti yadanItyA te tena#}  {#sAkaM patantyarAt#} Śukra. 4. 1266
+    judged: Body: 'Immediately; at once' — this is the standard definition of ArAt (indeclinable); arAt (short a) is not a standard form.
+    confirm: Own entry L4439: '<lex>ind.</lex> Immediately; at once' with citation Sukra.4.1266 — a defined headword with POS tag and source, a real attested word.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=AP&key=arAt
+
+Ekadyam       -> EkaDyam        [dcs=3 ndicts=1 body=realword]
+    AP: {#Ekadyam#} {%ind.%} At once, together.
+    judged: Body: 'At once, together' — this is the definition of EkaDyam (eka+dhyam); Ekadyam with dental d instead of aspirate D is a misspelling.
+    confirm: L10738 'Ekadyam <lex>ind.</lex> At once, together' is a distinct entry adjacent to separate L10739 'EkaDyam = Singleness of time'; both exist as real words.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=AP&key=Ekadyam
+
+# ===== BUCKET 3  REVIEW -- undecidable without the printed page (6) =====
+
+anuSravika    -> AnuSravika     [dcs=3 ndicts=2 body=realword]
+    AP: {#anuSravika#} {%a.%} Known from the Śāstras; (Pātañjala Yogadarśana 1. 15)
+    judged: Body: 'Known from the Śāstras' — standard definition of AnuSravika; but anuSravika (short a) could also be valid adjectival form.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=AP&key=anuSravika
+
+cIcIkucI      -> cIcIkUcI       [dcs=2 ndicts=2 body=realword]
+    AP: {#cIcIkucI#} {%Onomat.%} For the warbling of birds.
+    judged: Onomatopoeic word; body doesn't document short-u vs long-U as variant; cannot determine correct vowel length from gloss alone.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=AP&key=cIcIkucI
+
+kawinI        -> KawinI         [dcs=2 ndicts=2 body=realword]
+    AP: {#kawinI#} {%m.%} An elephant.
+    judged: Body 'An elephant' fits either k or K (kh) initial; cannot determine correct consonant from gloss alone.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=AP&key=kawinI
+
+sfkvam        -> sfkvan         [dcs=2 ndicts=1 body=realword]
+    AP: {{Lbody=35251}}  (redirect -> sfkkam)
+    judged: Body is only a redirect to sfkkam; cannot classify suspect vs suggestion from redirect alone.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=AP&key=sfkvam
+
+SAmilI        -> SAmIlI         [dcs=0 ndicts=2 body=realword]
+    AP: {#SAmilI#} A sacrificial ladle; ({#sruc#}).
+    judged: Body 'A sacrificial ladle (sruc)' too terse to determine whether short or long I is correct.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=AP&key=SAmilI
+
+ekAzWI        -> ekAzwI         [dcs=0 ndicts=1 body=realword]
+    AP: {#ekAzWI#} A seed of the cotton tree.
+    judged: Body 'A seed of the cotton tree' — ṭh vs ṭ aspirate distinction; no variant marker or etymology to confirm which is standard.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=AP&key=ekAzWI
+
+# ===== BUCKET 4  REAL-WORD -- a distinct real word; the fix would merge two words (109) =====
+antAra        -> antara        | AP: {#antAra#} {%a.%} [{#anta f aR#}] A cowherd; Śabda C. | Body: 'A cowherd' with derivation [anta f aR]; antAra (long A) is its own word, distinct f
+prARA         -> prARa         | AP: {#prARA#} {%f.%} N. of Garuḍaʼs mother-in-law; L. D. B. | Body: 'N. of Garuḍa's mother-in-law' — a proper noun feminine; distinct from prARa (life-b
+palA          -> pala          | AP: {#palA#} The plant {#jawAmAMsI#}, Indian spikenard; {#granTikaM ca palAM#}  {#cavyaM … …#} | Body 'The plant jaṭāmāṃsī, Indian spikenard' — palA (long A) is a feminine plant name, dis
+alasya        -> Alasya        | AP: {#alasya#} {%a.%} Idle, lazy. | Body: 'Idle, lazy' — adjective from alasa; alasya is its own valid adjectival form, distin
+nivAs         -> nivas         | AP: {#nivAs#} €10 P. To clothe, to put on clothes. | Body: 'To clothe' — 10P verbal root; nivas means to dwell; completely different meanings.
+AjAta         -> ajAta         | AP: {#AjAta#} {%a.%} Of high birth, noble birth; {#yo vEkaScidihAjAtaH kzatriyaH#}  {#kzatraka | Body: 'Of high birth, noble birth' — AjAta (Ā-prefix) means noble-born; ajAta means unborn
+mandirA       -> mandira       | AP: {#mandirA#} A stable. | Body: 'A stable' — mandirA (feminine) = stable; mandira (neuter) = temple/house; distinct 
+AvaSyam       -> avaSyam       | AP: {#AvaSyam#} [{#avaSya-aR#}] Necessity, inevitable act or conclusion. | Body: 'Necessity, inevitable act' with derivation [avaSya-aR] — AvaSyam is an abstract nou
+vasAna        -> vasana        | AP: {#vasAna#} {%a.%} Dwelling; {#vasAnastatra vE puryAmaditervipriyaMkaram#}  Mb. 12. 339. 91 | Body 'a. Dwelling' + Mb citation; vasAna is Ātmanepada present participle of vas, distinct
+sattrA        -> sattra        | AP: {#sattrA#} {%ind.%} With, together with; {#sattrA putrakalatramitranivahEH#}  Rām. Ch. 2.  | Body 'ind. With, together with' — sattrA is an indeclinable particle; sattra is a noun (sa
+sTalA         -> sTala         | AP: {#sTalA#} A spot of dry ground artificially raised and drained (opp.  {#sTalI#} q. v. belo | Body explicitly gives feminine 'A spot of dry ground... (opp. sTalI)' — sTalA is the femin
+ArvAk         -> arvAk         | AP: {#ArvAk#} {%ind.%} After, afterwards; behind. | Body 'ind. After, afterwards; behind' — ArvAk (ā-initial, long vowel) is distinct from arv
+Adana         -> AdAna         | AP: {#Adana#} Food. Rv. 6. 54. 3. | Body 'Food. Rv.' — Adana=food; AdAna=taking/receiving. Clearly distinct meanings and diffe
+kAdala        -> kadala        | AP: {#kAdala#} {%a.%} Belonging or relating to the {{kadali->kadalī||20260425||https://github. | Body 'a. Belonging to kadalī kind of deer' — kAdala is adjective from kadalī; kadala=banan
+nIram         -> niram         | AP: {#nIram#} [Uṇ. 2. 13] ∙²1 Water; {#nIrAnnirmalato janiH#} Bv. 1. 63. ∙²2 Juice, liquor. .━ | Body: 'Water; juice' with Uṇādi derivation and long-I compounds — nIram (long I) is the co
+dampatI       -> dampati       | AP: {#dampatI#} {%m.%} (du.) ∙²1 The lord of the house (Agni, Indra, the Aśvins); {#dampatIva  | Body 'm. (du.)' — dampatI is the dual form explicitly, with multiple citations; real gramm
+cIram         -> ciram         | AP: {#cIram#} [{#ci-kran dIrGaSca#}; Uṇ. 2. 26] ∙²1 A rag, a tattered cloth, a long stripe or  | Body gives 9 meanings (rag, cloth, bark, etc.) — cIram (long I) is wholly distinct from ci
+visram        -> viSram        | AP: {#visram#} A smell like that of raw meat. ━{%a.%} Stinking of; ({#SiKiSiKASreRayaH#})  {#a | Body: 'A smell like that of raw meat' — visra from vis-root; viSram = vi+Sram (to rest); c
+sAmam         -> sAman         | AP: {#sAmam#} Likeness, similarity. .━{@Comp.@}: {#sAmasTyam#} | Body: 'Likeness, similarity' — from sama (equal); entirely different word and meaning from
+saMBf         -> saMvf         | AP: {#saMBf#} €3 U. ∙²1 To collect, hoard, place or bring together; {#tyAgAya saMBftArTAnAm#}  | Body: verbal root 'to collect, hoard, cherish.' saMBf (saṃ+bhṛ) vs saMvf (saṃ+vṛ) = entire
+saMBid        -> saMvid        | AP: {#saMBid#} €7 U. ∙²1 To break or tear asunder, break to pieces. ∙²2 To mingle, meet, combi | Body: 'To break or tear asunder.' saMBid (saṃ+bhid) vs saMvid (saṃ+vid) = completely diffe
+kusIdA        -> kusIda        | AP: {#kusIdA#} A female usurer. | Body: 'A female usurer' — kusIdA (feminine, long A) is a legitimate feminine form of kusId
+pracalA       -> pracala       | AP: {#pracalA#} {%f.%} A chamelion (Mar. {#saraqA#}). | Body gives 'f.' (feminine) — pracalA is the feminine nominal form of pracala; -A ending is
+Atapta        -> atapta        | AP: {#Atapta#} {%a.%} Refined by heat (as gold). | Body 'Refined by heat (as gold)' — Atapta=ā+tapta (heated); atapta=a+tapta (unheated). Opp
+mukundA       -> mukunda       | AP: {#mukundA#} {%f.%} A kind of drum; {#vIRAmukundAmurajAdiBiSca#} Bu. C. 1. 45. | Body 'f. A kind of drum' — mukundA is the feminine form (f.) with its own citation; real w
+tURA          -> tURa          | AP: {#tURA#} {%f.%} A bellows; L. D. B. | Body: '{%f.%} A bellows' — tURA is a feminine noun (long A ending), defined independently.
+gaRqakA       -> gaRqaka       | AP: {#gaRqakA#} A lump, a ball. | Body: 'A lump, a ball.' gaRqakA is a feminine noun (long A), defined independently.
+saMpuwakA     -> saMpuwaka     | AP: {#saMpuwakA, -saMpuwikA#} ∙²1 A box, casket; {#yasya saMpuwikA nAsti kutastasya suBAzitam# | Body lists 'saMpuwakA, -saMpuwikA' — both feminine forms, defined with 3 senses. Long A is
+yATAtaTyam    -> yaTAtaTyam    | AP: {#yATAtaTyam#} ∙²1 Reality, truth. ∙²2 Rectitude, propriety. | Body: 'Reality, truth; Rectitude.' yATAtaTyam (from yATA = 'as truly is') is a recognized 
+pratIkzaRam   -> pratikzaRam   | AP: {#pratIkzaRam, pratIkzA#} ∙²1 Waiting for; {#satyavratasyAgamanapratIkzAH#} Mb. 3. 164. 11 | Body headword reads pratIkzaRam (long I); entry defines it with 5 senses. Long I is the co
+varDakI       -> varDaki       | AP: {#varDakI#} A harlot, an adulterous woman; Bhāg. 7; Gīrvāṇa. | Body: 'A harlot, an adulterous woman' — varDakI is a standard feminine -I form, its own wo
+marUvaka      -> maruvaka      | AP: {#marUva(ba)ka#} {%a.%} Terrible, formidable. | Body headword spells it marUva(ba)ka (long U), defined as 'Terrible, formidable.' Long U c
+gavizWi       -> gavizwi       | AP: {#gavizWi#} {%a.%} Ved. ∙²1 Wishing for cows. ∙²2 Desirous, eager, ardent. | Body: Vedic adj. 'Wishing for cows; Desirous.' gavizWi with long I is defined independentl
+vipaRyu       -> vipanyu       | AP: {#vipaRyu#} {%a.%} ∙²1 One who has left occupation, practice etc. ∙²2 Indifferent; {#viraj | Body: adj. 'One who has left occupation; Indifferent.' vipaRyu (retroflex R=ṇ) is defined 
+aviDAyaka     -> aBiDAyaka     | AP: {#aviDAyaka#} {%a.%} Non-injunctive; Non-injunctive statement; {#aviDAyako#}  {#mantraH .  | Body: 'Non-injunctive' = a-viDAyaka (neg. prefix a-); aBiDAyaka would be 'injunctive.' Ent
+AlIQA         -> AlIQa         | AP: {#AlIQA#} A woman in menstruation; {#nAlIQyA parihataM BakzayIta kadAcana#}  Mb. 18. 104.  | Body: 'A woman in menstruation' — AlIQA (feminine, long A) is distinct from AlIQa (neuter/
+ujjfmBA       -> ujjfmBa       | AP: {#ujjfmBA, -mBaRam#} ∙²1 The act of gaping, opening the mouth, yawning, ∙²2 Spreading, inc | Body lists 'ujjfmBA, -mBaRam' — A-stem feminine explicitly given alongside the neuter; rea
+avacAra       -> avacara       | AP: {#avacAra#} {%a.%} Going or moving down in or upon. | Body: '{%a.%} Going or moving down in or upon.' avacAra (long A) is its own adjective entr
+kAzaRa        -> kazaRa        | AP: {#kAzaRa#} {%a.%} Unripe. | Body: '{%a.%} Unripe.' kAzaRa (long initial A) is its own adjective, not a misspelling of 
+sPUrjA        -> sPUrja        | AP: {#sPUrjA#} The crashing sound of a thunder-clap; {#kuryAdyoginamapyeza#}  {#sPUrjAvAn pari | Body: 'The crashing sound of a thunder-clap' (feminine noun, long A). sPUrjA is defined in
+SAkula        -> Sakula        | AP: {#SAkula, SAkulika#} {%a.%} Belonging to fish; {#sapta vE SAkulena#}  {#tu#} ({#mAsAn pita | Body: '{%a.%} Belonging to fish.' SAkula (long SA-) is its own adjective, distinct from Sa
+amaraRam      -> AmaraRam      | AP: {#amaraRam#} Not dying, immortality. | Body: 'Not dying, immortality.' amaraRam = a- (neg.) + maraRam; short a- is correct negati
+sUpyA         -> sUpya         | AP: {#sUpyA#} A kind of bean (Mar. {#masUra, tUra#}). | Body: 'A kind of bean' — sUpyA is a feminine noun (long A ending), defined independently.
+stAmberama    -> stamberama    | AP: {#stAmberama#} {%a.%} Belonging to an elephant; {#radaM stAmberamaM taTA#}  Śiva B. 30. 12 | Body: '{%a.%} Belonging to an elephant.' stAmberama (long A) is its own adjective entry.
+klizwA        -> klizwa        | AP: {#klizwA#} {%f.%} A kind of {#cittavftti#} as laid down in the {#pAtaYjalayogaSAstra#}. | Body: '{%f.%} A kind of cittavftti in Yoga.' klizwA is a feminine noun (long A), defined i
+koNkaRA       -> koNkaRa       | AP: {#koNkaRA#} N. of Reṇukā, wife of Jamadagni. .━{@Comp.@}: {#koNkaRAsUtaH#} | Proper feminine name of Reṇukā; long-ā ending is standard for women's names; compound koNk
+luYcanA       -> luYcana       | AP: {#luYcanA#} Concise speech. | Feminine abstract noun 'Concise speech'; long-ā is a standard Sanskrit feminine nominal en
+pariDAraRA    -> pariDAraRa    | AP: {#pariDAraRA#} Patience, perseverance. | Feminine abstract noun 'Patience, perseverance'; long-ā ending is standard for this word c
+prAGUrRikA    -> prAGUrRika    | AP: {#prAGUrRikA#} Hospitable reception. | Feminine noun 'Hospitable reception'; long-ā ending is regular for feminine -ikā nouns.
+saYjA         -> saYja         | AP: {#saYjA#} A she-goat. | 'A she-goat' is naturally feminine; long-ā is the correct feminine form, not a misspelling
+viDra         -> vIDra         | AP: {#viDra#} {%a.%} [{#vinDeH kran, nalopaSca#} Uṇ. 2. 26] Clear, stainless. | Body: 'Clear, stainless' with derivation [vinDeH kran, nalopaSca] — viDra has its own etym
+amitrIya      -> amitriya      | AP: {#amitrIya, -trya#} {%a.%}  Hostile, inimical; {#viSvA vftramamitriyA SavoBiH#} Rv. 6. 17. | Body: '{%a.%} Hostile, inimical.' amitrIya (long I) defined with gloss and RV citation. It
+viSrutI       -> viSruti       | AP: {#viSrutI#} {%f.%} A cow; ŚB. on MS. 10. 3. 49. | Body: '{%f.%} A cow.' viSrutI is a feminine noun (long I), defined independently with cita
+vawurin       -> vawUrin       | AP: {#vawurin#} {%a.%} Ved. Broad, wide. | Body: 'Ved. {%a.%} Broad, wide.' vawurin (short u) is defined as its own Vedic adjective.
+anuSItam      -> anusItam      | AP: {#anuSItam#} {%ind.%} In cold. | S=palatal ś; anuSItam=anu+śīta 'in cold' is the correct spelling; 's' would be wrong conso
+aSEva         -> aSeva         | AP: {#aSEva#} {%a.%} Inauspicious; {#tyajASvaSEvaM kulakOSalAya#} Bhāg. 3. 1. 13. | Body gives 'a. Inauspicious' + Bhāg. citation; aSEva (E=ai) is independently attested as i
+aBikzipta     -> avikzipta     | AP: {#aBikzipta#} {%p. p.%} Thrown, surpassed. | Body 'Thrown, surpassed' fits aBi+kzipta (abhi+kṣipta); suggestion avikzipta has different
+biBIzaka      -> viBIzaka      | AP: {#biBIzaka#} {%a.%} Frightening, terrifying. | Body: '{%a.%} Frightening, terrifying.' biBIzaka (from bhī, desiderative) is defined indep
+atikrAntA     -> atikrAnta     | AP: {#atikrAntA#} N. of the sixth stage of the elephantʼs must; {#atikrAntAvasTo#}  {#gajapati | Body 'N. of the sixth stage of elephant's must' — atikrAntA is the feminine form (f.) with
+picCakA       -> picCaka       | AP: {#picCa(cCi)kA#} The feathers of a peacockʼs tail tied in a bunch, a  feather-brush (used  | Body: picCa(cCi)kA 'feathers of a peacock's tail' — feminine noun (long A), defined indepe
+aBisarI       -> aBisArI       | AP: {#aBisarI#} ({#-riH#}), {%f.%} ∙²1 Following; {#asurapuravaDe gacCantyaBisarIm#} Pratimā 3 | Body: '{%f.%} Following; Going out to help.' aBisarI (short a) defined with citations; dis
+haWika        -> haWikA        | AP: {#haWika#} {%a.%} Sudden, violent. | Body: '{%a.%} Sudden, violent.' haWika is an adjective (short a final); haWikA would be it
+ramaRyA       -> ramaRya       | AP: {#ramaRyA#} {%f.%} A female. | Body: '{%f.%} A female.' ramaRyA is a feminine noun (long A), defined independently.
+srAvita       -> SrAvita       | AP: {#srAvita#} {%a.%} Liquefied. | Gloss 'Liquefied' fits srAvita (p.p. of sru, to flow); SrAvita (from Sru, to hear) means '
+Abalyam       -> AbAlyam       | AP: {#Abalyam#} [{#abalasya BAvaH#}] Weakness. | Body etymology 'abalasya BAvaH' (state of a-bala=weak); Abalyam derives from abala, not Ab
+kAlita        -> kalita        | AP: {#kAlita#} {%a.%} Dead; {#nADunA santi kAlitAH#} Bhāg. 10. 51. 18. | Body 'Dead' (kAla=death/time); kalita='known/understood'. Distinct meanings, different vow
+aBimeTika     -> aBimeTikA     | AP: {#aBimeTika#} {%a.%} Ved. | Marked as adjective ({%a.%}); masculine/default headword aBimeTika is standard; -ikā would
+anunAyika     -> anunAyikA     | AP: {#anunAyika#} {%a.%} Conciliating; {#priyatamezu vaDUranunAyikA#} Śi. 6. 7. | Marked as adjective with citation; masculine stem anunAyika is the correct lemma; -ikā is 
+apasfta       -> apAsfta       | AP: {#apasfta#} {%p. p.%} ∙²1 Gone away, retreated &c.; dropped or fallen down; {#apasftapARqu | p.p. from apa+sf (to go); gloss 'Gone away, retreated' fits apa-sfta precisely; apA- prefi
+dvEvArzika    -> dvEvarzika    | AP: {#dvEvArzika#} {%a.%} ({#-kI#} {%f.%})  Biennial. | Adjective 'Biennial'; long A in dvEvArzika is standard vṛddhi derivation from varza (year)
+sPAl          -> sPal          | AP: {#sPAl#} €1 P. ({#sPAlati#}) To tremble, quiver, throb, palpitate. ∙²10 U. or {%Caus.%} ({ | Verbal root sPAl with inflection sPAlati; root with long A is distinct from sPal; body def
+upanAyikA     -> upanAyika     | AP: {#upanAyikA#} A character in a dramatic or any other work of art next  in importance to th | Defines a feminine dramatic role ('next in importance to the heroine'); long-ā is the prim
+uzRIgaNgA     -> uzRIgaNga     | AP: {#uzRIgaNgA#} The hot Gaṅgā {%i. e.%} the Badarī (having hot sources). | Compound proper name meaning 'hot Gaṅgā'; final -gaNgA with long ā is correct as Gaṅgā is 
+waNgA         -> waNga         | AP: {#waNgA#} The leg. | 'The leg' — defined as a feminine noun; long-ā is the regular feminine nominal ending, not
+Sapita        -> SApita        | AP: {#Sapita#} {%p. p.%} Cursed; {#iti rozavaSAduBO tadAnImanyonyaM SapitO#}  {#nfpadvijendrO# | Body 'Cursed' with Rām. citation — śapita (short a) = past passive participle of śap = to 
+dIkzaRIyA     -> dIkzaRIya     | AP: {#dIkzaRIyA, dIkzaRIyezwi#} {%f.%} A sacrificial yāga before  initiation; the sacrifice of | Body {%f.%} 'A sacrificial yāga before initiation' — long-A dIkzaRIyA is the feminine form
+laYjA         -> laYja         | AP: {#laYjA#} ∙²1 A current. ∙²2 An adulteress. ∙²3 N. of Lakṣmī. ∙²4 Sleep. | Body lists four meanings (current, adulteress, Lakṣmī, sleep) for laYjA — feminine noun wi
+lowanA        -> lowana        | AP: {#lowanA#} Persuasive speech, complaisance. | Body 'Persuasive speech, complaisance' — lowanA is a feminine noun (long A), a distinct wo
+viliptA       -> vilipta       | AP: {#viliptA, viliptikA#} A second (= ¹⁄₃₆₀₀ of a degree). | Body 'A second (= 1/3600 of a degree)' grouping viliptA, viliptikA — feminine form with lo
+sUnAvat       -> sUnavat       | AP: {#sUnAvat#} A keeper of a slaughter-house; Ms. 4. 84. | Body 'A keeper of a slaughter-house; Ms. 4. 84.' — sUnAvat from sūnā (slaughter-house, lon
+lOhitika      -> lOhitIka      | AP: {#lOhitika#} {%a.%} Reddish. | Adjective 'Reddish'; short-i in -itika is the documented form; long-Ī suggestion is not su
+SArvarIka     -> SArvarika     | AP: {#SArvarIka#} {%a.%} Nocturnal; {#SArvaramiti ca#} Vamanaʼs Kāvyālaṃkārasūtrāṇi 59. | Adjective 'Nocturnal' with citation; long-Ī in SArvarIka is the documented form, derived f
+pratIram      -> pratiram      | AP: {#pratIram#} A shore, bank; {#pratIradeSEH svakalatracAruBirviBUzitAH#}  {#kuYjasamudrayoz | 'A shore, bank' with citation; pratIram with long I is the accusative of pratIra; well-att
+dantula       -> dantUla       | AP: {#dantula#} {%a.%} Having or furnished with teeth. | Adjective 'Having or furnished with teeth'; short-u in dantula is the documented form; lon
+gaRqUla       -> gaRqula       | AP: {#gaRqUla#} {%a.%} Bent, crooked. | Body defines gaRqUla as 'Bent, crooked'; long-U is the documented headword form; suggestio
+jambUmat      -> jambumat      | AP: {#jambUmat#} {%m.%} ∙²1 A mountain. ∙²2 A monkey. | Body defines 'A mountain. A monkey.' Long-U jambUmat (rose-apple-bearing) is a valid disti
+tUram         -> turam         | AP: {#tUram#} A kind of musical instrument. | Body 'A kind of musical instrument' = tūra (long U, trumpet); tUram with long U is the sta
+Sek           -> sek           | AP: {#Sek#} €1 Ā. To go; L. D. B. | Body '1 Ā. To go' — Sek (palatal ś) is a distinct verbal root from sek (dental s).
+adaDryaYc     -> adadryaYc     | AP: {#adaDryaYc#} [{#amum aYcati adas-aYc kvip aDryAgamaH#} P. VIII. 2. 80-81.]  Going to that | Body derivation '[adas-aYc kvip aDryAgamaH P. VIII. 2. 80-81]' — aDh-āgama explicitly acco
+utsakta       -> utsakTa       | AP: {#utsakta#} {%a.%} Prospering, going on progressingly; {#utsaktAH pARqavA#}  {#nityam#} Mb | Body 'Prospering' + Mb citation; utsakta (ut+sakta) is its own p.p., different from utsakT
+gupita        -> guPita        | AP: {#gupita#} {%a.%} Protected, guarded; {#AcCadviDAnErgupito bArhatEH soma#}  {#rakzitaH#} R | Body 'Protected, guarded' with Ṛgveda citation — from √gup (to protect); guPita from √guph
+AvAlam        -> AbAlam        | AP: {#AvAlam#} [{#A-val-Ric ac#} Tv.] A basin for water round the root of  a tree; cf. {#AlavA | Body etymology 'A-val-Ric' and gloss 'basin for water at tree root'; AvAlam from val root,
+BareRa        -> vareRa        | AP: {#BareRa, BarAt#} {%ind.%} In full measure, with all oneʼs might. | Body 'In full measure, with all one's might' fits BareRa (from bhara = load/weight). Compl
+vizam         -> viSam         | AP: {#vizam#} [{#viz-ka#}] ∙²1 Poison, venom (said to be {%m.%} also in this sense); {#vizaM B | Body '[viz-ka] Poison, venom...' — z=retroflex ṣ in SLP1, so vizam = viṣam (poison), the s
+aviBAzita     -> aBiBAzita     | AP: {#aviBAzita#} {%a.%} That which is not taken into consideration. | Body 'Not taken into consideration' = a+vi+bhāṣita (not discussed), fits aviBAzita. aBiBAz
+avineya       -> aBineya       | AP: {#avineya#} {%a.%} Uncontrollable. | Body 'Uncontrollable' = a+vineya (a+vi+nī = not trainable). aBineya = abhi+neya = to be le
+Bayam         -> vayam         | AP: {#Bayam#} [{#biBetyasmAt, BI-apAdAne ac#}] ∙²1 Fear, alarm, dread, apprehension, (oft. wit | Body '[BI-apAdAne ac] Fear, alarm, dread…' with many citations — Bayam = bhayam (fear). va
+nAsatyA       -> nAsatya       | AP: {#nAsatyA#} The constellation {#aSvinI#}. | Body: 'The constellation aSvinI' — nAsatyA (feminine) used for the constellation; distinct
+fS            -> fz            | AP: {#fS#} (A Sautra root) ∙²1 To go. ∙²2 To kill. | Body: 'A Sautra root: to go, to kill' — fS is explicitly labeled a Sautra root with its ow
+biBIzaRa      -> viBIzaRa      | AP: {#biBIzaRa#} {%a.%} ∙²1 Terrifying, frightening, intimidating. ∙²2 Formidable, terrible. ∙ | Body gives 3 independent glosses (terrifying, formidable, bullying) with no cross-referenc
+anAvara       -> anavara       | AP: {#anAvara#} {%a.%} One without a covering for the head; {#taTA nOsADanaparAn#}  {#mallavAr | Body: 'One without a covering for the head' — anAvara (an+Avara, long A) = without head-co
+yona          -> yOna          | AP: {#yona#} {%a.%} Regarding race; {#tEryagyonaSca paYcaDA Bavati#} Sāṅ. K. 53. | Body: 'Regarding race' and the quoted verse uses yona (short o); yona appears to be the do
+badvam        -> badvan        | AP: {#badvam#} A large number (according to Sāyaṇa 100 kotis, others 10,000  millions; 13084 a | Body defines badvam as a large number (neuter noun); the -am ending is accusative/nominati
+AkalanA       -> Akalana       | AP: {#AkalanA#} ∙²1 See {#Akalanam#}. ∙²2 Worship, devotion; {#taTApyezA dozApanayanapawuH svA | Body gives own gloss 'Worship, devotion' and cross-ref to Akalanam; feminine -ā form is a 
+jAmbUlamAlikA -> jambUlamAlikA | AP: {#jAmbUlamAlikA#} Procession of the bridegroom. | jAmbU- is the regular vṛddhi derivation from jambU (rose-apple); feminine -ikā ending; sta
+pronmaTin     -> pronmATin     | AP: {#pronmaTin#} {%a.%} Destroying, annihilating. | Gloss 'Destroying, annihilating' fits pronmaTin from pra-ud-manT (to churn/destroy); short
+kaRqita       -> KaRqita       | AP: {#kaRqita#} {%a.%} Dislocated. | Body 'Dislocated' defines kaRqita (k) independently, no cross-reference to KaRqita (kh).
+apakoza       -> apakoSa       | AP: {#apakoza#} {%a.%} Something without cover or sheath; {#mfduByAmapakozAByAM#}  {#padAByAma | Body has {%a.%} POS tag + gloss 'without cover or sheath' and citation with apakozAByAM (z
+varAsI        -> barAsI        | AP: {#varAsI#} {%f.%} Bathing cloth or soiled cloth; L. D. B. | Body 'Bathing cloth or soiled cloth; L. D. B.' — varAsI defined as its own feminine noun w
+
+# ===== BUCKET 5  INTENTIONAL -- AP documents the spelling on purpose; NEVER file (32) =====
+brahmam       -> brahman       | AP: {#brahmam#} The Supreme Spirit, the Absolute. | Body: 'The Supreme Spirit' — accusative/alternate form of neuter -an stem brahman; AP list
+hemam         -> heman         | AP: {#hemam#} [{#hi-man#}] ∙²1 Gold. ∙²2 The thorn-apple. | Body: 'Gold; thorn-apple' with derivation [hi-man] — accusative of neuter -an stem heman; 
+janmam        -> janman        | AP: {#janmam#} Birth. | Body: 'Birth' — accusative of neuter -an stem janman; AP's convention of listing case-form
+sevanA        -> sevana        | AP: {#sevanA#} See {#sevanam#} (1); {#tAneva te madanusevanayAvarudDAn#}  Bhāg. 3. 23. 7. | Body 'See sevanam (1)' — explicit See cross-reference; sevanA documented as variant of sev
+SrutI         -> Sruti         | AP: {#SrutI#} = {#Sruti#} above. | Body '= Sruti above' — explicit cross-reference; SrutI documented as variant form pointing
+aBIGAta       -> aBiGAta       | AP: {#aBIGAta#} = {#aBiGAta#} q. v. | Body '= aBiGAta q.v.' — explicit cross-reference with q.v. marker; aBIGAta is a documented
+banDyA        -> vanDyA        | AP: {#banDyA#} (= {#vanDyA#}) ∙²1 A barren woman; {#na hi banDyA vijAnAti gurvI prasavavedanAm | Body contains '(= {#vanDyA#})' — explicitly documented as a variant of vanDyA; also has it
+Danvam        -> Danvan        | AP: {#Danvam#} A bow (rarely used in classical literature); {#DanvAnyAduDuvustamAm#}  Śiva B.  | Body: 'A bow' — accusative of neuter -an stem Danvan; AP lists case-forms as intentional h
+SIrzam        -> SIrzan        | AP: {#SIrzam#} [{#Siras-pfzo˚ SIrzAdeSaH, SF-ka suk ca vA#}] ∙²1 The head; {#SIrze sarpo deSAn | Body: 'The head; top' with derivation — accusative of neuter -an stem SIrzan; AP's convent
+carmam        -> carman        | AP: {#carmam#} ∙²1 A shield. ∙²2 Ved. A skin. | Body: 'A shield; skin' — accusative of neuter -an stem carman; AP's convention of listing 
+dAmam         -> dAman         | AP: {#dAmam#} (At the end of a compound) Wreath, garland. | Body: 'Wreath, garland (at end of compound)' — accusative of neuter -an stem dAman; AP con
+bAlukA        -> vAlukA        | AP: {#bAlukA#} See {#vAlukA#}. .━{@Comp.@}: {#bAlukAyantram#} | Body 'See vAlukA' — explicit See cross-reference; bAlukA documented as alternate form of v
+timI          -> timi          | AP: {#timI#} {%f.%} (= {#timiH#} q. v.); L. D. B. | Body: '{%f.%} (= {#timiH#} q. v.)' — cross-reference form explicitly documented; 'q.v.' is
+AgUr          -> Agur          | AP: {{Lbody=6532}} || {#AgUr#} ({%f.%}) An agreement, promise.  (redirect -> Agur) | Body explicitly says '(redirect -> Agur)' — AgUr is documented as a variant/redirect; inte
+udam          -> udan          | AP: {#udam#} Water. | Body: 'Water' — accusative of neuter -an stem udan; AP's convention of listing case-forms 
+klomam        -> kloman        | AP: {#klomam, kloman#} {%n.%} [{#klu gatO manin#}] ∙²1 The lungs; Vāj. 25. 8; {#yakfcca klomAn | Body lists both 'klomam, kloman' as forms of the same entry (n. lungs/bladder). Documented
+Avaritf       -> AvarItf       | AP: {#Avari(rI)tf#} {%a.%} One that covers or envelops; {#SarErAvAritastasya#}  {#saMyuge pata | Headword reads 'Avari(rI)tf' explicitly documenting both short-i and long-I spellings as v
+tardu         -> tardU         | AP: {#tardu, -rdU#} {%f.%}  A wooden ladle. | Body gives '{#tardu, -rdU#}' — both short-u and long-U forms explicitly listed in the same
+siDmam        -> siDman        | AP: {#siDmam, siDman#} {%n.%} [{#siD-man kicca#} Uṇ. 1. 137] ∙²1 Blotch, scab. ∙²2 Leprosy. ∙² | Body gives '{#siDmam, siDman#}' — both forms are explicitly documented in the same entry.
+somala        -> somAla        | AP: {#somala#} {%a.%} Soft, bland, placid (MW. gives {#somAla#} in this sense). | Body defines somala and explicitly notes 'MW. gives somAla in this sense' — AP intentional
+KarparIkA     -> KarparikA     | AP: {#KarparIkA, -KarparI#}  A kind of collyrium. | Body gives '{#KarparIkA, -KarparI#}' — explicitly lists long-Ī forms; both the full and ab
+kuRqira       -> kuRqIra       | AP: {#kuRqi(RqI)ra#} {%a.%} Strong, powerful. | Body gives '{#kuRqi(RqI)ra#}' — explicitly documents both short-i and long-I forms in the 
+apIju         -> apIjU         | AP: {#apIju#} {%a.%} Ved. Impelling, stirring up. (MW. {#apIjU#}) {#uzAsAnaktA#}  {#jagatAmapI | Body notes 'MW. {#apIjU#}' — AP uses short-u apIju and explicitly documents MW's long-U fo
+savyezwf      -> savyezWf      | AP: {#savyezwf, savyezWaH, savyezWf, savyezWAtf#} {%m.%}  A charioteer. | Headword groups 'savyezwf, savyezWaH, savyezWf, savyezWAtf' — both spellings listed togeth
+nivirISa      -> nibirISa      | AP: {#nivirI(qI)Sa, -sa#} {%a.%} See {#nibirIsa#}. ∙²1 Compact, close; {#urunivirIsanitambaBAr | Body explicitly 'See nibirIsa' — cross-reference marker; headword groups variants 'nivirI(
+sfkkam        -> sfkkan        | AP: {#sfkkam, sfkkaRI, sfkkan#} {%n.%}, {#sfkkiRI, sfkkin#} {%n.%}, {#sfkvam, sfkvaRI, sfkvan# | Headword entry explicitly lists 'sfkkam, sfkkaRI, sfkkan' together — both forms documented
+arI|a         -> (flag)        | AP: {#arI|a#} {%a.%} (= {#arIQa#}) Ved. Not licked; {#arI|aM vatsaM caraTAya#}  {#mAtA#} Rv. 4 | Body '(= arIQa) Ved. Not licked' — cross-reference marker '=' documents this as a delibera
+Param         -> param         | AP: {#Param#} A shield; cf. {#Palaka#}. | 
+vilva         -> bilva         | AP: {#vilva#} See {#bilva#}. | 
+vezyA         -> veSyA         | AP: {#vezyA#} See {#veSyA#}. | 
+uzmam         -> uzman         | AP: {#uzmam, uzpa#} &c. See under {#uz#}. | 
+varzmam       -> varzman       | AP: {#varzmam#} The body; see below. | 
+
+# ===== BUCKET 6  UNLOCATABLE -- not in the current AP source (stale/different key) (3) =====
+kapizWAla     -> kapizWala     | AP:  | 
+astamike      -> astamIke      | AP:  | 
+abaGuzwa      -> avaGuzwa      | AP:  | 

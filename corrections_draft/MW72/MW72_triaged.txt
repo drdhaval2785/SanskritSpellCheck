@@ -1,0 +1,432 @@
+# MW72 tier-A -- BODY-GROUNDED triage  (DRAFT; verify every kept case against the scan)
+#
+# The 360 engine tier-A candidates were judged against MW72's OWN entry text (csl-orig),
+# not spelling alone. A spelling detector cannot tell a typo from a real word, an
+# intentional variant / compounding form, or wrong-reading apparatus -- the entry can.
+# Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM
+# pass over the 'realword' set + source confirmation of every TYPO verdict.
+#
+# FINDING: of 360 tier-A candidates, 0 are body-confirmed fileable typos (0.0%).
+# 231 are real distinct words, 77 are spellings MW72 documents on purpose (w.r./v.l./
+# in-comp./cross-ref -- filing them would CORRUPT MW72), 42 are not in the current
+# source, and 10 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
+# do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.
+
+# ===== BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file) (0) =====
+
+# ===== BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted (7) =====
+
+ahnika        -> Ahnika         [dcs=3 ndicts=2 body=realword]
+    MW72: {%Ahnika, as, ā, am,%} as last member of a compound {%= ahan;%} e. g. {%dvy-ahnika, as, ā, am,%} lasting two days.
+    judged: Body defines 'Ahnika' (long Ā) as last member of compound = ahan. Suspect ahnika (short a) is a misspelling of Ahnika.
+    confirm: Body headword '{%Ahnika, as, ā, am,%} as last member of a compound = ahan'; only long-Ā form documented, suspect short-a is bare key misspelling.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MW72&key=ahnika
+
+ayacita       -> ayAcita        [dcs=3 ndicts=1 body=realword]
+    MW72: {%A-yacita, as, ā, am,%} unasked, unsolicited; {%ayā- %} [Page0079-b+ 72] {%citam,%} ind. without being asked; ({%as%}), m., N. of the Ṛṣi Upavarṣa. {%—Ayācita-vṛtti, is,%} f. or {%ayācita-vrata, am,%
+    judged: Body defines A-yācita 'unasked, unsolicited' with long Ā; the ā-prefix (A-) and yācita (from yāc) require ayAcita.
+    confirm: Body '{%A-yacita, as, ā, am,%} unasked, unsolicited' is a full real definition (adj + N. of Ṛṣi); defined as its own word.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MW72&key=ayacita
+
+sisaka        -> sIsaka         [dcs=3 ndicts=1 body=realword]
+    MW72: {%Sisaka, am,%} n. lead.
+    judged: Sanskrit word for lead (metal) is sīsaka with long ī; body gloss 'lead' fits sIsaka; short i in suspect is a misspelling.
+    confirm: Body '{%Sisaka, am,%} n. lead' uses short-i matching suspect and gives a real noun definition; defined as its own word.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MW72&key=sisaka
+
+praharaRiya   -> praharaRIya    [dcs=1 ndicts=1 body=realword]
+    MW72: {%Pra-haraṇiya, as, ā, am,%} to be attacked or assailed, assailable; to be fought with; to be expelled or removed; ({%am%}), n. a weapon.
+    judged: Body gives pra-haraṇīya (IAST ṇīya = long ī = SLP1 I); suspect short-i praharaRiya is a misspelling.
+    confirm: Body '{%Pra-haraṇiya, as, ā, am,%} to be attacked... a weapon' uses short-i matching suspect with a full real definition.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MW72&key=praharaRiya
+
+nalopaKyAna   -> nalopAKyAna    [dcs=0 ndicts=1 body=realword]
+    MW72: {%Nalopakhyāna;%} read {%Nalopākhyāna.%}
+    judged: Body explicitly says 'read Nalopākhyāna' — a direct correction instruction; suspect is the misspelling.
+    confirm: Body '{%Nalopakhyāna;%} read {%Nalopākhyāna.%}' explicitly documents the spelling correction (a 'read X' redirect entry).
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MW72&key=nalopaKyAna
+
+sukam         -> Sukam          [dcs=0 ndicts=1 body=realword]
+    MW72: {%Sukam,%} ind. = 5. {%su,%} (Naigh. III. 12.)
+    judged: Body headword is Śukam (S = palatal ś, fitting suggestion Sukam); suspect sukam (dental s) is a key misspelling.
+    confirm: Body '{%Sukam,%} ind. = 5. su (Naigh. III.12)' uses plain dental S matching suspect; real defined indeclinable, not palatal Śukam.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MW72&key=sukam
+
+sIrRa         -> SIrRa          [dcs=0 ndicts=2 body=realword]
+    MW72: {%Sīrṇa, as, ā, am,%} (according to Śabda-k.) hurt, injured.
+    judged: Body says 'Sīrṇa' = SIrRa (palatal S); suspect sIrRa has dental s, which contradicts the body spelling.
+    confirm: Body '{%Sīrṇa, as, ā, am,%} (Śabda-k.) hurt, injured' uses plain dental S matching suspect with a real definition; not palatal Śīrṇa.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MW72&key=sIrRa
+
+# ===== BUCKET 3  REVIEW -- undecidable without the printed page (3) =====
+
+vilasa        -> vilAsa         [dcs=4 ndicts=1 body=realword]
+    MW72: {%Vilasa, as, ā, am,%} see Gaṇa Tṛṇādi to Pāṇ. IV. 2, 80.
+    judged: Body only says 'see Gaṇa Tṛṇādi to Pāṇ.' with no gloss; cannot judge whether vilasa is own word or typo of vilAsa.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MW72&key=vilasa
+
+vyaDita       -> vyADita        [dcs=4 ndicts=3 body=realword]
+    MW72: {#vyaDita#} {%vyadhita, as, ā, am%} (a doubtful word), made, done (?).
+    judged: Body calls it 'a doubtful word, made, done (?)'; too uncertain to judge whether short a or long ā is intended.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MW72&key=vyaDita
+
+abdi          -> abDi           [dcs=4 ndicts=2 body=realword]
+    MW72: {%Ab-di, is,%} m., Ved. a cloud. {%—Abdi-mat, ān,%} {%atī, at,%} Ved. possessed of clouds, giving water, im- pregnating (?).
+    judged: Body entry is 'Ab-di' (long Ā, retroflex D), matching neither suspect abdi (short a, dental d) nor suggestion abDi exactly.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MW72&key=abdi
+
+# ===== BUCKET 4  REAL-WORD -- a distinct real word; the fix would merge two words (231) =====
+sattvA        -> sattva        | MW72: {%Sattvā,%} ind. having sunk down, sitting, resting, &c. | Body 'having sunk down, sitting' is the absolutive of sad; sattvā (long A) is the regular 
+vira          -> vIra          | MW72: {#vira#} {%vira, as,%} m. (according to Sāy. fr. rt. {%vṛ%}), Ved. one who goes or departs | Body defines 'vira, as, m. (Sāy.) one who departs this life (= gantṛ = preta)' — own Vedic
+Rad           -> mad           | MW72: {#Rad#} {%ṇad, ṇam, ṇaś,%} &c. Many roots which really begin with the dental {%n%} are wri | Body is a meta-entry about cerebral ṇ roots (ṇad/ṇam/ṇaś → see nad/nam/naś); entirely unre
+Agnihotra     -> agnihotra     | MW72: {%Āgnihotra, as, ī, am,%} fit for the Agnihotra. | Body defines 'Āgnihotra' (SLP1 Agnihotra, long Ā) as adj. 'fit for the Agnihotra'; own wor
+AmA           -> Ama           | MW72: {#AmA#} {%ā-mā,%} cl. 3. A. {%-mimīte, -mātum,%} to effect, accomplish. | Body defines ā-mā (long final ā) as verbal root cl. 3. A. 'to effect, accomplish'; own wor
+avAs          -> avas          | MW72: {#avAs#} {%avās (ava-as),%} cl. 4. P. {%avāsyati,%} {%situm,%} to throw down. | Body defines avās (ava-as, long Ā) cl. 4 P. 'to throw down'; own verbal entry distinct fro
+upAdru        -> upadru        | MW72: {#upAdru#} {%upā-dru (upa-ā-),%} cl. 1. P. {%-dravati,%} {%-drotum,%} to run near to. | Body defines upā-dru (upa-ā-) 'to run near to'; the long ā is from ā-prefix, making it its
+Ad            -> ad            | MW72: {#Ad#} {%ād (ā-ad),%} cl. 2. P., Ved. {%ātti, āttum,%} to eat. | Body defines ād (ā-ad) cl. 2 P. Ved. ātti, āttum 'to eat'; distinct compound root, not a t
+saNgA         -> saNga         | MW72: {#saNgA#} {%saṅ-gā (sam-gā),%} cl. 3. P. {%-jigāti, -gā-%} {%tum,%} to come together; to g | Body defines saṅ-gā (sam-gā) as verbal root 'to come together, to go to'; long final ā is 
+upAhAra       -> upahAra       | MW72: {%Upāhāra (upa-āh˚), as,%} m. slight refreshment (consisting of fruits, sweetmeats, &c.). | Body defines Upāhāra (upa-āhāra) 'slight refreshment'; compound with ā-hāra, own word dist
+saman         -> sAman         | MW72: {#saman#} {%sam-an,%} cl. 2. P. {%-aniti, -anitum,%} Ved. to breathe again, come to life. | Body defines sam-an as cl. 2 P. root 'to breathe again, come to life'; an independent verb
+sayujya       -> sAyujya       | MW72: {%Sa-yujya, as, ā, am,%} closely united with. {%—Sa-%} {%yujya-tā,%} f. intimate union or  | Body gives 'closely united with' as own gloss with <lex> adj. (sa-yujya, a bahuvrīhi); dis
+vasAna        -> vasana        | MW72: {%Vasāna, as, ā, am,%} wearing, putting on (clothes). | Body 'wearing, putting on clothes'; vasāna is the middle present participle of vas (to wea
+sikata        -> sikatA        | MW72: {%Sikata, ās,%} m. pl. (said to be fr. the Sautra rt. above; probably fr. rt. 1. {%sic%}), | Body defines sikata (m.pl.) = sand as masculine, distinct from sikatā (f.); both are real 
+AmAlaka       -> Amalaka       | MW72: {#AmAlaka#} {%āmālaka, as, am,%} m. n. land near a mountain (?). | Body 'āmālaka' with long ā in mālaka; gloss 'land near a mountain' defines this as a disti
+Sayin         -> SAyin         | MW72: {%Śayin, ī, inī, i,%} lying, resting, reposing. | Body 'lying, resting' is śayin from śī (to lie); short a is correct. śāyin (long Ā) would 
+ASad          -> Asad          | MW72: {#ASad#} {%ā-śad,%} cl. 6. A. {%-śīyate, -śattum,%} to go. | Body defines ā-śad (palatal ś) cl. 6. A. 'to go'; distinct from Asad (ā-sad, with dental s
+saMSad        -> saMsad        | MW72: {#saMSad#} {%saṃ-śad,%} Caus. {%-śātayati, -yitum,%} to cause to fall down, throw down, br | Body defines saṃ-śad (palatal ś) Caus. 'to cause to fall down'; distinct from saMsad (asse
+praSad        -> prasad        | MW72: {#praSad#} {%pra-śad,%} Caus. P. {%-śātayati, -yitum,%} to cause to fall down, break off,  | Body defines pra-śad (with ś) as a Caus. root 'to cause to fall down, pluck'; distinct fro
+niraS         -> niras         | MW72: {#niraS#} {%nir-aś,%} cl. 9. P. {%-aśnāti,%} &c., Ved. to eat up, consume entirely. | Body defines nir-aś (with ś) as cl. 9 P. root 'to eat up'; distinct verbal root from niras
+anda          -> anDa          | MW72: {%Anda, as,%} m. binding. | Body defines 'Anda, as, m. binding' — dental d, own gloss distinct from anDa (egg/ball wit
+ED            -> eD            | MW72: {#ED#} {%aidh,%} f. or {%aidha, as,%} m. or {%aidhā,%} f. (fr. rt. {%indh%} with {%ā%}), V | Body defines aidh/aidha 'flaming, a flame, splendor' under key {#ED#}; E (=ai) is correct 
+sTana         -> stana         | MW72: {#sTana#} {%sthana%} (fr. rt. 1. {%as%}), Ved. {%= bhavatha,%} (Ṛg-veda VIII. 18, 15.) | Body defines sthana (fr. rt. as) Ved. = bhavatha; own Vedic form distinct from stana (brea
+baNga         -> BaNga         | MW72: {#baNga#} {%baṅga, as,%} m. the country of Bengal; (usually written {%vaṅga,%} q. v.) | Body defines baNga as 'country of Bengal (usually written vaNga)'; distinct from BaNga (bh
+prasaNGa      -> prasaNga      | MW72: {#prasaNGa#} {%pra-saṅgha, as,%} m. a great multitude. | Body defines pra-saNGa (pra-saṅgha, with aspirate Gh) as 'a great multitude'; distinct fro
+pratikF       -> pratikf       | MW72: {#pratikF#} {%prati-kṝ,%} cl. 6. P. A. {%-kirati, -te,%} {%-karitum, -karītum,%} to scatte | Body defines prati-kṝ (long vocalic r F) cl. 6. 'to scatter towards'; distinct from pratik
+Apaw          -> Apat          | MW72: {#Apaw#} {%ā-paṭ,%} cl. 10. P. {%-pāṭayati, -yitum,%} to split; to sever. | Body defines ā-paṭ (retroflex ṭ) cl. 10. P. 'to split, to sever'; distinct from Apat (āpat
+jamva         -> jamBa         | MW72: {#jamva#} {%jamva, as,%} m. mud, mire. | Body defines 'jamva, as, m. mud, mire'; own word with own gloss, completely distinct from 
+niSad         -> nizad         | MW72: {#niSad#} {%ni-śad,%} Caus. {%-śātayati, -yitum,%} Ved. to kill. | Body defines ni-śad (palatal ś) Caus. 'to kill'; distinct from niṣad (retroflex ṣ). Own Ve
+viSad         -> vizad         | MW72: {#viSad#} {%vi-śad,%} Caus. {%-śātayati, -yitum,%} to cause to fall to pieces, break to pi | Body defines vi-Sad as a real verbal root (Caus. -SAtayati) meaning 'to break to pieces'; 
+vfMhaRa       -> bfMhaRa       | MW72: {%Vṛṃhaṇa, as, ā%} or {%ī, am,%} causing to increase, nourishing, fostering, fattening, nu | Body fully defines vṛṃhaṇa 'causing to increase, nourishing' with compounds; v/b alternati
+sawI          -> satI          | MW72: {%Saṭī,%} f. {%= saṭi%} above; a kind of perfume. | Body '= saṭi; a kind of perfume' — saṭī (retroflex ṭ, long ī) is a perfume plant, distinct
+niraR         -> niram         | MW72: {#niraR#} {%ni-raṇ,%} cl. 1. P. {%-raṇati, -raṇitum,%} Ved. to rejoice, delight in. | Body defines ni-raṇ cl.1 'to rejoice, delight in' (Vedic); niraR is a real verbal root ent
+vikfS         -> vikfz         | MW72: {#vikfS#} {%vi-kṛś,%} Caus. {%-karśayati, -yitum,%} to make thin, emaciate, attenuate; to  | Body defines vi-kṛś Caus. 'to make thin, emaciate'; vikfS (vi-kṛś) is a real root, distinc
+SrIRat        -> SrImat        | MW72: {%Śrīṇat, an, atī, at,%} Ved. mixing. | Body 'mixing' (Vedic pres. part.) — śrīṇat from śrī (to mix/cook); entirely different word
+bfMhana       -> bfMhaRa       | MW72: {%Bṛṃhana, am,%} n. (see {%vṛṃhana%}), Ved. a means of maintaining or preserving, (accordi | Body defines bṛṃhana 'means of maintaining' (Vedic) with own gloss; n vs ṇ gives two disti
+AsparSa       -> asparSa       | MW72: {#AsparSa#} {%ā-sparśa, as,%} m. (rt. {%spṛś%}), contact; {%āsparśa-tas,%} by the contact. | Body defines ā-sparśa (long Ā) m. 'contact'; own word with long ā-prefix, distinct from as
+pacAna        -> pacana        | MW72: {%Pacāna, as, ā, am%} (anomalous form of the pres. part. A.), cooking, preparing food, (se | Body defines 'Pacāna (anomalous pres. part. A.) cooking'; own documented form with long ā,
+ramARa        -> ramaRa        | MW72: {%Ramāṇa, as, ā, am,%} playing, sporting, disporting. | Body gives own <lex> 'playing, sporting, disporting' — Ramāṇa is a distinct adjective, not
+saMvAh        -> saMvah        | MW72: {#saMvAh#} {%saṃ-vāh%} [cf. {%saṃ-vah,%} to which the forms and senses given to this verb  | Body defines saṃ-vāh as a cl.1 A. root meaning 'rub/shampoo'; noted as related but distinc
+vigAma        -> vigama        | MW72: {%Vi-gāma, as,%} m., Ved. a step, pace, stride, (in Ṛg-veda I. 155, 4. applied to the thre | Body defines vi-gāma as a Ved. noun 'step/pace'; has its own gloss (Sāy. = vividha-gamana)
+avASya        -> avaSya        | MW72: {#avASya#} {%a-vāśya, as, ā, am%} (rt. {%vaś%}), un- desirable. | Body gives a-vASya with lex POS (as, A, am) from rt. vaS meaning 'undesirable'; own distin
+avAcCid       -> avacCid       | MW72: {#avAcCid#} {%avā-cchid (ava-ā-chid),%} cl. 7. P. A. {%-cchinatti, -cchinte, -cchettum,%}  | Body defines avA-cchid (ava-A-chid) as a real compound verbal root cl.7 'to tear or snatch
+mImAMsa       -> mImAMsA       | MW72: {#mImAMsa#} {%mīmāṃsa,%} Desid. base of rt. {%man,%} q. v. | Body defines mImAMsa as the Desiderative base of rt. man; a grammatical term with its own 
+Sasitf        -> SAsitf        | MW72: {%Śasitṛ, tā, trī, tṛ,%} a cutter, wounder. See {%vi-%} {%śasitṛ.%} | Body 'cutter, wounder' fits śasitṛ from śas (to cut/slay); śāsitṛ from śās (to instruct) h
+mahitvA       -> mahitva       | MW72: {%Mahitvā,%} ind. having honoured or esteemed. | Body 'having honoured' is absolutive of mah; mahitvā with long A is the regular absolutive
+samupAkram    -> samupakram    | MW72: {#samupAkram#} {%sam-upā-kram (-upa-ā-),%} cl. 1. P. A. {%-krāmati, -kramate, -kramitum,%} | Body explicitly spells it sam-upā-kram (= upa-ā-); the long Ā is the ā-prefix, making samu
+AvArya        -> avArya        | MW72: {%Ā-vārya,%} ind. having enclosed, having covered; concealing; warding off. | Body defines Ā-vārya ind. 'having enclosed, warding off' with ā-prefix — distinct form fro
+avarya        -> avArya        | MW72: {%Avarya,%} nom. P. {%avaryati, -yitum,%} to become lower. | Body defines Avarya nom. P. 'to become lower' — denominative verb with short a; distinct f
+manAna        -> manana        | MW72: {%Manāna, as, ā, am,%} Ved. praising, glorifying. | Body defines Manāna 'praising, glorifying' (Ved.) — distinct participial adjective, not ma
+svaDitI       -> svaDiti       | MW72: {%Svadhitī,%} f. an axe. {%—Svadhitī-vat, ān, atī, at,%} Ved. possessing or holding an axe | Body defines svadhitī (long ī) as 'an axe' with its own compound entry; the long-ī form is
+saMSi         -> saMSI         | MW72: {#saMSi#} {%saṃ-śi%} (closely connected with {%saṃ-%} {%śo%}), cl. 5. P. A. {%-śinoti, -śi | Body defines saṃ-śi as cl. 5 P/A root 'to sharpen, excite'; own verbal entry distinct from
+SUti          -> sUti          | MW72: {%Śūti, is,%} f. swelling, increasing. | Body defines Śūti (śūti) as 'swelling, increasing' — a distinct word beginning with ś (pal
+vivaD         -> vivad         | MW72: {#vivaD#} {%vi-vadh%} (a defective verb, see rt. {%vadh%}), Ved. to destroy utterly. | Body defines vi-vadh 'to destroy utterly' (defective verb); vivaD=vi-vadh is distinct from
+vyavadA       -> vyavaDA       | MW72: {#vyavadA#} {%vy-ava-dā%} (see rt. 3. {%dā%}), cl. 2. 4. P. {%-dāti, -dyati, -dātum,%} to  | Body defines vy-ava-dā 'to cut off, divide' citing rt. 3. dā — distinct root, not a misspe
+pragE         -> prage         | MW72: {#pragE#} {%pra-gai,%} cl. 1. P. {%-gāyati, -gātum,%} to begin to sing, sing of, sing, cel | Body defines pra-gai cl.1.P. 'begin to sing' — own verbal root gai with long E intentional
+laliTa        -> lalita        | MW72: {%Lalitha, ās,%} m. pl., N. of a people. | Body defines Lalitha as m.pl. name of a people; a proper noun with its own entry, not a mi
+Sikarin       -> SiKarin       | MW72: {%Śikarin, ī, iṇī, i,%} sprinkling, drizzling. | Body defines śikarin (with k, not kh) as 'sprinkling, drizzling'; own adjective entry; siK
+Aviz          -> Avis          | MW72: {#Aviz#} {%ā-viṣ,%} cl. 3. P. A., Ved. {%-veveṣṭi,%} {%-veviṣṭe, -veṣṭum,%} to pervade, pe | Body defines ā-viṣ as a cl. 3 P/A. verbal root 'to pervade, penetrate'; own entry with ful
+balita        -> valita        | MW72: 1. {%balita, as, ā, am,%} strong ?; ({%am%}), ind. strongly; [cf. 2. {%balita%} at p. 677, | Two homograph entries: balita(1)='strong', balita(2)='wrinkled'; both define balita with o
+reBat         -> revat         | MW72: {%Rebhat, an, antī, at,%} Ved. crackling, sounding; praising. | Body defines rebhat as 'crackling, sounding; praising' — a distinct present participle fro
+nimad         -> ninad         | MW72: {#nimad#} {%ni-mad,%} Caus. P. {%-mādayati, -yitum,%} to pronounce distinctly but slowly. | Body defines ni-mad Caus. 'to pronounce distinctly but slowly' — genuine verb root, not mi
+pragaR        -> pragam        | MW72: {#pragaR#} {%pra-gaṇ,%} cl. 10. P. {%-gaṇayati, -yitum,%} to reckon up, calculate. | Body defines pra-gaṇ cl. 10 'to reckon up, calculate' — distinct root gaṇ, not a misspelli
+pariBAs       -> pariBAz       | MW72: {#pariBAs#} {%pari-bhās,%} cl. 1. A. {%-bhāsate, -bhā-%} {%situm,%} to appear (Ved.): Caus | Body gives pari-bhās cl.1.A. 'appear' — own verbal root distinct from pari-bhāṣ (speak/exp
+ruzat         -> ruSat         | MW72: {%Ruṣat, an, antī%} or {%atī%} (as if fr. rt. {%ruś%}), {%at,%} hurting, injuring, vexing, | Body defines Ruṣat 'hurting, injuring' from rt. ruś — distinct word; SLP1 z (ṣ) vs S (ś) i
+vargas        -> Bargas        | MW72: {%Vargas,%} Ved. {%= bala-nāma%} (Naigh. II. 9). | Body gives Vedic Vargas = bala-nāma; own entry, v≠b is genuine (different words).
+ahika         -> Ahika         | MW72: 1. {%ahika, as,%} m. a blind snake, not venomous, see {%andhāhika; (ā),%} f., N. of the si | Two entries: ahika(1)=blind snake/cotton tree; ahika(2)=lasting N days. Both define ahika 
+avAkara       -> avakara       | MW72: {%Avā-kara, as,%} m. a mint (?). | Body defines avā-kara as 'a mint (?)'; compound with ava+ā prefix, distinct from avakara.
+druhA         -> druha         | MW72: {%Druhā,%} f., Ved. (according to Sāy. inst. sing. of 2. {%druh%}), injury, damage. | Body defines druhā (f.) as 'injury, damage' with its own Vedic gloss; feminine form, disti
+kArRAwaka     -> karRAwaka     | MW72: {%Kārṇāṭaka, as,%} m. a native of Karṇāṭa. | Body defines Kārṇāṭaka as 'a native of Karṇāṭa'; the long ā (Kār-) is the standard vṛddhi 
+pariBAvya     -> pAriBAvya     | MW72: {%Pari-bhāvya,%} ind. having caused to be surrounded; having reflected upon. | Body defines pari-bhāvya as an indeclinable 'having caused to be surrounded; having reflec
+samarARa      -> samaraRa      | MW72: {%Sam-arāṇa, as, ā, am,%} Ved. coming together. | Body defines sam-arāṇa as 'coming together' (Ved.); own adjective entry, not a misspelling
+syA           -> sya           | MW72: {#syA#} {%syā,%} fem. of the pronoun {%tyad = tad,%} ‘he,’ ‘that,’ &c., (nom. c. masc. {%s | Body defines syā as the feminine of pronoun tyad/tad; own pronominal entry, not a misspell
+sacAna        -> sacana        | MW72: {%Sacāna, as, ā, am,%} Ved. following, pursuing, &c.; being associated with. | Body defines sacAna (as, A, am, Ved.) 'following, pursuing'; distinct Vedic participial fo
+AvartamAna    -> avartamAna    | MW72: {%Ā-vartamāna, as, ā, am,%} going round, revolving; advancing, proceeding. | Body defines Ā-vartamāna 'going round, revolving' with long Ā prefix — correct ā-prefix fo
+Sastrika      -> SAstrika      | MW72: {%Śastrika, as, ā, am%} (at the end of comps.), having a knife; ({%ā%}), f. a knife, blade | Body defines Śastrika 'having a knife; a knife, blade' from śastra — distinct word, not śā
+aSvaya        -> aSvayA        | MW72: {%Aśvaya,%} nom. P. {%aśvayati, -yitum,%} to wish for horses. | Body defines Aśvaya nom. P. 'to wish for horses' — a verbal denominative, short -a stem, d
+niHSAs        -> niHSas        | MW72: {#niHSAs#} {%niḥ-śās (nis-ś˚),%} cl. 2. P. {%-śāsti,%} {%-śāsitum,%} Ved. to order off or  | Body defines niḥ-śās cl. 2 'to order off, expel' — long ā root śās, not śas; genuine disti
+stavAna       -> stavana       | MW72: {%Stavāna, as, ā, am,%} being praised, being lauded or glorified, (Sāy. {%= stūyamāna.%}) | Body defines Stavāna 'being praised' (Sāy. = stūyamāna) — a distinct passive participle fo
+vilApita      -> vilapita      | MW72: {%Vi-lāpita, as, ā, am%} (fr. the Caus.), caused to be dissolved, liquefied. | Body defines Vi-lāpita (fr. Caus.) 'caused to be dissolved, liquefied' — long ā Causative 
+srotya        -> srotyA        | MW72: {%Srotya, as, ā, am,%} Ved. produced in a stream; ({%ā%}), f., Ved. a stream, current, riv | Body defines Srotya adj. 'produced in a stream' and f. 'a stream' with full gloss — genuin
+Cikkika       -> CikkikA       | MW72: {%Chikkika, as, ā, am,%} sneezing, sternutatory; ({%ā%}), f. the plant Artemisia Sternutat | Body gives 'Chikkika, as, ā, am' — masc. adj. headword; suspect is the valid m. nom., sugg
+DvAnita       -> Dvanita       | MW72: {%Dhvānita, as, ā, am,%} caused to sound, made resonant. | Body gives 'Dhvānita' with long ā, matching suspect DvAnita (long Ā); suspect key is corre
+kArRika       -> karRika       | MW72: {%Kārṇika, as, ī, am,%} relating to the ear. | Body gives Kārṇika 'relating to the ear'; long ā is correct taddhita derivation from karṇa
+upaKyA        -> upAKyA        | MW72: {#upaKyA#} {%upa-khyā,%} cl. 2. P., Ved. {%-khyāti,%} {%-tum,%} to see. | Body gives upa-khyā cl.2.P. 'to see'; own verbal root distinct from upā-khyā (narrate/rela
+CardIkA       -> CardikA       | MW72: {%Chardīkā,%} f. vomiting, sickness. | Body defines Chardīkā (long ī) as 'vomiting, sickness'; the long-ī form is the intended he
+nIrasana      -> nirasana      | MW72: {#nIrasana#} {%nī-rasana, as, ā, am%} (fr. {%nis + ra-%} {%sanā%}), having no girdle. | Body defines nī-rasana as bahuvrīhi 'having no girdle' (nis+rasanā); distinct word from ni
+samIz         -> samiz         | MW72: {#samIz#} {%sam-īṣ,%} cl. 1. A. {%-īṣate,%} Ved. to become extended or lengthened out. | Body gives sam-īṣ cl.1.A. 'become extended'; own verbal root with long Ī; not a misspellin
+pratiprAs     -> pratiprAS     | MW72: {#pratiprAs#} {%prati-prās%} ({%-pra-as;%} see rt. 2. {%as%}), cl. 4. P. {%-prāsyati, -prā | Body defines prati-prās (pra-as, rt. 2 as) cl. 4 'to throw or cast upon' — distinct root a
+aBimarDa      -> aBimarda      | MW72: {%Abhi-mardha, as,%} m. rubbing, friction; oppression, devastation of a country &c. by an  | Body gives aBi-mardha (as, m.) with full definition (rubbing, friction, oppression, war); 
+ucCilIndra    -> ucCilInDra    | MW72: {#ucCilIndra#} {%uc-chilīndra (ud-śi˚), am,%} n. a mushroom. | Body defines uc-chilīndra 'a mushroom' — the entry spelling uses n not N; the suspect form
+avyati        -> avyaTi        | MW72: {#avyati#} {%avyati, is,%} f. (fr. rt. {%av%}), Ved. the act of satiating, satisfaction; d | Body defines avyati (is, f., fr. rt. av) 'act of satiating, satisfaction'; own distinct wo
+AKan          -> Akan          | MW72: {#AKan#} {%ā-khan,%} cl. 1. P. {%-khanati, -nitum,%} to dig. (It is doubtful whether {%ā-k | Body 'ā-khan' has kh (= K); suspect AKan (aspirate K) is correct; suggestion Akan drops th
+ceka          -> Ceka          | MW72: {#ceka#} {%ceka, as%} or {%am%} (?), m. or n. (?), N. of a country. | Body defines ceka as a proper noun N. of a country with lex markers (as or am, m. or n.); 
+anukFt        -> anukft        | MW72: {#anukFt#} {%anu-kṝt,%} cl. 10. P. {%-kīrtayati,%} {%-yitum,%} to relate after (or in orde | Body 'anu-kṝt' has long ṝ = F; suspect anukFt (long F) is correct; suggestion anukft (shor
+nirBidya      -> nirvidya      | MW72: {%Nir-bhidya,%} ind. having broken through, having pierced or penetrated. | Body defines nirBidya as indeclinable 'having pierced/penetrated' (from nir+Bid); distinct
+wowaka        -> towaka        | MW72: {#wowaka#} {%ṭoṭaka,%} a kind of metre consisting of four lines of twelve syllables each. | Body defines wowaka as a metrical term (kind of metre, 4 lines of 12 syllables); own entry
+yaBya         -> yavya         | MW72: {%Yabhya, as, ā, am,%} to be carnally known. | Body defines yaBya (as, A, am) 'to be carnally known'; clearly own word, unrelated to yavy
+niBf          -> nivf          | MW72: {#niBf#} {%ni-bhṛ,%} cl. 1. P. {%-bharati, -bhartum,%} &c., to bear or put down, (apparent | Body defines ni-bhṛ cl.1 P. 'to bear or put down'; distinct root from ni-vṛ (suggestion); 
+uSita         -> uzita         | MW72: {%Uśita, as, ā, am,%} wished, desired. | Body defines Uśita 'wished, desired' (palatal ś); distinct from uṣita (retroflex ṣ); genui
+nirBas        -> nirvas        | MW72: {#nirBas#} {%nir-bhas,%} cl. 3. P. {%-babhasti, -bap-%} {%sati,%} &c., Ved. to bite off, c | Body defines nir-bhas cl. 3 'to bite off, chew' — root bhas, entirely different from vas; 
+panita        -> paRita        | MW72: {%Panita, as, ā, am,%} admired, praised. | Body defines Panita 'admired, praised' — from rt. pan; distinct word with own gloss, not p
+vEjavApa      -> bEjavApa      | MW72: {#vEjavApa#} {%vaijavāpa, as,%} m. (fr. {%vīja-vāpa%}), N. of a Muni; of the author of a l | Body defines vaijavāpa as a proper name (Muni, law-book author) derived from vīja-vāpa — v
+vinipaw       -> vinipat       | MW72: {#vinipaw#} {%vi-ni-paṭ,%} cl. 10. P. {%-pāṭayati,%} &c., to split open, split up, cleave. | Body defines vi-ni-paṭ cl. 10 'to split open' — root paṭ (not pat); distinct verb entry.
+vEkarma       -> vEkarRa       | MW72: {#vEkarma#} {%vaikarma, as,%} m., N. of the Muni Vātsya. | Body defines vaikarma (m ending) as N. of Muni Vātsya; suggestion vEkarRa is a different w
+qayamAna      -> dayamAna      | MW72: {%Ḍayamāna, as, ā, am,%} flying, passing through the air. | Body 'Ḍayamāna' has retroflex ḍ = q; suspect qayamAna (retroflex) is correct; suggestion d
+dASaSiras     -> daSaSiras     | MW72: {%Dāśaśiras,%} n. (perhaps for {%dāśaśirasa%} fr. {%daśa-%} {%śiras%}), N. of a Sāman. | Body defines dASaSiras as N. of a SAman, distinct from daSaSiras; long A (dASa) signals a 
+paYcA         -> paYca         | MW72: {%Pañcā,%} f. spreading. | Body defines paYcA (f.) as 'spreading'; feminine noun with its own meaning, distinct from 
+fjUya         -> fjUyA         | MW72: {%Ṛjūya,%} nom. Ved. {%ṛjūyati, -te, -yitum,%} to walk straightforward, on the right or ho | Body defines fjUya as a verbal denominative (nom. fjUyati, -te) with full meaning; own wor
+sAtrAsaha     -> sAtrAsAha     | MW72: {#sAtrAsaha#} {%sātrāsaha, as,%} m. (fr. {%satrā-sah%}), a patronymic of Śona (a king of t | Body defines sAtrAsaha (as, m., fr. satrA-sah) as a patronymic; own entry with etymology, 
+vipanya       -> vipanyA       | MW72: {#vipanya#} {%vi-panya%} (probably fr. {%vipanyā%} below), Nom. A. {%-panyate,%} &c., Ved. | Body gives vi-panya its own Nom. verbal form -panyate 'to praise in various ways'; real de
+hAyin         -> hayin         | MW72: {%Hāyin, ī, inī, i,%} leaving, abandoning, neglecting. | Body defines Hāyin 'leaving, abandoning' from hā — long ā is correct for this root; distin
+izaRya        -> izaRyA        | MW72: {%Iṣaṇya,%} nom. P., Ved. {%iṣaṇyati, -yitum,%} to cause to make haste, to excite, drive. | Body defines Iṣaṇya nom. P. 'to excite, drive' — a denominative verb (short -a stem), dist
+izuDya        -> izuDyA        | MW72: {%Iṣudhya,%} nom. P., Ved. {%-dhyati, -yitum,%} to be a quiver, to contain arrows; to impl | Body gives full verbal entry nom. P. -dhyati; own Vedic verb, not a misspelling of suggest
+taRqin        -> tARqin        | MW72: {#taRqin#} {%taṇḍin, ī,%} m., N. of the author of a work on prosody quoted by Piṅgala. | Body gives own N. of author of prosody work; short-a stem taṇḍin distinct from tāṇḍin.
+SimbAtA       -> SimbAta       | MW72: {#SimbAtA#} {%śimbātā,%} m. du., Ved. mentioned in Naigh. III. 6. together with {%śata-rā% | Body defines śimbātā as a Vedic word (Naigh. III.6); own entry distinct from śimbāta.
+duroRAyu      -> duroRayu      | MW72: {%Duroṇāyu, us, us, u,%} Ved. fond of the house; (Sāy.) frequenting the sacrificial hall. | Body glosses Duroṇāyu 'fond of the house'; long Ā is own Vedic adj., not a typo of short-a
+SumBAna       -> SumBana       | MW72: {%Śumbhāna, as, ā, am,%} Ved. decorating, illumi- nating, (Sāy. {%= śobhayat.%}) | Body 'Śumbhāna' has long ā; suspect SumBAna (long A) matches; suggestion SumBana (short a)
+parihAsya     -> pArihAsya     | MW72: {%Pari-hāsya, as, ā, am,%} laughable, ridiculous. | Body 'Pari-hāsya' has short a at start; suspect parihAsya matches; suggestion pArihAsya (l
+snIhitI       -> snIhiti       | MW72: {%Snīhitī,%} f., Ved. killing, slaying; malevolent, (Sāy. {%= vadha-kāriṇī,%} Ṛg-veda I. 7 | Body defines snIhitI (f., Ved.) as 'killing, slaying'; own word with Sayanacharya gloss, n
+Amaritf       -> AmarItf       | MW72: {#Amaritf#} {%ā-maritṛ, tā,%} m. (rt. {%mṛ%} or {%mṛṇ%} with {%ā%}), Ved. one who hurts or | Body reads ā-maritṛ with short i (IAST marit-), matching suspect Amaritf (short i); sugges
+viSrAvya      -> visrAvya      | MW72: {%Vi-śrāvya,%} ind. having caused to be heard. | Body defines Vi-śrāvya (palatal Ś) 'having caused to be heard'; matches suspect viSrAvya; 
+aDvayat       -> advayat       | MW72: {%Adhvayat, an, antī, at,%} Ved. running, quick. | Body defines aDvayat (an, antI, at, Ved.) 'running, quick'; real word with lex POS, distin
+vEjavApi      -> bEjavApi      | MW72: {%Vaijavāpi, is, is, i%} (fr. {%vīja-vāpin%}), see Gaṇa Sutaṅgamādi to Pāṇ. IV. 2, 80; ({% | Body defines Vaijavāpi as a genuine patronymic from Vīja-vāpa/Vīja-vāpin; V- prefix is cor
+sOvalya       -> sObalya       | MW72: {#sOvalya#} {%sauvalya, ās,%} m. pl., N. of a people (also read {%sauśalya, sauśulya%}). | Body gives sauvalya as a people-name with unrelated variants; v≠b is intentional, own entr
+vfhata        -> bfhata        | MW72: {%Vṛhata, as,%} m., N. of a son of the ninth Manu. | Body gives Vṛhata as N. of a son of the ninth Manu; own proper noun, v≠b is intentional.
+praRudita     -> pramudita     | MW72: {%Pra-ṇudita, as, ā, am,%} driven away. | Body defines 'Pra-ṇudita' = driven away; pramudita = delighted; completely different roots
+lunat         -> lumat         | MW72: {%Lunat, an, atī, at,%} or {%lunāna, as, ā, am,%} cut- ting, severing, dividing, reaping,  | Body defines 'Lunat' = cutting/severing from root lu; lumat is a different word; own defin
+hindolA       -> hindola       | MW72: {%Hindolā,%} f. a swing ({%= hindola%} above). | Body gives hindolā its own feminine entry with gloss 'a swing'; = hindola is just a cross-
+vipaSin       -> vipASin       | MW72: {#vipaSin#} {%vi-paśin, ī,%} m. (probably fr. rt. 1. {%paś%} with {%vi%}), a Buddhist sain | Body defines vi-paśin (palatal ś) as a Buddhist saint, first of seven Buddhas; own gloss, 
+wANkAra       -> wANkara       | MW72: {#wANkAra#} {%ṭāṅ-kāra, as,%} m. or {%ṭāṅ-kṛta, am,%} n. (fr. {%ṭām,%} imitative sound, an | Body headword ṭāṅ-kāra with long ā matches suspect wANkAra (long A); distinct sound-word w
+AkarRya       -> akarRya       | MW72: {%Ā-karṇya,%} ind. having heard or listened to. | Body defines Ā-karṇya (long ā preverb) as indeclinable 'having heard'; genuine ā-prefix fo
+DyAtvA        -> DyAtva        | MW72: {%Dhyātvā,%} ind. having thought of or reflected, having pondered or recollected, &c. | Body headword Dhyātvā matches suspect DyAtvA (gerund with long-ā -tvā suffix); REALWORD ge
+parizvajAna   -> parizvajana   | MW72: {%Pari-ṣvajāna, as, ā, am,%} embracing, (Rāmā- yaṇa II. 83, 10.) | Body headword Pari-ṣvajāna with long ā matches suspect parizvajAna; adj. 'embracing' is it
+prAdAya       -> pradAya       | MW72: {%Prādāya,%} ind. having given or bestowed. | Body headword Prādāya = prAdAya (prā- prefix + long ā); gerund 'having given' is its own d
+samASvasya    -> samASvAsya    | MW72: {%Sam-āśvasya,%} ind. having taken confidence, gain- ing courage. | Body defines Sam-āśvasya 'having taken confidence'; body fits suspect, not the longer sugg
+apavfta       -> apAvfta       | MW72: {%Apa-vṛta, as, ā, am,%} uncovered, opened. | Body headword Apa-vṛta (short a in apa-) = suspect apavfta 'uncovered'; suggestion apAvfta
+santapana     -> sAntapana     | MW72: {%San-tapana, am,%} n. the act of inflaming or tor- menting. | Body defines San-tapana (short a) = suspect santapana 'act of inflaming'; suggestion has l
+dAhanIya      -> dahanIya      | MW72: {%Dāhanīya, as, ā, am,%} to be burnt, combustible. | Body headword Dāhanīya with long ā = suspect dAhanIya 'to be burnt'; suggestion dahanIya h
+prATayat      -> praTayat      | MW72: 2. {%prāthayat, an, antī, at,%} throwing, casting. | Body headword prāthayat with long ā = suspect prATayat 'throwing, casting'; suggestion pra
+sannipAtita   -> sannipatita   | MW72: {%Sannipātita, as, ā, am,%} thrown or shot down, shot off, discharged; brought together, a | Body headword Sannipātita with long ā = suspect sannipAtita 'thrown down, assembled'; sugg
+vyapanIya     -> vyApanIya     | MW72: {%Vy-apanīya,%} ind. having led or taken away, hav- ing taken off or laid aside, having pu | Body gloss 'having led/taken away' fits vi+apa+nī (vyapanIya), not vyāp (pervade); suspect
+aByudgA       -> aByudga       | MW72: {#aByudgA#} {%abhy-ud-gā (abhi-ud˚),%} cl. 3. P. {%-jigāti, -gātum,%} to rise over or befo | Body defines abhy-ud-gā cl.3.P. as own verbal root gā (long A); not a typo of short-a abyu
+apAhAya       -> apahAya       | MW72: {%Apā-hāya,%} ind. excepting; except. | Body gives Apā-hāya ind. 'excepting'; long Ā in prefix apā- is intentional; distinct from 
+izetvAka      -> izetvaka      | MW72: {%Iṣetvāka, as, ā, am%} (an Adhyāya or Anuvāka), containing the words {%iṣe tvā,%} ‘for ra | Body says 'containing the words iṣe tvā' — tvā has long ā, so compound izetvAka (long Ā) i
+kftaya        -> kftAya        | MW72: {%Kṛtaya,%} nom. P. {%kṛtayati, -yitum,%} to take the die called Kṛta. | Body gives denominative kṛtayati 'to take the die Kṛta'; kṛtaya is the verbal base, not a 
+samudyAta     -> samudyata     | MW72: {%Sam-udyāta, as, ā, am,%} risen up against. | Body gives Sam-udyāta 'risen up against'; long Ā from ud+yā is correct ppp form, not a typ
+savegam       -> sAvegam       | MW72: {#savegam#} {%sa-vegam,%} ind. with impetuosity, with great haste, hastily. | Body gives sa-vegam 'with impetuosity'; short-a prefix sa- is correct; suggestion long Ā w
+maRqapika     -> maRqapikA     | MW72: {%Maṇḍapika, as,%} m. or {%maṇḍapikā,%} f. (fr. {%maṇḍa-%} {%pa%} above), a little pavilio | Body gives maṇḍapika m. or maṇḍapikā f. — suspect is the valid m. headword form, not a mis
+navatika      -> navatikA      | MW72: {%Navatika,%} f. (fr. {%navati%}), a paint-brush containing 90 hairs. | Body gives navatika f. as own entry for a paint-brush; suspect is the valid headword stem,
+prastutya     -> prAstutya     | MW72: {%Pra-stutya,%} ind. having told or related, having rehearsed. | Body defines pra-stutya ind. 'having told'; pra- prefix has short a; distinct from prāstut
+sAraTin       -> saraTin       | MW72: {%Sārathin, ī,%} m., Ved. a charioteer, (Atharva-veda XV. 2, 1.) | Body defines Sārathin 'charioteer' with long ā; standard taddhita form; not a typo of shor
+sevitvA       -> sevitva       | MW72: {%Sevitvā,%} ind. having sewn or stitched; having joined. | Body 'Sevitvā' (absolutive -tvā = long A) fits suspect sevitvA; suggestion sevitva (short 
+vartitvA      -> vartitva      | MW72: {%Vartitvā,%} ind. having lived, having dwelt, having remained, &c. | Body 'Vartitvā' (absolutive -tvā = long A) fits suspect vartitvA; suggestion vartitva (sho
+vitastapurI   -> vitastApurI   | MW72: {#vitastapurI#} {%vitasta-purī,%} f., N. of a city. | Body 'vitasta-purī' — compound vitasta (short a) + purī; body fits suspect vitastapurI not
+Arpita        -> arpita        | MW72: {%Ārpita, as, ā, am,%} fastened to, annexed; depend- ing on. | Body defines 'Ārpita' (long Ā) = fastened to; arpita (short a) is a different word; own en
+ayin          -> Ayin          | MW72: {#ayin#} {%ayin, ī, inī, i%} (rt. {%i%}), at the end of compounds, going, e. g. {%atyayin, | Body defines 'ayin' (short a, rt. i) = going; Āyin (long Ā) is different; own derivation g
+prahAsita     -> prahasita     | MW72: {%Pra-hāsita, as, ā, am,%} caused to laugh. | Body defines 'Pra-hāsita' = caused to laugh (long ā, causal); prahasita = laughed (short a
+unnAmita      -> unnamita      | MW72: {%Un-nāmita, as, ā, am,%} raised up. | Body defines 'Un-nāmita' (long ā) = raised up; unnamita (short a) is different; own entry.
+upAgamya      -> upagamya      | MW72: {%Upā-gamya%} or {%upā-gatya,%} ind. having approached, having gone near or towards. | Body defines 'Upā-gamya' = having approached (upā = upa+ā prefix); distinct from upagamya;
+vikAsita      -> vikasita      | MW72: {%Vi-kāsita, as, ā, am,%} caused to open or blow, expanded; radiant, (in this sense better | Body defines 'Vi-kāsita' = caused to open (long ā, causal); vikasita (short a) is differen
+vinipatita    -> vinipAtita    | MW72: {%Vi-nipatita, as, ā, am,%} fallen down; flown down; flying away. | Body defines 'Vi-nipatita' = fallen down (short a); vinipātita (long ā) is causative; dist
+Arindama      -> arindama      | MW72: {#Arindama#} {%ārindama, as,%} m. patronymic of the prince Sana-śruta. | Body defines 'ārindama' (long Ā) = patronymic; arindama (short a) is different; own entry.
+SUyamana      -> SUyamAna      | MW72: {%Śūyamana, as, ā, am,%} being swollen, swelling, enlarging, expanding. | Body defines 'Śūyamana' (short a) = being swollen; SUyamAna (long Ā) is a different form; 
+Sravayat      -> SrAvayat      | MW72: {%Śravayat, an, antī, at,%} Ved. making famous or celebrated, celebrating. | Body defines 'Śravayat' (short a) = making famous; SrAvayat (long Ā) is causal of differen
+lAwya         -> lawya         | MW72: {#lAwya#} {%lāṭya,%} Nom. P. {%lāṭyati,%} &c., to live. | Body defines 'lāṭya' (long Ā) = to live; lawya (short a) is different; own nominative verb
+pAcyamAna     -> pacyamAna     | MW72: {%Pācyamāna, as, ā, am,%} being cooked. | Body defines 'Pācyamāna' (long Ā) = being cooked (causal passive); pacyamāna (short a) is 
+rATantara     -> raTantara     | MW72: {%Rāthantara, as, ī, am%} (fr. {%rathan-tara%}), Ved. relating to the Rathantara Sāman; ({ | Body defines 'Rāthantara' (long Ā) from rathan-tara; raTantara (short a) is different form
+rArAsyamAna   -> rArasyamAna   | MW72: {%Rārāsyamāna, as, ā, am,%} crying aloud, uttering loud lamentations. | Body defines 'Rārāsyamāna' (long Ā in 2nd syllable) = crying aloud; rArasyamAna differs; o
+saYcAlana     -> saYcalana     | MW72: {%Sañcālana, am,%} n. the act of causing to move about, shaking, agitation. | Body defines 'Sañcālana' (long Ā) = causing to move/shaking; saYcalana (short a) is differ
+viBAjyamAna   -> viBajyamAna   | MW72: {%Vi-bhājyamāna, as, ā, am,%} being caused to be divided, being distributed or apportioned | Body spells 'Vi-bhājyamāna' (long ā), matching suspect viBAjyamAna; suggestion viBajyamAna
+vijAyamAna    -> vijayamAna    | MW72: {%Vi-jāyamāna, as, ā, am,%} being born or pro- duced; generating, producing offspring. | Body explicitly says 'Vi-jāyamāna' (long ā), matching suspect vijAyamAna; suggestion (shor
+yUnI          -> yUni          | MW72: {#yUnI#} {%yūnī,%} f. of {%yuvan,%} q. v. | Body headword yūnī with long ī matches suspect yUnI; documented feminine of yuvan with own
+apivfta       -> apIvfta       | MW72: {%Api-vṛta, as, ā, am,%} concealed, covered. | Body Api-vṛta: capital A is sentence-case, not long ā; api particle has short a+i = apivft
+mAninDa       -> mAnInDa       | MW72: {#mAninDa#} {%mānindha, as,%} m., N. of an astro- nomer, (also read {%manindha;%} cf. {%ma | Body entry 'mānindha' has short i; suspect mAninDa (short i) matches; suggestion mAnInDa (
+Awikara       -> AwIkara       | MW72: {%Ā-ṭikara, as,%} m. a bull (etym. probably the same as the last). | Body 'Ā-ṭikara' has short i; suspect Awikara (short i) matches; suggestion AwIkara (long I
+SiBya         -> SIBya         | MW72: {%Śibhya, as,%} m. an epithet of Śiva; a bull. | Body 'Śibhya' has short i; suspect SiBya (short i) matches; suggestion SIBya (long I) does
+sammilya      -> sammIlya      | MW72: {%Sam-milya,%} ind. having assembled or met toge- ther. | Body 'Sam-milya' has short i; suspect sammilya (short i) matches; suggestion sammIlya (lon
+vappIya       -> vappiya       | MW72: {%Vappīya%} or {%vappīyaka, as,%} m., N. of a king. | Body 'Vappīya or vappīyaka' has long ī; suspect vappIya (long I) matches; suggestion vappi
+nIr           -> nir           | MW72: {#nIr#} {%nīr (ni-īr),%} Caus. P. {%nīrayati, -yitum,%} to drive or impel into, urge forwa | Body defines 'nīr (ni-īr)' as a Caus. verbal root with long ī; distinct from nir.
+saMrUzita     -> saMruzita     | MW72: {%Saṃ-rūṣita%} or {%saṃ-roṣita, as, ā, am,%} spread over, covered, besmeared. | Body spells it 'Saṃ-rūṣita' with long ū, matching suspect saMrUzita; entry is genuine.
+vakUla        -> vakula        | MW72: {%Vakūla, as,%} m. the Vakula tree. | Body 'Vakūla' with long ū matches suspect; the Vakūla tree name carries the long vowel.
+santu         -> Santu         | MW72: {#santu#} {%san-tu (sam-tu).%} See rt. 2. {%tu,%} p. 377. | Body defines san-tu (sam-tu) with dental s as a particle; dental s vs palatal Ś are distin
+anIrasana     -> anIraSana     | MW72: {#anIrasana#} {%a-nīrasana (a-nir-rasana), as, ā,%} {%am,%} not destitute of a waistband. | Body 'a-nīrasana' has dental s; suspect anIrasana (dental s) matches; suggestion anIraSana
+nisrAvin      -> niSrAvin      | MW72: {%Ni-srāvin, ī, iṇī, i,%} flowing down. | Body 'Ni-srāvin' has dental s; suspect nisrAvin (dental s) matches; suggestion niSrAvin (p
+OsInari       -> OSInari       | MW72: {%Ausīnari, is,%} m. a prince of the Uśīnaras. | Body 'Ausīnari' has dental s; suspect OsInari (dental s) matches; suggestion OSInari (pala
+aBisIna       -> aBiSIna       | MW72: {%Abhi-sīna%} or {%abhi-śyāna, as, ā, am,%} coagulated, congealed. | Body gives 'Abhi-sīna' (dental s) as primary form; suspect aBisIna (dental s) matches the 
+SOcika        -> sOcika        | MW72: {%Śaucika, as,%} m. a cleanser, cleaner; a particular mixed caste (the son of a Śauṇḍika a | Body says 'Śaucika' (palatal ś), matching SOcika (S=ś); suggestion sOcika (dental s) contr
+SUnavat       -> sUnavat       | MW72: {%Śūna-vat, ān, atī, at,%} one who has increased. | Body says 'Śūna-vat' (palatal ś), matching SUnavat (S=ś); suggestion sUnavat (dental s) co
+sanDAnikA     -> sandAnikA     | MW72: {%Sandhānikā,%} f. a kind of pickle or sauce. | Body says 'Sandhānikā' = sanDAnikA (D=dh); suggestion sandAnikA (d, not dh) contradicts th
+vidas         -> viDas         | MW72: {#vidas#} {%vi-das,%} cl. 4. P. {%-dasyati, -dasitum,%} Ved. to waste away, become exhaust | Body has {#vidas#} defining vi-das cl.4 'to waste away'; a real distinct verbal root, not 
+viDat         -> vidat         | MW72: {%Vidhat, an, atī%} or {%antī, at,%} Ved. worshipping, honouring. | Body says 'Vidhat' = worshipping (from √dhā), matching viDat (D=dh); suggestion vidat (√vi
+vikzud        -> vikzuD        | MW72: {#vikzud#} {%vi-kṣud,%} cl. 7. P. A. {%-kṣuṇatti,%} {%-kṣuntte, -kṣottum,%} to pound to pi | Body has {#vikzud#} vi-kṣud cl.7 'to pound'; key uses d (dental), suggestion vikzuD (D=dh)
+otsa          -> Otsa          | MW72: {#otsa#} {%otsa, as,%} m., N. of an Agrahāra. | Body headword otsa (simple o, lowercase) matches suspect; defines N. of an Agrahāra; sugge
+yogaka        -> yOgaka        | MW72: {%Yogaka, as,%} m., N. of Agni (as the nuptial fire). | Body headword Yogaka = yogaka (simple o, SLP1 lowercase); N. of Agni; suggestion yOgaka (d
+prapf         -> prapF         | MW72: {#prapf#} {%pra-pṛ%} (see rt. 1. {%pṛ%}), Caus. P. {%-pā-%} {%rayati, -yitum,%} Ved. to ca | Body 'pra-pṛ' has short ṛ = f; suspect prapf (short f) matches; suggestion prapF (long F) 
+Jarat         -> jarat         | MW72: {%Jharat, an, antī, at,%} flowing or falling down; [cf. {%kṣar.%}] | Body defines 'Jharat' (J=jh) as 'flowing or falling down'; suggestion jarat (j) is a diffe
+baNgAla       -> vaNgAla       | MW72: {%Baṅgāla, as,%} m. (?), N. of the country Bengal. | Body defines Baṅgāla 'N. of the country Bengal' with b-; proper noun with own entry, not a
+amahan        -> anahan        | MW72: {%—Ama-han, hā, ghnī, ha,%} destroying diseases, &c. 1. {%amata, as,%} m. sickness; diseas | Body defines Ama-han 'destroying diseases' with ama- (disease); distinct compound from ana
+veni          -> veRi          | MW72: {%Veni, is, is, i,%} Ved. loving, desiring, (according to Sāy. on Ṛg-veda VIII. 41, 3. {%v | Body gives <lex> POS + Vedic gloss 'loving, desiring'; veni is a distinct Vedic adj., not 
+KarvUja       -> KarbUja       | MW72: {#KarvUja#} {%kharvūja, am,%} n. the water-melon (fr. the Pers. خربوزه kharbūza). | Body 'kharvūja' has v; suspect KarvUja (v) matches; suggestion KarbUja (b) does not fit th
+caramya       -> caraRya       | MW72: {%Caramya,%} nom. P. {%caramyati,%} to be the last. | Body 'Caramya' has m; suspect caramya (m) matches; suggestion caraRya (retroflex R) does n
+jamat         -> janat         | MW72: {%Jamat, an, antī, at,%} Ved. blazing. {%—Jamad-%} {%agni, is,%} m., N. of a Ṛṣi often men | Body 'Jamat, blazing' has m; suspect jamat (m) matches; suggestion janat (n) does not fit.
+udvfMhaRa     -> udbfMhaRa     | MW72: {#udvfMhaRa#} {%ud-vṛṃhaṇa, am,%} n. increase. | Body 'ud-vṛṃhaṇa' has v; suspect udvfMhaRa (v) matches; suggestion udbfMhaRa (b) does not.
+varaRya       -> BaraRya       | MW72: {%Varaṇya,%} Nom. P. {%varaṇyati,%} &c., to go. | Body 'Varaṇya, to go' has v; suspect varaRya (v) matches; suggestion BaraRya (bh) is a com
+yOzmAkIRa     -> yOzmAkIna     | MW72: {%Yauṣmākīṇa, as, ī, am,%} your, yours. | Body defines 'Yauṣmākīṇa' with retroflex ṇ (R) = your/yours; suspect is the correct retrof
+zahasAna      -> sahasAna      | MW72: {%Ṣahasāna, as, ā, am,%} patient; ({%as%}), m. a pea- cock; sacrifice ({%= sahasāna,%} q.  | Body defines 'Ṣahasāna' (initial ṣ) = patient/peacock; distinct word with its own gloss, n
+anuvimba      -> anubimba      | MW72: {%Anu-vimba, am,%} n. a corresponding image or picture, counterpart. | Body defines 'Anu-vimba' = corresponding image; vimba/bimba alternation; suspect has its o
+jikaRa        -> jikana        | MW72: {#jikaRa#} {%jikaṇa, as,%} m., N. of a lawyer. | Body defines jikaṇa (retroflex R) = proper name; suspect has retroflex ṇ, suggestion has d
+jyotayamAnaka -> jyotayamAmaka | MW72: {#jyotayamAnaka#} {%jyotayamānaka, as, ikā, am,%} Ved. shining (?). | Body directly defines 'jyotayamānaka' = shining; suspect is its own entry, not a typo of j
+utprabAla     -> utpravAla     | MW72: {%Ut-prabāla, as, ā, am,%} shooting out fresh foliage. | Body defines 'Ut-prabāla' = sprouting foliage; prabāla vs pravāla are distinct words with 
+vAzpaka       -> bAzpaka       | MW72: {%Vāṣpaka, as,%} m. a kind of vegetable or pot-herb, {%= māriṣa; (ā),%} f. a drug ({%= hiṅ | Body defines 'Vāṣpaka' with full botanical gloss; MW attests both v/b spellings of vāṣpa/b
+vAzpin        -> bAzpin        | MW72: {%Vāṣpin, ī, iṇī, i,%} discharging or shedding tears (at the end of a comp.). | Body defines 'Vāṣpin' = shedding tears; v/b alternation attested; suspect has its own defi
+vahizwAt      -> bahizwAt      | MW72: {%Vahiṣṭāt,%} ind. on the outside, without, abroad. {%—Vahiṣṭāj-jyotis, is,%} f. epithet o | Body defines 'Vahiṣṭāt' = outside/without; vahis/bahis both attested in MW; own entry with
+vimbiya       -> bimbiya       | MW72: {%Vimbiya, as,%} m. a proper N. | Body defines 'Vimbiya' = proper N; v/b alternation; own entry.
+vindukita     -> bindukita     | MW72: {%Vindukita, as, ā, am,%} covered with drops. | Body defines 'Vindukita' = covered with drops; vindu/bindu alternation attested; own entry
+aBitfpta      -> avitfpta      | MW72: {%Abhi-tṛpta, as, ā, am,%} satiated, refreshed. | Body defines 'Abhi-tṛpta' = satiated; suggestion avitfpta = not-satiated — completely diff
+dABI          -> qABI          | MW72: {#dABI#} {%dābhī,%} f. (fr. rt. {%dabh?%}), Ved. hurt- ing, injuring (?). | Body defines 'dābhī' with dental d (=dABI); suggestion qABI = ḍābhī with retroflex ḍ contr
+nardanIya     -> mardanIya     | MW72: {%Nardanīya, as, ā, am,%} to be sounded; to be celebrated or praised aloud. | Body defines 'Nardanīya' from √nard (to sound/celebrate); mardanīya from √mard (crush) is 
+nudita        -> mudita        | MW72: {%Nudita, as, ā, am,%} (ep.) {%= nutta, nunna.%} | Body defines 'Nudita = nutta, nunna' (pushed, from √nud); mudita = joyful is an entirely d
+veya          -> Beya          | MW72: {%Veya, as, ā, am,%} to be woven. {%—Veya-gāna, am,%} n. a particular song-book or manual  | Body defines 'Veya' as 'to be woven' from √vā; suggestion Beya is unrelated; body has exte
+saMvftya      -> saMBftya      | MW72: {%Saṃ-vṛtya,%} ind. having concealed; having closed or compressed. | Body defines 'Saṃ-vṛtya' = having concealed/closed (from √vṛt); saMBftya = saṃbhṛtya is a 
+ja|u          -> (flag)        | MW72: {#ja|u#} {%jaḷhu, us, us, u%} (related to {%jaḍa ?%}), Ved. deprived of splendor or withou | Body defines 'jaḷhu' as a Vedic word 'deprived of splendour' with etymology; a genuine dis
+nibA|a        -> (flag)        | MW72: {#nibA|a#} {%ni-bāḷha, as, ā, am%} (according to some fr. rt. {%baṃh,%} according to Sāy.  | Body defines 'ni-bāḷha' as a Vedic word 'forced down' with full etymology (√baṃh/bāh); a g
+piRqaraka     -> piRqAraka     | MW72: {%Piṇḍaraka, as%} or {%am,%} m. or n. (?), a bridge. | Body defines Piṇḍaraka 'a bridge' — has its own gloss; short a in second syllable may be c
+sAkala        -> SAkala        | MW72: {#sAkala#} {%sākala, am,%} n., N. of a town in the Pañjāb (also read {%śākala%}). | Body defines sAkala (am, n.) as N. of a town, noting 'also read SAkala'; both spellings do
+SAlura        -> SAlUra        | MW72: {%Śālura, as,%} m. a frog. | Body defines SAlura with lex tag (as, m.) 'a frog'; could be own entry or short-vowel vari
+vimbaki       -> bimbaki       | MW72: {%Vimbaki, is,%} m., N. of a king. | Body defines Vimbaki as a king's name — proper noun with v-initial; could be variant of Bi
+elapura       -> elApura       | MW72: {#elapura#} {%elapura, am,%} n., N. of a town. | Body defines elapura as a town name — proper noun with short a; could be variant but docum
+danuza        -> Danuza        | MW72: {%Danuṣa, as,%} m. (?) a Rākṣasa. | Body defines danuza (as, m.) as a RAkzasa proper noun; an entry with its own referent, not
+sannyAsika    -> sAnnyAsika    | MW72: {%San-nyāsika%} in {%veda-s˚,%} q. v. | Body shows San-nyāsika (short a) = suspect sannyAsika used in compound veda-s˚; suggestion
+
+# ===== BUCKET 5  INTENTIONAL -- MW72 documents the spelling on purpose; NEVER file (77) =====
+vIviDa        -> viviDa        | MW72: {#vIviDa#} {%vīvidha%} for {%vi-vidha,%} q. v. | Body says 'vīvidha for vi-vidha, q.v.' — explicit cross-reference documenting the long-ī v
+hIta          -> hita          | MW72: {#hIta#} {%hīta, as, ā, am,%} Ved. {%= hita%} (accord- ing to some). | Body says 'hīta = hita (according to some)' — documented Vedic variant explicitly equated 
+viSala        -> viSAla        | MW72: {#viSala#} {%viśala, as,%} m. (for {%viśāla?%}), N. of the son of Abja; ({%ā%}), f., N. of | Body itself puts 'for viśāla?' in parentheses, flagging viśala as a probable error for viś
+ArvAk         -> arvAk         | MW72: {#ArvAk#} {%ārvāk,%} ind. after, afterwards, be- hind. See {%arvāk.%} | Body 'See arvāk' is a pure cross-reference; ārvāk is a prefixed/lengthened variant deliber
+vikftI        -> vikfti        | MW72: {%Vi-kṛtī,%} f. {%= vi-kṛti%} above. | Body says 'Vi-kṛtī, f. = vi-kṛti above' — cross-reference documenting the long-ī form as v
+SrutI         -> Sruti         | MW72: {%Śrutī,%} f. {%= śruti.%} | Body '= śruti' is an explicit equality cross-reference; śrutī is a feminine form documente
+suz           -> Suz           | MW72: {#suz#} {%suṣ%} = rt. {%śuṣ,%} p. 1016. | Body says 'suṣ = rt. śuṣ, p. 1016' — explicit cross-reference documenting suṣ as variant/a
+arsas         -> arSas         | MW72: {#arsas#} {%arsas, as,%} n. hemorrhoids. See {%arśas%} above. | Body 'See arśas above' is a cross-reference; arsas is deliberately entered as a variant sp
+vilva         -> bilva         | MW72: {#vilva#} {%vilva, as,%} m. (fr. rt. {%vil,%} also written {%bilva,%} q. v.), the tree Ægl | Body says 'also written bilva, q.v.' — vilva is a documented orthographic variant of bilva
+zah           -> sah           | MW72: {#zah#} {%ṣah%} = rt. 1. {%sah.%} | Body '= rt. 1. sah' is an explicit root cross-reference; ṣah is a documented variant/alter
+aDiBOtika     -> ADiBOtika     | MW72: {%Adhi-bhautika%} (better {%ādhibhautika,%} q. v.), {%as,%} {%ī, am,%} natural (?). | Body says 'Adhi-bhautika (better ādhibhautika, q.v.)' — explicitly notes the long-ā form i
+vilAya        -> vilaya        | MW72: {%Vi-lāya,%} ind. {%= vi-līya,%} Pāṇ. VI. 1, 51. | Body says '= vi-līya' (cross-reference marker); documents the form as an indeclinable vari
+wikA          -> wIkA          | MW72: {#wikA#} {%ṭikā%} in {%svarga-grāma-ṭikā-viluṇṭhana,%} the spoils of the poor villages of  | Second homograph entry says 'to be erased, see grāmaṭikā'; explicitly marks wikA as an err
+SAlina        -> SAlIna        | MW72: {%Śālina, as, ā, am,%} for {%śālīna%} below. {%—Śālinī-%} {%karaṇa,%} see {%śālīnī-karaṇa. | Body says 'for śālīna below' — explicitly cross-references the correct spelling; classic '
+puraka        -> pUraka        | MW72: {%Puraka = pura.%} See {%arghāṣṭa-puraka,%} p. 83. | Body says 'Puraka = pura. See arghāṣṭa-puraka' — cross-reference only, no independent defi
+sTura         -> sTUra         | MW72: {%Sthura%} in {%apa-ṣṭh˚,%} q. v. | Body 'in apa-ṣṭh˚, q.v.' is a compound fragment with cross-reference; sthura is documented
+SAntvana      -> sAntvana      | MW72: {%Śāntvana, am,%} n. (less correctly written {%sāntvana%}), the act of appeasing or reconc | Body says '(less correctly written sāntvana)' — śāntvana is correct; sAntvana is the recor
+SrotoYjana    -> srotoYjana    | MW72: {#SrotoYjana#} {%śroto-'ñjana.%} See under 2. {%śro-%} {%tas,%} p. 1028. | Body 'See under 2. śrotas' is a cross-reference; the Ś vs s difference is documented under
+vADana        -> bADana        | MW72: {%Vādhana, am,%} n. the act of oppressing, paining, vexing, &c. (See {%bādhana.%}) | Body says 'See bādhana' — pure cross-reference with no independent definition; vādhana red
+prAn          -> prAR          | MW72: {#prAn#} {%prān.%} See 1. {%prāṇ,%} p. 654, col. 3. | Body says 'See 1. prāṇ' — cross-reference marker; suspect is a documented abbreviated form
+vinduka       -> binduka       | MW72: {%Vinduka, as,%} m. {%= vindu,%} a drop, &c. | Body glosses Vinduka '= vindu, a drop' — form defined as variant of vindu (v-initial), not
+svAyamBU      -> svayamBU      | MW72: {%Svāyambhū = svāyambhuva%} above. | Body says 'Svāyambhū = svāyambhuva above' — cross-reference; suspect is documented as a va
+aDamarRA      -> aDamarRa      | MW72: {#aDamarRA, aDamarRika#}, &c. See above, under {%adhama.%} | Body says 'See above, under adhama' — cross-reference entry; suspect is a documented cross
+vratatI       -> vratati       | MW72: {%Vratatī,%} f. {%= vratati%} above. | Body '= vratati above' is a cross-reference; vratatI is documented as a variant form, not 
+vIvfta        -> vivfta        | MW72: {#vIvfta#} {%vīvṛta, as, ā, am, = vi-vṛta,%} revealed, published. | Body '= vi-vfta' shows vIvfta is intentionally listed with its own entry as a known form e
+sPurjaka      -> sPUrjaka      | MW72: {%Sphurjaka = sphūrjaka%} below. | Body 'Sphurjaka = sphUrjaka below' is a cross-reference; sPurjaka is documented as variant
+SaMrAj        -> saMrAj        | MW72: 2. {%śaṃ-rāj, ṭ,%} m. (properly written with {%m%} by Pāṇ. VIII. 3, 25). See {%sam-rāj%} s | Body 'See sam-rAj s.v.' is an explicit cross-reference; SaMrAj documented as variant spell
+sAKowa        -> SAKowa        | MW72: {#sAKowa#} {%sākhoṭa%} for {%śākhoṭa,%} q. v. | Body 'sAKowa for SAKowa q.v.' explicitly marks sAKowa as an alternative/erroneous form for
+SUpakAra      -> sUpakAra      | MW72: {#SUpakAra#} {%śūpa-kāra, as,%} m. (for {%sūpa-kāra,%} q. v.), one who lives by cooking fo | Body explicitly states 'for sūpa-kāra, q.v.' — documented as a variant spelling with cross
+SArNgazWA     -> SArNgazwA     | MW72: {#SArNgazWA#} {%śārṅgaṣṭhā,%} f. a kind of tree ({%=%} {%mahā-karañja;%} also written {%śā | Body notes 'also written śāṅgoṣṭhā' — alternative spellings documented; ṣṭhā vs ṣṭhā varia
+mARimanta     -> mARimanTa     | MW72: {%Māṇimanta, am,%} n. {%= māṇimantha%} above. | Body 'mARimanta = mARimanTa above' is an explicit cross-reference to the correct form mARi
+barhiska      -> barhizka      | MW72: {%Barhiska = barhiṣka%} above. | Body 'Barhiska = barhizka above' is a cross-reference; barhiska documented as a variant sp
+vanDula       -> banDula       | MW72: {#vanDula#} {%vandhula, as,%} m. (also written {%ban-%} {%dhula,%} q. v.), N. of a Ṛṣi. | Body: 'also written bandhula, q.v.' — vandhula is the primary; bandhula is a documented va
+sampramad     -> sampraRad     | MW72: {#sampramad#} {%sam-pra-mad.%} See rt. 2. {%mad.%} | Body is a cross-reference 'See rt. 2. mad' — entry for sampramad is intentionally document
+tatfpi        -> tAtfpi        | MW72: {#tatfpi#} {%tatṛpi%} for {%tātṛpi,%} q. v. | Body 'tatfpi for tAtfpi q.v.' explicitly marks tatfpi as a form (short vowel variant) poin
+apramARika    -> aprAmARika    | MW72: {%A-pramāṇika, as, ā, am,%} unauthorized; properly {%a-prāmāṇika,%} q. v. | Body says 'properly a-prAmARika q.v.' — explicitly marks apramARika as an improper/less-co
+bUkkan        -> bukkan        | MW72: {%Būkkan = bukkan,%} q. v. | Body 'bUkkan = bukkan q.v.' is an explicit cross-reference; bUkkan documented as a variant
+hrad          -> hrAd          | MW72: {#hrad#} {%hrad,%} an older form of rt. {%hrād,%} q. v. | Body explicitly says 'hrad, an older form of rt. hrād' — intentionally documented archaic/
+anugrAhita    -> anugrahita    | MW72: {%Anu-grāhita%} or {%anu-grahita (?), as, ā, am,%} favoured. | Body explicitly gives 'anu-grāhita or anu-grahita (?)' — both spellings documented; intent
+vahli         -> vAhli         | MW72: {#vahli#} {%vahli, is,%} m., N. of a country, (more correctly written {%balhi.%}) | Body says 'more correctly written balhi' — vahli is documented as a known alternate/less c
+hItvA         -> hitvA         | MW72: {%Hītvā,%} ind., Ved. = 1. {%hitvā,%} (Pāṇ. VII. 4, 44.) | Body says Hītvā = 1. hitvā (Pāṇ. VII. 4, 44); explicitly documented Vedic variant with = c
+hriRiyA       -> hriRIyA       | MW72: {#hriRiyA#} {%hriṇiyā%} or {%hriṇīyā,%} f. ({%= hṛṇīyā%} [Page1179-c+ 73] at p. 1175, col. | Body documents both 'hṛṇiyā or hṛṇīyā' — both short-I and long-I variants listed on purpos
+veS           -> ves           | MW72: {#veS#} {%veś.%} See under rt. 1. {%ves,%} p. 967. | Body 'See under rt. 1. ves' — veS is an intentional cross-reference entry pointing to ves.
+narDawaka     -> nardawaka     | MW72: {#narDawaka#} {%nardhaṭaka,%} wrong form for {%nar-%} {%daṭaka.%} | Body: 'wrong form for nardaṭaka' — the entry documents narDawaka as a known wrong form int
+vAhirvedika   -> bAhirvedika   | MW72: {#vAhirvedika#} {%vāhirvedika.%} See {%bāhirvedika.%} | Body says 'See bāhirvedika' — explicit cross-reference (See X); variant spelling intention
+kusuruvinda   -> kusurubinda   | MW72: {#kusuruvinda#} {%kusuruvinda%} or {%kusurubinda, as,%} m., N. of a descendant of Uddālaka | Body: 'kusuruvinda or kusurubinda' — both spellings explicitly documented as variants in t
+praniMsita    -> praRiMsita    | MW72: {#praniMsita#} {%pra-niṃsita, pra-niṃsitavya = pra-%} {%ṇiṃsita, pra-ṇiṃsitavya,%} p. 609, | Body: 'pra-niṃsita = pra-ṇiṃsitavya' — cross-reference showing dental-n form is documented
+vfsaya        -> vfzaya        | MW72: {#vfsaya#} {%vṛsaya = bṛsaya,%} q. v. | Body cross-refs 'vṛsaya = bṛsaya q.v.' — documented spelling variant, not a typo of vfzaya
+vizPul        -> visPul        | MW72: {#vizPul#} {%vi-ṣphul = vi-sphul,%} q. v. | Body says 'vi-ṣphul = vi-sphul, q.v.' — the variant spelling vizPul is documented as a cro
+arI|a         -> (flag)        | MW72: {#arI|a#} {%a-rīḷha, as, ā, am%} (for {%a-rīḍha,%} rt. {%rih = lih%}), Ved. not licked. | Body has {#arI|a#} a-rīḷha with note 'for a-rīḍha'; the ḷ-spelling is intentionally docume
+df|a          -> (flag)        | MW72: {#df|a#} {%dṛḷha.%} See {%dṛḍha,%} p. 427, col. 2. | Body says 'dṛḷha. See dṛḍha' — cross-reference entry; the ḷ-spelling is documented as a va
+vo|f          -> (flag)        | MW72: {#vo|f#} {%voḷhṛ, ḷhā,%} m., Ved. {%= voḍhṛ,%} a bearer, carrier; an animal used for draug | Body says 'voḷhṛ = voḍhṛ, a bearer' — the ḷh-spelling is documented as a Vedic variant of 
+maMhanezWa    -> maMhanezWA    | MW72: {%Maṃhane-ṣṭha%} or {%-ṣṭhā%} (?), according to Sāy. on Ṛg-veda X. 61, 1 {%= pradāne prava | Body gives 'Maṃhane-ṣṭha or -ṣṭhā (?)' — both forms documented together; intentional docum
+SaktI         -> Sakti         | MW72: {%Śaktī,%} f. {%= śakti,%} see Vopa-deva IV. 27. | 
+cinta         -> cintA         | MW72: {%Cinta, as,%} m. (?) thought; [cf. {%cintā.%}] | 
+prasAh        -> prasah        | MW72: {%Pra-sāh.%} See 2. {%pra-sah%} above. | 
+aBIGAta       -> aBiGAta       | MW72: {#aBIGAta#} {%abhī-ghāta.%} See {%abhi-ghāta.%} | 
+yatI          -> yati          | MW72: {%Yatī.%} See under 2. {%yati,%} col. 1. | 
+hanU          -> hanu          | MW72: {%Hanū, ūs,%} f. See under {%hanu.%} | 
+svaSura       -> SvaSura       | MW72: {#svaSura#} {%svaśura.%} See {%śvaśura.%} | 
+aB            -> av            | MW72: {#aB#} {%abh.%} See {%ambh.%} | 
+pArAvara      -> parAvara      | MW72: {#pArAvara#} {%pārāvara.%} See p. 566, col. 3. | 
+pArva         -> parva         | MW72: {#pArva#} {%pārva, as, ī, am%} (fr. {%parvan%}), {%= pār-%} {%vaṇa;%} (probably an incorre | 
+sUtI          -> sUti          | MW72: {%Sūtī.%} See under 2. {%sūta%} above. | 
+pIwikA        -> pIWikA        | MW72: {#pIwikA#} {%pīṭikā,%} a various reading for {%pīṭhikā,%} q. v. | 
+jAvAli        -> jAbAli        | MW72: {#jAvAli#} {%jāvāli.%} See {%jābāli.%} | 
+apAm          -> apAn          | MW72: {#apAm#} {%apām.%} See under {%ap,%} p. 48. | 
+aBIruc        -> aBiruc        | MW72: {#aBIruc#} {%abhī-ruc.%} See {%abhi-ruci.%} | 
+prastUta      -> prastuta      | MW72: {#prastUta#} {%pra-stūta, as,%} m., N. of a class of deities under Manu Cākṣuṣa; (an incor | 
+mAyavat       -> mAyAvat       | MW72: {#mAyavat#} {%māya-vat.%} See col. I. | 
+sutAraka      -> sutArakA      | MW72: {#sutAraka#} {%su-tāraka.%} See p. 1120, col. 1. | 
+vicAkasat     -> vicAkaSat     | MW72: {%Vi-cākasat, at, atī, at,%} Ved. See s. v. | 
+sanDya        -> sanDyA        | MW72: {%Sandhya, as, ā, am,%} of or belonging to Sandhi, relating to euphonic conjunction, joine | 
+SIr           -> Sir           | MW72: {#SIr#} {%śīr.%} See {%śir.%} | 
+SrIta         -> Srita         | MW72: {%Śrīta, as, ā, am,%} cooked; dressed, prepared, mixed (said of the Soma juice, Sāy. {%= p | 
+vekuri        -> Bekuri        | MW72: {#vekuri#} {%vekuri.%} See {%bekuri.%} | 
+sA|f          -> (flag)        | MW72: {%Sāḷhṛ, ḷhā,%} m., Ved. one who overcomes or conquers, a conqueror. || {#sA|f#} {%sāḷhṛ.% | 
+
+# ===== BUCKET 6  UNLOCATABLE -- not in the current MW72 source (stale/different key) (42) =====
+ajIrRA        -> ajIrRa        | MW72:  | 
+anurupa       -> anurUpa       | MW72:  | 
+samuddf       -> samudDf       | MW72:  | 
+viham         -> vihan         | MW72:  | 
+aNgaRA        -> aNganA        | MW72:  | 
+adakziRA      -> adakziRa      | MW72:  | 
+aguRA         -> aguRa         | MW72:  | 
+akarRA        -> akarRa        | MW72:  | 
+akaruRA       -> akaruRa       | MW72:  | 
+aBipsita      -> aBIpsita      | MW72:  | 
+apicya        -> apIcya        | MW72:  | 
+virukzaRa     -> virUkzaRa     | MW72:  | 
+aBya          -> avya          | MW72:  | 
+aGfRA         -> aGfRa         | MW72:  | 
+apraRa        -> aprARa        | MW72:  | 
+aDiguRA       -> aDiguRa       | MW72:  | 
+aDizavaRA     -> aDizavaRa     | MW72:  | 
+akarRADAra    -> akarRaDAra    | MW72:  | 
+ananuBAzaRA   -> ananuBAzaRa   | MW72:  | 
+atIkzRA       -> atIkzRa       | MW72:  | 
+atiSaNka      -> atiSaNkA      | MW72:  | 
+atipramARA    -> atipramARa    | MW72:  | 
+aBinila       -> aBinIla       | MW72:  | 
+yusmad        -> yuzmad        | MW72:  | 
+agraBaRA      -> agraBaRa      | MW72:  | 
+aprata        -> apratA        | MW72:  | 
+nEruhika      -> nErUhika      | MW72:  | 
+apaziras      -> apaSiras      | MW72:  | 
+aDAraRAka     -> aDAraRaka     | MW72:  | 
+aDipezaRA     -> aDipezaRa     | MW72:  | 
+aDyAharaRA    -> aDyAharaRa    | MW72:  | 
+adDyAlohakarRA -> adDyAlohakarRa | MW72:  | 
+akArRAvezwakika -> akArRavezwakika | MW72:  | 
+anapakaraRA   -> anapakaraRa   | MW72:  | 
+atiprARAm     -> atiprARam     | MW72:  | 
+atisOparRA    -> atisOparRa    | MW72:  | 
+acikkaRA      -> acikkaRa      | MW72:  | 
+aparupa       -> aparUpa       | MW72:  | 
+aBimarDin     -> aBimardin     | MW72:  | 
+Agf           -> AGf           | MW72:  | 
+ajjala        -> ajJala        | MW72:  | 
+wihan         -> tihan         | MW72:  | 

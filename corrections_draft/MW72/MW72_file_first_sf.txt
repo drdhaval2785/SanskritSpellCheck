@@ -1,0 +1,6 @@
+; MW72 body-confirmed fileable typos -- CORRECTIONS standard format (DICT:wrong:right:n)
+; 0 fileable (classified TYPO + source-confirmed + survived the Opus false-positive review) + 1 reviewed-out (commented below)
+; VERIFY each remaining case on the scan, flip trailing n->y for confirmed ones, then:
+;   python chg_nchg_sep.py MW72_file_first_sf.txt chg.txt nchg.txt
+; REVIEWED-OUT (realword): Genuine entry: '{%Ahnika, as, a, am,%} as last member of a compound {%= ahan;%}' e.g. dvy-ahnika 'lasting two days'; com
+;MW72:ahnika:Ahnika:n
