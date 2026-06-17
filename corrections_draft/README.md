@@ -113,3 +113,11 @@ overwrite): `MW` `PW` `VCP` `PWG` `SNP` `SKD` `AP` `MW72` `SCH` `SHS` `WIL` `GST
 `MD` `GRA` `BEN` `CCS`; **source not in csl-orig** (1): `PD` — two external sources to be
 provided, then triageable.
 
+## Planned: orthographic-drift study
+
+A second axis on the same pipeline — checking the **gloss-language tokens** (German / English /
+French / Latin / Russian) inside entry bodies against a **2026 standard**, to document how 19th-c.
+spelling has drifted (German reformed 1901 + 1996; English convention drift; Russian 1918). It is
+a **documentation / search-normalization layer, not a correction list**. Design:
+**[../ORTHO_DRIFT_ROADMAP.md](../ORTHO_DRIFT_ROADMAP.md)**.
+
