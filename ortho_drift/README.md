@@ -33,7 +33,8 @@ and the 697-form set are stable, only the dic-vs-map label migrates by design (s
 **PW's German is pervasively pre-1901, confirmed at scale** — 697 distinct drift forms across the
 dictionary, dominated by 1901 `th→t` and `c→k/z`. They are persisted to
 **[de_reform_map.tsv](de_reform_map.tsv)** — a German reform lexicon that, after the whole cluster,
-holds **978 forms** and accumulates across runs; it is the expandable container for DTA/RIDGES pairs.
+holds **978 forms** (and **2,809** after the residual classify below) and accumulates across runs;
+it is the expandable container for DTA/RIDGES pairs.
 
 ## German cluster — drift across dictionaries, and the SCH-1928 control
 
@@ -56,6 +57,30 @@ still wrote *Kuß*, *Bewußtsein*, *Mißgunst*, *naß* — all pre-1996). So the
 find drift; it **correctly dates each dictionary's orthographic epoch from its own text**. The
 overall drift rate also declines monotonically with publication date (10.26 → 8.86 → 7.90 → 4.72
 → 2.52 per 1k) — the corpus modernising across ~70 years.
+
+## Residual classification (recall harvest)
+
+The transform-and-check + curated map leave a residual per dict (forms the rule couldn't auto-
+resolve: inflected/compound drift, foreign words, names, OCR fragments). Deduped across the five
+dicts, that residual is **6,804 unique tokens**, each classified vs 2026 Duden by 39 Sonnet agents
+([de_residual_classified.tsv](de_residual_classified.tsv)):
+
+| category | count | share |
+|---|--:|--:|
+| fragment / OCR (`rtha`, `tha`, transliteration bits) | 2,981 | 44% |
+| **reform-drift** (inflected/compound forms the rule missed) | **1,831** | 27% |
+| Latin / foreign (botanical, abbrev) | 1,105 | 16% |
+| modern (incl. `t+h` boundaries) | 759 | 11% |
+| proper-noun | 106 | 2% |
+| uncertain | 22 | <1% |
+
+The **1,831 confirmed reform-drift** (e.g. `thierkreise→Tierkreise`, `abtheilung→Abteilung`,
+`commentars→Kommentars`, `eigenthümlichkeiten→Eigentümlichkeiten`) were folded into
+[de_reform_map.tsv](de_reform_map.tsv), growing it **978 → 2,809 forms** — a recall gain banked
+for future runs. (`modern_form` is advisory — a few LLM artifacts, e.g. one `Gestikulaion` typo.)
+The per-dict drift reports above are left as the deterministic-pass snapshot, so the SCH-control
+comparison stays stable; re-running any dict now would reclassify its share of these 1,831 from
+*residual* into *drift*.
 
 ## Pilot validation (sampled + LLM) — how the method was proven first
 
@@ -151,4 +176,4 @@ python ortho_drift.py PW --full     # every entry
    the files locally, like the Hunspell dic).
 4. ✅ **German cluster done + SCH-1928 control validated** (see the comparison above). SCH's
    profile flips to 1996-`ß`-dominant (319) with 1901-`th` collapsed (76) — confirming the method
-   dates orthography from the text. Reform map now 978 forms.
+   dates orthography from the text. Reform map: 978 forms (→ 2,809 after the residual classify).

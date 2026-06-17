@@ -6,6 +6,22 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.25.0] - 2026-06-17
+
+### Added
+- **LLM-classified the German ortho-drift residuals — recall harvest.** Deduped the 9,482 residual
+  candidates across PW/PWG/GRA/CCS/SCH to **6,804 unique tokens** and classified each against 2026
+  Duden (39 Sonnet agents, deduped because classification is language-level). Breakdown:
+  **1,831 reform-drift (27%)**, 2,981 fragment/OCR (44%), 1,105 Latin/foreign (16%), 759 modern
+  (incl. `t+h` boundaries, 11%), 106 proper-noun, 22 uncertain.
+  - The 1,831 confirmed drift are the inflected/compound forms the rule-based transform missed
+    (`thierkreise→Tierkreise`, `abtheilung→Abteilung`, `commentars→Kommentars`,
+    `eigenthümlichkeiten→Eigentümlichkeiten`). Folded into `ortho_drift/de_reform_map.tsv`, growing
+    it **978 → 2,809 forms** — recall banked for future runs. Verdicts in
+    `ortho_drift/de_residual_classified.tsv`.
+  - `modern_form` is advisory (a few LLM artifacts). Documentation only. The per-dict drift reports
+    are left as the deterministic-pass snapshot so the SCH-control comparison stays stable.
+
 ## [1.24.0] - 2026-06-17
 
 ### Fixed
