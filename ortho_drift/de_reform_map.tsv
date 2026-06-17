@@ -1,6 +1,5 @@
 # German orthographic reform map:  old<TAB>2026<TAB>era
-# Curated seed + corpus-mined (transform/dic-confirmed) + LLM-classified residual drift.
-# Expandable -- merge DTA/RIDGES historical->modern pairs here. 2809 forms.
+# Curated seed + corpus-mined drift + dic-validated external pairs (DTA/RIDGES/web). 2823 forms.
 abbruchthuer	Abbruchtuer	1901-th
 abendröthe	abendröte	1901-th
 abendröthen	Abendröten	1901-th
@@ -418,6 +417,7 @@ charakteristicum	charakteristikum	1901-c
 christenthum	christentum	1901-th
 ciel	ziel	1901-c
 cigarette	zigarette	1901-c
+cigarre	zigarre	1901-c
 cirkel	zirkel	1901-c
 cisterne	zisterne	1901-c
 citadelle	zitadelle	1901-c
@@ -728,9 +728,11 @@ descendenz	deszendenz	1901-c
 description	deskription	1901-c
 designirt	designiert	1901-iren
 designirte	designierte	1901-iren
+desinficieren	desinfizieren	1901-c-iren
 destillirt	destilliert	1901-iren
 destillirte	destillierte	1901-iren
 detaillirte	detaillierte	1901-iren
+detto	dito	1901
 dichterthum	dichtertum	1901-th
 dienstthuende	diensttuende	1901-th
 dienstthuenden	dienstuenden	1901-th
@@ -763,6 +765,7 @@ dreitheiligkeit	Dreiteiligkeit	1901-th
 dreitheilung	Dreiteilung	1901-th
 dressiren	dressieren	1901-iren
 dressirt	dressiert	1901-iren
+drogue	droge	1901
 dunkelroth	dunkelrot	1901-th
 dunkelrothe	dunkelrote	1901-th
 dunkelrothen	dunkelroten	1901-th
@@ -956,6 +959,7 @@ gegenthat	Gegentat	1901-th
 gegentheil	Gegenteil	1901-th
 gegentheils	Gegenteils	1901-th
 gegentheilsein	Gegenteilsein	1901-th
+geheimniß	geheimnis	1901
 geheirathet	geheiratet	1901-th
 geistesthätigkeit	Geistestätigkeit	1901-th
 gelblichroth	gelblichrot	1901-th
@@ -1088,6 +1092,7 @@ grundbestandtheil	Grundbestandteil	1901-th
 gräuelthat	gräueltat	1901-th
 gräuelthaten	Greueltaten	1901-th
 grösstentheils	größtenteils	1901-th
+guitarre	gitarre	1901-c
 gutheissen	gutheißen	1901-th
 gutheissung	Gutheißung	1901-th
 guthmachen	gutmachen	1901-th
@@ -1398,6 +1403,7 @@ liebesgenuß	liebesgenuss	1996-ss
 liebesgluth	liebesglut	1901-th
 liebesgäßchen	liebesgässchen	1996-ss
 limitirt	limitiert	1901-iren
+liqueur	likör	1901
 lithographirte	lithografierte	1901-iren
 lithographirten	lithografierten	1901-iren
 litteratur	literatur	1901
@@ -1652,6 +1658,7 @@ nothzucht	Notzucht	1901-th
 nothzüchtigen	notzüchtigen	1901-th
 notiren	notieren	1901-iren
 nth	nt	1901-th
+numeriren	nummerieren	1901-iren
 nuth	nut	1901-th
 nuß	nuss	1996-ss
 nöthen	nöten	1901-th
@@ -1812,6 +1819,7 @@ rathsverversammlung	Ratsversammlung	1901-th
 raubthier	Raubtier	1901-th
 raubthiere	Raubtiere	1901-th
 raubthieren	Raubtieren	1901-th
+rauh	rau	1996
 recapituliren	rekapitulieren	1901-c-iren
 recension	rezension	1901-c
 recept	rezept	1901-c
@@ -1826,6 +1834,7 @@ recitiren	rezitieren	1901-c-iren
 recitirt	rezitiert	1901-iren
 recognosciren	rekognoszieren	1901-c-iren
 rectificiren	rektifizieren	1901-iren
+redacteur	redakteur	1901-c
 redeblüthen	Redeblüten	1901-th
 redetheilen	Redeteilen	1901-th
 redetheils	Redesteils	1901-th
@@ -1980,6 +1989,7 @@ schamtheile	schamteile	1901-th
 schandthat	schandtat	1901-th
 scharlachroth	scharlachrot	1901-th
 schenkwirth	schenkwirt	1901-th
+schloß	schloss	1996-ss
 schluß	schluss	1996-ss
 schlußfolgerung	schlussfolgerung	1996-ss
 schlußgabe	schlussgabe	1996-ss
@@ -2044,6 +2054,7 @@ sey	sei	archaic-ey
 seyd	seid	archaic-ey
 seyn	sein	archaic-ey
 seßhafter	sesshafter	1996-ss
+shawl	schal	1901
 sichaufthun	sichauftun	1901-th
 sichbetheiligen	sichbeteiligen	1901-th
 siebentheilig	siebenteilig	1901-th
@@ -2064,6 +2075,7 @@ sinnesthätigkeit	Sinnestätigkeit	1901-th
 sintfluth	sintflut	1901-th
 skepticismus	skeptizismus	1901-c
 sloth	slot	1901-th
+social	sozial	1901-c
 socius	sozius	1901-c
 sodaß	sodass	1996-ss
 sondiren	sondieren	1901-iren
@@ -2097,6 +2109,7 @@ starkmuthig	starkmutig	1901-th
 statuiren	statuieren	1901-iren
 statuirt	statuiert	1901-iren
 staunenswerth	staunenswert	1901-th
+stengel	stängel	1996
 sternantheil	Sternanteil	1901-th
 sthaat	staat	1901-th
 stipuliren	stipulieren	1901-iren

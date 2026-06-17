@@ -1,0 +1,30 @@
+# German reform pairs harvested 2026-06-17 from authoritative reform documentation
+# (de.wikipedia.org "Orthographische Konferenz von 1901" + "Reform der deutschen Rechtschreibung
+# von 1996", via WebFetch) + the canonical textbook 1901 loanword respellings. Each is VALIDATED
+# against the modern de_DE Hunspell dic before merging (old not in dic, new in dic) -- see
+# detectors/merge_reform_pairs.py. This is the DTA/RIDGES-style external-ingest input; bulk
+# DTA/RIDGES corpora are not WebFetch-downloadable, so these are the documented reform pairs.
+# old	new	era
+thal	tal	1901-th
+thür	tür	1901-th
+geheimniß	geheimnis	1901
+accent	akzent	1901-c
+central	zentral	1901-c
+centrum	zentrum	1901-c
+social	sozial	1901-c
+sociale	soziale	1901-c
+accusativ	akkusativ	1901-c
+cigarre	zigarre	1901-c
+redacteur	redakteur	1901-c
+litteratur	literatur	1901
+guitarre	gitarre	1901-c
+liqueur	likör	1901
+compagnie	kompanie	1901-c
+detto	dito	1901
+drogue	droge	1901
+shawl	schal	1901
+desinficieren	desinfizieren	1901-c-iren
+numeriren	nummerieren	1901-iren
+schloß	schloss	1996-ss
+stengel	stängel	1996
+rauh	rau	1996

@@ -33,8 +33,8 @@ and the 697-form set are stable, only the dic-vs-map label migrates by design (s
 **PW's German is pervasively pre-1901, confirmed at scale** — 697 distinct drift forms across the
 dictionary, dominated by 1901 `th→t` and `c→k/z`. They are persisted to
 **[de_reform_map.tsv](de_reform_map.tsv)** — a German reform lexicon that, after the whole cluster,
-holds **978 forms** (and **2,809** after the residual classify below) and accumulates across runs;
-it is the expandable container for DTA/RIDGES pairs.
+holds **978 forms** (2,809 after the residual classify below, **2,823** after merging documented
+reform pairs) and accumulates across runs; it is the expandable container for DTA/RIDGES pairs.
 
 ## German cluster — drift across dictionaries, and the SCH-1928 control
 
@@ -208,9 +208,14 @@ python ortho_drift.py PW --full     # every entry
    forms** (366 `1901-th`, 224 `1901-c`, 84 `-iren`, 21 `c-iren`, 12 `1996-ss`, 5 `ey`), seeded
    from the curated pairs + the full-PW transform/dic-confirmed drift. `ortho_drift.py` loads it
    at startup and folds each run's discoveries back in, so it accumulates across dictionaries and
-   works even without the Hunspell dic. **DTA/RIDGES** historical→modern pairs are online and
-   this environment has no outbound internet — merge them into this file when reachable (or drop
-   the files locally, like the Hunspell dic).
+   works even without the Hunspell dic. **External pairs (DTA/RIDGES / web-harvested) merge via a
+   dic-validated tool** — `detectors/merge_reform_pairs.py <lang> <pairs.tsv>` accepts a pair only
+   if `old∉dic & new∈dic` (filtering hallucinations / dual-spellings / rejected proposals). First
+   real input: **14 documented 1901/1996 reform pairs** harvested from the German Wikipedia reform
+   articles ([de_reform_web_candidates.tsv](de_reform_web_candidates.tsv)) → **de map 2,809 → 2,823**
+   (`cigarre→zigarre`, `guitarre→gitarre`, `liqueur→likör`, `schloß→schloss`, `rauh→rau`…). WebFetch
+   reaches the web but can't bulk-download the DTA/RIDGES corpora through its summariser — drop a
+   local DTA/RIDGES export or give a row-list URL to merge the long tail.
 4. ✅ **German cluster done + SCH-1928 control validated** (see the comparison above). SCH's
    profile flips to 1996-`ß`-dominant (319) with 1901-`th` collapsed (76) — confirming the method
-   dates orthography from the text. Reform map: 978 forms (→ 2,809 after the residual classify).
+   dates orthography from the text. Reform map: 978 → 2,809 (residual classify) → 2,823 (external merge).

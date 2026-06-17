@@ -6,6 +6,24 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.28.0] - 2026-06-17
+
+### Added
+- **External reform-pair merge (DTA/RIDGES-style ingest), dic-validated.** New
+  `detectors/merge_reform_pairs.py` ingests any external historical→modern pair file
+  (`old<TAB>new[<TAB>era]`) into `ortho_drift/<lang>_reform_map.tsv`, accepting a pair only if
+  `old∉dic & new∈dic & old≠new` — the same transform-and-check guard, so hallucinations,
+  dual-spellings and rejected proposals are filtered out.
+  - First input: **14 documented 1901/1996 German reform pairs** harvested via WebFetch from the
+    German Wikipedia reform articles (`ortho_drift/de_reform_web_candidates.tsv`) → de reform map
+    **2,809 → 2,823** (`cigarre→zigarre`, `guitarre→gitarre`, `liqueur→likör`, `schloß→schloss`,
+    `rauh→rau`, `stengel→stängel`, `redacteur→redakteur`, `desinficieren→desinfizieren`, …).
+    9 correctly rejected (7 already mapped; `compagnie` is still a valid modern German word;
+    `soziale` is an inflected non-stem).
+  - WebFetch reaches the web but **can't bulk-download the DTA/RIDGES corpora** through its
+    summariser — the tool is the ready wiring: drop a local DTA/RIDGES export (or give a row-list
+    URL) to merge the long tail. Documentation only; never edits the sources.
+
 ## [1.27.0] - 2026-06-17
 
 ### Added
