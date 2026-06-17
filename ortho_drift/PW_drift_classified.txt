@@ -1,0 +1,125 @@
+# PW German pattern-candidates classified vs the 2026 Duden (Sonnet oracle).
+# DOCUMENTATION ONLY -- never edits csl-orig. modern_form is advisory.
+# 163 candidates -> reform-drift=114, modern=19, latin-or-foreign=15, fragment-or-ocr=13, proper-noun=2
+#
+# 114 reform-drift, grouped by reform rule (pre-reform -> 2026):
+
+# ===== 1901-th (75) =====
+gerathen                 -> geraten
+theilen                  -> teilen
+rothe                    -> rote
+wasserthier              -> Wassertier
+getheilt                 -> geteilt
+lotusblüthe              -> Lotusblüte
+verrathen                -> verraten
+vermuthen                -> vermuten
+thuend                   -> tuend
+koloquinthengurke        -> Koloquintengurke
+theilung                 -> Teilung
+theilhaftig              -> teilhaftig
+rother                   -> roter
+thieren                  -> Tieren
+athem                    -> Atem
+zertheilen               -> zerteilen
+untheilbare              -> unteilbare
+opferthier               -> Opfertier
+vermuthend               -> vermutend
+grossmüthig              -> großmütig
+eigenthümlich            -> eigentümlich
+raubthier                -> Raubtier
+thaten                   -> Taten
+thätig                   -> tätig
+bethätigt                -> betätigt
+eigenthümlichkeiten      -> Eigentümlichkeiten
+koloquinthe              -> Koloquinte
+muthiges                 -> mutiges
+röthel                   -> Rötel
+vermuthung               -> Vermutung
+erbtheilung              -> Erbteilung
+gemüthes                 -> Gemütes
+uebelthat                -> Übeltat
+zwölftheilig             -> zwölfteilig
+zugthier                 -> Zugtier
+nothwendigkeit           -> Notwendigkeit
+theilbar                 -> teilbar
+nöthigen                 -> nötigen
+stadtthor                -> Stadttor
+mannesthat               -> Mannestat
+heldenmuth               -> Heldenmut
+anthuend                 -> antuend
+sonnengluth              -> Sonnenglut
+demüthiges               -> demütiges
+ertheilt                 -> erteilt
+thränen                  -> Tränen
+fruchtvertheiler         -> Fruchtverteiler
+vortheilhafte            -> vorteilhafte
+antheil                  -> Anteil
+abtheilen                -> abteilen
+verrath                  -> Verrat
+errathend                -> erratend
+thieres                  -> Tieres
+vordertheil              -> Vorderteil
+zusammengerathen         -> zusammengeraten
+betheiligt               -> beteiligt
+betheiligen              -> beteiligen
+nöthig                   -> nötig
+röthe                    -> Röte
+unterthanen              -> Untertanen
+gemüth                   -> Gemüt
+verkündenswerth          -> verkündenswert
+sesamblüthe              -> Sesamblüte
+mittheilend              -> mitteilend
+heldenmüthiger           -> heldenmütiger
+muthiger                 -> mutiger
+vermuthe                 -> vermute
+vermuthungen             -> Vermutungen
+nachtheilig              -> nachteilig
+beurtheilen              -> beurteilen
+gemüthsruhe              -> Gemütsruhe
+beklagenswerth           -> beklagenswert
+rechtthuend              -> rechttuend
+erstrebenswerth          -> erstrebenswert
+hochmuth                 -> Hochmut
+
+# ===== 1901-c (27) =====
+correlation              -> Korrelation
+sclave                   -> Sklave
+correlativen             -> korrelativen
+mercur                   -> Merkur
+complement               -> Komplement
+acut                     -> Akut
+sclavin                  -> Sklavin
+conjunction              -> Konjunktion
+lexicographen            -> Lexikographen
+constellationen          -> Konstellationen
+cocosnussbaum            -> Kokosnussbaum
+concret                  -> konkret
+consonant                -> Konsonant
+doppelconsonanz          -> Doppelkonsonanz
+compact                  -> kompakt
+commentar                -> Kommentar
+correlative              -> korrelative
+personification          -> Personifikation
+hungercur                -> Hungerkur
+secretär                 -> Sekretär
+prädicat                 -> Prädikat
+commentatoren            -> Kommentatoren
+constant                 -> konstant
+construction             -> Konstruktion
+prädicativem             -> prädikativem
+contact                  -> Kontakt
+specification            -> Spezifikation
+
+# ===== 1901-iren (12) =====
+personificirt            -> personifiziert
+multiplicirt             -> multipliziert
+identificirt             -> identifiziert
+recitiren                -> rezitieren
+qualificirt              -> qualifiziert
+personificirte           -> personifizierte
+durchstudirt             -> durchstudiert
+passiren                 -> passieren
+specialisiren            -> spezialisieren
+inhärirt                 -> inhäriert
+dividiren                -> dividieren
+unmotivirte              -> unmotivierte

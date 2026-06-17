@@ -25,6 +25,24 @@ found in real PW glosses ([PW_drift_report.txt](PW_drift_report.txt)):
 `gethan→getan` (2) · `Vocale→Vokale` (1) · `Thor→Tor` (1). Eras: 1901 `th→t`, 1901 `c→k`,
 archaic `ey→ei`, 1996 `ß→ss`.
 
+### Candidates classified vs 2026 Duden (Sonnet as the Duden oracle)
+
+The 163 pattern-candidates ([PW_drift_classified.txt](PW_drift_classified.txt)):
+
+| category | count | meaning |
+|---|--:|---|
+| **reform-drift** | **114** | real pre-reform German — 75× `1901 th→t`, 27× `1901 c→k/z`, 12× `1901 -iren→-ieren` (e.g. `gerathen→geraten`, `eigenthümlich→eigentümlich`, `commentar→Kommentar`, `recitiren→rezitieren`) |
+| modern | 19 | already 2026-correct — incl. the `t+h` boundaries (`enthaltend`, `Gottheit`) the patterns over-flagged |
+| latin-or-foreign | 15 | Latin / botanical / English (`curcuma`, `clitoris`, `lexicon`) — not German |
+| fragment-or-ocr | 13 | transliteration fragments / garble (`rtha`, `tha`) |
+| proper-noun | 2 | names |
+
+**So in the 2,509-entry sample, 127 distinct reform-drift forms** (13 map + 114 classified) — PW's
+German is **pervasively pre-1901**; extrapolated, thousands of drift instances across the full
+text. The noise buckets (Latin / proper-noun / fragment / `t+h`-boundary) worked as designed,
+confirming the proper-noun strategy. `modern_form` is advisory (documentation, not correction);
+two LLM artifacts were hand-corrected (`Kokossnussbaum→Kokosnussbaum`, `Konstant→konstant`).
+
 ## What the pilot established
 
 1. **The method works on the gloss language.** Real, era-correct German drift is found and
@@ -68,8 +86,8 @@ python ortho_drift.py PW --full     # every entry
 
 ## Next (to finish Phase 0 → Phase 1)
 
-1. **LLM classify the 163 candidates vs 2026 Duden** (Sonnet as the Duden oracle) — disambiguate
-   reform-drift / modern / Latin-foreign / proper-noun / fragment. *(running)*
+1. ✅ **LLM classify the 163 candidates vs 2026 Duden** — done: **114 reform-drift** confirmed,
+   noise correctly bucketed → [PW_drift_classified.txt](PW_drift_classified.txt).
 2. **Wire the Hunspell `de_DE` word-list** as the deterministic pre-filter (reduces LLM load,
    catches non-pattern drift + OCR errors). Setup dependency, like the OCR `san` model.
 3. **Expand the reform map** from DTA / RIDGES resources (the curated map is a starter).

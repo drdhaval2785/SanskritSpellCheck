@@ -16,6 +16,10 @@ ready for a dated entry.
   - On a 2,509-entry PW sample (12,917 German tokens): **48 confirmed reform-drift occurrences
     in 13 forms** (`Thier→Tier`, `Theil→Teil`, `Noth→Not`, `thun→tun`, `Vocal→Vokal`, …; eras
     1901 `th→t`/`c→k`, archaic `ey`, 1996 `ß→ss`) + 163 pattern-candidates for the LLM/wordlist.
+  - **vs-Duden classification** (Sonnet oracle) of the 163 candidates: **114 more reform-drift**
+    (75 `th→t`, 27 `c→k/z`, 12 `-iren→-ieren`), 19 modern (`t+h` boundaries), 15 Latin/foreign,
+    13 fragments, 2 proper-nouns → **127 distinct reform-drift forms in the sample**; PW's German
+    is pervasively pre-1901. Verdicts in `ortho_drift/PW_drift_classified.txt`.
   - Reuses `triage_util` (entry index, paths, stdio); a curated reform map (high precision) +
     recall patterns. **Documentation only — never edits csl-orig.**
   - **Tokenizer-hardening discovered live:** PW glosses embed editorial-correction records
