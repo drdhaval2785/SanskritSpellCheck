@@ -29,7 +29,9 @@ Top: `gerathen→geraten` (253), `personificirt→personifiziert` (191), `theilh
 `constellation→konstellation` (67). Full list → [PW_drift_report.txt](PW_drift_report.txt).
 
 **PW's German is pervasively pre-1901, confirmed at scale** — 672 distinct drift forms across
-the dictionary, dominated by 1901 `th→t` and `c→k/z`.
+the dictionary, dominated by 1901 `th→t` and `c→k/z`. These (plus the curated seed) are persisted
+to **[de_reform_map.tsv](de_reform_map.tsv)** — a 715-form German reform lexicon that accumulates
+across runs and is the expandable container for DTA/RIDGES pairs.
 
 ## Pilot validation (sampled + LLM) — how the method was proven first
 
@@ -115,6 +117,12 @@ python ortho_drift.py PW --full     # every entry
 2. ✅ **Wired the Hunspell `de_DE` word-list** (2006/Duden, 103,756 stems — Adobe's bundled dic,
    a local dependency) as the deterministic filter + transform-and-check drift detector → 672
    dic-confirmed drift forms on full PW. The residual LLM target is now 2,171 candidates.
-3. **Expand the reform map** from DTA / RIDGES resources (the curated map is a starter).
+3. ✅ **Reform map externalized + expanded** → [de_reform_map.tsv](de_reform_map.tsv): **715
+   forms** (366 `1901-th`, 224 `1901-c`, 84 `-iren`, 21 `c-iren`, 12 `1996-ss`, 5 `ey`), seeded
+   from the curated pairs + the full-PW transform/dic-confirmed drift. `ortho_drift.py` loads it
+   at startup and folds each run's discoveries back in, so it accumulates across dictionaries and
+   works even without the Hunspell dic. **DTA/RIDGES** historical→modern pairs are online and
+   this environment has no outbound internet — merge them into this file when reachable (or drop
+   the files locally, like the Hunspell dic).
 4. **Run the rest of the German cluster** — PWG / GRA / CCS, and **SCH (1928) as the internal
    control** (should show 1996-era drift but little 1901-era, unlike pre-1901 PW).

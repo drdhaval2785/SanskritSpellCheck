@@ -33,6 +33,7 @@ triage_util.reconfigure_stdio()
 from collections import Counter, defaultdict
 
 OUT = os.path.join(triage_util.ROOT, 'ortho_drift')
+MAP_FILE = os.path.join(OUT, 'de_reform_map.tsv')   # persistent, expandable German reform map
 SAMPLE_N = 2500
 
 # --- German reform map: pre-reform spelling -> (2026 form, era) ------------------------------
@@ -61,6 +62,22 @@ REFORM = {
     # period German that drifted (the "Dintenfass" gloss in PW)
     'dinte': ('tinte', '1901-th-adjacent'), 'dintenfass': ('tintenfass', '1996-ss'),
 }
+
+
+def load_reform_map(seed):
+    """The curated seed merged with the persistent, corpus-accumulated map (MAP_FILE). The file
+    is the expandable lexicon: each run folds its transform+dic-confirmed drift back into it, and
+    DTA/RIDGES historical->modern pairs can be merged into it when available."""
+    m = dict(seed)
+    if os.path.exists(MAP_FILE):
+        with open(MAP_FILE, encoding='utf-8') as f:
+            for ln in f:
+                if ln.startswith('#') or '\t' not in ln:
+                    continue
+                p = ln.rstrip('\n').split('\t')
+                if len(p) >= 3 and p[0]:
+                    m[p[0]] = (p[1], p[2])
+    return m
 
 # --- recall patterns (candidates only -- need wordlist/LLM to confirm) -----------------------
 PATTERNS = [
@@ -172,7 +189,8 @@ def main():
         sample = entries[::step]
 
     modern = load_modern_de()
-    drift = Counter()            # curated-map drift:    (old, new, era) -> count
+    reform = load_reform_map(REFORM)
+    drift = Counter()            # reform-map drift:     (old, new, era) -> count
     dicdrift = Counter()         # transform+dic drift:  (old, new, era) -> count
     drift_example = {}
     pat_cand = defaultdict(Counter)
@@ -185,8 +203,8 @@ def main():
             if modern is not None and lw in modern:
                 n_modern += 1                        # already 2026-modern German -> not drift
                 continue
-            if lw in REFORM:
-                new, era = REFORM[lw]
+            if lw in reform:
+                new, era = reform[lw]
                 drift[(lw, new, era)] += 1
                 drift_example.setdefault(lw, ' '.join(clean_gloss(e['body']).split())[:90])
                 continue
@@ -243,6 +261,18 @@ def main():
                     continue
                 seen.add(tok)
                 f.write('%s\t%s\t%d\n' % (tok, name, n))
+
+    # accumulate the discovered drift into the persistent map -- the expanded reform lexicon
+    acc = dict(reform)
+    for (old, new, era) in list(dicdrift) + list(drift):
+        acc[old] = (new, era)
+    with open(MAP_FILE, 'w', encoding='utf-8') as f:
+        f.write('# German orthographic reform map:  old<TAB>2026<TAB>era\n')
+        f.write('# Curated seed + drift mined from the corpus (transform + Hunspell-confirmed).\n')
+        f.write('# Expandable -- merge DTA/RIDGES historical->modern pairs here. %d forms.\n' % len(acc))
+        for old in sorted(acc):
+            new, era = acc[old]
+            f.write('%s\t%s\t%s\n' % (old, new, era))
 
     print('%s: %d German tokens in %d entries; modern-filtered %d%s'
           % (dict_code, n_tokens, len(sample), n_modern,

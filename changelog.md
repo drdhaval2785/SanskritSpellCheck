@@ -6,6 +6,21 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.22.0] - 2026-06-17
+
+### Added
+- **Externalized + expanded the German reform map** → `ortho_drift/de_reform_map.tsv`.
+  `ortho_drift.py` now loads it at startup (merged with the curated seed) and folds each run's
+  transform+dic-confirmed drift back into it, so the lexicon **accumulates across dictionaries**
+  and works even without the Hunspell dic. Seeded from the full-PW run: **715 forms** (366
+  `1901-th`, 224 `1901-c`, 84 `1901-iren`, 21 `1901-c-iren`, 12 `1996-ss`, 5 `archaic-ey`, 2 misc)
+  — up from ~40 inline pairs.
+  - This is the achievable equivalent of "expand from DTA/RIDGES": those are online research
+    resources and this environment has **no outbound internet** (PyPI/pip unreachable), so the
+    map is seeded from the corpus' own validated drift instead. `de_reform_map.tsv` is the
+    expandable container — DTA/RIDGES historical→modern pairs merge straight in (or drop the
+    files locally, like the Hunspell dic). Documentation only; never edits csl-orig.
+
 ## [1.21.0] - 2026-06-17
 
 ### Added
