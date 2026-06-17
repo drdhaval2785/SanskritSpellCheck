@@ -16,22 +16,24 @@ via `$ORTHO_DE_DIC`). Across **all 170,556 PW entries / 845,888 German gloss tok
 | | |
 |---|--:|
 | already-2026-modern (filtered by the dic) | **502,882 (59%)** |
-| **reform-drift** | **8,683 occurrences** |
-| &nbsp;&nbsp;• dic-confirmed (reform transform → lands in the modern dic) | 6,352 in **672 distinct forms** |
-| &nbsp;&nbsp;• curated map (incl. inflected forms) | 2,331 in 25 forms |
+| **reform-drift** | **8,683 occurrences · 697 distinct forms** |
+| &nbsp;&nbsp;discovered by transform-and-check, beyond the curated seed | **672 forms** (first run) |
 | residual candidates (→ LLM pass) | 2,171 distinct |
 
-The **dic-confirmed** list is high-precision — each old form is *absent* from the 2026 dic and a
-reform transform lands *in* it (so `Theater`/`Gottheit` are rejected; `Thier`/`gerathen` kept).
-Top: `gerathen→geraten` (253), `personificirt→personifiziert` (191), `theilhaftig→teilhaftig`
-(190), `theilen→teilen` (164), `ceremonie→zeremonie` (138), `thätigkeit→tätigkeit` (102),
-`mittheilen→mitteilen` (95), `reichthum→reichtum` (81), `casus→kasus` (76),
-`constellation→konstellation` (67). Full list → [PW_drift_report.txt](PW_drift_report.txt).
+The **transform-and-check** is high-precision — each old form is *absent* from the 2026 dic and a
+reform transform lands *in* it (so `Theater`/`Gottheit` are rejected; `Thier`/`gerathen` kept). On
+the first run it discovered **672 forms** beyond the curated seed; **once those are folded into the
+accumulating reform map, later runs attribute all 8,683 occurrences to the map** — the 8,683 total
+and the 697-form set are stable, only the dic-vs-map label migrates by design (so the committed
+[PW_drift_report.txt](PW_drift_report.txt) now shows `dic 0 / map 8,683`). Top forms:
+`gerathen→geraten` (253), `personificirt→personifiziert` (191), `theilhaftig→teilhaftig` (190),
+`theilen→teilen` (164), `ceremonie→zeremonie` (138), `thätigkeit→tätigkeit` (102),
+`mittheilen→mitteilen` (95), `reichthum→reichtum` (81), `casus→kasus` (76).
 
-**PW's German is pervasively pre-1901, confirmed at scale** — 672 distinct drift forms across
-the dictionary, dominated by 1901 `th→t` and `c→k/z`. These (plus the curated seed) are persisted
-to **[de_reform_map.tsv](de_reform_map.tsv)** — a German reform lexicon (now **981 forms** after
-the whole cluster) that accumulates across runs and is the expandable container for DTA/RIDGES pairs.
+**PW's German is pervasively pre-1901, confirmed at scale** — 697 distinct drift forms across the
+dictionary, dominated by 1901 `th→t` and `c→k/z`. They are persisted to
+**[de_reform_map.tsv](de_reform_map.tsv)** — a German reform lexicon that, after the whole cluster,
+holds **978 forms** and accumulates across runs; it is the expandable container for DTA/RIDGES pairs.
 
 ## German cluster — drift across dictionaries, and the SCH-1928 control
 
@@ -137,8 +139,9 @@ python ortho_drift.py PW --full     # every entry
 1. ✅ **LLM classify the 163 candidates vs 2026 Duden** — done: **114 reform-drift** confirmed,
    noise correctly bucketed → [PW_drift_classified.txt](PW_drift_classified.txt).
 2. ✅ **Wired the Hunspell `de_DE` word-list** (2006/Duden, 103,756 stems — Adobe's bundled dic,
-   a local dependency) as the deterministic filter + transform-and-check drift detector → 672
-   dic-confirmed drift forms on full PW. The residual LLM target is now 2,171 candidates.
+   a local dependency) as the deterministic filter + transform-and-check drift detector → 697
+   distinct drift forms on full PW (672 discovered beyond the curated seed). The residual LLM
+   target is 2,171 candidates.
 3. ✅ **Reform map externalized + expanded** → [de_reform_map.tsv](de_reform_map.tsv): **715
    forms** (366 `1901-th`, 224 `1901-c`, 84 `-iren`, 21 `c-iren`, 12 `1996-ss`, 5 `ey`), seeded
    from the curated pairs + the full-PW transform/dic-confirmed drift. `ortho_drift.py` loads it
@@ -148,4 +151,4 @@ python ortho_drift.py PW --full     # every entry
    the files locally, like the Hunspell dic).
 4. ✅ **German cluster done + SCH-1928 control validated** (see the comparison above). SCH's
    profile flips to 1996-`ß`-dominant (319) with 1901-`th` collapsed (76) — confirming the method
-   dates orthography from the text. Reform map now 981 forms.
+   dates orthography from the text. Reform map now 978 forms.

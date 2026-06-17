@@ -6,11 +6,28 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.24.0] - 2026-06-17
+
+### Fixed
+- **Documentation-accuracy pass** — fact-checked the ortho-drift docs (changelog 1.20–1.23 +
+  `ortho_drift/README.md` + `.ai_state.md`) against the committed data files (87 numeric claims).
+  Corrected:
+  - reform-map count **981 → 978** (a `wc -l` had counted the file's 3 comment lines as forms);
+  - the **dic-vs-map attribution** in the full-PW result — the transform-and-check *discovers* 672
+    drift forms, which then fold into the accumulating reform map, so the committed
+    `PW_drift_report.txt` now reads `dic 0 / map 8,683`. The stable facts are **8,683 occurrences
+    across 697 distinct forms**; only the dic-vs-map label migrates by design. (The earlier docs
+    quoted the first-run `6,352 dic / 2,331 map` split as if permanent.)
+  - the 715-form seed breakdown (added the 3 misc-era forms so the components sum to 715);
+  - removed a self-referential commit hash from `.ai_state.md`'s WIP note.
+  - Confirmed **2,171** residual candidates is correct (deduped; per-category counts sum higher
+    only because a token can match more than one pattern). Documentation only.
+
 ## [1.23.0] - 2026-06-17
 
 ### Added
 - **German-cluster orthographic-drift + the SCH-1928 control.** Ran PWG / GRA / CCS / SCH
-  (`ortho_drift.py <DICT> --full`); the reform map accumulated to **981 forms**, and per-dict
+  (`ortho_drift.py <DICT> --full`); the reform map accumulated to **978 forms**, and per-dict
   drift-by-era is written to `ortho_drift/de_drift_summary.tsv`.
   - **Control validated.** The four pre-1901 dictionaries are 1901-`th→t`-dominated
     (PW 6203, PWG 6508, GRA 1460, CCS 341) with almost no 1996-`ß` drift. **SCH (Schmidt 1928)
@@ -28,7 +45,7 @@ ready for a dated entry.
   `ortho_drift.py` now loads it at startup (merged with the curated seed) and folds each run's
   transform+dic-confirmed drift back into it, so the lexicon **accumulates across dictionaries**
   and works even without the Hunspell dic. Seeded from the full-PW run: **715 forms** (366
-  `1901-th`, 224 `1901-c`, 84 `1901-iren`, 21 `1901-c-iren`, 12 `1996-ss`, 5 `archaic-ey`, 2 misc)
+  `1901-th`, 224 `1901-c`, 84 `1901-iren`, 21 `1901-c-iren`, 12 `1996-ss`, 5 `archaic-ey`, 3 misc)
   — up from ~40 inline pairs.
   - This is the achievable equivalent of "expand from DTA/RIDGES": those are online research
     resources and this environment has **no outbound internet** (PyPI/pip unreachable), so the
@@ -45,8 +62,10 @@ ready for a dated entry.
   detects drift by **transform-and-check**: apply a reform rule to a flagged token and accept it
   as drift *iff the transformed form is in the modern dic and the original is not*.
   - **Full PW** (170,556 entries / **845,888 German tokens**): 502,882 (59%) filtered as already-
-    2026-modern; **8,683 reform-drift occurrences — 6,352 dic-confirmed in 672 distinct forms** +
-    2,331 curated-map in 25 forms; 2,171 residual candidates for the LLM. Top: `gerathen→geraten`
+    2026-modern; **8,683 reform-drift occurrences across 697 distinct forms** — the transform-and-check
+    discovered 672 beyond the curated seed (high-precision; `Theater`/`Gottheit` rejected); 2,171
+    residual candidates for the LLM. (Once those 672 fold into the accumulating map, later reports
+    attribute all 8,683 to the map — total stable, attribution migrates.) Top: `gerathen→geraten`
     (253), `personificirt→personifiziert` (191), `theilhaftig→teilhaftig` (190), `ceremonie→zeremonie`
     (138). **PW's German is pervasively pre-1901, confirmed at scale.**
   - Transform-and-check deterministically rejects the `t+h`-boundary / Greek-loan false positives
