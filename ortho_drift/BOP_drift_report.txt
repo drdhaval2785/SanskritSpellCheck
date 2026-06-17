@@ -1,0 +1,11 @@
+# BOP (Latin) orthographic-drift -- DOCUMENTATION ONLY (never edits the source)
+# FULL corpus
+# modern word-list: NONE (control / not wired) -- map + patterns only
+# gloss tokens: 76933 ; already-modern: 0 ; reform-drift: 0 (transform 0 + map 0)
+# drift occurrences by era: (none)
+#
+# ===== reform-drift CONFIRMED by transform (+ wordlist, where available) =====
+
+# ===== reform-drift from the curated/accumulated map =====
+
+# ===== RESIDUAL pattern candidates (-> LLM pass) =====

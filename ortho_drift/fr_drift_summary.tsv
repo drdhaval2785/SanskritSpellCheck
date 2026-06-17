@@ -1,0 +1,5 @@
+# French orthographic-drift across dictionaries -- DOCUMENTATION ONLY
+# drift/1k = reform-drift occurrences per 1000 gloss tokens
+dict	tokens	modern%	drift	drift/1k	oi-ai	trema	ph-f
+BUR	229053	49	71	0.31	2	21	48
+STC	281418	59	5	0.02	2	0	3

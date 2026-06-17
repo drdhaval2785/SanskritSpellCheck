@@ -1,0 +1,4 @@
+# Russian orthographic-drift across dictionaries -- DOCUMENTATION ONLY
+# drift/1k = reform-drift occurrences per 1000 gloss tokens
+dict	tokens	modern%	drift	drift/1k	1918-yat	1918-i	1918-hardsign	1918-fita	1918-izhitsa
+KOSSOVICH	87636	0	31389	358.17	8139	11106	12125	19	0

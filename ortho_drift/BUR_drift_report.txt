@@ -1,0 +1,69 @@
+# BUR (French) orthographic-drift -- DOCUMENTATION ONLY (never edits the source)
+# FULL corpus
+# modern word-list: ORTHO_FR_DIC, 62338 stems
+# gloss tokens: 229053 ; already-modern: 113166 ; reform-drift: 71 (transform 67 + map 4)
+# drift occurrences by era: ph-f=48, trema=21, oi-ai=2
+#
+# ===== reform-drift CONFIRMED by transform (+ wordlist, where available) =====
+pha                    -> fa                     ph-f             33  ¦ kaphaṇi m. et kaphaṇi f. (ka; phaṇ) coude.
+aloës                  -> aloès                  trema            19  ¦ adala m. eugenia acutangula, bot. -- adalā f. aloës sucotrin ou perfoliata, bot.
+phlegme                -> flegme                 ph-f              9  ¦ kaphelū a. qui produit le phlegme ou la lymphe.
+phull                  -> full                   ph-f              2  ¦ phull. phullāmi 1; etc. S'épanouir, fleurir. Cf. phal.
+phlegmatique           -> flegmatique            ph-f              1  ¦ kaphin a. phlegmatique; lymphatique. -- S. m. éléphant.
+dois                   -> dais                   oi-ai             1  ¦ nikṣipāmi (kṣip) déposer: amṛtaṃ kuśeṣu l'ambroisie sur le kuśa . || Donner en dépôt, co
+vois                   -> vais                   oi-ai             1  ¦ paśya ( imp. de paś 4) vois, voici, ac.
+phur                   -> fur                    ph-f              1  ¦ viṣphurāmi cf. visphurāmi.
+
+# ===== reform-drift from the curated/accumulated map =====
+poëte                  -> poète                  trema             2  ¦ abhīka a. (abhi; sfx. ika) généralt., qui a une tendance vers ou contre: désireux; amour
+rhythme                -> rythme                 ph-f              2  ¦ chandas n. intention, tendance naturelle, désir; || indépendance de caractère. -- (chand
+
+# ===== RESIDUAL pattern candidates (-> LLM pass) =====
+# -- trema: 27 distinct (top 15) --
+   aïeul                      11
+   lagopodioïdes              11
+   ajoaën                      8
+   populneoïdes                6
+   cynosuroïdes                6
+   orchioïdes                  5
+   hyacinthoïdes               5
+   hémorrhoïdes                4
+   coïx                        4
+   populnoïdes                 3
+   bisaïeul                    3
+   scutellaroïdes              2
+   ajwaën                      2
+   çivaïte                     2
+   contiguës                   1
+# -- oi: 29 distinct (top 15) --
+   doit                       69
+   droit                      30
+   voit                       29
+   adroit                     28
+   boit                       20
+   rois                       14
+   reçoit                     11
+   croit                       9
+   sois                        9
+   lois                        7
+   villageois                  5
+   crois                       4
+   prévoit                     4
+   étroit                      4
+   perçoit                     4
+# -- ph: 89 distinct (top 15) --
+   phala                      33
+   phal                       24
+   phaseolus                  20
+   phyllanthus                16
+   phthisie                    8
+   phalap                      4
+   philippensis                3
+   phakk                       3
+   phara                       3
+   phulla                      3
+   phen                        3
+   phel                        3
+   phrases                     2
+   phena                       2
+   phul                        2

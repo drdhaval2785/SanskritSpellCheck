@@ -6,6 +6,26 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.26.0] - 2026-06-17
+
+### Added
+- **Cross-language orthographic-drift — French, Latin, Russian.** Generalized `ortho_drift.py`
+  into a profile-driven multi-language tool (`de`/`fr`/`la`/`ru`; the German profile reproduces
+  prior behaviour verbatim — verified, German outputs untouched). Ran:
+  - **Russian (Kossovich, pre-1918)** — 87,636 gloss tokens, **31,389 drift (358/1k ≈ 36% of
+    tokens)**, detected **wordlist-free** (the 1918-abolished letters ѣ/і/ѳ/ѵ and word-final ъ are
+    pre-1918 by definition): `въ→в`, `родъ→род`, `растеніе→растение` (і), `имѣющій→имеющий` (yat).
+    The most sweeping reform in the corpus. Source: SamudraManthanam `kossovich.jsonl` (not csl-orig).
+  - **French (BUR Burnouf 1866 / STC Stchoupak 1932)** — **0.31 / 0.02 drift/1k**
+    (`poëte→poète`, `phlegme→flegme`, `françois→français`); Hunspell `fr_FR` membership. Romance
+    convention-drift is ~30–1,500× below German legislated reform. (⚠️ BUR/STC inline Sanskrit in
+    IAST, not `{#…#}` braces, so a few IAST fragments leak — macro-rate robust, forms less so.)
+  - **Latin (BOP Bopp 1847)** — the **negative control: 0 drift** (no reform, no word-list exists),
+    confirming the method's specificity (no drift manufactured where none exists).
+  - **The drift rate tracks reform scope:** Russian 1918 (radical) ≫ German 1901/1996 (moderate) ≫
+    French (minor) ≫ Latin (none). Per-language `<lang>_reform_map.tsv` / `<lang>_drift_summary.tsv`.
+    Documentation only; never edits the sources.
+
 ## [1.25.0] - 2026-06-17
 
 ### Added
