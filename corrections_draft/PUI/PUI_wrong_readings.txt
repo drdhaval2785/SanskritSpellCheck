@@ -1,0 +1,33 @@
+# PUI -- DOCUMENTED-INTENTIONAL spellings (NOT typos -- do NOT file corrections)
+#
+# 21 headwords that LOOK like misspellings but which PUI records on purpose:
+# wrong-reading apparatus (w.r.), variae lectiones (v.l.), in-composition /
+# sandhi forms (in comp. for...), cross-references (See / = X q.v.), and other
+# grammatical/Vedic notes. Filing a 'correction' for any of these CORRUPTS PUI.
+# Use this as a suppression list: such headwords should not be re-flagged.
+# Format per row:  headword -> would-be 'correction'  |  the PUI entry text
+
+# ===== CROSS-REFERENCE (7) =====
+SivacaturdaSi  -> SivacaturdaSI  | {%Śivacaturdaśi%} — see Maheśvaravratam. M. 95. 5.
+kzAtriya       -> kzatriya       | {%Kṣātriya vidhi%} — not to kill a woman. See also Kṣatriya. Vā. 94. 14; 96. 224.
+laguda         -> laguqa         | {%Lagudas%} — see Yaṣṭi, the weapons of the Ābhīras. Vi. V. 38. 50-51.
+pannagA        -> pannaga        | {%Pannagās%} — semi-divine beings, see {%Sarpās.%} Br. II. 32. 1, 2.
+purodA         -> puroDA         | {%Purodās%} — see Purohita.1 Khāṇḍikya's Purodās fol- lowed the banished king to the forest.2 1) Br. III. 10. 101; IV. 9. 11; Vā. 99. 37. 111. 81. 2) Vi. VI. 6.
+saMtatI        -> saMtati        | {%Saṃtatī%} (I) — (see Sannatī); a daughter of Dakṣa and wife of Kratu;1 gave birth to Vālakhilyas.2 1) Br. II. 9. 56; Vā. 28. 31; Vi. I. 7. 25. 2) Ib. I. 10. 1
+sacIpati       -> SacIpati       | {%Sacīpati%} — see Indra; got Kṛṣṇa's promise of protection to Arjuna. Vi. V. 12. 15; 12. 16-20, 24.
+
+# ===== OTHER-INTENTIONAL (14) =====
+ArhaRa         -> arhaRa         | {%Ārhaṇa%} ({%Arhaṇa%} — Bur.) a chief attendant on Hari. Bhā. II. 9. 14.
+CandoGa        -> Candoga        | {%Chando(u)gha%} — the chanting of the Vedas, being prac- tised in a hermitage. Br. III. 21. 46.
+bAhuputra      -> bahuputra      | {%Bāhu(ka)putra%} — married two daughters of Dakṣa. M. 146. 17; Vā. 63. 42.
+baDryaSva      -> vaDryaSva      | {%Badhryaśva%} — (also Bandhyaśva) the first son of Mud- gala and a Brahmiṣṭha through Indrasenā; his wife Menakā, gave birth to a {%mithuna,%} Divodāsa and Aha
+babruvAhana    -> baBruvAhana    | {%Bab(h)ruvāhana%} (I) — a son of Arjuna and Ulūpi, the daughter of the king of Maṇipura; became a putrikāputra. Bhā. IX. 22. 32; Vi. IV. 20. 50.
+barhanASva     -> barhaRASva     | {%Barhanāśva%} — (Varhanāśva-{%Br. P.%}); son of Nikumbha and father of Kṛśāśva. Bhā. IX. 6. 25.
+dakziRabanDa   -> dakziRAbanDa   | {%Dakṣiṇabandha%} — (Taijasa bandha in other books). Vā. 102. 59.
+haridASa       -> haridAsa       | {%Haridāśa (Haridehe?)%} — the birthplace of Hariṇāśva mūrchana. Br. III. 61. 44. Vā. 86. 51.
+kAmalI         -> kAmali         | {%Kāmalī%} — another name for Reṇukā. Vā. 91. 90.
+nEmizA         -> nEmiza         | {%Naimiṣā%} — (also Naimiṣālaya s.v.) sacred to Viṣṇu; here Śaunaka and other sages performed a {%satra%} extending over a thousand years;1 visited by Balarāma 
+prAhlAda       -> prahlAda       | {%Prāhlāda%} — (also Prahlāda) defeated by Indra in war;1 was regarded as the Indra of the Asuras;2 came after Hira- ṇyakaśipu and Bali.3 [Page2-447+ 39] 1) Vā.
+sEneya         -> SEneya         | {%Saineya%} — is Sātyaki. Bhā. I. 8. 7; 10. 18.
+sarya          -> Sarya          | {%Sarya (sarpa?)%} — a son of Yātudhāna. Br. III. 7. 90, 97.
+stutA          -> stuta          | {%Stutā (Surā?)%} — a wife of Varuṇa! her two sons were Kali and Vaidya and a daughter Surasundarī. Br. III. 59. 6.

@@ -6,6 +6,21 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.32.0] - 2026-06-23
+
+### Added
+- **PUI triage — 20/33 dicts.** Body-grounded triage of the *Purāṇic Index* (proper names;
+  registered `PUI: 'en'`). Of **518 tier-A** candidates: **0 fileable typos**, 21 documented-intentional
+  (cross-reference 7, other 14), 467 real named entities, 6 unlocatable. Expected near-zero precision
+  for a proper-name index — the flagged forms are attested Purāṇic names in their own spelling
+  (`Brahmaṇa` = a Nāga, not brāhmaṇa). Package: [corrections_draft/PUI/](corrections_draft/PUI/).
+  - Registered the remaining index dicts in `triage_lang._LANG` in one edit (PUI/INM/PE/YAT/ACC/IEG/
+    MCI/PGN/VEI = en, KRM = sa) ahead of triaging them.
+
+### Changed
+- **Suppression list → 20 dicts**, [nochange/do_not_file_suppress.txt](nochange/do_not_file_suppress.txt)
+  **2,020 → 2,041** unique. `eval.py` false-positives stay **0**.
+
 ## [1.31.0] - 2026-06-23
 
 ### Added

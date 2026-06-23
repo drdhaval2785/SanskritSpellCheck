@@ -10,7 +10,7 @@
 # DO NOT hand-edit -- regenerate with detectors/gen_do_not_file_suppress.py
 # after triaging more dictionaries.
 #
-# 2020 unique headwords from 19 dictionaries:
+# 2041 unique headwords from 20 dictionaries:
 #   SanskritSpellCheck\corrections_draft\AP90\AP90_wrong_readings.txt: 8
 #   SanskritSpellCheck\corrections_draft\AP\AP_wrong_readings.txt: 32
 #   SanskritSpellCheck\corrections_draft\BEN\BEN_wrong_readings.txt: 14
@@ -22,6 +22,7 @@
 #   SanskritSpellCheck\corrections_draft\MD\MD_wrong_readings.txt: 1
 #   SanskritSpellCheck\corrections_draft\MW72\MW72_wrong_readings.txt: 77
 #   SanskritSpellCheck\corrections_draft\MW\MW_wrong_readings.txt: 630
+#   SanskritSpellCheck\corrections_draft\PUI\PUI_wrong_readings.txt: 21
 #   SanskritSpellCheck\corrections_draft\PWG\PWG_wrong_readings.txt: 248
 #   SanskritSpellCheck\corrections_draft\PW\PW_wrong_readings.txt: 255
 #   SanskritSpellCheck\corrections_draft\SCH\SCH_wrong_readings.txt: 109
@@ -76,6 +77,7 @@ ApastamBa
 Apastamva
 ArDya
 ArgayaRa
+ArhaRa
 Arjuna
 ArvAk
 AsPuwa
@@ -118,6 +120,7 @@ Buvanakoza
 BuzuRqi
 Cana
 CandaS
+CandoGa
 Caraka
 CardIkA
 CattraDara
@@ -255,6 +258,7 @@ Sipibizwa
 SiraS
 SiroDAman
 Sitapuzpa
+SivacaturdaSi
 Sivika
 SlIpAda
 SoDikA
@@ -466,6 +470,7 @@ bA
 bARAparRi
 bARI
 bAhU
+bAhuputra
 bAlaja
 bAlavyaYjana
 bAliKilya
@@ -476,8 +481,10 @@ bUkkan
 baDUwI
 baDUyu
 baDna
+baDryaSva
 baRik
 baWara
+babruvAhana
 badDAppi
 badarapacana
 bahAdura
@@ -490,6 +497,7 @@ ban
 banDU
 banDur
 banDyA
+barhanASva
 barhiska
 barhiz
 bariSI
@@ -581,6 +589,7 @@ daSEraka
 daSatI
 dadrUrogin
 dahuka
+dakziRabanDa
 dakziReya
 dalasUcI
 dantASlizwa
@@ -701,6 +710,7 @@ haRqa
 hanU
 harIman
 hariSravA
+haridASa
 haritakI
 harzya
 haviz
@@ -779,6 +789,7 @@ kAlapfzwa
 kAlikApUrva
 kAlpam
 kAluza
+kAmalI
 kAmatva
 kAnyAkubja
 kAraRin
@@ -899,6 +910,7 @@ kuwIka
 kuwuka
 kuwwaparAnta
 kzAp
+kzAtriya
 kzIrapAna
 kzaRA
 kzayadvira
@@ -913,6 +925,7 @@ lAvAkza
 lOhitASva
 lUta
 laSUna
+laguda
 lakzmIpatI
 laspUjani
 lawikA
@@ -1022,6 +1035,7 @@ nAmra
 nAndi
 nAndiGoza
 nApatya
+nEmizA
 nEz
 nIcikI
 nIlapiNgalA
@@ -1122,6 +1136,7 @@ padI
 padapadma
 padmavIjABa
 padvA
+pannagA
 parARasA
 parAYjana
 parApata
@@ -1184,6 +1199,7 @@ prAcInavarhis
 prAcyA
 prAgalBa
 prAhita
+prAhlAda
 prAjina
 prAjita
 prAjvalana
@@ -1249,6 +1265,7 @@ pukkaza
 puni
 puraS
 puraka
+purodA
 purunizWA
 purusakAra
 puzkaravIja
@@ -1318,6 +1335,7 @@ sArvakAma
 sAtagiri
 sA|f
 sEla
+sEneya
 sIlana
 sIrRa
 sOganDikA
@@ -1359,9 +1377,11 @@ saMsArataraRI
 saMsTApanA
 saMsargika
 saMsparSAna
+saMtatI
 saMvADa
 saNKa
 saYjA
+sacIpati
 sadASva
 sadyaS
 sahasrARIka
@@ -1399,6 +1419,7 @@ sarvarUpasaMdarSanA
 sarvataS
 sarvatanU
 sarveSA
+sarya
 satAgiri
 satkara
 satyApanA
@@ -1436,6 +1457,7 @@ stari
 stavAna
 stavi
 stritamA
+stutA
 suBadrakA
 suBita
 suBra

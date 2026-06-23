@@ -16,6 +16,10 @@ _LANG = {
     'WIL': 'en', 'BEN': 'en', 'GST': 'en', 'CAE': 'en',   # Wilson, Benfey, Goldstuecker, Cappeller (Eng)
     'MD': 'en', 'SHS': 'en',                              # Macdonell, Shabda-Sagara
     'BHS': 'en',                                          # Edgerton, Buddhist Hybrid Sanskrit Dict (Eng)
+    'PUI': 'en', 'INM': 'en', 'PE': 'en', 'YAT': 'en',   # Puranic/Mahabharata name indices, Yates (Eng)
+    'ACC': 'en', 'IEG': 'en', 'MCI': 'en', 'PGN': 'en',  # Catalogus Cat., Epigraphical Gloss., name indices
+    'VEI': 'en',                                          # Vedic Index of Names (Macdonell-Keith, Eng)
+    'KRM': 'sa',                                          # Kramadisvara dhatupatha (Sanskrit root-list)
     'PW': 'de', 'PWG': 'de', 'SCH': 'de',                # Petersburg (Boehtlingk-Roth) + Schmidt Nachtraege
     'GRA': 'de', 'CCS': 'de',                            # Grassmann (Rigveda), Cappeller (German)
     'VCP': 'sa', 'SKD': 'sa',                            # Vacaspatyam, Sabdakalpadruma (Sanskrit-Sanskrit)

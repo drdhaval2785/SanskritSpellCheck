@@ -1,0 +1,519 @@
+# PUI tier-A -- BODY-GROUNDED triage  (DRAFT; verify every kept case against the scan)
+#
+# The 494 engine tier-A candidates were judged against PUI's OWN entry text (csl-orig),
+# not spelling alone. A spelling detector cannot tell a typo from a real word, an
+# intentional variant / compounding form, or wrong-reading apparatus -- the entry can.
+# Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM
+# pass over the 'realword' set + source confirmation of every TYPO verdict.
+#
+# FINDING: of 494 tier-A candidates, 0 are body-confirmed fileable typos (0.0%).
+# 467 are real distinct words, 21 are spellings PUI documents on purpose (w.r./v.l./
+# in-comp./cross-ref -- filing them would CORRUPT PUI), 6 are not in the current
+# source, and 0 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
+# do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.
+
+# ===== BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file) (0) =====
+
+# ===== BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted (0) =====
+
+# ===== BUCKET 3  REVIEW -- undecidable without the printed page (0) =====
+
+# ===== BUCKET 4  REAL-WORD -- a distinct real word; the fix would merge two words (467) =====
+brahmaRa      -> brAhmaRa      | PUI: {%Brahmaṇa%} — a Kādraveya Nāga. Br. III. 7. 36. | "Brahmaṇa — a Kādraveya Nāga" is a named Nāga with its own citation, not the common noun b
+narA          -> nara          | PUI: {%Narā%} — the daughter of Suyagña (Śvaphalka, {%Vā. P.%}) and wife of Bhaṅgakāra; had two | "Narā — the daughter of Suyagña ... and wife of Bhaṅgakāra" is a distinct named woman with
+SarIrA        -> SarIra        | PUI: {%Śarīrā karṣaṇikalā%} — a Śakti. Br. IV. 19. 20; 36. 70; 44. 120. | "Śarīrā karṣaṇikalā — a Śakti" is a named Śakti; the headword extends beyond the bare susp
+kalpA         -> kalpa         | PUI: {%Kalpā%} — a door-keeper of Mahākāla. Br. IV. 32. 18. | "Kalpā — a door-keeper of Mahākāla" is a named entity with citation.
+kumArA        -> kumAra        | PUI: {%Kumārā%} — a R. from the Śuktimat hill. Vi. II. 3. 14. | "Kumārā — a R. from the Śuktimat hill" is a named river with citation.
+mAnasA        -> mAnasa        | PUI: {%Mānasā%} — the world above Brahmāṇḍa where live the Somapa Pitṛs;1 the country of Pitṛs  | "Mānasā — the world above Brahmāṇḍa ... the country of Pitṛs" is a named region with citat
+mArgA         -> mArga         | PUI: {%Mārgā%} — a Brahmavādin. Br. II. 33. 19. | "Mārgā — a Brahmavādin" is a named person with citation.
+nAradA        -> nArada        | PUI: {%Nāradā%} — a śakti. Br. IV. 44. 91. | "Nāradā — a śakti" is a named Śakti with citation.
+cittA         -> citta         | PUI: {%Cittā%} — a mother-goddess. M. 179. 28. | '{%Cittā%} — a mother-goddess' is a named goddess with citation.
+upaya         -> upAya         | PUI: {%Upayas%} — Śveta Parāśara group. M. 201. 36. | '{%Upayas%} — Śveta Parāśara group' is a named group with citation.
+vfkzA         -> vfkza         | PUI: {%Vṛkṣās%} — sacred as houses for the primitive man and supplied him with honey, fruits an | '{%Vṛkṣās%} — sacred as houses for the primitive man ...' is a defined index lemma with ci
+prItI         -> prIti         | PUI: {%Prītī%} (I) — a wife of the God of Love, the other being Rati; was in her previous birth | "Prītī (I) — a wife of the God of Love ... (II) — a daughter of Dakṣa" are named persons w
+Srezwa        -> SrezWa        | PUI: {%Śreṣṭa%} — a Sudhāmāna god. Br. II. 36. 28. | '{%Śreṣṭa%} — a Sudhāmāna god' is a named deity with citation.
+vivida        -> viviDa        | PUI: {%Vivida%} — a dānava. Br. III. 6. 6. | "Vivida — a dānava" is a named demon with its own citation.
+gO            -> go            | PUI: {%Gau%} (I) — the mind-born daughter of Pitṛs and wife of Śukra. Br. III. 1. 77; M. 15. 15 | "Gau (I) — the mind-born daughter of Pitṛs and wife of Śukra" is a named figure with citat
+adarSanA      -> adarSana      | PUI: {%Adarśanā%} — a mind-born mother. M. 179. 27. | "Adarśanā — a mind-born mother" is a named goddess with citation.
+anaGA         -> anaGa         | PUI: {%Anaghā%} — a R. of Śākadvīpa. Bhā. V. 20. 26. | "Anaghā — a R. of Śākadvīpa" is a named river with citation.
+anaNgA        -> anaNga        | PUI: {%Anaṅgā%} — was the Apsaras sent by Indra to ruin Hari's {%tapas.%} M. 61. 22. | "Anaṅgā — was the Apsaras sent by Indra" is a named apsaras with citation.
+hantA         -> hanta         | PUI: {%Hantā%} — one of the 20 of Amitābha gaṇa. Vā. 100. 16. | "Hantā — one of the 20 of Amitābha gaṇa" is a named gaṇa member with citation.
+jAmadagni     -> jamadagni     | PUI: {%Jāmadagni%} (I) — the sixth human incarnation of Viṣṇu with Viśvāmitra as {%purohita%} i | "Jāmadagni (I) — the sixth human incarnation of Viṣṇu" is the patronymic form (Jāmadagnya/
+kusumA        -> kusuma        | PUI: {%Kusumā%} (I) — a {%Śaktī.%} Br. IV. 36. 76. || {%Kusumā%} (II) — the city founded by Udā | "Kusumā (I) — a Śaktī ... (II) — the city founded by Udāyī" are named entities with citati
+kAli          -> kali          | PUI: {%Kāli%} — a manneya. Vā. 69. 2. || {%Kāli%} (VII) — R. a sacred river. M. 22. 20. | "Kāli — a manneya ... (VII) — R. a sacred river" are named entities with citations.
+atiTya        -> AtiTya        | PUI: {%Atithya%} — a great Brāhmaṇ. Br. I. 1. 134. | "Atithya — a great Brāhmaṇ" is a named person with citation.
+mahimAn       -> mahiman       | PUI: {%Mahimān%} (I) — a son of Bhaga and Siddhī. Bhā. VI. 18. 2. || {%Mahimān%} (II) — a son o | "Mahimān (I) — a son of Bhaga and Siddhī" is a named person with citations.
+nIlotpalA     -> nIlotpala     | PUI: {%Nīlotpalā%} — a R. of the Bhāratavarṣa. Vā. 45. 100. | "Nīlotpalā — a R. of the Bhāratavarṣa" is a named river with citation.
+potA          -> pota          | PUI: {%Potā%} — one of the 16 Ṛtviks for a {%yajña;%} created from the belly of Nārāyaṇa. M. 16 | "Potā — one of the 16 Ṛtviks for a yajña" is a named ritual figure with citation.
+AnDakAra      -> anDakAra      | PUI: {%Āndhakāra (c)%} — a kingdom after the name of Andha- kāra,1 near Pīvara hill.2 1) Br. II | "Āndhakāra (c) — a kingdom after the name of Andhakāra" is a named kingdom with citations.
+AnDaka        -> anDaka        | PUI: {%Āndhaka%} — a son of Vipracitti and  siṃhikā. Vi. I. 21. 12. | "Āndhaka — a son of Vipracitti and siṃhikā" is a named person with citation.
+SaWA          -> SaWa          | PUI: {%Śaṭhās%} — Ekārṣeyas. M. 200. 3. | "Śaṭhās — Ekārṣeyas" is a named gotra group (plural) with citation.
+SakawA        -> Sakawa        | PUI: {%Śakaṭās%} — of the Agastya family. M. 202. 1. | "Śakaṭās — of the Agastya family" is a named gotra group with citation.
+drAviRa       -> draviRa       | PUI: {%Drāviṇa%} — Mt. in the west that entered the sea for fear of Indra. M. 121. 75. | "Drāviṇa — Mt. in the west that entered the sea" is a named mountain with citation.
+haMsA         -> haMsa         | PUI: {%Haṃsā%} — a Laukikya Apsaras. Br. III. 7. 10. | "Haṃsā — a Laukikya Apsaras" is a named apsaras with citation.
+kambalA       -> kambala       | PUI: {%Kambalā%} — a R. of the Ketumāla continent. Vā. 44. 17. | "Kambalā — a R. of the Ketumāla continent" is a named river with citation.
+mADavA        -> mADava        | PUI: {%Mādhavā%} — an Apsarasa sent by Indra to destroy Viṣṇu's {%tapas.%} M. 61. 22. | "Mādhavā — an Apsarasa sent by Indra to destroy Viṣṇu's tapas" is a named apsaras with cit
+maDava        -> mADava        | PUI: {%Madhava%} (III) — a son of Auttama Manu. M. 9. 12. | "Madhava (III) — a son of Auttama Manu" is a named person with citation (numbered entry).
+manava        -> mAnava        | PUI: {%Manavas%} — twelve sons of Brahmā with {%mantraśarīras.%} Vā. 67. 6. | "Manavas — twelve sons of Brahmā with mantraśarīras" is a named group with citation.
+nirBayA       -> nirBaya       | PUI: {%Nirbhayā%} — a mind-born mother. M. 179. 25. | "Nirbhayā — a mind-born mother" is a named goddess with citation.
+pavanA        -> pavana        | PUI: {%Pavanās%} — a tribe. Br. III. 73. 108. | "Pavanās — a tribe" is a named tribe with citation.
+pradozA       -> pradoza       | PUI: {%Pradoṣā%} — a Śakti on the Soḍaśapatrābjā. Br. IV. 32. 12. | "Pradoṣā — a Śakti on the Soḍaśapatrābjā" is a named Śakti with citation.
+sArasA        -> sArasa        | PUI: {%Sārasā%} — one of the six charioteers of Lalitā. Br. IV. 20. 92. | "Sārasā — one of the six charioteers of Lalitā" is a named figure with citation.
+vatsarA       -> vatsara       | PUI: {%Vatsarā%} — a Śakti. Br. IV. 32. 16. | "Vatsarā — a Śakti" is a named Śakti with citation.
+vikarRA       -> vikarRa       | PUI: {%Vikarṇās%} — a tribe. M. 121. 54. | "Vikarṇās — a tribe" is a named tribe with citation.
+yAmunA        -> yamunA        | PUI: {%Yāmunā%} — on its north bank was situated Pratiṣṭhāna Vā. 91. 50. | "Yāmunā — on its north bank was situated Pratiṣṭhāna" is the adjectival river name (Yāmunā
+SyenA         -> Syena         | PUI: {%Śyenā%} — a R. of the Ṛkṣa hill. Br. II. 16. 30. | "Śyenā — a R. of the Ṛkṣa hill" is a named river with citation.
+dUzaRA        -> dUzaRa        | PUI: {%Dūṣaṇā%} — the queen of Bhauvana and mother of Tvaṣṭā. Bhā. V. 15. 15. | "Dūṣaṇā — the queen of Bhauvana and mother of Tvaṣṭā" is a named queen with citation.
+piSAcA        -> piSAca        | PUI: {%Piśācās%} — a kind of semi-divine beings governed by Śiva;1 three steps inferior to the  | "Piśācās — a kind of semi-divine beings governed by Śiva" is a named class with citations.
+salilA        -> salila        | PUI: {%Salilā%} — a mind-born mother. M. 179. 20. | "Salilā — a mind-born mother" is a named goddess with citation.
+sarvajYA      -> sarvajYa      | PUI: {%Sarvajñā%} — a śakti, in the Sarvajñādyantaram — a pro- tection of cakra. Br. IV. 19. 42 | "Sarvajñā — a śakti, in the Sarvajñādyantaram" is a named Śakti with citations.
+vitAnA        -> vitAna        | PUI: {%Vitānā%} — the mother of Bṛhadbhānu. Bhā. VIII. 13. 35. | "Vitānā — the mother of Bṛhadbhānu" is a named person with citation.
+svarRA        -> svarRa        | PUI: {%Svarṇā%} — a daughter of Samudra and wife of Prācīna- barhis. Vā. 63. 25. | '{%Svarṇā%} — a daughter of Samudra and wife of Prācīnabarhis' is a named figure with cita
+vAhA          -> vAha          | PUI: {%Vāhā%} — a R. of the Ketumālā continent. Vā. 44. 20. || {%Vāhās%} — a Janapada of the Ke | '{%Vāhā%} — a R. of the Ketumālā continent' and a Janapada are named entities with citatio
+kfpaRA        -> kfpaRa        | PUI: {%Kṛpaṇā%} — a deity. Br. IV. 27. 38. | '{%Kṛpaṇā%} — a deity' is a named deity with citation.
+klamA         -> klama         | PUI: {%Klamā%} — a chief R. of Plakṣadvīpa. Vi. II. 4. 11. | '{%Klamā%} — a chief R. of Plakṣadvīpa' is a named river with citation.
+koRA          -> koRa          | PUI: {%Koṇā%} — a mother goddess. M. 179. 28. | '{%Koṇā%} — a mother goddess' is a named goddess with citation.
+lokapAlA      -> lokapAla      | PUI: {%Lokapālās%} — eight in number, each with a city of his own situated in the eight cardina | '{%Lokapālās%} — eight in number, each with a city of his own' is a defined named class wi
+nirguRA       -> nirguRa       | PUI: {%Nirguṇā%} — a third {%mātra%} of {%Om.%} Vā. 20. 2. | '{%Nirguṇā%} — a third mātra of Om' is a named entity with citation.
+pASupatA      -> pASupata      | PUI: {%Pāśupatās%} — followers of the Pāśupata yogam. Br. III. 32. 5. | '{%Pāśupatās%} — followers of the Pāśupata yogam' is a named sect with citation.
+prayAgA       -> prayAga       | PUI: {%Prayāgā%} (I) — a {%tīrtha%} sacred to Hari. Sages of this place visited Dvārakā; was vi | '{%Prayāgā%} (I) — a tīrtha sacred to Hari' is a named tīrtha with extensive citations.
+sTaRqilA      -> sTaRqila      | PUI: {%Sthaṇḍilā%} — one of the 10 Pīṭhas for images, square and with no {%mekhala;%} this lead | '{%Sthaṇḍilā%} — one of the 10 Pīṭhas for images' is a named pīṭha with citations.
+vaktrA        -> vaktra        | PUI: {%Vaktrā%} — a R. in the Bhadrā continent. Vā. 43. 25. | '{%Vaktrā%} — a R. in the Bhadrā continent' is a named river with citation.
+varAnana      -> varAnanA      | PUI: {%Varānana%} — a daughter of the Gandharvas. Vā. 69. 10. | '{%Varānana%} — a daughter of the Gandharvas' is a named figure with citation.
+vikArA        -> vikAra        | PUI: {%Vikārās%} — derivatives from Prakṛti of which there are sixteen (eleven organs and five  | '{%Vikārās%} — derivatives from Prakṛti ... sixteen' is a defined Sāṅkhya index lemma with
+waNkaRA       -> waNkaRa       | PUI: {%Ṭaṅkaṇās%} — the horses of Ṭaṅkaṇa country. Br. IV. 16. 16. | '{%Ṭaṅkaṇās%} — the horses of Ṭaṅkaṇa country' is a named group with citation.
+yUTapA        -> yUTapa        | PUI: {%Yūthapās%} — Dhūmra Parāśaras. M. 201. 38. | '{%Yūthapās%} — Dhūmra Parāśaras' is a named group with citation.
+utkfzwA       -> utkfzwa       | PUI: {%Utkṛṣṭā%} — a daughter of Khaśa, after whom came the {%Autkārṣṭeya gaṇa.%} Br. III. 7. 1 | '{%Utkṛṣṭā%} — a daughter of Khaśa, after whom came the Autkārṣṭeya gaṇa' is a named figur
+DvanI         -> Dvani         | PUI: {%Dhvanī%} — a goddess enshrined at Śaṅkhoddhāra. M. 13. 48. | "Dhvanī — a goddess enshrined at Śaṅkhoddhāra" is a named goddess with citation.
+dyutI         -> dyuti         | PUI: {%Dyutī%} — left her consort Vibhāvasu and loved Soma with eight other Devis. M. 23. 24. | "Dyutī — left her consort Vibhāvasu and loved Soma" is a named Devi with citation.
+jimUta        -> jImUta        | PUI: {%Jimūtas%} — clouds of the Āgneya type without lightning; under the control of Pravāha ai | "Jimūtas — clouds of the Āgneya type" is a named class with citations (attested short-i va
+mUrtI         -> mUrti         | PUI: {%Mūrtī%} — a daughter of Dakṣa, and a wife of Dharma; mother of Nara and Nārāyaṇa. Bhā. I | "Mūrtī — a daughter of Dakṣa, and a wife of Dharma" is a named person with citations.
+SrAvasti      -> SrAvastI      | PUI: {%Śrāvasti%} — the city built by Śrāvasta of the Ikṣvāku line; capital of Uttarakośala whe | '{%Śrāvasti%} — the city built by Śrāvasta ... capital of Uttarakośala' is the named city 
+pOrRamAsi     -> pOrRamAsI     | PUI: {%Paurṇamāsi%} (I) — the Devī of the 27th Kalpa became a twin. Vā. 21. 62, 68. || {%Paurṇa | '{%Paurṇamāsi%} (I) — the Devī of the 27th Kalpa' and (II) the Full Moon day are named ent
+sTitI         -> sTiti         | PUI: {%Sthitī%} (I) — a Kalā of Brahmā. Br. IV. 35. 94. || {%Sthitī%} (II) — a Kalā of Hari Br. | '{%Sthitī%} (I) — a Kalā of Brahmā' and further senses are named entities with citations.
+stutI         -> stuti         | PUI: {%Stutī%} — the wife of Pratihartā and mother of Aja and Bhūman. Bhā. V. 15. 5. | '{%Stutī%} — the wife of Pratihartā and mother of Aja and Bhūman' is a named figure with c
+dAsi          -> dAsI          | PUI: {%Dāsi%} (I) — Slaves as present to learned men. Br. II. 34. 39. || {%Dāsi%} (II) — of fou | '{%Dāsi%} (I) — Slaves as present to learned men' with a second sense; defined index lemma
+Sukfta        -> sukfta        | PUI: {%Śukṛta%} (I) — a son of Vasiṣṭha and a Prajāpati of the Svārociṣa epoch. M. 9. 9. | "Śukṛta (I) — a son of Vasiṣṭha and a Prajāpati" is a named person with citation.
+Svara         -> svara         | PUI: {%Śvara%} — a son of Dadhīci. Vā. 21. 42. | "Śvara — a son of Dadhīci" is a named person with citation.
+sOnaka        -> SOnaka        | PUI: {%Saunaka%} — a Bhārgava gotra. Vā. 65. 96. | "Saunaka — a Bhārgava gotra" is a named gotra with citation (Saunaka, not Śaunaka, is the 
+SUri          -> sUri          | PUI: {%Śūri%} — a name of Kṛṣṇa born to Devaki. M. 46. 15. | '{%Śūri%} — a name of Kṛṣṇa born to Devaki' is a named epithet with citation.
+sEtya         -> SEtya         | PUI: {%Saitya%} — a sage having no marriage alliances with Bṛhas- pati, Bharadvāja, Garga, etc. | '{%Saitya%} — a sage having no marriage alliances with Bṛhaspati ...' is a named sage with
+ganDamADana   -> ganDamAdana   | PUI: {%Gandhamādhana%} — a division of Jambūdvīpa. Vi. II. 1. 23. | "Gandhamādhana — a division of Jambūdvīpa" is a named region with citation.
+titi          -> tiTi          | PUI: {%Titi%} — a Śakti on the Nāga patra. Br. IV. 32. 17. | "Titi — a Śakti on the Nāga patra" is a named Śakti with citation.
+bOma          -> BOma          | PUI: {%Bauma%} — a Saiṃhikeya. Vā. 68. 19. | "Bauma — a Saiṃhikeya" is a named demon with citation.
+anuzwub       -> anuzwuB       | PUI: {%Anuṣṭub%} — a poetic metre;1 a horse yoked to the sun's chariot;2 from the fourth face o | '{%Anuṣṭub%} — a poetic metre; a horse yoked to the sun's chariot' is a named entity with 
+kAmBoja       -> kAmboja       | PUI: {%Kāmbhojas%} — a northern kingdom noted for horses.1 Their king Sudakṣiṇa was an ally of  | '{%Kāmbhojas%} — a northern kingdom noted for horses' is the named people with extensive c
+biBIzaRa      -> viBIzaRa      | PUI: {%Bibhīṣaṇa%} — a son of Bali. M. 6. 11. | '{%Bibhīṣaṇa%} — a son of Bali' is a distinct named person (B-, not Rāvaṇa's brother) with
+paYcadaSam    -> paYcadaSan    | PUI: {%Pañcadaśam%} — a svara variety of a {%sāma.%} Br. II. 8. 51, 52; Vā. 9. 49. | '{%Pañcadaśam%} — a svara variety of a sāma' is a named entity with citations.
+savitri       -> savitf        | PUI: {%Savitri%} — a son of Aditi, married Pṛṣṇi in the Vaivas- vata and became father of Sāvit | '{%Savitri%} — a son of Aditi ... father of Sāvitri' is a named figure with extensive cita
+viDAtri       -> viDAtf        | PUI: {%Vidhātri%} (I) — a son of Khyātī and Bhṛgu, married Niyatī, (Āyatī-{%Vā. P.%}) a daughte | '{%Vidhātri%} (I) — a son of Khyātī and Bhṛgu' with four senses; named figure with citatio
+SalaBA        -> SalaBa        | PUI: {%Śalabhā%} — one of the ten wives of Ahi. Br. III. 8. 75. | "Śalabhā — one of the ten wives of Ahi" is a named wife with citation.
+SravA         -> Srava         | PUI: {%Śravā%} — a son of Bhṛgu. Vā. 65. 87. | "Śravā — a son of Bhṛgu" is a named person with citation.
+arUpA         -> arUpa         | PUI: {%Arūpā%} — a daughter of Riṣṭa. Br. III. 7. 13; Vā. 69. 48. | "Arūpā — a daughter of Riṣṭa" is a named person with citations.
+kaYcI         -> kAYcI         | PUI: {%Kañcī%} — in the {%liṅga deśa%} of the personified Veda. Vā. 104. 76. || {%Kañcī%} — a R | "Kañcī — in the liṅga deśa ... a R. of the Ketumāla country" is a named place/river with c
+vidiSa        -> vidiSA        | PUI: {%Vidiśa%} — a particular locality between the Cakra (Candra-{%Vā. P.%}) and Maināka hills | "Vidiśa — a particular locality between the Cakra and Maināka hills" is a named locality w
+AhukA         -> Ahuka         | PUI: {%Āhukās%} — the people of an eastern kingdom. Br. II. 16. 52; Vā. 45. 121. | "Āhukās — the people of an eastern kingdom" is a named people with citations.
+AnakA         -> Anaka         | PUI: {%Ānakā%} — a son of Ugrasena. Vi. IV. 14. 20. | "Ānakā — a son of Ugrasena" is a named person with citation.
+Arizwanemi    -> arizwanemi    | PUI: {%Āriṣṭanemi%} (VI) — a son of Citraka; daughter Sumati, wife of Sagara. Br. III. 71. 115; | "Āriṣṭanemi (VI) — a son of Citraka" is a named person under its own numbered headword wit
+Avanti        -> avanti        | PUI: {%Āvantis%} — a tribe. M. 114. 36. | "Āvantis — a tribe" is a named tribe with citation.
+SAryAti       -> SaryAti       | PUI: {%Śāryāti%} — a son of Svāyambhuva Manu. Br. II. 38. 30. | "Śāryāti — a son of Svāyambhuva Manu" is a named person with citation (attested patronymic
+akUti         -> AkUti         | PUI: {%Akūti%} (III) — the wife of Pṛthusena and mother of Nakta. Bhā. V. 15. 6. | "Akūti (III) — the wife of Pṛthusena and mother of Nakta" is a named person under its own 
+devavrAta     -> devavrata     | PUI: {%Devavrāta%} — the chief among the Brāhmaṇas who in appreciation of the wood-cutter's cha | "Devavrāta — the chief among the Brāhmaṇas who ... renamed him Dvijavarma" is a named pers
+draviqA       -> draviqa       | PUI: {%Draviḍā%} — a daughter of Tṛṇabindu and mother of Viśravas. Vā. 86. 16. | "Draviḍā — a daughter of Tṛṇabindu and mother of Viśravas" is a named person with citation
+jAlaDi        -> jalaDi        | PUI: {%Jāladhi%} — a Bhārgavagotrakara. M. 195. 22. | "Jāladhi — a Bhārgavagotrakara" is a named gotra-founder with citation.
+kAmarUpA      -> kAmarUpa      | PUI: {%Kāmarūpā%} — a mindborn mother. M. 179. 21. | "Kāmarūpā — a mindborn mother" is a named goddess with citation.
+kArUzA        -> kArUza        | PUI: {%Kārūṣās%} — descendants of Karūṣa, the son of Vaivasvata Manu1 and, kings of Uttarāpatha | "Kārūṣās — descendants of Karūṣa ... a Kṣatriya clan" is a named clan with citations.
+kzIrodA       -> kzIroda       | PUI: {%Kṣīrodā%} — a R. of the Bhadrā. Vā. 43. 29. | "Kṣīrodā — a R. of the Bhadrā" is a named river with citation.
+makaraDvajA   -> makaraDvaja   | PUI: {%Makaradhvajā%} — a śakti. Br. IV. 44. 74. | "Makaradhvajā — a śakti" is a named Śakti with citation.
+mudgalA       -> mudgala       | PUI: {%Mudgalā%} — a Brahmavādinī. Br. II. 33. 18. | "Mudgalā — a Brahmavādinī" is a named female sage with citation.
+nABAgA        -> nABAga        | PUI: {%Nābhāgās%} — a royal dynasty. Br. II. 35. 96. | "Nābhāgās — a royal dynasty" is a named dynasty with citation.
+nikumBA       -> nikumBa       | PUI: {%Nikumbhā%} — a mind-born mother. M. 179. 26. | "Nikumbhā — a mind-born mother" is a named goddess with citation.
+pOlomA        -> pOloma        | PUI: {%Paulomā (ī)%} — a daughter of Puloma and wife of Bhṛgu the sage;1 mother of twelve sons, | "Paulomā (ī) — a daughter of Puloma and wife of Bhṛgu" is a named person with citations.
+pOrRamAsA     -> pOrRamAsa     | PUI: {%Paurṇamāsās%} — Trayārṣeyas; no marriage alliance with Pāraṇa an Agastya. M. 202. 4. | "Paurṇamāsās — Trayārṣeyas" is a named gotra group with citation.
+paYcajanya    -> pAYcajanya    | PUI: {%Pañcajanya%} — an {%Upadvīpa%} to Jambūdvīpa. Bhā. V. 19. 30. | "Pañcajanya — an Upadvīpa to Jambūdvīpa" is a named island with citation.
+prAdyota      -> pradyota      | PUI: {%Prādyotas%} — five kings from Pradyota to Nandivar- dhana; ruled for 138 years. Br. III. | "Prādyotas — five kings from Pradyota to Nandivardhana" is a named dynasty (descendants of
+praBaYjanA    -> praBaYjana    | PUI: {%Prabhañjanā%} — a R. in the Ketumālā continent. Vā. 44. 18. | "Prabhañjanā — a R. in the Ketumālā continent" is a named river with citation.
+sampati       -> sampAti       | PUI: {%Sampati%} — a son of Aruṇa and Gṛdhri; father of Vijaya and Prasaha. Br. III. 7. 447. | "Sampati — a son of Aruṇa and Gṛdhri; father of Vijaya and Prasaha" is a named person with
+tvazwra       -> tvAzwra       | PUI: {%Tvaṣṭra%} (I) — an architect of Gods; he built Dvāravati for Kṛṣṇa. Bhā. X. 69. 7. | "Tvaṣṭra (I) — an architect of Gods; he built Dvāravati for Kṛṣṇa" is a named figure with 
+ugrasenA      -> ugrasena      | PUI: {%Ugrasenā%} — a wife of Akrūra, and mother of Devavān and Upadeva. M. 45. 31. | "Ugrasenā — a wife of Akrūra, and mother of Devavān and Upadeva" is a named woman with cit
+ulmukA        -> ulmuka        | PUI: {%Ulmukā%} (I) — a son of Cākṣusa Manu and Naḍvalā. His queen was Puṣkariṇī. Father of six | "Ulmukā (I) — a son of Cākṣusa Manu and Naḍvalā" is a named person with citation.
+uparAgA       -> uparAga       | PUI: {%Uparāgā%} — a {%śakti.%} Br. IV. 32. 13. | "Uparāgā — a śakti" is a named Śakti with citation.
+vErAjA        -> vErAja        | PUI: {%Vairājās%} (I) — the first gods created by Brahmā to occupy the first worlds by name San | "Vairājās (I) — the first gods created by Brahmā" is a named class of gods with citations.
+varUTA        -> varUTa        | PUI: {%Varūthā%} — an Apsaras. Br. III. 7. 11. | "Varūthā — an Apsaras" is a named apsaras with citation.
+vazawkArA     -> vazawkAra     | PUI: {%Vaṣaṭkārā%} — a mind-born mother. M. 179. 20. | "Vaṣaṭkārā — a mind-born mother" is a named goddess with citation.
+viBrAjA       -> viBrAja       | PUI: {%Vibhrājās%} — the pitṛs in the Barhiṣada worlds. M. 15. 1. | "Vibhrājās — the pitṛs in the Barhiṣada worlds" is a named class of pitṛs with citation.
+vinAyakA      -> vinAyaka      | PUI: {%Vināyakās%} (I) — a variety of evil spirits;1 a group of Bhūtas, followers of Śiva2 1) B | "Vināyakās (I) — a variety of evil spirits" is a named class with citations.
+zaRqA         -> zaRqa         | PUI: {%Ṣaṇḍā%} — a śakti. Br. IV. 44. 91. | "Ṣaṇḍā — a śakti" is a named Śakti with citation.
+arhata        -> Arhata        | PUI: {%Arhatas%} — the Asuras who performed penance on the Narmadā, were deluded by Viṣṇu {%Māy | '{%Arhatas%} — the Asuras who performed penance on the Narmadā' is a named group with cita
+senAjit       -> senajit       | PUI: {%Senājit%} (I) — a son of Kṛśāśva and father of Yuvanāśva. Bhā. IX. 6. 25. || {%Senājit%} | '{%Senājit%} (I) — a son of Kṛśāśva' with ten senses; a named dynastic figure with citatio
+vijYApanA     -> vijYApana     | PUI: {%Vijñāpanā%} — a chief door-keeper in Geyacakraratha. Br. IV. 19. 88. | '{%Vijñāpanā%} — a chief door-keeper in Geyacakraratha' is a named figure with citation.
+DarmaSAstrA   -> DarmaSAstra   | PUI: {%Dharmaśāstrās%} — a Vidyā; Law books to be learnt by a Prince;1 known to Sūta;2 learnt b | '{%Dharmaśāstrās%} — a Vidyā; Law books to be learnt by a Prince' is a defined index lemma
+SAntikA       -> SAntika       | PUI: {%Śāntikā%} — a mother goddess. M. 179. 28. | '{%Śāntikā%} — a mother goddess' is a named goddess with citation.
+apARqu        -> ApARqu        | PUI: {%Apāṇḍu%} — a sage. M. 196. 45. | '{%Apāṇḍu%} — a sage' is a named sage with citation.
+avikArA       -> avikAra       | PUI: {%Avikārā%} — a mindborn mother. M. 179. 26. | '{%Avikārā%} — a mindborn mother' is a named goddess with citation.
+deSikA        -> deSika        | PUI: {%Deśikās%} — ordinary teachers. Br. IV. 8. 5. | '{%Deśikās%} — ordinary teachers' is a defined index lemma with citation.
+ekAzwaka      -> ekAzwakA      | PUI: {%Ekāṣṭaka%} — the final form attained in {%Brahmaloka%} by Virajā, the mindborn daughter  | '{%Ekāṣṭaka%} — the final form attained in Brahmaloka by Virajā' is a named entity with ci
+gajAnAna      -> gajAnana      | PUI: {%Gajānāna%} — is Gaṇeśa. Br. III. 41. 54: 42. 35: 44. 51: IV. 27. 72. M. 154. 505. | '{%Gajānāna%} — is Gaṇeśa' is a named epithet (attested -āna spelling) with citations.
+manoBavA      -> manoBava      | PUI: {%Manobhavā%} — an Apsarasa. Br. III. 7. 7. | '{%Manobhavā%} — an Apsarasa' is a named apsaras with citation.
+ozA           -> oza           | PUI: {%Oṣā%} — the wife of Bhava; son was Uśanas. Vā. 27. 50. | '{%Oṣā%} — the wife of Bhava; son was Uśanas' is a named figure with citation.
+paYcaguRA     -> paYcaguRa     | PUI: {%Pañcaguṇās%} — these are {%śabda, sparśa, rūpa, rasa%} and {%gandha.%} Vā. 4. 68. | '{%Pañcaguṇās%} — these are śabda, sparśa, rūpa, rasa and gandha' is a defined index lemma
+pahlavA       -> pahlava       | PUI: {%Pahlavās%} — defeated by Paraśurāma;1 attacked by Bāhu and defeated by Sagara;2 punished | '{%Pahlavās%} — defeated by Paraśurāma ...' is a named people with citations.
+parAtparA     -> parAtpara     | PUI: {%Parātparā%} — is Lalitā. Br. IV. 13. 1 and 5. | '{%Parātparā%} — is Lalitā' is a named epithet with citations.
+paravft       -> parAvft       | PUI: {%Paravṛt%} — a son of Rukmakavaca and father of five sons. Vi. IV. 12. 10-11. | '{%Paravṛt%} — a son of Rukmakavaca and father of five sons' is a distinct named person wi
+sarUpya       -> sArUpya       | PUI: {%Sarūpya%} — a son of Duṣkanta and father of Aṇḍīra. Br. III. 74. 5. | '{%Sarūpya%} — a son of Duṣkanta and father of Aṇḍīra' is a distinct named person with cit
+sucirA        -> sucira        | PUI: {%Sucirā%} — a Mother Goddess. M. 179. 29. | '{%Sucirā%} — a Mother Goddess' is a named goddess with citation.
+suparvAn      -> suparvan      | PUI: {%Suparvān%} (I) — a god of Sukarmāṇa group. Br. IV. 1. 88; Vā. 100. 92. || {%Suparvān%} ( | '{%Suparvān%} (I) — a god of Sukarmāṇa group' and (II) an Asura are named entities with ci
+tAmarasA      -> tAmarasa      | PUI: {%Tāmarasā%} — one of Atri's wives. Br. III. 8. 76. | '{%Tāmarasā%} — one of Atri's wives' is a named figure with citation.
+uttamArRa     -> uttamarRa     | PUI: {%Uttamārṇas%} — A tribe of the Vindhya regions. Vā. 45. 132. | '{%Uttamārṇas%} — A tribe of the Vindhya regions' is a named tribe with citation.
+viSudDA       -> viSudDa       | PUI: {%Viśuddhās%} — a group of gods of the X epoch of Manu. Vi. III. 2. 25. | '{%Viśuddhās%} — a group of gods of the X epoch of Manu' is a named group with citation.
+vimocanA      -> vimocana      | PUI: {%Vimocanā (nī)%} — R. a main stream of Sālmalidvīpa. Vi. II. 4. 28; Vā. 49. 42; Br. II. 1 | '{%Vimocanā (nī)%} — R. a main stream of Sālmalidvīpa' is a named river with citations.
+vizRupAda     -> vizRupada     | PUI: {%Viṣṇupāda%} — the celestial regions where Dhruva holds the Bhagavatpadī on his head with | '{%Viṣṇupāda%} — the celestial regions where Dhruva holds the Bhagavatpadī' is a named pla
+vizaDAra      -> vizaDara      | PUI: {%Viṣadhāra%} — a Mt. south of the Mānasa. Vā. 36. 23. | '{%Viṣadhāra%} — a Mt. south of the Mānasa' is a named mountain with citation.
+AlambA        -> Alamba        | PUI: {%Ālambā%} — a daughter of Khaśā, and a Rākṣasī, after whom came the {%Ālambeya gaṇa.%} Br | "Ālambā — a daughter of Khaśā, and a Rākṣasī" is a named being with its own Br./Vā. citati
+ekaSfNgA      -> ekaSfNga      | PUI: {%Ekaśṛṅgā%} — the queen of Śukra, formerly {%Yogotpatti,%} the {%pitṛ kanyā.%} Br. III. 1 | "Ekaśṛṅgā — the queen of Śukra" is a named (feminine) figure with its own Br. citation.
+nizaDA        -> nizaDa        | PUI: {%Niṣadhā%} — a R. from the Vindhyas. Br. II. 16. 32; Vā. 45. 102. | "Niṣadhā — a R. from the Vindhyas" is a named river with its own Br./Vā. citations.
+pippalA       -> pippala       | PUI: {%Pippalā%} — a R. of the Bhāratavarṣa from the Ṛkṣa hill. Br. II. 16. 30. Vā. 45. 100. | "Pippalā — a R. of the Bhāratavarṣa from the Ṛkṣa hill" is a named river with its own cita
+sarUpA        -> sarUpa        | PUI: {%Sarūpā%} — a wife of Bhūta; brought forth innumerable Rudras. Bhā. VI. 6. 17-18. | "Sarūpā — a wife of Bhūta; brought forth innumerable Rudras" is a named figure with its ow
+supratizWitA  -> supratizWita  | PUI: {%Supratiṣṭhitā%} — an Apsaras. Vā. 69. 6. | "Supratiṣṭhitā — an Apsaras" is a named apsaras with its own Vā. citation.
+surottamA     -> surottama     | PUI: {%Surottamā%} — an Apsaras. Vā. 69. 4. | "Surottamā — an Apsaras" is a named apsaras with its own Vā. citation.
+sutaptA       -> sutapta       | PUI: {%Sutaptā%} — a R. of the Plakṣadvīpa. Vā. 49. 17. | "Sutaptā — a R. of the Plakṣadvīpa" is a named river with its own Vā. citation.
+vajrahastA    -> vajrahasta    | PUI: {%Vajrahastā%} — a mind-born mother. M. 179. 16. | "Vajrahastā — a mind-born mother" is a named mother with its own M. citation.
+nizpApA       -> nizpApa       | PUI: {%Niṣpāpā%} — a R. of the Plakṣadvīpa. Vā. 49. 17. | "Niṣpāpā — a R. of the Plakṣadvīpa" is a named river with its own Vā. citation.
+AgniDra       -> AgnIDra       | PUI: {%Āgnidhra%} (IV) — one of the 16 {%Ṛtviks%} for an {%Yajña;%} created from the hands of N | "Āgnidhra (IV) — one of the 16 Ṛtviks for an Yajña" is a named ritual figure under its own
+aBizAha       -> aBIzAha       | PUI: {%Abhiṣāha%} — a northern kingdom. Br. II. 16. 48. | "Abhiṣāha — a northern kingdom" is a named kingdom with citation.
+qAkini        -> qAkinI        | PUI: {%Ḍākini%} (I) — an attendant on Śiva. Br. III. 41. 30. | "Ḍākini (I) — an attendant on Śiva" is a named attendant under its own numbered headword w
+Agneyi        -> AgneyI        | PUI: {%Āgneyi%} (I) — the city of Agni. Bhā. X. 89. 44. | "Āgneyi (I) — the city of Agni" is a named city under its own numbered headword with citat
+AnakadunduBI  -> AnakadunduBi  | PUI: {%Ānakadundubhī%} — a previous name of Vasudeva. (s.v.)1 When he was born {%Dundubhi%} and | "Ānakadundubhī — a previous name of Vasudeva" is an attested epithet/name with citations.
+IrA           -> irA           | PUI: {%Īrā%} — a R. mahānadī. Vā. 108. 79. | "Īrā — a R. mahānadī" is a named great river with citation.
+avIcI         -> avIci         | PUI: {%Avīcī%} — the fifth hell under the earth; torture by machinery. Vā. 101. 179, 182; 112.  | "Avīcī — the fifth hell under the earth" is a named hell with citations.
+jayanti       -> jayantI       | PUI: {%Jayanti%} (IV) — a goddess enshrined at Hastināpura; a mother-goddess. M. 13. 28; 179. 1 | "Jayanti (IV) — a goddess enshrined at Hastināpura" is a named goddess under its own numbe
+nAgavITi      -> nAgavITI      | PUI: {%Nāgavīthi%} — the northern course; three periods of sunrise here in Aśvini, Kṛttikā, and | "Nāgavīthi — the northern course" is a named celestial path with citations.
+nIdAGa        -> nidAGa        | PUI: {%Nīdāgha%} — son of Pulastya; initiated into {%jñāna%} by Ṛbhu. Engaged himself in auster | "Nīdāgha — son of Pulastya; initiated into jñāna by Ṛbhu" is a named sage with citation.
+nIramitra     -> niramitra     | PUI: {%Nīramitra%} — a son of Nakuli by Kareṇumatī. M. 50. 55. | "Nīramitra — a son of Nakuli by Kareṇumatī" is a named person with citation.
+surucI        -> suruci        | PUI: {%Surucī%} (I) — the Yakṣa presiding over the month of Tapas. Bhā. XII. 11. 39. | "Surucī (I) — the Yakṣa presiding over the month of Tapas" is a named Yakṣa under its own 
+vArAhi        -> vArAhI        | PUI: {%Vārāhi%} — a Pravara (Aṅgiras). M. 196. 12, 13. | "Vārāhi — a Pravara (Aṅgiras)" is a named pravara with citation.
+godAvari      -> godAvarI      | PUI: {%Godāvari%} — R. from the Sahya hill, the northern part of the Sahya where the Godāvari i | '{%Godāvari%} — R. from the Sahya hill' is the named river with extensive citations.
+AnvIkziki     -> AnvIkzikI     | PUI: {%Ānvīkṣiki%} ({%Adhyātmakī vidyā,%} s.v.) — Taught by Dat- tātreya to Alarka and others.1 | '{%Ānvīkṣiki%} (Adhyātmakī vidyā) — Taught by Dattātreya to Alarka' is a named vidyā with 
+Palguni       -> PalgunI       | PUI: {%Phalguni%} — the name of an asterism. Vā. 82. 6. | '{%Phalguni%} — the name of an asterism' is a named nakṣatra with citation.
+SARqili       -> SARqilI       | PUI: {%Śāṇḍili%} — sacred for śrāddha. Br. III. 19. 92. | '{%Śāṇḍili%} — sacred for śrāddha' is a named tīrtha with citation.
+ganDarvi      -> ganDarvI      | PUI: {%Gandharvi%} — the name om rising from Gāndhāra. Vā. 20. 3. | '{%Gandharvi%} — the name om rising from Gāndhāra' is a named entity with citation.
+hastini       -> hastinI       | PUI: {%Hastini%} — a son of Bhadra. Vā. 69. 213. | '{%Hastini%} — a son of Bhadra' is a distinct named person with citation.
+kzAntI        -> kzAnti        | PUI: {%Kṣāntī%} — the main stream of Krauñcadvīpa. Vi. II. 4. 55. | '{%Kṣāntī%} — the main stream of Krauñcadvīpa' is a named river with citation.
+pradeSini     -> pradeSinI     | PUI: {%Pradeśini%} — the index finger used for measuring {%aṅgulas.%} Vā. 8. 103. | '{%Pradeśini%} — the index finger used for measuring aṅgulas' is a defined index lemma wit
+pratIci       -> pratIcI       | PUI: {%Pratīci%} — a Ṛ. in the Draviḍa country. Bhā. XI. 5. 40. | '{%Pratīci%} — a Ṛ. in the Draviḍa country' is a named river with citation.
+sOdAmani      -> sOdAmanI      | PUI: {%Saudāmani%} — the lightning of the sky, a daughter of Vinatā. M. 6. 34. | '{%Saudāmani%} — the lightning of the sky, a daughter of Vinatā' is a named figure with ci
+sTalapadmini  -> sTalapadminI  | PUI: {%Sthalapadmini%} — in Ekāśiladeśa between Kṛṣṇa and Pāṇḍura Mts; in the middle is nyagrod | '{%Sthalapadmini%} — in Ekāśiladeśa between Kṛṣṇa and Pāṇḍura Mts' is a named place with c
+samBUtI       -> samBUti       | PUI: {%Sambhūtī%} (I) — a wife of Vairāja. Bhā. VIII. 5. 9. || {%Sambhūtī%} (II) — a wife of Ja | '{%Sambhūtī%} (I) — a wife of Vairāja' with multiple senses; named figure with citations.
+satkftI       -> satkfti       | PUI: {%Satkṛtī%} — a wife of Mahāyaśa. M. 49. 37. | '{%Satkṛtī%} — a wife of Mahāyaśa' is a named figure with citation.
+tripurArI     -> tripurAri     | PUI: {%Tripurārī%} — an epithet of Rudra; Śiva with 16 hands danced in joy at the ruin of the c | '{%Tripurārī%} — an epithet of Rudra' is a named epithet with citations.
+puruvasu      -> purUvasu      | PUI: {%Puruvasu%} — a son of Madhu and father of Purudvān. Br. III. 70. 46. | '{%Puruvasu%} — a son of Madhu and father of Purudvān' is a distinct named person with cit
+SuSravas      -> suSravas      | PUI: {%Śuśravas%} — a Prajāpati. Br. III. 1. 53. | "Śuśravas — a Prajāpati" is a named Prajāpati with citation.
+asmaka        -> aSmaka        | PUI: {%Asmakas%} — of the {%Dākṣiṇātya%} country. Vā. 45. 127. | "Asmakas — of the Dākṣiṇātya country" is a named people under their own headword with cita
+sanEScara     -> SanEScara     | PUI: {%Sanaiścara%} (I) — (Saturn) Śrutakarma, traverses each sign of the zodiac in thirty mont | "Sanaiścara (I) — (Saturn) Śrutakarma ... A son of Chāyā and Vivasvat" is the planet Satur
+svaPalka      -> SvaPalka      | PUI: {%Svaphalka%} — a son of Pṛśni — a righteous and great king; no disease or famine during h | "Svaphalka — a son of Pṛśni — a righteous and great king" is a named king with citations.
+SUryakAnta    -> sUryakAnta    | PUI: {%Śūryakānta%} — a Kulaparvata of the Uttara Kuru country. Vā. 45. 25. | '{%Śūryakānta%} — a Kulaparvata of the Uttara Kuru country' is a named mountain (printed Ś
+niSawa        -> niSaWa        | PUI: {%Niśaṭa%} — a son of Vasudeva and Rohiṇī. Vā. 96. 162. | "Niśaṭa — a son of Vasudeva and Rohiṇī" is a named person with citation.
+garizwa       -> garizWa       | PUI: {%Gariṣṭa%} — a Dānava. Br. III. 6. 16. | '{%Gariṣṭa%} — a Dānava' is a named dānava with citation.
+yavizwa       -> yavizWa       | PUI: {%Yaviṣṭa%} — a Śukra deva. Vā. 31. 8. | '{%Yaviṣṭa%} — a Śukra deva' is a named deity with citation.
+anAdfzwa      -> anADfzwa      | PUI: {%Anādṛṣṭa%} — a rājarṣi; a brother of Vasudeva. Vā: 96. 148; Vā. 99. 127. | "Anādṛṣṭa — a rājarṣi; a brother of Vasudeva" is a named royal sage with citations.
+anAdfzwi      -> anADfzwi      | PUI: {%Anādṛṣṭi%} — son of Asmaki. Vā. 96. 186. | "Anādṛṣṭi — son of Asmaki" is a named person with citation.
+vESa          -> veSa          | PUI: {%Vaiśa%} — also Vidarbha; the son of Saivyā and Jyāmagha after the former's severe auster | "Vaiśa — also Vidarbha; the son of Saivyā and Jyāmagha" is a named person with citation.
+vyApfTa       -> vyApfta       | PUI: {%Vyāpṛtha%} — one of the ten branches of the Supāra group of devas. Vā. 100. 94. | "Vyāpṛtha — one of the ten branches of the Supāra group of devas" is a named deva-branch w
+avaBfta       -> avaBfTa       | PUI: {%Avabhṛta (Pāvaka)%} — Agni; his son Hṛcchaya. Vā. 29. 31; Br. II. 12. 33. | '{%Avabhṛta (Pāvaka)%} — Agni; his son Hṛcchaya' is a named entity with citations.
+bfhadbAnu     -> bfhadBAnu     | PUI: {%Bṛhadbānu%} — had a son by name Bṛhanmanas. Vā. 99. 114. | "Bṛhadbānu — had a son by name Bṛhanmanas" is a named person with citation.
+kusumba       -> kusumBa       | PUI: {%Kusumba (kunkumam)%} — one of eight saubhāgyams. M. 60-9, 27. | '{%Kusumba (kunkumam)%} — one of eight saubhāgyams' is a named item with citation.
+sambUti       -> samBUti       | PUI: {%Sambūti%} — an elephant daughter of dig-nāgas. Br. III. 7. 354. | '{%Sambūti%} — an elephant daughter of dig-nāgas' is a distinct named entity with citation
+CandraBAgA    -> candraBAgA    | PUI: {%Chandrabhāgā%} (II) — the regions of, fell into the hands of Vrātyas and Mlecchas. Bhā.  | "Chandrabhāgā (II) — the regions of, fell into the hands of Vrātyas" is the river/region u
+Jarjara       -> JarJara       | PUI: {%Jharjara%} — a son of Hiraṇyākṣa. Vi. I. 21. 3. | '{%Jharjara%} — a son of Hiraṇyākṣa' is a distinct named person with citation.
+AhavaRIya     -> AhavanIya     | PUI: {%Āhavaṇīya Padam%} — in Gayā. Vā. 111. 51. | "Āhavaṇīya Padam — in Gayā" is a named sacred spot with citation (retroflex-ṇ variant of t
+barada        -> varada        | PUI: {%Baradas%} — a tribe to be conquered by Kalki. Br. III. 73. 108. | "Baradas — a tribe to be conquered by Kalki" is a named tribe with citation.
+kuninda       -> kuRinda       | PUI: {%Kunindas%} — a tribe. Vā. 47. 43. | "Kunindas — a tribe" is a named tribe with citation.
+sOwi          -> sOti          | PUI: {%Sauṭi%} — belonging to the Pravara of Aṅgiras. M. 196. 13. | "Sauṭi — belonging to the Pravara of Aṅgiras" is a named pravara with citation.
+ABila         -> Avila         | PUI: {%Ābhila%} — a mahāratha, and a commander of Bhaṇḍa's army. His riding vehicle was  siṃha. | '{%Ābhila%} — a mahāratha, and a commander of Bhaṇḍa's army' is a named figure with citati
+SElUsa        -> SElUza        | PUI: {%Śailūsa%} — a tribe. Br. IV. 7. 19. | '{%Śailūsa%} — a tribe' is a named tribe with citation.
+diRqima       -> qiRqima       | PUI: {%Diṇḍima%} — a war-musical instrument. M. 138. 56; Mā. 40. 24. | '{%Diṇḍima%} — a war-musical instrument' is a named instrument (attested D-) with citation
+jfmBana       -> jfmBaRa       | PUI: {%Jṛmbhana%} — a commander of Bhaṇḍa. Br. IV. 21. 80. | '{%Jṛmbhana%} — a commander of Bhaṇḍa' is a named figure with citation.
+karava        -> karaBa        | PUI: {%Karava%} — a chief of the Vānaras. Br. III. 7. 234. | '{%Karava%} — a chief of the Vānaras' is a named figure with citation.
+parimati      -> pariRati      | PUI: {%Parimati%} — a Bhavya God. Br. II. 36. 72. | '{%Parimati%} — a Bhavya God' is a named deity with citation.
+piTara        -> piWara        | PUI: {%Pithara%} — an asura in the sabhā of Hiraṇyakaśipu. M. 161. 80. | '{%Pithara%} — an asura in the sabhā of Hiraṇyakaśipu' is a named asura with citation.
+pravahana     -> pravahaRa     | PUI: {%Pravahana%} — a sage of the Auttama epoch. M. 9. 14. | '{%Pravahana%} — a sage of the Auttama epoch' is a named sage with citation.
+aDidAnta      -> aDidanta      | PUI: {%Adhidānta%} — a son of Hṛdīka. Br. III. 71. 141. | "Adhidānta — a son of Hṛdīka" is a named person with citation.
+aTarvA        -> aTarva        | PUI: {%Atharvā%} — a Laukikāgni; is Bhṛgu; father of Darpahā. Belongs to Dadhyaṅgātharvaṇa cate | "Atharvā — a Laukikāgni; is Bhṛgu; father of Darpahā" is a named figure (Atharvan) with ci
+anapAyA       -> anapAya       | PUI: {%Anapāyā%} — an apsaras. Br. III. 7. 5. | "Anapāyā — an apsaras" is a named apsaras with citation.
+rAjayakzmA    -> rAjayakzma    | PUI: {%Rājayakṣmā%} — to be worshipped in house-building. M. 253. 30, 42; 268. 23. | "Rājayakṣmā — to be worshipped in house-building" is a personified entity with citations.
+KewA          -> Kewa          | PUI: {%Kheṭā%} — a mind-born mother. M. 179. 17. | "Kheṭā — a mind-born mother" is a named goddess with citation.
+balakASva     -> balAkASva     | PUI: {%Balakāśva%} — a son of Ajaka. Vā. 91. 61. | "Balakāśva — a son of Ajaka" is a named person with citation.
+ekAkzA        -> ekAkza        | PUI: {%Ekākṣā%} — a R. of the Ketumāla country. Vā. 44. 20. | "Ekākṣā — a R. of the Ketumāla country" is a named river with citation.
+mahizika      -> mAhizika      | PUI: {%Mahiṣikas%} — a tribe of the south;1 a kingdom of.2 1) M. 114. 47. 2) Br. II. 16. 57. | Body defines '{%Mahiṣikas%} — a tribe of the south' with its own citations, an attested et
+purAjit       -> purajit       | PUI: {%Purājit%} — a son of Bhaṇḍa. Br. IV. 26. 49. | '{%Purājit%} — a son of Bhaṇḍa' is a distinct named person with its own citation.
+savarRika     -> sAvarRika     | PUI: {%Savarṇika%} (I) — a Bhārgava gotrakāra. M. 195. 19. | '{%Savarṇika%} (I) — a Bhārgava gotrakāra' is a distinct named entity with citation.
+utkacA        -> utkaca        | PUI: {%Utkacā%} — a daughter of Khaśa. Vā. 69. 170. | '{%Utkacā%} — a daughter of Khaśa' is a named feminine entity with its own citation.
+yODeyA        -> yODeya        | PUI: {%Yaudheyā%} — the capital of Nṛga (Mṛga-{%Vā. P.%}). Br. III. 74. 21; Vā. 99. 21. | '{%Yaudheyā%} — the capital of Nṛga' is a named place with citation.
+satyaratA     -> satyarata     | PUI: {%Satyaratā%} — the Kaikaya princess married to Satya(v)- rata. Triśaṅku son of Hariścandr | '{%Satyaratā%} — the Kaikaya princess married to Satya(v)rata' is a named figure with cita
+vftrahA       -> vftraha       | PUI: {%Vṛtrahā%} — is Indra;1 got frightened at the prolonged love of Umā and Śankara and asked | '{%Vṛtrahā%} — is Indra' is a named epithet with citations.
+SAlavatya     -> SAlAvatya     | PUI: {%Śālavatyas%} — of Kauśika gotra. Vā. 91. 100. | '{%Śālavatyas%} — of Kauśika gotra' is a named gotra group with citation.
+SatasaMKyA    -> SatasaMKya    | PUI: {%Śatasaṃkhyā%} — a group of gods of the X epoch of Manu. Vi. III. 2. 25. | '{%Śatasaṃkhyā%} — a group of gods of the X epoch of Manu' is a named group with citation.
+aNgarAjA      -> aNgarAja      | PUI: {%Aṅgarājā%} — killed by Arjuna. Vi. V. 38. 47. | '{%Aṅgarājā%} — killed by Arjuna' is a named figure with citation.
+baBrava       -> bABrava       | PUI: {%Babhrava%} — a disciple of Śaunaka;1 of Kauśikagotra.2 1) Vā. 61. 53. 2) Ib. 91. 99. ||  | '{%Babhrava%} — a disciple of Śaunaka' and a Kāśyapa gotra group are named entities with c
+citraSAla     -> citraSAlA     | PUI: {%Citraśāla%} — painting and pictures in Tripuram. M. 130. 16. | '{%Citraśāla%} — painting and pictures in Tripuram' is a named feature with citation.
+digISvarA     -> digISvara     | PUI: {%Digīśvarās%} — Lords of the quarters; present at Varuṇa's sacrifice. Br. III. 1. 28. | '{%Digīśvarās%} — Lords of the quarters; present at Varuṇa's sacrifice' is a named class w
+hastina       -> hAstina       | PUI: {%Hastina Chāyā%} — is Kuñjara chāyā. Br. III. 16. 44. | '{%Hastina Chāyā%} — is Kuñjara chāyā' is a named entity with citation.
+kaRwakArA     -> kaRwakAra     | PUI: {%Kaṇṭakārās%} — a northern tribe. M. 114. 42. | '{%Kaṇṭakārās%} — a northern tribe' is a named tribe with citation.
+kuwumbikA     -> kuwumbika     | PUI: {%Kuṭumbikā%} — a mother goddess. M. 179. 30. | '{%Kuṭumbikā%} — a mother goddess' is a named goddess with citation.
+mahAcakrA     -> mahAcakra     | PUI: {%Mahācakrā%} — a R. of Bhadrā country. Vā. 43. 25. | '{%Mahācakrā%} — a R. of Bhadrā country' is a named river with citation.
+mahAgrIvA     -> mahAgrIva     | PUI: {%Mahāgrīvā%} — a mind-born mother. M. 179. 24. | '{%Mahāgrīvā%} — a mind-born mother' is a named goddess with citation.
+mahAjihvA     -> mahAjihva     | PUI: {%Mahājihvā%} — a Brahmarākṣasī. Br. III. 7. 99; Vā. 69. 134. | '{%Mahājihvā%} — a Brahmarākṣasī' is a named demoness with citations.
+naqAyana      -> nAqAyana      | PUI: {%Naḍāyana%} — a Bhārgava gotrakṛt. M. 195. 17. | '{%Naḍāyana%} — a Bhārgava gotrakṛt' is a named gotra-founder with citation.
+somasaMsTa    -> somasaMsTA    | PUI: {%Somasaṃsthas%} — a kind of rituals for house-holders. Vi. III. 11. 24. | '{%Somasaṃsthas%} — a kind of rituals for house-holders' is a defined index lemma with cit
+suparvARa     -> suparvaRa     | PUI: {%Suparvāṇa%} — a Sādhya. M. 171. 45. | '{%Suparvāṇa%} — a Sādhya' is a named deity with citation.
+surAsinDu     -> surasinDu     | PUI: {%Surāsindhu%} — is Madīrā sindhu. Br. IV. 20. 76. | '{%Surāsindhu%} — is Madīrā sindhu' is a named river with citation.
+suyASA        -> suyaSA        | PUI: {%Suyāśā%} (I) — a queen of Divodāsa who prayed at Nikumbha's temple for a son but did not | '{%Suyāśā%} (I) — a queen of Divodāsa' with further senses; named figure with citations.
+tApakA        -> tApaka        | PUI: {%Tāpakā (c)%} — a western country. Br. II. 16. 60. | "Tāpakā (c) — a western country" is a named place with its own Br. citation.
+taporAti      -> taporati      | PUI: {%Taporāti%} (I) — (Paulaha): a sage of the epoch of the 4th Sāvarṇa Manu. Br. IV. 1. 92.  | "Taporāti" is a sage/son with three distinct attestations (Br., M., Vi.).
+varArhA       -> varArha       | PUI: {%Varārhā%} — R. one of the seven rivers in Śivapuram. Vā. 101. 243. | "Varārhā — R. one of the seven rivers in Śivapuram" is a named river (feminine) with its o
+vyAGrapAdA    -> vyAGrapAda    | PUI: {%Vyāghrapādā%} — a Vāsiṣṭha. M. 200. 2. | "Vyāghrapādā — a Vāsiṣṭha" is a named person with its own M. citation.
+kAYcanakA     -> kAYcanaka     | PUI: {%Kāñcanakā%} — the capital city of Pravīra. Br. III. 74. 184. | "Kāñcanakā — the capital city of Pravīra" is a named city with its own Br. citation.
+prayAti       -> prayati       | PUI: {%Prayāti%} — a Yāmadeva. Br. II. 13. 92. | "Prayāti — a Yāmadeva" is a named deity with its own Br. citation.
+ajavITi       -> ajavITI       | PUI: {%Ajavīthi%} — on the back of the Śiśumāra (s.v.)1 the southern course. Here are three kin | '{%Ajavīthi%} — on the back of the Śiśumāra ... the southern course' is a named celestial 
+viSalyakaraRi -> viSalyakaraRI | PUI: {%Viśalyakaraṇi%} — a medicinal herb in Droṇa hill of Śālmalidvīpa; has the power to bring | '{%Viśalyakaraṇi%} — a medicinal herb ... power to bring the dead back to life' is a named
+SAliya        -> SAlIya        | PUI: {%Śāliya%} — a pupil of Śākalya. Bhā. XII. 6. 57. || {%Śāliya%} — a pupil of Vedamitra Śāk | "Śāliya — a pupil of Śākalya" is a named person attested twice (Bhā., Vi.).
+cakreSvari    -> cakreSvarI    | PUI: {%Cakreśvari%} — a name of Lalitā. Br. IV. 17. 19; 18. 15. | "Cakreśvari — a name of Lalitā" is a named goddess with its own Br. citation.
+candragirI    -> candragiri    | PUI: {%Candragirī%} — a son of Tārāpīḍa. M. 12. 55. | "Candragirī — a son of Tārāpīḍa" is a named person with its own M. citation.
+darimuKa      -> darImuKa      | PUI: {%Darimukha%} — born of Pulaha. Br. III. 7. 178. | "Darimukha — born of Pulaha" is a named being with its own Br. citation.
+gAruqi        -> gAruqI        | PUI: {%Gāruḍi%} — Sugrīva, the enemy of snakes in the Vai- kārika hill. Vā. 39. 40. | "Gāruḍi — Sugrīva, the enemy of snakes" is a named figure with its own Vā. citation.
+jyotsni       -> jyotsnI       | PUI: {%Jyotsni%} — a Śakti on the Soḍaśa patrābja. Br. IV. 32. 11. | "Jyotsni — a Śakti on the Soḍaśa patrābja" is a named Śakti with its own Br. citation.
+kUzmARqi      -> kUzmARqI      | PUI: {%Kūṣmāṇḍi%} — the son of Kapiśa; gave birth to two Piśacās of brown colour; they have no  | "Kūṣmāṇḍi — the son of Kapiśa" is a named being with its own Vā. citation.
+kuliya        -> kulIya        | PUI: {%Kuliyas%} — a southern tribe. M. 114. 49. | "Kuliyas — a southern tribe" is a named tribe with its own M. citation.
+kumBakAri     -> kumBakArI     | PUI: {%Kumbhakāri%} — a R. of the Ketumāla country. Vā. 44. 22. | "Kumbhakāri — a R. of the Ketumāla country" is a named river with its own Vā. citation.
+maDupuri      -> maDupurI      | PUI: {%Madhupuri (Mathurā)%} — sacred to Hari;1 the capital of the Yadus.2 1) Bhā. VII. 14. 31. | "Madhupuri (Mathurā) — sacred to Hari; the capital of the Yadus" is a named city with its 
+maRicaka      -> maRIcaka      | PUI: {%Maṇicaka%} — a son of Havya. Vā. 33. 16. | "Maṇicaka — a son of Havya" is a named person with its own Vā. citation.
+cEtraraTI     -> cEtraraTi     | PUI: {%Caitrarathī%} (also {%Bindumatī%}) — the daughter of Śaśa- bindu and wife of Māndhāta; h | "Caitrarathī (also Bindumatī) — the daughter of Śaśabindu and wife of Māndhāta" is a named
+mUli          -> mUlI          | PUI: {%Mūli%} — a R. from the Mahendra hill. M. 114. 31. | "Mūli — a R. from the Mahendra hill" is a named river with its own M. citation.
+kUwi          -> kuwi          | PUI: {%Kūṭi%} (I) — one of the twenty Sutapa gaṇas. Vā. 100. 15. | 'Kūṭi (I) — one of the twenty Sutapa gaṇas. Vā. 100. 15' — a named gaṇa with citation and 
+hiraRyasfNga  -> hiraRyaSfNga  | PUI: {%Hiraṇyasṛṅga%} — a powerful follower of Kubera, lives in Surabhi; forbidden to take part | "Hiraṇyasṛṅga — a powerful follower of Kubera" is a named being with its own M. citation.
+javizwa       -> javizWa       | PUI: {%Javiṣṭa%} — a Deva. Br. II. 13. 95. | "Javiṣṭa — a Deva" is a named deity with its own Br. citation.
+mArzWi        -> mArzwi        | PUI: {%Mārṣṭhi%} — a son of Sāraṇa. Vi. IV. 15. 21. | "Mārṣṭhi — a son of Sāraṇa" is a named person with its own Vi. citation.
+DfQanemi      -> dfQanemi      | PUI: {%Dhṛḍhanemi%} — a son of Satyadhṛta. Vā. 99. 185. | '{%Dhṛḍhanemi%} — a son of Satyadhṛta' is a distinct named person with citation.
+DfQasena      -> dfQasena      | PUI: {%Dhṛḍhasena%} — ruled for 58 years. Vā. 99. 305. | '{%Dhṛḍhasena%} — ruled for 58 years' is a named king with citation.
+saMveDa       -> saMveda       | PUI: {%Saṃvedhas%} — with Bṛhaspati in rāśi. Br. II. 23. 87. | "Saṃvedhas — with Bṛhaspati in rāśi" is a named entity (headword Saṃvedhas) with its own B
+sTApaTya      -> sTApatya      | PUI: {%Sthāpathya%} — architectural science created by Brahmā. Bhā. III. 12. 38. | "Sthāpathya — architectural science created by Brahmā" is a named subject with its own Bhā
+bOtya         -> BOtya         | PUI: {%Bautyas%} — the descendants of Bhūti. Vā. 96. 100. | '{%Bautyas%} — the descendants of Bhūti' is a named patronymic group with citation.
+nAsiKya       -> nAsikya       | PUI: {%Nāsikhyas(c)%} — the people of the southern country. Vā. 45. 130. | "Nāsikhyas(c) — the people of the southern country" is a named people with its own Vā. cit
+Keta          -> Kewa          | PUI: {%Kheta%} — a smaller division than a Kharvaṭa. Vi. V. 2. 13. | '{%Kheta%} — a smaller division than a Kharvaṭa' is a named administrative unit with citat
+kARvAyaRa     -> kARvAyana     | PUI: {%Kāṇvāyaṇas%} (I) — the clan of Brāhmaṇas from Kaṇva, son of Ajamīḍha; a pravara of Aṅgir | '{%Kāṇvāyaṇas%} (I) — the clan of Brāhmaṇas from Kaṇva' is a named gotra with citations.
+SfNgina       -> SfNgiRa       | PUI: {%Śṛṅginas%} — a group of gods doing śrāddha. Br. III. 10. 109. | "Śṛṅginas — a group of gods doing śrāddha" is a named group with its own Br. citation.
+avijAti       -> aBijAti       | PUI: {%Avijāti%} — goats and sheep born of Bhadrā. Br. III. 3. 75. | "Avijāti — goats and sheep born of Bhadrā" is a named offspring-group with its own Br. cit
+gArgyAyana    -> gArgyAyaRa    | PUI: {%Gārgyāyana%} — a Bhārgava gotrakara. M. 195. 23. | "Gārgyāyana — a Bhārgava gotrakara" is a named gotra-founder with its own M. citation.
+iqAvatsara    -> idAvatsara    | PUI: {%Iḍāvatsara%} — the third year of a five year yuga. Also {%Idvatsara;%}1 is Soma or moon. | "Iḍāvatsara — the third year of a five year yuga ... is Soma or moon" is a named year with
+kzoni         -> kzoRi         | PUI: {%Kṣoni%} — was instructed in {%Vāraha Purāṇa%} by Hari. M. 53. 39. | "Kṣoni — was instructed in Vāraha Purāṇa by Hari" is a named figure with its own M. citati
+marzana       -> marSana       | PUI: {%Marṣanas%} — belonging to the Kauśika gotra. Br. III. 66. 70; Vā. 91. 98. | "Marṣanas — belonging to the Kauśika gotra" is a named group with its own Br./Vā. citation
+mfgazIrza     -> mfgaSIrza     | PUI: {%Mṛgaṣīrṣa%} — a {%nakṣatra.%} Bhā. V. 23. 6. | "Mṛgaṣīrṣa — a nakṣatra" is the named asterism with its own Bhā. citation.
+nadvala       -> naqvala       | PUI: {%Nadvala Manu%} — father of ten sons. Vā. 62. 68, 91. | "Nadvala Manu — father of ten sons" is a named Manu with its own Vā. citation.
+pramAlikA     -> praRAlikA     | PUI: {%Pramālikā%} — a Śakti. Br. IV. 27. 38. | "Pramālikā — a Śakti" is a named Śakti with its own Br. citation.
+trayyAruni    -> trayyAruRi    | PUI: {%Trayyāruni (a)%} (III) — the son of Tridhanvā and father of Satyavrata. Br. III. 63. 76; | "Trayyāruni (a) (III) — the son of Tridhanvā and father of Satyavrata" is a named person w
+vateSvara     -> vaweSvara     | PUI: {%Vateśvara%} — with Mādhava is engaged in Yoganidrā at Prayāgā;1 the holiest of holies;2  | "Vateśvara — ... the Prapitāmaha or Viṣṇu" is a named tīrtha/deity with its own citations.
+aNgirasI      -> ANgirasI      | PUI: {%Aṅgirasī%} — a R. of Plakṣadvīpa. Bhā. V. 20. 4. | '{%Aṅgirasī%} — a R. of Plakṣadvīpa' is a named river with citation.
+caruBadra     -> cAruBadra     | PUI: {%Carubhadra%} — a son of Rukmiṇī. Vā. 96. 237. | '{%Carubhadra%} — a son of Rukmiṇī' is a distinct named person with citation.
+pOrukutsA     -> pOrukutsa     | PUI: {%Paurukutsā(ī)%} — wife of Gādhi;1 gave birth to Viśvā- mitra taking the caru of Ṛcika in | '{%Paurukutsā(ī)%} — wife of Gādhi' is a named feminine figure with citations.
+pUrvatiTi     -> pUrvAtiTi     | PUI: {%Pūrvatithi%} — a Mantrakāra and an Ātreya. Vā. 59. 104. | '{%Pūrvatithi%} — a Mantrakāra and an Ātreya' is a named sage with citation.
+tuzwA         -> tuzwa         | PUI: {%Tuṣṭā%} — a R. in Śālmalidvīpa. Br. II. 19. 46. | '{%Tuṣṭā%} — a R. in Śālmalidvīpa' is a named river with citation.
+pUrRacandrA   -> pUrRacandra   | PUI: {%Pūrṇacandrā%} — one of the ten {%Pīṭhas%} for images; with two Mekhalas in the middle; g | "Pūrṇacandrā — one of the ten Pīṭhas for images" is a named pīṭha with its own M. citation
+ratnakUwA     -> ratnakUwa     | PUI: {%Ratnakūṭā%} (I) — one of Atri's wives. Br. III. 8. 76. || {%Ratnakūṭā%} (II) — a daughte | "Ratnakūṭā (I) — one of Atri's wives ... (II) — a daughter of Bhadrāśva" is a named figure
+sarmA         -> sarma         | PUI: {%Sarmā%} — a daughter of Krodhavaśa and a wife of Pulaha: mother of Śyāma and Śabala, fol | "Sarmā — a daughter of Krodhavaśa and a wife of Pulaha" is a named figure with its own Br.
+AjapAla       -> ajapAla       | PUI: {%Ājapāla%} — a son of Aja and father of Daśaratha. M. 12. 49. | "Ājapāla — a son of Aja and father of Daśaratha" is a named king with its own M. citation.
+BAvaBAvana    -> BavaBAvana    | PUI: {%Bhāvabhāvanas%} — three-fold, Brahma bhāvana, Karma bhāvana and Ubhaya bhāvana, accordin | "Bhāvabhāvanas — three-fold, Brahma bhāvana, Karma bhāvana and Ubhaya bhāvana" is a named 
+BagAnandA     -> BaganandA     | PUI: {%Bhagānandā%} — a mind-born mother. M. 179. 11. | "Bhagānandā — a mind-born mother" is a named mother with its own M. citation.
+SaryAtA       -> SaryAta       | PUI: {%Śaryātās%} — a Haihaya clan. M. 43. 48. | "Śaryātās — a Haihaya clan" is a named clan with its own M. citation.
+aSmaraTya     -> ASmaraTya     | PUI: {%Aśmarathya%} — a Trayārṣeya; not to have marital rela- tions with Viśvāmitra and Vañjuli | "Aśmarathya — a Trayārṣeya" is a named sage with its own M. citation.
+cikitvAn      -> cikitvan      | PUI: {%Cikitvān%} — a Tuṣita God. Br. II. 36. 11. | "Cikitvān — a Tuṣita God" is a named deity with its own Br. citation.
+devayAtra     -> devayAtrA     | PUI: {%Devayātra%} — a festival being celebrated at Dvārakā when Arjuna carried off Subhadrā. B | "Devayātra — a festival ... when Arjuna carried off Subhadrā" is a named festival with its
+kaMsAvatI     -> kaMsavatI     | PUI: {%Kaṃsāvatī%} — a daughter of Ugrasena. Married Deva- śravas. Bhā. IX. 24. 25 & 41; Br. II | "Kaṃsāvatī — a daughter of Ugrasena. Married Devaśravas" is a named person with its own mu
+prAvfzeyA     -> prAvfzeya     | PUI: {%Prāvṛṣeyās%} — an eastern country. Br. II. 16. 54. | "Prāvṛṣeyās — an eastern country" is a named country/people with its own Br. citation.
+rAha          -> raha          | PUI: {%Rāha%} — a clan belonging to Rohita Prajāpati. Vā. 100. 61. | "Rāha — a clan belonging to Rohita Prajāpati" is a named clan with its own Vā. citation.
+setukA        -> setuka        | PUI: {%Setukās%} — a southern country; a tribe. Br. II. 16. 56; M. 114. 46; Vā. 45. 125. | "Setukās — a southern country; a tribe" is a named tribe/country with its own multiple cit
+tiryA         -> tirya         | PUI: {%Tiryā%} — a daughter of Krodhā, the wife of Pulaha. Br. III. 7. 172. | "Tiryā — a daughter of Krodhā, the wife of Pulaha" is a named figure with its own Br. cita
+vAcavfdDa     -> vAcAvfdDa     | PUI: {%Vācavṛddhas%} — one of the five groups of devas of the 14th Manu Bhauta — the seers of S | "Vācavṛddhas — one of the five groups of devas of the 14th Manu" is a named group with its
+vEklavA       -> vEklava       | PUI: {%Vaiklavās%} — of the Vāsiṣṭha gotra. M. 200. 2. | "Vaiklavās — of the Vāsiṣṭha gotra" is a named group with its own M. citation.
+vEriRA        -> vEriRa        | PUI: {%Vairiṇā%} — the daughter of Dakṣa so-called. Br. I. 1. 112. | "Vairiṇā — the daughter of Dakṣa so-called" is a named figure with its own Br. citation.
+sukAma        -> sukAmA        | PUI: {%Sukāmas%} — a Janapada of the Bhadrā continent. Vā. 43. 20. | 'Sukāmas — a Janapada of the Bhadrā continent. Vā. 43. 20' — a named janapada with citatio
+vEDftA        -> vEDfta        | PUI: {%Vaidhṛtā%} — the wife of Āryaka, and mother of Dharma- setu. Bhā. VIII. 13. 26. | 'Vaidhṛtā — the wife of Āryaka, and mother of Dharmasetu. Bhā. VIII. 13. 26' — a named per
+mUrDA         -> mUrDa         | PUI: {%Mūrdhā%} — a son of Bhṛgu. M. 195. 13. | 'Mūrdhā — a son of Bhṛgu. M. 195. 13' — a named person with citation.
+OgrasenI      -> Ograseni      | PUI: {%Augrasenī%} — the daughter of Ugrasena, and wife of Akrūra. Br. III. 71. 113. | "Augrasenī — the daughter of Ugrasena, and wife of Akrūra" is a named figure with its own 
+OpagavI       -> Opagavi       | PUI: {%Aupagavī%} — name of Uddhava. Bhā. III. 4. 27. | "Aupagavī — name of Uddhava" is a named patronymic with its own Bhā. citation.
+cAndramasi    -> cAndramasI    | PUI: {%Cāndramasi%} — a Bhārgava gotrakara. M. 195. 26. | "Cāndramasi — a Bhārgava gotrakara" is a named gotra-founder with its own M. citation.
+devapatni     -> devapatnI     | PUI: {%Devapatnis%} — wives of the Devas. Vā. 65. 29. | "Devapatnis — wives of the Devas" is a named group with its own Vā. citation.
+hAlini        -> hAlinI        | PUI: {%Hālini%} — a pupil of Lāṅgala. Br. II. 35. 48. | "Hālini — a pupil of Lāṅgala" is a named person with its own Br. citation.
+kilakIla      -> kilakila      | PUI: {%Kilakīlas%} — the important kings after the Guṇḍas, Vṛṣa- las and Maunas; succeeded Ābhī | "Kilakīlas — the important kings after the Guṇḍas" is a named dynasty with its own Br./M. 
+nAhuzI        -> nAhuzi        | PUI: {%Nāhuṣī%} — a son of Ātmavān and father of Ṛcīka, born from the thighs. Vā. 65. 91-2. | "Nāhuṣī — a son of Ātmavān and father of Ṛcīka" is a named person with its own Vā. citatio
+raTasaptami   -> raTasaptamI   | PUI: {%Rathasaptami%} — the Saptami of the month of Māgha when the sun turns his chariot; fit f | "Rathasaptami — the Saptami of the month of Māgha" is a named tithi/festival with its own 
+tEttirIka     -> tEttirika     | PUI: {%Taittirīka%} — a southern tribe. M. 114. 49. | "Taittirīka — a southern tribe" is a named tribe with its own M. citation.
+vaSini        -> vaSinI        | PUI: {%Vaśini%} — a Rahasya Yogini devī. Br. IV. 19. 48; 37. 3. | "Vaśini — a Rahasya Yogini devī" is a named goddess with its own Br. citations.
+mARquki       -> mARqUki       | PUI: {%Māṇḍuki%} — a Śrutarṣi; a pupil of Indrapramati in charge of a part of the Ṛg Veda. Br.  | "Māṇḍuki — a Śrutarṣi; a pupil of Indrapramati" is a named sage with its own Br. citations
+asmakI        -> aSmakI        | PUI: {%Asmakī%} (I) — the wife of Śūra. Vā. 96. 143. || {%Asmakī%} (II) — the son Anādṛṣṭi. Vā. | '{%Asmakī%} (I) — the wife of Śūra' and (II) are distinct named entities with citations (n
+suciraTa      -> SuciraTa      | PUI: {%Suciratha%} — a son of Vicitraratha and father of Vṛṣṇimat. Vi. IV. 21. 11-12. | "Suciratha — a son of Vicitraratha and father of Vṛṣṇimat" is a named king with its own Vi
+sArzWi        -> sArzwi        | PUI: {%Sārṣṭhi%} — a son of Sāraṇa. Vi. IV. 15. 21. | "Sārṣṭhi — a son of Sāraṇa" is a named person with its own Vi. citation.
+kOrupati      -> kOrupaTi      | PUI: {%Kaurupati%} — a pravara (Aṅgiras). M. 196. 17. | "Kaurupati — a pravara (Aṅgiras)" is a named pravara with its own M. citation.
+SOlkAyaRi     -> SOlkAyani     | PUI: {%Śaulkāyaṇi%} — a pupil of Devadarśa. Br. II. 35. 58 Vi. III. 6. 11. | "Śaulkāyaṇi — a pupil of Devadarśa" is a named person with its own Br./Vi. citations.
+kuSItaka      -> kuzItaka      | PUI: {%Kuśītaka%} — a son of Vasudeva and Rohiṇī. Br. III. 71. 165; Vā. 96. 163. | "Kuśītaka — a son of Vasudeva and Rohiṇī" is a named person with its own Br./Vā. citations
+ajAmuKa       -> ajamuKa       | PUI: {%Ajāmukha%} — one of Danu's sons. Vā. 68. 5. || {%Ajāmukhas%} (also {%Adhomukhas%}) — a g | '{%Ajāmukha%} — one of Danu's sons' and a piśāca group are named entities with citations.
+anuvfttA      -> anuvftta      | PUI: {%Anuvṛttā%} — a daughter of Rṣā (Rṣi-{%Vā. P.%}); gave birth to the class of maṇḍūkas, {% | '{%Anuvṛttā%} — a daughter of Rṣā' is a named feminine figure with citations.
+UrDvakeSA     -> UrDvakeSa     | PUI: {%Ūrdhvakeśā(i)%} — a svara śakti. Br. IV. 44. 56 and 85. | '{%Ūrdhvakeśā(i)%} — a svara śakti' is a named śakti with citation.
+brAhmakalpa   -> brahmakalpa   | PUI: {%Brāhmakalpa%} — when Brahmā was known as Śabda- brahman. Bhā. III. 11. 34. | '{%Brāhmakalpa%} — when Brahmā was known as Śabda-brahman' is a named kalpa with citation.
+vedASira      -> vedaSira      | PUI: {%Vedāśiras%} (III) — a sage and a siddha. His wife was Tuṣitā. Father of Vibhu, a manifes | '{%Vedāśiras%} (III) — a sage and a siddha' is a distinct named person with citations.
+vasunDara     -> vasunDarA     | PUI: {%Vasundharas%} — a class of people in Śālmalidvīpa. Bhā. V. 20. 11. | '{%Vasundharas%} — a class of people in Śālmalidvīpa' is a named group with citation.
+apsarasa      -> Apsarasa      | PUI: {%Apsarasa gaṇas%} — fourteen in number, the mindborn daughters of Brahmā, daughters of Ma | "Apsarasa gaṇas — fourteen in number, the mindborn daughters of Brahmā" is a named group w
+hariBadrA     -> hariBadra     | PUI: {%Haribhadrā%} — a daughter of Krodhavaśā and Hari and a wife of Pulaha; sons, monkeys of  | "Haribhadrā — a daughter of Krodhavaśā and Hari and a wife of Pulaha" is a named figure wi
+AnDraBftya    -> anDraBftya    | PUI: {%Āndhrabhṛtyas%} — seven in number. Vi. IV. 24. 51. | "Āndhrabhṛtyas — seven in number" is a named dynasty with its own Vi. citation.
+DarmaSAla     -> DarmaSAlA     | PUI: {%Dharmaśālas%} — in Brahmakṣetra. Vā. 59. 127. | "Dharmaśālas — in Brahmakṣetra" is a named place with its own Vā. citation.
+DarmajYA      -> DarmajYa      | PUI: {%Dharmajñā%} — a daughter of Dakṣa, given to Kaśyapa. Vā. 66. 55. | "Dharmajñā — a daughter of Dakṣa, given to Kaśyapa" is a named figure with its own Vā. cit
+DyAnajApya    -> DyAnajapya    | PUI: {%Dhyānajāpya%} — of Kauśika gotra. Br. III. 66. 71. Vā. 91. 99. | "Dhyānajāpya — of Kauśika gotra" is a named gotra entry with its own Br./Vā. citations.
+SArNgadevA    -> SArNgadeva    | PUI: {%Śārṅgadevā%} — one of the wives of Vasudeva and mother of Tumbu. Vā. 96. 177. | "Śārṅgadevā — one of the wives of Vasudeva and mother of Tumbu" is a named figure with its
+aSvArUQA      -> aSvArUQa      | PUI: {%Aśvārūḍhā%} — a devī who killed Ulūkajit. Br. IV. 28. 38 & 99. | "Aśvārūḍhā — a devī who killed Ulūkajit" is a named goddess with its own Br. citation.
+arihA         -> ariha         | PUI: {%Arihā%} — one of the two {%amitābha gaṇas.%} Vā. 100. 16. | "Arihā — one of the two amitābha gaṇas" is a named gaṇa with its own Vā. citation.
+bAlika        -> balika        | PUI: {%Bālika%} — a son of Maya. Vā. 68. 29. | "Bālika — a son of Maya" is a named person with its own Vā. citation.
+bahava        -> bAhava        | PUI: {%Bahava%} — (Anavarma-{%Br. P.%}); son of Cakora. Bhā. XII. 1. 26. | "Bahava — (Anavarma-Br. P.); son of Cakora" is a named king with its own Bhā. citation.
+brahmaBAgA    -> brahmaBAga    | PUI: {%Brahmabhāgā%} — a R. of the Bhadra continent. Vā. 43. 28. | "Brahmabhāgā — a R. of the Bhadra continent" is a named river with its own Vā. citation.
+brahmadA      -> brahmada      | PUI: {%Brahmadā%} — a R; a Mahānadī in Bhāratavarṣa. Vā. 108. 81. | "Brahmadā — a R; a Mahānadī in Bhāratavarṣa" is a named river with its own Vā. citation.
+daMzwrAlA     -> daMzwrAla     | PUI: {%Daṃṣṭrālā%} — a Mind-born mother. M. 179. 23. | "Daṃṣṭrālā — a Mind-born mother" is a named mother with its own M. citation.
+dfQAcyuta     -> dfQacyuta     | PUI: {%Dṛḍhācyuta%} — a Sage; a son of Agastya and father of Idh- mavāha. Bhā. IV. 28. 32. | "Dṛḍhācyuta — a Sage; a son of Agastya and father of Idhmavāha" is a named sage with its o
+gARapatA      -> gARapata      | PUI: {%Gāṇapatā mantras%} — sacred to Gaṇapati. Br. IV. 38. 5. | "Gāṇapatā mantras — sacred to Gaṇapati" is a named mantra-set with its own Br. citation.
+gAva          -> gava          | PUI: {%Gāva%} — a group of nāḍīs of the sun pouring out heat. Br. II. 24. 29. Vā. 53. 22. | "Gāva — a group of nāḍīs of the sun pouring out heat" is a named group with its own Br./Vā
+kAlajihvA     -> kAlajihva     | PUI: {%Kālajihvā%} — a śakti. Br. IV. 44. 76. | "Kālajihvā — a śakti" is a named Śakti with its own Br. citation.
+kArowaka      -> karowaka      | PUI: {%Kāroṭaka%} — Ārṣeya Pravara of Aṅgiras. M. 196. 8. | "Kāroṭaka — Ārṣeya Pravara of Aṅgiras" is a named pravara with its own M. citation.
+kArzaRi       -> karzaRi       | PUI: {%Kārṣaṇi%} — a Bhārgava gotrakara. M. 195. 18. | "Kārṣaṇi — a Bhārgava gotrakara" is a named gotra-founder with its own M. citation.
+karamBavAluka -> karamBavAlukA | PUI: {%Karambhavāluka%} — a hell for those fallen from {%karma.%} Br. II. 28. 84; Vā. 56. 79. | "Karambhavāluka — a hell for those fallen from karma" is a named hell with its own Br./Vā.
+kulaha        -> kulAha        | PUI: {%Kulaha%} — a Pravara Ṛṣi. M. 199. 17. | "Kulaha — a Pravara Ṛṣi" is a named sage with its own M. citation.
+kzatri        -> kzAtri        | PUI: {%Kṣatri%} — a name of Vidura. Bhā. XII. 12. 8. | "Kṣatri — a name of Vidura" is a named epithet with its own Bhā. citation.
+madodDatA     -> madodData     | PUI: {%Madoddhatā%} — a mind-born mother. M. 179. 22. | "Madoddhatā — a mind-born mother" is a named mother with its own M. citation.
+mahAprakASA   -> mahAprakASa   | PUI: {%Mahāprakāśā%} — a consort of Mārtāṇḍa bhairava. Br. IV. 35. 47. | "Mahāprakāśā — a consort of Mārtāṇḍa bhairava" is a named consort with its own Br. citatio
+mahAsTala     -> mahAsTAla     | PUI: {%Mahāsthalas%} — a Janapada of the Bhadrā continent. Vā. 43. 20. | "Mahāsthalas — a Janapada of the Bhadrā continent" is a named region with its own Vā. cita
+nEkA          -> nEka          | PUI: {%Naikās (Nailās)%} — born of Nila; belong to a branch of the Ālambeyas; invincible and bo | "Naikās (Nailās) — born of Nila; belong to a branch of the Ālambeyas" is a named group wit
+niyutsa       -> niyutsA       | PUI: {%Niyutsa%} — the wife of Prastāva and mother of Vibhu. Bhā. V. 15. 6. | "Niyutsa — the wife of Prastāva and mother of Vibhu" is a named figure with its own Bhā. c
+pAnnagAri     -> pAnnAgAri     | PUI: {%Pānnagāri%} — a pupil of Bāṣkali. Br. II. 35. 6. | "Pānnagāri — a pupil of Bāṣkali" is a named person with its own Br. citation (a distinct e
+paYcavarRA    -> paYcavarRa    | PUI: {%Pañcavarṇā%} — a R. of the Bhadra country Vā. 43. 27. | "Pañcavarṇā — a R. of the Bhadra country" is a named river with its own Vā. citation.
+pannAgAri     -> pAnnAgAri     | PUI: {%Pannāgāri%} — a sage; one of the three disciples of Rathī- tara. M. 200. 12; Vā. 61. 3. | "Pannāgāri — a sage; one of the three disciples of Rathītara" is a named sage with its own
+pitfgATa      -> pitfgATA      | PUI: {%Pitṛgāthas%} — fit to be remembered on the days of ceremony. M. 204. 3-18. | "Pitṛgāthas — fit to be remembered on the days of ceremony" is a named group of verses wit
+rajeyu        -> rAjeyu        | PUI: {%Rajeyu%} — one of the ten sons of Raudrāśva. Vā. 99. 124. | "Rajeyu — one of the ten sons of Raudrāśva" is a named person with its own Vā. citation.
+sAhari        -> sahari        | PUI: {%Sāhari%} — belonging to ārṣeya pravara of Aṅgiras. M. 196. 23. | "Sāhari — belonging to ārṣeya pravara of Aṅgiras" is a named pravara with its own M. citat
+sArameyadana  -> sArameyAdana  | PUI: {%Sārameyadana%} — one of the twenty-eight hells; contains 720 hounds of adamantine teeth; | Named entity with its own citation: 'one of the twenty-eight hells ... Bhā. V. 26. 7' — at
+sfpA          -> sfpa          | PUI: {%Sṛpā%} — a R. in the Vindhyas. Br. II. 16. 32. | 'Śṛpā — a R. in the Vindhyas. Br. II. 16. 32' — a named river with its own citation.
+sohAYji       -> sohaYji       | PUI: {%Sohāñji%} — a son of Kuntī and father of Mahiṣmān. Bhā. IX. 23. 22. | 'Sohāñji — a son of Kuntī and father of Mahiṣmān. Bhā. IX. 23. 22' — a named person with c
+somapAda      -> somapada      | PUI: {%Somapāda%} — the worlds where Marīci's descendants reside; here Devapitṛs by name {%agni | 'Somapāda — the worlds where Marīci's descendants reside ... Vā. 73. 1-2' — named entity w
+surozA        -> suroza        | PUI: {%Suroṣā%} — the city of Rākṣasas in Rasātalam. Br. II. 20. 40. | 'Suroṣā — the city of Rākṣasas in Rasātalam. Br. II. 20. 40' — a named city with citation.
+susTalA       -> susTala       | PUI: {%Susthalā%} — with the sun in the Madhu and Mādhava months. Br. II. 23. 4. | 'Susthalā — with the sun in the Madhu and Mādhava months. Br. II. 23. 4' — named entity wi
+trivarzA      -> trivarza      | PUI: {%Trivarṣā%} — the eleventh Veda-Vyāsa. Br. II. 35. 119. | 'Trivarṣā — the eleventh Veda-Vyāsa. Br. II. 35. 119' — a named Vyāsa with citation.
+tumburA       -> tumbura       | PUI: {%Tumburā%} — a Niṣāda tribe; on the other side of the Vindhyas. Vā. 62. 124; 45. 133. | 'Tumburā — a Niṣāda tribe ... Vā. 62. 124' — a named tribe with citation.
+vaMSaDarA     -> vaMSaDArA     | PUI: {%Vaṃśadharā%} — a R. from Mahendra hills. Br. II. 16. 37; Vā. 45. 106. | 'Vaṃśadharā — a R. from Mahendra hills. Br. II. 16. 37' — a named river with citation.
+varAmbarA     -> varambarA     | PUI: {%Varāmbarā%} — an Apsaras. Br. III. 7. 5. | 'Varāmbarā — an Apsaras. Br. III. 7. 5' — a named Apsaras with citation.
+vicitrarUpA   -> vicitrarUpa   | PUI: {%Vicitrarūpā%} — a mind-born mother. M. 179. 21. | 'Vicitrarūpā — a mind-born mother. M. 179. 21' — a named mother-goddess with citation.
+vrAtinI       -> vratinI       | PUI: {%Vrātinī%} — a second daughter of Bhaṅgakāra given to Kṛṣṇa in marriage. Vā. 96. 55. | 'Vrātinī — a second daughter of Bhaṅgakāra given to Kṛṣṇa ... Vā. 96. 55' — a named person
+vrajapati     -> vrAjapati     | PUI: {%Vrajapati%} — is Kṛṣṇa. Br. III. 37. 11. | 'Vrajapati — is Kṛṣṇa. Br. III. 37. 11' — an epithet/name (lord of Vraja) with citation.
+nimlocA       -> nimloca       | PUI: {%Nimlocā%} — the Apsaras with the sun in the months of Nabha and Nabhasya. Vā. 52. 11. | 'Nimlocā — the Apsaras with the sun in the months of Nabha and Nabhasya. Vā. 52. 11' — a n
+BAvina        -> Bavina        | PUI: {%Bhāvina%} — a caste equal to Śūdra in Plakṣadvīpa. Vi. II. 4. 17. | 'Bhāvina — a caste equal to Śūdra in Plakṣadvīpa. Vi. II. 4. 17' — a named caste with cita
+aSvAsya       -> ASvAsya       | PUI: {%Aśvāsya%} — a son of Citraka. Br. III. 71. 115. | 'Aśvāsya — a son of Citraka. Br. III. 71. 115' — a named person with citation.
+cAturvarRa    -> caturvarRa    | PUI: {%Cāturvarṇa%} — the four castes; Viṣṇu, their creator and protector;1 originated by the f | 'Cāturvarṇa — the four castes ... Br. II. 37. 5' — an attested headword (vṛddhi form) with
+kAmArttA      -> kAmArtta      | PUI: {%Kāmārttā%} — a {%śakti.%} Br. IV. 44. 73. | 'Kāmārttā — a śakti. Br. IV. 44. 73' — a named śakti with citation.
+pradyoti      -> prAdyoti      | PUI: {%Pradyoti%} — ruled for 23 years with the Sāmantas sub- dued. Br. III. 74. 123. | 'Pradyoti — ruled for 23 years with the Sāmantas subdued. Br. III. 74. 123' — a named king
+sADitA        -> sADita        | PUI: {%Sādhitā%} — a Trayārṣeya. M. 198. 5. | 'Sādhitā — a Trayārṣeya. M. 198. 5' — a named pravara with citation.
+trisanDyA     -> trisanDya     | PUI: {%Trisandhyā%} (I) — The goddess enshrined at Godāśrama. M. 13. 37. || {%Trisandhyā%} (II) | 'Trisandhyā (I) — The goddess enshrined at Godāśrama ... (II) a Tīrtham' — two distinct na
+vfzAsya       -> vfzasya       | PUI: {%Vṛṣāsya%} — a son of Kārtavīrya who escaped Paraśurāma: a Mahāratha. Br. III. 41. 13; 69 | 'Vṛṣāsya — a son of Kārtavīrya who escaped Paraśurāma: a Mahāratha. Br. III. 41. 13' — a n
+viSvasya      -> viSvAsya      | PUI: {%Viśvasya%} — the place of Samudra agni. Vā. 29. 22. | 'Viśvasya — the place of Samudra agni. Vā. 29. 22' — a named place with citation.
+maRivaka      -> maRIvaka      | PUI: {%Maṇivaka%} — a son of Havya, after whom was called the Maṇivakavarṣa. Br. II. 14. 17-9. | 'Maṇivaka — a son of Havya, after whom was called the Maṇivakavarṣa. Br. II. 14. 17-9' — n
+bAlAyanI      -> bAlAyani      | PUI: {%Bālāyanī%} — a pupil of Bāṣkali. Bhā. XII. 6. 59. | 'Bālāyanī — a pupil of Bāṣkali. Bhā. XII. 6. 59' — a named person with citation.
+devavItI      -> devavIti      | PUI: {%Devavītī%} — a daughter of Meru and queen of Ketumālā. Bhā. V. 2. 23. | 'Devavītī — a daughter of Meru and queen of Ketumālā. Bhā. V. 2. 23' — a named person with
+javIna        -> javina        | PUI: {%Javīna%} — a Bhārgava gotrakara. M. 195. 20. | 'Javīna — a Bhārgava gotrakara. M. 195. 20' — a named gotra-founder with citation.
+kolIkila      -> kolikila      | PUI: {%Kolīkilas%} — a tribe to which Vindhyaśakti belonged. Vā. 99. 365. | 'Kolīkilas — a tribe to which Vindhyaśakti belonged. Vā. 99. 365' — a named tribe with cit
+nijaDftI      -> nijaDfti      | PUI: {%Nijadhṛtī%} — a R. in Śākadvīpa. Bhā. V. 20. 26. | 'Nijadhṛtī — a R. in Śākadvīpa. Bhā. V. 20. 26' — a named river with citation.
+nimlocani     -> nimlocanI     | PUI: {%Nimlocani%} — the city of Varuṇa on the west of Meru. Bhā. V. 21. 7. | 'Nimlocani — the city of Varuṇa on the west of Meru. Bhā. V. 21. 7' — a named city with ci
+parRavi       -> parRavI       | PUI: {%Parṇavi%} — a Trayārṣeya Pravara. M. 197. 6. | 'Parṇavi — a Trayārṣeya Pravara. M. 197. 6' — a named pravara with citation.
+pratikASva    -> pratIkASva    | PUI: {%Pratikāśva%} — the son of Bhānumat and father of Supratīka. Bhā. IX. 12. 11. | 'Pratikāśva — the son of Bhānumat and father of Supratīka. Bhā. IX. 12. 11' — a named pers
+sarvayonI     -> sarvayoni     | PUI: {%Sarvayonī%} — a Mudrādevī. Br. IV. 19. 15. | 'Sarvayonī — a Mudrādevī. Br. IV. 19. 15' — a named goddess with citation.
+tAmravarRi    -> tAmravarRI    | PUI: {%Tāmravarṇi%} (III) — name of an elephant; son of Puṣpa- danta. Vā. 69. 221. | 'Tāmravarṇi (III) — name of an elephant; son of Puṣpadanta. Vā. 69. 221' — a named elephan
+varDini       -> varDinI       | PUI: {%Vardhini%} — a Śakti. Br. IV. 44. 90. | 'Vardhini — a Śakti. Br. IV. 44. 90' — a named śakti with citation.
+kusu          -> kusU          | PUI: {%Kusu%} — an Yakṣa, and a son of Devayāni. Br. III. 7. 128. | 'Kusu — an Yakṣa, and a son of Devayāni. Br. III. 7. 128' — a named Yakṣa with citation.
+vinDyacUlika  -> vinDyaculika  | PUI: {%Vindhyacūlikas%} — {%(c)%} a northern kingdom. Br. II. 16. 48. | 'Vindhyacūlikas — (c) a northern kingdom. Br. II. 16. 48' — a named kingdom with citation.
+sahasrasruti  -> sahasraSruti  | PUI: {%Sahasrasruti%} — (Sahasrastuti-{%Bhā. P.%}) a R. in Śākadvīpa. Bhā. V. 20. 26. | '{%Sahasrasruti%} — (Sahasrastuti-Bhā. P.) a R. in Śākadvīpa' is a named river with docume
+sItAdri       -> SItAdri       | PUI: {%Sītādri%} — a Mt. in Gayāśilā. Vā. 108. 56. | 'Sītādri — a Mt. in Gayāśilā. Vā. 108. 56' — a named mountain (Sītā-adri) with citation.
+sUrpAkAra     -> SUrpAkAra     | PUI: {%Sūrpākāras%} — of the southern country. Vā. 45. 128. | 'Sūrpākāras — of the southern country. Vā. 45. 128' — a named people with citation.
+suklAyana     -> SuklAyana     | PUI: {%Suklāyana%} — the name of Vyāsa of the 22nd dvāpara; Lāṅgali, the {%avatār%} of the Lord | 'Suklāyana — the name of Vyāsa of the 22nd dvāpara ... Vā. 23. 198' — a named Vyāsa with c
+brahmaDAna    -> brahmadAna    | PUI: {%Brahmadhāna%} — one of the three Rākṣasa clans moving about in the day as against the Ni | 'Brahmadhāna — one of the three Rākṣasa clans ... Br. III. 8. 61' — a named clan with cita
+skandika      -> skanDika      | PUI: {%Skandika%} — a class of Piśācas. Br. III. 7. 380. | 'Skandika — a class of Piśācas. Br. III. 7. 380' — a named class with citation.
+madyam        -> maDyam        | PUI: {%Madyam%} — Liquor: Brāhmaṇas forbidden to take it: {%prāyascitta%} for it: used in the w | 'Madyam — Liquor: Brāhmaṇas forbidden to take it ... Br. IV. 7. 66' — the substance madya 
+gOtamAnvaya   -> gotamAnvaya   | PUI: {%Gautamānvaya%} — Śāradvatas or Ṛtathyas. Vā. 99. 205. | 'Gautamānvaya — Śāradvatas or Ṛtathyas. Vā. 99. 205' — a named lineage (Gautama-anvaya) wi
+devasTAni     -> dEvasTAni     | PUI: {%Devasthāni%} — a Pravara of Aṅgiras. M. 196. 15. | 'Devasthāni — a Pravara of Aṅgiras. M. 196. 15' — a named pravara with citation.
+reRava        -> rERava        | PUI: {%Reṇava%} — a branch of Kauśika gotra. Vā. 91. 99. | 'Reṇava — a branch of Kauśika gotra. Vā. 91. 99' — a named gotra-branch with citation.
+sambUta       -> samBUta       | PUI: {%Sambūta%} — a son of Yuvanāśva and Narmadā; father of Anaraṇya. Br. III. 63. 73. | '{%Sambūta%} — a son of Yuvanāśva and Narmadā' is a distinct named person with citation.
+mahAgoza      -> mahAGoza      | PUI: {%Mahāgoṣa%} — a kinnara gaṇa; horse-faced. Vā. 69. 32. | 'Mahāgoṣa — a kinnara gaṇa; horse-faced. Vā. 69. 32' — a named kinnara with citation.
+kakzIvaw      -> kakzIvat      | PUI: {%Kakṣīvaṭ%} (I) — a rājarṣi becoming a Brāhmaṇa. Vā. 91. 117. || {%Kakṣīvaṭ%} (III) — the | '{%Kakṣīvaṭ%} (I) — a rājarṣi becoming a Brāhmaṇa' is the attested -ṭ form of the named ṛṣ
+mADyamdina    -> mADyandina    | PUI: {%Mādhyamdina%} — a Trayārṣeya. M. 200. 15. | '{%Mādhyamdina%} — a Trayārṣeya' is a named entity (attested -mdina spelling) with citatio
+vizam         -> viSam         | PUI: {%Viṣam%} — produced by the churning of the ocean by the Devas and Asuras. Vā. 54. 49; 62. | 'Viṣam — produced by the churning of the ocean ... Vā. 54. 49' — the poison (viṣam) of the
+lAvakft       -> lABakft       | PUI: {%Lāvakṛt%} — an Ārṣeya Pravara (Aṅgiras). M. 196. 22. | 'Lāvakṛt — an Ārṣeya Pravara (Aṅgiras). M. 196. 22' — a named pravara with citation.
+prabAhI       -> pravAhI       | PUI: {%Prabāhī%} — brought forth 10 Deva-gandharvas, all best songsters. Vā. 68. 37. | 'Prabāhī — brought forth 10 Deva-gandharvas ... Vā. 68. 37' — a named female with citation
+turanya       -> turaRya       | PUI: {%Turanya%} — a horse of the Moon's chariot. Vā. 52. 53. | 'Turanya — a horse of the Moon's chariot. Vā. 52. 53' — a named horse with citation.
+uSadraTa      -> uzadraTa      | PUI: {%Uśadratha%} — the son of Titikṣu, a famous king of the east. Br. III. 74. 25; Vā. 99. 25 | 'Uśadratha — the son of Titikṣu, a famous king of the east. Br. III. 74. 25' — a named kin
+ArADi         -> ArAQi         | PUI: {%Ārādhi%} — a son of Jayatsena. Vā. 99. 231. | 'Ārādhi — a son of Jayatsena. Vā. 99. 231' — a named person with citation.
+amarka        -> anarka        | PUI: {%Amarka%} — a son of Śukrācārya. Bhā. VII. 5. 1, 48. | 'Amarka — a son of Śukrācārya. Bhā. VII. 5. 1, 48' — a named person (Amarka, companion of 
+karRIra       -> karmIra       | PUI: {%Karṇīra%} — a Nāga. Vā. 69. 69. | 'Karṇīra — a Nāga. Vā. 69. 69' — a named Nāga with citation.
+pravAhuka     -> prabAhuka     | PUI: {%Pravāhuka%} — a son of the Muṇḍīśa {%avatār%} of the Lord. Vā. 23. 211. | 'Pravāhuka — a son of the Muṇḍīśa avatār of the Lord. Vā. 23. 211' — a named person with c
+deSA          -> deSa          | PUI: {%Deśās%} — regions different from Rāṣṭras and Janapadas. Br. III. 50. 6. | '{%Deśās%} — regions different from Rāṣṭras and Janapadas' is a defined index lemma with c
+SrotrIya      -> Srotriya      | PUI: {%Śrotrīya%} — eligible for Pārvaṇa śrāddha, as also his son. M. 16. 8; 105. 17; Vi. III.  | '{%Śrotrīya%} — eligible for Pārvaṇa śrāddha' is a defined index lemma with citations.
+purUhUta      -> puruhUta      | PUI: {%Purūhūta%} — a name of Indra; his city is said to have a 1000 gates. M. 38. 15. | "Purūhūta — a name of Indra" is an attested epithet form of Indra given its own headword w
+SanatkumAra   -> sanatkumAra   | PUI: {%Śanatkumāra%} — a son of Anala;1 sacred to Kurukṣetra;2 discovered yoga;3 attended Soma' | "Śanatkumāra — a son of Anala ... discovered yoga" defines the entity under the Ś- spellin
+SfYjaya       -> sfYjaya       | PUI: {%Śṛñjaya%} — a son of Bheda;1 His daughters married by Bāhyaka.2 1) Vā. 99. 196. 2) Ib. 9 | "Śṛñjaya — a son of Bheda" is a named person under its own headword with citations (attest
+SuparRa       -> suparRa       | PUI: {%Śuparṇa%} — a Sudhāmāna god. Br. II. 36. 28. | "Śuparṇa — a Sudhāmāna god" is a named god under its own headword with citation.
+fTu           -> ftu           | PUI: {%Ṛthu%} — a rājarṣi becoming a Brāhmaṇa. Vā. 91. 116. | "Ṛthu — a rājarṣi becoming a Brāhmaṇa" is a named royal sage with citation (attested aspir
+Kadga         -> Kaqga         | PUI: {%Khadga%} — rhinoceros; flesh very good for {%śrāddha,%} but horn to be thrown away. Vā.  | "Khadga — rhinoceros; flesh very good for śrāddha" is an entry on the rhinoceros (Khaḍga) 
+hAstinApura   -> hastinApura   | PUI: {%Hastināpura%} — (also Hastināpura and Gajāhva);1 visit- ed by Kṛṣṇa often. Here Kṛṣṇa sp | "Hastināpura — (also Hastināpura and Gajāhva)" defines the famous city; the headword carri
+pAraSarya     -> pArASarya     | PUI: {%Pāraśarya%} — Kauthuma: composed of six saṃhitas. Vā. 61. 41. | "Pāraśarya — Kauthuma: composed of six saṃhitas" is a named entry with citation (attested 
+Darmata       -> DarmatA       | PUI: {%Dharmata%} — the Brāhma form of marriage. Vā. 76. 3. | '{%Dharmata%} — the Brāhma form of marriage' is a defined index lemma with citation.
+mahavarAha    -> mahAvarAha    | PUI: {%Mahavarāha%} — an account of, in the {%Varāha Purāṇa.%} M. 53. 39. | '{%Mahavarāha%} — an account of, in the Varāha Purāṇa' is the index lemma as printed with 
+Sripati       -> SrIpati       | PUI: {%Śripati tīrtham%} — sacred to the Pitṛs. M. 22. 74. | '{%Śripati tīrtham%} — sacred to the Pitṛs' is a named tīrtha with citation (printed Śri-)
+saMgItI       -> saMgIti       | PUI: {%Saṃgītī%} — in the Gayāśilā. Vā. 108. 48. | '{%Saṃgītī%} — in the Gayāśilā' is a named place-feature with citation.
+Sisuka        -> SiSuka        | PUI: {%Śisuka%} — a grandson of Nandiyaśa, ruled in Purīkā. Vā. 99. 370. | "Śisuka — a grandson of Nandiyaśa, ruled in Purīkā" is a named king under its own headword
+kusika        -> kuSika        | PUI: {%Kusika%} (I) — the king who engaged himself in austeri- ties for a son for one thousand  | "Kusika (I) — the king who ... See Kusastamba" defines a named king under its own headword
+sukeza        -> sukeSa        | PUI: {%Sukeṣa%} (III) — a Mt. Br. III. 7. 453. | "Sukeṣa (III) — a Mt." is a named mountain under its own numbered headword with citation.
+visarjama     -> visarjana     | PUI: {%Visarjama%} — a kingdom of the west watered by the Sindhu. Br. II. 18. 48. | "Visarjama — a kingdom of the west watered by the Sindhu" is a named kingdom with citation
+satvam        -> satvan        | PUI: {%Satvam%} — the quality of jñānam. Br. IV. 3. 32-3, 45. | '{%Satvam%} — the quality of jñānam' is a defined index lemma with citation.
+satrAjitI     -> sAtrAjitI     | PUI: {%Satrājitī%} — a queen of Kṛṣṇa. Vi. V. 28. 5. | '{%Satrājitī%} — a queen of Kṛṣṇa' is a named figure with citation; attested patronymic sp
+uttarAzAQa    -> uttarAzAQA    | PUI: {%Uttarāṣāḍha%} — an asterism. Vā. 82. 11. | "Uttarāṣāḍha — an asterism" is the standard masculine/neuter nakṣatra name with its own Vā
+gfDrakuwa     -> gfDrakUwa     | PUI: {%Gṛdhrakuṭa%} — in the left hand of the śilā when sages performed tapas in the form of an | "Gṛdhrakuṭa — ... in Gayā; fit for śrāddha" is a named tīrtha with its own citations; spel
+plakzapraSravaRa -> plakzaprasravaRa | PUI: {%Plakṣapraśravaṇa%} — a sacred spot for śrāddha; on the Sarasvatī. Br. III. 13. 69. | "Plakṣapraśravaṇa — a sacred spot for śrāddha; on the Sarasvatī" is a named tīrtha with it
+AtmA          -> Atma          | PUI: {%Ātmā%} — that which is attained, which is taken away and that which is, and hence the ev | '{%Ātmā%} — that which is attained ... the ever present bhāva' is a defined index lemma wi
+Srivfkzaka    -> SrIvfkzaka    | PUI: {%Śrivṛkṣaka%} — a palace; see Padmaka. M. 269. 44. | 'Śrivṛkṣaka — a palace; see Padmaka. M. 269. 44' — a named palace with citation; cross-ref
+vIraRi        -> vIraRI        | PUI: {%Vīraṇi%} — a Vāgin. Vā. 61. 25. | 'Vīraṇi — a Vāgin. Vā. 61. 25' — a named entity with citation, though terse.
+vERi          -> veRi          | PUI: {%Vaiṇi%} — of the Sahya hills in the Dakṣināpatha. Vā. 45. 104. | 'Vaiṇi — of the Sahya hills in the Dakṣināpatha. Vā. 45. 104' — a named entity with citati
+Svetarata     -> SvetaraTa     | PUI: {%Śvetarata%} — a son of Hṛdika. Br. III. 71. 14. | 'Śvetarata — a son of Hṛdika. Br. III. 71. 14' — a named person with citation (attested va
+DUmaSikA      -> DUmaSiKA      | PUI: {%Dhūmaśikā%} — a Mind-born mother. M. 179. 24. | 'Dhūmaśikā — a Mind-born mother. M. 179. 24' — a named mother-goddess with citation.
+haMsaaparvata -> (flag)        | PUI: {%Haṃsaaparvata%} — a Mt. west of the Mahābhadra lake. Vā. 36. 30. | 'Haṃsaaparvata — a Mt. west of the Mahābhadra lake. Vā. 36. 30' — a named mountain with ci
+vajasaneyaka  -> vAjasaneyaka  | PUI: {%Vajasaneyaka%} — 1900 Ṛk gaṇas and four-fold Brāh- maṇas. Vā. 61. 67; 99. 254. | "Vajasaneyaka — 1900 Ṛk gaṇas and four-fold Brāhmaṇas" is given as its own entry; spelling
+
+# ===== BUCKET 5  INTENTIONAL -- PUI documents the spelling on purpose; NEVER file (21) =====
+kzAtriya      -> kzatriya      | PUI: {%Kṣātriya vidhi%} — not to kill a woman. See also Kṣatriya. Vā. 94. 14; 96. 224. | "Kṣātriya vidhi ... See also Kṣatriya" explicitly cross-references the standard form, docu
+pannagA       -> pannaga       | PUI: {%Pannagās%} — semi-divine beings, see {%Sarpās.%} Br. II. 32. 1, 2. | "Pannagās — semi-divine beings, see Sarpās" is a cross-reference entry ("see Sarpās").
+prAhlAda      -> prahlAda      | PUI: {%Prāhlāda%} — (also Prahlāda) defeated by Indra in war;1 was regarded as the Indra of the | "Prāhlāda — (also Prahlāda) defeated by Indra" explicitly notes the variant via "(also Pra
+saMtatI       -> saMtati       | PUI: {%Saṃtatī%} (I) — (see Sannatī); a daughter of Dakṣa and wife of Kratu;1 gave birth to Vāl | "Saṃtatī (I) — (see Sannatī)" begins with a cross-reference marker "(see Sannatī)".
+sEneya        -> SEneya        | PUI: {%Saineya%} — is Sātyaki. Bhā. I. 8. 7; 10. 18. | "Saineya — is Sātyaki" is an equational cross-reference ("is Sātyaki") defining the varian
+sacIpati      -> SacIpati      | PUI: {%Sacīpati%} — see Indra; got Kṛṣṇa's promise of protection to Arjuna. Vi. V. 12. 15; 12.  | "Sacīpati — see Indra" is an explicit cross-reference ("see Indra").
+ArhaRa        -> arhaRa        | PUI: {%Ārhaṇa%} ({%Arhaṇa%} — Bur.) a chief attendant on Hari. Bhā. II. 9. 14. | "Ārhaṇa (Arhaṇa — Bur.) a chief attendant on Hari" explicitly notes the variant reading "(
+nEmizA        -> nEmiza        | PUI: {%Naimiṣā%} — (also Naimiṣālaya s.v.) sacred to Viṣṇu; here Śaunaka and other sages perfor | "Naimiṣā — (also Naimiṣālaya s.v.)" carries a cross-reference "s.v." documenting the form.
+purodA        -> puroDA        | PUI: {%Purodās%} — see Purohita.1 Khāṇḍikya's Purodās fol- lowed the banished king to the fores | Body is a cross-reference: '{%Purodās%} — see Purohita'.
+babruvAhana   -> baBruvAhana   | PUI: {%Bab(h)ruvāhana%} (I) — a son of Arjuna and Ulūpi, the daughter of the king of Maṇipura;  | "Bab(h)ruvāhana (I) — a son of Arjuna and Ulūpi" carries an explicit parenthetical variant
+CandoGa       -> Candoga       | PUI: {%Chando(u)gha%} — the chanting of the Vedas, being prac- tised in a hermitage. Br. III. 2 | "Chando(u)gha — the chanting of the Vedas" carries an explicit parenthetical variant "Chan
+baDryaSva     -> vaDryaSva     | PUI: {%Badhryaśva%} — (also Bandhyaśva) the first son of Mud- gala and a Brahmiṣṭha through Ind | Body documents the variant: '{%Badhryaśva%} — (also Bandhyaśva) the first son of Mudgala'.
+laguda        -> laguqa        | PUI: {%Lagudas%} — see Yaṣṭi, the weapons of the Ābhīras. Vi. V. 38. 50-51. | Body is a cross-reference: '{%Lagudas%} — see Yaṣṭi, the weapons of the Ābhīras'.
+bAhuputra     -> bahuputra     | PUI: {%Bāhu(ka)putra%} — married two daughters of Dakṣa. M. 146. 17; Vā. 63. 42. | "Bāhu(ka)putra — married two daughters of Dakṣa" carries an explicit parenthetical variant
+SivacaturdaSi -> SivacaturdaSI | PUI: {%Śivacaturdaśi%} — see Maheśvaravratam. M. 95. 5. | "Śivacaturdaśi — see Maheśvaravratam" is an explicit cross-reference entry.
+sarya         -> Sarya         | PUI: {%Sarya (sarpa?)%} — a son of Yātudhāna. Br. III. 7. 90, 97. | "Sarya (sarpa?)" carries the editor's own parenthetical query about the reading, documenti
+kAmalI        -> kAmali        | PUI: {%Kāmalī%} — another name for Reṇukā. Vā. 91. 90. | 'Kāmalī — another name for Reṇukā. Vā. 91. 90' — explicit alternate-name (cross-reference)
+barhanASva    -> barhaRASva    | PUI: {%Barhanāśva%} — (Varhanāśva-{%Br. P.%}); son of Nikumbha and father of Kṛśāśva. Bhā. IX.  | Body documents the variant explicitly: '(Varhanāśva-Br. P.); son of Nikumbha and father of
+stutA         -> stuta         | PUI: {%Stutā (Surā?)%} — a wife of Varuṇa! her two sons were Kali and Vaidya and a daughter Sur | Body flags a spelling alternative: '{%Stutā (Surā?)%} — a wife of Varuṇa'.
+dakziRabanDa  -> dakziRAbanDa  | PUI: {%Dakṣiṇabandha%} — (Taijasa bandha in other books). Vā. 102. 59. | Body notes an alternative naming: '{%Dakṣiṇabandha%} — (Taijasa bandha in other books)'.
+haridASa      -> haridAsa      | PUI: {%Haridāśa (Haridehe?)%} — the birthplace of Hariṇāśva mūrchana. Br. III. 61. 44. Vā. 86.  | Body itself flags the spelling uncertainty: '{%Haridāśa (Haridehe?)%} — the birthplace of 
+
+# ===== BUCKET 6  UNLOCATABLE -- not in the current PUI source (stale/different key) (6) =====
+gopi          -> gopI          | PUI:  | 
+KawvAnga      -> KawvANga      | PUI:  | 
+citrAngada    -> citrANgada    | PUI:  | 
+tapomUrtI     -> tapomUrti     | PUI:  | 
+BIzMacaRqika  -> (flag)        | PUI:  | 
+p2rTivI       -> (flag)        | PUI:  | 
