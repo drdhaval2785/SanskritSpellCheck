@@ -10,7 +10,7 @@
 # DO NOT hand-edit -- regenerate with detectors/gen_do_not_file_suppress.py
 # after triaging more dictionaries.
 #
-# 2041 unique headwords from 20 dictionaries:
+# 2042 unique headwords from 21 dictionaries:
 #   SanskritSpellCheck\corrections_draft\AP90\AP90_wrong_readings.txt: 8
 #   SanskritSpellCheck\corrections_draft\AP\AP_wrong_readings.txt: 32
 #   SanskritSpellCheck\corrections_draft\BEN\BEN_wrong_readings.txt: 14
@@ -31,6 +31,7 @@
 #   SanskritSpellCheck\corrections_draft\SNP\SNP_wrong_readings.txt: 3
 #   SanskritSpellCheck\corrections_draft\VCP\VCP_wrong_readings.txt: 408
 #   SanskritSpellCheck\corrections_draft\WIL\WIL_wrong_readings.txt: 17
+#   SanskritSpellCheck\corrections_draft\YAT\YAT_wrong_readings.txt: 1
 ABasvara
 AGAtin
 ASIna
@@ -443,6 +444,7 @@ avAlamba
 avAruh
 avAsic
 avIkzit
+avahelA
 avala
 avalambA
 avamanya

@@ -6,6 +6,23 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.33.0] - 2026-06-23
+
+### Added
+- **YAT triage — 21/33 dicts; a high-yield outlier (27 fileable).** Body-grounded triage of Yates'
+  *Sanskrit-English Dictionary* (Calcutta, 1846; registered `YAT: 'en'`). Of **247 tier-A**: **27
+  body-confirmed fileable typos (10.9%)** — second only to SHS — plus **32 b↔v pairs held for scan**,
+  123 real roots/words, 13 eyes, 15 unlocatable, 1 do-not-file. Like SHS, a poorly-digitised
+  19th-c. Bengal source: each fileable typo is fixed by the entry's own citation form (dental-n vs
+  retroflex-ṇ, sibilant, aspiration, vowel-length). Ran the full **Confirm (source) + Review
+  (false-positive gate)** phases via subagents. Package: [corrections_draft/YAT/](corrections_draft/YAT/).
+  - ⚠️ **b↔v caveat:** Bengali orthography doesn't distinguish व/ब, so the 32 b/v candidates may be
+    faithful to the print — held in TYPO-UNSURE, NOT filed, pending scan verification (व vs ब).
+  - Cross-dict precision: SHS 37/246 · YAT 27/247 · PWG 12/497 · MW 4/1954 · … · BHS 0/713 · PUI 0/518.
+
+### Changed
+- **Suppression list → 21 dicts** (YAT adds 1 do-not-file). `eval.py` false-positives stay **0**.
+
 ## [1.32.0] - 2026-06-23
 
 ### Added

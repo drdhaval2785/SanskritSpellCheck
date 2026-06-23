@@ -1,0 +1,630 @@
+# YAT tier-A -- BODY-GROUNDED triage  (DRAFT; verify every kept case against the scan)
+#
+# The 219 engine tier-A candidates were judged against YAT's OWN entry text (csl-orig),
+# not spelling alone. A spelling detector cannot tell a typo from a real word, an
+# intentional variant / compounding form, or wrong-reading apparatus -- the entry can.
+# Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM
+# pass over the 'realword' set + source confirmation of every TYPO verdict.
+#
+# FINDING: of 219 tier-A candidates, 27 are body-confirmed fileable typos (12.3%).
+# 123 are real distinct words, 1 are spellings YAT documents on purpose (w.r./v.l./
+# in-comp./cross-ref -- filing them would CORRUPT YAT), 15 are not in the current
+# source, and 53 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
+# do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.
+
+# ===== BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file) (27) =====
+
+mayAvin       -> mAyAvin        [dcs=3 ndicts=1 body=realword]
+    YAT: {#mayAvin#} {#(vI)#} 5. {%m.%} A cheat.
+    judged: Gloss {%m.%} 'A cheat' is precisely mAyAvin's meaning; suspect lacks the long A.
+    confirm: Gloss 'a cheat' = mAyAvin (possessing mAyA); short a is a vowel-length slip for long A.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=mayAvin
+
+mahAmayA      -> mahAmAyA       [dcs=3 ndicts=1 body=realword]
+    YAT: {#mahA-mayA#} {#(yA)#} 1. {%f. Durgā;%} illusion.
+    judged: Gloss {%f. Durgā;%} illusion = mahAmAyA (great illusion); the suspect lacks the long A.
+    confirm: Gloss 'Durga; illusion' = mahAmAyA (great illusion, long A).
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=mahAmayA
+
+RaB           -> naB            [dcs=3 ndicts=1 body=realword]
+    YAT: {#RaB#} {#(Ya, ya, ga) naBati, te#} 1. {%c.%} {#naByati#} 4. {%a.%} {#naBnAti#} 9. {%a.%} To kill, to die.
+    judged: All citations {#naBati#}/{#naByati#}/{#naBnAti#} use dental n, matching the suggestion naB rather than retroflex-R suspect.
+    confirm: Body conjugates {#naBati#} (dental-n), root nabh; R-for-n root-cluster slip.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=RaB
+
+Rij           -> nij            [dcs=3 ndicts=1 body=realword]
+    YAT: {#Rij#} {#(la, i) niMkte#} 2. {%d.%} To cleanse with; {#(li, O, ira) nenekti#} to che- rish; {#nenikte#} 3. {%c.%} To purify.
+    judged: All citations {#niMkte#}/{#nenekti#}/{#nenikte#} use dental n, matching the suggestion nij rather than retroflex-R suspect.
+    confirm: Body conjugates {#nenekti/niMkte#} (dental-n), root nij; R-for-n root-cluster slip.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=Rij
+
+gaDABft       -> gadABft        [dcs=2 ndicts=1 body=realword]
+    YAT: {#gaDABft#} {#(t)#} 5. {%m. Viṣṇu.%}
+    judged: Gloss {%m. Viṣṇu.%} is gadABft (mace-bearer); retroflex-aspirate D for dental d is an error.
+    confirm: Gloss 'Vishnu' = gadABft (gadA mace-bearer); dental d mis-aspirated to D (dh).
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=gaDABft
+
+vizwABU       -> vizWABU        [dcs=0 ndicts=1 body=realword]
+    YAT: {#vizwABU#} {#(BUH-Bu)#} {%a.%} Born in filth.
+    judged: Gloss 'Born in filth' = vizWA (excrement, retroflex W); the dental-w spelling is an error.
+    confirm: Gloss 'born in filth' = vizWABU (vizWA, retroflex Th=W); headword has w (T).
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=vizwABU
+
+pAradfzvan    -> pAradfSvan     [dcs=0 ndicts=1 body=realword]
+    YAT: {#pAra-dfzvan#} {#(zvA-zvA-zva)#} {%a.%} Longsighted.
+    judged: Body {#pAra-dfzvan#} 'Longsighted' is pAra+dfSvan (one who has seen the far shore, from dfS 'to see'); dfSvan standardly has palatal S, so retroflex z is a misspelling for S.
+    confirm: gloss 'longsighted' = one who has seen far shore, from drS (palatal S); dfzvan not a word, dfSvan correct; z->S typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=pAradfzvan
+
+RiS           -> niS            [dcs=4 ndicts=1 body=realword]
+    YAT: {#RiS#} {#neSati#} 1. {%a.%} To meditate pro- foundly, or abstractedly.
+    judged: Citation {#neSati#} has dental n (guna of niS), matching the suggestion niS rather than retroflex-R suspect.
+    confirm: Body conjugates {#neSati#} (dental-n); root nis. R-for-n in this root cluster; citation form dental-n.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=RiS
+
+aSanayA       -> aSanAyA        [dcs=3 ndicts=1 body=realword]
+    YAT: {#aSanayA#} {#(yA)#} 1. {%f.%} Hunger.
+    judged: Gloss {%f.%} 'Hunger' = aSanAyA (desire to eat); the suspect lacks the long A in the second syllable.
+    confirm: Gloss 'hunger' = aSanAyA (long A); cf neighbour aSanAyita 'hungry'.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=aSanayA
+
+asaMSakta     -> asaMsakta      [dcs=3 ndicts=1 body=realword]
+    YAT: {#a-saMSakta#} {#(ktaH-ktA-ktaM)#} {%a.%} Indifferent.
+    judged: Gloss 'Indifferent' = a-saM-sakta (not attached, dental s); the palatal S in the suspect is an error.
+    confirm: Gloss 'indifferent/unattached' = asaMsakta (saM+sakta, dental s); S (palatal) is a sibilant slip.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=asaMSakta
+
+vESizWya      -> vESizwya       [dcs=3 ndicts=1 body=realword]
+    YAT: {#vESizWya#} {#(zWyaM)#} 1. {%n.%} Being possessed of; distinction.
+    judged: Gloss 'distinction' = vESizwya (from viSizwa, retroflex w); the aspirate W in the suspect is an error.
+    confirm: Gloss 'distinction' = vESizwya (viSizwa+ya, zw=sht); headword has zW (shth), wrong aspiration.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=vESizWya
+
+drAvana       -> drAvaRa        [dcs=3 ndicts=2 body=realword]
+    YAT: {#drAvana#} {#(naM)#} 1. {%n.%} The clearing nut; caus- ing to fly; fusing, distilling.
+    judged: Gloss 'causing to fly; fusing, distilling' = drAvaRa (causative of dru); the dental n for retroflex R is an error.
+    confirm: Gloss 'causing to fly; fusing' = drAvaRa; n retroflexes to R after r (nati).
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=drAvana
+
+hantAkAra     -> hantakAra      [dcs=2 ndicts=2 body=realword]
+    YAT: {#hantA-kAra#} {#(raH)#} 1. {%m.%} Rice to be given to a guest.
+    judged: Body is the particle hanta + kAra; the long A in hantA- is an error for short hanta-.
+    confirm: Gloss 'rice given to a guest' = hantakAra (hanta exclamation, short a); long A is slip.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=hantAkAra
+
+ambukfta      -> ambUkfta       [dcs=2 ndicts=2 body=realword]
+    YAT: {#ambu-kfta#} {#(taH-tA-taM)#} {%par.%} Sputtered.
+    judged: Gloss {%par.%} 'Sputtered' = ambUkfta (made watery); the suspect's short u is an error.
+    confirm: Gloss 'sputtered' = ambUkfta (ambu+kf, lengthened U); headword has short u.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=ambukfta
+
+arsasa        -> arSasa         [dcs=2 ndicts=1 body=realword]
+    YAT: {#arsasa#} {#(saH)#} {%m.%} Hoemorrhoids.
+    judged: Gloss {%m.%} 'Haemorrhoids' is arSas's meaning; the dental s for palatal S is an error.
+    confirm: Gloss 'haemorrhoids' = arSas/arSasa (palatal S); dental s is a sibilant slip; cf neighbour arSehita.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=arsasa
+
+cInapizWa     -> cInapizwa      [dcs=2 ndicts=2 body=realword]
+    YAT: {#cIna-pizWa#} {#(zWaH)#} 1. {%m.%} Lead, red-lead.
+    judged: Gloss 'Lead, red-lead' = cIna-pizwa (powder, retroflex w); the aspirate W is an error.
+    confirm: Gloss 'lead, red-lead' = cInapizwa (pizwa ground, zw=sht); headword has zW (shth).
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=cInapizWa
+
+zazWihAyana   -> zazwihAyana    [dcs=2 ndicts=2 body=realword]
+    YAT: {#zazWi-hAyana#} {#(naH)#} 1. {%m. Idem.%}
+    judged: Body 'Idem' refers to a sixty-year cycle; zazwi (sixty) has retroflex w, so the aspirate W is an error.
+    confirm: Gloss 'elephant (idem)' = zazwihAyana (sixty-year, zazwi=shashti, zw); headword has zW (shth).
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=zazWihAyana
+
+prAyopavizWa  -> prAyopavizwa   [dcs=2 ndicts=1 body=realword]
+    YAT: {#prAyopavizWa#} {#(zwaH-zwA-zwaM)#} {%a.%} Fasting to death.
+    judged: Gloss 'Fasting to death' = prAyopavizwa (seated, viz+ta, retroflex w); the aspirate W is an error.
+    confirm: Gloss 'fasting to death' = prAyopavizwa (upavizwa seated, zw=sht); headword has zW (shth).
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=prAyopavizWa
+
+lakzmIpala    -> lakzmIPala     [dcs=2 ndicts=2 body=realword]
+    YAT: {#lakzmI-pala#} {#(laH)#} 1. {%m.%} Ægle marmelos.
+    judged: Gloss 'Ægle marmelos' (the bael fruit) = lakzmI-Pala (fruit); the unaspirate p for aspirate P is an error.
+    confirm: Gloss 'Aegle marmelos' (a fruit) = lakzmIPala (Lakshmi's phala/fruit, P=ph); headword has p.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=lakzmIpala
+
+AparAhnika    -> AparAhRika     [dcs=2 ndicts=2 body=realword]
+    YAT: {#AparA_hnika#} {#(kaH-kI-kaM)#} {%a.%} Of the afternoon, after mid-day.
+    judged: Gloss 'Of the afternoon' = derived from aparAhRa (retroflex R); the dental n in -hnika is an error.
+    confirm: Gloss 'of the afternoon' = AparAhRika (aparAhRa, retroflex R); headword has dental n (hn).
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=AparAhnika
+
+duzwu         -> duzWu          [dcs=1 ndicts=2 body=realword]
+    YAT: {#duzwu#} {#(zwuH-zwuH-zwu)#} {%a.%} Ill; improper.
+    judged: Gloss {%a.%} 'Ill; improper' = duzWu (badly); the retroflex w for aspirate W is an error.
+    confirm: Gloss 'ill; improper' = duzWu (dus+zWu, retroflex aspirate W); headword has w.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=duzwu
+
+AkzadyUta     -> akzadyUta      [dcs=0 ndicts=1 body=realword]
+    YAT: {#Akza-dyUta#} {#(taH)#} 1. {%m.%} Gambling.
+    judged: Gloss {%m.%} 'Gambling' matches akza-dyUta (dice-gambling); the initial long A is an error.
+    confirm: Gloss 'gambling' = akzadyUta (short a); long initial A is contamination from vrddhi neighbour AkzadyUtika.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=AkzadyUta
+
+avasfzWa      -> avasfzwa       [dcs=0 ndicts=1 body=realword]
+    YAT: {#ava-sfzWa#} {#(zwaH-zwA-zwaM)#} {%p.%} Removed, dismissed.
+    judged: Body {#ava-sfzWa#} {%p.%} 'Removed, dismissed' is the past participle of ava+sfj, which standardly is avasfzwa with retroflex w (-ta after z); W is a misspelling for w.
+    confirm: 'removed, dismissed' = ava+sfj ppl sfzwa; declension (zwaH-zwA-zwaM) in body uses w, key has W; W->w typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=avasfzWa
+
+saNGati       -> saNgati        [dcs=0 ndicts=1 body=realword]
+    YAT: {#saNGati#} {#(tiH)#} 2. {%f.%} A collecting.
+    judged: Gloss {%f.%} 'A collecting' = saNgati (union); the aspirate G for unaspirated g is an error.
+    confirm: Gloss 'a collecting' = saNgati (saM+gati, plain g); G (gh) is a wrong aspiration.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=saNGati
+
+pratisidDa    -> pratizidDa     [dcs=0 ndicts=1 body=realword]
+    YAT: {#prati-sidDa#} {#(dDaH-dDA-dDaM)#} {%a.%} Prohibited.
+    judged: Gloss 'Prohibited' = pratizidDa (from ziD); after prati- the s should be retroflex z, so suspect's dental s is an error.
+    confirm: Gloss 'prohibited' = pratizidDa; s retroflexes to z after prati (nati).
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=pratisidDa
+
+pakzipARIyaSAlikA -> pakzipAnIyaSAlikA  [dcs=0 ndicts=2 body=realword]
+    YAT: {#pakzi-pARIya-SAlikA#} {#(kA)#} 1. {%f.%} A trough for watering beasts, &c.
+    judged: Body 'A trough for watering beasts' contains pAnIya (drinking-water), which has dental n; the R in pARIya is a misspelling for n.
+    confirm: gloss 'trough for watering beasts' = paniya (water); pAR is not a word, dental-n pAnIya correct; R->n typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=pakzipARIyaSAlikA
+
+prAkPAlguRa   -> prAkPAlguna    [dcs=0 ndicts=2 body=realword]
+    YAT: {#prAk-PAlguRa#} {#(RaH)#} 1. {%m. Idem.%}
+    judged: Body {#prAk-PAlguRa#} relates to PAlguna (month/Arjuna), which standardly ends in dental -guna; final R is a misspelling for n.
+    confirm: 'Idem'=prak-phalguna; Phalguna month/name has dental n; pARguRa not a word; R->n typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=prAkPAlguRa
+
+# ===== BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted (40) =====
+
+RaS           -> naS            [dcs=5 ndicts=1 body=realword]
+    YAT: {#RaS#} {#(ya) naSyati#} 4. {%a.%} To disappear; to perish, to be annihilated.
+    judged: Body conjugates the root as {#naSyati#} 'To disappear; to perish' with dental n, contradicting the headword's initial retroflex R; citation form matches suggestion naS.
+    confirm: apparatus; {#RaS#} citation 'naSyati' To perish; R-initial root listed per PaNinian Nopadesa convention, not a typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=RaS
+
+viqbarAha     -> viqvarAha      [dcs=3 ndicts=1 body=realword]
+    YAT: {#viqba_rAha#} {#(haH)#} 1. {%m.%} A tame hog.
+    judged: Gloss 'A tame hog' = viq-varAha (village-hog, varAha = hog); the b for v is an error.
+    confirm: viqvarAha (tame hog); b vs v ambiguous - Bengali orthography, cannot confirm from text.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=viqbarAha
+
+aSvavaqaba    -> aSvavaqava     [dcs=2 ndicts=1 body=realword]
+    YAT: {#aSva-vaqaba#} {#(vaM)#} 1. {%n.%} A stud of horses and mares. {%du.%} Horse and mare.
+    judged: Gloss 'stud of horses and mares' = aSva-vaqava (vaqava = mare); the b for v is an error.
+    confirm: aSvavaqava (qava=vaDavA mare); b vs v ambiguous - Bengali orthography, cannot confirm from text.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=aSvavaqaba
+
+agniballaBa   -> agnivallaBa    [dcs=2 ndicts=1 body=realword]
+    YAT: {#agni-ballaBa#} {#(BaH)#} 1. {%m.%} Resin.
+    judged: Gloss 'Resin' = agni-vallaBa (fire's beloved); the initial b for v is an error.
+    confirm: agnivallaBa ('fire's beloved'=resin, vallabha); b vs v ambiguous - Bengali orthography.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=agniballaBa
+
+anabasTiti    -> anavasTiti     [dcs=2 ndicts=1 body=realword]
+    YAT: {#ana_ba-sTiti#} {#(tiH)#} 2. {%f.%} Unsteadiness.
+    judged: Gloss 'Unsteadiness' = an-avasTiti (non-steadiness); the b for v is an error.
+    confirm: anavasTiti (ava-sthiti, unsteadiness); b vs v ambiguous - Bengali orthography. cf anavasTAna/anavasTita.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=anabasTiti
+
+anabasara     -> anavasara      [dcs=2 ndicts=1 body=realword]
+    YAT: {#ana_basara#} {#(raH-rA-raM)#} {%a.%} Busy.
+    judged: Gloss 'Busy' = an-avasara (no leisure); the b for v is an error.
+    confirm: anavasara (no-leisure='busy'); b vs v ambiguous - Bengali orthography, cannot confirm from text.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=anabasara
+
+daSavala      -> daSabala       [dcs=2 ndicts=1 body=realword]
+    YAT: {#daSa-vala#} {#(laH)#} 1. {%m.%} A {%Buddha.%}
+    judged: Gloss 'A Buddha' = daSabala (ten-powered, bala = power); the v for b is an error.
+    confirm: daSabala ('ten-powered'=Buddha, bala); b vs v ambiguous - Bengali orthography, cannot confirm.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=daSavala
+
+netrAmvu      -> netrAmbu       [dcs=2 ndicts=1 body=realword]
+    YAT: {#netrA_mvu#} {#(mvuH)#} 2. {%m.%} A tear.
+    judged: Gloss 'A tear' = netra-ambu (eye-water, ambu = water); the v for b is an error.
+    confirm: b/v pair; entry {#netrA_mvu#} 'a tear' (netra-ambu) uses mv in body matching key; needs scan.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=netrAmvu
+
+samanubrata   -> samanuvrata    [dcs=2 ndicts=1 body=realword]
+    YAT: {#sama-nu-brata#} {#(taH-tA-taM)#} {%a.%} Devoted to.
+    judged: Gloss 'Devoted to' = sam-anu-vrata; the b for v in -brata is an error.
+    confirm: b/v pair; {#sama-nu-brata#} 'devoted to' = samanuvrata, but brata spelling in body matches key; needs scan.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=samanubrata
+
+aDyabasAyin   -> aDyavasAyin    [dcs=2 ndicts=1 body=realword]
+    YAT: {#aDya_basAyin#} {#(yI-yinI-yi)#} {%a.%} Perse- vering, resolute, determined.
+    judged: Body {#aDya_basAyin#} 'Persevering, resolute' is adhyavasAyin from adhi+ava+SO; the standard form has v (ava-), so b is a misspelling for v.
+    confirm: b/v pair; {#aDya_basAyin#} 'persevering' = adhyavasAyin, body uses basAyin matching key; needs scan.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=aDyabasAyin
+
+ElabAluka     -> ElavAluka      [dcs=1 ndicts=1 body=realword]
+    YAT: {#ElabAluka#} {#(kaM)#} 1. {%n.%} A perfume.
+    judged: Body {#ElabAluka#} 'A perfume' is the spice/perfume elavAluka; standard form has v, so b is a misspelling for v.
+    confirm: b/v pair; {#ElabAluka#} 'a perfume' = ElavAluka, body uses bAluka matching key; needs scan.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=ElabAluka
+
+kzIrapAyiR    -> kzIrapAyin     [dcs=0 ndicts=2 body=realword]
+    YAT: {#kzIra-pAyiR#} {#(yiRaH)#} 5. {%m.%} The people called {%Usīnaras,%} milk-drinkers.
+    judged: Gloss 'milk-drinkers' = pAyin (drinker); final retroflex R for dental n is an error.
+    confirm: Distinct entry (a people Usinaras); body declines (yiRaH) with retroflex R, documenting its own stem spelling.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=kzIrapAyiR
+
+BawwArakabAra -> BawwArakavAra  [dcs=0 ndicts=1 body=realword]
+    YAT: {#BawwAraka-bAra#} {#(raM)#} 1. {%n.%} Sunday.
+    judged: Body {#BawwAraka-bAra#} 'Sunday' is BawwAraka (the Sun) + vAra (day); vAra (weekday) standardly has v, so b is a misspelling for v.
+    confirm: b/v pair; {#BawwAraka-bAra#} 'Sunday' = BawwArakavAra (lord's day), body uses bAra matching key; needs scan.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=BawwArakabAra
+
+Rez           -> nez            [dcs=0 ndicts=1 body=realword]
+    YAT: {#Rez#} {#(Na, f) nezati#} 1. {%d.%} To go, approach.
+    judged: Body conjugates the root as {#nezati#} with dental n, contradicting the headword's initial retroflex R; citation form matches suggestion nez.
+    confirm: apparatus; {#Rez#} citation 'nezati' To go; R-initial root listed per PaNinian Nopadesa convention, not a typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=Rez
+
+avedabid      -> avedavid       [dcs=0 ndicts=1 body=realword]
+    YAT: {#a-vedabid#} {#(d)#} 5. {%m.%} Brāhman not knowing the vedas.
+    judged: Body {#a-vedabid#} 'Brāhman not knowing the vedas' is a-veda-vid (vid 'to know'); vid standardly has v, so b is a misspelling for v.
+    confirm: b/v pair; {#a-vedabid#} 'Brahman not knowing vedas' = avedavid, body uses bid matching key; needs scan.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=avedabid
+
+dibodBava     -> divodBava      [dcs=0 ndicts=1 body=realword]
+    YAT: {#dibodBava#} {#(vaH-vA-vaM)#} {%a.%} Born or produ- ced in heaven. {%f.%} Cardamoms.
+    judged: Body {#dibodBava#} 'Born or produced in heaven' is divodBava (div 'heaven' + udBava); div/diva standardly has v, so b is a misspelling for v.
+    confirm: b/v pair; {#dibodBava#} 'born in heaven' = divodBava (div=heaven), body uses dibo matching key; needs scan.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=dibodBava
+
+garhyabAdin   -> garhyavAdin    [dcs=0 ndicts=1 body=realword]
+    YAT: {#garhya-bAdin#} {#(dI-dinI-di)#} {%a.%} Speak- ing ill, vilely or inaccurately.
+    judged: Body {#garhya-bAdin#} 'Speaking ill, vilely' is garhya+vAdin (vad 'to speak'); vAdin standardly has v, so b is a misspelling for v.
+    confirm: b/v pair; {#garhya-bAdin#} 'speaking ill/vilely' = garhyavAdin, body uses bAdin matching key; needs scan.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=garhyabAdin
+
+iBayubati     -> iBayuvati      [dcs=0 ndicts=1 body=realword]
+    YAT: {#iBa-yubati#} {#(tiH)#} 2. {%f.%} Elephant's cub.
+    judged: Body {#iBa-yubati#} 'Elephant's cub' is iBa+yuvati (young female); yuvati standardly has v, so b is a misspelling for v.
+    confirm: b/v pair; {#iBa-yubati#} 'elephant's cub' = iBayuvati (yuvati), body uses yubati matching key; needs scan.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=iBayubati
+
+indrasAbarRi  -> indrasAvarRi   [dcs=0 ndicts=1 body=realword]
+    YAT: {#indra-sAbarRi#} {#(rRiH)#} 2. {%m.%} Last {%Menu.%}
+    judged: Body {#indra-sAbarRi#} 'Last Manu' is indra-sAvarRi (the Manu Savarni); sAvarRi standardly has v, so b is a misspelling for v.
+    confirm: b/v pair; {#indra-sAbarRi#} 'last Menu' = indrasAvarNi (sAvarNi), body uses bar matching key; needs scan.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=indrasAbarRi
+
+kawolabIRA    -> kawolavIRA     [dcs=0 ndicts=1 body=realword]
+    YAT: {#kawola-bIRA#} {#(RA)#} 1. {%f.%} A kind of lute, played by common people.
+    judged: Body {#kawola-bIRA#} 'A kind of lute' is kawola+vIRA (vina, lute); vIRA standardly has v, so b is a misspelling for v.
+    confirm: b/v pair; {#kawola-bIRA#} 'a kind of lute' = kaTolavINA (vINA), body uses bIRA matching key; needs scan.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=kawolabIRA
+
+kzudrabaMSA   -> kzudravaMSA    [dcs=0 ndicts=1 body=realword]
+    YAT: {#kzudra-baMSA#} {#(SA)#} 1. {%f.%} A plant, (Lyco- podium imbricatum).
+    judged: Body {#kzudra-baMSA#} 'A plant' is kzudra+vaMSA (vamsa 'bamboo/reed'); vaMSA standardly has v, so b is a misspelling for v.
+    confirm: b/v pair; {#kzudra-baMSA#} 'a plant' = kzudravaMSA (vaMSa), body uses baMSA matching key; needs scan.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=kzudrabaMSA
+
+pattanabaRij  -> pattanavaRij   [dcs=0 ndicts=1 body=realword]
+    YAT: {#pattana-baRij#} {#(k)#} 5. {%m.%} A tradesman.
+    judged: Body {#pattana-baRij#} 'A tradesman' is pattana+vaRij (vanij/vanik 'merchant'); vaRij standardly has v, so b is a misspelling for v.
+    confirm: b/v pair; {#pattana-baRij#} 'a tradesman' = pattanavaNij (vaNij=merchant), body uses baRij matching key; needs scan.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=pattanabaRij
+
+pAtitva       -> patitva        [dcs=3 ndicts=1 body=realword]
+    YAT: {#pAtitva#} {#(tvaM)#} 1. {%n.%} State of falling.
+    judged: Gloss {%n.%} 'State of falling' matches patitva (state of being fallen); suspect's long A is an error.
+    confirm: 'State of falling' could derive from patita or pAtin; entry sits among long-A pAtita/pAtin forms; uncertain.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=pAtitva
+
+nirAlamva     -> nirAlamba      [dcs=3 ndicts=1 body=realword]
+    YAT: {#nirA_lamva#} {#(mvaH-mvA-mvaM)#} {%a.%} Self-sup- ported, not relying on others.
+    judged: Gloss 'Self-supported, not relying on others' = nir-Alamba (Alamba = support); the v for b is an error.
+    confirm: nirAlamba (a-lamba support); b vs v ambiguous - Bengali orthography, cannot confirm typo from text.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=nirAlamva
+
+ekAntya       -> EkAntya        [dcs=2 ndicts=1 body=realword]
+    YAT: {#ekAntya#} {#(ntyaH-ntyA-ntyaM)#} {%a.%} Of the last.
+    judged: Gloss 'Of the last/sole' = EkAntya (vrddhi derivative); the short e for E is an error.
+    confirm: Gloss 'of the last' is a taddhita sense needing vrddhi EkAntya (aikAntya); a missing-vrddhi derivational issue, not a bare typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=ekAntya
+
+elabAlu       -> elavAlu        [dcs=2 ndicts=2 body=realword]
+    YAT: {#elabAlu#} {#(lu)#} 2. {%n.%} A perfume.
+    judged: Gloss 'A perfume' = elavAlu; the b for v is an error.
+    confirm: elavAlu (perfume); b vs v ambiguous - Bengali orthography, cannot confirm from text. cf elavAluka.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=elabAlu
+
+kolamvaka     -> kolambaka      [dcs=2 ndicts=1 body=realword]
+    YAT: {#kolamvaka#} {#(kaH)#} 1. {%m.%} Body of a lute.
+    judged: Gloss 'Body of a lute' = kolambaka; the v for b is an error.
+    confirm: b/v pair; entry body {#kolamvaka#} 'body of a lute' uses same mv spelling as key; cannot confirm from text.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=kolamvaka
+
+yojanaballI   -> yojanavallI    [dcs=2 ndicts=1 body=realword]
+    YAT: {#yojana-ballI#} {#(llI)#} 3. {%f. Idem.%}
+    judged: Body 'Idem' refers to a creeper = vallI; the b for v in -ballI is an error.
+    confirm: b/v pair; {#yojana-ballI#} 'Idem' (vallI=creeper), body uses ballI matching key; needs scan.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=yojanaballI
+
+viBitsu       -> biBitsu        [dcs=2 ndicts=2 body=realword]
+    YAT: {#vi-Bitsu#} {#(tsuH-tsuH-tsu)#} {%a.%} Wishing to hit or pierce.
+    judged: Body {#vi-Bitsu#} 'Wishing to hit or pierce' is the desiderative of root BID (to pierce), whose reduplicated desiderative is biBitsu with initial b-, not vi-; the prefix-like segmentation vi- is spurious.
+    confirm: b/v pair; {#vi-Bitsu#} 'wishing to hit/pierce' = biBitsu (desid. of Bid), body uses vi matching key; needs scan.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=viBitsu
+
+paYcaSErizaka -> paYcaSErIzaka  [dcs=1 ndicts=2 body=realword]
+    YAT: {#paYca-SErizaka#} {#(kaM)#} 1. {%n.%} Bark of five trees.
+    judged: Gloss 'Bark of five trees' = derived from SirIza/SErIza tree; the short i for long I is an error.
+    confirm: vowel-length i/I; body {#paYca-SErizaka#} matches key, no citation form documents I; uncertain.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=paYcaSErizaka
+
+suraBIsravA   -> suraBisravA    [dcs=1 ndicts=1 body=realword]
+    YAT: {#suraBI-sravA#} {#(vA)#} 1. {%f. Idem.%}
+    judged: Body 'Idem' compounds suraBi (fragrant); the long I in suraBI- is an error for short i.
+    confirm: vowel-length I/i; gloss 'Idem', body {#suraBI-sravA#} matches key, no evidence for suraBi; uncertain.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=suraBIsravA
+
+drORAyaRa     -> drORAyana      [dcs=0 ndicts=2 body=realword]
+    YAT: {#drORAyaRa#} {#(RaH)#} 1. {%m.%} A name of {%Ash-%} {%watthama%} son of {%Drona.%}
+    judged: Body glosses {#drORAyaRa#} as 'son of Drona', i.e. the patronymic drauRAyana of droRa, which standardly ends in dental -ana; final R is a misspelling for n.
+    confirm: realword; {#drORAyaRa#} 'son of Drona' = drauNAyaNa, retroflex N is correct (vrddhi patronymic, NatvA); not a typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=drORAyaRa
+
+AkASabartman  -> AkASavartman   [dcs=0 ndicts=1 body=realword]
+    YAT: {#AkASa-bartman#} {#(rtma)#} 5. {%n.%} Firmament.
+    judged: Body {#AkASa-bartman#} 'Firmament' is AkASa+vartman (path/track of the sky); vartman standardly has v, so b is a misspelling for v.
+    confirm: b/v pair; {#AkASa-bartman#} 'firmament' = AkASavartman (path of sky), body uses bartman matching key; needs scan.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=AkASabartman
+
+BImabikrama   -> BImavikrama    [dcs=0 ndicts=1 body=realword]
+    YAT: {#BIma-bikrama#} {#(maH-mA-maM)#} {%a.%} Gigantic.
+    judged: Body {#BIma-bikrama#} {%a.%} 'Gigantic' is BIma+vikrama (valour/stride); vikrama standardly has v, so b is a misspelling for v.
+    confirm: b/v pair; {#BIma-bikrama#} 'gigantic' = BImavikrama, body uses bikrama matching key; needs scan.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=BImabikrama
+
+araRyabAsa    -> araRyavAsa     [dcs=0 ndicts=1 body=realword]
+    YAT: {#araRya-bAsa#} {#(saH)#} 1. {%m.%} Hermitage.
+    judged: Body {#araRya-bAsa#} 'Hermitage' is araRya+vAsa (dwelling); vAsa standardly has v, so b is a misspelling for v.
+    confirm: b/v pair; {#araRya-bAsa#} 'hermitage' = araNyavAsa (forest-dwelling), body uses bAsa matching key; needs scan.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=araRyabAsa
+
+kapawapravanDa -> kapawaprabanDa  [dcs=0 ndicts=1 body=realword]
+    YAT: {#kapawa-pravanDa#} {#(nDaH)#} 1. {%m.%} Fraud.
+    judged: Body {#kapawa-pravanDa#} 'Fraud' is kapawa+prabanDa (prabandha 'contrivance, composition'); standard form has b, so v in -vanDa is a misspelling for b.
+    confirm: b/v pair; {#kapawa-pravanDa#} 'fraud' = kapaTaprabanDa (prabandha), body uses prav matching key; needs scan.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=kapawapravanDa
+
+marudvadDa    -> marudbadDa     [dcs=0 ndicts=1 body=realword]
+    YAT: {#maru-dvadDa#} {#(dDaH)#} 1. {%m. Viṣṇu;%} a vessel used at sacrifices; part of a {%Veda.%}
+    judged: Body {#maru-dvadDa#} 'Viṣṇu; a vessel used at sacrifices' is marut+badDa; the standard form marudbaddha has b, so v in -vadDa is a misspelling for b.
+    confirm: b/v pair; {#maru-dvadDa#} 'Vishnu; sacrificial vessel' = marudbadDa, body uses dvadDa matching key; needs scan.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=marudvadDa
+
+paSupalbala   -> paSupalvala    [dcs=0 ndicts=1 body=realword]
+    YAT: {#paSu-palbala#} {#(laM)#} 1. {%n.%} A fragrant grass.
+    judged: Body {#paSu-palbala#} 'A fragrant grass' is paSu+palvala (a pool/marsh); palvala standardly has v, so b is a misspelling for v.
+    confirm: b/v pair; {#paSu-palbala#} 'a fragrant grass' = paSupalvala, body uses lbala matching key; needs scan.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=paSupalbala
+
+puMbfza       -> puMvfza        [dcs=0 ndicts=1 body=realword]
+    YAT: {#puM-bfza#} {#(zaH)#} 1. {%m.%} The musk rat.
+    judged: Body {#puM-bfza#} 'The musk rat' is pum+vfza (male+bull/vfza); vfza standardly has v, so b is a misspelling for v.
+    confirm: b/v pair; {#puM-bfza#} 'the musk rat' = puMvfza, body uses bfza matching key; needs scan.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=puMbfza
+
+suhfdvala     -> suhfdbala      [dcs=0 ndicts=1 body=realword]
+    YAT: {#suhfdvala#} {#(laM)#} 1. {%m.%} Army of an ally.
+    judged: Body {#suhfdvala#} 'Army of an ally' is suhfd+bala (bala 'army/force'); the gloss 'Army' confirms bala with b, so v in -vala is a misspelling for b.
+    confirm: b/v pair; {#suhfdvala#} 'army of an ally' = suhfdbala (bala=force), body uses vala matching key; needs scan.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=suhfdvala
+
+# ===== BUCKET 3  REVIEW -- undecidable without the printed page (13) =====
+
+Rad           -> mad            [dcs=5 ndicts=2 body=realword x2]
+    YAT: {#Rad#} {#nadati#} 1. {%a.%} To sound inarti- culately as a bell, river or beast. || {#Rad#} {#(ka) nAdayati#} To tell; to shine.
+    judged: Citation {#nadati#} has dental n, pointing to root 'nad' — neither the suspect Rad nor the suggestion mad.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=Rad
+
+RAs           -> mAs            [dcs=4 ndicts=1 body=realword]
+    YAT: {#RAs#} {#(Na, f) nAsate#} 1. {%d.%} To sound.
+    judged: Citation {#(Na, f) nAsate#} has dental n, pointing to root 'nAs' — neither suspect RAs nor suggestion mAs.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=RAs
+
+Rah           -> mah            [dcs=4 ndicts=1 body=realword]
+    YAT: {#Rah#} {#(Ya, O) nahyati, te#} 4. {%c.%} To bind or tie. With {#saM#} to put on armour.
+    judged: Citation {#nahyati, te#} has dental n, pointing to root 'nah' — neither suspect Rah nor suggestion mah.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=Rah
+
+Rud           -> mud            [dcs=4 ndicts=1 body=realword]
+    YAT: {#Rud#} {#(Sa-O) nudati#} 6. {%a.%} To cast, to command. With {#apa#} to remove; with {#nir#} to throw out; to con- fess; with {#pra#} to follow; with {#vi#} to be happy; with {#saM#} to drive.
+    judged: Citation {#(Sa-O) nudati#} has dental n, pointing to root 'nud' — neither suspect Rud nor suggestion mud.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=Rud
+
+RIl           -> mIl            [dcs=2 ndicts=1 body=realword]
+    YAT: {#RIl#} {#nIlati#} 1. {%a.%} To be blue.
+    judged: Citation {#nIlati#} has dental n, pointing to root 'nIl' — neither suspect RIl nor suggestion mIl.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=RIl
+
+Red           -> med            [dcs=2 ndicts=1 body=realword]
+    YAT: {#Red#} {#(f) nedati, te#} 1. {%c.%} To censure; to approach.
+    judged: Citation {#(f) nedati, te#} has dental n, pointing to root 'ned/nid' — neither suspect Red nor suggestion med.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=Red
+
+Rid           -> mid            [dcs=1 ndicts=1 body=realword]
+    YAT: {#Rid#} {#(i) nindati#} 1. {%a.%} To abuse, to revile. {#(f) nedati, te#} 1. {%c. Idem.%}
+    judged: Citations {#nindati#}/{#nedati#} have dental n, pointing to root 'nind/nid' — neither suspect Rid nor suggestion mid.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=Rid
+
+RIv           -> mIv            [dcs=0 ndicts=1 body=realword]
+    YAT: {#RIv#} {#nIvati#} 1. {%a.%} To be large.
+    judged: Citation {#nIvati#} has dental n, pointing to root 'nIv' — neither suspect RIv nor suggestion mIv.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=RIv
+
+kfb           -> kfv            [dcs=0 ndicts=2 body=realword]
+    YAT: {#kfb#} {#(na-i) kfRoti#} 5. {%a.%} To hurt; to do; to go; to be in pain.
+    judged: Citation {#(na-i) kfRoti#} is the class-5 form of root 'kf' — neither suspect kfb nor suggestion kfv.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=kfb
+
+BABa          -> BAva           [dcs=5 ndicts=4 body=realword]
+    YAT: {#BA_Ba#} {#(BaH-BA-BaM)#} {%a.%} Bright.
+    judged: Terse adjective entry {%a.%} 'Bright'; gloss does not clearly match BAva 'being/existence', leaving the b/v judgment ambiguous.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=BABa
+
+itkaWa        -> itkawa         [dcs=2 ndicts=2 body=realword]
+    YAT: {#itkaWa#} {#(WaH)#} 1. {%m.%} A kind of reed.
+    judged: Terse noun entry 'A kind of reed'; gloss does not disambiguate the aspirate W vs retroflex w spelling.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=itkaWa
+
+meba          -> meva           [dcs=0 ndicts=2 body=realword x2]
+    YAT: {#meba#} {#(Na, f) mebate#} 1. {%d.%} To serve. || {#meba#} {#(Na, f) mevate#} 1. {%d.%} To serve.
+    judged: Body gives two conflicting citation forms {#mebate#} and {#mevate#} both glossed 'To serve', so it documents both spellings and does not clearly point to one.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=meba
+
+prAkPalguRIBava -> prAkPalgunIBava  [dcs=0 ndicts=2 body=realword]
+    YAT: {#prAk-PalguRI-Bava#} {#(vaH)#} 1. {%m. Vrihashpati.%}
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=YAT&key=prAkPalguRIBava
+
+# ===== BUCKET 4  REAL-WORD -- a distinct real word; the fix would merge two words (123) =====
+jiv           -> jIv           | YAT: {#jiv#} {#(i) jimbati#} 1. {%a.%} To please or be pleased; to loose. | Body gives its own short-vowel citation {#(i) jimbati#} with gloss 'To please', a distinct
+Div           -> div           | YAT: {#Div#} {#(na, i) Dinoni#} 5. {%a.%} To please; to be pleased; to go. | Own class-5 citation {#(na, i) Dinoni#} 5. defines Div as a distinct root 'To please; to g
+arda          -> arDa          | YAT: {#arda#} {#arddayati te#} 10. {%c.%} To hurt or kill. | Own causative citation {#arddayati te#} 'To hurt or kill' is root ard (dental d), distinct
+Ced           -> ced           | YAT: {#Ced#} {#(Cedayati)#} 10. {%a.%} To cut; to cover. | Own citation {#(Cedayati)#} (aspirate C) defines Ced as a distinct root 'To cut; to cover'
+vAC           -> vAc           | YAT: {#vAC#} {#(i) vAYCati#} 1. {%a.%} To desire. | Own citation {#(i) vAYCati#} (palatal C) defines vAC as a distinct root 'To desire'.
+zas           -> zaz           | YAT: {#zas#} {#(la) sasti#} 2. {%a.%} To sleep. | Own citation {#(la) sasti#} 2. 'To sleep' defines zas as a distinct root, not zaz.
+Bad           -> vad           | YAT: {#Bad#} {#(ki, iYa) Bandati, te Bandayati, te#} 1. 10. {%a.%} To act auspiciously, to be h | Own citation {#Bandati, te#} (initial B) defines Bad as a distinct root 'To act auspicious
+mAT           -> maT           | YAT: {#mAT#} {#(i) mAnTati#} 1. {%a.%} To hurt, afflict. | Own long-A citation {#(i) mAnTati#} defines mAT as a distinct root 'To hurt, afflict'.
+It            -> it            | YAT: {#It#} {#(i) Intati#} 1. {%a.%} To bind. | Own long-I citation {#(i) Intati#} defines It as a distinct root 'To bind'.
+lub           -> luB           | YAT: {#lub#} {#(i, ki) lumbati, yati#} 1. 10. {%a.%} To hurt, to afflict. 10th. To disappear. | Own citation {#(i, ki) lumbati#} (unaspirated b) defines lub as a distinct root 'To hurt'.
+laG           -> lag           | YAT: {#laG#} {#(ka) lAGayati#} 10. {%a.%} To taste, ob- tain. {#(i, Na) laMGate#} 1. {%d.%} To  | Body gives multiple own conjugations {#laMGate#}/{#laMGati#}/{#laMGayati#}, a distinct roo
+varGa         -> varga         | YAT: {#varGa#} {#varGati#} 1. {%a.%} To go. | Own citation {#varGati#} (aspirate G) defines varGa as a distinct root 'To go'.
+vuD           -> buD           | YAT: {#vuD#} {#(ka, i) vunDati#} 10. {%a.%} To in- jure, kill. | Own citation {#(ka, i) vunDati#} (initial v) defines vuD as a distinct root 'To injure, ki
+zap           -> Sap           | YAT: {#zap#} {#sapati#} 1. {%a.%} To be connected; to understand well. | Own citation {#sapati#} defines zap as a distinct root 'To be connected; to understand wel
+zuB           -> SuB           | YAT: {#zuB#} {#soBati#}, 1. {%a.%} and {#(Sa) suBati#} 6. {%a.%} To speak; shine; hurt. | Own citations {#soBati#} and {#(Sa) suBati#} define zuB as a distinct root 'To speak; shin
+aramya        -> araRya        | YAT: {#a-ramya#} {#(myaH-myA-myaM)#} {%a.%} Disagreeable. | Body {#a-ramya#} {%a.%} 'Disagreeable' parses as a-+ramya (not pleasant), matching suspect
+luT           -> luW           | YAT: {#luT#} {#(i) lunTati#} 1. {%a.%} To hurt, to afflict. | Own citation {#(i) lunTati#} defines luT as a distinct root 'To hurt, to afflict'.
+vUz           -> BUz           | YAT: {#vUz#} {#(ka) vUzayati#} 10. {%a.%} To kill. | Own citation {#(ka) vUzayati#} (initial v) defines vUz as a distinct root 'To kill'.
+dav           -> daB           | YAT: {#dav#} {#(i) danvati#} 1. {%a.%} To go. | Own citation {#(i) danvati#} (initial d, v) defines dav as a distinct root 'To go'.
+qaB           -> daB           | YAT: {#qaB#} {#(ki, i) qamBati qamBayati, te#} 1. 10. {%a.%} To collect, to heap together. | Own citation {#(ki, i) qamBati#} (retroflex q) defines qaB as a distinct root 'To collect,
+Gaz           -> Gas           | YAT: {#Gaz#} {#(A, Na, i) GaMzate#} 1. {%d.%} To render handsome or brilliant. | Own citation {#(A, Na, i) GaMzate#} (retroflex z) defines Gaz as a distinct root 'To rende
+zarDa         -> SarDa         | YAT: {#zarDa#} {#sardDati#} 1. {%a.%} To go. | Own citation {#sardDati#} defines zarDa as a distinct root 'To go'.
+Svaja         -> svaja         | YAT: {#Svaja#} {#Svajate#} and {#(i) SvaMjate#} 1. {%d. Id.%} | Own citation {#Svajate#}/{#(i) SvaMjate#} (palatal S) 'Id.' defines Svaja as a distinct ro
+heQa          -> heqa          | YAT: {#heQa#} {#heQRAti#} 9. {%a.%} To be past birth; to produce young; to purify. | Own class-9 citation {#heQRAti#} defines heQa as a distinct root 'To produce young; to pur
+zaYja         -> saYja         | YAT: {#zaYja#} {#sajati#} 1. {%a.%} To embrace, cling to. With {#ava#}, to be sus- pended; {{{# | Own citation {#sajati#} defines zaYja as a distinct root 'To embrace, cling to'.
+samagati      -> samAgati      | YAT: {#sama-gati#} {#(tiH)#} 2. {%f.%} Equal or mean pace. | Body {#sama-gati#} {%f.%} 'Equal or mean pace' parses as sama+gati and matches the suspect
+Svaga         -> svaga         | YAT: {#Svaga#} {#(i) SvaMgati#} 1. {%a.%} To go. | Own citation {#(i) SvaMgati#} (palatal S) defines Svaga as a distinct root 'To go'.
+hewa          -> heWa          | YAT: {#hewa#} {#hewate#} 1. {%d.%} To resist, to vex. | Own citation {#hewate#} (retroflex w) defines hewa as a distinct root 'To resist, to vex'.
+muW           -> muw           | YAT: {#muW#} {#(i, Na) muMWate#} 1. {%d.%} To guard, flee. | Own citation {#(i, Na) muMWate#} (retroflex W) defines muW as a distinct root 'To guard, f
+hroq          -> hrOq          | YAT: {#hroq#} {#(F) hroqati#} 1. {%a.%} To move. | Own citation {#(F) hroqati#} (vowel o) defines hroq as a distinct root 'To move'.
+tub           -> tuB           | YAT: {#tub#} {#(i, u, ka) tumbati tumbayati#} 1. {%a.%} To kill. 10th, to disappear. | Own citation {#(i, u, ka) tumbati#} (unaspirated b) defines tub as a distinct root 'To kil
+trak          -> traK          | YAT: {#trak#} {#(Na, i) traNkate#} 1. {%d.%} To go or move. | Own citation {#(Na, i) traNkate#} (unaspirated k) defines trak as a distinct root 'To go o
+SuR           -> Sun           | YAT: {#SuR#} {#(Sa) SuRati#} 6. {%a.%} To go. | Own citation {#(Sa) SuRati#} (retroflex R) defines SuR as a distinct root 'To go'.
+zUr           -> SUr           | YAT: {#zUr#} {#(ya, I, Nga) sUryyate#} 4. {%d.%} To be stop- ped; hurt. | Own citation {#(ya, I, Nga) sUryyate#} defines zUr as a distinct root 'To be stopped; hurt
+zal           -> Sal           | YAT: {#zal#} {#salati#} 1. {%a.%} To go; to shake. | Own citation {#salati#} defines zal as a distinct root 'To go; to shake'.
+zfB           -> sfB           | YAT: {#zfB#} {#(u) sarBati#} 1. {%a.%} To hurt or kill. | Own citation {#(u) sarBati#} defines zfB as a distinct root 'To hurt or kill'.
+vuw           -> buw           | YAT: {#vuw#} {#(i, ka) vowayati#} 1. 10. {%a.%} To hurt. | Own citation {#(i, ka) vowayati#} (initial v) defines vuw as a distinct root 'To hurt'.
+dIpA          -> dIpa          | YAT: {#dIpA#} {#nvitA (tA)#} 1. {%f.%} An illumination. | Body is its own feminine noun {%f.%} 'An illumination', a distinct gendered form.
+ekada         -> ekadA         | YAT: {#ekada#} {%ind.%} In one place, together. | Body is its own indeclinable {%ind.%} 'In one place, together', distinct from ekadA 'once'
+vasAna        -> vasana        | YAT: {#vasAna#} {#(naH-nA-naM)#} {%p.%} Wearing. | Body {#(naH-nA-naM)#} {%p.%} 'Wearing' is a present participle of vas, a legitimate distin
+sattrA        -> sattra        | YAT: {#sattrA#} {%prep.%} With. | Body is its own indeclinable {%prep.%} 'With', distinct from the noun sattra 'sacrifice'.
+jAnana        -> janana        | YAT: {#jAnana#} {#(naH-nA-naM)#} {%a.%} Knowing. | Gloss {%a.%} 'Knowing' matches jAnana (from jnA), distinct from janana 'producing'.
+AmAlaka       -> Amalaka       | YAT: {#AmA_laka#} {#(kaH-kaM)#} 1. {%m. n.%} Land near a mountain; a valley. | Gloss 'Land near a mountain; a valley' is a distinct meaning, not the tree Amalaka.
+yaTAtaTA      -> yaTAtaTa      | YAT: {#yaTA_taTA#} {%adv.%} In any way. | Body is its own adverb {%adv.%} 'In any way', a distinct adverbial form.
+vyaDita       -> vyADita       | YAT: {#vyaDita#} {#(taH-tA-taM)#} {%p.%} Hit, effected. | Gloss {%p.%} 'Hit, effected' matches vyaDita (from vyaD, pierced), distinct from vyADita '
+DftI          -> Dfti          | YAT: {#DftI#} {#(tI)#} 3. {%f. Durgā.%} | Body gives a distinct feminine form {%f. Durgā.%}, its own gendered variant.
+vfMhaRa       -> bfMhaRa       | YAT: {#vfMhaRa#} {#(RaH-RA-RI-RaM)#} 1. {%m.%} A kind of sweetmeat made of milk, spices, &c. fr | Own entry 'a kind of sweetmeat... Nutritious', a v-variant headword of bfMhaRa with its ow
+AjyapA        -> Ajyapa        | YAT: {#Ajya-pA#} {#(pAH)#} 1. {%m.%} An ancestor. | Own masculine entry {#(pAH)#} 1. {%m.%} 'An ancestor', a distinct -pA compound form.
+AnyAya        -> anyAya        | YAT: {#AnyA_ya#} {#(yaH)#} 1. {%m.%} A king. | Own masculine entry {#(yaH)#} 1. {%m.%} 'A king', a distinct word, not anyAya 'injustice'.
+anekaviDA     -> anekaviDa     | YAT: {#aneka-viDA#} {%adv.%} In many ways. | Body is its own adverb {%adv.%} 'In many ways', a distinct adverbial form.
+havyavAh      -> havyavah      | YAT: {#havya-vAh#} {#(w)#} 5. {%m.%} Fire. | Body {#(w)#} {%m.%} 'Fire' is the strong-stem havyavAh (oblation-bearer), a legitimate var
+kfttika       -> kfttikA       | YAT: {#kfttika#} {#(kaH-kI-kaM)#} {%a.%} Cutting, injured. ({#kA#}) 1. {%f.%} The third of the  | Body gives its own adjective {%a.%} 'Cutting, injured' plus the feminine ({#kA#}), documen
+DuroRa        -> duroRa        | YAT: {#DuroRa#} {#(RaH-RA-RaM)#} {%a.%} Bearing a bur- den, burdened, loaded. {%m.%} Man of bus | Own entry 'Bearing a burden, burdened; beast of burden', its own headword with full gloss.
+CikkaRa       -> cikkaRa       | YAT: {#CikkaRa#} {#(RaM)#} 1. {%n.%} Sneezing. {%f.%} A plant. | Body 'Sneezing; a plant' is its own noun entry, an aspirate-C variant headword.
+zumBa         -> SumBa         | YAT: {#zumBa#} {#sumBati#} 1. 6. {%a. Idem;%} be beautiful. | Own citation {#sumBati#} 'Idem; be beautiful' gives zumBa as its own root spelling.
+avAkara       -> avakara       | YAT: {#avAkara#} {#(raH)#} 1. {%m.%} A mint. | Own masculine entry {%m.%} 'A mint', distinct meaning from avakara 'sweepings'.
+upajYa        -> upajYA        | YAT: {#upajYa#} {#(jYaH-jYA-jYaM)#} {%a.%} Knowing, skil- led in; designed. | Own adjective entry {#(jYaH-jYA-jYaM)#} {%a.%} 'Knowing, skilled', distinct from feminine 
+arTana        -> arTanA        | YAT: {#arTana#} {#(naM)#} 1. {%n.%} Asking. | Own neuter entry {#(naM)#} {%n.%} 'Asking', a distinct gendered form from feminine arTanA.
+AyamAna       -> Ayamana       | YAT: {#Aya-mAna#} {#(naH-nA-naM)#} {%p.%} Coming. | Body {#(naH-nA-naM)#} {%p.%} 'Coming' is a present participle (atmanepada), a legitimate d
+antaHpuracarA -> antaHpuracara | YAT: {#antaHpura-carA#} {#(rA)#} 1. {%f.%} Chamber- maid. | Body {#(rA)#} {%f.%} 'Chamber-maid' is the feminine of cara, a distinct gendered form.
+abDijA        -> abDija        | YAT: {#abDi-jA#} {#(jA)#} 1. {%f.%} Wine. | Body {#(jA)#} {%f.%} 'Wine' is the feminine abDi-jA (ocean-born), a distinct gendered form
+suna          -> sUna          | YAT: {#suna#} {#(naH-nA-naM)#} {%p.%} Aimed at, offered. | Own participle entry {#(naH-nA-naM)#} {%p.%} 'Aimed at, offered', a distinct short-u form.
+marSaRa       -> marzaRa       | YAT: {#marSaRa#} {#(RaM)#} 1. {%n.%} Advising. | Own neuter entry {#(RaM)#} {%n.%} 'Advising', a distinct word from marzaRa 'forbearance'.
+gavAhnikA     -> gavAhnika     | YAT: {#gavA_hnikA#} {#(kA)#} 1. {%f.%} Cow's food for a day, its daily allowance. | Body {#(kA)#} {%f.%} 'Cow's food for a day' is a feminine form, its own gendered variant.
+pitfhu        -> pitfhU        | YAT: {#pitfhu#} {#(huH-hu)#} {%a.%} Sacred to the fa- thers or the manes. | Own adjective entry {#(huH-hu)#} {%a.%} 'Sacred to the fathers or the manes', a distinct s
+lIQA          -> lIQa          | YAT: {#lIQA#} {#(QA)#} 1. {%f.%} A lick, a taste. | Own feminine entry {#(QA)#} {%f.%} 'A lick, a taste', distinct from past-participle lIQa.
+Atmada        -> AtmadA        | YAT: {#Atmada#} {#(daH-dA-daM)#} {%a.%} Giving one's self. | Body {#Atmada#} {%a.%} 'Giving one's self' with declension (daH-dA-daM) is an adjective; s
+dfQagAtrika   -> dfQagAtrikA   | YAT: {#dfQa-gAtrika#} {#(kaH-kA-kaM)#} {%a.%} Firm-bo- died. {%f.%} ({#kA#}) Granulated sugar. | Body {#dfQa-gAtrika#} {%a.%} (kaH-kA-kaM) 'Firm-bodied' is an adjective; the kA form is th
+muKarika      -> muKarikA      | YAT: {#muKarika#} {#(kaH-kA-kaM)#} {%a.%} Of the mouth. | Body {#muKarika#} {%a.%} (kaH-kA-kaM) 'Of the mouth' is an adjective; masc. stem -ka corre
+ulluRWa       -> ulluRWA       | YAT: {#ulluRWa#} {#(RWaH)#} 1. {%m.%} A rolling; volley of abuse. | Body {#ulluRWa#} (RWaH) {%m.%} 'A rolling; volley of abuse' is masculine in -a; suggestion
+visAritA      -> visArita      | YAT: {#visAritA#} {#(tA)#} 1. {%f.%} Spreading. | Body {#visAritA#} (tA) {%f.%} 'Spreading' is the abstract noun visArita+tA (-tA suffix); l
+AnuvAta       -> anuvAta       | YAT: {#Anu-vAta#} {#(taH-tA-taM)#} {%p.%} Resounded. | Body {#Anu-vAta#} {%p.%} 'Resounded' declines (taH-tA-taM) as a participle with vrddhi lon
+apakAragIr    -> apakAragir    | YAT: {#apakAra_gIr#} {#(gIH)#} 5. {%f.%} Reproach. | Body {#apakAra_gIr#} (gIH) {%f.%} 'Reproach' — gIr/gIH (speech) legitimately has long I in
+advEzwf       -> advezwf       | YAT: {#a-dvEzwf#} {#(zwA)#} 4. {%m.%} A friend. | Body {#a-dvEzwf#} (zwA) {%m.%} 'A friend' is a-dvezwf 'non-hater'; the long E (=ai) is a v
+cuvra         -> cubra         | YAT: {#cuvra#} {#(vraM)#} 1. {%n.%} The face. | Own neuter entry {#(vraM)#} {%n.%} 'The face', a v-variant headword of cubra.
+kaSerukA      -> kazerukA      | YAT: {#kaSerukA#} {#(kA)#} 1. {%f.%} The back bone. | Own feminine entry {%f.%} 'The back bone', a palatal-S variant of kazerukA.
+spfhanIya     -> spfhaRIya     | YAT: {#spfhanIya#} {#(yaH-yA-yaM)#} {%a.%} Desirable. | Body {#spfhanIya#} {%a.%} 'Desirable' is the gerundive of spfh with dental n; suggestion h
+tOk           -> wOk           | YAT: {#tOk#} {#(f) tOkate#} 1. {%d.%} To move. | Body conjugates {#tOkate#} 'To move' with dental t matching the headword tOk, not the retr
+maWacI        -> mawacI        | YAT: {#maWacI#} {#(cI)#} 3. {%f.%} A locust. | Body only repeats the suspect spelling {#maWacI#} with gloss 'A locust'; no citation point
+mahAvila      -> mahAbila      | YAT: {#mahA-vila#} {#(laM)#} 1. {%n.%} Sky; a water-jar; the heart; a hole, a cave. | Body repeats {#mahA-vila#} 'a hole, a cave' with v; no internal evidence it should be mahA
+suvarRavindu  -> suvarRabindu  | YAT: {#suvarRa-vindu#} {#(nduH)#} 2. {%m. Viṣṇu.%} | Body shows {#suvarRa-vindu#} 'Viṣṇu' with v; only the headword self-confirms, no pointer t
+aDibinnA      -> aDivinnA      | YAT: {#aDi-binnA#} {#(nnA)#} 1. {%f.%} A superseded wife. | Body repeats {#aDi-binnA#} 'A superseded wife' with b; self-consistent, no pointer to aDiv
+agnibAha      -> agnivAha      | YAT: {#agni-bAha#} {#(haH)#} 1. {%m.%} Smoke. | Body repeats {#agni-bAha#} 'Smoke' with b; self-consistent only.
+gfhavali      -> gfhabali      | YAT: {#gfha-vali#} {#(liH)#} 2. {%m.%} Offering of there- mains of food to spirits, birds, &c. | Body shows {#gfha-vali#} 'Offering of remains of food to spirits' with v; self-consistent 
+kawuraba      -> kawurava      | YAT: {#kawu-raba#} {#(vaH)#} 1. {%m.%} A frog. | Body repeats {#kawu-raba#} 'A frog' with b; self-consistent only.
+mimAna        -> nimAna        | YAT: {#mimAna#} {#(naH-nA-naM)#} {%p.%} Measuring. | Body {#mimAna#} {%p.%} 'Measuring' is the present participle of root mA with reduplicated 
+padmavanDu    -> padmabanDu    | YAT: {#padma-vanDu#} {#(nDuH)#} 2. {%m.%} A bee; the sun. | Body repeats {#padma-vanDu#} 'A bee; the sun' with v; self-consistent only.
+sahaBAbin     -> sahaBAvin     | YAT: {#saha-BAbin#} {#(vI)#} 5. {%m.%} A friend, a partisan. | Body repeats {#saha-BAbin#} 'A friend, a partisan' with b; self-consistent only.
+vAbadUka      -> vAvadUka      | YAT: {#vAbadUka#} {#(kaH-kA-kaM)#} {%a.%} Talking much. | Body repeats {#vAbadUka#} 'Talking much' with b; self-consistent only.
+paYcaprasAda  -> paYcaprAsAda  | YAT: {#paYca-prasAda#} {#(daH)#} 1. {%m.%} A temple with four pinnacles and a steeple. | Body {#paYca-prasAda#} 'A temple with pinnacles' is a plausible prasAda (mansion/temple) c
+AtapyamAna    -> atapyamAna    | YAT: {#AtapyamAna#} {#(naH-nA-naM)#} {%p.%} Heated; distressed. | Body {#AtapyamAna#} {%p.%} 'Heated; distressed' is the present participle with long A- fro
+apekzabudDi   -> apekzAbudDi   | YAT: {#apekza-budDi#} {#(dDiH)#} 2. {%f.%} Clearness of understanding, or perception. | Body {#apekza-budDi#} 'Clearness of understanding' self-consistent; no pointer to long A.
+darSanapratiBAvya -> darSanaprAtiBAvya | YAT: {#darSana-pratiBAvya#} {#(vyaM)#} 1. {%n.%} Bail. | Body {#darSana-pratiBAvya#} 'Bail' self-consistent; no pointer to prAti-.
+hemaBa        -> hemABa        | YAT: {#hema-Ba#} {#(BaH-BA-BaM)#} {%a.%} Like gold. | Body {#hema-Ba#} 'Like gold' self-consistent; segmentation hema-Ba with short a, no pointe
+kaMsyanIla    -> kAMsyanIla    | YAT: {#kaMsya-nIla#} {#(laH)#} 1. {%m.%} Blue vitriol, used as a collyrium. | Body {#kaMsya-nIla#} 'Blue vitriol' self-consistent; no pointer to long kAMsya.
+kaRwAkila     -> kaRwakila     | YAT: {#kaRwAkila#} {#(laH)#} 1. {%m.%} A thorny kind of bamboo. | Body {#kaRwAkila#} 'A thorny kind of bamboo' self-consistent; no pointer to short kaRwakil
+samavAhAra    -> samavahAra    | YAT: {#samavAhAra#} {#(raH)#} 1. {%m.%} Mixture, union. | Body {#samavAhAra#} 'Mixture, union' self-consistent; no pointer to short samavahAra.
+kArAyamARa    -> kArayamARa    | YAT: {#kArAyamARa#} {#(RaH-RA-RaM)#} {%p.%} Effecting. | Body {#kArAyamARa#} {%p.%} 'Effecting' self-consistent; suggestion has short kAraya-, body
+pawakuwi      -> pawakuwI      | YAT: {#pawa-kuwi#} {#(wiH)#} 2. {%f.%} A tent. | Body {#pawa-kuwi#} (wiH) {%f.%} 'A tent' declines as -i stem; self-consistent, suggestion 
+reRuruzita    -> reRurUzita    | YAT: {#reRu-ruzita#} {#(taH-tA-taM)#} {%a.%} Dusty, co- vered with dust. {%m.%} An ass. | Body {#reRu-ruzita#} 'Dusty, covered with dust; an ass' self-consistent; no pointer to lon
+SUkaramuKa    -> sUkaramuKa    | YAT: {#SUkara-muKa#} {#(KaM)#} {%n.%} A hell. | Body {#SUkara-muKa#} 'A hell' self-consistent; SUkara/sUkara (boar) is a known S/s variant
+SvasanAsana   -> SvasanASana   | YAT: {#SvasanA_sana#} {#(naH)#} 1. {%m.%} A snake. | Body {#SvasanA_sana#} 'A snake' (lit. wind-eater) self-consistent; aSana 'eating' would gi
+kftAvaSakTika -> kftAvasakTika | YAT: {#kftA_vaSakTika#} {#(kaH-kA-kaM)#} {%a.%} Seated on the hams with the knees tied. | Body {#kftA_vaSakTika#} 'Seated on the hams with knees tied' self-consistent; no internal 
+madyapAsana   -> madyapASana   | YAT: {#madya-pAsana#} {#(naM)#} 1. {%n.%} Eating a relish, or that which excites thirst. | Body {#madya-pAsana#} 'Eating a relish, or that which excites thirst' self-consistent; no 
+asOzwava      -> asOzWava      | YAT: {#a-sOzwava#} {#(vaM)#} 1. {%n.%} Deformity. | Body {#a-sOzwava#} 'Deformity' self-consistent; suggestion differs only in dental/retrofle
+astrakaRWaka  -> astrakaRwaka  | YAT: {#astra-kaRWaka#} {#(kaH)#} 1. {%m.%} An arrow. | Body {#astra-kaRWaka#} 'An arrow' self-consistent; kaRWaka/kaRwaka (thorn) w/W variant but
+gAQamuzWi     -> gAQamuzwi     | YAT: {#gAQa-muzWi#} {#(zWiH)#} 2. {%m.%} A scymitar. {%a.%} Miserly, close-fisted. | Body {#gAQa-muzWi#} (zWiH) 'A scymitar; miserly' self-consistent; muzwi 'fist' normally ha
+karakaRWaka   -> karakaRwaka   | YAT: {#kara-kaRWaka#} {#(kaH)#} 1. {%m.%} The finger nail. | Body {#kara-kaRWaka#} 'The finger nail' self-consistent; w/W variant, no internal pointer.
+zazWimatta    -> zazwimatta    | YAT: {#zazWimatta#} {#(ttaH)#} 1. {%m.%} An elephant. | Body {#zazWimatta#} 'An elephant' self-consistent; zazWi/zazwi (sixty) w/W variant, no int
+umAkaWa       -> umAkawa       | YAT: {#umA-kaWa#} {#(waH)#} 1. {%m.%} A cluster of flax. | Body {#umA-kaWa#} 'A cluster of flax' self-consistent; w/W variant, no internal pointer.
+kujJiSa       -> kujjiSa       | YAT: {#kujJiSa#} {#(SaH)#} 1. {%m.%} A kind of fish. | Body {#kujJiSa#} 'A kind of fish' self-consistent; jJ/jj variant, no internal pointer.
+BrAtfbala     -> BrAtfvala     | YAT: {#BrAtf-bala#} {#(laH-lA-laM)#} {%a.%} Having a brother. | Body {#BrAtf-bala#} {%a.%} 'Having a brother' from bala (strength); self-consistent with b
+SAkavAleya    -> SAkabAleya    | YAT: {#SAka-vAleya#} {#(yaH)#} 1. {%m.%} A plant, {%Bamanaithi.%} | Body {#SAka-vAleya#} 'A plant' self-consistent; no internal pointer to bAleya.
+garabrata     -> garavrata     | YAT: {#gara-brata#} {#(taH)#} 1. {%m.%} A peacock. | Body {#gara-brata#} 'A peacock' self-consistent; b/v variant of vrata, no internal pointer
+mARavIRa      -> mARavIna      | YAT: {#mARavIRa#} {#(RaH-RA-RaM)#} {%a.%} Boyish, childish. | Body {#mARavIRa#} {%a.%} 'Boyish, childish' declines (RaH-RA-RaM) consistently with R; sel
+rAjaSana      -> rAjaSaRa      | YAT: {#rAja-Sana#} {#(naH)#} 1. {%m.%} A plant from which canvass is made. | Body {#rAja-Sana#} 'A plant from which canvass is made' self-consistent; Sana/SaRa (hemp) 
+sTAlIvila     -> sTAlIbila     | YAT: {#sTAlIvila#} {#(laH)#} 1. {%n.%} The interior or hollow of a boiler. | Body {#sTAlIvila#} 'The interior or hollow of a boiler' self-consistent; bila (hole/cavity
+Gftabara      -> Gftavara      | YAT: {#Gfta-bara#} {#(raH)#} 1. {%m.%} A sweetmeat. | Body {#Gfta-bara#} 'A sweetmeat' self-consistent; b/v variant, no internal pointer.
+aBizizenayizu -> aBizizeRayizu | YAT: {#aBi-zizenayizu#} {#(zuH-zuH-zu)#} {%a.%} Desir- ous of sending forth an army. | Body {#aBi-zizenayizu#} 'Desirous of sending forth an army' self-consistent with dental n;
+agnibARa      -> agnivARa      | YAT: {#agni-bARa#} {#(RaH)#} 1. {%m.%} Fiery dart. | Body {#agni-bARa#} 'Fiery dart' is agni+bARa/vARa (arrow); body shows b, bARa is a known v
+dfQavanDinI   -> dfQabanDinI   | YAT: {#dfQa-vanDinI#} {#(nI)#} 3. {%f.%} A creeper. | Body {#dfQa-vanDinI#} 'A creeper' self-consistent; banDinI (binding) suits sense but body 
+dinavala      -> dinabala      | YAT: {#dina-vala#} {#(laH)#} 1. {%m.%} A name of cer- tain signs in the zodiac. | Body {#dina-vala#} 'A name of certain signs in the zodiac' self-consistent; dinabala (day-
+mahAPenA      -> mahAPeRA      | YAT: {#mahA-PenA#} {#(nA)#} 1. {%f.%} Cuttle-fish bone. | Body {#mahA-PenA#} 'Cuttle-fish bone' is mahA+PenA (Pena 'foam') with dental n; suggestion
+
+# ===== BUCKET 5  INTENTIONAL -- YAT documents the spelling on purpose; NEVER file (1) =====
+avahelA       -> avahela       | YAT: {#ava-helA#} {#(laM-lA)#} 1. {%n. f. Idem.%} | Body marks it {%n. f. Idem.%} with both gender forms {#(laM-lA)#}, an explicit variant/cro
+
+# ===== BUCKET 6  UNLOCATABLE -- not in the current YAT source (stale/different key) (15) =====
+dib           -> div           | YAT:  | 
+qiv           -> div           | YAT:  | 
+abiSeza       -> aviSeza       | YAT:  | 
+abakIrRin     -> avakIrRin     | YAT:  | 
+abalepa       -> avalepa       | YAT:  | 
+abadaMSa      -> avadaMSa      | YAT:  | 
+abalokita     -> avalokita     | YAT:  | 
+abarohin      -> avarohin      | YAT:  | 
+abaDIra       -> abaDira       | YAT:  | 
+abaqIna       -> avaqIna       | YAT:  | 
+abalIQa       -> avalIQa       | YAT:  | 
+abaBinna      -> avaBinna      | YAT:  | 
+abacUrRita    -> avacUrRita    | YAT:  | 
+abasavya      -> avasavya      | YAT:  | 
+abaSizwa      -> avaSizwa      | YAT:  | 

@@ -1,0 +1,111 @@
+; YAT body-confirmed fileable typos -- CORRECTIONS standard format (DICT:wrong:right:n)
+; 27 fileable (classified TYPO + source-confirmed + survived the Opus false-positive review) + 40 reviewed-out (commented below)
+; VERIFY each remaining case on the scan, flip trailing n->y for confirmed ones, then:
+;   python chg_nchg_sep.py YAT_file_first_sf.txt chg.txt nchg.txt
+YAT:mayAvin:mAyAvin:n
+YAT:mahAmayA:mahAmAyA:n
+YAT:RaB:naB:n
+YAT:Rij:nij:n
+YAT:gaDABft:gadABft:n
+YAT:vizwABU:vizWABU:n
+YAT:pAradfzvan:pAradfSvan:n
+YAT:RiS:niS:n
+YAT:aSanayA:aSanAyA:n
+YAT:asaMSakta:asaMsakta:n
+YAT:vESizWya:vESizwya:n
+YAT:drAvana:drAvaRa:n
+YAT:hantAkAra:hantakAra:n
+YAT:ambukfta:ambUkfta:n
+YAT:arsasa:arSasa:n
+YAT:cInapizWa:cInapizwa:n
+YAT:zazWihAyana:zazwihAyana:n
+YAT:prAyopavizWa:prAyopavizwa:n
+YAT:lakzmIpala:lakzmIPala:n
+YAT:AparAhnika:AparAhRika:n
+YAT:duzwu:duzWu:n
+YAT:AkzadyUta:akzadyUta:n
+YAT:avasfzWa:avasfzwa:n
+YAT:saNGati:saNgati:n
+YAT:pratisidDa:pratizidDa:n
+YAT:pakzipARIyaSAlikA:pakzipAnIyaSAlikA:n
+YAT:prAkPAlguRa:prAkPAlguna:n
+; REVIEWED-OUT (apparatus): R-initial dhatu listed per PaNinian Nopadesa convention; citation naSyati; not a typo.
+;YAT:RaS:naS:n
+; REVIEWED-OUT (other): b/v - Bengali-orthography (viqvarAha); needs scan, cannot confirm from text.
+;YAT:viqbarAha:viqvarAha:n
+; REVIEWED-OUT (other): b/v - Bengali-orthography (aSvavaqava, vaDavA mare); needs scan, cannot confirm.
+;YAT:aSvavaqaba:aSvavaqava:n
+; REVIEWED-OUT (other): b/v - Bengali-orthography (agnivallaBa, vallabha); needs scan, cannot confirm.
+;YAT:agniballaBa:agnivallaBa:n
+; REVIEWED-OUT (other): b/v - Bengali-orthography (anavasTiti); needs scan, cf anavasTAna, cannot confirm.
+;YAT:anabasTiti:anavasTiti:n
+; REVIEWED-OUT (other): b/v - Bengali-orthography (anavasara); needs scan, cannot confirm from text.
+;YAT:anabasara:anavasara:n
+; REVIEWED-OUT (other): b/v - Bengali-orthography (daSabala, daSabala=Buddha); needs scan, cannot confirm.
+;YAT:daSavala:daSabala:n
+; REVIEWED-OUT (other): b/v - Bengali-orthography; needs scan. netra-ambu, mv in body matches key.
+;YAT:netrAmvu:netrAmbu:n
+; REVIEWED-OUT (other): b/v - Bengali-orthography; needs scan. brata->vrata, body matches key.
+;YAT:samanubrata:samanuvrata:n
+; REVIEWED-OUT (other): b/v - Bengali-orthography; needs scan. basAyin->vasAyin, body matches key.
+;YAT:aDyabasAyin:aDyavasAyin:n
+; REVIEWED-OUT (other): b/v - Bengali-orthography; needs scan. bAluka->vAluka, body matches key.
+;YAT:ElabAluka:ElavAluka:n
+; REVIEWED-OUT (realword): Distinct entry (a people, Usinaras); body decl (yiRaH) documents its own retroflex stem.
+;YAT:kzIrapAyiR:kzIrapAyin:n
+; REVIEWED-OUT (other): b/v - Bengali-orthography; needs scan. bAra->vAra, body matches key.
+;YAT:BawwArakabAra:BawwArakavAra:n
+; REVIEWED-OUT (apparatus): R-initial dhatu listed per PaNinian Nopadesa convention; citation nezati; not a typo.
+;YAT:Rez:nez:n
+; REVIEWED-OUT (other): b/v - Bengali-orthography; needs scan. bid->vid, body matches key.
+;YAT:avedabid:avedavid:n
+; REVIEWED-OUT (other): b/v - Bengali-orthography; needs scan. dibo->divo (div=heaven), body matches key.
+;YAT:dibodBava:divodBava:n
+; REVIEWED-OUT (other): b/v - Bengali-orthography; needs scan. bAdin->vAdin, body matches key.
+;YAT:garhyabAdin:garhyavAdin:n
+; REVIEWED-OUT (other): b/v - Bengali-orthography; needs scan. yubati->yuvati, body matches key.
+;YAT:iBayubati:iBayuvati:n
+; REVIEWED-OUT (other): b/v - Bengali-orthography; needs scan. bar->var (sAvarNi), body matches key.
+;YAT:indrasAbarRi:indrasAvarRi:n
+; REVIEWED-OUT (other): b/v - Bengali-orthography; needs scan. bIRA->vINA (lute), body matches key.
+;YAT:kawolabIRA:kawolavIRA:n
+; REVIEWED-OUT (other): b/v - Bengali-orthography; needs scan. baMSA->vaMSA, body matches key.
+;YAT:kzudrabaMSA:kzudravaMSA:n
+; REVIEWED-OUT (other): b/v - Bengali-orthography; needs scan. baRij->vaNij (merchant), body matches key.
+;YAT:pattanabaRij:pattanavaRij:n
+; REVIEWED-OUT (other): 'State of falling' may legitimately derive from pAtin/pAtita (long-A cluster); uncertain, protect dict.
+;YAT:pAtitva:patitva:n
+; REVIEWED-OUT (other): b/v - Bengali-orthography (nirAlamba); needs scan, cannot confirm from text.
+;YAT:nirAlamva:nirAlamba:n
+; REVIEWED-OUT (vrddhi): Suggestion EkAntya (aikAntya) is a vrddhi taddhita derivative; not a bare digitization typo.
+;YAT:ekAntya:EkAntya:n
+; REVIEWED-OUT (other): b/v - Bengali-orthography (elavAlu); needs scan, cf elavAluka, cannot confirm from text.
+;YAT:elabAlu:elavAlu:n
+; REVIEWED-OUT (other): b/v - Bengali-orthography; needs scan. mv->mb in body matches key.
+;YAT:kolamvaka:kolambaka:n
+; REVIEWED-OUT (other): b/v - Bengali-orthography; needs scan. ballI->vallI, body matches key.
+;YAT:yojanaballI:yojanavallI:n
+; REVIEWED-OUT (other): b/v - Bengali-orthography; needs scan. vi->bi (biBitsu desid.), body matches key.
+;YAT:viBitsu:biBitsu:n
+; REVIEWED-OUT (other): vowel-length i/I unconfirmed; body matches key, no citation evidence; uncertain.
+;YAT:paYcaSErizaka:paYcaSErIzaka:n
+; REVIEWED-OUT (other): vowel-length I/i unconfirmed; 'Idem' gloss, body matches key; uncertain.
+;YAT:suraBIsravA:suraBisravA:n
+; REVIEWED-OUT (realword): drauNAyaNa patronymic of Drona; retroflex N correct (NatvA); suggestion drORAyana wrong.
+;YAT:drORAyaRa:drORAyana:n
+; REVIEWED-OUT (other): b/v - Bengali-orthography; needs scan. bartman->vartman, body matches key.
+;YAT:AkASabartman:AkASavartman:n
+; REVIEWED-OUT (other): b/v - Bengali-orthography; needs scan. bikrama->vikrama, body matches key.
+;YAT:BImabikrama:BImavikrama:n
+; REVIEWED-OUT (other): b/v - Bengali-orthography; needs scan. bAsa->vAsa, body matches key.
+;YAT:araRyabAsa:araRyavAsa:n
+; REVIEWED-OUT (other): b/v - Bengali-orthography; needs scan. prav->prab (prabandha), body matches key.
+;YAT:kapawapravanDa:kapawaprabanDa:n
+; REVIEWED-OUT (other): b/v - Bengali-orthography; needs scan. dvadDa->dbadDa, body matches key.
+;YAT:marudvadDa:marudbadDa:n
+; REVIEWED-OUT (other): b/v - Bengali-orthography; needs scan. lbala->lvala, body matches key.
+;YAT:paSupalbala:paSupalvala:n
+; REVIEWED-OUT (other): b/v - Bengali-orthography; needs scan. bfza->vfza, body matches key.
+;YAT:puMbfza:puMvfza:n
+; REVIEWED-OUT (other): b/v - Bengali-orthography; needs scan. vala->bala (force), body matches key.
+;YAT:suhfdvala:suhfdbala:n
