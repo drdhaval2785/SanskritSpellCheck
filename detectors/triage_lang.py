@@ -15,6 +15,7 @@ _LANG = {
     'MW': 'en', 'MW72': 'en', 'AP': 'en', 'AP90': 'en',   # Monier-Williams 1899/1872, Apte 1957/1890
     'WIL': 'en', 'BEN': 'en', 'GST': 'en', 'CAE': 'en',   # Wilson, Benfey, Goldstuecker, Cappeller (Eng)
     'MD': 'en', 'SHS': 'en',                              # Macdonell, Shabda-Sagara
+    'BHS': 'en',                                          # Edgerton, Buddhist Hybrid Sanskrit Dict (Eng)
     'PW': 'de', 'PWG': 'de', 'SCH': 'de',                # Petersburg (Boehtlingk-Roth) + Schmidt Nachtraege
     'GRA': 'de', 'CCS': 'de',                            # Grassmann (Rigveda), Cappeller (German)
     'VCP': 'sa', 'SKD': 'sa',                            # Vacaspatyam, Sabdakalpadruma (Sanskrit-Sanskrit)

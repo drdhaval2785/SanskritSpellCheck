@@ -6,6 +6,24 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.31.0] - 2026-06-23
+
+### Added
+- **BHS triage — 19/33 dicts.** Body-grounded triage of Edgerton's *Buddhist Hybrid Sanskrit
+  Dictionary* (registered `BHS: 'en'` in `triage_lang._LANG`). Of **713 tier-A** candidates:
+  **0 fileable typos**, 294 documented-intentional (do-not-file: cross-reference 138, varia-lectio
+  81, other 67, wrong-reading 6, in-composition 2), 415 real BHS words, 4 unsure. The expected
+  near-zero precision for a specialized hybrid-Sanskrit lexicon — the flagged forms are deliberate
+  hybrid/MIndic/metri-causa spellings or proper names Edgerton records on purpose. Package:
+  [corrections_draft/BHS/](corrections_draft/BHS/) (readme + do-not-file + queue).
+  - Cross-dict fileable precision: MW 4/1954 · PW 2/657 · VCP 1/563 · PWG 12/497 · SHS 37/246 · **BHS 0/713**.
+
+### Changed
+- **Suppression list refreshed to 19 dicts** — [nochange/do_not_file_suppress.txt](nochange/do_not_file_suppress.txt)
+  grew **1,726 → 2,020** unique headwords (BHS's 294 folded in via `gen_do_not_file_suppress.py`).
+  Verified: `eval.py` false-positives stay **0**; 0 suppressed headwords survive as candidates
+  (unified candidates 15,323 → 15,029).
+
 ## [1.30.0] - 2026-06-23
 
 ### Added

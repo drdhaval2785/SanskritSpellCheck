@@ -1,0 +1,312 @@
+# BHS -- DOCUMENTED-INTENTIONAL spellings (NOT typos -- do NOT file corrections)
+#
+# 294 headwords that LOOK like misspellings but which BHS records on purpose:
+# wrong-reading apparatus (w.r.), variae lectiones (v.l.), in-composition /
+# sandhi forms (in comp. for...), cross-references (See / = X q.v.), and other
+# grammatical/Vedic notes. Filing a 'correction' for any of these CORRUPTS BHS.
+# Use this as a suppression list: such headwords should not be re-flagged.
+# Format per row:  headword -> would-be 'correction'  |  the BHS entry text
+
+# ===== WRONG-READING (6) =====
+AGAtin         -> aGAtin         | {@āghātin@}, adj.-subst. (from āghāta {%slaying%} with -in), {%murderous%} (person), {%murderer%}: LV 〔207.3〕 (vs) āghātina (so read with all mss. but one which
+AvarjanA       -> Avarjana       | {@āvarjanā@} = {@āvarjana@}, {%winning to oneself, the making kindly disposed%}: in LV 〔245.14—15〕 read: bodhisattvo rudrakasya rāmaputrasya saśiṣyasyāvarjanāṃ 
+izwI           -> izwi           | {@iṣṭī, iṣṭi@} (Pali itthi, itthī), = {@iṣṭikā, istrī@}, qq.v., {%woman%}: LV 〔74.15〕 (vs) ye ca iṣṭidārakā suduḥkhitā (Lefm. wrongly ˚dārakāsu duḥ˚), {%and wha
+lABA           -> lABa           | [{@lābhā@}, in lābhā te mahārājo sulabdhā Mv 〔i.226.14〕 (prose), taken as fem. by Senart, wrongly; it is n. pl. m.; so also in the parallels alleged in Senartʼs
+raRati         -> ramati         | {@raṇati@} (unrecorded in this mg.), acc. to Bendall and Rouse {%makes contact with%} (loc.), perhaps rather {%delights in%} (so Vedic), or better yet {%is atta
+tikzRa         -> tIkzRa         | [{@Tikṣṇa@}, Lefm., {@Tikṣu@}, Foucaux with v.l., wrong readings for {@Tiṣya@}, q.v. (Tib. ḥod ldan) at LV 〔172.3〕. Calc. reads Vikṣu.]
+
+# ===== VARIA-LECTIO (81) =====
+Apaskara       -> apaskara       | ? {@āpas-kara@}, m., {%action of water%}: Mv 〔ii.366.13〕 (na tasya caurā rājāno dhanaskandha [so one ms., Senart with v.l. ˚dhaṃ] parāmṛṣe) agnir vā āpaskaro (r
+Asaya          -> ASaya          | ? {@āsaya@}, nt., in Mv 〔iii.400.3〕 hitvā ālayāni (see {@ālaya@}) āsayāni (v.l. āsanāni); the Pali parallel Sn 〔535〕 reads āsavāni = BHS āśravāṇi, ās˚, which mu
+BUzaRA         -> BUzaRa         | ? {@bhūṣaṇā@}, f. (only nt. in Pali and Pkt.; in Skt. nt. or ‘exceptionally’ m.), {%ornament%}: hā istrigārā vigaḍita bhūṣaṇābhiḥ LV 〔231.6〕 (vs), {%stripped of
+GAwin          -> GAtin          | {@ghāṭin@}, adj. (= ghātin, cf. 〔§ 2.41〕), {%destroying%}: jagakleśa-ghāṭī Dbh.g. 〔41(67).14〕 (no v.l.).
+IzADara        -> IzADAra        | {@Īṣādhara@}, m. (= Pali Īsadhara), n. of a mountain (one of the seven ranges surrounding Sumeru; Kirfel, Kosm. 〔186〕): Mvy 〔4144〕 (but Mironov Īśā˚, with v.l. 
+Karjuraka      -> KarjUraka      | {@kharjuraka@}, nt. (Skt. Lex. kharjura; otherwise recorded only with ū), {%fruit of the date%}: ˚kāni Mv 〔ii.475.16〕, so read; in a list of various fruits; so 
+Kawuka         -> kawuka         | {@khaṭuka@}, oftener {@khaṭuṅka@} (also abstr. {@˚ka-tā@}), in KP {@khaḍuṅka@}, adj. or subst. m. (Pali and AMg. khaluṅka; cf. Skt. Lex. kaṭuṅka-tā, and see Sch
+Ko             -> ko             | {@kho@} = {@khu@} (Skt. khalu), q.v.; this, which is the Pali form, is rare in BHS: in vss, where meter requires a long syllable, Samādh 〔8.25〕; Mv 〔ii.57.22〕; 
+Tala           -> tala           | {@thala@} (nt., = Pali id., MIndic for Skt. sthala), {%dry land%}: Mv 〔iii.32.2, 11〕 (v.l. sthala in both: prose).
+aByAyata       -> avyAyata       | [{@abhyāyata@}, adj. (error for atyāyata, which is read in other texts), in Mv 〔ii.43.15〕 nābhyāyata-vacanā ca, one (〔No. 47〕) of the {@anuvyañjana@} (q.v.). Fo
+alindA         -> alinda         | {@alindā@}, ({@1@}) = prec. (v.l. ˚ṇḍā): mahatī ca alindā bhaktasya (q.v.) Mv 〔iii.15.9〕; (odanasya mahatī) alindā ibid. 〔13〕; ({@2@}) n. of a queen, wife of Ik
+anantavikrAmin -> anantavikramin | {@Anantavikrāmin@}, v.l. ˚kramin, ˚krama, n. of a Bodhisattva: SP 〔3.7〕.
+asya           -> Asya           | {@asya@}, also {@sya@}, apparently particle of emphasis; acc. to Senart on Mv 〔i.45.1〕, = Skt. svid, Pali su (also assu). (Note that PTSD s.v. su³ derives this 
+bfNga          -> BfNga          | {@bṛṅga@}, var. for {@pṛṅga@}, q.v.
+camu           -> camU           | {@camu, camū@}, ({@1@}) as in Skt., {%host, army%}, but with masc. ending (otherwise only fem.): mārasya jetuṃ camūn LV 〔276.6〕 (end of stanza; no v.l.); ({@2@}
+caturASIti     -> caturaSIti     | {@caturāśīti@} (= Pali ˚sīti, AMg. caurāsīiṃ, Pischel 〔446〕; see 〔§ 19.35〕), {%eighty-four%}: in prose, Mv 〔iii.450.13〕 (v.l. ˚aśīti); Gv 〔389.16〕 (note in 22 b
+dAGa           -> daGa           | {@dāgha@}, m. (recorded only for Pkt. in Hem. 〔1.264〕, but cf. Skt. nidāgha), {%burning, conflagration%}: (geha-)dāghā vā kṛtā bhavanti vana-dāghā … Mv 〔i.23.1〕
+dakziReya      -> dAkziReya      | {@dakṣiṇeya@}, adj. (= {@˚ṇīya@}; also {@dākṣ˚@}; closer to Pali dakkhiṇeyya, but in BHS noted only in Mv and rare there), {%worthy of veneration%}: Mv 〔ii.295.
+ekAdaSA        -> ekAdaSa        | {@Ekādaśā@} (by em.), ({@1@}) n. of a devakumārikā in the west: LV 〔390.6〕; mss. Ekāhaṃśa-, Ekāndaśā, ˚dasā; in parallel Mv 〔iii.308.9〕 mss. Ekānavā (v.l. ˚naṃ-
+gUhati         -> guhati         | {@gūhati, gūhayati@} (perhaps connected with Skt. Gr. gumpha(ya)ti, Pali ogumpheti; see {@avagūhayati@}), {%winds%} (garlands): Mv 〔ii.426.19〕 mālāṃ gūhayati; 〔
+gfhAvAsa       -> gfhavAsa       | {@gṛhāvāsa@}, m. (= Pali gharāvāsa; cf. Skt. gṛha-vāsa), {%living at home, in the householderʼs state%}, contrasted with ascetic life: RP 〔12.16〕 (prose), where
+hUma           -> hURa           | {@hūma@}, nt. (Mironov ḍūma; v.l. both edd. hama), a high number: Mvy 〔7711〕 = Tib. zam zim; also corresp. to {@poma@}, q.v.
+jAnatA         -> janatA         | [{@jānatā@} LV 〔264.1〕 (prose), na me paścimā ˚tānukampitā syāt, read janatā, {%people%}, with v.l.; Tib. skye bo; cf. in the verse account 〔270.22〕 no … anukam
+jAneya         -> jAmeya         | [{@jāneya@}, in puruṣa-j˚, v.l. -jāna, Mv 〔ii.133.8〕 (prose), read puruṣājāneya; see s.v. {@ājanya@}.]
+jAva           -> java           | {@jāva@}, m. (to java, but nowhere recorded), {%speed, swiftness%}: ˚vaḥ Mvy 〔2003〕 = Tib. mgyogs pa. So also Mironov; no v.l. Follows yogaḥ and precedes anukra
+jijYAsanA      -> jijYAsana      | {@jijñāsanā@} (cf. Skt. ˚na, nt., and jijñāsā, f.; perh. a blend of these two), {%test, trial%}: yūyaṃ kanyakā (Māra speaks to his daughters) … bodhisattvasya j
+jugupsanA      -> jugupsana      | {@jugupsanā, ˚na@} (?nt.), {@˚na-tā@} (Skt. Lex. ˚na, nt.; Pali jigucchana, nt.), {%loathing, condition of abhorrence%}, with loc. or in comp.: kāmeṣu … ˚nā utp
+kAruRa         -> karuRa         | {@kāruṇa@} (nowhere recorded), ({@1@}) adj. (= Skt. kāruṇika), {%compassionate%}: Mv 〔i.179.6〕 (vs, metr. indifferent) tato lokānukampārthaṃ kāruṇo (mss. ˚ṇā) m
+kAwaka         -> kawaka         | {@-kāṭaka@}, nt., in pātra-kāṭakam Mvy 〔8952〕, {%ring%} or which the almsbowl is fastened, = Tib. lhuṅ gzed (bzed) gzhag paḥi gdu bu, {%ring for putting almsbow
+kaRqarika      -> kaRqarIka      | [{@kaṇḍarika@}, v.l. for {@kāṇḍ˚@}, q.v.]
+karmira        -> karmIra        | ? {@Karmira@}, v.l. for {@Kampila@}, q.v.
+katIya         -> kAtIya         | {@katīya@}, adj. (from kati, with suffix īya, cf. dvitīya, tṛtīya, and tadīya etc.), {%amounting to how much?%}: Karmav 〔70.10〕 ˚yaṃ mahārāja gṛhapater dravyaṃ 
+koqa           -> Koqa           | {@koḍa@}, MIndic for kroḍa, {%breast%}: koḍa-sakkino SP 〔95.3〕 (vs), so both edd. and most mss. (v.l. kroḍa˚). See also s.v. {@kola@} (2).
+mArjara        -> mArjAra        | {@mārjara@}, m. (cf. Pkt. maṃjara; Skt. mārjāra), {%cat%}: Mvy 〔4790〕 (so also Mironov, with v.l. mārjāra).
+mEtrA          -> mEtra          | {@maitrā@} (rarely {@maitryā@}, q.v.; = Pali mettā; the Skt. equivalent maitrī is also extensively used, notably instead of this as one of the {@apramāṇa@}; Skt
+mahArAjA       -> mahArAja       | ? {@mahārājā@}, adj. or subst. f., used (if text is right) with fem. entities: LV 〔391.4〕 (vs) upasthitā mahārājā (but v.l. mahāvālā) Āśā Śraddhā Hirī Śirī (fou
+marja          -> mArja          | {@marj(j)a@}, if to be kept with Senart and mss., is hyper-Skt. for majja(n), {%marrow%}: asthi-marj(j)aṃ (acc. sg.) Mv 〔i.20.2〕 (v.l. ˚rjja; one ms., only, rep
+meruwu         -> meruwU         | {@meruṭu@} (vv.ll. meruhu, merutū; but Mironov ˚ṭu, no v.l.), m. or f., a high number: Mvy 〔7786〕 = Tib. lhun yas = {@mirava@} (˚pha), q.v.
+nAganadI       -> naganadI       | {@nāga-nadī@}, {%‘river of nāgas (serpent-demons)’%}, epithet of the Nairañjanā, given to it because nāgas lived in it (LV 〔270.2 ff.〕), as in the Pali (see 1 N
+nAlIkera       -> nAlikera       | {@nālīkera@}, nt. (cf. {@nāḍīkerī@}, and Skt. nālikera, nārīkela), {%cocoanut, the fruit of the cocoa-palm%}: Mv 〔ii.475.15〕 ˚rāṇi (v.l. ˚lāni).
+nAlada         -> nalada         | {@Nālada@}, ({@1@}) v.l. in Mv 〔ii.43.2〕 for Nārada (3), q.v., referring to {@Nālaka@}; prob. the same person is meant by the sthavira Nālada Av 〔i.274.6 ff.〕; 
+pAMSukrIqana   -> pAMsukrIqana   | {@pāṃśukrīḍana@}, m. adj. or subst. (in Skt. cited only as nt. n. act.; cf. next, and {@saha-pāṃśu-krīḍanaka@}; Bloomfield, Mūladeva, Proc. Am. Philos. Soc. 〔52
+pARqarA        -> pARqara        | {@Pāṇḍarā@} (in Dharmas 〔4〕 text Pāṇḍurā, v.l. ˚arā which prob. read), n. of a Buddhist goddess, associated with Tārā, and prob. identical with prec.: Sādh 〔18.
+pArSvakA       -> pArSvaka       | {@pārśvakā@} (see s.vv. {@pārśukā, pārśvika@}), {%rib%}: Śikṣ 〔228.13〕 (ed. note suggests reading pārśukā); v.l. in some mss. for pārśukā LV 〔254.9, 11〕; 〔255.2
+pAraloka       -> paraloka       | ? {@pāraloka@} (m., = AMg. pāraloga, acc. to Ratnach.; Skt. paraloka), {%the other world%}: imaṃ lokaṃ ˚kaṃ (acc.) Mv 〔i.9.2〕 (vs; v.l. pala˚; first part of ślo
+parApata       -> pArApata       | {@parāpata@}, m. (vv.ll. pārāp˚, pārāvata, both Skt., see on the first Schmidt, Nachträge; Mironov parāpata with no v.l.), {%pigeon%}: Mvy 〔4902〕 = Tib. phug ro
+parikANkzin    -> pArikANkzin    | {@-parikāṅkṣin@}, adj., in a-pari˚, {%(not) desiring%}: Mv 〔i.134.3〕, see s.v. {@nirvṛti@} 2. (There is a v.l. a-pratikāṅkṣ˚.)
+pavara         -> pAvara         | {@pavara@} (= Pali id., MIndic for Skt. pravara), {%excellent%}: so if text is right, Dbh.g. 〔12(348).17〕 yāvattareṇa pavararṣiṇa (v.l. parikarṣiṇa) jñānalābhas
+prAkawa        -> prakawa        | {@prākaṭa@}, adj. (= Pali pākaṭa, ˚ta; semi-MIndic for Skt. prākṛta, cf. next), {%vulgar, low, common%}: upāsikās ca varjeta prākaṭā yā avasthitāḥ SP 〔279.6〕 (v
+praharzA       -> praharza       | {@praharṣā@}, f. (Skt. ˚ṣa, m.), or (v.l.) ˚ṣa-tā, {%(state of) joy%}: tayā ˚ṣa(ta)yā Suv 〔181.11〕 (prose).
+prasAdika      -> prAsAdika      | {@prasādika@}, ({@1@}) adj. = {@prāsādika@} (1), q.v.: so mss. at Mv 〔i.3.4〕, applied to a past Buddha; Senart em. prā˚; ({@2@}) v.l. for {@prāsādika@} (2), q.v
+pratiBARita    -> pratiBaRita    | {@pratibhāṇita@}, ppp., m.c. for ˚bhaṇita (to pratibhaṇ-, recorded in Skt. only in a single artificial passage; not in Pali; AMg. paḍibhaṇai), {%answered, respo
+puni           -> pUni           | {@puni@}, in LV 〔151.8〕 (vs) seemingly m.c. for *pune, certainly represents punar, {%but%}; both edd. read so, no v.l. No *pune seems to be recorded, even in a 
+ratnamudra     -> ratnamudrA     | {@Rat(a)namudra@}, v.l. Rat(a)nasamudra, n. of a former Buddha: Mv 〔i.138.10〕.
+rutA           -> ruta           | {@rutā@} = {@ruta@}, {%voice, speech%}: in LV 〔286.20—21〕 (prose) read, ekarutā-(Lefm. ˚tāṃ, misprint?)-sarva-ruta-ravaṇī (Lefm. ˚racanī, v.l. ˚ramaṇī; our read
+sAlamBa        -> sAlamba        | {@sālambha@}, m. (may be specialized use of {@sārambha@} = Pali id., which so far as I know is not recorded of physical fighting; in some LV mss. v.l. sār˚ occu
+sAmam          -> samam          | {@sāmam@}, indecl. pron. (= Pali sāmaṃ; in mg. = Skt. svayam; see {@sāmato@} and {@svāmam, ˚ma@}), {%self, oneself%}: na … Ghaṭikāro kumbhakāro sāmaṃ (mss. soma
+sAntika        -> SAntika        | {@sāntika@}, in adv. forms ˚ke and ˚kāt (= Pali santike, ˚kā; see {@santika, ˚ke@}, of which this may well be a secondary Sktization; but it reveals the true or
+sPAritra       -> sParitra       | {@sphāritra@}, nt. (Mironov sphar˚, v.l. spār˚, sic!), {%oar%}: Mvy 〔5894〕 = Tib. gru skya, {%oar%} (Das gives Skt. as sphāritra).
+sPuwika        -> sPuwikA        | {@sphuṭika@}, adj. (read ˚ṭaka ?), = {@sphuṭa@}, {%full, filled%} (-ka perh. m.c.): te cāsya kṣetra sphuṭikā (v.l. sphuṭā, unmetr.; Tib. Chin. said to mean {%fu
+samasama       -> samAsama       | {@sama-sama@}, adj. (āmreḍita of sama; = Pali id.), {%quite equal%} or {%equivalent, exactly alike%}: sarvadharmāḥ samāḥ sarve samāḥ samasamāḥ sadā SP 〔143.5〕 (
+saraBaNga      -> SaraBaNga      | {@Sarabhaṅga@}, see {@Śara˚@}. The colophon Mv 〔iii.375.12〕 reads Sarabhaṃgajātakam in Senart (v.l. Śara˚).
+sarvarUpasaMdarSanA -> sarvarUpasaMdarSana | {@Sarvarūpasaṃdarśanā@}, n. of the lokadhātu of the Buddha Meghadundubhisvararāja: SP 〔431.9〕. So both edd.; both Transl. Sarvabuddhasaṃ˚, which is not cited fr
+stIna          -> stIma          | {@stīna@} (= Pali thīna; 〔§ 3.115〕) = {@styāna@}, q.v.: -middhaṃ, v.l. of Kashgar rec. for SP 〔335.6〕 (vs).
+supana         -> supAna         | {@supana@}, acc. to Senartʼs note for more usual {@supina@}, q.v., = Skt. svapna: (kāyo …) ucchādana-(so read, Senart em. ācchā˚)-parimardana-supana-(v.l. sū˚)-
+suveDa         -> suveda         | {@suvedha@}, adj., {%having a good aim, hitting the mark%}: Mv 〔iii.285.8〕 (vs); the corresp. Pali, SN 〔i.127.5〕, has anoko (v.l. aneko); the passage is corrupt
+tAyaRa         -> tAyana         | {@tāyaṇa, ˚na@} (nt.; MIndic, = {@trāyaṇa@}, q.v.), (act of) {%saving%}: jaga-tāyanaṃ smarati Dbh.g. 〔2(338).7〕; jagatāyaṇārthaṃ (v.l. ˚trāy˚) 〔16(352).12〕.
+todeya         -> tOdeya         | {@Todeya@}, v.l. for {@Tau˚@}, q.v.
+trElAwA        -> trElAwa        | {@trailāṭā@} (so text, also Mironov with v.l. ˚ṭāka; Kyōtō ed. Index with BR ˚ṭa; cf. prec.), a kind of {%fly%}: Mvy 〔4861〕; ˚ṭāḥ, pl., MSV 〔iv.74.22〕.
+tremAsika      -> trEmAsika      | {@tremāsika@}, adj. (= Skt. trai˚; cf. {@traimāsa@} and {@dvemāsika@}), (suitable) {%for three months%}: ˚kaṃ (v.l. trai˚) vā bhaktaṃ Mv 〔ii.462.6〕.
+turiya         -> turIya         | {@turiya@} (nt. or m.; = Pali id., MIndic for Skt. tūrya), {%musical instrument%}; common in vss of LV, e.g. 〔54.6〕 (v.l. tūry˚); 〔161.17〕 (v.l. tūry˚); 〔164.20
+udArika        -> udarika        | {@udārika@}, adj. = {@audārika 2@} (if reading is correct), {%exalted, abundant%}: SP 〔164.3〕 mahataś codārikasyāvabhāsasya (both edd., no v.l., but perhaps rea
+udGawitajYa    -> udGAwitajYa    | {@udghaṭita-jña@}, adj. or subst. m. (= Pali ugghaṭitaññu; see Wogihara, Lex. 〔19〕: ‘das Geöffnete kennend’ = ‘sich auf das Offenliegende d.h. auf eine kurze Da
+ukara          -> ukAra          | ? {@ukara-@} (v.l. udakara-, utkara-; cf. {@ugra-lipi@}), in Mv 〔i.135.6〕 (prose) ukara-madhura-darada-cīṇa- (etc.), sc. lipi, a list of various kinds of writin
+uluka          -> ulUka          | {@Uluka@}, v.l. for {@Huluka@}, q.v.
+utkArika       -> utkArikA       | {@utkārika@}, m., {%the expression evam%}: Mvy 〔7618〕 = Tib. de bzhin no zhes bya ba (Chin. similarly). There is a var. udgārikaḥ (cf. Skt. udgāra, {%sound, utt
+vAnArasI       -> vARArasI       | {@Vānārasī@} (prob. intends Vāṇā˚ = the commoner, with Skt., Vārāṇasī), {%Benares%}: ˚syām (v.l. Vārāṇ˚) Mv 〔i.174.2〕.
+viBUzitA       -> viBUzita       | {@vibhūṣitā@}, ({@1@}) (? to Skt. vibhūṣin plus -tā), {%magnificence, splendor, ornate condition%}: na śraddadhī mahyam imāṃ vibhūṣitāṃ SP 〔113.10〕 (vs), {%he h
+vicarcika      -> vicarcikA      | {@vicarcika@}, adj. (cf. Skt. ˚kā, {%mange%}), {%mangy%}: (na … kaṇḍūlo vā kacchulo vā) ˚ko vā anyo vā kiṃcid amanāpaṃ … tiṣṭheyā Mv 〔ii.150.10〕; 〔152.3〕; (by S
+vilambA        -> vilamba        | {@Vilambā@}, ({@1@}) n. of a rākṣasī: SP 〔400.4〕 (Burnouf [Page498-b] Pralambā, citing a var. Vilambā; two mss. reported in KN as reading first Vilambā, then Pr
+vyUhA          -> vyUha          | {@vyūhā, viyūhā@}, = {@vyūha@} (2): mahatyā rājavyūhayā Suv 〔79.13〕 (prose); about half the mss. mahatā ˚vyūhena; (mahatā rājānubhāvena mahatā rāja-ṛddhīye) mah
+
+# ===== IN-COMPOSITION (2) =====
+ASItakI        -> AsItakI        | {@āśītakī@}, or {@ās˚@}, also written aśītaka, aśīta, aśitaka, asita, the a-stems being prob. m. (Mv 〔ii.231.13〕); the Pali equivalent is āsītika, m. (not ˚kā, 
+dArika         -> dArikA         | ? {@dārika@} (= Skt. dāraka), and acc. to text ˚kā(in comp.), {%boy%}: dvātriṃśad-dārikā-sahasrāṇi LV 〔128.11〕 (prose), all mss. acc. to Lefm.; dārikebhiḥ LV 〔1
+
+# ===== CROSS-REFERENCE (138) =====
+Agatika        -> agatika        | {@-āgatika@} (= Skt. āgati, at end of Bahuvrīhis), see {@an-āgatika@}.
+Akampya        -> akampya        | {@Ākampya@} Mvy 〔739〕, see {@Akampya@}.
+AnantarIya     -> anantarIya     | [{@ānantarīya@}, nt., ˚yāṇi, Mvy 〔2323〕; but prob. read with Mironov {@ānantarya@}, q.v. Cf. however next.]
+AntarikA       -> antarikA       | {@āntarikā@} (= {@ant˚@}, q.v.; some cases there cited may belong here), {%space between, interval, interstice%}: LV 〔254.11〕 gopānasy-āntarikāś (n. pl.), {%int
+AntraguRa      -> antraguRa      | {@āntra-guṇa@}, m. (pl.), = {@antra-guṇa@}, q.v.: ŚsP 〔1430.21〕; 〔1431.11〕; read in both (āntram) āntraguṇā(ḥ). (In Gv 〔328.19〕 could be intended as well as ant
+AnuSaMsa       -> anuSaMsa       | {@ānuśaṃsa@}, m., and {@˚sā@}, f., = {@anu˚@}, q.v.; {@ānuśaṃsaka@}, see {@-anu˚@}.
+AsparSa        -> asparSa        | [{@āsparśa@}, supposedly {%contact%}, assumed by Senart in a cpd. Mv 〔ii.115.12〕; but see {@sparśita@}.]
+DArmarAjikA    -> DarmarAjikA    | {@dhārmarājikā@} = {@dharmarājikā@}, q.v.: Divy 〔368.28〕.
+DarmA          -> Darma          | {@dharmā-(kathā)@}, see s.v. 3 {@dharma@}.
+EkAsanika      -> ekAsanika      | {@aikāsanika@}, Mvy 〔1132〕, = {@ekās˚@}, q.v.
+GAtyA          -> GAtya          | {@-ghātyā@}, see {@nala-gh˚@}.
+ISADAra        -> IzADAra        | {@Īśādhāra@}, ({@1@}) n. of a nāga, Mironovʼs reading for {@Iśā˚@} Mvy 〔3333〕; ({@2@}) m. pl., n. of a range of mountains (= Īṣā˚; see under {@Īṣādhara@}): Śikṣ
+PalaKa         -> Palaka         | {@phalakha@}, see {@phalaha@}.
+SAntara        -> sAntara        | [{@śāntara@}, corrupt, in defective vs Mv 〔i.164.15〕; Senart, yathecchakaṃ (mss. yate˚) araṇa-samādhi śāntara (read śānta ca ? cf. Pali santaṃ samādhiṃ araṇaṃ, 
+SAtAgiri       -> sAtAgiri       | {@Śātāgiri@}, see {@Sātā˚@}.
+SItiBAva       -> SItIBAva       | {@śīti-bhāva, -bhūta@}, see {@śītī˚@}.
+SardUla        -> SArdUla        | [{@śardūla@}, LV 〔207.17〕; read with some mss. {@gardūla@}, q.v.]
+Sarita         -> SArita         | {@śarita@}, see {@sarita@} 3.
+SlIpAda        -> SlIpada        | [{@ślīpāda@}, m., {%elephantiasis%}: Mvy 〔9521〕; read (Skt.) ślīpada with Mironov and Bhīk 〔17a.2〕; cf. ślīpadin Mvy 〔8792〕.]
+SoRIta         -> SoRita         | {@śoṇīta@}, m.c. for Skt. śoṇita, {%blood%}: LV 〔208.14〕 (vs); also AMg. soṇīya, Ācār. (Schubring) 〔39.10〕 (Smith, see 〔§ 1.38〕 〔fn. 15, p. 12〕).
+SunaKa         -> Sunaka         | {@śunakha@}, see {@su˚@}.
+aBirADanA      -> aBirADana      | {@abhirādhanā@} (cf. prec. and next; Skt. ˚dhana, Pali an-abhirādhana), {%winning favor, conciliation%}: Mvy 〔2944〕.
+aKalita        -> akalita        | {@a-khalita@}, see 2 {@khalita@}.
+aNgulIkA       -> aNgulikA       | {@aṅgulīkā@}, see {@aṅgulikā@} (2).
+agAha          -> aGAha          | {@a-gāha@}, see {@gāha@}.
+agneya         -> Agneya         | [{@agneya, Agneyī@}, read {@Āg˚@}, q.v.]
+akUhaka        -> akuhaka        | {@a-kūhaka@}, see {@kūhaka@}.
+amrapAlI       -> AmrapAlI       | {@Amrapālī@}, see {@Āmra˚@}.
+anAgArikA      -> anagArikA      | {@anāgārikā@} = {@anagārikā@}, q.v.
+anAvatapta     -> anavatapta     | {@Anāvatapta@}, m.c. for {@Anava˚@} (2), q.v.: LV 〔219.9〕.
+anUpalipta     -> anupalipta     | {@anūpalipta@} (= Pali ˚litta) m.c. for {@anupa˚@}, see also {@anopa˚@}, {%unstained%}: SP 〔313.3〕 (vs).
+anantariya     -> anantarIya     | {@anantariya@}, subst. nt. = ān˚, {%crime bearing immediate fruition, deadly sin%} (one of five): ˚riyāṇi (pañca) Bhad 〔51〕. Cf. {@ānantarīya@}, and {@˚tarya@};
+anantaryasamADi -> AnantaryasamADi | [{@Anantaryasamādhi@}, misprint in Mvy 〔901〕 for {@Ānant˚@}, q.v.; corrected in Index.]
+apranihita     -> apraRihita     | {@a-pranihita@} = {@a-praṇihita@}, q.v.
+avalambA       -> avalamba       | {@Avalambā@}, see {@Olambā@}.
+avikzaRa       -> avIkzaRa       | ({@avikṣaṇa@}, nt.; see s.v. {@abhibhakṣaṇa@}).
+bAlavyaYjana   -> vAlavyaYjana   | {@bālavyañjana@}, see {@vāla˚@}.
+boDipAkzika    -> boDipakzika    | {@bodhipākṣika@}, adj. (= Pali ˚pakkhika; cf. {@˚pakṣika, ˚pakṣya, ˚pakṣa@}) = {@bodhipakṣya@}, q.v.; usually with dharma, {%the%} (37) {%conditions favorable t
+cARqikA        -> caRqikA        | {@Cāṇḍikā@} (cf. Skt. Caṇḍikā), n. of a yoginī: Dharmas 〔13〕 (misprint or error ?).
+cArIkA         -> cArikA         | {@cārīkā@}, m.c. for {@cārikā@}, q.v., Gv 〔57.15〕.
+cAri           -> cari           | {@cāri@} (m.c. for {@cari@}, q.v.), {%conduct%}, in Bhvr. cpds.: sugatasya putrān … śāntapraśāntacārīn SP 〔12.14〕 (vs), {%… of calm, peaceful conduct%}; paripūr
+cAwaka         -> cAtaka         | ? {@cāṭaka@}, read prob. {@cāṭuka@} (= Skt. cāṭu, and once cāṭuka, which in the passage cited in BR may be an adj.; in Rājat. 〔1.213〕, cited in pw s.v. cāṭu, fo
+citrikAra      -> citrIkAra      | {@citrikāra@}, see {@citrīkāra@}.
+dahuka         -> dAhuka         | ? {@dahuka@}, so mss. of Divy 〔475.17〕 (ed. em. dakṣaka), [Page263-b] ep. of children, see {@taruṇaka@}. Prob. read dahara(ka), or dahraka, = next.
+dardarA        -> dardara        | [{@dardarā@}, see {@dardurā@}.]
+duHk           -> duHK           | {@duḥ-k-@}, see {@duṣ-k-@}.
+dunduBikA      -> dunduBika      | {@-dundubhikā@}, see {@mukha-du˚@},
+durAvagAha     -> duravagAha     | {@durāvagāha@}, adj. (for durava˚), {%hard to fathom%}: samudrakalpa … gambhīra-durāvagāhatvāt LV 〔424.11〕 (prose). See 〔§ 3.10〕. This is ignored by Weller 〔39〕
+duzya          -> dUzya          | 1 {@duṣya@}, adj., {%evil%}, = Skt. dūṣya, which Senartʼs note would read by em.: ye 'duṣyadharmasaṃpannāḥ Mv 〔iii.320.12〕, {%who are not endowed with evil char
+dvitiya        -> dvitIya        | {@dvitiya@}, adj. (cf. Pali dutiya, for Skt. dvitīya; 〔§ 3.41〕), {%second%}; rare and only m.c. in BHS (so also {@tṛtiya@}, q.v.); in many of the following case
+dvyahika       -> dvyAhika       | {@dvyahika@}, see {@dvīhika@}.
+ekotIBAva      -> ekotiBAva      | {@ekotī-bhāva, -bhūta@}, see {@ekoti˚@}.
+fkta           -> fkTa           | {@ṛkta-@}, hyper-Skt. for rikta-, in tucchata ṛktato 'sārato Śāl 〔88.14〕, cited Śikṣ 〔227.6〕; ṛkta- LV 〔212.14〕 (prose); 〔214.8〕; and see {@riktamuṣṭi@}.
+hAkkAra        -> hakkAra        | {@hākkāra@} = {@hakkāra@}, q.v., {%sound of admiration%} or {%applause%}: udānam udānayan ˚raṃ kurvan Gv 〔99.22〕 (prose), cited Śikṣ 〔36.11〕.
+harzya         -> harzyA         | [{@harṣya@}, see {@saharṣya@}.]
+hirI           -> hiri           | {@Hirī@}, see {@Hrī@}.
+iryA           -> irya           | {@iryā, iryāpatha, iryāvant, iryavant@}, semi-MIndic spelling for {@īry˚@}, q.v.
+jAnayati       -> janayati       | {@jānayati@} (= janayati; 〔§ 38.15〕), {%produces%}: kāyabalasthāmaṃ jānayitvā Mv 〔ii.131.10〕 (prose), cf. LV 〔272.9〕 kāyabalasthāma saṃjanayya; jānayi sarvi vik
+jalahara       -> jalahAra       | {@jalahara@}, {%ocean%}, see {@jaladhara@}.
+jatya          -> jAtya          | ? {@jatya@}, perh. by error for a-jatya, itself either error, or with MIndic a for ā, for Skt. a-jātya (= Pali a-jacca); or else (perhaps more likely) error for
+kAsi           -> kASi           | {@kāsi@}, etc., aor. of kṛ, q.v. in Chap. 43.
+kOSIdya        -> kOsIdya        | {@kauśīdya@} = {@kaus˚@} q.v.
+kUhaka         -> kuhaka         | {@(a-)kūhaka@}, adj., {%(not) deceiving%}: Dbh.g. 〔16(352).18〕 sumanāś ca akūhakaś ca; prob. m.c. for Skt. kuhaka. Cf. next.
+kaSyapIya      -> kASyapIya      | {@Kaśyapīya@}, see s.v. {@Kāśyapīya@}.
+kalpaduzya     -> kalpadUzya     | {@kalpa-duṣya@}, or {@˚dūṣya@}, nt. (see {@duṣya, dūṣya@}; Senart always prints duṣya in Mv text but cites dūṣya in Index), (fine) {%cloth made from the kalpa-v
+koravya        -> kOravya        | {@Koravya@}, see {@Kaur˚@}.
+kuSInagarI     -> kuSinagarI     | {@Kuśīnagarī@} = {@Kuśi˚@}, q.v.
+kzaRA          -> kzaRa          | [{@kṣaṇā@}, f., acc. to Divy 〔643.2〕, = Skt. kṣaṇa, of a definite unit of time; but in line 3 the word is nt., kṣaṇāny; and in the parallel 〔644.11〕 it seems to
+lawikA         -> latikA         | [{@laṭikā@}, app. misprint for latikā (so Index): Mvy 〔433〕 = Tib. khri śiṅ, {%creeper%}; but Mironov {@prapāṭikā@}, q.v.]
+mAnAtva        -> nAnAtva        | [{@mānātva@}, see {@mānatva@}.]
+mOra           -> mora           | {@maura@} = {@mora@}, q.v.
+maNgusa        -> maNguza        | ? {@maṅgusa@}, see {@bhaṅgakula@}.
+maRqavya       -> mARqavya       | {@Maṇḍavya@}, see {@Māṇḍavya@}.
+manasIkAra     -> manasikAra     | {@manasīkāra@} (to prec.) = {@manasi˚@}: KP 〔71.8〕 (prose), see s.v. {@yoniśaḥ@}.
+mazwa          -> nazwa          | {@maṣṭa(ka)@}, see {@māṣṭa(ka)@}.
+niDyApti       -> niDyapti       | {@nidhyāpti@}, Mvy 〔7460〕, prob. error for {@nidhyapti@}, q.v.
+nirupaka       -> nirUpaka       | {@nirupaka@}, see {@upaka@}.
+opaDika        -> OpaDika        | [{@opadhika@}, assumed by Weller on LV 〔32.1〕, but see s.v. {@upadhika@}.]
+osa            -> oza            | {@osa@}, see {@avaśya@}.
+pArihARi       -> parihARi       | {@pārihāṇi@}, or {@˚ni@}, f. (cf. prec.; = Skt. and Pali pari˚; 〔§ 3.10〕), {%loss%}: ˚ṇi Mv 〔ii.238.1〕 (prose); ˚ṇiṃ (acc.; mss. ˚ṇi, unmetr.) 〔391.21〕 (vs); ˚n
+pAripUrRa      -> paripUrRa      | {@pāripūrṇa@}, adj., ppp. (m.c. for pari˚), {%full%}: śubha ˚ṇaṃ Mv 〔ii.299.11〕 (vs). Cf. prec.
+pUrRika        -> pUrRikA        | {@Pūrṇika@} = {@Pūrṇamukha@} (2), q.v.
+pUrvi          -> pUrvI          | {@pūrvi@}, m.c. for {@pūrve@}, q.v.
+paRqaravAsinI  -> pARqaravAsinI  | {@Paṇḍaravāsinī@}, see {@Pā˚@}.
+paYcagatika    -> pAYcagatika    | {@pañcagatika@}, adj., = {@pāñca˚@}, q.v.: mss. at MadhK 〔269.9〕 (ed. em. pāñca˚).
+pariRizpanna   -> parinizpanna   | {@pariṇiṣpanna@}, see {@pariniṣ˚@}.
+pariSrAvaRa    -> parisrAvaRa    | {@pariśrāvaṇa@}, see {@parisr˚@}.
+parindanA      -> parIndanA      | {@parindanā@} (also {@parī˚@}; to {@parindāmi@}), {%the giving over, presenting%}: ˚nārthaṃ SP 〔391.1〕; ˚nayā LV 〔443.9〕; Dbh.g. 〔56(82).5〕 (prose, not vs); see
+parisPUwa      -> parisPuwa      | {@parisphūṭa@}, adj. (cf. {@sphūṭa@}, on same page of LV, for {@sphuṭa@}), = prec.: (prabhayā …) ˚ṭo 'bhūt LV 〔86.3〕 (prose).
+prAhita        -> prahita        | {@prāhita@} (if not error or misprint, = {@prahita@}, q.v.), {%intent, concentrated%} (here, on evil desires): kathaṃ ca tvaṃ ˚to mūrchito 'dhyavasito … Śikṣ 〔7
+praBakara      -> praBAkara      | {@prabhakara@}, see {@prabhaṃkara@}.
+praRada        -> pramada        | [{@praṇada@}, SP 〔51.13〕, read {@tuṇava@}, q.v.]
+pracoqaka      -> pracodaka      | ? {@pracoḍaka@}, see {@praccopaka@}.
+prajYApti      -> prajYapti      | {@prajñāpti@}, f., noted only in Mvy as substitute for the usual {@prajñapti@}, q.v., cf. {@vāhana-pra˚@} where in citing LV the Mvy substitutes ā for a in the 
+pratiBARa      -> pratiBAna      | [{@pratibhāṇa@} is read by the mss., and sometimes in Nobelʼs text, of Suv, for {@pratibhāna@}, q.v.; it seems to be a mere corruption. Cf. next.]
+purusakAra     -> puruzakAra     | {@purusakāra-@} (= Skt.), in ˚ra-phalam, one of the 5 {@phala@} (q.v.): Mvy 〔2274〕; sc. of karuṇā acc. to Sūtrāl. 〔xvii.31〕, comm., {%fruit consisting of heroic
+rOruka         -> roruka         | {@Rauruka@} = {@Roruka@} (1), q.v.
+ramin          -> rAmin          | [{@ramin@}, see {@sadāramin@}.]
+ratnAmaya      -> ratnamaya      | {@rat(a)nāmaya@}, adj. (Pkt. rayaṇāmaya; = Skt. ratna˚; cf. {@ratanāmaka@}), {%made of jewels%}: (in prose) Mv 〔i.31.5〕; 〔32.3, 5, 10〕; 〔ii.109.3〕 (twice), 5; o
+ritu           -> ftu            | {@ritu@} (MIndic = Skt. ṛtu; cf. AMg. riu), {%season%}: Gv 〔408.1〕 (vs; after vowel).
+sAtagiri       -> sAtAgiri       | {@Sātagiri@}, see {@Sātāgiri@}.
+sPUwa          -> sPuwa          | {@sphūṭa@}, adj. (= {@sphuṭa@}; cf. {@parisphūṭa@}), {%full%}: mahatāvabhāsena sphūṭā abhūvan LV 〔86.20〕 (prose).
+sUDana         -> sUdana         | {@Sūdhana@}, see {@Sudhana@}.
+sUmati         -> sumati         | {@Sūmati@}, m.c. for {@Sumati@} (1), q.v.
+saMgrahaka     -> saMgrAhaka     | ? {@saṃgrahaka-@}, = (and prob. error for) {@saṃgrāhaka@}, {%charioteer%}, q.v.: ˚ka-rūpeṇa Gv 〔225.26〕 (without context), foll. by {@sārthavāhakarūpeṇa@}.
+samAdapana     -> samAdApana     | {@samādapana, ˚nā@} (Pali id.; = {@˚dāpana, ˚nā@}; cf. next), {%incitement to assume, to take on oneself%}: bodhayi citta-samādapanena (mss. ˚yanena; ed. prints
+samanvI        -> samanvi        | {@samanvī@}, in Gv 〔254.11〕 (vs), app. a semi-MIndic contracted form for samanvitaḥ, {%provided%}: dvātriṃśalakṣaṇa-˚vī so 'nuvyañjanai (read anu˚?) racitagātra
+sarvArtuka     -> sarvartuka     | ? {@sarvārtuka@}, adj. (= Skt. sarvartuka; see also {@sarvotuka@}), {%of all seasons%}: ˚kāni (of flowers) Mv 〔ii.97.4〕 (prose). So app. both mss. (one is speci
+satAgiri       -> sAtAgiri       | [{@Satāgiri@}, see {@Sā˚@}.]
+soratya        -> sOratya        | {@soratya@}, see {@sauratya@}.
+stAra          -> stara          | ? {@-stāra@}, see {@phalaha-@}.
+suRqika        -> SuRqika        | {@suṇḍika@}, see {@śu˚@}.
+supatIrTa      -> sUpatIrTa      | [{@supatīrtha@}, ep. of rivers of Sukhāvatī: Sukh 〔39.3〕; read (Skt.) sūpa˚, q.v. in BR.]
+svAlaMkfta     -> svalaMkfta     | {@sv-ālaṃkṛta@}, adj. (m.c. for sv-a˚), {%well adorned%}: LV 〔220.15〕; 〔221.17〕; 〔282.10〕 (all vss). Cf. {@su-laṃkṛtikā@}.
+syAma          -> SyAma          | {@Syāma(ka)@}, see {@Śyāma(ka)@}.
+tftiya         -> tftIya         | {@tṛtiya@}, adj. (= Pali tatiya, Skt. tṛtīya), {%third%}; rare and only m.c. in BHS: SP 〔92.7〕; LV 〔111.11〕; by em. (mss. tṛtī˚), m.c., SP 〔46.11〕; Mv 〔i.174.16
+tre            -> trE            | {@tre-@} for {@trai-@} in vṛddhi formations, see the following items.
+udAnta         -> udanta         | [{@Udānta-@}, in proper names, see {@Udātta-@}.]
+udgIraRa       -> udgiraRa       | {@udgīraṇa@} (?) see {@udguraṇa@}.
+upADAna        -> upaDAna        | [{@upādhāna@}, Karmav 〔22.5〕, misprint for {@upadhāna@}, q.v.]
+upaGAwa        -> upaGAta        | [{@upaghāṭa@}, wrong em. in ed. Mv 〔i.229.7〕; see {@aruṇodghāṭa@}.]
+usIragiri      -> uSIragiri      | {@Usīragiri@} = {@Uśīra˚@}, q.v.
+utsuKa         -> utsuka         | ? {@utsukha@} = Skt. utsuka, {%longing, desirous%}: Gv 〔330.25〕 ity utsukheṣu (so also 2d ed.). Perhaps error; but cf. Geiger 〔40.1〕; Pischel 〔p. 148, middle〕.
+uzRiza         -> uzRIza         | {@uṣṇiṣa@} (m.c. for uṣṇīṣa), {%excrescence on the head%}: ˚ṣodgato (= ˚ṣa udgataḥ) RP 〔6.18〕 (vs).
+vArzikA        -> vArzika        | {@vārṣikā@}, ({@1@}) Mv 〔i.19.11〕, taken by Senart as subst., {%garment for the rainy season%}; he reads (eraka) vārṣikā vā kārāpitā cīrakavārṣikā kārāpitā vā; 
+vImati         -> vimati         | {@vīmati@}, m.c. for {@vimati@}, q.v.
+vaRIpaka       -> vanIpaka       | {@vaṇīpaka@}, (only Mv 〔ii.100.4〕; 〔182.4, 9〕; also text 〔iii.254.18〕 but without ms. support), otherwise {@van˚@} (Skt. vaṇīpaka and ˚yaka, one of them certain
+valAha         -> vAlAha         | {@Valāha@} (= Pali id.; also {@Vālāha, ˚haka, Balāhaka, Bālāha, ˚haka@}, qq.v.), n. of the horse (in Mv prose called {@Keśin@}, q.v.), hero of Pali Valāhassa Jā
+vetAlika       -> vEtAlika       | ? {@vetālika@}, m., perh. to be read (mss. corrupt) for text vaitālika, tālika, Mv 〔iii.113.2〕; 〔442.8〕, in lists of entertainers; mg.? Skt. vait˚, {%panegyrist
+vfsikA         -> bfsikA         | {@vṛsikā@}, see {@vṛṣ˚@}.
+vikrAmin       -> vikramin       | {@vikrāmin@} (unrecorded elsewhere) ({@1@}) = Skt. vikramin, {%possessing prowess%}; chiefly m.c.; ˚mī, n. sg., Mvy 〔2400〕 (Mironov vikramī); Tib. rtsal (po) ch
+vindusAra      -> bindusAra      | {@Vindusāra@}, see {@Bi˚@}.
+vinivaraRa     -> vinivAraRa     | {@vi-nivaraṇa@}, see {@vi-nī˚@}.
+viruQaka       -> virUQaka       | {@Viruḍhaka@}, m.c. for {@Virūḍhaka@}, q.v.
+virupAkza      -> virUpAkza      | {@Virupākṣa@}, m.c. for {@Virūp˚@}, q.v.
+visada         -> viSada         | {@visada@}, nt., a high number: Gv 〔133.16〕, cited in Mvy 〔7878〕 as {@vimadam@}, q.v., which is prob. to be read in Gv (graphic corruption). Seems not to occur 
+vukka          -> bukka          | {@vukka@}, nt. (unrecorded MIndic, if not error or misprint, for Skt. vṛkka; cf. Pali vakka), {%kidney%}: ˚kaṃ ŚsP 〔1430.20〕; 〔1431.10〕, in lists of parts of th
+yaTAtmya       -> yATAtmya       | {@yathātmya@} (nt., = Skt. yāthātmya), {%true nature%}: Mvy 〔858〕 ˚myāvatārakuśalaḥ (of Bodhisattvas; see s.v. {@avatāra@} 3).
+
+# ===== OTHER-INTENTIONAL (67) =====
+ABasvara       -> ABAsvara       | {@ābhasvara@} = {@ābhāsvara@}, a class of gods: Ud 〔xxx.49〕.
+Adapana        -> AdApana        | {@ādapana@}, acc. to Kern SP Preface 〔p. vii〕, in Kashgar rec. of SP for Nep. ādāpana.
+Ajanya         -> ajanya         | {@ājanya@}, also {@ājaniya, ājānya, ājāniya, ājāneya@}, adj. (= Pali ājañña, ājāniya, ājānīya, ājāneyya), {%of noble race, blooded%}, primarily of animals, esp.
+Alambuza       -> alambuza       | ? {@ālambuṣa@} (m. or nt.?), n. of a plant: Mmk 〔82.18〕 ālambuṣa-mūlaṃ kṣīreṇa saha pīṣayitvā. Prose; perhaps error for alambuṣā, which is the only form recorde
+AsPuwa         -> asPuwa         | ? {@āsphuṭa@}, adj., {%clear, clarified, illumined%}: LV 〔17.3〕 (prose) tenāvabhāsenāsphuṭa-samānā(ḥ), {%being illumined by that light%}. The mg. is certain, an
+Atireka        -> atireka        | {@ātireka@} (m.c. for Skt. ati˚), {%excess%}: aṅga manorama divya-ātirekāḥ LV 〔49.15〕 (vs), {%his members are charming beyond divine ones%}.
+Basati         -> vasati         | {@bhasati@} (m.c. for bhāṣati), {%speaks%}: bhasi, 2 sg. aor., LV 〔235.9〕 (vs).
+Buta           -> BUta           | {@bhuta@}, m.c. for Skt. (and BHS) {@bhūta@}, {%become%}, etc.; {%true%}: (only vss) LV 〔54.3〕 (but in 〔53.8〕 prob. read tuma); 〔197.2〕 (read sakunā, or śa˚, bh
+Cana           -> cana           | {@-chana@} for -channa (Skt.), {%covered%}, in (text) ducchanaṃ and succhanaṃ, yathā hy agāraṃ du˚ Ud 〔xxxi.11—16〕 and … su˚ 17—22; meter favors, indeed almost 
+Darmita        -> DarmitA        | [{@-dharmita@}, Śikṣ 〔103.8〕 (vs) karuṇa-maitra-dharmitāḥ, could be taken as a denom. pple. to dharma, {%characterized%} (by …). But the passage is cited from G
+Karta          -> karta          | {@kharta@}, ? in Mmk 〔157.4〕 (vs) ūrū cāsya vartulakau, kaurparau kharta-varjitau, {%and the elbows free from …?%} Prob. corrupt, but I can think of no plausibl
+KedanA         -> Kedana         | {@khedanā@} (Skt. ˚na, nt.), {%lassitude%}: ŚsP 〔1462.10〕 (prose) na ca kadācit khedanopapadyate.
+SantaSrI       -> SAntaSrI       | [{@Śantaś(i)rī, Śantābha@}, prob. by error for {@Śānt˚@}, qq.v.]
+SikzaRA        -> SikzaRa        | {@śikṣaṇā@} (= Skt. ˚ṇa, nt., Pali sikkhaṇa), {%disciplined observance%} (with loc.): ekasyāṃ śikṣāyāṃ śikṣaṇāyām aśaktasyetaraśikṣānabhyāsād anāpattiḥ Śikṣ 〔11
+aByanta        -> aByAnta        | [{@abhyanta-@}, read {@atyanta-@}, {%complete%}: Gv 〔243.21〕; Śikṣ 〔296.9〕.]
+aDyASana       -> aDyaSana       | [{@adhyāśana@}, (probably error) for Skt. adhyāsana: samādhibhāvanādhyāśanatayā Gv 〔494.8—9〕, {%because it is the basis for realization%} (bringing into being) 
+aSvara         -> asvara         | ? {@Aśvara@}, read prob. Aśvala, n. of a ṛṣi: Mmk 〔18.18〕.
+anopama        -> anOpama        | {@an-opama@}, f. {@˚mī@}, adj. (= Pali id.; for Skt. anupama; in BHS prob. only m.c.), {%matchless%}: Mv 〔i.166.12〕 (˚mī); 〔207.18〕 = 〔ii.12.8〕; 〔ii.379.19〕; 〔i
+antarAyika     -> AntarAyika     | {@antarāyika@}, adj. (= Pali id.; also {@āntar˚@}, and neg. {@an-antar˚@}, qq.v.), {%connected with hindrances; causing obstacles%} or {%obstruction%}, regularl
+aparAjIta      -> aparAjita      | {@a-parājīta@}, adj. (m.c. for ˚jita), {%unconquered%}: Gv 〔57.18〕 (vs).
+atISaya        -> atiSaya        | {@atīśaya@} (m.c. for Skt. ati˚), {%abundance%}: Mv 〔i.100.10〕 (vs).
+biBatsa        -> bIBatsa        | {@bibhatsa@}, adj. (m.c. for Skt. bī˚), {%loathsome%}: LV 〔206.2〕 (vs).
+cApAlya        -> cApalya        | ? {@cāpālya@} (nt., for Skt. cāpalya), {%instability%}: lakṣmī-˚ya- Divy 〔432.13〕 (prose); prob. read cāpalya.
+darSaniya      -> darSanIya      | {@darśaniya@}, adj. (〔§ 3.42〕), {%beautiful%}: SP 〔313.13〕; LV 〔240.11〕 (em., mss. ˚nīya, unmetr.).
+dfzwA          -> dfzwa          | {@dṛṣṭā@}, n. sg., for draṣṭā, to stem draṣṭr, {%seer%}: in same line dṛṣṭavya, for dra˚, gdve.: na dṛṣṭā na ca dṛṣṭavyaṃ [Page269-b] Laṅk 〔9.6〕 (vs), {%there i
+gaBira         -> gaBIra         | {@gabhira@}, adj. (m.c. for gabhīra, gambhīra), {%deep, profound%}: Sukh 〔7.18〕 (vs).
+guRABUta       -> guRaBUta       | {@guṇā-bhūta@}, adj. (for Skt. guṇa˚, with ā m.c.), {%dependent%}: Mv 〔i.182.4〕 (vs) tasya sarvaṃ guṇābhūtaṃ atītānāgatasthitaṃ.
+hitezin        -> hitEzin        | {@Hiteṣin, Hitaiṣin@} (both spellings in mss.), n. of three former Buddhas in the same list: Mv 〔iii.234.7〕; 〔236.11〕; 〔237.5〕.
+jAhu           -> jahu           | [? {@jāhu@}, in RP 〔58.18〕 (vs), printed: dūre jāhu bhujagavad etān (sc. evil companions). Since it is scarcely possible that the Vedic verb aj-, {%drive%} (awa
+jAnapati       -> janapati       | [{@jānapati@}, in KP 〔84.8〕 (prose) sarva-śreṣṭhi-naigamajānapatayaḥ, read ˚jānapadāḥ, {%people of the country%}. Tib. and Chin. lack this sentence.]
+jAvita         -> javita         | {@jāvita@}, nt. (= {@javita, 1@}; perhaps so read, but Mironov also jā˚), {%running, foot-racing%}: Mvy 〔4999〕 ˚tam = Tib. baṅ, {%foot-race%}.
+kAlpam         -> kalpam         | [{@kālpam@} LV 〔407.13〕, error or misprint for kālyam, {%early in the morning%}.]
+kAluza         -> kaluza         | {@kāluṣa-@}, either = Skt. kāluṣya, {%turbidity%}, or perhaps error for kaluṣa, {%turbid%}: Gv 〔327.13〕 īrṣyā-mātsarya-māyāśāṭhya-kāluṣāśayaḥ
+kaTina         -> kaWina         | {@kathina@}, adj. (= Skt. kaṭhina), {%hard%}: -śilavat ˚nāntarātmā LV 〔158.5〕, so all mss. acc. to Lefm.; Calc. kaṭh˚.
+kulina         -> kulIna         | [{@kulina@}, misprint or corruption for Skt. kulīna, adj.: Gv 〔526.16〕 (prose) (sarvajāter adoṣaḥ …) prajāyāṃ kulino (read ˚īno) bhavati.]
+kzitiSa        -> kzitISa        | {@kṣitiśa@} (m.c. for Skt. kṣitīśa), {%king%}: RP 〔45.7〕 (vs).
+lakzmIpatI     -> lakzmIpati     | {@Lakṣmīpatī@} (so mss., Senart em. ˚matī), n. of a devakumārikā in the southern quarter: Mv 〔iii.307.8〕.
+mAskarin       -> maskarin       | {@Māskarin@} = {@Maskarin@}; Av 〔i.231.4〕 (‘probably a clerical error’, Speyer).
+mEtrAyana      -> mEtrAyaRa      | [? {@maitrāyana@} (for ˚ṇa?), n. sg. ˚naḥ, Dbh.g. 〔41(67).14〕, if text is right, would seem to be synonym of {@maitrā@}, {%love%}: ˚naḥ śubhaprabhā jagakleśaghā
+muktahastA     -> muktahasta     | [{@muktahastā@}, read {@˚hastatā@}, {%liberality%}: Bbh 〔303.13〕.]
+niSAWaka       -> niSAwaka       | ? {@niśāṭhaka@} or {@niśāthaka@}, in: kalaha-raṇa-˚kā(ḥ) Mv 〔i.176.6—7〕, ep. of Buddhas; clearly corrupt; Senart em. niśātakā, rendering {%(sharp =) redoubtable
+nirAparADa     -> niraparADa     | {@nir-āparādha@}, adj. Bhvr. (m.c. for nir-a˚), {%inoffensive%}: ˚dheṣv aparādhyate (so read) yaḥ LV 〔342.16〕 (vs).
+nirupADiSeza   -> nirupaDiSeza   | [{@nirupādhiśeṣa@}, error for {@nirupadhi˚@}, of nirvāṇadhātu: MSV 〔ii.77.11〕; 〔87.13〕.]
+paYcavarzika   -> pAYcavarzika   | {@pañcavarṣika@} (so Divy 〔403.16, 27〕; 〔405.11〕; and Kalpanām., below), or (in all others) ˚vārṣika, adj. and subst. nt., {%of five years%}, or as subst., {%th
+parijAta       -> pArijAta       | [{@parijāta@}, in ˚tāni puṣpāṇi Mv 〔iii.99.19〕, = Skt. pāri˚, {%a%} (heavenly) {%flower%}; not in Senartʼs Index, hence no doubt merely an uncorrected misprint 
+prAYjalIka     -> prAYjalika     | {@prāñjalīka@}, adj. Bhvr. (m.c. for ˚li-ka), {%making a gesture of reverence in front%}: LV 〔81.12〕 (vs).
+prAjina        -> prajina        | [{@prājina@}, in Gv 〔414.16〕 ed. na prājineṣu praṇatā sadaiva, read namrā jineṣu …, {%she was always humble and obedient before the Jinas%}.]
+prAkfti        -> prakfti        | ? {@prākṛti@} (f.), sometimes in text of Divy for prakṛti, {%nature%}, e.g. 〔310.26〕 ˚tiṃ ca jñātvā; elsewhere in the same phrase, e.g. 〔47.10〕, the regular pra
+prahelika      -> prahelikA      | (? {@prahelika@}, m., Mvy 〔7351〕 [one Tib. rendering, lde ḥu, = {%riddle%}, Das; so Jap.], but Mironov reads ˚kā, which in Skt. means {%riddle%}.)
+pravarjanA     -> pravarjana     | {@pravarjanā-@} (possibly hyper-Skt. for M. pavajjaṇa to pavajjai = Skt. prapadyate), {%assent, promise%} (?): jñānaketava akhinnavacanāḥ pravarjanā-kuśalāś ca 
+rOhiRI         -> rohiRI         | [{@rauhiṇī@}, read prob. rohiṇī with Mironov, Mvy 〔5831〕, n. of some plant; Skt. uses rohiṇī of several plants.]
+rikza          -> fkza           | {@rikṣa@} (semi-MIndic for Skt. ṛkṣa), {%bear%}: MSV 〔i.v.15〕.
+rocama         -> rocana         | [{@Rocama@}, corruption of a name of a future Tathāgata: Gv 〔443.16〕: (yathā ca maitreyasya …) evam … siṃhasyaivaṃ [Page457-b] yāvad rocamasya tathāgatasya jana
+rugma          -> fgma           | {@rugma@} (semi-MIndic for Skt. rukma; no such form recorded elsewhere), {%gold%}: rugma-varṇa Mmk 〔214.20〕.
+sAhoQa         -> sahoQa         | {@sāhoḍha@}, adj., m.c. for Skt. sahoḍha, {%having stolen goods with him%}: ˚ḍhā iva caurā(ḥ) LV 〔371.12〕 (vs).
+sEla           -> SEla           | {@Saila@} (read {@Śaila?@}), n. of a yakṣa: Māy 〔2〕.
+saMButa        -> saMBUta        | {@saṃbhuta@} (m.c. for Skt. ˚ūta), {%originated%} etc.: LV 〔419.9〕; Gv 〔255.12〕; Śikṣ 〔347.8〕 (all vss).
+samagrya       -> sAmagrya       | {@samagrya@} (nt., = Skt. sāmagrya, Pali sāmaggiya; perh. short a only m.c.), {%totality%}; only in Bhvr. cpds., and only in vss: daśabalasamagryo 'cirād bhaviṣ
+samatikrAma    -> samatikrama    | {@samatikrāma@} = {@˚krama@}: saṃsāra-˚maṃ kuryā iti Av 〔i.300.3〕. Speyer would em. to ˚kramaṃ ‘according to grammar’, a reason which I fail to understand.
+sora           -> sOra           | {@sora@} = Skt. svara (〔§ 3.117〕), {%voice, sound%}: cakorasorāṃ (acc. pl.) karaviṅkanāditāṃ LV 〔214.18〕 (vs); meter requires long syllable so-; so Lefm. with 2
+suSila         -> suSIla         | {@su-śila@}, adj. (m.c. for ˚śila), {%of good behavior%}: ˚lā LV 〔114.15〕 (vs).
+tAlUka         -> tAluka         | [{@tālūka@}, nt, ˚kaṃ MSV 〔i.239.16〕, read śālūka (Skt.), {%edible lotus-root%}.]
+vEjayanti      -> vEjayantI      | {@vaijayanti@} (= Skt. ˚tī), {%flag, banner%}: -paṭākā-˚ti- (in a long cpd.) LV 〔295.15〕 (prose; so all mss.; Calc. ˚tī).
+vEmacitra      -> vemacitra      | {@Vaimacitra@} = {@Vemacitrin, ˚tra@} (perh. mere corruption or hyper-Sktism): Thomas ap. Hoernle MR 〔105.9〕.
+vItaTa         -> vitaTa         | {@vītatha@}, adj. (m.c. for Skt. vi˚), {%false%}: satya-vī˚-patheṣu Gv 〔55.3〕 (vs).
+vikalpA        -> vikalpa        | {@vikalpā@} = {@vikalpa@} (1): paraspara-vikalpayā Laṅk 〔287.7〕 (vs); perhaps m.c. for ˚pena, which would not fit metr. here.
+vinayanA       -> vinayana       | {@vinayanā@} (in Skt., Pali, and Pkt. only ˚na, nt.), {%instruction, training%}: samādāpanā ˚nā niveśanā pratiṣṭhāpanā Bbh 〔221.6〕 (note all fems.).

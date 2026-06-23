@@ -7,7 +7,7 @@ tier-A spelling candidates can be turned into a verified **FILE-FIRST** queue + 
 run it with the **[`/dict-triage <DICT>`](../.claude/commands/dict-triage.md)** skill
 (Sonnet classifies, Opus source-confirms, a human verifies).
 
-**18 of 33 triaged — 63 fileable typos across 8 dicts; ~1,976 documented-intentional spellings catalogued.**
+**19 of 33 triaged — 63 fileable typos across 8 dicts; ~2,270 documented-intentional spellings catalogued.**
 Tier-A precision stays **near-zero** on mature, much-corrected dictionaries — the durable
 deliverable is the do-not-file list and *preventing bad bulk edits*, not the handful of real
 typos. The exception is **poorly-digitised sources**: SHS (15%) and PWG (2.4%) carry many real
@@ -23,7 +23,7 @@ OCR errors, each confirmed by the entry's own etymology/inflection.
 | PW (German) | 657 | **2** | 255 |
 | VCP (Sanskrit) | 563 | **1** | 408 |
 | GST (English, 1856) | 48 | **1** | 22 |
-| _10 others_ — AP · MW72 · SCH · AP90 · MD · CAE · GRA · BEN · CCS · SNP | — | **0** | 262 |
+| _11 others_ — AP · MW72 · SCH · AP90 · MD · CAE · GRA · BEN · CCS · SNP · BHS | — | **0** | 556 |
 
 ## Status — all 33 dictionaries (by tier-A volume)
 
@@ -36,7 +36,7 @@ provided) — it becomes triageable once they are wired into the pipeline.**
 |---|--:|---|
 | [MW](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/mw) — Monier-Williams (1899) | 1954 | ✅ **4 fileable · 630 do-not-file** — [readme](MW/readme.md) · [file-first](MW/MW_file_first_sf.txt) · [do-not-file](MW/MW_wrong_readings.txt) · [queue](MW/MW_triaged.txt) |
 | PD | 1045 | ⏳ source not in csl-orig — **two external sources to be provided**, then triageable |
-| [BHS](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/bhs) — Edgerton, Buddhist Hybrid Sanskrit | 737 | — pending |
+| [BHS](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/bhs) — Edgerton, Buddhist Hybrid Sanskrit | 713 | ✅ **0 fileable · 294 do-not-file** — [readme](BHS/readme.md) · [do-not-file](BHS/BHS_wrong_readings.txt) · [queue](BHS/BHS_triaged.txt) |
 | [SCH](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/sch) — Schmidt, Nachträge (German, 1928) | 678 | ✅ **0 fileable · 109 do-not-file** — [readme](SCH/readme.md) · [do-not-file](SCH/SCH_wrong_readings.txt) · [queue](SCH/SCH_triaged.txt) |
 | [PW](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/pw) — Böhtlingk–Roth, Petersburg | 657 | ✅ **2 fileable · 255 do-not-file** — [readme](PW/readme.md) · [file-first](PW/PW_file_first_sf.txt) · [do-not-file](PW/PW_wrong_readings.txt) · [queue](PW/PW_triaged.txt) |
 | [VCP](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/vcp) — Vācaspatyam | 563 | ✅ **1 fileable · 408 do-not-file** — [readme](VCP/readme.md) · [file-first](VCP/VCP_file_first_sf.txt) · [do-not-file](VCP/VCP_wrong_readings.txt) · [queue](VCP/VCP_triaged.txt) |

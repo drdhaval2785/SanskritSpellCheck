@@ -1,0 +1,754 @@
+# BHS tier-A -- BODY-GROUNDED triage  (DRAFT; verify every kept case against the scan)
+#
+# The 713 engine tier-A candidates were judged against BHS's OWN entry text (csl-orig),
+# not spelling alone. A spelling detector cannot tell a typo from a real word, an
+# intentional variant / compounding form, or wrong-reading apparatus -- the entry can.
+# Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM
+# pass over the 'realword' set + source confirmation of every TYPO verdict.
+#
+# FINDING: of 713 tier-A candidates, 0 are body-confirmed fileable typos (0.0%).
+# 415 are real distinct words, 294 are spellings BHS documents on purpose (w.r./v.l./
+# in-comp./cross-ref -- filing them would CORRUPT BHS), 0 are not in the current
+# source, and 4 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
+# do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.
+
+# ===== BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file) (0) =====
+
+# ===== BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted (0) =====
+
+# ===== BUCKET 3  REVIEW -- undecidable without the printed page (4) =====
+
+pUrvAhRikA    -> pUrvAhRika     [dcs=3 ndicts=1 body=realword]
+    BHS: {@pūrvāhṇikā@}, app. {%morning meal%}: MSV 〔ii.144.6 ff.〕
+    judged: Terse entry 'pūrvāhṇikā, app. morning meal' with no cross-listing or correction note to adjudicate the -ā ending.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BHS&key=pUrvAhRikA
+
+prasAtika     -> prasAtikA      [dcs=1 ndicts=1 body=realword]
+    BHS: {@prasātika, ˚kā@}, Mv 〔ii.60.22〕, see {@prāsādika@} (2).
+    judged: '{@prasātika, ˚kā@}, Mv, see {@prāsādika@} (2)' — terse cross-reference listing both m. and f., too brief to adjudicate.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BHS&key=prasAtika
+
+sPowika       -> sPowikA        [dcs=1 ndicts=1 body=realword]
+    BHS: {@sphoṭika@}, Mv 〔iii.58.4〕, uncertain mg., see s.v. {@tripuṣkara@}.
+    judged: '{@sphoṭika@}, Mv, uncertain mg., see s.v. {@tripuṣkara@}' — Edgerton himself calls the meaning uncertain; too terse to judge.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BHS&key=sPowika
+
+niHsarita     -> niHsArita      [dcs=0 ndicts=1 body=realword]
+    BHS: {@niḥsarita@}, nt., Gv 〔351.19〕; see s.v. {@āsarita@}.
+    judged: Terse entry '{@niḥsarita@}, nt., Gv 351.19; see s.v. {@āsarita@}' gives no gloss to adjudicate against niḥsārita.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BHS&key=niHsarita
+
+# ===== BUCKET 4  REAL-WORD -- a distinct real word; the fix would merge two words (415) =====
+dfQA          -> dfQa          | BHS: {@Dṛḍhā@}, n. of an (or, the) earth-goddess (pṛthivīdevatā): Suv 〔1.8〕; 〔3.12〕; 〔85.1〕; 〔9 | {@Dṛḍhā@}, 'n. of an (or, the) earth-goddess (pṛthivīdevatā)' — a proper name (chapter Dṛḍ
+mantrA        -> mantra        | BHS: {@mantrā@}, f. (only recorded as m. or nt.) = Skt. BHS mantra, {%formula%} etc.: Mmk 〔27.3 | Body: "mantrā, f. (only recorded as m. or nt.) = Skt. BHS mantra, formula" — deliberately 
+pUwa          -> puwa          | BHS: {@pūṭa@}, m., and {@pūṭī@}, {%sheath, calyx%} (of a flower); see s.v. {@puṣpa-puṭa@}; only | {@pūṭa@}, m. … 'sheath, calyx (of a flower)' — its own glossed word, distinct from puṭa.
+sona          -> soma          | BHS: ? {@sona@} (= Pali sona, oftener soṇa; to Skt. śvan), {%dog%}: sonāhārīkṛtaṃ Mv 〔i.129.9〕  | {@sona@} '(= Pali sona … to Skt. śvan), dog' — a distinct word meaning 'dog', unrelated to
+metra         -> netra         | BHS: {@metra@} (semi-MIndic for {@maitrā@}, with a m.c., or Skt. maitra), {%love%}: metra-varmi | Body: "metra (semi-MIndic for {@maitrā@} … or Skt. maitra), love" — its own word, unrelate
+vudDi         -> budDi         | BHS: {@vuddhi@}, f. (= Pali id. or vuḍḍhi) = {@vṛddhi@}, q.v.: jaya-vuddhi (with mss.) ca se (s | Body: "vuddhi, f. (= Pali id. or vuḍḍhi) = {@vṛddhi@}, q.v." — Prakritic v-form of vṛddhi,
+adfSyA        -> adfSya        | BHS: {@adṛśyā@} (not recorded in this sense), probably to be read for text ādṛśyā, n. of a magi | Edgerton's headword {@adṛśyā@} 'n. of a magic herb (which makes invisible)', his proposed 
+aninditA      -> anindita      | BHS: {@Aninditā@}, n. of a pond: Gv 〔336.21, 25〕. | {@Aninditā@}, 'n. of a pond' — a proper name in its own spelling, distinct from the adject
+antrA         -> antra         | BHS: {@antrā@}, ({@1@}) (Skt. and Pali only nt. antra, anta) {%intestines%}: antrāyāṃ, loc., Di | {@antrā@} 'intestines' explicitly contrasted with '(Skt. and Pali only nt. antra)' — a del
+dIpA          -> dIpa          | BHS: {@Dīpā@}, n. of a goddess or yoginī: Sādh 〔157.12〕 etc.; 〔324.6〕. | {@Dīpā@}, 'n. of a goddess or yoginī' — a proper name in its own spelling.
+kusumA        -> kusuma        | BHS: {@Kusumā@}, n. of a legendary queen, instructed and saved by Buddha (wife of {@Kusumbha@}) | {@Kusumā@}, 'n. of a legendary queen' — a proper name, not a misspelling of kusuma.
+kAli          -> kali          | BHS: {@kāli@}, f. (ka plus āli), {%ka-series%}, name for a series of syllables beginning with k | {@kāli@}, f. '(ka plus āli), ka-series' — its own derivation and gloss, a distinct technic
+aDipatya      -> ADipatya      | BHS: {@adhipatya@} (nt., = Pali adhipacca, adhipatiya, cf. Skt. ādhipatya), {%overlordship%}: ˚ | {@adhipatya@} '(nt., = Pali adhipacca … cf. Skt. ādhipatya), overlordship' — a deliberatel
+locanA        -> locana        | BHS: {@Locanā@}, n. of a goddess (= {@Buddhalocanā, Rocanī@}): Sādh 〔18.13〕 etc. | {@Locanā@}, 'n. of a goddess (= Buddhalocanā, Rocanī)' — a proper name.
+nIlotpalA     -> nIlotpala     | BHS: {@Nīlotpalā@}, n. of an apsaras: Kv 〔3.15〕. | {@Nīlotpalā@}, 'n. of an apsaras' — a proper name in its own spelling.
+SaMkAra       -> SaMkara       | BHS: {@Śaṃkāra@}, n. of a nāga king: Mvy 〔3255〕 (so also Mironov; cited in BR as {@Śaṃkara@}).  | {@Śaṃkāra@}, 'n. of a nāga king' (so also Mironov) — a proper name; the BR citation as Śaṃ
+padmakA       -> padmaka       | BHS: {@padmakā@}, n. of a (medicinal) plant (prob. = padmā, Suśr., BR): MSV 〔i.111.8〕. | {@padmakā@}, 'n. of a (medicinal) plant (prob. = padmā)' — its own glossed plant name.
+sundarA       -> sundara       | BHS: {@Sundarā@}, n. of a female doorkeeper (dvārapālinī): Sādh 〔502.14〕. | {@Sundarā@}, 'n. of a female doorkeeper (dvārapālinī)' — a proper name.
+vimokzA       -> vimokza       | BHS: {@Vimokṣā@}, n. of a dhāraṇī: RP 〔50.4〕 (prose). | {@Vimokṣā@}, 'n. of a dhāraṇī' — a proper name in its own spelling.
+ASIvizA       -> ASIviza       | BHS: {@Āśīviṣā@}, n. of a river: ˚ṣāyāṃ, loc., Divy 〔451.6, 10〕; 〔456.24, 28〕. See under prec. | Proper noun: "Āśīviṣā, n. of a river".
+madrI         -> mAdrI         | BHS: {@Madrī@} (= Pali Maddī), n. of the wife of {@Viśvaṃtara@} (or {@Sudaṃṣṭra@}): Jm 〔56.22 f | Proper noun: "Madrī (= Pali Maddī), n. of the wife of Viśvaṃtara" — established BHS spelli
+sTAvarA       -> sTAvara       | BHS: {@Sthāvarā@}, n. of an earth-goddess, (mahā-)pṛthivīdevatā: LV 〔319.3, 9〕; Gv 〔220.19 ff.〕 | Proper noun: "Sthāvarā, n. of an earth-goddess".
+AntaHpura     -> antaHpura     | BHS: {@āntaḥpura@}, f. {@˚rī@}, adj. or subst. (cf. Skt. āntaḥpurikā), (women) {%of the harem%} | Body: "āntaḥpura, f. ˚rī, adj. or subst. (cf. Skt. āntaḥpurikā), of the harem" — own attes
+DUpA          -> DUpa          | BHS: {@Dhūpā@}, {%‘Incense’%}, n. of a goddess or yoginī: Sādh 〔50.3〕 etc.; 〔324.6〕. | Proper noun: "Dhūpā, 'Incense', n. of a goddess or yoginī" — feminine name.
+aBiya         -> aBiyA         | BHS: {@Abhiya@}, n. of a monk of old (previous incarnation of Śākyamuni): Mv 〔i.35.13 ff.〕 (A t | Proper noun: "Abhiya, n. of a monk of old (previous incarnation of Śākyamuni)" — masculine
+aByantarA     -> aByantara     | BHS: {@abhyantarā@}, adv.-prep. (cf. Skt. abhyantara, adj., ˚raṃ, ˚re, Pali abbha˚; and {@antar | Body: "abhyantarā, adv.-prep. (cf. Skt. abhyantara, adj. …), within, with gen." — distinct
+apratimA      -> apratima      | BHS: {@Apratimā@}, n. of a queen, previous incarnation of Yaśodharā: Mv 〔i.128.13 ff.〕 | Proper noun: "Apratimā, n. of a queen, previous incarnation of Yaśodharā" — feminine name.
+cAkzuzya      -> cakzuzya      | BHS: {@cākṣuṣya@}, adj. (= Skt. cakṣ˚, cf. cākṣuṣa; Pali cakkhussa), {%good for the eyes%}: MSV | Body: "cākṣuṣya, adj. (= Skt. cakṣ˚, cf. cākṣuṣa; Pali cakkhussa), good for the eyes" — ow
+cAtuzpada     -> catuzpada     | BHS: {@cātuṣpada@}, f. {@˚padī@} (Skt. catuṣp˚), = {@catuṣpadaka@}, q.v.; f. with gāthā, Vaj in | Body: "cātuṣpada, f. ˚padī (Skt. catuṣp˚), = {@catuṣpadaka@}, q.v." — own attested lengthe
+jaNgamA       -> jaNgama       | BHS: {@Jaṅgamā@}, n. of a rākṣasī: Māy 〔243.24〕. | Proper noun: "Jaṅgamā, n. of a rākṣasī" — feminine name.
+jambUnada     -> jAmbUnada     | BHS: {@jambūnada@} (nt.; = Pali jambu˚, Skt. jāmbū˚; 〔§ 3.32〕), {%gold%}: jambūnadārcisadṛśaṃ ( | Body: "jambūnada (= Pali jambu˚, Skt. jāmbū˚; §3.32), gold" — own attested form.
+kacCapA       -> kacCapa       | BHS: {@Kacchapā@}, n. of a river: Māy 〔253.3〕. In list of rivers, placed between Narmadā and Pa | Proper noun: "Kacchapā, n. of a river".
+leKanA        -> leKana        | BHS: {@lekhanā@} (cf. Skt. and Pali ˚na, nt.), (act of) {%writing%}: Mvy 〔903〕 (in sense of {%c | Body: "lekhanā (cf. Skt. and Pali ˚na, nt.), (act of) writing" — own attested feminine for
+mArgaRA       -> mArgaRa       | BHS: {@mārgaṇā@} (Skt. Lex. id., Skt. ˚ṇa, nt.; Pali magganā), {%act of searching, seeking%}: ˚ | Body: "mārgaṇā (Skt. Lex. id., Skt. ˚ṇa, nt.; Pali magganā), act of searching, seeking" — 
+namaskara     -> namaskAra     | BHS: {@namaskara@}, nt., = ˚kāra (masc.), {%homage-paying%}: nidāna-namaskarāṇi samāptāni Mv 〔i | Body: "namaskara, nt., = ˚kāra (masc.), homage-paying" — own attested neuter form with cit
+nftyA         -> nftya         | BHS: {@Nṛtyā@}, {%(dramatic) Dance%} or {%Drama%}, n. of a goddess or yoginī: Sādh 〔157.12〕 etc | Proper noun: "Nṛtyā, '(dramatic) Dance' or 'Drama', n. of a goddess or yoginī" — feminine 
+niBA          -> niBa          | BHS: {@nibhā@} (= Pali id.), {%appearance, sheen%}: LV 〔255.6〕; 〔256.5, 10〕 (all prose). In Skt | Body: "nibhā (= Pali id.), appearance, sheen … the existence of the noun in Pali" — own at
+niSAcarA      -> niSAcara      | BHS: {@Niśācarā@}, n. of a rākṣasī: May 〔243.30〕. | Proper noun: "Niśācarā, n. of a rākṣasī" — feminine name.
+pUjanA        -> pUjana        | BHS: {@pūjanā@} (= Pali id.; in Skt. only ˚na, nt., recorded), {%worship, reverence%}: SP 〔144. | Body: "pūjanā (= Pali id.; in Skt. only ˚na, nt., recorded), worship, reverence" — own att
+praBUtA       -> praBUta       | BHS: {@Prabhūtā@}, n. of a lay-disciple (upāsikā): Gv 〔135.18〕; 〔136.16 ff.〕 | Body defines 'Prabhūtā, n. of a lay-disciple (upāsikā)' — a distinct proper name, not a mi
+sUdanA        -> sUdana        | BHS: {@sūdanā@}, f. (Skt. ˚na, nt.), {%destruction%}: kileśa-˚nā (n. sg.) LV 〔53.15〕 (vs). | 'sūdanā, f. (Skt. ˚na, nt.)' — Edgerton records a feminine BHS form distinct from the Skt.
+toraRA        -> toraRa        | BHS: {@toraṇā@}, f. (= Skt. toraṇa), {%portal, arched gateway%}: ˚ṇāye (gen.) karkaṭakasmiṃ Mv  | 'toraṇā, f. (= Skt. toraṇa)' — deliberately recorded feminine variant with its own gen. ˚ṇ
+valayA        -> valaya        | BHS: {@Valayā@}, n. of the (2) {@yaṣṭi@} (q.v.) of the capital cities of four former Buddhas (c | 'Valayā, n. of the (2) yaṣṭi … of the capital cities' — a proper name with its own definit
+Sayin         -> SAyin         | BHS: {@śayin@}, adj. (to Skt. śete, śayate, ˚ti, plus -in), {%lying%}: śayanasyādṛśi chinna pād | 'śayin, adj. (to Skt. śete, śayate … plus -in), lying' — its own derived word with gloss a
+SakyA         -> Sakya         | BHS: {@śakyā@}, indecl. (= Pali, Pkt. sakkā; from Skt. root-aor. or precative śakyāt, Pischel 〔 | 'śakyā, indecl. (= Pali, Pkt. sakkā …), it is possible, one can' — a distinct indeclinable
+dOmya         -> DOmya         | BHS: {@daumya@}, adj. (cf. AMg. dūmiya, {%white%}; dūmaṇa, also dumaṇa, nt., {%making white%};  | 'daumya, adj. (cf. AMg. dūmiya, white …), white' — its own distinct hybrid word, unrelated
+Taru          -> taru          | BHS: {@tharu@} (= Pali id.; 〔§ 2.9〕), {%hilt of a sword; sword%}: (dhanusmiṃ vā) tharusmiṃ vā M | Body defines its own word "tharu (= Pali id.), hilt of a sword; sword" — a distinct meanin
+uqaya         -> udaya         | BHS: {@uḍaya@} (m. or nt.; = AMg. id., Skt. uṭaja), {%hut%}: Mmk 〔37.3〕 ekānte uḍayaṃ kṛtvā pra | Body defines its own word "uḍaya (= AMg. id., Skt. uṭaja), hut" — a distinct word, not a s
+BelA          -> velA          | BHS: {@bhelā@}, a high number: Gv 〔106.11〕. Cf. next, and {@telā@}. | 'bhelā, a high number' — its own distinct numeral term, not velā.
+magara        -> nagara        | BHS: {@magara@}, Gv 〔133.1〕, in place of {@āgāra@}, q.v., a high number. | 'magara … in place of āgāra, q.v., a high number' — a distinct documented numeral entry, n
+brahmadattA   -> brahmadatta   | BHS: {@Brahmadattā@}, n. of a girl attendant on Subhadrā (1): Gv 〔52.2〕. | Proper noun: "Brahmadattā, n. of a girl attendant on Subhadrā" — a distinct feminine name.
+carakA        -> caraka        | BHS: {@Carakā@}, n. of a goddess: Mahāsamāj., Waldschmidt, Kl. Skt. Texte 4, 〔185.17〕. | Proper noun: "Carakā, n. of a goddess" — a distinct feminine name.
+kokanAda      -> kokanada      | BHS: {@Kokanāda@}, n. of a mountain: Māy 〔254.11〕. | Proper noun: "Kokanāda, n. of a mountain".
+mahApadmA     -> mahApadma     | BHS: {@Mahāpadmā@}, n. of a medicinal or magic herb: Gv 〔497.24〕. | Proper noun: "Mahāpadmā, n. of a medicinal or magic herb".
+paRqara       -> pARqara       | BHS: {@Paṇḍara@} (= Pali id.), n. of a nāga king: Mvy 〔3281〕. | Proper noun: "Paṇḍara (= Pali id.), n. of a nāga king".
+saBikA        -> saBika        | BHS: {@Sabhikā@}, n. of a goddess: Mahāsamāj., Waldschmidt, Kl. Skt. Texte 4, 〔185.13〕. | Proper noun: "Sabhikā, n. of a goddess".
+sarvakAlika   -> sArvakAlika   | BHS: {@sarvakālika@}, adj. (= AMg. savvakāliya; to Skt. ˚kālaṃ, adv., Pali sabbakālaṃ, plus -ik | Body derives "sarvakālika (= AMg. savvakāliya; to Skt. ˚kālaṃ … plus -ika), perennial" as 
+supArSvA      -> supArSva      | BHS: {@Supārśvā@}, n. of a crow-queen, consort of {@Supātra@} (1), q.v.; in Pali called Suphass | Proper noun: "Supārśvā, n. of a crow-queen" — a distinct feminine name.
+suprabudDA    -> suprabudDa    | BHS: {@Suprabuddhā@}, n. of a devakumārikā in the southern quarter: LV 〔389.8〕 (corresp. to {@S | Proper noun: "Suprabuddhā, n. of a devakumārikā" — feminine name.
+vajraDarA     -> vajraDara     | BHS: {@Vajradharā@}, n. of a rākṣasī: Māy 〔243.22〕. | Proper noun: "Vajradharā, n. of a rākṣasī" — feminine name.
+vijYapana     -> vijYApana     | BHS: {@vijñapana@} (nt.; cf. Skt. vijñāpana, Pali viññāpana; to Skt. vijñapayati), {%the making | Body: "vijñapana (cf. Skt. vijñāpana, Pali viññāpana; to Skt. vijñapayati), the making kno
+aDikArika     -> ADikArika     | BHS: {@-adhikārika@}, ifc. adj., f. {@˚kī@}, (= Pali id.), {%referring%} [Page012-b] {%to, conc | '-adhikārika, ifc. adj. … (= Pali id.), referring to, concerned with' — its own well-attes
+arpaRA        -> arpaRa        | BHS: {@arpaṇā@} (cf. also {@vyarpaṇā@}; prob. = Pali appanā; in Skt. only ˚ṇa, nt., not in this | 'arpaṇā (prob. = Pali appanā; in Skt. only ˚ṇa, nt., not in this mg.)' — a distinct femini
+danturA       -> dantura       | BHS: {@Danturā@}, n. of a rākṣasī: Māy 〔243.20〕. | 'Danturā, n. of a rākṣasī' — a proper name with its own definition.
+karzika       -> kArzika       | BHS: {@karṣika@}, m. (cf. Skt. kārṣaka, and tila-kārṣika; perh. semi-MIndic in having a for ā;  | 'karṣika, m. … perh. semi-MIndic in having a for ā …, plowman, farmer' — a deliberately re
+kfzRAjinA     -> kfzRAjina     | BHS: {@Kṛṣṇājinā@} (= Pali Kaṇhājinā), n. of the daughter of {@Viśvaṃtara@}: Jm 〔59.22 ff.〕; in | 'Kṛṣṇājinā (= Pali Kaṇhājinā), n. of the daughter of Viśvaṃtara' — a proper name with its 
+pfcCa         -> pfcCA         | BHS: {@-pṛccha@} (= Skt. pṛcchaka), ifc., see {@kṣemaṇīyapṛccha@}. | '-pṛccha (= Skt. pṛcchaka), ifc.' — a distinct ifc. stem, not pṛcchā.
+vAcikA        -> vAcika        | BHS: {@vācikā@} (= Pali id.), {%speech%}; see {@pṛṣṭa-v˚@}; also tri-, eka-vācikayā, {%with tri | 'vācikā (= Pali id.), speech' — its own gloss with attested forms tri-/eka-vācikayā.
+AgfhIta       -> agfhIta       | BHS: {@āgṛhīta@} (= Pali aggahīta; cf. {@an-āg˚@} and {@āgraha@}), {%held back = niggardly%}; ā | 'āgṛhīta (= Pali aggahīta …), held back = niggardly' — its own distinct word and gloss.
+AkarzaRA      -> AkarzaRa      | BHS: {@ākarṣaṇā, ˚ṇa-tā@}, and {@˚ṇī@} (cf. Skt. ākarṣaṇa, nt., {%attraction%}), (a Buddhaʼs) { | 'ākarṣaṇā, ˚ṇa-tā, and ˚ṇī (cf. Skt. ākarṣaṇa, nt.), power of attraction' — a distinct fem
+ArAjaka       -> arAjaka       | BHS: {@ārājaka@}, nt. (secondary deriv., with vṛddhi, from arāja or ˚jaka), {%state of kingless | 'ārājaka, nt. (secondary deriv., with vṛddhi, from arāja …), state of kinglessness' — its 
+ArUpa         -> arUpa         | BHS: {@ārūpa@}, nt. (= {@ārūpya@}; cf. {@ārūpin@}), {%formlessness%}: Laṅk 〔312.8(—9)〕 ārūpya-r | 'ārūpa, nt. (= ārūpya; cf. ārūpin), formlessness' — its own attested word with gloss and c
+AwavikA       -> Awavika       | BHS: {@Āṭavikā@} (= Pali Āḷavī, cf. {@Agrāṭavika@}), n. of a city in Magadha, and of a river ne | 'Āṭavikā (= Pali Āḷavī …), n. of a city in Magadha, and of a river near it' — a proper nam
+OdumbarA      -> Odumbara      | BHS: {@Audumbarā@}, n. of a gandharva maid: Kv 〔4.24〕. | 'Audumbarā, n. of a gandharva maid' — a proper name with its own definition.
+SAdvalA       -> SAdvala       | BHS: {@Śādvalā@}, n. of a town: MSV 〔i.xviii.2〕. | 'Śādvalā, n. of a town' — a proper name with its own definition.
+SuSrUzaRA     -> SuSrUzaRa     | BHS: {@śuśrūṣaṇā@} (= AMg. sussūsaṇā; blend of Skt. ˚ṣā and ˚ṣaṇa, nt.), {%obedience%}: guru-śu | 'śuśrūṣaṇā (= AMg. sussūsaṇā; blend of Skt. ˚ṣā and ˚ṣaṇa, nt.), obedience' — a distinct b
+aBayaMkarA    -> aBayaMkara    | BHS: {@Abhayaṃkarā@}, n. of a lokadhātu: Gv 〔398.20〕. | 'Abhayaṃkarā, n. of a lokadhātu' — a proper name with its own definition.
+aBivAdanA     -> aBivAdana     | BHS: {@abhivādanā@} (in Skt. and Pali only ˚na, nt.), {%salutation%}: Bbh 〔139.7〕 (prose) ˚nā-v | 'abhivādanā (in Skt. and Pali only ˚na, nt.), salutation' — a deliberately recorded femini
+aNgulIyakA    -> aNgulIyaka    | BHS: {@aṅgulīyakā@}, fem., {%finger-ring%}; nowhere else recorded in this form and gender; but  | 'aṅgulīyakā, fem., finger-ring; nowhere else recorded in this form and gender' — a distinc
+apanAya       -> apanaya       | BHS: {@apanāya@}, nt. (cf. AMg. avaṇaya, {%censure, abuse%}), {%rebuke%} (?): RP 〔40.6〕 (prose) | 'apanāya, nt. (cf. AMg. avaṇaya …), rebuke (?)' — its own hybrid word with gloss.
+avalambanA    -> avalambana    | BHS: {@avalambanā@} (= Skt. ˚na, nt.), {%dependence%}: Divy 〔199.19〕 tau Buddha-dharma-saṃghāva | 'avalambanā (= Skt. ˚na, nt.), dependence' — a deliberately recorded feminine variant with
+catvAra       -> catvara       | BHS: {@catvāra@} (m. or nt.; = Skt. catvara; only in prose of Gv; ā perhaps influenced by remem | 'catvāra (m. or nt.; = Skt. catvara … ā perhaps influenced by …catvāraḥ), crossroads, squa
+ganDarvika    -> gAnDarvika    | BHS: {@gandharvika@} (= Skt. gā˚; ă MIndic?), {%musician%}: Mv 〔iii.111.20〕 (here Senart em. gā | 'gandharvika (= Skt. gā˚; ă MIndic?), musician' — a deliberately recorded MIndic short-a f
+hAha          -> hAhA          | BHS: {@hāha@}, Kv 〔18.13〕; 〔50.3〕; and {@hāhava@}, Kv 〔66.16〕; names of (a) hell(s), from the c | 'hāha … and hāhava … names of (a) hell(s)' — a proper name of a hell with its own entry.
+jIvika        -> jIvikA        | BHS: {@Jīvika@}, ({@1@}) = {@Jīvaka@}, the physician: Av 〔ii.134.6 ff.〕; [({@2@}) in LV 〔430.20 | 'Jīvika, (1) = Jīvaka, the physician' — a proper name equated with Jīvaka, not jīvikā.
+kAriRI        -> kariRI        | BHS: {@Kāriṇī@}, n. of a goddess: Sādh 〔502.9〕. | 'Kāriṇī, n. of a goddess' — a proper name with its own definition.
+kArika        -> kArikA        | BHS: {@-kārika@}, adj. (= Skt. kālika; cf. 2 {@kāra@}), ifc., {%belonging to a … time%}: LV 〔40 | '-kārika, adj. (= Skt. kālika …), belonging to a … time' — its own ifc. adjective with glo
+kArzikA       -> kArzika       | BHS: {@kārṣikā@} (or {@˚ka@}; cf. Skt. karṣa), a small weight, app. = karṣa: Laṅk 〔31.9〕 (vs) k | 'kārṣikā (or ˚ka …), a small weight, app. = karṣa' — its own headword (with ˚ka noted as v
+muRqanA       -> muRqana       | BHS: {@muṇḍanā@} (= Skt. and Pali muṇḍana, nt.), {%clipping of the hair%}: Mvy 〔9332〕 = Tib. sk | 'muṇḍanā (= Skt. and Pali muṇḍana, nt.), clipping of the hair' — a deliberately recorded f
+mukulitA      -> mukulita      | BHS: {@Mukulitā@}, n. of a ‘gandharva maid’: Kv 〔4.18〕. | 'Mukulitā, n. of a gandharva maid' — a proper name with its own definition.
+nadin         -> nAdin         | BHS: {@Nadin@}, n. of a brahman: nadī nāma Mv 〔iii.325.2〕. The same personage is referred to, b | 'Nadin, n. of a brahman: nadī nāma Mv' — a proper name, not nādin.
+prapata       -> prapAta       | BHS: {@prapata@} (m.? cf. Skt. prapāta), {%fall%}: ulkinaḥ (see {@ulkin@}) prapate ({%on the fa | 'prapata (m.? cf. Skt. prapāta), fall' — a documented short-a hybrid form with gloss and c
+pratisAra     -> pratisara     | BHS: {@pratisāra@}, m. (cf. Pkt. paḍisāra, Sheth, and Hem. 〔1.206〕), {%turning back, regression | 'pratisāra, m. (cf. Pkt. paḍisāra …), turning back, regression' — its own word with Prakri
+sraMsanA      -> sraMsana      | BHS: {@sraṃsanā@} (Skt. ˚na, nt., not quite in this sense), {%relaxation%} (of effort or activi | 'sraṃsanā (Skt. ˚na, nt., not quite in this sense), relaxation' — a feminine BHS form with
+suvIrA        -> suvIra        | BHS: {@Suvīrā@}, n. of a yoginī: Sādh 〔427.7〕. | 'Suvīrā, n. of a yoginī' — a proper name with its own definition.
+tAqanA        -> tAqana        | BHS: {@tāḍanā@}, f. (Skt. ˚na, nt.), {%a beating%}: kaści kuryān na tāḍanāṃ … SP 〔285.1〕 (vs);  | 'tāḍanā, f. (Skt. ˚na, nt.), a beating' — a deliberately recorded feminine variant with ci
+takzARa       -> takzaRa       | BHS: {@takṣāṇa@} (for Skt. takṣan; 〔§§ 17.39, 41〕; cf. Pāṇ. 〔6.4.9〕 and Kāś.; Pkt. takkhāṇa, He | 'takṣāṇa (for Skt. takṣan …; Pkt. takkhāṇa), wood-worker, carpenter' — a documented hybrid
+tozaRA        -> tozaRa        | BHS: {@toṣaṇā@} (only nt. Skt. ˚ṇa, Pali tosaṇa), {%gratification%}: āvarjana-toṣaṇā-vismāpanā  | 'toṣaṇā (only nt. Skt. ˚ṇa …), gratification' — a deliberately recorded feminine variant w
+vidvezaRA     -> vidvezaRa     | BHS: {@vidveṣaṇā@} (= Pali viddesanā; Skt. ˚ṇa, nt.), {%hatred%}: mā me ˚ṇā bhavet Mv 〔iii.419. | 'vidveṣaṇā (= Pali viddesanā; Skt. ˚ṇa, nt.), hatred' — a feminine BHS variant with gloss 
+vilepanA      -> vilepana      | BHS: {@vilepanā@} (otherwise only ˚na, nt.), {%unguent%}: ˚nāṃ gṛhītvā LV 〔49.8〕 and 〔50.12〕, b | 'vilepanā (otherwise only ˚na, nt.), unguent' — a deliberately recorded feminine variant w
+vismApanA     -> vismApana     | BHS: {@vismāpanā@} (Skt. only nt. ˚na), {%the causing astonishment%}: Bbh 〔140.27〕, see s.v. {@ | 'vismāpanā (Skt. only nt. ˚na), the causing astonishment' — a feminine BHS variant with ci
+vivarjanA     -> vivarjana     | BHS: {@vivarjanā@} (= Pkt. vivajjaṇā; Skt. only ˚na, nt.), {%riddance, the getting rid%} ({%of% | 'vivarjanā (= Pkt. vivajjaṇā; Skt. only ˚na, nt.), riddance' — a feminine BHS variant with
+apapa         -> apApa         | BHS: {@apapa@}, m., n. of a (cold) hell: Dharmas 〔122〕 (replaces {@hahava@}, q.v., of other lis | '{@apapa@}, m., n. of a (cold) hell' is a proper name; it replaces hahava in Dharmas lists
+dattA         -> datta         | BHS: {@Dattā@}, n. of a yakṣiṇī: Sādh 〔561.1, 11〕. | '{@Dattā@}, n. of a yakṣiṇī' is a proper name defined in this exact feminine spelling.
+gargA         -> garga         | BHS: {@Gargā@} (corresp. to Pali Gaggarā), n. of a pool at Campā where Buddha stayed: MSV 〔ii.2 | '{@Gargā@} (corresp. to Pali Gaggarā), n. of a pool' is a proper name defined in this exac
+karRaDArA     -> karRaDAra     | BHS: {@Karṇadhārā@}, n. of an apsaras: Kv 〔3.10〕. | '{@Karṇadhārā@}, n. of an apsaras' is a proper name defined in this exact feminine spellin
+pulindA       -> pulinda       | BHS: {@Pulindā@}, n. of a nāga maid: Kv 〔4.7〕. | '{@Pulindā@}, n. of a nāga maid' is a proper name defined in this exact feminine spelling.
+surendrA      -> surendra      | BHS: {@Surendrā@}, n. of a kiṃnara maid: Kv 〔6.20〕. | '{@Surendrā@}, n. of a kiṃnara maid' is a proper name defined in this exact feminine spell
+Avarti        -> avarti        | BHS: {@āvar(t)ti@}, seems = {@āvartana@}, q.v., {%wandering, (re-)turn%}, in Gv 〔37.8〕 sarvalok | '{@āvar(t)ti@}, seems = {@āvartana@} ... wandering, (re-)turn' is defined as its own word 
+rAkza         -> rakza         | BHS: {@rākṣa@} (nt.? in mg. = Skt. rakṣā, Pali rakkhā; Skt. rakṣa only adj. and n. ag.), {%prot | '{@rākṣa@} (nt.? in mg. = Skt. rakṣā ...), protection' is its own BHS word, distinct in me
+AvArI         -> AvAri         | BHS: {@āvārī@} (once acc. ˚riṃ, otherwise all unambiguous forms show ā- and -ī; Skt. Lex. āvāri | 'āvārī (… all unambiguous forms show ā- and -ī …), shop, bazaar' — its own well-attested w
+SIti          -> Siti          | BHS: {@śīti@}, aphetic form for aśīti, {%eighty%}; at beginning of line, and proved correct by  | 'śīti, aphetic form for aśīti, eighty … proved correct by meter' — a documented aphetic nu
+bimbi         -> bimbI         | BHS: {@bimbi@} or {@bimbī@}, app. {%gold, gold-color%} (see PTSD s.v., with cpd. bimbijāla): so | 'bimbi or bimbī, app. gold, gold-color' — both spellings recorded together as one entry's 
+jAtiya        -> jAtIya        | BHS: {@jātiya@}, adj. (= Pali id., Childers, for Skt. jātya), prob. {%noble%}; to be read for t | 'jātiya, adj. (= Pali id., Childers, for Skt. jātya), prob. noble' — a documented Pali-bas
+jyotizmati    -> jyotizmatI    | BHS: {@Jyotiṣmati@}, n. of a Bodhisattva: Mvy 〔698〕 (with epithet kumārabhūta). | 'Jyotiṣmati, n. of a Bodhisattva' — a proper name with its own citation.
+praviRa       -> pravIRa       | BHS: {@Praviṇa@}, n. of a rākṣasa king: Mmk 〔17.27〕. | 'Praviṇa, n. of a rākṣasa king' — a proper name with its own citation.
+rAvaRI        -> rAvaRi        | BHS: {@Rāvaṇī@}, n. of a rākṣasī: Māy 〔243.18〕. | '{@Rāvaṇī@}, n. of a rākṣasī' is a proper name defined in this exact long-ī spelling.
+samula        -> samUla        | BHS: {@samula@}, m., a high number: Gv 〔133.24〕 (first saṃmulaḥ, by error, repeated twice as sa | 'samula, m., a high number … cited in Mvy as sambala' — a distinct numeral term, not samūl
+viduzaka      -> vidUzaka      | BHS: {@viduṣa-ka@}, adj., = {@vidu@}, for Skt. vidus (changed to a-stem, 〔§ 16.50〕, plus -ka),  | 'viduṣa-ka, adj., = vidu, for Skt. vidus … wise, skilled' — its own derived word, unrelate
+aSvasTa       -> asvasTa       | BHS: {@Aśvastha@}, n. of a mountain: Māy 〔253.35〕. | 'Aśvastha, n. of a mountain' — a proper name with its own citation.
+trikaRWaka    -> trikaRwaka    | BHS: {@Trikaṇṭhaka@}, Māy 〔273.3〕, or {@˚kin@}, Mahāsamāj. Waldschmidt, Kl. Skt. Texte 4, 〔175. | 'Trikaṇṭhaka … or ˚kin … n. of a yakṣa or gandharva' — a proper name (with aspirate) with 
+nirodaka      -> niroDaka      | BHS: {@nir-odaka@}, adj. (see s.v. {@odaka@}), {%waterless%}: Mv 〔ii.178.10〕 etāni ca puṣkariṇī | '{@nir-odaka@}, adj. (see s.v. {@odaka@}), waterless' is its own word (nir-odaka, from oda
+kopIna        -> kOpIna        | BHS: {@kopīna@} (= Pali id., Skt. kau˚), lit. {%the immodest bodily parts%}; fig. {%shame%}: Mv | 'kopīna (= Pali id., Skt. kau˚) … the immodest bodily parts; fig. shame' — a documented Pa
+odumbara      -> Odumbara      | BHS: {@odumbara@}, adj. (= Skt. aud˚), {%of the udumbara%}: ˚ram iva kusumaṃ Mv 〔i.270.3〕. | 'odumbara, adj. (= Skt. aud˚), of the udumbara' — a documented MIndic o- for au- form with
+orasa         -> Orasa         | BHS: {@orasa@}, adj., subst. (= Pali id., Skt. aur˚), {%own, self-begotten%} (son): SP 〔88.3〕;  | 'orasa, adj., subst. (= Pali id., Skt. aur˚), own, self-begotten (son)' — a documented Pal
+hemantika     -> hEmantika     | BHS: {@hemantika@}, adj. (to hemanta plus -ika; = Pali id. Skt. hai˚), {%of%} or {%pertaining t | Body derives "hemantika (to hemanta plus -ika; = Pali id. Skt. hai˚), pertaining to winter
+ekAhika       -> EkAhika       | BHS: {@ekāhika@}, adj. m. (= Pali id., Skt. aik˚), {%recurring daily, quotidian%} (of fever): M | 'ekāhika, adj. m. (= Pali id., Skt. aik˚), recurring daily, quotidian' — a documented hybr
+viKala        -> vikala        | BHS: {@vikhala@}, adj. (prob. = Pkt. vihala, acc. to Pischel 〔206, 332〕 always = Skt. vihvala,  | 'vikhala, adj. (prob. = Pkt. vihala … this would be a hyper-Sktism), broken, breaking (of 
+saMGata       -> saMgata       | BHS: {@saṃghata@}, adj. (= Skt. saṃhata, cf. Pischel 〔267〕; Pkt. saṃghaa), {%compact%}: nitya-ā | Body: "saṃghata (= Skt. saṃhata, cf. Pischel; Pkt. saṃghaa), compact" — own Prakritic form
+nAdikA        -> nAqikA        | BHS: {@Nādikā@} (= Pali id., also Ñātikā), n. of a village: MPS 〔9.2 ff.〕 | Proper noun: "Nādikā (= Pali id., also Ñātikā), n. of a village".
+mAnavaka      -> mARavaka      | BHS: {@mānavaka@} (sometimes written for Skt. māṇavaka, as LV 〔101.9〕 and 〔108.5〕, all mss.; f. | 'mānavaka (sometimes written for Skt. māṇavaka … perh. rather to Skt. mānava, mānavī, huma
+viDUna        -> viDUma        | BHS: {@vidhūna@}, adj. (? nt., ˚nam; cf. Pāṇ. 〔8.2.44〕 dhūna, ppp. to dhū-, not in Skt. lit.; A | 'vidhūna, adj. (… dhūna, ppp. to dhū- …; AMg. vihūṇa), cut off, stopped' — its own derived
+vukta         -> Bukta         | BHS: {@vukta@}, semi-MIndic = Skt. ukta: sugatasya vuktāḥ KP 〔14.14〕 (vs); vukto 〔126.4〕 (vs).  | 'vukta, semi-MIndic = Skt. ukta' — a documented semi-MIndic form, unrelated to bhukta.
+anABiBUta     -> anaBiBUta     | BHS: {@anābhibhūta@}, neg. ppp. (= Skt. anabhi˚, 〔§ 3.11〕), {%unconquered%}: SP 〔69.4〕. | Body: "anābhibhūta, neg. ppp. (= Skt. anabhi˚, §3.11), unconquered" — own attested form.
+cundA         -> cunda         | BHS: {@Cundā@}, n. of a goddess: Sādh 〔270.8〕 etc. (cf. next). | Proper noun: "Cundā, n. of a goddess" — feminine name.
+guRAkarA      -> guRAkara      | BHS: {@Guṇākarā@}, n. of a lokadhātu in the southeast: LV 〔292.19〕. | Proper noun: "Guṇākarā, n. of a lokadhātu in the southeast".
+karpAsika     -> kArpAsika     | BHS: {@karpāsika@}, ({@1@}) adj. (= Pali kappā˚, Skt. kārpā˚), {%made of cotton%}: Mv 〔ii.375.1 | Body: "karpāsika (= Pali kappā˚, Skt. kārpā˚), made of cotton" — own attested form with it
+pArihARa      -> parihARa      | BHS: {@pārihāṇa@} (nt.; = Skt. and Pali pari˚; 〔§ 3.10〕), {%loss%}: prajñā-˚ṇāya (dat.) KP 〔1.2 | Body: "pārihāṇa (nt.; = Skt. and Pali pari˚; §3.10), loss" — own attested BHS lengthening.
+parzadya      -> pArzadya      | BHS: {@parṣadya@}, m. (= {@pāriṣ˚, pārṣ˚, pariṣ˚@}), {%member of an assembly%}: amātya-p˚ Suv 〔 | Body: "parṣadya, m. (= {@pāriṣ˚, pārṣ˚, pariṣ˚@}), member of an assembly" — own attested v
+samantaBadrA  -> samantaBadra  | BHS: {@Samantabhadrā@}, n. of a goddess: Mvy 〔4289〕. | Proper noun: "Samantabhadrā, n. of a goddess" — feminine name.
+suviSudDA     -> suviSudDa     | BHS: {@Suviśuddhā@}, n. of a devakumārikā in the southern quarter: Mv 〔iii.307.9〕 (= Suprabuddh | Proper noun: "Suviśuddhā, n. of a devakumārikā" — feminine name.
+vasumitrA     -> vasumitra     | BHS: {@Vasumitrā@}, n. of a {@bhāgavatī@} (q.v.): Gv 〔201.11, 26 ff.〕 | Proper noun: "Vasumitrā, n. of a bhāgavatī" — feminine name.
+lAqita        -> laqita        | BHS: {@lāḍita@}, ppp. (cf. next; = Skt. lālita; Gr. lāḍ˚), {%cherished%}: sa tair jñātibhis tat | Body: "lāḍita, ppp. (= Skt. lālita; Gr. lāḍ˚), cherished" — own attested form with citatio
+aSleza        -> aSlezA        | BHS: {@aśleṣa@}, m., {%non-binding, disconnection, freedom%}: AsP 〔294.18—19〕 yaḥ … rūpasyāsaṃb | 'aśleṣa, m., non-binding, disconnection, freedom' — its own masculine word with gloss and 
+anurakzaRA    -> anurakzaRa    | BHS: {@anurakṣaṇā@} (= Pali anurakkhaṇā and ˚ṇa; MW cites Skt. ˚ṇa, nt., without reference; not | 'anurakṣaṇā (= Pali anurakkhaṇā and ˚ṇa …), guarding, protection' — a feminine BHS variant
+mahantaka     -> mahAntaka     | BHS: {@mahantaka@}, or {@mahān˚@}, f. {@˚tikā@} (a-extension of mahant-, mahānt-, plus -ka), {% | 'mahantaka, or mahān˚ … (a-extension of mahant-, mahānt-, plus -ka), great' — both forms r
+nizpAdanA     -> nizpAdana     | BHS: {@niṣpādanā@} = {@niścikīrṣā, ˚ṣutā@}, q.v.: in lābhena lābha-niṣ˚ Mvy 〔2497〕. | 'niṣpādanā = niścikīrṣā, ˚ṣutā, q.v.' — a feminine BHS term equated with another, with cit
+ABakzaRa      -> aBakzaRa      | BHS: {@ābhakṣaṇa@}, only in comp. with {@saṃbhakṣaṇa@}, q.v., and associated with other social  | 'ābhakṣaṇa, only in comp. with saṃbhakṣaṇa … perhaps feasting … Neither word is known in t
+AbanDya       -> abanDya       | BHS: {@ābandhya@}, adj. (from Skt. ābandha with suffix ya), {%serving%} or {%intended for bindi | 'ābandhya, adj. (from Skt. ābandha with suffix ya), serving or intended for binding' — its
+AdeSanA       -> AdeSana       | BHS: {@ādeśanā@}, ({@1@}) (= Pali ādesanā-, cpd. with pāṭihāriya), {%reading of the mind%}: Bbh | 'ādeśanā, (1) (= Pali ādesanā- …), reading of the mind' — a distinct feminine technical te
+Asupta        -> asupta        | BHS: {@āsupta@}, ppp. of {@*āsvapati@} (cf. {@āsvāpana@}), {%gone to sleep%}: Mv 〔i.227.16〕 (pr | 'āsupta, ppp. of *āsvapati (cf. āsvāpana), gone to sleep' — its own derived ppp. with glos
+aByudDara     -> aByudDAra     | BHS: {@Abhyuddhara@}, n. of a Bodhisattva: Gv 〔443.5〕. | 'Abhyuddhara, n. of a Bodhisattva' — a proper name with its own citation.
+aTarvaRika    -> ATarvaRika    | BHS: {@atharvaṇika@}, {%a member of a school of the AV%}: Divy 〔633.10 ff.〕 | 'atharvaṇika, a member of a school of the AV' — its own word with gloss and citation.
+apacitA       -> apacita       | BHS: {@apacitā@}, {%honor, respect%}: Mv 〔ii.259.9〕 paramāya apacitāya, and 〔260.3〕 ˚māye ˚tāye | 'apacitā, honor, respect … there seems no doubt of its reality' — Edgerton affirms the fem
+avaskandanA   -> avaskandana   | BHS: {@avaskandanā@} (cf. Skt. avaskandana, nt., {%accusation, legal attack%}; to ava-skand-, { | 'avaskandanā (cf. Skt. avaskandana, nt. …), (verbal) attack; injurious speech' — a feminin
+azwamika      -> azwamikA      | BHS: {@aṣṭamika@}, nt. (also {@āṣṭa˚@}, q.v.), {%food given away on the feast of the eighth lun | 'aṣṭamika, nt. (also āṣṭa˚ …), food given away on the feast of the eighth lunar day' — its
+dvIpika       -> dvIpikA       | BHS: 1 {@dvīpika@}, m., a certain insect: ˚kaḥ Mvy 〔4918〕 = Tib. sril ({%silkworm%}) or mug pa  | '1 dvīpika, m., a certain insect … || 2 -dvīpika, ifc. adj.' — its own masculine/ifc. word
+dvipadaka     -> dvipAdaka     | BHS: {@dvipadaka@}, f. {@˚ikā@} (= Skt. dvipada; Bhvr.), (a verse) {%consisting of two metrical | 'dvipadaka, f. ˚ikā (= Skt. dvipada; Bhvr.), consisting of two metrical units' — its own d
+jAmbAla       -> jambAla       | BHS: {@Jāmbāla@} ({%muddy%}, from Skt. jambāla plus -a), n. of a man, hero of Av chap. 50: Av 〔 | 'Jāmbāla (muddy, from Skt. jambāla plus -a), n. of a man, hero of Av chap. 50' — a proper 
+kavita        -> kavitA        | BHS: {@kavita@}, denom. pple. from Skt. kavi, {%fanciful, thought up, invented%}: RP 〔28.15〕; A | 'kavita, denom. pple. from Skt. kavi, fanciful, thought up, invented' — its own participle
+kimpaka       -> kimpAka       | BHS: {@kimpaka@} (also {@mahā-ki˚@}), m. pl., a class of malevolent superhuman beings: Mmk 〔17. | 'kimpaka (also mahā-ki˚), m. pl., a class of malevolent superhuman beings' — its own word 
+krandanA      -> krandana      | BHS: {@krandanā@} (or ˚na, m.), a kind of malevolent supernatural being, in a list of such: kra | 'krandanā (or ˚na, m.), a kind of malevolent supernatural being' — its own word naming a b
+lAlAwikA      -> lalAwikA      | BHS: {@lālāṭikā@} (cf. Skt. lālāṭī, id.), {%forehead%}: ˚kām anuprayacchataḥ (dual) MSV 〔iii.16 | 'lālāṭikā (cf. Skt. lālāṭī, id.), forehead' — its own word with gloss and citation, with l
+maRqavI       -> mARqavI       | BHS: {@Maṇḍavī@}, n. of a locality (cf. Skt. Māṇḍavya?): Māy 〔54〕. | 'Maṇḍavī, n. of a locality (cf. Skt. Māṇḍavya?)' — a proper name with its own citation.
+mahABEravA    -> mahABErava    | BHS: {@Mahābhairavā@}, n. of a yoginī: Sādh 〔427.5〕. | 'Mahābhairavā, n. of a yoginī' — a proper name with its own citation.
+marzaRA       -> marzaRa       | BHS: {@marṣaṇā@} (= Skt. ˚ṇa, nt.), {%patience, endurance%}: (parāpakārasya) ˚ṇā sarveṣāṃ ca ˚ṇ | 'marṣaṇā (= Skt. ˚ṇa, nt.), patience, endurance' — a feminine BHS variant with gloss and c
+nimantraRA    -> nimantraRa    | BHS: {@nimantraṇā@} (= AMg. ṇimantaṇā; in Skt. and Pali only ˚ṇa, nt.), {%invitation%}: na ˚ṇāṃ | 'nimantraṇā (= AMg. ṇimantaṇā; in Skt. and Pali only ˚ṇa, nt.), invitation' — a feminine B
+niryAtanA     -> niryAtana     | BHS: {@niryātanā@} (to next), {%gift, offering%}: Sādh 〔64.7〕. | 'niryātanā (to next), gift, offering' — its own feminine word with gloss and citation.
+ojA           -> oja           | BHS: {@ojā@} (= Pali id.; derived by Childers and Senart from Skt. ūrj, by PTSD from ojas, whic | 'ojā (= Pali id. …), food … in BHS, at least, ojā means simply food' — its own well-attest
+pAripUraka    -> paripUraka    | BHS: {@pāripūraka@}, f. {@˚kī@} or {@˚ikā@}, adj. (= Skt. pari˚; cf. next), {%making full%} or  | 'pāripūraka, f. ˚kī or ˚ikā, adj. (= Skt. pari˚ …), making full or complete' — a well-atte
+paricaraRA    -> paricaraRa    | BHS: {@paricaraṇā@} (cf. next three), {%(sexual) commerce%}: kutaḥ punar anayā sāṛdhaṃ ˚ṇā Śikṣ | 'paricaraṇā (cf. next three), (sexual) commerce' — a feminine BHS word with distinct gloss
+prAhfta       -> prahfta       | BHS: {@prāhṛta@} (app. ppp. to prā- [for pra-] hṛ-, but prahṛta is not normal Skt. in this mg.; | 'prāhṛta (app. ppp. to prā- [for pra-] hṛ-, but prahṛta is not normal Skt. in this mg. …),
+prAvarakA     -> prAvaraka     | BHS: {@prāvarakā@} (cf. Pkt. pāvaraa, Sheth, beside pāvāraya = Skt. prāvāraka, {%cloak%}), perh | 'prāvarakā (cf. Pkt. pāvaraa …), perh. cloak; certainly some kind of garment' — a feminine
+puzpika       -> puzpikA       | BHS: {@Puṣpika@}, n. of the present {@Bhadrakalpa@} (q.v.): Mv 〔iii.330.5〕. | 'Puṣpika, n. of the present Bhadrakalpa' — a proper name with its own citation.
+sADarma       -> saDarma       | BHS: {@sādharma@} (nt.; to Skt. sadharma plus -a), = (if not error for) Skt. sādharmya, {%liken | 'sādharma (nt.; to Skt. sadharma plus -a), = (if not error for) Skt. sādharmya, likeness' 
+sAketA        -> sAketa        | BHS: {@Sāketā@} (= Skt. and Pali ˚ta, nt.), n. of a city (Oudh): MSV 〔i.66.3〕; 〔67.4 ff.〕 (˚tām | 'Sāketā (= Skt. and Pali ˚ta, nt.), n. of a city (Oudh)' — a proper name (feminine variant
+sOmitrA       -> sOmitra       | BHS: {@Saumitrā@}, n. of a river: Māy 〔253.5〕; in a list between Carmaṇvatī and Viśvāmitrā. | 'Saumitrā, n. of a river' — a proper name with its own citation in a river list.
+sTora         -> sTorA         | BHS: {@sthora@} or {@sthorā@}, acc. to Index and pw {%cargo%}, but acc. to Burrow, BSOS 〔7.514〕 | 'sthora or sthorā … beast of burden … = Niya Pkt. stora, horse, an Iranian loanword' — bot
+saMharzaRA    -> saMharzaRa    | BHS: {@saṃharṣaṇā@} (n. act. in -anā, see prec.), {%a gladdening%}: (teṣāṃ … vaṇijānām) imāṃ sa | 'saṃharṣaṇā (n. act. in -anā …), a gladdening' — a feminine BHS noun with gloss and citati
+saMniveSanA   -> saMniveSana   | BHS: {@saṃniveśanā@} (Skt. and Pali ˚na, nt.; to Skt. ˚veśayati plus -anā; cf. AMg. saṃnivesaṇa | 'saṃniveśanā (Skt. and Pali ˚na, nt.; to Skt. ˚veśayati plus -anā …), establishment' — a f
+saMsArika     -> sAMsArika     | BHS: {@saṃsārika@}, adj. (= AMg. saṃsāriya: MIndic, or possibly error, for Skt. sāṃ˚), {%relati | 'saṃsārika, adj. (= AMg. saṃsāriya: MIndic, or possibly error, for Skt. sāṃ˚), relating to
+saMtozaRA     -> saMtozaRa     | BHS: {@saṃtoṣaṇā@} (= Skt. ˚ṇa, nt.), {%gratification%}: sarvasattvasubhāṣita-˚ṇāyai LV 〔35.19〕 | 'saṃtoṣaṇā (= Skt. ˚ṇa, nt.), gratification' — a feminine BHS variant with gloss and citat
+sajati        -> sajAti        | BHS: {@sajati@}, ppp. sajita, or saṃjita (cf. {@utsajati@}; = Pali sajati, cf. n. ag. saṃjitar, | 'sajati, ppp. sajita … (MIndic for Skt. sṛjati), sends forth, spreads abroad' — a verbal f
+surucirA      -> surucira      | BHS: {@Surucirā@}, n. of the queen of King Subandhu: Mv 〔ii.422.1〕. | 'Surucirā, n. of the queen of King Subandhu' — a proper name with its own citation.
+trElokyavijaya -> trElokyavijayA | BHS: {@Trailokyavijaya@}, n. of a deity: Sādh 〔511.6〕. | 'Trailokyavijaya, n. of a deity' — a proper name with its own citation, not the feminine ˚
+trimaRqala    -> trimaRqalA    | BHS: {@tri-maṇḍala@} (nt.; not noted in Pali in these senses), lit. {%the three circles%} or {% | Body defines '{@tri-maṇḍala@} (nt.)' as its own word, 'the three circles', with all attest
+udaryA        -> udarya        | BHS: {@Udaryā@}, n. of a yakṣiṇī: MSV 〔i.xviii.17〕. | '{@Udaryā@}, n. of a yakṣiṇī' is a proper name defined in this exact spelling.
+vigrAhin      -> vigrahin      | BHS: {@vigrāhin@}, {%grasping, laying hold of%} (Tib. ḥdzin): svacittārtha-vigrāhiṇah Laṅk 〔374 | '{@vigrāhin@}, grasping, laying hold of' is defined as its own BHS word with long ā throug
+vijAnana      -> vijanana      | BHS: {@vijānana@} (nt.; = Pali id.; to pres. vijānati plus -ana), {%knowledge, knowing%}; dat.  | '{@vijānana@} (nt.; = Pali id.; to pres. vijānati plus -ana), knowledge, knowing' is its o
+zaqASIti      -> zaqaSIti      | BHS: {@ṣaḍ-āśīti@} (= Pali chaḷāsīti), {%86%}; cf. {@catur-āśīti@}, and 〔§ 19.35〕; Mv 〔iii.96.2 | '{@ṣaḍ-āśīti@} (= Pali chaḷāsīti), 86' is its own word with long ā (ṣaḍ-āśīti), not a slip
+anupratizWa   -> anupratizWA   | BHS: {@anu-pratiṣṭha@}, adj. (anu plus pratiṣṭhā, Bhvr.), {%having a corresponding basis%}: Śik | '{@anu-pratiṣṭha@}, adj. (anu plus pratiṣṭhā, Bhvr.), having a corresponding basis' is its
+cUqakA        -> cUqaka        | BHS: {@Cūḍakā@}, n. of an apsaras: Kv 〔3.12〕. | '{@Cūḍakā@}, n. of an apsaras' is a proper name defined in this exact feminine spelling.
+ganDottama    -> ganDottamA    | BHS: {@Gandhottama@}, n. of a Buddha in the zenith: Sukh 〔98.15〕. | '{@Gandhottama@}, n. of a Buddha in the zenith' is a masculine proper name (a Buddha), so 
+janitA        -> janita        | BHS: {@janitā@} (or ˚ta ?), sg. or pl., = Skt. janatā, {%people%}: daśakuśalī janitā (Calc. ˚tā | '{@janitā@} (or ˚ta ?) ... = Skt. janatā, people' is its own word; Edgerton defines it and
+mfdukA        -> mfduka        | BHS: {@Mṛdukā@} (cf. prec.), n. of an Apsaras: Kv 〔3.13〕. | '{@Mṛdukā@} (cf. prec.), n. of an Apsaras' is a proper name defined in this exact feminine
+mucilindA     -> mucilinda     | BHS: {@Mucilindā@}, n. of a nāga maid: Kv 〔3.23〕. | '{@Mucilindā@}, n. of a nāga maid' is a proper name defined in this exact feminine spellin
+sudaMzwrA     -> sudaMzwra     | BHS: {@Sudaṃṣṭrā@}, n. of a kiṃnara maid: Kv 〔6.1〕. | '{@Sudaṃṣṭrā@}, n. of a kiṃnara maid' is a proper name defined in this exact feminine spel
+sudurjayA     -> sudurjaya     | BHS: {@Sudurjayā@} (cf. {@Durjayā@}), n. of the 5th Bodhisattva bhūmi: Mvy 〔890〕; Dharmas 〔64〕; | '{@Sudurjayā@} (cf. {@Durjayā@}), n. of the 5th Bodhisattva bhūmi' is a proper name define
+vAyuvegA      -> vAyuvega      | BHS: {@Vāyuvegā@}, ({@1@}) n. of a kiṃnara maid: Kv 〔5.23〕; ({@2@}) n. of a yoginī: Sādh 〔427.5 | '{@Vāyuvegā@}, n. of a kiṃnara maid ... n. of a yoginī' is a proper name defined in this e
+Biruka        -> BIruka        | BHS: {@Bhiruka@}, ({@1@}) m., = prec.: Divy 〔556.8, 13〕; 〔562.15〕; 〔563.25〕; 〔564.10〕; 〔570.26〕 | '{@Bhiruka@}, m. ... n. of a city' is a proper name defined in this exact short-i spelling
+pretI         -> preti         | BHS: {@Pretī@}, n. of a piśācī: Māy 〔239.6〕. | '{@Pretī@}, n. of a piśācī' is a proper name defined in this exact spelling.
+suparRi       -> suparRI       | BHS: {@Suparṇi(n)@}, m. (Skt. Su-parṇa plus -in, Bhvr.; unrecorded otherwise), = Skt. Suparṇa,  | '{@Suparṇi(n)@}, m. ... = Skt. Suparṇa, the garuḍa bird' is its own stem with both short a
+Izi           -> izi           | BHS: {@īṣi, īṣit@}, adv. (= AMg. īsi; Skt. īṣat; form lacking t noted only in vss, but regularl | '{@īṣi, īṣit@}, adv. (= AMg. īsi; Skt. īṣat ...), a little, slightly' is its own adverb wi
+vacI          -> vaci          | BHS: {@vacī@} (once in Skt. vaci-bhedāt, BR; Pali id., mostly in cpds.; AMg. vai, common), {%sp | '{@vacī@} (once in Skt. vaci-bhedāt ...; Pali id.), speech, word' is its own stem (vacī-ka
+vipAsa        -> vipASa        | BHS: {@vipāsa@} (m. or nt.), a high number: ˚sasya, gen., Gv 〔105.21〕; replaces {@ārāva@}, q.v. | '{@vipāsa@} (m. or nt.), a high number' is defined as its own numeral word, not the sugges
+prozwa        -> prozWa        | BHS: {@proṣṭa@}, ppp. (of pra- plus uṣ, {%burn%}, this cpd. unrecorded), {%burnt%}: must be rea | '{@proṣṭa@}, ppp. (of pra- plus uṣ, burn ...), burnt: must be read for ploṣṭa-' is its own
+durbuda       -> durbuDa       | BHS: {@durbuda@}, m. or nt., a high number: Gv 〔106.4〕; corresponds in position to {@drabuddha@ | '{@durbuda@}, m. or nt., a high number ... corresponds in position to {@drabuddha@}' is it
+nirdAraRa     -> nirDAraRa     | BHS: {@nirdāraṇa@} (cf. AMg. ṇiddāriya, ppp.) {%plucking out, destroying%}: sarvābhiniveśa-nir˚ | '{@nirdāraṇa@} (cf. AMg. ṇiddāriya), plucking out, destroying' is its own word (nir-dāraṇa
+pratirodana   -> pratiroDana   | BHS: {@pratirodana@}, nt. (= Pali paṭi˚, Jāt. 〔iii.80.25〕, in closely similar vs), {%crying bac | '{@pratirodana@}, nt. (= Pali paṭi˚), crying back' is its own word from rud-, distinct fro
+pradAraRa     -> praDAraRa     | BHS: {@-pradāraṇa@}, f. {@˚ṇī@} (Pali padār˚, ifc.; late Skt. once ˚ṇa, nt., {%destruction%}, S | '{@-pradāraṇa@}, f. {@˚ṇī@} (Pali padār˚ ...; to Skt. pradārayati), destroying' is its own
+vemAtra       -> vEmAtra       | BHS: {@vemātra@}, m., a high number: Mvy 〔7756〕 = Tib. gzhal saṅs; cf. {@vimantra@} (also {@vai | Body: "vemātra, m., a high number … (also {@vaimātra@}, which must be distinguished from t
+ratika        -> raTika        | BHS: {@Ratika@}, n. of a yakṣa: Māy 〔53〕. | '{@Ratika@}, n. of a yakṣa' is a proper name defined in this exact spelling.
+anAlamBa      -> anAlamba      | BHS: {@Anālambha@}, n. of a former Buddha: Mv 〔i.138.10〕. | Proper noun: "Anālambha, n. of a former Buddha" (note also -mbha vs suggestion's -mba).
+ArambaRIya    -> AramBaRIya    | BHS: {@ārambaṇīya@}, adj., {%pertaining to the objects of sense%} (see {@ārambaṇa@}, 3): Gv 〔83 | '{@ārambaṇīya@}, adj., pertaining to the objects of sense (see {@ārambaṇa@}, 3)' is its ow
+saMGin        -> saMgin        | BHS: {@saṃghin@} (= Pali id.), {%head of an order%} or {%assembly%} of pupils, ep. of Rudraka R | '{@saṃghin@} (= Pali id.), head of an order' is its own word (saṃgha plus -in), distinct f
+lABika        -> lAvika        | BHS: {@-lābhika@} (Skt. lābha plus -ika, or -lābhin plus -ka; cf. AMg. lābhiya acc. to Sheth, l | '{@-lābhika@} (Skt. lābha plus -ika ...), leading to the acquisition of' is its own deriva
+SavalASva     -> SabalASva     | BHS: {@Śavalāśva@}, n. of a former Buddha: Mv 〔i.140.12〕. | '{@Śavalāśva@}, n. of a former Buddha' is a proper name defined in this exact spelling.
+aloRaka       -> alomaka       | BHS: {@aloṇaka@}, adj. (= Pali id.; also {@alavaṇaka@}, q.v.), {%unsalted%}: Mv 〔iii.120.21〕 ˚k | '{@aloṇaka@}, adj. (= Pali id.; also {@alavaṇaka@}), unsalted' is its own word (a-loṇa-ka)
+avapAwana     -> avapAtana     | BHS: {@avapāṭana@} (nt., = AMg. ovāḍaṇa, Sheth; to Skt. ava-pāṭ- plus -ana), {%rending, tearing | '{@avapāṭana@} (nt., = AMg. ovāḍaṇa ...; to Skt. ava-pāṭ- plus -ana), rending, tearing' is
+gaqita        -> gadita        | BHS: {@gaḍita@} (= Skt. galita, 〔§ 2.46〕; in Pali gaḷita), {%fallen in%}: SP 〔83.1〕 (vs) gavākṣ | '{@gaḍita@} (= Skt. galita ...; in Pali gaḷita), fallen in' is its own word (= galita), di
+gopitaka      -> gopiwaka      | BHS: {@gopitaka@}, adj. (= Skt. ˚ta), {%hidden, concealed%}: (so ca naṃ māṣo) tatraiva gaṅgākūl | '{@gopitaka@}, adj. (= Skt. ˚ta), hidden, concealed' is its own word from gup-, with denta
+nEgameSa      -> nEgameza      | BHS: {@Naigameśa@}, n. of a yakṣa: Māy 〔55〕. | '{@Naigameśa@}, n. of a yakṣa' is a proper name defined in this exact palatal-ś spelling.
+ajitabala     -> ajitabalA     | BHS: {@Ajitabala@}, n. of a former Buddha: Mv 〔i.140.2〕. | Proper noun: "Ajitabala, n. of a former Buddha" — masculine Buddha name.
+bahuSrutya    -> bAhuSrutya    | BHS: {@bahuśrutya@} (nt.; = {@bāhu˚@}, q.v.; = Pali bāhusacca, also bahu˚, which PTSD would em. | Body: "bahuśrutya (= {@bāhu˚@}, q.v.; = Pali bāhusacca, also bahu˚), great (excessive) lea
+upaSAntA      -> upaSAnta      | BHS: {@Upaśāntā@}, n. of a lokadhātu: ŚsP 〔34.11〕. | Proper noun: "Upaśāntā, n. of a lokadhātu".
+anupakruzwa   -> anupAkruzwa   | BHS: {@an-upakruṣṭa@}, adj. (= Pali anupakkuṭṭha; cf. Skt. upakruṣṭa, {%a low-caste man; a carp | '{@an-upakruṣṭa@}, adj. (= Pali anupakkuṭṭha; cf. Skt. upakruṣṭa), blameless' is its own w
+ambakA        -> ambaka        | BHS: {@ambakā@} (= Pali id.; cf. Skt. ambā), {%a%} ({%poor%}, CPD) {%woman%}: MPS 〔11.25〕, of Ā | '{@ambakā@} (= Pali id.; cf. Skt. ambā), a (poor) woman' is its own word, distinct from ma
+candrABa      -> candraBa      | BHS: {@Candrābha@}, n. of a former Buddha: Mv 〔i.137.5〕. | '{@Candrābha@}, n. of a former Buddha' is a proper name defined in this exact spelling (ca
+gocarin       -> gocArin       | BHS: {@gocarin@}, adj., {%having as oneʼs scope%} or {%sphere; devoted to%}: rājyakāryu no karo | '{@gocarin@}, adj., having as oneʼs scope or sphere' is its own word from gocara, distinct
+kacaNgalA     -> kacaNgala     | BHS: {@Kacaṅgalā@} (= Pali Kajaṅgalā, ˚la), ({@1@}) n. of a town: Jm 〔113.22〕 ˚lāyāṃ, loc.; Av  | '{@Kacaṅgalā@} (= Pali Kajaṅgalā), n. of a town ... n. of an old woman' is a proper name d
+kurukulla     -> kurukullA     | BHS: {@Kurukulla(-parvata)@}, n. of a mountain: Sādh 〔343.11〕 etc. | '{@Kurukulla(-parvata)@}, n. of a mountain' is a proper name defined in this exact spellin
+mahattarakA   -> mahattaraka   | BHS: {@mahattarakā@} (AMg. ˚riyā, ib.), {%chief queen%}: tenaiva sā ˚kā mahatā janakāyena sārdh | '{@mahattarakā@} (AMg. ˚riyā), chief queen' is its own feminine word with feminine meaning
+niSrAya       -> niSraya       | BHS: {@niśrāya@}, postposition w. acc. (= Pali nissāya, partly Sktized; a further Sktization pr | '{@niśrāya@}, postposition w. acc. (= Pali nissāya, partly Sktized), relying on' is its ow
+pARiKAtA      -> pARiKAta      | BHS: {@Pāṇikhātā@} (˚ta, ˚da or ˚dā; cf. Skt. ˚ta, below, and {@Pāṇihatā@}), n. of a river magi | '{@Pāṇikhātā@} (˚ta, ˚da or ˚dā ...), n. of a river' is a proper name; the feminine ˚tā is
+parzA         -> parza         | BHS: {@parṣā@} (= {@pariṣā@}, etc.; Skt. parṣad), {%assembly%}: SP 〔354.12〕 (vs); Mv 〔i.310.5〕  | '{@parṣā@} (= {@pariṣā@}, etc.; Skt. parṣad), assembly' is its own word for the four assem
+prajvara      -> prajvAra      | BHS: {@prajvara@}, m., acc. to Tib. on Mvy 〔9530〕 {%a virulent contagious disease%} (rims drag  | '{@prajvara@}, m. ... a virulent contagious disease ... Doubtless a fever' is its own word
+saMketika     -> sAMketika     | BHS: {@saṃketika@}, f. {@˚kī@} (cf. Skt. sāṃketika; to {@saṃketa@} 2, q.v., plus -ika), {%conve | '{@saṃketika@} ... (cf. Skt. sāṃketika; to {@saṃketa@} 2 ... plus -ika), conventional, nom
+samajya       -> samajyA       | BHS: {@samajya@} (nt.? app. = Pali samajja, for Skt. samāja, rarely samajyā, which Senart reads | '{@samajya@} (nt.? app. = Pali samajja, for Skt. samāja, rarely samajyā), gathering, meeti
+sudaya        -> sudAya        | BHS: {@Sudaya@}, n. of a future Buddha: Mv 〔iii.330.14〕. | '{@Sudaya@}, n. of a future Buddha' is a proper name defined in this exact spelling.
+suganDita     -> suganDitA     | BHS: {@sugandhita@}, ppp. (to Skt. sugandhayati; perh. = AMg. sugandhiya, which acc. to Ratnach | '{@sugandhita@}, ppp. (to Skt. sugandhayati ...), made fragrant' is its own past participl
+tAmarA        -> tAmara        | BHS: {@Tāmarā@}, n. of a river: Māy 〔253.6〕 (prose). Cf. Epic Skt. Tāmrā, a river(?). In list b | '{@Tāmarā@}, n. of a river ... Cf. Epic Skt. Tāmrā' is a proper name defined in this exact
+upahatya      -> upahatyA      | BHS: {@-upahatya (˚tyā?)@}, {%damage, harm%}, in Bhvr. cpd. nir-upahatyaṃ nirupadravaṃ bhavet M | '{@-upahatya (˚tyā?)@}, damage, harm' is its own word; Edgerton himself notes both forms, 
+pramuditA     -> pramudita     | BHS: {@Pramuditā@} (also {@muditā@}, q.v., 2), n. of the first bodhisattva-bhūmi: Mvy 〔886〕; Dh | {@Pramuditā@} is the name of the first bodhisattva-bhūmi, a feminine technical term with i
+siMhacandrA   -> siMhacandra   | BHS: {@Siṃhacandrā@}, n. of a nun: SP 〔383.1〕. | {@Siṃhacandrā@}, 'n. of a nun' — feminine proper noun with its own attestation.
+vEjayantIka   -> vEjayantika   | BHS: {@vaijayantīka@}, ifc. Bhvr., in sa-˚kā(ḥ), {%provided with banners%}: SP 〔338.9〕 (prose). | '{@vaijayantīka@}, ifc. Bhvr. ... provided with banners' is its own compound form with lon
+lohI          -> lohi          | BHS: {@lohī@} (in AMg. and other Pkt. said to mean {%a shallow metal pan, frying pan%}, which h | {@lohī@} 'kettle, a large metal receptacle' is a fully glossed feminine noun with multiple
+BUruRqa       -> BuruRqa       | BHS: {@Bhūruṇḍa@}, n. of a serpent king: Mmk 〔18.24〕. Cf. {@Bheruṇḍa, Maruṇḍa@}. | '{@Bhūruṇḍa@}, n. of a serpent king ... Cf. {@Bheruṇḍa, Maruṇḍa@}' is a proper name define
+saMSamaka     -> saMsamaka     | BHS: {@saṃśamaka@}, adj. (Skt. ˚mayati plus -aka), {%allaying, pacifying%} (plagues): upadravop | {@saṃśamaka@} 'allaying, pacifying' (Skt. ˚mayati plus -aka) is its own adjective with cit
+golika        -> gOlika        | BHS: {@golika@}, also {@gaulika@}, m. (cf. AMg. goliya-sālā, {%a shop for selling treacle%}, Ra | Body: "golika, also gaulika, m. (… from Skt. guḍa with -ika), dealer in sugar" — own deriv
+Darmi         -> DarRi         | BHS: {@dharmi-@} ({@kathā@}; Pali dhammi-), see s.v. 3 {@dharma@}. | '{@dharmi-@} ({@kathā@}; Pali dhammi-), see s.v. 3 {@dharma@}' is its own stem (dharmi-kat
+aBipriya      -> avipriya      | BHS: {@abhipriya@}, adj. (intensifying to priya; cf. BR s.v. abhi 1, d), {%quite agreeable%}: M | '{@abhipriya@}, adj. (intensifying to priya ...), quite agreeable' is its own word (abhi-p
+kimi          -> kiRi          | BHS: {@kimi@} (m.; 〔§ 2.6〕; = Pali id., {%glow-worm%}, as well as {%worm%} in general; in this  | '{@kimi@} (m.; = Pali id., glow-worm ...), glow-worm' is its own word (= Pali kimi), unrel
+paravAqa      -> paravAda      | BHS: {@Paravāḍa@}, n. of a nāga king: Mvy 〔3284〕. Cf. {@Maravāla@}. | '{@Paravāḍa@}, n. of a nāga king ... Cf. {@Maravāla@}' is a proper name defined in this ex
+akAca         -> akaca         | BHS: {@akāca@}, adj. (= Pali id.; etym. uncertain; PTSD {%not glass%}, originally of jewels; it | Body: "akāca (= Pali id.; etym. uncertain), free from blemish or impurity" — own distinct 
+atimAyA       -> atimAya       | BHS: {@Atimāyā@}, n. of a sister of Māyā: Mv 〔i.355.17〕. | Proper noun: "Atimāyā, n. of a sister of Māyā" — feminine name.
+DvajAgrakeyUrA -> DvajAgrakeyUra | BHS: {@Dhvajāgrakeyūrā@}, n. of a goddess: Sādh 〔403.1〕 etc. | Proper noun: "Dhvajāgrakeyūrā, n. of a goddess" — feminine name.
+Opanayika     -> OpanAyika     | BHS: {@aupanayika@}, adj. (= Pali opa˚; ep. of Buddhaʼs dhamma; from Skt. upanaya plus -ika; cf | Body: "aupanayika (= Pali opa˚; … from Skt. upanaya plus -ika), conducive" — own derived f
+aByavakASika  -> AByavakASika  | BHS: {@abhyavakāśika@}, adj. and subst. m. and (?) nt. (from prec.; = Pali abbhokāsika; BHS als | Body: "abhyavakāśika (from prec.; = Pali abbhokāsika; BHS also {@ābhy˚@}, q.v.), living in
+gavA          -> gava          | BHS: {@Gavā@}, n. of a {@nagarāvalambikā@} (q.v.) at Senāpatigrāma who gave a rag garment to th | Proper noun: "Gavā, n. of a nagarāvalambikā … who gave a rag garment to the Bodhisattva" —
+jyotizpraBA   -> jyotizpraBa   | BHS: {@jyotiṣprabhā@} (-ratna), n. of a jewel: Mvy 〔5963〕. Cf. {@jyotiprabhāsa@}. | Proper noun: "jyotiṣprabhā (-ratna), n. of a jewel".
+kambojaka     -> kAmbojaka     | BHS: {@kambojaka@}, adj., {%of%} (the land) {%Kamboja%}: Mv 〔ii.185.12, 17〕 (vs) ˚kā aśvavarā s | Body: "kambojaka, adj., of (the land) Kamboja" — own attested form, distinct from kāmbojak
+pArihAraka    -> parihAraka    | BHS: {@pārihāraka@}, m. (= {@parihāraka, ˚hāṭaka@}, q.v.; cf. 〔§ 3.10〕), {%bracelet%} (or {%ank | Body: "pārihāraka, m. (= {@parihāraka, ˚hāṭaka@}, q.v.; §3.10), bracelet" — own attested l
+samantapraBA  -> samantapraBa  | BHS: {@Samantaprabhā@}, n. of an eleventh (Bodhisattva-)bhūmi, one of three added to the usual  | Proper noun: "Samantaprabhā, n. of an eleventh (Bodhisattva-)bhūmi" — feminine name.
+samutkarzika  -> sAmutkarzika  | BHS: {@samutkarṣika@}, adj. (= {@sām˚@}, q.v.; to Skt. ˚ṣa plus ika), {%very eminent, excellent | Body: "samutkarṣika (= {@sām˚@}, q.v.; to Skt. ˚ṣa plus ika), very eminent" — own derived 
+suKAvahA      -> suKAvaha      | BHS: {@Sukhāvahā@}, n. of a devakumārikā in the southern quarter: LV 〔389.8〕 (= {@Suvyākṛtā@} o | Proper noun: "Sukhāvahā, n. of a devakumārikā" — feminine name.
+vaSIBUtA      -> vaSIBUta      | BHS: {@Vaśībhūtā@}, n. of a lokadhātu: ŚsP 〔47.15〕. | Proper noun: "Vaśībhūtā, n. of a lokadhātu".
+vardala       -> vArdala       | BHS: {@vardala@}, nt. (see next; AMg. vaddalaa, ˚laga, nt., Skt. Lex. vār˚, possibly with ā by  | Body: "vardala, nt. (… AMg. vaddalaa … Skt. Lex. vār˚ …), rainy weather" — own attested fo
+yaTAsaMstarika -> yATAsaMstarika | BHS: {@yathāsaṃstarika@}, m. (= Pali yathāsaṃthatika, as if from Skt. -saṃstṛta; Pali uses both | Body: "yathāsaṃstarika, m. (= Pali yathāsaṃthatika …; BHS also {@yāthā˚@}, q.v.), taking a
+rAjanIya      -> rajanIya      | BHS: {@rājanīya@}, adj. (cf. Skt. rañjanīya; 〔§ 3.3〕; replaces usual ramaṇīya, which is commonl | Body: "rājanīya, adj. (cf. Skt. rañjanīya; §3.3 …), causing joy" — own attested form, not 
+saMparAyika   -> sAMparAyika   | BHS: {@saṃparāyika@}, adj. (= Pali id., Skt. sāṃpa˚; cf. {@saṃparāya@}), {%of a life after deat | Body: "saṃparāyika (= Pali id., Skt. sāṃpa˚; cf. {@saṃparāya@}), of a life after death" — 
+AtApana       -> Atapana       | BHS: {@ātāpana-@}, noted only in cpd. ˚na-{@paritāpana@}, which occurs in Pali too, (self-){%ca | '{@ātāpana-@} ... (self-)castigation' is its own word (long ā, from ā-tap-, ascetic self-t
+mahAkaruRA    -> mahAkaruRa    | BHS: {@mahā-karuṇā@} (cf. Skt. karuṇā; = Pali id.), {%great compassion%}: LV 〔181.5〕; Mv 〔ii.2. | '{@mahā-karuṇā@} (cf. Skt. karuṇā; = Pali id.), great compassion' is its own well-formed w
+padmavyUhA    -> padmavyUha    | BHS: {@Padmavyūhā@}, n. of a ‘Bodhisattva-dhāraṇī’: Mvy 〔753〕; padmavyūha-(m. or nt.?)-dhāraṇī- | '{@Padmavyūhā@}, n. of a Bodhisattva-dhāraṇī' is a proper name (dhāraṇī names are fem.) de
+siMhavijfmBitA -> siMhavijfmBita | BHS: {@Siṃhavijṛmbhitā@}, n. of a nun: Gv 〔192.16 ff.〕 | '{@Siṃhavijṛmbhitā@}, n. of a nun' is a feminine proper name defined in this exact spellin
+ADAvana       -> ADavana       | BHS: {@ādhāvana@} (nt.; Pali id.), in comp. with following {@paridhāvana@}, {%running around, t | '{@ādhāvana@} (nt.; Pali id.) ... running around, to and fro' is its own word (ā-dhāv-), w
+BImadarSanA   -> BImadarSana   | BHS: {@Bhīmadarśanā@}, n. of a goddess: Sādh 〔502.10〕. | '{@Bhīmadarśanā@}, n. of a goddess' is a feminine proper name defined in this exact spelli
+DAraRISvararAja -> DaraRISvararAja | BHS: {@Dhāraṇīśvararāja@}, n. of a Bodhisattva: RP 〔2.1〕. | '{@Dhāraṇīśvararāja@}, n. of a Bodhisattva' is a proper name (dhāraṇī-īśvara-rāja) defined
+OSIrika       -> OSIrikA       | BHS: {@auśīrika@}, m., or {@˚kā@}, f. (cf. Skt. uśīra; Sheth cites Pkt. osīra once), pl. ˚kāḥ,  | '{@auśīrika@}, m., or {@˚kā@}, f. (cf. Skt. uśīra) ... shoots or reeds' is its own word wi
+Sakalika      -> SAkalika      | BHS: {@śakalika@}, m., {@˚likā@} (= Skt. ˚la, Pali sakalikā), ({@1@}) {%chip, small piece%} (as | '{@śakalika@}, m. ... (= Skt. ˚la, Pali sakalikā), chip, small piece' is its own word with
+asiDarA       -> asiDArA       | BHS: {@Asidharā@}, n. of a rākṣasī: Māy 〔241.33〕. | '{@Asidharā@}, n. of a rākṣasī' is a proper name defined in this exact spelling.
+cUrRika       -> cUrRikA       | BHS: {@cūrṇika-@} (perh. for ˚kā, m.c.; cf. Skt. cūrṇi, cūrṇī), {%commentary%}: ākhyāyiketihāsā | '{@cūrṇika-@} (perh. for ˚kā, m.c.; cf. Skt. cūrṇi, cūrṇī), commentary' is its own word; E
+candrima      -> candrimA      | BHS: {@Candrima@} (cf. Pali candimā = Skt. candramās, [Page225-a] {%moon%}), n. of two former B | '{@Candrima@} (cf. Pali candimā = Skt. candramās, moon), n. of two former Buddhas' is a ma
+catuzpadaka   -> catuzpAdaka   | BHS: {@catuṣpadaka@}, f. {@˚ikā@}, adj. (= Skt. ˚pada plus -ka; see also {@˚pādaka@}, and {@cāt | '{@catuṣpadaka@} ... (= Skt. ˚pada plus -ka; see also {@˚pādaka@}), consisting of four pād
+daRqaki       -> dARqaki       | BHS: {@Daṇḍaki(n)@}, n. of a wicked king (of Govardhana): [Page261-b] Mv 〔iii.363.6, 16〕; 〔364. | '{@Daṇḍaki(n)@}, n. of a wicked king ... comparable to Pali Daṇḍakī' is a proper name defi
+divasacarA    -> divasacara    | BHS: {@Divasacarā@}, n. of a rākṣasī: Māy 〔243.30〕. | '{@Divasacarā@}, n. of a rākṣasī' is a feminine proper name defined in this exact spelling
+gilAna        -> gilana        | BHS: {@gilāna, ˚naka@} (= Pali, both; Skt. glāna, BHS {@glāna@} and {@glānaka@}), {%weak, exhau | '{@gilāna, ˚naka@} (= Pali, both; Skt. glāna ...), weak, exhausted, sick' is its own MIndi
+haricandrA    -> haricandra    | BHS: {@Haricandrā@}, n. of a rakṣasī: Māy 〔243.11〕. | '{@Haricandrā@}, n. of a rakṣasī' is a feminine proper name defined in this exact spelling
+jAyendra      -> jayendra      | BHS: {@Jāyendra@}, n. of a Tathāgata (living in {@Jāyā@}): ŚsP 〔37.5〕. | '{@Jāyendra@}, n. of a Tathāgata (living in {@Jāyā@})' is a proper name whose long ā deriv
+kfmilika      -> kfmilikA      | BHS: {@kṛmilika@}, m., {%a kind of cloth%}: Mvy 〔9173〕; acc. to Tib. and Chin. {%a red cloth ma | '{@kṛmilika@}, m., a kind of cloth' is its own masculine word defined in this exact spelli
+kokAlika      -> kokalika      | BHS: {@Kokālika@} (= Pali id.), n. of a monk, a partisan of Devadatta: Karmav 〔49.4〕 yathā Deva | '{@Kokālika@} (= Pali id.), n. of a monk' is a proper name (= Pali Kokālika) defined in th
+kulABa        -> kulaBa        | BHS: {@ku-lābha@}, m., {%slight acquisition%} (so Tib.): MSV 〔ii.97.14 ff.〕 | '{@ku-lābha@}, m., slight acquisition (so Tib.)' is its own word (ku- + lābha 'gain'), unr
+mAyati        -> mAyAti        | BHS: {@māyati@} (= Skt. māti), {%is measurable in, is contained in%}, with loc. (so Skt. māti): | '{@māyati@} (= Skt. māti), is measurable in, is contained in' is its own present-stem verb
+merupraBA     -> merupraBa     | BHS: {@Meruprabhā@}, n. of a lokadhātu: Gv 〔426.26〕. | '{@Meruprabhā@}, n. of a lokadhātu' is a feminine proper name (world-system) defined in th
+nEKanya       -> nEKAnya       | BHS: {@naikhanya@}, in tripauruṣa-naikhanyāni (iṣikāni, or iṣī˚) Mv 〔i.196.2〕; 〔iii.228.13〕, (h | '{@naikhanya@} ... a part sunk in the earth ... the same as that cited by BR from Ṣaḍv. Br
+naravIrA      -> naravIra      | BHS: {@Naravīrā@}, n. of a yakṣiṇī: Mmk 〔567.11〕; 〔568.22〕. | '{@Naravīrā@}, n. of a yakṣiṇī' is a feminine proper name defined in this exact spelling.
+nawikA        -> nAwikA        | BHS: {@Naṭikā@} = next, n. of a yakṣiṇī: Mmk 〔565.1〕 (prose). | '{@Naṭikā@} = next, n. of a yakṣiṇī' is a proper name defined in this exact short-a spelli
+pAdavezwanikA -> pAdavezwanika | BHS: {@pāda-veṣṭanikā@} (so also Mironov; BR ˚ka), {%stocking, sock%}: Mvy 〔8970〕 = Tib. ḥbog,  | '{@pāda-veṣṭanikā@} (so also Mironov; BR ˚ka), stocking, sock' is its own feminine word, E
+pAwahika      -> pAwahikA      | BHS: {@pāṭahika@}, m. (= M. pāḍahiga, ˚hiya; Skt. paṭaha plus -ika), {%drum-beater%}: Mv 〔iii.4 | '{@pāṭahika@}, m. (= M. pāḍahiga; Skt. paṭaha plus -ika), drum-beater' is its own masculin
+pUpika        -> pUpikA        | BHS: {@pūpika@} (= Pali pūvika; Skt. pūpa plus -ika), {%cake-maker%}: Mv 〔iii.113.8〕 (in a list | '{@pūpika@} (= Pali pūvika; Skt. pūpa plus -ika), cake-maker' is its own masculine agent-n
+parivahin     -> parivAhin     | BHS: {@parivahin@}, adj. (to Skt. and Pali ˚vahati), {%carrying around%}: hayanavarehi ˚vahī (m | '{@parivahin@}, adj. (to Skt. and Pali ˚vahati), carrying around' is its own word from vah
+paryantika    -> pAryantika    | BHS: {@paryantika@} (or ˚taka?; Pali, see below), f. ˚tikā, ifc. (Bhvr.?), {%having … as its li | '{@paryantika@} (or ˚taka?; Pali ...), having ... as its limit, ending in' is its own word
+pawahikA      -> pAwahikA      | BHS: {@paṭahikā@}, (to Skt. paṭaha, with -ikā, perh. dim.; cf. M. paḍahiyā, defined as {%a smal | '{@paṭahikā@} (to Skt. paṭaha, with -ikā, perh. dim.), a (small?) drum' is its own diminut
+pratilamBika  -> prAtilamBika  | BHS: {@-pratilambhika@}, adj. (also {@prāti˚@}, q.v.; to Skt. pratilambha plus -ika; cf. pratil | '{@-pratilambhika@}, adj. (also {@prāti˚@}, q.v.; to Skt. pratilambha plus -ika), suited f
+pravArika     -> prAvArika     | BHS: {@pravārika@}, m., (a monk) {%making%}, or {%about to make, the pravāraṇa%} (q.v., 2) {%ri | '{@pravārika@}, m., (a monk) making ... the pravāraṇa rite' is its own word from pravāraṇa
+saMjYApti     -> saMjYapti     | BHS: {@saṃjñāpti@}, f. (would seem to = {@saṃjñapti@}, Pali saññatti, but neither seems used in | '{@saṃjñāpti@}, f. (would seem to = {@saṃjñapti@} ... but neither seems used in just this 
+sugAtrA       -> sugAtra       | BHS: {@Sugātrā@}, n. of a female lay-disciple: Gv 〔51.15〕. | '{@Sugātrā@}, n. of a female lay-disciple' is a feminine proper name defined in this exact
+sumeKalA      -> sumeKala      | BHS: {@Sumekhalā@}, n. of a yakṣiṇī: Mmk 〔564.26〕; 〔566.11〕. | '{@Sumekhalā@}, n. of a yakṣiṇī' is a feminine proper name defined in this exact spelling.
+suvarRAvaBAsa -> suvarRAvaBAsA | BHS: {@Suvarṇāvabhāsa@}, n. of a peacock-king: Māy 〔222.30〕 etc.; MSV 〔i.287.17〕. | '{@Suvarṇāvabhāsa@}, n. of a peacock-king' is a masculine proper name, so the masc. spelli
+varuRikA      -> varuRika      | BHS: {@Varuṇikā@}, and {@Varuṇī@}, n. of two goddesses: Mahāsamāj., Waldschmidt, Kl. Skt. Texte | '{@Varuṇikā@}, and {@Varuṇī@}, n. of two goddesses' is a feminine proper name defined in t
+vidUzaRA      -> vidUzaRa      | BHS: {@vidūṣaṇā@} (-samudācāra), (performance of) {%self-denunciation%} (of oneʼs own past sins | '{@vidūṣaṇā@} (-samudācāra), (performance of) self-denunciation' is its own feminine techn
+anavakAra     -> anavakara     | BHS: {@anavakāra@}, adj. (= Pali id.; cf. {@avakāra@}), {%without elimination; not partial, com | {@anavakāra@} (= Pali id.) 'without elimination; absolute' is a fully defined adjective.
+karAlikA      -> karAlika      | BHS: {@Karālikā@}, n. of a yoginī, = {@Karālī@}: Sādh 〔589.15〕 (vs; prob. m.c. -kā). | {@Karālikā@}, 'n. of a yoginī, = Karālī' — feminine proper noun (prob. m.c. -kā), defined 
+krAyika       -> krayika       | BHS: {@krāyika@}, m. = {@krayika, krāyaka@}: Divy 〔505.8〕 yatra krāyiko 'sti (cf. krayika in 6  | {@krāyika@} m. '= krayika, krāyaka' is cross-listed as its own attested variant lemma.
+praveSitA     -> praveSita     | BHS: {@praveśitā@}, fem. ppp. (of caus. of Skt. pra-viś-): ahaṃ … dārakaṃ praveśitā Divy 〔541.2 | {@praveśitā@} fem. ppp. 'pregnant (lit. caused to be entered)' is a defined feminine form 
+ratikarA      -> ratikara      | BHS: {@Ratikarā@}, n. of an apsaras: Kv 〔3.14〕. | {@Ratikarā@}, 'n. of an apsaras' — feminine proper noun with its own attestation.
+sragDarA      -> sragDara      | BHS: {@Sragdharā@}, a name or form of Tārā: Sādh 〔223.23 ff.〕 | {@Sragdharā@}, 'a name or form of Tārā' — proper noun with its own citation.
+suguptA       -> sugupta       | BHS: {@Suguptā@}, n. of a yakṣinī: Sādh 〔562.4〕. | {@Suguptā@}, 'n. of a yakṣinī' — feminine proper noun with its own attestation.
+uttarya       -> uttArya       | BHS: 1 {@uttarya@}, nt., and {@˚ryā@}, f. (cf. Skt. and Pali uttarīya, AMg. uttariya; perhaps a | {@uttarya@} 'a covering' (cf. Skt./Pali uttarīya) is a fully defined noun with multiple ci
+BAryAka       -> BAryaka       | BHS: {@-bhāryāka@}, ifc. Bhvr., = Skt. bhāryā, {%wife%}: sabhāryāko Mv 〔i.304.6〕. | {@-bhāryāka@} ifc. Bhvr. '= Skt. bhāryā, wife' is a defined compound form with citation.
+SatAyuDA      -> SatAyuDa      | BHS: {@Śatāyudhā@}, n. of a kiṃnara maid: Kv 〔6.23〕. | {@Śatāyudhā@}, 'n. of a kiṃnara maid' — feminine proper noun with its own attestation.
+atma          -> Atma          | BHS: {@atma@}, semi-MIndic for ātmā, {%self%}: LV 〔419.8〕 (vs); see 〔§ 3.35〕. | {@atma@}, 'semi-MIndic for ātmā, self' is a deliberately documented MIndic form with gramm
+gaNgika       -> gANgika       | BHS: {@Gaṅgika@}, n. of a householderʼs son of Benares: Av 〔ii.181.6〕. | {@Gaṅgika@}, 'n. of a householder's son of Benares' — proper noun with its own attestation
+lApika        -> lApikA        | BHS: {@-lāpika@}, adj. (= Skt. -lāpin plus -ka), {%talking%}, in manuṣya-lāpiko śuko Mv 〔i.271. | {@-lāpika@} adj. (= Skt. -lāpin plus -ka) 'talking' is a defined adjective with citation, 
+mahAsaMBavA   -> mahAsaMBava   | BHS: {@Mahāsaṃbhavā@}, n. of the lokadhātu where dwelt the Buddhas named Bhīṣmagarjitasvararāja | {@Mahāsaṃbhavā@}, 'n. of the lokadhātu where dwelt the Buddhas …' — feminine proper noun.
+niyatana      -> niyAtana      | BHS: ? {@niyatana@}, perh. {%determination, fixation%} (an irregular formation, as if with suff | {@niyatana@} 'determination, fixation', an irregular -ana formation based on niyata, is de
+ratnasaMBavA  -> ratnasaMBava  | BHS: {@Ratnasaṃbhavā@}, n. of a lokadhātu in the southwest: LV 〔293.9〕. Cf. prec., 2. | {@Ratnasaṃbhavā@}, 'n. of a lokadhātu in the southwest' — feminine proper noun with its ow
+sAMbanDaka    -> saMbanDaka    | BHS: {@sāṃbandhaka@}, nt. (to Skt. saṃbandha plus -ka; = Skt. ˚dhika), {%an alliance by marriag | {@sāṃbandhaka@} 'an alliance by marriage' is fully defined; Edgerton defends it against Sp
+saMBavA       -> saMBava       | BHS: {@Saṃbhavā@}, n. of the world (lokadhātu) of the former Buddha Mahābhijñājñānābhibhū: SP 〔 | {@Saṃbhavā@}, 'n. of the world (lokadhātu) of the former Buddha …' — feminine proper noun.
+saMvalitA     -> saMvalita     | BHS: {@Saṃvalitā@}, the verse-equivalent of {@Suvalitaratiprabhāsaśrī@}, q.v., in the prose sto | {@Saṃvalitā@}, 'the verse-equivalent of Suvalitaratiprabhāsaśrī' — a defined proper name.
+GawikAra      -> GawIkAra      | BHS: {@Ghaṭikāra@}, MSV {@Ghaṭī˚@} (= Pali Ghaṭīkāra), n. of a potter who was a disciple of the | '{@Ghaṭikāra@}, MSV {@Ghaṭī˚@} (= Pali Ghaṭīkāra), n. of a potter' is a proper name; ˚kāra
+kaNkaRikA     -> kaNkaRIkA     | BHS: {@kaṅkaṇikā@} = Skt. kiṅkiṇikā, {%bell%}: MPS 〔34.72, 79, 85〕. | '{@kaṅkaṇikā@} = Skt. kiṅkiṇikā, bell' is its own word equated with Skt. kiṅkiṇikā, define
+maRivatI      -> maRIvatI      | BHS: {@Maṇivatī@}, n. of a city: MSV 〔i.66.2, 15 ff.〕 | '{@Maṇivatī@}, n. of a city' is a proper name (maṇi-vatī) defined in this exact short-i sp
+samiya        -> samIya        | BHS: {@samiya-@}, acc. to Senart MIndic for samyak-; {%perfectly%}: sarvaśaḥ samiya-mārdavānvit | Body defines {@samiya-@} as Senart's MIndic for samyak- 'perfectly' with its own derivatio
+varAlI        -> varAli        | BHS: {@Varālī@}, n. of a yoginī: Sādh 〔277.2〕 (prose) etc.; cf. prec. | {@Varālī@} is defined as 'n. of a yoginī' — a proper noun with its own attestation, distin
+varzaRI       -> varzaRi       | BHS: {@Varṣaṇī@}, n. of a rākṣasī: Māy 〔243.22〕. | {@Varṣaṇī@}, 'n. of a rākṣasī' — a proper-name entry in its own right.
+SAsaniya      -> SAsanIya      | BHS: {@śāsaniya@}, adj., gdve. (〔§ 3.42〕), {%to be instructed%}: LV 〔363.13〕 (vs). | {@śāsaniya@} gdve. 'to be instructed' is a defined gerundive (§3.42) with citation, a deli
+samirita      -> samIrita      | BHS: {@samirita@}, ppp. or subst. (= Skt. samīrita, which one ms. and Calc. read; but cf. Pkt.  | {@samirita@} (cf. Pkt./Lex. samira = samīra 'wind') 'blown, stirring' is defended as its o
+fjuka         -> fjUka         | BHS: {@ṛjuka@}, adj. (also {@ujjuka@}; = Pali ujuka, ujjuka; Skt. ṛju plus ka), {%straight, rig | {@ṛjuka@} 'straight, right' (= Pali ujuka; Skt. ṛju plus ka) is fully defined as its own a
+muzaRa        -> mUzaRa        | BHS: {@muṣaṇa@} (nt.; = M. musaṇa; to Epic Skt. and BHS muṣati, 〔§ 28.37〕, for Skt. muṣṇāti plu | {@muṣaṇa@} 'stealing, theft' (to muṣati, for muṣṇāti plus -ana) is a distinct lemma with i
+saralaka      -> Saralaka      | BHS: {@Saralaka@} (cf. Skt. sarala, {%a pine tree%}: Sarala, n. of a mountain, Kirfel, Kosm. 〔9 | {@Saralaka@}, 'n. of a mountain' (cf. Skt. sarala 'a pine tree') — proper noun with its ow
+avaSruta      -> avasruta      | BHS: {@avaśruta@}, f. {@˚tā@} (= Pali avassuta; cf. {@an-ava˚@}; derived from Skt. root sru, fo | {@avaśruta@} (= Pali avassuta) '(sexually) lustful' is fully defined; the ś-spelling is ex
+mukuzwa       -> mukuzWa       | BHS: {@mukuṣṭa@}, m. (Skt. makuṣṭha, Lex. makuṣṭa, mukuṣṭha; not in Pali or Pkt.), a kind of be | {@mukuṣṭa@} 'a kind of bean' (Skt. makuṣṭha) is defined as its own word with explicit Lex.
+anuDAra       -> anudAra       | BHS: {@-anudhāra@}, adj., f. {@-ī@}, {%bearing, holding%} ({%in attendance?%} anu): Divy 〔513.2 | {@-anudhāra@} 'bearing, holding' is defined with its own gloss and attestation, distinct f
+prarodana     -> praroDana     | BHS: {@prarodana@}, nt. (Skt. pra-rud- plus -ana; unrecorded), {%weeping%}: ˚nam Mvy 〔6926〕 = T | {@prarodana@} 'weeping' (Skt. pra-rud- plus -ana) is its own lemma with derivation and glo
+lokAkza       -> lOkAkza       | BHS: {@Lokākṣa@}, pl., n. of a brahmanical gotra: Divy 〔635.16〕. Cf. {@Laukākṣa@}. | Proper noun: "Lokākṣa, pl., n. of a brahmanical gotra: … Cf. {@Laukākṣa@}" — distinguished
+proRa         -> prORa         | BHS: {@proṇa@}, adj. (semi-MIndic for Skt. pravaṇa; Pali poṇa), {%directed%} towards (in comp.) | {@proṇa@} (semi-MIndic for Skt. pravaṇa; Pali poṇa) 'directed towards' is a defined adject
+koSikAra      -> kOSikAra      | BHS: {@kośikāra@} (m. or nt.; = AMg. kosiyāra; cf. Skt. kauśika, {%silken, silk cloth%}), {%sil | {@kośikāra@} (= AMg. kosiyāra; cf. Skt. kauśika) 'silk cloth' is a defined noun with its o
+dEvakulika    -> devakulika    | BHS: {@daivakulika@} (Mironov deva˚), m., {%temple guard%}: Mvy 〔3748〕 = Tib. lha khaṅ bsruṅ ba | Body: "daivakulika (Mironov deva˚), m., temple guard" — own attested form, deva˚ being onl
+pe            -> pE            | BHS: {@pe@} (= Pali id.), abbreviation for {@peyālam@}, q.v.: Śikṣ 〔53.15〕; 〔55.18〕, etc. | {@pe@} (= Pali id.) is an abbreviation for peyālam, defined in its own right.
+SEzya         -> Sezya         | BHS: {@śaiṣya@}, m. (= {@śaikṣa@}, q.v.; some mss. present this in other passages), {%disciple  | {@śaiṣya@} m. (= śaikṣa) 'disciple in training' is fully defined with derivation from śiṣy
+dve           -> dvE           | BHS: {@dve, duve@}, m.c. {@dvi@}, MIndic for Skt. dvau etc., {%two%}: see 〔§§ 19.3, 4〕. | {@dve, duve@} m.c. dvi, 'MIndic for Skt. dvau, two' is a defined numeral form with grammar
+pramaTaka     -> pramataka     | BHS: {@-pramathaka@}, adj. (Skt. pra-math- plus -aka), {%crushing%}: paracakra-˚kasya Suv 〔69.7 | {@-pramathaka@} 'crushing' (Skt. pra-math- plus -aka) is its own derived adjective.
+kaRqita       -> KaRqita       | BHS: {@kaṇḍita@}, ppp. (= AMg. kaṇḍiya, {%pounded%}; kaṇḍanta, pres. pple.; cf. Skt. kaṇḍīkarot | Body: "kaṇḍita, ppp. (= AMg. kaṇḍiya, pounded; … perhaps related to Skt. khaṇḍayati?), pou
+vaKala        -> vakala        | BHS: {@Vakhala@}, n. of a country: Mmk 〔325.10〕 (vs), see s.v. {@Kāviśa@}. | {@Vakhala@}, 'n. of a country' — proper noun with its own attestation.
+Kalita        -> kalita        | BHS: 1 {@khalita@}, adj. (= Pali id., Skt. khalati, but note Skt. khālitya, {%baldness%}), {%ba | {@khalita@} 'bald' / 'error, false step' (= Pali id., Skt. khalati/skhalita) is a doubly d
+Kelu          -> kelu          | BHS: {@khelu@}, m. or f., a high number: Gv 〔133.21〕; cited Mvy 〔7891〕 as {@śvelu@} (n. ˚uḥ), q | {@khelu@}, 'a high number' (cited Mvy as śvelu) is a defined numeral lemma in its own righ
+Caka          -> caka          | BHS: {@chaka@} (nt.; = Pali id., Childers and Geiger 〔40.1a〕; only chakana reported in Pali lit | {@chaka@} (= Pali id.; = Skt. śakṛt) 'dung' is a distinct lemma defended by Edgerton's rea
+co            -> Co            | BHS: {@co@} (m.c. = ca, see JAOS 〔66.203〕), {%and%}: SP 〔13.15〕 etc., 〔§ 3.82〕. | {@co@} (m.c. = ca) 'and' is a defined particle with its own JAOS reference.
+lIqa          -> lIQa          | BHS: {@-līḍa@}, ifc. Bhvr. for līḍā = Skt. līlā (〔§ 2.46〕), {%grace, attractiveness%}: suślakṣṇ | {@-līḍa@} ifc. Bhvr. 'for līḍā = Skt. līlā, grace' is a defined compound form with multipl
+lampa         -> lamPa         | BHS: {@lampa@}, nt. (cf. AMg. lambaṇa, {%mouthful%}), {%mouthful%}, or {%titbit%}, or the like: | {@lampa@} 'mouthful, titbit' (cf. AMg. lambaṇa) is defined as its own noun against Senart'
+naNgula       -> maNgula       | BHS: {@naṅgula@} (= Pali id., for Skt. lāṅgula), see {@go-na˚@}. | Body: "naṅgula (= Pali id., for Skt. lāṅgula), see {@go-na˚@}" — its own word, unrelated t
+velu          -> Belu          | BHS: {@velu@}, ({@1@}) m., f., or nt., a high number: veluḥ Mvy 〔7889〕 = Tib. dus rlabs, cited  | Body defines "velu, (1) a high number … (2) (= Pali id., bamboo …; Skt. veṇu), bamboo; bam
+viniSrita     -> vimiSrita     | BHS: {@viniśrita@}, adj.-ppp. (or, with Senart and half his mss., viniḥśr˚; but the antonym saṃ | Body: "viniśrita, adj.-ppp. (… cf. {@aniśrita@}), detached from, not dependent on" — own w
+aDovARa       -> aDobARa       | BHS: {@Adhovāṇa@}, or (MSV) {@Adhunāna@}, m., n. of a mountain: Divy 〔450.11〕; 〔455.30〕; MSV 〔i | {@Adhovāṇa@}, 'n. of a mountain' — proper noun with variant Adhunāna, defined in its own r
+aniSrita      -> amiSrita      | BHS: {@aniśrita@} (= Pali anissita), {%unattached, free, independent, emancipated%} (esp. from  | {@aniśrita@} (= Pali anissita) 'unattached, free, independent' is a fully defined distinct
+AvarhaRa      -> AbarhaRa      | BHS: {@āvarhaṇa@}, nt. (to next with -ana; cf. Pali abbāhana, {%extraction%}, as of thorns; but | {@āvarhaṇa@} 'removal, freeing' is fully defined with Pali parallels and its own attestati
+gORAyana      -> gOmAyana      | BHS: {@Gauṇāyana@}, m. pl., n. of a brahmanical gotra: Divy 〔635.13〕. | {@Gauṇāyana@}, 'n. of a brahmanical gotra' — proper noun with its own attestation.
+kubela        -> kuvela        | BHS: {@Kubela@} = Skt. Kubera, n. of a god: LV 〔130.13〕 (vs; but several mss. ˚ra). | {@Kubela@} = Skt. Kubera, 'n. of a god' — proper-name entry, not kuvela.
+mahAsTAma     -> mahAsTAna     | BHS: {@Mahāsthāma@}, n. of a Bodhisattva: Mmk 〔576.15〕; almost certainly short form for next, m | {@Mahāsthāma@}, 'n. of a Bodhisattva', short form m.c. for Mahāsthāmaprāpta — proper noun,
+padmamAla     -> padmanAla     | BHS: {@Padmamāla@}, n. of a former Buddha: Mv 〔i.140.11〕. | {@Padmamāla@}, 'n. of a former Buddha' — proper-name entry with its own citation.
+pucCati       -> pucCawi       | BHS: {@pucchati@} (= Pali id.; MIndic for Skt. pṛcchati), {%asks%}: ger. pucchitva (vv.ll. budd | {@pucchati@} (= Pali id.; MIndic for Skt. pṛcchati) 'asks' is a distinct verb form with ci
+umaka         -> uRaka         | BHS: {@umaka-@}, in comp. with -puṣpa, nt. (from Skt. umā), {%flower of the flax plant%} (blue) | {@umaka-@} (from Skt. umā) 'flower of the flax plant' is a defined lemma, unrelated to uRa
+vihu          -> Bihu          | BHS: {@-vihu@}, may be MIndic for Skt. vidhu, {%moon%}, as in Pkt. (Sheth), or, perh. more like | {@-vihu@}, MIndic for Skt. vidhu 'moon' or vibhu 'lord', is discussed as its own form.
+vusta         -> busta         | BHS: {@vusta@}, ppp. (= Pali vuttha, Epic Skt. uṣṭa), {%dwelt%}: vāsaṃ (so mss.) vusto Mv 〔iii. | {@vusta@} ppp. (= Pali vuttha, Epic Skt. uṣṭa) 'dwelt' is a defined participle, not busta.
+niSrita       -> miSrita       | BHS: {@niśrita@}, ppp. (Pali nissita; cf. prec. and next items, and see {@a-ni˚@}), {%depending | {@niśrita@} (Pali nissita) 'depending, relying, based on' is a fully glossed participle, u
+vinardita     -> vimardita     | BHS: {@vinardita@}, ({@1@}) (nt.; ppp. of Skt. vinardati), {%shout, cry%}: Māra-kali-vikiraṇa-v | {@vinardita@} 'shout, cry' (ppp. of vinardati) and 'n. of a nāga' is a defined lemma, dist
+karaRA        -> karaRa        | BHS: {@karaṇā@} (cf. {@karaṇī@}; both = Skt. karaṇa, nt.), {%means, cause%}: LV 〔434.2〕, repeat | Body: "karaṇā (cf. {@karaṇī@}; both = Skt. karaṇa, nt.), means, cause" — own attested femi
+anucAra       -> anucara       | BHS: {@anucāra?@} only in cārānucāra-prayoga-nimittāni, Dbh 〔45.28〕, [Page026-b] in a list of s | {@anucāra?@} analysed as 'omens derived from various manners of walking (cāra)', derived f
+ApAya         -> apAya         | BHS: ? {@āpāya@}, adj. = {@āpāyika@} (apāya with suffix -a), in Śikṣ 〔46.6〕 paścaināṃś codayiṣy | {@āpāya@}, adj. '= {@āpāyika@} (apāya with suffix -a)' — Edgerton's own (queried) derived 
+prAdakziRa    -> pradakziRa    | BHS: {@prādakṣiṇa@} (seemingly nt. = Skt. ˚ṇya), {%circumambulation to the right, respectful be | {@prādakṣiṇa@} '(seemingly nt. = Skt. ˚ṇya), circumambulation' — recorded as a BHS form eq
+upakAraRa     -> upakaraRa     | BHS: ? {@upakāraṇa@} (cf. AMg. uvagāraṇa = Skt. upakāra? or for Skt. and Pali upakaraṇa?), in M | {@upakāraṇa?@} discussed with its own etymology '(cf. AMg. uvagāraṇa = Skt. upakāra?)' — E
+jAnana        -> janana        | BHS: {@jānana@}, nt., {%birth, origination%}: Mvy 〔1848〕 = Tib. [Page241-b] bskyed pa. Cf. Skt. | Body: "jānana, nt., birth, origination … Cf. Skt. janana, perh. to be read here; but Miron
+kalI          -> kali          | BHS: ? {@kalī@} = Skt. kalā, {%part%}: LV 〔341.5〕 (vs). Doubtful; see {@saṭhaḥ@}. | {@kalī@} '= Skt. kalā, part' (marked doubtful) — equated with kalā, its own (queried) entr
+Bali          -> bali          | BHS: {@bhali@}, acc. to Tib. bu ma rta, {%messenger%}: MSV 〔iv.62.14〕. The Ap. word bhali in a  | Body defines its own word "bhali, acc. to Tib. bu ma rta, messenger" with a distinct gloss
+anayaka       -> anAyaka       | BHS: {@anayaka@}, adj., f. {@˚ikā@} (from anaya, {%misfortune%}; not recorded), {%unfortunate,  | Body derives "anayaka (from anaya, misfortune), unfortunate" as its own word, treating ā a
+anuSAsanA     -> anuSAsana     | BHS: {@anuśāsanā@} (= {@˚nī@}, q.v.), {%instruction%}: Mvy 〔1439〕; [Jm 〔29.5〕 ˚nāṃ, ed. by em., | Body defines "anuśāsanā (= ˚nī, q.v.), instruction" as its own attested BHS feminine form.
+anulomika     -> Anulomika     | BHS: {@anulomika@}, adj., f. {@˚kī@} (= Pali id. = {@ānu˚@}, q.v.), {%conformable%} (to the con | Body defines "anulomika (= Pali id. = ānu˚, q.v.), conformable" as its own attested form.
+anupAlanA     -> anupAlana     | BHS: {@anupālanā@} (= Pali id.; Skt. only ˚na, nt.), {%the keeping, maintaining%}, with loc.: ś | Body: "anupālanā (= Pali id.; Skt. only ˚na, nt.), the keeping, maintaining" — own BHS fem
+anuvartanA    -> anuvartana    | BHS: {@anuvartanā@} (Skt. ˚na, nt., Pali ˚vattana, nt.; see also {@˚vartanatā@}), {%conformity  | Body: "anuvartanā (Skt. ˚na, nt., Pali ˚vattana, nt.), conformity to, imitation of" — own 
+apakarzaRA    -> apakarzaRa    | BHS: {@apakarṣaṇā@} (Skt. only ˚ṇa, nt.), {%removal%}: Śikṣ 〔183.5〕. | Body: "apakarṣaṇā (Skt. only ˚ṇa, nt.), removal" — own BHS feminine form.
+dakzya        -> dAkzya        | BHS: {@dakṣya@} (nt.; from Skt. dakṣa plus -ya; = Skt. dākṣya, perh. read so), {%skill%}: dakṣy | Body derives "dakṣya (from Skt. dakṣa plus -ya; = Skt. dākṣya, perh. read so), skill" as i
+ArUpin        -> arUpin        | BHS: {@ārūpin@}, adj. (from {@ārūpa@}, q.v., plus -in), (something) {%characterized by formless | Body derives "ārūpin (from {@ārūpa@}, q.v., plus -in), characterized by formlessness" as i
+anantarya     -> Anantarya     | BHS: ({@anantarya@}, adj., {%immediately successive%}, in) {@anantarya-tā@}, {%state of being … | Body defines "anantarya, adj., immediately successive" and its derivative anantarya-tā as 
+pariSara      -> parisara      | BHS: ? {@pariśara@}, app. nearly = śara, {%dart, arrow%}: śokapariśara-viddha-(mss. ˚ddho) hṛda | Body: "? pariśara, app. nearly = śara, dart, arrow" — proposes its own distinct gloss, not
+CaRqikA       -> caRqikA       | BHS: {@chaṇḍikā@}, acc. to Tib. sgo ḥu chuṅ, app. {%small door%}, or ske ḥu (? ske = {%neck%}), | Body defines "chaṇḍikā, acc. to Tib. … small door … some servant or official in a monaster
+valganA       -> valgana       | BHS: {@valganā@}, perhaps {%analysis, classification%}: Mvy 〔7559〕; may be for Skt. vargaṇā, {% | Body: "valganā, perhaps analysis, classification … may be for Skt. vargaṇā" — its own conj
+aByudDAraRa   -> aByudDaraRa   | BHS: {@abhyuddhāraṇa@} (nt., cf. prec. items, esp. {@abhyuddharaṇa@}), = prec.: Gv 〔143.22〕 sar | Body: "abhyuddhāraṇa (nt., cf. … {@abhyuddharaṇa@}), = prec." — its own attested variant w
+avakAra       -> avakara       | BHS: {@avakāra@}, m. ({@1@}) see {@avakara@}; ({@2@}) okāraṃ acc. sg. (= Pali okāra, in phrase  | Body sense (2) defines "okāraṃ (= Pali okāra …), elimination, getting rid" — a distinct wo
+drAmiqa       -> dramiqa       | BHS: {@Drāmiḍa@}, adj. (precisely this form seems to be unrecorded; cf. AMg. Dāmila), {%Dravidi | Body: "Drāmiḍa, adj. (precisely this form seems to be unrecorded; cf. AMg. Dāmila), Dravid
+upasaMhAraRa  -> upasaMharaRa  | BHS: {@upasaṃhāraṇa@} (nt.; = prec.), {%provision, furnishing%}: Bbh 〔270.12—13〕 priyāpriya-saṃ | Body: "upasaṃhāraṇa (nt.; = prec.), provision, furnishing" — own attested form with gloss 
+ASravaRa      -> aSravaRa      | BHS: ? {@āśravaṇa-@}, prob. {%lesson%} (so Kern; otherwise Burnouf): SP 〔6.13〕 anekavividhāśrav | '? āśravaṇa-, prob. lesson (so Kern) … However, WT ˚vividha-śravaṇā˚ … perh. read so' — Ed
+pratinAva     -> pratinava     | BHS: [{@pratināva@} or {@˚vā@}, acc. {@˚vaṃ@}, see {@pratinau@}.] | Bracketed cross-ref 'pratināva or ˚vā, acc. ˚vaṃ, see pratinau' — directs to pratinau, a d
+vAhikA        -> vAhika        | BHS: {@vāhikā@}, {%(manner of) carrying%}: (tā dāni antaḥpurikā tena sārdhaṃ viśvastaṃ krīḍanti | Body defines "vāhikā, (manner of) carrying" as a feminine noun with its own gloss and disc
+utpalAvarRA   -> utpalavarRA   | BHS: {@Utpalāvarṇā@}, n. of a Buddhist disciple, doubtless = {@Utpalavarṇā@}, Jm 〔115.24〕 (vs;  | Body: "Utpalāvarṇā … doubtless = {@Utpalavarṇā@} … but ˚lā˚ does not seem to be m.c." — pr
+samAdapaka    -> samAdApaka    | BHS: {@samādapaka@}, m. (or adj.; Pali id.; to {@˚dapeti@}; = {@˚dāpaka@}), {%one who incites%} | Body: "samādapaka, m. (Pali id.; to {@˚dapeti@}; = {@˚dāpaka@}), one who incites" — own at
+nIGa          -> niGa          | BHS: {@nīgha@}, m. (see {@nigha, anigha@}), {%evil%}: Mv 〔ii.374.23〕, by Senartʼs plausible em. | Body defines "nīgha, m. (see {@nigha, anigha@}), evil" by Senart's emendation as its own h
+nandIGoza     -> nandiGoza     | BHS: {@nandīghoṣa@}, ({@1@}) = {@nandi˚@}, q.v., but here in ˚ṣamanojña-śabdopacārāṇi, Śikṣ 〔29 | Body: sense (1) "nandīghoṣa = {@nandi˚@}, q.v." but sense (2) "n. of Indra's chariot" — ha
+AnuSAsti      -> anuSAsti      | BHS: {@ānuśāsti@}, f. (= {@anu˚@}; acc. to CPD, Pali also -ānusatthi, ifc.), {%instruction%}: M | Body: "ānuśāsti, f. (= {@anu˚@}; …), instruction … the ā could be m.c." — own attested for
+netrikA       -> netrika       | BHS: {@netrikā@}, as ep. of tṛṣṇā, = {@bhavanetrī@}, q.v.: tṛṣṇā [Page311-b] nāsya (mss. nāsti, | Body: "netrikā, as ep. of tṛṣṇā, = {@bhavanetrī@}, q.v." — own attested feminine with glos
+paYcacIrA     -> paYcacIra     | BHS: {@pañca-cīrā@}, in ˚rāsu vinyastaḥ Mmk 〔334.4〕; lacuna precedes these words, so that appli | Body discusses "pañca-cīrā … perhaps on five strips of cloth (? the fem. cīrā occurs in Sk
+vastuvidyA    -> vAstuvidyA    | BHS: {@vastu-vidyā@}, read so (or with pw 〔7.373〕 vāstu˚, but see {@vastu@}) for vastra-v˚, {%s | Body: "vastu-vidyā, read so (or with pw vāstu˚, but see {@vastu@}) for vastra-v˚, science 
+prastArika    -> prAstArika    | BHS: {@prastārika@}, or {@˚raka@}, in Mv 〔iii.113.7〕 ˚ikā, v.l ˚akā, in a list of guilds or occ | '{@prastārika@}, or {@˚raka@} ... in a list of guilds ... perhaps merchant' is its own occ
+sIMhaka       -> siMhaka       | BHS: {@sīṃhaka@}, some product of the jewelerʼs craft: ˚kā pi kriyanti Mv 〔ii.473.12〕. | Body: "sīṃhaka, some product of the jeweler's craft" — own headword with its own (obscure)
+saMDUkzita    -> saMDukzita    | BHS: {@saṃdhūkṣita@}, (prob.) ppp. (= Skt. saṃdhukṣ˚, cf. prec., and {@saṃdhukṣita@}), {%inflam | Body: "saṃdhūkṣita (= Skt. saṃdhukṣ˚, cf. … {@saṃdhukṣita@}), inflamed" — own attested ū-f
+araRemi       -> aranemi       | BHS: {@Araṇemi@} (˚min, ˚mī?), m. (= Pali id.; also {@˚nemi@}, q.v.), n. of a brahmanical sage: | Body: "Araṇemi (= Pali id.; also {@˚nemi@}, q.v.), n. of a brahmanical sage" — established
+
+# ===== BUCKET 5  INTENTIONAL -- BHS documents the spelling on purpose; NEVER file (294) =====
+kzaRA         -> kzaRa         | BHS: [{@kṣaṇā@}, f., acc. to Divy 〔643.2〕, = Skt. kṣaṇa, of a definite unit of time; but in lin | Bracketed entry concluding 'Prob. the fem. kṣaṇā is a mere corruption' — documented as a c
+prAkfti       -> prakfti       | BHS: ? {@prākṛti@} (f.), sometimes in text of Divy for prakṛti, {%nature%}, e.g. 〔310.26〕 ˚tiṃ  | {@prākṛti@} 'sometimes in text of Divy for prakṛti … perhaps only misprint' — documented a
+dvitiya       -> dvitIya       | BHS: {@dvitiya@}, adj. (cf. Pali dutiya, for Skt. dvitīya; 〔§ 3.41〕), {%second%}; rare and only | Body: "dvitiya (cf. Pali dutiya, for Skt. dvitīya; §3.41), second; rare and only m.c. in B
+Buta          -> BUta          | BHS: {@bhuta@}, m.c. for Skt. (and BHS) {@bhūta@}, {%become%}, etc.; {%true%}: (only vss) LV 〔5 | {@bhuta@}, 'm.c. for Skt. (and BHS) {@bhūta@}' — documented metrical shortening.
+SardUla       -> SArdUla       | BHS: [{@śardūla@}, LV 〔207.17〕; read with some mss. {@gardūla@}, q.v.] | Bracketed '[{@śardūla@} … read with some mss. {@gardūla@}, q.v.]' — documented reading, co
+atISaya       -> atiSaya       | BHS: {@atīśaya@} (m.c. for Skt. ati˚), {%abundance%}: Mv 〔i.100.10〕 (vs). | {@atīśaya@} '(m.c. for Skt. ati˚)' — Edgerton documents the lengthening as metri causa.
+uzRiza        -> uzRIza        | BHS: {@uṣṇiṣa@} (m.c. for uṣṇīṣa), {%excrescence on the head%}: ˚ṣodgato (= ˚ṣa udgataḥ) RP 〔6. | {@uṣṇiṣa@} '(m.c. for uṣṇīṣa)' — documented metrical shortening.
+aparAjIta     -> aparAjita     | BHS: {@a-parājīta@}, adj. (m.c. for ˚jita), {%unconquered%}: Gv 〔57.18〕 (vs). | {@a-parājīta@}, adj. '(m.c. for ˚jita), unconquered' — documented metrical lengthening.
+SoRIta        -> SoRita        | BHS: {@śoṇīta@}, m.c. for Skt. śoṇita, {%blood%}: LV 〔208.14〕 (vs); also AMg. soṇīya, Ācār. (Sc | 'śoṇīta, m.c. for Skt. śoṇita' — explicitly a metri-causa lengthening Edgerton records on 
+darSaniya     -> darSanIya     | BHS: {@darśaniya@}, adj. (〔§ 3.42〕), {%beautiful%}: SP 〔313.13〕; LV 〔240.11〕 (em., mss. ˚nīya,  | 'darśaniya, adj. (§3.42)' with note '(em., mss. ˚nīya, unmetr.)' — a deliberate metrical s
+kulina        -> kulIna        | BHS: [{@kulina@}, misprint or corruption for Skt. kulīna, adj.: Gv 〔526.16〕 (prose) (sarvajāter | Bracketed entry: 'kulina, misprint or corruption for Skt. kulīna … kulino (read ˚īno)' — E
+tftiya        -> tftIya        | BHS: {@tṛtiya@}, adj. (= Pali tatiya, Skt. tṛtīya), {%third%}; rare and only m.c. in BHS: SP 〔9 | 'tṛtiya, adj. (= Pali tatiya, Skt. tṛtīya) … rare and only m.c. in BHS' — a deliberately r
+sPUwa         -> sPuwa         | BHS: {@sphūṭa@}, adj. (= {@sphuṭa@}; cf. {@parisphūṭa@}), {%full%}: mahatāvabhāsena sphūṭā abhū | Body documents the form deliberately: "(= {@sphuṭa@}; cf. {@parisphūṭa@})", a recorded BHS
+visada        -> viSada        | BHS: {@visada@}, nt., a high number: Gv 〔133.16〕, cited in Mvy 〔7878〕 as {@vimadam@}, q.v., whi | Body labels it "(graphic corruption)" and discusses it on purpose.
+rOhiRI        -> rohiRI        | BHS: [{@rauhiṇī@}, read prob. rohiṇī with Mironov, Mvy 〔5831〕, n. of some plant; Skt. uses rohi | Bracketed entry says "[rauhiṇī, read prob. rohiṇī with Mironov]".
+Basati        -> vasati        | BHS: {@bhasati@} (m.c. for bhāṣati), {%speaks%}: bhasi, 2 sg. aor., LV 〔235.9〕 (vs). | Body records it deliberately: "bhasati (m.c. for bhāṣati), speaks".
+kaTina        -> kaWina        | BHS: {@kathina@}, adj. (= Skt. kaṭhina), {%hard%}: -śilavat ˚nāntarātmā LV 〔158.5〕, so all mss. | Body records the spelling deliberately: "kathina (= Skt. kaṭhina), hard" with ms. variants
+rikza         -> fkza          | BHS: {@rikṣa@} (semi-MIndic for Skt. ṛkṣa), {%bear%}: MSV 〔i.v.15〕. | 'rikṣa (semi-MIndic for Skt. ṛkṣa), bear' — a deliberately documented MIndic spelling.
+ritu          -> ftu           | BHS: {@ritu@} (MIndic = Skt. ṛtu; cf. AMg. riu), {%season%}: Gv 〔408.1〕 (vs; after vowel). | 'ritu (MIndic = Skt. ṛtu …), season' — a documented Middle-Indic variant.
+rocama        -> rocana        | BHS: [{@Rocama@}, corruption of a name of a future Tathāgata: Gv 〔443.16〕: (yathā ca maitreyasy | Bracketed: 'Rocama, corruption of a name of a future Tathāgata … the impossible Rocama' — 
+upaGAwa       -> upaGAta       | BHS: [{@upaghāṭa@}, wrong em. in ed. Mv 〔i.229.7〕; see {@aruṇodghāṭa@}.] | Bracketed: 'upaghāṭa, wrong em. in ed. Mv … see aruṇodghāṭa' — documented as a wrong emend
+AsparSa       -> asparSa       | BHS: [{@āsparśa@}, supposedly {%contact%}, assumed by Senart in a cpd. Mv 〔ii.115.12〕; but see  | Bracketed: "[āsparśa, supposedly contact, assumed by Senart … but see {@sparśita@}.]"
+aDyASana      -> aDyaSana      | BHS: [{@adhyāśana@}, (probably error) for Skt. adhyāsana: samādhibhāvanādhyāśanatayā Gv 〔494.8— | Body says "(probably error) for Skt. adhyāsana" — documents the spelling on purpose.
+anAvatapta    -> anavatapta    | BHS: {@Anāvatapta@}, m.c. for {@Anava˚@} (2), q.v.: LV 〔219.9〕. | Body: "Anāvatapta, m.c. for {@Anava˚@} (2), q.v."
+upADAna       -> upaDAna       | BHS: [{@upādhāna@}, Karmav 〔22.5〕, misprint for {@upadhāna@}, q.v.] | Bracketed: "[upādhāna, Karmav, misprint for {@upadhāna@}, q.v.]"
+ABasvara      -> ABAsvara      | BHS: {@ābhasvara@} = {@ābhāsvara@}, a class of gods: Ud 〔xxx.49〕. | Body cross-lists deliberately: "ābhasvara = ābhāsvara, a class of gods".
+AnuSaMsa      -> anuSaMsa      | BHS: {@ānuśaṃsa@}, m., and {@˚sā@}, f., = {@anu˚@}, q.v.; {@ānuśaṃsaka@}, see {@-anu˚@}. | Body: "ānuśaṃsa, m., and ˚sā, f., = {@anu˚@}, q.v."
+Atireka       -> atireka       | BHS: {@ātireka@} (m.c. for Skt. ati˚), {%excess%}: aṅga manorama divya-ātirekāḥ LV 〔49.15〕 (vs) | Body: "ātireka (m.c. for Skt. ati˚), excess".
+mAskarin      -> maskarin      | BHS: {@Māskarin@} = {@Maskarin@}; Av 〔i.231.4〕 (‘probably a clerical error’, Speyer). | Body: "Māskarin = Maskarin; ('probably a clerical error', Speyer)".
+prajYApti     -> prajYapti     | BHS: {@prajñāpti@}, f., noted only in Mvy as substitute for the usual {@prajñapti@}, q.v., cf.  | Body: "prajñāpti … as substitute for the usual {@prajñapti@}, q.v. … the Mvy substitutes ā
+samatikrAma   -> samatikrama   | BHS: {@samatikrāma@} = {@˚krama@}: saṃsāra-˚maṃ kuryā iti Av 〔i.300.3〕. Speyer would em. to ˚kr | Body: "samatikrāma = ˚krama" — deliberate cross-listing.
+cAri          -> cari          | BHS: {@cāri@} (m.c. for {@cari@}, q.v.), {%conduct%}, in Bhvr. cpds.: sugatasya putrān … śāntap | Body: "cāri (m.c. for {@cari@}, q.v.), conduct".
+SlIpAda       -> SlIpada       | BHS: [{@ślīpāda@}, m., {%elephantiasis%}: Mvy 〔9521〕; read (Skt.) ślīpada with Mironov and Bhīk | Bracketed: 'ślīpāda … read (Skt.) ślīpada with Mironov' — Edgerton documents the long-ā sp
+cApAlya       -> cApalya       | BHS: ? {@cāpālya@} (nt., for Skt. cāpalya), {%instability%}: lakṣmī-˚ya- Divy 〔432.13〕 (prose); | '? cāpālya (nt., for Skt. cāpalya) … prob. read cāpalya' — Edgerton flags the form and rec
+pArihARi      -> parihARi      | BHS: {@pārihāṇi@}, or {@˚ni@}, f. (cf. prec.; = Skt. and Pali pari˚; 〔§ 3.10〕), {%loss%}: ˚ṇi M | 'pārihāṇi … (= Skt. and Pali pari˚; §3.10), loss' with note '(ed. pāri˚ m.c.)' — a deliber
+sAhoQa        -> sahoQa        | BHS: {@sāhoḍha@}, adj., m.c. for Skt. sahoḍha, {%having stolen goods with him%}: ˚ḍhā iva caurā | 'sāhoḍha, adj., m.c. for Skt. sahoḍha, having stolen goods with him' — explicitly a metri-
+samagrya      -> sAmagrya      | BHS: {@samagrya@} (nt., = Skt. sāmagrya, Pali sāmaggiya; perh. short a only m.c.), {%totality%} | 'samagrya (nt., = Skt. sāmagrya … perh. short a only m.c.), totality … only in vss' — a de
+parijAta      -> pArijAta      | BHS: [{@parijāta@}, in ˚tāni puṣpāṇi Mv 〔iii.99.19〕, = Skt. pāri˚, {%a%} (heavenly) {%flower%}; | Edgerton brackets it and says '= Skt. pāri˚ ... no doubt merely an uncorrected misprint fo
+cArIkA        -> cArikA        | BHS: {@cārīkā@}, m.c. for {@cārikā@}, q.v., Gv 〔57.15〕. | Body: "cārīkā, m.c. for {@cārikā@}, q.v."
+manasIkAra    -> manasikAra    | BHS: {@manasīkāra@} (to prec.) = {@manasi˚@}: KP 〔71.8〕 (prose), see s.v. {@yoniśaḥ@}. | Body: "manasīkāra (to prec.) = {@manasi˚@}" — deliberate cross-listing.
+suSila        -> suSIla        | BHS: {@su-śila@}, adj. (m.c. for ˚śila), {%of good behavior%}: ˚lā LV 〔114.15〕 (vs). | Body: "su-śila, adj. (m.c. for ˚śila), of good behavior" — metri causa form.
+vEjayanti     -> vEjayantI     | BHS: {@vaijayanti@} (= Skt. ˚tī), {%flag, banner%}: -paṭākā-˚ti- (in a long cpd.) LV 〔295.15〕 ( | 'vaijayanti (= Skt. ˚tī), flag, banner … so all mss.; Calc. ˚tī' — a documented short-i sp
+biBatsa       -> bIBatsa       | BHS: {@bibhatsa@}, adj. (m.c. for Skt. bī˚), {%loathsome%}: LV 〔206.2〕 (vs). | 'bibhatsa, adj. (m.c. for Skt. bī˚), loathsome' — explicitly a metri-causa short-i form.
+gaBira        -> gaBIra        | BHS: {@gabhira@}, adj. (m.c. for gabhīra, gambhīra), {%deep, profound%}: Sukh 〔7.18〕 (vs). | 'gabhira, adj. (m.c. for gabhīra, gambhīra), deep, profound' — explicitly a metri-causa sh
+kzitiSa       -> kzitISa       | BHS: {@kṣitiśa@} (m.c. for Skt. kṣitīśa), {%king%}: RP 〔45.7〕 (vs). | 'kṣitiśa (m.c. for Skt. kṣitīśa), king' — explicitly a metri-causa short-i form.
+vItaTa        -> vitaTa        | BHS: {@vītatha@}, adj. (m.c. for Skt. vi˚), {%false%}: satya-vī˚-patheṣu Gv 〔55.3〕 (vs). | 'vītatha, adj. (m.c. for Skt. vi˚), false' — explicitly a metri-causa long-ī form.
+kUhaka        -> kuhaka        | BHS: {@(a-)kūhaka@}, adj., {%(not) deceiving%}: Dbh.g. 〔16(352).18〕 sumanāś ca akūhakaś ca; pro | Body: "(a-)kūhaka … prob. m.c. for Skt. kuhaka".
+tAlUka        -> tAluka        | BHS: [{@tālūka@}, nt, ˚kaṃ MSV 〔i.239.16〕, read śālūka (Skt.), {%edible lotus-root%}.] | Bracketed: 'tālūka … read śālūka (Skt.), edible lotus-root' — documented as to-be-correcte
+sora          -> sOra          | BHS: {@sora@} = Skt. svara (〔§ 3.117〕), {%voice, sound%}: cakorasorāṃ (acc. pl.) karaviṅkanādit | '{@sora@} = Skt. svara (§ 3.117), voice, sound ... meter requires long syllable so-' is a 
+vetAlika      -> vEtAlika      | BHS: ? {@vetālika@}, m., perh. to be read (mss. corrupt) for text vaitālika, tālika, Mv 〔iii.11 | '? vetālika, m., perh. to be read (mss. corrupt) for text vaitālika, tālika' — Edgerton fl
+Cana          -> cana          | BHS: {@-chana@} for -channa (Skt.), {%covered%}, in (text) ducchanaṃ and succhanaṃ, yathā hy ag | '-chana for -channa (Skt.), covered … must … be adopted here … this obvious error' — docum
+pratiBARa     -> pratiBAna     | BHS: [{@pratibhāṇa@} is read by the mss., and sometimes in Nobelʼs text, of Suv, for {@pratibhā | Bracketed: "[pratibhāṇa … for {@pratibhāna@}, q.v.; it seems to be a mere corruption.]"
+cAwaka        -> cAtaka        | BHS: ? {@cāṭaka@}, read prob. {@cāṭuka@} (= Skt. cāṭu, and once cāṭuka, which in the passage ci | '? cāṭaka, read prob. cāṭuka (= Skt. cāṭu …)' — Edgerton flags it and recommends reading c
+lawikA        -> latikA        | BHS: [{@laṭikā@}, app. misprint for latikā (so Index): Mvy 〔433〕 = Tib. khri śiṅ, {%creeper%};  | Bracketed: 'laṭikā, app. misprint for latikā (so Index)' — Edgerton documents it as a misp
+saMgrahaka    -> saMgrAhaka    | BHS: ? {@saṃgrahaka-@}, = (and prob. error for) {@saṃgrāhaka@}, {%charioteer%}, q.v.: ˚ka-rūpeṇ | Body: "? saṃgrahaka-, = (and prob. error for) {@saṃgrāhaka@}, charioteer, q.v."
+aByanta       -> aByAnta       | BHS: [{@abhyanta-@}, read {@atyanta-@}, {%complete%}: Gv 〔243.21〕; Śikṣ 〔296.9〕.] | Bracketed: 'abhyanta-, read atyanta-, complete' — Edgerton documents it as to be read atya
+durAvagAha    -> duravagAha    | BHS: {@durāvagāha@}, adj. (for durava˚), {%hard to fathom%}: samudrakalpa … gambhīra-durāvagāha | 'durāvagāha, adj. (for durava˚) … The -ā- here may have been carried over from some passag
+iryA          -> irya          | BHS: {@iryā, iryāpatha, iryāvant, iryavant@}, semi-MIndic spelling for {@īry˚@}, q.v. | 'iryā, iryāpatha … semi-MIndic spelling for īry˚, q.v.' — explicitly a documented semi-MIn
+muktahastA    -> muktahasta    | BHS: [{@muktahastā@}, read {@˚hastatā@}, {%liberality%}: Bbh 〔303.13〕.] | Bracketed: 'muktahastā, read ˚hastatā, liberality' — Edgerton documents it as to be read m
+nirAparADa    -> niraparADa    | BHS: {@nir-āparādha@}, adj. Bhvr. (m.c. for nir-a˚), {%inoffensive%}: ˚dheṣv aparādhyate (so re | 'nir-āparādha, adj. Bhvr. (m.c. for nir-a˚), inoffensive' — explicitly a metri-causa lengt
+pAripUrRa     -> paripUrRa     | BHS: {@pāripūrṇa@}, adj., ppp. (m.c. for pari˚), {%full%}: śubha ˚ṇaṃ Mv 〔ii.299.11〕 (vs). Cf.  | 'pāripūrṇa, adj., ppp. (m.c. for pari˚), full' — explicitly a metri-causa lengthening.
+sarvArtuka    -> sarvartuka    | BHS: ? {@sarvārtuka@}, adj. (= Skt. sarvartuka; see also {@sarvotuka@}), {%of all seasons%}: ˚k | '? sarvārtuka, adj. (= Skt. sarvartuka …), of all seasons … may it be an editorial slip fo
+vikrAmin      -> vikramin      | BHS: {@vikrāmin@} (unrecorded elsewhere) ({@1@}) = Skt. vikramin, {%possessing prowess%}; chief | Edgerton deliberately records '{@vikrāmin@} (unrecorded elsewhere) = Skt. vikramin ... chi
+vinayanA      -> vinayana      | BHS: {@vinayanā@} (in Skt., Pali, and Pkt. only ˚na, nt.), {%instruction, training%}: samādāpan | '{@vinayanā@} (in Skt., Pali, and Pkt. only ˚na, nt.)' is explicitly contrasted as a delib
+yaTAtmya      -> yATAtmya      | BHS: {@yathātmya@} (nt., = Skt. yāthātmya), {%true nature%}: Mvy 〔858〕 ˚myāvatārakuśalaḥ (of Bo | '{@yathātmya@} (nt., = Skt. yāthātmya), true nature' is deliberately recorded as a BHS var
+aBirADanA     -> aBirADana     | BHS: {@abhirādhanā@} (cf. prec. and next; Skt. ˚dhana, Pali an-abhirādhana), {%winning favor, c | '{@abhirādhanā@} (cf. ...; Skt. ˚dhana, Pali an-abhirādhana), winning favor' is a delibera
+lakzmIpatI    -> lakzmIpati    | BHS: {@Lakṣmīpatī@} (so mss., Senart em. ˚matī), n. of a devakumārikā in the southern quarter:  | '{@Lakṣmīpatī@} (so mss., Senart em. ˚matī), n. of a devakumārikā' is the ms.-attested spe
+parisPUwa     -> parisPuwa     | BHS: {@parisphūṭa@}, adj. (cf. {@sphūṭa@}, on same page of LV, for {@sphuṭa@}), = prec.: (prabh | Body: "parisphūṭa (cf. {@sphūṭa@}, on same page of LV, for {@sphuṭa@})" — documented varia
+kalpaduzya    -> kalpadUzya    | BHS: {@kalpa-duṣya@}, or {@˚dūṣya@}, nt. (see {@duṣya, dūṣya@}; Senart always prints duṣya in M | '{@kalpa-duṣya@}, or {@˚dūṣya@} ... Senart always prints duṣya in Mv text but cites dūṣya 
+SAntara       -> sAntara       | BHS: [{@śāntara@}, corrupt, in defective vs Mv 〔i.164.15〕; Senart, yathecchakaṃ (mss. yate˚) ar | Bracketed: "[śāntara, corrupt, in defective vs … read śānta ca ?]"
+aSvara        -> asvara        | BHS: ? {@Aśvara@}, read prob. Aśvala, n. of a ṛṣi: Mmk 〔18.18〕. | '? {@Aśvara@}, read prob. Aśvala, n. of a ṛṣi' — Edgerton flags it as to-be-read otherwise
+opaDika       -> OpaDika       | BHS: [{@opadhika@}, assumed by Weller on LV 〔32.1〕, but see s.v. {@upadhika@}.] | Bracketed: "[opadhika, assumed by Weller on LV, but see s.v. {@upadhika@}.]"
+anopama       -> anOpama       | BHS: {@an-opama@}, f. {@˚mī@}, adj. (= Pali id.; for Skt. anupama; in BHS prob. only m.c.), {%m | '{@an-opama@} ... (for Skt. anupama; in BHS prob. only m.c.), matchless' is a deliberately
+vEmacitra     -> vemacitra     | BHS: {@Vaimacitra@} = {@Vemacitrin, ˚tra@} (perh. mere corruption or hyper-Sktism): Thomas ap.  | Body: "Vaimacitra = Vemacitrin, ˚tra (perh. mere corruption or hyper-Sktism)".
+fkta          -> fkTa          | BHS: {@ṛkta-@}, hyper-Skt. for rikta-, in tucchata ṛktato 'sārato Śāl 〔88.14〕, cited Śikṣ 〔227. | '{@ṛkta-@}, hyper-Skt. for rikta-' is a deliberately recorded hyper-Sanskritism.
+ISADAra       -> IzADAra       | BHS: {@Īśādhāra@}, ({@1@}) n. of a nāga, Mironovʼs reading for {@Iśā˚@} Mvy 〔3333〕; ({@2@}) m.  | '{@Īśādhāra@} ... Mironovʼs reading for {@Iśā˚@} ... (= Īṣā˚; see under {@Īṣādhara@})' — v
+mEtrAyana     -> mEtrAyaRa     | BHS: [? {@maitrāyana@} (for ˚ṇa?), n. sg. ˚naḥ, Dbh.g. 〔41(67).14〕, if text is right, would see | Bracketed and queried: '[? {@maitrāyana@} (for ˚ṇa?) ... it is prob. a corruption ...]' — 
+rugma         -> fgma          | BHS: {@rugma@} (semi-MIndic for Skt. rukma; no such form recorded elsewhere), {%gold%}: rugma-v | '{@rugma@} (semi-MIndic for Skt. rukma; no such form recorded elsewhere), gold' is a delib
+antarAyika    -> AntarAyika    | BHS: {@antarāyika@}, adj. (= Pali id.; also {@āntar˚@}, and neg. {@an-antar˚@}, qq.v.), {%conne | '{@antarāyika@}, adj. (= Pali id.; also {@āntar˚@} ...)' explicitly cross-lists the long-ā
+SikzaRA       -> SikzaRa       | BHS: {@śikṣaṇā@} (= Skt. ˚ṇa, nt., Pali sikkhaṇa), {%disciplined observance%} (with loc.): ekas | '{@śikṣaṇā@} (= Skt. ˚ṇa, nt., Pali sikkhaṇa), disciplined observance' is a deliberately r
+jAnapati      -> janapati      | BHS: [{@jānapati@}, in KP 〔84.8〕 (prose) sarva-śreṣṭhi-naigamajānapatayaḥ, read ˚jānapadāḥ, {%p | Bracketed: '[{@jānapati@} ... read ˚jānapadāḥ, people of the country ...]' — Edgerton reco
+samanvI       -> samanvi       | BHS: {@samanvī@}, in Gv 〔254.11〕 (vs), app. a semi-MIndic contracted form for samanvitaḥ, {%pro | '{@samanvī@} ... app. a semi-MIndic contracted form for samanvitaḥ' is deliberately record
+niSAWaka      -> niSAwaka      | BHS: ? {@niśāṭhaka@} or {@niśāthaka@}, in: kalaha-raṇa-˚kā(ḥ) Mv 〔i.176.6—7〕, ep. of Buddhas; c | '? {@niśāṭhaka@} or {@niśāthaka@} ... clearly corrupt; Senart em. niśātakā ...' — Edgerton
+vukka         -> bukka         | BHS: {@vukka@}, nt. (unrecorded MIndic, if not error or misprint, for Skt. vṛkka; cf. Pali vakk | '{@vukka@}, nt. (unrecorded MIndic, if not error or misprint, for Skt. vṛkka ...), kidney'
+DArmarAjikA   -> DarmarAjikA   | BHS: {@dhārmarājikā@} = {@dharmarājikā@}, q.v.: Divy 〔368.28〕. | Body: "dhārmarājikā = dharmarājikā, q.v." — deliberate cross-listing.
+SantaSrI      -> SAntaSrI      | BHS: [{@Śantaś(i)rī, Śantābha@}, prob. by error for {@Śānt˚@}, qq.v.] | Bracketed: "[Śantaś(i)rī, Śantābha, prob. by error for {@Śānt˚@}, qq.v.]"
+hAkkAra       -> hakkAra       | BHS: {@hākkāra@} = {@hakkāra@}, q.v., {%sound of admiration%} or {%applause%}: udānam udānayan  | Body: "hākkāra = {@hakkāra@}, q.v., sound of admiration" — deliberate cross-listing.
+jAnayati      -> janayati      | BHS: {@jānayati@} (= janayati; 〔§ 38.15〕), {%produces%}: kāyabalasthāmaṃ jānayitvā Mv 〔ii.131.1 | Body: "jānayati (= janayati; §38.15), produces" — documented BHS phonetic variant.
+nirupADiSeza  -> nirupaDiSeza  | BHS: [{@nirupādhiśeṣa@}, error for {@nirupadhi˚@}, of nirvāṇadhātu: MSV 〔ii.77.11〕; 〔87.13〕.] | Bracketed: "[nirupādhiśeṣa, error for {@nirupadhi˚@}, of nirvāṇadhātu]"
+paYcagatika   -> pAYcagatika   | BHS: {@pañcagatika@}, adj., = {@pāñca˚@}, q.v.: mss. at MadhK 〔269.9〕 (ed. em. pāñca˚). | Body: "pañcagatika, adj., = {@pāñca˚@}, q.v.: mss. at MadhK (ed. em. pāñca˚)".
+prAhita       -> prahita       | BHS: {@prāhita@} (if not error or misprint, = {@prahita@}, q.v.), {%intent, concentrated%} (her | Body: "prāhita (if not error or misprint, = {@prahita@}, q.v.), intent, concentrated".
+AntraguRa     -> antraguRa     | BHS: {@āntra-guṇa@}, m. (pl.), = {@antra-guṇa@}, q.v.: ŚsP 〔1430.21〕; 〔1431.11〕; read in both ( | Body: "āntra-guṇa, m. (pl.), = {@antra-guṇa@}, q.v." — deliberate cross-listing of m.c. le
+niDyApti      -> niDyapti      | BHS: {@nidhyāpti@}, Mvy 〔7460〕, prob. error for {@nidhyapti@}, q.v. | '{@nidhyāpti@}, Mvy, prob. error for {@nidhyapti@}, q.v.' — Edgerton records it and explic
+Adapana       -> AdApana       | BHS: {@ādapana@}, acc. to Kern SP Preface 〔p. vii〕, in Kashgar rec. of SP for Nep. ādāpana. | '{@ādapana@}, acc. to Kern ... in Kashgar rec. of SP for Nep. ādāpana' — a recension varia
+AnantarIya    -> anantarIya    | BHS: [{@ānantarīya@}, nt., ˚yāṇi, Mvy 〔2323〕; but prob. read with Mironov {@ānantarya@}, q.v. C | Bracketed: '[{@ānantarīya@} ... but prob. read with Mironov {@ānantarya@}, q.v. ...]' — va
+Darmita       -> DarmitA       | BHS: [{@-dharmita@}, Śikṣ 〔103.8〕 (vs) karuṇa-maitra-dharmitāḥ, could be taken as a denom. pple | Bracketed: '[{@-dharmita@} ... But the passage ... reads ... ˚maitravarmitaḥ, which is und
+KedanA        -> Kedana        | BHS: {@khedanā@} (Skt. ˚na, nt.), {%lassitude%}: ŚsP 〔1462.10〕 (prose) na ca kadācit khedanopap | '{@khedanā@} (Skt. ˚na, nt.), lassitude' is a deliberately recorded feminine BHS variant o
+anantaryasamADi -> AnantaryasamADi | BHS: [{@Anantaryasamādhi@}, misprint in Mvy 〔901〕 for {@Ānant˚@}, q.v.; corrected in Index.] | '[{@Anantaryasamādhi@}, misprint in Mvy for {@Ānant˚@} ... corrected in Index.]' — Edgerto
+dahuka        -> dAhuka        | BHS: ? {@dahuka@}, so mss. of Divy 〔475.17〕 (ed. em. dakṣaka), [Page263-b] ep. of children, see | '? {@dahuka@}, so mss. of Divy (ed. em. dakṣaka) ... Prob. read dahara(ka), or dahraka' — 
+guRABUta      -> guRaBUta      | BHS: {@guṇā-bhūta@}, adj. (for Skt. guṇa˚, with ā m.c.), {%dependent%}: Mv 〔i.182.4〕 (vs) tasya | '{@guṇā-bhūta@}, adj. (for Skt. guṇa˚, with ā m.c.), dependent' is a deliberately recorded
+jAhu          -> jahu          | BHS: [? {@jāhu@}, in RP 〔58.18〕 (vs), printed: dūre jāhu bhujagavad etān (sc. evil companions). | Bracketed and queried: '[? {@jāhu@} ... I cannot explain the final u ... Perhaps read jāhā
+prAjina       -> prajina       | BHS: [{@prājina@}, in Gv 〔414.16〕 ed. na prājineṣu praṇatā sadaiva, read namrā jineṣu …, {%she  | Bracketed: '[{@prājina@} ... read namrā jineṣu ...]' — Edgerton records the printed form a
+pravarjanA    -> pravarjana    | BHS: {@pravarjanā-@} (possibly hyper-Skt. for M. pavajjaṇa to pavajjai = Skt. prapadyate), {%as | '{@pravarjanā-@} (possibly hyper-Skt. for M. pavajjaṇa ...), assent, promise (?)' is a del
+ratnAmaya     -> ratnamaya     | BHS: {@rat(a)nāmaya@}, adj. (Pkt. rayaṇāmaya; = Skt. ratna˚; cf. {@ratanāmaka@}), {%made of jew | '{@rat(a)nāmaya@}, adj. (Pkt. rayaṇāmaya; = Skt. ratna˚ ...), made of jewels' is a deliber
+samAdapana    -> samAdApana    | BHS: {@samādapana, ˚nā@} (Pali id.; = {@˚dāpana, ˚nā@}; cf. next), {%incitement to assume, to t | '{@samādapana, ˚nā@} (Pali id.; = {@˚dāpana, ˚nā@}) ... here ˚dap˚ may be m.c.' — a delibe
+svAlaMkfta    -> svalaMkfta    | BHS: {@sv-ālaṃkṛta@}, adj. (m.c. for sv-a˚), {%well adorned%}: LV 〔220.15〕; 〔221.17〕; 〔282.10〕  | '{@sv-ālaṃkṛta@}, adj. (m.c. for sv-a˚), well adorned' is a deliberately recorded metrical
+AntarikA      -> antarikA      | BHS: {@āntarikā@} (= {@ant˚@}, q.v.; some cases there cited may belong here), {%space between,  | Body '{@āntarikā@} (= {@ant˚@}, q.v.)' deliberately cross-lists it as a variant of antarik
+kAlpam        -> kalpam        | BHS: [{@kālpam@} LV 〔407.13〕, error or misprint for kālyam, {%early in the morning%}.] | Bracketed entry: '{@kālpam@} … error or misprint for kālyam' — recorded only to flag it as
+valAha        -> vAlAha        | BHS: {@Valāha@} (= Pali id.; also {@Vālāha, ˚haka, Balāhaka, Bālāha, ˚haka@}, qq.v.), n. of the | Body '{@Valāha@} (= Pali id.; also {@Vālāha, ˚haka, …@}, qq.v.)' deliberately cross-lists 
+anantariya    -> anantarIya    | BHS: {@anantariya@}, subst. nt. = ān˚, {%crime bearing immediate fruition, deadly sin%} (one of | '{@anantariya@}, subst. nt. = ān˚ ... in Bhad -i- could be m.c., but is regular in Pali' —
+parindanA     -> parIndanA     | BHS: {@parindanā@} (also {@parī˚@}; to {@parindāmi@}), {%the giving over, presenting%}: ˚nārtha | Body '{@parindanā@} (also {@parī˚@})' and 'see s.v. {@parīndanā@}' deliberately cross-list
+prAYjalIka    -> prAYjalika    | BHS: {@prāñjalīka@}, adj. Bhvr. (m.c. for ˚li-ka), {%making a gesture of reverence in front%}:  | {@prāñjalīka@} adj. Bhvr. '(m.c. for ˚li-ka)' — deliberately recorded metri causa lengthen
+saMButa       -> saMBUta       | BHS: {@saṃbhuta@} (m.c. for Skt. ˚ūta), {%originated%} etc.: LV 〔419.9〕; Gv 〔255.12〕; Śikṣ 〔347 | Body: "saṃbhuta (m.c. for Skt. ˚ūta), originated".
+anUpalipta    -> anupalipta    | BHS: {@anūpalipta@} (= Pali ˚litta) m.c. for {@anupa˚@}, see also {@anopa˚@}, {%unstained%}: SP | Body marks it '(= Pali ˚litta) m.c. for {@anupa˚@}' — deliberately recorded metri causa va
+supatIrTa     -> sUpatIrTa     | BHS: [{@supatīrtha@}, ep. of rivers of Sukhāvatī: Sukh 〔39.3〕; read (Skt.) sūpa˚, q.v. in BR.] | Bracketed entry: 'read (Skt.) sūpa˚, q.v.' — Edgerton records supatīrtha only to correct i
+hitezin       -> hitEzin       | BHS: {@Hiteṣin, Hitaiṣin@} (both spellings in mss.), n. of three former Buddhas in the same lis | Body header '{@Hiteṣin, Hitaiṣin@} (both spellings in mss.)' deliberately records both spe
+tre           -> trE           | BHS: {@tre-@} for {@trai-@} in vṛddhi formations, see the following items. | Cross-reference entry: '{@tre-@} for {@trai-@} in vṛddhi formations' deliberately document
+vikalpA       -> vikalpa       | BHS: {@vikalpā@} = {@vikalpa@} (1): paraspara-vikalpayā Laṅk 〔287.7〕 (vs); perhaps m.c. for ˚pe | {@vikalpā@} '= {@vikalpa@} (1) … perhaps m.c. for ˚pena' — documented as a (metrical) vari
+dArika        -> dArikA        | BHS: ? {@dārika@} (= Skt. dāraka), and acc. to text ˚kā(in comp.), {%boy%}: dvātriṃśad-dārikā-s | Body: "? dārika (= Skt. dāraka), and acc. to text ˚kā … the final -ā of dārikā must … be a
+kAluza        -> kaluza        | BHS: {@kāluṣa-@}, either = Skt. kāluṣya, {%turbidity%}, or perhaps error for kaluṣa, {%turbid%} | Body: "kāluṣa-, either = Skt. kāluṣya, turbidity, or perhaps error for kaluṣa, turbid" — d
+sEla          -> SEla          | BHS: {@Saila@} (read {@Śaila?@}), n. of a yakṣa: Māy 〔2〕. | {@Saila@} '(read {@Śaila?@}), n. of a yakṣa' — Edgerton flags his own reading query; docum
+utsuKa        -> utsuka        | BHS: ? {@utsukha@} = Skt. utsuka, {%longing, desirous%}: Gv 〔330.25〕 ity utsukheṣu (so also 2d  | '? utsukha = Skt. utsuka … Perhaps error; but cf. Geiger …' — Edgerton flags and discusses
+dfzwA         -> dfzwa         | BHS: {@dṛṣṭā@}, n. sg., for draṣṭā, to stem draṣṭr, {%seer%}: in same line dṛṣṭavya, for dra˚,  | Body: "dṛṣṭā, n. sg., for draṣṭā … Possibly both are errors or misprints" — documented for
+jatya         -> jAtya         | BHS: ? {@jatya@}, perh. by error for a-jatya, itself either error, or with MIndic a for ā, for  | Body opens "? jatya, perh. by error for a-jatya … or else error for {@a-janya@}, q.v." — d
+Alambuza      -> alambuza      | BHS: ? {@ālambuṣa@} (m. or nt.?), n. of a plant: Mmk 〔82.18〕 ālambuṣa-mūlaṃ kṣīreṇa saha pīṣayi | '? ālambuṣa … perhaps error for alambuṣā, which is the only form recorded' — Edgerton flag
+AsPuwa        -> asPuwa        | BHS: ? {@āsphuṭa@}, adj., {%clear, clarified, illumined%}: LV 〔17.3〕 (prose) tenāvabhāsenāsphuṭ | '? āsphuṭa … āsphuṭa is suspicious in itself … The expected reading is …sphuṭāḥ' — Edgerto
+cARqikA       -> caRqikA       | BHS: {@Cāṇḍikā@} (cf. Skt. Caṇḍikā), n. of a yoginī: Dharmas 〔13〕 (misprint or error ?). | '{@Cāṇḍikā@} (cf. Skt. Caṇḍikā), n. of a yoginī: Dharmas (misprint or error ?)' — Edgerton
+Karta         -> karta         | BHS: {@kharta@}, ? in Mmk 〔157.4〕 (vs) ūrū cāsya vartulakau, kaurparau kharta-varjitau, {%and t | 'kharta, ? … Prob. corrupt, but I can think of no plausible em.' — Edgerton flags the form
+purusakAra    -> puruzakAra    | BHS: {@purusakāra-@} (= Skt.), in ˚ra-phalam, one of the 5 {@phala@} (q.v.): Mvy 〔2274〕; sc. of | 'purusakāra- (= Skt.)' — the dental-s spelling is a printed-form variant of puruṣakāra Edg
+Agatika       -> agatika       | BHS: {@-āgatika@} (= Skt. āgati, at end of Bahuvrīhis), see {@an-āgatika@}. | Body is a cross-ref stub: "-āgatika (= Skt. āgati …), see {@an-āgatika@}".
+jAvita        -> javita        | BHS: {@jāvita@}, nt. (= {@javita, 1@}; perhaps so read, but Mironov also jā˚), {%running, foot- | 'jāvita, nt. (= javita, 1; perhaps so read, but Mironov also jā˚), running, foot-racing' —
+prahelika     -> prahelikA     | BHS: (? {@prahelika@}, m., Mvy 〔7351〕 [one Tib. rendering, lde ḥu, = {%riddle%}, Das; so Jap.], | '(? prahelika, m., Mvy … but Mironov reads ˚kā, which in Skt. means riddle)' — Edgerton fl
+DarmA         -> Darma         | BHS: {@dharmā-(kathā)@}, see s.v. 3 {@dharma@}. | 
+tikzRa        -> tIkzRa        | BHS: [{@Tikṣṇa@}, Lefm., {@Tikṣu@}, Foucaux with v.l., wrong readings for {@Tiṣya@}, q.v. (Tib. | 
+Tala          -> tala          | BHS: {@thala@} (nt., = Pali id., MIndic for Skt. sthala), {%dry land%}: Mv 〔iii.32.2, 11〕 (v.l. | 
+asya          -> Asya          | BHS: {@asya@}, also {@sya@}, apparently particle of emphasis; acc. to Senart on Mv 〔i.45.1〕, =  | 
+jAva          -> java          | BHS: {@jāva@}, m. (to java, but nowhere recorded), {%speed, swiftness%}: ˚vaḥ Mvy 〔2003〕 = Tib. | 
+sAmam         -> samam         | BHS: {@sāmam@}, indecl. pron. (= Pali sāmaṃ; in mg. = Skt. svayam; see {@sāmato@} and {@svāmam, | 
+agneya        -> Agneya        | BHS: [{@agneya, Agneyī@}, read {@Āg˚@}, q.v.] | 
+vArzikA       -> vArzika       | BHS: {@vārṣikā@}, ({@1@}) Mv 〔i.19.11〕, taken by Senart as subst., {%garment for the rainy seas | 
+vyUhA         -> vyUha         | BHS: {@vyūhā, viyūhā@}, = {@vyūha@} (2): mahatyā rājavyūhayā Suv 〔79.13〕 (prose); about half th | 
+BUzaRA        -> BUzaRa        | BHS: ? {@bhūṣaṇā@}, f. (only nt. in Pali and Pkt.; in Skt. nt. or ‘exceptionally’ m.), {%orname | 
+ekAdaSA       -> ekAdaSa       | BHS: {@Ekādaśā@} (by em.), ({@1@}) n. of a devakumārikā in the west: LV 〔390.6〕; mss. Ekāhaṃśa- | 
+kAruRa        -> karuRa        | BHS: {@kāruṇa@} (nowhere recorded), ({@1@}) adj. (= Skt. kāruṇika), {%compassionate%}: Mv 〔i.17 | 
+lABA          -> lABa          | BHS: [{@lābhā@}, in lābhā te mahārājo sulabdhā Mv 〔i.226.14〕 (prose), taken as fem. by Senart,  | 
+mArjara       -> mArjAra       | BHS: {@mārjara@}, m. (cf. Pkt. maṃjara; Skt. mārjāra), {%cat%}: Mvy 〔4790〕 (so also Mironov, wi | 
+mEtrA         -> mEtra         | BHS: {@maitrā@} (rarely {@maitryā@}, q.v.; = Pali mettā; the Skt. equivalent maitrī is also ext | 
+praharzA      -> praharza      | BHS: {@praharṣā@}, f. (Skt. ˚ṣa, m.), or (v.l.) ˚ṣa-tā, {%(state of) joy%}: tayā ˚ṣa(ta)yā Suv  | 
+izwI          -> izwi          | BHS: {@iṣṭī, iṣṭi@} (Pali itthi, itthī), = {@iṣṭikā, istrī@}, qq.v., {%woman%}: LV 〔74.15〕 (vs) | 
+camu          -> camU          | BHS: {@camu, camū@}, ({@1@}) as in Skt., {%host, army%}, but with masc. ending (otherwise only  | 
+uluka         -> ulUka         | BHS: {@Uluka@}, v.l. for {@Huluka@}, q.v. | 
+sUmati        -> sumati        | BHS: {@Sūmati@}, m.c. for {@Sumati@} (1), q.v. | 
+virupAkza     -> virUpAkza     | BHS: {@Virupākṣa@}, m.c. for {@Virūp˚@}, q.v. | 
+Asaya         -> ASaya         | BHS: ? {@āsaya@}, nt., in Mv 〔iii.400.3〕 hitvā ālayāni (see {@ālaya@}) āsayāni (v.l. āsanāni);  | 
+syAma         -> SyAma         | BHS: {@Syāma(ka)@}, see {@Śyāma(ka)@}. | 
+kAsi          -> kASi          | BHS: {@kāsi@}, etc., aor. of kṛ, q.v. in Chap. 43. | 
+sUDana        -> sUdana        | BHS: {@Sūdhana@}, see {@Sudhana@}. | 
+koravya       -> kOravya       | BHS: {@Koravya@}, see {@Kaur˚@}. | 
+bfNga         -> BfNga         | BHS: {@bṛṅga@}, var. for {@pṛṅga@}, q.v. | 
+Kawuka        -> kawuka        | BHS: {@khaṭuka@}, oftener {@khaṭuṅka@} (also abstr. {@˚ka-tā@}), in KP {@khaḍuṅka@}, adj. or su | 
+PalaKa        -> Palaka        | BHS: {@phalakha@}, see {@phalaha@}. | 
+GAwin         -> GAtin         | BHS: {@ghāṭin@}, adj. (= ghātin, cf. 〔§ 2.41〕), {%destroying%}: jagakleśa-ghāṭī Dbh.g. 〔41(67). | 
+Akampya       -> akampya       | BHS: {@Ākampya@} Mvy 〔739〕, see {@Akampya@}. | 
+anAgArikA     -> anagArikA     | BHS: {@anāgārikā@} = {@anagārikā@}, q.v. | 
+kAwaka        -> kawaka        | BHS: {@-kāṭaka@}, nt., in pātra-kāṭakam Mvy 〔8952〕, {%ring%} or which the almsbowl is fastened, | 
+maRqavya      -> mARqavya      | BHS: {@Maṇḍavya@}, see {@Māṇḍavya@}. | 
+praBakara     -> praBAkara     | BHS: {@prabhakara@}, see {@prabhaṃkara@}. | 
+prasAdika     -> prAsAdika     | BHS: {@prasādika@}, ({@1@}) adj. = {@prāsādika@} (1), q.v.: so mss. at Mv 〔i.3.4〕, applied to a | 
+rutA          -> ruta          | BHS: {@rutā@} = {@ruta@}, {%voice, speech%}: in LV 〔286.20—21〕 (prose) read, ekarutā-(Lefm. ˚tā | 
+udAnta        -> udanta        | BHS: [{@Udānta-@}, in proper names, see {@Udātta-@}.] | 
+utkArika      -> utkArikA      | BHS: {@utkārika@}, m., {%the expression evam%}: Mvy 〔7618〕 = Tib. de bzhin no zhes bya ba (Chin | 
+avalambA      -> avalamba      | BHS: {@Avalambā@}, see {@Olambā@}. | 
+caturASIti    -> caturaSIti    | BHS: {@caturāśīti@} (= Pali ˚sīti, AMg. caurāsīiṃ, Pischel 〔446〕; see 〔§ 19.35〕), {%eighty-four | 
+jAnatA        -> janatA        | BHS: [{@jānatā@} LV 〔264.1〕 (prose), na me paścimā ˚tānukampitā syāt, read janatā, {%people%},  | 
+nAlada        -> nalada        | BHS: {@Nālada@}, ({@1@}) v.l. in Mv 〔ii.43.2〕 for Nārada (3), q.v., referring to {@Nālaka@}; pr | 
+prAkawa       -> prakawa       | BHS: {@prākaṭa@}, adj. (= Pali pākaṭa, ˚ta; semi-MIndic for Skt. prākṛta, cf. next), {%vulgar,  | 
+ukara         -> ukAra         | BHS: ? {@ukara-@} (v.l. udakara-, utkara-; cf. {@ugra-lipi@}), in Mv 〔i.135.6〕 (prose) ukara-ma | 
+vicarcika     -> vicarcikA     | BHS: {@vicarcika@}, adj. (cf. Skt. ˚kā, {%mange%}), {%mangy%}: (na … kaṇḍūlo vā kacchulo vā) ˚k | 
+vilambA       -> vilamba       | BHS: {@Vilambā@}, ({@1@}) n. of a rākṣasī: SP 〔400.4〕 (Burnouf [Page498-b] Pralambā, citing a v | 
+pARqarA       -> pARqara       | BHS: {@Pāṇḍarā@} (in Dharmas 〔4〕 text Pāṇḍurā, v.l. ˚arā which prob. read), n. of a Buddhist go | 
+nAlIkera      -> nAlikera      | BHS: {@nālīkera@}, nt. (cf. {@nāḍīkerī@}, and Skt. nālikera, nārīkela), {%cocoanut, the fruit o | 
+aNgulIkA      -> aNgulikA      | BHS: {@aṅgulīkā@}, see {@aṅgulikā@} (2). | 
+turiya        -> turIya        | BHS: {@turiya@} (nt. or m.; = Pali id., MIndic for Skt. tūrya), {%musical instrument%}; common  | 
+duzya         -> dUzya         | BHS: 1 {@duṣya@}, adj., {%evil%}, = Skt. dūṣya, which Senartʼs note would read by em.: ye 'duṣy | 
+viruQaka      -> virUQaka      | BHS: {@Viruḍhaka@}, m.c. for {@Virūḍhaka@}, q.v. | 
+saraBaNga     -> SaraBaNga     | BHS: {@Sarabhaṅga@}, see {@Śara˚@}. The colophon Mv 〔iii.375.12〕 reads Sarabhaṃgajātakam in Sen | 
+sAntika       -> SAntika       | BHS: {@sāntika@}, in adv. forms ˚ke and ˚kāt (= Pali santike, ˚kā; see {@santika, ˚ke@}, of whi | 
+SunaKa        -> Sunaka        | BHS: {@śunakha@}, see {@su˚@}. | 
+hUma          -> hURa          | BHS: {@hūma@}, nt. (Mironov ḍūma; v.l. both edd. hama), a high number: Mvy 〔7711〕 = Tib. zam zi | 
+praRada       -> pramada       | BHS: [{@praṇada@}, SP 〔51.13〕, read {@tuṇava@}, q.v.] | 
+mAnAtva       -> nAnAtva       | BHS: [{@mānātva@}, see {@mānatva@}.] | 
+osa           -> oza           | BHS: {@osa@}, see {@avaśya@}. | 
+AvarjanA      -> Avarjana      | BHS: {@āvarjanā@} = {@āvarjana@}, {%winning to oneself, the making kindly disposed%}: in LV 〔24 | 
+alindA        -> alinda        | BHS: {@alindā@}, ({@1@}) = prec. (v.l. ˚ṇḍā): mahatī ca alindā bhaktasya (q.v.) Mv 〔iii.15.9〕;  | 
+dardarA       -> dardara       | BHS: [{@dardarā@}, see {@dardurā@}.] | 
+mahArAjA      -> mahArAja      | BHS: ? {@mahārājā@}, adj. or subst. f., used (if text is right) with fem. entities: LV 〔391.4〕  | 
+viBUzitA      -> viBUzita      | BHS: {@vibhūṣitā@}, ({@1@}) (? to Skt. vibhūṣin plus -tā), {%magnificence, splendor, ornate con | 
+IzADara       -> IzADAra       | BHS: {@Īṣādhara@}, m. (= Pali Īsadhara), n. of a mountain (one of the seven ranges surrounding  | 
+Apaskara      -> apaskara      | BHS: ? {@āpas-kara@}, m., {%action of water%}: Mv 〔ii.366.13〕 (na tasya caurā rājāno dhanaskand | 
+dvyahika      -> dvyAhika      | BHS: {@dvyahika@}, see {@dvīhika@}. | 
+jijYAsanA     -> jijYAsana     | BHS: {@jijñāsanā@} (cf. Skt. ˚na, nt., and jijñāsā, f.; perh. a blend of these two), {%test, tr | 
+jugupsanA     -> jugupsana     | BHS: {@jugupsanā, ˚na@} (?nt.), {@˚na-tā@} (Skt. Lex. ˚na, nt.; Pali jigucchana, nt.), {%loathi | 
+pArSvakA      -> pArSvaka      | BHS: {@pārśvakā@} (see s.vv. {@pārśukā, pārśvika@}), {%rib%}: Śikṣ 〔228.13〕 (ed. note suggests  | 
+pAraloka      -> paraloka      | BHS: ? {@pāraloka@} (m., = AMg. pāraloga, acc. to Ratnach.; Skt. paraloka), {%the other world%} | 
+parApata      -> pArApata      | BHS: {@parāpata@}, m. (vv.ll. pārāp˚, pārāvata, both Skt., see on the first Schmidt, Nachträge; | 
+vinivaraRa    -> vinivAraRa    | BHS: {@vi-nivaraṇa@}, see {@vi-nī˚@}. | 
+vImati        -> vimati        | BHS: {@vīmati@}, m.c. for {@vimati@}, q.v. | 
+udgIraRa      -> udgiraRa      | BHS: {@udgīraṇa@} (?) see {@udguraṇa@}. | 
+kaRqarika     -> kaRqarIka     | BHS: [{@kaṇḍarika@}, v.l. for {@kāṇḍ˚@}, q.v.] | 
+kuSInagarI    -> kuSinagarI    | BHS: {@Kuśīnagarī@} = {@Kuśi˚@}, q.v. | 
+akUhaka       -> akuhaka       | BHS: {@a-kūhaka@}, see {@kūhaka@}. | 
+nirupaka      -> nirUpaka      | BHS: {@nirupaka@}, see {@upaka@}. | 
+kOSIdya       -> kOsIdya       | BHS: {@kauśīdya@} = {@kaus˚@} q.v. | 
+pariSrAvaRa   -> parisrAvaRa   | BHS: {@pariśrāvaṇa@}, see {@parisr˚@}. | 
+suRqika       -> SuRqika       | BHS: {@suṇḍika@}, see {@śu˚@}. | 
+tremAsika     -> trEmAsika     | BHS: {@tremāsika@}, adj. (= Skt. trai˚; cf. {@traimāsa@} and {@dvemāsika@}), (suitable) {%for t | 
+aKalita       -> akalita       | BHS: {@a-khalita@}, see 2 {@khalita@}. | 
+vaRIpaka      -> vanIpaka      | BHS: {@vaṇīpaka@}, (only Mv 〔ii.100.4〕; 〔182.4, 9〕; also text 〔iii.254.18〕 but without ms. supp | 
+apranihita    -> apraRihita    | BHS: {@a-pranihita@} = {@a-praṇihita@}, q.v. | 
+pariRizpanna  -> parinizpanna  | BHS: {@pariṇiṣpanna@}, see {@pariniṣ˚@}. | 
+raRati        -> ramati        | BHS: {@raṇati@} (unrecorded in this mg.), acc. to Bendall and Rouse {%makes contact with%} (loc | 
+mazwa         -> nazwa         | BHS: {@maṣṭa(ka)@}, see {@māṣṭa(ka)@}. | 
+Ajanya        -> ajanya        | BHS: {@ājanya@}, also {@ājaniya, ājānya, ājāniya, ājāneya@}, adj. (= Pali ājañña, ājāniya, ājān | 
+AGAtin        -> aGAtin        | BHS: {@āghātin@}, adj.-subst. (from āghāta {%slaying%} with -in), {%murderous%} (person), {%mur | 
+dunduBikA     -> dunduBika     | BHS: {@-dundubhikā@}, see {@mukha-du˚@}, | 
+harzya        -> harzyA        | BHS: [{@harṣya@}, see {@saharṣya@}.] | 
+marja         -> mArja         | BHS: {@marj(j)a@}, if to be kept with Senart and mss., is hyper-Skt. for majja(n), {%marrow%}:  | 
+parikANkzin   -> pArikANkzin   | BHS: {@-parikāṅkṣin@}, adj., in a-pari˚, {%(not) desiring%}: Mv 〔i.134.3〕, see s.v. {@nirvṛti@} | 
+sPuwika       -> sPuwikA       | BHS: {@sphuṭika@}, adj. (read ˚ṭaka ?), = {@sphuṭa@}, {%full, filled%} (-ka perh. m.c.): te cās | 
+udArika       -> udarika       | BHS: {@udārika@}, adj. = {@audārika 2@} (if reading is correct), {%exalted, abundant%}: SP 〔164 | 
+citrikAra     -> citrIkAra     | BHS: {@citrikāra@}, see {@citrīkāra@}. | 
+Karjuraka     -> KarjUraka     | BHS: {@kharjuraka@}, nt. (Skt. Lex. kharjura; otherwise recorded only with ū), {%fruit of the d | 
+usIragiri     -> uSIragiri     | BHS: {@Usīragiri@} = {@Uśīra˚@}, q.v. | 
+koqa          -> Koqa          | BHS: {@koḍa@}, MIndic for kroḍa, {%breast%}: koḍa-sakkino SP 〔95.3〕 (vs), so both edd. and most | 
+Ko            -> ko            | BHS: {@kho@} = {@khu@} (Skt. khalu), q.v.; this, which is the Pali form, is rare in BHS: in vss | 
+vindusAra     -> bindusAra     | BHS: {@Vindusāra@}, see {@Bi˚@}. | 
+tAyaRa        -> tAyana        | BHS: {@tāyaṇa, ˚na@} (nt.; MIndic, = {@trāyaṇa@}, q.v.), (act of) {%saving%}: jaga-tāyanaṃ smar | 
+pracoqaka     -> pracodaka     | BHS: ? {@pracoḍaka@}, see {@praccopaka@}. | 
+stIna         -> stIma         | BHS: {@stīna@} (= Pali thīna; 〔§ 3.115〕) = {@styāna@}, q.v.: -middhaṃ, v.l. of Kashgar rec. for | 
+anantavikrAmin -> anantavikramin | BHS: {@Anantavikrāmin@}, v.l. ˚kramin, ˚krama, n. of a Bodhisattva: SP 〔3.7〕. | 
+kaSyapIya     -> kASyapIya     | BHS: {@Kaśyapīya@}, see s.v. {@Kāśyapīya@}. | 
+ratnamudra    -> ratnamudrA    | BHS: {@Rat(a)namudra@}, v.l. Rat(a)nasamudra, n. of a former Buddha: Mv 〔i.138.10〕. | 
+amrapAlI      -> AmrapAlI      | BHS: {@Amrapālī@}, see {@Āmra˚@}. | 
+boDipAkzika   -> boDipakzika   | BHS: {@bodhipākṣika@}, adj. (= Pali ˚pakkhika; cf. {@˚pakṣika, ˚pakṣya, ˚pakṣa@}) = {@bodhipakṣ | 
+dakziReya     -> dAkziReya     | BHS: {@dakṣiṇeya@}, adj. (= {@˚ṇīya@}; also {@dākṣ˚@}; closer to Pali dakkhiṇeyya, but in BHS n | 
+gfhAvAsa      -> gfhavAsa      | BHS: {@gṛhāvāsa@}, m. (= Pali gharāvāsa; cf. Skt. gṛha-vāsa), {%living at home, in the househol | 
+jalahara      -> jalahAra      | BHS: {@jalahara@}, {%ocean%}, see {@jaladhara@}. | 
+katIya        -> kAtIya        | BHS: {@katīya@}, adj. (from kati, with suffix īya, cf. dvitīya, tṛtīya, and tadīya etc.), {%amo | 
+nAganadI      -> naganadI      | BHS: {@nāga-nadī@}, {%‘river of nāgas (serpent-demons)’%}, epithet of the Nairañjanā, given to  | 
+pUrRika       -> pUrRikA       | BHS: {@Pūrṇika@} = {@Pūrṇamukha@} (2), q.v. | 
+paRqaravAsinI -> pARqaravAsinI | BHS: {@Paṇḍaravāsinī@}, see {@Pā˚@}. | 
+paYcavarzika  -> pAYcavarzika  | BHS: {@pañcavarṣika@} (so Divy 〔403.16, 27〕; 〔405.11〕; and Kalpanām., below), or (in all others | 
+pavara        -> pAvara        | BHS: {@pavara@} (= Pali id., MIndic for Skt. pravara), {%excellent%}: so if text is right, Dbh. | 
+pratiBARita   -> pratiBaRita   | BHS: {@pratibhāṇita@}, ppp., m.c. for ˚bhaṇita (to pratibhaṇ-, recorded in Skt. only in a singl | 
+sAtagiri      -> sAtAgiri      | BHS: {@Sātagiri@}, see {@Sātāgiri@}. | 
+sPAritra      -> sParitra      | BHS: {@sphāritra@}, nt. (Mironov sphar˚, v.l. spār˚, sic!), {%oar%}: Mvy 〔5894〕 = Tib. gru skya | 
+samasama      -> samAsama      | BHS: {@sama-sama@}, adj. (āmreḍita of sama; = Pali id.), {%quite equal%} or {%equivalent, exact | 
+sarvarUpasaMdarSanA -> sarvarUpasaMdarSana | BHS: {@Sarvarūpasaṃdarśanā@}, n. of the lokadhātu of the Buddha Meghadundubhisvararāja: SP 〔431 | 
+satAgiri      -> sAtAgiri      | BHS: [{@Satāgiri@}, see {@Sā˚@}.] | 
+stAra         -> stara         | BHS: ? {@-stāra@}, see {@phalaha-@}. | 
+supana        -> supAna        | BHS: {@supana@}, acc. to Senartʼs note for more usual {@supina@}, q.v., = Skt. svapna: (kāyo …) | 
+udGawitajYa   -> udGAwitajYa   | BHS: {@udghaṭita-jña@}, adj. or subst. m. (= Pali ugghaṭitaññu; see Wogihara, Lex. 〔19〕: ‘das G | 
+dAGa          -> daGa          | BHS: {@dāgha@}, m. (recorded only for Pkt. in Hem. 〔1.264〕, but cf. Skt. nidāgha), {%burning, c | 
+GAtyA         -> GAtya         | BHS: {@-ghātyā@}, see {@nala-gh˚@}. | 
+Sarita        -> SArita        | BHS: {@śarita@}, see {@sarita@} 3. | 
+ramin         -> rAmin         | BHS: [{@ramin@}, see {@sadāramin@}.] | 
+trElAwA       -> trElAwa       | BHS: {@trailāṭā@} (so text, also Mironov with v.l. ˚ṭāka; Kyōtō ed. Index with BR ˚ṭa; cf. prec | 
+SItiBAva      -> SItIBAva      | BHS: {@śīti-bhāva, -bhūta@}, see {@śītī˚@}. | 
+hirI          -> hiri          | BHS: {@Hirī@}, see {@Hrī@}. | 
+avikzaRa      -> avIkzaRa      | BHS: ({@avikṣaṇa@}, nt.; see s.v. {@abhibhakṣaṇa@}). | 
+ekotIBAva     -> ekotiBAva     | BHS: {@ekotī-bhāva, -bhūta@}, see {@ekoti˚@}. | 
+karmira       -> karmIra       | BHS: ? {@Karmira@}, v.l. for {@Kampila@}, q.v. | 
+pUrvi         -> pUrvI         | BHS: {@pūrvi@}, m.c. for {@pūrve@}, q.v. | 
+gUhati        -> guhati        | BHS: {@gūhati, gūhayati@} (perhaps connected with Skt. Gr. gumpha(ya)ti, Pali ogumpheti; see {@ | 
+meruwu        -> meruwU        | BHS: {@meruṭu@} (vv.ll. meruhu, merutū; but Mironov ˚ṭu, no v.l.), m. or f., a high number: Mvy | 
+puni          -> pUni          | BHS: {@puni@}, in LV 〔151.8〕 (vs) seemingly m.c. for *pune, certainly represents punar, {%but%} | 
+ASItakI       -> AsItakI       | BHS: {@āśītakī@}, or {@ās˚@}, also written aśītaka, aśīta, aśitaka, asita, the a-stems being pr | 
+SAtAgiri      -> sAtAgiri      | BHS: {@Śātāgiri@}, see {@Sātā˚@}. | 
+pAMSukrIqana  -> pAMsukrIqana  | BHS: {@pāṃśukrīḍana@}, m. adj. or subst. (in Skt. cited only as nt. n. act.; cf. next, and {@sa | 
+suveDa        -> suveda        | BHS: {@suvedha@}, adj., {%having a good aim, hitting the mark%}: Mv 〔iii.285.8〕 (vs); the corre | 
+rOruka        -> roruka        | BHS: {@Rauruka@} = {@Roruka@} (1), q.v. | 
+soratya       -> sOratya       | BHS: {@soratya@}, see {@sauratya@}. | 
+todeya        -> tOdeya        | BHS: {@Todeya@}, v.l. for {@Tau˚@}, q.v. | 
+mOra          -> mora          | BHS: {@maura@} = {@mora@}, q.v. | 
+EkAsanika     -> ekAsanika     | BHS: {@aikāsanika@}, Mvy 〔1132〕, = {@ekās˚@}, q.v. | 
+sAlamBa       -> sAlamba       | BHS: {@sālambha@}, m. (may be specialized use of {@sārambha@} = Pali id., which so far as I kno | 
+duHk          -> duHK          | BHS: {@duḥ-k-@}, see {@duṣ-k-@}. | 
+agAha         -> aGAha         | BHS: {@a-gāha@}, see {@gāha@}. | 
+vfsikA        -> bfsikA        | BHS: {@vṛsikā@}, see {@vṛṣ˚@}. | 
+jAneya        -> jAmeya        | BHS: [{@jāneya@}, in puruṣa-j˚, v.l. -jāna, Mv 〔ii.133.8〕 (prose), read puruṣājāneya; see s.v.  | 
+maNgusa       -> maNguza       | BHS: ? {@maṅgusa@}, see {@bhaṅgakula@}. | 
+vAnArasI      -> vARArasI      | BHS: {@Vānārasī@} (prob. intends Vāṇā˚ = the commoner, with Skt., Vārāṇasī), {%Benares%}: ˚syām | 
+aByAyata      -> avyAyata      | BHS: [{@abhyāyata@}, adj. (error for atyāyata, which is read in other texts), in Mv 〔ii.43.15〕  | 
+bAlavyaYjana  -> vAlavyaYjana  | BHS: {@bālavyañjana@}, see {@vāla˚@}. | 
+
+# ===== BUCKET 6  UNLOCATABLE -- not in the current BHS source (stale/different key) (0) =====
