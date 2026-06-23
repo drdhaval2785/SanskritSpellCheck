@@ -6,6 +6,20 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.30.0] - 2026-06-23
+
+### Added
+- **Orthographic-drift findings write-up — the publishable capstone.** New
+  [docs/ORTHO_DRIFT_FINDINGS.md](docs/ORTHO_DRIFT_FINDINGS.md) synthesises the completed 5-language
+  ortho-drift study (German, English, French, Latin, Russian) into one standalone, citable artifact
+  for a lexicography / DH audience: headline finding, method (transform-and-check), per-language
+  results with the data tables, the SCH-1928 control, caveats, and a reproducibility note. Every
+  figure verified against the committed `ortho_drift/*.tsv` / `*_drift_report.txt` data files before
+  writing. Documentation only — never edits `csl-orig`.
+  - **Headline:** drift magnitude = f(reform *type*) — legislated (Russian Kossovich 358/1k, German
+    PW 10.26/1k) ≫ convention (English WIL 0.57 → MW 0.01, French BUR 0.31) ≫ none (Latin BOP 0),
+    1–3 orders of magnitude between tiers.
+
 ## [1.29.0] - 2026-06-23
 
 ### Added
