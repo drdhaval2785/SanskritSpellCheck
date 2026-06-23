@@ -272,10 +272,17 @@ def confusion_weight(a, b, weights):
 
 
 def load_whitelist(path='nochange/nochange.txt'):
-    try:
-        return {w for w in _read_words(path) if w}
-    except OSError:
-        return set()
+    """Human-curated whitelist (nochange.txt) unioned with the auto-generated
+    do_not_file_suppress.txt sibling (the per-dict documented-intentional
+    spellings from the body-grounded triage), so detectors never re-flag them.
+    The suppression file is optional; provenance stays in separate files."""
+    words = set()
+    for p in (path, os.path.join(os.path.dirname(path) or '.', 'do_not_file_suppress.txt')):
+        try:
+            words.update(w for w in _read_words(p) if w and not w.startswith('#'))
+        except OSError:
+            pass
+    return words
 
 
 def parse_sanhw1(path='sanhw1.txt'):

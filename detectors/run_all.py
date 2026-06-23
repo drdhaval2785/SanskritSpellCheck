@@ -68,6 +68,11 @@ def ensure_outputs(sanhw1, rerun):
 
 def aggregate():
     cands = {}
+    # Whitelist = nochange.txt ∪ do_not_file_suppress.txt (the per-dict
+    # documented-intentional spellings from the body-grounded triage). The
+    # correctors already self-suppress, but the flaggers (phonotactic/charset)
+    # do not -- filter here so no suppressed headword survives in any detector.
+    whitelist = u.load_whitelist(os.path.join(HERE, '..', 'nochange', 'nochange.txt'))
 
     def get(hw):
         if hw not in cands:
@@ -86,6 +91,8 @@ def aggregate():
                 if len(parts) < 3:
                     continue
                 code, wrong, right = parts[0], parts[1], parts[2]
+                if wrong in whitelist:
+                    continue
                 c = get(wrong)
                 c.detectors.add(name)
                 c.sugg_dets[right].add(name)
@@ -98,6 +105,8 @@ def aggregate():
                 d = line[line.rindex(':') + 1:]
                 mid = line[line.index(':') + 1:line.rindex(':')]
                 rcode, _, detail = mid.partition('=')
+                if x in whitelist:
+                    continue
                 c = get(x)
                 c.detectors.add(name)
                 c.reasons.append((name, rcode, detail))

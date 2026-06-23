@@ -6,6 +6,32 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.29.0] - 2026-06-23
+
+### Added
+- **Do-not-file suppression layer — the durable triage deliverable, wired into the detectors.**
+  The body-grounded triage emits, per dictionary, a `<DICT>_wrong_readings.txt` (the standing
+  do-not-file list of spellings the dictionary documents *on purpose* — `w.r.`/`v.l.` apparatus,
+  in-composition/sandhi forms, cross-references, grammatical/Vedic notes). New
+  [detectors/gen_do_not_file_suppress.py](detectors/gen_do_not_file_suppress.py) collects the
+  headword (left column) from all **18** triaged `*_wrong_readings.txt`, dedups, and writes
+  [nochange/do_not_file_suppress.txt](nochange/do_not_file_suppress.txt) (**1,726 unique** of
+  ~1,976 rows — the rest are cross-dict duplicates). Regenerate after triaging more dicts.
+
+### Changed
+- **`slp1util.load_whitelist()` now unions `nochange.txt` with the sibling
+  `do_not_file_suppress.txt`** (if present), so all four correctors
+  (`spell_correct`/`consensus`/`intra_dup`/`dict_vs_corpus`) self-suppress the documented-intentional
+  forms. Provenance stays separate from the human-curated `nochange.txt`.
+- **`run_all.py` aggregation filters the whitelist at the single choke point**, covering the
+  **flaggers** too (`phonotactic`/`charset` never consulted the whitelist — e.g. the charset-flagged
+  Vedic headword `arI|a` "not licked" leaked through). Unified candidates 15,377 → **15,323**.
+
+### Verified
+- `eval.py` false-positive check stays **0** for every corrector (whitelist grew 30,887 → 31,272).
+- 0 of the 1,726 suppressed headwords survive in `combined_candidates.txt`.
+- `do_not_file_suppress.txt` written UTF-8 **without BOM**. Documentation/tooling only — never edits `csl-orig`.
+
 ## [1.28.0] - 2026-06-17
 
 ### Added
