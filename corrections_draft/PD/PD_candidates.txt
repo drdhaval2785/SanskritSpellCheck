@@ -1,0 +1,1008 @@
+# PD tier-A correction candidates (unified engine) — score	wrong -> right	detectors	morph
+475	akzA -> akza	[consensus,dict_vs_corpus,intra_dup,spell_correct]	morph✓
+465	adarSanA -> adarSana	[consensus,dict_vs_corpus,intra_dup,spell_correct]	morph✓
+465	adfSyA -> adfSya	[consensus,dict_vs_corpus,intra_dup,spell_correct]	morph✓
+465	anANga -> anaNga	[consensus,dict_vs_corpus,intra_dup,spell_correct]	morph✓
+465	anaGA -> anaGa	[consensus,dict_vs_corpus,intra_dup,spell_correct]	morph✓
+465	anaNgA -> anaNga	[consensus,dict_vs_corpus,intra_dup,spell_correct]	morph✓
+465	aninditA -> anindita	[consensus,dict_vs_corpus,intra_dup,spell_correct]	morph✓
+465	antrA -> antra	[consensus,dict_vs_corpus,intra_dup,spell_correct]	morph✓
+465	antyA -> antya	[consensus,dict_vs_corpus,intra_dup,spell_correct]	morph✓
+465	anucAra -> anucara	[consensus,dict_vs_corpus,intra_dup,spell_correct]	morph✓
+462	atrI -> atri	[consensus,dict_vs_corpus,intra_dup,spell_correct]	morph✓
+458	adama -> aDama	[consensus,dict_vs_corpus,intra_dup,spell_correct]	morph✓
+457	agaqa -> agada	[consensus,dict_vs_corpus,intra_dup,spell_correct]	morph✓
+374	aDikA -> aDika	[consensus,intra_dup,spell_correct]	morph✓
+374	anilA -> anila	[consensus,intra_dup,spell_correct]	morph✓
+366	aGni -> agni	[consensus,intra_dup,spell_correct]	morph✓
+366	aRya -> anya	[consensus,intra_dup,spell_correct]	morph✓
+366	awi -> ati	[consensus,intra_dup,spell_correct]	morph✓
+365	aDipatya -> ADipatya	[consensus,dict_vs_corpus,spell_correct]	morph✓
+365	anDAka -> anDaka	[consensus,dict_vs_corpus,intra_dup]	morph✓
+365	atiTya -> AtiTya	[consensus,dict_vs_corpus,spell_correct]	morph✓
+364	aDikAraRa -> aDikaraRa	[consensus,intra_dup,spell_correct]	morph✓
+364	aDyakzA -> aDyakza	[consensus,intra_dup,spell_correct]	morph✓
+364	aYjAna -> aYjana	[consensus,intra_dup,spell_correct]	morph✓
+364	acAla -> acala	[consensus,intra_dup,spell_correct]	morph✓
+364	acyutA -> acyuta	[consensus,intra_dup,spell_correct]	morph✓
+364	adButA -> adButa	[consensus,intra_dup,spell_correct]	morph✓
+364	agrAtas -> agratas	[consensus,intra_dup,spell_correct]	morph✓
+364	anATA -> anATa	[consensus,intra_dup,spell_correct]	morph✓
+364	anAryA -> anArya	[consensus,intra_dup,spell_correct]	morph✓
+364	anDA -> anDa	[consensus,intra_dup,spell_correct]	morph✓
+364	anDakA -> anDaka	[consensus,intra_dup,spell_correct]	morph✓
+364	anantAra -> anantara	[consensus,intra_dup,spell_correct]	morph✓
+364	anantarA -> anantara	[consensus,intra_dup,spell_correct]	morph✓
+364	antakA -> antaka	[consensus,intra_dup,spell_correct]	morph✓
+364	antarikzA -> antarikza	[consensus,intra_dup,spell_correct]	morph✓
+364	anugrAha -> anugraha	[consensus,intra_dup,spell_correct]	morph✓
+364	anurAgA -> anurAga	[consensus,intra_dup,spell_correct]	morph✓
+364	anurUpA -> anurUpa	[consensus,intra_dup,spell_correct]	morph✓
+364	anuttamA -> anuttama	[consensus,intra_dup,spell_correct]	morph✓
+364	anuttarA -> anuttara	[consensus,intra_dup,spell_correct]	morph✓
+364	anuvAsanA -> anuvAsana	[consensus,intra_dup,spell_correct]	morph✓
+364	anvayA -> anvaya	[consensus,intra_dup,spell_correct]	morph✓
+364	anyatarA -> anyatara	[consensus,intra_dup,spell_correct]	morph✓
+364	atandritA -> atandrita	[consensus,intra_dup,spell_correct]	morph✓
+364	atiSAya -> atiSaya	[consensus,intra_dup,spell_correct]	morph✓
+364	atimAtrA -> atimAtra	[consensus,intra_dup,spell_correct]	morph✓
+364	atulA -> atula	[consensus,intra_dup,spell_correct]	morph✓
+362	aYjalI -> aYjali	[consensus,dict_vs_corpus,intra_dup]	morph✓
+361	aRIman -> aRiman	[consensus,intra_dup,spell_correct]	morph✓
+361	aditI -> aditi	[consensus,intra_dup,spell_correct]	morph✓
+361	ajIna -> ajina	[consensus,intra_dup,spell_correct]	morph✓
+361	anika -> anIka	[consensus,intra_dup,spell_correct]	morph✓
+360	agrA -> agra	[consensus,dict_vs_corpus,intra_dup]	
+358	anUja -> anuja	[consensus,intra_dup,spell_correct]	morph✓
+358	anUttara -> anuttara	[consensus,intra_dup,spell_correct]	morph✓
+358	anUvft -> anuvft	[consensus,intra_dup,spell_correct]	morph✓
+358	anuSAra -> anusAra	[consensus,intra_dup,spell_correct]	morph✓
+357	andas -> anDas	[consensus,intra_dup,spell_correct]	morph✓
+357	anuzwA -> anuzWA	[consensus,intra_dup,spell_correct]	morph✓
+356	aRAdi -> anAdi	[consensus,intra_dup,spell_correct]	morph✓
+356	aRanta -> ananta	[consensus,intra_dup,spell_correct]	morph✓
+356	aRarTa -> anarTa	[consensus,intra_dup,spell_correct]	morph✓
+356	aRuja -> anuja	[consensus,intra_dup,spell_correct]	morph✓
+356	aRurUpa -> anurUpa	[consensus,intra_dup,spell_correct]	morph✓
+356	aRusAra -> anusAra	[consensus,intra_dup,spell_correct]	morph✓
+356	akzohiRI -> akzOhiRI	[consensus,intra_dup,spell_correct]	morph✓
+356	anEka -> aneka	[consensus,intra_dup,spell_correct]	morph✓
+356	anaga -> anaGa	[consensus,intra_dup,spell_correct]	morph✓
+356	anarta -> anarTa	[consensus,intra_dup,spell_correct]	morph✓
+356	anunA -> anumA	[consensus,intra_dup,spell_correct]	morph✓
+356	atIBa -> atIva	[consensus,intra_dup,spell_correct]	morph✓
+355	ajaganDa -> ajaganDA	[consensus,intra_dup,spell_correct]	morph✓
+355	akzamAla -> akzamAlA	[consensus,intra_dup,spell_correct]	morph✓
+355	anAvara -> anavara	[consensus,intra_dup,spell_correct]	morph✓
+355	anavamA -> anavama	[consensus,intra_dup,spell_correct]	morph✓
+355	anayA -> anaya	[consensus,intra_dup,spell_correct]	morph✓
+355	anayaka -> anAyaka	[consensus,intra_dup,spell_correct]	morph✓
+355	anuSAsanA -> anuSAsana	[consensus,intra_dup,spell_correct]	morph✓
+355	anuSravika -> AnuSravika	[consensus,intra_dup,spell_correct]	morph✓
+355	anulomika -> Anulomika	[consensus,intra_dup,spell_correct]	morph✓
+355	anupAlanA -> anupAlana	[consensus,intra_dup,spell_correct]	morph✓
+355	anuvartanA -> anuvartana	[consensus,intra_dup,spell_correct]	morph✓
+355	anuyAtrA -> anuyAtra	[consensus,intra_dup,spell_correct]	morph✓
+355	apakarzaRA -> apakarzaRa	[consensus,intra_dup,spell_correct]	morph✓
+355	atitaram -> atitarAm	[consensus,intra_dup,spell_correct]	morph✓
+355	awwahAsA -> awwahAsa	[consensus,intra_dup,spell_correct]	morph✓
+354	aDISA -> aDISa	[consensus,intra_dup,spell_correct]	morph✓
+354	aDISvarA -> aDISvara	[consensus,intra_dup,spell_correct]	morph✓
+354	aDidevata -> aDidevatA	[consensus,intra_dup,spell_correct]	morph✓
+354	aDyApanA -> aDyApana	[consensus,intra_dup,spell_correct]	morph✓
+354	aDyarDA -> aDyarDa	[consensus,intra_dup,spell_correct]	morph✓
+354	aKaRqA -> aKaRqa	[consensus,intra_dup,spell_correct]	morph✓
+354	adAByA -> adABya	[consensus,intra_dup,spell_correct]	morph✓
+354	adDa -> adDA	[consensus,intra_dup,spell_correct]	morph✓
+354	adaRqA -> adaRqa	[consensus,intra_dup,spell_correct]	morph✓
+354	advitIyA -> advitIya	[consensus,intra_dup,spell_correct]	morph✓
+354	agamA -> agama	[consensus,intra_dup,spell_correct]	morph✓
+354	agnikuRqA -> agnikuRqa	[consensus,intra_dup,spell_correct]	morph✓
+354	agnimanTA -> agnimanTa	[consensus,intra_dup,spell_correct]	morph✓
+354	agrAhyA -> agrAhya	[consensus,intra_dup,spell_correct]	morph✓
+354	ajAna -> ajana	[consensus,intra_dup,spell_correct]	morph✓
+354	ajAvikA -> ajAvika	[consensus,intra_dup,spell_correct]	morph✓
+354	akalmazA -> akalmaza	[consensus,intra_dup,spell_correct]	morph✓
+354	akrUrA -> akrUra	[consensus,intra_dup,spell_correct]	morph✓
+354	akroDA -> akroDa	[consensus,intra_dup,spell_correct]	morph✓
+354	anADyAya -> anaDyAya	[consensus,intra_dup,spell_correct]	morph✓
+354	anAdiniDanA -> anAdiniDana	[consensus,intra_dup,spell_correct]	morph✓
+354	anAgamin -> anAgAmin	[consensus,intra_dup,spell_correct]	morph✓
+354	anAhatA -> anAhata	[consensus,intra_dup,spell_correct]	morph✓
+354	anAvApta -> anavApta	[consensus,intra_dup,spell_correct]	morph✓
+354	anDatAmisrA -> anDatAmisra	[consensus,intra_dup,spell_correct]	morph✓
+354	anaSanA -> anaSana	[consensus,intra_dup,spell_correct]	morph✓
+354	analpA -> analpa	[consensus,intra_dup,spell_correct]	morph✓
+354	anasUyakA -> anasUyaka	[consensus,intra_dup,spell_correct]	morph✓
+354	anavAra -> anavara	[consensus,intra_dup,spell_correct]	morph✓
+354	anfRA -> anfRa	[consensus,intra_dup,spell_correct]	morph✓
+354	antyajA -> antyaja	[consensus,intra_dup,spell_correct]	morph✓
+354	anuSaMsA -> anuSaMsa	[consensus,intra_dup,spell_correct]	morph✓
+354	anunAsikA -> anunAsika	[consensus,intra_dup,spell_correct]	morph✓
+354	anurasA -> anurasa	[consensus,intra_dup,spell_correct]	morph✓
+354	anuroDA -> anuroDa	[consensus,intra_dup,spell_correct]	morph✓
+354	anusAraRa -> anusaraRa	[consensus,intra_dup,spell_correct]	morph✓
+354	anusaMDa -> anusaMDA	[consensus,intra_dup,spell_correct]	morph✓
+354	anuvaMSA -> anuvaMSa	[consensus,intra_dup,spell_correct]	morph✓
+354	anuvindA -> anuvinda	[consensus,intra_dup,spell_correct]	morph✓
+354	anuvratA -> anuvrata	[consensus,intra_dup,spell_correct]	morph✓
+354	anvAsanA -> anvAsana	[consensus,intra_dup,spell_correct]	morph✓
+354	anvasana -> anvAsana	[consensus,intra_dup,spell_correct]	morph✓
+354	anyUnA -> anyUna	[consensus,intra_dup,spell_correct]	morph✓
+354	anyadIyA -> anyadIya	[consensus,intra_dup,spell_correct]	morph✓
+354	anyada -> anyadA	[consensus,intra_dup,spell_correct]	morph✓
+354	atAla -> atala	[consensus,intra_dup,spell_correct]	morph✓
+354	atikrAma -> atikrama	[consensus,intra_dup,spell_correct]	morph✓
+354	atikrAmaRa -> atikramaRa	[consensus,intra_dup,spell_correct]	morph✓
+354	atikramaRA -> atikramaRa	[consensus,intra_dup,spell_correct]	morph✓
+354	atimuktakA -> atimuktaka	[consensus,intra_dup,spell_correct]	morph✓
+354	atitIkzRA -> atitIkzRa	[consensus,intra_dup,spell_correct]	morph✓
+354	ativfdDA -> ativfdDa	[consensus,intra_dup,spell_correct]	morph✓
+354	atyA -> atya	[consensus,intra_dup,spell_correct]	morph✓
+354	awwahasa -> awwahAsa	[consensus,intra_dup,spell_correct]	morph✓
+354	awwalaka -> awwAlaka	[consensus,intra_dup,spell_correct]	morph✓
+351	aMSumati -> aMSumatI	[consensus,intra_dup,spell_correct]	morph✓
+351	akzarapaNktI -> akzarapaNkti	[consensus,intra_dup,spell_correct]	morph✓
+351	anumatI -> anumati	[consensus,intra_dup,spell_correct]	morph✓
+351	atIdeSa -> atideSa	[consensus,intra_dup,spell_correct]	morph✓
+351	atIruc -> atiruc	[consensus,intra_dup,spell_correct]	morph✓
+350	aDarmA -> aDarma	[consensus,dict_vs_corpus,intra_dup]	
+350	ajirA -> ajira	[consensus,dict_vs_corpus,intra_dup]	
+350	anucarA -> anucara	[consensus,dict_vs_corpus,intra_dup]	
+349	anvAh -> anvah	[consensus,intra_dup,spell_correct]	
+348	aDyasana -> aDyaSana	[consensus,intra_dup,spell_correct]	morph✓
+348	akUla -> akula	[consensus,intra_dup,spell_correct]	morph✓
+348	anAdfzwa -> anADfzwa	[consensus,intra_dup,spell_correct]	morph✓
+348	anAdfzwi -> anADfzwi	[consensus,intra_dup,spell_correct]	morph✓
+348	anUcita -> anucita	[consensus,intra_dup,spell_correct]	morph✓
+348	anUkAra -> anukAra	[consensus,intra_dup,spell_correct]	morph✓
+348	anUpama -> anupama	[consensus,intra_dup,spell_correct]	morph✓
+348	anUvAka -> anuvAka	[consensus,intra_dup,spell_correct]	morph✓
+348	anUvAkyA -> anuvAkyA	[consensus,intra_dup,spell_correct]	morph✓
+347	aDAtf -> adAtf	[consensus,intra_dup,spell_correct]	morph✓
+347	akaRqita -> aKaRqita	[consensus,intra_dup,spell_correct]	morph✓
+347	akzoWa -> akzowa	[consensus,intra_dup,spell_correct]	morph✓
+347	anekadA -> anekaDA	[consensus,intra_dup,spell_correct]	morph✓
+347	anugAnin -> anugAmin	[consensus,intra_dup,spell_correct]	morph✓
+347	anuveda -> anuveDa	[consensus,intra_dup,spell_correct]	morph✓
+347	anyaDA -> anyadA	[consensus,intra_dup,spell_correct]	morph✓
+346	aDirata -> aDiraTa	[consensus,intra_dup,spell_correct]	morph✓
+346	aGAra -> agAra	[consensus,intra_dup,spell_correct]	morph✓
+346	aRAdyanta -> anAdyanta	[consensus,intra_dup,spell_correct]	morph✓
+346	aRaDikAra -> anaDikAra	[consensus,intra_dup,spell_correct]	morph✓
+346	aRukalpa -> anukalpa	[consensus,intra_dup,spell_correct]	morph✓
+346	aRupraveSa -> anupraveSa	[consensus,intra_dup,spell_correct]	morph✓
+346	aRutpatti -> anutpatti	[consensus,intra_dup,spell_correct]	morph✓
+346	aRuvAda -> anuvAda	[consensus,intra_dup,spell_correct]	morph✓
+346	aRvarTa -> anvarTa	[consensus,intra_dup,spell_correct]	morph✓
+346	ajekapAd -> ajEkapAd	[consensus,intra_dup,spell_correct]	morph✓
+346	akaRqa -> aKaRqa	[consensus,intra_dup,spell_correct]	morph✓
+346	anAramba -> anAramBa	[consensus,intra_dup,spell_correct]	morph✓
+346	anIyas -> aRIyas	[consensus,intra_dup,spell_correct]	morph✓
+346	anirBiRRa -> anirviRRa	[consensus,intra_dup,spell_correct]	morph✓
+346	antarE -> antare	[consensus,intra_dup,spell_correct]	morph✓
+346	anubinda -> anuvinda	[consensus,intra_dup,spell_correct]	morph✓
+346	anugaRa -> anugama	[consensus,intra_dup,spell_correct]	morph✓
+346	anumAsika -> anunAsika	[consensus,intra_dup,spell_correct]	morph✓
+346	atirata -> atiraTa	[consensus,intra_dup,spell_correct]	morph✓
+346	awya -> atya	[consensus,intra_dup,spell_correct]	morph✓
+345	aDidAnta -> aDidanta	[consensus,intra_dup,spell_correct]	morph✓
+345	aGfRA -> aGfRa	[consensus,intra_dup,spell_correct]	morph✓
+345	akzasUtrA -> akzasUtra	[consensus,intra_dup,spell_correct]	morph✓
+345	anABiBUta -> anaBiBUta	[consensus,intra_dup,spell_correct]	morph✓
+345	anapAyA -> anapAya	[consensus,intra_dup,spell_correct]	morph✓
+345	anuvAha -> anuvaha	[consensus,intra_dup,spell_correct]	morph✓
+345	anvAyin -> anvayin	[consensus,intra_dup,spell_correct]	morph✓
+344	aDAnya -> aDanya	[consensus,intra_dup,spell_correct]	morph✓
+344	aDijihvA -> aDijihva	[consensus,intra_dup,spell_correct]	morph✓
+344	aDyADIna -> aDyaDIna	[consensus,intra_dup,spell_correct]	morph✓
+344	aMsaPalakA -> aMsaPalaka	[consensus,intra_dup,spell_correct]	morph✓
+344	acaru -> acAru	[consensus,intra_dup,spell_correct]	morph✓
+344	acezwA -> acezwa	[consensus,intra_dup,spell_correct]	morph✓
+344	adayA -> adaya	[consensus,intra_dup,spell_correct]	morph✓
+344	agUQaganDA -> agUQaganDa	[consensus,intra_dup,spell_correct]	morph✓
+344	agnimuKA -> agnimuKa	[consensus,intra_dup,spell_correct]	morph✓
+344	agnipraBa -> agnipraBA	[consensus,intra_dup,spell_correct]	morph✓
+344	agnivallaBA -> agnivallaBa	[consensus,intra_dup,spell_correct]	morph✓
+344	agragaRyA -> agragaRya	[consensus,intra_dup,spell_correct]	morph✓
+344	ajApa -> ajapa	[consensus,intra_dup,spell_correct]	morph✓
+344	ajArya -> ajarya	[consensus,intra_dup,spell_correct]	morph✓
+344	akA -> aka	[consensus,intra_dup,spell_correct]	morph✓
+344	akalaNkA -> akalaNka	[consensus,intra_dup,spell_correct]	morph✓
+344	akfzwapacyA -> akfzwapacya	[consensus,intra_dup,spell_correct]	morph✓
+344	akzAvapa -> akzAvApa	[consensus,intra_dup,spell_correct]	morph✓
+344	anADizWita -> anaDizWita	[consensus,intra_dup,spell_correct]	morph✓
+344	anAdeyA -> anAdeya	[consensus,intra_dup,spell_correct]	morph✓
+344	anAgastva -> anAgAstva	[consensus,intra_dup,spell_correct]	morph✓
+344	anAkza -> anakza	[consensus,intra_dup,spell_correct]	morph✓
+344	anAparADin -> anaparADin	[consensus,intra_dup,spell_correct]	morph✓
+344	anAyatA -> anAyata	[consensus,intra_dup,spell_correct]	morph✓
+344	anDakAritA -> anDakArita	[consensus,intra_dup,spell_correct]	morph✓
+344	anaMSA -> anaMSa	[consensus,intra_dup,spell_correct]	morph✓
+344	anaYjanA -> anaYjana	[consensus,intra_dup,spell_correct]	morph✓
+344	analapraBa -> analapraBA	[consensus,intra_dup,spell_correct]	morph✓
+344	anantarAja -> anantaraja	[consensus,intra_dup,spell_correct]	morph✓
+344	anantyA -> anantya	[consensus,intra_dup,spell_correct]	morph✓
+344	ananuyAjA -> ananuyAja	[consensus,intra_dup,spell_correct]	morph✓
+344	anapAkriyA -> anapakriyA	[consensus,intra_dup,spell_correct]	morph✓
+344	animezA -> animeza	[consensus,intra_dup,spell_correct]	morph✓
+344	antaScAra -> antaScara	[consensus,intra_dup,spell_correct]	morph✓
+344	antaraBakta -> antarABakta	[consensus,intra_dup,spell_correct]	morph✓
+344	antaragAra -> antarAgAra	[consensus,intra_dup,spell_correct]	morph✓
+344	anuSrAva -> anuSrava	[consensus,intra_dup,spell_correct]	morph✓
+344	anugrA -> anugra	[consensus,intra_dup,spell_correct]	morph✓
+344	anujiGfkza -> anujiGfkzA	[consensus,intra_dup,spell_correct]	morph✓
+344	anukampanA -> anukampana	[consensus,intra_dup,spell_correct]	morph✓
+344	anunAdA -> anunAda	[consensus,intra_dup,spell_correct]	morph✓
+344	anupAlaByamAna -> anupalaByamAna	[consensus,intra_dup,spell_correct]	morph✓
+344	anupalamBanA -> anupalamBana	[consensus,intra_dup,spell_correct]	morph✓
+344	anutpadya -> anutpAdya	[consensus,intra_dup,spell_correct]	morph✓
+344	anuvakrA -> anuvakra	[consensus,intra_dup,spell_correct]	morph✓
+344	anvADeyA -> anvADeya	[consensus,intra_dup,spell_correct]	morph✓
+344	anyaTABava -> anyaTABAva	[consensus,intra_dup,spell_correct]	morph✓
+344	anyadfS -> anyAdfS	[consensus,intra_dup,spell_correct]	morph✓
+344	anyapUrva -> anyapUrvA	[consensus,intra_dup,spell_correct]	morph✓
+344	anyapuzwA -> anyapuzwa	[consensus,intra_dup,spell_correct]	morph✓
+344	apagamanA -> apagamana	[consensus,intra_dup,spell_correct]	morph✓
+344	apakfzwA -> apakfzwa	[consensus,intra_dup,spell_correct]	morph✓
+344	atiduHKitA -> atiduHKita	[consensus,intra_dup,spell_correct]	morph✓
+344	atimoda -> atimodA	[consensus,intra_dup,spell_correct]	morph✓
+344	atimuktA -> atimukta	[consensus,intra_dup,spell_correct]	morph✓
+344	atisaMvatsara -> atisAMvatsara	[consensus,intra_dup,spell_correct]	morph✓
+344	ativelA -> ativela	[consensus,intra_dup,spell_correct]	morph✓
+344	atizWa -> atizWA	[consensus,intra_dup,spell_correct]	morph✓
+344	atrapA -> atrapa	[consensus,intra_dup,spell_correct]	morph✓
+344	atyahita -> atyAhita	[consensus,intra_dup,spell_correct]	morph✓
+344	atyantaBAva -> atyantABAva	[consensus,intra_dup,spell_correct]	morph✓
+344	awwAwwahAsA -> awwAwwahAsa	[consensus,intra_dup,spell_correct]	morph✓
+343	anuSf -> anusf	[consensus,intra_dup,spell_correct]	
+342	aRimARqavya -> aRImARqavya	[consensus,intra_dup,spell_correct]	morph✓
+342	aRita -> amita	[consensus,dict_vs_corpus,spell_correct]	
+342	ajavITi -> ajavITI	[consensus,intra_dup,spell_correct]	morph✓
+341	aDIkfta -> aDikfta	[consensus,intra_dup,spell_correct]	morph✓
+341	aDirohiRi -> aDirohiRI	[consensus,intra_dup,spell_correct]	morph✓
+341	aDiyAna -> aDIyAna	[consensus,intra_dup,spell_correct]	morph✓
+341	acIram -> aciram	[consensus,intra_dup,spell_correct]	morph✓
+341	agnIBU -> agniBU	[consensus,intra_dup,spell_correct]	morph✓
+341	anIna -> anina	[consensus,intra_dup,spell_correct]	morph✓
+341	ananvIta -> ananvita	[consensus,intra_dup,spell_correct]	morph✓
+341	antarDI -> antarDi	[consensus,intra_dup,spell_correct]	morph✓
+341	antarIkzya -> antarikzya	[consensus,intra_dup,spell_correct]	morph✓
+341	anukramaRi -> anukramaRI	[consensus,intra_dup,spell_correct]	morph✓
+341	anusamI -> anusami	[consensus,intra_dup,spell_correct]	morph✓
+341	atISeza -> atiSeza	[consensus,intra_dup,spell_correct]	morph✓
+341	atijagati -> atijagatI	[consensus,intra_dup,spell_correct]	morph✓
+339	akfzRA -> akfzRa	[consensus,intra_dup,spell_correct]	
+339	akzU -> akzu	[consensus,intra_dup,spell_correct]	morph✓
+339	anDU -> anDu	[consensus,intra_dup,spell_correct]	morph✓
+339	anuSItam -> anusItam	[consensus,intra_dup,spell_correct]	morph✓
+339	anulomapratilomA -> anulomapratiloma	[consensus,intra_dup,spell_correct]	
+339	ativegA -> ativega	[consensus,intra_dup,spell_correct]	
+338	aNkUrita -> aNkurita	[consensus,intra_dup,spell_correct]	morph✓
+338	adASa -> adAsa	[consensus,intra_dup,spell_correct]	morph✓
+338	anUpeta -> anupeta	[consensus,intra_dup,spell_correct]	morph✓
+338	anUroha -> anuroha	[consensus,intra_dup,spell_correct]	morph✓
+338	antarAMSa -> antarAMsa	[consensus,intra_dup,spell_correct]	morph✓
+338	atyasana -> atyaSana	[consensus,intra_dup,spell_correct]	morph✓
+337	adInatva -> aDInatva	[consensus,intra_dup,spell_correct]	morph✓
+337	agnidAna -> agniDAna	[consensus,intra_dup,spell_correct]	morph✓
+337	anADeya -> anAdeya	[consensus,intra_dup,spell_correct]	morph✓
+337	anAlamBa -> anAlamba	[consensus,intra_dup,spell_correct]	morph✓
+337	anavadAna -> anavaDAna	[consensus,intra_dup,spell_correct]	morph✓
+337	aniDAna -> anidAna	[consensus,intra_dup,spell_correct]	morph✓
+337	anurodana -> anuroDana	[consensus,intra_dup,spell_correct]	morph✓
+337	anvAdi -> anvADi	[consensus,intra_dup,spell_correct]	morph✓
+337	anyatABAva -> anyaTABAva	[consensus,intra_dup,spell_correct]	morph✓
+336	aDigaRana -> aDigamana	[consensus,intra_dup,spell_correct]	morph✓
+336	aGaja -> agaja	[consensus,intra_dup,spell_correct]	morph✓
+336	aGu -> agu	[consensus,intra_dup,spell_correct]	morph✓
+336	aKa -> aka	[consensus,intra_dup,spell_correct]	morph✓
+336	aNgasaNGa -> aNgasaNga	[consensus,intra_dup,spell_correct]	morph✓
+336	aNkaRa -> aNkana	[consensus,intra_dup,spell_correct]	morph✓
+336	aRaMSa -> anaMSa	[consensus,intra_dup,spell_correct]	morph✓
+336	aRudeSa -> anudeSa	[consensus,intra_dup,spell_correct]	morph✓
+336	aRumArga -> anumArga	[consensus,intra_dup,spell_correct]	morph✓
+336	aRurUpatas -> anurUpatas	[consensus,intra_dup,spell_correct]	morph✓
+336	aRuvacana -> anuvacana	[consensus,intra_dup,spell_correct]	morph✓
+336	aTanu -> atanu	[consensus,intra_dup,spell_correct]	morph✓
+336	agrasTa -> agrasta	[consensus,intra_dup,spell_correct]	morph✓
+336	agreya -> aGreya	[consensus,intra_dup,spell_correct]	morph✓
+336	akzipaT -> akzipat	[consensus,intra_dup,spell_correct]	morph✓
+336	akzoda -> akzoqa	[consensus,intra_dup,spell_correct]	morph✓
+336	anEkAntavAda -> anekAntavAda	[consensus,intra_dup,spell_correct]	morph✓
+336	anEkAntavAdin -> anekAntavAdin	[consensus,intra_dup,spell_correct]	morph✓
+336	antaryARa -> antaryAma	[consensus,intra_dup,spell_correct]	morph✓
+336	anupari -> anuparI	[consensus,intra_dup,spell_correct]	
+336	anuvyan -> anuvyam	[consensus,intra_dup,spell_correct]	morph✓
+336	apakFt -> apakft	[consensus,intra_dup,spell_correct]	morph✓
+336	atiSaNKA -> atiSaNkA	[consensus,intra_dup,spell_correct]	morph✓
+336	atiSita -> atiSIta	[consensus,intra_dup,spell_correct]	
+336	atyaDvam -> atyaDvan	[consensus,intra_dup,spell_correct]	morph✓
+335	aNgirA -> aNgira	[consensus,intra_dup,spell_correct]	morph✓
+335	ajitabala -> ajitabalA	[consensus,intra_dup,spell_correct]	morph✓
+335	anAkara -> anAkAra	[consensus,intra_dup,spell_correct]	morph✓
+335	anapasAra -> anapasara	[consensus,intra_dup,spell_correct]	morph✓
+334	aDyaRqa -> aDyaRqA	[consensus,intra_dup,spell_correct]	morph✓
+334	aGahara -> aGahAra	[consensus,intra_dup,spell_correct]	morph✓
+334	aGozA -> aGoza	[consensus,intra_dup,spell_correct]	morph✓
+334	aKaRqanA -> aKaRqana	[consensus,intra_dup,spell_correct]	morph✓
+334	aMSaprakalpana -> aMSaprakalpanA	[consensus,intra_dup,spell_correct]	morph✓
+334	aYjanavatI -> aYjanAvatI	[consensus,intra_dup,spell_correct]	morph✓
+334	adaridrA -> adaridra	[consensus,intra_dup,spell_correct]	morph✓
+334	adrikIla -> adrikIlA	[consensus,intra_dup,spell_correct]	morph✓
+334	aduzwAtva -> aduzwatva	[consensus,intra_dup,spell_correct]	morph✓
+334	agamyagamanIya -> agamyAgamanIya	[consensus,intra_dup,spell_correct]	morph✓
+334	agnicitya -> agnicityA	[consensus,intra_dup,spell_correct]	morph✓
+334	ajaBakzA -> ajaBakza	[consensus,intra_dup,spell_correct]	morph✓
+334	ajanyA -> ajanya	[consensus,intra_dup,spell_correct]	morph✓
+334	ajarAyu -> ajarayu	[consensus,intra_dup,spell_correct]	morph✓
+334	aklamA -> aklama	[consensus,intra_dup,spell_correct]	morph✓
+334	akzAtra -> akzatra	[consensus,intra_dup,spell_correct]	morph✓
+334	akzitavasu -> akzitAvasu	[consensus,intra_dup,spell_correct]	morph✓
+334	anAli -> anali	[consensus,intra_dup,spell_correct]	morph✓
+334	anakAra -> anAkAra	[consensus,intra_dup,spell_correct]	morph✓
+334	anantapara -> anantapAra	[consensus,intra_dup,spell_correct]	morph✓
+334	ananuBUti -> anAnuBUti	[consensus,intra_dup,spell_correct]	morph✓
+334	anavagrAha -> anavagraha	[consensus,intra_dup,spell_correct]	morph✓
+334	andukA -> anduka	[consensus,intra_dup,spell_correct]	morph✓
+334	anityasamA -> anityasama	[consensus,intra_dup,spell_correct]	morph✓
+334	antarAsTa -> antarasTa	[consensus,intra_dup,spell_correct]	morph✓
+334	antarikzacAra -> antarikzacara	[consensus,intra_dup,spell_correct]	morph✓
+334	antaryA -> antarya	[consensus,intra_dup,spell_correct]	morph✓
+334	antisumnA -> antisumna	[consensus,intra_dup,spell_correct]	morph✓
+334	anupalabDisamA -> anupalabDisama	[consensus,intra_dup,spell_correct]	morph✓
+334	anusama -> anusAma	[consensus,intra_dup,spell_correct]	morph✓
+334	anutpattisamA -> anutpattisama	[consensus,intra_dup,spell_correct]	morph✓
+334	anyABAva -> anyaBAva	[consensus,intra_dup,spell_correct]	morph✓
+334	anyaBava -> anyaBAva	[consensus,intra_dup,spell_correct]	morph✓
+334	anyaTAsidDA -> anyaTAsidDa	[consensus,intra_dup,spell_correct]	morph✓
+334	apakrAntA -> apakrAnta	[consensus,intra_dup,spell_correct]	morph✓
+334	apakriya -> apakriyA	[consensus,intra_dup,spell_correct]	morph✓
+334	atipattrA -> atipattra	[consensus,intra_dup,spell_correct]	morph✓
+334	ativESasA -> ativESasa	[consensus,intra_dup,spell_correct]	morph✓
+334	ativyaTa -> ativyaTA	[consensus,intra_dup,spell_correct]	morph✓
+333	ajUrya -> ajurya	[consensus,intra_dup,spell_correct]	
+333	anuvaS -> anuvas	[consensus,intra_dup,spell_correct]	
+332	anuviD -> anuvid	[consensus,intra_dup,spell_correct]	
+331	aDImanTana -> aDimanTana	[consensus,intra_dup,spell_correct]	morph✓
+331	ajigarta -> ajIgarta	[consensus,intra_dup,spell_correct]	morph✓
+331	ajyAnI -> ajyAni	[consensus,intra_dup,spell_correct]	morph✓
+331	anIra -> anira	[consensus,intra_dup,spell_correct]	morph✓
+331	analI -> anali	[consensus,intra_dup,spell_correct]	morph✓
+331	anunud -> anumud	[consensus,intra_dup,spell_correct]	
+331	atyantina -> atyantIna	[consensus,intra_dup,spell_correct]	morph✓
+330	apakaraka -> apakAraka	[consensus,intra_dup,spell_correct]	
+329	aYcitA -> aYcita	[consensus,intra_dup,spell_correct]	
+329	acAlana -> acalana	[consensus,intra_dup,spell_correct]	
+329	agniDarA -> agniDArA	[consensus,intra_dup,spell_correct]	
+329	ajEkapada -> ajEkapAda	[consensus,intra_dup,spell_correct]	
+329	anIrzyA -> anIrzya	[consensus,intra_dup,spell_correct]	
+329	atikrAmin -> atikramin	[consensus,intra_dup,spell_correct]	
+328	aDvayat -> advayat	[consensus,intra_dup,spell_correct]	morph✓
+328	aYcitaBru -> aYcitaBrU	[consensus,intra_dup,spell_correct]	morph✓
+328	agrataHSara -> agrataHsara	[consensus,intra_dup,spell_correct]	morph✓
+328	anUkAsa -> anUkASa	[consensus,intra_dup,spell_correct]	morph✓
+328	anUpahita -> anupahita	[consensus,intra_dup,spell_correct]	morph✓
+328	anukASa -> anUkASa	[consensus,intra_dup,spell_correct]	morph✓
+328	anuzman -> anUzman	[consensus,intra_dup,spell_correct]	morph✓
+327	anDuka -> anduka	[consensus,intra_dup,spell_correct]	morph✓
+327	apakzI -> apakzi	[consensus,intra_dup,spell_correct]	
+327	atata -> atawa	[consensus,intra_dup,spell_correct]	morph✓
+326	aDirAjam -> aDirAjan	[consensus,intra_dup,spell_correct]	morph✓
+326	aRukarman -> anukarman	[consensus,intra_dup,spell_correct]	morph✓
+326	aRupramARa -> anupramARa	[consensus,intra_dup,spell_correct]	morph✓
+326	ananu -> anaRu	[consensus,intra_dup,spell_correct]	morph✓
+326	anujjita -> anujJita	[consensus,intra_dup,spell_correct]	morph✓
+326	anusvApam -> anuzvApam	[consensus,intra_dup,spell_correct]	morph✓
+326	anyatAKyAti -> anyaTAKyAti	[consensus,intra_dup,spell_correct]	morph✓
+326	atItara -> atitara	[consensus,intra_dup,spell_correct]	
+326	atidIna -> atiqIna	[consensus,intra_dup,spell_correct]	morph✓
+325	aDyAropaRA -> aDyAropaRa	[consensus,intra_dup,spell_correct]	morph✓
+325	acCuka -> AcCuka	[consensus,intra_dup,spell_correct]	morph✓
+325	acCupta -> acCuptA	[consensus,intra_dup,spell_correct]	morph✓
+325	ajAmuKa -> ajamuKa	[consensus,intra_dup,spell_correct]	morph✓
+325	akAca -> akaca	[consensus,intra_dup,spell_correct]	morph✓
+325	akzArAlavaRASin -> akzAralavaRASin	[consensus,intra_dup,spell_correct]	morph✓
+325	akzapawalika -> Akzapawalika	[consensus,intra_dup,spell_correct]	morph✓
+325	anuvfttA -> anuvftta	[consensus,intra_dup,spell_correct]	morph✓
+325	anuzRaSIta -> anuzRASIta	[consensus,intra_dup,spell_correct]	morph✓
+325	atimAyA -> atimAya	[consensus,intra_dup,spell_correct]	morph✓
+324	aDaHSayin -> aDaHSAyin	[consensus,intra_dup,spell_correct]	morph✓
+324	aDaScAra -> aDaScara	[consensus,intra_dup,spell_correct]	morph✓
+324	aDarAhanu -> aDarahanu	[consensus,intra_dup,spell_correct]	morph✓
+324	aDiSrAya -> aDiSraya	[consensus,intra_dup,spell_correct]	morph✓
+324	aDikAkzarA -> aDikAkzara	[consensus,intra_dup,spell_correct]	morph✓
+324	aDikArita -> aDikAritA	[consensus,intra_dup,spell_correct]	morph✓
+324	aDikarma -> aDikArma	[consensus,intra_dup,spell_correct]	morph✓
+324	aDoBAva -> aDoBava	[consensus,intra_dup,spell_correct]	morph✓
+324	aDvaja -> aDvajA	[consensus,intra_dup,spell_correct]	morph✓
+324	aDvaragA -> aDvaraga	[consensus,intra_dup,spell_correct]	morph✓
+324	aGahan -> aGAhan	[consensus,intra_dup,spell_correct]	morph✓
+324	aMSakalpana -> aMSakalpanA	[consensus,intra_dup,spell_correct]	morph✓
+324	aNgArya -> aNgAryA	[consensus,intra_dup,spell_correct]	morph✓
+324	aNgAsparSa -> aNgasparSa	[consensus,intra_dup,spell_correct]	morph✓
+324	aNkAvatara -> aNkAvatAra	[consensus,intra_dup,spell_correct]	morph✓
+324	aNkuSagrAha -> aNkuSagraha	[consensus,intra_dup,spell_correct]	morph✓
+324	aTarvARi -> aTarvaRi	[consensus,intra_dup,spell_correct]	morph✓
+324	aYjikA -> aYjika	[consensus,intra_dup,spell_correct]	morph✓
+324	aciraBA -> acirABA	[consensus,intra_dup,spell_correct]	morph✓
+324	acyutAnta -> acyutanta	[consensus,intra_dup,spell_correct]	morph✓
+324	adButasvanA -> adButasvana	[consensus,intra_dup,spell_correct]	morph✓
+324	adevata -> adevatA	[consensus,intra_dup,spell_correct]	morph✓
+324	adritanaya -> adritanayA	[consensus,intra_dup,spell_correct]	morph✓
+324	agADajalA -> agADajala	[consensus,intra_dup,spell_correct]	morph✓
+324	agamyAgamin -> agamyAgAmin	[consensus,intra_dup,spell_correct]	morph✓
+324	agamyagAmin -> agamyAgAmin	[consensus,intra_dup,spell_correct]	morph✓
+324	agamyagamana -> agamyAgamana	[consensus,intra_dup,spell_correct]	morph✓
+324	agastyagIta -> agastyagItA	[consensus,intra_dup,spell_correct]	morph✓
+324	agniBA -> agniBa	[consensus,intra_dup,spell_correct]	morph✓
+324	agnicAya -> agnicaya	[consensus,intra_dup,spell_correct]	morph✓
+324	agnihotrAhoma -> agnihotrahoma	[consensus,intra_dup,spell_correct]	morph✓
+324	agnijala -> agnijAla	[consensus,intra_dup,spell_correct]	morph✓
+324	agnirAja -> agniraja	[consensus,intra_dup,spell_correct]	morph✓
+324	agrAjyA -> agrajyA	[consensus,intra_dup,spell_correct]	morph✓
+324	ajAloman -> ajaloman	[consensus,intra_dup,spell_correct]	morph✓
+324	ajApaTa -> ajapaTa	[consensus,intra_dup,spell_correct]	morph✓
+324	ajaTya -> ajaTyA	[consensus,intra_dup,spell_correct]	morph✓
+324	ajika -> ajikA	[consensus,intra_dup,spell_correct]	morph✓
+324	akfpA -> akfpa	[consensus,intra_dup,spell_correct]	morph✓
+324	akzamAlika -> akzamAlikA	[consensus,intra_dup,spell_correct]	morph✓
+324	akzaraja -> akzarAja	[consensus,intra_dup,spell_correct]	morph✓
+324	akzitAra -> akzitArA	[consensus,intra_dup,spell_correct]	morph✓
+324	anAgatabADa -> anAgatAbADa	[consensus,intra_dup,spell_correct]	morph✓
+324	anArTatva -> anarTatva	[consensus,intra_dup,spell_correct]	morph✓
+324	anUrDvA -> anUrDva	[consensus,intra_dup,spell_correct]	morph✓
+324	anaSya -> anASya	[consensus,intra_dup,spell_correct]	morph✓
+324	anajaka -> anajakA	[consensus,intra_dup,spell_correct]	morph✓
+324	anantaSIrza -> anantaSIrzA	[consensus,intra_dup,spell_correct]	morph✓
+324	anantaSayanA -> anantaSayana	[consensus,intra_dup,spell_correct]	morph✓
+324	anantatIrTA -> anantatIrTa	[consensus,intra_dup,spell_correct]	morph✓
+324	anapA -> anapa	[consensus,intra_dup,spell_correct]	morph✓
+324	anapakrAmin -> anapakramin	[consensus,intra_dup,spell_correct]	morph✓
+324	anarti -> anArti	[consensus,intra_dup,spell_correct]	morph✓
+324	anavalambitA -> anavalambita	[consensus,intra_dup,spell_correct]	morph✓
+324	anirmAlya -> anirmAlyA	[consensus,intra_dup,spell_correct]	morph✓
+324	anirvAhA -> anirvAha	[consensus,intra_dup,spell_correct]	morph✓
+324	annAdAna -> annadAna	[consensus,intra_dup,spell_correct]	morph✓
+324	antAgamana -> antagamana	[consensus,intra_dup,spell_correct]	morph✓
+324	antaHpatra -> antaHpAtra	[consensus,intra_dup,spell_correct]	morph✓
+324	antaHsalilA -> antaHsalila	[consensus,intra_dup,spell_correct]	morph✓
+324	antakAra -> antakara	[consensus,intra_dup,spell_correct]	morph✓
+324	antarAsTita -> antarasTita	[consensus,intra_dup,spell_correct]	morph✓
+324	antarAvayava -> antaravayava	[consensus,intra_dup,spell_correct]	morph✓
+324	antarBAvana -> antarBAvanA	[consensus,intra_dup,spell_correct]	morph✓
+324	antaradiS -> antarAdiS	[consensus,intra_dup,spell_correct]	morph✓
+324	antarduHKA -> antarduHKa	[consensus,intra_dup,spell_correct]	morph✓
+324	antarikzapra -> antarikzaprA	[consensus,intra_dup,spell_correct]	morph✓
+324	antarmudrA -> antarmudra	[consensus,intra_dup,spell_correct]	morph✓
+324	antyakA -> antyaka	[consensus,intra_dup,spell_correct]	morph✓
+324	antyapAda -> antyapada	[consensus,intra_dup,spell_correct]	morph✓
+324	antyavarRA -> antyavarRa	[consensus,intra_dup,spell_correct]	morph✓
+324	anuBUyA -> anuBUya	[consensus,intra_dup,spell_correct]	morph✓
+324	anuSiKA -> anuSiKa	[consensus,intra_dup,spell_correct]	morph✓
+324	anuSuSrUza -> anuSuSrUzA	[consensus,intra_dup,spell_correct]	morph✓
+324	anubanDyA -> anubanDya	[consensus,intra_dup,spell_correct]	morph✓
+324	anudArA -> anudAra	[consensus,intra_dup,spell_correct]	morph✓
+324	anugatA -> anugata	[consensus,intra_dup,spell_correct]	morph✓
+324	anujYApanA -> anujYApana	[consensus,intra_dup,spell_correct]	morph✓
+324	anukampitA -> anukampita	[consensus,intra_dup,spell_correct]	morph✓
+324	anukramaRika -> anukramaRikA	[consensus,intra_dup,spell_correct]	morph✓
+324	anupAnIyA -> anupAnIya	[consensus,intra_dup,spell_correct]	morph✓
+324	anupanIya -> anupAnIya	[consensus,intra_dup,spell_correct]	morph✓
+324	anusamAya -> anusamaya	[consensus,intra_dup,spell_correct]	morph✓
+324	anusvana -> anusvAna	[consensus,intra_dup,spell_correct]	morph✓
+324	anuvidDA -> anuvidDa	[consensus,intra_dup,spell_correct]	morph✓
+324	anvAramBaRIya -> anvAramBaRIyA	[consensus,intra_dup,spell_correct]	morph✓
+324	anvArohA -> anvAroha	[consensus,intra_dup,spell_correct]	morph✓
+324	anvayagata -> anvayAgata	[consensus,intra_dup,spell_correct]	morph✓
+324	anyAvApa -> anyavApa	[consensus,intra_dup,spell_correct]	morph✓
+324	anyaBftA -> anyaBfta	[consensus,intra_dup,spell_correct]	morph✓
+324	anyadevatA -> anyadevata	[consensus,intra_dup,spell_correct]	morph✓
+324	anyasakta -> anyAsakta	[consensus,intra_dup,spell_correct]	morph✓
+324	anyoQa -> anyoQA	[consensus,intra_dup,spell_correct]	morph✓
+324	anyonyABeda -> anyonyaBeda	[consensus,intra_dup,spell_correct]	morph✓
+324	apakarzasamA -> apakarzasama	[consensus,intra_dup,spell_correct]	morph✓
+324	atiSAstra -> atiSastra	[consensus,intra_dup,spell_correct]	morph✓
+324	atiTipUjanA -> atiTipUjana	[consensus,intra_dup,spell_correct]	morph✓
+324	atidAntA -> atidAnta	[consensus,intra_dup,spell_correct]	morph✓
+324	atihAsita -> atihasita	[consensus,intra_dup,spell_correct]	morph✓
+324	atilohitA -> atilohita	[consensus,intra_dup,spell_correct]	morph✓
+324	atipa -> atipA	[consensus,intra_dup,spell_correct]	morph✓
+324	atiromaSA -> atiromaSa	[consensus,intra_dup,spell_correct]	morph✓
+324	atisAmya -> atisAmyA	[consensus,intra_dup,spell_correct]	morph✓
+324	ativahana -> ativAhana	[consensus,intra_dup,spell_correct]	morph✓
+324	atyupaDA -> atyupaDa	[consensus,intra_dup,spell_correct]	morph✓
+324	awwalikA -> awwAlikA	[consensus,intra_dup,spell_correct]	morph✓
+323	aYcU -> aYcu	[consensus,intra_dup,spell_correct]	
+323	anuSrotas -> anusrotas	[consensus,intra_dup,spell_correct]	
+322	aDIyamAna -> adIyamAna	[consensus,intra_dup,spell_correct]	
+322	adigata -> aDigata	[consensus,intra_dup,spell_correct]	
+322	atiSri -> atiSrI	[consensus,intra_dup,spell_correct]	morph✓
+321	aDIkarman -> aDikarman	[consensus,intra_dup,spell_correct]	morph✓
+321	aDarAraRI -> aDarAraRi	[consensus,intra_dup,spell_correct]	morph✓
+321	aDyUDni -> aDyUDnI	[consensus,intra_dup,spell_correct]	morph✓
+321	aDyarDaKArika -> aDyarDaKArIka	[consensus,intra_dup,spell_correct]	morph✓
+321	aNGrivallI -> aNGrivalli	[consensus,intra_dup,spell_correct]	morph✓
+321	aNgulipaYcaka -> aNgulIpaYcaka	[consensus,intra_dup,spell_correct]	morph✓
+321	aNkatI -> aNkati	[consensus,intra_dup,spell_correct]	morph✓
+321	aRusrotas -> anusrotas	[consensus,intra_dup,spell_correct]	
+321	acCUri -> acCUrI	[consensus,intra_dup,spell_correct]	morph✓
+321	agrI -> agri	[consensus,intra_dup,spell_correct]	morph✓
+321	akzAvali -> akzAvalI	[consensus,intra_dup,spell_correct]	morph✓
+321	antarIkzaloka -> antarikzaloka	[consensus,intra_dup,spell_correct]	morph✓
+321	anusvaDam -> anuzvaDam	[consensus,intra_dup,spell_correct]	
+321	atImokza -> atimokza	[consensus,intra_dup,spell_correct]	morph✓
+320	aDyavasAyitA -> aDyavasAyita	[consensus,intra_dup,spell_correct]	
+320	atikrAntA -> atikrAnta	[consensus,intra_dup,spell_correct]	
+319	anABu -> anABU	[consensus,intra_dup,spell_correct]	morph✓
+319	anuBavin -> anuBAvin	[consensus,intra_dup,spell_correct]	
+319	ativaha -> ativAha	[consensus,intra_dup,spell_correct]	
+318	aDyarDasUrpa -> aDyarDaSUrpa	[consensus,intra_dup,spell_correct]	morph✓
+318	aMSaBArika -> aMsaBArika	[consensus,intra_dup,spell_correct]	morph✓
+318	aMsaBU -> aMSaBU	[consensus,intra_dup,spell_correct]	morph✓
+318	aNguza -> aNgUza	[consensus,intra_dup,spell_correct]	morph✓
+318	agnihUta -> agnihuta	[consensus,intra_dup,spell_correct]	morph✓
+318	agnisAla -> agniSAla	[consensus,intra_dup,spell_correct]	morph✓
+318	anAsya -> anASya	[consensus,intra_dup,spell_correct]	morph✓
+318	anUzaRqa -> anuzaRqa	[consensus,intra_dup,spell_correct]	morph✓
+318	anupasadam -> anUpasadam	[consensus,intra_dup,spell_correct]	morph✓
+318	anusu -> anusU	[consensus,intra_dup,spell_correct]	morph✓
+318	anuvASita -> anuvAsita	[consensus,intra_dup,spell_correct]	morph✓
+318	anuzita -> anUzita	[consensus,intra_dup,spell_correct]	morph✓
+318	anyASakta -> anyAsakta	[consensus,intra_dup,spell_correct]	morph✓
+317	aDAman -> adAman	[consensus,intra_dup,spell_correct]	morph✓
+317	aNkuWa -> aNkuwa	[consensus,intra_dup,spell_correct]	morph✓
+317	adaHkfta -> aDaHkfta	[consensus,intra_dup,spell_correct]	morph✓
+317	akoWa -> akowa	[consensus,intra_dup,spell_correct]	morph✓
+317	anavya -> aRavya	[consensus,intra_dup,spell_correct]	morph✓
+317	annaDAna -> annadAna	[consensus,intra_dup,spell_correct]	morph✓
+317	annakozwaka -> annakozWaka	[consensus,intra_dup,spell_correct]	morph✓
+317	anvAdya -> anvADya	[consensus,intra_dup,spell_correct]	morph✓
+316	aDiprajan -> aDiprajam	[consensus,intra_dup,spell_correct]	morph✓
+316	aGAvaha -> agAvaha	[consensus,intra_dup,spell_correct]	morph✓
+316	aGri -> agri	[consensus,intra_dup,spell_correct]	morph✓
+316	aRubimba -> anubimba	[consensus,intra_dup,spell_correct]	morph✓
+316	aRugata -> anugata	[consensus,intra_dup,spell_correct]	morph✓
+316	aRukalpita -> anukalpita	[consensus,intra_dup,spell_correct]	morph✓
+316	aYjizakTa -> aYjisakTa	[consensus,intra_dup,spell_correct]	morph✓
+316	agaRyarUpa -> agamyarUpa	[consensus,intra_dup,spell_correct]	morph✓
+316	agniKaqA -> agniKadA	[consensus,intra_dup,spell_correct]	morph✓
+316	agrahAyana -> agrahAyaRa	[consensus,intra_dup,spell_correct]	morph✓
+316	ajabasti -> ajavasti	[consensus,intra_dup,spell_correct]	morph✓
+316	akulawA -> akulatA	[consensus,intra_dup,spell_correct]	morph✓
+316	akzAvapaRa -> akzAvapana	[consensus,intra_dup,spell_correct]	morph✓
+316	anEqa -> aneqa	[consensus,intra_dup,spell_correct]	morph✓
+316	anO -> ano	[consensus,intra_dup,spell_correct]	morph✓
+316	anOjas -> anojas	[consensus,intra_dup,spell_correct]	morph✓
+316	anOkaSAyin -> anokaSAyin	[consensus,intra_dup,spell_correct]	morph✓
+316	anaPa -> anapa	[consensus,intra_dup,spell_correct]	morph✓
+316	anamyatA -> ananyatA	[consensus,intra_dup,spell_correct]	morph✓
+316	annaBid -> annavid	[consensus,intra_dup,spell_correct]	morph✓
+316	antargarva -> antargarBa	[consensus,intra_dup,spell_correct]	morph✓
+316	anunIyamAna -> anumIyamAna	[consensus,intra_dup,spell_correct]	morph✓
+316	anunodita -> anumodita	[consensus,intra_dup,spell_correct]	morph✓
+316	anupaneya -> anupameya	[consensus,intra_dup,spell_correct]	morph✓
+316	anuveza -> anuveSa	[consensus,intra_dup,spell_correct]	morph✓
+316	anuzU -> anusU	[consensus,intra_dup,spell_correct]	morph✓
+316	anvI -> aRvI	[consensus,intra_dup,spell_correct]	morph✓
+316	anvanta -> aRvanta	[consensus,intra_dup,spell_correct]	morph✓
+316	anyatAdarSana -> anyaTAdarSana	[consensus,intra_dup,spell_correct]	morph✓
+316	anyavfta -> anyaBfta	[consensus,intra_dup,spell_correct]	morph✓
+316	atamAna -> awamAna	[consensus,intra_dup,spell_correct]	morph✓
+316	atibAhya -> ativAhya	[consensus,intra_dup,spell_correct]	morph✓
+316	ativfta -> atiBfta	[consensus,intra_dup,spell_correct]	morph✓
+310	akampra -> Akampra	[consensus,intra_dup,spell_correct]	
+309	aDaHkziptA -> aDaHkzipta	[consensus,intra_dup,spell_correct]	
+309	aDivApana -> aDivapana	[consensus,intra_dup,spell_correct]	
+309	aDyAsta -> aDyasta	[consensus,intra_dup,spell_correct]	
+309	aDyasitavya -> aDyAsitavya	[consensus,intra_dup,spell_correct]	
+309	aGaha -> aGAha	[consensus,intra_dup,spell_correct]	
+309	aYjihiza -> aYjihizA	[consensus,intra_dup,spell_correct]	
+309	advEtAsidDi -> advEtasidDi	[consensus,intra_dup,spell_correct]	
+309	akUvArA -> akUvAra	[consensus,intra_dup,spell_correct]	
+309	anANgatva -> anaNgatva	[consensus,intra_dup,spell_correct]	
+309	ananusaMDAnA -> ananusaMDAna	[consensus,intra_dup,spell_correct]	
+309	anapacitA -> anapacita	[consensus,intra_dup,spell_correct]	
+309	antarAgata -> antaragata	[consensus,intra_dup,spell_correct]	
+309	anumitsa -> anumitsA	[consensus,intra_dup,spell_correct]	
+309	anunayana -> anunAyana	[consensus,intra_dup,spell_correct]	
+309	anuvAtA -> anuvAta	[consensus,intra_dup,spell_correct]	
+309	anyAvizaya -> anyavizaya	[consensus,intra_dup,spell_correct]	
+309	anyAyoga -> anyayoga	[consensus,intra_dup,spell_correct]	
+309	anyaSAKA -> anyaSAKa	[consensus,intra_dup,spell_correct]	
+309	anyagocara -> anyagocarA	[consensus,intra_dup,spell_correct]	
+309	anyayogA -> anyayoga	[consensus,intra_dup,spell_correct]	
+309	atiGorA -> atiGora	[consensus,intra_dup,spell_correct]	
+309	atiSaNkitA -> atiSaNkita	[consensus,intra_dup,spell_correct]	
+309	atiSayAna -> atiSayana	[consensus,intra_dup,spell_correct]	
+309	aticAtura -> aticatura	[consensus,intra_dup,spell_correct]	
+309	atidurbalA -> atidurbala	[consensus,intra_dup,spell_correct]	
+309	atigamBIrA -> atigamBIra	[consensus,intra_dup,spell_correct]	
+309	atilAlita -> atilalita	[consensus,intra_dup,spell_correct]	
+309	atipatya -> atipAtya	[consensus,intra_dup,spell_correct]	
+309	atiriktA -> atirikta	[consensus,intra_dup,spell_correct]	
+309	ativegitA -> ativegita	[consensus,intra_dup,spell_correct]	
+309	ativiDurA -> ativiDura	[consensus,intra_dup,spell_correct]	
+309	atiyAma -> atiyama	[consensus,intra_dup,spell_correct]	
+309	atyayat -> atyAyat	[consensus,intra_dup,spell_correct]	
+306	aDISrI -> aDiSrI	[consensus,intra_dup,spell_correct]	
+306	aNgi -> aNgI	[consensus,intra_dup,spell_correct]	
+306	aNki -> aNkI	[consensus,intra_dup,spell_correct]	
+306	anuvi -> anuvI	[consensus,intra_dup,spell_correct]	
+306	atIvrata -> ativrata	[consensus,intra_dup,spell_correct]	
+303	atyaSita -> atyasita	[consensus,intra_dup,spell_correct]	
+302	anupadi -> anupaDi	[consensus,intra_dup,spell_correct]	
+301	aRuBUta -> anuBUta	[consensus,intra_dup,spell_correct]	
+301	aRyadarTa -> anyadarTa	[consensus,intra_dup,spell_correct]	
+301	akUbAra -> akUvAra	[consensus,intra_dup,spell_correct]	
+301	akzIBa -> akzIva	[consensus,intra_dup,spell_correct]	
+301	anuBAta -> anuvAta	[consensus,intra_dup,spell_correct]	
+301	anunAsa -> anumAsa	[consensus,intra_dup,spell_correct]	
+301	atidurvala -> atidurbala	[consensus,intra_dup,spell_correct]	
+274	aKyA -> AKyA	[consensus,spell_correct]	morph✓
+266	ajya -> Ajya	[dict_vs_corpus,spell_correct]	morph✓
+266	akfti -> Akfti	[dict_vs_corpus,spell_correct]	morph✓
+266	anuttAra -> anuttara	[dict_vs_corpus,spell_correct]	morph✓
+264	aKyAna -> AKyAna	[consensus,spell_correct]	morph✓
+264	ajYA -> AjYA	[consensus,spell_correct]	morph✓
+255	agrayaRa -> AgrayaRa	[consensus,intra_dup]	morph✓
+255	ajEkapad -> ajEkapAd	[consensus,intra_dup]	morph✓
+255	aqambara -> Aqambara	[consensus,spell_correct]	morph✓
+254	aGfRi -> AGfRi	[consensus,spell_correct]	morph✓
+254	aKu -> AKu	[consensus,spell_correct]	morph✓
+254	acCid -> AcCid	[consensus,spell_correct]	morph✓
+254	agnAvEzRava -> AgnAvEzRava	[consensus,spell_correct]	morph✓
+254	agneyI -> AgneyI	[consensus,spell_correct]	morph✓
+254	agnimAruta -> AgnimAruta	[consensus,spell_correct]	morph✓
+254	agrahAyaRI -> AgrahAyaRI	[consensus,spell_correct]	morph✓
+254	akANkzA -> AkANkzA	[consensus,spell_correct]	morph✓
+254	akarzaRa -> AkarzaRa	[consensus,spell_correct]	morph✓
+254	akrIqa -> AkrIqa	[consensus,spell_correct]	morph✓
+254	akzepa -> Akzepa	[consensus,spell_correct]	morph✓
+254	akzipta -> Akzipta	[consensus,spell_correct]	morph✓
+254	anayana -> Anayana	[consensus,spell_correct]	morph✓
+254	anulomya -> Anulomya	[consensus,spell_correct]	morph✓
+254	anvayat -> anvAyat	[intra_dup,spell_correct]	morph✓
+254	atAmra -> AtAmra	[consensus,spell_correct]	morph✓
+251	aDIkAravat -> aDikAravat	[intra_dup,spell_correct]	morph✓
+247	agnimaT -> agnimat	[consensus,intra_dup]	morph✓
+246	aRavat -> amavat	[consensus,spell_correct]	morph✓
+246	aRutas -> amutas	[consensus,spell_correct]	morph✓
+246	agamita -> agaRita	[consensus,spell_correct]	morph✓
+246	anantra -> amantra	[consensus,spell_correct]	morph✓
+246	anutas -> amutas	[consensus,spell_correct]	morph✓
+245	anuSAsanika -> AnuSAsanika	[consensus,spell_correct]	morph✓
+245	anurakzaRA -> anurakzaRa	[intra_dup,spell_correct]	morph✓
+245	atilomA -> atiloma	[consensus,spell_correct]	morph✓
+244	aDamana -> ADamana	[consensus,spell_correct]	morph✓
+244	aDogamA -> aDogama	[intra_dup,spell_correct]	morph✓
+244	aKewa -> AKewa	[consensus,spell_correct]	morph✓
+244	aKyApana -> AKyApana	[consensus,spell_correct]	morph✓
+244	acCeda -> AcCeda	[consensus,spell_correct]	morph✓
+244	acCurita -> AcCurita	[consensus,spell_correct]	morph✓
+244	acandrA -> acandra	[intra_dup,spell_correct]	morph✓
+244	adahana -> Adahana	[consensus,spell_correct]	morph✓
+244	agnIDrIya -> AgnIDrIya	[consensus,spell_correct]	morph✓
+244	agrahAyaRika -> AgrahAyaRika	[consensus,spell_correct]	morph✓
+244	ajIv -> AjIv	[consensus,spell_correct]	morph✓
+244	ajanana -> Ajanana	[consensus,spell_correct]	morph✓
+244	akAravat -> AkAravat	[consensus,spell_correct]	morph✓
+244	anDIgava -> AnDIgava	[consensus,spell_correct]	morph✓
+244	anuzWya -> anuzWyA	[consensus,spell_correct]	morph✓
+244	atApin -> AtApin	[consensus,spell_correct]	morph✓
+244	atarpaRa -> AtarpaRa	[consensus,spell_correct]	morph✓
+244	atiTeya -> AtiTeya	[consensus,spell_correct]	morph✓
+244	ativAc -> ativac	[intra_dup,spell_correct]	morph✓
+242	anvADI -> anvADi	[consensus,intra_dup]	morph✓
+241	aYjalIpuwa -> aYjalipuwa	[intra_dup,spell_correct]	morph✓
+240	akulA -> akula	[consensus,intra_dup]	
+240	akzoByA -> akzoBya	[consensus,intra_dup]	
+240	anUkA -> anUka	[consensus,intra_dup]	
+239	aDaHpatana -> aDaHpAtana	[intra_dup,spell_correct]	
+239	agAmin -> AgAmin	[consensus,spell_correct]	
+239	antarapuruza -> antarapUruza	[consensus,intra_dup]	morph✓
+238	agniDamanI -> agnidamanI	[consensus,intra_dup]	morph✓
+238	anUyAjavat -> anuyAjavat	[intra_dup,spell_correct]	morph✓
+237	anuvartmam -> anuvartman	[consensus,intra_dup]	morph✓
+236	anAt -> amAt	[consensus,spell_correct]	morph✓
+236	ananyamAna -> amanyamAna	[consensus,spell_correct]	morph✓
+235	agrajihvA -> agrajihva	[consensus,intra_dup]	morph✓
+235	anaNgaleKa -> anaNgaleKA	[consensus,intra_dup]	morph✓
+235	anupakruzwa -> anupAkruzwa	[intra_dup,spell_correct]	morph✓
+234	aDirukmA -> aDirukma	[consensus,spell_correct]	morph✓
+234	aDivastrA -> aDivastra	[consensus,spell_correct]	morph✓
+234	aDyAyika -> ADyAyika	[consensus,spell_correct]	morph✓
+234	aGawwaka -> AGawwaka	[consensus,spell_correct]	morph✓
+234	aYjasInA -> aYjasIna	[consensus,spell_correct]	morph✓
+234	acCidyamAnA -> acCidyamAna	[consensus,spell_correct]	morph✓
+234	adeSin -> AdeSin	[consensus,spell_correct]	morph✓
+234	adevana -> Adevana	[consensus,spell_correct]	morph✓
+234	adomUlA -> adomUla	[consensus,spell_correct]	morph✓
+234	agniveSi -> AgniveSi	[consensus,spell_correct]	morph✓
+234	agrasenA -> agrasena	[intra_dup,spell_correct]	morph✓
+234	ajIvaka -> AjIvaka	[consensus,spell_correct]	morph✓
+234	ajozA -> ajoza	[consensus,spell_correct]	morph✓
+234	akarin -> Akarin	[consensus,spell_correct]	morph✓
+234	akekara -> Akekara	[consensus,spell_correct]	morph✓
+234	anUpyA -> anUpya	[consensus,spell_correct]	morph✓
+234	anapasPurA -> anapasPura	[consensus,spell_correct]	morph✓
+234	anft -> Anft	[consensus,spell_correct]	morph✓
+234	anizavyA -> anizavya	[consensus,spell_correct]	morph✓
+234	anyANga -> anyaNga	[consensus,spell_correct]	morph✓
+234	atuc -> Atuc	[consensus,spell_correct]	morph✓
+232	anasti -> anasTi	[consensus,intra_dup]	
+232	anupraDA -> anupradA	[intra_dup,spell_correct]	
+230	aKarvA -> aKarva	[consensus,intra_dup]	
+230	agajA -> agaja	[consensus,intra_dup]	
+230	anupratizWa -> anupratizWA	[intra_dup,spell_correct]	
+230	atiraktA -> atirakta	[consensus,intra_dup]	
+230	atyUhA -> atyUha	[consensus,intra_dup]	
+229	aDaHSAlya -> aDaHSalya	[intra_dup,spell_correct]	
+229	aDaHSalyA -> aDaHSalya	[intra_dup,spell_correct]	
+229	akal -> Akal	[consensus,spell_correct]	
+229	akarRikA -> akarRika	[intra_dup,spell_correct]	
+229	anagnikA -> anagnika	[intra_dup,spell_correct]	
+229	anavaDAraRA -> anavaDAraRa	[intra_dup,spell_correct]	
+229	antarABAva -> antarABava	[intra_dup,spell_correct]	
+229	atipicCilA -> atipicCila	[intra_dup,spell_correct]	
+229	atirohitA -> atirohita	[intra_dup,spell_correct]	
+227	aNgAraSakawi -> aNgAraSakawI	[consensus,intra_dup]	
+226	ajAkzi -> ajAkzI	[intra_dup,spell_correct]	
+226	anAvayu -> anAbayu	[intra_dup,spell_correct]	morph✓
+226	anutsuKa -> anutsuka	[consensus,spell_correct]	morph✓
+225	aDaHkAra -> aDaHkara	[consensus,intra_dup]	morph✓
+225	acalasaptamI -> acalAsaptamI	[intra_dup,spell_correct]	morph✓
+225	adattadAna -> adattAdAna	[consensus,intra_dup]	morph✓
+225	aditsA -> AditsA	[intra_dup,spell_correct]	morph✓
+225	akzapAd -> akzapad	[intra_dup,spell_correct]	morph✓
+225	anumfta -> anumftA	[consensus,intra_dup]	morph✓
+225	atapana -> Atapana	[consensus,spell_correct]	morph✓
+225	atisundarA -> atisundara	[consensus,intra_dup]	morph✓
+224	aDarmAcaraRa -> aDarmacaraRa	[intra_dup,spell_correct]	morph✓
+224	aDiBoga -> ADiBoga	[consensus,spell_correct]	morph✓
+224	aDicaraRA -> aDicaraRa	[consensus,spell_correct]	morph✓
+224	aDikAzwa -> aDikazwa	[consensus,spell_correct]	morph✓
+224	aDyAsya -> aDyAsyA	[intra_dup,spell_correct]	morph✓
+224	aDyakzya -> ADyakzya	[consensus,spell_correct]	morph✓
+224	aGArikA -> aGarikA	[intra_dup,spell_correct]	morph✓
+224	aNkAgata -> aNkagata	[intra_dup,spell_correct]	morph✓
+224	aNkuraropaRa -> aNkurAropaRa	[intra_dup,spell_correct]	morph✓
+224	aYjanIkArI -> AYjanIkArI	[consensus,spell_correct]	morph✓
+224	acCAdita -> AcCAdita	[consensus,spell_correct]	morph✓
+224	acCawaSabda -> acCawASabda	[intra_dup,spell_correct]	morph✓
+224	acintyarUpA -> acintyarUpa	[intra_dup,spell_correct]	morph✓
+224	acyutanti -> Acyutanti	[consensus,spell_correct]	morph✓
+224	adfzwigocaram -> Adfzwigocaram	[consensus,spell_correct]	morph✓
+224	adyAdya -> AdyAdya	[consensus,spell_correct]	morph✓
+224	agAradAha -> AgAradAha	[consensus,spell_correct]	morph✓
+224	agnidevatA -> agnidevata	[intra_dup,spell_correct]	morph✓
+224	agniveSyAyana -> AgniveSyAyana	[consensus,spell_correct]	morph✓
+224	agniviDa -> agniviDA	[intra_dup,spell_correct]	morph✓
+224	agnizwomika -> Agnizwomika	[consensus,spell_correct]	morph✓
+224	agratalasaMcara -> agratalasaMcAra	[intra_dup,spell_correct]	morph✓
+224	ajAdya -> AjAdya	[consensus,spell_correct]	morph✓
+224	ajYapti -> AjYapti	[consensus,spell_correct]	morph✓
+224	ajagala -> ajAgala	[intra_dup,spell_correct]	morph✓
+224	ajayana -> Ajayana	[consensus,spell_correct]	morph✓
+224	akAlam -> AkAlam	[consensus,spell_correct]	morph✓
+224	akAyika -> akAyikA	[intra_dup,spell_correct]	morph✓
+224	akalpaka -> Akalpaka	[consensus,spell_correct]	morph✓
+224	aklI -> AklI	[consensus,spell_correct]	morph✓
+224	akuli -> Akuli	[consensus,spell_correct]	morph✓
+224	akzABA -> akzaBA	[intra_dup,spell_correct]	morph✓
+224	anABi -> AnABi	[consensus,spell_correct]	morph✓
+224	anAntatva -> anantatva	[intra_dup,spell_correct]	morph✓
+224	anApUyitA -> anApUyita	[consensus,spell_correct]	morph✓
+224	anAvyADA -> anAvyADa	[consensus,spell_correct]	morph✓
+224	anaDyAsA -> anaDyAsa	[intra_dup,spell_correct]	morph✓
+224	anapavAcanA -> anapavAcana	[consensus,spell_correct]	morph✓
+224	anaquhya -> Anaquhya	[consensus,spell_correct]	morph✓
+224	anarTakAra -> anarTakara	[intra_dup,spell_correct]	morph✓
+224	anatidagDA -> anatidagDa	[consensus,spell_correct]	morph✓
+224	anekaBAryA -> anekaBArya	[intra_dup,spell_correct]	morph✓
+224	anekasaMKyA -> anekasaMKya	[intra_dup,spell_correct]	morph✓
+224	anftakaTA -> anftakaTa	[intra_dup,spell_correct]	morph✓
+224	anftavAdana -> anftavadana	[intra_dup,spell_correct]	morph✓
+224	aniSitasargA -> aniSitasarga	[consensus,spell_correct]	morph✓
+224	anilahata -> anilAhata	[intra_dup,spell_correct]	morph✓
+224	anirBarA -> anirBara	[consensus,spell_correct]	morph✓
+224	anityaBava -> anityaBAva	[intra_dup,spell_correct]	morph✓
+224	aniveSanA -> aniveSana	[consensus,spell_correct]	morph✓
+224	annakAraRa -> annakaraRa	[intra_dup,spell_correct]	morph✓
+224	antaBAva -> antaBava	[intra_dup,spell_correct]	morph✓
+224	antaHpAtitA -> antaHpAtita	[intra_dup,spell_correct]	morph✓
+224	antaHpatita -> antaHpAtita	[intra_dup,spell_correct]	morph✓
+224	antaHpuravfdDa -> antaHpuravfdDA	[intra_dup,spell_correct]	morph✓
+224	antarApatita -> antarapatita	[intra_dup,spell_correct]	morph✓
+224	antaraBavadeha -> antarABavadeha	[intra_dup,spell_correct]	morph✓
+224	antarapAtita -> antarapatita	[intra_dup,spell_correct]	morph✓
+224	antargaRika -> AntargaRika	[consensus,spell_correct]	morph✓
+224	antargozWA -> antargozWa	[intra_dup,spell_correct]	morph✓
+224	anuSasya -> anuSAsya	[intra_dup,spell_correct]	morph✓
+224	anucArI -> anucarI	[intra_dup,spell_correct]	morph✓
+224	anugatya -> Anugatya	[consensus,spell_correct]	morph✓
+224	anulomapariRIta -> anulomapariRItA	[intra_dup,spell_correct]	morph✓
+224	anupacArita -> anupacarita	[intra_dup,spell_correct]	morph✓
+224	anupayAt -> anupayat	[intra_dup,spell_correct]	morph✓
+224	anupfzWyA -> anupfzWya	[consensus,spell_correct]	morph✓
+224	anusaMraktA -> anusaMrakta	[consensus,spell_correct]	morph✓
+224	anuviDitsA -> AnuviDitsA	[consensus,spell_correct]	morph✓
+224	anvIpika -> AnvIpika	[consensus,spell_correct]	morph✓
+224	anvarTasaMjYa -> anvarTasaMjYA	[intra_dup,spell_correct]	morph✓
+224	anyAkAra -> anyakAra	[intra_dup,spell_correct]	morph✓
+224	anyaSrita -> anyASrita	[intra_dup,spell_correct]	morph✓
+224	anyakara -> anyakAra	[intra_dup,spell_correct]	morph✓
+224	anyakriyA -> anyakriya	[intra_dup,spell_correct]	morph✓
+224	anyaparigrahA -> anyaparigraha	[intra_dup,spell_correct]	morph✓
+224	anyataratodantA -> anyataratodanta	[consensus,spell_correct]	morph✓
+224	anyatareya -> Anyatareya	[consensus,spell_correct]	morph✓
+224	anyonyasApekzA -> anyonyasApekza	[intra_dup,spell_correct]	morph✓
+224	apakramam -> apakrAmam	[intra_dup,spell_correct]	morph✓
+224	aqU -> AqU	[consensus,spell_correct]	morph✓
+224	atimala -> atimAla	[intra_dup,spell_correct]	morph✓
+224	atiyaSA -> atiyaSa	[consensus,spell_correct]	morph✓
+223	anuBUj -> anuBuj	[consensus,spell_correct]	
+223	anupadas -> anUpadas	[intra_dup,spell_correct]	
+223	atiSru -> atisru	[intra_dup,spell_correct]	
+223	atisfta -> atiSfta	[intra_dup,spell_correct]	
+222	aneDas -> ameDas	[consensus,intra_dup]	
+222	antarAdi -> antarADi	[intra_dup,spell_correct]	
+222	anukFt -> anukft	[intra_dup,spell_correct]	
+221	aNgulImAtra -> aNgulimAtra	[intra_dup,spell_correct]	morph✓
+221	aNgulIvezwaka -> aNgulivezwaka	[intra_dup,spell_correct]	morph✓
+221	aNguliBaNga -> aNgulIBaNga	[intra_dup,spell_correct]	morph✓
+221	aNguligranTi -> aNgulIgranTi	[intra_dup,spell_correct]	morph✓
+221	aRapavAda -> anapavAda	[intra_dup,spell_correct]	
+221	aRici -> aRIci	[intra_dup,spell_correct]	morph✓
+221	aYjalikfta -> aYjalIkfta	[intra_dup,spell_correct]	morph✓
+221	anispanda -> anizpanda	[intra_dup,spell_correct]	
+221	anuraR -> anuram	[intra_dup,spell_correct]	
+221	anusaMBid -> anusaMvid	[intra_dup,spell_correct]	
+221	anusac -> anuzac	[intra_dup,spell_correct]	
+221	atIroka -> atiroka	[intra_dup,spell_correct]	morph✓
+221	atandri -> atandrI	[intra_dup,spell_correct]	morph✓
+220	agAtf -> AgAtf	[consensus,intra_dup]	
+219	aDiSayAna -> aDiSayana	[intra_dup,spell_correct]	
+219	aDicaNkramA -> aDicaNkrama	[consensus,spell_correct]	
+219	adUzaRA -> adUzaRa	[intra_dup,spell_correct]	
+219	agnitanU -> agnitanu	[intra_dup,spell_correct]	morph✓
+219	akzepin -> Akzepin	[consensus,spell_correct]	
+219	anaByASamitya -> anaByAsamitya	[consensus,intra_dup]	morph✓
+219	antarga -> antargA	[intra_dup,spell_correct]	
+219	antivAmA -> antivAma	[consensus,spell_correct]	
+218	aDunvat -> aDUnvat	[intra_dup,spell_correct]	morph✓
+218	aMSamUla -> aMsamUla	[intra_dup,spell_correct]	morph✓
+218	anUpayat -> anupayat	[intra_dup,spell_correct]	morph✓
+218	anUyAjArTa -> anuyAjArTa	[intra_dup,spell_correct]	morph✓
+218	atiSaktimat -> atisaktimat	[intra_dup,spell_correct]	morph✓
+218	atiSruta -> atisruta	[intra_dup,spell_correct]	morph✓
+218	ativisrabDa -> ativiSrabDa	[intra_dup,spell_correct]	morph✓
+217	aDovARa -> aDobARa	[intra_dup,spell_correct]	morph✓
+217	aRqakoSaka -> aRqakozaka	[consensus,intra_dup]	morph✓
+217	agnipraDAna -> agnipradAna	[intra_dup,spell_correct]	morph✓
+217	agrARIka -> agrAnIka	[consensus,intra_dup]	morph✓
+217	anaham -> anahan	[consensus,intra_dup]	morph✓
+217	aniSrita -> amiSrita	[consensus,spell_correct]	morph✓
+217	apakoza -> apakoSa	[intra_dup,spell_correct]	morph✓
+216	aDvagama -> aDvagaRa	[intra_dup,spell_correct]	morph✓
+216	aRantatva -> anantatva	[intra_dup,spell_correct]	morph✓
+216	aRudvAra -> anudvAra	[intra_dup,spell_correct]	morph✓
+216	aRuvat -> amuvat	[consensus,spell_correct]	morph✓
+216	aRvavasTA -> anvavasTA	[intra_dup,spell_correct]	morph✓
+216	aTanavat -> atanavat	[intra_dup,spell_correct]	morph✓
+216	akzapAwana -> akzapAtana	[intra_dup,spell_correct]	morph✓
+216	anAnana -> amAnana	[consensus,spell_correct]	morph✓
+216	anArjita -> amArjita	[consensus,spell_correct]	morph✓
+216	anftAnanda -> amftAnanda	[consensus,spell_correct]	morph✓
+216	anftatA -> amftatA	[consensus,spell_correct]	morph✓
+216	anftatva -> amftatva	[consensus,spell_correct]	morph✓
+216	antareSa -> antareza	[intra_dup,spell_correct]	morph✓
+216	anuSa -> anuza	[intra_dup,spell_correct]	morph✓
+216	anulamBa -> anulamba	[intra_dup,spell_correct]	morph✓
+216	anumAsikAdi -> anunAsikAdi	[intra_dup,spell_correct]	morph✓
+216	anusikta -> anuzikta	[consensus,spell_correct]	morph✓
+216	anuviBA -> anuvivA	[intra_dup,spell_correct]	morph✓
+216	anyadEvatya -> anyadevatya	[intra_dup,spell_correct]	morph✓
+216	atibfMhita -> ativfMhita	[intra_dup,spell_correct]	morph✓
+211	aRuSabda -> anuSabda	[intra_dup,spell_correct]	
+211	anekAgrya -> anEkAgrya	[intra_dup,spell_correct]	
+211	atiKala -> atikala	[consensus,intra_dup]	
+211	atirOpya -> atiropya	[intra_dup,spell_correct]	
+211	ativf -> atiBf	[intra_dup,spell_correct]	
+210	aDirUQA -> aDirUQa	[consensus,intra_dup]	
+210	aNgalepA -> aNgalepa	[intra_dup,spell_correct]	
+210	acalApati -> acalapati	[intra_dup,spell_correct]	
+210	adaraRIya -> AdaraRIya	[consensus,spell_correct]	
+210	anavakAra -> anavakara	[intra_dup,spell_correct]	
+210	anujAtA -> anujAta	[consensus,intra_dup]	
+210	anupADi -> anupaDi	[consensus,intra_dup]	
+210	atimuktakamAlA -> atimuktakamalA	[intra_dup,spell_correct]	
+210	atinIla -> atinIlA	[intra_dup,spell_correct]	
+209	aDyarDeqA -> aDyarDeqa	[intra_dup,spell_correct]	
+209	aGApahA -> aGApaha	[intra_dup,spell_correct]	
+209	aNgArAsAra -> aNgArasAra	[intra_dup,spell_correct]	
+209	acAndana -> acandana	[consensus,intra_dup]	
+209	acCAvAc -> acCAvac	[intra_dup,spell_correct]	
+209	acCagam -> acCAgam	[intra_dup,spell_correct]	
+209	acaRqAla -> acARqAla	[intra_dup,spell_correct]	
+209	acalaja -> acalajA	[intra_dup,spell_correct]	
+209	acyutadanti -> Acyutadanti	[consensus,spell_correct]	
+209	adAntatva -> adantatva	[intra_dup,spell_correct]	
+209	adAsya -> adasya	[intra_dup,spell_correct]	
+209	aditidevatyA -> aditidevatya	[intra_dup,spell_correct]	
+209	agAmuka -> AgAmuka	[consensus,spell_correct]	
+209	ajApati -> ajapati	[intra_dup,spell_correct]	
+209	ajasuta -> ajAsuta	[intra_dup,spell_correct]	
+209	ajigIzA -> ajigIza	[consensus,intra_dup]	
+209	ajigIzu -> AjigIzu	[consensus,spell_correct]	
+209	akANkzita -> AkANkzita	[consensus,spell_correct]	
+209	akAryakAraRa -> akAryakaraRa	[intra_dup,spell_correct]	
+209	akIrRa -> AkIrRa	[consensus,spell_correct]	
+209	akftASrama -> akftaSrama	[consensus,intra_dup]	
+209	akzepya -> Akzepya	[consensus,spell_correct]	
+209	anATaSaraRA -> anATaSaraRa	[intra_dup,spell_correct]	
+209	anAkANkzA -> anAkANkza	[intra_dup,spell_correct]	
+209	anAkta -> anakta	[intra_dup,spell_correct]	
+209	anAnuvazawkfta -> ananuvazawkfta	[intra_dup,spell_correct]	
+209	anaBiBavaganDA -> anaBiBavaganDa	[consensus,spell_correct]	
+209	anaBicAraRIya -> anaBicaraRIya	[intra_dup,spell_correct]	
+209	anaNgadA -> anaNgada	[intra_dup,spell_correct]	
+209	anandita -> Anandita	[consensus,spell_correct]	
+209	anantapAda -> anantapada	[intra_dup,spell_correct]	
+209	anantapadA -> anantapada	[intra_dup,spell_correct]	
+209	ananuvratA -> ananuvrata	[consensus,spell_correct]	
+209	anapakfzwa -> anapAkfzwa	[consensus,intra_dup]	
+209	anarkA -> anarka	[consensus,intra_dup]	
+209	anativilambita -> anativilambitA	[intra_dup,spell_correct]	
+209	anekapAda -> anekapada	[intra_dup,spell_correct]	
+209	annApAka -> annapAka	[intra_dup,spell_correct]	
+209	annatamA -> annatama	[intra_dup,spell_correct]	
+209	anuBavya -> anuBAvya	[intra_dup,spell_correct]	
+209	anukUlaka -> anukUlakA	[intra_dup,spell_correct]	
+209	anusArita -> anusAritA	[intra_dup,spell_correct]	
+209	anuvAditA -> anuvAdita	[intra_dup,spell_correct]	
+209	anuyAt -> anuyat	[intra_dup,spell_correct]	
+209	anvAha -> anvaha	[intra_dup,spell_correct]	
+209	anvayAboDa -> anvayaboDa	[intra_dup,spell_correct]	
+209	anyadAsTa -> anyadAsTA	[intra_dup,spell_correct]	
+209	atfRRa -> AtfRRa	[consensus,spell_correct]	
+209	aticCatrakA -> aticCatraka	[consensus,intra_dup]	
+209	atiduHKAnvitA -> atiduHKAnvita	[consensus,spell_correct]	
+209	atikaruRA -> atikaruRa	[consensus,intra_dup]	
+209	atikatara -> atikAtara	[consensus,intra_dup]	
+209	atipadA -> atipada	[consensus,spell_correct]	
+209	atisaMhitA -> atisaMhita	[consensus,intra_dup]	
+209	atiskanDa -> atiskanDA	[intra_dup,spell_correct]	
+209	atisvarya -> atisvArya	[intra_dup,spell_correct]	
+209	atitAryA -> atitArya	[consensus,spell_correct]	
+209	atyucCrAya -> atyucCraya	[intra_dup,spell_correct]	
+206	aNgulIsaMjYA -> aNgulisaMjYA	[intra_dup,spell_correct]	
+206	aNguliBava -> aNgulIBava	[intra_dup,spell_correct]	
+206	aNgulisaMBUta -> aNgulIsaMBUta	[intra_dup,spell_correct]	
+206	adridroRI -> adridroRi	[intra_dup,spell_correct]	
+206	agnizomAtmaka -> agnIzomAtmaka	[intra_dup,spell_correct]	
+206	awavibala -> awavIbala	[intra_dup,spell_correct]	
+204	akzAMsa -> akzAMSa	[consensus,intra_dup]	
+203	anantapUra -> anantapura	[intra_dup,spell_correct]	
+203	anuvyas -> anuvyaS	[intra_dup,spell_correct]	
+203	atipura -> atipUra	[consensus,intra_dup]	
+202	aDaHkftya -> adaHkftya	[intra_dup,spell_correct]	
+202	adfzwatA -> aDfzwatA	[consensus,intra_dup]	
+202	akzapAta -> akzapAwa	[consensus,intra_dup]	
+202	antaryAmIya -> antaryARIya	[intra_dup,spell_correct]	
+202	ativI -> atiBI	[consensus,intra_dup]	
+201	aRikAsam -> aRikAzam	[intra_dup,spell_correct]	
+201	aditidEvatya -> aditidevatya	[intra_dup,spell_correct]	
+201	advis -> adBis	[consensus,spell_correct]	
+201	agAQatA -> agADatA	[consensus,intra_dup]	
+201	ajEkapAdadevatya -> ajEkapAdadEvatya	[intra_dup,spell_correct]	
+201	anusaMBA -> anusaMvA	[intra_dup,spell_correct]	
+201	anuzvan -> anusvan	[intra_dup,spell_correct]	
+201	atigarBa -> atigarva	[intra_dup,spell_correct]	
+201	atinamAmin -> atinanAmin	[intra_dup,spell_correct]	
+201	atisikTa -> atisikta	[intra_dup,spell_correct]	
+201	ativitata -> ativitaTa	[consensus,intra_dup]	
+201	attavE -> attave	[intra_dup,spell_correct]	
+174	adA -> AdA	[spell_correct]	morph✓
+174	annA -> anna	[spell_correct]	morph✓
+168	anU -> anu	[spell_correct]	morph✓

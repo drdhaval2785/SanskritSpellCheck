@@ -1,0 +1,132 @@
+# PD -- DOCUMENTED-INTENTIONAL spellings (NOT typos -- do NOT file corrections)
+#
+# 116 headwords that LOOK like misspellings but which PD records on purpose:
+# wrong-reading apparatus (w.r.), variae lectiones (v.l.), in-composition /
+# sandhi forms (in comp. for...), cross-references (See / = X q.v.), and other
+# grammatical/Vedic notes. Filing a 'correction' for any of these CORRUPTS PD.
+# Use this as a suppression list: such headwords should not be re-flagged.
+# Format per row:  headword -> would-be 'correction'  |  the PD entry text
+
+# ===== WRONG-READING (16) =====
+aDyAyika       -> ADyAyika       | {#aDyAyika#} (adhyāy-íka) {%adj.%} (accent ?) [VIŚVA, wrongly read for {%ādhyāyika%}, due to wrong split in {%sandhi%} of {#yu/vADyA\yikaH#} in {#sADuyu/vADyA\#
+aDyarDaKArika  -> aDyarDaKArIka  | {#aDyarDaKArika#} (adhyardhakhāri-ka) {%adj.%} [w. r. for {@{#aDyarDaKArIka#}@}] KośaKaTa. 1. 6856.
+aDyasitavya    -> aDyAsitavya    | {#aDyasitavya#} (adhy-asitavya) {%adj.%} which is to be wrongly imposed (on something else) {#na cAyamasti niyamaH -- puro'vasTita eva vizaye vizayAntara-#} {#m
+aGAra          -> agAra          | {#aGAra#} (aghāra) {%m.%} [{%w. r.%} for {#AGAra#}] BhaviP. 375A. 33 (ii(2). 15 (? 14). 11)
+aRikAsam       -> aRikAzam       | {#aRikAsam#} (a-ṇikāsam) {%adv.%} ({%w. r.%} for {%‘aṇikāṣam’%} or {%anikāṣam%}) [nt.]
+agneyI         -> AgneyI         | {#agneyI#} (agneyī) (w. r. for {%āgneyī%}) {%f.%} the South-East quarter {#agneyyAM vfdDiH#} ParaS. 4. 81; cf. {@{#AgneyI#}@}.
+agnimAruta     -> AgnimAruta     | {#agnimAruta#} (agnimāruta) {%m.%} [w. r. for {%āgnimāruta%}] name of Agastya {#mEtrAvaruRa Agneya agnimAruta ityapi.agastye#} ŚabdaRa.(Su.) 2. 24.
+agniveSyAyana  -> AgniveSyAyana  | {#agniveSyAyana#} (agniveśy-āyana) {%m.%} [w. r. for {#AgniveSyAyana#}] name of a Vedic teacher on phonetics {#nAgniveSyAyanasya#} (comm. {#na a(? A) gniveSyA-#
+akzoWa         -> akzowa         | {#akzoWa#} (akṣoṭha) {%m.%} [w. r. for {%akṣoṭa%}] walnut {#akzoWaSuRWimaricArdrakadA-#} {#qimatvak…ºsusaMskftAnyaH.matsyAn suSItasitaBaktatale daDAti#} Subhāṣi
+anAdfzwi       -> anADfzwi       | {#anAdfzwi#} (anādṛṣṭi) {%m.%} {@A@} name of one of the sons of Dhṛtarā- ṣṭra {#apAtayanta putrAMste raTeByaH….anADf#} (v. l. {#ºdf#}) {#zwiM kuRqaBedaM vErAwam
+anftAnanda     -> amftAnanda     | {#anftAnanda#} (anṛtānanda) {%n.%} a type of Raudradhyāna (in which one behaves with wrong intention or accuses wrongly and thinks about the evil of others), Ja
+anusamAya      -> anusamaya      | {#anusamAya#} (anu-samāya) [w. r. for {@{#anusamaya#}@}], SāstrDī. 421. 15 ({%on%} v. 2. 2)
+anyaDA         -> anyadA         | {#anyaDA#} (anya-dhā) {%adv.%} in the other, i. e. wrong way, wrongly {#yaTA#} {#maDvAsicya lAjAnAvapet tadanyaDeva syAt tAdfk tat#} JaimiBr. 2. 79.
+apakFt         -> apakft         | {#apakFt#} (apa-kṝt-) X. U. to mention wrongly, to abuse, cf. {@{#apakIrtita#}@} [VIŚVA.]
+apakriya       -> apakriyA       | {#apakriya#} (apa-kriya) {%adj.%} {@A@} having wrong use or application {#‘sarvaSrAdDe#} {#…varjyaM cApakriyaM sarvam…apakriyaM’ apagatasvocitakriyam#} CaturCin
+atfRRa         -> AtfRRa         | {#atfRRa#} (atṛṇṇa) [{%w. r.%} for {#AtfRRa#}] ĀpaŚS. xvi. 22. 3 [VIŚVA.] cf. TaiS. V. ii. 7. 2.
+
+# ===== VARIA-LECTIO (66) =====
+aGni           -> agni           | {#aGni#} (a-ghni) (Gr.) abbreviated form of the word {%aghniyā%} {#aratim…#} {#aGni#} (v. l. {#aGniya#}) TaiPrāti. 11. 17 (comm. {#aratim…aGni ityetezu grahaRez
+aKyApana       -> AKyApana       | {#aKyApana#} (a-khyāpana) {%n.%} non-revelation, absence of display {#na hi#} {#viBUtiKyApanena kaScidatiSayo laByate na cAsyAKyApanena kiYcidDIyate#} NyāyVār. 
+aNgalepA       -> aNgalepa       | {#aNgalepA#} (aṅgalepā) {%f.%} name of a city {#avantImaNgalopAM#} (v. l. {#aNgalepAM#}) {#ca sarvamASu vicetavyaM kapiBiH kAmarUpiBiH#} Rāmā. iv. 41. 11.
+aNkuSagrAha    -> aNkuSagraha    | {#aNkuSagrAha#} (aṅkuśa-grāha) {%m.%} [Kātan. iv. 3. 15] elephant-driver {#sa mAgaDAnAM pravaro'NkuSagra#} (v. l. {#grA#}) {#haH#} MahāBhā. viii. 13. 5.
+aRIman         -> aRiman         | {#aRIman#} (aṇīman) {%m.%} supernatural power of assuming the most minute form {#sidDayo'kfzwapacyAH#} (v. l. {#sidDayo'zwAvaRImAdyAH#}) SkandP. iv. 58. 134 (F.
+aRici          -> aRIci          | {#aRici#} (aṇici) {%m.%} bamboo or reed {#aRIcistu#} (v. l. {#aRicistu#}) {#pumAna#} {#veRO trizu SAkawike mataH#} NānārthāSaṃ. ii. 58. 139; {%adj.%} belonging 
+aRimARqavya    -> aRImARqavya    | {#aRimARqavya#} (aṇimāṇḍavya) {%m.%} name of a sage {#SUle protaH….#} {#aRImARqavyaH#} (v. l. {#aRimARqavyaH#}) MahāBhā. i. 57. 77; {#sa tena tapasA lokA-#} {#n
+aYcU           -> aYcu           | {#aYcU#} (añc-ū) (Gr.) verbal root {%añc-%} (to go) {#aYcU gatO ca#} Dhātu- Pā.(Śāk.) i. 337; {#aYcU iti paWan SAkawAyanaH#} DhātuVṛ. i. 852; DhātuPā. (H.) 1. 1
+aYjihiza       -> aYjihizA       | {#aYjihiza#} (añjihiṣa-) [{%desid.%} of {%aṃh-%}] to desire to go, Dhātu- Pra. 1. 636 (47. 13); {#prAcyamA#} (v. l. {#ma#}) {#YjihizAMcakre prahasto rAvaRAjYayA
+acAndana       -> acandana       | {#acAndana#} (a-cāndana) {%adj.%} not prepared from sandalwood {#idaM#} {#tatsnehasarvasvam….acandana#} (v. l. {#acAndana#}) {#manOSIraM hfdayasyAnulepanam#} Mṛ
+acIram         -> aciram         | {#acIram#} (a-cīram) {%adv.%} [accent shows that the vocable should be {@{#cIra#}@}] without delay {#A\vaha/ntI vitanvA\nA.ku\rvA\RAcIra/mA\tmanaH/#} (v. l. {#k
+adayA          -> adaya          | {#adayA#} (a-dayā) {%f.%} mercilessness, unkindness, cruelty {#AlasyaM cAGfRA-#} {#dayA#} MahāBhā. xiv. App. I. 4. 1700; {#nirdayasya#} (v. l. {#nirdayasyA#}) {
+adfSyA         -> adfSya         | {#adfSyA#} (adṛśyā) {%f.%} name of Vāsiṣṭha's wife {#reme sa tasyA rAjarziH…#} {#yaTA…adfSyantyAM#} (v. l. {#adfSyAyAM#}) {#ca vAsizWaH#} MahāBhā. v. 115. 11.
+agamyAgamin    -> agamyAgAmin    | {#agamyAgamin#} (agamyā-gamin) {%adj.%} who has illicit intercourse, who commits adultery {#agamyAgamI#} (v. l. {#ºgAmI#}) {#duScarmA…tasmAt prAyaScittaM caredA
+agrahAyaRika   -> AgrahAyaRika   | {#agrahAyaRika#} (agrahāyaṇ-ika) {%m.%} month of Mārgaśīrṣa {#mArgaSIrzo#} {#mArgaH syAdAgrahAyaRaH.AgrahAyaRikaH#} (v. l. {#agrahAyaRikaH#}) KośaKaTa. 1. 1078.
+agrayaRa       -> AgrayaRa       | {#agrayaRa#} (agrayaṇa) [also {%āgrayaṇa%}, in the {%prajñādigaṇa%}, cf. Sara- Kaṇṭhā.(Gr.) v. 4. 45, {#candrastu.agre'yanasya.agrayaRam.rAjadantAditvA-#} {#tpr
+agreya         -> aGreya         | {#agreya#} (agreya) {%adj.%} leading, foremost cf. {@{#agriya#}@}, {#vikrAntacakrAyuDaH#} {#samastarAjAgreyaH…karikAlacoLaH#} EI. xxi. 33. 35; {#agramagryaM taT
+ajabasti       -> ajavasti       | {#ajabasti#} (aja-basti) {%m.%} name of a person {#SuBrAdiByaH.SuBra ityeva-#} {#mAdiByo'patye Qag Bavati.…SuBra…ajabasti#} CāndraVyā. ii. 4. 53; {#gfzwyAdiByaH
+ajarAyu        -> ajarayu        | {#ajarAyu#} (ajarāyu) {%m.%} name of a son of Āyu {#nahuzaM vfdDaSarmARaM rAjiM#} {#ramBam#} (v. l. {#ajarAyum#}) {#…etAnAyoH putrAnpracakzate#} MahāBhā. i. 70.
+akAlam         -> AkAlam         | {#akAlam#} (akālam) {%adv.%} {@1@} prematurely, suddenly {#akAlaM cAgame'DItI#} {#kimapasmAravAnaTa#} TriṣaŚaPuC. ii. 6. 292; {#akARqa#} (v. l. {#akAla#}) {#mev
+akarRikA       -> akarRika       | {#akarRikA#} (a-karṇikā) {%adj.%} [{%f.%} of {%akarṇaka%}] {@A@} having no ears {#ekakarRImakarRikAm#} (v. l. {#KarakarRyaSvakarRikAH#}) Rāmā. v. 15. 11; {#saMd
+akoWa          -> akowa          | {#akoWa#} (akoṭha) {%m.%} [= akoṭa] the Areca or Betel-nut palm {#akoWa-#} {#naKaro biBraddaMzwrA (? zwrAM) kurabakAtmikAM…vasaMtakesarI#} PadmP.(Ra.) 95. 15; {
+akzoda         -> akzoqa         | 1{#akzoda#} (akṣoda) {%m.%} walnut tree {#vanam…adrAkzIt…nAradaH…akzodEH#} {#…virAjitam#} SkandP. ii. (9). 16. 34. || 2{#akzoda#} (akṣoda) {%n.%} name of a lake
+akzohiRI       -> akzOhiRI       | {#akzohiRI#} (akṣohiṇī) {%f.%} [= {#akzOhiRI#}] {@A@} an army consisting of ten {%anīkinīs%} = 21870 elephant-riders, 21870 charioteers, 65610 horsemen, and 109
+anAlamBa       -> anAlamba       | {#anAlamBa#} (an-ālambha) {%adj.%} not having immolation of sacrificial animals {#upadrutamidaM sarvamanAlamba#} (v. l. {#mBa#}) {#manAyakam.kEkeyyA hi kfte sar
+anAli          -> anali          | {#anAli#} (anāli) {%m.%} name of one of the sons of Viśvāmitra {#tasya#} {#putrA mahAtmAno brahmavaMSavivarTanAH.…ArAdDirnAmayaScEva#} (v. l. {#anAlirnAvikaScEv
+anAvApta       -> anavApta       | {#anAvApta#} (an-āvāpta) {%adj.%} (irr.) {@i@} not completed, not fulfilled {#kaccidrAjankftAnyeva kftaprAyARi vA punaH.viduste vIra karmARi nAna#} (v. l. {#nAn
+anOkaSAyin     -> anokaSAyin     | {#anOkaSAyin#} (an-aukaśāyin) {%adj.%} not sleeping in a house {#anokasArI#} (v. l. {#anOkaSAyI#}) {#…sa BikzuH#} MahāBhā. i. 86. 5.
+anUcita        -> anucita        | {#anUcita#} (anūcita) adj. narrated after {#upamAnapade tilottamAM yadi mantrI#} {#vidaDe SriyaM prati.aparokzya punastadIdfSaM kaTamarTaM tadanUditaM#} (v. l. 
+anUpama        -> anupama        | {#anUpama#} (an-ūpama) {%adj.%} [{%f.%} -ā] {@A@} matchless, i. e. excellent, best {#paSya#} {#divyaM suruciraM BIma puzpamanuttamam#} (v. l. {#anUpamam#}) Mahā
+anUpyA         -> anUpya         | {#anUpyA#} (anūpyā̀) {%adj. (f.)%} of the marshes, occurring on the marshy land {#SaM na\ Apo/ Danva\nyA\ 3\/ Samu/ santvanU\pyAH/#} AV. i. 6. 4; xix. 2. 2; Kāṭ
+anUttara       -> anuttara       | {#anUttara#} (anūttara) {%adj.%} having no reply, clueless {#yadvado'nuttaraH#} (v. l. {#anUttaraH#}) AbhidhāCin. 347.
+anUzaRqa       -> anuzaRqa       | {#anUzaRqa#} (anūṣaṇḍa) {%m.%} [perhaps v. l. for {#anuzaRqa#}, cf. GaṇPā. 35. 10] name of a country {#anUzaRqa ityanye#} GaṇRa. 5. 327 (366)
+anaNgA         -> anaNga         | {#anaNgA#} (anaṅgā) {%f.%} {@1@} name of a river {#AryA mlecCASca…nadIH#} {#pibanti bahulA gaNgAM sinDuM sarasvatIm.…SuktimatImaraRyAM#} (v. l. {#anaNgAm#}) {#c
+anapA          -> anapa          | {#anapA#} (anapā) {%f.%} name of a daughter of Prāvā {#anUpAM#} (v. l. {#anapAM#}) {#suBagAM BAsImiti prAvA vyajAyata#} MahāBhā. i. 59. 44.
+anavakAra      -> anavakara      | {#anavakAra#} (anavakāra) {%adj.%} ({%śānyatā%}) without elimination, not partial, complete, absolute {#zoqaSaviDA SUnyatA…anavakAraSUnyatA prakfti-#} {#SUnyatA
+andas          -> anDas          | {#andas#} (andas) {%n.%} cooked rice {#BismAnDo#} (v. l. {#ºzRAndo#}) {#dIdivirBaktamannamAhAramodanam#} ParyāMu. 20. 3.
+anfRA          -> anfRa          | {#anfRA#} (anṛṇā) {%f.%} name of an Apsaras {#anunA#} (v. l. {#anfRA#}) {#cAnavadyA ca#} {#priyAmuKyA guRAvarA#} MahāBhā. i. 114. 50.
+anilA          -> anila          | {#anilA#} (anilā) {%f.%} {@1@} name of a daughter of Prāvā {#anavadyAm…#} {#priyAm.anUpAM#} (v. l. {#anilAm#}) {#suBagAM BAsImiti prAvA vyajAyata#} MahāBhā. i. 
+anirBiRRa      -> anirviRRa      | {#anirBiRRa#} (á-nirbhiṇṇa) {%adj.%} [AltGr. I. 2. 190; II. 1. 136] {@1@} not differentained, not separated (i. e. not become manifest sep- arately) {#ya A/Rqak
+anispanda      -> anizpanda      | {#anispanda#} (a-nispanda) {%adj.%} not moving, inert {#tatra mAnavAH.#} {#anizpandAH#} (v. l. {#anispandAH#}) {#suganDASca nirAhArA jitendriyAH.devalokacyutAH#
+annAdAna       -> annadAna       | 1{#annAdAna#} (annādāna) {%n.%} {@A@} non-giving of food {#(SaNKaH) yo'nAdane'pi#} {#nadati#} (v. l. {#yo'nnAdAne vinadati#}) {#sa nanAdADikaM tadA#} MahāBhā. i
+antarAsTa      -> antarasTa      | {#antarAsTa#} (antarā-stha) {%adj.%} [{%f.%} -ā] {@A@} what exists in the mind {#antarasTAm#} (v. l. {#antarAsTAm#} VIŚVA.) {#parityajya BAvaSrIM BAvanAmayIm.yo
+antarAsTita    -> antarasTita    | {#antarAsTita#} (antarā-sthita) {%adj.%} [{%f.%} -ā] {@A@} residing in the region between (Sindhu and its tributaries) {#paYcAnAM sinDuzazWAnAM nadInAM ye'ntarA
+anuSuSrUza     -> anuSuSrUzA     | {#anuSuSrUza#} (anu-śuśrūṣa-) {%desid.%} {@A@} to desire to listen, i. e. to obey {#BarataH#} {#….kOsalyAto'tiriktaM ca sa tu SuSrUzate#} (v. l. {#so'nuSuSrUzat
+anubinda       -> anuvinda       | {#anubinda#} (anubinda) {%m.%} name of a warrior (hailing from Avanti) {#vindAnuvinda#} (v. l. {#bindAnubindA#}) {#vAvantyO sametO raTasattamO#} MahāBhā. v. 163
+anucAra        -> anucara        | {#anucAra#} (anu-cāra) {%m.%} {@i@} follower {#samAgataM pUrRaSaSipraBAnanaM mahAnu-#} {#BAvam#} (v. l. {#sahAnucArEH#}) {#nacireRa dfzwavAn#} MahāBhā. iv. 177*
+anukramaRika   -> anukramaRikA   | {#anukramaRika#} (anukramaṇi-ka) {%m.%} index, table of contents {#anukra-#} {#maRyA#} (v. l. {#anukramaRikAd#}) {#yAvatsyAt#} MahāBhā. i. 1. 200.
+anunA          -> anumA          | {#anunA#} (anunā) {%f.%} name of a daughter of Prāvā {#anavadyAmanuvaSA-#} {#manUnAmaruRAM priyAm#} (v. l. {#anunAmAruRapriyAm#}) {#.…prAvA vyajAyata#} MahāBhā.
+anunIyamAna    -> anumIyamAna    | {#anunIyamAna#} (anu-nīyamāna) {%adj.%} [{%f.%} -ā] {@A@} being conciliated {#DruvaM vinASo nfpa kOravARAM#} (v. l. {#nEkaprakArEranunIyamAnaH#}) {#na vE Sreyo 
+anunud         -> anumud         | {#anunud#} (anu-nud-) VI.P. ({%caus.%}) to cause to push or urge {#duHSAsana raTAstUrRaM yujyantAm….anIkAni ca sarvARi SIGraM tvamanucodaya#} (v. l. {#ºnodaya#}
+anupakruzwa    -> anupAkruzwa    | {#anupakruzwa#} (an-upakruṣṭa) {%adj.%} not censured, blameless {#mahAnta-#} {#mapyarTamaDarmayuktaM yaH saMtyajatyanupA#} (v. l. {#ºpa#}) {#kruzwa eva#} MahāBh
+anupayAt       -> anupayat       | {#anupayAt#} (an-upayāt) {%adj.%} not approaching (sexually) {#apradAtA#} {#pitA vAcyo vAcyaScAnupaya#} (v. l. {#ºyA#} Ind. Spr. 656) {#n patiH#} MahāBhā. iii. 
+anurAgA        -> anurAga        | {#anurAgA#} (anurāgā) {%f.%} name of a river {#gaRqakIyAM taTA SoRam#} (v. l. {#gaRqakImanurAgAM ca)…nadyaH krameREtya vrajanti te#} MahāBhā. ii. 18. 27.
+anusama        -> anusAma        | {#anusama#} (anu-sama) {%adj.%} almost resembling or equal {#SAradvatIputraH….#} {#rAmasyAnumataH#} (v. l. {#ºsamaH#}) {#SAstre puraMdarasamo yuDi.kArtavIryasam
+anuvaMSA       -> anuvaMSa       | {#anuvaMSA#} (anu-vaṃśā) {%adj. (f.)%} {@1@} parallel to the secondary rafter {#gfhe#} {#sOmye paScimapUrvAyatAM taTAnuvaMSAM pUrvadakziRayordvArayutAmagniSAlAM
+anuvakrA       -> anuvakra       | {#anuvakrA#} (anu-vakrā) {%f.%} a variety of motion (of planets) type of retro- grade motion {#vakrAtivakrA vikalA#} (v. l. {#vakrAnuvakrA kuwilA#}) {#mandA man
+anuviDitsA     -> AnuviDitsA     | {#anuviDitsA#} (anu-vidhitsā) {%f.%} desire to do or inflict retribution {#puruzaH#} {#….nApnoti…sarvamAyuH keneha hetunA.…kroDaScAtivivitsA#} (v. l. {#ºnuviDit
+anuzvan        -> anusvan        | {#anuzvan#} (anu-ṣvan-) I.P. to resound, to echo {#ripunizUdanaH.aBizwa#}- (v. l. {#ºnuzva#}) {#nati medinyAm#} Rāmā. vi. 22. 27.
+anyUnA         -> anyUna         | {#anyUnA#} (anyūnā) {%f.%} name of an Apsaras ({%lit.%} perfect) {#apsarasaH….#} {#nanftuH….anUnA#} (v. l. {#anyUnA#}) {#cAnavadyA ca#} MahāBhā. i. 114. 50.
+anyasakta      -> anyAsakta      | {#anyasakta#} (anya-sakta) {%adj.%} [{%f.%} -ā] {@Ai@} attached or devoted to another man {#anyAsaktA#} (v. l. {#anyasaktA#}) {#tviyaM kanyA…mayA jitA#} MahāBhā
+anyoQa         -> anyoQA         | {#anyoQa#} (anyoḍha) {%m.%} son born of the wife married to another person {#retajo vA Bavetputrastyakto vA kzetrajo Bavet.aDyUQaH#} (v. l. {#anyoQaH#}) {#samay
+atilAlita      -> atilalita      | {#atilAlita#} (ati-lālita) {%adj.%} [{%f.%} -ā] excessively fondled {#aTavA#} {#yOvanamatilaNGitaM#} (v. l. {#lAlitaM#}) {#nu kuvfdDEH#} DhūrtaViSaṃ. 5. 21; {#B
+atiskanDa      -> atiskanDA      | {#atiskanDa#} (ati-skandha) {%adj.%} having high shoulders {#taTA jYAnagatiM#} {#skanDaM#} (v. l. {#taTArjunamatiskanDam#}) {#sahajolbaRapOruzam#} MahāBhā. iii.
+ativfta        -> atiBfta        | {#ativfta#} (ati-vṛta) {%adj.%} {@1@} chosen by overlooking (someone) {#nAti-#} {#vfto yAjayet#} BaudhŚS. iii. 197. 6; {@2@} completely screened {#kAlaH sarvezu
+awwalaka       -> awwAlaka       | {#awwalaka#} (aṭṭala-ka) {%m.%} tower {#awwaScAwwA#} (v. l. {#wwa#}) {#lakaH#} Dvirū.(Ha.) 22.
+
+# ===== CROSS-REFERENCE (22) =====
+aDiBoga        -> ADiBoga        | {#aDiBoga#} (adhi-bhoga) {%m.%} [inferior reading for {@{#ADiBogA#}@} in GautDS. ii. 3. 32] enjoyment or usufruct of something pledged, (considered as interest)
+aDyarDasUrpa   -> aDyarDaSUrpa   | {#aDyarDasUrpa#} (adhyardha-sūrpa) {%adj.%} purchased for or worth (grains measuring to) one and a half {%sūrpa%} {#aRWaRorub Bavati.…aDyarDasUrpam#} JaineVyā. 
+aNkuWa         -> aNkuwa         | {#aNkuWa#} (aṅkuṭha) {%n. Alangium haxapetalum%} {#aNkuWam.apAmArgaM tAlakaM#} {#ca (cUrRayitvA)#} RaseCin. 9. 317 (254. 1), cf. {@{#aNkowa#}@}.
+acaRqAla       -> acARqAla       | {#acaRqAla#} (a-caṇḍāla) {%m.%} not a low-caste man ŚatBr.(K.) XVI. vi. 3. 22 cf. {@{#acARqAla#}@}.
+agnitanU       -> agnitanu       | {#agnitanU#} (agni-tanū) {%f.%} cf. {@{#agnitanu#}@}.
+agrARIka       -> agrAnIka       | {#agrARIka#} (agrāṇīka) {%m. n.%} [cf. {@{#agrAnIka#}@}] vanguard [APTE]
+agrahAyana     -> agrahAyaRa     | {#agrahAyana#} (agrahāyana) {%m.%} cf. {#agrahAyaRa#} [APTE]
+ajUrya         -> ajurya         | {#ajUrya#} (á-jūrya) {%adj.%} [{%f.%} -ā] unperishing, not subject to drying up, not decaying cf. {@{#ajurya#}@}, {#dvO sa/mu\drO vita/tAvajU\ryO pa\ryAva/rtete
+ajigarta       -> ajIgarta       | {#ajigarta#} (ajigarta) {%m.%} name of a Brahmin cf. {@{#ajIrgata#}@}, {#taTAjigartasya#} {#suto varizWo nAmnA SunaHSepa iti prasidDaH.krItastu pitrA#} DevīBhāP
+akzitavasu     -> akzitAvasu     | {#akzitavasu#} (akṣita-vasu) cf. {#akzitAvasu#}.
+anAvayu        -> anAbayu        | {#anAvayu#} (an-āvayu) {%adj.%} not being consumed {#Avayo'nAvayo#} {#rasasta ugra Avaya A te karmam aSImahi#} AV.(P.) xix. 5. 7; {#AvayatiH attikarmA.#} {#tasm
+anU            -> anu            | {#anU#} (anū) (=anu) {%adn.%} after {#sannezu nArASaMsezu camasinaH svaM svaM camasamanU#} {#nyante#} ĀpaŚS. xiii. 12. 9; (comm. {#dIrGaSCAndasaH prAmAdiko vA#}
+anUja          -> anuja          | {#anUja#} (anū-ja) {%m.%} [lengthening {%metri causa%}] younger brother {#putrA#} {#baBUvuratisO(SO)ryaparASca tasya.tatrAgrajo nfpavarastripurISaH….tezAmanUjas
+anUvAka        -> anuvAka        | {#anUvAka#} (anū-vāka) {%m.%} particular hymn of praise {#jImUtasyetyanUvAkAYcaturdikzu#} {#viniHkzipet#} NāraS. 54. 18; cf. {@{#anuvAka#}@}.
+anUvAkyA       -> anuvAkyA       | {#anUvAkyA#} (anū-vākyā) {%f.%} invitatory verse or formula {#yAjyAnUvAkyAvini-#} {#yogaparavacanaM pradAnaBedaM prakASayati#} SaṅkarKāBh. 87. 5 ({%on%} ii. 2. 
+anUyAjavat     -> anuyAjavat     | {#anUyAjavat#} (anūyājá-va(n)t) {%adj.%} having, i. e. combined with the after- offering {#pra\yA\java/dananUyA\jaM prA/ya\RIyaM/ kA\rya/manUyA\java/t.a\pra\yA\
+anuSf          -> anusf          | {#anuSf#} (anu-śṛ-) = {#anuSru#}, cf. VIŚVA.
+anvAh          -> anvah          | {#anvAh#} (anv-āh-) (= anv-ah-), cf. {@{#anvah#}@} [VIŚVA.]
+aqU            -> AqU            | {#aqU#} (aḍū) {%m. /f.%} boat, raft {#aRo qaSca.aqUrjalaplavadravyam#} SiddhāKau. 522B. 4, cf. {@{#AqU#}@}.
+atIruc         -> atiruc         | {#atIruc#} (atī-rúc) {%m.%} fetlóck or knee (of a horse) {#agni/matIru/gByAm#} MaiS. iii. 15. 3; JaineVyā. 315. 27 ({%on%} iv. 3. 219); cf. {@{#atiruc#}@}.
+atidurvala     -> atidurbala     | {#atidurvala#} (ati-durvala) {%adj.%} very weak, feeble, emaciated {#kAsamAno#} {#hayo dIrGaM BinnaromAtidurvalaH#} AśvaVai. 34. 7; cf. {@{#atidurbala#}@}.
+ativyaTa       -> ativyaTA       | {#ativyaTa#} (ati-vyatha) {%adj.%} cf. {@{#durativyaTa#}@} KāṭhS. 25. 1; KapiS. 38. 4 [VIŚVA.]
+
+# ===== OTHER-INTENTIONAL (12) =====
+aDipatya       -> ADipatya       | {#aDipatya#} (ádhipat-ya) {%n.%} sovereignty, lordship [PadaPā. for ā́dhi- patya in ṚV. x. 124. 5]
+aDyADIna       -> aDyaDIna       | {#aDyADIna#} (adhy-ādhīna) {%adj.%} completely under some one (i. e. arrested) {#(nADyaDIno na vaktavyaH) anye tu tulyasaMhitatvAdaDyADIna iti paWanti.#} {#aDyA
+aYjizakTa      -> aYjisakTa      | {#aYjizakTa#} (añji-ṣáktha) {%adj.%} [ = {#aYjisakTa#}] (goat) having white spots on the thighs {#kfzRa/grIvaH Sitika/kzo'Yji{??}/kTasta/ EndrAgnAH/#} MaiS. iii
+acyutadanti    -> Acyutadanti    | {#acyutadanti#} (acyuta-danti) {%m.%} name of a warrior tribe [variant for {#Acyutadanti#} in Dāmanyādigaṇa P. v. 3. 116]
+agrataHSara    -> agrataHsara    | {#agrataHSara#} (agrataś-śara) {%adj.%} [for {%agrataḥsara%}] {#itTamuttejitastejaH-#} {#SAlinAmagrataHSaraH#} PāṇḍaC. 7. 659.
+ajekapAd       -> ajEkapAd       | {#ajekapAd#} (ajekapād) {%m.%} one of the eleven Rudras {#aje(? jE)kapAda-#} {#hirbuDnyA(? DnyaH)…rudrAScEkAdaSa smftAH#} BṛhaspaSm. 83. 23; VyavaNi. 151. 3.
+akfpA          -> akfpa          | {#akfpA#} (a-kṛpā) {%f.%} absence of compassion, pitilessness, cruelty {#kroDaH#} {#kAmo loBamohO vivitsAkfpAsUyA mAnaSokO spfhA ca…varjyAH sadA…nareRa#} MahāBh
+anABu          -> anABU          | {#anABu#} (án-ābhu) {%m.%} epithet of Rudra ({%lit.%} not empty) {#a/nABo#} {#mfqa/ DU/rte na/mante(? ste) astu ru/dra mfqa/#} MaiS. i. 8. 5 (i. 121. 10) ({%but
+anAhatA        -> anAhata        | {#anAhatA#} (an-āhatā) {%f.%} {@1@} one of the epithets of the power of Viṣṇu ({%lit.%} unobstructed or unlimited) {#Bagavatastasya…SaktiH….anAhatA#} {#buDEH pr
+anupasadam     -> anUpasadam     | {#anupasadam#} (anupasadam) {%adv.%} without the {%iṣṭi-%} rite called {%upasad%} {#anupasadamagniM cinoti dvyaham#} ĀpaŚS. xvi. 35. 8; xxiii. 11. 4 ({%but%} VI
+anvIpika       -> AnvIpika       | {#anvIpika#} (anv-īpika) {%adj.%} agreeable, conducive {#a(A ?)nvIpikaH#} Prasā. i. 826. 6 ({%on%} iv. 4. 2)
+anyadevatA     -> anyadevata     | {#anyadevatA#} (anya-devatā) {%f.%} {@1A@} other deity {#kAme/ste/stErhftajYAnAH prapadyante'nya-#} {#devatAH#} MahāBhā. vi. 29. 20 = BhagGī. 7. 20; {#AvAhya de

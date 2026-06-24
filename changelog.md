@@ -6,6 +6,24 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.40.0] - 2026-06-24
+
+### Added
+- **PD triaged on source 1 — ALL 33 dicts done.** The Deccan College *Encyclopaedic Dictionary*
+  (English, 107,630 entries): 1,007 tier-A → **0 fileable typos**, 888 real words, **116
+  documented-intentional** — the **richest do-not-file list of any dict** (varia-lectio 66,
+  wrong-reading 16, cross-reference 22, other 12). As a historical-principles lexicon PD deliberately
+  records non-standard attested spellings with full citations + an explicit verdict (`agneyI` "w. r.
+  for *āgneyī*", `aGni` v.l. `aGniya`), so filing any would corrupt its editorial record. The lone
+  typo-unsure (`akzAMsa`) was source-refuted (own `[MW]` headword); 0 unlocatable. Package +
+  [readme](corrections_draft/PD/readme.md) under [corrections_draft/PD/](corrections_draft/PD/).
+  A second PD source is still expected — a re-run later only refines the do-not-file list.
+
+### Changed
+- **Suppression list → 33 dicts, 2297 unique** (PD +116 do-not-file headwords). Re-ran
+  `run_all.py --rerun`; `eval.py` false-positives back to **0** for all four correctors (tier-C
+  known-pair recall steady: A=690, B=243, C=918).
+
 ## [1.39.0] - 2026-06-24
 
 ### Added
