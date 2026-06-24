@@ -112,11 +112,21 @@ python detectors/get_external_source.py PD   # (re)stage PD's sources on a fresh
 
 See [PD/readme.md](PD/readme.md) for the source list, license, and second-source slot.
 
-## Planned: orthographic-drift study
+## Orthographic-drift study — ✅ COMPLETE (all 5 gloss languages)
 
 A second axis on the same pipeline — checking the **gloss-language tokens** (German / English /
 French / Latin / Russian) inside entry bodies against a **2026 standard**, to document how 19th-c.
 spelling has drifted (German reformed 1901 + 1996; English convention drift; Russian 1918). It is
-a **documentation / search-normalization layer, not a correction list**. Design:
-**[../ORTHO_DRIFT_ROADMAP.md](../ORTHO_DRIFT_ROADMAP.md)**.
+a **documentation / search-normalization layer, not a correction list**.
+
+**Done across all 5 languages** (changelog `[1.20.0]`–`[1.30.0]`): tool `detectors/ortho_drift.py`
+(profile-driven de/en/fr/la/ru), per-lang reform maps + drift summaries in `ortho_drift/`, and a
+standalone write-up in **[../docs/ORTHO_DRIFT_FINDINGS.md](../docs/ORTHO_DRIFT_FINDINGS.md)**. Headline:
+drift magnitude tracks reform **type** — legislated (RU 1918 ≫ DE 1901/96) ≫ convention (EN ≤0.57,
+FR ≤0.31 per 1k) ≫ none (LA = 0). Design: **[../ORTHO_DRIFT_ROADMAP.md](../ORTHO_DRIFT_ROADMAP.md)**.
+
+**Optional, externally-gated extensions** (not started — need data on disk): a within-EN recency
+control over modern dicts (BHS/IEG/PE/VEI, plus now **PD** 1976–2009) needs the `en_GB` Hunspell dic
+(`$ORTHO_EN_DIC`); the German DTA/RIDGES long-tail merge (`detectors/merge_reform_pairs.py` is wired)
+needs a local corpus export or a row-list URL.
 
