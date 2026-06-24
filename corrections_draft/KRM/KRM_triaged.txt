@@ -1,0 +1,68 @@
+# KRM tier-A -- BODY-GROUNDED triage  (DRAFT; verify every kept case against the scan)
+#
+# The 43 engine tier-A candidates were judged against KRM's OWN entry text (csl-orig),
+# not spelling alone. A spelling detector cannot tell a typo from a real word, an
+# intentional variant / compounding form, or wrong-reading apparatus -- the entry can.
+# Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM
+# pass over the 'realword' set + source confirmation of every TYPO verdict.
+#
+# FINDING: of 43 tier-A candidates, 0 are body-confirmed fileable typos (0.0%).
+# 37 are real distinct words, 6 are spellings KRM documents on purpose (w.r./v.l./
+# in-comp./cross-ref -- filing them would CORRUPT KRM), 0 are not in the current
+# source, and 0 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
+# do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.
+
+# ===== BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file) (0) =====
+
+# ===== BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted (0) =====
+
+# ===== BUCKET 3  REVIEW -- undecidable without the printed page (0) =====
+
+# ===== BUCKET 4  REAL-WORD -- a distinct real word; the fix would merge two words (37) =====
+arda          -> arDa          | KRM: (41) {@‘arda gatO yAcane ca’@} (I-BvAdiH-55-saka. se. para.) ‘ardayedardate'rderdyO hiMsan | Entry (41) quotes "arda gatO yAcane ca" with forms ardakaH/ardati — a distinct BvAdi root.
+mfDu          -> mfdu          | KRM: (1308) {@“mfDu undane”@} (I-BvAdiH-874. saka. sew. uBa.) undanam = kledanam . marGakaH-rDi | Entry (1308) quotes "mfDu undane" with forms marDakaH/marDan — its own BvAdi root with asp
+garba         -> garBa         | KRM: (382) {@“garba gatO”@} (I-BvAdiH-422. aka. sew. para.) garbakaH-rbikA, garbakaH-rbikA, jig | Entry (382) quotes and defines "garba gatO" with its own conjugation (garbakaH) — a distin
+abi           -> aBi           | KRM: (29) {@“abi Sabde”@} (I-BvAdiH-378. aka-se-A—) ambakaH-mbikA, ambakaH-mbikA, ambibizakaH-z | Entry (29) quotes "abi Sabde" with forms ambakaH etc. — a distinct BvAdi root spelled abi.
+tamu          -> tanu          | KRM: (706) {@“tamu kANkzAyAm”@} (IV-divAdiH-1202. saka. sew. para.) SamAdiH . GawAdiH . [a] 1 t | Entry (706) quotes "tamu kANkzAyAm" (divAdiH) with forms tamakaH/tAmyan — its own root, di
+hiwa          -> hita          | KRM: (2002) {@“hiwa AkroSe”@} (I-BvAdiH-317. (pA) saka. sew. para.) ‘hiWa’ iti kecit . BOvAdika | Entry (2002) quotes "hiwa AkroSe" (retroflex w) and notes the variant 'hiWa iti kecit' — a
+mAnTa         -> manTa         | KRM: (1246) {@“mAnTa hiMsAsaMkleSanayoH”@} (I-BvAdiH-46. saka. sew. para.) “— ‘maTi—’ ityapi dO | Entry (1246) quotes "mAnTa hiMsAsaMkleSanayoH" with forms mAnTakaH; the long-A root is the
+vijI          -> viji          | KRM: (1598) {@“o vijI BayacalanayoH”@} (VI-tudAdiH-1289. aka. sew. Atma.) prAyeRAyaM utpUrvaH . | Entry (1598) quotes "o vijI BayacalanayoH" with long I as citation form and forms udvejaka
+rabi          -> ravi          | KRM: (1377) {@“rabi Sabde”@} (I-BvAdiH-376. aka. sew. Atma.) rambakaH-mbikA, rambakaH-mbikA, ri | Entry (1377) quotes "rabi Sabde" with forms rambakaH etc. — a distinct BvAdi root, not rav
+lIN           -> liN           | KRM: (1494) {@“lIN SlezaRe”@} (IV-divAdiH-1139. aka. ani. Atma.) ‘lApayellAlayedAtve SlezaRe lI | Entry (1494) quotes "lIN SlezaRe" (divAdiH) with long I and forms lAyakaH/lIyate — distinc
+Sarda         -> SarDa         | KRM: (1688) {@“Sarda kutsite Sabde”@} iti kASakftsnena (BvAdO) paWitam . sa DAtuH AtmanepadI it | Entry (1688) quotes "Sarda kutsite Sabde" (per kASakftsna) with form Sardate — a distinct 
+arba          -> arBa          | KRM: (42) {@‘arba gatO’@} (I-BvAdiH 415-saka. se. para.) arbakaH-rbikA, arbakaH-rbikA, 1 arbibi | Entry (42) quotes "arba gatO" with forms arbakaH/arban — a distinct BvAdi root.
+kFY           -> kfY           | KRM: (258) {@“kFY hiMsAyAm”@} (IX-kryAdiH-1485. saka. sew. uBa.) pvAdiH, lvAdiSca . ‘kfRan kfRI | Entry (258) quotes "kFY hiMsAyAm" (kryAdiH) with the long vocalic F as citation form and f
+damu          -> danu          | KRM: (819) {@“damu upaSame”@} (IV-divAdiH-1203. saka. sew. para.) SamAdiH . GawAdiH . 1 damakaH | Entry (819) quotes "damu upaSame" (divAdiH) with forms damakaH/dAmyan — a distinct root, n
+pfN           -> pfR           | KRM: (1046) {@“pfN vyAyAme”@} (VI-tudAdiH-1402. aka. ani. Atma.) ‘vyAyAmaH = udyogaH . sa ca pr | Entry (1046) quotes "pfN vyAyAme" (tudAdiH) with forms pArakaH; the final N is the root's 
+tubi          -> tuvi          | KRM: (750) {@“tubi ardane”@} (I-BvAdiH-428. saka. sew. para.) ‘lumbayet tumbayedarde Sapi lumba | Entries (750)/(751) quote "tubi ardane" with forms tumbakaH — a distinct root, not tuvi.
+sPUrjA        -> sPUrja        | KRM: (1966) {@“wu o sPUrjA vajranirGoze”@} (I-BvAdiH-235. aka. sew para.)  [Page1397+ 28] ‘— va | Entry (1966) quotes "wu o sPUrjA vajranirGoze" with forms sPUrjaH/AsPUrjaTuH — the marked 
+vfjI          -> vfji          | KRM: (1623) {@“vfjI varjane”@} (II-adAdiH-1029. saka. sew. Atma.) sUtramidaM kzIrasvAmI dOrgapA | Entry (1623) quotes "vfjI varjane" (adAdiH) with extensive idit discussion (vfkte) — the l
+IN            -> iN            | KRM: (80) {@“IN gatO”@} (IV-divAdiH-1143-saka. ani-Atma-) ‘ayatyetIyate gatyAM, aDIte'Dyeti ceN | Entry (80) quotes "IN gatO" (divAdiH) with long I and forms IyamAnaH — distinct from the s
+akzU          -> akzu          | KRM: (3) {@“akzU vyAptO”@} (BvAdiH-I-654. saka-vew-para.) ‘saMGAte ca’ iti kzIrasvAmI . akzakaH | Entry (3) quotes "akzU vyAptO" with long U as its citation form and forms akzakaH — a dist
+Divi          -> divi          | KRM: (899) {@“Divi prIRane”@} (I-BvAdiH-593. saka. sew. para.) DinvakaH nvikA, DinvakaH-nvikA,  | Entry (899) quotes "Divi prIRane" with forms DinvakaH/Dinvan — its own BvAdi root, not div
+paqi          -> padi          | KRM: (964) {@“paqi gatO”@} (I-BvAdiH-281. saka. sew. Atma.) paRqakaH-RqikA, paRqakaH-RqikA, pip | Entry (964) quotes "paqi gatO" (retroflex q) with forms paRqakaH/paRqA — a distinct root, 
+uN            -> um            | KRM: (94) {@“uN Sabde”@} (I-BvAdiH-953-aka. ani. Atma-) AvakaH-vikA, AvakaH-vikA, 1 UzizakaH-zi | Entry (94) quotes "uN Sabde" with forms AvakaH/avaH — its own BvAdi root with N anubandha,
+stima         -> stIma         | KRM: (1933) {@“stima ArdrIBAve”@} (IV-divAdiH-922. aka. ani. para.) sAyaRasammataH pAWo'yam . t | Entry (1933) quotes "stima ArdrIBAve" (divAdiH, sAyaRa's reading) and notes the zwima vari
+labi          -> lavi          | KRM: (1469) {@“labi avasraMsane ca”@} (I-BvAdiH-377. aka. sew. Atma.) cakArAt Sabde'pi Bavati . | Entry (1469) quotes "labi avasraMsane ca" with forms lambakaH — a distinct BvAdi root, not
+laji          -> lAji          | KRM: (1459) {@“laji Bartsane”@} (I-BvAdiH-239. saka. sew. para.) ‘—Barjane’ iti mA. DA. vfttiH  | Entries (1459)/(1460) quote "laji Bartsane" with forms laYjakaH — its own root, not lAji.
+SvitA         -> Svita         | KRM: (1804) {@“SvitA varRe”@} (I-BvAdiH-742. aka. sew. Atma.) ‘— SOklye’ ityeva vopadevaH . sar | Entry (1804) quotes "SvitA varRe" with forms SvetaH/Svitram — its own BvAdi root, the long
+laqi          -> lAqi          | KRM: (1466) {@“laqi BAzArTaH”@} (X-curAdiH-1801. aka. sew. uBa.) AsvadIyaH . iditkaraRAt Rico v | Entries (1466)/(1467) quote "laqi BAzArTaH" (curAdiH, retroflex q) with forms laRqakaH — a
+kzvidA        -> kzvida        | KRM: (326) {@“Yi kzvidA avyakte Sabde”@} (I-BvAdiH-744. aka. sew. para.) [a] ‘Yi kzviqA—’ ityAr | Entry (326) quotes "Yi kzvidA avyakte Sabde" with forms kzvedakaH — the marked long-A cita
+cadi          -> Cadi          | KRM: (492) {@“cadi AhlAdane dIptO ca”@} (I-BvAdiH-68. saka. sew. para.) candakaH-ndikA, candaka | Entry (492) quotes "cadi AhlAdane dIptO ca" with forms candakaH and derivative candraH — a
+GuN           -> GuR           | KRM: (463) {@“GuN Sabde”@} (I-BvAdiH-952. aka. ani. Atma.) GAvakaH-vikA, GAvakaH-vikA, juGUzaka | Entry (463) quotes "GuN Sabde" with forms GAvakaH/GutaH — its own BvAdi root with N anuban
+mIN           -> mIm           | KRM: (1268) {@“mIN hiMsAyAm”@} (IV-divAdiH-1137. saka. ani. Atma.) ‘mIYo mInAti mInIte, hiMsAyA | Entry (1268) quotes "mIN hiMsAyAm" (divAdiH) with verse 'mIYo mInAti mInIte' and forms mAy
+vfY           -> vfR           | KRM: (1626) {@“vfY varaRe”@} (V-svAdiH-1254. saka. sew. uBa.) ‘BaktO vfRIte varaRe vfRoti vfRut | Entry (1626) quotes "vfY varaRe" (svAdiH) with verse 'vfRIte varaRe vfRoti' and forms vAra
+kUN           -> kUR           | KRM: (238) {@“kUN Sabde”@} (VI-tudAdiH-1401. aka. sew. Atma.) kuwAdiH . [a] ‘avyaktaSabde kavat | Entry (238) quotes "kUN Sabde" (tudAdiH, kuwAdiH) with forms kAvakaH — its own root with N
+miji          -> niji          | KRM: (1252) {@“miji BAzArTaH”@} (X-curAdiH-1757. saka. sew. uBa.) AsvadIyaH . iditkaraRAt Rico  | Entry (1252) quotes "miji BAzArTaH" (curAdiH) with forms miYjakaH — a distinct m-initial r
+pUY           -> pUR           | KRM: (1035) {@“pUY pavane”@} (IX-kryAdiH-1482. saka. sew. uBa.) pvAdiH, lvAdiSca . [a] ‘Sni pun | Entry (1035) quotes "pUY pavane" (kryAdiH) with verse 'punAti punIte' and forms pAvakaH — 
+prIY          -> prIR          | KRM: (1072) {@“prIY tarpaRe kAntO ca”@} (IX-kryAdiH-1474. saka. ani uBa.) kAntiH = kAmanA . ‘pr | Entry (1072) quotes "prIY tarpaRe kAntO ca" (kryAdiH) with forms prAyakaH/prIRakaH — its o
+
+# ===== BUCKET 5  INTENTIONAL -- KRM documents the spelling on purpose; NEVER file (6) =====
+Risi          -> misi          | KRM: (679) {@“Risi cumbane”@} (II-adAdiH-1025. saka. sew. Atma.) 2 praRiMsakaH-praniMsakaH-sikA | Entry (679) is the R-initial (RopadeSa) listing of "Risi cumbane"; it conjugates with dent
+zarja         -> sarja         | KRM: (1821) {@“zarja arjane”@} (I-BvAdiH-225. saka. sew. para.) ‘sarja—’ iti kzIrasvAmI . sarjU | Entry (1821) is the z-initial (zopadeSa) listing "zarja arjane"; the body itself notes 'sa
+Riji          -> niji          | KRM: (672) {@“Riji SudDO”@} (II-adAdiH-1026. saka. sew. Atma.) 4 niYjakaH-YjikA, niYjakaH-YjikA | Entry (672) is the R-initial (RopadeSa) listing "Riji SudDO"; it conjugates with dental n 
+zivi          -> Sivi          | KRM: (1840) {@“zivi secane”@} (I-BvAdiH. (pA.) saka. sew. para.) BOvAdikajinvativat (604) rUpAR | Entry (1840) is the z-initial (zopadeSa) listing "zivi secane"; the z-spelling is the deli
+mfN           -> mfR           | KRM: (1301) {@“mfN prARatyAge”@} (VI-tudAdiH-1403. aka. ani. Atma.) ‘mfRAti hiMsArTe pvAdermfNa | 
+DurvI         -> DUrvI         | KRM: (904) {@“DurvI hiMsArTaH”@} (I-BvAdiH-573. aka. sew. para.) DUrvakaH-rvikA, DUrvakaH-rvikA | 
+
+# ===== BUCKET 6  UNLOCATABLE -- not in the current KRM source (stale/different key) (0) =====

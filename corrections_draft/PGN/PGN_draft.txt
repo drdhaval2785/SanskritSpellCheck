@@ -1,0 +1,41 @@
+; DRAFT corrections for PGN — SanskritSpellCheck; VERIFY each against the scan before filing.
+; updateByLine format; only the <k1>/<k2> key field is edited (check the entry body too).
+; NOTE: each case targets the FIRST entry with that headword -- check for homographs
+;       (multiple entries sharing a key) and that no two cases edit the same line.
+;
+; Case 1.  kElASa -> kElAsa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PGN&key=kElASa
+13664 old <L>480<pc>298<k1>kElASa<k2>kElASa
+13664 new <L>480<pc>298<k1>kElAsa<k2>kElAsa
+;
+; Case 2.  indravizRu -> indrAvizRu   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PGN&key=indravizRu
+2356 old <L>37<pc>041<k1>indravizRu<k2>indravizRu
+2356 new <L>37<pc>041<k1>indrAvizRu<k2>indrAvizRu
+;
+; Case 3.  undAna -> undana   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PGN&key=undAna
+4501 old <L>240<pc>080<k1>undAna<k2>undAna
+4501 new <L>240<pc>080<k1>undana<k2>undana
+;
+; Case 4.  zAhi -> sAhi   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PGN&key=zAhi
+7589 old <L>331<pc>158<k1>zAhi<k2>zAhi
+7589 new <L>331<pc>158<k1>sAhi<k2>sAhi
+;
+; Case 5.  vawodaka -> vawodakA   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PGN&key=vawodaka
+11219 old <L>408<pc>244<k1>vawodaka<k2>vawodaka
+11219 new <L>408<pc>244<k1>vawodakA<k2>vawodakA
+;
+; Case 6.  SaRqaka -> zaRqaka   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PGN&key=SaRqaka
+2924 old <L>88<pc>052<k1>SaRqaka<k2>SaRqaka
+2924 new <L>88<pc>052<k1>zaRqaka<k2>zaRqaka
+;
+; Case 7.  pizwapura -> pizwapUra   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PGN&key=pizwapura
+10679 old <L>374<pc>233<k1>pizwapura<k2>pizwapura
+10679 new <L>374<pc>233<k1>pizwapUra<k2>pizwapUra
+;
+; Case 8.  amftadeva -> anftadeva   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PGN&key=amftadeva
+4913 old <L>270<pc>089<k1>amftadeva<k2>amftadeva
+4913 new <L>270<pc>089<k1>anftadeva<k2>anftadeva
+;
+; Case 9.  bawwasvAmin -> BawwasvAmin   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=PGN&key=bawwasvAmin
+4298 old <L>215<pc>077<k1>bawwasvAmin<k2>bawwasvAmin
+4298 new <L>215<pc>077<k1>BawwasvAmin<k2>BawwasvAmin
+;

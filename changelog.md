@@ -6,6 +6,23 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.37.0] - 2026-06-24
+
+### Added
+- **VEI + MCI + PGN + KRM triage — 29/33 dicts.** Four small dicts:
+  - **MCI** (mythical-name index, en): 41 tier-A → **10 fileable typos** + 11 real + 3 do-not-file.
+    Unusually clean — each fileable is a headword keying error contradicted by the entry's *own
+    repeated citations* (`Mahānadi` lemma but "mahānadī" in prose; `Dakṣināpatha` but
+    "dakṣiṇāpathavāsin"; `Brahmopanisad` but "brahmopaniṣadaṃ"). Confirm+Review run; source-verified.
+  - **VEI** (Macdonell–Keith Vedic Index, en): 43 → 0 fileable, 2 do-not-file, 34 attested terms.
+  - **PGN** (inscription proper-name index, en): 21 → 0 fileable, 1 do-not-file, 8 names.
+  - **KRM** (Kramadīśvara dhātupāṭha, `sa`): 47 → 0 fileable, 6 do-not-file, 37 roots. The ṇ-/ṣ-initial
+    upadeśa-form roots (`Riji`, `zarja`) are deliberate Pāṇinian notation, not typos.
+  - Packages under [corrections_draft/](corrections_draft/).
+
+### Changed
+- **Suppression list → 29 dicts** (VEI +2, MCI +3, PGN +1, KRM +6 do-not-file). `eval.py` false-positives stay **0**.
+
 ## [1.36.0] - 2026-06-24
 
 ### Added

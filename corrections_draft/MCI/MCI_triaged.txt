@@ -1,0 +1,99 @@
+# MCI tier-A -- BODY-GROUNDED triage  (DRAFT; verify every kept case against the scan)
+#
+# The 24 engine tier-A candidates were judged against MCI's OWN entry text (csl-orig),
+# not spelling alone. A spelling detector cannot tell a typo from a real word, an
+# intentional variant / compounding form, or wrong-reading apparatus -- the entry can.
+# Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM
+# pass over the 'realword' set + source confirmation of every TYPO verdict.
+#
+# FINDING: of 24 tier-A candidates, 10 are body-confirmed fileable typos (41.7%).
+# 11 are real distinct words, 3 are spellings MCI documents on purpose (w.r./v.l./
+# in-comp./cross-ref -- filing them would CORRUPT MCI), 0 are not in the current
+# source, and 0 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
+# do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.
+
+# ===== BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file) (10) =====
+
+asvaSiras     -> aSvaSiras      [dcs=3 ndicts=1 body=realword]
+    MCI: {@Asvaśiras@} nt.: Name of a {%tīrtha.%} {@A.@} Description: Holy ({%puṇya%}) 7. 57. 28. {@B.@} Epic events connected with this {%tīrtha:%} (1) The sage Bṛhadaśva taught {%akṣahṛdaya%} (the secret sci
+    judged: Lemma {@Asvaśiras@} reads 'asva', but the body cites Aśvaśiras / {%cāśvaśiro%} (aśva = horse), the meaningful form.
+    confirm: Lemma 'Asvaśiras' (dental s) but citations 'Aśvaśiras', 'cāśvaśiro', 'aśvaśiro' — palatal ś (aśva, horse-head).
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=asvaSiras
+
+vEsAKa        -> vESAKa         [dcs=3 ndicts=1 body=realword]
+    MCI: {@Vaisākha@} m.: Name of a month, also called {@Mādhava.@} {@A.@} Event: Yavakrī, the son of Bhara- dvāja, in his wanderings once went to Rai- bhya's {%āśrama%} in the month of Mādhava ({%mādhave māsi
+    judged: Lemma {@Vaisākha@} has dental s, yet the body names the month Vaiśākha with ś ({%nistared ekabhaktena vaiśākham%}, {%mādhave vaiśākhe%}).
+    confirm: Lemma 'Vaisākha' (dental s) but month cited as 'vaiśākhe', 'Vaiśākha', 'vaiśākham' — palatal ś.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=vEsAKa
+
+brahmopanisad -> brahmopanizad  [dcs=0 ndicts=1 body=realword]
+    MCI: {@Brahmopanisad@} f.: Name of a text (?) (or ‘a secret doctrine related to {%brahman%}’ ?) [Page193-a+ 39] At the end of the war, Dhṛtarāṣṭra, when he met the sage Vyāsa, learnt it, along with the dut
+    judged: Lemma {@Brahmopanisad@} has dental s, but the body citation reads brahmopaniṣadaṃ with ṣ ({%brahmopaniṣadaṃ tathā%}), the standard upaniṣad.
+    confirm: Lemma 'Brahmopanisad' (dental s) but citation 'brahmopaniṣadaṃ' — retroflex ṣ (upaniṣad).
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=brahmopanisad
+
+mahAnadi      -> mahAnadI       [dcs=3 ndicts=1 body=realword]
+    MCI: {@Mahānadi1@} f.: Name of a river. {@A.@} Location: Listed by Saṃjaya among the rivers of the Bhāratavarṣa; its water used by people for drinking 6. 10. 26, 13; in the east ({%prācīṃ diśam abhiprepsuḥ
+    judged: Lemma {@Mahānadi1@} f. 'Name of a river', but every Sanskrit citation in the body reads mahānadī with long ī ({%puṇyā caiva mahānadī%}), so the headword's short i is a digitization slip.
+    confirm: Lemma 'Mahānadi' but gloss 'f.' (river) and citations consistently 'mahānadī ca', 'puṇyā caiva mahānadī', 'the Mahānadī' (long ī).
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=mahAnadi
+
+supratika     -> supratIka      [dcs=3 ndicts=1 body=realword]
+    MCI: {@Supratika,@} with the openings of his temples burst open ({%prabhinnakaraṭāmukha%}), dwells, together with the four {%diggajas%} (Airāvata and the others), in the region ({%lokasaṃsthili%}) known as
+    judged: Lemma is {@Supratika,@} but the body consistently names the elephant Supratīka with long ī ('dimensions of Supratīka', 'Supratīka and the four diggajas').
+    confirm: Lemma 'Supratika' but name spelled 'Supratīka' throughout the entry's running text (long ī).
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=supratika
+
+kikawa        -> kIkawa         [dcs=3 ndicts=1 body=realword]
+    MCI: {@Kikaṭa@} m. (pl.): Name of a people. Karṇa related to Saṃjaya what a Brāhmaṇa had told the assembly of the Kurus (8. 30. 41) regarding the Kīkaṭas; he had said that the Kīkaṭas were follo- wers of b
+    judged: Lemma {@Kikaṭa@} (short i), but the body repeatedly names the people Kīkaṭa with long ī ('regarding the Kīkaṭas', {%kīkaṭāṭavīn%}).
+    confirm: Lemma 'Kikaṭa' but 'Name of a people' cited twice as 'Kīkaṭas' (long ī).
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=kikawa
+
+dakzinApaTa   -> dakziRApaTa    [dcs=3 ndicts=2 body=realword]
+    MCI: {@Dakṣināpatha@} m. (pl.): Name of the southern region; its people referred to as {%dakṣiṇāpathavāsin%} (5. 19. 23). {@A.@} Characteristics: The people of Dakṣiṇāpatha are described as very heroic ({%
+    judged: Lemma {@Dakṣināpatha@} has dental n, yet all body citations use retroflex ṇ ({%dakṣiṇāpathavāsin%}, {%dakṣiṇāpathajanmānaḥ%}), the standard Dakṣiṇāpatha.
+    confirm: Lemma 'Dakṣināpatha' (dental n) but citations all retroflex: dakṣiṇāpathavāsin, Dakṣiṇāpatha, dakṣiṇāpathajanmānaḥ.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=dakzinApaTa
+
+mAkandi       -> mAkandI        [dcs=2 ndicts=1 body=realword]
+    MCI: {@Mākandi@} f.: Name of the southern part of the Pāñcāla country. {@A.@} Location: Region south of Gaṅga up to the river Carmaṇvatī ({%mākandīm%} {%atha gaṅgāyās tīre … /dakṣiṇāṃś caiva%} {%pāñcālān y
+    judged: Lemma {@Mākandi@} f. has short i, but the body cites the region as mākandī with long ī ({%mākandīm atha gaṅgāyās%}, {%mākandīm...janapadāyutām%}).
+    confirm: Lemma 'Mākandi' but gloss 'f.' and citations 'mākandīm' twice (long ī).
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=mAkandi
+
+arunDatIvAwa  -> arunDatIvawa   [dcs=1 ndicts=1 body=realword]
+    MCI: {@Arundhatīvāṭa@} m.: Name of a {%tīrtha (?)%} One who is on a pilgrimage ({%tīrtha-%} {%sevī%}) is advised by Pulastya to visit Arun- dhatīvaṭa 3. 82. 37 (Name of a banyan tree situated near the Sāmu
+    judged: Lemma {@Arundhatīvāṭa@} has long ā, but the body cites Arundhatīvaṭa (short a) and glosses it as a banyan tree (vaṭa).
+    confirm: Lemma 'Arundhatīvāṭa' (long ā) but citation 'visit Arundhatīvaṭa' and banyan-tree gloss use short a (vaṭa).
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=arunDatIvAwa
+
+baliha        -> balIha         [dcs=1 ndicts=1 body=realword]
+    MCI: {@Baliha@} m. (pl.): Name of a people. Listed by Bhīma among the eighteen peoples whose kings were known to have extirpated their kinsmen, friends and rela- tives; Arkaja was then the king of Balīhas 
+    judged: Lemma {@Baliha@} (short i), but the body names the people Balīha with long ī ('king of Balīhas', {%arkajaś ca balīhānām%}).
+    confirm: Lemma 'Baliha' but 'Name of a people' cited as 'arkajaś ca balīhānām', king of 'Balīhas' (long ī).
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=baliha
+
+# ===== BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted (0) =====
+
+# ===== BUCKET 3  REVIEW -- undecidable without the printed page (0) =====
+
+# ===== BUCKET 4  REAL-WORD -- a distinct real word; the fix would merge two words (11) =====
+Agni          -> agni          | MCI: {@Āgni-(astra)@} nt.: Name of a missile 5. 140. 6. [See {@Āgneyāstra1@}]. | Lemma {@Āgni-(astra)@} (long Ā) is its own entry, 'Name of a missile', cross-ref [See Āgne
+vAraRA        -> vAraRa        | MCI: {@Vāraṇā@} f.: Short for Vāraṇāvata ? One of the places to which the army of the Kauravas, | Lemma {@Vāraṇā@} f. is its own attested entry, glossed 'Short for Vāraṇāvata', a place nam
+kOSIka        -> kOSika        | MCI: {@Kauśīka@} m. (pl.): Name of a movement ({%mārga%}) adopted while fighting with a mace ({ | Lemma {@Kauśīka@} (=kOSIka) is its own attested entry, the name of a mace-fighting movemen
+upatyaka      -> upatyakA      | MCI: {@Upatyaka@} m. (pl.): Name of a Jana- pada. Listed by Saṃjaya among the (northern) Janapa | Lemma {@Upatyaka@} m. is its own attested entry, 'Name of a Janapada' listed by Saṃjaya ({
+vinaSaRa      -> vinaSana      | MCI: {@Vinaśaṇa2@} nt.: Name of a {%tīrtha.%} Situated in the east; from there one reaches the  | Lemma {@Vinaśaṇa2@} with retroflex ṇ is its own attested entry, the name of a tīrtha on th
+pAtara        -> patara        | MCI: {@Pātara@} m.: A mythical serpent. Born in the {%kula%} of Kauravya, listed by Sūta among  | Lemma {@Pātara@} m. is its own attested entry, 'A mythical serpent' born in the kula of Ka
+brahmavAlukA  -> brahmavAluka  | MCI: {@Brahmavālukā@} f.: Name of a {%tīrtha.%} Situated along the river Devikā; by bathing the | Lemma {@Brahmavālukā@} f. is its own attested tīrtha entry on the river Devikā; the femini
+SyAmAyA       -> SyAmAya       | MCI: {@Śyāmāyā āśramaḥ@} m.: Name of an {%āśrama.%} Mentioned in the Tīrthavaṃśa narrated by Aṅ | Lemma {@Śyāmāyā āśramaḥ@} is its own attested āśrama entry (genitive Śyāmāyā), confirmed b
+satiya        -> satIya        | MCI: {@Satiya@} m. (sg. ?): Name of a Jana- pada. Listed by Saṃjaya among the southern Janapada | Lemma {@Satiya@} m. is its own Janapada entry and the body citation confirms the short i (
+BagadEva      -> Bagadeva      | MCI: {@Bhagadaiva@} m.: Name of the month Phalguna. Aṅgiras told Bhīṣma that one who eats only  | Lemma {@Bhagadaiva@} and the body citation {%bhagadaivaṃ tu yo māsam%} both use ai consist
+samBalagrAma  -> SamBalagrAma  | MCI: {@Sambhalagrāma@} m.: Name of a village. {@A.@} Description: Auspicious ({%śubha%}) 3. 188 | Lemma {@Sambhalagrāma@} and its citation {%sambhalagrāme%} both use dental s consistently;
+
+# ===== BUCKET 5  INTENTIONAL -- MCI documents the spelling on purpose; NEVER file (3) =====
+bAhukaRwaka   -> bahukaRwaka   | MCI: {@Bāhukaṇṭaka@} nt.: Name of a particular manœuvre employed in a wrestling match. Karṇa em | Lemma {@Bāhukaṇṭaka@} is its own wrestling-manoeuvre entry, and the body explicitly docume
+sarasvatitIrTa -> sarasvatItIrTa | MCI: {@Sarasvatitīrtha@} nt.: See {@Sthāṇutīrtha.@} | 
+somadEvata    -> somadevata    | MCI: {@Somadaivata@} nt.: See {@Mṛgottama.@} | 
+
+# ===== BUCKET 6  UNLOCATABLE -- not in the current MCI source (stale/different key) (0) =====

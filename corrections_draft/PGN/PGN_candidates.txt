@@ -1,0 +1,10 @@
+# PGN tier-A correction candidates (unified engine) — score	wrong -> right	detectors	morph
+258	kElASa -> kElAsa	[consensus,spell_correct]	morph✓
+254	indravizRu -> indrAvizRu	[consensus,spell_correct]	morph✓
+244	undAna -> undana	[consensus,spell_correct]	morph✓
+226	zAhi -> sAhi	[consensus,spell_correct]	morph✓
+224	vawodaka -> vawodakA	[consensus,spell_correct]	morph✓
+221	SaRqaka -> zaRqaka	[consensus,spell_correct]	
+218	pizwapura -> pizwapUra	[consensus,spell_correct]	morph✓
+217	amftadeva -> anftadeva	[consensus,spell_correct]	morph✓
+216	bawwasvAmin -> BawwasvAmin	[consensus,spell_correct]	morph✓

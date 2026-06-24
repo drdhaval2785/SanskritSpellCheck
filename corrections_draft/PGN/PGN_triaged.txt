@@ -1,0 +1,34 @@
+# PGN tier-A -- BODY-GROUNDED triage  (DRAFT; verify every kept case against the scan)
+#
+# The 9 engine tier-A candidates were judged against PGN's OWN entry text (csl-orig),
+# not spelling alone. A spelling detector cannot tell a typo from a real word, an
+# intentional variant / compounding form, or wrong-reading apparatus -- the entry can.
+# Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM
+# pass over the 'realword' set + source confirmation of every TYPO verdict.
+#
+# FINDING: of 9 tier-A candidates, 0 are body-confirmed fileable typos (0.0%).
+# 8 are real distinct words, 1 are spellings PGN documents on purpose (w.r./v.l./
+# in-comp./cross-ref -- filing them would CORRUPT PGN), 0 are not in the current
+# source, and 0 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
+# do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.
+
+# ===== BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file) (0) =====
+
+# ===== BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted (0) =====
+
+# ===== BUCKET 3  REVIEW -- undecidable without the printed page (0) =====
+
+# ===== BUCKET 4  REAL-WORD -- a distinct real word; the fix would merge two words (8) =====
+kElASa        -> kElAsa        | PGN: 1. {%Kailāśa%} (No. 17, L. 6: L. 13): In L. 6 of the inscription the poet while giving an  | Body attests the mountain name Kailāśa (No. 17, L. 6/13) in its own spelling with full des
+indravizRu    -> indrAvizRu    | PGN: 4. {%Indraviṣṇu%} (No. 18, L. 5): He has been mentioned as a mahārāja, great-grand-father  | Body documents the proper name Indraviṣṇu (No. 18, L. 5) and explicitly contrasts it with 
+undAna        -> undana        | PGN: 16. {%Undāna%} (No. 5, L. 5): The root apparent in the form is {%§ud — §und%} meaning to w | Body attests the name Undāna (No. 5, L. 5) with its own root derivation (ud/und) and meani
+zAhi          -> sAhi          | PGN: 18. {%Ṣāhi%}428 (No. 1, L. 23): The Ṣāhis are said to have paid homage to Samudragupta. Fr | Body records the tribal/title name Ṣāhi (No. 1, L. 23) with its own reference and discussi
+vawodaka      -> vawodakA      | PGN: 18. {%Vaṭodaka435%} (No. 30, L. 4): It is the name of a village. Vaṭa is probably a Prakri | Body attests the village name Vaṭodaka (No. 30, L. 4), identified with Badoh, in its short
+pizwapura     -> pizwapUra     | PGN: (9) {%Piṣṭapura%} (No. 1, L. 19): It has been mentioned as one of the southern regions whi | Body attests the place name Piṣṭapura (No. 1, L. 19), modern Pithapuram, with its own refe
+amftadeva     -> anftadeva     | PGN: 1. {%Amṛtadeva%} (No. 37, L. 6; L. 14): The first part is Amṛta and the second is ‘deva’.  | Body attests the name Amṛtadeva (No. 37, L. 6/14) derived from Amṛta + deva; the suggestio
+bawwasvAmin   -> BawwasvAmin   | PGN: 2. {%Baṭṭasvāmin%} (No. 43, L. 7): The word {%Bhaṭṭa%} literally means ‘lord’ (from {%bhar | Body records the headword Baṭṭasvāmin (No. 43, L. 7) as the attested name even while gloss
+
+# ===== BUCKET 5  INTENTIONAL -- PGN documents the spelling on purpose; NEVER file (1) =====
+SaRqaka       -> zaRqaka       | PGN: 5. {%Śa (ga) ṇḍaka%} (No. 36, L. 3): D.C. Sircar takes the reading to be Gaṇḍaka which see | Body deliberately discusses the reading, equating Śaṇḍaka with Saṇḍaka and weighing it aga
+
+# ===== BUCKET 6  UNLOCATABLE -- not in the current PGN source (stale/different key) (0) =====

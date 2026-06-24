@@ -1,0 +1,11 @@
+# PGN -- DOCUMENTED-INTENTIONAL spellings (NOT typos -- do NOT file corrections)
+#
+# 1 headwords that LOOK like misspellings but which PGN records on purpose:
+# wrong-reading apparatus (w.r.), variae lectiones (v.l.), in-composition /
+# sandhi forms (in comp. for...), cross-references (See / = X q.v.), and other
+# grammatical/Vedic notes. Filing a 'correction' for any of these CORRUPTS PGN.
+# Use this as a suppression list: such headwords should not be re-flagged.
+# Format per row:  headword -> would-be 'correction'  |  the PGN entry text
+
+# ===== OTHER-INTENTIONAL (1) =====
+SaRqaka        -> zaRqaka        | 5. {%Śa (ga) ṇḍaka%} (No. 36, L. 3): D.C. Sircar takes the reading to be Gaṇḍaka which seems to be correct.85 One scholar86 equates Śaṇḍaka with Saṇḍaka which m

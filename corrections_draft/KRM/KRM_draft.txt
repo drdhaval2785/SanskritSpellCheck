@@ -1,0 +1,177 @@
+; DRAFT corrections for KRM — SanskritSpellCheck; VERIFY each against the scan before filing.
+; updateByLine format; only the <k1>/<k2> key field is edited (check the entry body too).
+; NOTE: each case targets the FIRST entry with that headword -- check for homographs
+;       (multiple entries sharing a key) and that no two cases edit the same line.
+;
+; Case 1.  garba -> garBa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=garba
+13505 old <L>382<pc>0375<k1>garba<k2>garba
+13505 new <L>382<pc>0375<k1>garBa<k2>garBa
+;
+; Case 2.  abi -> aBi   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=abi
+1053 old <L>29<pc>0027<k1>abi<k2>abi
+1053 new <L>29<pc>0027<k1>aBi<k2>aBi
+;
+; Case 3.  tamu -> tanu   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=tamu
+23330 old <L>706<pc>0651<k1>tamu<k2>tamu
+23330 new <L>706<pc>0651<k1>tanu<k2>tanu
+;
+; Case 4.  mAnTa -> manTa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=mAnTa
+37679 old <L>1246<pc>1018<k1>mAnTa<k2>mAnTa
+37679 new <L>1246<pc>1018<k1>manTa<k2>manTa
+;
+; Case 5.  rabi -> ravi   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=rabi
+40986 old <L>1377<pc>1101<k1>rabi<k2>rabi
+40986 new <L>1377<pc>1101<k1>ravi<k2>ravi
+;
+; Case 6.  akzU -> akzu   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=akzU
+147 old <L>3<pc>0005<k1>akzU<k2>akzU
+147 new <L>3<pc>0005<k1>akzu<k2>akzu
+;
+; Case 7.  Divi -> divi   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=Divi
+28764 old <L>899<pc>0796<k1>Divi<k2>Divi
+28764 new <L>899<pc>0796<k1>divi<k2>divi
+;
+; Case 8.  kFY -> kfY   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=kFY
+9316 old <L>258<pc>0259<k1>kFY<k2>kFY
+9316 new <L>258<pc>0259<k1>kfY<k2>kfY
+;
+; Case 9.  cadi -> Cadi   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=cadi
+16999 old <L>492<pc>0475<k1>cadi<k2>cadi
+16999 new <L>492<pc>0475<k1>Cadi<k2>Cadi
+;
+; Case 10.  laji -> lAji   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=laji
+42896 old <L>1459<pc>1148<k1>laji<k2>laji
+42896 new <L>1459<pc>1148<k1>lAji<k2>lAji
+;
+; Case 11.  arda -> arDa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=arda
+1443 old <L>41<pc>0038<k1>arda<k2>arda
+1443 new <L>41<pc>0038<k1>arDa<k2>arDa
+;
+; Case 12.  mfDu -> mfdu   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=mfDu
+39065 old <L>1308<pc>1053<k1>mfDu<k2>mfDu
+39065 new <L>1308<pc>1053<k1>mfdu<k2>mfdu
+;
+; Case 13.  hiwa -> hita   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=hiwa
+54004 old <L>2001<pc>1415<k1>hiwa<k2>hiwa
+54004 new <L>2001<pc>1415<k1>hita<k2>hita
+;
+; Case 14.  vijI -> viji   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=vijI
+46022 old <L>1597<pc>1229<k1>vijI<k2>vijI
+46022 new <L>1597<pc>1229<k1>viji<k2>viji
+;
+; Case 15.  Sarda -> SarDa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=Sarda
+48410 old <L>1687<pc>1289<k1>Sarda<k2>Sarda
+48410 new <L>1687<pc>1289<k1>SarDa<k2>SarDa
+;
+; Case 16.  arba -> arBa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=arba
+1533 old <L>42<pc>0040<k1>arba<k2>arba
+1533 new <L>42<pc>0040<k1>arBa<k2>arBa
+;
+; Case 17.  Risi -> misi   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=Risi
+22464 old <L>679<pc>0627<k1>Risi<k2>Risi
+22464 new <L>679<pc>0627<k1>misi<k2>misi
+;
+; Case 18.  damu -> danu   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=damu
+25890 old <L>819<pc>0721<k1>damu<k2>damu
+25890 new <L>819<pc>0721<k1>danu<k2>danu
+;
+; Case 19.  mfN -> mfR   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=mfN
+38784 old <L>1301<pc>1046<k1>mfN<k2>mfN
+38784 new <L>1301<pc>1046<k1>mfR<k2>mfR
+;
+; Case 20.  pfN -> pfR   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=pfN
+32375 old <L>1046<pc>0886<k1>pfN<k2>pfN
+32375 new <L>1046<pc>0886<k1>pfR<k2>pfR
+;
+; Case 21.  tubi -> tuvi   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=tubi
+24093 old <L>750<pc>0671<k1>tubi<k2>tubi
+24093 new <L>750<pc>0671<k1>tuvi<k2>tuvi
+;
+; Case 22.  zarja -> sarja   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=zarja
+50577 old <L>1820<pc>1338<k1>zarja<k2>zarja
+50577 new <L>1820<pc>1338<k1>sarja<k2>sarja
+;
+; Case 23.  sPUrjA -> sPUrja   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=sPUrjA
+53188 old <L>1965<pc>1396<k1>sPUrjA<k2>sPUrjA
+53188 new <L>1965<pc>1396<k1>sPUrja<k2>sPUrja
+;
+; Case 24.  vfjI -> vfji   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=vfjI
+46788 old <L>1622<pc>1249<k1>vfjI<k2>vfjI
+46788 new <L>1622<pc>1249<k1>vfji<k2>vfji
+;
+; Case 25.  paqi -> padi   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=paqi
+30370 old <L>964<pc>0836<k1>paqi<k2>paqi
+30370 new <L>964<pc>0836<k1>padi<k2>padi
+;
+; Case 26.  lIN -> liN   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=lIN
+43611 old <L>1494<pc>1167<k1>lIN<k2>lIN
+43611 new <L>1494<pc>1167<k1>liN<k2>liN
+;
+; Case 27.  uN -> um   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=uN
+3562 old <L>94<pc>0092<k1>uN<k2>uN
+3562 new <L>94<pc>0092<k1>um<k2>um
+;
+; Case 28.  IN -> iN   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=IN
+3173 old <L>80<pc>0081<k1>IN<k2>IN
+3173 new <L>80<pc>0081<k1>iN<k2>iN
+;
+; Case 29.  labi -> lavi   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=labi
+43050 old <L>1469<pc>1153<k1>labi<k2>labi
+43050 new <L>1469<pc>1153<k1>lavi<k2>lavi
+;
+; Case 30.  SvitA -> Svita   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=SvitA
+50305 old <L>1803<pc>1332<k1>SvitA<k2>SvitA
+50305 new <L>1803<pc>1332<k1>Svita<k2>Svita
+;
+; Case 31.  laqi -> lAqi   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=laqi
+42999 old <L>1466<pc>1151<k1>laqi<k2>laqi
+42999 new <L>1466<pc>1151<k1>lAqi<k2>lAqi
+;
+; Case 32.  DurvI -> DUrvI   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=DurvI
+28906 old <L>904<pc>0800<k1>DurvI<k2>DurvI
+28906 new <L>904<pc>0800<k1>DUrvI<k2>DUrvI
+;
+; Case 33.  GuN -> GuR   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=GuN
+16223 old <L>463<pc>0453<k1>GuN<k2>GuN
+16223 new <L>463<pc>0453<k1>GuR<k2>GuR
+;
+; Case 34.  mIN -> mIm   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=mIN
+38144 old <L>1268<pc>1030<k1>mIN<k2>mIN
+38144 new <L>1268<pc>1030<k1>mIm<k2>mIm
+;
+; Case 35.  stima -> stIma   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=stima
+52766 old <L>1932<pc>1387<k1>stima<k2>stima
+52766 new <L>1932<pc>1387<k1>stIma<k2>stIma
+;
+; Case 36.  vfY -> vfR   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=vfY
+46881 old <L>1625<pc>1251<k1>vfY<k2>vfY
+46881 new <L>1625<pc>1251<k1>vfR<k2>vfR
+;
+; Case 37.  kzvidA -> kzvida   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=kzvidA
+12121 old <L>326<pc>0339<k1>kzvidA<k2>kzvidA
+12121 new <L>326<pc>0339<k1>kzvida<k2>kzvida
+;
+; Case 38.  Riji -> niji   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=Riji
+22315 old <L>672<pc>0623<k1>Riji<k2>Riji
+22315 new <L>672<pc>0623<k1>niji<k2>niji
+;
+; Case 39.  kUN -> kUR   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=kUN
+8124 old <L>238<pc>0228<k1>kUN<k2>kUN
+8124 new <L>238<pc>0228<k1>kUR<k2>kUR
+;
+; Case 40.  miji -> niji   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=miji
+37768 old <L>1252<pc>1020<k1>miji<k2>miji
+37768 new <L>1252<pc>1020<k1>niji<k2>niji
+;
+; Case 41.  pUY -> pUR   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=pUY
+32048 old <L>1035<pc>0878<k1>pUY<k2>pUY
+32048 new <L>1035<pc>0878<k1>pUR<k2>pUR
+;
+; Case 42.  prIY -> prIR   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=prIY
+33032 old <L>1072<pc>0904<k1>prIY<k2>prIY
+33032 new <L>1072<pc>0904<k1>prIR<k2>prIR
+;
+; Case 43.  zivi -> Sivi   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=KRM&key=zivi
+50878 old <L>1839<pc>1345<k1>zivi<k2>zivi
+50878 new <L>1839<pc>1345<k1>Sivi<k2>Sivi
+;

@@ -7,7 +7,7 @@ tier-A spelling candidates can be turned into a verified **FILE-FIRST** queue + 
 run it with the **[`/dict-triage <DICT>`](../.claude/commands/dict-triage.md)** skill
 (Sonnet classifies, Opus source-confirms, a human verifies).
 
-**25 of 33 triaged — 112 fileable typos across 10 dicts; ~2,386 documented-intentional spellings catalogued.**
+**29 of 33 triaged — 122 fileable typos across 11 dicts; ~2,398 documented-intentional spellings catalogued.**
 Tier-A precision stays **near-zero** on mature, much-corrected dictionaries — the durable
 deliverable is the do-not-file list and *preventing bad bulk edits*, not the handful of real
 typos. The exception is **poorly-digitised sources**: SHS (15%), YAT (11%) and PWG (2.4%) carry many
@@ -19,13 +19,14 @@ real OCR/keying errors, each confirmed by the entry's own etymology/inflection.
 | YAT (English, 1846) | 247 | **27** | 1 |
 | ACC (Catalogus Cat., 1891) | 174 | **22** | 25 |
 | PWG (German) | 497 | **12** | 248 |
+| MCI (mythical-name index) | 41 | **10** | 3 |
 | MW (English, 1899) | 1954 | **4** | 630 |
 | SKD (Sanskrit) | 412 | **3** | 103 |
 | WIL (English, 1832) | 108 | **3** | 17 |
 | PW (German) | 657 | **2** | 255 |
 | VCP (Sanskrit) | 563 | **1** | 408 |
 | GST (English, 1856) | 48 | **1** | 22 |
-| _15 others_ — AP · MW72 · SCH · AP90 · MD · CAE · GRA · BEN · CCS · SNP · BHS · PUI · IEG · INM · PE | — | **0** | 646 |
+| _18 others_ — AP · MW72 · SCH · AP90 · MD · CAE · GRA · BEN · CCS · SNP · BHS · PUI · IEG · INM · PE · VEI · PGN · KRM | — | **0** | 655 |
 
 ## Status — all 33 dictionaries (by tier-A volume)
 
@@ -60,14 +61,14 @@ provided) — it becomes triageable once they are wired into the pipeline.**
 | [AP90](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/ap90) — Apte (1890) | 53 | ✅ **0 fileable · 8 do-not-file** — [readme](AP90/readme.md) · [do-not-file](AP90/AP90_wrong_readings.txt) · [queue](AP90/AP90_triaged.txt) |
 | [MD](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/md) — Macdonell (1893) | 50 | ✅ **0 fileable · 1 do-not-file** — [readme](MD/readme.md) · [do-not-file](MD/MD_wrong_readings.txt) · [queue](MD/MD_triaged.txt) |
 | [GST](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/gst) — Goldstücker (English, 1856) | 48 | ✅ **1 fileable · 22 do-not-file** — [readme](GST/readme.md) · [file-first](GST/GST_file_first_sf.txt) · [do-not-file](GST/GST_wrong_readings.txt) · [queue](GST/GST_triaged.txt) |
-| [KRM](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/krm) | 47 | — pending |
+| [KRM](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/krm) — Kramadīśvara dhātupāṭha (Sanskrit) | 47 | ✅ **0 fileable · 6 do-not-file** — [readme](KRM/readme.md) · [do-not-file](KRM/KRM_wrong_readings.txt) · [queue](KRM/KRM_triaged.txt) |
 | [GRA](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/gra) — Grassmann, Wörterbuch zum Rig-Veda (German, 1873) | 45 | ✅ **0 fileable · 7 do-not-file** — [readme](GRA/readme.md) · [do-not-file](GRA/GRA_wrong_readings.txt) · [queue](GRA/GRA_triaged.txt) |
 | [BEN](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/ben) — Benfey (English, 1866) | 43 | ✅ **0 fileable · 14 do-not-file** — [readme](BEN/readme.md) · [do-not-file](BEN/BEN_wrong_readings.txt) · [queue](BEN/BEN_triaged.txt) |
-| [VEI](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/vei) | 43 | — pending |
+| [VEI](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/vei) — Macdonell–Keith, Vedic Index | 43 | ✅ **0 fileable · 2 do-not-file** — [readme](VEI/readme.md) · [do-not-file](VEI/VEI_wrong_readings.txt) · [queue](VEI/VEI_triaged.txt) |
 | [BOP](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/bop) — Bopp, Glossarium | 39 | — pending |
 | [CCS](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/ccs) — Cappeller, Sanskrit-German | 35 | ✅ **0 fileable · 3 do-not-file** — [readme](CCS/readme.md) · [do-not-file](CCS/CCS_wrong_readings.txt) · [queue](CCS/CCS_triaged.txt) |
-| [MCI](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/mci) | 24 | — pending |
-| [PGN](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/pgn) | 10 | — pending |
+| [MCI](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/mci) — mythical-name index | 41 | ✅ **10 fileable · 3 do-not-file** — [readme](MCI/readme.md) · [file-first](MCI/MCI_file_first_sf.txt) · [do-not-file](MCI/MCI_wrong_readings.txt) · [queue](MCI/MCI_triaged.txt) |
+| [PGN](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/pgn) — proper-name index (inscriptions) | 21 | ✅ **0 fileable · 1 do-not-file** — [readme](PGN/readme.md) · [do-not-file](PGN/PGN_wrong_readings.txt) · [queue](PGN/PGN_triaged.txt) |
 | [SNP](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/snp) | 4 | ✅ **0 fileable · 3 do-not-file** (Review-phase validation dict) — [readme](SNP/readme.md) · [do-not-file](SNP/SNP_wrong_readings.txt) · [queue](SNP/SNP_triaged.txt) |
 
 > Names are given where well-established (per the CDSL catalogue); uncertain ones show the

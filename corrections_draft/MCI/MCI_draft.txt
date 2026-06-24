@@ -1,0 +1,101 @@
+; DRAFT corrections for MCI — SanskritSpellCheck; VERIFY each against the scan before filing.
+; updateByLine format; only the <k1>/<k2> key field is edited (check the entry body too).
+; NOTE: each case targets the FIRST entry with that headword -- check for homographs
+;       (multiple entries sharing a key) and that no two cases edit the same line.
+;
+; Case 1.  kOSIka -> kOSika   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=kOSIka
+9764 old <L>475<pc>096-a<k1>kOSIka<k2>kOSIka
+9764 new <L>475<pc>096-a<k1>kOSika<k2>kOSika
+;
+; Case 2.  mahAnadi -> mahAnadI   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=mahAnadi
+37973 old <L>1518<pc>409-a<k1>mahAnadi<k2>mahAnadi<h>1
+37973 new <L>1518<pc>409-a<k1>mahAnadI<k2>mahAnadI<h>1
+;
+; Case 3.  supratika -> supratIka   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=supratika
+7624 old <L>386<pc>072-a<k1>supratika<k2>supratika
+7624 new <L>386<pc>072-a<k1>supratIka<k2>supratIka
+;
+; Case 4.  dakzinApaTa -> dakziRApaTa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=dakzinApaTa
+67082 old <L>2312<pc>740-a<k1>dakzinApaTa<k2>dakzinApaTa
+67082 new <L>2312<pc>740-a<k1>dakziRApaTa<k2>dakziRApaTa
+;
+; Case 5.  vinaSaRa -> vinaSana   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=vinaSaRa
+41038 old <L>1656<pc>442-a<k1>vinaSaRa<k2>vinaSaRa<h>2
+41038 new <L>1656<pc>442-a<k1>vinaSana<k2>vinaSana<h>2
+;
+; Case 6.  Agni -> agni   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=Agni
+9276 old <L>448<pc>091-a<k1>Agni<k2>Agni
+9276 new <L>448<pc>091-a<k1>agni<k2>agni
+;
+; Case 7.  vAraRA -> vAraRa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=vAraRA
+51787 old <L>2012<pc>563-a<k1>vAraRA<k2>vAraRA
+51787 new <L>2012<pc>563-a<k1>vAraRa<k2>vAraRa
+;
+; Case 8.  upatyaka -> upatyakA   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=upatyaka
+58437 old <L>2146<pc>640-a<k1>upatyaka<k2>upatyaka
+58437 new <L>2146<pc>640-a<k1>upatyakA<k2>upatyakA
+;
+; Case 9.  kikawa -> kIkawa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=kikawa
+60494 old <L>2205<pc>663-a<k1>kikawa<k2>kikawa
+60494 new <L>2205<pc>663-a<k1>kIkawa<k2>kIkawa
+;
+; Case 10.  asvaSiras -> aSvaSiras   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=asvaSiras
+27004 old <L>1008<pc>291-a<k1>asvaSiras<k2>asvaSiras
+27004 new <L>1008<pc>291-a<k1>aSvaSiras<k2>aSvaSiras
+;
+; Case 11.  vEsAKa -> vESAKa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=vEsAKa
+25180 old <L>943<pc>270-a<k1>vEsAKa<k2>vEsAKa
+25180 new <L>943<pc>270-a<k1>vESAKa<k2>vESAKa
+;
+; Case 12.  bAhukaRwaka -> bahukaRwaka   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=bAhukaRwaka
+11821 old <L>530<pc>119-b<k1>bAhukaRwaka<k2>bAhukaRwaka
+11821 new <L>530<pc>119-b<k1>bahukaRwaka<k2>bahukaRwaka
+;
+; Case 13.  pAtara -> patara   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=pAtara
+4422 old <L>200<pc>039-b<k1>pAtara<k2>pAtara
+4422 new <L>200<pc>039-b<k1>patara<k2>patara
+;
+; Case 14.  mAkandi -> mAkandI   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=mAkandi
+74947 old <L>2451<pc>831-b<k1>mAkandi<k2>mAkandi
+74947 new <L>2451<pc>831-b<k1>mAkandI<k2>mAkandI
+;
+; Case 15.  arunDatIvAwa -> arunDatIvawa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=arunDatIvAwa
+26862 old <L>998<pc>289-b<k1>arunDatIvAwa<k2>arunDatIvAwa
+26862 new <L>998<pc>289-b<k1>arunDatIvawa<k2>arunDatIvawa
+;
+; Case 16.  baliha -> balIha   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=baliha
+71833 old <L>2408<pc>795-a<k1>baliha<k2>baliha
+71833 new <L>2408<pc>795-a<k1>balIha<k2>balIha
+;
+; Case 17.  brahmavAlukA -> brahmavAluka   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=brahmavAlukA
+36857 old <L>1457<pc>397-a<k1>brahmavAlukA<k2>brahmavAlukA
+36857 new <L>1457<pc>397-a<k1>brahmavAluka<k2>brahmavAluka
+;
+; Case 18.  sarasvatitIrTa -> sarasvatItIrTa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=sarasvatitIrTa
+44171 old <L>1769<pc>476-b<k1>sarasvatitIrTa<k2>sarasvatitIrTa
+44171 new <L>1769<pc>476-b<k1>sarasvatItIrTa<k2>sarasvatItIrTa
+;
+; Case 19.  satiya -> satIya   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=satiya
+81085 old <L>2571<pc>903-a<k1>satiya<k2>satiya
+81085 new <L>2571<pc>903-a<k1>satIya<k2>satIya
+;
+; Case 20.  samBalagrAma -> SamBalagrAma   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=samBalagrAma
+53213 old <L>2057<pc>579-a<k1>samBalagrAma<k2>samBalagrAma
+53213 new <L>2057<pc>579-a<k1>SamBalagrAma<k2>SamBalagrAma
+;
+; Case 21.  somadEvata -> somadevata   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=somadEvata
+26139 old <L>964<pc>281-a<k1>somadEvata<k2>somadEvata
+26139 new <L>964<pc>281-a<k1>somadevata<k2>somadevata
+;
+; Case 22.  BagadEva -> Bagadeva   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=BagadEva
+24412 old <L>913<pc>261-b<k1>BagadEva<k2>BagadEva
+24412 new <L>913<pc>261-b<k1>Bagadeva<k2>Bagadeva
+;
+; Case 23.  brahmopanisad -> brahmopanizad   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=brahmopanisad
+18379 old <L>749<pc>192-b<k1>brahmopanisad<k2>brahmopanisad
+18379 new <L>749<pc>192-b<k1>brahmopanizad<k2>brahmopanizad
+;
+; Case 24.  SyAmAyA -> SyAmAya   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MCI&key=SyAmAyA
+52969 old <L>2051<pc>576-a<k1>SyAmAyA<k2>SyAmAyA
+52969 new <L>2051<pc>576-a<k1>SyAmAya<k2>SyAmAya
+;

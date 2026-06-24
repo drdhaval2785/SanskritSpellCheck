@@ -1,0 +1,37 @@
+# VEI tier-A correction candidates (unified engine) — score	wrong -> right	detectors	morph
+354	pajrA -> pajra	[consensus,intra_dup,spell_correct]	morph✓
+351	kAtyAyani -> kAtyAyanI	[consensus,intra_dup,spell_correct]	morph✓
+334	tayAdara -> tAyAdara	[consensus,intra_dup,spell_correct]	morph✓
+328	Ula -> ula	[consensus,intra_dup,spell_correct]	morph✓
+248	SamUla -> samUla	[consensus,spell_correct]	morph✓
+248	pesas -> peSas	[consensus,spell_correct]	morph✓
+248	sabara -> Sabara	[consensus,spell_correct]	morph✓
+246	kESinI -> keSinI	[consensus,spell_correct]	morph✓
+244	Simida -> SimidA	[consensus,spell_correct]	morph✓
+244	plakzaprAsravaRa -> plakzaprasravaRa	[consensus,spell_correct]	morph✓
+244	skanDyA -> skanDya	[consensus,spell_correct]	morph✓
+244	viSvAsAman -> viSvasAman	[consensus,spell_correct]	morph✓
+243	sAli -> SAli	[consensus,spell_correct]	
+238	sunahotra -> Sunahotra	[consensus,spell_correct]	morph✓
+238	vizRApu -> vizRApU	[consensus,spell_correct]	morph✓
+237	UrRanABI -> UrRanABi	[consensus,intra_dup]	
+234	dityavAh -> dityavah	[consensus,spell_correct]	morph✓
+234	hasrA -> hasra	[consensus,spell_correct]	morph✓
+234	talASa -> talASA	[consensus,spell_correct]	morph✓
+234	tfRajalAyuka -> tfRajalAyukA	[consensus,spell_correct]	morph✓
+230	pracalAkA -> pracalAka	[consensus,intra_dup]	
+229	vimuktA -> vimukta	[consensus,spell_correct]	
+228	kusara -> kuSara	[consensus,spell_correct]	morph✓
+224	apalamba -> apAlamba	[consensus,spell_correct]	morph✓
+224	manTAlava -> mAnTAlava	[consensus,spell_correct]	morph✓
+224	turyavAh -> turyavah	[consensus,spell_correct]	morph✓
+221	kvayI -> kvayi	[consensus,spell_correct]	morph✓
+218	sAvasAyana -> SAvasAyana	[consensus,spell_correct]	morph✓
+218	sElAli -> SElAli	[consensus,spell_correct]	morph✓
+218	siSnadeva -> SiSnadeva	[consensus,spell_correct]	morph✓
+218	svapad -> Svapad	[consensus,spell_correct]	morph✓
+217	vEzWapureya -> vEzwapureya	[consensus,spell_correct]	morph✓
+216	nEmiSi -> nEmizi	[consensus,spell_correct]	morph✓
+152	purumI|a -> (flag)	[charset]	
+151	harivarRaaNgirasa -> (flag)	[phonotactic]	
+151	sumI|a -> (flag)	[charset]	

@@ -1,0 +1,44 @@
+# KRM tier-A correction candidates (unified engine) — score	wrong -> right	detectors	morph
+367	garba -> garBa	[consensus,dict_vs_corpus,intra_dup]	morph✓
+366	abi -> aBi	[consensus,intra_dup,spell_correct]	morph✓
+366	tamu -> tanu	[consensus,intra_dup,spell_correct]	morph✓
+364	mAnTa -> manTa	[consensus,intra_dup,spell_correct]	morph✓
+356	rabi -> ravi	[consensus,intra_dup,spell_correct]	morph✓
+339	akzU -> akzu	[consensus,intra_dup,spell_correct]	morph✓
+337	Divi -> divi	[consensus,intra_dup,spell_correct]	morph✓
+331	kFY -> kfY	[consensus,intra_dup,spell_correct]	
+316	cadi -> Cadi	[consensus,intra_dup,spell_correct]	morph✓
+309	laji -> lAji	[consensus,intra_dup,spell_correct]	
+272	arda -> arDa	[dict_vs_corpus,spell_correct]	morph✓
+267	mfDu -> mfdu	[consensus,spell_correct]	morph✓
+266	hiwa -> hita	[consensus,spell_correct]	morph✓
+261	vijI -> viji	[consensus,spell_correct]	morph✓
+247	Sarda -> SarDa	[consensus,spell_correct]	morph✓
+247	arba -> arBa	[consensus,intra_dup]	morph✓
+246	Risi -> misi	[consensus,spell_correct]	morph✓
+246	damu -> danu	[consensus,spell_correct]	morph✓
+246	mfN -> mfR	[consensus,spell_correct]	morph✓
+246	pfN -> pfR	[consensus,spell_correct]	morph✓
+246	tubi -> tuvi	[consensus,spell_correct]	morph✓
+246	zarja -> sarja	[consensus,spell_correct]	morph✓
+245	sPUrjA -> sPUrja	[consensus,spell_correct]	morph✓
+241	vfjI -> vfji	[consensus,spell_correct]	morph✓
+237	paqi -> padi	[consensus,spell_correct]	morph✓
+236	lIN -> liN	[consensus,spell_correct]	
+236	uN -> um	[consensus,spell_correct]	morph✓
+226	IN -> iN	[consensus,spell_correct]	
+226	labi -> lavi	[consensus,spell_correct]	morph✓
+224	SvitA -> Svita	[consensus,spell_correct]	morph✓
+224	laqi -> lAqi	[consensus,spell_correct]	morph✓
+218	DurvI -> DUrvI	[consensus,spell_correct]	morph✓
+216	GuN -> GuR	[consensus,spell_correct]	morph✓
+216	mIN -> mIm	[consensus,spell_correct]	morph✓
+216	stima -> stIma	[consensus,spell_correct]	
+216	vfY -> vfR	[consensus,spell_correct]	morph✓
+209	kzvidA -> kzvida	[consensus,spell_correct]	
+201	Riji -> niji	[consensus,spell_correct]	
+201	kUN -> kUR	[consensus,spell_correct]	
+201	miji -> niji	[consensus,spell_correct]	
+201	pUY -> pUR	[consensus,spell_correct]	
+201	prIY -> prIR	[intra_dup,spell_correct]	
+201	zivi -> Sivi	[consensus,spell_correct]	

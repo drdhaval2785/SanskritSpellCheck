@@ -1,0 +1,61 @@
+# VEI tier-A -- BODY-GROUNDED triage  (DRAFT; verify every kept case against the scan)
+#
+# The 36 engine tier-A candidates were judged against VEI's OWN entry text (csl-orig),
+# not spelling alone. A spelling detector cannot tell a typo from a real word, an
+# intentional variant / compounding form, or wrong-reading apparatus -- the entry can.
+# Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM
+# pass over the 'realword' set + source confirmation of every TYPO verdict.
+#
+# FINDING: of 36 tier-A candidates, 0 are body-confirmed fileable typos (0.0%).
+# 34 are real distinct words, 2 are spellings VEI documents on purpose (w.r./v.l./
+# in-comp./cross-ref -- filing them would CORRUPT VEI), 0 are not in the current
+# source, and 0 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
+# do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.
+
+# ===== BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file) (0) =====
+
+# ===== BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted (0) =====
+
+# ===== BUCKET 3  REVIEW -- undecidable without the printed page (0) =====
+
+# ===== BUCKET 4  REAL-WORD -- a distinct real word; the fix would merge two words (34) =====
+sAli          -> SAli          | VEI: {@Sāli,@} a later word for ‘rice,’ is conjectured by Roth to be the equivalent of Śāri in  | Body bolds {@Sāli@}, a later word for 'rice,' as its own headword.
+pajrA         -> pajra         | VEI: {@Pajrā@} occurs once in the Rigveda,1 where Ludwig2 sees in the word the name of the wife | Body bolds {@Pajrā@} with its own Rigveda reference (ix.82,14) and distinguishes it from t
+UrRanABI      -> UrRanABi      | VEI: {@Ūrṇa-nābhī,@}1 {@Ūrṇa-vābhi, Ūrṇā-vant@} are all names of the spider in the later Saṃhit | Body bolds {@Ūrṇa-nābhī@} as a name of the spider in the later Saṃhitās, its own headword.
+SamUla        -> samUla        | VEI: {@Śamūla@} in the Jaiminīya Upaniṣad {@Brāhmaṇa@}1 seems to have much the same sense as {@ | Body bolds {@Śamūla@} in the Jaiminīya Upaniṣad Brāhmaṇa with its own gloss and reference 
+pesas         -> peSas         | VEI: {@Pesas@} denotes in the Rigveda1 and later2 an embroidered garment such as a female dance | Body bolds {@Pesas@} as an embroidered garment attested in the Rigveda, its own headword.
+sabara        -> Sabara        | VEI: {@Sabara@} is the name of a wild tribe who in the Aitareya Brāhmaṇa1 are classed as {@Dasy | Body bolds {@Sabara@} as the name of a wild tribe in the Aitareya Brāhmaṇa (vii.18,2).
+kESinI        -> keSinI        | VEI: {@Kaiśinī.@} — The {%Kaiśinyaḥ prajāḥ,%} ‘offspring or people1 of Keśin,’ are mentioned in | Body bolds {@Kaiśinī@} (kESinI) with its own Śatapatha Brāhmaṇa reference (xi.8,4,6).
+Simida        -> SimidA        | VEI: {@Śimida,@} occurring in the Rigveda1 in the compound {%a-śinida,%} perhaps denotes a dise | Body bolds {@Śimida@} from the Rigveda (vii.50,4); Śimidā is described as its distinct fem
+plakzaprAsravaRa -> plakzaprasravaRa | VEI: 3. {@Plakṣa Prā-sravaṇa@} is the name of a locality, forty-four days’ journey from the spo | Body bolds {@Plakṣa Prā-sravaṇa@} as a locality in the Pañcaviṃśa Brāhmaṇa, distinct from 
+skanDyA       -> skanDya       | VEI: {@{{Skandhhyā->Skandhyā||20160113|Dr. Dhaval Patel|https://github.com/sanskrit-lexicon/COR | Body records Skandhyā (fem. plur.) used in the Atharvaveda (vi.25,3) of a shoulder disease
+viSvAsAman    -> viSvasAman    | VEI: {@Viśvā-sāman@} is the name of a Ṛṣi, an {@Atreya,@} in the Rigveda.1 1) v. 22, 1. {%Cf.%} | Body bolds {@Viśvā-sāman@} as the name of a Ṛṣi in the Rigveda (v.22,1).
+pracalAkA     -> pracalAka     | VEI: {@Pra-calākā@} in the Taittirīya Saṃhitā (vii. 5, 11, 1) and the Kāṭhaka Saṃhitā (Aśvamedh | Body bolds {@Pra-calākā@} ('cloud-burst') with its own Taittirīya and Kāṭhaka Saṃhitā refe
+vimuktA       -> vimukta       | VEI: {@Vi-muktā@} (lit., ‘secreted’), ‘pearl,’ is found in the late Ṣaḍviṃśa Brāhmaṇa (v. 6). | Body bolds {@Vi-muktā@} 'pearl' in the Ṣaḍviṃśa Brāhmaṇa (v.6).
+vizRApu       -> vizRApU       | VEI: {@Viṣṇāpu@} is the son of {@Viśvaka@} in the Rigveda.1 When lost he was restored to his fa | Body bolds {@Viṣṇāpu@} as the son of Viśvaka with its own Rigveda references (i.116,23 etc
+sunahotra     -> Sunahotra     | VEI: {@Suna-hotra,@} in the plural, denotes a family of seers in the Rigveda (ii. 18, 6; 41, 14 | Body bolds {@Suna-hotra@} as a family of seers in the Rigveda (ii.18,6 etc.).
+tayAdara      -> tAyAdara      | VEI: {@Tayādara@} is the name of an animal only mentioned in the adjectival form {%tāyādara%} a | Body bolds {@Tayādara@} as the name of an animal with its own Atharvaveda reference (vi.72
+dityavAh      -> dityavah      | VEI: {@Ditya-vāh,@} m.; {@Dityauhī,@} f., ‘a two-year-old bull or cow.’ is mentioned in the lat | Body bolds {@Ditya-vāh@} 'a two-year-old bull or cow' with its own Saṃhitā references.
+hasrA         -> hasra         | VEI: {@Hasrā@} (‘laughing woman’) in the Rigveda1 denotes a courtesan according to Pischel.2 1) | Body bolds {@Hasrā@} ('laughing woman'), a courtesan in the Rigveda (i.124,7).
+talASa        -> talASA        | VEI: {@Talāśa@} is the name of a tree in the Atharvaveda.1 Whitney2 suggests that it may be the | Body bolds {@Talāśa@} as the name of a tree in the Atharvaveda (vi.15,3).
+tfRajalAyuka  -> tfRajalAyukA  | VEI: {@Tṛṇa-jalāyuka,@} ‘caterpillar,’ is mentioned in the Bṛhad- āraṇyaka Upaniṣad (iv. 2, 4). | Body bolds {@Tṛṇa-jalāyuka@} 'caterpillar' in the Bṛhadāraṇyaka Upaniṣad (iv.2,4).
+kusara        -> kuSara        | VEI: {@Ku-sara@} is mentioned with {@Śara@} and other grasses in one hymn of the Rigveda1 as af | Body bolds {@Ku-sara@} as a grass mentioned in the Rigveda (i.191,3).
+apalamba      -> apAlamba      | VEI: {@Apa-lamba.@} — By this word1 is denoted a brake or drag, let down (from {%lamb,%} ‘hang  | Body bolds {@Apa-lamba@} as a brake/drag with its own Śatapatha Brāhmaṇa reference (iii.3,
+manTAlava     -> mAnTAlava     | VEI: {@Manthālava,@}1 {@Mānthīlava@}2 are the names in the Yajurveda Saṃhitās of a victim at th | Body bolds {@Manthālava@} as an Aśvamedha victim with its own Saṃhitā references, distinct
+turyavAh      -> turyavah      | VEI: {@Turya-vāh,@} masc.; {@Turyauhī,@} fem., ‘a four-year-old ox or cow,’ is mentioned in the | Body bolds {@Turya-vāh@} 'a four-year-old ox or cow' with its own Saṃhitā references.
+kvayI         -> kvayi         | VEI: {@Kvayī@} is the name of some species of bird in the Yajurveda,1 occurring in the list of  | Body bolds {@Kvayī@} as a bird species in the Yajurveda Aśvamedha list.
+sAvasAyana    -> SAvasAyana    | VEI: {@Sāvasāyana,@} ‘descendant of Śavas,’ is the patronymic of {@Devataras@} in the Vaṃśa Brā | Body bolds {@Sāvasāyana@} 'descendant of Śavas' as the patronymic of Devataras in the Vaṃś
+sElAli        -> SElAli        | VEI: {@Sailāli,@} ‘descendant of Śilālin,’ is the name of a ritual teacher in the Śatapatha Brā | Body bolds {@Sailāli@} 'descendant of Śilālin' as a ritual teacher in the Śatapatha Brāhma
+siSnadeva     -> SiSnadeva     | VEI: {@Siśna-deva,@} occurring twice in the Rigveda1 in the plural, means ‘those who have the p | Body bolds {@Siśna-deva@} occurring twice in the Rigveda (vii.21,5; x.99,3).
+svapad        -> Svapad        | VEI: {@Sva-pad@} denotes a ‘savage animal,’ ‘beast of prey,’ in the Atharvaveda (viii. 5, 11; x | Body bolds {@Sva-pad@} 'savage animal' in the Atharvaveda (viii.5,11; xix.39,4).
+vEzWapureya   -> vEzwapureya   | VEI: {@Vaiṣṭha-pureya,@} ‘descendant of Viṣṭhapura,’ is the name of a teacher in the first two  | Body bolds {@Vaiṣṭha-pureya@} 'descendant of Viṣṭhapura' as a teacher in the Bṛhadāraṇyaka
+nEmiSi        -> nEmizi        | VEI: {@Naimiśi@} is the epithet of {@Śitibāhu Aiṣakṛta@} in the Jaiminīya Brāhmaṇa.1 It is prob | Body bolds {@Naimiśi@} as the epithet of Śitibāhu Aiṣakṛta in the Jaiminīya Brāhmaṇa (i.36
+purumI|a      -> (flag)        | VEI: {@Puru-mīḷha@} is mentioned twice in the Rigveda1 as an ancient sage, in which capacity he | Body bolds {@Puru-mīḷha@} (mīḷha = mI|a) as an ancient sage in the Rigveda and Atharvaveda
+harivarRaaNgirasa -> (flag)        | VEI: {@Hari-varṇa Aṅgirasa@} (‘descendant of Aṅgiras’) is the name of the seer of a Sāman or ch | Body bolds {@Hari-varṇa Aṅgirasa@} as the seer of a Sāman in the Pañcaviṃśa Brāhmaṇa (viii
+sumI|a        -> (flag)        | VEI: {@Su-mīḷha@} is the name of a patron in the Rigveda.1 1) vi. 63, 9. {%Cf.%} Ludwig, Transl | Body bolds {@Su-mīḷha@} as the name of a patron in the Rigveda (vi.63,9).
+
+# ===== BUCKET 5  INTENTIONAL -- VEI documents the spelling on purpose; NEVER file (2) =====
+Ula           -> ula           | VEI: {@Ūla@} is a variant of {@Ula.@} | Body explicitly records the spelling as a variant note: '{@Ūla@} is a variant of {@Ula@}'.
+kAtyAyani     -> kAtyAyanI     | VEI: {@Kātyāyani.@} See {@Dakṣa.@} | 
+
+# ===== BUCKET 6  UNLOCATABLE -- not in the current VEI source (stale/different key) (0) =====

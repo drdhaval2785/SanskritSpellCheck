@@ -1,0 +1,14 @@
+; MCI body-confirmed fileable typos -- CORRECTIONS standard format (DICT:wrong:right:n)
+; 10 fileable (classified TYPO + source-confirmed + survived the Opus false-positive review)
+; VERIFY each remaining case on the scan, flip trailing n->y for confirmed ones, then:
+;   python chg_nchg_sep.py MCI_file_first_sf.txt chg.txt nchg.txt
+MCI:asvaSiras:aSvaSiras:n
+MCI:vEsAKa:vESAKa:n
+MCI:brahmopanisad:brahmopanizad:n
+MCI:mahAnadi:mahAnadI:n
+MCI:supratika:supratIka:n
+MCI:kikawa:kIkawa:n
+MCI:dakzinApaTa:dakziRApaTa:n
+MCI:mAkandi:mAkandI:n
+MCI:arunDatIvAwa:arunDatIvawa:n
+MCI:baliha:balIha:n

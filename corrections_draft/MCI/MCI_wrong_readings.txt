@@ -1,0 +1,15 @@
+# MCI -- DOCUMENTED-INTENTIONAL spellings (NOT typos -- do NOT file corrections)
+#
+# 3 headwords that LOOK like misspellings but which MCI records on purpose:
+# wrong-reading apparatus (w.r.), variae lectiones (v.l.), in-composition /
+# sandhi forms (in comp. for...), cross-references (See / = X q.v.), and other
+# grammatical/Vedic notes. Filing a 'correction' for any of these CORRUPTS MCI.
+# Use this as a suppression list: such headwords should not be re-flagged.
+# Format per row:  headword -> would-be 'correction'  |  the MCI entry text
+
+# ===== CROSS-REFERENCE (2) =====
+sarasvatitIrTa -> sarasvatItIrTa | {@Sarasvatitīrtha@} nt.: See {@Sthāṇutīrtha.@}
+somadEvata     -> somadevata     | {@Somadaivata@} nt.: See {@Mṛgottama.@}
+
+# ===== OTHER-INTENTIONAL (1) =====
+bAhukaRwaka    -> bahukaRwaka    | {@Bāhukaṇṭaka@} nt.: Name of a particular manœuvre employed in a wrestling match. Karṇa employed it to split the joint in Jarāsandha's body while wrestling with

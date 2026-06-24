@@ -1,0 +1,18 @@
+# KRM -- DOCUMENTED-INTENTIONAL spellings (NOT typos -- do NOT file corrections)
+#
+# 6 headwords that LOOK like misspellings but which KRM records on purpose:
+# wrong-reading apparatus (w.r.), variae lectiones (v.l.), in-composition /
+# sandhi forms (in comp. for...), cross-references (See / = X q.v.), and other
+# grammatical/Vedic notes. Filing a 'correction' for any of these CORRUPTS KRM.
+# Use this as a suppression list: such headwords should not be re-flagged.
+# Format per row:  headword -> would-be 'correction'  |  the KRM entry text
+
+# ===== WRONG-READING (1) =====
+DurvI          -> DUrvI          | (904) {@“DurvI hiMsArTaH”@} (I-BvAdiH-573. aka. sew. para.) DUrvakaH-rvikA, DUrvakaH-rvikA, duDUrvizakaH-zikA, doDUrvakaH-rvikA; ityAdIni sarvARyapi rUpARi BOvA
+
+# ===== OTHER-INTENTIONAL (5) =====
+Riji           -> niji           | (672) {@“Riji SudDO”@} (II-adAdiH-1026. saka. sew. Atma.) 4 niYjakaH-YjikA, niYjakaH-YjikA, niniYjizakaH-zikA, 5 neniYjakaH-YjikA; niYjitA-trI, niYjayitA-trI, n
+Risi           -> misi           | (679) {@“Risi cumbane”@} (II-adAdiH-1025. saka. sew. Atma.) 2 praRiMsakaH-praniMsakaH-sikA, niMsakaH-sikA, niniMsizakaH-zikA,  [Page0628+ 31] neniMsakaH-sikA; 1
+mfN            -> mfR            | (1301) {@“mfN prARatyAge”@} (VI-tudAdiH-1403. aka. ani. Atma.) ‘mfRAti hiMsArTe pvAdermfNastu mriyate padam ..’ (Slo. 34) iti devaH . mArakaH-rikA, mArakaH-rikA
+zarja          -> sarja          | (1821) {@“zarja arjane”@} (I-BvAdiH-225. saka. sew. para.) ‘sarja—’ iti kzIrasvAmI . sarjUH—ORAdika UpratyayaH . rUpARi sarvARi karjativat (169) boDyAni .
+zivi           -> Sivi           | (1840) {@“zivi secane”@} (I-BvAdiH. (pA.) saka. sew. para.) BOvAdikajinvativat (604) rUpARi sarvARyapi UhyAni .

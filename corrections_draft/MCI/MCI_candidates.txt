@@ -1,0 +1,25 @@
+# MCI tier-A correction candidates (unified engine) — score	wrong -> right	detectors	morph
+361	kOSIka -> kOSika	[consensus,intra_dup,spell_correct]	morph✓
+351	mahAnadi -> mahAnadI	[consensus,intra_dup,spell_correct]	morph✓
+351	supratika -> supratIka	[consensus,intra_dup,spell_correct]	morph✓
+347	dakzinApaTa -> dakziRApaTa	[consensus,intra_dup,spell_correct]	morph✓
+346	vinaSaRa -> vinaSana	[consensus,intra_dup,spell_correct]	morph✓
+274	Agni -> agni	[consensus,spell_correct]	morph✓
+264	vAraRA -> vAraRa	[consensus,spell_correct]	morph✓
+254	upatyaka -> upatyakA	[consensus,spell_correct]	morph✓
+251	kikawa -> kIkawa	[consensus,spell_correct]	morph✓
+248	asvaSiras -> aSvaSiras	[consensus,spell_correct]	morph✓
+248	vEsAKa -> vESAKa	[consensus,spell_correct]	morph✓
+245	bAhukaRwaka -> bahukaRwaka	[consensus,spell_correct]	morph✓
+244	pAtara -> patara	[consensus,spell_correct]	morph✓
+241	mAkandi -> mAkandI	[consensus,spell_correct]	morph✓
+234	arunDatIvAwa -> arunDatIvawa	[consensus,spell_correct]	morph✓
+231	baliha -> balIha	[consensus,spell_correct]	morph✓
+224	brahmavAlukA -> brahmavAluka	[consensus,spell_correct]	morph✓
+221	sarasvatitIrTa -> sarasvatItIrTa	[consensus,spell_correct]	morph✓
+221	satiya -> satIya	[consensus,spell_correct]	morph✓
+219	samBalagrAma -> SamBalagrAma	[intra_dup,spell_correct]	morph✓
+217	somadEvata -> somadevata	[intra_dup,spell_correct]	morph✓
+216	BagadEva -> Bagadeva	[consensus,spell_correct]	morph✓
+216	brahmopanisad -> brahmopanizad	[consensus,spell_correct]	morph✓
+209	SyAmAyA -> SyAmAya	[consensus,spell_correct]	
