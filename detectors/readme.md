@@ -132,6 +132,23 @@ flagged by several detectors at once — the verify-first queue. Outputs are git
   via `dcs_full.sqlite` (the local copy is an empty placeholder — detectors use the
   vendored banded summary), and GRETIL corpus expansion (external download).
 
+## Body-grounded triage & ortho-drift (separate pipelines in this dir)
+
+Two larger pipelines also live here; they consume the detector output but have their own docs:
+
+- **Body-grounded triage** — `triage_dict.py` / `triage_*.py` / `triage_util.py` /
+  `triage_lang.py` + `bodyaware_workflow.js`, driven by the **`/dict-triage <DICT>`** skill. Judges
+  each tier-A candidate against the dictionary's *own entry text* → a FILE-FIRST queue + a do-not-file
+  list. **Done for all 33 dicts** — index + results in
+  [../corrections_draft/README.md](../corrections_draft/README.md);
+  `gen_do_not_file_suppress.py` folds the do-not-file lists into the detector suppression layer.
+  Dictionaries not in `csl-orig` (e.g. **PD**) are staged with
+  [get_external_source.py](get_external_source.py) into `external_src/` and resolved by
+  `triage_util.source_file()`.
+- **Ortho-drift study** — [ortho_drift.py](ortho_drift.py) + `merge_reform_pairs.py`. Checks
+  gloss-language tokens (de/en/fr/la/ru) against a 2026 standard to document spelling drift; **complete
+  across all 5 languages** — see [../docs/ORTHO_DRIFT_FINDINGS.md](../docs/ORTHO_DRIFT_FINDINGS.md).
+
 ## Output formats (reuse the existing pipeline)
 - **Flaggers** (4, 5, 6) emit faultfinder-style `X:CODE=detail:D`, so
   [../faultfinder3a-html.php](../faultfinder3a-html.php) (with the `repeat=2` arg)

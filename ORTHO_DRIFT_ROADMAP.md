@@ -1,6 +1,12 @@
 # Orthographic-Drift Roadmap
 
-**Status:** planned / not started. This document is the design; nothing here edits `csl-orig`.
+**Status: ✅ COMPLETE across all 5 gloss languages** (changelog `[1.20.0]`–`[1.30.0]`). This
+document is the original **design**; the implementation (`detectors/ortho_drift.py`, profile-driven
+de/en/fr/la/ru), the per-language outputs in `ortho_drift/`, and the synthesis are all done — read
+the results in **[docs/ORTHO_DRIFT_FINDINGS.md](docs/ORTHO_DRIFT_FINDINGS.md)**. Nothing here edits
+`csl-orig`. *Optional, externally-gated extensions remain* (within-EN recency control over the
+modern dicts incl. PD; German DTA/RIDGES long-tail merge) — see Task C in
+[HANDOFF_NEXT.md](HANDOFF_NEXT.md).
 **Scope:** a new dimension for the body-grounded triage — check the **gloss-language tokens
 inside dictionary entries** against a **2026 standard**, and document, at meta level, how
 19th-/early-20th-century European-language spelling has drifted.

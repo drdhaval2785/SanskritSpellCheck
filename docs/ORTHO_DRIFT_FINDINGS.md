@@ -240,6 +240,6 @@ none (no reform) and Russian needs none (the 1918 letters are definitional). Eac
 | figure | file |
 |---|---|
 | per-dict drift/1k + era columns | [ortho_drift/`<lang>`_drift_summary.tsv](../ortho_drift/) |
-| accumulated historical→2026 lexicon | [ortho_drift/`<lang>`_reform_map.tsv](../ortho_drift/) (de = 2,823 forms) |
+| accumulated historical→2026 lexicon | [ortho_drift/`<lang>`_reform_map.tsv](../ortho_drift/) (de ≈ 2,825, ru ≈ 7,711, en 73, fr 20, la 2 forms; the maps accumulate across runs) |
 | per-dict detail (header: tokens / modern / drift) | [ortho_drift/`<DICT>`_drift_report.txt](../ortho_drift/) |
 | German residual LLM-classify (6,804 → 1,831 drift) | [de_residual_classified.tsv](../ortho_drift/de_residual_classified.tsv) |

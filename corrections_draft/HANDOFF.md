@@ -1,9 +1,15 @@
-# Handoff — review another dictionary in a new chat
+# Handoff — (re)triage a dictionary in a new chat
 
-Open a new chat **in the SanskritSpellCheck repo, on Opus**, then either invoke the skill or
-paste the self-contained prompt below. Swap `<DICT>` for a pending code (see the
-[index](README.md) — highest tier-A first: `BHS` 737 · `SCH` 678 · `PUI` 518 · `SKD` 412 ·
-`MW72` 360 …). Avoid `PD` (no csl-orig source) and the done ones (`MW`/`PW`/`VCP`/`PWG`/`SNP`).
+> **All 33 dictionaries are already triaged** (see the [index](README.md)). There is **no pending
+> dict left to triage for the first time.** This handoff now serves **re-runs** — most usefully
+> **PD once its optional second source is wired in** (register it in
+> [../detectors/get_external_source.py](../detectors/get_external_source.py) `SOURCES['PD']`, re-stage,
+> re-run). PD is read from a staged external source (`external_src/pd/`), not `csl-orig`.
+
+Open a new chat **in the SanskritSpellCheck repo, on Opus**, then either invoke the skill or paste
+the self-contained prompt below, swapping `<DICT>` for the code to re-run. **⚠️ The TYPO pass is
+stochastic — a fresh run can *lose* verified typos, so don't blindly overwrite a committed package;**
+re-run only with reason (a new/second source, or to extend recall by unioning across runs).
 
 ## Shortest form — if the `/dict-triage` command is loaded
 
@@ -35,9 +41,10 @@ list), changelog.md and .ai_state.md; then commit (ai-wip: prefix + the
 "Co-Authored-By: Claude Opus 4.8 (1M context)" trailer) and push.
 
 Guardrails: keep this session on OPUS (orchestration + spot-check run on the session model; the
-workflow's Sonnet/Opus split is pinned internally). The TYPO pass is STOCHASTIC — do NOT re-run an
-already-triaged dict (MW/PW/VCP/PWG/SNP); a fresh run can lose verified typos. Tier-A precision is
-near-zero on mature dicts — the do-not-file list is the real deliverable, not the few typos.
+workflow's Sonnet/Opus split is pinned internally). The TYPO pass is STOCHASTIC — all 33 dicts are
+already triaged, so re-run one ONLY with reason (a new/second source, or to union across runs for
+recall); a fresh run can lose verified typos, so don't blindly overwrite the committed package. Tier-A
+precision is near-zero on mature dicts — the do-not-file list is the real deliverable, not the few typos.
 ```
 
 ## What you get
