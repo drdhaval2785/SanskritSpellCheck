@@ -28,9 +28,15 @@ separate: [corrections_draft/HANDOFF.md](corrections_draft/HANDOFF.md).
 
 ---
 
-## Task A — Triage the remaining dictionaries (RECOMMENDED)
+## Task A — Triage the remaining dictionaries — ✅ DONE (2026-06-24)
 
-**Goal:** run the body-grounded triage on the **14 untriaged dicts** to extend the durable
+> **Complete.** All runnable dicts are triaged — **32/33** (changelog `[1.38.0]`). The last three
+> (BUR/STC French, BOP Latin) came in **0 fileable**. Only **PD** remains, and it is BLOCKED on its
+> two external sources (not in `csl-orig`). The suppression list is at 32 dicts / 2181 unique with
+> `eval.py` false-positives 0. **What's left that an AI can do: Task B below.** The brief below is
+> kept for reference / for PD once its sources arrive.
+
+**Goal (historical):** run the body-grounded triage on the untriaged dicts to extend the durable
 deliverable — the per-dict **do-not-file** lists — and, with one re-run of the generator, the
 detector **suppression layer** built last session. Tier-A precision is near-zero on mature dicts,
 so the value is the do-not-file lists + preventing bad bulk edits, not the few real typos.
