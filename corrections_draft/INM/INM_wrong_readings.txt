@@ -1,0 +1,28 @@
+# INM -- DOCUMENTED-INTENTIONAL spellings (NOT typos -- do NOT file corrections)
+#
+# 16 headwords that LOOK like misspellings but which INM records on purpose:
+# wrong-reading apparatus (w.r.), variae lectiones (v.l.), in-composition /
+# sandhi forms (in comp. for...), cross-references (See / = X q.v.), and other
+# grammatical/Vedic notes. Filing a 'correction' for any of these CORRUPTS INM.
+# Use this as a suppression list: such headwords should not be re-flagged.
+# Format per row:  headword -> would-be 'correction'  |  the INM entry text
+
+# ===== CROSS-REFERENCE (4) =====
+SaNkarzaRa     -> saNkarzaRa     | {@Śaṅkarṣaṇa@} (X, 498), error in C. for Saṅkarṣaṇa, q.v.
+bfhannalA      -> bfhannala      | {@Bṛhannalā@} = Arjuna, q.v.
+gudAkeSa       -> guqAkeSa       | {@Gudākeśa@} = Arjuna, q.v.
+vEkartaRa      -> vEkartana      | {@Vaikartaṇa@} = Karṇa, q.v.
+
+# ===== OTHER-INTENTIONAL (12) =====
+aBirAmA        -> aBirAma        | {@Abhirāmā@}, v. Pūrvābhirāmā.
+anAyuz         -> anAyus         | {@Anāyuṣ@} (B. {%Da˚%}), erratum for Danāyus.
+dvetavana      -> dvEtavana      | {@Dvetavana@}, v. Dvaitavana.
+kalasodara     -> kalaSodara     | {@Kalasodara@}, v. Kalaśodara.
+kftavanDu      -> kftabanDu      | {@Kṛtavandhu@}, v. Kṛtabandhu.
+koNkana        -> koNkaRa        | {@Koṅkana@}, pl., v. Kauṅkana, pl.
+koSika         -> kOSika         | {@Kośika@}, pl. ({%˚āḥ%}) (VII, 1052), v. Kāśika, pl.
+kusasTalI      -> kuSasTalI      | {@Kusasthalī@}, v. Kuśasthalī.
+saryAti        -> SaryAti        | {@Saryāti@}, v. Śaryāti.
+suvAhu         -> subAhu         | {@Suvāhu@}, v. Subāhu.
+uzInara        -> uSInara        | {@Uṣīnara@}, v. Uśīnara.
+varaDAna       -> varadAna       | {@Varadhāna@} (V, 2405), error in C. for Vaṭadhāna.

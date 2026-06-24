@@ -1,0 +1,177 @@
+# PE tier-A -- BODY-GROUNDED triage  (DRAFT; verify every kept case against the scan)
+#
+# The 152 engine tier-A candidates were judged against PE's OWN entry text (csl-orig),
+# not spelling alone. A spelling detector cannot tell a typo from a real word, an
+# intentional variant / compounding form, or wrong-reading apparatus -- the entry can.
+# Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM
+# pass over the 'realword' set + source confirmation of every TYPO verdict.
+#
+# FINDING: of 152 tier-A candidates, 0 are body-confirmed fileable typos (0.0%).
+# 138 are real distinct words, 13 are spellings PE documents on purpose (w.r./v.l./
+# in-comp./cross-ref -- filing them would CORRUPT PE), 1 are not in the current
+# source, and 0 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
+# do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.
+
+# ===== BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file) (0) =====
+
+# ===== BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted (0) =====
+
+# ===== BUCKET 3  REVIEW -- undecidable without the printed page (0) =====
+
+# ===== BUCKET 4  REAL-WORD -- a distinct real word; the fix would merge two words (138) =====
+narA          -> nara          | PE: NARĀ IV. One of the wives of Uśīnara, a King of the family of the Aṅga Kings. Uśīnara had  | Body headword NARĀ IV is a distinct wife of Uśīnara, contrasted with her son Nara — a real
+sarvA         -> sarva         | PE: SARVĀ. A Purāṇic river. (Bhīṣma Parva, Chapter 89, Verse 36). | SARVĀ is a named Purāṇic river with its own Bhīṣma Parva citation.
+vivida        -> viviDa        | PE: VIVIDA. An asura who was the follower of Kaṃsa. It is mentioned in Bhāgavata, Skandha 10,  | VIVIDA is named as an asura follower of Kaṃsa with its own Bhāgavata citation; attested sp
+mahimAn       -> mahiman       | PE: MAHIMĀN. An Āditya. Bhāgavata 6th Skandha says that Mahimān was the son of Bhaga by Siddhi | MAHIMĀN is a named Āditya, son of Bhaga, with Bhāgavata citation.
+vatsalA       -> vatsala       | PE: VATSALĀ. An attendant of Subrahmaṇya. (M.B. Śalya Parva, Chapter 45, Stanza 72). | VATSALĀ is a named attendant of Subrahmaṇya with Śalya Parva citation.
+mandarA       -> mandara       | PE: MANDARĀ. One of the wives of Viśvakarmā. The monkey named Nala was the son of Mandarā. Thi | MANDARĀ is a named wife of Viśvakarmā and mother of the monkey Nala.
+ahitA         -> ahita         | PE: AHITĀ. A river of ancient Bhārata. (M.B., Bhīṣma Parva, Śloka 21, Chapter 9). | AHITĀ is a named river of ancient Bhārata with Bhīṣma Parva citation.
+kalahA        -> kalaha        | PE: KALAHĀ. Wife of a brāhmaṇa named Bhikṣu who was an inhabitant of the city of Saurāṣṭra. Th | KALAHĀ is a named woman, wife of the brāhmaṇa Bhikṣu, with a full narrative.
+svarRA        -> svarRa        | PE: SVARṆĀ. A celestial woman. By the blessings of Krauñca a daughter named Vṛndā was born to  | SVARṆĀ is a named celestial woman, mother of Vṛndā, with Padma Purāṇa citation.
+AYjali        -> aYjali        | PE: ĀÑJALI. A sage who was a classmate of Śaunaka. (Skandha 12, Bhāgavata). | ĀÑJALI is named as a sage, classmate of Śaunaka, with Bhāgavata citation; long initial Ā a
+laNgalI       -> lANgalI       | PE: LAṄGALĪ. A celebrated river of Purāṇic fame. This river worships Varuṇa in the form of a D | LAṄGALĪ is named as a celebrated Purāṇic river with Sabhā Parva citation.
+suganDI       -> suganDi       | PE: SUGANDHĪ. One of the thirteen wives of Vasudeva. A son named Puṇḍra was born to Vasudeva b | SUGANDHĪ is named as a wife of Vasudeva, mother of Puṇḍra, with Vāyu Purāṇa citation.
+gITa          -> gIta          | PE: GĪTHA. A King of the Bharata dynasty. (5th Skandha, Bhāgavata). | GĪTHA is named as a King of the Bharata dynasty; body spells with aspirate TH, its own ent
+SalaBA        -> SalaBa        | PE: ŚALABHĀ. Wife of Atrimaharṣi. (Brahmāṇḍa Purāṇa, 3, 8; 74-78). | ŚALABHĀ is named as a wife of Atri with Brahmāṇḍa Purāṇa citation.
+SravA         -> Srava         | PE: ŚRAVĀ. Son of Santa, a Maharṣi who belonged to Gṛtsamada's family. He was the father of Ta | ŚRAVĀ is a named Maharṣi, son of Santa and father of Tamas, with Anuśāsana Parva citation.
+arUpA         -> arUpa         | PE: ARŪPĀ. One of Dakṣa's daughters. (M.B., Ādi Parva, Chapter 65, Verse 46). | ARŪPĀ is named as one of Dakṣa's daughters with Ādi Parva citation.
+bfhantA       -> bfhanta       | PE: BṚHANTĀ. One of the seven mothers of Subrahmaṇya. (M.B. Vana Parva, Chapter 118, Stanza 10 | BṚHANTĀ is named as one of the seven mothers of Subrahmaṇya.
+nirAmayA      -> nirAmaya      | PE: NIRĀMAYĀ. A river, the water of which was very dear to the people of ancient India. (Bhīṣm | NIRĀMAYĀ is a named river with Bhīṣma Parva citation.
+yakzmA        -> yakzma        | PE: YAKṢMĀ (RĀJAYAKṢMĀ). The disease of consump- tion (Tuberculosis). There is a story in Mahā | YAKṢMĀ (RĀJAYAKṢMĀ) is the named disease created by Dakṣa, an entry in its own right.
+UzmapA        -> Uzmapa        | PE: ŪṢMAPĀ. A group of Pitṛs (the Manes). It is men- tioned in Mahābhārata, Sabhā Parva, Chapt | ŪṢMAPĀ is named as a group of Pitṛs with Sabhā Parva citation.
+arawwa        -> Arawwa        | PE: ARAṬṬA(M). A place in ancient India. After Droṇa was killed in the great war, Kṛtavarmā ra | ARAṬṬA(M) is a named place; body and text use short initial a (Araṭṭa), matching the suspe
+jAbAlA        -> jAbAla        | PE: JĀBĀLĀ. The mother of the hermit Satyakāma. (For details see under Satyakāma). | JĀBĀLĀ is named as the mother of the hermit Satyakāma.
+kartA         -> karta         | PE: KARTĀ. A Viśvadeva, (Śloka 35, Chapter 91, Anu- śāsana Parva). | KARTĀ is named as a Viśvadeva with Anuśāsana Parva citation.
+agraRi        -> agraRI        | PE: AGRAṆI. The name of an Agni. He was the fifth son of the Agni named Bhānu and his wife, Ni | AGRAṆI is named as an Agni, fifth son of Bhānu and Niśādevī, with Vana Parva citation.
+asikni        -> asiknI        | PE: ASIKNI I. A river flowing through the Punjab in India. This is called Candrabhāgā and also | ASIKNI I/II are named (a river and a wife of Dakṣa); body uses short final i throughout.
+astI          -> asti          | PE: ASTĪ. Daughter of Jarāsandha, King of Magadha. Kaṃsa married Astī and also another daughte | ASTĪ is named as a daughter of Jarāsandha married to Kaṃsa, with Sabhā Parva citation.
+devanadi      -> devanadI      | PE: DEVANADI. A river described as existing in the assem- bly of Varuṇa. (Sabhā Parva, Chapter | DEVANADI is a named river in Varuṇa's assembly with Sabhā Parva citation.
+PalgU         -> Palgu         | PE: PHALGŪ. A holy river. If one visits this place one would get the benefit of doing an Aśvam | PHALGŪ is named as a holy river conferring Aśvamedha benefit, with Vana Parva citation.
+aviraTa       -> avirata       | PE: AVIRATHA. A hermit of the family of Kardama. {%Genealogy.%} Brahmā-Kardama-Kapila-Gṛtsapat | AVIRATHA is named as a hermit of Kardama's line with an explicit genealogy ending in Avira
+ramana        -> ramaRa        | PE: RAMANA. I. A son born to the Vasu known as Soma of his wife Manoharā. (Ādi Parva, Chapter  | RAMANA is named as a son of the Vasu Soma by Manoharā with Ādi Parva citation.
+aTarvA        -> aTarva        | PE: ATHARVĀ I. This muni is referred to in Mahābhārata, Udyoga Parva, Chapter 43, Verse 50, as | ATHARVĀ I is a named muni/chanter who recovered Agni, with multiple Mahābhārata citations.
+akzasUtrA     -> akzasUtra     | PE: AKṢASŪTRĀ. She was the wife of the sage Āpastamba. She was a very chaste woman. (See under | AKṢASŪTRĀ is named as the chaste wife of Āpastamba.
+kAlakakza     -> kAlakAkza     | PE: KĀLAKAKṢA. A warrior of Skanda deva. (M.B. Śalya Parva, Chapter 45, Verse 69). | KĀLAKAKṢA is named as a warrior of Skanda with Śalya Parva citation.
+atilomA       -> atiloma       | PE: ATILOMĀ. An Asura who was killed by Śrī Kṛṣṇa. (M.B. Sabhā Parva, Chapter 38). | ATILOMĀ is named as an Asura killed by Kṛṣṇa, with Sabhā Parva citation.
+satyaratA     -> satyarata     | PE: SATYARATĀ. A Kekaya princess. Satyavrata (Triśaṅku) the king of Ayodhyā married this princ | SATYARATĀ is named as a Kekaya princess married by Satyavrata/Triśaṅku, with Vāyu Purāṇa c
+anumloca      -> anumlocA      | PE: ANUMLOCA. An apsaras. (Harivaṃśa 326). | ANUMLOCA is named as an apsaras with Harivaṃśa citation; attested as its own entry.
+citrASvA      -> citrASva      | PE: CITRĀŚVĀ. Another name of Satyavān. He used to make the figure of horses using clay and pe | CITRĀŚVĀ is given as another name of Satyavān with a name-origin story and Vana Parva cita
+devAdarSa     -> devadarSa     | PE: DEVĀDARŚA. An ācārya in the line of Vyāsa's disciples. He was the disciple of Kabandha, an | DEVĀDARŚA is named as an ācārya, disciple of Kabandha, in the line of Vyāsa's disciples.
+fjraSva       -> fjrASva       | PE: ṚJRAŚVA. A muni (sage) celebrated in the Ṛgveda. Some details. (1) Ṛjrāśva was made blind  | ṚJRAŚVA is named as a Ṛgvedic sage, son of Vṛṣāgīr, with a full narrative.
+hastikaSyapa  -> hastikASyapa  | PE: HASTIKAŚYAPA. A great sage who lived in North India in very olden days. He once met and ta | HASTIKAŚYAPA is named as a North-Indian sage who met Kṛṣṇa, with Anuśāsana Parva citation.
+hutahavyavAha -> hutahavyavaha | PE: HUTAHAVYAVĀHA. One of the two sons of Dhara, the Vasu, the other son being Draviṇa. (Ādi P | HUTAHAVYAVĀHA is named as a son of the Vasu Dhara with Ādi Parva citation.
+kapilahrada   -> kapilAhrada   | PE: KAPILAHRADA. A sacred place in Kāśī. If one bathes there one will get the benefit of perfo | KAPILAHRADA is named as a sacred place in Kāśī conferring Rājasūya benefit.
+maRicara      -> mARicara      | PE: MAṆICARA. A Yakṣa. In the fight between Rāvaṇa and Kubera this Yakṣa helping Kubera create | MAṆICARA is named as a Yakṣa who helped Kubera against Rāvaṇa, from Uttara Rāmāyaṇa.
+paYcaja       -> paYcAja       | PE: PAÑCAJA I. (PAÑCAJANA). A mighty asura. This asura lived inside a conch. Śrī Kṛṣṇa killed  | PAÑCAJA I (Pañcajana) is named as a conch-dwelling asura killed by Kṛṣṇa, with a full narr
+saMhatA       -> saMhata       | PE: SAṂHATĀ. Second wife of Dhṛtarāṣṭra. She was the niece of Gāndhārī. | SAṂHATĀ is named as the second wife of Dhṛtarāṣṭra and niece of Gāndhārī.
+vizRuDarmA    -> vizRuDarma    | PE: VIṢṆUDHARMĀ. A child of Garuḍa. (Mahābhārata, Udyoga Parva, Chapter 101, Stanza 13). | VIṢṆUDHARMĀ is named as a child of Garuḍa with Udyoga Parva citation.
+KyAtA         -> KyAta         | PE: KHYĀTĀ. An attendant of Skanda. (M.B. Śalya Parva, Chapter 46, Stanza 20). | KHYĀTĀ is named as an attendant of Skanda with Śalya Parva citation.
+vivasvAn      -> vivasvan      | PE: VIVASVĀN I. The Sun. 1) {%General information.%} Sūrya (Sun) has a large number of synonym | VIVASVĀN I is the Sun, a major named Āditya with extensive description.
+agniDAra      -> agniDArA      | PE: AGNIDHĀRA TIRTHA. This is the name of a sacred place near Gautamavana. (See Śloka 146, Cha | AGNIDHĀRA TIRTHA is named as a sacred place near Gautamavana with Vana Parva citation.
+aRimARqavya   -> aRImARqavya   | PE: AṆIMĀṆḌAVYA. 1) {%General. How he got the name Aṇimāṇḍavya.%} Once there was a famous Brah | AṆIMĀṆḌAVYA is a named Brahmin with a full origin narrative; attested spelling.
+vAdI          -> vAdi          | PE: VĀDĪ. A son of emperor Pṛthu. Pṛthu had two righteous sons called Antardhāna and Vādī. A s | VĀDĪ is named as a son of emperor Pṛthu with a genealogy and Viṣṇu Purāṇa citation.
+SivarAtrI     -> SivarAtri     | PE: ŚIVARĀTRĪ. 1) {%General.%} Śivarātrī is a holy day. Śivarātrī is observed on the eve of Ne | ŚIVARĀTRĪ is the named holy day with a full Purāṇic account; its own headword entry.
+cakranemI     -> cakranemi     | PE: CAKRANEMĪ. A woman attendant of Skandadeva. (Śalya Parva, Chapter 46, Verse 5). | CAKRANEMĪ is named as a woman attendant of Skanda with Śalya Parva citation.
+mahAgOri      -> mahAgOrI      | PE: MAHĀGAURI. A prominent river in India. (Mahā- bhārata, Bhīṣma Parva, Chapter 9, Verse 33). | MAHĀGAURI is named as a prominent Indian river with Bhīṣma Parva citation.
+sumAlI        -> sumAli        | PE: SUMĀLĪ I. A Rākṣasa, who was Sukeśa's son and brother of Mālī. When Agastya cursed and tra | SUMĀLĪ I/II/III are named Rākṣasas/asuras with full narratives and citations.
+amanTu        -> amantu        | PE: AMANTHU. A king of the family of Priyavrata. {%Genealogy:%} From Viṣṇu descended in this o | AMANTHU is named as a king of Priyavrata's family with a genealogy; body spells with aspir
+BadraSAka     -> BadraSAKa     | PE: BHADRAŚĀKA. A name of Subrahmaṇya. It is the figure of Subrahmaṇya in the shape of a goat  | BHADRAŚĀKA is a name of Subrahmaṇya in goat form; body spells unaspirated final -ŚĀKA, mat
+gUrRikA       -> GUrRikA       | PE: GŪRṆIKĀ. A companion of Devayānī. (Chapter 78, Ādi Parva). | GŪRṆIKĀ is named as a companion of Devayānī; suggestion differs only in vowel length of an
+KarakarmI     -> KarakarRI     | PE: KHARAKARMĪ. A female attendant of Skanda. (M.B. Śalya Parva, Chapter 46, Stanza 26). | KHARAKARMĪ is named as a female attendant of Skanda; body spells -karmī with m, matching s
+hiranyaDanus  -> hiraRyaDanus  | PE: HIRANYADHANUS. A King of forest tribes. Ekalavya, the great master of archery was Hiraṇyad | HIRANYADHANUS is named as a king of forest tribes, father of Ekalavya; the headword is its
+jatADara      -> jawADara      | PE: JATĀDHARA. A warrior of Subrahmaṇya. (M.B. Śalya Parva, Chapter 45, Verse 61). | JATĀDHARA is named as a warrior of Subrahmaṇya with Śalya Parva citation.
+guRavarA      -> guRAvarA      | PE: GUṆAVARĀ. A heroine, devoted to her husband, in the ancient literature of India. There is  | GUṆAVARĀ is a named heroine, queen of Vīrabhuja, with a Kathāsaritsāgara story.
+kIrtisenA     -> kIrtisena     | PE: KĪRTISENĀ. A heroine who has firmly established her reputation in Sanskrit literature. An  | KĪRTISENĀ is a named heroine, daughter of Dhanapāla, with a full narrative.
+ratnakUwA     -> ratnakUwa     | PE: RATNAKŪṬĀ. One of the wives of Atrimaharṣi. (Padma Purāṇa, Pātāla Khaṇḍa). | RATNAKŪṬĀ is named as a wife of Atri with Padma Purāṇa citation.
+tAmravatI     -> tAmrAvatI     | PE: TĀMRAVATĪ. An ancient river. It is believed that fire is generated from this river. (Śloka | TĀMRAVATĪ is named as an ancient river said to generate fire, with Vana Parva citation.
+Druvaratna    -> DruvaratnA    | PE: DHRUVARATNA. An attendant of Subrahmaṇya. (M.B. Śalya Parva, Chapter 46, Stanza 4). | DHRUVARATNA is named as an attendant of Subrahmaṇya with Śalya Parva citation.
+Satrutapana   -> SatrutApana   | PE: ŚATRUTAPANA. An asura, the son of Kaśyapaprajā- pati by his wife Danu. (Ādi Parva, Chapter | ŚATRUTAPANA is named as an asura, son of Kaśyapa by Danu, with Ādi Parva citation.
+bahudantaka   -> bAhudantaka   | PE: BAHUDANTAKA. A book on the science of Ethics (Nīti- śāstra), the work of Brahmā. It contai | BAHUDANTAKA is named as a Nīti-śāstra book by Brahmā with Śānti Parva citation.
+cAndravrata   -> candravrata   | PE: CĀNDRAVRATA. A penance performed for the attain- ment of beauty, happiness and popularity  | CĀNDRAVRATA is named as a penance performed in Dhanu, with Anuśāsana Parva citation.
+cirantaka     -> cirAntaka     | PE: CIRANTAKA. A son of Garuḍa. (Śloka 1, Chapter 101, Udyoga Parva). | CIRANTAKA is named as a son of Garuḍa with Udyoga Parva citation.
+citravAhA     -> citravahA     | PE: CITRAVĀHĀ. A purāṇic river of Bhārata. (Śloka 17, Chapter 9, Bhīṣma Parva). | CITRAVĀHĀ is named as a Purāṇic river of Bhārata with Bhīṣma Parva citation.
+citropala     -> citropalA     | PE: CITROPALA. A river of purāṇic fame. (Śloka 34, Chapter 9, Bhīṣma Parva). | CITROPALA is named as a river of Purāṇic fame with Bhīṣma Parva citation.
+maDukumBa     -> maDukumBA     | PE: MADHUKUMBHA. A follower of Subrahmaṇya. (Śloka 19, Chapter 46, Śalya Parva). | MADHUKUMBHA is named as a follower of Subrahmaṇya with Śalya Parva citation.
+yakfllomA     -> yakflloma     | PE: YAKṚLLOMĀ. An Indian town. (Mahābhārata, Bhīṣma Parva, Chapter 9, Verse 46). | YAKṚLLOMĀ is named as an Indian town with Bhīṣma Parva citation.
+paYcagaNgA    -> paYcagaNga    | PE: PAÑCAGAṄGĀ. A sacred place of Uttara Bhārata. The god of Death once sat at this place and  | Body 'PAÑCAGAṄGĀ. A sacred place of Uttara Bhārata' is a named place with citation.
+daRqI         -> daRqi         | PE: DAṆḌĪ II. A god. This god is worshipped as a waiter of the Sun. The sun is consecrated in  | DAṆḌĪ II is named as a god, the Sun's door-keeper, paired with Piṅgala; its own entry.
+lohitAyanI    -> lohitAyani    | PE: LOHITĀYANĪ. Daughter of Red Sea and one of the foster-mothers of Subrahmaṇya. Lohitāyanī w | LOHITĀYANĪ is named as a foster-mother of Subrahmaṇya with Vana Parva citation.
+pOzwi         -> pOzwI         | PE: PAUṢṬI. Wife of king Puru. Puru begot of Pauṣṭi three sons named Pravīra, Īśvara, and Raud | PAUṢṬI is named as the wife of king Puru and mother of three sons, with Ādi Parva citation
+uzRinABa      -> uzRInABa      | PE: UṢṆINĀBHA. A Viśvadeva (a class of gods). (Mahā- bhārata, Anuśāsana Parva, Chapter 91, Sta | UṢṆINĀBHA is named as a Viśvadeva with Anuśāsana Parva citation.
+PalOdaka      -> Palodaka      | PE: PHALAUDAKA. A Yakṣa. This Yakṣa lives in the court of Kubera. (Chapter 10, Sabhā Parva). | PHALAUDAKA is named as a Yakṣa in Kubera's court with Sabhā Parva citation; au-spelling is
+bAduli        -> vAduli        | PE: BĀDULI. A son of Viśvāmitra. He was a follower of the Brahma cult. (M.B., Anuśāsana Parva, | Body 'BĀDULI. A son of Viśvāmitra' is its own named entity with citation.
+sumani        -> sumaRi        | PE: SUMANI. One of the two attendants given to Subrah- maṇya by Moon the second one being Maṇi | Body 'SUMANI. One of the two attendants...the second one being Maṇi' distinguishes Sumani 
+guRAvatI      -> guRavatI      | PE: GUṆĀVATĪ. A river. Once Paraśurāma slew some Kṣatriyas on the northern banks of this river | GUṆĀVATĪ is named as a river where Paraśurāma slew Kṣatriyas, with Droṇa Parva citation.
+saNkalpA      -> saNkalpa      | PE: SAṄKALPĀ. A daughter of Dakṣa. Dharmadeva married the following ten daughters of Dakṣa, i. | SAṄKALPĀ is named as a daughter of Dakṣa married to Dharmadeva.
+hariBadrA     -> hariBadra     | PE: HARIBHADRĀ. Daughter of Kaśyapa by Krodhā. She was given in marriage to sage Pulaha and fr | Body 'HARIBHADRĀ. Daughter of Kaśyapa by Krodhā' is a distinct named female entity.
+krozwA        -> krozwa        | PE: KROṢṬĀ. A son of Yadu. Sahasrada, Payoda, Kroṣṭā, Nīla and Ājika were the five sons of Yad | Body 'KROṢṬĀ. A son of Yadu' is a named entity with Harivaṃśa citation.
+pawalAvatI    -> pAwalAvatI    | PE: PAṬALĀVATĪ. A holy river of Uttara Bhārata. (Śloka 11, Chapter 9, Bhīṣma Parva) | Body 'PAṬALĀVATĪ. A holy river' is a named place with citation.
+BarmyaSva     -> BArmyaSva     | PE: BHARMYAŚVA. A famous king of Pāñcāla Deśa. He had five heroic sons headed by Mudgala. (Nav | Body 'BHARMYAŚVA. A famous king of Pāñcāla Deśa' is a named entity with citation.
+DarmAyu       -> Darmayu       | PE: DHARMĀYU. A king of the Pūru family. His father was Raudrāśva, the son of Pūru and his mot | Body 'DHARMĀYU. A king of the Pūru family' is a named entity with genealogy and citation.
+Sarka         -> SArka         | PE: ŚARKA. A son of King Kuśāmba. Śarka had a brother called Gāni. (Brahmāṇḍa Purāṇa, Chapter  | Body 'ŚARKA. A son of King Kuśāmba' is a named entity with citation.
+SucismitA     -> Sucismita     | PE: ŚUCISMITĀ I. A Brāhmaṇī who was devoted to her husband. (For further details see under Dha | Body has two distinct entries 'ŚUCISMITĀ I/II' as named female entities.
+agnimAn       -> agniman       | PE: AGNIMĀN. Name of one Agni. | Body 'AGNIMĀN. Name of one Agni' names a specific Agni.
+bahugavA      -> bahugava      | PE: BAHUGAVĀ. A king born of the family of Yayāti. (Bhāgavata, Skandha 9). | Body 'BAHUGAVĀ. A king born of the family of Yayāti' is a named entity with citation.
+budDikAma     -> budDikAmA     | PE: BUDDHIKĀMA. An attendant of Śubrahmaṇya. (M.B. Salya Parva, Chapter 46, Stanza 12). | Body 'BUDDHIKĀMA. An attendant of Śubrahmaṇya' is a named entity with citation.
+caRqamuRqa    -> caRqamuRqA    | PE: CAṆḌAMUṆḌAS. Two brothers born in the Asura dynasty, the elder brother being called Caṇḍa  | Body 'CAṆḌAMUṆḌAS. Two brothers...Caṇḍa and...Muṇḍa' is a named dual entity with descripti
+dattamitra    -> dattAmitra    | PE: DATTAMITRA. This is another name of Sumitra the King of Sauvīra. Arjuna, during his conque | Body 'DATTAMITRA. Another name of Sumitra the King of Sauvīra' is a named entity with cita
+kArki         -> karki         | PE: KĀRKI. The son of the sage Āpastamba by his wife Akṣasūtrā. | Body 'KĀRKI. The son of the sage Āpastamba' is a named entity.
+mAnasAdevI    -> manasAdevI    | PE: MĀNASĀDEVĪ. A devī born of the mind of Kaśyapa Prajāpati. She is known as Jaratkāru also.  | Body 'MĀNASĀDEVĪ. A devī born of the mind of Kaśyapa' is a named entity (also called Jarat
+maDurasvarA   -> maDurasvara   | PE: MADHURASVARĀ. A celestial maiden. She once con- ducted a dance performance in honour of Ar | Body 'MADHURASVARĀ. A celestial maiden' is a named entity with citation.
+nacIna        -> nAcIna        | PE: NACĪNA. An ancient region of the country mentioned in Chapter 38, Sabhā Parva. | Body 'NACĪNA. An ancient region' is a named place with citation.
+punaScandra   -> punaScandrA   | PE: PUNAŚCANDRA. A sacred place. This is situated in the Jamadagnivedī in Śūrpārakakṣetra. (Śl | Body 'PUNAŚCANDRA. A sacred place' is a named place with citation.
+rAjaDarmA     -> rAjaDarma     | PE: RĀJADHARMĀ. A stork, which was a friend of Brahmā and a son of Kaśyapaprajāpati. This stor | Body 'RĀJADHARMĀ. A stork...friend of Brahmā' is a named entity (also Nāḍījaṅgha).
+satyaDarmA    -> satyaDarma    | PE: SATYADHARMĀ I. A King of the lunar dynasty. He was a helper of Yudhiṣṭhira. (M.B. Udyoga P | Body has two distinct entries 'SATYADHARMĀ I/II' as named kings with citations.
+suvedA        -> suveda        | PE: SUVEDĀ. Wife of Savana, son of Priyavrata. (See under Savana I). | Body 'SUVEDĀ. Wife of Savana' is a named entity with cross-reference.
+uttarajyotizA -> uttarajyotiza | PE: UTTARAJYOTIṢĀ. An ancient city which stood in the western part of Bhārata. It is said in t | Body 'UTTARAJYOTIṢĀ. An ancient city...Nakula conquered' is a named place with citation.
+vESAlA        -> vESAla        | PE: VAIŚĀLĀ. A city. This city was founded by King Viśāla, who belonged to the dynasty of Diṣṭ | Body 'VAIŚĀLĀ. A city...founded by King Viśāla' is a named place with extended description
+avAkIrRa      -> avakIrRa      | PE: AVĀKĪRṆA(M). A holy place on the bank of the river Sarasvatī. (M.B., Śalya Parva, Chapter  | Body 'AVĀKĪRṆA(M). A holy place on the bank of Sarasvatī' is a named place with citation.
+nicitA        -> nicita        | PE: NICITĀ. A holy river of ancient India. (Bhīṣma Parva, Chapter 9, Verse 18). | Body 'NICITĀ. A holy river of ancient India' is a named place with citation.
+suvastrA      -> suvastra      | PE: SUVASTRĀ. An Indian river famous in the Purāṇas. (Bhīṣma Parva, Chapter 9, Verse 25). | Body 'SUVASTRĀ. An Indian river famous in the Purāṇas' is a named place with citation.
+yamasaBA      -> yamasaBa      | PE: YAMASABHĀ. Yama's assembly. This assembly is described in Mahābhārata, Sabhā Parva, Chapte | Body 'YAMASABHĀ. Yama's assembly' is its own named entry with extended description.
+agrasanDanI   -> agrasanDAnI   | PE: AGRASANDHANĪ. The name of the book which Yama (the God of Death—Kāla) keeps in which all t | Body 'AGRASANDHANĪ. The name of the book which Yama keeps' is its own named entry.
+Iyam          -> iyam          | PE: ĪYAM. Īyaṃ in Malayalam means the metal lead. A metal formed out of the dirt in river Gaṅg | Body 'ĪYAM. Īyaṃ in Malayalam means the metal lead' is its own glossed entry.
+cIriRi        -> cIriRI        | PE: CĪRIṆI. A river. It was on the banks of this river that Vaivasvata Manu clad in bark-skin  | Body 'CĪRIṆI. A river' is a named place with citation.
+hIhi          -> hIhI          | PE: HĪHI. A class of fiends (Piśācas). (Bhāgavata 10th Skandha). | Body 'HĪHI. A class of fiends (Piśācas)' is a named entity with citation.
+mahAnandI     -> mahAnandi     | PE: MAHĀNANDĪ. A Magadha King who was the son of Nandivardhana. He was the last King of the Śi | Body 'MAHĀNANDĪ. A Magadha King...son of Nandivardhana' is a named entity with description
+uzRigaNga     -> uzRIgaNga     | PE: UṢṆIGAṄGA. An ancient holy place in Bhārata. (M.B. Vana Parva, Chapter 135, Stanza 7). | Body 'UṢṆIGAṄGA. An ancient holy place' is a named place with citation.
+vetAlapaYcaviMSatI -> vetAlapaYcaviMSati | PE: VETĀLAPAÑCAVIṂŚATĪ. The twentyfive stories told by Vetāla. (See under Vetāla). | Body 'VETĀLAPAÑCAVIṂŚATĪ. The twentyfive stories told by Vetāla' is its own named entry.
+vfzAgIr       -> vfzAgir       | PE: VṚṢĀGĪR. A royal hermit spoken of in Ṛgveda. Ṛjrā- śva was the son of this hermit. (See un | Body 'VṚṢĀGĪR. A royal hermit spoken of in Ṛgveda' is a named entity.
+viSuRqI       -> viSuRqi       | PE: VIŚUṆḌĪ. A nāga (serpent) born in the family of Kaśyapa. (Mahābhārata, Udyoga Parva, Chapt | Body 'VIŚUṆḌĪ. A nāga born in the family of Kaśyapa' is a named entity with citation.
+anUpati       -> anupati       | PE: ANŪPATI. A synonym of Kārttavīrya. (Vana Parva, Chapter 116, Verse 19). | Body 'ANŪPATI. A synonym of Kārttavīrya' is a named entity with citation.
+suhu          -> suhU          | PE: SUHU. A Yādava king who was the son of Ugrasena. (Bhāgavata, Skandha 9). | Body 'SUHU. A Yādava king...son of Ugrasena' is a named entity with citation.
+sudya         -> sUdya         | PE: SUDYA. A King of the dynasty of Yayāti. He was the grandson of Namasyu and the son of Cāru | Body 'SUDYA. A King of the dynasty of Yayāti' is a named entity with genealogy.
+veRIskanda    -> veRIskanDa    | PE: VEṆĪSKANDA. A nāga (serpent) born in the Kaurava family. This serpent also fell in the sac | Body 'VEṆĪSKANDA. A nāga born in the Kaurava family' is a named entity with citation.
+devApa        -> dEvApa        | PE: DEVĀPA. A king born in the Yayāti dynasty. (Bhāga- vata, Navama Skandha). | Body 'DEVĀPA. A king born in the Yayāti dynasty' is a named entity with citation.
+maNka         -> maNKa         | PE: MAṄKA. A place of habitation in the island of Śāka. This place is inhabited mostly by duti | Body 'MAṄKA. A place of habitation in the island of Śāka' is a named place with citation.
+bAliSiKa      -> vAliSiKa      | PE: BĀLIŚIKHA. A serpent born to Kaśyapa prajāpati of his wife Kadru. (M.B., Ādi Parva, Chapte | BĀLIŚIKHA is named as a serpent born to Kaśyapa and Kadru; body spells with initial B, its
+nakza         -> makza         | PE: NAKṢA. The son born to Pṛthuṣeṇa by his wife Ākūti. Mention is made in Bhāgavata, Skandha  | Body 'NAKṢA. The son born to Pṛthuṣeṇa by Ākūti' is a named entity with genealogy.
+nAlu          -> mAlu          | PE: NĀLU (FOUR). Various things mentioned in the Purāṇas having some association with four (Nā | Body 'NĀLU (FOUR)' is its own glossed entry on things associated with four.
+plAkzAyana    -> plAkzAyaRa    | PE: PLĀKṢĀYANA. A Vaiyākaraṇa (grammarian). His opinion on Visargasandhi (a point in grammar)  | Body 'PLĀKṢĀYANA. A Vaiyākaraṇa (grammarian)' is a named entity cited in Taittirīyaprātiśā
+rAyARa        -> rAyAna        | PE: RĀYĀṆA. Brother of Yaśodā, mother of Śrī Kṛṣṇa. (Brahmavaivarta Purāṇa, 2.39, 37-39). | Body 'RĀYĀṆA. Brother of Yaśodā' is a named entity with citation.
+rahasyaveda   -> rahasyaBeda   | PE: RAHASYAVEDA. A Veda composed by mni Arvāvasu. This Veda is about Sūrya. (Bhārata, Chapter  | Body 'RAHASYAVEDA. A Veda composed by Arvāvasu...about Sūrya' is its own named entry.
+aparavallava  -> aparaballava  | PE: APARAVALLAVA(M). A place in ancient India. (M.B., Sabhā Parva, Chapter 9, Verse 62). | Body 'APARAVALLAVA(M). A place in ancient India' is a named place with citation.
+pftuSravas    -> pfTuSravas    | PE: PṚTUŚRAVAS V. A serpent. This serpent was present at Prabhāsatīrtha to carry the soul of B | Body headword PṚTUŚRAVAS V names a distinct serpent at Prabhāsatīrtha; attested as its own
+gArhastya     -> gArhasTya     | PE: GĀRHASTYA. The Gṛhasthāśrama a stage in life when you live with your family as a house-hol | GĀRHASTYA names the Gṛhasthāśrama householder stage with Ādi Parva citation; its own headw
+indrazena     -> indrasena     | PE: INDRAṢENA I. A son of King Nala. (M.B. Vana Parva, Chapter 60, Verse 23). Nala had also a  | Body headword INDRAṢENA I is a son of Nala, explicitly distinguished from the daughter Ind
+subela        -> suvela        | PE: SUBELA. A mountain near Laṅkā. (Vana Parva, Chap- ter 234, Verse 21). | SUBELA is named as a mountain near Laṅkā with Vana Parva citation; its own entry (cf. vari
+azwamANgala   -> azwamaNgala   | PE: AṢṬAMĀṄGALA. Brahmins, bow, Fire, gold, ghee, Sun, water and King. | AṢṬAMĀṄGALA is a named set of eight auspicious things, given as its own headword entry.
+SAkayanya     -> SAkAyanya     | PE: ŚĀKAYANYA. A maharṣi. (For details see under Bṛhadratha). | Body 'ŚĀKAYANYA. A maharṣi' names a distinct sage (cross-ref to Bṛhadratha).
+
+# ===== BUCKET 5  INTENTIONAL -- PE documents the spelling on purpose; NEVER file (13) =====
+susvarA       -> susvara       | PE: SUSVARĀ. A Gandharva woman. (See under Pramohinī). | SUSVARĀ is defined only by a cross-reference '(See under Pramohinī)'.
+qAkini        -> qAkinI        | PE: ḌĀKINI. A class of women supposed to be proficient in magic and the performance of feats w | Entry defines ḌĀKINI as a class of women and ends with a cross-reference '(See Kṣuraka)'.
+prasTalA      -> prasTala      | PE: PRASTHALĀ I. The palace of Suśarmā. (See under Suśarmā). | PRASTHALĀ I is defined only by a cross-reference '(See under Suśarmā)'.
+vakanaKa      -> bakanaKa      | PE: VAKANAKHA (BAKANAKHA). One of Viśvāmitra's sons who were expounders of the Vedas. (Mahā Bh | Headword 'VAKANAKHA (BAKANAKHA)' explicitly records both spellings as variants.
+SAlakawaNkawA -> SAlakawaNkawa | PE: ŚĀLAKAṬAṄKAṬĀ (SĀLAKAṬAṄKĀ) I A synonym for Alambuṣā. (See under Alambuṣā). | Body gives variant 'ŚĀLAKAṬAṄKAṬĀ (SĀLAKAṬAṄKĀ)' and a synonym cross-reference to Alambuṣā
+trEvali       -> trEbali       | PE: TRAIVALI (TRAIBALI). A sage. He shone as a {{membe->member||20210319|AnnaRybakovaT|https:/ | Headword 'TRAIVALI (TRAIBALI)' explicitly records both spellings as variants.
+vABravAyaRi   -> bABravAyaRi   | PE: VĀBHRAVĀYAṆI (BĀBHRAVĀYAṆI). One of Viśvā- mitra's sons, who were all Brahmavādins. (M.B.  | Headword 'VĀBHRAVĀYAṆI (BĀBHRAVĀYAṆI)' explicitly records both spellings as variants.
+anAraRya      -> anaraRya      | PE: ANĀRAṆYA. (See ANARAṆYA). | 
+pArIjAta      -> pArijAta      | PE: PĀRĪJĀTA II. See under Kalpavṛkṣa. | 
+valAkASva     -> balAkASva     | PE: VALĀKĀŚVA. See under Balākāśva. | 
+purunITa      -> puruRITa      | PE: PURUNĪTHA. See under Paruṇītha. | 
+sudaRqika     -> sudaRqikA     | PE: SUDAṆḌIKA. See under Sūryaprabha. | 
+valala        -> balala        | PE: VALALA. See under Ballava. | 
+
+# ===== BUCKET 6  UNLOCATABLE -- not in the current PE source (stale/different key) (1) =====
+NO            -> nO            | PE:  | 

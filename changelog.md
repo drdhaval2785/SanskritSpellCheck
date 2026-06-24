@@ -6,6 +6,20 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.36.0] - 2026-06-24
+
+### Added
+- **INM + PE triage — 25/33 dicts.** Two proper-name indices, both **0 fileable typos**:
+  - **INM** (Sörensen, *Index to the Names in the Mahābhārata*, en): 161 tier-A → 0 fileable,
+    16 do-not-file, 123 named entities, 12 unlocatable. Includes Sörensen's deliberately-indexed
+    wrong readings ("error in C. for…").
+  - **PE** (Mani, *Purāṇic Encyclopaedia*, en): 158 tier-A → 0 fileable, 13 do-not-file, 138 named
+    entities, 1 unlocatable. Dual-spelling headwords ("VAKANAKHA (BAKANAKHA)") = intentional.
+  - Packages: [corrections_draft/INM/](corrections_draft/INM/), [corrections_draft/PE/](corrections_draft/PE/).
+
+### Changed
+- **Suppression list → 25 dicts** (INM +16, PE +13 do-not-file). `eval.py` false-positives stay **0**.
+
 ## [1.35.0] - 2026-06-24
 
 ### Added

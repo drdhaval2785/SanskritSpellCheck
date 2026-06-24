@@ -10,7 +10,7 @@
 # DO NOT hand-edit -- regenerate with detectors/gen_do_not_file_suppress.py
 # after triaging more dictionaries.
 #
-# 2107 unique headwords from 23 dictionaries:
+# 2136 unique headwords from 25 dictionaries:
 #   SanskritSpellCheck\corrections_draft\ACC\ACC_wrong_readings.txt: 25
 #   SanskritSpellCheck\corrections_draft\AP90\AP90_wrong_readings.txt: 8
 #   SanskritSpellCheck\corrections_draft\AP\AP_wrong_readings.txt: 32
@@ -21,9 +21,11 @@
 #   SanskritSpellCheck\corrections_draft\GRA\GRA_wrong_readings.txt: 7
 #   SanskritSpellCheck\corrections_draft\GST\GST_wrong_readings.txt: 22
 #   SanskritSpellCheck\corrections_draft\IEG\IEG_wrong_readings.txt: 40
+#   SanskritSpellCheck\corrections_draft\INM\INM_wrong_readings.txt: 16
 #   SanskritSpellCheck\corrections_draft\MD\MD_wrong_readings.txt: 1
 #   SanskritSpellCheck\corrections_draft\MW72\MW72_wrong_readings.txt: 77
 #   SanskritSpellCheck\corrections_draft\MW\MW_wrong_readings.txt: 630
+#   SanskritSpellCheck\corrections_draft\PE\PE_wrong_readings.txt: 13
 #   SanskritSpellCheck\corrections_draft\PUI\PUI_wrong_readings.txt: 21
 #   SanskritSpellCheck\corrections_draft\PWG\PWG_wrong_readings.txt: 248
 #   SanskritSpellCheck\corrections_draft\PW\PW_wrong_readings.txt: 255
@@ -203,6 +205,7 @@ RATa
 SASvat
 SAkalin
 SAkapUta
+SAlakawaNkawA
 SAlina
 SAlvahan
 SAmbava
@@ -233,6 +236,7 @@ SUrpanaKA
 SUrya
 SaMrAj
 SaNKiRI
+SaNkarzaRa
 SaRqikA
 SakawAyana
 SaktI
@@ -310,6 +314,7 @@ aBiSrava
 aBijYeya
 aBilAsin
 aBirADanA
+aBirAmA
 aBivarga
 aBiyAtI
 aBizAvakIy
@@ -383,8 +388,10 @@ amlalonikA
 amrapAlI
 anASana
 anAgArikA
+anAraRya
 anAtyaya
 anAvatapta
+anAyuz
 anOkaha
 anUbanDa
 anUpalipta
@@ -522,6 +529,7 @@ bas
 bastya
 bfNga
 bfhadrAvI
+bfhannalA
 bfhaw
 biBatsa
 bidalIkfta
@@ -660,6 +668,7 @@ durmallIkA
 durvala
 duzwA
 duzya
+dvetavana
 dviguRA
 dvimuKA
 dvitiya
@@ -725,6 +734,7 @@ granTakUwI
 granTiparRA
 guRABUta
 guRi
+gudAkeSa
 guptakA
 guqodana
 gurU
@@ -863,6 +873,7 @@ kakzApuwa
 kakzyapra
 kalAci
 kalambu
+kalasodara
 kalaya
 kalikAta
 kalindI
@@ -891,6 +902,7 @@ kftAntA
 kftaPalA
 kftaSrAma
 kftasApatnIkA
+kftavanDu
 kfzRAzwami
 kfzRasarpA
 kfzRavalakza
@@ -905,7 +917,9 @@ kiwaka
 kleza
 klomam
 koNkaRA
+koNkana
 koSIDAnya
+koSika
 kolUta
 koqa
 koravya
@@ -936,6 +950,7 @@ kuraWa
 kurasA
 kuruRWa
 kusIraka
+kusasTalI
 kusuruvinda
 kuvalayA
 kuveRi
@@ -1145,6 +1160,7 @@ pAdavI
 pAdukft
 pArAvara
 pArISa
+pArIjAta
 pArSvakA
 pAraloka
 pAralokika
@@ -1287,6 +1303,7 @@ prapAdIka
 prapaTA
 prasAdika
 prasAh
+prasTalA
 prastAvika
 prastUta
 pratAn
@@ -1316,11 +1333,13 @@ puni
 puraS
 puraka
 purodA
+purunITa
 purunizWA
 purusakAra
 puzkaravIja
 puzpavARa
 puzyA
+qAkini
 qahU
 qambAra
 qoraka
@@ -1476,6 +1495,7 @@ sarvarUpasaMdarSanA
 sarvataS
 sarvatanU
 sarveSA
+saryAti
 sarya
 satAgiri
 satkara
@@ -1524,6 +1544,7 @@ suRqika
 suSila
 sudIdIti
 sudaMSas
+sudaRqika
 sumaha
 sumatI
 supArA
@@ -1534,11 +1555,13 @@ suraRadI
 surezwA
 susTAla
 susaMBfta
+susvarA
 sutAraka
 sutaka
 sutanU
 sutasomA
 suttee
+suvAhu
 suveDa
 suyaSa
 suyamA
@@ -1595,6 +1618,7 @@ tiraSci
 todalatantra
 todeya
 trElAwA
+trEvali
 trapuzI
 trayaS
 tre
@@ -1673,8 +1697,10 @@ utsadana
 utseda
 utsuKa
 uttarapUrvA
+uzInara
 uzRiza
 uzmam
+vABravAyaRi
 vADaka
 vADana
 vADin
@@ -1701,6 +1727,7 @@ vEbaDika
 vEhInari
 vEjavApa
 vEjayanti
+vEkartaRa
 vEmacitra
 vEpAdikA
 vEzka
@@ -1771,13 +1798,16 @@ vahuvrIhi
 vahvfc
 vahvfca
 vajri
+vakanaKa
 vakulA
 vakulAvalikA
 vakulI
 vakzaS
 valAha
+valAkASva
 valAna
 valIvarda
+valala
 valasUdana
 valiBuj
 valipodakI
@@ -1789,6 +1819,7 @@ vapIha
 vapuz
 varAwakA
 varAwaki
+varaDAna
 varcasyA
 vardAlikA
 vareRA

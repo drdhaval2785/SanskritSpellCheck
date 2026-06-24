@@ -1,0 +1,176 @@
+# INM tier-A -- BODY-GROUNDED triage  (DRAFT; verify every kept case against the scan)
+#
+# The 151 engine tier-A candidates were judged against INM's OWN entry text (csl-orig),
+# not spelling alone. A spelling detector cannot tell a typo from a real word, an
+# intentional variant / compounding form, or wrong-reading apparatus -- the entry can.
+# Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM
+# pass over the 'realword' set + source confirmation of every TYPO verdict.
+#
+# FINDING: of 151 tier-A candidates, 0 are body-confirmed fileable typos (0.0%).
+# 123 are real distinct words, 16 are spellings INM documents on purpose (w.r./v.l./
+# in-comp./cross-ref -- filing them would CORRUPT INM), 12 are not in the current
+# source, and 0 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
+# do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.
+
+# ===== BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file) (0) =====
+
+# ===== BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted (0) =====
+
+# ===== BUCKET 3  REVIEW -- undecidable without the printed page (0) =====
+
+# ===== BUCKET 4  REAL-WORD -- a distinct real word; the fix would merge two words (123) =====
+sarvA         -> sarva         | INM: {@Sarvā@}, a river. § 574 (Jambūkh.): VI, {@9@}λ, 344 (only B. C. has {%Sarvagaṅgāṃ%}). | Body defines Sarvā as a river with its own parva/verse reference, a distinct named entity.
+brAhman       -> brahman       | INM: {@Brāhman@}2 = Śiva (1000 names1). Do.3 = Viṣṇu (1000 names). | Brāhman is glossed as a name of Śiva/Viṣṇu in the 1000-names list, attested spelling.
+nISA          -> niSA          | INM: {@Nīśā@}1, wife of the fire Bhānu (B. Manu). § 493 (Āṅgirasa): III, {@221@}, 14190. | Nīśā is named as the wife of the fire Bhānu with a III reference, a distinct entity.
+jAmadagni     -> jamadagni     | INM: {@Jāmadagni@}, a ṛṣi. § 734 (Anuśāsanik.): XIII, {@26@}α, 1763 (among the ṛṣis who surroun | Jāmadagni is the patronymic ('son of Jamadagni'), a ṛṣi with its own XIII reference, not a
+ftA           -> fta           | INM: {@Ṛtā@} = Sarasvatī(?): XII, 13234 ({%Brahmasutā devī Sarasratī%}). | Ṛtā is equated with Sarasvatī with a XII reference, a named feminine entity.
+drOpadi       -> drOpadI       | INM: {@Draupadi@} (“son of Drupada”) = Dhṛṣṭadyumna: VIII, 288. | Draupadi here is the masculine patronymic ('son of Drupada') = Dhṛṣṭadyumna, distinct from
+samARa        -> samAna        | INM: {@Samāṇa@}2 = Śiva (1000 names1). | Samāṇa is glossed as a name of Śiva in the 1000-names list, attested spelling.
+virAta        -> virAwa        | INM: {@Virāta@}, king of the Matsyas, husband of Sudeṣṇā, father of [Page740-b+ 63] Śaṅkha, Utt | Virāta is the king of the Matsyas with extensive parva references, a major named entity.
+DarmajA       -> Darmaja       | INM: {@Dharmajā@} (“daughter of Dharma”) = Satyā, the wife of Śaṃyu: III, 14133. | Dharmajā ('daughter of Dharma') = Satyā, a distinct feminine named entity with a III refer
+arjuni        -> Arjuni        | INM: {@Arjuni@}3 = Irāvat: VII, 1738. | Arjuni (short a) = Irāvat with a VII reference, recorded as its own entry.
+cAkzuzA       -> cAkzuza       | INM: {@Cākṣuṣā@}, a Gandharvic science given to Arjuna by Citraratha. § 221 (Caitrarathap.): I, | Cākṣuṣā is a named Gandharvic science given to Arjuna, with its own detailed entry and ref
+aqambara      -> Aqambara      | INM: {@Aḍambara@}, a companion of Skanda. § 615{%u%} (Skanda): IX, {@45@}ζ, 2541 ({%Dambarā˚au% | Aḍambara is a companion of Skanda with a IX reference, a distinct named entity.
+senAjit       -> senajit       | INM: {@Senājit@}, name of one or more kings. § 554 (Sainyodyogap.): V, {@4@}γ, 76 (at the time  | Senājit is a name of one or more kings with multiple parva references, an attested entry.
+vAcikA        -> vAcika        | INM: {@Vācikā@}, adj. (“belonging to speech,” viz. one of Brahmán's births). § 717{%b%} (Nārāya | Vācikā adj. ('belonging to speech', a birth of Brahmán) with XII references, an attested e
+aSvalAyana    -> ASvalAyana    | INM: {@Aśvalāyana@}, a son of Viśvāmitra's: XIII, {@4@}β, 253 (Viśvā- mitrop.). | Aśvalāyana is a son of Viśvāmitra with a XIII reference, a distinct named person.
+akroSa        -> AkroSa        | INM: {@Akrośa@}. § 285 (Digvijayap.): II, {@32@}, 1188 ({%rājarṣim%}, conquered by Nakula). | Akrośa is a rājarṣi conquered by Nakula with a II reference, a distinct named person.
+caRUra        -> cARUra        | INM: {@Caṇūra@}1, a prince. § 264 (Sabhākriyāp.): II, {@4@}β, 121 (among the princes who waited | Caṇūra is a prince (and a second Caṇūra slain by Kṛṣṇa) with II/V references, distinct nam
+gaRanayaka    -> gaRanAyaka    | INM: {@Gaṇanayaka@} = Gaṇeśa: I, 77. | Gaṇanayaka = Gaṇeśa with a I reference, an attested epithet spelling.
+kAlaviNka     -> kalaviNka     | INM: {@Kālaviṅka@}, a tīrtha. § 733 (Ānuśāsanik.): XIII, {@25@}, 1729. | Kālaviṅka is a tīrtha with a XIII reference, a distinct named place.
+kzIrapA       -> kzIrapa       | INM: {@Kṣīrapā@} = Śiva (1000 names1). | Kṣīrapā is glossed as a name of Śiva in the 1000-names list, attested spelling.
+tamasI        -> tAmasI        | INM: {@Tamasī@}, a river. § 574 (Jambūkh.): VI, {@9@}λ, 339 (only C., B. has {%Mānavī%}). | Tamasī is a river with a VI reference (only C.; B. has Mānavī), an attested named river.
+plakzA        -> plakza        | INM: {@Plakṣā@} = Sarasvatī: III, 7085. | Plakṣā = Sarasvatī with a III reference, a distinct feminine named entity.
+aBizAha       -> aBIzAha       | INM: {@Abhiṣāha@}, a people (= ˚bhī˚); with other barbarous tribes they attack Arjuna at the in | Abhiṣāha is a people with a VI reference; the variant Abhī˚ is noted as the B. reading, so
+kOmodaki      -> kOmodakI      | INM: {@Kaumodaki@}, name of the mace of Kṛṣṇa. § 257 (Khāṇḍa- vadahanap.): I, {@225@}, 8200 ({% | Kaumodaki is the name of Kṛṣṇa's mace with I/VII references, an attested named entity.
+sinDUrAja     -> sinDurAja     | INM: {@Sindhūrāja@}2 (do.) = Jayadratha: I, 2744 (married Duḥśalā); III, 15636, †15694, 15747 ( | Sindhūrāja = Jayadratha with extensive references, an attested epithet spelling.
+kaWaka        -> kawaka        | INM: {@Kaṭhaka@}, a warrior of Skanda. § 615{%u%} (Skanda): IX, {@45@}η, 2569. | Kaṭhaka is a warrior of Skanda with a IX reference, a distinct named entity.
+dakzinApaTa   -> dakziRApaTa   | INM: {@Dakṣināpatha@}, pl. ({%˚āḥ%}) (“the inhabitants of Dakṣiṇā- patha”). § 576 (Bhagavadgītā | Dakṣināpatha pl. is glossed as inhabitants of Dakṣiṇāpatha with a VI reference, an atteste
+dAkzinAtya    -> dAkziRAtya    | INM: {@Dākṣinātya@}, sg. (“the king of the Southerners”). § 295 (Dyūtap.): II, {@53@}, 1914. | Dākṣinātya sg. is glossed as 'king of the Southerners' with a II reference, an attested en
+lokaRATa      -> lokanATa      | INM: {@Lokaṇātha@}1 = Brahmán: XIII, †4918, †4941. | Lokaṇātha = Brahmán with two XIII references, attested spelling with retroflex ṇ.
+padmaRABa     -> padmanABa     | INM: {@Padmaṇābha@}2, a son of Dhṛtarāṣṭra. § 130 (Amśāvat.): I, {@67@}, 2731. Cf. Sunābha. | Padmaṇābha is a son of Dhṛtarāṣṭra with a I reference, a distinct named person.
+vikata        -> vikawa        | INM: {@Vikata@}1, son of Dhṛtarāṣṭra. § 130 (Aṃśāvat.): I, {@67@}, 2731.—§ 232 (Svayaṃvarap.):  | Vikata is a son of Dhṛtarāṣṭra with multiple parva references, a distinct named person.
+arcismat      -> arcizmat      | INM: {@Arcismat@} = Viṣṇu (1000 names). | Arcismat is glossed as a name of Viṣṇu in the 1000-names list, attested spelling.
+dambara       -> qambara       | INM: {@Dambara@}, a companion of Skanda. § 615{%u%} (Skanda): IX, {@45@}ζ, 2541 (given to Skand | Dambara is a companion of Skanda (given by Dhātṛ) with a IX reference, a distinct named en
+kItaka        -> kIwaka        | INM: {@Kītaka@}, a prince. § 130 (Aṃśāvat.): I, {@67@}, 2696 (among the incarnations from the K | Kītaka is a prince/incarnation from the Krodhavaśa gaṇa with a I reference, a distinct nam
+tiwwiBa       -> wiwwiBa       | INM: {@Tiṭṭibha@}, an Asura. § 268 (Varuṇasabhāv.): II, {@9@}, 367 (in the palace of Varuṇa). | Tiṭṭibha is an Asura in the palace of Varuṇa with a II reference, a distinct named entity.
+triRetra      -> trinetra      | INM: {@Triṇetra@} = Śiva (1000 names1—2). | Triṇetra is glossed as a name of Śiva in the 1000-names list, attested spelling with retro
+vAgmiR        -> vAgmin        | INM: {@Vāgmiṇ@}1, a prince. § 150 (Pūruvaṃś.): I, {@94@}, 3697 (son of Manasyu and Sauvīrī).—Do | Vāgmiṇ is a prince (son of Manasyu) and a name of Viṣṇu, with a I reference, attested spel
+amftapA       -> amftapa       | INM: {@Amṛtapā@} = Śiva (1000 names1). | Amṛtapā is glossed as a name of Śiva in the 1000-names list, attested spelling.
+ganDarvArAja  -> ganDarvarAja  | INM: {@Gandharvārāja@}4 (do.) = Citrasena: III, 1801, 1803, 14869, 14887, 14955, 14966, 14973,  | Gandharvārāja = Citrasena with many III/VII references, an attested epithet.
+suBUmikA      -> suBUmika      | INM: {@Subhūmikā@} = Subhūmika: IX, 2126 ({%˚eti vikhyātā%}). | Subhūmikā is equated with Subhūmika ('˚eti vikhyātā') with a IX reference, an attested fem
+anuSAsanika   -> AnuSAsanika   | INM: {@Anuśāsanika@} (“relating to instruction”). § 10 (Parvas.): I, {@2@}, 353 ({%˚aṃ parva%}, | Anuśāsanika ('relating to instruction') is glossed with a I reference, an attested adjecti
+bAhukaRwaka   -> bahukaRwaka   | INM: {@Bāhukaṇṭaka@} (a mode of fighting). § 621 (Rājadh.): XII, {@5@}, 132 (v. Nīl.). | Bāhukaṇṭaka is a named mode of fighting with a XII reference, a distinct attested entry.
+DUmavatI      -> DUmAvatI      | INM: {@Dhūmavatī@}, a tīrtha. § 370 (Tīrthayātrāp.): III, {@84@}, 8000. | Dhūmavatī is a tīrtha with a III reference, a distinct named place.
+bahuDara      -> bahuDAra      | INM: {@Bahudhara@} = Śiva (1000 names2). | Bahudhara is glossed as a name of Śiva in the 1000-names list, attested spelling.
+dunduBisvAna  -> dunduBisvana  | INM: {@Dundubhisvāna@}, a region in Krauñcadvīpa. § 575 (Bhūmip.): VI, {@12@}θ, 464. | Dundubhisvāna is a region in Krauñcadvīpa with a VI reference, a distinct named place.
+mArjalIya     -> mArjAlIya     | INM: {@Mārjalīya@} = Śiva: III, 1628. | Mārjalīya = Śiva with a III reference, an attested epithet spelling.
+mahotsaha     -> mahotsAha     | INM: {@Mahotsaha@}1, an ancient king. § 6 (Anukram.): I, {@1@}α, 229 (in Sañjayas enumeration). | Mahotsaha is an ancient king and a name of Viṣṇu with I references, distinct attested entr
+skandApasmara -> skandApasmAra | INM: {@Skandāpasmara@}, name of a demon. § 502 (Manuṣya grahak.): III, {@230@}, 14479. | Skandāpasmara is the name of a demon with a III reference, a distinct named entity.
+KyAtA         -> KyAta         | INM: {@Khyātā@}, a mātṛ. § 615{%u%} (Skanda): IX, {@46@}θ, 2638. | {@Khyātā@} is glossed as a mātṛ with its own §615 Skanda reference.
+sUryajA       -> sUryaja       | INM: {@Sūryajā@} (“the daughter of Sūrya (the Sun)”) = Bṛhadbhāsā: III, 14184 ({%B˚%}). | {@Sūryajā@} ('daughter of Sūrya') is identified with Bṛhadbhāsā with its own III,14184 ref
+prAtIpIya     -> prAtipIya     | INM: {@Prātīpīya@} (“son of Pratīpa”) = Bālhīka: VII, 6934. | Prātīpīya ('son of Pratīpa') = Bālhīka with a VII reference, an attested patronymic.
+prAtIpeya     -> prAtipeya     | INM: {@Prātīpeya@}1 (do.) = Śāntanu: I, 5088. || {@Prātīpeya@}2 (do.) = Bālhīka: V, †693 ({%B˚% | Prātīpeya ('son/descendant of Pratīpa') = Śāntanu/Bālhīka with multiple references, an att
+sUdAman       -> sudAman       | INM: {@Sūdāman@}, pl. ({%˚mānaḥ%}), a people. § 574 (Jambūkh.): VI, {@9@}μ, 362. | Sūdāman pl. is a people with a VI reference, a distinct named ethnonym.
+Sucisravas    -> SuciSravas    | INM: {@Śucisravas@} = Viṣṇu (1000 names). | Śucisravas is glossed as a name of Viṣṇu in the 1000-names list, attested spelling.
+pfzwaja       -> pfzWaja       | INM: {@Pṛṣṭaja@}, a son or form of Skanda. § 116 (Vasu, pl.): I, {@66@}, 2588 (cf. Naigameya). | Pṛṣṭaja is a son or form of Skanda with a I reference, a distinct named entity.
+dfDAyu        -> dfQAyu        | INM: {@Dṛdhāyu(s)@}1, son of Purūravas and Urvaśī. § 141 (Purūravas): I, {@75@}, 3149. | Dṛdhāyu(s) is the son of Purūravas and Urvaśī with a I reference, a distinct named person.
+diRqika       -> qiRqika       | INM: {@Diṇḍika@}, a mouse. § 571 (Ulūkadūtāgamanap.): V, {@160@}, 5440, 5442, 5443, 5446 (the s | Diṇḍika is a mouse in the story of the wicked cat with multiple V references, a distinct n
+vaqavAgni     -> vaqabAgni     | INM: {@Vaḍavāgni@} = Vaḍavāmukha1. § 490 (Āṅgirasa): III, {@219@}, 14149 ({%pibaty ambho yaḥ%}) | Vaḍavāgni = Vaḍavāmukha with a III reference, a distinct named entity.
+apratiraWa    -> apratiraTa    | INM: {@Apratiraṭha@} = Viṣṇu (1000 names). | Apratiraṭha is glossed as a name of Viṣṇu in the 1000-names list, attested spelling.
+muzalAyuDa    -> musalAyuDa    | INM: {@Muṣalāyudha@} (“club-armed”) = Balarāma: IX, 2065, 2834. | Muṣalāyudha ('club-armed') = Balarāma with IX references, an attested epithet.
+parataNgana   -> parataNgaRa   | INM: {@Parataṅgana@}, pl. ({%˚āḥ%}), a people. § 295 (Dyūtap.): II, {@52@}, 1859 ({%Taṅganāḥ P˚ | Parataṅgana pl. is a people with a II reference, a distinct named ethnonym.
+pAvakAtmajA   -> pAvakAtmaja   | INM: {@Pāvakātmajā@} (“the daughter of Pāvaka [i.e. Agni]”) = Draupadī: IV, 1181. | Pāvakātmajā ('daughter of Pāvaka [Agni]') = Draupadī with a IV reference, an attested femi
+tAmravatI     -> tAmrAvatI     | INM: {@Tāmravatī@}, a river. § 494 (Āṅgirasa): III, {@222@}, 14231 (among the rivers who are mo | Tāmravatī is a river among the mothers of fires with a III reference, a distinct named riv
+BImasuta      -> BImasutA      | INM: {@Bhīmasuta@} (do.) = do.: VIII, 6858. | Bhīmasuta ('son of Bhīma') with a VIII reference, an attested masculine patronymic.
+SrIvAha       -> SrIvaha       | INM: {@Śrīvāha@}, a serpent. § 47 (Sarpanāmak.): I, {@35@}, 1558 (enumeration). | Śrīvāha is a serpent in the Sarpanāmaka enumeration with a I reference, a distinct named e
+aBAsura       -> ABAsura       | INM: {@Abhāsura@} (No. 5) (shining, see BR.) = No. 3. XII, 12864. | Abhāsura ('shining', per BR.) is a glossed entry equated with No. 3 with a XII reference, 
+alambAyana    -> AlambAyana    | INM: {@Alambāyana@} (= Cāruśīrṣa). § 730 (Ānuśāsanik., Megha- vāhanop.): XIII, {@18@}, 1301 (C˚ | Alambāyana (= Cāruśīrṣa) with a XIII reference, a distinct named entity.
+kapilavawa    -> kapilAvawa    | INM: {@Kapilavaṭa@}, a tīrtha. § 370 (Tīrthayātrāp.): III, {@84@}, 8009. | Kapilavaṭa is a tīrtha with a III reference, a distinct named place.
+kfzRAgaNgA    -> kfzRagaNgA    | INM: {@Kṛṣṇā Gaṅgā@}, a river. § 757{%m%} (Goloka): XIII, {@102@}α, 4888. | Body glosses {@Kṛṣṇā Gaṅgā@} as a river with its own §757 reference, a distinct named enti
+kuwwAparanta  -> kuwwAparAnta  | INM: {@Kuṭṭāparanta@}, pl. ({%˚āḥ%}), a people. § 574 (Jambūkh.): VI, {@9@}μ, 356 (only C., B.  | {@Kuṭṭāparanta@} is glossed as a people (pl.) with §574 reference and a B. variant note, a
+meDAvikA      -> meDAvika      | INM: {@Medhāvikā@}, a tīrtha. § 372 (Tīrthayātrāp.): III, {@85@}, 8197. | {@Medhāvikā@} is glossed as a tīrtha with its own §372 reference.
+plakzajAta    -> plakzajAtA    | INM: {@plakṣajāta@}, adj. (“rising from the fig-tree”), said of the river Sarasvatī: I, 6455 ({ | {@plakṣajāta@} is an adjective epithet of the river Sarasvatī with its own I,6455 referenc
+veRuvIRADArA  -> veRuvIRADarA  | INM: {@Veṇuvīṇādhārā@}, a mātṛ. § 615{%u%} (Skanda): IX, {@46@}θ, 2639. | {@Veṇuvīṇādhārā@} is glossed as a mātṛ with its own §615 Skanda reference.
+SrIyAvAsin    -> SriyAvAsin    | INM: {@Śrīyāvāsin@} = Śiva (1000 names2). | {@Śrīyāvāsin@} is recorded as a name of Śiva from the 1000-names list, its own entry.
+kiNkiRikASrama -> kiNkiRIkASrama | INM: {@Kiṅkiṇikāśrama@}, a tīrtha. § 733{%k%} (Vaimānikā): XIII, {@25@}, 1709. | {@Kiṅkiṇikāśrama@} is glossed as a tīrtha with its own §733 reference.
+skandAkza     -> skanDAkza     | INM: {@Skandākṣa@}, a warrior of Skanda. § 615{%u%} (Skanda): IX, {@45@}η, 2562. | {@Skandākṣa@} is glossed as a warrior of Skanda with its own §615 reference.
+viskara       -> vizkara       | INM: {@Viskara@}, an ancient king (an Asura?). § 673{%b%} (Bali- Vāsavasaṃv.): XII, {@227@}α, 8 | Viskara is an ancient king with a XII reference; the Viṣk˚ form is noted as the B. reading
+dAmozRISa     -> dAmozRIza     | INM: {@Dāmoṣṇīśa@} (B. {%˚īṣa%}), a muni. § 264 (Sabhākriyāp.): II, {@4@}α, 108 (among the muni | {@Dāmoṣṇīśa@} is glossed as a muni with §264 reference; the body cites the suspect spellin
+gavalgana     -> gavalgaRa     | INM: {@Gavalgana@}, the father of the sūta Sañjaya. § 81 (Sañjaya): I, {@63@}, 2426. | {@Gavalgana@} is glossed as the father of the sūta Sañjaya with its own §81 reference.
+maDuvarna     -> maDuvarRa     | INM: {@Madhuvarna@}, a warrior of Skanda. § 615{%u%} (Skanda): IX, {@45@}η, 2574. | {@Madhuvarna@} is glossed as a warrior of Skanda with its own §615 reference.
+catuzpaTarata -> catuzpaTaratA | INM: {@Catuṣpatharata@} = Śiva (1000 names1). | Catuṣpatharata is glossed as a name of Śiva in the 1000-names list, attested spelling.
+suKapradA     -> suKaprada     | INM: {@Sukhapradā@} = Devasenā: III, 14451. | Sukhapradā = Devasenā with a III reference, a distinct feminine named entity.
+DanaYjayA     -> DanaYjaya     | INM: {@Dhanañjayā@}, name of an army. § 615{%u%} (Skanda): IX, {@46@}, 2665 (given to Skanda by | Dhanañjayā is the name of an army given to Skanda with a IX reference, a distinct named en
+pawalAvatI    -> pAwalAvatI    | INM: {@Paṭalāvatī@}, a river. § 574 (Jambūkh.): VI, {@9@}λ, 330. | {@Paṭalāvatī@} is glossed as a river with its own §574 reference.
+BArataSrezWa  -> BarataSrezWa  | INM: {@Bhārataśreṣṭha@} = Arjuna Pāṇḍava: XIV, 2482. | {@Bhārataśreṣṭha@} is identified with Arjuna Pāṇḍava with its own XIV,2482 reference.
+DftarAzwrajA  -> DftarAzwraja  | INM: {@Dhṛtarāṣṭrajā@} (“daughter of Dhṛtarāṣṭra1”) = Duḥśalā: XIV, 2275 ({%D˚%}), 2285. | {@Dhṛtarāṣṭrajā@} ('daughter of Dhṛtarāṣṭra') is identified with Duḥśalā with its own XIV 
+SUraputra     -> SUraputrA     | INM: {@Śūraputra@} (“son of Śūra”) = Vasudeva: XVI, 200. | {@Śūraputra@} ('son of Śūra') is identified with Vasudeva with its own XVI,200 reference.
+SantAtman     -> SAntAtman     | INM: {@Śantātman@} = Kṛṣṇa: XII, 1671. | {@Śantātman@} is identified with Kṛṣṇa with its own XII,1671 reference.
+candrAvarta   -> candrAvartA   | INM: {@Candrāvarta@} = Śiva (1000 names1). | {@Candrāvarta@} is recorded as a name of Śiva from the 1000-names list, its own entry.
+daSArRarAja   -> dASArRarAja   | INM: {@Daśārṇarāja@} (do.) = Hiraṇyavarman: V, 7430. | {@Daśārṇarāja@} is identified with Hiraṇyavarman with its own V,7430 reference.
+daSaBuja      -> daSaBujA      | INM: {@Daśabhuja@} = Śiva: XIV, 209. | {@Daśabhuja@} is identified with Śiva with its own XIV,209 reference.
+lalItika      -> lalItikA      | INM: {@Lalītika@}, a tīrtha. § 370 (Tīrthayātrāp.): III, {@84@}, 8142 (this śloka is omitted in | {@Lalītika@} is glossed as a tīrtha with its own §370 reference.
+mahABImA      -> mahABIma      | INM: {@Mahābhīmā@} = Umā: XII, 10304. | {@Mahābhīmā@} is identified with Umā with its own XII,10304 reference.
+nagnajita     -> nAgnajita     | INM: {@Nagnajita@}, pl. ({%˚āḥ%}), a people or a family (“the sons of Nagnajit”?). § 608 (Karṇa | {@Nagnajita@} is glossed as a people/family with §608 reference; body cites the suspect sp
+pAYcAlarAjan  -> paYcAlarAjan  | INM: {@Pāñcālarājan@} (do.) = Dhṛṣṭadyumna (B. {%Pa˚%}): X, 351. | {@Pāñcālarājan@} is identified with Dhṛṣṭadyumna with its own X,351 reference; B.'s Pa˚ no
+rakzovaha     -> rakzovAha     | INM: {@Rakṣovaha@}, pl. ({%˚āḥ%}), a people. § 595 (Ṣoḍaśarāj., v. Rāma Jāmadagnya): VII, {@70@ | {@Rakṣovaha@} is glossed as a people (pl.) with its own §595 reference.
+sAMvartakAgni -> saMvartakAgni | INM: {@Sāṃvartakāgni@} ({%Sambartta˚%}, C.) (“the fire of dissolution”): IX, 907 ({%˚pratimaṃ%} | {@Sāṃvartakāgni@} ('fire of dissolution') is its own entry with IX,907 reference, only not
+somASrAyAyaRa -> somASrayAyaRa | INM: {@Somāśrāyāyaṇa@}, a tīrtha. § 221 (Cuitrarathap.): I, {@170@}, 6438 (visited by the Pāṇḍa | {@Somāśrāyāyaṇa@} is glossed as a tīrtha with its own §221 reference.
+avAkIrRa      -> avakIrRa      | INM: {@Avākīrṇa@} (a tīrtha, only in B.). § 615 (Baladevatīrthay.): IX, {@41@}, 2318 | {@Avākīrṇa@} is glossed as a tīrtha (only in B.) with its own §615 reference.
+brahmasutA    -> brahmasuta    | INM: {@Brahmasutā@}. § 717{%b%} (Nārāyaṇīya): XII, {@343@}ϕ, 13234 ({%Ṛtā Brahmasutā sā me Saty | {@Brahmasutā@} is its own entry with §717 Nārāyaṇīya reference and a quoted verse naming h
+virAwajA      -> virAwaja      | INM: {@Virāṭajā@} (do.) = Uttarā: XIV, 1857. | {@Virāṭajā@} is identified with Uttarā with its own XIV,1857 reference.
+SatruYjayA    -> SatruYjaya    | INM: {@Śatruñjayā@}, a mātṛ. § 615{%u%} (Skanda): IX, {@46@}θ, 2624 (so B., C. has {%Śatañjayā% | {@Śatruñjayā@} is glossed as a mātṛ with its own §615 reference (so B.; C. has Śatañjayā).
+kArUzADipati  -> karUzADipati  | INM: {@Kārūṣādhipati@} (do.). § 232 (Svayaṃvarap.): I, {@186@}, 6996 (present at the svayaṃvara | {@Kārūṣādhipati@} is its own entry with §232 svayaṃvara reference and a 'Cf. the prec.' no
+kalada        -> kAlada        | INM: {@Kalada@}, pl. ({%āḥ%}), a people. § 574 (Jambūkh.): VI, {@9@}ν, 370 (only B., C. has {%K | {@Kalada@} is glossed as a people (pl.) with its own §574 reference (only B.; C. has Kalav
+DUmrAkzI      -> DUmrAkzi      | INM: {@Dhūmrākṣī@} = Durgā (Umā): VI, 801. | {@Dhūmrākṣī@} is identified with Durgā (Umā) with its own VI,801 reference.
+brahmavedI    -> brahmavedi    | INM: {@Brahmavedī@} (“the sacrificial altar of Brahmán”) = Kuruk- ṣetra: III, 7077. | {@Brahmavedī@} ('sacrificial altar of Brahmán') is identified with Kurukṣetra with its own
+raTANgapARI   -> raTANgapARi   | INM: {@Rathāṅgapāṇī@} = Viṣṇu (1000 names). | {@Rathāṅgapāṇī@} is recorded as a name of Viṣṇu from the 1000-names list, its own entry.
+tIrTasenI     -> tIrTaseni     | INM: {@Tīrthasenī@}, a mātṛ. § 615{%u%} (Skanda): IX, {@46@}θ, 2625. | {@Tīrthasenī@} is glossed as a mātṛ with its own §615 Skanda reference.
+sUtAtmaja     -> sutAtmaja     | INM: {@Sūtātmaja@} (do.) = Karṇa: VII, 7053, 7059, 8247; VIII, †4560, †4563, †4630, †4825. | {@Sūtātmaja@} ('son of the sūta') is identified with Karṇa with its own multiple VII/VIII 
+samBalagrAma  -> SamBalagrAma  | INM: {@Sambhalagrāma@}, name of a city. § 460{%c%} (Kalkin): III, {@190@}, 13102 (the birthplac | {@Sambhalagrāma@} is glossed as the name of a city (birthplace of Kalkin) with its own §46
+bAheyika      -> vAheyika      | INM: {@Bāheyika@} (“used among the Bāhīkas”?, v. BR.; Nīl. “used by the slaughter of an ox”): V | Bāheyika has its own glossed entry (BR./Nīl. interpretations) with a VIII reference, an at
+SaravanodBava -> SaravaRodBava | INM: {@Śaravanodbhava@} = Skanda: III, 14635. | {@Śaravanodbhava@} is identified with Skanda with its own III,14635 reference.
+dAkzAyanya    -> dAkzAyaRya    | INM: {@Dākṣāyanya@} (“son of the daughter of Dakṣa”) = Āditya (the Sun): XIII, 6831. | {@Dākṣāyanya@} ('son of the daughter of Dakṣa') is identified with Āditya with its own XII
+kAmaTaka      -> kAmaWaka      | INM: {@Kāmathaka@}, a serpent. § 67 (Sarpasattra): I, {@57@}, 2157 (of Dhṛtarāṣṭra's race). | {@Kāmathaka@} is glossed as a serpent with its own §67 Sarpasattra reference.
+nEmizAranya   -> nEmizAraRya   | INM: {@Naimiṣāranya@} = Naimiṣa1. § 1 (Anukram.): I, {@1@}, 1 (there Śaunaka held his twelve ye | {@Naimiṣāranya@} is identified with Naimiṣa1 and has an extensive own entry with many §/pa
+vadavA        -> vaqavA        | INM: {@Vadavā@}2, name of a tirtha. § 359 (Tīrthayātrāp.): In {%V%}. one should in the evening  | {@Vadavā@}2 is its own numbered entry, a named tīrtha with an extensive §359 description.
+pAYcalya      -> pAYcAlya      | INM: {@Pāñcalya@}6 = Janamejaya: VII, 7483 ({%J˚%}); VIII, 2335 ({%J˚%}). | Pāñcalya is given as an epithet (= Janamejaya) with two attested references; recorded as i
+janakAtmaja   -> janakAtmajA   | INM: {@Janakātmaja@} = Vasumat: XII, 11518. | Janakātmaja = Vasumat (masculine) with a XII reference, distinct from feminine Janakātmajā
+asatyA        -> asatya        | INM: {@Asatyā@} (?). § 490 (Āṅgirasa): III, {@219@}, 14133 ({%Śaṃyor%} {%apratimā bhāryā Satyā  | Asatyā(?) has its own entry citing the Satyā/Dharmajā verse with a III reference, recorded
+praniDi       -> praRiDi       | INM: {@Pranidhi@}, name of a fire(?). § 491 (Āṅgirasa): III, {@220@}, 14164 (son of Bṛhadraṭha) | Pranidhi is the name of a fire (son of Bṛhadraṭha) with a III reference, recorded as its o
+aMSAvatAraRa  -> aMSAvataraRa  | INM: {@Aṃśāvatāraṇa@} (the three first chapters of Sambhavaparvan, I, {@65—7@}). § 11 (Parvas.) | Aṃśāvatāraṇa names the three chapters of Sambhavaparvan with references; recorded with var
+GozayAtra     -> GozayAtrA     | INM: {@ghoṣayātra@} (“the expedition to the cattle station,” as related in Ghoṣayātrāparvan): I | ghoṣayātra is glossed as the cattle-station expedition with many references; recorded as i
+yavakri       -> yavakrI       | INM: {@Yavakri@} = Yavakrīta: III, 10759. | {@Yavakri@} is its own entry identified with Yavakrīta and carrying its own III,10759 refe
+
+# ===== BUCKET 5  INTENTIONAL -- INM documents the spelling on purpose; NEVER file (16) =====
+koSika        -> kOSika        | INM: {@Kośika@}, pl. ({%˚āḥ%}) (VII, 1052), v. Kāśika, pl. | Body is a cross-reference: 'Kośika, pl. ... v. Kāśika, pl.'
+aBirAmA       -> aBirAma       | INM: {@Abhirāmā@}, v. Pūrvābhirāmā. | Body is a cross-reference: 'Abhirāmā, v. Pūrvābhirāmā.'
+kusasTalI     -> kuSasTalI     | INM: {@Kusasthalī@}, v. Kuśasthalī. | Body is a cross-reference: 'Kusasthalī, v. Kuśasthalī.'
+saryAti       -> SaryAti       | INM: {@Saryāti@}, v. Śaryāti. | Body is a cross-reference: 'Saryāti, v. Śaryāti.'
+dvetavana     -> dvEtavana     | INM: {@Dvetavana@}, v. Dvaitavana. | Body is a cross-reference: 'Dvetavana, v. Dvaitavana.'
+suvAhu        -> subAhu        | INM: {@Suvāhu@}, v. Subāhu. | Body is a cross-reference: 'Suvāhu, v. Subāhu.'
+uzInara       -> uSInara       | INM: {@Uṣīnara@}, v. Uśīnara. | Body is a cross-reference: 'Uṣīnara, v. Uśīnara.'
+varaDAna      -> varadAna      | INM: {@Varadhāna@} (V, 2405), error in C. for Vaṭadhāna. | Body documents it as an error in C. for Vaṭadhāna, an explicit variant note.
+anAyuz        -> anAyus        | INM: {@Anāyuṣ@} (B. {%Da˚%}), erratum for Danāyus. | Body documents it as an erratum for Danāyus (B. has Da˚), an explicit variant note.
+koNkana       -> koNkaRa       | INM: {@Koṅkana@}, pl., v. Kauṅkana, pl. | Body is a cross-reference: 'Koṅkana, pl., v. Kauṅkana, pl.'
+kalasodara    -> kalaSodara    | INM: {@Kalasodara@}, v. Kalaśodara. | Body is a cross-reference: 'Kalasodara, v. Kalaśodara.'
+kftavanDu     -> kftabanDu     | INM: {@Kṛtavandhu@}, v. Kṛtabandhu. | Body is a cross-reference: 'Kṛtavandhu, v. Kṛtabandhu.'
+SaNkarzaRa    -> saNkarzaRa    | INM: {@Śaṅkarṣaṇa@} (X, 498), error in C. for Saṅkarṣaṇa, q.v. | Body documents it as 'error in C. for Saṅkarṣaṇa, q.v.', an explicit variant note.
+vEkartaRa     -> vEkartana     | INM: {@Vaikartaṇa@} = Karṇa, q.v. | 
+gudAkeSa      -> guqAkeSa      | INM: {@Gudākeśa@} = Arjuna, q.v. | 
+bfhannalA     -> bfhannala     | INM: {@Bṛhannalā@} = Arjuna, q.v. | 
+
+# ===== BUCKET 6  UNLOCATABLE -- not in the current INM source (stale/different key) (12) =====
+akfti         -> Akfti         | INM:  | 
+AtiTi         -> atiTi         | INM:  | 
+apageya       -> Apageya       | INM:  | 
+DarmAranya    -> DarmAraRya    | INM:  | 
+dInakft       -> dinakft       | INM:  | 
+kAkudika      -> kAkudIka      | INM:  | 
+aSramavAsa    -> ASramavAsa    | INM:  | 
+atapana       -> Atapana       | INM:  | 
+KaSira        -> KaSIra        | INM:  | 
+jYAnOttama    -> jYAnottama    | INM:  | 
+aTida         -> aWida         | INM:  | 
+dimBaka       -> qimBaka       | INM:  | 

@@ -7,7 +7,7 @@ tier-A spelling candidates can be turned into a verified **FILE-FIRST** queue + 
 run it with the **[`/dict-triage <DICT>`](../.claude/commands/dict-triage.md)** skill
 (Sonnet classifies, Opus source-confirms, a human verifies).
 
-**23 of 33 triaged — 112 fileable typos across 10 dicts; ~2,357 documented-intentional spellings catalogued.**
+**25 of 33 triaged — 112 fileable typos across 10 dicts; ~2,386 documented-intentional spellings catalogued.**
 Tier-A precision stays **near-zero** on mature, much-corrected dictionaries — the durable
 deliverable is the do-not-file list and *preventing bad bulk edits*, not the handful of real
 typos. The exception is **poorly-digitised sources**: SHS (15%), YAT (11%) and PWG (2.4%) carry many
@@ -25,7 +25,7 @@ real OCR/keying errors, each confirmed by the entry's own etymology/inflection.
 | PW (German) | 657 | **2** | 255 |
 | VCP (Sanskrit) | 563 | **1** | 408 |
 | GST (English, 1856) | 48 | **1** | 22 |
-| _13 others_ — AP · MW72 · SCH · AP90 · MD · CAE · GRA · BEN · CCS · SNP · BHS · PUI · IEG | — | **0** | 617 |
+| _15 others_ — AP · MW72 · SCH · AP90 · MD · CAE · GRA · BEN · CCS · SNP · BHS · PUI · IEG · INM · PE | — | **0** | 646 |
 
 ## Status — all 33 dictionaries (by tier-A volume)
 
@@ -51,8 +51,8 @@ provided) — it becomes triageable once they are wired into the pipeline.**
 | [ACC](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/acc) — Aufrecht, Catalogus Catalogorum | 174 | ✅ **22 fileable · 25 do-not-file** — [readme](ACC/readme.md) · [file-first](ACC/ACC_file_first_sf.txt) · [do-not-file](ACC/ACC_wrong_readings.txt) · [queue](ACC/ACC_triaged.txt) |
 | [BUR](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/bur) — Burnouf | 162 | — pending |
 | [IEG](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/ieg) — Sircar, Indian Epigraphical Glossary | 162 | ✅ **0 fileable · 40 do-not-file** — [readme](IEG/readme.md) · [do-not-file](IEG/IEG_wrong_readings.txt) · [queue](IEG/IEG_triaged.txt) |
-| [INM](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/inm) | 161 | — pending |
-| [PE](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/pe) | 158 | — pending |
+| [INM](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/inm) — Sörensen, Index of Names (Mahābhārata) | 161 | ✅ **0 fileable · 16 do-not-file** — [readme](INM/readme.md) · [do-not-file](INM/INM_wrong_readings.txt) · [queue](INM/INM_triaged.txt) |
+| [PE](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/pe) — Mani, Purāṇic Encyclopaedia | 158 | ✅ **0 fileable · 13 do-not-file** — [readme](PE/readme.md) · [do-not-file](PE/PE_wrong_readings.txt) · [queue](PE/PE_triaged.txt) |
 | [AP](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/ap) — Apte, Practical (English) | 152 | ✅ **0 fileable · 32 do-not-file** — [readme](AP/readme.md) · [do-not-file](AP/AP_wrong_readings.txt) · [queue](AP/AP_triaged.txt) |
 | [STC](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/stc) | 111 | — pending |
 | [WIL](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/wil) — Wilson (English, 1832) | 108 | ✅ **3 fileable · 17 do-not-file** — [readme](WIL/readme.md) · [file-first](WIL/WIL_file_first_sf.txt) · [do-not-file](WIL/WIL_wrong_readings.txt) · [queue](WIL/WIL_triaged.txt) |

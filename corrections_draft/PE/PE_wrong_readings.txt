@@ -1,0 +1,25 @@
+# PE -- DOCUMENTED-INTENTIONAL spellings (NOT typos -- do NOT file corrections)
+#
+# 13 headwords that LOOK like misspellings but which PE records on purpose:
+# wrong-reading apparatus (w.r.), variae lectiones (v.l.), in-composition /
+# sandhi forms (in comp. for...), cross-references (See / = X q.v.), and other
+# grammatical/Vedic notes. Filing a 'correction' for any of these CORRUPTS PE.
+# Use this as a suppression list: such headwords should not be re-flagged.
+# Format per row:  headword -> would-be 'correction'  |  the PE entry text
+
+# ===== CROSS-REFERENCE (10) =====
+SAlakawaNkawA  -> SAlakawaNkawa  | ŚĀLAKAṬAṄKAṬĀ (SĀLAKAṬAṄKĀ) I A synonym for Alambuṣā. (See under Alambuṣā).
+anAraRya       -> anaraRya       | ANĀRAṆYA. (See ANARAṆYA).
+pArIjAta       -> pArijAta       | PĀRĪJĀTA II. See under Kalpavṛkṣa.
+prasTalA       -> prasTala       | PRASTHALĀ I. The palace of Suśarmā. (See under Suśarmā).
+purunITa       -> puruRITa       | PURUNĪTHA. See under Paruṇītha.
+qAkini         -> qAkinI         | ḌĀKINI. A class of women supposed to be proficient in magic and the performance of feats with the help of mantras. (See Kṣuraka).
+sudaRqika      -> sudaRqikA      | SUDAṆḌIKA. See under Sūryaprabha.
+susvarA        -> susvara        | SUSVARĀ. A Gandharva woman. (See under Pramohinī).
+valAkASva      -> balAkASva      | VALĀKĀŚVA. See under Balākāśva.
+valala         -> balala         | VALALA. See under Ballava.
+
+# ===== OTHER-INTENTIONAL (3) =====
+trEvali        -> trEbali        | TRAIVALI (TRAIBALI). A sage. He shone as a {{membe->member||20210319|AnnaRybakovaT|https://github.com/sanskrit-lexicon/csl-orig/issues/468|}} in the court of Yu
+vABravAyaRi    -> bABravAyaRi    | VĀBHRAVĀYAṆI (BĀBHRAVĀYAṆI). One of Viśvā- mitra's sons, who were all Brahmavādins. (M.B. Anuśā- sana Parva, Chapter 4, Stanza 57).
+vakanaKa       -> bakanaKa       | VAKANAKHA (BAKANAKHA). One of Viśvāmitra's sons who were expounders of the Vedas. (Mahā Bhārata Anuśāsana Parva, Chapter 4, Stanza 58).
