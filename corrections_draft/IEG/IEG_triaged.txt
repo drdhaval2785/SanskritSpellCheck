@@ -1,0 +1,169 @@
+# IEG tier-A -- BODY-GROUNDED triage  (DRAFT; verify every kept case against the scan)
+#
+# The 144 engine tier-A candidates were judged against IEG's OWN entry text (csl-orig),
+# not spelling alone. A spelling detector cannot tell a typo from a real word, an
+# intentional variant / compounding form, or wrong-reading apparatus -- the entry can.
+# Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM
+# pass over the 'realword' set + source confirmation of every TYPO verdict.
+#
+# FINDING: of 144 tier-A candidates, 0 are body-confirmed fileable typos (0.0%).
+# 101 are real distinct words, 40 are spellings IEG documents on purpose (w.r./v.l./
+# in-comp./cross-ref -- filing them would CORRUPT IEG), 3 are not in the current
+# source, and 0 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
+# do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.
+
+# ===== BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file) (0) =====
+
+# ===== BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted (0) =====
+
+# ===== BUCKET 3  REVIEW -- undecidable without the printed page (0) =====
+
+# ===== BUCKET 4  REAL-WORD -- a distinct real word; the fix would merge two words (101) =====
+yugA          -> yuga          | IEG: {%yugā%} (CII 4), a voucher. | Has its own gloss and siglum: {%yugā%} (CII 4), 'a voucher'.
+BaktI         -> Bakti         | IEG: {%bhaktī%} (EI 8), name of a land measure. | Own attested form with gloss: {%bhaktī%} (EI 8), 'name of a land measure'.
+bAva          -> BAva          | IEG: {%bāva%} ({%CII%} 3, etc.), a Prakrit word denoting ‘a relative of the same generation wit | Own entry 'bāva (CII 3), a Prakrit word denoting a relative ... generally an uncle' — expl
+nARA          -> nAnA          | IEG: {%nāṇā%} (EI 30), name of a coin; same as {%nāṇaka.%} | Own entry 'nāṇā (EI 30), name of a coin; same as nāṇaka' with siglum and gloss.
+pAYcaka       -> paYcaka       | IEG: {%pāñcaka%} (CII 3), a committee. See {%pañca-maṇḍalī%} and {%pañcakula.%} | Own gloss and siglum: {%pāñcaka%} (CII 3), 'a committee', with cross-refs to pañca-maṇḍalī
+akfti         -> Akfti         | IEG: {%akṛti%} (IE 7-1-2), ‘twentytwo’. | Own gloss and siglum: {%akṛti%} (IE 7-1-2), a numeral 'twentytwo'.
+dAm           -> dam           | IEG: {%dām,%} derivative of {%dramma%} (q. v.); copper coin, (1/40) of a Mughal {%rupee%} (q. v | Own gloss: {%dām%}, 'derivative of {%dramma%}; copper coin, 1/40 of a Mughal rupee'.
+dIpanA        -> dIpana        | IEG: {%dīpanā%} (CII 1), glorification. | Own gloss and siglum: {%dīpanā%} (CII 1), 'glorification'.
+golakA        -> golaka        | IEG: {%golakā%} (SITI), also called {%gulikā, goḻakkai, koḻakkai, kuḻigai;%} name of a coin, pr | Own gloss with sources: {%golakā%} (SITI), 'name of a coin, probably circular in shape', s
+sAmIpa        -> samIpa        | IEG: {%sāmīpa%} (CII 1), a neighbour. | Own gloss and siglum: {%sāmīpa%} (CII 1), 'a neighbour'.
+udgrAh        -> udgrah        | IEG: {%udgrāh,%} cf. {%udgrāhayiṣyāmi%} (LP), ‘I shall get the revenue collected [from the coun | Own gloss with attested verbal forms: {%udgrāh%}, cf. {%udgrāhayiṣyāmi%} (LP), revenue col
+vari          -> vAri          | IEG: {%vari%} (SITI), Tamil; tax; revenue register; order of the king and his officers fixing t | Own detailed gloss and siglum: {%vari%} (SITI), Tamil 'tax; revenue register; order fixing
+piqA          -> pIqA          | IEG: {%piḍā%} (Chamba), a grain measure; also spelt {%piṭha, peḍā, pyoḍā.%} | Own gloss and source: {%piḍā%} (Chamba), 'a grain measure', also spelt piṭha, peḍā.
+rajjU         -> rajju         | IEG: {%rajjū%} (HRS), used in the {%Arthaśāstra%} probably in the sense of the cost realised by | Own gloss and siglum: {%rajjū%} (HRS), a sense relating to land-measurement cost in the Ar
+kARam         -> kAmam         | IEG: {%kāṇam%} (EI 21, 28; SII 3; SITI), Tamil; name of a coin; a gold coin; a weight; a share. | Own gloss with multiple sigla: {%kāṇam%} (EI 21, 28; SII 3), Tamil 'name of a coin; a gold
+DAnika        -> Danika        | IEG: {%dhānika,%} a coin equal to 4 {%kārṣāpaṇas%} or 64 {%paṇas%} according to the {%Kṛtyakalp | Own gloss with sources: {%dhānika%}, a coin equal to 4 kārṣāpaṇas, cf. {%dhānaka%}.
+parikAra      -> parikara      | IEG: {%Parikāra%} (SITI), a servant. | Own gloss and siglum: {%Parikāra%} (SITI), 'a servant'.
+vijYApanA     -> vijYApana     | IEG: {%vijñāpanā%} (IA 10), also called {%vijñapti;%} an application; a request; cf. Kannaḍa {% | Own gloss and siglum: {%vijñāpanā%} (IA 10), 'an application; a request', also called vijñ
+ArcA          -> arcA          | IEG: {%ārcā%} (EI 24), the image of a god; cf. {%arcā,%} adoration. | Own gloss and siglum: {%ārcā%} (EI 24), 'the image of a god'; cf. {%arcā%}, distinguished 
+aByupAgama    -> aByupagama    | IEG: {%abhyupāgama%} (IE 8-8), arrival. | Own gloss and siglum: {%abhyupāgama%} (IE 8-8), 'arrival'.
+avaDAraRA     -> avaDAraRa     | IEG: {%avadhāraṇā,%} cf. {%adhikaraṇ-āvadhāraṇā,%} ‘official investiga- tion’ ({%Ep. Ind.,%} Vo | Own gloss with attested compound: {%avadhāraṇā%}, cf. adhikaraṇ-āvadhāraṇā 'official inves
+dvikA         -> dvika         | IEG: {%dvikā,%} double measure ({%Ep. Ind.,%} Vol. XXXVI, p. 52, note 5). | Own gloss and source: {%dvikā%}, 'double measure' (Ep. Ind. XXXVI).
+hiraRyAya     -> hiraRyaya     | IEG: {%hiraṇy-āya%} (EI 7), tax in cash; cf. {%hiraṇya-deya, kāś-āya.%} | Own gloss and siglum: {%hiraṇy-āya%} (EI 7), 'tax in cash' — a compound (hiraṇya+āya), not
+pAdarakzA     -> pAdarakza     | IEG: {%pāda-rakṣā,%} cf. Tamil {%pāda-raṭcai%} (SITI), shoes; sandals. | Own gloss: {%pāda-rakṣā%}, cf. Tamil pāda-raṭcai (SITI), 'shoes; sandals'.
+uzara         -> Uzara         | IEG: {%uṣara,%} cf. {%sa-gartt-oṣara%} (IE 8-5); a saline spot or barren land. | Own gloss with attested compound: {%uṣara%}, cf. sa-gartt-oṣara (IE 8-5), 'a saline spot o
+Pika          -> pika          | IEG: {%phika (LP),%} a bull which is not castrated. | Own gloss and siglum: {%phika%} (LP), 'a bull which is not castrated'.
+SoqaSI        -> zoqaSI        | IEG: {%śoḍaśī, śoḍaśikā%} (SII 4), name of a coin which may have been (1/16) of the standard co | Own gloss: {%śoḍaśī, śoḍaśikā%} (SII 4), 'name of a coin... (1/16) of the standard'; sugge
+kampaRa       -> kampana       | IEG: {%kampaṇa%} (IE 8-4), a small territorial unit like a Parganā. | Own gloss and siglum: {%kampaṇa%} (IE 8-4), 'a small territorial unit like a Parganā'.
+aBikAra       -> avikAra       | IEG: {%abhikāra,%} cf. {%kṛt-ābhikāra%} (CII 1), probably, one who has committed an offence und | Own gloss with attested compound: {%abhikāra%}, cf. kṛt-ābhikāra (CII 1), 'one who has com
+avazkara      -> avaskara      | IEG: {%avaṣkara,%} sweepings, a mound; cf. {%s-oṣar-āvaṣkara-sthāha-%} {%nivīta-lavaṇākara%} (E | Own gloss with attested compounds and sigla: {%avaṣkara%}, 'sweepings, a mound', cf. s-oṣa
+bfndAvana     -> vfndAvana     | IEG: {%bṛndāvana%} (EI 12), a tomb. | Own gloss and siglum: {%bṛndāvana%} (EI 12), 'a tomb' — attested b/v variant with its own 
+kARika        -> kAmika        | IEG: {%kāṇika%} (IE 8-5), same as Kannaḍa {%kāṇika-kānĕ, kāṇikĕ-%} {%kappa%} or {%kappa-kānikĕ, | Own gloss and siglum: {%kāṇika%} (IE 8-5), 'same as Kannaḍa kāṇika-kānĕ... presents from i
+pARaka        -> pAnaka        | IEG: {%pāṇaka%} ({%Ep. Ind.,%} Vol. XIV, p. 309), small quantity of a liquid; name of a measure | Own gloss and source: {%pāṇaka%} (Ep. Ind. XIV), 'small quantity of a liquid; name of a me
+cOrika        -> cOrikA        | IEG: {%Caurika%} ({%Ep. Ind.,%} Vol. XIX, p. 71), official designation. Cf. {%Cāmara-kumāra, Ca | Own gloss: {%Caurika%} (Ep. Ind.), 'official designation', with cf. cross-refs.
+hAlikA        -> hAlika        | IEG: {%Hālikā%} (EI 15), feminine form of {%Hālika,%} ‘an agriculturist or ploughman’. | Body: {%Hālikā%} (EI 15), 'feminine form of {%Hālika%}' — a distinct attested feminine ter
+karaRika      -> kAraRika      | IEG: {%Karaṇika%} (CII 4; BL), official designation of a scribe; the writer of legal documents; | Own detailed gloss and many sigla: {%Karaṇika%} (CII 4; BL), 'official designation of a sc
+mahantaka     -> mahAntaka     | IEG: {%Mahantaka%} (LP), an accountant; a clerk. It is a term of respect among the Baniyās of G | Own gloss and siglum: {%Mahantaka%} (LP), 'an accountant; a clerk; term of respect among B
+SAntikAra     -> SAntikara     | IEG: {%Śāntikāra%} (SITI), a temple priest; also known as {%Śāntiy-%} {%aḍigal%} and {%Śānti-śe | Own gloss and siglum: {%Śāntikāra%} (SITI), 'a temple priest', with alternate names.
+guqika        -> guqikA        | IEG: {%Guḍika%} (EI 28, 31), maker or seller of sugar; see {%Gauḍika.%} | Own gloss and sigla: {%Guḍika%} (EI 28, 31), 'maker or seller of sugar; see {%Gauḍika%}'.
+hora          -> horA          | IEG: {%hora, horaka%} (EI 9), probably, a foreign word meaning ‘a lady’ | Own gloss and siglum: {%hora, horaka%} (EI 9), 'probably a foreign word meaning a lady'.
+jIvaputrA     -> jIvaputra     | IEG: {%Jīva-putrā,%} Prakrit {%Jīva-putā%} (EI 24), a lady whose son is (or, sons are) still li | Body: {%Jīva-putrā%}, Prakrit Jīva-putā (EI 24), 'a lady whose son(s) is/are still living'
+kAnI          -> kanI          | IEG: {%kānī%} (IE 8-6), Bengali; a land measure equal to one- sixteenth of a {%Doṇ;%} cf. {%kāk | Own gloss and siglum: {%kānī%} (IE 8-6), Bengali 'a land measure equal to one-sixteenth of
+parata        -> paratA        | IEG: {%parata%} (Chamba), return, exchange, substitute, compen- sation; derived from Sanskrit { | Own gloss and siglum: {%parata%} (Chamba), 'return, exchange, compensation; derived from S
+piRqAdAna     -> piRqadAna     | IEG: {%piṇḍ-ādāna%} (EI 12), quit rent. Cf. also {%piṇḍa-kara.%} | Own gloss and siglum: {%piṇḍ-ādāna%} (EI 12), 'quit rent' — a compound (piṇḍa+ādāna), not 
+tElaparRikA   -> tElaparRika   | IEG: {%taila-parṇikā%} (EI 24), explained as ‘leaves producing oil’. | Own gloss and siglum: {%taila-parṇikā%} (EI 24), 'leaves producing oil'.
+cAturvIdya    -> cAturvidya    | IEG: {%cāturvīdya%} (EI 23, 32), cf. {%Caturvedin;%} ‘relating to the {%Caturvedin%}’, a commun | Own gloss and sigla: {%cāturvīdya%} (EI 23, 32), cf. Caturvedin, with attested compounds —
+kawIsUtra     -> kawisUtra     | IEG: {%kaṭī-sūtra%} (EI 16), an ornament. | Own gloss and siglum: {%kaṭī-sūtra%} (EI 16), 'an ornament'.
+oRI           -> oRi           | IEG: {%oṇī%} (EI 27), a territorial division. | Own gloss and siglum: {%oṇī%} (EI 27), 'a territorial division'.
+yAzwika       -> yAzwIka       | IEG: {%Yāṣṭika%} (HD), staff bearer; an attendant on the king. See {%Rājataraṅgiṇī,%} VI 203; P | Own gloss and siglum: {%Yāṣṭika%} (HD), 'staff bearer; an attendant on the king', with cit
+peWa          -> pewa          | IEG: {%peṭha%} (IE 8-4; CII 3), a small territorial unit; a group of villages. | Own gloss and sigla: {%peṭha%} (IE 8-4; CII 3), 'a small territorial unit; a group of vill
+jena          -> jEna          | IEG: {%jena%} (CITD), Telugu; a span (about 7 inches). | Own gloss and siglum: {%jena%} (CITD), Telugu 'a span (about 7 inches)'.
+janiTa        -> janita        | IEG: {%janitha%} (EI 13), cf. {%sudhā-janitha-niḥsyandad-vapuḥ,%} ‘its body welling forth from  | Own entry 'janitha (EI 13), cf. sudhā-janitha-niḥsyandad-vapuḥ' with siglum and attested c
+astamba       -> astamBa       | IEG: {%astamba,%} cf. {%samudaya-bāhy-ādy-astamba%} (EI 23), ‘land originally devoid of vegetat | Own gloss with attested compound: {%astamba%}, cf. samudaya-bāhy-ādy-astamba (EI 23), 'lan
+paqi          -> padi          | IEG: {%paḍi%} (EI 21), a measure. | Own gloss and siglum: {%paḍi%} (EI 21), 'a measure'.
+jAyAmya       -> jAyAnya       | IEG: {%jāyāmya%} (IA 19), a kind of charm. | Own gloss and siglum: {%jāyāmya%} (IA 19), 'a kind of charm'.
+udgaRanIya    -> udgamanIya    | IEG: {%udgaṇanīya%} (LP), cf. Gujarātī {%gaṇī āpavuṃ,%} ‘the charge should be handed over.’ | Own gloss and siglum: {%udgaṇanīya%} (LP), cf. Gujarātī gaṇī āpavuṃ 'the charge should be 
+vAqi          -> vAdi          | IEG: {%vāḍi%} (IA 7), same as {%vāḍa;%} often suffixed to geographical names. | Own entry 'vāḍi (IA 7), same as vāḍa; often suffixed to geographical names' with siglum an
+AByantarikA   -> AByantarika   | IEG: {%Ābhyantarikā,%} a female guard of the inner apartment of the palace; probably also a con | Own gloss and source: {%Ābhyantarikā%}, 'a female guard of the inner apartment of the pala
+hevaka        -> hevAka        | IEG: {%hevaka%} (IA 18), love or desire; same as Arabic {%hawwa.%} | Own entry 'hevaka (IA 18), love or desire' with siglum and gloss; an attested inscriptiona
+kakali        -> kAkali        | IEG: {%kakali%} (IE 3-4), paper; same as {%kakari.%} | Own entry 'kakali (IE 3-4), paper; same as kakari' with siglum and gloss.
+cOri          -> cOrI          | IEG: {%cauri%} (ASLV), spelt {%chowrie%} in English; a flywhisk; some- times the right of its u | Own entry 'cauri (ASLV) ... a flywhisk' with siglum and full gloss.
+uttiram       -> uttIram       | IEG: {%uttiram%} (SII 2), the projecting part of a wall. | Own entry 'uttiram (SII 2), the projecting part of a wall' with siglum and gloss.
+tAmbulika     -> tAmbUlika     | IEG: {%Tāmbulika%} (EI 28), producer and seller of betel leaves. | Own entry 'Tāmbulika (EI 28), producer and seller of betel leaves' with siglum and gloss.
+DvaMSi        -> DvaMsi        | IEG: {%dhvaṃśi,%} same as {%vaṃśya;%} a minute unit of measurement. | Own entry 'dhvaṃśi, same as vaṃśya; a minute unit of measurement' with its own gloss.
+KarozWI       -> KarozwI       | IEG: {%Kharoṣṭhī,%} an early Indian alphabet which was an Indian modification of the Aramaic al | Own entry 'Kharoṣṭhī, an early Indian alphabet ...' — Kharoṣṭhī (KarozWI) is the headword 
+paqaga        -> padaga        | IEG: {%paḍaga%} (SITI), Tamil; name of a measure of land; cf. {%pāḍaga.%} | Own entry 'paḍaga (SITI), Tamil; name of a measure of land; cf. pāḍaga' with siglum and gl
+akzapawalika  -> Akzapawalika  | IEG: {%Akṣapaṭalika%} (EI 30; CII 4; HD; BL), same as {%Akṣapaṭal-ādhipati,%} officer in charge | Own detailed gloss and sigla: {%Akṣapaṭalika%} (EI 30; CII 4), 'officer in charge of accou
+dASabanDa     -> daSabanDa     | IEG: {%dāśabandha-visatia (viṃśatika) ttriprastha%} (HRS), kinds of tax. | Own compound gloss with siglum: {%dāśabandha-visatia ... ttriprastha%} (HRS), 'kinds of ta
+pAwakAra      -> pawakAra      | IEG: {%Pāṭakāra%} (EI 28), a splitter of wood. | Own gloss and siglum: {%Pāṭakāra%} (EI 28), 'a splitter of wood'.
+BaRqArin      -> BARqArin      | IEG: {%Bhaṇḍārin, Bhāṇḍārin%} (EI 9; SITI), officer in charge of the treasury; same as {%Bhāṇḍā | Body lists 'Bhaṇḍārin, Bhāṇḍārin (EI 9; SITI)' as variant spellings of an attested office 
+anuSasti      -> anuSAsti      | IEG: {%anuśasti%} (CII 1), inculcation, instruction; same as {%anuśāsana.%} | Own entry 'anuśasti (CII 1), inculcation, instruction; same as anuśāsana' with siglum and 
+atiyAtra      -> atiyAtrA      | IEG: {%atiyātra%} (EI 30), same as {%atiyātrika;%} exit tax. | Own entry 'atiyātra (EI 30), same as atiyātrika; exit tax' with siglum and gloss.
+gocaraka      -> gocAraka      | IEG: {%gocaraka%} (Chamba), pasture land; same as {%gocara.%} | Own entry 'gocaraka (Chamba), pasture land; same as gocara' with siglum and gloss.
+lagaqA        -> lagaqa        | IEG: {%lagaḍā%} ({%Ep. Ind.,%} Vol. XIV, p. 309), a load; a bar of metal. | Own entry 'lagaḍā (Ep. Ind., XIV, p. 309), a load; a bar of metal' with reference and glos
+lohAra        -> lohara        | IEG: {%Lohāra%} (EI 4; BL), modification of {%Lohakāra;%} a black- smith. | Own entry 'Lohāra (EI 4; BL), modification of Lohakāra; a blacksmith' with siglum and glos
+nEyAmika      -> nEyamika      | IEG: {%Naiyāmika, Naiyamika%} (EI 24), also called {%Naiyāvika;%} a law officer or judge. | Body lists 'Naiyāmika, Naiyamika (EI 24)' as variant spellings of an attested law officer 
+paYcArTika    -> pAYcArTika    | IEG: {%Pañcārthika, Pāñcārthika%} (CII 4; IA 18), same as {%Pañcārtha,%} the Pāśupata sect of t | Body lists 'Pañcārthika, Pāñcārthika (CII 4; IA 18), same as Pañcārtha' as attested varian
+sAcitta       -> sacitta       | IEG: {%sācitta%} (LP), probably, ‘land attached to government ser- vants as long as they serve’ | Own entry 'sācitta (LP), probably land attached to government servants ...' with siglum an
+somavatI      -> somAvatI      | IEG: {%somavatī%} (IA 26), same as {%ba-di%} 15 falling on a Monday. | Own entry 'somavatī (IA 26), same as ba-di 15 falling on a Monday' with siglum and gloss.
+sudivasA      -> sudivasa      | IEG: {%su-divasā%} (IA 18; CII 1), an auspicious day. | Own entry 'su-divasā (IA 18; CII 1), an auspicious day' with sigla and gloss.
+vacanakAra    -> vacanakara    | IEG: {%Vacanakāra%} (EI 23), an author of {%vacanas%} or sayings; cf. {%subhāṣita.%} | Own entry 'Vacanakāra (EI 23), an author of vacanas or sayings; cf. subhāṣita' with siglum
+sanDivigrahika -> sAnDivigrahika | IEG: {%Sandhivigrahika%} (HD), minister for peace and war. See {%Viṣṇudharmottara,%} II. 24. 17 | Own entry 'Sandhivigrahika (HD), minister for peace and war' with siglum, gloss and a 'See
+tAr           -> tar           | IEG: {%tār%} (SII 1), name of a silver coin, equal to (1/6) of a gold {%fanam.%} || {%tār,%} na | Own entry 'tār (SII 1), name of a silver coin, equal to 1/6 of a gold fanam' with siglum a
+utpAw         -> utpaw         | IEG: {%ut-pāṭ%} (LP), Gujarātī {%upāḍavuṃ;%} cf. {%Vaidyanātha-patram=%} {%utpāṭayati,%} ‘takes | Own entry 'ut-pāṭ (LP), Gujarātī upāḍavuṃ; cf. ... utpāṭayati' with siglum and gloss.
+dIpAvalI      -> dIpAvali      | IEG: {%dīpāvalī%} (EI 5; CII 4), name of a festival; the festival of lights; cf. {%dīp-otsava.% | Own entry 'dīpāvalī (EI 5; CII 4), the festival of lights; cf. dīp-otsava' with sigla and 
+haraRI        -> haraRi        | IEG: {%haraṇī,%} cf. {%Hastavapra-haraṇī%} (EI 17), a district; probably a mistake for {%āharaṇ | Own entry 'haraṇī, cf. Hastavapra-haraṇī (EI 17), a district' with attested compound and g
+BOli          -> BOlI          | IEG: {%bhauli, bhaulī%} (Chamba), a share, portion or allotment. | Body lists 'bhauli, bhaulī (Chamba)' as attested variants meaning a share/allotment with g
+alIpaka       -> alipaka       | IEG: {%alīpaka,%} also read as {%alīyaka%} (EI 32), a fiscal expression of uncertain import; se | alīpaka is the headword 'alīpaka, also read alīyaka (EI 32)' with its own discussion; alip
+pArasi        -> pArasI        | IEG: {%Pārasi, Pārasī, Pārasika%} (EI 5; SII 1), a Persian. | Body lists 'Pārasi, Pārasī, Pārasika (EI 5; SII 1), a Persian' as attested variants with g
+salAwa        -> SalAwa        | IEG: {%Salāṭa%} ({%PJS%}), Gujarātī; also called {%Salāvaṭa;%} a stone- cutter or mason. | Own entry 'Salāṭa (PJS), Gujarātī; ... a stone-cutter or mason' with siglum and gloss.
+suRqaka       -> SuRqaka       | IEG: {%suṇḍaka%} (IA 19), meaning doubtful; probably, a bundle. | Own entry 'suṇḍaka (IA 19), meaning doubtful; probably, a bundle' with siglum and gloss.
+CO            -> Co            | IEG: {%Chau˚%} (PJS), contraction of {%Caudharī (Caturdhara)%} especially in medieval Jain insc | Own entry 'Chau˚ (PJS), contraction of Caudharī ...' with siglum and gloss.
+corodDaraRika -> cOrodDaraRika | IEG: {%Cor-oddharaṇika%} (EI 28, 30), same as {%Caur-oddharaṇika;%} a police officer in charge  | Own entry 'Cor-oddharaṇika (EI 28, 30), same as Caur-oddharaṇika; a police officer ...' wi
+Sre           -> SrE           | IEG: {%śre%} (PJS; LP), contraction of {%Śreṣṭhin,%} ‘a banker’ or {%śreyase,%} ‘for the merit  | Own entry 'śre (PJS; LP), contraction of Śreṣṭhin ... or śreyase' with sigla and gloss.
+kol           -> Kol           | IEG: {%kol%} (IE 8-6), Tamil; a measuring rod; cf. {%śrīpāda-kkol,%} ‘rod measured according to | Own entry 'kol (IE 8-6), Tamil; a measuring rod ... a land measure' with sigla and gloss.
+lAga          -> lAGa          | IEG: {%lāga%} (EI 11), a cess. | Own entry 'lāga (EI 11), a cess' with siglum and gloss.
+CaNga         -> caNga         | IEG: {%chaṅga%} ({%Ep. Ind.,%} Vol. XIV, p. 310), a measure of grain. | Own gloss and source: {%chaṅga%} (Ep. Ind. XIV), 'a measure of grain'.
+daRqapAwa     -> daRqapAta     | IEG: {%daṇḍapāṭa%} ({%Ep. Ind.,%} Vol. XXIX, p. 107); Oḏiyā; the province of a kingdom; an admi | Own entry 'daṇḍapāṭa (Ep. Ind., XXIX, p. 107); Oḏiyā; the province of a kingdom' with refe
+saNGAwa       -> saNGAta       | IEG: {%saṅghāṭa, saṅghāṭā%} ({%Ep. Ind.,%} Vol. XXXIII, p. 248), cf. {%pāda-saṅghāṭa%} or {%pād | Own entry 'saṅghāṭa, saṅghāṭā (Ep. Ind., XXXIII, p. 248), cf. pāda-saṅghāṭa' with referenc
+marICi        -> marIci        | IEG: {%marīchi,%} a theoretical unit of measurement ({%JNSI,%} Vol. XVI, p. 48). | Own gloss: {%marīchi%}, 'a theoretical unit of measurement' (JNSI).
+dvesa         -> dveza         | IEG: {%dvesa%} (CII 3), an epithet applied to land; a term of un- certain significance. | Own gloss and siglum: {%dvesa%} (CII 3), 'an epithet applied to land; uncertain significan
+
+# ===== BUCKET 5  INTENTIONAL -- IEG documents the spelling on purpose; NEVER file (40) =====
+dARa          -> dAna          | IEG: {%dāṇa%} (IE 8-5; LP), same as {%dāna,%} road-cess; customs duties; cf. the official desig | Body says {%dāṇa%} (IE 8-5) 'same as {%dāna%}', an explicit cross-reference to the Sanskri
+visaya        -> vizaya        | IEG: {%visaya%} (CITD), same as Telugu {%visā, visāmu.%} | Body says {%visaya%} (CITD), 'same as Telugu {%visā, visāmu%}' — deliberately recorded for
+jagati        -> jagatI        | IEG: {%jagati, jagatī%} (EI 11), explained variously as ‘ground’; (EI 3), ‘lower ground or comp | Headword listed as {%jagati, jagatī%} together with shared gloss; both spellings documente
+Seka          -> seka          | IEG: {%śeka%} (EI 11), same as Sanskrit {%śikya,%} a loop or swing made of rope and suspended f | Body says {%śeka%} (EI 11), 'same as Sanskrit {%śikya%}' — explicit cross-reference (and s
+nakara        -> makara        | IEG: {%nakara,%} Kannaḍa; same as Sanskrit {%nagara%} (q. v.); also spelt {%nakhara.%} | Body says {%nakara%}, Kannaḍa, 'same as Sanskrit {%nagara%} (q.v.)'; suggestion makara is 
+pIWika        -> pIWikA        | IEG: {%pīṭhika%} (ASLV), Sanskrit {%pīṭhikā;%} a throne; same as {%rājya.%} | Body says {%pīṭhika%} (ASLV), 'Sanskrit {%pīṭhikā%}' — explicitly noting the Sanskrit form
+samata        -> samatA        | IEG: {%samata%} (IE 8-1), corrupt form of {%saṃvat.%} | Body says {%samata%} (IE 8-1), 'corrupt form of {%saṃvat%}' — but the suggestion samatA is
+aDikArika     -> ADikArika     | IEG: {%Adhikārika, Ādhikārika%} (IE 8-3; EI 2, 23, 28; CII 4; BL; HD), ‘an officer’; same as {% | Headword listed as {%Adhikārika, Ādhikārika%} together with shared gloss — both spellings 
+aNgaraka      -> aNgAraka      | IEG: {%Aṅgaraka%} (SII 11-1), corruption of {%Aṅgarakṣa%} (q. v.). | Body says {%Aṅgaraka%} (SII 11-1), 'corruption of {%Aṅgarakṣa%} (q.v.)' — explicitly docum
+gadyA         -> gadya         | IEG: {%gadyā,%} abbreviation of {%gadyāṇa%} (q. v.). || {%gadyā,%} abbreviation of {%gadyāṇa.%} | Body says {%gadyā%}, 'abbreviation of {%gadyāṇa%} (q.v.)' — explicit cross-reference.
+varAwakA      -> varAwaka      | IEG: {%varāṭakā,%} same as {%varāṭaka%} or {%varāṭikā.%} | Body says {%varāṭakā%}, 'same as {%varāṭaka%} or {%varāṭikā%}' — explicit cross-reference.
+dinAra        -> dInAra        | IEG: {%dināra%} (SITI), name of a coin; same as {%dīnāra;%} derived from the Roman coin name {% | Body says {%dināra%} (SITI), 'same as {%dīnāra%}; generally spelt {%dīnāra%} (q.v.)' — exp
+rU            -> ru            | IEG: {%rū%} (IE 8-1), abbreviation of {%rūpaka%} or {%rūpyaka.%} ({%CITD%}), abbreviation of Te | Body says {%rū%} (IE 8-1), 'abbreviation of {%rūpaka%} or {%rūpyaka%}' — deliberately docu
+dEvaputra     -> devaputra     | IEG: {%Daivaputra%} (IE 8-2; EI 30), same as {%Devaputra;%} title of certain kings of the Kuṣāṇ | Body says {%Daivaputra%} (IE 8-2), 'same as {%Devaputra%}' — explicit cross-reference.
+dibira        -> divira        | IEG: {%Dibira,%} same as {%Divira%} (q. v.). | Body says {%Dibira%}, 'same as {%Divira%} (q.v.)' — explicit cross-reference.
+valIvarda     -> balIvarda     | IEG: {%valīvarda,%} variant spelling of {%balīvarda%} (q. v.); cf. {%a-param-%} {%parā-valivard | Body says {%valīvarda%}, 'variant spelling of {%balīvarda%} (q.v.)' — explicit variant not
+kAnuka        -> kAmuka        | IEG: {%kānuka%} (CITD), Telugu; an offering or courtesy made in homage to a superior or a god.  | Body says {%kānuka%} (CITD), Telugu offering, 'same as {%kāṇika%}' — explicit cross-refere
+dARqanAyaka   -> daRqanAyaka   | IEG: {%Dāṇḍanāyaka%} (EI 23; HD), same as {%Daṇdanāyaka.%} See {%Ep. Ind.,%} Vol. XIX, p. 269. | Body says {%Dāṇḍanāyaka%} (EI 23), 'same as {%Daṇdanāyaka%}' — explicit cross-reference.
+padakA        -> padaka        | IEG: {%padakā%} (Chamba), same as {%paduka;%} foot-print. | Body says {%padakā%} (Chamba), 'same as {%paduka%}; foot-print' — explicit cross-reference
+samAraRa      -> samaraRa      | IEG: {%samāraṇa%} Prakrit used in Sanskrit for {%samāracaṇa%} ({%Ep. Ind.,%} Vol. XXXV, p. 59). | Body says {%samāraṇa%} 'Prakrit used in Sanskrit for {%samāracaṇa%}' — explicitly document
+viMsatima     -> viMSatima     | IEG: {%viṃsatima%} (CII 3), used for {%viṃśatitama,%} twentieth. | Body says {%viṃsatima%} (CII 3), 'used for {%viṃśatitama%}, twentieth' — explicitly docume
+AGAwana       -> AGAtana       | IEG: {%āghāṭana%} ({%Ep. Ind.,%} Vol. XII, p. 264, text line 42), same as {%āghāṭa,%} boundary; | Body says {%āghāṭana%} (Ep. Ind. XII), 'same as {%āghāṭa%}, boundary' — explicit cross-ref
+rAjanaka      -> rAjAnaka      | IEG: {%Rājanaka%} (IE 8-2, 8-3; EI 23, 29), same as {%Rājānaka,%} {%Rājanyaka, Rājānika;%} a fe | Body says {%Rājanaka%} (IE 8-2), 'same as {%Rājānaka, Rājanyaka, Rājānika%}' — explicit cr
+talAka        -> talaka        | IEG: {%taḻāka%} (EI 14), same as {%taṭāka, taḍāga;%} a tank. | Body says {%taḻāka%} (EI 14), 'same as {%taṭāka, taḍāga%}; a tank' — explicit cross-refere
+agrahArika    -> AgrahArika    | IEG: {%Agrahārika, Āgrahārika%} (IE 3-8; EI 23; HD; CII 3; etc.), the owner of an {%agrahāra;%} | Headword listed as {%Agrahārika, Āgrahārika%} together with shared gloss — both spellings 
+caruka        -> cAruka        | IEG: {%caruka%} (EI 1), same as {%caru,%} one of the five {%mahāyajñas.%} | Body says {%caruka%} (EI 1), 'same as {%caru%}, one of the five mahāyajñas' — explicit cro
+wANk          -> waNk          | IEG: {%ṭāṅk%} (IA 26), also called {%tāṅkī,%} etc.; same as {%ṭaṅka.%} | Body 'ṭāṅk (IA 26) ... same as ṭaṅka' cross-references the spelling to ṭaṅka.
+BaRqAra       -> BARqAra       | IEG: {%bhaṇḍāra,%} same as Sanskrit {%bhāṇḍāra;%} cf. {%Bhaṇdārin,%} etc. | Body says {%bhaṇḍāra%}, 'same as Sanskrit {%bhāṇḍāra%}' — explicit cross-reference.
+dARqavAsika   -> daRqavAsika   | IEG: {%Dāṇḍavāsika%} (EI 23), same as {%Daṇḍavāsika, Dāṇḍapāśika.%} | Body says {%Dāṇḍavāsika%} (EI 23), 'same as {%Daṇḍavāsika, Dāṇḍapāśika%}' — explicit cross
+mahAmaRqalIka -> mahAmaRqalika | IEG: {%Mahāmaṇḍalīka%} (HD), same as {%Mahāmaṇḍaleśvara.%} Cf. {%Ind. Ant.,%} Vol. IX, p. 35. S | Body says {%Mahāmaṇḍalīka%} (HD), 'same as {%Mahāmaṇḍaleśvara%}' and 'See {%Mahāmaṇḍalika%
+daSavanDa     -> daSabanDa     | IEG: {%daśavandha,%} cf. {%daśavanna%} (IA 30), explained as ‘land granted to a person for repa | Body gives {%daśavandha%} its own detailed gloss but ends 'See {%daśabandha%}' — deliberat
+KadgaDara     -> KaqgaDara     | IEG: {%Khadgadhara,%} cf. {%Mahākhaḍgadhara, Khaḍagrāhin,%} etc. | Body 'Khadgadhara, cf. Mahākhaḍgadhara, Khaḍagrāhin, etc.' is a cross-reference (cf.) entr
+Avara         -> avara         | IEG: {%āvara%} (CII 4), a stall. Cf. {%āvāra.%} | 
+bAcaka        -> vAcaka        | IEG: {%bācaka%} (LP), handful; cf. Gujarātī {%bācko.%} | 
+SatikA        -> Satika        | IEG: {%śatikā%} (EI 28), cf. {%saikā.%} | 
+niSadi        -> niSAdi        | IEG: {%niśadi,%} cf. {%niśadam.%} | 
+guptakA       -> guptaka       | IEG: {%guptakā,%} see {%guttagai.%} | 
+naptfka       -> naptfkA       | IEG: {%naptṛka,%} cf. {%natika%} (EI 22), a grandson. | 
+ruRqA         -> ruRqa         | IEG: {%Ruṇḍā,%} cf. {%Mahāruṇḍā.%} | 
+suttee        -> (flag)        | IEG: {%suttee%} (CII 3, etc.), see {%satī.%} | 
+
+# ===== BUCKET 6  UNLOCATABLE -- not in the current IEG source (stale/different key) (3) =====
+cA            -> ca            | IEG:  | 
+kaPA          -> kaPa          | IEG:  | 
+bo            -> Bo            | IEG:  | 

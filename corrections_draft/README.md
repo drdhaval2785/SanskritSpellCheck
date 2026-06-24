@@ -7,7 +7,7 @@ tier-A spelling candidates can be turned into a verified **FILE-FIRST** queue + 
 run it with the **[`/dict-triage <DICT>`](../.claude/commands/dict-triage.md)** skill
 (Sonnet classifies, Opus source-confirms, a human verifies).
 
-**22 of 33 triaged — 112 fileable typos across 10 dicts; ~2,317 documented-intentional spellings catalogued.**
+**23 of 33 triaged — 112 fileable typos across 10 dicts; ~2,357 documented-intentional spellings catalogued.**
 Tier-A precision stays **near-zero** on mature, much-corrected dictionaries — the durable
 deliverable is the do-not-file list and *preventing bad bulk edits*, not the handful of real
 typos. The exception is **poorly-digitised sources**: SHS (15%), YAT (11%) and PWG (2.4%) carry many
@@ -25,7 +25,7 @@ real OCR/keying errors, each confirmed by the entry's own etymology/inflection.
 | PW (German) | 657 | **2** | 255 |
 | VCP (Sanskrit) | 563 | **1** | 408 |
 | GST (English, 1856) | 48 | **1** | 22 |
-| _12 others_ — AP · MW72 · SCH · AP90 · MD · CAE · GRA · BEN · CCS · SNP · BHS · PUI | — | **0** | 577 |
+| _13 others_ — AP · MW72 · SCH · AP90 · MD · CAE · GRA · BEN · CCS · SNP · BHS · PUI · IEG | — | **0** | 617 |
 
 ## Status — all 33 dictionaries (by tier-A volume)
 
@@ -50,7 +50,7 @@ provided) — it becomes triageable once they are wired into the pipeline.**
 | [SHS](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/shs) — Śabda-Sāgara (English, 1900) | 246 | ✅ **37 fileable · 31 do-not-file** — [readme](SHS/readme.md) · [file-first](SHS/SHS_file_first_sf.txt) · [do-not-file](SHS/SHS_wrong_readings.txt) · [queue](SHS/SHS_triaged.txt) |
 | [ACC](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/acc) — Aufrecht, Catalogus Catalogorum | 174 | ✅ **22 fileable · 25 do-not-file** — [readme](ACC/readme.md) · [file-first](ACC/ACC_file_first_sf.txt) · [do-not-file](ACC/ACC_wrong_readings.txt) · [queue](ACC/ACC_triaged.txt) |
 | [BUR](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/bur) — Burnouf | 162 | — pending |
-| [IEG](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/ieg) — Sircar, Indian Epigraphical Glossary | 162 | — pending |
+| [IEG](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/ieg) — Sircar, Indian Epigraphical Glossary | 162 | ✅ **0 fileable · 40 do-not-file** — [readme](IEG/readme.md) · [do-not-file](IEG/IEG_wrong_readings.txt) · [queue](IEG/IEG_triaged.txt) |
 | [INM](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/inm) | 161 | — pending |
 | [PE](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/pe) | 158 | — pending |
 | [AP](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/ap) — Apte, Practical (English) | 152 | ✅ **0 fileable · 32 do-not-file** — [readme](AP/readme.md) · [do-not-file](AP/AP_wrong_readings.txt) · [queue](AP/AP_triaged.txt) |

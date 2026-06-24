@@ -1,0 +1,52 @@
+# IEG -- DOCUMENTED-INTENTIONAL spellings (NOT typos -- do NOT file corrections)
+#
+# 40 headwords that LOOK like misspellings but which IEG records on purpose:
+# wrong-reading apparatus (w.r.), variae lectiones (v.l.), in-composition /
+# sandhi forms (in comp. for...), cross-references (See / = X q.v.), and other
+# grammatical/Vedic notes. Filing a 'correction' for any of these CORRUPTS IEG.
+# Use this as a suppression list: such headwords should not be re-flagged.
+# Format per row:  headword -> would-be 'correction'  |  the IEG entry text
+
+# ===== CROSS-REFERENCE (21) =====
+AGAwana        -> AGAtana        | {%āghāṭana%} ({%Ep. Ind.,%} Vol. XII, p. 264, text line 42), same as {%āghāṭa,%} boundary; see also {%āghāṭī.%}
+Avara          -> avara          | {%āvara%} (CII 4), a stall. Cf. {%āvāra.%}
+BaRqAra        -> BARqAra        | {%bhaṇḍāra,%} same as Sanskrit {%bhāṇḍāra;%} cf. {%Bhaṇdārin,%} etc.
+KadgaDara      -> KaqgaDara      | {%Khadgadhara,%} cf. {%Mahākhaḍgadhara, Khaḍagrāhin,%} etc.
+SatikA         -> Satika         | {%śatikā%} (EI 28), cf. {%saikā.%}
+Seka           -> seka           | {%śeka%} (EI 11), same as Sanskrit {%śikya,%} a loop or swing made of rope and suspended from the ends of a pole placed on one's shoulder for carrying loads, or
+aDikArika      -> ADikArika      | {%Adhikārika, Ādhikārika%} (IE 8-3; EI 2, 23, 28; CII 4; BL; HD), ‘an officer’; same as {%Adhikārin, Niyogika, Adhyakṣa,%} etc., regarded as meaning a minister,
+agrahArika     -> AgrahArika     | {%Agrahārika, Āgrahārika%} (IE 3-8; EI 23; HD; CII 3; etc.), the owner of an {%agrahāra;%} sometimes probably, the superin- tendent of {%agrahāras;%} same as {%
+bAcaka         -> vAcaka         | {%bācaka%} (LP), handful; cf. Gujarātī {%bācko.%}
+dARa           -> dAna           | {%dāṇa%} (IE 8-5; LP), same as {%dāna,%} road-cess; customs duties; cf. the official designation {%Dāṇī%} (Sanskrit {%Dānin%}).
+dARqanAyaka    -> daRqanAyaka    | {%Dāṇḍanāyaka%} (EI 23; HD), same as {%Daṇdanāyaka.%} See {%Ep. Ind.,%} Vol. XIX, p. 269.
+daSavanDa      -> daSabanDa      | {%daśavandha,%} cf. {%daśavanna%} (IA 30), explained as ‘land granted to a person for repairing or building a tank on condi- tion of paying in money or kind one
+guptakA        -> guptaka        | {%guptakā,%} see {%guttagai.%}
+jagati         -> jagatI         | {%jagati, jagatī%} (EI 11), explained variously as ‘ground’; (EI 3), ‘lower ground or compound’; (EI 1), ‘a kind of build- ing’; also as ‘railed parapet’ (R. Na
+kAnuka         -> kAmuka         | {%kānuka%} (CITD), Telugu; an offering or courtesy made in homage to a superior or a god. See {%kāṇikĕ,%} etc. ({%EI%} 33), same as {%kānika,%} tolls. || {%kānu
+mahAmaRqalIka  -> mahAmaRqalika  | {%Mahāmaṇḍalīka%} (HD), same as {%Mahāmaṇḍaleśvara.%} Cf. {%Ind. Ant.,%} Vol. IX, p. 35. See {%Mahāmaṇḍalika, Mahāmaṇḍale-%} {%śvar-ādhipati, Māṇḍalika%} etc.
+naptfka        -> naptfkA        | {%naptṛka,%} cf. {%natika%} (EI 22), a grandson.
+niSadi         -> niSAdi         | {%niśadi,%} cf. {%niśadam.%}
+ruRqA          -> ruRqa          | {%Ruṇḍā,%} cf. {%Mahāruṇḍā.%}
+suttee         -> (flag)         | {%suttee%} (CII 3, etc.), see {%satī.%}
+valIvarda      -> balIvarda      | {%valīvarda,%} variant spelling of {%balīvarda%} (q. v.); cf. {%a-param-%} {%parā-valivarda,%} etc. (IE 8-5); a pair of bullocks [which the villagers were oblig
+
+# ===== OTHER-INTENTIONAL (19) =====
+aNgaraka       -> aNgAraka       | {%Aṅgaraka%} (SII 11-1), corruption of {%Aṅgarakṣa%} (q. v.).
+caruka         -> cAruka         | {%caruka%} (EI 1), same as {%caru,%} one of the five {%mahāyajñas.%}
+dARqavAsika    -> daRqavAsika    | {%Dāṇḍavāsika%} (EI 23), same as {%Daṇḍavāsika, Dāṇḍapāśika.%}
+dEvaputra      -> devaputra      | {%Daivaputra%} (IE 8-2; EI 30), same as {%Devaputra;%} title of certain kings of the Kuṣāṇa dynasty; derived from a Chinese title meaning ‘the Son of Heaven’.
+dibira         -> divira         | {%Dibira,%} same as {%Divira%} (q. v.).
+dinAra         -> dInAra         | {%dināra%} (SITI), name of a coin; same as {%dīnāra;%} derived from the Roman coin name {%denarius;%} a cowrie-shell according to the {%Rājataraṅgiṇī%} (Stein's
+gadyA          -> gadya          | {%gadyā,%} abbreviation of {%gadyāṇa%} (q. v.). || {%gadyā,%} abbreviation of {%gadyāṇa.%}
+nakara         -> makara         | {%nakara,%} Kannaḍa; same as Sanskrit {%nagara%} (q. v.); also spelt {%nakhara.%}
+pIWika         -> pIWikA         | {%pīṭhika%} (ASLV), Sanskrit {%pīṭhikā;%} a throne; same as {%rājya.%}
+padakA         -> padaka         | {%padakā%} (Chamba), same as {%paduka;%} foot-print.
+rAjanaka       -> rAjAnaka       | {%Rājanaka%} (IE 8-2, 8-3; EI 23, 29), same as {%Rājānaka,%} {%Rājanyaka, Rājānika;%} a feudatory; in some cases, smaller than the feudatory called {%Rājan.%}
+rU             -> ru             | {%rū%} (IE 8-1), abbreviation of {%rūpaka%} or {%rūpyaka.%} ({%CITD%}), abbreviation of Telugu {%rūka%} meaning ‘cash’ and probably derived from Sanskrit {%rūpa
+samAraRa       -> samaraRa       | {%samāraṇa%} Prakrit used in Sanskrit for {%samāracaṇa%} ({%Ep. Ind.,%} Vol. XXXV, p. 59).
+samata         -> samatA         | {%samata%} (IE 8-1), corrupt form of {%saṃvat.%}
+talAka         -> talaka         | {%taḻāka%} (EI 14), same as {%taṭāka, taḍāga;%} a tank.
+varAwakA       -> varAwaka       | {%varāṭakā,%} same as {%varāṭaka%} or {%varāṭikā.%}
+viMsatima      -> viMSatima      | {%viṃsatima%} (CII 3), used for {%viṃśatitama,%} twentieth.
+visaya         -> vizaya         | {%visaya%} (CITD), same as Telugu {%visā, visāmu.%}
+wANk           -> waNk           | {%ṭāṅk%} (IA 26), also called {%tāṅkī,%} etc.; same as {%ṭaṅka.%}

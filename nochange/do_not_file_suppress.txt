@@ -10,7 +10,7 @@
 # DO NOT hand-edit -- regenerate with detectors/gen_do_not_file_suppress.py
 # after triaging more dictionaries.
 #
-# 2067 unique headwords from 22 dictionaries:
+# 2107 unique headwords from 23 dictionaries:
 #   SanskritSpellCheck\corrections_draft\ACC\ACC_wrong_readings.txt: 25
 #   SanskritSpellCheck\corrections_draft\AP90\AP90_wrong_readings.txt: 8
 #   SanskritSpellCheck\corrections_draft\AP\AP_wrong_readings.txt: 32
@@ -20,6 +20,7 @@
 #   SanskritSpellCheck\corrections_draft\CCS\CCS_wrong_readings.txt: 3
 #   SanskritSpellCheck\corrections_draft\GRA\GRA_wrong_readings.txt: 7
 #   SanskritSpellCheck\corrections_draft\GST\GST_wrong_readings.txt: 22
+#   SanskritSpellCheck\corrections_draft\IEG\IEG_wrong_readings.txt: 40
 #   SanskritSpellCheck\corrections_draft\MD\MD_wrong_readings.txt: 1
 #   SanskritSpellCheck\corrections_draft\MW72\MW72_wrong_readings.txt: 77
 #   SanskritSpellCheck\corrections_draft\MW\MW_wrong_readings.txt: 630
@@ -35,6 +36,7 @@
 #   SanskritSpellCheck\corrections_draft\YAT\YAT_wrong_readings.txt: 1
 ABasvara
 AGAtin
+AGAwana
 ASIna
 ASIr
 ASItakI
@@ -88,6 +90,7 @@ Asaya
 AsparSa
 Atireka
 AvESika
+Avara
 Avaritf
 AvarjanA
 Aviz
@@ -101,6 +104,7 @@ BUmIBuj
 BUmIpati
 BUyaS
 BUzaRA
+BaRqAra
 BadravalA
 Bagini
 BaktAruci
@@ -169,6 +173,7 @@ JampA
 KARqaka
 KArIjaNGa
 KaRqIka
+KadgaDara
 Kalidruma
 Karjuraka
 KarparIkA
@@ -247,8 +252,10 @@ Sarita
 Sasitf
 Sastrika
 SataGni
+SatikA
 Savaka
 Sazya
+Seka
 SiKaRqi
 SiMhARaka
 SiNGAna
@@ -314,12 +321,14 @@ aDIkzepa
 aDamA
 aDamarRA
 aDiBOtika
+aDikArika
 aDolamva
 aDvA
 aDyASana
 aDyAropana
 aGay
 aKalita
+aNgaraka
 aNgulIkA
 aRU
 aRUka
@@ -349,6 +358,7 @@ agAha
 agneya
 agnivAhu
 agnyADeyika
+agrahArika
 ahAta
 ahIraRI
 ahiPeRa
@@ -474,6 +484,7 @@ azwakapAla
 bA
 bARAparRi
 bARI
+bAcaka
 bAhU
 bAhuputra
 bAladIkzita
@@ -558,6 +569,7 @@ candrasUra
 carATa
 carawI
 carmam
+caruka
 cattra
 catuS
 caturASIti
@@ -572,7 +584,10 @@ cintitA
 citrataRqulA
 citrikAra
 dAGa
+dARa
 dARqaka
+dARqanAyaka
+dARqavAsika
 dAmam
 dArA
 dArika
@@ -583,6 +598,7 @@ dAtta
 dAvat
 dAyA
 dEvanirmita
+dEvaputra
 dEvatA
 dIkzaRA
 dIkzaRIyA
@@ -594,6 +610,7 @@ daRqakA
 daSAdaSin
 daSEraka
 daSatI
+daSavanDa
 dadrUrogin
 dahuka
 dakziRabanDa
@@ -619,6 +636,8 @@ dfzwA
 dfzwaraTa
 df|a
 diDIzu
+dibira
+dinAra
 ditI
 dor
 drORikA
@@ -677,6 +696,7 @@ gaReruka
 gaRitA
 gadADarI
 gadagada
+gadyA
 gajapippali
 galu
 ganDASuRqinI
@@ -705,6 +725,7 @@ granTakUwI
 granTiparRA
 guRABUta
 guRi
+guptakA
 guqodana
 gurU
 hAkkAra
@@ -768,6 +789,7 @@ jUq
 jYAnadarpana
 jYAnavaraRIya
 jYAtA
+jagati
 jalaDI
 jalahara
 jamat
@@ -802,6 +824,7 @@ kAlpam
 kAluza
 kAmalI
 kAmatva
+kAnuka
 kAnyAkubja
 kAraRin
 kArpawin
@@ -989,6 +1012,7 @@ mahASAntI
 mahASUdrA
 mahAbIra
 mahAdevA
+mahAmaRqalIka
 mahAmagna
 mahAmahA
 mahAmani
@@ -1061,8 +1085,10 @@ nIvid
 naBaS
 nadija
 nagarOzaDI
+nakara
 nalini
 namrA
+naptfka
 narDawaka
 navatI
 netrABisyanda
@@ -1073,6 +1099,7 @@ nfsenA
 niBftA
 niDyApti
 niSAWaka
+niSadi
 niScira
 nicUla
 nikilviza
@@ -1133,6 +1160,7 @@ pAtnI
 pAwalikA
 pEtfyajYiya
 pEzwikA
+pIWika
 pItasAla
 pItavIjA
 pIwikA
@@ -1152,6 +1180,7 @@ paYcasvara
 paYcavarzika
 padArTatattvabivecana
 padI
+padakA
 padapadma
 padmavIjABa
 padvA
@@ -1302,12 +1331,14 @@ rATa
 rAjA
 rAjAn
 rAjIPalA
+rAjanaka
 rAtriMdivA
 rAyana
 rIwi
 rOhiRI
 rOra
 rOruka
+rU
 raNGanATa
 raRati
 raSana
@@ -1331,6 +1362,7 @@ rizwA
 rocama
 rolA
 romAvali
+ruRqA
 rudantIkA
 rudrIya
 rugma
@@ -1411,12 +1443,14 @@ sahasranITa
 sahavratA
 samAdapana
 samAntaka
+samAraRa
 samAvApti
 samagrya
 saman
 samanvI
 samarTanA
 samasama
+samata
 samatikrAma
 samavaSaraRa
 samitar
@@ -1504,6 +1538,7 @@ sutAraka
 sutaka
 sutanU
 sutasomA
+suttee
 suveDa
 suyaSa
 suyamA
@@ -1531,6 +1566,7 @@ tArRi
 tAyaRa
 tIrTarAji
 tUlanAli
+talAka
 talaSabda
 talpalA
 tamAlakA
@@ -1741,6 +1777,7 @@ vakulI
 vakzaS
 valAha
 valAna
+valIvarda
 valasUdana
 valiBuj
 valipodakI
@@ -1750,6 +1787,7 @@ vanDula
 vanazad
 vapIha
 vapuz
+varAwakA
 varAwaki
 varcasyA
 vardAlikA
@@ -1826,6 +1864,7 @@ vfzay
 viBUzitA
 viBraMsa
 viDI
+viMsatima
 viPalASa
 viSAstf
 viSala
@@ -1873,6 +1912,7 @@ virukza
 virupAkza
 visada
 visahya
+visaya
 viskamBa
 vismAyin
 visvasfj
@@ -2057,6 +2097,7 @@ vyAmarSa
 vyUhA
 vyapayana
 wAMkara
+wANk
 wiRwiRIkA
 wikA
 wowaka

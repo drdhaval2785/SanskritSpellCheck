@@ -6,6 +6,19 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.35.0] - 2026-06-24
+
+### Added
+- **IEG triage — 23/33 dicts.** Body-grounded triage of Sircar's *Indian Epigraphical Glossary*
+  (registered `IEG: 'en'`). Of **162 tier-A**: **0 fileable typos**, 40 documented-intentional
+  (cross-reference 21, other 19), 101 attested epigraphic terms, 3 unlocatable. Expected near-zero
+  precision — IEG deliberately records inscriptional spellings (Prakrit doubling, retroflex/dental
+  shifts, vowel/anusvāra variation) and cross-references Prakrit terms to their Sanskrit equivalents
+  (`dāṇa` "same as dāna"). Package: [corrections_draft/IEG/](corrections_draft/IEG/).
+
+### Changed
+- **Suppression list → 23 dicts** (IEG adds 40 do-not-file). `eval.py` false-positives stay **0**.
+
 ## [1.34.0] - 2026-06-24
 
 ### Added
