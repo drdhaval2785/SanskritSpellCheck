@@ -75,10 +75,33 @@ def csl_root():
     return os.path.join(GITHUB, 'csl-orig')
 
 
-def csl_dict_file(dict_code):
-    """csl-orig/v02/<dict>/<dict>.txt -- the canonical source text for a dictionary."""
+# External-source staging for dictionaries that are NOT in the csl-orig merge (e.g. PD,
+# the Deccan College Encyclopaedic Dictionary, CC BY-NC-SA -- fetched separately, gitignored).
+# A dict with external_src/<dict>/<dict>.txt is read from there; everything else from csl-orig.
+EXTERNAL_SRC = os.path.join(ROOT, 'external_src')
+
+
+def external_source_file(dict_code):
+    """Local staged source path for a non-csl-orig dictionary (may not exist)."""
     d = dict_code.lower()
-    return os.path.join(csl_root(), 'v02', d, d + '.txt')
+    return os.path.join(EXTERNAL_SRC, d, d + '.txt')
+
+
+def source_file(dict_code, csl_root_dir=None):
+    """The entry-text source for a dictionary: an external_src/ staging file if present
+    (PD and other non-csl-orig dicts), otherwise csl-orig/v02/<dict>/<dict>.txt. One
+    resolver so every step (triage_dict launch args, build_entry_index, make_changefiles)
+    agrees on where a dict's text lives."""
+    ext = external_source_file(dict_code)
+    if os.path.exists(ext):
+        return ext
+    d = dict_code.lower()
+    return os.path.join(csl_root_dir or csl_root(), 'v02', d, d + '.txt')
+
+
+def csl_dict_file(dict_code):
+    """The source text for a dictionary (external_src/ override, else csl-orig)."""
+    return source_file(dict_code)
 
 
 # --- workflow-output JSON ---------------------------------------------------
@@ -166,8 +189,10 @@ def _finalize(idx, cur, buf):
 
 
 def build_entry_index(csl_root, dictcode):
-    """Parse csl-orig/v02/<dict>/<dict>.txt into an EntryIndex; None if the file is absent."""
-    path = os.path.join(csl_root, 'v02', dictcode.lower(), dictcode.lower() + '.txt')
+    """Parse a dictionary's source text into an EntryIndex; None if the file is absent.
+    Source = external_src/<dict>/<dict>.txt if staged (non-csl-orig dicts like PD), else
+    <csl_root>/v02/<dict>/<dict>.txt (the passed csl_root honors make_changefiles' override)."""
+    path = source_file(dictcode, csl_root)
     if not os.path.exists(path):
         return None
     idx = EntryIndex()

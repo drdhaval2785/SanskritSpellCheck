@@ -8,8 +8,11 @@ run it with the **[`/dict-triage <DICT>`](../.claude/commands/dict-triage.md)** 
 (Sonnet classifies, Opus source-confirms, a human verifies).
 
 **32 of 33 triaged — 122 fileable typos across 11 dicts; ~2,433 documented-intentional spellings catalogued.**
-Only **PD** remains (its sources are not in `csl-orig`). The three cross-language dicts **BUR** / **STC**
-(French) and **BOP** (Latin) triaged 2026-06-24 — all **0 fileable**, as expected for mature foreign-gloss lexica.
+Only **PD** remains to be *run*. Its first source — the Deccan College *Encyclopaedic Dictionary*
+(English, 55 MB, 107,630 entries, CC BY-NC-SA) — is now **staged and wired** (`external_src/pd/`,
+fetched by [detectors/get_external_source.py](../detectors/get_external_source.py)); the triage is
+held for its **second source**. The three cross-language dicts **BUR** / **STC** (French) and **BOP**
+(Latin) triaged 2026-06-24 — all **0 fileable**, as expected for mature foreign-gloss lexica.
 Tier-A precision stays **near-zero** on mature, much-corrected dictionaries — the durable
 deliverable is the do-not-file list and *preventing bad bulk edits*, not the handful of real
 typos. The exception is **poorly-digitised sources**: SHS (15%), YAT (11%) and PWG (2.4%) carry many
@@ -40,7 +43,7 @@ provided) — it becomes triageable once they are wired into the pipeline.**
 | dictionary | tier-A | triage status |
 |---|--:|---|
 | [MW](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/mw) — Monier-Williams (1899) | 1954 | ✅ **4 fileable · 630 do-not-file** — [readme](MW/readme.md) · [file-first](MW/MW_file_first_sf.txt) · [do-not-file](MW/MW_wrong_readings.txt) · [queue](MW/MW_triaged.txt) |
-| PD | 1045 | ⏳ source not in csl-orig — **two external sources to be provided**, then triageable |
+| [PD](https://sanskrit-lexicon.uni-koeln.de/scans/PDScan/2020/web/index.php) — Encyclopaedic Dict. of Sanskrit (Deccan College, 1976–2009) | 1007 | 🟡 **source 1 of 2 staged → ready to triage** (920 to-judge, 0 unlocatable); held for source 2 — [readme](PD/readme.md) |
 | [BHS](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/bhs) — Edgerton, Buddhist Hybrid Sanskrit | 713 | ✅ **0 fileable · 294 do-not-file** — [readme](BHS/readme.md) · [do-not-file](BHS/BHS_wrong_readings.txt) · [queue](BHS/BHS_triaged.txt) |
 | [SCH](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/sch) — Schmidt, Nachträge (German, 1928) | 678 | ✅ **0 fileable · 109 do-not-file** — [readme](SCH/readme.md) · [do-not-file](SCH/SCH_wrong_readings.txt) · [queue](SCH/SCH_triaged.txt) |
 | [PW](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/pw) — Böhtlingk–Roth, Petersburg | 657 | ✅ **2 fileable · 255 do-not-file** — [readme](PW/readme.md) · [file-first](PW/PW_file_first_sf.txt) · [do-not-file](PW/PW_wrong_readings.txt) · [queue](PW/PW_triaged.txt) |
@@ -94,14 +97,18 @@ drives the whole sequence (incl. the source-verification rubric and the do-not-f
 
 ### Only one dictionary remains
 
-**32 of 33 are triaged.** The single remaining dict is **PD** — its two source files are **not in
-`csl-orig`** (the user will provide them), so it is not yet runnable. Re-runs of an already-triaged
-dict are **stochastic** — don't blindly overwrite a committed package.
+**32 of 33 are triaged.** The single remaining dict is **PD**, and it is now **runnable**: its first
+source is staged in `external_src/pd/` (the body-grounded triage reads it exactly like a `csl-orig`
+dict). The run is **held for PD's second source** so it isn't redone — but it can be triaged on
+source 1 alone at any time. Re-runs of an already-triaged dict are **stochastic** — don't blindly
+overwrite a committed package.
 
+```sh
+python detectors/get_external_source.py PD   # (re)stage source 1 on a fresh clone
+/dict-triage PD                              # run the triage (source 1 now; re-run when source 2 lands)
 ```
-# blocked until its external sources are wired into the pipeline:
-/dict-triage PD
-```
+
+See [PD/readme.md](PD/readme.md) for the source list, license, and second-source slot.
 
 ## Planned: orthographic-drift study
 

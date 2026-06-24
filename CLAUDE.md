@@ -67,6 +67,15 @@ appear in output (e.g. `Start-Consonant-Consonant` → `SCC`).
 "less fruitful" and excluded in places (e.g. [chg_nchg_sep.py](chg_nchg_sep.py)
 line 18) because they are domain-specific, not general Sanskrit lexica.
 
+**External dictionary sources (not in `csl-orig`).** A few dicts have headwords in
+`sanhw1.txt` but no `csl-orig/v02/<dict>/<dict>.txt` entry text — notably **PD** (Deccan
+College *Encyclopaedic Dictionary*, CC BY-NC-SA, ~55 MB). The body-grounded triage resolves a
+dict's entry text through `triage_util.source_file(dict_code)`, which prefers a gitignored
+`external_src/<dict>/<dict>.txt` staging file and otherwise falls back to `csl-orig`. Stage these
+with [detectors/get_external_source.py](detectors/get_external_source.py) (re-run on a fresh
+clone); they are **never committed here** (license + size). PD expects a **second source** —
+register its URL in that script.
+
 ## Shared transliteration library
 
 [function.php](function.php) (≈436 KB), [slp-dev.php](slp-dev.php) (SLP1→Devanagari)

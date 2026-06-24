@@ -6,6 +6,27 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.39.0] - 2026-06-24
+
+### Added
+- **PD wired in via an external-source mechanism — now triageable.** PD (the Deccan College
+  *Encyclopaedic Dictionary of Sanskrit on Historical Principles*, English, 1976–2009) is the one
+  Cologne-listed dict **not in the `csl-orig` merge**, which blocked its body-grounded triage. New
+  `triage_util.source_file(dict_code)` resolver prefers a gitignored `external_src/<dict>/<dict>.txt`
+  staging file and falls back to `csl-orig/v02/<dict>/<dict>.txt` — behaviour-preserving for every
+  existing dict (`csl_dict_file` and `build_entry_index` both route through it; test_triage.py 25/25,
+  MW still resolves to csl-orig). PD registered `en` in `triage_lang.py`.
+- **`detectors/get_external_source.py`** — fetch + unzip a non-csl-orig dict source into
+  `external_src/`. First source: PD's `pdtxt.zip` from the
+  [PDScan 2020 edition](https://sanskrit-lexicon.uni-koeln.de/scans/PDScan/2020/web/index.php)
+  (`pd.txt`, 55 MB, **107,630 entries**). The script has a slot for PD's **expected second source**.
+- **`external_src/` gitignored** — the PD text is CC BY-NC-SA 3.0 (© The Sanskrit Library / Thomas
+  Malten); this repo hosts QA tooling + do-not-file lists, not third-party dictionary text. Re-stage
+  on a fresh clone with `python detectors/get_external_source.py PD`.
+- **Verified ready:** `triage_dict.py PD` builds the package — **1,007 tier-A, 920 to body-judge, 0
+  unlocatable** (every PD headword resolves in the source). The triage run itself is **held for PD's
+  second source** so it isn't redone; documented in [corrections_draft/PD/readme.md](corrections_draft/PD/readme.md).
+
 ## [1.38.0] - 2026-06-24
 
 ### Added
