@@ -117,8 +117,10 @@ don't refactor them. They use no PHP-8-removed constructs (`each()`,
   dictionary's tier-A candidates into a verified FILE-FIRST queue + a do-not-file list by
   judging each against the dictionary's *own entry text* (not spelling alone). Run it with the
   **`/dict-triage <DICT>`** skill ([.claude/commands/dict-triage.md](.claude/commands/dict-triage.md));
-  hybrid models (Sonnet classify / Opus confirm). Output: `corrections_draft/<DICT>/`. Done for
-  MW/PW/VCP/PWG. ⚠️ Tier-A precision is near-zero on mature dicts; the LLM TYPO pass is
+  hybrid models (Sonnet classify / Opus confirm). Output: `corrections_draft/<DICT>/`. **Done for
+  all 33 dicts** (index: [corrections_draft/README.md](corrections_draft/README.md)) — 122 fileable
+  typos across 11 dicts, ~2,549 do-not-file spellings; the high-yield outliers are poorly-digitised
+  sources (SHS 37, YAT 27, ACC 22). ⚠️ Tier-A precision is near-zero on mature dicts; the LLM TYPO pass is
   stochastic (don't blindly re-run a verified package) — the do-not-file list is the real value.
   All steps share `detectors/triage_util.py`, the stdlib-only triage core: paths
   (`csl_root()`/`csl_dict_file()`, `package_dir()`/`work_dir()`), CLI helpers
