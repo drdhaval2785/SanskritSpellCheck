@@ -1,0 +1,34 @@
+; ACC body-confirmed fileable typos -- CORRECTIONS standard format (DICT:wrong:right:n)
+; 22 fileable (classified TYPO + source-confirmed + survived the Opus false-positive review) + 4 reviewed-out (commented below)
+; VERIFY each remaining case on the scan, flip trailing n->y for confirmed ones, then:
+;   python chg_nchg_sep.py ACC_file_first_sf.txt chg.txt nchg.txt
+ACC:bfhannArayaRopanizad:bfhannArAyaRopanizad:n
+ACC:SAkawayanavyAkaraRa:SAkawAyanavyAkaraRa:n
+ACC:SakawAyanasmfti:SAkawAyanasmfti:n
+ACC:dakziRamUrtisaMhitA:dakziRAmUrtisaMhitA:n
+ACC:jEminIyanyAyamAlAvistAra:jEminIyanyAyamAlAvistara:n
+ACC:mahAnArayaRopanizad:mahAnArAyaRopanizad:n
+ACC:parAmArTasAra:paramArTasAra:n
+ACC:rAsayAtraviveka:rAsayAtrAviveka:n
+ACC:vivekacUqAmaRI:vivekacUqAmaRi:n
+ACC:rupagosvAmin:rUpagosvAmin:n
+ACC:kAwakopanizad:kAWakopanizad:n
+ACC:metrAyaRIyopanizad:mEtrAyaRIyopanizad:n
+ACC:EtareyavrAhmaRa:EtareyabrAhmaRa:n
+ACC:SatapaTavrAhmaRa:SatapaTabrAhmaRa:n
+ACC:gAyatrIBAsya:gAyatrIBAzya:n
+ACC:sAttvikavrahmavidyAvilAsa:sAttvikabrahmavidyAvilAsa:n
+ACC:viSvarUpanivanDa:viSvarUpanibanDa:n
+ACC:zadarTasaMkzepa:zaqarTasaMkzepa:n
+ACC:zadftuvarRana:zaqftuvarRana:n
+ACC:saMnyasaviDi:saMnyAsaviDi:n
+ACC:SravaRadvAdaSIvratakalpa:SrAvaRadvAdaSIvratakalpa:n
+ACC:QuRqi:QuRQi:n
+; REVIEWED-OUT (redirect): Body is {{Lbody=15405}} redirect entry; variant-headword pointer, not safe to file though spelling non-standard.
+;ACC:bAdArAyaRasUtra:bAdarAyaRasUtra:n
+; REVIEWED-OUT (vrddhi): darSa- vs dArSa- vrddhi-derivative; both forms attested; terse colophon, no independent proof.
+;ACC:darSapOrRamAsika:dArSapOrRamAsika:n
+; REVIEWED-OUT (redirect): Body is {{Lbody=18569}} redirect entry; variant-headword pointer, not safe to file.
+;ACC:nArayaRIyopanizad:nArAyaRIyopanizad:n
+; REVIEWED-OUT (variant): Empty body (no source/title), appears twice identically; faithful colophon, no independent evidence.
+;ACC:dolayAtrAviveka:dolAyAtrAviveka:n

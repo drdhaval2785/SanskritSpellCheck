@@ -6,6 +6,20 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.34.0] - 2026-06-24
+
+### Added
+- **ACC triage — 22/33 dicts (22 fileable).** Body-grounded triage of Aufrecht's *Catalogus
+  Catalogorum* (registered `ACC: 'en'`). Of **174 tier-A**: **22 body-confirmed fileable typos** in
+  normalised work-titles (dropped long ā, vr→b, retroflex ḍ, sibilant/aspirate), 68 real titles/names,
+  25 do-not-file, 25 eyes, 4 typo-unsure. Ran Confirm + Review via subagent with explicit *direction*
+  and *faithful-colophon* checks — the gate excluded a reversed-direction pair (`aBijYAnaSAkuntala`,
+  already correct) and redirect/vṛddhi/variant entries. Package: [corrections_draft/ACC/](corrections_draft/ACC/).
+  - FILE-FIRST is DRAFT — verify each on the Aufrecht scan before filing.
+
+### Changed
+- **Suppression list → 22 dicts** (ACC adds 25 do-not-file). `eval.py` false-positives stay **0**.
+
 ## [1.33.0] - 2026-06-23
 
 ### Added

@@ -7,7 +7,7 @@ tier-A spelling candidates can be turned into a verified **FILE-FIRST** queue + 
 run it with the **[`/dict-triage <DICT>`](../.claude/commands/dict-triage.md)** skill
 (Sonnet classifies, Opus source-confirms, a human verifies).
 
-**21 of 33 triaged — 90 fileable typos across 9 dicts; ~2,292 documented-intentional spellings catalogued.**
+**22 of 33 triaged — 112 fileable typos across 10 dicts; ~2,317 documented-intentional spellings catalogued.**
 Tier-A precision stays **near-zero** on mature, much-corrected dictionaries — the durable
 deliverable is the do-not-file list and *preventing bad bulk edits*, not the handful of real
 typos. The exception is **poorly-digitised sources**: SHS (15%), YAT (11%) and PWG (2.4%) carry many
@@ -17,6 +17,7 @@ real OCR/keying errors, each confirmed by the entry's own etymology/inflection.
 |---|--:|--:|--:|
 | SHS (English, 1900) | 246 | **37** | 31 |
 | YAT (English, 1846) | 247 | **27** | 1 |
+| ACC (Catalogus Cat., 1891) | 174 | **22** | 25 |
 | PWG (German) | 497 | **12** | 248 |
 | MW (English, 1899) | 1954 | **4** | 630 |
 | SKD (Sanskrit) | 412 | **3** | 103 |
@@ -47,7 +48,7 @@ provided) — it becomes triageable once they are wired into the pipeline.**
 | [MW72](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/mw72) — Monier-Williams (1872, 1st ed) | 360 | ✅ **0 fileable · 77 do-not-file** — [readme](MW72/readme.md) · [do-not-file](MW72/MW72_wrong_readings.txt) · [queue](MW72/MW72_triaged.txt) |
 | [YAT](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/yat) — Yates, Sanskrit-English (1846) | 247 | ✅ **27 fileable · 1 do-not-file** (+32 b/v held for scan) — [readme](YAT/readme.md) · [file-first](YAT/YAT_file_first_sf.txt) · [do-not-file](YAT/YAT_wrong_readings.txt) · [queue](YAT/YAT_triaged.txt) |
 | [SHS](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/shs) — Śabda-Sāgara (English, 1900) | 246 | ✅ **37 fileable · 31 do-not-file** — [readme](SHS/readme.md) · [file-first](SHS/SHS_file_first_sf.txt) · [do-not-file](SHS/SHS_wrong_readings.txt) · [queue](SHS/SHS_triaged.txt) |
-| [ACC](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/acc) | 174 | — pending |
+| [ACC](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/acc) — Aufrecht, Catalogus Catalogorum | 174 | ✅ **22 fileable · 25 do-not-file** — [readme](ACC/readme.md) · [file-first](ACC/ACC_file_first_sf.txt) · [do-not-file](ACC/ACC_wrong_readings.txt) · [queue](ACC/ACC_triaged.txt) |
 | [BUR](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/bur) — Burnouf | 162 | — pending |
 | [IEG](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/ieg) — Sircar, Indian Epigraphical Glossary | 162 | — pending |
 | [INM](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/inm) | 161 | — pending |

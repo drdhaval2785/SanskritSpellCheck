@@ -1,0 +1,399 @@
+# ACC tier-A -- BODY-GROUNDED triage  (DRAFT; verify every kept case against the scan)
+#
+# The 144 engine tier-A candidates were judged against ACC's OWN entry text (csl-orig),
+# not spelling alone. A spelling detector cannot tell a typo from a real word, an
+# intentional variant / compounding form, or wrong-reading apparatus -- the entry can.
+# Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM
+# pass over the 'realword' set + source confirmation of every TYPO verdict.
+#
+# FINDING: of 144 tier-A candidates, 22 are body-confirmed fileable typos (15.3%).
+# 68 are real distinct words, 25 are spellings ACC documents on purpose (w.r./v.l./
+# in-comp./cross-ref -- filing them would CORRUPT ACC), 0 are not in the current
+# source, and 29 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
+# do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.
+
+# ===== BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file) (22) =====
+
+bfhannArayaRopanizad -> bfhannArAyaRopanizad  [dcs=0 ndicts=1 body=realword]
+    ACC: {#bfhannArayaRopanizad#} AS p. 120 (2 MSS.). Lz. 116, 2.
+    judged: The Upaniṣad is well known as Bṛhannārāyaṇopaniṣad (nārāyaṇa with long ā); the body's bare two-MS citation gives a missing-ā misspelling of a standard title.
+    confirm: Brhannarayanopanisad: Narayana has long A; suspect Naraya is a clear vowel-length digitization error.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=bfhannArayaRopanizad
+
+SAkawayanavyAkaraRa -> SAkawAyanavyAkaraRa  [dcs=0 ndicts=1 body=realword]
+    ACC: {#SAkawayanavyAkaraRa#} the grammar of the pseudo Śāka- ṭāyana. Gov. Or. Libr. Madras 95. C. Prakriyāsaṃgraha by Abhayacandra. ibid. This is probably a popular arrangement of Śāka- ṭāyana's grammar af
+    judged: Body itself spells the author 'pseudo Śākaṭāyana' with long ā, so the headword's short-a Śākaṭayana is a plain misspelling of Śākaṭāyana.
+    confirm: Body says 'pseudo Sakatayana'; Sakatayana has long A in -tAyana. Suspect short. Clear typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=SAkawayanavyAkaraRa
+
+SakawAyanasmfti -> SAkawAyanasmfti  [dcs=0 ndicts=1 body=realword]
+    ACC: {#SakawAyanasmfti#} Quoted by Devaṇṇa in Smṛticandrikā.
+    judged: Quoted by Devaṇṇa as the smṛti of Śākaṭāyana (long initial ā); the headword's short-a Śakaṭāyana is a misspelling of the standard sage-name.
+    confirm: Sakatayana has long initial A (SA); suspect Saka- short. Clear typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=SakawAyanasmfti
+
+dakziRamUrtisaMhitA -> dakziRAmUrtisaMhitA  [dcs=0 ndicts=1 body=realword]
+    ACC: {#dakziRamUrtisaMhitA#} tantr. Ulwar 2164. Extr. 629.
+    judged: The tantra is the Dakṣiṇāmūrti-saṃhitā (Dakṣiṇāmūrti, long ā); the headword's short-a dakṣiṇamūrti is a plain misspelling of the well-known deity name.
+    confirm: Daksinamurti has long A (DaksinA-); suspect dakziRa short. Clear typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=dakziRamUrtisaMhitA
+
+jEminIyanyAyamAlAvistAra -> jEminIyanyAyamAlAvistara  [dcs=0 ndicts=1 body=realword]
+    ACC: {#jEminIyanyAyamAlAvistAra#} by Someśvara (?). Ben. 90.
+    judged: The work is the Jaiminīya-nyāyamālā-vistara (vistara = elaboration, short final a); the headword's long -vistāra is a misspelling, body only a terse Ben. siglum with (?).
+    confirm: Jaiminiyanyayamalavistara (Madhava): -vistara has short a; suspect vistAra long. The (?) is on author. Clear typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=jEminIyanyAyamAlAvistAra
+
+mahAnArayaRopanizad -> mahAnArAyaRopanizad  [dcs=0 ndicts=1 body=realword]
+    ACC: {#mahAnArayaRopanizad#} Av. AS p. 4. 5. Lz. 116, 1. Peters. 6, 35.
+    judged: The Upaniṣad is the Mahānārāyaṇopaniṣad (Nārāyaṇa with long ā); the headword's nārayaṇa drops the ā, a bare misspelling of a well-known title.
+    confirm: Mahanarayanopanisad: Narayana long A; suspect Naraya short. Clear typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=mahAnArayaRopanizad
+
+parAmArTasAra -> paramArTasAra  [dcs=0 ndicts=1 body=realword]
+    ACC: {#parAmArTasAra#} or {#SezAryA#} śaiva, attributed to Śeṣanāga. Oxf. 353^a. Hall p. 105. L. 698. NW. 308. Bur- nell 93^b. Poona 629. C. by Rāghavānanda Muni. Hall p. 105. NW. 322. Burnell 93^b. Poona 
+    judged: The well-known śaiva work attributed to Śeṣanāga is the Paramārthasāra (paramārtha); the headword's parāmārtha is a vowel-transposition misspelling of the standard title.
+    confirm: Body: saiva, attr. Sesanaga = Paramarthasara; parama- has short a. Suspect parA- wrongly lengthens. Clear typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=parAmArTasAra
+
+rAsayAtraviveka -> rAsayAtrAviveka  [dcs=0 ndicts=1 body=realword]
+    ACC: {#rAsayAtraviveka#} by Śūlapāṇi. L. 4059.
+    judged: Śūlapāṇi's work on the Rāsayātrā festival; the festival name requires long -yātrā, so the headword's short-a rāsayātra is a missing-ā misspelling.
+    confirm: Rasayatra: yatra has long A; suspect yAtra drops it. By Sulapani. Clear typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=rAsayAtraviveka
+
+vivekacUqAmaRI -> vivekacUqAmaRi  [dcs=0 ndicts=1 body=realword]
+    ACC: {#vivekacUqAmaRI#} by Śaṅkarācārya. Ulwar 560.
+    judged: Śaṅkarācārya's celebrated Vivekacūḍāmaṇi ends in short -maṇi; the suspect's long -maṇī is a bare misspelling of the well-known title.
+    confirm: Vivekacudamani by Sankaracarya; maNi has short final i, suspect maNI long. Clear typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=vivekacUqAmaRI
+
+rupagosvAmin  -> rUpagosvAmin   [dcs=0 ndicts=1 body=realword]
+    ACC: {#rupa gosvAmin#} brother of Sanātana and Vallabha, son of Kumāra, grandson of Mukunda. See Sarvajña: Ujjvalanīlamaṇi. Utkalikāvallarī, written in 1550. Uddhavadūta. Upadeśāmṛta. Kārpaṇyapuñjikā. Gaṅg
+    judged: The famous Gauḍīya theologian is Rūpa Gosvāmin (long ū); the body's long entry describes exactly him, making 'rupa' a plain misspelling.
+    confirm: Body: Rupa Gosvamin, brother of Sanatana; Rupa has long U. Suspect rupa short. Clear typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=rupagosvAmin
+
+kAwakopanizad -> kAWakopanizad  [dcs=0 ndicts=1 body=realword]
+    ACC: {#kAwakopanizad#} {%add%} Oxf. 365^b. Haug 18. {%read%} W. p. 85. Peters. 3, 383. C. by Śaṅkarācārya. {%delete%} Poona 30. C. by Dāmodarācārya. {%read%} Oudh 1877, 4. C. by Raṅgarāmānuja. {%read%} Oud
+    judged: The Upaniṣad is the Kāṭhakopaniṣad (retroflex aspirate W=ṭha); the editorial {%add/read/delete%} apparatus treats it as the standard Kāṭhaka text, so the dental w is an error.
+    confirm: Kathakopanisad: Kathaka has retroflex Th (W); suspect w (T retroflex) is a clear typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=kAwakopanizad
+
+metrAyaRIyopanizad -> mEtrAyaRIyopanizad  [dcs=0 ndicts=1 body=realword]
+    ACC: {#metrAyaRIyopanizad#} Hz. 1173.
+    judged: The text is the Maitrāyaṇīya Upaniṣad (mE-/Maitr-, not me-); body cites it with a single Hz. siglum and the me- form is a bare vowel error.
+    confirm: Maitrayaniyopanisad: mai- = E; suspect me- (e). Neighbour entry uses mEtrA-. Clear typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=metrAyaRIyopanizad
+
+EtareyavrAhmaRa -> EtareyabrAhmaRa  [dcs=0 ndicts=1 body=realword]
+    ACC: {#EtareyavrAhmaRa#} AK 33 (Aṣṭaka 1--3). 34 (Aṣṭaka 3). AS p. 33 (4 MSS.). Bd. 51. IL (a short fragment of 3, 23 ff.). Lz. 20--31. Peters. 5, 37--39 (Pañcikā 5--7). C. by Sāyaṇa. AS p. 33. BC 236. 237
+    judged: The work is the well-known Aitareya-brāhmaṇa (b-, not vr-); body lists it as the standard Veda text with many sources and a Sāyaṇa commentary.
+    confirm: Aitareyabrahmana: brahmana has b; suspect vrAhmaRa (v) is a clear b/v typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=EtareyavrAhmaRa
+
+SatapaTavrAhmaRa -> SatapaTabrAhmaRa  [dcs=0 ndicts=1 body=realword]
+    ACC: {#SatapaTavrAhmaRa#} Vs. Mādhyaṃdina Śākhā, as far as stated. IO. 268. 311. 583 A. 964. 1263. 1277. 1379. 1471. 2143. W. p. 42--45. Oxf. 364. 376^b. 377^a. 378^b. 382^b. 383^a. 385^a. 395^b. Paris (D 
+    judged: The work is the famous Śatapatha-brāhmaṇa (b-, not vr-); body lists the Mādhyandina Śākhā text with extensive standard sources.
+    confirm: Satapathabrahmana: brahmana has b; suspect vrAhmaRa (v) clear b/v typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=SatapaTavrAhmaRa
+
+gAyatrIBAsya  -> gAyatrIBAzya   [dcs=0 ndicts=1 body=realword]
+    ACC: {#gAyatrIBAsya#} Oxf. 296^b. B. 1, 12. Taylor 1, 282. Oppert II, 6254. --by Śaṅkarācārya. B. 4, 50. BA. 16.
+    judged: The word is bhāṣya (retroflex z=ṣ, not dental s); body lists a commentary work incl. one by Śaṅkarācārya, plainly a Gāyatrī-bhāṣya.
+    confirm: Gayatribhasya by Sankaracarya: bhasya has retroflex z; suspect BAsya (dental s) clear typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=gAyatrIBAsya
+
+sAttvikavrahmavidyAvilAsa -> sAttvikabrahmavidyAvilAsa  [dcs=0 ndicts=1 body=realword]
+    ACC: {#sAttvikavrahmavidyAvilAsa#} vaiṣṇava. Taylor 1, 181. 224. 301. Oppert 5213.
+    judged: The compound contains brahma- (b-, not vr-); body records a vaiṣṇava work (Sāttvika-brahmavidyāvilāsa) with Taylor and Oppert citations.
+    confirm: Sattvikabrahmavidyavilasa: brahma has b; suspect vrahma (v) clear b/v typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=sAttvikavrahmavidyAvilAsa
+
+viSvarUpanivanDa -> viSvarUpanibanDa  [dcs=0 ndicts=1 body=realword]
+    ACC: {#viSvarUpanivanDa#} from the Bhaviṣyottarapurāṇa. Ulwar 1456.
+    judged: The word is nibandha (b-, not v-); body records a work from the Bhaviṣyottarapurāṇa with an Ulwar citation, plainly Viśvarūpa-nibandha.
+    confirm: Visvarupanibandha: nibandha has b; suspect nivanDa (v) clear b/v typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=viSvarUpanivanDa
+
+zadarTasaMkzepa -> zaqarTasaMkzepa  [dcs=0 ndicts=1 body=realword]
+    ACC: {#zadarTasaMkzepa#} vedānta by Rāmamiśra. Quoted in Nyāya- siddhāñjana pp. 106. 122. 125. 130.
+    judged: The first member is ṣaḍ- (retroflex q=ḍ, not dental d) before artha; body records a vedānta work by Rāmamiśra (Ṣaḍartha-saṃkṣepa).
+    confirm: Sadarthasamksepa: saD (six) has retroflex D (q); suspect zad (dental d) clear typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=zadarTasaMkzepa
+
+zadftuvarRana -> zaqftuvarRana  [dcs=0 ndicts=1 body=realword]
+    ACC: {#zadftuvarRana#} kāvya by Kṛṣṇa Bhaṭṭa. Bd. 475.  [Page3-141-a+ 44]
+    judged: The word is ṣaḍṛtu- (ṣaḍ + ṛtu, retroflex q=ḍ); body records a kāvya by Kṛṣṇa Bhaṭṭa (Ṣaḍṛtuvarṇana), so the d is an error.
+    confirm: Sadrtuvarnana (six seasons): saD has retroflex D (q); suspect zad (dental d) clear typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=zadftuvarRana
+
+saMnyasaviDi  -> saMnyAsaviDi   [dcs=0 ndicts=1 body=realword]
+    ACC: {#saMnyasaviDi#} Kh. 62. Rice 220. BP. 301. --Baudh. B. 1, 186. --attributed to Śaunaka. L. 683. See Ekadaṇḍisaṃ- nyāsavidhi. --by Viṣṇucitta. Oppert 5207. II, 8471. --by Viṣṇutīrtha. Burnell 109^b. O
+    judged: The work is the Saṃnyāsavidhi (saṃnyāsa, long ā); the rich multi-source body cross-references Ekadaṇḍisaṃnyāsavidhi with the standard long-ā spelling, exposing the short-a key as an error.
+    confirm: Samnyasavidhi: samnyAsa has long A; suspect saMnyasa drops it. Clear typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=saMnyasaviDi
+
+SravaRadvAdaSIvratakalpa -> SrAvaRadvAdaSIvratakalpa  [dcs=0 ndicts=1 body=realword]
+    ACC: {#SravaRadvAdaSIvratakalpa#} Gov. Or. Libr. Madras 99.
+    judged: The festival is the Śrāvaṇa (month) dvādaśī; companion entry SravaRadvAdaSImAhAtmya explicitly corrects to Śrāvaṇa, so the short-a Śravaṇa here is the same misspelling.
+    confirm: Sravana (month) has long A; suspect SravaRa short. Clear typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=SravaRadvAdaSIvratakalpa
+
+QuRqi         -> QuRQi          [dcs=0 ndicts=1 body=realword]
+    ACC: {#QuRqi#} Mahārāja, patron of Viśvanātha (Dhuṇḍhipratāpa).  [Page1-215-a+ 48]
+    judged: Body's parenthetical (Dhuṇḍhipratāpa) shows the name is Dhuṇḍhi with retroflex Q in both syllables, so the second-syllable q (dental ḍ) is a misspelling.
+    confirm: Body: Dhundhipratapa -> name is Dhundhi (final Dh=Q); suspect qi (Di) clear typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=QuRqi
+
+# ===== BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted (4) =====
+
+bAdArAyaRasUtra -> bAdarAyaRasUtra  [dcs=0 ndicts=1 body=realword]
+    ACC: {{Lbody=15405}}  (redirect -> brahmasUtra)
+    judged: Redirect to brahmasUtra: the work is Bādarāyaṇa's sūtra (the sage Bādarāyaṇa, short second a), so the headword's bādārāyaṇa is a misspelling.
+    confirm: Badarayana: long A then short a; suspect bAdArA wrongly lengthens 2nd syllable. Non-standard spelling.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=bAdArAyaRasUtra
+
+darSapOrRamAsika -> dArSapOrRamAsika  [dcs=0 ndicts=1 body=realword]
+    ACC: {#darSapOrRamAsika#} Bik. 118.
+    judged: The rite is the Dārśapaurṇamāsika (the -ika vṛddhi derivative of darśa-paurṇamāsa requires initial dā-); the headword's short-a darśa- is a misspelling, here only a bare Bik. siglum.
+    confirm: Vrddhi-derivative ambiguity: darSa- vs dArSa-; terse colophon (Bik. 118), no independent proof. Default false.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=darSapOrRamAsika
+
+nArayaRIyopanizad -> nArAyaRIyopanizad  [dcs=0 ndicts=1 body=realword]
+    ACC: {{Lbody=18569}}  (redirect -> yAjYikyupanizad)
+    judged: Redirect to yAjYikyupanizad; the work is the Nārāyaṇīyopaniṣad (Nārāyaṇa, long ā), so the headword's nārayaṇīya is a missing-ā misspelling.
+    confirm: Narayaniyopanisad: Narayana long A; suspect Naraya short. (Body is Lbody redirect.)
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=nArayaRIyopanizad
+
+dolayAtrAviveka -> dolAyAtrAviveka  [dcs=0 ndicts=1 body=realword x2]
+    ACC: {#dolayAtrAviveka#} || {#dolayAtrAviveka#} by Śūlapāṇi. CS 2. 340. 605.
+    judged: Śūlapāṇi's work is the Dolāyātrāviveka (the festival Dolāyātrā, long ā); the headword's dolayātrā with short a is a misspelling (parallel to rāsayātrāviveka by the same author).
+    confirm: Dolayatra: Dola (swing) has long A; suspect dola short. But body empty - no independent evidence.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=dolayAtrAviveka
+
+# ===== BUCKET 3  REVIEW -- undecidable without the printed page (25) =====
+
+SrAvaRadvAdaSI -> SravaRadvAdaSI  [dcs=1 ndicts=2 body=realword]
+    ACC: {#SrAvaRadvAdaSI#} dh. Burnell 110^b. BP. 300.
+    judged: Body only repeats headword as a dh. work with two sigla; SrA-/Sra- vowel length not independently confirmed.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=SrAvaRadvAdaSI
+
+bAlAtantra    -> bAlatantra     [dcs=0 ndicts=2 body=realword]
+    ACC: {#bAlAtantra#} Mentioned in Āgamatattvavilāsa.
+    judged: Body only says 'Mentioned in Āgamatattvavilāsa' with no evidence for the bAlA-/bAla- vowel length of the title.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=bAlAtantra
+
+SabdaratnAvali -> SabdaratnAvalI  [dcs=0 ndicts=1 body=realword]
+    ACC: {#SabdaratnAvali#} Tod 105 (inc.).
+    judged: Body only repeats the headword with one source and is marked inc.; the -avali/-avalI vowel length is not independently confirmed.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=SabdaratnAvali
+
+Sikzopanizad  -> SIkzopanizad   [dcs=0 ndicts=1 body=realword]
+    ACC: {#Sikzopanizad#} Peters. 6, 46.
+    judged: Body just cites Peters. 6,46 and repeats the headword with no evidence for the long SI- spelling.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=Sikzopanizad
+
+SlokAvalI     -> SlokAvali      [dcs=0 ndicts=1 body=realword]
+    ACC: {#SlokAvalI#} poetry. AK 591.
+    judged: Body merely repeats the headword with category 'poetry' and source AK 591; the -avalI/-avali ending is not corroborated.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=SlokAvalI
+
+kullukaBawwa  -> kullUkaBawwa   [dcs=0 ndicts=1 body=realword x2]
+    ACC: {#kulluka Bawwa#} Rūpaprakāśa gr. || {#kulluka Bawwa#} Śrāddhasāgara, the second part of his Smṛti- sāgara.
+    judged: Body lists works of this author but gives no independent evidence on the kulluka/kullUka vowel length.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=kullukaBawwa
+
+sarvapfzwezwiprayoga -> sarvapfzWezwiprayoga  [dcs=0 ndicts=1 body=realword]
+    ACC: {#sarvapfzwezwiprayoga#} Hiraṇyak. NP. IX, 4.
+    judged: Body only repeats the headword with sources (Hiraṇyak. NP.); retroflex w vs W not independently confirmed.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=sarvapfzwezwiprayoga
+
+veDavicAra    -> vedavicAra     [dcs=0 ndicts=1 body=realword]
+    ACC: {#veDavicAra#} jy. Pheh 9.
+    judged: Body just repeats the headword as a jy. work with one siglum (Pheh 9); D/d not corroborated, though Vedavicāra is the expected form.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=veDavicAra
+
+BagavadgITArTasaMgraharakzA -> BagavadgItArTasaMgraharakzA  [dcs=0 ndicts=1 body=realword]
+    ACC: {#BagavadgITArTasaMgraharakzA#} Gov. Or. Libr. Madras 23.
+    judged: Body only gives a single Madras library siglum; the gITa/gIta length difference is not independently confirmable.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=BagavadgITArTasaMgraharakzA
+
+pApAka        -> pApaka         [dcs=3 ndicts=2 body=realword]
+    ACC: {#pApAka#} poet. Skm.
+    judged: Poet recorded only with the Skm siglum; no independent evidence distinguishes Pāpāka from Pāpaka.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=pApAka
+
+sAtala        -> sAtalA         [dcs=3 ndicts=2 body=realword]
+    ACC: {#sAtala#} poet. Sbhv.
+    judged: Poet recorded only with the Sbhv siglum and no further evidence of the correct ending.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=sAtala
+
+vAgura        -> vAgurA         [dcs=3 ndicts=2 body=realword]
+    ACC: {#vAgura#} poet. Skm.  [Page1-559-a+ 46]
+    judged: Poet recorded only with the Skm siglum; nothing in the body confirms vāgura vs vāgurā.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=vAgura
+
+kUka          -> kuka           [dcs=1 ndicts=1 body=realword]
+    ACC: {#kUka#} son of Vyāsanārāyaṇa-, son of Govinda, father of Mādhava Śukla (Kuṇḍakalpadruma 1656).
+    judged: Body records Kūka as an ancestor name in a genealogy; a personal name whose kU-/ku- vowel length cannot be independently verified.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=kUka
+
+ApAdeva       -> Apadeva        [dcs=0 ndicts=1 body=realword]
+    ACC: {#ApAdeva#} Grahapīṭhamālā jy. Tithitattvasāra dh. B. 3, 84.
+    judged: Terse author/work entry with only a B. siglum; Apadeva is a known author but the body gives no independent confirmation of the vowel length.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=ApAdeva
+
+BAwwakArikA   -> BawwakArikA    [dcs=0 ndicts=1 body=realword]
+    ACC: {#BAwwakArikA#} mīm. Oppert II, 4791.
+    judged: One-line mīmāṃsā title with a single Oppert siglum and no evidence distinguishing BAwwa- from Bawwa-.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=BAwwakArikA
+
+durgadAsa     -> durgAdAsa      [dcs=0 ndicts=1 body=realword]
+    ACC: {#durgadAsa#} son of Vāsudeva, pupil of Bhaṭṭa Devacandra: Vidagdhamukhamaṇḍanaṭīkā.
+    judged: Author entry for the son of Vāsudeva with no source siglum; both Durgadāsa and Durgādāsa exist as names, so the body does not confirm an error.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=durgadAsa
+
+keSAvAditya   -> keSavAditya    [dcs=0 ndicts=1 body=realword]
+    ACC: {#keSAvAditya#} Nalodayaṭīkā. B. 2, 86. Peters. 3, 395.
+    judged: Author of a Nalodayaṭīkā with two sigla and no independent spelling evidence; Keśava- vs Keśāva- cannot be resolved from the terse body.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=keSAvAditya
+
+pattrAvalAmbana -> pattrAvalambana  [dcs=0 ndicts=1 body=realword]
+    ACC: {#pattrAvalAmbana#} vedānta, by Vallabha Dīkṣita. IO. 2366. C. Brahmavādārtha by Tāpīśa IO. 2080.
+    judged: Vedānta work by Vallabha Dīkṣita with one IO siglum; the title (pattra-avalambana) is plausibly avalambana but the body offers no confirmation.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=pattrAvalAmbana
+
+BawwasAra     -> BAwwasAra      [dcs=0 ndicts=1 body=realword]
+    ACC: {#BawwasAra#} ny. Rice 114.
+    judged: Nyāya title with one Rice siglum; Bhaṭṭasāra vs Bhāṭṭasāra cannot be resolved from the terse body.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=BawwasAra
+
+maheSvaratantra -> mAheSvaratantra  [dcs=0 ndicts=1 body=realword]
+    ACC: {#maheSvaratantra#} Ulwar 2290. Extr. 658.
+    judged: Tantra with one Ulwar siglum; both Maheśvaratantra and Māheśvaratantra are attested forms, and the terse body gives no proof of error.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=maheSvaratantra
+
+harikaRWa     -> hArikaRWa      [dcs=0 ndicts=2 body=realword]
+    ACC: {#harikaRWa#} Kirātārjunīyaṭīkā.
+    judged: Body only names a Kirātārjunīyaṭīkā; the hari-/hAri- initial vowel length of this name is not independently confirmable.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=harikaRWa
+
+kfzRaya       -> kfzRAya        [dcs=0 ndicts=1 body=realword]
+    ACC: {#kfzRaya#} son of Nṛsiṃha, younger brother of Veṅkaṭara- maṇa: Yogavāsiṣṭhasaptaśatī.
+    judged: Body records a personal name in a genealogy (author of Yogavāsiṣṭhasaptaśatī); the -aya/-Aya ending cannot be independently verified.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=kfzRaya
+
+DikowI        -> DIkowI         [dcs=0 ndicts=1 body=realword]
+    ACC: {#DikowI#} jy. by Śrīpati. B. 4, 150 (and C.). Pheh 10. NP. IX, 52. C. Oudh VII, 4.
+    judged: Jyotiṣa work by Śrīpati with several sigla; Dhikoṭī vs Dhīkoṭī cannot be resolved from the terse body.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=DikowI
+
+baNgAla       -> vaNgAla        [dcs=0 ndicts=2 body=realword]
+    ACC: {#baNgAla#} poet. Skm.
+    judged: Poet recorded only with the Skm siglum; b/v interchange is common in manuscripts and the body gives no evidence which is correct.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=baNgAla
+
+tolakamAhAtmya -> wolakamAhAtmya  [dcs=0 ndicts=1 body=realword]
+    ACC: {#tolakamAhAtmya#} Bl. 2.
+    judged: Body only gives one terse siglum (Bl. 2); the initial t-/w- (retroflex) of this place-name māhātmya is not independently confirmable.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=ACC&key=tolakamAhAtmya
+
+# ===== BUCKET 4  REAL-WORD -- a distinct real word; the fix would merge two words (68) =====
+sarvaMkazA    -> sarvaMkaza    | ACC: {#sarvaMkazA#} Śiśupālavadhaṭīkā by Mallinātha. | Mallinātha's celebrated commentary on the Śiśupālavadha is the Sarvaṃkaṣā (feminine -ā ṭīk
+aBijYAnaSAkuntala -> aBijYAnaSakuntala | ACC: {#aBijYAnaSAkuntala#} by Kālidāsa. AK 583. 584 (inc.). AS p. 11. BC 97. 266. Bd. 521. IL ( | The famous Kālidāsa play is standardly Abhijñānaśākuntala (long ā), so the suspect spellin
+jayamaNgalA   -> jayamaNgala   | ACC: {#jayamaNgalA#} Jayamaṅgala's C. on the Bhaṭṭikāvya. || {#jayamaNgalA#} Bhāgavatapurāṇavya | Body lists three distinct commentaries titled Jayamaṅgalā (on Bhaṭṭikāvya, Bhāgavata, and 
+SabdaprAmARyarahasya -> SabdAprAmARyarahasya | ACC: {#SabdaprAmARyarahasya#} ny. by Mathurānātha. Stein 143. | A nyāya work by Mathurānātha on śabda-prāmāṇya (verbal authority); Śabdaprāmāṇya- is the c
+devatAvArIpUjA -> devatAvAripUjA | ACC: {#devatAvArIpUjA#} vārī is kalaśa. | Body explicitly glosses 'vārī is kalaśa', confirming the long -vArI- is the intended attes
+amftadeva     -> anftadeva     | ACC: {#amftadeva#} poet. Sbhv. | Body records Amṛtadeva as a poet (Sbhv.); the suggested 'anftadeva' is not a plausible nam
+argalA        -> argala        | ACC: {#argalA#} stotra. Oppert II, 1727. | Body records {#argalA#} stotra with a single Oppert siglum and gives no independent eviden
+kAmaSastra    -> kAmaSAstra    | ACC: {#kAmaSastra#} kāvya, by Silhapāṭa. Rādh 20. | Title of a kāvya by Silhapāṭa recorded with one Rādh siglum; despite resemblance to kāmaśā
+anAkulA       -> anAkula       | ACC: {#anAkulA#} by Haradatta. See Āpastambagṛhyasūtra- bhāṣya. | A commentary by Haradatta titled Anākulā (cross-ref 'See Āpastambagṛhyasūtrabhāṣya'); the 
+anAvilA       -> anAvila       | ACC: {#anAvilA#} Āśvalāyanagṛhyasūtrabhāṣya by Haradatta. Burnell 13^b. Oppert II, 5155. | Haradatta's Āśvalāyanagṛhyasūtrabhāṣya titled Anāvilā with two sigla; the feminine -ā comm
+aSvatantra    -> asvatantra    | ACC: {#aSvatantra#} Quoted by Rāyamukuṭa. | Quoted by Rāyamukuṭa as Aśvatantra (aśva = horse), a meaningful title; the suggestion asva
+uttarAtantra  -> uttaratantra  | ACC: {#uttarAtantra#} Quoted by Pūrṇānanda. L. 2067. || {#uttarAtantra#} tantra. Rep. p. 16. | Recorded twice as a tantra title with sources (L. 2067, Rep. p. 16) and no variant note, s
+Ajaqa         -> ajaqa         | ACC: {#Ajaqa#} son of Tribhuvanapāla, grandson of Ḍālyani: C. on Halāyudha's Abhidhānaratnamālā | Author name Ājaḍa, son of Tribhuvanapāla, recorded with two commentary entries and a P. si
+triSiKA       -> triSiKa       | ACC: {#triSiKA#} Paribhāṣenduśekharaṭīkā by Lakṣmīnṛsiṃha. Hz. 251. | Title of a Paribhāṣenduśekharaṭīkā by Lakṣmīnṛsiṃha; the feminine -ā commentary-title spel
+vAsantikA     -> vAsantika     | ACC: {#vAsantikA#} nāṭaka by Rāmacandra. IO. 2353. No. 4136. | A nāṭaka by Rāmacandra titled Vāsantikā with IO siglum; the feminine -ā play-title spellin
+kfzRIya       -> kfzRiya       | ACC: {#kfzRIya#} astrol. in 31 Adhyāyāḥ by Kṛṣṇa. Whish 171. 172 (fr.). | An astrology work in 31 adhyāyas by Kṛṣṇa, i.e. Kṛṣṇīya (the -īya derivative from Kṛṣṇa), 
+azwamaNgalA   -> azwamaNgala   | ACC: {#azwamaNgalA#}, a C. on Durgasiṃha's Kātantravṛtti, by Rāmakiśora. | A commentary on Durgasiṃha's Kātantravṛtti by Rāmakiśora titled Aṣṭamaṅgalā; the feminine 
+BAvasAgara    -> BavasAgara    | ACC: {#BAvasAgara#} jy. Peters. 5, 494. | Jyotiṣa title Bhāvasāgara (bhāva = an astrological house) is a meaningful title with a Pet
+SAbdaboDaprakriyA -> SabdaboDaprakriyA | ACC: {#SAbdaboDaprakriyA#} Peters. 1, 120. --a philosophical grammar by Rāmakṛṣṇa. L. 1695. Lah | A philosophical grammar by Rāmakṛṣṇa titled Śābdabodhaprakriyā (śābda-, the -a derivative)
+kfzRAmAhAtmya -> kfzRamAhAtmya | ACC: {#kfzRAmAhAtmya#} from Skandapurāṇa. Mack. 68. Poona 458. See Kṛṣṇānadīmāhātmya. || {#kfzR | Two entries with sources, one cross-referencing Kṛṣṇānadīmāhātmya; Kṛṣṇāmāhātmya (māhātmya
+meDAkara      -> meDAkAra      | ACC: {#meDAkara#} father of Jayānanda (Janmapaddhati). | Author name Medhākara, father of Jayānanda; Medhākara (medhā-kara) is a normal personal na
+sAmAnyABAvavyavasTApana -> sAmAnyaBAvavyavasTApana | ACC: {#sAmAnyABAvavyavasTApana#} by Gadādhara. Hz. 1250. | A work by Gadādhara on sāmānya-abhāva (absence of the universal); Sāmānyābhāva- is the cor
+suDADara      -> suDADAra      | ACC: {#suDADara#} father of Harṣadhara (Varṣatantraṭīkā). | Author name Sudhādhara, father of Harṣadhara; -dhara (bearing) is the normal name ending, 
+veRugItA      -> veRugIta      | ACC: {#veRugItA#} from the Bhāgavatapurāṇa 10, 21. AS p. 181. | The Veṇugītā is a well-known section of the Bhāgavatapurāṇa (10.21), conventionally femini
+yAjamAnaprayoga -> yajamAnaprayoga | ACC: {#yAjamAnaprayoga#} Āśval. Bhk. 12. | An Āśvalāyana ritual text titled Yājamānaprayoga (yājamāna, the vṛddhi adjective of yajamā
+brAhmasidDAnta -> brahmasidDAnta | ACC: {#brAhmasidDAnta#} jy. Mentioned by Varāhamihira in Bṛ- hatsiddhānta ch. 2. | Body records a jy. work mentioned by Varāhamihira; Brāhma-siddhānta (the well-known astron
+pAdamaYjarI   -> padamaYjarI   | ACC: {#pAdamaYjarI#} ‘a treatise on Ṛgveda’. NP. VI, 4. | Body glosses it as 'a treatise on Ṛgveda' (NP. VI,4); Pādamañjarī is a known title and sta
+akulAgamatantra -> AkulAgamatantra | ACC: {#akulAgamatantra#} tantra. B. 4, 252. Peters. 3, 399. Akulāgamatantre Yogasārasamuccaya.  | Body catalogues a tantra under this spelling with several sources (B., Peters., Bhr., Hpr.
+dIpAvalI      -> dIpAvali      | ACC: {#dIpAvalI#} dh. Lz. 316, 2. | A dharma text titled Dīpāvalī (the festival Dīpāvalī, long final ī); the suspect spelling 
+SabdarUpAvalI -> SabdarUpAvali | ACC: {#SabdarUpAvalI#} gr. AK 659. AS p. 195 (inc.). Peters. 5, 233.  [Page3-132-a+ 47] | A grammar text titled Śabdarūpāvalī (rūpa-āvalī, a 'series of word-forms'); the feminine -
+avantIKaRqa   -> avantiKaRqa   | ACC: {#avantIKaRqa#} from the Skandapurāṇa. AS p. 14. CS 4, 212. 253 (inc.). IO. 391. 2622. | Body records this as a section from the Skandapurāṇa with multiple sources (AS, CS, IO); a
+jYAnaratnAvali -> jYAnaratnAvalI | ACC: {#jYAnaratnAvali#} vedānta. Oppert 5538. A Jñānaratnāvalī is quoted by Hemādri in Dānakhaṇ | Two distinct works are catalogued under this spelling (vedānta; jy. by Jayaratna) with mul
+sUktAvalI     -> sUktAvali     | ACC: {#sUktAvalI#} moral sentences collected by an anonymous author. Different from the Suktāva | Body documents multiple distinct Sūktāvalī works and authors under this spelling; an estab
+tattvamuktAvali -> tattvamuktAvalI | ACC: {#tattvamuktAvali#} vedānta, by Appayya Dīkṣita. Oppert II, 8030. | Body attributes the work to Appayya Dīkṣita with an Oppert citation; recorded as a real ca
+vEzRavaDarmasuradrumamaYjarI -> vEzRavaDarmasuradrumamaYjari | ACC: {#vEzRavaDarmasuradrumamaYjarI#} (Nimbārka doctrine) by Saṃka- rṣaṇaśarana, a follower of  | Body records a specific Nimbārka-doctrine work by a named author with a Peters. citation; 
+yogamuktAvali -> yogamuktAvalI | ACC: {#yogamuktAvali#} med. by Ballāladeva (Bühler: Vallabhadeva). AK 936. Peters. 5, 542. | Body records a med. work with named author(s) and two sources (AK, Peters.); a catalogued 
+pAyIka        -> pAyika        | ACC: {#pAyIka#} poet. Skm. | Body records Pāyīka as a poet (Skm.); a personal name attested in its catalogued spelling.
+laGukaraRa    -> laGUkaraRa    | ACC: {#laGukaraRa#} jy. in 9 chapters, composed by Bhāvā Sadā- śiva in 1599. IO. 2464. | Body records a jy. work in 9 chapters by a dated named author (Bhāvā Sadāśiva, 1599) with 
+SArikAmAhAtmya -> sArikAmAhAtmya | ACC: {#SArikAmAhAtmya#} from the Bhṛṅgīśasaṃhitā. Stein 211. | Body records a māhātmya from the Bhṛṅgīśasaṃhitā with a Stein citation; catalogued title w
+pAraSIprakASa -> pArasIprakASa | ACC: {#pAraSIprakASa#} by Vedāṅgarāya. Ulwar 1238. 1837. | Body records a work by Vedāṅgarāya with two Ulwar citations; a catalogued title (Pārasī- '
+SarePa        -> sarePa        | ACC: {#SarePa#} poet. Sbhv. | Body records Śarepha as a poet (Sbhv.); the palatal S- initial is the attested name spelli
+anuvedAnta    -> aRuvedAnta    | ACC: {#anuvedAnta#} by Ānandatīrtha. NP. V, 36. Probably, the Anuvyākhyāna on the Brahmansūtra. | Body identifies it as Ānandatīrtha's work, 'Probably the Anuvyākhyāna'—reading the prefix 
+mAgarAjapadDati -> nAgarAjapadDati | ACC: {#mAgarAjapadDati#} med. by Māgacandradeva. Peters. 4, 40 (inc.). | Body attributes it to Māgacandradeva, whose name begins with M-, consistent with the suspe
+kuRqakalpalawA -> kuRqakalpalatA | ACC: {#kuRqakalpalawA#} dh. by Ḍhuṇḍhirāja AS p. 47. | Body records a dh. work by Ḍhuṇḍhirāja with an AS citation; catalogued title, retroflex -l
+parAmarSawippaRI -> parAmarSawippanI | ACC: {#parAmarSawippaRI#} Paris (B 54 b). | Body records a work with a single Paris siglum; ṭippaṇī with retroflex R is the normal San
+parAtantra    -> paratantra    | ACC: {#parAtantra#} tantra. CU. add. 1477. IO. 1412. | Tantra title with two sigla (CU, IO) and no variant note; the colophon spelling parātantra
+pratiBAgA     -> pratiBAga     | ACC: {#pratiBAgA#} jy. Oppert II, 4731. | Jyotiṣa title with one Oppert siglum; the feminine -ā title-spelling is recorded as-is wit
+rAsamaYjarI   -> rasamaYjarI   | ACC: {#rAsamaYjarI#} by Rāmadāsa. Tüb. 10. | Title by Rāmadāsa with one Tüb siglum; Rāsamañjarī is meaningful (rāsa) and the body offer
+sOraBi        -> sOraBI        | ACC: {#sOraBi#} Nāmamālā Ekākṣarī. See also Dvyakṣaranāma- mālā. Mātṛkānāmamālā. | A Nāmamālā Ekākṣarī titled Saurabhi with cross-refs to other nāmamālās; the short-i spelli
+DAraRapAraRavrata -> DAraRApAraRavrata | ACC: {#DAraRapAraRavrata#} a religious ceremony, consisting in eating and fasting on alternate  | Body describes the dhāraṇa-pāraṇa fasting ceremony with two sources; the descriptive gloss
+rAmagIta      -> rAmagItA      | ACC: {#rAmagIta#} by Kṛṣṇa Bhaṭṭa. Rgb. 401. | Title by Kṛṣṇa Bhaṭṭa with one Rgb siglum; gīta vs gītā both occur and the body gives no p
+aBinavatAmarasA -> aBinavatAmarasa | ACC: {#aBinavatAmarasA#} Makarandaṭīkā (jy) by Kṛṣṇaśarman. Oudh VII, 2.  [Page1-025-b+ 46] | Title of a Makarandaṭīkā by Kṛṣṇaśarman with one Oudh siglum; the feminine -ā title-spelli
+acalasaptamI  -> acalAsaptamI  | ACC: {#acalasaptamI#} from the Vratārka of Śaṅkara. Lz. 535. | Vrata text from Śaṅkara's Vratārka with one Lz siglum; the Acalasaptamī spelling is record
+cArucarya     -> cArucaryA     | ACC: {#cArucarya#} med. attributed to Dhanvantari Oppert 980. 1170. | Medical work attributed to Dhanvantari with two Oppert sigla; the cārucarya title-spelling
+BEkzAcaraRa   -> BEkzacaraRa   | ACC: {#BEkzAcaraRa#} kāvya, by Śivadāsa. ibid. | A kāvya by Śivadāsa titled Bhaikṣācaraṇa (bhaikṣa-ācaraṇa) recorded as-is; the long-ā comp
+SivApaYcANga  -> SivapaYcANga  | ACC: {#SivApaYcANga#} tantr. Stein 238. | A tantric work titled Śivāpañcāṅga with one Stein siglum; the colophon spelling is recorde
+cAturarTikA   -> cAturarTika   | ACC: {#cAturarTikA#} an. SB. 302. | An anonymous work titled Cāturarthikā with one SB siglum; the feminine -ā title-spelling i
+kUwAGawitalakzaRa -> kUwaGawitalakzaRa | ACC: {#kUwAGawitalakzaRa#} ny. from Nyāyaratnagādādharīpañcavāda- ṭīkā, by Raghunātha. Ben. 199 | A nyāya text from Raghunātha's work with many commentary sigla; kūṭa-ghaṭita is recorded w
+kfzRaguru     -> kfzRAguru     | ACC: {#kfzRaguru#} Munibhāvaprakāśa, vedānta. Oppert 5612. II, 1593. 4114. | Author/work entry (Munibhāvaprakāśa, vedānta) with three Oppert sigla; Kṛṣṇaguru is a plau
+liNgaDAraRAcandrikA -> liNgaDAraRacandrikA | ACC: {#liNgaDAraRAcandrikA#} śaiva. Adyar Libr. 53. | A śaiva work titled Liṅgadhāraṇācandrikā with one Adyar siglum; the long-ā compound juncti
+muhUrtaracanA -> muhUrtaracana | ACC: {#muhUrtaracanA#} Stein 170 (inc.). | Title Muhūrtaracanā with one Stein siglum (inc.); the feminine -ā title-spelling is record
+nyAsadeSavivaraRa -> nyAsAdeSavivaraRa | ACC: {#nyAsadeSavivaraRa#} bhakti, by Viṭṭhala Dīkṣita. Hall p. 150. | A bhakti work by Viṭṭhala Dīkṣita titled Nyāsadeśavivaraṇa with one Hall siglum; the colop
+rAsacandra    -> rasacandra    | ACC: {#rAsacandra#} son of Kṛṣṇa: Kālanirṇayadīpikā. | Author Rāsacandra, son of Kṛṣṇa (Kālanirṇayadīpikā); a personal name recorded as-is with n
+ramalAsAra    -> ramalasAra    | ACC: {#ramalAsAra#} by Śrīpati, son of Lakṣmīnṛsiṃha Bhaṭṭa. Ulwar 1935. | A work by Śrīpati titled Ramalāsāra with one Ulwar siglum; the colophon spelling is record
+somavArAvrata -> somavAravrata | ACC: {#somavArAvrata#} AK 208. | A vrata titled Somavārāvrata (Monday-fast) with one AK siglum; the colophon spelling is re
+vAstuvijYAnaratnakoSa -> vastuvijYAnaratnakoSa | ACC: {{Lbody=19073}}  (redirect -> ratnakoSa) | Redirect to ratnakoSa; Vāstuvijñāna (architecture) is a meaningful long-ā compound, record
+varzAvicAra   -> varzavicAra   | ACC: {#varzAvicAra#} jy. Oudh XX, 136. | A jyotiṣa work titled Varṣāvicāra with one Oudh siglum; the colophon spelling is recorded 
+veNkaweSamaNgalaSAsana -> veNkaweSamaNgalASAsana | ACC: {#veNkaweSamaNgalaSAsana#} (school of Rāmānuja). Bd. 189. | A Rāmānuja-school work titled Veṅkaṭeśamaṅgalaśāsana with one Bd siglum; the compound junc
+
+# ===== BUCKET 5  INTENTIONAL -- ACC documents the spelling on purpose; NEVER file (25) =====
+mahipati      -> mahIpati      | ACC: {#mahipati#} (?): Pañcasāyaka. P. 10. | Body carries the cataloguer query marker (?): the spelling is flagged on purpose, not asse
+kleza         -> kleSa         | ACC: {{Lbody=30543}}  (redirect -> kleSaSAntipadDati) | Body is a redirect (-> kleSaSAntipadDati), a cross-reference entry rather than an asserted
+taruRi        -> taruRI        | ACC: {#taruRi#} (?): Kaularahasya. Peters. 3, 399. | Body carries the cataloguer query (?): the spelling taruṇi is explicitly flagged as uncert
+vATula        -> vAtula        | ACC: {{Lbody=21783}}  (redirect -> vAtulatantra) | Body is a redirect (-> vAtulatantra), a cross-reference entry rather than an independently
+paYcasvara    -> paYcasvarA    | ACC: {#paYcasvara#} or {#paYcasvarA#} jy. by Prajāpatidāsa. AK 870. AS p. 60. Lz. 1112. Peters. | Body explicitly gives both forms: '{#paYcasvara#} or {#paYcasvarA#}', documenting the vari
+SravaRadvAdaSImAhAtmya -> SrAvaRadvAdaSImAhAtmya | ACC: {#SravaRadvAdaSImAhAtmya#} from the Ādityapurāṇa. Stein 199. See Śrāvaṇadvādaśīmāhātmya. | | Body explicitly cross-references the corrected form: 'See Śrāvaṇadvādaśīmāhātmya', documen
+bAladIkzita   -> bAlAdIkzita   | ACC: {#bAladIkzita#} (Burnell writes Bālādīkṣita), middle of last century: Atyagniṣṭomaprayoga  | Body notes the variant on purpose: '(Burnell writes Bālādīkṣita)', explicitly documenting 
+nyAyAmAlAvEyAsikI -> nyAyamAlAvEyAsikI | ACC: {#nyAyAmAlA vEyAsikI#} or {#aDikaraRanyAyamAlA#} (q. v.), or {#vedAntADikaraRamAlA#} by Bh | Body documents alternative titles with 'or ... (q. v.)': Adhikaraṇanyāyamālā / Vedāntādhik
+sidDAntalakzaRA -> sidDAntalakzaRa | ACC: {{Lbody=28153}} || {#sidDAntalakzaRA#} ny. CS 3, 244 (Pattrikāḥ). --by Gadādhara. CS 3, 26 | Body ends with a redirect (-> sidDAntalakzaRa), cross-referencing the masculine form; the 
+gAnDarvatantra -> ganDarvatantra | ACC: {#gAnDarvatantra#} See Gandharvatantra. Quoted in Tantrasāra Oxf. 95^a, in Śaktiratnākara  | Body opens 'See Gandharvatantra', an explicit cross-reference to the alternate spelling.
+tripurAsidDAnta -> tripurasidDAnta | ACC: {#tripurAsidDAnta#} tantr. Oppert II, 3412. Tripurāsiddhānte (printed Tripurārisiddhānta)  | Body parenthetically notes a variant '(printed Tripurārisiddhānta)', documenting the spell
+lURiga        -> luRiga        | ACC: {#lURiga#} (not Luṇiga), father of Mahādeva (Jyotiṣaratna- mālāṭīkā). | Body explicitly notes '(not Luṇiga)', deliberately distinguishing this spelling from the a
+saptapadArTanirupaRa -> saptapadArTanirUpaRa | ACC: {{Lbody=27137}}  (redirect -> saptapadArTI) | Body is a redirect (-> saptapadArTI), a cross-reference rather than an attestation of the 
+padArTatattvabivecana -> padArTatattvavivecana | ACC: {{Lbody=12786}}  (redirect -> padArTaKaRqana) | Body is a redirect (-> padArTaKaRqana), a cross-reference rather than an independent attes
+hariharaagnihotrin -> (flag)        | ACC: {#harihara agnihotrin#} Pāraskaragṛhyasūtrabhāṣya, and Prayogapaddhati following it. These | Body documents this author's works and the names under which they are quoted; the suggesti
+camatkAraRa   -> camatkaraRa   | ACC: {#camatkAraRa#} jy. by Sthānapāla (?). Jac. 696. | Body carries the cataloguer query 'by Sthānapāla (?)' and is a terse jyotiṣa entry; the au
+priyAka       -> priyaka       | ACC: {#priyAka#} poet. Skm. See Piyāka. | 
+BavasAraviveka -> BAvasAraviveka | ACC: {{Lbody=34742}} || {#BavasAraviveka#} See Prapañcasāraviveka.  (redirect -> prapaYcasAravi | 
+gadADarI      -> gAdADarI      | ACC: {#gadADarI#} See Gādādharī. | 
+kASyapasaMhitA -> kaSyapasaMhitA | ACC: {#kASyapasaMhitA#} See Kaśyapasaṃhitā. | 
+parASarahorA  -> pArASarahorA  | ACC: {#parASarahorA#} See Pārāśarahorā. | 
+raTodDatA     -> raTodData     | ACC: {#raTodDatA#} See Varṣagaṇitapaddhati. | 
+pARinIyaSikzA -> pARinIyaSIkzA | ACC: {#pARinIyaSikzA#} considered as one of the Vedāngās. IO. 1347. 1378. 1743 B. 1981. 2542. 3 | 
+kORqaBawwa    -> koRqaBawwa    | ACC: {{Lbody=5107}} || {#kORqa Bawwa#} See Koṇḍa Bhaṭṭa.  (redirect -> koRqaBawwa) | 
+zadaNgarudra  -> zaqaNgarudra  | ACC: {#zadaNgarudra#} See Rudrajapa. | 
+
+# ===== BUCKET 6  UNLOCATABLE -- not in the current ACC source (stale/different key) (0) =====

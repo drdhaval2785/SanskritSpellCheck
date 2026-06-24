@@ -1,0 +1,37 @@
+# ACC -- DOCUMENTED-INTENTIONAL spellings (NOT typos -- do NOT file corrections)
+#
+# 25 headwords that LOOK like misspellings but which ACC records on purpose:
+# wrong-reading apparatus (w.r.), variae lectiones (v.l.), in-composition /
+# sandhi forms (in comp. for...), cross-references (See / = X q.v.), and other
+# grammatical/Vedic notes. Filing a 'correction' for any of these CORRUPTS ACC.
+# Use this as a suppression list: such headwords should not be re-flagged.
+# Format per row:  headword -> would-be 'correction'  |  the ACC entry text
+
+# ===== CROSS-REFERENCE (10) =====
+BavasAraviveka -> BAvasAraviveka | {{Lbody=34742}} || {#BavasAraviveka#} See Prapañcasāraviveka.  (redirect -> prapaYcasAraviveka)
+SravaRadvAdaSImAhAtmya -> SrAvaRadvAdaSImAhAtmya | {#SravaRadvAdaSImAhAtmya#} from the Ādityapurāṇa. Stein 199. See Śrāvaṇadvādaśīmāhātmya. || {#SravaRadvAdaSImAhAtmya#} (Baṇikpretopākhyāna) from the Bhaviṣyotta
+gAnDarvatantra -> ganDarvatantra | {#gAnDarvatantra#} See Gandharvatantra. Quoted in Tantrasāra Oxf. 95^a, in Śaktiratnākara Oxf. 101^b, in Śāktā- nandataraṅgiṇī Oxf. 103^b. || {#gAnDarvatantra#}
+gadADarI       -> gAdADarI       | {#gadADarI#} See Gādādharī.
+kASyapasaMhitA -> kaSyapasaMhitA | {#kASyapasaMhitA#} See Kaśyapasaṃhitā.
+kORqaBawwa     -> koRqaBawwa     | {{Lbody=5107}} || {#kORqa Bawwa#} See Koṇḍa Bhaṭṭa.  (redirect -> koRqaBawwa)
+parASarahorA   -> pArASarahorA   | {#parASarahorA#} See Pārāśarahorā.
+priyAka        -> priyaka        | {#priyAka#} poet. Skm. See Piyāka.
+raTodDatA      -> raTodData      | {#raTodDatA#} See Varṣagaṇitapaddhati.
+zadaNgarudra   -> zaqaNgarudra   | {#zadaNgarudra#} See Rudrajapa.
+
+# ===== OTHER-INTENTIONAL (15) =====
+bAladIkzita    -> bAlAdIkzita    | {#bAladIkzita#} (Burnell writes Bālādīkṣita), middle of last century: Atyagniṣṭomaprayoga Baudh. Āgrayaṇaprayoga Baudh. Upākarmapramāṇa. Baudhāyanaprayoga. Baud
+camatkAraRa    -> camatkaraRa    | {#camatkAraRa#} jy. by Sthānapāla (?). Jac. 696.
+hariharaagnihotrin -> (flag)         | {#harihara agnihotrin#} Pāraskaragṛhyasūtrabhāṣya, and Prayogapaddhati following it. These are very often quoted under the name of Hariharapaddhati and Ha- riha
+kleza          -> kleSa          | {{Lbody=30543}}  (redirect -> kleSaSAntipadDati)
+lURiga         -> luRiga         | {#lURiga#} (not Luṇiga), father of Mahādeva (Jyotiṣaratna- mālāṭīkā).
+mahipati       -> mahIpati       | {#mahipati#} (?): Pañcasāyaka. P. 10.
+nyAyAmAlAvEyAsikI -> nyAyamAlAvEyAsikI | {#nyAyAmAlA vEyAsikI#} or {#aDikaraRanyAyamAlA#} (q. v.), or {#vedAntADikaraRamAlA#} by Bhāratītīrtha. Gov. Or. Libr. Madras 90. Stein 127.
+pARinIyaSikzA  -> pARinIyaSIkzA  | {#pARinIyaSikzA#} considered as one of the Vedāngās. IO. 1347. 1378. 1743 B. 1981. 2542. 3193. W. p. 97. 98, Oxf. 386^a. L. 1237. B. 1, 206 (and C.). 208. 210. 
+paYcasvara     -> paYcasvarA     | {#paYcasvara#} or {#paYcasvarA#} jy. by Prajāpatidāsa. AK 870. AS p. 60. Lz. 1112. Peters. 6, 421. C. Ṭippaṇa. AK 871.
+padArTatattvabivecana -> padArTatattvavivecana | {{Lbody=12786}}  (redirect -> padArTaKaRqana)
+saptapadArTanirupaRa -> saptapadArTanirUpaRa | {{Lbody=27137}}  (redirect -> saptapadArTI)
+sidDAntalakzaRA -> sidDAntalakzaRa | {{Lbody=28153}} || {#sidDAntalakzaRA#} ny. CS 3, 244 (Pattrikāḥ). --by Gadādhara. CS 3, 263 (inc.). 485. 488 (Pattrikāḥ). 490 (inc.). 492 (inc.). Hz. 986. 1250.
+taruRi         -> taruRI         | {#taruRi#} (?): Kaularahasya. Peters. 3, 399.
+tripurAsidDAnta -> tripurasidDAnta | {#tripurAsidDAnta#} tantr. Oppert II, 3412. Tripurāsiddhānte (printed Tripurārisiddhānta) Su- varṇākarṣaṇabhairavastotra. Burnell 203^a. || {#tripurAsidDAnta#} 
+vATula         -> vAtula         | {{Lbody=21783}}  (redirect -> vAtulatantra)

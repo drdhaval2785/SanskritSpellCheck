@@ -1,0 +1,145 @@
+# ACC tier-A correction candidates (unified engine) — score	wrong -> right	detectors	morph
+355	argalA -> argala	[consensus,intra_dup,spell_correct]	morph✓
+354	kAmaSastra -> kAmaSAstra	[consensus,intra_dup,spell_correct]	morph✓
+347	mahipati -> mahIpati	[consensus,dict_vs_corpus,intra_dup]	
+344	uttarAtantra -> uttaratantra	[consensus,intra_dup,spell_correct]	morph✓
+324	ApAdeva -> Apadeva	[consensus,intra_dup,spell_correct]	morph✓
+324	BAwwakArikA -> BawwakArikA	[consensus,intra_dup,spell_correct]	morph✓
+324	BavasAraviveka -> BAvasAraviveka	[consensus,intra_dup,spell_correct]	morph✓
+324	DAraRapAraRavrata -> DAraRApAraRavrata	[consensus,intra_dup,spell_correct]	morph✓
+324	aBijYAnaSAkuntala -> aBijYAnaSakuntala	[consensus,intra_dup,spell_correct]	morph✓
+324	bfhannArayaRopanizad -> bfhannArAyaRopanizad	[consensus,intra_dup,spell_correct]	morph✓
+324	durgadAsa -> durgAdAsa	[consensus,intra_dup,spell_correct]	morph✓
+324	gadADarI -> gAdADarI	[consensus,intra_dup,spell_correct]	morph✓
+324	jayamaNgalA -> jayamaNgala	[consensus,intra_dup,spell_correct]	morph✓
+324	keSAvAditya -> keSavAditya	[consensus,intra_dup,spell_correct]	morph✓
+324	paYcasvara -> paYcasvarA	[consensus,intra_dup,spell_correct]	morph✓
+324	pattrAvalAmbana -> pattrAvalambana	[consensus,intra_dup,spell_correct]	morph✓
+324	rAmagIta -> rAmagItA	[consensus,intra_dup,spell_correct]	morph✓
+324	saMnyasaviDi -> saMnyAsaviDi	[consensus,intra_dup,spell_correct]	morph✓
+321	vivekacUqAmaRI -> vivekacUqAmaRi	[consensus,intra_dup,spell_correct]	morph✓
+318	rupagosvAmin -> rUpagosvAmin	[consensus,intra_dup,spell_correct]	morph✓
+317	baNgAla -> vaNgAla	[consensus,intra_dup,spell_correct]	morph✓
+317	kAwakopanizad -> kAWakopanizad	[consensus,intra_dup,spell_correct]	morph✓
+316	QuRqi -> QuRQi	[consensus,intra_dup,spell_correct]	morph✓
+316	anuvedAnta -> aRuvedAnta	[consensus,intra_dup,spell_correct]	morph✓
+316	kORqaBawwa -> koRqaBawwa	[consensus,intra_dup,spell_correct]	morph✓
+316	mAgarAjapadDati -> nAgarAjapadDati	[consensus,intra_dup,spell_correct]	morph✓
+309	aBinavatAmarasA -> aBinavatAmarasa	[consensus,intra_dup,spell_correct]	
+256	kleza -> kleSa	[consensus,spell_correct]	morph✓
+254	anAkulA -> anAkula	[consensus,spell_correct]	morph✓
+254	anAvilA -> anAvila	[consensus,spell_correct]	morph✓
+254	parAtantra -> paratantra	[consensus,spell_correct]	morph✓
+251	taruRi -> taruRI	[consensus,spell_correct]	morph✓
+248	aSvatantra -> asvatantra	[consensus,spell_correct]	morph✓
+244	Ajaqa -> ajaqa	[consensus,spell_correct]	morph✓
+244	pratiBAgA -> pratiBAga	[consensus,spell_correct]	morph✓
+244	triSiKA -> triSiKa	[consensus,spell_correct]	morph✓
+242	sOraBi -> sOraBI	[consensus,spell_correct]	morph✓
+241	kfzRIya -> kfzRiya	[consensus,spell_correct]	morph✓
+240	pApAka -> pApaka	[consensus,intra_dup]	
+240	priyAka -> priyaka	[consensus,intra_dup]	
+240	sAtala -> sAtalA	[consensus,intra_dup]	
+240	vAgura -> vAgurA	[consensus,intra_dup]	
+236	vATula -> vAtula	[consensus,spell_correct]	morph✓
+234	azwamaNgalA -> azwamaNgala	[consensus,spell_correct]	morph✓
+230	rAsamaYjarI -> rasamaYjarI	[consensus,intra_dup]	
+230	sarvaMkazA -> sarvaMkaza	[consensus,intra_dup]	
+230	vAsantikA -> vAsantika	[consensus,intra_dup]	
+225	acalasaptamI -> acalAsaptamI	[intra_dup,spell_correct]	morph✓
+225	cArucarya -> cArucaryA	[intra_dup,spell_correct]	morph✓
+225	kASyapasaMhitA -> kaSyapasaMhitA	[intra_dup,spell_correct]	morph✓
+224	BAvasAgara -> BavasAgara	[consensus,spell_correct]	morph✓
+224	BEkzAcaraRa -> BEkzacaraRa	[consensus,spell_correct]	morph✓
+224	BawwasAra -> BAwwasAra	[intra_dup,spell_correct]	morph✓
+224	SAbdaboDaprakriyA -> SabdaboDaprakriyA	[intra_dup,spell_correct]	morph✓
+224	SAkawayanavyAkaraRa -> SAkawAyanavyAkaraRa	[intra_dup,spell_correct]	morph✓
+224	SabdaprAmARyarahasya -> SabdAprAmARyarahasya	[intra_dup,spell_correct]	morph✓
+224	SakawAyanasmfti -> SAkawAyanasmfti	[intra_dup,spell_correct]	morph✓
+224	SivApaYcANga -> SivapaYcANga	[intra_dup,spell_correct]	morph✓
+224	SravaRadvAdaSImAhAtmya -> SrAvaRadvAdaSImAhAtmya	[intra_dup,spell_correct]	morph✓
+224	SravaRadvAdaSIvratakalpa -> SrAvaRadvAdaSIvratakalpa	[intra_dup,spell_correct]	morph✓
+224	bAdArAyaRasUtra -> bAdarAyaRasUtra	[intra_dup,spell_correct]	morph✓
+224	bAladIkzita -> bAlAdIkzita	[intra_dup,spell_correct]	morph✓
+224	cAturarTikA -> cAturarTika	[consensus,spell_correct]	morph✓
+224	camatkAraRa -> camatkaraRa	[consensus,spell_correct]	morph✓
+224	dakziRamUrtisaMhitA -> dakziRAmUrtisaMhitA	[intra_dup,spell_correct]	morph✓
+224	darSapOrRamAsika -> dArSapOrRamAsika	[consensus,spell_correct]	morph✓
+224	dolayAtrAviveka -> dolAyAtrAviveka	[intra_dup,spell_correct]	morph✓
+224	jEminIyanyAyamAlAvistAra -> jEminIyanyAyamAlAvistara	[intra_dup,spell_correct]	morph✓
+224	kUwAGawitalakzaRa -> kUwaGawitalakzaRa	[intra_dup,spell_correct]	morph✓
+224	kfzRAmAhAtmya -> kfzRamAhAtmya	[intra_dup,spell_correct]	morph✓
+224	kfzRaguru -> kfzRAguru	[consensus,spell_correct]	morph✓
+224	liNgaDAraRAcandrikA -> liNgaDAraRacandrikA	[intra_dup,spell_correct]	morph✓
+224	mahAnArayaRopanizad -> mahAnArAyaRopanizad	[intra_dup,spell_correct]	morph✓
+224	maheSvaratantra -> mAheSvaratantra	[intra_dup,spell_correct]	morph✓
+224	meDAkara -> meDAkAra	[consensus,spell_correct]	morph✓
+224	muhUrtaracanA -> muhUrtaracana	[intra_dup,spell_correct]	morph✓
+224	nArayaRIyopanizad -> nArAyaRIyopanizad	[intra_dup,spell_correct]	morph✓
+224	nyAsadeSavivaraRa -> nyAsAdeSavivaraRa	[intra_dup,spell_correct]	morph✓
+224	nyAyAmAlAvEyAsikI -> nyAyamAlAvEyAsikI	[intra_dup,spell_correct]	morph✓
+224	parASarahorA -> pArASarahorA	[intra_dup,spell_correct]	morph✓
+224	parAmArTasAra -> paramArTasAra	[intra_dup,spell_correct]	morph✓
+224	rAsacandra -> rasacandra	[intra_dup,spell_correct]	morph✓
+224	rAsayAtraviveka -> rAsayAtrAviveka	[intra_dup,spell_correct]	morph✓
+224	ramalAsAra -> ramalasAra	[intra_dup,spell_correct]	morph✓
+224	sAmAnyABAvavyavasTApana -> sAmAnyaBAvavyavasTApana	[intra_dup,spell_correct]	morph✓
+224	sidDAntalakzaRA -> sidDAntalakzaRa	[intra_dup,spell_correct]	morph✓
+224	somavArAvrata -> somavAravrata	[intra_dup,spell_correct]	morph✓
+224	suDADara -> suDADAra	[consensus,spell_correct]	morph✓
+224	vAstuvijYAnaratnakoSa -> vastuvijYAnaratnakoSa	[intra_dup,spell_correct]	morph✓
+224	varzAvicAra -> varzavicAra	[intra_dup,spell_correct]	morph✓
+224	veNkaweSamaNgalaSAsana -> veNkaweSamaNgalASAsana	[intra_dup,spell_correct]	morph✓
+224	veRugItA -> veRugIta	[intra_dup,spell_correct]	morph✓
+224	yAjamAnaprayoga -> yajamAnaprayoga	[intra_dup,spell_correct]	morph✓
+222	dIpAvalI -> dIpAvali	[consensus,spell_correct]	morph✓
+221	DikowI -> DIkowI	[intra_dup,spell_correct]	morph✓
+221	SabdarUpAvalI -> SabdarUpAvali	[intra_dup,spell_correct]	morph✓
+221	SabdaratnAvali -> SabdaratnAvalI	[intra_dup,spell_correct]	morph✓
+221	Sikzopanizad -> SIkzopanizad	[intra_dup,spell_correct]	morph✓
+221	SlokAvalI -> SlokAvali	[intra_dup,spell_correct]	morph✓
+221	avantIKaRqa -> avantiKaRqa	[intra_dup,spell_correct]	morph✓
+221	devatAvArIpUjA -> devatAvAripUjA	[intra_dup,spell_correct]	morph✓
+221	jYAnaratnAvali -> jYAnaratnAvalI	[intra_dup,spell_correct]	morph✓
+221	pARinIyaSikzA -> pARinIyaSIkzA	[intra_dup,spell_correct]	morph✓
+221	sUktAvalI -> sUktAvali	[intra_dup,spell_correct]	morph✓
+221	tattvamuktAvali -> tattvamuktAvalI	[intra_dup,spell_correct]	morph✓
+221	vEzRavaDarmasuradrumamaYjarI -> vEzRavaDarmasuradrumamaYjari	[intra_dup,spell_correct]	morph✓
+221	yogamuktAvali -> yogamuktAvalI	[intra_dup,spell_correct]	morph✓
+220	SrAvaRadvAdaSI -> SravaRadvAdaSI	[consensus,intra_dup]	
+219	lURiga -> luRiga	[intra_dup,spell_correct]	morph✓
+218	SArikAmAhAtmya -> sArikAmAhAtmya	[intra_dup,spell_correct]	morph✓
+218	kullukaBawwa -> kullUkaBawwa	[intra_dup,spell_correct]	morph✓
+218	laGukaraRa -> laGUkaraRa	[consensus,spell_correct]	morph✓
+218	pAraSIprakASa -> pArasIprakASa	[intra_dup,spell_correct]	morph✓
+218	saptapadArTanirupaRa -> saptapadArTanirUpaRa	[intra_dup,spell_correct]	morph✓
+217	amftadeva -> anftadeva	[consensus,spell_correct]	morph✓
+217	sarvapfzwezwiprayoga -> sarvapfzWezwiprayoga	[intra_dup,spell_correct]	morph✓
+217	veDavicAra -> vedavicAra	[intra_dup,spell_correct]	morph✓
+216	BagavadgITArTasaMgraharakzA -> BagavadgItArTasaMgraharakzA	[intra_dup,spell_correct]	morph✓
+216	EtareyavrAhmaRa -> EtareyabrAhmaRa	[intra_dup,spell_correct]	morph✓
+216	SatapaTavrAhmaRa -> SatapaTabrAhmaRa	[intra_dup,spell_correct]	morph✓
+216	gAyatrIBAsya -> gAyatrIBAzya	[intra_dup,spell_correct]	morph✓
+216	kuRqakalpalawA -> kuRqakalpalatA	[intra_dup,spell_correct]	morph✓
+216	metrAyaRIyopanizad -> mEtrAyaRIyopanizad	[intra_dup,spell_correct]	morph✓
+216	padArTatattvabivecana -> padArTatattvavivecana	[intra_dup,spell_correct]	morph✓
+216	parAmarSawippaRI -> parAmarSawippanI	[intra_dup,spell_correct]	morph✓
+216	sAttvikavrahmavidyAvilAsa -> sAttvikabrahmavidyAvilAsa	[intra_dup,spell_correct]	morph✓
+216	tolakamAhAtmya -> wolakamAhAtmya	[intra_dup,spell_correct]	morph✓
+216	viSvarUpanivanDa -> viSvarUpanibanDa	[intra_dup,spell_correct]	morph✓
+216	zadaNgarudra -> zaqaNgarudra	[intra_dup,spell_correct]	morph✓
+216	zadarTasaMkzepa -> zaqarTasaMkzepa	[intra_dup,spell_correct]	morph✓
+216	zadftuvarRana -> zaqftuvarRana	[intra_dup,spell_correct]	morph✓
+213	kUka -> kuka	[consensus,spell_correct]	
+210	bAlAtantra -> bAlatantra	[consensus,intra_dup]	
+210	brAhmasidDAnta -> brahmasidDAnta	[consensus,intra_dup]	
+210	harikaRWa -> hArikaRWa	[consensus,intra_dup]	
+210	pAdamaYjarI -> padamaYjarI	[consensus,intra_dup]	
+210	raTodDatA -> raTodData	[consensus,intra_dup]	
+209	akulAgamatantra -> AkulAgamatantra	[intra_dup,spell_correct]	
+209	gAnDarvatantra -> ganDarvatantra	[intra_dup,spell_correct]	
+209	kfzRaya -> kfzRAya	[consensus,spell_correct]	
+209	tripurAsidDAnta -> tripurasidDAnta	[intra_dup,spell_correct]	
+207	pAyIka -> pAyika	[consensus,intra_dup]	
+204	SarePa -> sarePa	[consensus,intra_dup]	
+151	hariharaagnihotrin -> (flag)	[phonotactic]	

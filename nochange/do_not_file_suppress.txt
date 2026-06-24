@@ -10,7 +10,8 @@
 # DO NOT hand-edit -- regenerate with detectors/gen_do_not_file_suppress.py
 # after triaging more dictionaries.
 #
-# 2042 unique headwords from 21 dictionaries:
+# 2067 unique headwords from 22 dictionaries:
+#   SanskritSpellCheck\corrections_draft\ACC\ACC_wrong_readings.txt: 25
 #   SanskritSpellCheck\corrections_draft\AP90\AP90_wrong_readings.txt: 8
 #   SanskritSpellCheck\corrections_draft\AP\AP_wrong_readings.txt: 32
 #   SanskritSpellCheck\corrections_draft\BEN\BEN_wrong_readings.txt: 14
@@ -110,6 +111,7 @@ Barezuja
 Barya
 Basati
 BavA
+BavasAraviveka
 Bavayu
 BedadarSin
 BetAla
@@ -270,6 +272,7 @@ SrAk
 SrImati
 SrIta
 SraMs
+SravaRadvAdaSImAhAtmya
 SritI
 Sriv
 SroRibimba
@@ -473,6 +476,7 @@ bARAparRi
 bARI
 bAhU
 bAhuputra
+bAladIkzita
 bAlaja
 bAlavyaYjana
 bAliKilya
@@ -545,6 +549,7 @@ cakrabAla
 cakzuS
 cakzuz
 calU
+camatkAraRa
 camu
 canDana
 candrAyaRa
@@ -654,6 +659,7 @@ fN
 fjU
 fkta
 ftI
+gAnDarvatantra
 gAnDinIsuta
 gAruqapurARa
 gAruqopanizad
@@ -669,6 +675,7 @@ gaBira
 gaDita
 gaReruka
 gaRitA
+gadADarI
 gadagada
 gajapippali
 galu
@@ -713,6 +720,7 @@ hanU
 harIman
 hariSravA
 haridASa
+hariharaagnihotrin
 haritakI
 harzya
 haviz
@@ -783,6 +791,7 @@ kAMSyanIla
 kANgula
 kASIsa
 kASUtarI
+kASyapasaMhitA
 kAYcipada
 kAkAndI
 kAkanantikA
@@ -805,6 +814,7 @@ kAsmarya
 kAwaka
 kAzi
 kElikila
+kORqaBawwa
 kOSIdya
 kOSalaka
 kOmudIka
@@ -869,6 +879,7 @@ kiriwa
 kisarAdi
 kisora
 kiwaka
+kleza
 klomam
 koNkaRA
 koSIDAnya
@@ -925,6 +936,7 @@ lABA
 lAkza
 lAvAkza
 lOhitASva
+lURiga
 lUta
 laSUna
 laguda
@@ -982,6 +994,7 @@ mahAmahA
 mahAmani
 mahArAjA
 mahAsAla
+mahipati
 mahyA
 malapu
 mallikAKyA
@@ -1085,6 +1098,7 @@ nizkASanIya
 nizpAd
 nizyandin
 nudita
+nyAyAmAlAvEyAsikI
 odarika
 opaDika
 osa
@@ -1095,6 +1109,7 @@ pAMSumardana
 pAMsulA
 pAMsupatra
 pARI
+pARinIyaSikzA
 pARqarA
 pAYcajanyA
 pAYjara
@@ -1133,13 +1148,16 @@ paRAya
 paRqaravAsinI
 paSuka
 paYcagatika
+paYcasvara
 paYcavarzika
+padArTatattvabivecana
 padI
 padapadma
 padmavIjABa
 padvA
 pannagA
 parARasA
+parASarahorA
 parAYjana
 parApata
 parAvarya
@@ -1261,6 +1279,7 @@ pravizwA
 prayApana
 prayogi
 premA
+priyAka
 proQapAda
 puMS
 pukkaza
@@ -1294,6 +1313,7 @@ raRati
 raSana
 raTANgA
 raTavAhaRa
+raTodDatA
 raktANgA
 raktavIjakA
 rakzaRA
@@ -1411,6 +1431,7 @@ santva
 sanu
 sapatni
 saptaSivA
+saptapadArTanirupaRa
 sarATin
 saraBaNga
 sarasi
@@ -1435,6 +1456,7 @@ sfkkam
 siDmam
 siMhAsyA
 sidDAntadIpika
+sidDAntalakzaRA
 sikata
 sinIbAlI
 sindukA
@@ -1523,6 +1545,7 @@ tarItf
 tarasA
 tardu
 tarkAri
+taruRi
 tarutulikA
 tatfpi
 tfRapulI
@@ -1546,6 +1569,7 @@ tribali
 trihAyana
 tripUruza
 tripadyA
+tripurAsidDAnta
 trizuparRa
 trowI
 tryakzAyaRa
@@ -1622,6 +1646,7 @@ vARagaNgA
 vARaliNga
 vARaprasTa
 vARapuNKA
+vATula
 vAcas
 vAcasa
 vAguji
@@ -2060,6 +2085,7 @@ zAD
 zAmba
 zaRqAmarka
 zad
+zadaNgarudra
 zah
 zahasAna
 zaqgranTI
