@@ -1,13 +1,17 @@
-# HANDOFF — two next-steps for SanskritSpellCheck
+# HANDOFF — next-steps for SanskritSpellCheck
 
-Paste-ready briefs for a **fresh chat** (no memory of the prior session) to pick up either task.
-Both are fully actionable now (no external data, no human gate). The headword-triage handoff is
-separate: [corrections_draft/HANDOFF.md](corrections_draft/HANDOFF.md).
+Paste-ready briefs for a **fresh chat** (no memory of the prior session) to pick up a task. The
+headword-triage handoff is separate: [corrections_draft/HANDOFF.md](corrections_draft/HANDOFF.md).
 
-> **Done in the last session** (changelog `[1.29.0]`–`[1.30.0]`): **Task B — do-not-file
-> suppression layer** (1,726 documented-intentional spellings wired into the detector whitelist;
-> `eval.py` false-positives 0) and **Task A — the ortho-drift findings write-up**
-> ([docs/ORTHO_DRIFT_FINDINGS.md](docs/ORTHO_DRIFT_FINDINGS.md)). The two tasks below are what's next.
+> **State as of 2026-06-24** (changelog up to `[1.40.0]`): **headword triage is COMPLETE — all
+> 33/33 dictionaries** (Task A, below, is done; PD was wired in via `external_src/` and triaged on
+> source 1). The **ortho-drift study is COMPLETE across all 5 gloss languages**
+> ([docs/ORTHO_DRIFT_FINDINGS.md](docs/ORTHO_DRIFT_FINDINGS.md)). The do-not-file **suppression
+> layer** is at 33 dicts / 2,297 unique, `eval.py` false-positives 0.
+>
+> **What a fresh chat can still pick up:** **Task B** (tier-C ranking calibration — fully actionable,
+> no external data) and **Task C** (ortho-drift recency control — needs one data file on disk, see its
+> prerequisite). Task A is kept below for reference / for PD's optional second source.
 
 ## Shared context
 
@@ -99,14 +103,60 @@ without inflating the false-positive rate (which must stay ~0 against `nochange.
 
 ---
 
-Pick either. Task A is the durable lexicographic deliverable (and feeds the suppression layer);
-Task B is the engineering refinement of the ranking. Both are self-contained.
+## Task C — Ortho-drift within-EN recency control (needs one data file)
 
-**Blocked-on-external (not for a fresh AI chat):**
-- **PD** triage — needs its two external sources (the user will provide; not in `csl-orig`).
+**Goal:** extend the completed ortho-drift study with a **recency control**. The study showed English
+drift is convention-driven and **editor/age-dependent** (WIL 1832 = 0.57 per 1k → MW 1899 ≈ 0.01 →
+AP/CAE ≈ 0). Test that prediction at the *modern* end: run the same detector on dictionaries compiled
+late, which should show **≈ 0 drift** — confirming the method dates orthography rather than flagging
+noise. New anchors not yet in the EN cluster: **PD** (Deccan College, 1976–2009 — the most modern
+English dict in the corpus, now staged in `external_src/`), plus the modern-leaning glossaries
+**BHS / IEG / PE / VEI**. Expectation: PD lands at or below MW (lowest drift of all), tightening the
+WIL→…→PD recency gradient.
+
+**Data prerequisite (must be on disk first — this is why it isn't a no-setup task):**
+- The **`en_GB` Hunspell dictionary** the EN profile checks against, pointed to by the env var
+  **`$ORTHO_EN_DIC`** (it's the Adobe-InDesign-bundled dic, a **local dep, not committed**). The EN
+  method is *transform-and-check against this wordlist*, so without it recall collapses to the small
+  curated map + definitional rules. Confirm it resolves before running:
+  `python -c "import os; p=os.environ.get('ORTHO_EN_DIC'); print(p, os.path.exists(p or ''))"`.
+
+**Paste this into a new chat (after `$ORTHO_EN_DIC` points at the en_GB Hunspell dic):**
+> In `SanskritSpellCheck/detectors`, extend the ortho-drift study with an English **recency control**.
+> Register **PD, BHS, IEG, PE, VEI** as `en` in `ortho_drift.py`'s `LANG_OF` map (they currently
+> default to German). Confirm `$ORTHO_EN_DIC` points at the `en_GB` Hunspell dic
+> (`load_wordlist` returns None and recall collapses without it). Then run
+> `python ortho_drift.py <DICT> --full` for each of the five (PD reads from `external_src/pd/pd.txt`
+> automatically via `triage_util.source_file()`; the others from `csl-orig`). Read each
+> `ortho_drift/en_drift_summary.tsv` row and compare against the existing 10-dict EN cluster
+> (WIL 0.57 → MW 0.01 → AP/CAE 0). The hypothesis: the modern dicts — **PD (1976–2009) especially** —
+> sit at the bottom of the drift gradient (≈ 0 per 1k), confirming the method tracks orthographic
+> epoch. Do **not** re-run the 10 existing dicts (keeps the published table stable); fold any new
+> en reform-map forms the runs surface. Update `docs/ORTHO_DRIFT_FINDINGS.md` with the recency-control
+> row + a one-line interpretation, bump `changelog.md`, and commit (`ai-wip:` + the Co-Authored-By
+> trailer).
+
+**Lessons to carry in:**
+- `ortho_drift.py` **degrades gracefully** if the dic is absent (map + rules only) — but for EN that
+  means near-zero recall, so the run is meaningless without `$ORTHO_EN_DIC`. Check it first.
+- It is a **documentation / search-normalization layer, never a correction list** — it does not edit
+  any source. Doc-only deliverable.
+- Keep the existing 5-language outputs and the 10-dict EN table **stable** — only *add* the new rows.
+
+> *Alternative extension (not written up here): the German **DTA/RIDGES long-tail merge** —
+> `detectors/merge_reform_pairs.py` is the ready dic-validated wiring; it needs a local DTA/RIDGES
+> corpus export or a row-list URL of old→new pairs, which `WebFetch` can't bulk-download.*
+
+---
+
+Pick a task. Task A (triage) is **done**; Task B is the self-contained engineering refinement of the
+ranking; Task C is the externally-gated ortho-drift recency control.
+
+**Blocked-on-external / human (not a no-setup fresh AI chat):**
+- **PD second source** — optional; register it as a 2nd tuple in `detectors/get_external_source.py`
+  `SOURCES['PD']`, re-stage, re-run `/dict-triage PD`. Refines PD's 116-entry do-not-file list only.
+- **Task C data file** — the `en_GB` Hunspell dic on disk (`$ORTHO_EN_DIC`); see Task C.
 - **DTA/RIDGES long tail** for ortho-drift — `detectors/merge_reform_pairs.py` is the ready wiring;
   needs a local corpus export or a row-list URL.
-- **Human scan-verification** of the FILE-FIRST queues (SHS 37 biggest, then PWG 12, MW 4, …) — flip
-  `n`→`y` and file to CORRECTIONS; this is a human-eyes-on-scans task.
-- **Ortho-drift within-EN recency control** (4 modern-EN dicts BHS/IEG/PE/VEI) and any ortho-drift
-  re-run — need the Hunspell `de_DE`/`en_GB`/`fr_FR` dics on disk (Adobe local dep, `$ORTHO_<L>_DIC`).
+- **Human scan-verification** of the 122 FILE-FIRST candidates (SHS 37 biggest, then YAT 27, ACC 22,
+  PWG 12, MCI 10, MW 4, …) — flip `n`→`y` and file to CORRECTIONS; human-eyes-on-scans task.

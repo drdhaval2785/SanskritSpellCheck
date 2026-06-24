@@ -31,14 +31,16 @@ real OCR/keying errors, each confirmed by the entry's own etymology/inflection.
 | PW (German) | 657 | **2** | 255 |
 | VCP (Sanskrit) | 563 | **1** | 408 |
 | GST (English, 1856) | 48 | **1** | 22 |
-| _18 others_ — AP · MW72 · SCH · AP90 · MD · CAE · GRA · BEN · CCS · SNP · BHS · PUI · IEG · INM · PE · VEI · PGN · KRM | — | **0** | 655 |
+| _22 others_ — AP · MW72 · SCH · AP90 · MD · CAE · GRA · BEN · CCS · SNP · BHS · PUI · IEG · INM · PE · VEI · PGN · KRM · BUR · STC · BOP · PD | — | **0** | 806 |
 
 ## Status — all 33 dictionaries (by tier-A volume)
 
 `tier-A` = engine tier-A candidate count (per-dict, from `combined_candidates.txt`). The dict
 code links to its [csl-orig](https://github.com/sanskrit-lexicon/csl-orig) source (the entry
-text the triage reads); **PD is not in `csl-orig`, but two external sources exist (to be
-provided) — it becomes triageable once they are wired into the pipeline.**
+text the triage reads); **PD is not in `csl-orig` — it is read from a staged external source
+(`external_src/pd/`, [detectors/get_external_source.py](../detectors/get_external_source.py)) and
+was triaged on its first source; a second PD source is optional and would only refine its
+do-not-file list.**
 
 | dictionary | tier-A | triage status |
 |---|--:|---|

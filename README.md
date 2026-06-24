@@ -7,10 +7,12 @@ from faultfinder3a.php - the machine is commandline tool now.
 > [CLAUDE.md](CLAUDE.md). For task-oriented recipes see **[USE_CASES.md](USE_CASES.md)**;
 > for the newer algorithms see **[detectors/readme.md](detectors/readme.md)**.
 >
-> **Body-grounded triage:** per-dictionary status + results for all 33 dicts (4 triaged so
-> far — MW/PW/VCP/PWG) are indexed in **[corrections_draft/README.md](corrections_draft/README.md)**.
-> To triage another dictionary, type **`/dict-triage <DICT>`** in Claude Code (the link opens
-> the index; the slash-command is run by typing it, not by clicking).
+> **Body-grounded triage:** per-dictionary status + results for **all 33 dictionaries (complete)**
+> are indexed in **[corrections_draft/README.md](corrections_draft/README.md)** — 122 fileable typos
+> across 11 dicts, ~2,549 do-not-file spellings (folded into the detector suppression layer). The
+> high-yield outliers are poorly-digitised sources (SHS 37, YAT 27, ACC 22). To re-triage a
+> dictionary, type **`/dict-triage <DICT>`** in Claude Code (the link opens the index; the
+> slash-command is run by typing it, not by clicking).
 
 ## Detection methods
 
