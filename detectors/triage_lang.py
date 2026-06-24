@@ -23,8 +23,10 @@ _LANG = {
     'PW': 'de', 'PWG': 'de', 'SCH': 'de',                # Petersburg (Boehtlingk-Roth) + Schmidt Nachtraege
     'GRA': 'de', 'CCS': 'de',                            # Grassmann (Rigveda), Cappeller (German)
     'VCP': 'sa', 'SKD': 'sa',                            # Vacaspatyam, Sabdakalpadruma (Sanskrit-Sanskrit)
+    'BUR': 'fr', 'STC': 'fr',                            # Burnouf 1866, Stchoupak-Nitti-Renou (French)
+    'BOP': 'la',                                          # Bopp, Glossarium Sanscritum (Latin)
 }
-_LANG_NAME = {'en': 'English', 'de': 'German', 'sa': 'Sanskrit'}
+_LANG_NAME = {'en': 'English', 'de': 'German', 'sa': 'Sanskrit', 'fr': 'French', 'la': 'Latin'}
 
 # language -> {sub-type: regex source}. Order matters (most specific first when sub-typing).
 MARKERS = {
@@ -51,6 +53,20 @@ MARKERS = {
         # {{Lbody=N}} = VCP redirect (a variant/cross-ref headword sharing another entry's
         # body, e.g. vrAhmaRa -> brAhmaRa); draSya/drazwavya = "is to be seen" (see X).
         'cross-reference': r'\{\{Lbody=|drazwavya|draSyam|tatra draSyam',
+    },
+    'fr': {  # Burnouf 1866 / Stchoupak 1932 French-Sanskrit conventions
+        # STC writes the correction directive as "lire <form>" (infinitive, e.g. valmi- "lire vallī-");
+        # anchor on a following form-marker ({ or the ˚ ditto) so plain glosses ("action de lire") don't match.
+        'wrong-reading':   r'faute pour|erreur pour|fautif|mauvaise le[çc]on|\blisez\b|\blire\s+[{˚]|à corriger|corrompu',
+        'varia-lectio':    r'\bv\.\s?l\.|variante|autre le[çc]on',
+        'in-composition':  r'en composition|en comp\.|pour \S+ devant|par sandhi|m[ée]tri',
+        'cross-reference': r'\bvoyez\b|\bvoy\.|\bcf\.|\bq\.v\.|=\s*\{#|\bv\.\s*\{#',
+    },
+    'la': {  # Bopp 1847 Glossarium Sanscritum (Latin gloss)
+        'wrong-reading':   r'vitiose|male pro|perperam|mendose|\blege\b|corrupt',
+        'varia-lectio':    r'\bv\.\s?l\.|varia lectio|alii legunt|aliter',
+        'in-composition':  r'in compositione|in comp\.|pro \S+ ante|metri causa',
+        'cross-reference': r'\bvide\b|\bconf\.|\bcf\.|\bq\.v\.|=\s*\{#|\bv\.\s*\{#',
     },
 }
 _SUBTYPE_ORDER = ['wrong-reading', 'varia-lectio', 'in-composition', 'cross-reference']
@@ -83,6 +99,17 @@ _HINT = {
            'para0/Atma0 + saka0 + sew, then conjugation -> a real distinct word). A '
            '{{Lbody=N}} body is a REDIRECT (variant headword sharing entry N) = intentional '
            'cross-reference; aSudDa/apapAWa = wrong reading; pAWAntara/iti pAWaH = variant.'),
+    'fr': ('French glosses (Burnouf / Stchoupak). Sanskrit forms appear in {#...#} (or inline IAST), '
+           'French glosses in {%...%}. Intentional-spelling markers: "faute pour" / "erreur pour" / '
+           '"lisez" / "mauvaise leçon" (error/false reading for); "v.l." / "variante"; "voyez" / '
+           '"voy." / "cf." / "= {#X#}" (see/compare, cross-reference); "en composition". A normal '
+           'French definition of the suspect itself means it is a real word. NOTE: BUR/STC inline '
+           'their Sanskrit in IAST (not always {#..#}), so judge by meaning, not markup.'),
+    'la': ('Latin glosses (Bopp, Glossarium). Sanskrit forms appear in {#...#} (or inline IAST), '
+           'Latin glosses in {%...%}. Intentional-spelling markers: "vitiose" / "male pro" / '
+           '"perperam" / "mendose" / "lege" (wrongly/read-for, an erroneous reading); "v.l." / '
+           '"varia lectio" / "aliter"; "vide" / "cf." / "conf." / "= {#X#}" (see/compare); "in '
+           'compositione". A normal Latin definition of the suspect itself means it is a real word.'),
 }
 
 

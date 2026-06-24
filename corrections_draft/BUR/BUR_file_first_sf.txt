@@ -1,0 +1,12 @@
+; BUR body-confirmed fileable typos -- CORRECTIONS standard format (DICT:wrong:right:n)
+; 0 fileable (classified TYPO + source-confirmed + survived the Opus false-positive review) + 4 reviewed-out (commented below)
+; VERIFY each remaining case on the scan, flip trailing n->y for confirmed ones, then:
+;   python chg_nchg_sep.py BUR_file_first_sf.txt chg.txt nchg.txt
+; REVIEWED-OUT (realword): Gloss {%aśunya%} matches headword short-u; defined 'sans vide, plein; complet' as priv. of śūnya. Entry's own gloss agre
+;BUR:aSunya:aSUnya:n
+; REVIEWED-OUT (realword): Gloss {%kamaṭa%}, derivation {%(kam%}=eau {%aṭ)%}=tortue. Gloss spells kamaṭa (=suspect), not kamaṭha; entry's own evide
+;BUR:kamawa:kamaWa:n
+; REVIEWED-OUT (vrddhi): Derived: gloss {%smāśānika%}, base {%(śmaśāna)%} 'qui fréquente les cimetières'. Vrddhi derivative from cited base śmaśā
+;BUR:smASAnika:SmASAnika:n
+; REVIEWED-OUT (vrddhi): Gloss {%viṣṭala%}, derived {%(sthala)%} 'lieu retiré'. Compound from cited base sthala; entry derives the form.
+;BUR:vizwala:vizWala:n

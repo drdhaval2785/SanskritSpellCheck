@@ -1,0 +1,192 @@
+# BUR tier-A -- BODY-GROUNDED triage  (DRAFT; verify every kept case against the scan)
+#
+# The 147 engine tier-A candidates were judged against BUR's OWN entry text (csl-orig),
+# not spelling alone. A spelling detector cannot tell a typo from a real word, an
+# intentional variant / compounding form, or wrong-reading apparatus -- the entry can.
+# Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM
+# pass over the 'realword' set + source confirmation of every TYPO verdict.
+#
+# FINDING: of 147 tier-A candidates, 0 are body-confirmed fileable typos (0.0%).
+# 123 are real distinct words, 20 are spellings BUR documents on purpose (w.r./v.l./
+# in-comp./cross-ref -- filing them would CORRUPT BUR), 0 are not in the current
+# source, and 4 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
+# do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.
+
+# ===== BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file) (0) =====
+
+# ===== BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted (4) =====
+
+aSunya        -> aSUnya         [dcs=3 ndicts=1 body=realword]
+    BUR: {#aSunya#} {%aśunya%} a. {%(a%} priv.) sans vide, plein; complet, entier. || Universel. || Ac. adv. entièrement, tout à fait; sans laisser de vide.
+    judged: Gloss 'sans vide, plein; complet' fits aśūnya (from śūnya=empty). Standard form has long ū; suspect has short u — key misspelling.
+    confirm: Gloss 'sans vide, plein; complet, entier' = aśūnya (a-priv + śūnya empty). Suspect has short u; standard aSUnya long U. Key misspelling.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=aSunya
+
+kamawa        -> kamaWa         [dcs=3 ndicts=2 body=realword]
+    BUR: {#kamawa#} {%kamaṭa%} m. {%(kam%} eau; {%aṭ)%} tortue. || Bambou. || Porc-épic. -- S. m. n. le pot-à  l'eau ou gourde des ascètes. -- S. f. {%kamaṭī%}  tortue femelle.
+    judged: Body IAST is 'kamaṭa'; ṭ (retroflex) = W in SLP1, not w (dental t). Suspect kamawa (w) is a SLP1 typo for kamaWa.
+    confirm: Body IAST 'kamaṭa' (tortue); ṭ retroflex=W in SLP1. Suspect kamawa has dental w. SLP1 key typo for kamaWa.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=kamawa
+
+smASAnika     -> SmASAnika      [dcs=2 ndicts=1 body=realword]
+    BUR: {#smASAnika#} {%smāśānika%} a. {%(śmaśāna)%} qui fréquente les cimetières, Bd.
+    judged: Body derivation '(śmaśāna)' has palatal ś=S; derivative should be SmASAnika; suspect starts with dental s — key misspelling.
+    confirm: Derivation '(śmaśāna)' palatal ś=S; derivative is SmASAnika 'qui fréquente les cimetières'. Suspect starts dental s. Key misspelling.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=smASAnika
+
+vizwala       -> vizWala        [dcs=0 ndicts=1 body=realword]
+    BUR: {#vizwala#} {%viṣṭala%} n. {%(sthala)%} neu retiré, place à part.
+    judged: Body IAST 'viṣṭala' (ṣṭ = zW in SLP1); suspect vizwala has dental w, not retroflex W. SLP1 typo for vizWala.
+    confirm: Body IAST 'viṣṭala' (sthala) 'place à part'; ṣṭ=zW. Suspect vizwala has dental w. SLP1 key typo for vizWala.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=vizwala
+
+# ===== BUCKET 3  REVIEW -- undecidable without the printed page (0) =====
+
+# ===== BUCKET 4  REAL-WORD -- a distinct real word; the fix would merge two words (123) =====
+gAm           -> gam           | BUR: {#gAm#} {%gām%} ac. sg. de {%go.%} | Body: 'ac. sg. de go' — gām is acc. sg. of go (cow), its own inflected form, not a misspel
+ayus          -> Ayus          | BUR: {#ayus#} {%ayus%} n. Vd. un des trois sacrifices;  les deux autres sont appelés {%jyotis%} | Body: 'n. Vd. un des trois sacrifices' alongside jyotis and gos — a distinct Vedic word, n
+sta           -> sTa           | BUR: {#sta#} {%sta%} 2p. pl. imp. de {%asmi%} {%(as).%} | Body: '2p. pl. imp. de asmi (as)' — sta is the genuine 2pl imperative of as; stha is a dif
+Agrya         -> agrya         | BUR: {#Agrya#} {%āgrya%} a. {%(agra)%} éminent; insigne; distingué. | Body defines āgrya as 'éminent; insigne' from agra — genuine vṛddhi derivative with long ā
+jaGAna        -> jaGana        | BUR: {#jaGAna#} {%jaghāna%} p. de {%han.%} | Body: 'p. de han' — jaghāna (long ā) is the correct perfect 3sg of han; jaghana would be w
+AnaNga        -> anaNga        | BUR: {#AnaNga#} {%ānaṅga%} p. de {%aṅg.%} | Body: 'p. de aṅg' — ānaṅga is a participle from aṅg with ā- prefix; different word from an
+aSAna         -> aSana         | BUR: {#aSAna#} {%aśāna%} 2p. sg. imp. de {%aś%} 9. | Body: '2p. sg. imp. de aś 9' — aśāna (long ā) is the 2sg imperative of aś; aśana (food) is
+caturvarRya   -> cAturvarRya   | BUR: {#caturvarRya#} {%caturvarṇya%} n. {%(varṇa)%} le système  des 4 castes. | Body: 'le système des 4 castes' from varṇa — caturvarṇya (no vṛddhi) is a valid compound f
+mArta         -> marta         | BUR: {#mArta#} {%mārta%} m. {%(mṛ%} ou {%mṛt)%} homme, Vd. || {#mArta#} {%mārta%} a. vd. mérité | Body (2 entries): mārta = 'homme Vd.' and 'mérité; lat. meritus' — genuine words, long ā t
+sIta          -> sItA          | BUR: {#sIta#} {%sīta%} pp. de {%sai.%} | Body: 'pp. de sai' — sīta (m./n. pp.) and sītā (f. proper noun) are distinct; both real fo
+upacAya       -> upacaya       | BUR: {#upacAya#} {%upacāya%} m. {%(ci)%} le feu du sacrifice, [m à m. qu'il faut réunir, entret | Body: 'm. (ci) le feu du sacrifice' — upacāya (long ā, from ci) is distinct from upacaya (
+iyAt          -> iyat          | BUR: {#iyAt#} {%iyāt%} 3p. sg. o. de {%emi%} {%(i).%} | Body: '3p. sg. o. de emi (i)' — iyāt (long ā) is 3sg optative of i (go); iyat (so much) is
+vasAna        -> vasana        | BUR: {#vasAna#} {%vasāna%} ppr. de {%vas.%} | Body gives 'ppr. de vas', a present participle of vas-.
+sattrA        -> sattra        | BUR: {#sattrA#} {%sattrā%} adv. avec, en même temps. | Defined as 'adv. avec, en même temps', its own adverb.
+ajya          -> Ajya          | BUR: {#ajya#} {%ajya%} n. {%(añj)%} onction. | Defined as 'n. (añj) onction', its own derivation and gloss.
+praRAya       -> praRaya       | BUR: {#praRAya#} {%praṇāya%} a. {%(nī)%} zélé; || exempt de passion; || droit, juste, honnête. | Defined as 'a. (nī) zélé; exempt de passion; droit, juste', its own derivation.
+uccAvAca      -> uccAvaca      | BUR: {#uccAvAca#} {%uccāvāca%} a. {%(avāc)%} haut et bas; grand et petit; changeant, varié, mul | Defined as 'a. (avāc) haut et bas; grand et petit; changeant', its own gloss.
+dampatI       -> dampati       | BUR: {#dampatI#} {%dampatī%} m. du. {%(dam%} f.) le mari et la femme, le maître et la maîtresse | Defined as 'm. du. (dam f.) le mari et la femme', the dual form, its own entry.
+anuzWuB       -> anuzwuB       | BUR: {#anuzWuB#} {%anuṣṭhubh%} f. {%(sthumbh)%} stance de 32 [Page027-1]  syllabes, divisées en | Defined as 'f. (sthumbh) stance de 32 syllabes', the anuṣṭubh meter, its own word.
+DayA          -> dayA          | BUR: {#DayA#} {%dhayā%} f. {%(dhe)%} petite fille. | Defined as 'f. (dhe) petite fille', its own derivation and gloss.
+iTas          -> itas          | BUR: {#iTas#} {%ithas%} 2p. du. pr. de {%emi%} {%(i).%} | Body: '2p. du. pr. de emi (i)' — ithas is 2du present of i (go); itas (from here) is unrel
+darba         -> darBa         | BUR: {#darba#} {%darba%} m. rākṣasa ou mauvais génie. | Body: 'm. rākṣasa ou mauvais génie' — darba (demon) is its own word, not darbha (sacred gr
+ARa           -> Ama           | BUR: {#ARa#} {%āṇa%} p. de {%aṇ.%} {%āṇayāmi%} c. résonner, rendre un son. | Body: 'p. de aṇ; āṇayāmi c. résonner' — āṇa is from root aṇ; completely different word fro
+Ardita        -> ardita        | BUR: {#Ardita#} {%ārdita%} pp. {%(ārd)%} tourmenté, persécuté, affligé, Cf. {%ārtta.%} | Body: 'pp. (ārd) tourmenté, persécuté' — ārdita with ā- prefix from ārd; distinct from ard
+anayA         -> anaya         | BUR: {#anayA#} {%anayā, anena,%} i. de {%ayam, idam.%} | Body: 'i. de ayam, idam' — anayā is instr. fem. of ayam (this); anaya (misconduct) is unre
+dakzya        -> dAkzya        | BUR: {#dakzya#} {%dakṣya%} n. (sfx. {%ya)%} adresse, dextérité. | Body: 'n. (sfx. ya) adresse, dextérité' — dakṣya (short a) is a valid derivative; both for
+Anarha        -> anarha        | BUR: {#Anarha#} {%ānarha%} p. de {%arh.%} | Body: 'p. de arh' — ānarha is a participle from arh with ā- prefix; distinct from anarha (
+kawakza       -> kawAkza       | BUR: {#kawakza#} {%kaṭakṣa%} m. {%(kaṭ; akṣa)%} regard voilé, regard oblique. | Body: 'm. (kaṭ; akṣa) regard voilé, regard oblique' — kaṭakṣa is a valid compound; both fo
+kuYjA         -> kuYja         | BUR: {#kuYjA#} {%kuñjā%} f. loge ou tonnelle de jardin; cf. {%kuñja.%} | Body: 'f. loge ou tonnelle de jardin' — full French gloss of kuñjā as its own feminine nou
+paricAya      -> paricaya      | BUR: {#paricAya#} {%paricāya%} m. {%(ci)%} action de rassembler;  || perception d'une rente. || | Body: 'm. (ci) action de rassembler; le feu sacré' — paricāya (long ā, from ci) distinct f
+avASya        -> avaSya        | BUR: {#avASya#} {%avāśya%} a. {%(vaś)%} non désirable. | Defined as 'a. (vaś) non désirable', its own derivation and gloss.
+camIkara      -> cAmIkara      | BUR: {#camIkara#} {%camīkara%} n. mine, carrière. | Defined as 'n. mine, carrière', its own gloss.
+cawacawa      -> cawacawA      | BUR: {#cawacawa#} {%caṭacaṭa%} indéc. avec un bruit répété. | Defined as 'indéc. avec un bruit répété', its own indeclinable.
+AnaBra        -> anaBra        | BUR: {#AnaBra#} {%ānabhra%} p. de {%abhr.%} | Body IAST ānabhra has long ā matching SLP1 A; participle of abhr-; suspect key is correct.
+prAtipAdika   -> prAtipadika   | BUR: {#prAtipAdika#} {%prātipādika%} n. {%(prati; pada)%} nom sous sa forme thématique, tg. | Body IAST prātipādika has long ā in second syllable matching suspect; body defines it as g
+Apri          -> AprI          | BUR: {#Apri#} {%āpri,%} Vd. formes ou aspects divers d'Agni, désignés ordint. par les mots {%su | Body IAST āpri has short i matching suspect Apri; Vedic word for aspects of Agni; suggesti
+nAvIka        -> nAvika        | BUR: {#nAvIka#} {%nāvīka%} m. {%(nau;%} sfx. {%īka)%} pilote. | Body IAST nāvīka and sfx. īka both confirm long ī matching nAvIka; suggestion nAvika (shor
+urvIyA        -> urviyA        | BUR: {#urvIyA#} {%urvīyā%} adv. (i. f. de {%uru)%} largement;  amplement; beaucoup. | Body IAST urvīyā has long ī matching suspect; adverb from uru, correctly spelled.
+lUp           -> lup           | BUR: {#*lUp#} {%lūp.%} {%lūpayāmi%} 10. Dérober, voler,  cf. {%luṣ.%} || Tuer. | Body: 'lūpayāmi 10. Dérober, voler; Tuer' — lūp (long ū) is a distinct verbal root from lu
+Ude           -> ude           | BUR: {#Ude#} {%ūde%} p. moy. de {%vad.%} | 'p. moy. de vad' = middle-voice perfect of vad; Ude (long Ū) is the correct form, ude (sho
+prezwa        -> prezWa        | BUR: {#prezwa#} {%preṣṭa%} a. {%(iṣṭa)%} désiré, chéri. -- S. f. épouse. || Jambe [cf. {%preṣ%} | Body IAST preṣṭa (ṣ=z, ṭ=w) matches suspect prezwa; suggestion prezWa = preṣṭha (ṭh) contr
+dvAnta        -> DvAnta        | BUR: {#dvAnta#} {%dvānta%} Vd. nom d'une des 9 classes de Maruts. | Body: 'Vd. nom d'une des 9 classes de Maruts' — dvānta is a Vedic proper name; different f
+vedyuta       -> vEdyuta       | BUR: {#vedyuta#} {%vedyuta%} a. {%(vidyut)%} de l'éclair; {%agnir%} {%vedyutas%} le feu de l'éc | Defined as 'a. (vidyut) de l'éclair' with own derivation and usage example.
+datTa         -> datta         | BUR: {#datTa#} {%dattha%} 2p. pl. pr. de {%dadhāmi%} {%(dhā)%}. | Body gives '2p. pl. pr. de dadhāmi (dhā)', an inflected form of dhā-.
+KumBARqa      -> kumBARqa      | BUR: {#KumBARqa#} {%khumbhāṇḍa%} m. déités d'un certain  ordre, dans le Buddhisme. | Body IAST khumbhāṇḍa starts with kh=K; suspect KumBARqa is correct SLP1; suggestion has pl
+karaSAkA      -> karaSAKA      | BUR: {#karaSAkA#} {%karaśākā%} f. {%(śākā%} branche) doigt. | Body IAST karaśākā has plain k in kā matching suspect karaSAkA; suggestion KA = kha contra
+viSfNkala     -> viSfNKala     | BUR: {#viSfNkala#} {%viśṛṅkala%} a. dégagé de liens, libre. | Body IAST viśṛṅkala has plain k matching suspect; suggestion viSfNKala = viśṛṅkhala (kh) c
+jawiti        -> Jawiti        | BUR: {#jawiti#} {%jaṭiti%} adv. promptement, soudain. | Defined as 'adv. promptement, soudain', its own adverb.
+ABis          -> Avis          | BUR: {#ABis#} {%ābhis%} i. pl. f. de {%ayam.%} | Body: 'i. pl. f. de ayam' — ābhis is instr. pl. fem. of ayam (this); āvis (openly) is comp
+Bfjana        -> vfjana        | BUR: {#Bfjana#} {%bhṛjana%} n. poèle à frire. | Body: 'n. poèle à frire' — bhṛjana (frying pan) is a genuine word; vṛjana (settlement/sin)
+akarma        -> akarRa        | BUR: {#akarma#} {%akarma%} n. {%(kṛ)%} inaction, cessation de l'acte. {%akarmakṛt%} {%(kṛ)%} qu | Body: 'n. (kṛ) inaction' with derivative akarmakṛt — akarma is a real compound; akarṇa (ea
+biBeda        -> viBeda        | BUR: {#biBeda#} {%bibheda%} p. de {%bhid.%} | Body gives 'p. de bhid', the perfect of bhid-, its own grammatical form.
+dezma         -> dezRa         | BUR: {#dezma#} {%deṣma%} 1p. pl. vd. a1. de {%dā%} 3. | Body gives '1p. pl. vd. a1. de dā 3', a Vedic inflected form of dā-.
+aByarcaRa     -> aByarcana     | BUR: {#aByarcaRa#} {%abhyarcaṇa%} n. {%(arc)%} culte. || Vénération, respect. | Body IAST abhyarcaṇa has retroflex ṇ=R matching suspect; suggestion with dental n contradi
+mamus         -> manus         | BUR: {#mamus#} {%mamus%} 3p. pl p. de {%mā.%} | Body defines mamus as '3p. pl p. de mā' — a distinct verbal form, not a misspelling of man
+nahuz         -> nahus         | BUR: {#nahuz#} {%nahuṣ%} m. Vd. homme. {%nahuṣa%} m. np. d'un ancien roi de la race lunaire. || | Body IAST nahuṣ (ṣ=z) matches suspect; Vedic word and proper noun, distinct from *nahus.
+yozanA        -> yozaRA        | BUR: {#yozanA#} {%yoṣanā, yoṣā, yoṣit%} et {%yoṣitā,%} f. femme; cf. lat. uxor. | Body lists yoṣanā first with dental n matching suspect yozanA; retroflex ṇ variant is diff
+Aka           -> aka           | BUR: {#Aka#} {%āka%} p. de {%ak.%} | Body gives 'p. de ak', a participle of ak-.
+lAw           -> law           | BUR: {#*lAw#} {%lāṭ.%} {%lāṭyāmi%} 4. Vivre. | Defined as verb root 'lāṭyāmi 4. Vivre', its own entry.
+catuHSAlA     -> catuHSAla     | BUR: {#catuHSAlA#} {%catuḥśālā%} f. place ou cour formée par quatre maisons. | Body IAST catuḥśālā has long final ā matching suspect catuHSAlA; suggestion with short a c
+Anakza        -> anakza        | BUR: {#Anakza#} {%ānakṣa%} p. de {%akṣ.%} | Body IAST ānakṣa has long ā matching suspect Anakza; suggestion anakza (short a) contradic
+aparaNmuKa    -> aparANmuKa    | BUR: {#aparaNmuKa#} {%aparaṅmukha%} a. {%(mukha)%} qui ne détourne pas le visage: brave; sans a | Body IAST aparaṅmukha has short a after r matching suspect aparaNmuKa; suggestion with lon
+arADa         -> ArADa         | BUR: {#arADa#} {%arādha%} a. {%(rādh)%} Vd. qui ne présente  pas l'offrande, avare. | Body IAST arādha has short initial a matching suspect arADa; suggestion ArADa (long initia
+vikrAyika     -> vikrayika     | BUR: {#vikrAyika#} {%vikrāyika%} m. {%(krī;%} sfx. {%ika)%} vendeur. | Body IAST 'vikrāyika' (long ā) matches suspect vikrAyika exactly; its own entry meaning 'v
+yavamaDyA     -> yavamaDya     | BUR: {#yavamaDyA#} {%yavamadhyā%} f. {%(yava%} rapidité) sorte de stance composée de 3 vers don | Body IAST 'yavamadhyā' (f., long ā) matches suspect yavamaDyA; feminine metrical term with
+kalidrUma     -> kalidruma     | BUR: {#kalidrUma#} {%kalidrūma%} m. (cf. {%kali)%} terminalia  belerica, esp. de myrohalan, bot | Body IAST kalidrūma has long ū matching suspect kalidrUma; suggestion with short u contrad
+tripfzwa      -> tripfzWa      | BUR: {#tripfzwa#} {%tripṛṣṭa%} a. ép. d'Agni ou de Soma [qui présente trois dox aux libations], | Body IAST tripṛṣṭa has ṭ=w matching suspect tripfzwa; suggestion tripfzWa = tripṛṣṭha (ṭh)
+Svetreya      -> SvEtreya      | BUR: {#Svetreya#} {%śvetreya%} a. {%(śvitra)%} dont les rayons blanchissent, Vd. | Body IAST śvetreya has e (not ai) matching suspect Svetreya; suggestion SvEtreya = śvaitre
+Anarda        -> Amarda        | BUR: {#Anarda#} {%ānarda%} p. de {%ard.%} | Body gives 'p. de ard', a participle of ard-.
+ceta          -> cewa          | BUR: {#ceta#} {%ceta%} a. {%(cit)%} qui pense, qui réfléchit, sage. {%cetaka%} a. (sfx. {%ka)%} | Defined as 'a. (cit) qui pense, qui réfléchit, sage' with derivatives cetaka/cetakī.
+DUnin         -> DUmin         | BUR: {#DUnin#} {%dhūnin%} m. {%(dhū;%} sfx. {%nin)%} np. d'une des 9 classes de Maruts, Vd. | Body IAST dhūnin with sfx. nin confirms n; suspect DUnin matches body; DUmin = dhūmin is a
+lohiRI        -> lohinI        | BUR: {#lohiRI#} {%lohiṇī%} f. femme rouge de colère  ou fardée, {%rohiṇī.%} | Body IAST lohiṇī has retroflex ṇ=R matching suspect lohiRI; suggestion with dental n contr
+nikAmam       -> nikAman       | BUR: {#nikAmam#} {%nikāmam%} adv. {%(kam)%} volontiers,  volontairement. | Body IAST nikāmam has final m matching suspect; suggestion with final n contradicts body. 
+samemi        -> sanemi        | BUR: {#samemi#} {%samemi%} {%(i)%} aller ensemble; se réunir à, d.; || se rassembler. || Avoir  | Body gives full verbal gloss '(i) aller ensemble; se réunir' — a real compound verb, not a
+samprakzAlaRa -> samprakzAlana | BUR: {#samprakzAlaRa#} {%samprakṣālaṇa%} n. {%(kṣal)%} action  de laver, de nettoyer, de purifi | Body IAST samprakṣālaṇa has retroflex ṇ=R matching suspect samprakzAlaRa; suggestion with 
+vyatisaNga    -> vyatizaNga    | BUR: {#vyatisaNga#} {%vyatisaṅga%} m. {%(vi; ati; sam; gam)%} combinaison; rapprochement mutuel | Body IAST vyatisaṅga has dental s matching suspect; suggestion vyatizaNga = vyatiṣaṅga (re
+SiSAya        -> SiSaya        | BUR: {#SiSAya#} {%śiśāya%} p. de {%śi.%} | Body 'p. de śi' = perfect form of root śi; SiSAya (long ā) is the correct grammatical head
+asvaDyAya     -> asvADyAya     | BUR: {#asvaDyAya#} {%asvadhyāya%} a. {%(su, adhyāya)%} qui n'a pas bien fait les lectures, qui  | Defined adj. (su, adhyāya) 'qui n'a pas bien étudié le Veda'; asvaDyAya has its own deriva
+divoja        -> divojA        | BUR: {#divoja#} {%divoja%} a. {%(jan)%} né dans le ciel, céleste. | Defined adj. (jan) 'né dans le ciel, céleste' — a genuine entry; divojA would be a feminin
+samAsANga     -> samAsaNga     | BUR: {#samAsANga#} {%samāsāṅga%} n. {%(aṅga)%} membre d'un composé, tg. | Body IAST 'samāsāṅga' (long ā+Ṅ) matches suspect samAsANga; samAsaNga (short a) is a diffe
+AprAmi        -> aprAmi        | BUR: {#AprAmi#} {%āprāmi%} 2, {%(prā)%} Vd. remplir. | Glossed (prā) Vd. 'remplir' — ā-prā compound; AprAmi (ā-prefix, long Ā) is meaningful, dis
+arita         -> Arita         | BUR: {#arita#} {%arita%} m. Vd. rameur. Gr. ἐρἑσσω. | Defined m. Vd. 'rameur' with Greek cognate ἐρέσσω; body IAST 'arita' (short a) matches sus
+svADya        -> svAdya        | BUR: {#svADya#} {%svādhya%} a. {%(su; ā; dhyā)%} qui est en méditation; pensif. | Etym (su; ā; dhyā) 'en méditation'; D=dh fits svADya (from dhyā); svAdya (d) means 'savour
+citrodana     -> citrOdana     | BUR: {#citrodana#} {%citrodana%} n. {%(odana)%} riz bouilli  et coloré. | Body IAST 'citrodana' (short o, citra+odana sandhi) matches suspect; citrOdana (au-sandhi)
+darbawa       -> darBawa       | BUR: {#darbawa#} {%darbaṭa%} m. officier de police. | Defined as 'm. officier de police', its own gloss.
+vipaSin       -> vipASin       | BUR: {#vipaSin#} {%vipaśin%} m. {%(paś;%} sfx. {%in)%} m à m. un clairvoyant, un saint, Bd. | Defined as 'm. (paś; sfx. in) un clairvoyant, un saint', its own derivation.
+saYcAya       -> saYcaya       | BUR: {#saYcAya#} {%sañcāya%} m. sacrifice où l'on boit le soma. | Defined as 'm. sacrifice où l'on boit le soma', its own gloss.
+anagnitra     -> anagnitrA     | BUR: {#anagnitra#} {%anagnitra%} a. {%(agni)%} Vd. qui n'allume pas le feu sacré, ép. des Dasyu | Defined adj. Vd. 'qui n'allume pas le feu sacré'; body IAST 'anagnitra' matches suspect; a
+Avfzwa        -> avfzwa        | BUR: {#Avfzwa#} {%āvṛṣṭa%} n. et {%avṛṣṭi%} f. {%(vṛṣ)%} pluie. | Body gives both 'āvṛṣṭa n.' (= Avfzwa, long ā) and 'avṛṣṭi f.' — Avfzwa is its own entry, 
+DOrtikA       -> DOrtika       | BUR: {#DOrtikA#} {%dhaurtikā%} f. {%(dhūrta)%} fourberie; fraude, escroquerie. | Body IAST 'dhaurtikā' (long ā) matches suspect DOrtikA; this is the feminine form with its
+niryAt        -> niryat        | BUR: {#niryAt#} {%niryāt%} 3p. sg. o. de {%niremi.%} | '3p. sg. o. de niremi' = optative of niremi; niryAt (long ā) is the grammatically correct 
+ratodvAha     -> ratodvaha     | BUR: {#ratodvAha#} {%ratodvāha%} m. {%(ut; vah)%} coucou kokila. | Body IAST 'ratodvāha' (long ā) matches suspect; etym (ut; vah) 'coucou kokila' is its own 
+sUtyaSOca     -> sUtyASOca     | BUR: {#sUtyaSOca#} {%sūtyaśauca%} n. {%(sūti; a; śuc)%} impureté produite par un accouchement o | Body IAST 'sūtyaśauca' (short a in -ya-) matches suspect sUtyaSOca; sUtyASOca (long ā) wou
+tOrayaRa      -> tOrayARa      | BUR: {#tOrayaRa#} {%taurayaṇa%} a. {%(tūr)%} qui se hâte, Vd. | Body IAST 'taurayaṇa' (dental ṇa = Ra in SLP1) matches suspect tOrayaRa; tOrayARa (long ā 
+tarAj         -> tArAj         | BUR: {#tarAj#} {%tarāj%} n. une des 21 {%virāṭs%} de la gāyatrī. | Body IAST 'tarāj' (short a) matches suspect tarAj; defined as a virāṭ name. tArAj (long ā)
+sOmi          -> sOmI          | BUR: {#sOmi#} {%saumi%} pr. de {%su%} 1 et 2. | 'pr. de su 1 et 2' = present forms of su; sOmi (short i) is the correct present form; sOmI
+ratu          -> ratU          | BUR: {#ratu#} {%ratu%} f. {%(ram;%} sfx. {%tu)%} femme vertueuse  || Le Gange céleste. | Defined f. (ram; sfx. tu) 'femme vertueuse'; body IAST 'ratu' (short u) matches suspect; r
+anusayAna     -> anuSayAna     | BUR: {#anusayAna#} {%anusayāna%} ou {%anusāyana%} n. {%(so)%} Bd. la confession. | Body gives 'anusayāna ou anusāyana' — both variants have dental s, not palatal ś (S). Dist
+uvASa         -> uvAsa         | BUR: {#uvASa#} {%uvāśa%} p. de {%vaś.%} | Glossed 'p. de vaś' (perfect of vaś) — genuine verbal form; Ś (palatal) vs s (dental) is p
+surasAzWa     -> surasAzwa     | BUR: {#surasAzWa#} {%surasāṣṭha%} m. {%(aṣṭan)%} les huit plantes au suc savoureux. | Body IAST 'surasāṣṭha' (ṣṭh = zW in SLP1) matches suspect surasAzWa; surasAzwa (dental zw)
+DrARa         -> drARa         | BUR: {#DrARa#} {%dhrāṇa%} pp. ps. de {%dhrai.%} | Body gives 'pp. ps. de dhrai', a passive participle of dhrai-.
+svOrasa       -> svorasa       | BUR: {#svOrasa#} {%svaurasa%} m. {%(surasa)%} sédiment, marc, moulu ou pilé. | Defined m. (surasa) 'sédiment, marc, moulu ou pilé' — O (au) vs o is phonemically distinct
+parEzwukA     -> parezwukA     | BUR: {#parEzwukA#} {%paraiṣṭukā%} f. {%(iṣ;%} sfx. {%uka)%} vache  qui fait beaucoup de veaux. | Defined f. (iṣ; sfx. uka) 'vache qui fait beaucoup de veaux' — E (ai) vs e is phonemically
+vreha         -> vrEha         | BUR: {#vreha#} {%vreha%} a. {%(vrīhi)%} de riz. {%vreheya%} a. (sfx. {%eya)%} de riz, semé de r | Defined adj. (vrīhi) 'de riz' + derivative vreheya — own word family; e vs E (ai) is phone
+have          -> havE          | BUR: {#have#} {%have%} pr. vd. de {%hve.%} | Glossed 'pr. vd. de hve' (Vedic present of hve) — genuine verbal form; e vs E (ai) is phon
+adambitva     -> adamBitva     | BUR: {#adambitva#} {%adambitva%} n. {%(damb)%} sincérité. | Defined n. (damb) 'sincérité' — its own abstract noun derived from damb; gloss fits adambi
+KalikAra      -> kalikAra      | BUR: {#KalikAra#} {%khalikāra%} m. {%(khala%} a; {%kṛ)%} pervers,  malfaisant. | Defined as 'm. (khala a; kṛ) pervers, malfaisant', its own derivation.
+KolmuKa       -> Kolmuka       | BUR: {#KolmuKa#} {%kholmukha%} m. {%(kha; ulmukhā)%} la planète de Mars, qui est rougeâtre. | Body IAST 'kholmukha' (kh+mukha = K+muKa in SLP1) matches suspect KolmuKa; Kolmuka (short 
+varamukI      -> varamuKI      | BUR: {#varamukI#} {%varamukī%} f. le parfum {%reṇukā.%} | Defined f. 'le parfum reṇukā' — own gloss; k vs K (kh) is a distinct phoneme; not a typo.
+gulaYca       -> GulaYca       | BUR: {#gulaYca#} {%gulañca%} m. bouquet.  [Page220-2] {%gulañcakanda%} m. esp. de racine comest | Defined m. 'bouquet' plus derivative gulañcakanda — own word; g vs G (gh) is phonemically 
+cAgaleyin     -> CAgaleyin     | BUR: {#cAgaleyin#} {%cāgaleyin,%} au pl. nom d'une des écoles du Yajus noir. | Defined 'au pl. nom d'une des écoles du Yajus noir' — genuine entry; c vs C (ch) is phonem
+SuR           -> Sun           | BUR: {#SuR#} {%śuṇ%}. {%śuṇāmi%} 6. Aller, cf. {%śoṇ.%} | Defined as verb root 'śuṇāmi 6. Aller'; 'cf. śoṇ' points elsewhere.
+cuvra         -> cubra         | BUR: {#cuvra#} {%cuvra%} n. {%(cub)%} face, visage. | Defined as 'n. (cub) face, visage', its own derivation and gloss.
+avemi         -> aveRi         | BUR: {#avemi#} {%avemi%} 2, {%(i)%} descendre, ac. || Comprendre, concevoir, savoir. | Defined as verb '(i) descendre ... Comprendre, concevoir, savoir', its own entry.
+vemi          -> veRi          | BUR: {#vemi#} {%vemi%} pr. de {%vī.%} | Body gives 'pr. de vī', a present form of vī-.
+DyAyan        -> DyAyam        | BUR: {#DyAyan#} {%dhyāyan%} ppr. de {%dhyai.%} | 'ppr. de dhyai' = present participle of dhyai; DyAyan (nom. sg. m. ppr.) is the correct he
+cakrivat      -> cakfvat       | BUR: {#cakrivat#} {%cakrivat%} m. (sfx. {%vat)%} âne [qui se roule à terre]. | Defined m. (sfx. vat) 'âne [qui se roule à terre]' — its own word; i vs vocalic-r (f) is p
+nirvezwaRa    -> nirvezwana    | BUR: {#nirvezwaRa#} {%nirveṣṭaṇa%} n. petit roseau employé  par les tisserands. | Defined n. 'petit roseau employé par les tisserands' — gloss fits the suspect form; R vs n
+vfzAyana      -> vfzAyaRa      | BUR: {#vfzAyana#} {%vṛṣāyana%} m. passereau. | Defined m. 'passereau' — own gloss; n vs R (retroflex ṇ) is phonemically distinct, not a t
+prAmAnika     -> prAmARika     | BUR: {#prAmAnika#} {%prāmānika%} a. {%(pramāna)%} fondé sur un témoignage ou une autorité. -- S | Body spells prāmānika with dental n in both key and derivation (pramāna) — Burnouf's consi
+nAryANga      -> nAryaNga      | BUR: {#nAryANga#} {%nāryāṅga%} m. oranger. | Body IAST 'nāryāṅga' matches suspect nAryANga (Ā+Ṅ); gloss 'oranger' belongs to this entry
+pratitAli     -> pratitAlI     | BUR: {#pratitAli#} {%pratitāli%} f. clef. | Defined f. 'clef'; body IAST 'pratitāli' (short i) matches suspect; pratitAlI (long ī) wou
+susipra       -> suSipra       | BUR: {#susipra#} {%susipra%} a. [au beau nez?] ép. d'Indra, Vd. | Body IAST 'susipra' (dental s) matches suspect; glossed as Vedic epithet of Indra. suSipra
+
+# ===== BUCKET 5  INTENTIONAL -- BUR documents the spelling on purpose; NEVER file (20) =====
+vAhu          -> bAhu          | BUR: {#vAhu#} {%vāhu%} cf. {%bāhu.%} {%vāhuka,%} m. np. d'homme. | Body: 'cf. bāhu' — cross-reference marker documents vāhu as a deliberate variant; vāhuka a
+adarSaRa      -> adarSana      | BUR: {#adarSaRa#} {%adarśaṇa%} ou {%adarśana%} n. {%(dṛś)%} le fait de ne pas voir ou de n'être | Body explicitly gives 'adarśaṇa ou adarśana' — both spellings documented as the same word.
+dAt           -> dat           | BUR: {#dAt#} {%dāt,%} pour {%adāt,%} 3p. sg. a2. vd. de {%dā.%} | Body: 'pour adāt, 3p. sg. a2. vd. de dā' — 'pour' documents it as a shortened Vedic varian
+cyUti         -> cyuti         | BUR: {#cyUti#} {%cyūti%} f. mms. que {%cyuti.%} | Body: 'mms. que cyuti' (même sens) — explicitly a documented variant spelling of cyuti.
+metrAvaruRa   -> mEtrAvaruRa   | BUR: {#metrAvaruRa#} {%metrāvaruṇa%} a. cf. {%maitrāvaruṇa.%} | Body is 'a. cf. maitrāvaruṇa' — explicit cross-reference documenting metrāvaruṇa as a cros
+Awaruza       -> awaruza       | BUR: {#Awaruza#} {%āṭaruṣa%} m. justicia adhenatoda, bot. Cf. {%aṭaruṣa.%} | Body ends 'Cf. aṭaruṣa' — explicit cf. cross-reference documents the long-ā variant intent
+jiv           -> jIv           | BUR: {#*jiv#} {%jiv,%} cf. {%jinv.%} | 
+kzira         -> kzIra         | BUR: {#kzira#} {%kṣira%} n. lait, Vd. cf. {%kṣīra.%} | 
+Div           -> div           | BUR: {#*Div#} {%dhiv,%} cf. {%dhinv.%} | 
+Bad           -> vad           | BUR: {#*Bad#} {%bhad,%} cf. {%bhand.%} | 
+dUz           -> duz           | BUR: {#*dUz#} {%dūṣ,%} cf. {%duṣ.%} | 
+Svid          -> svid          | BUR: {#*Svid#} {%śvid%} et {%śvind,%} cf. {%śvit.%} | 
+baNga         -> vaNga         | BUR: {#baNga#} {%baṅga%} m. le Bengale, Cf. {%vaṅga.%} | 
+parusa        -> paruza        | BUR: {#parusa#} {%parusa%} n., cf. {%paru.%} | 
+kfzAnu        -> kfSAnu        | BUR: {#kfzAnu#} {%kṛṣānu%} m. cf. {%kṛśānu.%} | 
+dav           -> daB           | BUR: {#*dav#} {%dav,%} cf. {%danv.%} | 
+qaB           -> daB           | BUR: {#*qaB#} {%ḍabh,%} cf. {%ḍambh.%} | 
+tub           -> tuB           | BUR: {#*tub#} {%tub,%} cf. {%tumb.%} | 
+trak          -> traK          | BUR: {#*trak#} {%trak,%} cf. {%traṅk.%} | 
+kfb           -> kfv           | BUR: {#*kfb#} {%kṛb.%} Cf. {%karb.%} | 
+
+# ===== BUCKET 6  UNLOCATABLE -- not in the current BUR source (stale/different key) (0) =====

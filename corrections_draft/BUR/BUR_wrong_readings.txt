@@ -1,0 +1,32 @@
+# BUR -- DOCUMENTED-INTENTIONAL spellings (NOT typos -- do NOT file corrections)
+#
+# 20 headwords that LOOK like misspellings but which BUR records on purpose:
+# wrong-reading apparatus (w.r.), variae lectiones (v.l.), in-composition /
+# sandhi forms (in comp. for...), cross-references (See / = X q.v.), and other
+# grammatical/Vedic notes. Filing a 'correction' for any of these CORRUPTS BUR.
+# Use this as a suppression list: such headwords should not be re-flagged.
+# Format per row:  headword -> would-be 'correction'  |  the BUR entry text
+
+# ===== CROSS-REFERENCE (17) =====
+Awaruza        -> awaruza        | {#Awaruza#} {%āṭaruṣa%} m. justicia adhenatoda, bot. Cf. {%aṭaruṣa.%}
+Bad            -> vad            | {#*Bad#} {%bhad,%} cf. {%bhand.%}
+Div            -> div            | {#*Div#} {%dhiv,%} cf. {%dhinv.%}
+Svid           -> svid           | {#*Svid#} {%śvid%} et {%śvind,%} cf. {%śvit.%}
+baNga          -> vaNga          | {#baNga#} {%baṅga%} m. le Bengale, Cf. {%vaṅga.%}
+dUz            -> duz            | {#*dUz#} {%dūṣ,%} cf. {%duṣ.%}
+dav            -> daB            | {#*dav#} {%dav,%} cf. {%danv.%}
+jiv            -> jIv            | {#*jiv#} {%jiv,%} cf. {%jinv.%}
+kfb            -> kfv            | {#*kfb#} {%kṛb.%} Cf. {%karb.%}
+kfzAnu         -> kfSAnu         | {#kfzAnu#} {%kṛṣānu%} m. cf. {%kṛśānu.%}
+kzira          -> kzIra          | {#kzira#} {%kṣira%} n. lait, Vd. cf. {%kṣīra.%}
+metrAvaruRa    -> mEtrAvaruRa    | {#metrAvaruRa#} {%metrāvaruṇa%} a. cf. {%maitrāvaruṇa.%}
+parusa         -> paruza         | {#parusa#} {%parusa%} n., cf. {%paru.%}
+qaB            -> daB            | {#*qaB#} {%ḍabh,%} cf. {%ḍambh.%}
+trak           -> traK           | {#*trak#} {%trak,%} cf. {%traṅk.%}
+tub            -> tuB            | {#*tub#} {%tub,%} cf. {%tumb.%}
+vAhu           -> bAhu           | {#vAhu#} {%vāhu%} cf. {%bāhu.%} {%vāhuka,%} m. np. d'homme.
+
+# ===== OTHER-INTENTIONAL (3) =====
+adarSaRa       -> adarSana       | {#adarSaRa#} {%adarśaṇa%} ou {%adarśana%} n. {%(dṛś)%} le fait de ne pas voir ou de n'être pas vu.
+cyUti          -> cyuti          | {#cyUti#} {%cyūti%} f. mms. que {%cyuti.%}
+dAt            -> dat            | {#dAt#} {%dāt,%} pour {%adāt,%} 3p. sg. a2. vd. de {%dā.%}

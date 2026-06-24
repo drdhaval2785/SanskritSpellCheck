@@ -1,0 +1,61 @@
+# BOP tier-A -- BODY-GROUNDED triage  (DRAFT; verify every kept case against the scan)
+#
+# The 32 engine tier-A candidates were judged against BOP's OWN entry text (csl-orig),
+# not spelling alone. A spelling detector cannot tell a typo from a real word, an
+# intentional variant / compounding form, or wrong-reading apparatus -- the entry can.
+# Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM
+# pass over the 'realword' set + source confirmation of every TYPO verdict.
+#
+# FINDING: of 32 tier-A candidates, 0 are body-confirmed fileable typos (0.0%).
+# 24 are real distinct words, 6 are spellings BOP documents on purpose (w.r./v.l./
+# in-comp./cross-ref -- filing them would CORRUPT BOP), 1 are not in the current
+# source, and 1 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
+# do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.
+
+# ===== BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file) (0) =====
+
+# ===== BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted (0) =====
+
+# ===== BUCKET 3  REVIEW -- undecidable without the printed page (1) =====
+
+BAgiraTI      -> BAgIraTI       [dcs=3 ndicts=1 body=realword]
+    BOP: {#BAgiraTI#} {%f.%} ({%fem.%} τοῦ {#BAgiraTa#} a {#BagiraTa#} nom. pr. regis, suff. {#a#}) nomen Gangis fluminis.
+    judged: Body derives from {#BAgiraTa#} (short i) 'nomen Gangis'; standard BhāgīrathI has long I — entry internally consistent but suspect.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=BAgiraTI
+
+# ===== BUCKET 4  REAL-WORD -- a distinct real word; the fix would merge two words (24) =====
+Ced           -> ced           | BOP: {#Ced#} 10. {%P.%} ({#dvEDIkaraRe#} {%K.%} {#Cede#} {%V.%}; a {#Cid#}, v. 2. {#Cid#}) divi | Body defines {#Ced#} cl.10 'dividere'; capital C=palatal ch in SLP1, distinct root from ce
+Agrya         -> agrya         | BOP: {#Agrya#} (ab {#agra#} {%n.%} cacumen, s. {#ya#}, v. gr. 650.) insignis, egregius, eximius | Body defines {#Agrya#} (long A) 'insignis, egregius, eximius' from agra+ya — distinct word
+kalaSA        -> kalaSa        | BOP: {#kalaSA#} {%f.%} {%id.%} | Body gives {#kalaSA#} f. id. — documented feminine form of kalaSa; long-A feminine ending,
+pIWA          -> pIWa          | BOP: {#pIWA#} {%f.%} {%id.%} | Body gives {#pIWA#} f. id. — documented feminine form of pIWa; long-A feminine ending, own
+upaDyAya      -> upADyAya      | BOP: {#upaDyAya#} (r. {#DyE#} s. {#a#}) meditans, meditabundus. SA. 6.14. | Body derives from r. {#DyE#} praef. upa, glosses 'meditans, meditabundus' — distinct from 
+vasAna        -> vasana        | BOP: {#vasAna#} {%Part. praes. A.%} r. {#vas#} cl. 2. {%q. v.%} | Body defines {#vasAna#} as Part. praes. A. of r. {#vas#} cl.2 — present participle middle,
+gramya        -> grAmya        | BOP: {#gramya#} (a {#grAma#} vicus, s. {#ya#}) cicur, mansuetus. N. 13.8. | Body derives from {#grAma#}+ya, glosses 'cicur, mansuetus' (N. 13.8) — attested distinct f
+Ardita        -> ardita        | BOP: {#Ardita#} (r. {#ard#} vexare praef. {#A#} s. {#ta#}) vexatus, afflictus. H. 2.3. N. 12.10 | Body derives from r. {#ard#} praef. {#A#} s. ta, glosses 'vexatus, afflictus' — Cf is to A
+anuyAtrA      -> anuyAtra      | BOP: {#anuyAtrA#} {%f.%} (r. {#yA#} praef. {#anu#} sequi, s. {#trA#}) comitatus. DR. 52.10. | Body defines {#anuyAtrA#} f. 'comitatus' from yA+anu+trA — long-A is the feminine suffix, 
+argalA        -> argala        | BOP: {#argalA#} {%f.%} {%id.%} | Body gives {#argalA#} f. id. — documented feminine of argala; long-A feminine ending, own 
+preraRA       -> preraRa       | BOP: {#preraRA#} {%f.%} (r. {#Ir#} praef. {#pra#} s. {#ana#} in {%fem.%}) missio. | Body defines {#preraRA#} f. 'missio' from Ir+pra+ana in fem. — long-A marks the feminine, 
+Ardana        -> ardana        | BOP: {#Ardana#} {%m.%} (r. {#ard#} vexare praef. {#A#} suff. {#ana#}) vexator. BH. 1.39. | Body derives from r. {#ard#} praef. {#A#} suff. {#ana#}, glosses 'vexator' (BH. 1.39) — A-
+niravadyA     -> niravadya     | BOP: {#niravadyA#} {%f.%} ({%fem.%} a {#niravadya#} non humilis, non vilis, pulcher - {%BAH.%}  | Body defines {#niravadyA#} f. as BAH fem. of niravadya = 'pulchritudo' (IN. 5.11) — femini
+lUp           -> lup           | BOP: {#lUp#} 10. {%P.%} ({#vaDe steye#} {%V.%}) occidere; furari. ({%Cf.%} {#luz, muz, lU#}.) | Body defines {#lUp#} cl.10 'occidere; furari' — distinct verbal root with long U, not a mi
+kandalA       -> kandala       | BOP: {#kandalA#} {%f.%} 1) {%id.%} 2) sonus lenis. | Body defines {#kandalA#} f. with own senses '1) id. 2) sonus lenis' — feminine with indepe
+catuHSAlA     -> catuHSAla     | BOP: {#catuHSAlA#} {%f.%} (e {#catur#} et {#SAlA#}) locus quadratus quatuor domibus inclusus. A | Body defines {#catuHSAlA#} f. from catur+SAlA = 'locus quadratus...' — feminine compound, 
+plavin        -> plAvin        | BOP: {#plavin#} {%m.%} (r. {#plu#} s. {#in#}) avis. | Body derives {#plavin#} from r. {#plu#}+in = 'avis' — short-a root derivative, distinct fr
+puMskAma      -> puMskAmA      | BOP: {#puMskAma#} ({%BAH.%} e praec. et {#kAma#} desiderium) maris desiderium habens, maris cup | Body defines {#puMskAma#} BAH 'maris desiderium habens' (H. 3.15) — masculine/neuter; puMs
+BawwiRI       -> BawwinI       | BOP: {#BawwiRI#} {%f.%} vox Prâcrit. = scr. {#BartrI#}. UR. 43.13. | Body documents {#BawwiRI#} as 'vox Prâcrit. = scr. {#BartrI#}' — distinct Prakrit form, R 
+kAl           -> kal           | BOP: {#kAl#} 10. {%P.%} ({#kAlopadeSe#}) tempus computare, {%Denomin. a sq.%} | Body defines {#kAl#} cl.10 'tempus computare', Denomin. from kAla — distinct long-A denomi
+tintiqA       -> tintiqa       | BOP: {#tintiqA#} {%f.%} {%id.%} | Body gives {#tintiqA#} f. id. — documented feminine of tintiqa; long-A feminine ending, ow
+Darmavidya    -> DArmavidya    | BOP: {#Darmavidya#} ({%BAH.%} e {#Darma#} et {#vidyA#} {%f.%} scientia) juris, officiorum scien | Body derives from {#Darma#} (short a) consistently = 'juris...scientiam habens' (H. 1.36) 
+mfgalAYcana   -> mfgalAYCana   | BOP: {#mfgalAYcana#} {%m.%} ({%BAH.%} e {#mfga#} et {#lAYcana#} signum, nota) luna. UR. 43.4.{% | Body uses {#lAYcana#} (lowercase c) in derivation consistently; glosses 'luna' (UR. 43.4) 
+vAzpAy        -> bAzpAy        | BOP: {#vAzpAy#} ({%Denom.%} a praec.) lacrymare. UR. 84.19. | Body defines as Denom. 'lacrymare' from praec. — vAzpa (tears) is a valid Sanskrit form al
+
+# ===== BUCKET 5  INTENTIONAL -- BOP documents the spelling on purpose; NEVER file (6) =====
+saKA          -> saKa          | BOP: {#saKA#} {%nom. vocis%} {#saKi#} (ut videtur, pro {#saKAs#}, a Them. {#saKE#}, unde alii c | Body documents {#saKA#} as 'nom. vocis {#saKi#}' with grammatical explanation — intentiona
+dampatI       -> dampati       | BOP: {#dampatI#} v. 2. {#dam#}. | Body is a pure cross-reference 'v. 2. {#dam#}' (vide) with no independent gloss — intentio
+vAhu          -> bAhu          | BOP: {#vAhu#} v. {#bAhu#}. | 
+dUz           -> duz           | BOP: {#dUz#} v. {#duz#}. | 
+hidimba       -> hiqimba       | BOP: {#hidimba, hidimbA#} v. {#hiqimba, hiqimbA#}. | 
+baDEzin       -> vaDEzin       | BOP: {#baDEzin#} v. {#vaDEzin#}. | 
+
+# ===== BUCKET 6  UNLOCATABLE -- not in the current BOP source (stale/different key) (1) =====
+kANGA         -> kANgA         | BOP:  | 

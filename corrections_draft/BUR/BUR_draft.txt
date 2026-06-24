@@ -1,0 +1,593 @@
+; DRAFT corrections for BUR — SanskritSpellCheck; VERIFY each against the scan before filing.
+; updateByLine format; only the <k1>/<k2> key field is edited (check the entry body too).
+; NOTE: each case targets the FIRST entry with that headword -- check for homographs
+;       (multiple entries sharing a key) and that no two cases edit the same line.
+;
+; Case 1.  gAm -> gam   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=gAm
+28048 old <L>5840<pc>216,1<k1>gAm<k2>gAm
+28048 new <L>5840<pc>216,1<k1>gam<k2>gam
+;
+; Case 2.  jiv -> jIv   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=jiv
+35062 old <L>7266<pc>268,2<k1>jiv<k2>*jiv
+35062 new <L>7266<pc>268,2<k1>jIv<k2>*jiv
+;
+; Case 3.  Div -> div   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=Div
+45152 old <L>9351<pc>345,2<k1>Div<k2>*Div
+45152 new <L>9351<pc>345,2<k1>div<k2>*Div
+;
+; Case 4.  vAhu -> bAhu   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=vAhu
+76242 old <L>15171<pc>581,2<k1>vAhu<k2>vAhu
+76242 new <L>15171<pc>581,2<k1>bAhu<k2>bAhu
+;
+; Case 5.  Agrya -> agrya   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=Agrya
+8940 old <L>2059<pc>069,1<k1>Agrya<k2>Agrya
+8940 new <L>2059<pc>069,1<k1>agrya<k2>agrya
+;
+; Case 6.  jaGAna -> jaGana   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=jaGAna
+33543 old <L>6961<pc>257,2<k1>jaGAna<k2>jaGAna
+33543 new <L>6961<pc>257,2<k1>jaGana<k2>jaGana
+;
+; Case 7.  Svid -> svid   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=Svid
+86881 old <L>17183<pc>664,1<k1>Svid<k2>*Svid
+86881 new <L>17183<pc>664,1<k1>svid<k2>*Svid
+;
+; Case 8.  dUz -> duz   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=dUz
+42832 old <L>8912<pc>327,2<k1>dUz<k2>*dUz
+42832 new <L>8912<pc>327,2<k1>duz<k2>*dUz
+;
+; Case 9.  baNga -> vaNga   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=baNga
+60357 old <L>12384<pc>459,1<k1>baNga<k2>baNga
+60357 new <L>12384<pc>459,1<k1>vaNga<k2>vaNga
+;
+; Case 10.  ayus -> Ayus   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=ayus
+5783 old <L>1357<pc>046,1<k1>ayus<k2>ayus
+5783 new <L>1357<pc>046,1<k1>Ayus<k2>Ayus
+;
+; Case 11.  kzira -> kzIra   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=kzira
+25648 old <L>5394<pc>197,2<k1>kzira<k2>kzira
+25648 new <L>5394<pc>197,2<k1>kzIra<k2>kzIra
+;
+; Case 12.  sta -> sTa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=sta
+96059 old <L>19122<pc>733,2<k1>sta<k2>sta
+96059 new <L>19122<pc>733,2<k1>sTa<k2>sTa
+;
+; Case 13.  AnaNga -> anaNga   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=AnaNga
+9588 old <L>2187<pc>074,1<k1>AnaNga<k2>AnaNga
+9588 new <L>2187<pc>074,1<k1>anaNga<k2>anaNga
+;
+; Case 14.  aSAna -> aSana   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=aSAna
+7630 old <L>1772<pc>059,1<k1>aSAna<k2>aSAna
+7630 new <L>1772<pc>059,1<k1>aSana<k2>aSana
+;
+; Case 15.  caturvarRya -> cAturvarRya   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=caturvarRya
+30870 old <L>6396<pc>238,1<k1>caturvarRya<k2>caturvarRya
+30870 new <L>6396<pc>238,1<k1>cAturvarRya<k2>cAturvarRya
+;
+; Case 16.  mArta -> marta   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=mArta
+66063 old <L>13298<pc>504,1<k1>mArta<k2>mArta
+66063 new <L>13298<pc>504,1<k1>marta<k2>marta
+;
+; Case 17.  sIta -> sItA   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=sIta
+93697 old <L>18603<pc>715,2<k1>sIta<k2>sIta
+93697 new <L>18603<pc>715,2<k1>sItA<k2>sItA
+;
+; Case 18.  upacAya -> upacaya   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=upacAya
+14027 old <L>3095<pc>106,2<k1>upacAya<k2>upacAya
+14027 new <L>3095<pc>106,2<k1>upacaya<k2>upacaya
+;
+; Case 19.  ARa -> Ama   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=ARa
+9163 old <L>2112<pc>070,2<k1>ARa<k2>ARa
+9163 new <L>2112<pc>070,2<k1>Ama<k2>Ama
+;
+; Case 20.  darba -> darBa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=darba
+40795 old <L>8469<pc>312,2<k1>darba<k2>darba
+40795 new <L>8469<pc>312,2<k1>darBa<k2>darBa
+;
+; Case 21.  iTas -> itas   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=iTas
+11606 old <L>2630<pc>088,1<k1>iTas<k2>iTas
+11606 new <L>2630<pc>088,1<k1>itas<k2>itas
+;
+; Case 22.  parusa -> paruza   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=parusa
+52241 old <L>10792<pc>399,2<k1>parusa<k2>parusa
+52241 new <L>10792<pc>399,2<k1>paruza<k2>paruza
+;
+; Case 23.  Ardita -> ardita   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=Ardita
+10462 old <L>2396<pc>080,1<k1>Ardita<k2>Ardita
+10462 new <L>2396<pc>080,1<k1>ardita<k2>ardita
+;
+; Case 24.  anayA -> anaya   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=anayA
+2172 old <L>513<pc>020,1<k1>anayA<k2>anayA
+2172 new <L>513<pc>020,1<k1>anaya<k2>anaya
+;
+; Case 25.  dakzya -> dAkzya   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=dakzya
+40283 old <L>8372<pc>309,1<k1>dakzya<k2>dakzya
+40283 new <L>8372<pc>309,1<k1>dAkzya<k2>dAkzya
+;
+; Case 26.  Anarha -> anarha   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=Anarha
+9682 old <L>2213<pc>074,2<k1>Anarha<k2>Anarha
+9682 new <L>2213<pc>074,2<k1>anarha<k2>anarha
+;
+; Case 27.  dAt -> dat   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=dAt
+41253 old <L>8561<pc>316,1<k1>dAt<k2>dAt
+41253 new <L>8561<pc>316,1<k1>dat<k2>dat
+;
+; Case 28.  kawakza -> kawAkza   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=kawakza
+17487 old <L>3817<pc>134,2<k1>kawakza<k2>kawakza
+17487 new <L>3817<pc>134,2<k1>kawAkza<k2>kawAkza
+;
+; Case 29.  kuYjA -> kuYja   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=kuYjA
+21855 old <L>4696<pc>167,2<k1>kuYjA<k2>kuYjA
+21855 new <L>4696<pc>167,2<k1>kuYja<k2>kuYja
+;
+; Case 30.  paricAya -> paricaya   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=paricAya
+51284 old <L>10566<pc>392,2<k1>paricAya<k2>paricAya
+51284 new <L>10566<pc>392,2<k1>paricaya<k2>paricaya
+;
+; Case 31.  iyAt -> iyat   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=iyAt
+11794 old <L>2656<pc>089,2<k1>iyAt<k2>iyAt
+11794 new <L>2656<pc>089,2<k1>iyat<k2>iyat
+;
+; Case 32.  lUp -> lup   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=lUp
+72822 old <L>14550<pc>556,1<k1>lUp<k2>*lUp
+72822 new <L>14550<pc>556,1<k1>lup<k2>*lUp
+;
+; Case 33.  cyUti -> cyuti   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=cyUti
+32950 old <L>6835<pc>253,1<k1>cyUti<k2>cyUti
+32950 new <L>6835<pc>253,1<k1>cyuti<k2>cyuti
+;
+; Case 34.  dvAnta -> DvAnta   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=dvAnta
+44054 old <L>9143<pc>337,1<k1>dvAnta<k2>dvAnta
+44054 new <L>9143<pc>337,1<k1>DvAnta<k2>DvAnta
+;
+; Case 35.  ABis -> Avis   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=ABis
+9987 old <L>2283<pc>076,2<k1>ABis<k2>ABis
+9987 new <L>2283<pc>076,2<k1>Avis<k2>Avis
+;
+; Case 36.  Bfjana -> vfjana   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=Bfjana
+62988 old <L>12812<pc>480,1<k1>Bfjana<k2>Bfjana
+62988 new <L>12812<pc>480,1<k1>vfjana<k2>vfjana
+;
+; Case 37.  akarma -> akarRa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=akarma
+69 old <L>17<pc>005,2<k1>akarma<k2>akarma
+69 new <L>17<pc>005,2<k1>akarRa<k2>akarRa
+;
+; Case 38.  biBeda -> viBeda   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=biBeda
+61145 old <L>12533<pc>465,2<k1>biBeda<k2>biBeda
+61145 new <L>12533<pc>465,2<k1>viBeda<k2>viBeda
+;
+; Case 39.  datTa -> datta   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=datTa
+40383 old <L>8382<pc>310,1<k1>datTa<k2>datTa
+40383 new <L>8382<pc>310,1<k1>datta<k2>datta
+;
+; Case 40.  dezma -> dezRa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=dezma
+43321 old <L>8989<pc>331,2<k1>dezma<k2>dezma
+43321 new <L>8989<pc>331,2<k1>dezRa<k2>dezRa
+;
+; Case 41.  jawiti -> Jawiti   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=jawiti
+33648 old <L>6987<pc>258,1<k1>jawiti<k2>jawiti
+33648 new <L>6987<pc>258,1<k1>Jawiti<k2>Jawiti
+;
+; Case 42.  kfzAnu -> kfSAnu   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=kfzAnu
+23711 old <L>5032<pc>182,2<k1>kfzAnu<k2>kfzAnu
+23711 new <L>5032<pc>182,2<k1>kfSAnu<k2>kfSAnu
+;
+; Case 43.  vedyuta -> vEdyuta   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=vedyuta
+81100 old <L>16106<pc>618,1<k1>vedyuta<k2>vedyuta
+81100 new <L>16106<pc>618,1<k1>vEdyuta<k2>vEdyuta
+;
+; Case 44.  Aka -> aka   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=Aka
+8676 old <L>2006<pc>067,1<k1>Aka<k2>Aka
+8676 new <L>2006<pc>067,1<k1>aka<k2>aka
+;
+; Case 45.  lAw -> law   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=lAw
+72367 old <L>14440<pc>552,2<k1>lAw<k2>*lAw
+72367 new <L>14440<pc>552,2<k1>law<k2>*lAw
+;
+; Case 46.  avASya -> avaSya   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=avASya
+7291 old <L>1689<pc>057,1<k1>avASya<k2>avASya
+7291 new <L>1689<pc>057,1<k1>avaSya<k2>avaSya
+;
+; Case 47.  Anarda -> Amarda   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=Anarda
+9670 old <L>2209<pc>074,1<k1>Anarda<k2>Anarda
+9670 new <L>2209<pc>074,1<k1>Amarda<k2>Amarda
+;
+; Case 48.  ceta -> cewa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=ceta
+32697 old <L>6781<pc>251,1<k1>ceta<k2>ceta
+32697 new <L>6781<pc>251,1<k1>cewa<k2>cewa
+;
+; Case 49.  dav -> daB   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=dav
+40917 old <L>8492<pc>313,2<k1>dav<k2>*dav
+40917 new <L>8492<pc>313,2<k1>daB<k2>*dav
+;
+; Case 50.  qaB -> daB   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=qaB
+36388 old <L>7564<pc>279,1<k1>qaB<k2>*qaB
+36388 new <L>7564<pc>279,1<k1>daB<k2>*qaB
+;
+; Case 51.  darbawa -> darBawa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=darbawa
+40798 old <L>8470<pc>312,2<k1>darbawa<k2>darbawa
+40798 new <L>8470<pc>312,2<k1>darBawa<k2>darBawa
+;
+; Case 52.  vipaSin -> vipASin   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=vipaSin
+78033 old <L>15535<pc>595,1<k1>vipaSin<k2>vipaSin
+78033 new <L>15535<pc>595,1<k1>vipASin<k2>vipASin
+;
+; Case 53.  DrARa -> drARa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=DrARa
+45690 old <L>9470<pc>349,2<k1>DrARa<k2>DrARa
+45690 new <L>9470<pc>349,2<k1>drARa<k2>drARa
+;
+; Case 54.  SuR -> Sun   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=SuR
+85305 old <L>16895<pc>652,2<k1>SuR<k2>SuR
+85305 new <L>16895<pc>652,2<k1>Sun<k2>Sun
+;
+; Case 55.  cuvra -> cubra   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=cuvra
+32533 old <L>6741<pc>250,1<k1>cuvra<k2>cuvra
+32533 new <L>6741<pc>250,1<k1>cubra<k2>cubra
+;
+; Case 56.  trak -> traK   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=trak
+39398 old <L>8187<pc>301,2<k1>trak<k2>*trak
+39398 new <L>8187<pc>301,2<k1>traK<k2>*trak
+;
+; Case 57.  tub -> tuB   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=tub
+38621 old <L>8032<pc>296,1<k1>tub<k2>*tub
+38621 new <L>8032<pc>296,1<k1>tuB<k2>*tub
+;
+; Case 58.  KalikAra -> kalikAra   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=KalikAra
+26468 old <L>5549<pc>203,2<k1>KalikAra<k2>KalikAra
+26468 new <L>5549<pc>203,2<k1>kalikAra<k2>kalikAra
+;
+; Case 59.  avemi -> aveRi   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=avemi
+7478 old <L>1739<pc>058,1<k1>avemi<k2>avemi
+7478 new <L>1739<pc>058,1<k1>aveRi<k2>aveRi
+;
+; Case 60.  vemi -> veRi   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=vemi
+81164 old <L>16120<pc>618,2<k1>vemi<k2>vemi
+81164 new <L>16120<pc>618,2<k1>veRi<k2>veRi
+;
+; Case 61.  saYcAya -> saYcaya   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=saYcAya
+87775 old <L>17359<pc>671,2<k1>saYcAya<k2>saYcAya
+87775 new <L>17359<pc>671,2<k1>saYcaya<k2>saYcaya
+;
+; Case 62.  kfb -> kfv   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=kfb
+23634 old <L>5020<pc>182,1<k1>kfb<k2>*kfb
+23634 new <L>5020<pc>182,1<k1>kfv<k2>*kfb
+;
+; Case 63.  vasAna -> vasana   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=vasAna
+74860 old <L>14906<pc>571,2<k1>vasAna<k2>vasAna
+74860 new <L>14906<pc>571,2<k1>vasana<k2>vasana
+;
+; Case 64.  sattrA -> sattra   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=sattrA
+88006 old <L>17412<pc>673,1<k1>sattrA<k2>sattrA
+88006 new <L>17412<pc>673,1<k1>sattra<k2>sattra
+;
+; Case 65.  Bad -> vad   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=Bad
+61810 old <L>12642<pc>470,2<k1>Bad<k2>*Bad
+61810 new <L>12642<pc>470,2<k1>vad<k2>*Bad
+;
+; Case 66.  ajya -> Ajya   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=ajya
+967 old <L>221<pc>012,1<k1>ajya<k2>ajya
+967 new <L>221<pc>012,1<k1>Ajya<k2>Ajya
+;
+; Case 67.  dampatI -> dampati   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=dampatI
+40658 old <L>8442<pc>311,2<k1>dampatI<k2>dampatI
+40658 new <L>8442<pc>311,2<k1>dampati<k2>dampati
+;
+; Case 68.  praRAya -> praRaya   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=praRAya
+56205 old <L>11507<pc>430,1<k1>praRAya<k2>praRAya
+56205 new <L>11507<pc>430,1<k1>praRaya<k2>praRaya
+;
+; Case 69.  uccAvAca -> uccAvaca   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=uccAvAca
+12379 old <L>2777<pc>094,2<k1>uccAvAca<k2>uccAvAca
+12379 new <L>2777<pc>094,2<k1>uccAvaca<k2>uccAvaca
+;
+; Case 70.  DayA -> dayA   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=DayA
+44634 old <L>9268<pc>341,2<k1>DayA<k2>DayA
+44634 new <L>9268<pc>341,2<k1>dayA<k2>dayA
+;
+; Case 71.  anuzWuB -> anuzwuB   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=anuzWuB
+3072 old <L>727<pc>026,2<k1>anuzWuB<k2>anuzWuB
+3072 new <L>727<pc>026,2<k1>anuzwuB<k2>anuzwuB
+;
+; Case 72.  adarSaRa -> adarSana   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=adarSaRa
+1568 old <L>367<pc>016,1<k1>adarSaRa<k2>adarSaRa
+1568 new <L>367<pc>016,1<k1>adarSana<k2>adarSana
+;
+; Case 73.  camIkara -> cAmIkara   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=camIkara
+31097 old <L>6433<pc>239,2<k1>camIkara<k2>camIkara
+31097 new <L>6433<pc>239,2<k1>cAmIkara<k2>cAmIkara
+;
+; Case 74.  cawacawa -> cawacawA   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=cawacawa
+30700 old <L>6358<pc>236,2<k1>cawacawa<k2>cawacawa
+30700 new <L>6358<pc>236,2<k1>cawacawA<k2>cawacawA
+;
+; Case 75.  AnaBra -> anaBra   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=AnaBra
+9626 old <L>2197<pc>074,1<k1>AnaBra<k2>AnaBra
+9626 new <L>2197<pc>074,1<k1>anaBra<k2>anaBra
+;
+; Case 76.  prAtipAdika -> prAtipadika   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=prAtipAdika
+59382 old <L>12198<pc>451,2<k1>prAtipAdika<k2>prAtipAdika
+59382 new <L>12198<pc>451,2<k1>prAtipadika<k2>prAtipadika
+;
+; Case 77.  Apri -> AprI   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=Apri
+9926 old <L>2271<pc>076,1<k1>Apri<k2>Apri
+9926 new <L>2271<pc>076,1<k1>AprI<k2>AprI
+;
+; Case 78.  nAvIka -> nAvika   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=nAvIka
+46969 old <L>9703<pc>359,2<k1>nAvIka<k2>nAvIka
+46969 new <L>9703<pc>359,2<k1>nAvika<k2>nAvika
+;
+; Case 79.  urvIyA -> urviyA   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=urvIyA
+15285 old <L>3355<pc>116,1<k1>urvIyA<k2>urvIyA
+15285 new <L>3355<pc>116,1<k1>urviyA<k2>urviyA
+;
+; Case 80.  aSunya -> aSUnya   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=aSunya
+7679 old <L>1785<pc>059,2<k1>aSunya<k2>aSunya
+7679 new <L>1785<pc>059,2<k1>aSUnya<k2>aSUnya
+;
+; Case 81.  metrAvaruRa -> mEtrAvaruRa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=metrAvaruRa
+67614 old <L>13585<pc>516,1<k1>metrAvaruRa<k2>metrAvaruRa
+67614 new <L>13585<pc>516,1<k1>mEtrAvaruRa<k2>mEtrAvaruRa
+;
+; Case 82.  prezwa -> prezWa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=prezwa
+59822 old <L>12281<pc>455,1<k1>prezwa<k2>prezwa
+59822 new <L>12281<pc>455,1<k1>prezWa<k2>prezWa
+;
+; Case 83.  KumBARqa -> kumBARqa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=KumBARqa
+26730 old <L>5614<pc>205,2<k1>KumBARqa<k2>KumBARqa
+26730 new <L>5614<pc>205,2<k1>kumBARqa<k2>kumBARqa
+;
+; Case 84.  aByarcaRa -> aByarcana   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=aByarcaRa
+5198 old <L>1236<pc>041,2<k1>aByarcaRa<k2>aByarcaRa
+5198 new <L>1236<pc>041,2<k1>aByarcana<k2>aByarcana
+;
+; Case 85.  karaSAkA -> karaSAKA   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=karaSAkA
+18619 old <L>4046<pc>143,1<k1>karaSAkA<k2>karaSAkA
+18619 new <L>4046<pc>143,1<k1>karaSAKA<k2>karaSAKA
+;
+; Case 86.  mamus -> manus   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=mamus
+64572 old <L>13055<pc>492,2<k1>mamus<k2>mamus
+64572 new <L>13055<pc>492,2<k1>manus<k2>manus
+;
+; Case 87.  nahuz -> nahus   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=nahuz
+46590 old <L>9644<pc>356,2<k1>nahuz<k2>nahuz
+46590 new <L>9644<pc>356,2<k1>nahus<k2>nahus
+;
+; Case 88.  viSfNkala -> viSfNKala   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=viSfNkala
+79417 old <L>15839<pc>604,2<k1>viSfNkala<k2>viSfNkala
+79417 new <L>15839<pc>604,2<k1>viSfNKala<k2>viSfNKala
+;
+; Case 89.  yozanA -> yozaRA   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=yozanA
+69338 old <L>13894<pc>529,2<k1>yozanA<k2>yozanA
+69338 new <L>13894<pc>529,2<k1>yozaRA<k2>yozaRA
+;
+; Case 90.  catuHSAlA -> catuHSAla   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=catuHSAlA
+30784 old <L>6375<pc>237,1<k1>catuHSAlA<k2>catuHSAlA
+30784 new <L>6375<pc>237,1<k1>catuHSAla<k2>catuHSAla
+;
+; Case 91.  Anakza -> anakza   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=Anakza
+9579 old <L>2184<pc>073,2<k1>Anakza<k2>Anakza
+9579 new <L>2184<pc>073,2<k1>anakza<k2>anakza
+;
+; Case 92.  aparaNmuKa -> aparANmuKa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=aparaNmuKa
+3770 old <L>888<pc>031,2<k1>aparaNmuKa<k2>aparaNmuKa
+3770 new <L>888<pc>031,2<k1>aparANmuKa<k2>aparANmuKa
+;
+; Case 93.  arADa -> ArADa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=arADa
+5908 old <L>1389<pc>046,2<k1>arADa<k2>arADa
+5908 new <L>1389<pc>046,2<k1>ArADa<k2>ArADa
+;
+; Case 94.  kalidrUma -> kalidruma   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=kalidrUma
+19378 old <L>4192<pc>149,1<k1>kalidrUma<k2>kalidrUma
+19378 new <L>4192<pc>149,1<k1>kalidruma<k2>kalidruma
+;
+; Case 95.  smASAnika -> SmASAnika   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=smASAnika
+97153 old <L>19335<pc>741,2<k1>smASAnika<k2>smASAnika
+97153 new <L>19335<pc>741,2<k1>SmASAnika<k2>SmASAnika
+;
+; Case 96.  tripfzwa -> tripfzWa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=tripfzwa
+39752 old <L>8261<pc>304,1<k1>tripfzwa<k2>tripfzwa
+39752 new <L>8261<pc>304,1<k1>tripfzWa<k2>tripfzWa
+;
+; Case 97.  DUnin -> DUmin   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=DUnin
+45327 old <L>9391<pc>347,1<k1>DUnin<k2>DUnin
+45327 new <L>9391<pc>347,1<k1>DUmin<k2>DUmin
+;
+; Case 98.  Svetreya -> SvEtreya   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=Svetreya
+86953 old <L>17187<pc>665,2<k1>Svetreya<k2>Svetreya
+86953 new <L>17187<pc>665,2<k1>SvEtreya<k2>SvEtreya
+;
+; Case 99.  lohiRI -> lohinI   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=lohiRI
+73170 old <L>14606<pc>558,2<k1>lohiRI<k2>lohiRI
+73170 new <L>14606<pc>558,2<k1>lohinI<k2>lohinI
+;
+; Case 100.  nikAmam -> nikAman   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=nikAmam
+47065 old <L>9723<pc>360,2<k1>nikAmam<k2>nikAmam
+47065 new <L>9723<pc>360,2<k1>nikAman<k2>nikAman
+;
+; Case 101.  prAmAnika -> prAmARika   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=prAmAnika
+59485 old <L>12220<pc>452,2<k1>prAmAnika<k2>prAmAnika
+59485 new <L>12220<pc>452,2<k1>prAmARika<k2>prAmARika
+;
+; Case 102.  samemi -> sanemi   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=samemi
+90318 old <L>17908<pc>690,2<k1>samemi<k2>samemi
+90318 new <L>17908<pc>690,2<k1>sanemi<k2>sanemi
+;
+; Case 103.  samprakzAlaRa -> samprakzAlana   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=samprakzAlaRa
+90489 old <L>17946<pc>691,2<k1>samprakzAlaRa<k2>samprakzAlaRa
+90489 new <L>17946<pc>691,2<k1>samprakzAlana<k2>samprakzAlana
+;
+; Case 104.  vyatisaNga -> vyatizaNga   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=vyatisaNga
+81889 old <L>16295<pc>624,1<k1>vyatisaNga<k2>vyatisaNga
+81889 new <L>16295<pc>624,1<k1>vyatizaNga<k2>vyatizaNga
+;
+; Case 105.  SiSAya -> SiSaya   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=SiSAya
+84882 old <L>16829<pc>649,1<k1>SiSAya<k2>SiSAya
+84882 new <L>16829<pc>649,1<k1>SiSaya<k2>SiSaya
+;
+; Case 106.  asvaDyAya -> asvADyAya   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=asvaDyAya
+8444 old <L>1959<pc>065,1<k1>asvaDyAya<k2>asvaDyAya
+8444 new <L>1959<pc>065,1<k1>asvADyAya<k2>asvADyAya
+;
+; Case 107.  divoja -> divojA   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=divoja
+41980 old <L>8745<pc>321,1<k1>divoja<k2>divoja
+41980 new <L>8745<pc>321,1<k1>divojA<k2>divojA
+;
+; Case 108.  Ude -> ude   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=Ude
+15606 old <L>3427<pc>118,1<k1>Ude<k2>Ude
+15606 new <L>3427<pc>118,1<k1>ude<k2>ude
+;
+; Case 109.  kamawa -> kamaWa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=kamawa
+18333 old <L>3987<pc>141,1<k1>kamawa<k2>kamawa
+18333 new <L>3987<pc>141,1<k1>kamaWa<k2>kamaWa
+;
+; Case 110.  vikrAyika -> vikrayika   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=vikrAyika
+76493 old <L>15222<pc>583,2<k1>vikrAyika<k2>vikrAyika
+76493 new <L>15222<pc>583,2<k1>vikrayika<k2>vikrayika
+;
+; Case 111.  yavamaDyA -> yavamaDya   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=yavamaDyA
+68554 old <L>13746<pc>523,2<k1>yavamaDyA<k2>yavamaDyA
+68554 new <L>13746<pc>523,2<k1>yavamaDya<k2>yavamaDya
+;
+; Case 112.  svADya -> svAdya   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=svADya
+97772 old <L>19453<pc>746,2<k1>svADya<k2>svADya
+97772 new <L>19453<pc>746,2<k1>svAdya<k2>svAdya
+;
+; Case 113.  citrodana -> citrOdana   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=citrodana
+32106 old <L>6643<pc>247,1<k1>citrodana<k2>citrodana
+32106 new <L>6643<pc>247,1<k1>citrOdana<k2>citrOdana
+;
+; Case 114.  anagnitra -> anagnitrA   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=anagnitra
+2069 old <L>490<pc>019,1<k1>anagnitra<k2>anagnitra
+2069 new <L>490<pc>019,1<k1>anagnitrA<k2>anagnitrA
+;
+; Case 115.  Avfzwa -> avfzwa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=Avfzwa
+10820 old <L>2475<pc>082,2<k1>Avfzwa<k2>Avfzwa
+10820 new <L>2475<pc>082,2<k1>avfzwa<k2>avfzwa
+;
+; Case 116.  DOrtikA -> DOrtika   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=DOrtikA
+45587 old <L>9445<pc>348,2<k1>DOrtikA<k2>DOrtikA
+45587 new <L>9445<pc>348,2<k1>DOrtika<k2>DOrtika
+;
+; Case 117.  nAryANga -> nAryaNga   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=nAryANga
+46946 old <L>9700<pc>359,2<k1>nAryANga<k2>nAryANga
+46946 new <L>9700<pc>359,2<k1>nAryaNga<k2>nAryaNga
+;
+; Case 118.  niryAt -> niryat   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=niryAt
+48324 old <L>10010<pc>369,2<k1>niryAt<k2>niryAt
+48324 new <L>10010<pc>369,2<k1>niryat<k2>niryat
+;
+; Case 119.  ratodvAha -> ratodvaha   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=ratodvAha
+69819 old <L>13965<pc>533,2<k1>ratodvAha<k2>ratodvAha
+69819 new <L>13965<pc>533,2<k1>ratodvaha<k2>ratodvaha
+;
+; Case 120.  sUtyaSOca -> sUtyASOca   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=sUtyaSOca
+95072 old <L>18917<pc>726,1<k1>sUtyaSOca<k2>sUtyaSOca
+95072 new <L>18917<pc>726,1<k1>sUtyASOca<k2>sUtyASOca
+;
+; Case 121.  tOrayaRa -> tOrayARa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=tOrayaRa
+39346 old <L>8178<pc>301,1<k1>tOrayaRa<k2>tOrayaRa
+39346 new <L>8178<pc>301,1<k1>tOrayARa<k2>tOrayARa
+;
+; Case 122.  tarAj -> tArAj   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=tarAj
+37302 old <L>7753<pc>286,2<k1>tarAj<k2>tarAj
+37302 new <L>7753<pc>286,2<k1>tArAj<k2>tArAj
+;
+; Case 123.  pratitAli -> pratitAlI   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=pratitAli
+56528 old <L>11581<pc>432,1<k1>pratitAli<k2>pratitAli
+56528 new <L>11581<pc>432,1<k1>pratitAlI<k2>pratitAlI
+;
+; Case 124.  sOmi -> sOmI   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=sOmi
+95830 old <L>19080<pc>731,2<k1>sOmi<k2>sOmi
+95830 new <L>19080<pc>731,2<k1>sOmI<k2>sOmI
+;
+; Case 125.  samAsANga -> samAsaNga   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=samAsANga
+89713 old <L>17777<pc>685,2<k1>samAsANga<k2>samAsANga
+89713 new <L>17777<pc>685,2<k1>samAsaNga<k2>samAsaNga
+;
+; Case 126.  AprAmi -> aprAmi   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=AprAmi
+9923 old <L>2270<pc>076,1<k1>AprAmi<k2>AprAmi
+9923 new <L>2270<pc>076,1<k1>aprAmi<k2>aprAmi
+;
+; Case 127.  arita -> Arita   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=arita
+5929 old <L>1394<pc>047,1<k1>arita<k2>arita
+5929 new <L>1394<pc>047,1<k1>Arita<k2>Arita
+;
+; Case 128.  anusayAna -> anuSayAna   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=anusayAna
+3112 old <L>736<pc>027,1<k1>anusayAna<k2>anusayAna
+3112 new <L>736<pc>027,1<k1>anuSayAna<k2>anuSayAna
+;
+; Case 129.  ratu -> ratU   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=ratu
+69815 old <L>13964<pc>533,2<k1>ratu<k2>ratu
+69815 new <L>13964<pc>533,2<k1>ratU<k2>ratU
+;
+; Case 130.  susipra -> suSipra   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=susipra
+94901 old <L>18886<pc>724,2<k1>susipra<k2>susipra
+94901 new <L>18886<pc>724,2<k1>suSipra<k2>suSipra
+;
+; Case 131.  surasAzWa -> surasAzwa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=surasAzWa
+94570 old <L>18802<pc>722,1<k1>surasAzWa<k2>surasAzWa
+94570 new <L>18802<pc>722,1<k1>surasAzwa<k2>surasAzwa
+;
+; Case 132.  vizwala -> vizWala   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=vizwala
+79795 old <L>15890<pc>607,2<k1>vizwala<k2>vizwala
+79795 new <L>15890<pc>607,2<k1>vizWala<k2>vizWala
+;
+; Case 133.  DyAyan -> DyAyam   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=DyAyan
+45644 old <L>9458<pc>349,1<k1>DyAyan<k2>DyAyan
+45644 new <L>9458<pc>349,1<k1>DyAyam<k2>DyAyam
+;
+; Case 134.  KolmuKa -> Kolmuka   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=KolmuKa
+26906 old <L>5658<pc>206,2<k1>KolmuKa<k2>KolmuKa
+26906 new <L>5658<pc>206,2<k1>Kolmuka<k2>Kolmuka
+;
+; Case 135.  adambitva -> adamBitva   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=adambitva
+1561 old <L>365<pc>016,1<k1>adambitva<k2>adambitva
+1561 new <L>365<pc>016,1<k1>adamBitva<k2>adamBitva
+;
+; Case 136.  cAgaleyin -> CAgaleyin   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=cAgaleyin
+31484 old <L>6507<pc>242,2<k1>cAgaleyin<k2>cAgaleyin
+31484 new <L>6507<pc>242,2<k1>CAgaleyin<k2>CAgaleyin
+;
+; Case 137.  cakrivat -> cakfvat   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=cakrivat
+30563 old <L>6326<pc>235,2<k1>cakrivat<k2>cakrivat
+30563 new <L>6326<pc>235,2<k1>cakfvat<k2>cakfvat
+;
+; Case 138.  gulaYca -> GulaYca   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=gulaYca
+28629 old <L>5958<pc>220,1<k1>gulaYca<k2>gulaYca
+28629 new <L>5958<pc>220,1<k1>GulaYca<k2>GulaYca
+;
+; Case 139.  nirvezwaRa -> nirvezwana   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=nirvezwaRa
+48514 old <L>10051<pc>371,1<k1>nirvezwaRa<k2>nirvezwaRa
+48514 new <L>10051<pc>371,1<k1>nirvezwana<k2>nirvezwana
+;
+; Case 140.  parEzwukA -> parezwukA   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=parEzwukA
+52267 old <L>10799<pc>400,1<k1>parEzwukA<k2>parEzwukA
+52267 new <L>10799<pc>400,1<k1>parezwukA<k2>parezwukA
+;
+; Case 141.  svOrasa -> svorasa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=svOrasa
+97892 old <L>19476<pc>747,2<k1>svOrasa<k2>svOrasa
+97892 new <L>19476<pc>747,2<k1>svorasa<k2>svorasa
+;
+; Case 142.  varamukI -> varamuKI   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=varamukI
+74024 old <L>14750<pc>565,2<k1>varamukI<k2>varamukI
+74024 new <L>14750<pc>565,2<k1>varamuKI<k2>varamuKI
+;
+; Case 143.  vfzAyana -> vfzAyaRa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=vfzAyana
+80766 old <L>16053<pc>615,2<k1>vfzAyana<k2>vfzAyana
+80766 new <L>16053<pc>615,2<k1>vfzAyaRa<k2>vfzAyaRa
+;
+; Case 144.  vreha -> vrEha   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=vreha
+82786 old <L>16475<pc>630,2<k1>vreha<k2>vreha
+82786 new <L>16475<pc>630,2<k1>vrEha<k2>vrEha
+;
+; Case 145.  Awaruza -> awaruza   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=Awaruza
+9125 old <L>2103<pc>070,2<k1>Awaruza<k2>Awaruza
+9125 new <L>2103<pc>070,2<k1>awaruza<k2>awaruza
+;
+; Case 146.  uvASa -> uvAsa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=uvASa
+15393 old <L>3380<pc>116,2<k1>uvASa<k2>uvASa
+15393 new <L>3380<pc>116,2<k1>uvAsa<k2>uvAsa
+;
+; Case 147.  have -> havE   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BUR&key=have
+98313 old <L>19542<pc>751,1<k1>have<k2>have
+98313 new <L>19542<pc>751,1<k1>havE<k2>havE
+;

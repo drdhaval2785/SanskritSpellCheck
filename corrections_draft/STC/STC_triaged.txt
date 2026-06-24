@@ -1,0 +1,147 @@
+# STC tier-A -- BODY-GROUNDED triage  (DRAFT; verify every kept case against the scan)
+#
+# The 93 engine tier-A candidates were judged against STC's OWN entry text (csl-orig),
+# not spelling alone. A spelling detector cannot tell a typo from a real word, an
+# intentional variant / compounding form, or wrong-reading apparatus -- the entry can.
+# Pipeline: deterministic body classification (triage_bodies.py) + a body-aware LLM
+# pass over the 'realword' set + source confirmation of every TYPO verdict.
+#
+# FINDING: of 93 tier-A candidates, 0 are body-confirmed fileable typos (0.0%).
+# 75 are real distinct words, 9 are spellings STC documents on purpose (w.r./v.l./
+# in-comp./cross-ref -- filing them would CORRUPT STC), 3 are not in the current
+# source, and 6 need eyes. 'Tier A' is high ENGINE confidence, NOT precision:
+# do NOT bulk-apply it. Start with bucket 1; a human confirms each on the scan.
+
+# ===== BUCKET 1  FILE-FIRST -- body-confirmed typo (verify on scan, then file) (0) =====
+
+# ===== BUCKET 2  TYPO-UNSURE -- classified typo but source-confirm refuted (5) =====
+
+praS          -> prAS           [dcs=4 ndicts=1 body=realword]
+    STC: {@PRAŚ-@} {%pṛcchati -te ; papraccha%} ({%papracchuḥ%})  ; {%aprākṣīt ;%} {%prakṣyati ; pṛcchyate ; pṛṣṭa- praṣṭum pṛṣṭvā ˚pṛcchya%} -- demander, interroger, questionner ; demander à qq'un (acc.) qqch
+    judged: Body headword is PRAŚ- (SLP1 prAS-) with full conjugation; key praS (short a) is a typo for the long-ā root prAS-.
+    confirm: Body {@PRAŚ-@} with conjugation pṛcchati 'demander, interroger'; root is long-ā prAS-, key praS (short a) is a spelling error.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=STC&key=praS
+
+biBIzaRa      -> viBIzaRa       [dcs=4 ndicts=4 body=realword]
+    STC: {@bibhīṣaṇa-@} a. terrifiant, épouvantable ; m. n. d'un Rākṣasa, frère de Rāvaṇa.
+    judged: Body header bibhīṣaṇa but content (Rākṣasa, brother of Rāvaṇa) is unambiguously Vibhīṣaṇa; b/v swap in headword.
+    confirm: Body {@bibhīṣaṇa-@} content 'm. n. d'un Rākṣasa, frère de Rāvaṇa' = Vibhīṣaṇa; b/v swap in headword.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=STC&key=biBIzaRa
+
+praDAraRA     -> praDAraRa      [dcs=2 ndicts=2 body=realword]
+    STC: {@pra-dhāraṇā-@} f. fait de fixer l'esprit sur un point.
+    judged: Body '{@pra-dhāraṇā-@} f.' defines a feminine noun with final ā; SLP1 praDAraRa (masc./neut.) is the standard form; extra A = typo.
+    confirm: Body {@pra-dhāraṇā-@} f. is a feminine noun with final ā matching suspect exactly; defined as its own word, not a typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=STC&key=praDAraRA
+
+pradIna       -> praqIna        [dcs=2 ndicts=1 body=realword]
+    STC: {@pra-dīna-@} a. v. envolé, s'envolant ; nt. sorte de vol.
+    judged: Body 'envolé, s'envolant; sorte de vol' fits praḍīna (√ḍī to fly), not pradīna; d/ḍ swap in headword.
+    confirm: Body {@pra-dīna-@} 'envolé, s'envolant; nt. sorte de vol' fits praḍīna (√ḍī to fly); d/ḍ swap.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=STC&key=pradIna
+
+ApatanA       -> Apatana        [dcs=0 ndicts=1 body=realword]
+    STC: {@ā-patanā-@} nt. évènement imprévu.
+    judged: Body '{@ā-patanā-@} nt.' — neuter noun marked with final ā diacritic may be a markup oddity; suspect trailing A looks like a typo for neuter Apatana.
+    confirm: Body {@ā-patanā-@} 'évènement imprévu' header matches suspect spelling exactly; defined as its own word, not a typo.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=STC&key=ApatanA
+
+# ===== BUCKET 3  REVIEW -- undecidable without the printed page (1) =====
+
+taNgama       -> taNgaRa        [dcs=2 ndicts=1 body=realword]
+    STC: {@taṅgama-@} m. pl. n. d'un peuple (vallée de la haute Sarayū).
+    judged: Body header taṅgama matches suspect; proper noun (name of a people), cannot verify correct spelling.
+    scan: http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=STC&key=taNgama
+
+# ===== BUCKET 4  REAL-WORD -- a distinct real word; the fix would merge two words (75) =====
+gAm           -> gam           | STC: {@gām@} acc. sg. de {%go-.%} | Body defines gām as acc. sg. of go-, a distinct inflected nominal form, not the root gam-.
+duHSasana     -> duHSAsana     | STC: {@duḥ-śasana-@} nt. mauvaise instruction. | Body glosses duḥ-śasana- 'mauvaise instruction'; short a vs ā = distinct compound, own glo
+jaGAna        -> jaGana        | STC: {@jaghāna-@} {%jaghnuḥ%} v. {%HAN-.%} | Body presents jaghāna- as perfect of HAN-; long ā is the correct reduplicated perfect vowe
+avantya       -> Avantya       | STC: {@avantya-@} m. pl. n. de deux frères. | Body defines avantya- m.pl. as name of two brothers; initial a vs ā = different word, own 
+vasAna        -> vasana        | STC: {@vasāna-@} ({@1VAS-@}) partic. qui s'habille, etc. | Body header vasāna- matches suspect; partic. of 1VAS 'to dress' — distinct from vasana.
+anuttAra      -> anuttara      | STC: {@an-uttāra-@} a. qui ne peut s'échapper. | Body header an-uttāra- matches suspect; 'qui ne peut s'échapper' — distinct word from anut
+svas          -> Svas          | STC: {@svas@} 1{^re^} du. du présent de 1 {%-AS-.%} | Body defines svas as 1st du. present of AS-; s vs Ś are different consonants, genuine gram
+tatya         -> taTya         | STC: {@tatya-@} a. provenant ou résultant de là. | Body defines tatya- 'provenant ou résultant de là'; t vs T(th) are different consonants, o
+prasaNGa      -> prasaNga      | STC: {@pra-saṅgha-@} m. grande quantité, nombre très élevé. | Body defines pra-saṅgha- 'grande quantité'; G(gh) vs g are different consonants, own gloss
+samAkF        -> samAkf        | STC: {@sam-ā-KṜ-@} répandre, joncher, couvrir, remplir ; {%-˚kīrṇa-%} jonché, couvert, tendu de | Body header sam-ā-KṜ- (long Ṝ) matches suspect; verbal root with long vowel is correct.
+aramya        -> araRya        | STC: {@a-ramya-@} a. désagréable. | Body header a-ramya- matches suspect; 'désagréable' — completely different from araṇya (fo
+atiBft        -> ativft        | STC: {@ati-bhṛt-@} a. qui porte un grand poids. | Body header ati-bhṛt- matches suspect; 'qui porte un grand poids' fits √bhṛ, not √vṛ.
+saMBf         -> saMvf         | STC: {@saṃ-BHṚ-@} réunir, amasser, concentrer, préparer, not. tout le nécessaire (pour un sacri | Body header saṃ-BHṚ- matches suspect; √bhṛ 'réunir' — entirely different from saṃ-vṛ.
+saMBid        -> saMvid        | STC: {@saṃ-BHID-@} fendre, briser, percer ; {%-˚bhinna-%} fendu, etc. ; contracté (iic.).  {%sa | Body header saṃ-BHID- matches suspect; √bhid 'fendre' — different from saṃ-vid.
+atitaram      -> atitarAm      | STC: {@atitaram@} adv. très ; {%˚rām%} trop ; très, tout à fait ; plus (que) ; prép. au-dessus  | Body defines atitaram adv. 'très', lists ˚rām as sub-variant; both forms exist as real wor
+upaDana       -> upaDAna       | STC: {@upa-dhana-@} m. épée (?). | Body defines upa-dhana- m. 'épée (?)'; d vs D(dh) and a vs ā = distinct word, own gloss.
+ABinna        -> aBinna        | STC: {@ā-bhinna-@} a. v. déchiré. | Body defines ā-bhinna- a.v. 'déchiré'; ā- prefix makes it distinct from a-bhinna-, own glo
+upaSraya      -> upASraya      | STC: {@upa-śraya-@} m. fait de recourir à (ifc.). | Body defines upa-śraya- m. 'fait de recourir à'; upa- vs upā- prefix = distinct word, own 
+avAcCid       -> avacCid       | STC: {@avā-cchid- (CHID-)@} arracher de (abl.). | Body defines avā-cchid- (CHID-) 'arracher de'; avā- (ava+ā) vs ava- = distinct compound, o
+Apita         -> ApIta         | STC: {@āpita-@} ({@ĀP-@}) a. v. amené. | Body defines āpita- (ĀP-) a.v. 'amené'; short i vs long ī = distinct PPP, own entry.
+jAGani        -> jAGanI        | STC: {@jāghani-@} m. suivant, serviteur (?) ; {%-ī-%} f. queue. | Body header jāghani- (short i) matches suspect; -ī given separately as fem. form, not the 
+parikzI       -> parikzi       | STC: {@pari-KṢĪ-@} détruire ; pass. s'épuiser ; devenir pauvre ; {%˚kṣīṇa-%} diminué, disparu,  | Body header pari-KṢĪ- (long Ī) matches suspect; verbal root entry with long vowel is corre
+prakzI        -> prakzi        | STC: {@pra-KṢĪ-@} pass. être détruit, périr ; {%˚kṣīṇa-%} détruit, anéanti, disparu. | Body header pra-KṢĪ- (long Ī) matches suspect; verbal root entry.
+Day           -> day           | STC: {@DHAY-@} v. 2 {%DHĀ- ; dhayant-%} partic. buvant,  suçant. | Body defines root DHAY- 'buvant, suçant' with participle; D(dh) vs d are different consona
+upavaD        -> upavad        | STC: {@upa-VADH-@} ({%upāvadhīt%}) tuer. | Body header upa-VADH- matches suspect; verbal root entry for √vadh 'tuer'.
+jyezWya       -> jyEzWya       | STC: {@jyeṣṭhya-@} nt. aînesse. | Body header jyeṣṭhya- (short e) matches suspect; 'aînesse' fits jyeṣṭhya, not jyaiṣṭhya.
+unmI          -> unnI          | STC: {@un-MĪ-@} pass. disparaître. | Body header un-MĪ- matches suspect; verbal root √mī 'disparaître'.
+Jatiti        -> Jawiti        | STC: {@jhat-iti@} onom. indécl. soudain, à l'instant, aussitôt. | Body header jhat-iti matches suspect (SLP1 Jat=jhat); documented onomatopoeia indeclinable
+aBisaNga      -> aBizaNga      | STC: {@abhi-saṅga-@} m. penchant, fait de s'adonner  ; d'être troublé ; défaite ; malédiction ; | Body header abhi-saṅga- (non-retroflex s) matches suspect; distinct from abhi-ṣaṅga.
+Amfz          -> AmfS          | STC: {@ā-MṚṢ-@} moy. supporter patiemment ; caus. id. | Body header ā-MṚṢ- (retroflex ṣ) matches suspect Amfz (SLP1 z=ṣ); distinct from ā-MṚŚ (pal
+upajYa        -> upajYA        | STC: {@upa-jña-@} a. ifc. enseigné ou découvert par. | Body defines upa-jña- a. 'enseigné ou découvert par'; short a vs ā = distinct word, own gl
+aBikrAma      -> aBikrama      | STC: {@abhi-krāma-@} m. entreprise. | Body defines abhi-krāma- m. 'entreprise'; long ā vs short a = distinct word, own gloss.
+upAcaraRa     -> upacaraRa     | STC: {@upācaraṇa-@} nt. fait de servir qq'un (gén.). | Body header upācaraṇa- (long ā) matches suspect; distinct from upacaraṇa.
+aBijAtya      -> ABijAtya      | STC: {@abhi-jātya-@} nt. = {%abhi-jāta%} (iic.) ; {%˚nibhṛta-sneha-%} m. amour qui s'est dévelo | Body header abhi-jātya- (short initial a) matches suspect; distinct from Ābhijātya.
+cillA         -> cilla         | STC: {@cillā-@} f. n. d'un oiseau de proie. | Body header cillā- (long ā) matches suspect; feminine noun for a bird of prey.
+pratipraS     -> pratiprAS     | STC: {@prati-PRAŚ-@} demander qqch. à qq'un (2 acc.). | Body header prati-PRAŚ- (short a) matches suspect; distinct root from prāś (long ā).
+apakzI        -> apakzi        | STC: {@apa-KṢĪ-@} pass. disparaître (dit de la lune) ; {%˚kṣita-%} disparu. | Body defines apa-KṢĪ- pass. 'disparaître'; long ī vs short i = distinct verbal entry, own 
+saMBIta       -> saMvIta       | STC: {@saṃ-bhīta-@} a. v. très effrayé. | Body defines saṃ-bhīta- a.v. 'très effrayé'; B(bh) vs v are different consonants, own glos
+aBilamba      -> avilamba      | STC: {@abhi-lamba-@} a. qui pend (jusqu'à terre). | Body header abhi-lamba- matches suspect; 'qui pend' fits abhi-lamba, not a-vilamba (withou
+nirvahana     -> nirvahaRa     | STC: {@nir-vahana-@} nt. accomplissement, achèvement,  persévérance ; conclusion, dénouement,   | Body header nir-vahana- (non-retroflex n) matches suspect; body consistently spells with n
+nirvarRaRa    -> nirvarRana    | STC: {@nir-varṇaṇa-@} nt. examen, observation attentive ; décision (?). | Body header nir-varṇaṇa- (retroflex ṇ) matches suspect; body spells with ṇ.
+aBiBid        -> aBivid        | STC: {@abhi-BHID-@} pass. éclater. | Body '{@abhi-BHID-@} pass. éclater' defines abhi+BHID (to split/burst) as a real verbal ro
+saMbfh        -> saMvfh        | STC: {@saṃ-BṚH-@} 1 caus. fortifier, rassurer, encourager. | Body '{@saṃ-BṚH-@} 1 caus. fortifier' defines saṃ+BṚH (to strengthen) as a real verbal roo
+kApotikA      -> kapotikA      | STC: {@kāpotikā-@} f. sorte de plante. | Body header kāpotikā- (long ā) matches suspect; kāpotikā (derivative of kāpota) distinct f
+sarmA         -> sarma         | STC: {@sarmā-@} f. chienne d'Indra ou des dieux ; n. d'une Rākṣasī ; fille d'un prince des Gand | Body header sarmā- (long ā feminine) matches suspect; Indra's hound — distinct from sarma 
+ado           -> Ado           | STC: {@ado-@} v. {%adas-.%} | Body header ado- matches suspect; cross-ref to adas- confirms it is a documented form, not
+nirvIta       -> nirBIta       | STC: {@nir-vīta-@} a. v. qui a le cou entouré de qqch., not. du cordon brâhmanique ; {%-in-%} a | Body defines nir-vīta- a.v. 'qui a le cou entouré de qqch.' with full sub-entries; v vs B(
+ABizecanIya   -> aBizecanIya   | STC: {@ābhi-ṣecanīya-@} {%-ī-%} a. concernant l'onction royale. | Body defines ābhi-ṣecanīya- 'concernant l'onction royale'; ā- vṛddhi prefix = distinct wor
+jihvAla       -> jihvala       | STC: {@jihvāla-@} a. = {%jihvāvant-.%} | Body '{@jihvāla-@} a. = jhivāvant-' defines jihvāla as a real adjective synonym; not a mis
+maNgali       -> mANgali       | STC: {@maṅgali-@} m. n. d'un homme. | Body '{@maṅgali-@} m. n. d'un homme' defines maṅgali as a proper name (man's name); real w
+nAgnajitA     -> nAgnajita     | STC: {@nāgna-jitā-@} f. fille de Nagnajit et l'une des femmes de Kṛṣṇa. | Body '{@nāgna-jitā-@} f.' defines a feminine proper noun (wife of Kṛṣṇa); final ā is the f
+nilAyita      -> nilAyitA      | STC: {@ni-lāyita-@} a. v. qui s'installe ou demeure dans (ifc.) ; {%˚lāyin-%} a. id. | Body '{@ni-lāyita-@} a. v.' defines nilāyita as a past participle (masculine form); not a 
+glApita       -> glapita       | STC: {@glāpita-@} a. v. émacié. | Body '{@glāpita-@} a. v. émacié' defines glāpita with long ā (from glai); real word, disti
+pAtrikA       -> pAtrika       | STC: {@pātrikā-@} f. coupe, bol pour les aumônes. | Body '{@pātrikā-@} f. coupe, bol' defines pātrikā as a feminine noun (bowl/cup); final ā i
+pUlika        -> pUlikA        | STC: {@pūlika-@} m. (ou {%-ā-%} f.) faisceau. | Body '{@pūlika-@} m. (ou {%-ā-%} f.) faisceau' documents both pūlika m. and pūlikā f. as v
+prArohaka     -> prarohaka     | STC: {@prārohaka-@} pousse ; bourgeon (d'arbre). | Body '{@prārohaka-@} pousse; bourgeon' defines prārohaka with long ā; real word with prā- 
+pratipAdukA   -> pratipAduka   | STC: {@prati-pādukā-@} f. piédestal. | Body '{@prati-pādukā-@} f. piédestal' defines pratipādukā as a feminine noun; final ā is t
+sahIyAMs      -> sahIyaMs      | STC: {@sahīyāṃs-@} compar. (de 2 {%-saha-%}) plus puissant,  très fort. | Body '{@sahīyāṃs-@} compar.' defines sahīyāṃs with long Ā; this is the standard Sanskrit c
+tapIyAMs      -> tapIyaMs      | STC: {@tapīyāṃs-@} a. compar. le plus austère des (gén.). | Body '{@tapīyāṃs-@} a. compar.' defines tapīyāṃs with long Ā; standard Sanskrit comparativ
+udDuzita      -> udDUzita      | STC: {@ud-dhuṣita-@} a. le poil hérissé. | Body defines ud-dhuṣita- a. 'le poil hérissé'; short u vs long ū = distinct word, own glos
+gardana       -> garDana       | STC: {@gardana-@} nt. fait de braire, de bramer. | Body '{@gardana-@} nt. fait de braire' defines gardana (braying/bellowing) with -rd-; dist
+ke            -> Ke            | STC: {@ke@} nom. m. pl. de 1 {%ka-.%} | Body '{@ke@} nom. m. pl. de 1 {%ka-%}' defines ke as the nom. pl. of ka (who/what); real w
+nirmATa       -> nirnATa       | STC: {@nir-mātha-@} m. destruction, ruine. | Body defines nir-mātha- m. 'destruction, ruine'; m vs n are different consonants, own glos
+JaYJaRa       -> JaYJana       | STC: {@jhañjhaṇa-@} nt. {%jhañjhā-%} f. onom. cliquetis, dzing-dzing, clapotis, etc.  {%jhañjhā | Body '{@jhañjhaṇa-@} nt. {%jhañjhā-%} f. onom. cliquetis' defines jhañjhaṇa as a real onom
+avaBAzita     -> avaBAsita     | STC: {@ava-bhāṣita-@} a. v. insulté (?). | Body '{@ava-bhāṣita-@} a. v. insulté' defines avabhāṣita from root BHĀṢ (to speak/insult);
+kzamita       -> kzaRita       | STC: {@kṣamita-@} ({@KṢAM-@}) a. v. pardonné. | Body '{@kṣamita-@} ({@KṢAM-@}) a. v. pardonné' defines kṣamita from root KṢAM (to forgive)
+qInaka        -> dInaka        | STC: {@ḍīnaka-@} nt. vol d'oiseau. | Body '{@ḍīnaka-@} nt. vol d'oiseau' defines ḍīnaka (bird-flight) with retroflex ḍ; SLP1 q=
+aBisaMBfta    -> aBisaMvfta    | STC: {@abhi-saṃbhṛta-@} a. v. doué de. | Body '{@abhi-saṃbhṛta-@} a. v. doué de' defines abhi-saṃ-BHṚ (to bear/endow); real word, d
+saMnizUdita   -> saMnisUdita   | STC: {@saṃ-niṣūdita-@} a. v. tué, détruit. | Body '{@saṃ-niṣūdita-@} a. v. tué' defines saṃniṣūdita with retroflex ṣ (SLP1 z); real wor
+smas          -> snas          | STC: {@smas@} 1{^re^} pers. pl. du prés. de 1 {%-AS- ; smahe%} id. (moy.). | Body '{@smas@} 1re pers. pl. du prés. de 1 {%-AS-' defines smas as the 1pl present of AS (
+varmayati     -> varRayati     | STC: {@varmayati ;@} {%varmita-%} -- dén. munir d'une cuirasse, cuirasser ; a. v. pourvu d'une  | Body '{@varmayati@} dén. munir d'une cuirasse' defines varmayati as a denominative from va
+Barjita       -> varjita       | STC: {@bharjita-@} a. v. rôti, frit, grillé. | Body '{@bharjita-@} a. v. rôti, frit' defines bharjita from root BHARJ (to roast); entirel
+karSita       -> karzita       | STC: {@karśita-@} a. v. maigre, émacié. | Body '{@karśita-@} a. v. maigre' defines karśita from root KARŚ (to be thin); S=palatal ś,
+aBibfh        -> aBivfh        | STC: {@abhi-BṚH-@} caus. fortifier. | Body '{@abhi-BṚH-@} caus. fortifier' defines abhi+BṚH (to strengthen); real verbal root, d
+uzmAyate      -> UzmAyate      | STC: {@uṣmāyate@} dén. être brûlant. | Body '{@uṣmāyate@} dén. être brûlant' defines uṣmāyate as a denominative verb; suspect u- 
+
+# ===== BUCKET 5  INTENTIONAL -- STC documents the spelling on purpose; NEVER file (9) =====
+Atas          -> atas          | STC: {@ātas@} = {%atas.%} | Body '= atas' is an explicit cross-reference (= X form), documenting the form on purpose, 
+ato           -> aTo           | STC: {@ato@} v. {%atas.%} | Body 'v. atas' is a voyez cross-reference; ato documented as sandhi/variant form, not a mi
+turA          -> tura          | STC: {@turā˚@} v. s. {%tura-.%} | Body 'v. s. tura-' is a voyez sous cross-reference; turā˚ documented as compound prefix fo
+BUs           -> BUz           | STC: {@bhūs˚@} v. 3 {%bhū-.%} | Body 'v. 3 bhū-' is a voyez cross-reference; bhūs˚ documented as iic. sandhi form of bhū-.
+cawura        -> catura        | STC: {@caṭura-@} pour {%caṭula-.%} | Body 'pour caṭula-' is a 'faute pour' marker; caṭura- documented as erroneous form for caṭ
+nirnI         -> nirRI         | STC: {@nir-NĪ-@} v. {%˚ṆĪ-.%} | Body 'v. ˚ṆĪ-' is a voyez cross-reference to the retroflex form; nir-NĪ- intentionally doc
+vinivarhaRa   -> vinibarhaRa   | STC: {@vi-nivarhaṇa-@} lire {%˚barhaṇa-.%} | Body 'lire ˚barhaṇa-' is a 'lisez' correction marker; vi-nivarhaṇa- documented as error fo
+valmi         -> valmI         | STC: {@valmi-@} lire {%vallī-.%} | Body 'lire vallī' = 'lisez vallī' cross-reference marker; entry documents valmi as variant
+sAlaNkawaNkawa -> SAlaNkawaNkawa | STC: {@sālaṅkaṭaṅkaṭa-@} v. s. {%-śāl˚.%} | Body '{@sālaṅkaṭaṅkaṭa-@} v. s. {%-śāl˚.%}' is a cross-reference (voyez) to śālaṅkaṭaṅkaṭa
+
+# ===== BUCKET 6  UNLOCATABLE -- not in the current STC source (stale/different key) (3) =====
+aDyatma       -> aDyAtma       | STC:  | 
+viSran        -> viSram        | STC:  | 
+vyapakfs      -> vyapakfz      | STC:  | 

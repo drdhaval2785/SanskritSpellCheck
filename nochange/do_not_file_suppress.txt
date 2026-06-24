@@ -10,12 +10,14 @@
 # DO NOT hand-edit -- regenerate with detectors/gen_do_not_file_suppress.py
 # after triaging more dictionaries.
 #
-# 2148 unique headwords from 29 dictionaries:
+# 2181 unique headwords from 32 dictionaries:
 #   SanskritSpellCheck\corrections_draft\ACC\ACC_wrong_readings.txt: 25
 #   SanskritSpellCheck\corrections_draft\AP90\AP90_wrong_readings.txt: 8
 #   SanskritSpellCheck\corrections_draft\AP\AP_wrong_readings.txt: 32
 #   SanskritSpellCheck\corrections_draft\BEN\BEN_wrong_readings.txt: 14
 #   SanskritSpellCheck\corrections_draft\BHS\BHS_wrong_readings.txt: 294
+#   SanskritSpellCheck\corrections_draft\BOP\BOP_wrong_readings.txt: 6
+#   SanskritSpellCheck\corrections_draft\BUR\BUR_wrong_readings.txt: 20
 #   SanskritSpellCheck\corrections_draft\CAE\CAE_wrong_readings.txt: 8
 #   SanskritSpellCheck\corrections_draft\CCS\CCS_wrong_readings.txt: 3
 #   SanskritSpellCheck\corrections_draft\GRA\GRA_wrong_readings.txt: 7
@@ -36,6 +38,7 @@
 #   SanskritSpellCheck\corrections_draft\SHS\SHS_wrong_readings.txt: 31
 #   SanskritSpellCheck\corrections_draft\SKD\SKD_wrong_readings.txt: 103
 #   SanskritSpellCheck\corrections_draft\SNP\SNP_wrong_readings.txt: 3
+#   SanskritSpellCheck\corrections_draft\STC\STC_wrong_readings.txt: 9
 #   SanskritSpellCheck\corrections_draft\VCP\VCP_wrong_readings.txt: 408
 #   SanskritSpellCheck\corrections_draft\VEI\VEI_wrong_readings.txt: 2
 #   SanskritSpellCheck\corrections_draft\WIL\WIL_wrong_readings.txt: 17
@@ -94,12 +97,14 @@ AsPuwa
 Asat
 Asaya
 AsparSa
+Atas
 Atireka
 AvESika
 Avara
 Avaritf
 AvarjanA
 Aviz
+Awaruza
 Ayuz
 AzAqI
 Azwakya
@@ -108,9 +113,11 @@ BAvakA
 BUmA
 BUmIBuj
 BUmIpati
+BUs
 BUyaS
 BUzaRA
 BaRqAra
+Bad
 BadravalA
 Bagini
 BaktAruci
@@ -156,6 +163,7 @@ DarmA
 Darmita
 DfzitA
 Dikka
+Div
 DruvakA
 DurvI
 Durvaha
@@ -307,6 +315,7 @@ SvAvid
 SvaDiti
 SvaniSA
 Svapaka
+Svid
 SyomAka
 Tala
 Ula
@@ -366,6 +375,7 @@ abidvas
 acCAyA
 acirABa
 acirapraBa
+adarSaRa
 admanI
 adyakAlaka
 agAha
@@ -468,6 +478,7 @@ atiSi
 atiSvA
 atiliha
 atisvan
+ato
 avAcanIya
 avAlamba
 avAruh
@@ -512,10 +523,12 @@ bAlukA
 bArhas
 bAsteya
 bUkkan
+baDEzin
 baDUwI
 baDUyu
 baDna
 baDryaSva
+baNga
 baRik
 baWara
 babruvAhana
@@ -595,12 +608,14 @@ caturaNgA
 caturantA
 catuz
 cawulA
+cawura
 cetAya
 cilamilikA
 cinta
 cintitA
 citrataRqulA
 citrikAra
+cyUti
 dAGa
 dARa
 dARqaka
@@ -612,6 +627,7 @@ dArika
 dAsaPalI
 dAsanadinI
 dAsarUpya
+dAt
 dAtta
 dAvat
 dAyA
@@ -623,6 +639,7 @@ dIkzaRIyA
 dIrGavfntA
 dOhada
 dUragA
+dUz
 daRqAyAma
 daRqakA
 daSAdaSin
@@ -634,6 +651,7 @@ dahuka
 dakziRabanDa
 dakziReya
 dalasUcI
+dampatI
 dantASlizwa
 darBya
 darSanIyA
@@ -643,6 +661,7 @@ dardarA
 darvan
 daseraka
 dattAmitrA
+dav
 devakilviza
 devakinandana
 devatiTi
@@ -773,6 +792,7 @@ hemam
 hemavata
 hfdayeSA
 hiRqi
+hidimba
 hirI
 hiramya
 hitezin
@@ -823,6 +843,7 @@ jatya
 jijYAsanA
 jirvi
 jitakAsin
+jiv
 jugupsanA
 juka
 jumaranandin
@@ -909,11 +930,13 @@ kelikilA
 kerava
 ketaki
 kevalA
+kfb
 kftAntA
 kftaPalA
 kftaSrAma
 kftasApatnIkA
 kftavanDu
+kfzAnu
 kfzRAzwami
 kfzRasarpA
 kfzRavalakza
@@ -978,6 +1001,7 @@ kzaRA
 kzayadvira
 kzeRa
 kzipaRI
+kzira
 kzitiSa
 kzmAyitA
 kzora
@@ -1075,6 +1099,7 @@ medaS
 medini
 meqa
 meruwu
+metrAvaruRa
 mfN
 mfn
 mfttika
@@ -1136,6 +1161,7 @@ nirUQA
 nirUpAKya
 niraR
 nirguRqi
+nirnI
 nirudDaprakasa
 nirupADiSeza
 nirupaka
@@ -1247,6 +1273,7 @@ parisPUwa
 parizkanDa
 parizpanda
 parizyandana
+parusa
 parvatI
 paryAyA
 paryavaskanDa
@@ -1352,6 +1379,7 @@ puzkaravIja
 puzpavARa
 puzyA
 qAkini
+qaB
 qahU
 qambAra
 qoraka
@@ -1406,6 +1434,7 @@ sAhajit
 sAhoQa
 sAkala
 sAkzIBUta
+sAlaNkawaNkawa
 sAlamBa
 sAlivAhana
 sAmAna
@@ -1448,6 +1477,7 @@ sUraTa
 sUrmma
 sUrpaRaKA
 sUtI
+saKA
 saMBAva
 saMButa
 saMDI
@@ -1633,6 +1663,7 @@ todalatantra
 todeya
 trElAwA
 trEvali
+trak
 trapuzI
 trayaS
 tre
@@ -1647,7 +1678,9 @@ tripurAsidDAnta
 trizuparRa
 trowI
 tryakzAyaRa
+tub
 tulApragrAha
+turA
 turiya
 tuvI
 tvaksuganDA
@@ -1728,6 +1761,7 @@ vAcasa
 vAguji
 vAgvali
 vAhirvedika
+vAhu
 vAjasa
 vAluNgI
 vAnArasI
@@ -1826,6 +1860,7 @@ valasUdana
 valiBuj
 valipodakI
 valmIki
+valmi
 vamaka
 vanDula
 vanazad
@@ -1952,6 +1987,7 @@ vinayanA
 vinduka
 vindusAra
 vinivaraRa
+vinivarhaRa
 viruQaka
 virukza
 virupAkza

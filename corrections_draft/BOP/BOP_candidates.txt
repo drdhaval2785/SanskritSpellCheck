@@ -1,0 +1,33 @@
+# BOP tier-A correction candidates (unified engine) — score	wrong -> right	detectors	morph
+467	vAhu -> bAhu	[consensus,dict_vs_corpus,intra_dup,spell_correct]	morph✓
+465	Agrya -> agrya	[consensus,dict_vs_corpus,intra_dup,spell_correct]	morph✓
+459	dUz -> duz	[consensus,dict_vs_corpus,intra_dup,spell_correct]	morph✓
+367	Ced -> ced	[consensus,dict_vs_corpus,spell_correct]	morph✓
+364	kalaSA -> kalaSa	[consensus,intra_dup,spell_correct]	morph✓
+364	pIWA -> pIWa	[consensus,intra_dup,spell_correct]	morph✓
+364	upaDyAya -> upADyAya	[consensus,intra_dup,spell_correct]	morph✓
+355	Ardita -> ardita	[consensus,intra_dup,spell_correct]	morph✓
+355	anuyAtrA -> anuyAtra	[consensus,intra_dup,spell_correct]	morph✓
+355	argalA -> argala	[consensus,intra_dup,spell_correct]	morph✓
+349	lUp -> lup	[consensus,intra_dup,spell_correct]	morph✓
+346	hidimba -> hiqimba	[consensus,intra_dup,spell_correct]	morph✓
+344	kandalA -> kandala	[consensus,intra_dup,spell_correct]	morph✓
+335	kAl -> kal	[consensus,intra_dup,spell_correct]	morph✓
+324	tintiqA -> tintiqa	[consensus,intra_dup,spell_correct]	morph✓
+316	baDEzin -> vaDEzin	[consensus,intra_dup,spell_correct]	morph✓
+271	vasAna -> vasana	[dict_vs_corpus,spell_correct]	morph✓
+265	saKA -> saKa	[dict_vs_corpus,spell_correct]	morph✓
+264	dampatI -> dampati	[dict_vs_corpus,spell_correct]	morph✓
+264	gramya -> grAmya	[consensus,spell_correct]	morph✓
+255	preraRA -> preraRa	[consensus,spell_correct]	morph✓
+254	Ardana -> ardana	[consensus,spell_correct]	morph✓
+254	niravadyA -> niravadya	[consensus,spell_correct]	morph✓
+251	BAgiraTI -> BAgIraTI	[consensus,spell_correct]	morph✓
+245	catuHSAlA -> catuHSAla	[consensus,spell_correct]	morph✓
+244	plavin -> plAvin	[consensus,spell_correct]	morph✓
+244	puMskAma -> puMskAmA	[consensus,spell_correct]	morph✓
+236	BawwiRI -> BawwinI	[consensus,spell_correct]	morph✓
+224	Darmavidya -> DArmavidya	[consensus,spell_correct]	morph✓
+216	kANGA -> kANgA	[consensus,spell_correct]	morph✓
+216	mfgalAYcana -> mfgalAYCana	[consensus,spell_correct]	morph✓
+201	vAzpAy -> bAzpAy	[consensus,spell_correct]	

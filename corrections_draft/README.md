@@ -7,7 +7,9 @@ tier-A spelling candidates can be turned into a verified **FILE-FIRST** queue + 
 run it with the **[`/dict-triage <DICT>`](../.claude/commands/dict-triage.md)** skill
 (Sonnet classifies, Opus source-confirms, a human verifies).
 
-**29 of 33 triaged — 122 fileable typos across 11 dicts; ~2,398 documented-intentional spellings catalogued.**
+**32 of 33 triaged — 122 fileable typos across 11 dicts; ~2,433 documented-intentional spellings catalogued.**
+Only **PD** remains (its sources are not in `csl-orig`). The three cross-language dicts **BUR** / **STC**
+(French) and **BOP** (Latin) triaged 2026-06-24 — all **0 fileable**, as expected for mature foreign-gloss lexica.
 Tier-A precision stays **near-zero** on mature, much-corrected dictionaries — the durable
 deliverable is the do-not-file list and *preventing bad bulk edits*, not the handful of real
 typos. The exception is **poorly-digitised sources**: SHS (15%), YAT (11%) and PWG (2.4%) carry many
@@ -50,12 +52,12 @@ provided) — it becomes triageable once they are wired into the pipeline.**
 | [YAT](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/yat) — Yates, Sanskrit-English (1846) | 247 | ✅ **27 fileable · 1 do-not-file** (+32 b/v held for scan) — [readme](YAT/readme.md) · [file-first](YAT/YAT_file_first_sf.txt) · [do-not-file](YAT/YAT_wrong_readings.txt) · [queue](YAT/YAT_triaged.txt) |
 | [SHS](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/shs) — Śabda-Sāgara (English, 1900) | 246 | ✅ **37 fileable · 31 do-not-file** — [readme](SHS/readme.md) · [file-first](SHS/SHS_file_first_sf.txt) · [do-not-file](SHS/SHS_wrong_readings.txt) · [queue](SHS/SHS_triaged.txt) |
 | [ACC](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/acc) — Aufrecht, Catalogus Catalogorum | 174 | ✅ **22 fileable · 25 do-not-file** — [readme](ACC/readme.md) · [file-first](ACC/ACC_file_first_sf.txt) · [do-not-file](ACC/ACC_wrong_readings.txt) · [queue](ACC/ACC_triaged.txt) |
-| [BUR](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/bur) — Burnouf | 162 | — pending |
+| [BUR](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/bur) — Burnouf, Dict. classique sanscrit-français (1866) | 162 | ✅ **0 fileable · 20 do-not-file** — [readme](BUR/readme.md) · [do-not-file](BUR/BUR_wrong_readings.txt) · [queue](BUR/BUR_triaged.txt) |
 | [IEG](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/ieg) — Sircar, Indian Epigraphical Glossary | 162 | ✅ **0 fileable · 40 do-not-file** — [readme](IEG/readme.md) · [do-not-file](IEG/IEG_wrong_readings.txt) · [queue](IEG/IEG_triaged.txt) |
 | [INM](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/inm) — Sörensen, Index of Names (Mahābhārata) | 161 | ✅ **0 fileable · 16 do-not-file** — [readme](INM/readme.md) · [do-not-file](INM/INM_wrong_readings.txt) · [queue](INM/INM_triaged.txt) |
 | [PE](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/pe) — Mani, Purāṇic Encyclopaedia | 158 | ✅ **0 fileable · 13 do-not-file** — [readme](PE/readme.md) · [do-not-file](PE/PE_wrong_readings.txt) · [queue](PE/PE_triaged.txt) |
 | [AP](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/ap) — Apte, Practical (English) | 152 | ✅ **0 fileable · 32 do-not-file** — [readme](AP/readme.md) · [do-not-file](AP/AP_wrong_readings.txt) · [queue](AP/AP_triaged.txt) |
-| [STC](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/stc) | 111 | — pending |
+| [STC](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/stc) — Stchoupak–Nitti–Renou, Dict. Sanscrit-Français (1932) | 111 | ✅ **0 fileable · 9 do-not-file** — [readme](STC/readme.md) · [do-not-file](STC/STC_wrong_readings.txt) · [queue](STC/STC_triaged.txt) |
 | [WIL](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/wil) — Wilson (English, 1832) | 108 | ✅ **3 fileable · 17 do-not-file** — [readme](WIL/readme.md) · [file-first](WIL/WIL_file_first_sf.txt) · [do-not-file](WIL/WIL_wrong_readings.txt) · [queue](WIL/WIL_triaged.txt) |
 | [CAE](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/cae) — Cappeller, Sanskrit-English (1891) | 89 | ✅ **0 fileable · 8 do-not-file** — [readme](CAE/readme.md) · [do-not-file](CAE/CAE_wrong_readings.txt) · [queue](CAE/CAE_triaged.txt) |
 | [AP90](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/ap90) — Apte (1890) | 53 | ✅ **0 fileable · 8 do-not-file** — [readme](AP90/readme.md) · [do-not-file](AP90/AP90_wrong_readings.txt) · [queue](AP90/AP90_triaged.txt) |
@@ -65,7 +67,7 @@ provided) — it becomes triageable once they are wired into the pipeline.**
 | [GRA](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/gra) — Grassmann, Wörterbuch zum Rig-Veda (German, 1873) | 45 | ✅ **0 fileable · 7 do-not-file** — [readme](GRA/readme.md) · [do-not-file](GRA/GRA_wrong_readings.txt) · [queue](GRA/GRA_triaged.txt) |
 | [BEN](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/ben) — Benfey (English, 1866) | 43 | ✅ **0 fileable · 14 do-not-file** — [readme](BEN/readme.md) · [do-not-file](BEN/BEN_wrong_readings.txt) · [queue](BEN/BEN_triaged.txt) |
 | [VEI](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/vei) — Macdonell–Keith, Vedic Index | 43 | ✅ **0 fileable · 2 do-not-file** — [readme](VEI/readme.md) · [do-not-file](VEI/VEI_wrong_readings.txt) · [queue](VEI/VEI_triaged.txt) |
-| [BOP](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/bop) — Bopp, Glossarium | 39 | — pending |
+| [BOP](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/bop) — Bopp, Glossarium Sanscritum (Latin, 1847) | 39 | ✅ **0 fileable · 6 do-not-file** — [readme](BOP/readme.md) · [do-not-file](BOP/BOP_wrong_readings.txt) · [queue](BOP/BOP_triaged.txt) |
 | [CCS](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/ccs) — Cappeller, Sanskrit-German | 35 | ✅ **0 fileable · 3 do-not-file** — [readme](CCS/readme.md) · [do-not-file](CCS/CCS_wrong_readings.txt) · [queue](CCS/CCS_triaged.txt) |
 | [MCI](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/mci) — mythical-name index | 41 | ✅ **10 fileable · 3 do-not-file** — [readme](MCI/readme.md) · [file-first](MCI/MCI_file_first_sf.txt) · [do-not-file](MCI/MCI_wrong_readings.txt) · [queue](MCI/MCI_triaged.txt) |
 | [PGN](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/pgn) — proper-name index (inscriptions) | 21 | ✅ **0 fileable · 1 do-not-file** — [readme](PGN/readme.md) · [do-not-file](PGN/PGN_wrong_readings.txt) · [queue](PGN/PGN_triaged.txt) |
@@ -90,31 +92,16 @@ python triage_dict.py <DICT> --finish            # synthesize the package
 Or just run the **[`/dict-triage <DICT>`](../.claude/commands/dict-triage.md)** skill, which
 drives the whole sequence (incl. the source-verification rubric and the do-not-file list).
 
-### Ready to run — the 14 pending dictionaries (highest tier-A first)
+### Only one dictionary remains
 
-Type any line into Claude Code (a slash-command is run by typing, not by clicking):
+**32 of 33 are triaged.** The single remaining dict is **PD** — its two source files are **not in
+`csl-orig`** (the user will provide them), so it is not yet runnable. Re-runs of an already-triaged
+dict are **stochastic** — don't blindly overwrite a committed package.
 
 ```
-/dict-triage BHS
-/dict-triage PUI
-/dict-triage YAT
-/dict-triage ACC
-/dict-triage BUR
-/dict-triage IEG
-/dict-triage INM
-/dict-triage PE
-/dict-triage STC
-/dict-triage KRM
-/dict-triage VEI
-/dict-triage BOP
-/dict-triage MCI
-/dict-triage PGN
+# blocked until its external sources are wired into the pipeline:
+/dict-triage PD
 ```
-
-That accounts for all 33: **already triaged** (18, re-runs are stochastic — don't blindly
-overwrite): `MW` `PW` `VCP` `PWG` `SNP` `SKD` `AP` `MW72` `SCH` `SHS` `WIL` `GST` `CAE` `AP90`
-`MD` `GRA` `BEN` `CCS`; **source not in csl-orig** (1): `PD` — two external sources to be
-provided, then triageable.
 
 ## Planned: orthographic-drift study
 

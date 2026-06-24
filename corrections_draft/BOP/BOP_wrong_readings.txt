@@ -1,0 +1,18 @@
+# BOP -- DOCUMENTED-INTENTIONAL spellings (NOT typos -- do NOT file corrections)
+#
+# 6 headwords that LOOK like misspellings but which BOP records on purpose:
+# wrong-reading apparatus (w.r.), variae lectiones (v.l.), in-composition /
+# sandhi forms (in comp. for...), cross-references (See / = X q.v.), and other
+# grammatical/Vedic notes. Filing a 'correction' for any of these CORRUPTS BOP.
+# Use this as a suppression list: such headwords should not be re-flagged.
+# Format per row:  headword -> would-be 'correction'  |  the BOP entry text
+
+# ===== CROSS-REFERENCE (4) =====
+baDEzin        -> vaDEzin        | {#baDEzin#} v. {#vaDEzin#}.
+dUz            -> duz            | {#dUz#} v. {#duz#}.
+hidimba        -> hiqimba        | {#hidimba, hidimbA#} v. {#hiqimba, hiqimbA#}.
+vAhu           -> bAhu           | {#vAhu#} v. {#bAhu#}.
+
+# ===== OTHER-INTENTIONAL (2) =====
+dampatI        -> dampati        | {#dampatI#} v. 2. {#dam#}.
+saKA           -> saKa           | {#saKA#} {%nom. vocis%} {#saKi#} (ut videtur, pro {#saKAs#}, a Them. {#saKE#}, unde alii casus fortes, vocativo sing. excepto, derivantur, v. gr. min. ed. 2. §.

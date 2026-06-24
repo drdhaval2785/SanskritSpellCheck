@@ -1,0 +1,10 @@
+; STC body-confirmed fileable typos -- CORRECTIONS standard format (DICT:wrong:right:n)
+; 0 fileable (classified TYPO + source-confirmed + survived the Opus false-positive review) + 3 reviewed-out (commented below)
+; VERIFY each remaining case on the scan, flip trailing n->y for confirmed ones, then:
+;   python chg_nchg_sep.py STC_file_first_sf.txt chg.txt nchg.txt
+; REVIEWED-OUT (realword): Headword {@PRAŚ-@} is the genuine Sanskrit root praś 'demander, interroger', conjugated pṛcchati/papraccha; not a typo f
+;STC:praS:prAS:n
+; REVIEWED-OUT (realword): {@bibhīṣaṇa-@} 'terrifiant; nom d'un Rākṣasa, frère de Rāvaṇa' — attested b-spelling of Vibhīṣaṇa, defined as its own wo
+;STC:biBIzaRa:viBIzaRa:n
+; REVIEWED-OUT (realword): {@pra-dīna-@} 'envolé, s'envolant; sorte de vol' from pra-dī 'fly'; genuine word, not praḍīna (qIna).
+;STC:pradIna:praqIna:n

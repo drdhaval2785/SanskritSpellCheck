@@ -6,6 +6,34 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.38.0] - 2026-06-24
+
+### Added
+- **BUR + STC + BOP triage — 32/33 dicts (only PD remains).** The three cross-language dictionaries,
+  all **0 fileable typos** — the expected result for mature foreign-gloss lexica:
+  - **BUR** (Burnouf, *Dict. classique sanscrit-français*, 1866, `fr`): 162 tier-A → 147 located → 0
+    fileable, 123 real words, **20 do-not-file** (17 root cross-references `cf.`, 3 other). All 4
+    classified TYPOs were **reviewed out** by the Opus gate — two because the entry's own gloss spells
+    the suspect (`aśunya`, `kamaṭa`), two as vṛddhi derivatives (`smāśānika`←śmaśāna, `viṣṭala`←sthala).
+  - **STC** (Stchoupak–Nitti–Renou, *Dict. Sanscrit-Français*, 1932, `fr`): 111 tier-A → 93 located →
+    0 fileable, 75 real words, **9 do-not-file**. The Opus review held back the b/v (`bibhīṣaṇa-` =
+    Vibhīṣaṇa) and d/ḍ (`pra-dīna-`) candidates **for the scan** rather than filing them.
+  - **BOP** (Bopp, *Glossarium Sanscritum*, Latin, 1847, `la`): 39 tier-A → 32 located → 0 fileable,
+    24 real words, **6 do-not-file**. Latin = the study's negative control (no orthographic reform);
+    most flags are feminine `-ā` entries (`kalaSA`, `argalā`) or A-grade derivatives BOP gives own entries.
+  - Packages + per-dict `readme.md` under [corrections_draft/](corrections_draft/).
+- **`fr`/`la` profiles got test coverage + a missing STC marker.** Added BUR/STC/BOP marker cases to
+  `detectors/test_triage.py` (now **25 checks**). The cases surfaced a gap: STC writes its correction
+  directive as **`lire <form>`** (infinitive), which the `fr` `wrong-reading` regex (only `\blisez\b`)
+  missed — added `\blire\s+[{˚]` (anchored on a following form-marker so plain glosses like "action de
+  lire" don't match). Re-synthesis regroups STC's `valmi`/`vinivarhaṇa` under wrong-reading (2 of 9).
+
+### Changed
+- **Suppression list → 32 dicts, 2181 unique** (BUR +20, STC +9, BOP +6 do-not-file headwords folded
+  into `nochange/do_not_file_suppress.txt`). Re-ran `run_all.py --rerun` so the correctors re-filter
+  against the grown whitelist; `eval.py` false-positives back to **0** for all four correctors
+  (tier-C known-pair recall steady: A=696, B=248, C=907).
+
 ## [1.37.0] - 2026-06-24
 
 ### Added

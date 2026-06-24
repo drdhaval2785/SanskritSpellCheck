@@ -1,0 +1,132 @@
+; DRAFT corrections for BOP — SanskritSpellCheck; VERIFY each against the scan before filing.
+; updateByLine format; only the <k1>/<k2> key field is edited (check the entry body too).
+; NOTE: each case targets the FIRST entry with that headword -- check for homographs
+;       (multiple entries sharing a key) and that no two cases edit the same line.
+;
+; Case 1.  vAhu -> bAhu   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=vAhu
+44495 old <L>7187<pc>317-b<k1>vAhu<k2>vAhu
+44495 new <L>7187<pc>317-b<k1>bAhu<k2>bAhu
+;
+; Case 2.  Agrya -> agrya   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=Agrya
+4564 old <L>855<pc>028-a<k1>Agrya<k2>Agrya
+4564 new <L>855<pc>028-a<k1>agrya<k2>agrya
+;
+; Case 3.  dUz -> duz   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=dUz
+25032 old <L>4178<pc>173-b<k1>dUz<k2>dUz
+25032 new <L>4178<pc>173-b<k1>duz<k2>duz
+;
+; Case 4.  Ced -> ced   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=Ced
+19517 old <L>3325<pc>132-b<k1>Ced<k2>Ced
+19517 new <L>3325<pc>132-b<k1>ced<k2>ced
+;
+; Case 5.  kalaSA -> kalaSa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=kalaSA
+10750 old <L>1957<pc>068-b<k1>kalaSA<k2>kalaSA
+10750 new <L>1957<pc>068-b<k1>kalaSa<k2>kalaSa
+;
+; Case 6.  pIWA -> pIWa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=pIWA
+31177 old <L>5153<pc>218-a<k1>pIWA<k2>pIWA
+31177 new <L>5153<pc>218-a<k1>pIWa<k2>pIWa
+;
+; Case 7.  upaDyAya -> upADyAya   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=upaDyAya
+7848 old <L>1420<pc>050-a<k1>upaDyAya<k2>upaDyAya
+7848 new <L>1420<pc>050-a<k1>upADyAya<k2>upADyAya
+;
+; Case 8.  Ardita -> ardita   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=Ardita
+5380 old <L>1003<pc>033-b<k1>Ardita<k2>Ardita
+5380 new <L>1003<pc>033-b<k1>ardita<k2>ardita
+;
+; Case 9.  anuyAtrA -> anuyAtra   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=anuyAtrA
+1617 old <L>301<pc>010-b<k1>anuyAtrA<k2>anuyAtrA
+1617 new <L>301<pc>010-b<k1>anuyAtra<k2>anuyAtra
+;
+; Case 10.  argalA -> argala   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=argalA
+2961 old <L>566<pc>018-a<k1>argalA<k2>argalA
+2961 new <L>566<pc>018-a<k1>argala<k2>argala
+;
+; Case 11.  lUp -> lup   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=lUp
+42597 old <L>6901<pc>303-a<k1>lUp<k2>lUp
+42597 new <L>6901<pc>303-a<k1>lup<k2>lup
+;
+; Case 12.  hidimba -> hiqimba   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=hidimba
+55609 old <L>8877<pc>401-a<k1>hidimba<k2>hidimba, hidimbA
+55609 new <L>8877<pc>401-a<k1>hiqimba<k2>hidimba, hidimbA
+;
+; Case 13.  kandalA -> kandala   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=kandalA
+10207 old <L>1854<pc>065-a<k1>kandalA<k2>kandalA
+10207 new <L>1854<pc>065-a<k1>kandala<k2>kandala
+;
+; Case 14.  kAl -> kal   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=kAl
+11382 old <L>2087<pc>071-b<k1>kAl<k2>kAl
+11382 new <L>2087<pc>071-b<k1>kal<k2>kal
+;
+; Case 15.  tintiqA -> tintiqa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=tintiqA
+22206 old <L>3735<pc>153-a<k1>tintiqA<k2>tintiqA
+22206 new <L>3735<pc>153-a<k1>tintiqa<k2>tintiqa
+;
+; Case 16.  baDEzin -> vaDEzin   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=baDEzin
+34034 old <L>5658<pc>236-1b<k1>baDEzin<k2>baDEzin
+34034 new <L>5658<pc>236-1b<k1>vaDEzin<k2>vaDEzin
+;
+; Case 17.  vasAna -> vasana   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=vasAna
+43871 old <L>7090<pc>313-a<k1>vasAna<k2>vasAna
+43871 new <L>7090<pc>313-a<k1>vasana<k2>vasana
+;
+; Case 18.  saKA -> saKa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=saKA
+50722 old <L>8161<pc>363-a<k1>saKA<k2>saKA
+50722 new <L>8161<pc>363-a<k1>saKa<k2>saKa
+;
+; Case 19.  dampatI -> dampati   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=dampatI
+23737 old <L>3989<pc>163-b<k1>dampatI<k2>dampatI
+23737 new <L>3989<pc>163-b<k1>dampati<k2>dampati
+;
+; Case 20.  gramya -> grAmya   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=gramya
+16899 old <L>2946<pc>112-a<k1>gramya<k2>gramya
+16899 new <L>2946<pc>112-a<k1>grAmya<k2>grAmya
+;
+; Case 21.  preraRA -> preraRa   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=preraRA
+33626 old <L>5595<pc>233-b<k1>preraRA<k2>preraRA
+33626 new <L>5595<pc>233-b<k1>preraRa<k2>preraRa
+;
+; Case 22.  Ardana -> ardana   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=Ardana
+5374 old <L>1002<pc>033-a<k1>Ardana<k2>Ardana
+5374 new <L>1002<pc>033-a<k1>ardana<k2>ardana
+;
+; Case 23.  niravadyA -> niravadya   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=niravadyA
+28128 old <L>4649<pc>197-a<k1>niravadyA<k2>niravadyA
+28128 new <L>4649<pc>197-a<k1>niravadya<k2>niravadya
+;
+; Case 24.  BAgiraTI -> BAgIraTI   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=BAgiraTI
+35091 old <L>5821<pc>244-b<k1>BAgiraTI<k2>BAgiraTI
+35091 new <L>5821<pc>244-b<k1>BAgIraTI<k2>BAgIraTI
+;
+; Case 25.  catuHSAlA -> catuHSAla   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=catuHSAlA
+17661 old <L>3065<pc>118-a<k1>catuHSAlA<k2>catuHSAlA
+17661 new <L>3065<pc>118-a<k1>catuHSAla<k2>catuHSAla
+;
+; Case 26.  plavin -> plAvin   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=plavin
+33694 old <L>5610<pc>234-a<k1>plavin<k2>plavin
+33694 new <L>5610<pc>234-a<k1>plAvin<k2>plAvin
+;
+; Case 27.  puMskAma -> puMskAmA   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=puMskAma
+31266 old <L>5165<pc>219-a<k1>puMskAma<k2>puMskAma
+31266 new <L>5165<pc>219-a<k1>puMskAmA<k2>puMskAmA
+;
+; Case 28.  BawwiRI -> BawwinI   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=BawwiRI
+34864 old <L>5782<pc>243-a<k1>BawwiRI<k2>BawwiRI
+34864 new <L>5782<pc>243-a<k1>BawwinI<k2>BawwinI
+;
+; Case 29.  Darmavidya -> DArmavidya   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=Darmavidya
+26009 old <L>4343<pc>180-b<k1>Darmavidya<k2>Darmavidya
+26009 new <L>4343<pc>180-b<k1>DArmavidya<k2>DArmavidya
+;
+; Case 30.  kANGA -> kANgA   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=kANGA
+;   [NOT LOCATED in csl-orig — locate the entry manually]
+;
+; Case 31.  mfgalAYcana -> mfgalAYCana   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=mfgalAYcana
+38455 old <L>6332<pc>269-b<k1>mfgalAYcana<k2>mfgalAYcana
+38455 new <L>6332<pc>269-b<k1>mfgalAYCana<k2>mfgalAYCana
+;
+; Case 32.  vAzpAy -> bAzpAy   scan=http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=BOP&key=vAzpAy
+44405 old <L>7170<pc>317-a<k1>vAzpAy<k2>vAzpAy
+44405 new <L>7170<pc>317-a<k1>bAzpAy<k2>bAzpAy
+;

@@ -39,6 +39,13 @@ BODY_CASES = [
     # VCP (Sanskrit)
     ('VCP', '{{Lbody=35976}}', 'xref'),
     ('VCP', 'garba gatO BvA0 para0 saka0 sew . garbati agarbIt jagarba .', 'realword'),
+    # BUR / STC (French)
+    ('BUR', '{#baNga#} {%baṅga%} m. le Bengale, Cf. {%vaṅga.%}', 'xref'),
+    ('STC', '{@valmi-@} lire {%vallī-.%}', 'wr'),
+    ('STC', '{@ā-patanā-@} nt. évènement imprévu.', 'realword'),
+    # BOP (Latin)
+    ('BOP', '{#dUz#} v. {#duz#}.', 'xref'),
+    ('BOP', '{#Agrya#} (ab {#agra#} {%n.%} cacumen) insignis, egregius.', 'realword'),
 ]
 
 # (dict, body, expected wrong-readings sub-type)
@@ -47,6 +54,9 @@ SUBTYPE_CASES = [
     ('PW', 'fehlerhaft für Suci', 'wrong-reading'),
     ('PW', 'dARqakya v. l.', 'varia-lectio'),
     ('VCP', '{{Lbody=35976}}', 'cross-reference'),
+    ('STC', '{@valmi-@} lire {%vallī-.%}', 'wrong-reading'),
+    ('BUR', '{#baNga#} cf. {%vaṅga.%}', 'cross-reference'),
+    ('BOP', '{#dUz#} v. {#duz#}.', 'cross-reference'),
 ]
 
 

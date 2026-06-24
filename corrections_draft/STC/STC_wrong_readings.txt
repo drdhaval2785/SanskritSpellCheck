@@ -1,0 +1,21 @@
+# STC -- DOCUMENTED-INTENTIONAL spellings (NOT typos -- do NOT file corrections)
+#
+# 9 headwords that LOOK like misspellings but which STC records on purpose:
+# wrong-reading apparatus (w.r.), variae lectiones (v.l.), in-composition /
+# sandhi forms (in comp. for...), cross-references (See / = X q.v.), and other
+# grammatical/Vedic notes. Filing a 'correction' for any of these CORRUPTS STC.
+# Use this as a suppression list: such headwords should not be re-flagged.
+# Format per row:  headword -> would-be 'correction'  |  the STC entry text
+
+# ===== WRONG-READING (2) =====
+valmi          -> valmI          | {@valmi-@} lire {%vallī-.%}
+vinivarhaRa    -> vinibarhaRa    | {@vi-nivarhaṇa-@} lire {%˚barhaṇa-.%}
+
+# ===== OTHER-INTENTIONAL (7) =====
+Atas           -> atas           | {@ātas@} = {%atas.%}
+BUs            -> BUz            | {@bhūs˚@} v. 3 {%bhū-.%}
+ato            -> aTo            | {@ato@} v. {%atas.%}
+cawura         -> catura         | {@caṭura-@} pour {%caṭula-.%}
+nirnI          -> nirRI          | {@nir-NĪ-@} v. {%˚ṆĪ-.%}
+sAlaNkawaNkawa -> SAlaNkawaNkawa | {@sālaṅkaṭaṅkaṭa-@} v. s. {%-śāl˚.%}
+turA           -> tura           | {@turā˚@} v. s. {%tura-.%}
