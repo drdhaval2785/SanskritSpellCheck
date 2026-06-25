@@ -15,7 +15,7 @@ by priority. The headword-triage handoff (for re-runs) is separate:
 | # | Task | Type | Ready? |
 |--:|---|---|---|
 | **1** | **Draft the CORRECTIONS umbrella issue** (122 FILE-FIRST typos → one OCR-prefiltered issue) | lexicographic payoff | ⚠️ needs tesseract + `san` model for the OCR pre-verify |
-| **2** | **Tier-C ranking calibration** (`run_all.py`) | engineering | ✅ no external data |
+| ~~2~~ | ~~Tier-C ranking calibration~~ | engineering | ✅ **DONE** — negative result; tier-promotion unsafe (real minimal pairs), kept a ranking nudge |
 | ~~3~~ | ~~Ortho-drift within-EN recency control~~ | study extension | ✅ **DONE** (PD/PE/BHS/IEG = 0.00, VEI 0.06; en_GB.dic staged) |
 | **4** | **German DTA/RIDGES long-tail merge** (`merge_reform_pairs.py`) | study extension | ⚠️ needs a DTA/RIDGES export or row-list URL |
 | — | Cleanup / low-priority + blocked-on-external | — | see bottom |
@@ -102,9 +102,27 @@ tesseract it still runs but only **prefetches the scan image** as a review aid (
 
 ---
 
-## Task 2 — Tier-C ranking calibration
+## Task 2 — Tier-C ranking calibration — ✅ DONE (2026-06-25, negative result)
 
-**Goal:** improve the detector engine's **tier-C** ranking. `eval.py` shows tier C still recovers
+> **Tested and resolved.** The proposed corpus+confusion **tier-C → B promotion was tried and
+> rejected** as unsafe; only a **ranking nudge** (within-tier) was kept. Why:
+> - **It surfaces real Sanskrit minimal pairs as if they were typos.** Promoting `dict_vs_corpus`-alone
+>   candidates on (suggestion band ≥ 4, suspect band 0, high-weight confusion) lifted 602 candidates
+>   C→B — but spot-checking shows many are **real distinct words**: `patra` (leaf) vs `pAtra` (vessel),
+>   and `vata` / `rAtrI` are **real MW headwords** (`<L>185376`, `<L>177124`). Sanskrit vowel-length
+>   pairs are exactly where spelling + corpus **cannot** tell an error from a real word — the reason the
+>   body-grounded triage exists. `suspect_band == 0` is also unreliable (DCS coverage gaps make common
+>   words look unattested).
+> - **The safe promotions are already spent.** The C-stuck known o_vs_O pairs are **99 % single-detector
+>   `spell_correct` with suggestion band 0–2** (only 11 of ~1,000 have band ≥ 4); every single-detector
+>   pair the corpus *can* vouch for (band ≥ 3) is **already tier B** via the existing rule. So a band ≥ 4
+>   promotion moves ≈ 0 known pairs into B while mislabeling real words.
+> - **Outcome:** tier logic unchanged (A=5371, B=4693, C=4688; `eval.py` FP=0, A not ballooned); added a
+>   documented `CORROB_*` **score nudge** so corroborated candidates rank higher *within* their tier
+>   (the review queue surfaces them first) without the false-promotion. The real lever for these pairs
+>   is the body-grounded triage, not the scorer. Brief kept below for reference.
+
+**Goal (as briefed):** improve the detector engine's **tier-C** ranking. `eval.py` shows tier C still recovers
 ~**911 historically-real** o_vs_O pairs (single-detector recoveries that the cross-detector-agreement
 score parks in C). Boost the ones with independent corpus/DCS signal so true errors surface higher,
 without inflating the false-positive rate (which must stay ~0 against `nochange.txt`).

@@ -19,6 +19,16 @@ ready for a dated entry.
   draft-changefile prep (unblocks the umbrella-issue handoff, Task 1).
 
 ### Added
+- **Tier-C ranking calibration (Task 2) — negative result + ranking nudge.** Tested the proposed
+  corpus+confusion tier-C→B promotion (suggestion DCS band ≥ 4, suspect band 0, high-weight confusion):
+  it lifts 602 `dict_vs_corpus`-alone candidates C→B but **surfaces real Sanskrit minimal pairs as typos**
+  (`patra`=leaf vs `pAtra`=vessel; `vata`/`rAtrI` are real MW headwords `<L>185376`/`<L>177124`) —
+  vowel-length pairs only the body-grounded triage can adjudicate, and `suspect_band==0` is unreliable
+  (DCS gaps). The corpus-attested single-detector pairs (band ≥ 3) are **already tier B**, so the
+  C-stuck known o_vs_O pairs (99 % `spell_correct`, band 0–2) don't benefit. **Rejected the tier
+  promotion**; kept a documented `CORROB_*` **score nudge** (rank corroborated candidates higher
+  within their tier). Tiers unchanged (A=5371/B=4693/C=4688), `eval.py` FP=0. Write-up in Task 2 of
+  [HANDOFF_NEXT.md](HANDOFF_NEXT.md).
 - **Ortho-drift within-EN recency control (Task 3 done).** Registered the five modern-leaning English
   dicts **PD / PE / BHS / IEG / VEI** as `en` in `ortho_drift.py`'s `LANG_OF` and ran them against the
   `en_GB` reference (`ropensci/hunspell` `en_GB.dic`, staged at `external_src/hunspell/`, gitignored;

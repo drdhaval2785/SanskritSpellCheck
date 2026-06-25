@@ -38,9 +38,27 @@ DETECTORS = [
 HIGH_PRECISION = {'phonotactic', 'charset'}
 SCAN = "http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=%s&key=%s"
 
+# Corpus-corroboration ranking nudge (score_tier). A candidate is corroborated when the
+# suggestion is a frequent DCS lemma (band >= 4 of 5), the suspect is unattested (band 0), and
+# the edit is a high-weight confusion class (CORROB_CW = 0.05, the elbow of the weight
+# distribution: admits Aa .41 / Ii .25 / Uu .089 / Ss .078, excludes the Ww .042 tail).
+#
+# ⚠️ This is a SCORE nudge ONLY, deliberately NOT a tier promoter. A tier-C -> B promotion on this
+# signal was tried and REJECTED: it surfaces real Sanskrit minimal pairs as if they were typos
+# (patra=leaf vs pAtra=vessel, vata/rAtrI are real MW headwords) because (a) Sanskrit vowel-length
+# pairs are exactly where spelling+corpus can't tell an error from a real word -- the reason the
+# body-grounded triage exists -- and (b) suspect-band 0 is unreliable (DCS coverage gaps make
+# common words look unattested). The single-detector pairs the corpus CAN vouch for (band >= 3)
+# are already tier B; pushing further trades precision for nothing the body can't settle. So we
+# only let corroboration raise a candidate's rank WITHIN its tier, never its tier. See the
+# Task-2 write-up in HANDOFF_NEXT.md.
+CORROB_SUGG_BAND = 4
+CORROB_CW = 0.05
+
 
 class Cand:
-    __slots__ = ('suspect', 'detectors', 'sugg_dets', 'sugg_dicts', 'reasons', 'dicts', 'morph')
+    __slots__ = ('suspect', 'detectors', 'sugg_dets', 'sugg_dicts', 'reasons', 'dicts',
+                 'morph', 'corroborated')
 
     def __init__(self, suspect):
         self.suspect = suspect
@@ -50,6 +68,7 @@ class Cand:
         self.reasons = []                               # (detector, code, detail)
         self.dicts = set()
         self.morph = False                              # vidyut: suggestion is a valid stem, suspect is not
+        self.corroborated = False                       # corpus+confusion corroboration (ranking nudge)
 
 
 def ensure_outputs(sanhw1, rerun):
@@ -128,10 +147,14 @@ def score_tier(c, dcs, weights, stems):
     # WEAK on dictionary headwords (most aren't pratipadikas, and an inflected suspect
     # looks "not a stem"), so it is a ranking nudge + tag only -- NOT a tier promoter.
     c.morph = bool(best) and (best in stems) and (c.suspect not in stems)
+    # corpus corroboration (ranking nudge only -- see CORROB_* note above; NOT a tier promoter):
+    # suggestion is a frequent DCS lemma, suspect is unattested, edit is a high-weight confusion.
+    suspect_band = dcs.get(u.normalize_lemma(c.suspect), 0)
+    c.corroborated = (best_band >= CORROB_SUGG_BAND and suspect_band == 0 and cw >= CORROB_CW)
     score = (ndet * 100 + best_band * 10 + (50 if hpf else 0) + len(c.dicts)
-             + round(cw * 20) + (15 if c.morph else 0))
+             + round(cw * 20) + (15 if c.morph else 0) + (5 if c.corroborated else 0))
     if c.detectors == {'dict_vs_corpus'}:
-        tier = 'C'                              # exploratory alone
+        tier = 'C'                              # exploratory alone (corroboration ranks it up in C)
     elif ndet >= 2 or hpf or best_band == 5:
         tier = 'A'
     elif best_band >= 3 or (c.detectors & {'consensus', 'intra_dup'}):
