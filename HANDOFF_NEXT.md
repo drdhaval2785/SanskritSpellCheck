@@ -194,6 +194,23 @@ Wikipedia-sourced pairs. The blocker is data acquisition only.
 pairs. `WebFetch` reaches the web but **can't bulk-download** these corpora (it summarises via a small
 model), so the export must be dropped on disk or provided as an explicit pair list.
 
+**Where the pairs actually live (RIDGES / DTA).** These corpora carry a **normalization layer** that
+maps each historical token to its modern spelling — that layer *is* the pair source, not the
+documentation page:
+- **RIDGES** (HU Berlin diachronic scientific German, ~1482–1914): the token tiers include `dipl`
+  (diplomatic) / `clean` / **`norm`** (modern-normalized). Export the corpus from the **Laudatio
+  repository** (or an ANNIS query) with the `dipl`/`clean` + `norm` columns; the `(historical, norm)`
+  pairs where they differ are the input. The documentation page only *describes* these layers + the
+  download route — it is **not itself the data** (and it's behind an Anubis anti-bot wall, so it
+  can't be fetched programmatically).
+- **DTA** (Deutsches Textarchiv): the **DTA::CAB** `orig`→`norm` normalization is the same idea on a
+  much larger, general corpus — likely a broader pair list than RIDGES (which is domain-specific).
+- **Caveat:** `norm` normalizes *all* historical variation (early-modern spelling, OCR, etc.), not
+  just the 1901/1996 reforms — but `merge_reform_pairs.py`'s dic-validation (accept iff old ∉ de_DE
+  dic & new ∈ dic) filters it to genuine historical→modern pairs, which is exactly what we want.
+- **To hand off:** drop a TSV/CSV of `old<TAB>new` rows (extracted from the `norm` layer, differing
+  pairs only) on disk, or a direct Laudatio/ANNIS export — then the brief below merges it.
+
 **Paste this into a new chat (after the export is on disk):**
 > In `SanskritSpellCheck/detectors`, merge the supplied DTA/RIDGES old→new German reform-pair export
 > into `ortho_drift/de_reform_map.tsv` with `python merge_reform_pairs.py <export> de` (it is
