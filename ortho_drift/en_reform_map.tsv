@@ -1,8 +1,10 @@
 # English orthographic reform map:  old<TAB>2026<TAB>era
-# Curated seed + corpus-mined drift. Expandable. 71 forms.
+# Curated seed + corpus-mined drift. Expandable. 76 forms.
+achæan	achaean	ligature
 alœ	ale	ligature
 anapæst	anapaest	ligature
 ancle	ankle	archaic
+anæmia	anaemia	ligature
 aquatick	aquatic	ick
 aromatick	aromatic	ick
 arsenick	arsenic	ick
@@ -23,6 +25,8 @@ cæsura	caesura	ligature
 diarrhœa	diarrhoea	ligature
 dinœ	dine	ligature
 disconnexion	disconnection	xion
+encyclopædia	encyclopedia	ligature
+encyclopœdia	encyclopedia	ligature
 erotick	erotic	ick
 frolick	frolic	ick
 fœtus	foetus	ligature
@@ -53,6 +57,7 @@ physick	physic	ick
 phænomenon	phenomenon	ligature
 phœnix	phoenix	ligature
 phœnomenon	phenomenon	ligature
+primæval	primeval	ligature
 reflexion	reflection	xion
 shew	show	archaic
 shewing	showing	archaic

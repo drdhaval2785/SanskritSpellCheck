@@ -40,8 +40,17 @@ _ADOBE = (r'C:\Program Files\Adobe\Adobe InDesign 2026\Resources\Dictionaries\LI
           r'\Linguistics\Providers\Plugins2\AdobeHunspellPlugin\Dictionaries')
 
 
+# Hunspell .dic resolution: $ORTHO_<L>_DIC env var (checked in load_wordlist) wins; else the
+# Adobe InDesign bundle if present; else a locally-staged copy under external_src/hunspell/
+# (gitignored — e.g. en_GB.dic from github.com/ropensci/hunspell inst/dict). All local deps.
+_HUNSPELL_LOCAL = os.path.join(triage_util.ROOT, 'external_src', 'hunspell')
+
+
 def _dic(lang):
-    return os.path.join(_ADOBE, lang, lang + '.dic')
+    adobe = os.path.join(_ADOBE, lang, lang + '.dic')
+    if os.path.exists(adobe):
+        return adobe
+    return os.path.join(_HUNSPELL_LOCAL, lang + '.dic')
 
 
 # --- csl-orig gloss tokenizer (shared by de/fr/la) -------------------------------------------
@@ -235,7 +244,10 @@ PROFILES = {
 LANG_OF = {'PW': 'de', 'PWG': 'de', 'GRA': 'de', 'CCS': 'de', 'SCH': 'de',
            'BUR': 'fr', 'STC': 'fr', 'BOP': 'la', 'KOSSOVICH': 'ru', 'KOCHERGINA': 'ru',
            'MW': 'en', 'MW72': 'en', 'AP': 'en', 'AP90': 'en', 'WIL': 'en', 'BEN': 'en',
-           'GST': 'en', 'CAE': 'en', 'MD': 'en', 'SHS': 'en'}
+           'GST': 'en', 'CAE': 'en', 'MD': 'en', 'SHS': 'en',
+           # modern-EN recency-control anchors (PD = Deccan College 1976-2009, the most modern;
+           # BHS/IEG/PE/VEI = 20th-c. glossaries). Expect ~0 drift vs the 19th-c. cluster.
+           'PD': 'en', 'BHS': 'en', 'IEG': 'en', 'PE': 'en', 'VEI': 'en'}
 
 
 def load_wordlist(prof):

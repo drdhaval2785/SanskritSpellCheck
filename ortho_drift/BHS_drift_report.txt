@@ -1,0 +1,17 @@
+# BHS (English) orthographic-drift -- DOCUMENTATION ONLY (never edits the source)
+# FULL corpus
+# modern word-list: ORTHO_EN_DIC, 56571 stems
+# gloss tokens: 379068 ; already-modern: 137154 ; reform-drift: 1 (transform 0 + map 1)
+# drift occurrences by era: xion=1
+#
+# ===== reform-drift CONFIRMED by transform (+ wordlist, where available) =====
+
+# ===== reform-drift from the curated/accumulated map =====
+reflexion              -> reflection             xion              1  ¦ (= AMg. vi(y)ālaṇa; Skt. vicāraṇa), consideration, mental reflexion : svabuddhi-˚na-kuśa
+
+# ===== RESIDUAL pattern candidates (-> LLM pass) =====
+# -- xion: 0 distinct (top 15) --
+# -- ligature: 1 distinct (top 15) --
+   manœuvres                   1
+# -- ick: 0 distinct (top 15) --
+# -- shew: 0 distinct (top 15) --

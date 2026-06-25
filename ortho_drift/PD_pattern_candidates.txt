@@ -1,0 +1,5 @@
+# PD RESIDUAL pattern candidates (token<TAB>pattern<TAB>count) -> LLM classify pass
+lexion	xion	2
+plexion	xion	1
+strick	ick	2
+firestick	ick	1

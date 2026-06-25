@@ -1,0 +1,42 @@
+# VEI (English) orthographic-drift -- DOCUMENTATION ONLY (never edits the source)
+# FULL corpus
+# modern word-list: ORTHO_EN_DIC, 56571 stems
+# gloss tokens: 222063 ; already-modern: 81276 ; reform-drift: 13 (transform 5 + map 8)
+# drift occurrences by era: ligature=12, xion=1
+#
+# ===== reform-drift CONFIRMED by transform (+ wordlist, where available) =====
+encyclopædia           -> encyclopedia           ligature          1  ¦ the ‘unknown sickness,’ is mentioned in the Rigveda, 1 Atharvaveda, 2 and Kāṭhaka Saṃhit
+encyclopœdia           -> encyclopedia           ligature          1  ¦ — As the origin of caste, the relation of the castes, intermarriage, and cognate matters
+primæval               -> primeval               ligature          1  ¦ ‘path-maker,’ is not a rare epithet in the Rigveda 1 and later, 2 showing clearly the im
+achæan                 -> achaean                ligature          1  ¦ is the most usual word in the Rigveda 1 and later 2 for ‘clothing.’ Clothes were often w
+anæmia                 -> anaemia                ligature          1  ¦ is the name of a disease mentioned in the Athar- vaveda. 1 Bloomfield 2 thinks that ‘flo
+
+# ===== reform-drift from the curated/accumulated map =====
+diarrhœa               -> diarrhoea              ligature          3  ¦ — A disease affecting the stomach, 1 possibly dysentery, as suggested by Zimmer, 2 on th
+hyæna                  -> hyena                  ligature          2  ¦ the ‘hyæna,’ is mentioned in the list of victims at the Aśvamedha, or horse sacrifice, i
+phœnix                 -> phoenix                ligature          1  ¦ is the name of a tree ( Phœnix silvestris ) which is mentioned in the Yajurveda. 1 1) Ta
+lyræ                   -> lyre                   ligature          1  17. ¦ ‘the two releasers’; ‘root’; or ‘uprooting,’ denote primarily λ and ν at the extremi
+reflexion              -> reflection             xion              1  ¦ ‘year,’ is repeatedly mentioned from the Rigveda onwards. 1 It duration was, according t
+
+# ===== RESIDUAL pattern candidates (-> LLM pass) =====
+# -- xion: 1 distinct (top 15) --
+   nexion                      5
+# -- ligature: 16 distinct (top 15) --
+   vertebræ                    7
+   palœographie                4
+   hæmorrhoids                 3
+   cæsar                       3
+   mediæval                    3
+   libræ                       2
+   phœnicians                  2
+   formulæ                     2
+   nymphœa                     1
+   quœ                         1
+   hydræ                       1
+   aquilæ                      1
+   andromedæ                   1
+   nysæans                     1
+   onomatopœtic                1
+# -- ick: 1 distinct (top 15) --
+   fick                       38
+# -- shew: 0 distinct (top 15) --

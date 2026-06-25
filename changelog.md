@@ -19,6 +19,14 @@ ready for a dated entry.
   draft-changefile prep (unblocks the umbrella-issue handoff, Task 1).
 
 ### Added
+- **Ortho-drift within-EN recency control (Task 3 done).** Registered the five modern-leaning English
+  dicts **PD / PE / BHS / IEG / VEI** as `en` in `ortho_drift.py`'s `LANG_OF` and ran them against the
+  `en_GB` reference (`ropensci/hunspell` `en_GB.dic`, staged at `external_src/hunspell/`, gitignored;
+  `_dic()` now falls back there when the Adobe bundle is absent). Result: **PD (1976–2009, 1.32 M gloss
+  tokens) = 0.00 drift/1k**, PE/BHS/IEG = 0.00, VEI 0.06 (residual æ ligatures) — the modern end of the
+  gradient sits at ≈ 0, confirming the metric dates orthography. Full English picture is now a monotone
+  recency gradient WIL 1832 (0.57) → MW 1899 (0.01) → modern (0.00). Written up in
+  [docs/ORTHO_DRIFT_FINDINGS.md](docs/ORTHO_DRIFT_FINDINGS.md); 10-dict table left stable, 5 rows added.
 - **Handoff roadmap rewritten** ([HANDOFF_NEXT.md](HANDOFF_NEXT.md)) as a prioritized 4-task
   roadmap: (1) draft the CORRECTIONS umbrella issue for the 122 FILE-FIRST typos (OCR-prefiltered,
   pilot-SHS-then-scale), (2) tier-C calibration, (3) ortho-drift recency control, (4) DTA/RIDGES

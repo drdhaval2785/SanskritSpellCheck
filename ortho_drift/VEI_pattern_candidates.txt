@@ -1,0 +1,19 @@
+# VEI RESIDUAL pattern candidates (token<TAB>pattern<TAB>count) -> LLM classify pass
+nexion	xion	5
+vertebræ	ligature	7
+palœographie	ligature	4
+hæmorrhoids	ligature	3
+cæsar	ligature	3
+mediæval	ligature	3
+libræ	ligature	2
+phœnicians	ligature	2
+formulæ	ligature	2
+nymphœa	ligature	1
+quœ	ligature	1
+hydræ	ligature	1
+aquilæ	ligature	1
+andromedæ	ligature	1
+nysæans	ligature	1
+onomatopœtic	ligature	1
+hyænas	ligature	1
+fick	ick	38

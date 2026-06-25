@@ -16,7 +16,7 @@ by priority. The headword-triage handoff (for re-runs) is separate:
 |--:|---|---|---|
 | **1** | **Draft the CORRECTIONS umbrella issue** (122 FILE-FIRST typos → one OCR-prefiltered issue) | lexicographic payoff | ⚠️ needs tesseract + `san` model for the OCR pre-verify |
 | **2** | **Tier-C ranking calibration** (`run_all.py`) | engineering | ✅ no external data |
-| **3** | **Ortho-drift within-EN recency control** (add PD/BHS/IEG/PE/VEI) | study extension | ⚠️ needs `en_GB` Hunspell at `$ORTHO_EN_DIC` |
+| ~~3~~ | ~~Ortho-drift within-EN recency control~~ | study extension | ✅ **DONE** (PD/PE/BHS/IEG = 0.00, VEI 0.06; en_GB.dic staged) |
 | **4** | **German DTA/RIDGES long-tail merge** (`merge_reform_pairs.py`) | study extension | ⚠️ needs a DTA/RIDGES export or row-list URL |
 | — | Cleanup / low-priority + blocked-on-external | — | see bottom |
 
@@ -134,9 +134,15 @@ without inflating the false-positive rate (which must stay ~0 against `nochange.
 
 ---
 
-## Task 3 — Ortho-drift within-EN recency control (needs one data file)
+## Task 3 — Ortho-drift within-EN recency control — ✅ DONE (2026-06-25)
 
-**Goal:** extend the completed ortho-drift study with a **recency control**. The study showed English
+> **Complete.** PD/PE/BHS/IEG/VEI registered `en` in `LANG_OF`; en_GB reference = `ropensci/hunspell`
+> `en_GB.dic`, staged at `external_src/hunspell/` (gitignored; `_dic()` falls back there). Result:
+> **PD (1976–2009, 1.32 M tokens) = 0.00 drift/1k**, PE/BHS/IEG 0.00, VEI 0.06 — modern end of the
+> gradient ≈ 0; written up in [docs/ORTHO_DRIFT_FINDINGS.md](docs/ORTHO_DRIFT_FINDINGS.md). Brief kept
+> below for reference. To re-run: `python ortho_drift.py <DICT> --full` from `detectors/`.
+
+**Goal (done):** extend the completed ortho-drift study with a **recency control**. The study showed English
 drift is convention-driven and **editor/age-dependent** (WIL 1832 = 0.57 per 1k → MW 1899 ≈ 0.01 →
 AP/CAE ≈ 0). Test that prediction at the *modern* end: run the same detector on dictionaries compiled
 late, which should show **≈ 0 drift** — confirming the method dates orthography rather than flagging
