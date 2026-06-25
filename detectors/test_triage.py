@@ -15,6 +15,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import triage_lang
 import triage_bodies as tb
 import triage_util
+import run_all
+import run_campaign
 
 
 def kind(dict_code, body):
@@ -105,10 +107,30 @@ def main():
     if not ok:
         fails.append(('load_json_array', 'prose+brackets', '[{...}]', arr))
 
+    # run_campaign must mirror run_all row order for review HTML:
+    # (score, tier, band, best, cand), and must pass the morphology stems oracle.
+    cand = run_all.Cand('marga')
+    cand.detectors.add('spell_correct')
+    cand.sugg_dets['mArga'].add('spell_correct')
+    cand.sugg_dicts['mArga'].add('MW')
+    cand.dicts.add('MW')
+    by_dict = run_campaign.build_campaign_rows(
+        {'marga': cand},
+        {'mArga': 4},
+        {'Aa': 0.4},
+        {'mArga'},
+    )
+    score, tier, band, best, row_cand = by_dict['MW'][0]
+    ok = (band, best, row_cand.morph) == (4, 'mArga', True)
+    print("  campaign row order -> band=%r best=%r morph=%r %s"
+          % (band, best, row_cand.morph, 'OK' if ok else 'FAIL'))
+    if not ok:
+        fails.append(('campaign-row', 'marga', '(band,best,morph)', (band, best, row_cand.morph)))
+
     if fails:
         print("\n%d FAILURE(S)" % len(fails))
         sys.exit(1)
-    print("\nall %d checks passed" % (len(BODY_CASES) + len(SUBTYPE_CASES) + 3))
+    print("\nall %d checks passed" % (len(BODY_CASES) + len(SUBTYPE_CASES) + 4))
 
 
 if __name__ == '__main__':

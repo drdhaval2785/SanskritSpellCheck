@@ -23,17 +23,23 @@ u.reconfigure_stdio()
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 
+def build_campaign_rows(cands, dcs, weights, stems):
+    by_dict = collections.defaultdict(list)   # DICT -> [(score, tier, band, best, cand)]
+    for c in cands.values():
+        score, tier, best, band = ra.score_tier(c, dcs, weights, stems)
+        for d in c.dicts:
+            by_dict[d].append((score, tier, band, best, c))
+    return by_dict
+
+
 def main(sanhw1, rerun):
     ra.ensure_outputs(sanhw1, rerun)
     dcs = u.load_dcs_lemmas(u.dcs_path())
     weights = u.load_confusion_weights()
+    stems = u.load_vidyut_stems()
     cands = ra.aggregate()
 
-    by_dict = collections.defaultdict(list)   # DICT -> [(score, tier, band, best, cand)]
-    for c in cands.values():
-        score, tier, best, band = ra.score_tier(c, dcs, weights)
-        for d in c.dicts:
-            by_dict[d].append((score, tier, best, band, c))
+    by_dict = build_campaign_rows(cands, dcs, weights, stems)
 
     base = os.path.join(HERE, 'campaigns')
     os.makedirs(base, exist_ok=True)
