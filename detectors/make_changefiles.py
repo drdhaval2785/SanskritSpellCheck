@@ -37,8 +37,13 @@ def main(infile, csl_root, outdir):
     by_dict = collections.defaultdict(list)   # DICT -> [(wrong, right)]
     seen = set()
     for line in u._read_words(infile):
+        # skip sf comment lines (the file_first_sf header + the auto-commented
+        # "; REVIEWED-OUT ..." annotations); a real row is DICT:wrong:right:n with an
+        # alphanumeric dict code, so guard p[0] to avoid manufacturing junk "dicts".
+        if line.startswith((';', '#')):
+            continue
         p = line.split(':')
-        if len(p) >= 3 and p[1] != p[2]:
+        if len(p) >= 3 and p[0].isalnum() and p[1] != p[2]:
             key = (p[0], p[1], p[2])
             if key not in seen:
                 seen.add(key)

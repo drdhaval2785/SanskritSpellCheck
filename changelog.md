@@ -6,6 +6,24 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [Unreleased]
+
+### Fixed
+- **Campaign mode regression:** `detectors/run_campaign.py` now matches the current
+  `run_all.score_tier()` signature, preserves the shared row tuple order used by
+  review HTML, and has a lightweight regression check for the campaign row shape.
+- **`make_changefiles.py` mis-parsed FILE-FIRST sf comment lines.** Feeding a
+  `<DICT>_file_first_sf.txt` directly manufactured junk "dicts" from its `;`-comment
+  header + auto-commented `REVIEWED-OUT` lines. Now skips `;`/`#` lines and requires an
+  alphanumeric dict code — so the FILE-FIRST queues feed straight into the CORRECTIONS
+  draft-changefile prep (unblocks the umbrella-issue handoff, Task 1).
+
+### Added
+- **Handoff roadmap rewritten** ([HANDOFF_NEXT.md](HANDOFF_NEXT.md)) as a prioritized 4-task
+  roadmap: (1) draft the CORRECTIONS umbrella issue for the 122 FILE-FIRST typos (OCR-prefiltered,
+  pilot-SHS-then-scale), (2) tier-C calibration, (3) ortho-drift recency control, (4) DTA/RIDGES
+  long-tail merge — each with a paste-ready fresh-chat brief + its data prerequisite.
+
 ## [1.40.0] - 2026-06-24
 
 ### Added
