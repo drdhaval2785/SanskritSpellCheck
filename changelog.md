@@ -8,6 +8,19 @@ ready for a dated entry.
 
 ## [Unreleased]
 
+### Added
+- **Ortho-drift O4 — drift-rate as a dating tool.** New [detectors/drift_dating.py](detectors/drift_dating.py)
+  calibrates drift/1k ↔ publication year across the five languages (Spearman + leave-one-out year
+  prediction + a symlog scatter, `ortho_drift/drift_dating.png`). Finding: drift/1k is a **coarse,
+  regime-bounded** dater. (1) No cross-language calibration — the rate is regime-stratified (Russian
+  358 ≫ German 2.5–10 ≫ English/French 0–0.46 ≫ Latin 0). (2) Within a language, the **legislated**
+  German gradient is tight (Spearman −0.975, LOO **±15 yr**, R²=0.87) but the **convention** English
+  one is editor-noisy and saturated (−0.642, ±40 yr; **7 dicts read exactly 0.00 across 1890–1990**;
+  Macdonell's `-xion` puts MD 1893 above BEN 1866). (3) The **per-era composition** out-dates the
+  scalar rate: a pre-1901 rate-fit mis-dates SCH-1928 to 1896 (−32 yr), but its `ss`-dominant
+  composition pins it post-1901/pre-1996 (the O3 control). Written up in `docs/ORTHO_DRIFT_FINDINGS.md`
+  ("O4" section). Closes O4 in `HANDOFF_NEXT.md`.
+
 ### Investigated (no code change)
 - **O1 / R5 — a model-free body lookup in the ranker cannot demote real-word minimal pairs.**
   Tested whether a cheap deterministic `EntryIndex` body check could close R1's gap (the engine

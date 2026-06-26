@@ -275,11 +275,13 @@ a self-contained fresh-chat task; the ⚠️-marked ones need a local install or
   errors for 244 unverified others. **No `score_tier` change** — the body must be *read*, not measured
   (R1 is a semantic ceiling). Written up as [R5 in docs/HYPOTHESES.md](docs/HYPOTHESES.md). The real
   lever for these pairs stays the LLM body-grounded triage, not the scorer.
-- **O4 — Drift-rate as a dating tool.** Research/modeling; the data already exists.
-  > Using `ortho_drift/en_drift_summary.tsv` (+ de/ru) and each dictionary's known publication year,
-  > calibrate **drift/1k ↔ year** (the monotone WIL 1832=0.57 → MW 1899=0.01 → PD 1976=0.00 gradient).
-  > Fit/plot the relation, report its tightness, and test whether it can **estimate the epoch of an
-  > undated dictionary or stratum** from drift rate alone. Doc-only deliverable.
+- ~~**O4 — Drift-rate as a dating tool.**~~ ✅ **DONE (2026-06-26).** [drift_dating.py](detectors/drift_dating.py)
+  calibrates drift/1k ↔ year (+ [plot](ortho_drift/drift_dating.png)). Coarse, regime-bounded dater:
+  no cross-language calibration (regime-stratified RU 358 ≫ DE 2.5–10 ≫ EN/FR 0–0.46 ≫ LA 0); within
+  language, **legislated** German is tight (ρ −0.975, LOO ±15 yr) but **convention** English is
+  editor-noisy + saturated (ρ −0.642, ±40 yr; 7 dicts at exactly 0.00 across 1890–1990). The per-era
+  composition out-dates the scalar rate (SCH-1928 rate-dated to 1896, but ss-dominant composition pins
+  it correctly). Findings doc "O4" section.
 
 **⚠️ Need a local install:**
 

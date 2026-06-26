@@ -280,6 +280,55 @@ specificity**: it does not manufacture drift where none exists.
 
 ---
 
+## O4 — can the drift rate *date* a dictionary?
+
+If drift/1k tracks a text's orthographic epoch, it should also *predict its publication year*. Tested
+by pairing each dictionary's rate with its known year and fitting drift/1k ↔ year
+([detectors/drift_dating.py](../detectors/drift_dating.py) → [drift_dating.png](../ortho_drift/drift_dating.png)).
+The answer is **yes, but only within a single reform regime, and only coarsely** — three findings:
+
+**1. There is no cross-language calibration — the rate is regime-stratified.** A given drift/1k means
+a different epoch in each language, because the rate scales with the *kind* of reform, not the date:
+
+| regime | language | drift/1k range |
+|---|---|--:|
+| legislated, sweeping | Russian (1918) | **358** |
+| legislated, twice | German (1901/1996) | **2.5 – 10** |
+| convention | English / French | **0 – 0.46** |
+| none | Latin | **0** |
+
+A rate of ~5/1k is "mid-19th-c. German" but is *off the top of the scale* for English. Dating by rate
+must therefore be done **within** a language.
+
+**2. Within a language, monotonicity tracks the reform regime.** Spearman ρ(year, drift/1k):
+
+| language | n | Spearman ρ | leave-one-out year MAE | reading |
+|---|--:|--:|--:|---|
+| **German** (legislated) | 5 | **−0.975** (p=0.005) | **±15 yr** | a usable coarse dater; linear R²=0.87 |
+| English (convention) | 14 | −0.642 (p=0.013) | ±40 yr | significant but editor-noisy + saturated |
+| French | 2 | −1.0 | — | trivial (2 points) |
+
+The **legislated** German gradient is tight (ρ = −0.975, ±15 yr over 1865–1928). The **convention**
+English gradient is weak: editor idiosyncrasy outranks date below the early-19th-c. peak — Macdonell's
+`-xion` puts **MD (1893) at 0.14**, *above* the older **BEN (1866) at 0.02** — and the rate **saturates
+at 0**: **7 English dicts read *exactly* 0.00 across 1890–1990** (a full century the rate cannot order
+or date at all).
+
+**3. The per-era *composition* dates the epoch better than the scalar rate.** Where the rate is
+ambiguous, the era breakdown is not. **SCH (Schmidt 1928):** a pre-1901-German rate-fit predicts
+**1896 (−32 yr)** — the scalar rate under-dates it, mistaking its already-reformed low `th`-drift for
+"near-modern." But its *composition* — `1996-ss` **dominant** over `1901-th` — pins it
+**post-1901/pre-1996** exactly (the SCH control of O3). So the scalar rate places a text on a coarse
+gradient; the **era signature** resolves the epoch.
+
+**Verdict:** drift/1k is a real but **coarse, regime-bounded** dating signal — best for legislated
+reforms (German ±15 yr), unreliable for convention drift (English ±40 yr, saturating to 0 post-reform),
+and meaningless across languages. For fine dating, the **per-era composition** (which reforms dominate)
+beats the scalar rate. A practical use: it can place an *undated* dictionary or stratum on the
+pre-/post-reform timeline of *its own language*, not assign it a year.
+
+---
+
 ## Caveats (read before citing)
 
 - **Modern word-lists are a local dependency.** The Hunspell `de_DE` / `en_GB` / `fr_FR`
@@ -308,6 +357,7 @@ python ortho_drift.py KOSSOVICH --full   # Russian   (legislated, wordlist-free)
 python ortho_drift.py WIL --full         # English   (convention, max drift of 10)
 python ortho_drift.py BUR --full         # French    (convention)
 python ortho_drift.py BOP --full         # Latin     (negative control)
+python drift_dating.py                   # O4: drift/1k <-> year calibration + plot (needs scipy, matplotlib)
 ```
 
 Requires the Hunspell modern word-lists on disk (Adobe path, or set `$ORTHO_<L>_DIC`); Latin needs

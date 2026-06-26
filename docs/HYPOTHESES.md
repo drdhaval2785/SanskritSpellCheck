@@ -168,9 +168,14 @@ of known o_vs_O pairs.
 - ~~**O3 — Re-run German with the 15,685-form map.**~~ **✅ done (2026-06-26).** Rates ~triple and the
   top-of-gradient monotone ordering flattens (GRA > PWG), but the SCH-1928 era-dating control is fully
   intact — vindicates freezing the per-dict gradient. See `ORTHO_DRIFT_FINDINGS.md` "O3".
-- **O4 — Drift-rate as a dating tool.** The monotone WIL 0.46 → PD 0.00 gradient suggests drift/1k ↔
-  year is calibratable. Could the metric *date* an undated/anonymous dictionary, edition, or textual
-  stratum from its drift rate alone?
+- ~~**O4 — Drift-rate as a dating tool.**~~ **✅ done (2026-06-26) — confirmed but coarse.** drift/1k
+  *is* a dating signal, but **regime-bounded**: no cross-language calibration (rate stratifies by
+  reform type — RU 358 ≫ DE 2.5–10 ≫ EN/FR ≤0.46 ≫ LA 0); within a language the **legislated** German
+  gradient is tight (Spearman −0.975, leave-one-out **±15 yr**) while the **convention** English one is
+  editor-noisy and saturates to 0 (−0.642, ±40 yr; 7 dicts at exactly 0.00 across 1890–1990). The
+  per-era *composition* out-dates the scalar rate (the SCH-1928 control). So it places a text on its
+  own language's pre-/post-reform timeline, not a year. See `ORTHO_DRIFT_FINDINGS.md` "O4"
+  ([drift_dating.py](../detectors/drift_dating.py)).
 - ~~**O5 — Separate ligatures from reform.**~~ **✅ done (2026-06-26).** Added `NONREFORM_ERAS` so the
   æ/œ ligature is its own column, excluded from reform-drift/1k; mid-tier EN dicts (ligature-dominated)
   collapse to ≈0 reform. See `ORTHO_DRIFT_FINDINGS.md` EN section.
