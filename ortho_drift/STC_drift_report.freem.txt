@@ -1,0 +1,68 @@
+# STC (French) orthographic-drift -- DOCUMENTATION ONLY (never edits the source)
+# FULL corpus
+# modern word-list: ORTHO_FR_DIC, 62338 stems
+# gloss tokens: 281418 ; already-modern: 165618 ; drift occurrences: 728 (transform 0 + map 728)
+# reform-drift: 728 (2.59/1k) ; non-reform/ligature (excluded from rate): 0
+# drift occurrences by era: 955=570, 69=128, 37=10, 341=8, 135=6, ph-f=3, oi-ai=2, 33=1
+#
+# ===== reform-drift CONFIRMED by transform (+ wordlist, where available) =====
+
+# ===== reform-drift from the curated/accumulated map =====
+moy                    -> moi                    955             570  ¦ anakti aṅkte ; ajyate ; añjayati ; akṭa- añjita- -- oindre, enduire ; moy. se frotter, s
+dés                    -> dès                    69              128  ¦ m. dé (à jouer) ; n. d'une plante (Terminalia Bellerica). ˚kitava- m. joueur (de dés). ˚
+prés                   -> près                   37               10  ¦ adv. prés du peuple ; en présence d'autrui.
+ame                    -> âme                    341               8  ¦ a. qui ne se perd pas, ép. de l'Ame Suprême.
+toy                    -> toi                    135               6  ¦ ag. qui fait, qui opère, qui produit, qui cause (surtout ifc. ) ; m. main ; trompe de l'
+pha                    -> fa                     ph-f              3  ¦ m. -ā- f. chaperon du cobra ; -vant- a. (serpent) qui a un chaperon. ˚bhṛt- m. serpent (
+vois                   -> vais                   oi-ai             2  ¦ suppléé par DṚŚ- paśyati- te ; ( spāśayati ; spaṣṭa- v. s. v. ) -- voir, regarder ; perc
+effect                 -> effet                  33                1  ¦ projeter, lancer, décocher ; émettre, verser, répandre (larmes, etc. ; vācaṃ v. élever l
+
+# ===== RESIDUAL pattern candidates (-> LLM pass) =====
+# -- trema: 22 distinct (top 15) --
+   aïeul                       4
+   naïf                        4
+   héroïques                   4
+   ouï                         4
+   inouï                       3
+   ivaïte                      3
+   ivaïtes                     3
+   hémorroïdes                 2
+   haïsseur                    2
+   haï                         2
+   ouïtes                      2
+   koïl                        1
+   uïte                        1
+   haïssant                    1
+   ouïte                       1
+# -- oi: 29 distinct (top 15) --
+   doit                      491
+   droit                      95
+   voit                       64
+   rois                       37
+   reçoit                     35
+   croit                      28
+   lois                       28
+   étroit                     23
+   perçoit                    20
+   boit                       19
+   adroit                     18
+   villageois                  9
+   courtois                    5
+   maladroit                   3
+   échoit                      2
+# -- ph: 42 distinct (top 15) --
+   phala                      45
+   philos                     39
+   phal                        8
+   phalaka                     5
+   phrases                     5
+   phena                       4
+   philosophiques              3
+   phénomènes                  3
+   phalita                     3
+   phonèmes                    3
+   physiques                   3
+   phalati                     3
+   phalgun                     3
+   phases                      2
+   phalamaya                   2

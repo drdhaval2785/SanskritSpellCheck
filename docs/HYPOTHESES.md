@@ -179,9 +179,15 @@ of known o_vs_O pairs.
 - ~~**O5 — Separate ligatures from reform.**~~ **✅ done (2026-06-26).** Added `NONREFORM_ERAS` so the
   æ/œ ligature is its own column, excluded from reform-drift/1k; mid-tier EN dicts (ligature-dominated)
   collapse to ≈0 reform. See `ORTHO_DRIFT_FINDINGS.md` EN section.
-- **O6 — Language-general reform maps.** The transform-and-check + corpus-norm-merge pipeline (H4+H6)
-  is language-agnostic. Could it build reform maps for English (EEBO/ECCO), French (Frantext), etc.,
-  from their diachronic corpora — turning the study into a reusable method, not a one-corpus result?
+- ~~**O6 — Language-general reform maps.**~~ **✅ done for French (2026-06-26) — method yes, map
+  epoch-bound.** The `extract → dic-validate → merge` pipeline generalised with no per-language code:
+  the free 17th-c. [FreEMnorm](https://github.com/FreEM-corpora/FreEMnorm) corpus yielded 236
+  dic-validated EMF→modern French pairs (`fr` map 18→254). But the resulting map is **not** safe on the
+  19th–20c French Cologne dicts (BUR/STC): ~90 % false positives from epoch/register/language mismatch
+  (abbreviation `moy.`=*moyen*, homograph `dés`=dice / Latin `tres`, inline-IAST `pha`/`phull`). A
+  reform map needs a source corpus matched in epoch + register + script to the target. Validated pairs
+  kept as an artifact; canonical fr map frozen (O3 pattern). See `ORTHO_DRIFT_FINDINGS.md` "O6"
+  ([extract_freem_pairs.py](../detectors/extract_freem_pairs.py)).
 - **O7 — Does OCR pre-verify actually help the human?** Task 1 (the CORRECTIONS umbrella issue) plans
   to pre-filter the 122 FILE-FIRST candidates with `ocr_verify` (CONFIRM/DENY/UNCERTAIN). Open
   question: is OCR of old Devanāgarī scans reliable enough to *trust as a pre-filter*, or does it

@@ -9,6 +9,20 @@ ready for a dated entry.
 ## [Unreleased]
 
 ### Added
+- **Ortho-drift O6 — language-general reform map from a diachronic corpus (French, via FreEMnorm).**
+  New [detectors/extract_freem_pairs.py](detectors/extract_freem_pairs.py) harvests historical→modern
+  French pairs from the openly-licensed [FreEMnorm](https://github.com/FreEM-corpora/FreEMnorm) parallel
+  corpus (55 texts, 1606–1697; staged gitignored under `external_src/freem/`). The DTA pipeline
+  **generalises**: token-align → 9,973 pairs → ≥20× → 407 → `merge_reform_pairs.py fr` dic-validates
+  **236** into the French map (18→254), all textbook EMF→modern (`ie→je`, `vn→un`, `estre→être`,
+  `avoit→avait`). **But the map doesn't transfer to the target dicts:** on BUR (1866) / STC (1932) it
+  raises drift 0.31→3.43 / 0.02→2.59, **~90 % false positives** — `moy.` (=*moyen* abbrev.) read as
+  `moy→moi` (763), `dés` (="dice") / Latin `tres` read as `dès`/`très`, IAST `pha`/`phull` misfired by
+  `ph→f`. Epoch/register/language mismatch (17th-c. literary prose vs 20th-c. IAST-laced glosses).
+  Method language-general; map epoch-bound — kept the validated pairs
+  ([fr_reform_freem_pairs.tsv](ortho_drift/fr_reform_freem_pairs.tsv)) + banked the BUR/STC FreEM runs
+  (`*_drift_report.freem.txt`), but **froze** the canonical fr map/figures (as with O3). Written up in
+  `docs/ORTHO_DRIFT_FINDINGS.md` ("O6"). Closes O6 in `HANDOFF_NEXT.md`.
 - **Ortho-drift O4 — drift-rate as a dating tool.** New [detectors/drift_dating.py](detectors/drift_dating.py)
   calibrates drift/1k ↔ publication year across the five languages (Spearman + leave-one-out year
   prediction + a symlog scatter, `ortho_drift/drift_dating.png`). Finding: drift/1k is a **coarse,

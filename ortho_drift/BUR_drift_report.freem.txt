@@ -1,0 +1,86 @@
+# BUR (French) orthographic-drift -- DOCUMENTATION ONLY (never edits the source)
+# FULL corpus
+# modern word-list: ORTHO_FR_DIC, 62338 stems
+# gloss tokens: 229053 ; already-modern: 113166 ; drift occurrences: 786 (transform 0 + map 786)
+# reform-drift: 786 (3.43/1k) ; non-reform/ligature (excluded from rate): 0
+# drift occurrences by era: 69=485, 955=193, ph-f=48, trema=21, 341=12, 74=5, 111=4, 39=3, 37=3, 135=3, 82=2, 33=2, oi-ai=2, 36=1, 99=1, 254=1
+#
+# ===== reform-drift CONFIRMED by transform (+ wordlist, where available) =====
+
+# ===== reform-drift from the curated/accumulated map =====
+dés                    -> dès                    69              485  ¦ akṣadevin m. (div) joueur de dés.
+moy                    -> moi                    955             193  ¦ akariṣi a1. moy. de kṛ.
+pha                    -> fa                     ph-f             33  ¦ kaphaṇi m. et kaphaṇi f. (ka; phaṇ) coude.
+aloës                  -> aloès                  trema            19  ¦ adala m. eugenia acutangula, bot. -- adalā f. aloës sucotrin ou perfoliata, bot.
+ame                    -> âme                    341              12  ¦ adhyātman n. l'Ame suprême. adhyātmacetas a. (cint) qui pense à l'Ame suprême.
+phlegme                -> flegme                 ph-f              9  ¦ kaphelū a. qui produit le phlegme ou la lymphe.
+eglise                 -> église                 74                5  ¦ triśaraṇa n. les trois refuges [le Buddha , la Loi, l'Eglise], Bd.
+tres                   -> très                   111               4  ¦ tri a. [ m. trayas; f. tisras; n. trīṇi ] trois. M§ 51. || Gr. τρεῖς ; lat. tres; lith. 
+lumiere                -> lumière                39                3  ¦ kṛta pp. de kṛ. Au commencement des composés possessifs: qui a fait. || À la fin des com
+toy                    -> toi                    135               3  ¦ toya n. (tu; sfx. ya) eau. toyakāma m. (kam) le calamus fasciculatus, esp. de roseau aqu
+frere                  -> frère                  82                2  ¦ anūdya n. (vad) toute personne qu'il n'est pas convenable d'interroger, telle qu'un guru
+poëte                  -> poète                  trema             2  ¦ abhīka a. (abhi; sfx. ika) généralt., qui a une tendance vers ou contre: désireux; amour
+rhythme                -> rythme                 ph-f              2  ¦ chandas n. intention, tendance naturelle, désir; || indépendance de caractère. -- (chand
+phull                  -> full                   ph-f              2  ¦ phull. phullāmi 1; etc. S'épanouir, fleurir. Cf. phal.
+difference             -> différence             36                1  ¦ aviśeṣa a. (śiṣ) qui n'offre pas de difference sensible. -- Ac. adv. sans différence, to
+phlegmatique           -> flegmatique            ph-f              1  ¦ kaphin a. phlegmatique; lymphatique. -- S. m. éléphant.
+effect                 -> effet                  33                1  ¦ ji. jayāmi, jaye 1; p. jigāya, jigye; f2. jeṣyāmi, jeṣye; a1. ajaiṣam, ajeṣi; o. jīyāsam
+epoux                  -> époux                  37                1  ¦ jīvita pp. de jīv. -- A. vivant. -- S. n. la vie. || Slav. schivot; lat. vita [pour vivi
+desir                  -> désir                  37                1  ¦ joṣa n. (juṣ) desir, amour; accueil favorable; || satisfaction, contentement. -- S. f. j
+dois                   -> dais                   oi-ai             1  ¦ nikṣipāmi (kṣip) déposer: amṛtaṃ kuśeṣu l'ambroisie sur le kuśa . || Donner en dépôt, co
+prés                   -> près                   37                1  ¦ parigṛhṇāmi (grah) . Prendre, saisir: gadām une massue. || Emmener avec soi. || Prendre 
+present                -> présent                33                1  ¦ paryupatiṣṭhāmi (upa; sthā) . Se tenir autour, entourer; || être present à, 1. || Au fig
+vois                   -> vais                   oi-ai             1  ¦ paśya ( imp. de paś 4) vois, voici, ac.
+aprés                  -> après                  99                1  ¦ pāraṇa n. (pṝ au c. ; sfx. ana) action de rassasier, de satisfaire; || de manger ou de b
+phur                   -> fur                    ph-f              1  ¦ viṣphurāmi cf. visphurāmi.
+pere                   -> père                   254               1  ¦ vihīna ( pp. de vijahāmi) privé, pitrā de pere; tvadvihīna privé de toi, sans toi; || ex
+
+# ===== RESIDUAL pattern candidates (-> LLM pass) =====
+# -- trema: 27 distinct (top 15) --
+   aïeul                      11
+   lagopodioïdes              11
+   ajoaën                      8
+   populneoïdes                6
+   cynosuroïdes                6
+   orchioïdes                  5
+   hyacinthoïdes               5
+   hémorrhoïdes                4
+   coïx                        4
+   populnoïdes                 3
+   bisaïeul                    3
+   scutellaroïdes              2
+   ajwaën                      2
+   çivaïte                     2
+   contiguës                   1
+# -- oi: 29 distinct (top 15) --
+   doit                       69
+   droit                      30
+   voit                       29
+   adroit                     28
+   boit                       20
+   rois                       14
+   reçoit                     11
+   croit                       9
+   sois                        9
+   lois                        7
+   villageois                  5
+   crois                       4
+   prévoit                     4
+   étroit                      4
+   perçoit                     4
+# -- ph: 89 distinct (top 15) --
+   phala                      33
+   phal                       24
+   phaseolus                  20
+   phyllanthus                16
+   phthisie                    8
+   phalap                      4
+   philippensis                3
+   phakk                       3
+   phara                       3
+   phulla                      3
+   phen                        3
+   phel                        3
+   phrases                     2
+   phena                       2
+   phul                        2

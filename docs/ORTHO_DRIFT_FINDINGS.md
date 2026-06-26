@@ -329,6 +329,52 @@ pre-/post-reform timeline of *its own language*, not assign it a year.
 
 ---
 
+## O6 — a language-general reform map from a diachronic corpus (French, via FreEMnorm)
+
+The German map was grown from the DTA corpus's `norm` layer (the four-stage recall arc above). O6
+tests whether that **extract → dic-validate → merge** pipeline *generalises* to another language, using
+the openly-licensed **[FreEMnorm](https://github.com/FreEM-corpora/FreEMnorm)** parallel corpus (55
+17th-c. French texts, 1606–1697, each line `diplomatic⟶normalised`).
+
+**The pipeline runs end-to-end and the method generalises.**
+[detectors/extract_freem_pairs.py](../detectors/extract_freem_pairs.py) token-aligns each sentence pair
+(difflib, 1:1 `replace` spans, long-ſ folded to `s` so it yields no spurious pair), harvesting **9,973
+distinct `surface≠norm` pairs**; at the DTA `≥20×` threshold, **407** survive, of which
+[merge_reform_pairs.py](../detectors/merge_reform_pairs.py) dic-validates **236** into the French map
+(`fr`: 18 → 254 forms). The accepted pairs are textbook Early-Modern→modern French — i/j (`ie→je`), u/v
+(`vn→un`), y→i (`moy→moi`), circumflex-for-lost-s (`estre→être`, `nostre→notre`), and the **1835
+oi→ai imperfect** (`avoit→avait`, `estoit→était`). So the harvest itself is clean and reusable
+([fr_reform_freem_pairs.tsv](../ortho_drift/fr_reform_freem_pairs.tsv)).
+
+**But the map does *not* transfer to the target dictionaries** — applied to the 19th–20c French Sanskrit
+dicts (BUR 1866, STC 1932), it raises drift/1k from 0.31→3.43 (BUR) and 0.02→2.59 (STC), and **~90 % of
+that increase is false positives** ([BUR](../ortho_drift/BUR_drift_report.freem.txt) /
+[STC](../ortho_drift/STC_drift_report.freem.txt) banked, **not** merged into the canonical map). Three
+collision classes, all from an **epoch/register/language mismatch** between a 17th-c. literary-prose map
+and a 20th-c. lexicographic gloss:
+
+| false-positive class | example | hits |
+|---|---|--:|
+| **grammatical abbreviation** | `moy.` (= *moyen*, middle voice) read as archaic `moy`→`moi` | 763 |
+| **modern homograph of an archaic form** | `dés` (= "dice", *joueur de dés*) read as `dès`; Latin `tres` read as `très` | 600+ |
+| **inline IAST Sanskrit** | `pha`/`phull`/`phur` misfired by the `ph→f` rule | ~40 |
+
+The *genuine* archaisms BUR does carry (`aloës→aloès`, `phlegme→flegme`, `eglise→église`, `poëte→poète`,
+`rhythme→rythme`) are a small long-tail — about the same order as BUR's original frozen drift (71). So
+the expanded map adds **noise, not recall**, for these dicts.
+
+**Verdict:** the *method* is language-general — the pipeline produced a clean, reusable French reform
+lexicon from a free corpus with no per-language code (the `fr` profile already existed). But a reform
+map is only safe on target texts whose **epoch, register, and language-mix match the source corpus**;
+transplanting a 17th-c. literary map onto 19th–20c IAST-laced lexicographic glosses is dominated by
+abbreviation/homograph/transliteration collisions (the O3 epoch-mismatch lesson, compounded by register
+and cross-script contamination). The 236 validated pairs are kept as a standalone artifact; the
+canonical French drift map and the BUR/STC figures stay **frozen** (as with O3). A clean O6 for the
+Cologne French dicts would need an *epoch-matched* 19th-c. French corpus (e.g. a Frantext/BFM export),
+not the 17th-c. FreEMnorm.
+
+---
+
 ## Caveats (read before citing)
 
 - **Modern word-lists are a local dependency.** The Hunspell `de_DE` / `en_GB` / `fr_FR`
@@ -358,6 +404,9 @@ python ortho_drift.py WIL --full         # English   (convention, max drift of 1
 python ortho_drift.py BUR --full         # French    (convention)
 python ortho_drift.py BOP --full         # Latin     (negative control)
 python drift_dating.py                   # O4: drift/1k <-> year calibration + plot (needs scipy, matplotlib)
+# O6 (French, FreEMnorm): stage corpus to external_src/freem/, then
+python extract_freem_pairs.py ../external_src/freem/corpus ../external_src/freem/freem_fr_pairs.tsv 20
+python merge_reform_pairs.py fr ../external_src/freem/freem_fr_pairs.tsv   # dic-validate -> fr map
 ```
 
 Requires the Hunspell modern word-lists on disk (Adobe path, or set `$ORTHO_<L>_DIC`); Latin needs

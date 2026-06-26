@@ -296,10 +296,15 @@ a self-contained fresh-chat task; the ⚠️-marked ones need a local install or
 
 **⚠️ Need external corpora:**
 
-- **O6 — Language-general reform maps.** The transform-and-check + corpus-norm-merge pipeline (H4+H6)
-  is language-agnostic. Build reform maps for English (EEBO/ECCO), French (Frantext/BFM), etc. from
-  their diachronic corpora — same `extract_*_pairs.py` → `merge_reform_pairs.py <lang>` flow as DTA.
-  Needs a corpus export with a normalization layer per language (drop on disk / direct URL).
+- ~~**O6 — Language-general reform maps.**~~ ✅ **DONE for French (2026-06-26) — method generalises,
+  map is epoch-bound.** Built [extract_freem_pairs.py](detectors/extract_freem_pairs.py) over the free
+  [FreEMnorm](https://github.com/FreEM-corpora/FreEMnorm) 17th-c. corpus → 236 dic-validated EMF→modern
+  pairs (`fr` map 18→254). Pipeline works with no per-language code. BUT applied to BUR/STC the map is
+  ~90 % false positives (abbreviation `moy.`, homograph `dés`=dice, IAST `pha`) — epoch/register/language
+  mismatch (17th-c. prose vs 20th-c. IAST glosses). Kept the validated pairs, froze the canonical fr
+  map (O3 pattern). Findings doc "O6". **Next, for a clean French result:** an *epoch-matched* 19th-c.
+  corpus (Frantext/BFM export). **English:** EEBO-TCP is free but lacks a norm layer; the VARD2
+  variant→standard word-bank is the closest free pair source (needs the VARD distribution).
 
 ## Cleanup / low-priority (active-dev backlog)
 
