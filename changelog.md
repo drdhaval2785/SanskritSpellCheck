@@ -8,6 +8,17 @@ ready for a dated entry.
 
 ## [Unreleased]
 
+### Added
+- **`docs/HYPOTHESES.md` — project hypothesis ledger.** Documents in detail every testable
+  hypothesis behind the toolset, with verdicts and evidence: **7 confirmed** (body = ground truth;
+  tier-A precision near-zero on mature dicts; do-not-file is the deliverable; drift = f(reform type);
+  the metric dates a dict's epoch; corpus-norm + frequency yields clean reform pairs; external-source
+  shim), **4 refuted** (corpus/confusion tier-C promotion surfaces real minimal pairs; vidyut as a
+  tier promoter; re-running improves recall; base DTA TEI carries the reform layer), and **7 open**
+  (inline body check in the ranker, drift-rate as a dating tool, ligature-vs-reform split,
+  language-general reform maps, …). **USE_CASES.md** gains §11–§14 (body-grounded triage, external
+  sources, ortho-drift, reform-pair harvest) + table/links.
+
 ### Fixed
 - **Campaign mode regression:** `detectors/run_campaign.py` now matches the current
   `run_all.score_tier()` signature, preserves the shared row tuple order used by

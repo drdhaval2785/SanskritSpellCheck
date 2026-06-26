@@ -5,7 +5,8 @@ from faultfinder3a.php - the machine is commandline tool now.
 
 > **Runtime:** modernized June 2026 to run on **Python 3 + PHP 8** — see
 > [CLAUDE.md](CLAUDE.md). For task-oriented recipes see **[USE_CASES.md](USE_CASES.md)**;
-> for the newer algorithms see **[detectors/readme.md](detectors/readme.md)**.
+> for the newer algorithms see **[detectors/readme.md](detectors/readme.md)**; for the project's
+> confirmed/refuted/open hypotheses see **[docs/HYPOTHESES.md](docs/HYPOTHESES.md)**.
 >
 > **Body-grounded triage:** per-dictionary status + results for **all 33 dictionaries (complete)**
 > are indexed in **[corrections_draft/README.md](corrections_draft/README.md)** — 122 fileable typos

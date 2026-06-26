@@ -183,6 +183,80 @@ These are **drafts** — verify each `new` line against the scan, then file per 
 route: `python chg_nchg_sep.py corrected_sf.txt chg.txt nchg.txt` splits real
 corrections from false positives, the latter feeding the whitelist.)
 
+`make_changefiles.py` reads any `DICT:wrong:right` file and **skips `;`/`#` comment lines**, so you
+can feed a `corrections_draft/<DICT>/<DICT>_file_first_sf.txt` (the triage FILE-FIRST queue, §11)
+directly — its header and `; REVIEWED-OUT …` annotations are ignored.
+
+## 11. "Decide which tier-A candidates are *real* — body-grounded triage"
+
+A spelling detector can't tell a typo from a real word; the dictionary's **own entry** can. The
+triage judges each tier-A candidate against the csl-orig entry text and emits a verified **FILE-FIRST**
+queue + a standing **do-not-file** list. Hybrid models, driven by a skill:
+
+```sh
+/dict-triage <DICT>          # e.g. /dict-triage SHS  -- Sonnet classify, Opus confirm + review, you scan-verify
+```
+
+→ `corrections_draft/<DICT>/`: `<DICT>_file_first_sf.txt` (real typos), `<DICT>_wrong_readings.txt`
+(do-not-file, grouped by w.r./v.l./in-comp./xref), `<DICT>_triaged.txt` (full bucketed queue),
+`readme.md` (the finding). All **33 dicts are done** (index:
+[corrections_draft/README.md](corrections_draft/README.md)). Then fold the new do-not-file list into
+the detector whitelist so nothing is re-flagged:
+
+```sh
+cd detectors && python gen_do_not_file_suppress.py   # -> nochange/do_not_file_suppress.txt (2,297 unique)
+python eval.py                                        # false-positives must stay 0
+```
+
+⚠️ The LLM TYPO pass is **stochastic** — don't blindly re-run a verified package (a re-run can *lose*
+typos). Tier-A precision is near-zero on mature dicts; the **do-not-file list is the real deliverable**
+(see [docs/HYPOTHESES.md](docs/HYPOTHESES.md) H1–H3).
+
+## 12. "Triage a dictionary that isn't in csl-orig"
+
+Some dicts have headwords in `sanhw1.txt` but no `csl-orig` source (e.g. **PD**, the Deccan College
+*Encyclopaedic Dictionary*, CC BY-NC-SA). Stage the source once; the pipeline reads it transparently:
+
+```sh
+python detectors/get_external_source.py PD     # fetch+unzip -> external_src/pd/pd.txt (gitignored)
+/dict-triage PD                                # then exactly as §11
+```
+
+`triage_util.source_file()` prefers `external_src/<dict>/<dict>.txt`, else `csl-orig` — so every
+other dict is unaffected. Add a new source as a tuple in `get_external_source.py` `SOURCES`.
+
+## 13. "Measure orthographic drift in the gloss languages (a second axis)"
+
+Not an error list — a documentation layer: how far the 19th-c. gloss spelling (German/English/French/
+Latin/Russian) has drifted from a 2026 standard. **Complete across 5 languages** — read
+[docs/ORTHO_DRIFT_FINDINGS.md](docs/ORTHO_DRIFT_FINDINGS.md).
+
+```sh
+cd detectors && python ortho_drift.py <DICT> --full     # de/en/fr/la per LANG_OF; KOSSOVICH = ru (jsonl)
+```
+
+Needs the language's modern **Hunspell `.dic`** (`$ORTHO_<L>_DIC`, or staged at
+`external_src/hunspell/<lang>.dic` — e.g. `en_GB.dic` from `ropensci/hunspell`); without it, EN/DE
+recall collapses to the curated map. To add a dictionary to a cluster (e.g. a modern-EN **recency
+control**), register it in `LANG_OF` and run — the result is a row in `ortho_drift/<lang>_drift_summary.tsv`.
+Finding: drift tracks the dictionary's *epoch* (WIL 1832 = 0.57/1k → MW 1899 = 0.01 → PD 1976 = 0.00).
+
+## 14. "Grow the reform-pair lexicon from a diachronic corpus"
+
+The reform map (`ortho_drift/<lang>_reform_map.tsv`) recognises drift forms. Extend it from a corpus
+with a normalization layer — e.g. the **Deutsches Textarchiv** lingattr-TEI (`<w norm="MODERN">surface</w>`):
+
+```sh
+# 1. harvest surface != norm pairs from the corpus zip (streams it; skips corrupt members)
+cd detectors && python extract_dta_pairs.py ../external_src/dta/dta_lingattr.zip ../external_src/dta/dta_de_pairs.tsv 20
+# 2. dic-validated merge (accept iff old NOT in de_DE & new IN de_DE) -- filters OCR/dual-spellings
+python merge_reform_pairs.py de ../external_src/dta/dta_de_pairs.tsv
+```
+
+The frequency floor (≥ 20×) is the precision lever — it drops OCR singletons (`aaal→all`) that
+dic-validation alone passes. This grew `de_reform_map.tsv` **2,823 → 15,685** clean pairs (`vnd→und`,
+`Theil→Teil`, `creutz→kreuz`). Any `old<TAB>new` TSV works (RIDGES, Wikipedia, hand-curated).
+
 ---
 
 ## End-to-end example (MW, vowel-length focus)
@@ -206,3 +280,10 @@ grep '^MW:' mw_corr.txt > mw_only.txt                       # just MW rows
 | structurally-impossible forms | phonotactic_check (§5) |
 | a source-order headword list | order_check (§6) |
 | running text, not a headword list | ngram (§7) |
+| tier-A candidates and need *which are real* | body-grounded triage (§11) |
+| a dictionary not in csl-orig | external-source staging (§12) |
+| a question about gloss-language spelling change | ortho-drift (§13) |
+| a diachronic corpus with a normalization layer | reform-pair harvest (§14) |
+
+For the project's confirmed / refuted / open hypotheses (incl. *why* corpus-based tier-C promotion
+was rejected), see **[docs/HYPOTHESES.md](docs/HYPOTHESES.md)**.
