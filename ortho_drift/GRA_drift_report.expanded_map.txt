@@ -1,0 +1,839 @@
+# GRA (German) orthographic-drift -- DOCUMENTATION ONLY (never edits the source)
+# FULL corpus
+# modern word-list: ORTHO_DE_DIC, 103756 stems
+# gloss tokens: 254745 ; already-modern: 115646 ; reform-drift: 7055 (transform 0 + map 7055)
+# drift occurrences by era: 1901-th=1931, 1901-c=648, 2981=637, 87231=433, 192=310, 83=250, 29=160, 602=111, 32=101, 2484=90, 1775=88, 20=82, 64=72, 926=72, 26=71, 41=70, 201=70, 1469=51, 1901-c-iren=48, 7386=45, 62=44, 5931=41, 197=41, 994=39, 394=39, 5414=38, 82=37, 100=37, 1139=36, 315=34, 4469=32, 107=30, 57=29, 34=27, 52=25, 962=23, 200=23, 1664=22, 730=22, 440=21, 35=21, 76=19, 51=19, 22=18, 30=18, 99=18, 2116=17, 6196=17, 3774=17, 2819=17, 332=16, 72=16, 1901-iren=16, 23=16, 88=16, 67=16, 152=16, 179=14, 443=14, 762=14, 39=14, 36=14, 2427=14, 63=14, 31752=13, 167=13, 1520=13, 1649=13, 1335=12, 474=12, 453=12, 65=12, 583=11, 161=11, 120=11, 1848=11, 78=10, 21=10, 595=10, 24=10, 81=10, 59=10, 28805=9, 1072=9, 111=9, 1996=9, 69=9, 1899=9, 16294=8, 239=8, 118=8, 403=8, 101=8, 1901=7, 66=7, 3008=7, 294=7, 206=7, 42=7, 235=7, 186=7, 212=6, 2626=6, 259=6, 86=6, 1324=6, 105=6, 999=6, 954=6, 28=5, 286=5, 311=5, 170=5, 433=5, 3574=5, 54=5, 1916=4, 1787=4, 3722=4, 92=4, 147=4, 49=4, 155=4, 104=4, 567=4, 2609=4, 61=4, 3982=3, 383=3, 823=3, 1713=3, 119=3, 94=3, 915=3, 43=3, 257=3, 459=3, 920=3, 412=3, 711=3, 1080=3, 75=3, 126=3, 137=3, 180=3, 178=3, 60=3, 355=3, 767=3, 97=3, 55=2, 90=2, 5173=2, 544=2, 175=2, 262=2, 3904=2, 287=2, 1016=2, 96=2, 193=2, 244=2, 71=2, 519=2, 85=2, 79=2, 1120=2, 1961=2, 112=2, 782=2, 187=2, 108=2, 384=2, 6477=2, 802=2, 47=2, 1231=2, 3342=2, 227=2, 2354=2, 1998=2, 300=2, 605=2, 139=2, 587=2, 89=2, 40=2, 1024=2, 1920=2, 37=2, 254=1, 566=1, 335=1, 2568=1, 2557=1, 177=1, 291=1, 45=1, 1192=1, 102=1, 77=1, 872=1, 723=1, 573=1, 699=1, 297=1, 50=1, 330=1, 3949=1, 216=1, 229=1, 1311=1, 3739=1, 143=1, 788=1, 654=1, 364=1, 182=1, 606=1, 524=1, 2377=1, 993=1, 884=1, 2235=1, 1186=1, 2600=1, 146=1, 562=1, 901=1, 53=1, 386=1, 2850=1, 5665=1, 4988=1, 3321=1, 1266=1, 46=1, 56=1, 183=1, 378=1, 604=1, 95=1, 266=1, 91=1
+#
+# ===== reform-drift CONFIRMED by transform (+ wordlist, where available) =====
+
+# ===== reform-drift from the curated/accumulated map =====
+nam                    -> nahm                   2981            637  ¦ a. , nicht geeignet [kálpa] zu einer Sache. Mit dem Acc. prati-mā́nam keinen Vergleich z
+wol                    -> wohl                   87231           433  ¦ wol aus einem Denominativ *aṃhūr (eng sein) durch den adjectivischen Anhang -aná abgelei
+has                    -> hase                   192             310  ¦ f. , Enge, Bedrängniss (von aṃh). -has [ Ab. ] pā́si mártam {444,1}.
+cam                    -> kam                    1901-c          251  ¦ a. , aus Bedrängniss erlösend . -úcam {889,9} índram.
+mat                    -> matt                   83              209  (√añc).¦ Als Grundbedeutung tritt in den Veden, wie auch in den verwandten Sprachen [ ] de
+dam                    -> damen                  29              159  ¦ a. , der Gegend unkundig . -it {394,5} (neben mugdhás), {858,7} (〰 kṣetravídam hí áprāṭ)
+han                    -> haben                  602             111  ¦ a. , nicht tödtend, nicht verletzend (han). -atā [ I. ] {405,15} neben dádatā, jānatā́. 
+nth                    -> nt                     1901-th         103  ¦ a. , dessen Pfad [pánthā] nicht überschritten (durchkreuzt) wird . -ās [ N. s. ] ásuras 
+tur                    -> tür                    32               98  ¦ a. , dem niemand zuvorkommt, oder den niemand besiegt [tūrta von tur, tūrv]. -am {708,7}
+theils                 -> teils                  1901-th          93  ¦ ersteres im stets am Ende eines Verses oder eines im Schreiben abgetrennten Versgliedes 
+gross                  -> groß                   2484             90  2. ¦ n. , grosses Trinkgefäss, aus welchem dem Indra (und Vayu) der Somatrank zugegossen w
+object                 -> objekt                 1775             88  ¦ [ ], 1〉 essen, verzehren [ A. , G. ]; 2〉 essen, fressen, ohne Object. Mit , zerfressen, 
+rath                   -> rat                    1901-th          82  ¦ m. , der Gast, ursprünglich der Wandernde, wie atithín zeigt; auch tritt die adjectivisc
+theil                  -> teil                   1901-th          76  ¦ n. Grundbegriff ist „das Vorangehende“, also das erste einer Reihe oder das vor ihr her 
+reichthum              -> reichtum               1901-th          75  ¦ a. , über Reichthum gebietend [apna = ápnas und rā́j]. -ā́jau {958,7} (mitrā́váruṇau).
+sat                    -> satt                   201              70  1. ¦ [ ]. Die ursprüngliche Bedeutung „sich regen, leben“ tritt nur in Ableitungen [ásu, á
+morgenröthe            -> morgenröte             1901-th          66  ¦ f. , Nacht, als Göttin neben uṣás genannt, ursprünglich: die gesalbte, geschmückte [von 
+ath                    -> at                     1901-th          54  ¦ m. , der Gast, ursprünglich der Wandernde, wie atithín zeigt; auch tritt die adjectivisc
+jar                    -> jahr                   926              52  ¦ ersteres im stets am Ende eines Verses oder eines im Schreiben abgetrennten Versgliedes 
+casus                  -> kasus                  1901-c           51  ¦ n. , das Auge, wahrscheinlich als das scharf unterscheidende aufgefasst, indem insbesond
+ausserdem              -> außerdem               1469             51  ¦ ersteres im stets am Ende eines Verses oder eines im Schreiben abgetrennten Versgliedes 
+tir                    -> tier                   20               46  ¦ einmal ({297,7}) ariá, a. , zustrebend, zugethan [siehe arí], und zwar theils von der Ge
+hülfe                  -> hilfe                  7386             45  ¦ a. , unvergängliche [ákṣita] Hülfe [ūtí] gewährend . -is {5,9}; {465,1} ( v. Indra). -im
+nus                    -> nuss                   62               44  ¦ a. , zu den ásura gehörig, ihnen zukommend; 1〉 göttlich [ásura 1—3]; 2〉 den bösen Geiste
+sar                    -> saar                   41               42  ¦ [ ]. Die Form skṛ zeigt sich nach dem Augment in askṛta und bei der Verschmelzung mit de
+grösse                 -> größe                  5931             41  ¦ a. , nicht matt (jasra), nicht ermattend, unvergänglich, besonders 1〉 von Agni oder 2〉 s
+val                    -> fall                   83               41  ¦ f. , Versteck . -ā́ [ I. ] {203,3} yás gā́s udā́jat apadhā́ valásya, man sollte den Ab. 
+stam                   -> stamm                  197              41  ¦ a. , thätig (von ap), besonders beim Opferwerk; daher 2〉 kunstreich, geschickt im Ausfüh
+het                    -> hat                    994              39  ¦ a. , nicht göttlich [devá], daher 1〉 gottlos, den Göttern feindlich, von Menschen [Page3
+trit                   -> tritt                  394              39  ¦ a. , scheint wie apta, aptiá aus ap, Wasser zu stammen und etwa den im Dunstraume des Hi
+pari                   -> parieren               64               38  ¦ a. , von Feuer verbrannt (dah); daher 1〉 von den verbrannten Leichen, 2〉 von den vom Bli
+ausser                 -> außer                  5414             38  ¦ ersteres im stets am Ende eines Verses oder eines im Schreiben abgetrennten Versgliedes 
+that                   -> tat                    1901-th          38  ¦ m. , ursprünglich: der nicht Zersplitternde (dar), der feste Fels, der nicht zerfallende
+gat                    -> gatt                   82               37  ¦ „in Bewegung setzen“ ( gr. ὀρ, ἐρ , ), und zwar sowol in fortschreitende, wie der Rudere
+ergiessen              -> ergießen               100              37  ¦ a. , „in innerer wallender Bewegung begriffen“, vom Meere, dem Somastrome, dem Lichte (d
+geniessen              -> genießen               1139             36  ¦ Grundbedeutung „schmieren, mit einer weichen, fetten Masse bestreichen“ ( ), daher 1〉 di
+thun                   -> tun                    1901-th          36  ¦ [ ], athmen . Mit aushauchen, den letzten Athemzug thun . 1〉 zu athmen beginnen, vgl. pr
+concret                -> konkret                1901-c           35  ¦ f. , Mangel an Ergebenheit [anubhūti], Gleichgültigkeit, concret: der Gleichgültige (geg
+folg                   -> folge                  315              34  ¦ a. , nicht zerrinnend, unversiegbar . Als das nicht Zerrinnende wird insbesondere aufgef
+personificirt          -> personifiziert         1901-c-iren      33  ¦ f. , nach aus uru-váśī [váśa, Wunsch, Verlangen] zusammengezogen; daher 1〉 heftige Begie
+dan                    -> dann                   4469             32  ¦ ersteres im stets am Ende eines Verses oder eines im Schreiben abgetrennten Versgliedes 
+particip               -> partizip               1901-c           32  ¦ ursprünglich „gehen, sich bewegen“, von belebten Wesen, aber auch übertragen auf leblose
+lam                    -> lahm                   26               31  ¦ a. , der einen Haken (zum Obstabschütteln) hat [von aṅká]. -ī́ {279,4}. vṛkṣám pakvám ph
+werth                  -> wert                   1901-th          31  ¦ Der Hauptbegriff ist der des „oben auf, hinauf, auf“, wie er namentlich in Zusammensetzu
+thätig                 -> tätig                  1901-th          31  ¦ m. , der die Opferfeier besorgende [Page50] oder leitende Priester, der besonders bei de
+thier                  -> tier                   1901-th          31  ¦ f. , Biene oder ein anderes Süssigkeit [ṛdu] saugendes [pā] Thier. -e -é [ d. ] {686,11}
+ane                    -> ohne                   107              30  ¦ m. , Weg . -ā {113,3}; {173,11}; {204,2}; {558,2}; {574,3}; {651,11}; {887,26}; {934,1}.
+ind                    -> und                    57               29  1. ¦ preisen, ehren; der sinnliche Grundbegriff scheint „erhöhen, erheben“ zu sein [ vgl. 
+zutheilen              -> zuteilen               1901-th          28  ¦ m. , Wesen zwischen Göttern und Menschen, die als Vermittler zwischen beiden, als Söhne 
+goth                   -> gott                   41               28  ¦ m. Es bezeichnet ursprünglich das Gegenüberstehende ( vgl. gr. ἄντα, ἄντην ), daher 1〉 d
+mith                   -> mit                    1901-th          28  ¦ a. , nicht erzürnt [ s. mith], ungereizt . -as {665,37} sákhā.
+thus                   -> tus                    1901-th          28  ¦ stets mit dem Acc. , der jedoch an einzelnen wenigen Stellen ({502,6}; {231,6}; {655,11}
+ausgiessen             -> ausgießen              26               28  1. (√vakṣ),¦ träufeln, beträufeln, befeuchten. Es führt auf eine einfachere Form *uj, *vaj
+antheil                -> anteil                 1901-th          27  ¦ m. , das als Antheil erlangte ( s. 1. aś), daher 1〉 Antheil; 2〉 Erbtheil; 3〉 Partei; 4〉 
+comparativ             -> komparativ             1901-c           26  ¦ a. , Comparativ zu adha ( s. adhamá), der untere, mit dem Gegensatze úttara ({32,9}; {86
+stan                   -> stehen                 34               26  (abhī́),¦ in seiner Bedeutung möglichst genau dem lat. ob (von dem das oskische op ganz zu
+sowol                  -> sowohl                 962              23  ¦ mit dehnbarem Auslaute. Aeltere Form für das gleichbedeutende átha, und im viel häufiger
+tödten                 -> töten                  1664             22  ¦ [ ], 1〉 Rosse [ A. ] treiben, auch bildlich den Soma oder Agni, namentlich 2〉 sie wohin 
+causativ               -> kausativ               1901-c           22  ¦ Erweiterung von ar (3. 4. 8. 9) „in innere Bewegung (der Theile) gerathen“; zerstieben; 
+stossen                -> stoßen                 730              22  stark arvā́ñc-¦ [von arva und ac], a. , „in die Nähe gewandt“, insbesondere: in die des Re
+collectiv              -> kollektiv              1901-c           22  ¦ a. m. Der Grundbegriff ist: „beweglich“, oft mit dem Nebenbegriffe der Regsamkeit, Gesch
+thaten                 -> Taten                  1901-th          22  ¦ Aus der fünften Conjugationsklasse [inu] von i, gehen, hat sich eine selbständige Wurzel
+mittheilen             -> mitteilen              1901-th          21  ¦ Ablativ des Deutestammes a, und den Ablativ von idam vertretend in allen Zahlen und Gesc
+finsterniss            -> finsternis             200              21  ¦ a. , blind, ursprünglich: bedeckt ( vgl. gr. ἐπ-ενήνοϑε, ϰατ-ενήνοϑε ); oft neben śroṇá;
+gemäss                 -> gemäß                  926              20  1. ¦ Grundbegriff: hinter einem andern her, ihm nachfolgend. Daher hat es fast alle Bedeut
+itth                   -> itt                    1901-th          19  ¦ a. , unverständig (cétas), nicht wissend . -ā́s [ m. ] {120,2} itthā́‿áparas 〰. -ásam [ 
+thätigkeit             -> tätigkeit              1901-th          19  ¦ Der Hauptbegriff ist der des „oben auf, hinauf, auf“, wie er namentlich in Zusammensetzu
+vet                    -> fett                   52               19  ¦ a. , mit glänzendem Gewande [nirṇíj] bekleidet . -ijas [ A. p. ] {661,10}, neben śvetā́n
+ven                    -> vene                   20               19  1. ¦ Grundbegriff: hinter einem andern her, ihm nachfolgend. Daher hat es fast alle Bedeut
+vertheilen             -> verteilen              1901-th          19  ¦ ursprünglich „gehen, sich bewegen“, von belebten Wesen, aber auch übertragen auf leblose
+thiere                 -> tiere                  1901-th          18  ¦ m. , wohlriechender Oleander, Nerium odorum Ait. ; von áśva und ghna, tödtend, weil der 
+conjunctiv             -> Konjunktiv             1901-c           18  1. ¦ und, wo das Versmass die Länge fordert oder begünstigt, geschrieben, und zwar besonde
+adjectiv               -> adjektiv               76               17  ¦ a. , verkehrter Weise hassend, von dem weiblichen Instrumental akṣṇayā, welcher „verkehr
+subject                -> subjekt                2116             17  ¦ Grundbedeutung „schmieren, mit einer weichen, fetten Masse bestreichen“ ( ), daher 1〉 di
+duch                   -> doch                   51               17  ¦ a. , kein Unheil [duchúnā] in sich bergend . -ás. madás {773,17}.
+theile                 -> teile                  1901-th          17  ¦ a. , zur Presse gehörig; m. du. , die beiden Theile der Somapresse . -ā [ d. ] {28,2}.
+vocalen                -> Vokalen                1901-c           17  stark anaḍvā́h,¦ in den schwachen Casus (vor Vocalen anaḍúh), vor Consonanten anaḍut, ursp
+fuss                   -> fuß                    6196             17  ¦ n. , Fuss [von i, gehen]. -am {854,10}. _{854,11}.
+may                    -> mai                    3774             17  ¦ m. , Krankheit, Schmerz [von am Caus. ], enthalten in pṛṣṭi-āmayá.
+schaar                 -> schar                  2819             17  ¦ m. , Führer [vom Aorist von nī], namentlich (nach späterer Darstellung) der, welcher die
+noth                   -> not                    1901-th          16  ¦ 1〉 a. , schlimm, quällend, ursprünglich wol: bedrängend, würgend, von der in áṃhas u. s.
+locativ                -> lokativ                1901-c           16  ¦ ersteres im stets am Ende eines Verses oder eines im Schreiben abgetrennten Versgliedes 
+giessen                -> gießen                 332              16  ¦ 1〉 a. , salbend (añj), von den Priestern, die die Opferspeise bereiten oder ins Feuer gi
+gerathen               -> geraten                1901-th          16  ¦ „in Bewegung setzen“ ( gr. ὀρ, ἐρ , ), und zwar sowol in fortschreitende, wie der Rudere
+schiessen              -> schießen               440              16  1. ¦ 1〉 Grundbedeutung: „sich schnell bewegen, dahin schiessen “ [aus ar 6. 7 erweitert], 
+sak                    -> sack                   88               16  2. ¦ n. , Tag (im Gegensatze gegen die Nacht), Tageshelle . Die Gebrauchsweise im zeigt, d
+stos                   -> stoß                   67               16  ¦ (bis _{226,1} vollständig angeführt), und, auch, und zwar 1〉 und zwei einzelne Worte ver
+math                   -> matt                   152              16  ¦ [ ], als Richtungswort herzu, hinzu, herbei, mit den Verben: ar, av, 1. as, ās, i, īṣ, k
+hay                    -> hai                    99               16  ¦ [ ], „brennen“, und zwar 1〉 intr. , brennen (vom Feuer); 2〉 intr. , heiss scheinen (von 
+asth                   -> ast                    1901-th          15  ¦ a. , knochenlos [astha = asthán, Knochen]. -ás ūrús {621,34}.
+sama                   -> same                   35               15  ¦ a. , unerreicht [samaṣṭa siehe aś mit sam], enthalten in: %%(ásamaṣṭa-kāvya), ásamaṣṭa-k
+süss                   -> süß                    64               14  ¦ Grundbedeutung „schmieren, mit einer weichen, fetten Masse bestreichen“ ( ), daher 1〉 di
+einschliessen          -> einschließen           179              14  ¦ Grundbedeutung: über eine Grenze oder einen Gegenstand hinaus, und zwar so, dass dieser 
+wunsche                -> wünsche                762              14  ¦ a. , dem Wunsche [kā́ma] entsprechend, erwünscht; 2〉 -ám, nach Wunsch . -ám [ n. ] 1〉 cá
+reichthums             -> Reichtums              1901-th          14  ¦ m. Es bezeichnet ursprünglich das Gegenüberstehende ( vgl. gr. ἄντα, ἄντην ), daher 1〉 d
+mittheilend            -> mitteilend             1901-th          14  ¦ a. , ins Mittel [antarā́] bringend [bhara], herbeischaffend, mittheilend . -ás índras {6
+weiss                  -> weiß                   2427             14  ¦ a. , weiss, licht, silberfarben [von arj, strahlen. ]; Gegensatz kṛṣṇá ({450,1}; {847,3}
+arth                   -> art                    1901-th          14  ¦ [von ártha], 1〉 wonach [ A. ] Verlangen haben, etwas [ A. ] erstreben; 2〉 med. , sich er
+stok                   -> stock                  63               14  2. ¦ essen, geniessen (wol ursprünglich „Speise in Empfang nehmen“, also mit 1. aś, ursprü
+zertheilen             -> zerteilen              1901-th          14  ¦ ursprünglich „gehen, sich bewegen“, von belebten Wesen, aber auch übertragen auf leblose
+hant                   -> hand                   64               14  ¦ a. , 1〉 gerade (vom Wege); 2〉 recht, richtig, gerecht [von ṛñj]; Gegensatz zu 1〉 und 2〉 
+austheilen             -> austeilen              1901-th          14  [tátrā]¦ vertritt den Locativ des substantivisch gebrauchten tá in den drei Zahlen, und zw
+röthlich               -> rötlich                1901-th          13  ¦ a. , röthlich, hellbraun, goldgelb [von einer Wurzel ar, die auch in aruṣá, aru (Sonne) 
+nit                    -> nicht                  31752            13  1. ¦ [ ]. Die ursprüngliche Bedeutung „sich regen, leben“ tritt nur in Ableitungen [ásu, á
+vermuthen              -> vermuten               1901-th          13  ¦ pron. , dieser, dieser hier . Den verschiedenen Casus liegen die Deutestämme: i, imá, a 
+heiss                  -> heiß                   167              13  ¦ a. , 1〉 heiss [von uṣ, brennen]; 2〉 warm . -ám 2〉 vrajám {830,2}.
+ueberall               -> überall                1520             13  ¦ Grundbegriff: durch Spalten oder Schneiden zertheilen [ ], daher 1〉 vorschneiden, zerleg
+aeltern                -> eltern                 1649             13  ¦ m. , der Buhle [von 2. jar, sich nahen, herankommen], die Geliebte wird als priyā́ ({808
+morgenröthen           -> Morgenröten            1901-th          12  ¦ n. Grundbegriff ist „das Vorangehende“, also das erste einer Reihe oder das vor ihr her 
+nud                    -> nut                    39               12  ¦ a. , nicht fortzustossen [nutta s. nud], unüberwindlich . -am [ n. ] {165,9}; vīríam {80
+obwol                  -> obwohl                 1335             12  ¦ m. , der Zügel [als der bemeisternde, entweder von aś mit abhí (bemeistern) oder von īś 
+fliessen               -> fließen                474              12  ¦ Erweiterung von ar (3. 4. 8. 9) „in innere Bewegung (der Theile) gerathen“; zerstieben; 
+rit                    -> ritt                   22               12  ¦ a. , nicht ausgebreitet, nicht entfaltet, von Agni, sofern er noch im Holze verborgen ru
+gefäss                 -> gefäß                  453              12  ¦ m. , ein Gefäss zum Messen des Getreides, ein Scheffel ( ). -am {205,11}.
+mass                   -> maß                    583              11  ¦ Grundbedeutung: über eine Grenze oder einen Gegenstand hinaus, und zwar so, dass dieser 
+hot                    -> hat                    443              11  ¦ a. , nicht schädigend [drúh], wohlwollend, von den Göttern. Nom. und Voc. adhrúk. -úk [ 
+vocativ                -> vokativ                1901-c           11  2. ¦ f. , starke Form ā́p [ ], Wasser, Gewässer, und zwar nicht blos die auf der Erde, son
+thv                    -> tv                     1901-th          11  ¦ f. , ursprünglich der Andrang, das Andringende [von am], daher 1〉 Wucht, Gewalt; 2〉 Sonn
+vant                   -> fand                   23               11  ¦ stets mit dem Acc. , der jedoch an einzelnen wenigen Stellen ({502,6}; {231,6}; {655,11}
+begrüssen              -> begrüßen               120              11  1. ¦ preisen, ehren; der sinnliche Grundbegriff scheint „erhöhen, erheben“ zu sein [ vgl. 
+cod                    -> code                   30               11  ¦ Zwei Grundbedeutungen treten hervor: „in eilige Bewegung versetzen“ und „schärfen“. Die 
+fluth                  -> flut                   1901-th          11  ¦ a. , das Gestade [dhánu] überfluthend [árṇas Fluth] ( dhánva-arṇas). -asas [ N. p. f. ] 
+sammt                  -> samt                   1848             11  ¦ a. , mit Hirten [gopā́] versehen, von Hütern begleitet, sammt den Hirten . -ās [ A. p. f
+gethan                 -> getan                  1901-th          10  ¦ a. , 1〉 un-gethan [kṛtá], 2〉 unfertig, unvollkommen . -am [ n. ] 1〉 yád {459,15}; paúṃsi
+accusativ              -> Akkusativ              1901-c           10  ¦ ersteres im stets am Ende eines Verses oder eines im Schreiben abgetrennten Versgliedes 
+schoos                 -> schoß                  595              10  ¦ n. , Heimat, Heimatstätte, besonders als Ort der Heimkehr, der Ruhe, des Behagens aufgef
+hur                    -> hure                   161              10  ¦ aus *ana entstanden und daher zum griech. ἀνά , goth. ana [ ] zu stellen. Die Grundbedeu
+jah                    -> ja                     81               10  1. ¦ und, wo das Versmass die Länge fordert oder begünstigt, geschrieben, und zwar besonde
+hate                   -> hatte                  26               10  ¦ [ vgl. und ], „melken“, sowol im Activ, als auch (mit reflexiver Begriffswendung) im Med
+erschliessen           -> erschließen            72                9  ¦ m. , ursprünglich: der nicht Zersplitternde (dar), der feste Fels, der nicht zerfallende
+thuend                 -> tuend                  1901-th           9  ¦ a. , das dem Wunsche entsprechende thuend [kṛ́t]. -ṛ́t {723,7} (von Soma).
+blos                   -> bloß                   28805             9  ¦ m. Es bezeichnet ursprünglich das Gegenüberstehende ( vgl. gr. ἄντα, ἄντην ), daher 1〉 d
+zweien                 -> zwei                   1072              9  ¦ (nur zweimal -iá {945,1} und {917,8}), ein anderer, der andere (aus dem Deutestamme aná,
+accent                 -> akzent                 1901-c            9  ¦ Mit Macht herandringen ( vgl. áma, ámavat, ámati, aminá, ámīva, áṃsa), daher 1〉 schädlic
+thüren                 -> Türen                  1901-th           9  ¦ „in Bewegung setzen“ ( gr. ὀρ, ἐρ , ), und zwar sowol in fortschreitende, wie der Rudere
+griech                 -> grieche                69                9  ¦ aus *ana entstanden und daher zum griech. ἀνά , goth. ana [ ] zu stellen. Die Grundbedeu
+aufthun                -> auftun                 1901-th           9  ¦ mit sich spalten, sich aufthun; mit sich spalten . Stamm -antu . Part. II. -am {117,24} 
+vermittelst            -> vermittels             1899              9  ¦ Diese Form tritt nur im Präsensstamme hervor, in den allgemeinen Zeiten und Ableitungen 
+blüthe                 -> blüte                  1901-th           9  ¦ Der Grundbegriff scheint der des Wachsens der Pflanzen bis zu ihrer vollen Blüthenentwic
+ueber                  -> über                   16294             8  ¦ Die Silbe dhrí, welche hier zwischen ku und ac eingeschoben ist, erscheint ganz in gleic
+sen                    -> sein                   239               8  ¦ n. Grundbegriff ist „das Vorangehende“, also das erste einer Reihe oder das vor ihr her 
+eigenthümlich          -> eigentümlich           1901-th           8  ¦ m. , die (glühende) Kohle . Dass sie als glühende aufgefasst sei, zeigt sich besonders a
+mannichfach            -> mannigfach             118               8  ¦ Grundbedeutung „schmieren, mit einer weichen, fetten Masse bestreichen“ ( ), daher 1〉 di
+muthig                 -> mutig                  1901-th           8  ¦ a. , schwach ábibhyus, nicht sich fürchtend [bibhīvás s. bhī], furchtlos; muthig; getros
+rauh                   -> rau                    1996              8  ¦ a. , nicht rauh, nicht mager . -am ánnam {307,1}.
+vitha                  -> vita                   1901-th           8  ¦ stets mit dem Acc. , der jedoch an einzelnen wenigen Stellen ({502,6}; {231,6}; {655,11}
+litth                  -> litt                   1901-th           8  1. ursprünglich ¦ [ s. Perf. ānaṃśa und áṃśa Antheil], identisch mit 1. naś. Grundbedeutun
+thieres                -> Tieres                 1901-th           8  ¦ m. , Höhle, Bau eines Thieres [von khan mit ā́]. -é {920,5}.
+theilen                -> teilen                 1901-th           8  ¦ a. , wie die anuṣṭúbh aus vier Theilen zusammengesetzt . -asya {1007,1} havíṣas.
+zugthier               -> Zugtier                1901-th           8  ¦ f. , röthliches Zugthier der Maruts. -īṣu {64,7}. Vielleicht ist für yád ā́ruṇīṣu zu les
+zugthiere              -> Zugtiere               1901-th           8  ¦ m. , 1〉 Gurtgegend, insbesondere die, wo die Zug- oder Lastthiere gegürtet werden [ vgl.
+anthun                 -> antun                  1901-th           8  ¦ f. , ursprünglich „That“ [kṛ]; dann „Behexung“ (das Anthun), endlich im persönlich gefas
+reissen                -> reißen                 403               8  ¦ Die von als vedisch angeführte Form cikhāda oder cakhāda führt auf eine ursprünglichere 
+einmüthig              -> einmütig               1901-th           8  ¦ aus 2. ci erweitert ( s. dort), 1〉 etwas [ A. , G. ] erblicken, wahrnehmen; 2〉 beschauen
+thieren                -> Tieren                 1901-th           8  ¦ a. , n. , f. , ursprünglich eine Participialbildung von gā, gehen ( vgl. jígat), 1〉 a. ,
+austheilend            -> austeilend             1901-th           8  ¦ a. , Schlechtes austheilend, Böses erweisend . [Page617] -asya {861,4} (manyúm). -ā nírṛ
+saam                   -> sam                    59                8  ¦ f. , von pṛt ( s. pṛ́t), 1〉 Kampf, Treffen; 2〉 feindliches Heer . -ās [ A. pl. ] 1〉 mit 
+consonanten            -> Konsonanten            1901-c            7  ¦ vor Consonanten a-, ( gr. ἀν-, ἀ- ; in den übrigen verwandten Sprachen bleibt das n auch
+giebt                  -> gibt                   1901              7  ¦ a. , der bleibenden Lohn [rā́dhas] giebt . -asas [ N. p. ] (marútas) {166,7}; {225,4}; {
+umschliessen           -> umschließen            111               7  ¦ a. , nicht umschlossen [párīvṛta], nicht zu umschliessen . -as agnís {201,3}.
+att                    -> aß                     66                7  ¦ Zutheiler (von Opfern, Gütern), von kṣad mit abhí, s. kṣattṛ́. -úr {537,8} (tuā́vatas). 
+heissen                -> heißen                 3008              7  ¦ {211,2}: tvāyató abhiṣṭipā́si jánān, wo die -Handschriften abhiṣṭipā́ asi trennen; aber 
+verehrungswerth        -> verehrungswert         1901-th           7  ¦ a. , nicht verehrungswerth [yajñíya], unheilig . -ā́t {950,3}.
+rothen                 -> roten                  1901-th           7  ¦ 1〉 a. , mit Rossen versehen [von áśva], aus Rossen bestehend; 2〉 m. , Rossebändiger, Ros
+behülflich             -> behilflich             294               7  1. ¦ [ ]. Die ursprüngliche Bedeutung „sich regen, leben“ tritt nur in Ableitungen [ásu, á
+construirt             -> konstruiert            1901-c-iren       7  1. ¦ [ ]. Die ursprüngliche Bedeutung „sich regen, leben“ tritt nur in Ableitungen [ásu, á
+muth                   -> mut                    1901-th           7  ¦ a. , dessen Einschlürfen [āpānta v. 2. pā mit ā́] Eifer, Muth [manyú] erregt . -us sómas
+gewaltthat             -> Gewalttat              1901-th           7  ¦ n. , Zorn, Gewaltthat, enthalten im folgenden und verwandt mit írin, gewaltthätig, írya,
+tros                   -> tross                  20                7  ¦ a. , Comparativbildung von úd, zum Theil mit pronominaler Declination; 1〉 der höhere, ob
+zerreissen             -> zerreißen              206               7  ¦ schallnachahmend, mit kṛ zerreissen. {494,7}. _{494,8} 〰 kṛṇu.
+rühmenswerth           -> rühmenswert            1901-th           7  ¦ a. , rühmenswerth [von kīrtay, rühmen, rühmend gedenken , einem Denominativ von kīrtí]. 
+vus                    -> uns                    42                7  ¦ [das Fragepronomen in seiner ursprünglichen Gestalt, als Adverb], wo? {34,9}; {35,7}; {3
+vast                   -> fast                   235               7  ¦ f. , Finsterniss, Nacht, als die bedeckende [ gr. σϰέπω , ]; 1〉 Finsterniss; 2〉 Nacht; i
+adr                    -> ader                   65                7  ¦ m. , das beseelte Wesen, der Mensch [als der geborene, von jan], seltener von Göttern. 1
+vertheilung            -> Verteilung             1901-th           7  ¦ [ ], 1〉 austheilen, vertheilen [ A. ], auch 2〉 ohne Object; 3〉 jemandem [ D. ] etwas [ A
+bal                    -> ball                   72                7  ¦ m. , das Dargebrachte [von bhṛ, vgl. über die Laute ], Geschenk, Spende, Abgabe, überall
+begiessen              -> begießen               36                7  ¦ [ ; zend. hic „giessen“; auch die Bedeutung „trocknen“ des Zend ist aus „leer giessen“ e
+zutheilend             -> zuteilend              1901-th           6  ¦ a. , nicht karg [kava], daher 1〉 in dem Sinne: reichlich zutheilend, 2〉 reichlich zugeth
+zugetheilt             -> zugeteilt              1901-th           6  ¦ a. , nicht karg [kava], daher 1〉 in dem Sinne: reichlich zutheilend, 2〉 reichlich zugeth
+schliessen             -> schließen              2626              6  ¦ a. Die erste Silbe erscheint am Schlusse derjenigen Verszeilen, welche mit jambischer Di
+athmen                 -> atmen                  1901-th           6  ¦ [ ], athmen . Mit aushauchen, den letzten Athemzug thun . 1〉 zu athmen beginnen, vgl. pr
+zusammenstossen        -> zusammenstoßen         78                6  ¦ m. Es bezeichnet ursprünglich das Gegenüberstehende ( vgl. gr. ἄντα, ἄντην ), daher 1〉 d
+thöricht               -> töricht                1901-th           6  ¦ a. , nicht thöricht [pramūra], besonnen . -ās {90,2} (ādityā́s).
+anschliessen           -> anschließen            259               6  ¦ f. , Befestigung, festes Anschliessen [von śriṣ mit abhí]. -íṣas [ Ab. ] ṛté 〰 {621,12}.
+thür                   -> tür                    1901-th           6  ¦ „in Bewegung setzen“ ( gr. ὀρ, ἐρ , ), und zwar sowol in fortschreitende, wie der Rudere
+zutheil                -> zuteil                 1901-th           6  1. ¦ [ ]. Die ursprüngliche Bedeutung „sich regen, leben“ tritt nur in Ableitungen [ásu, á
+vermuthung             -> Vermutung              1901-th           6  1. ¦ Grundbedeutung „eng aneinander fügen“, wie die Theile des Wagens ({668,5}), besonders
+say                    -> sei                    86                6  ¦ adverbialer Instrumental von einem mit ā́s gleichbedeutenden fem. āsā́, {20,1} stómas ví
+rathe                  -> Rate                   1901-th           6  ¦ bisweilen zu lesen, wie, gleichsam [aus dem Deutestamme i und dem vergleichenden va (sie
+indicativ              -> indikativ              1901-c            6  1. ¦ und, wo das Versmass die Länge fordert oder begünstigt, geschrieben, und zwar besonde
+hirt                   -> hirte                  1324              6  2. ¦ rufen, verkünden; mit durch Zuruf antreiben. Stamm uvé [ 1. s. m. ] {912,7} uvé … yát
+heiligthums            -> Heiligtums             1901-th           6  ¦ a. , im Schoose (des Heiligthums) sitzend . -át {982,5} (agnís).
+kil                    -> kiel                   52                6  ¦ a. , fem. kilāsī́, 1〉 gefleckt [wol eigentlich besprengt, bespritzt, von kil = 2. kir], 
+schweiss               -> schweiß                105               6  ¦ m. , Pflüger (?). -ā [ du. ] {932,10} (Schweiss schwitzend).
+reduplication          -> Reduplikation          1901-c            6  ¦ Grundbedeutung: leuchten, schauen, durch Reduplication aus kas, kās = kaś (dessen ś durc
+kenntniss              -> kenntnis               999               6  ¦ m. , der die Wesen [jātá] kennt [védas, Kenntniss], als Bezeichnung des Agni, so {456,13
+nakt                   -> nackt                  64                6  ¦ a. , m. , f. [von 2. dhā, siehe dhénā], 1〉 a. , Milch gebend, milchend, reichlich ströme
+hineingerathen         -> hineingeraten          1901-th           6  ¦ [ ]. Es treten die beiden Grundbedeutungen: „gehen“ oder „schreiten“ und „fallen“ oder „
+bewundernswerth        -> bewundernswert         1901-th           6  ¦ 1〉 bewundernswerth sein; 2〉 bewundern, anstaunen, preisen [ A. ]; 3〉 Caus. bewundern, rü
+got                    -> gott                   954               6  ¦ [ ; φέρ-ω , fer-o, got. bair-a (bar)], im Aktiv stets mit dem Acc. des Objects, der nur 
+construction           -> Konstruktion           1901-c            5  ¦ ersteres im stets am Ende eines Verses oder eines im Schreiben abgetrennten Versgliedes 
+conjunctionen          -> Konjunktionen          1901-c            5  ¦ mit dehnbarem Auslaute. Aeltere Form für das gleichbedeutende átha, und im viel häufiger
+conjunction            -> Konjunktion            1901-c            5  ¦ mit dehnbarem Auslaute. Aeltere Form für das gleichbedeutende átha, und im viel häufiger
+viell                  -> viel                   20                5  2. ¦ f. , starke Form ā́p [ ], Wasser, Gewässer, und zwar nicht blos die auf der Erde, son
+thätigen               -> tätigen                1901-th           5  ¦ a. , thätig (von ap), besonders beim Opferwerk; daher 2〉 kunstreich, geschickt im Ausfüh
+zutheiler              -> Zuteiler               1901-th           5  ¦ Zutheiler (von Opfern, Gütern), von kṣad mit abhí, s. kṣattṛ́. -úr {537,8} (tuā́vatas). 
+zugethan               -> zugetan                1901-th           5  ¦ a. , 1〉 folgend, begleitend [sac mit abhí]; 2〉 zugethan, freundlich gesinnt . -ā́cam 2〉 
+eigenthümliche         -> eigentümliche          1901-th           5  ¦ a. , „regsam, strebsam“ [ar 6—9, besonders ar 9]. Von diesem allgemeinen Begriffe aus sc
+utha                   -> uta                    1901-th           5  1. ursprünglich ¦ [ s. Perf. ānaṃśa und áṃśa Antheil], identisch mit 1. naś. Grundbedeutun
+verstossen             -> verstoßen              286               5  2. ¦ schleudern, schiessen, werfen (vielleicht auch „schwingen“, vgl. así, Schwert) mit A.
+athem                  -> atem                   1901-th           5  ¦ m. , Das Leben, besonders in seiner Regsamkeit und Frische, oder als Seelenleben, Geiste
+declination            -> deklination            1901-c            5  ¦ pr. ich [ ]. Die aus verschiedenen Stämmen erwachsene Declination folgt hier nach der Re
+begehrenswerth         -> begehrenswert          1901-th           5  ¦ a. , zu erflehen; 2〉 begehrenswerth [von pṛch mit ā́]. -as viśpátis {60,2}. -am 2〉 krátu
+theilhaftig            -> teilhaftig             1901-th           5  ¦ ursprünglich „gehen, sich bewegen“, von belebten Wesen, aber auch übertragen auf leblose
+sehenswerth            -> sehenswert             1901-th           5  ¦ a. , sehenswerth [von īkṣ]. -āsas {789,3} īndavas [ īkṣeṇyā̀sas].
+attraction             -> attraktion             311               5  1. ¦ und, wo das Versmass die Länge fordert oder begünstigt, geschrieben, und zwar besonde
+conjectur              -> Konjektur              1901-c            5  ¦ a. , m. , 1〉 a. , preisend [von 1. kir]; 2〉 m. , Sänger, Lobsänger . -íṇā 1〉 hṛdā́ {358,
+nye                    -> nie                    35                5  ¦ [ ]. Die Form skṛ zeigt sich nach dem Augment in askṛta und bei der Verschmelzung mit de
+cand                   -> kant                   65                5  ¦ glänzen, schimmern, s. ścand.
+verhältniss            -> verhältnis             3574              5  ¦ m. , ursprünglich „der dritte“ wie gr. τρίτος , und daher einem dvitá ({667,16}) gegenüb
+vertheiler             -> verteiler              1901-th           5  ¦ m. , Erschliesser (der Schätze), Vertheiler [von dar, dir], auch N. dúras betont in {476
+uebelthat              -> Übeltat                1901-th           5  ¦ a. , n. , 1〉 a. , übel gethan; 2〉 n. , Uebelthat, Sünde . -ám 1〉 yád {667,13}. — 2〉 {926
+ith                    -> it                     1901-th           5  1. ¦ [ ], stets transitiv. Der Begriff spaltet sich (schon vor der Sprachtrennung) in den 
+wasserfluthen          -> Wasserfluten           1901-th           5  2. ¦ f. , 1〉 der Fluss, als der rauschende [von nad, vgl. nadá]; 2〉 auch übertragen auf di
+wachsthum              -> wachstum               1901-th           5  ¦ f. , 1〉 Gedeihen, Wachsthum, Mehrung, auch im plur. 2〉 Nahrung . -ís 2〉 raṇvā́ {65,5}; {
+wuth                   -> wut                    1901-th           5  2. ¦ m. , Grimm, Wuth [von bhām]. -as {909,4} tuám hí manyo … 〰 abhimātisāhás. -am {386,4}
+unthätig               -> untätig                1901-th           4  ¦ a. , unthätig [kra von kṛ]. -au (aśvínā) {120,2} nū́ cid nú márte 〰.
+vordertheil            -> Vorderteil             1901-th           4  ¦ n. Grundbegriff ist „das Vorangehende“, also das erste einer Reihe oder das vor ihr her 
+getödtet               -> getötet                1916              4  ¦ a. , fem. ájaghnuṣī, der nicht getödtet hat (jaghanvás, Part. Perf. von han). -aghnuṣī {
+grösste                -> größte                 1787              4  ¦ m. , ursprünglich die Trift, von aj, treiben; daher in den Veden die mit Gras oder Kräut
+vorrath                -> Vorrat                 1901-th           4  ¦ Ablativ des Deutestammes a, und den Ablativ von idam vertretend in allen Zahlen und Gesc
+grösser                -> größer                 3722              4  ¦ Ablativ des Deutestammes a, und den Ablativ von idam vertretend in allen Zahlen und Gesc
+causal                 -> kausal                 1901-c            4  (áthā),¦ eine Nebenform für ádha, die aus ádha entstanden ist und besonders häufig in den 
+theuer                 -> teuer                  1901-th           4  ¦ a. , der nächste [ Sup. von ánta 1.], Gegensatz paramá und madhyamá ({27,5}); gewöhnlich
+eigenthum              -> eigentum               1901-th           4  ¦ ( ). Es bezeichnet die unmittelbare Nähe, oft mit dem Nebenbegriffe des Zugehörens, des 
+gesammtheit            -> Gesamtheit             1901-th           4  ¦ a. , un-sterblich [mṛtá von mṛ]; 2〉 übertragen auf Dinge: unsterblich = unvergänglich od
+schoose                -> schoße                 23                4  ¦ adverbialer Acc. n. von ára ( s. o. ), 1〉 passend, angemessen, gemäss (mit Dat. ), insbe
+röthlichen             -> rötlichen              1901-th           4  ¦ a. , mit röthlichen Strahlen angethan . -úgbhis áśvais {506,2} (der Morgenröthe).
+parir                  -> parieren               22                4  ¦ Erweiterung von ar (3. 4. 8. 9) „in innere Bewegung (der Theile) gerathen“; zerstieben; 
+heiligthum             -> heiligtum              1901-th           4  ¦ n. , der verschlossene Ort, das innerste Heiligthum [von rudh mit ava, vgl. ródhana]. -a
+theilhaber             -> teilhaber              1901-th           4  ¦ m. , Theilnehmer, Theilhaber an, mit dem Loc. [von bhaj mít ā́, vgl. bhága]. -as avapā́n
+thätigkeiten           -> Tätigkeiten            1901-th           4  ¦ ursprünglich „gehen, sich bewegen“, von belebten Wesen, aber auch übertragen auf leblose
+etha                   -> eta                    1901-th           4  ¦ ursprünglich „gehen, sich bewegen“, von belebten Wesen, aber auch übertragen auf leblose
+activ                  -> aktiv                  147               4  ¦ so (vom Deutestamm i), stets auf das Gesprochene oder Gedachte hinweisend, und zwar so, 
+participien            -> partizipien            1901-c            4  ¦ [ neutr. des Deutestammes i] hebt den durch das vorhergehende (betonte) Wort bezeichnete
+eigenthümlichkeit      -> eigentümlichkeit       1901-th           4  ¦ a. , dem Indra [índra] gehörig, eigenthümlich, angemessen, lieb, ähnlich u. s. w. , ist 
+vocal                  -> vokal                  1901-c            4  ¦ a. , kräftig [von íṣ mit eingeschobenem Vocal]. -ān (índus) {129,6}.
+thim                   -> tim                    1901-th           4  ¦ (bis _{226,1} vollständig angeführt), und, auch, und zwar 1〉 und zwei einzelne Worte ver
+einestheils            -> einesteils             1901-th           4  ¦ a. , n. , Part. von ar 10 ( gr. ἀραρίσϰω ), dem lat. ratus entsprechend [ ], während das
+theilhaft              -> teilhaft               1901-th           4  1. ¦ Die Grundbedeutung „emporwachsen“ hat sich in ūrdhvá erhalten, aus ihr entspringt die
+havana                 -> havanna                155               4  ¦ [ n. von ká], Fragewort bei directer Frage, aber ohne dass, wie bei den lateinischen non
+süssen                 -> süßen                  440               4  ¦ a. , süssen Trank trinkend . -e [ D. ] agnáye {917,14}.
+rha                    -> rhe                    36                4  ¦ [ ]. Die Form skṛ zeigt sich nach dem Augment in askṛta und bei der Verschmelzung mit de
+chr                    -> christus               21                4  ¦ a. , in Gefahr [kṛchré, L. ] sich begebend [śrít von śri]. -ítas [ N. p. ] pitáras {516,
+hülfen                 -> helfen                 186               4  ¦ „gehen, kommen“ [ ], und zwar 1〉 kommen, ohne Object, aber oft mit I. und D. , um den od
+opferthieres           -> Opfertieres            1901-th           4  ¦ n. , Glied des Körpers [von gā, gehen, sich bewegen], und zwar 1〉 von den Gliedern des g
+rok                    -> rock                   104               4  ¦ (mit Verlängerung des a nach den bekannten metrischen Gesetzen) hebt ähnlich wie íd und 
+zerstossen             -> zerstoßen              170               4  ¦ [ ], abschneiden (Fuss, Flügel, A. ), abreissen, zerreissen (Faden, Zügel, A. ), zerstos
+wagrecht               -> waagerecht             433               4  ¦ a. , dem ūrdhvá entgegengesetzt ({95,5}; {226,9} vgl. jihmaśī́), daher 1〉 schief, schräg
+dau                    -> dow                    30                4  ¦ m. , aus turvá entstanden (Anhang -śa), und Eigenname desselben Mannes. — Im Plur. bezei
+thau                   -> tau                    1901-th           4  ¦ m. [nach von 1. dádhi und krā́ aus 2. kir, in dem Sinne Milchflocken = Thau und Reif aus
+gemüth                 -> gemüt                  1901-th           4  ¦ [ ], 1〉 austheilen, vertheilen [ A. ], auch 2〉 ohne Object; 3〉 jemandem [ D. ] etwas [ A
+nothwendig             -> notwendig              1901-th           4  ¦ n. Götterwohnung [ 3. mā́na]. -ám {961,7}. -ā́ {933,10} vor iva, wo vielleicht, aber nic
+verschliessen          -> verschließen           101               4  ¦ Grundbedeutung „verschliessen“, woraus die Bedeutungen des : „hemmen, bedecken, sich ane
+pathe                  -> pate                   1901-th           4  ¦ m. , [ ], Pfad, Weg, sehr häufig in bildlichem Sinne. Besonders häufig sind die Verbindu
+tödtlich               -> tödlich                567               4  ¦ [ ]. Es treten die beiden Grundbedeutungen: „gehen“ oder „schreiten“ und „fallen“ oder „
+thatenreich            -> tatenreich             1901-th           4  ¦ a. , m. , 1〉 a. , viel thuend, thatenreich; 2〉 m. , Mehrer mit Gen. -ṛt [ Vo. ] 1〉 indra
+blüthen                -> blüten                 1901-th           4  ¦ a. , mit Blüthen [púṣpa] versehen, Blüten tragend, blühend . -atīs [ N. pl. f. ] (óṣadhī
+vertheilend            -> verteilend             1901-th           4  ¦ Nebenform von prath, als Verbale enthalten mit der Bedeutung sich ausdehnend in ká-pṛth,
+weissen                -> weißen                 2609              4  ¦ a. , n. , f. , ursprünglich Particip des vorhergehenden; der Begriff des triefenden geht
+gath                   -> gatt                   24                4  ¦ [ ; gr. φύ-ω , lat. fu-am, alts. biu-m, lit. buv-aú, ( Inf. bû-ti)], 1〉 werden, entstehe
+erzeugniss             -> erzeugnis              101               4  ¦ f. , von man, das Denken, der Gedanke, besonders heilige Gedanken, Andacht, ferner das s
+meth                   -> met                    1901-th           4  ¦ a. , n. [ gr. μέϑυ (Wein), althochd. metu (Meth), altsl. medŭ = lit. medù-s (Honig); ]. 
+rante                  -> rannte                 54                4  ¦ m. , Verderber, Feind ( vgl. ā-múr). -úras {675,2} ná yám dudhrā́s várante ná sthirā́s 〰
+erbtheil               -> Erbteil                1901-th           3  ¦ m. , das als Antheil erlangte ( s. 1. aś), daher 1〉 Antheil; 2〉 Erbtheil; 3〉 Partei; 4〉 
+uebel                  -> übel                   3982              3  ¦ 1〉 a. , schlimm, quällend, ursprünglich wol: bedrängend, würgend, von der in áṃhas u. s.
+röthliches             -> rötliches              1901-th           3  ¦ m. , die (glühende) Kohle . Dass sie als glühende aufgefasst sei, zeigt sich besonders a
+perfect                -> perfekt                212               3  ¦ [ ], 1〉 Rosse [ A. ] treiben, auch bildlich den Soma oder Agni, namentlich 2〉 sie wohin 
+oertlichkeit           -> örtlichkeit            383               3  ¦ Ablativ des Deutestammes a, und den Ablativ von idam vertretend in allen Zahlen und Gesc
+regelmässig            -> regelmäßig             823               3  ¦ fürwahr, ursprünglich: auf diese Weise von ad, dem regelmässig gebildeten Neutrum des De
+geheimnissvoll         -> geheimnisvoll          28                3  ¦ a. , aus ati-bhūta gekürzt: was über das irdische Dasein, die irdische Erscheinung hinau
+äussere                -> äußere                 1713              3  ¦ a. , aus ati-bhūta gekürzt: was über das irdische Dasein, die irdische Erscheinung hinau
+athemzug               -> Atemzug                1901-th           3  ¦ [ ], athmen . Mit aushauchen, den letzten Athemzug thun . 1〉 zu athmen beginnen, vgl. pr
+pruth                  -> brut                   94                3  ¦ ab, fort, hinweg [ ], als Richtungswort zu Verben gefügt, seltener mit Nomen zusammenges
+ohre                   -> ohr                    915               3  ¦ ( ). Es bezeichnet die unmittelbare Nähe, oft mit dem Nebenbegriffe des Zugehörens, des 
+lobenswerth            -> lobenswert             1901-th           3  ¦ a. , nicht lobenswerth [práśasta s. caṃs mit prá], ruhmlos . -ā́s [ m. ] {232,16} (vayám
+übermüthig             -> übermütig              1901-th           3  ¦ a. , übermüthig [krátu]. -ūnām {268,10} damitā́.
+thatkraft              -> Tatkraft               1901-th           3  ¦ a. , unermessliche Thatkraft [ójas] habend . -ās índras {11,4}.
+jvan                   -> ivan                   36                3  ¦ a. , nicht Götter verehrend [yájyu], unfromm . -um mártiam {131,4}. -os [ G. ] {217,1} (
+anstossen              -> anstoßen               43                3  ¦ „in Bewegung setzen“ ( gr. ὀρ, ἐρ , ), und zwar sowol in fortschreitende, wie der Rudere
+thürflügel             -> Türflügel              1901-th           3  ¦ m. , Name eines Baumes Calosanthes indica; auch aralu genannt (woraus das ṭ sich erklärt
+wildniss               -> wildnis                92                3  ¦ n. , die Ferne [von áraṇa]. Später ( ) die Wildniss, mit dem Gegensatze grā́ma und kṛṣí,
+eigenthümlichen        -> eigentümlichen         1901-th           3  ¦ a. , „regsam, strebsam“ [ar 6—9, besonders ar 9]. Von diesem allgemeinen Begriffe aus sc
+indramythus            -> Indramythos            1901-th           3  ¦ n. , die wallende, wogende, strömende Flut der Gewässer [von ar, ṛṇ, s. arṇavá]; 2〉 insb
+gemüthes               -> Gemütes                1901-th           3  ¦ [von arvā́c], a. , hergewandt fast in denselben Beziehungen wie arvā́ñc, aber häufig mit
+satztheiles            -> Satzteiles             1901-th           3  ¦ aus *ana entstanden und daher zum griech. ἀνά , goth. ana [ ] zu stellen. Die Grundbedeu
+begehrungswerth        -> begehrungswert         1901-th           3  ¦ a. , begehrungswerth [von kā mit ā́]. -asya {325,5} rāyás.
+pir                    -> pier                   24                3  ¦ erreichen [ ]; von der ungedehnten Wurzel ap ( lat. apiscor) haben wir oben Spuren angeg
+gehülfe                -> gehilfe                257               3  ¦ a. , 1〉 gegenwärtig seiend, zur Hand seiend [von bhū mit ā́]; 2〉 hülfreich, dienstfertig
+thätige                -> tätige                 1901-th           3  ¦ a. m. Der Grundbegriff ist: „beweglich“, oft mit dem Nebenbegriffe der Regsamkeit, Gesch
+anhangen               -> anhängen               459               3  ¦ m. , Bezeichnung der Biene [-rá wie in pataṃga-rá von pataṃgá, āraṅga würde auf rañj mit
+redaction              -> redaktion              920               3  ¦ pron. , dieser, dieser hier . Den verschiedenen Casus liegen die Deutestämme: i, imá, a 
+rin                    -> rein                   49                3  ¦ n. , Zorn, Gewaltthat, enthalten im folgenden und verwandt mit írin, gewaltthätig, írya,
+gewaltthätig           -> gewalttätig            1901-th           3  ¦ n. , Zorn, Gewaltthat, enthalten im folgenden und verwandt mit írin, gewaltthätig, írya,
+gewissermassen         -> gewissermaßen          443               3  ¦ bisweilen zu lesen, wie, gleichsam [aus dem Deutestamme i und dem vergleichenden va (sie
+aufathmen              -> aufatmen               1901-th           3  ¦ m. , ursprünglich 1〉 das Aufathmen [úd und śvas], dann 2〉 das Aufwallen, Emporsprudeln d
+auseinanderthun        -> auseinandertun         1901-th           3  2. ¦ Die Wörter ardhá, árdha, „Hälfte“, ṛ́dhak, „getrennt“ weisen auf eine solche Wurzel e
+jenseit                -> jenseits               412               3  ¦ [ I. vom Deutestamme a, s. idám], 1〉 so, auf diese Weise; 2〉 hier (an diesem Orte); 3〉 d
+zugthieren             -> Zugtieren              1901-th           3  ¦ m. , die Hinterbacke, als die von der Peitsche [káśa = káśā] geschlagene [plak zu litth.
+erkenntniss            -> erkenntnis             711               3  ¦ a. , n. , 1〉 a. , die Eigenschaft eines Weisen [kaví] habend; 2〉 n. , Weisheit, Sehergab
+ausschliesslich        -> ausschließlich         1080              3  ¦ a. , pr. , jemandem ausschliesslich eigen, ihm und keinem andern angehörig; die Person, 
+mittheilung            -> Mitteilung             1901-th           3  ¦ a. , Rinder [gó] gewinnend oder verleihend [saní, Erlangung, Mittheilung]. -im {494,10} 
+vocativen              -> vokativens             1901-c            3  ¦ [ gr. τε , ], sehr selten ( z. B. {77,2}) metrisch verlängert, stets hinter einem betont
+russ                   -> ruß                    126               3  1. ¦ [ursprünglich *gvar], der ursprüngliche Begriff bezeichnet das Tönen der menschlichen
+aexte                  -> äxte                   137               3  ¦ [ ], mit tvakṣ ursprünglich identisch und aus älterm *tvak durch Erweiterung entstanden;
+vocalisch              -> vokalisch              1901-c            3  1. ¦ pron. , du [ ]. Diese Form tva ist enthalten in tvá-yata, tva-drík, die Stammform tvā
+beissen                -> beißen                 178               3  ¦ [ ], beissen . Stamm -a {472,3}. Part. -ate {189,5} neben adáte. Part. Perf. -ā́n kiráṇa
+casusbestimmung        -> kasusbestimmung        1901-c            3  1. ¦ [ ], „geben“, mit der Nebenform dad; 1〉 jemandem [ D. ] etwas [ A. ] geben, auch ohne
+oca                    -> oka                    1901-c            3  ¦ a. , wider das Gewohnte [von oká = ókas], ungewöhnlich, nur als Adverb, -am, ungewöhnlic
+preisenswerth          -> preisenwert            1901-th           3  ¦ a. , [vom desid. von 1. dhā, vgl. dhiṣáṇā] 1〉 freigiebig, gerne gebend, gerne helfend, v
+thatsache              -> Tatsache               1901-th           3  ¦ (aus ná und hí zusammengerückt): denn [Page721] nicht {10,8}; {19,2}; {22,4}; {24,6}; {3
+thal                   -> tal                    1901-th           3  ¦ m. , niedrige Gegend, Thal . -ā́s {437,7}.
+opferthiere            -> Opfertiere             1901-th           3  ¦ 1〉 jemand [ A. ] führen, leiten, häufig mit dem Nebenbegriff des Schutzes oder Heiles; 2
+lotusblüthe            -> Lotusblüte             1901-th           3  ¦ n. , (weisse) Lotusblüthe, wol zunächst Deminutiv von puṇḍari ( vgl. puṇḍarisraj Kranz v
+sag                    -> sage                   767               3  ¦ a. , wohlgenährt [ v. puṣ]. -ā [ du. m. ] váṃsagā {932,5}.
+reichthume             -> Reichtume              1901-th           3  ¦ [ ], 1〉 act. ausbreiten, ausdehnen [ A. ]; 2〉 med. , sich ausbreiten, sich ausdehnen (in
+brahman                -> brahmane               30                3  ¦ a. , Gebet [bráhman] erregend oder Brahmanen [brahman] antreibend . -īm ā́rām {494,8}.
+theilweise             -> teilweise              1901-th           3  ¦ [ zend. mrū, was als die ursprünglichere Form anzusehen ist, ], 1〉 jemandem [ D. ] etwas
+hintertheil            -> Hinterteil             1901-th           3  ¦ n. , ein Theil des Unterleibes, wahrscheinlich = bhasád Hintertheil, After . -asas [ Ab.
+zugetheilte            -> zugeteilte             1901-th           3  ¦ m. , von bhaj (zutheilen), theils „der Zutheilende“ theils „das Zugetheilte“, daher [Pag
+sant                   -> sand                   97                3  ¦ a. , m. , f. [von 1. bhuj], 1〉 a. , biegsam, d. h. lenksam; 2〉 m. , Eigenname eines Mann
+ucas                   -> ukas                   1901-c            3  ¦ Der Zusammenhang mit gr. μύσσω, μυϰτήρ u. s. w. [ ] ist sehr zweifelhaft, da die Formen 
+bündniss               -> bündnis                61                3  ¦ scheint aus yam durch Erweiterung mit und Ausfall des m (wie in yatá von yam) entsprunge
+rühmenswerthes         -> rühmenswerthes         1901-th           3  ¦ [ unter 4. kas], „aussprechen, nennen“ mit dem Nebenbegriffe des Feierlichen, Nachdrückl
+versüssen              -> versüßen               21                3  ¦ [Nebenform von svad], Grundbedeutung „etwas angenehm, namentlich schmackhaft, süss mache
+antheile               -> Anteile                1901-th           2  ¦ m. , das als Antheil erlangte ( s. 1. aś), daher 1〉 Antheil; 2〉 Erbtheil; 3〉 Partei; 4〉 
+vermuthe               -> vermute                1901-th           2  ¦ Die Silbe dhrí, welche hier zwischen ku und ac eingeschoben ist, erscheint ganz in gleic
+prädicativ             -> prädikativ             1901-c            2  ¦ a. Die erste Silbe erscheint am Schlusse derjenigen Verszeilen, welche mit jambischer Di
+comparativen           -> komparativen           1901-c            2  ¦ Ablativ des Deutestammes a, und den Ablativ von idam vertretend in allen Zahlen und Gesc
+uebermuth              -> Übermut                1901-th           2  ¦ f. , Uebermuth (von matí). -im {129,5}.
+ueberschreiten         -> überschreiten          55                2  ¦ f. , das Ueberschreiten ( Infin. v. skand, s. dort).
+schoosse               -> schoße                 90                2  ¦ a. , aus ati-bhūta gekürzt: was über das irdische Dasein, die irdische Erscheinung hinau
+abtheilungen           -> Abteilungen            1901-th           2  ¦ mit dehnbarem Auslaute. Aeltere Form für das gleichbedeutende átha, und im viel häufiger
+opfergeräthe           -> Opfergeräte            1901-th           2  ¦ a. , ohne Waffen [ā́yudha]; daher ohne Opfergeräthe . -ā́sas {301,14}; ásurās {705,9}.
+siechthum              -> siechtum               1901-th           2  ¦ f. , Entkräftung [von írā], Siechthum, gewöhnlich mit ámīvā, einmal ({669,20}) mit kṣúdh
+aehnlichkeit           -> ähnlichkeit            5173              2  1. ¦ Grundbegriff: hinter einem andern her, ihm nachfolgend. Daher hat es fast alle Bedeut
+tadelnswerth           -> tadelnswert            1901-th           2  ¦ a. , nicht lobenswerth [práśasta s. caṃs mit prá], tadelnswerth . -ān {167,8}.
+ungethüm               -> ungetüm                1901-th           2  ¦ eigentlich das „nicht seiende“ [von a und bhū, bhuva, bhava], und zwar theils als das üb
+anhange                -> anhing                 544               2  ¦ von dort her [von amú mit dem ablativischen Anhange -tas]. {179,4}; {793,2}; {911,25}; {
+ritha                  -> rita                   1901-th           2  ¦ „in Bewegung setzen“ ( gr. ὀρ, ἐρ , ), und zwar sowol in fortschreitende, wie der Rudere
+röthe                  -> röte                   1901-th           2  ¦ a. , röthlich, hellbraun, goldgelb [von einer Wurzel ar, die auch in aruṣá, aru (Sonne) 
+angethan               -> angetan                1901-th           2  ¦ a. , mit röthlichen Strahlen angethan . -úgbhis áśvais {506,2} (der Morgenröthe).
+date                   -> dato                   175               2  ¦ stets mit dem Acc. , der jedoch an einzelnen wenigen Stellen ({502,6}; {231,6}; {655,11}
+opferantheil           -> Opferanteil            1901-th           2  ¦ f. , Opferantheil [von yaj mit ava]. Nur der Nom. s. avayā́s, der aber viersilbig zu les
+stösst                 -> stößt                  262               2  ¦ a. , nach unten gerichtet [von áva und ac], in die Tiefe fahrend . -ācas [ A. p. ] duspr
+thräne                 -> Träne                  1901-th           2  ¦ n. , die Thräne [von 3. aś], als die scharfe, bittere, wie δάϰρυ von δάϰ-νω . Vielleicht
+bemerkenswerth         -> bemerkenswert          1901-th           2  ¦ a. , durch Rosse bemerkenswerth oder ausgezeichnet [budhya]. -am rayím {92,8}. -ān vā́jā
+ergiebt                -> ergibt                 3904              2  ¦ m. , Das Leben, besonders in seiner Regsamkeit und Frische, oder als Seelenleben, Geiste
+hir                    -> hier                   287               2  ¦ m. , Schlange [ ], von der Wurzel 1. ah ( gr. ἄγχω ) in der Bedeutung „schnüren, würgen“
+jme                    -> ihm                    1016              2  ¦ aus *ana entstanden und daher zum griech. ἀνά , goth. ana [ ] zu stellen. Die Grundbedeu
+bestandtheil           -> bestandteil            1901-th           2  ¦ f. , Bestandtheil [von kṛ mit ā́, vgl. kṛ́ti], s. auch dvā́daśākṛti. -is {911,5}.
+nöthig                 -> nötig                  1901-th           2  ¦ m. , die Umfassung, der Rahmen einer Thür, und daher bildlich des Himmels [von tan mit ā
+collectivem            -> kollektivem            1901-c            2  ¦ a. m. Der Grundbegriff ist: „beweglich“, oft mit dem Nebenbegriffe der Regsamkeit, Gesch
+dram                   -> tram                   193               2  ¦ [von íd], hebt den durch das Folgende ausgedrückten Begriff in dem Sinne hervor, dass di
+sohne                  -> sonne                  20                2  ¦ bisweilen zu lesen, wie, gleichsam [aus dem Deutestamme i und dem vergleichenden va (sie
+demgemäss              -> demgemäß               244               2  ¦ zweimal metrisch zu im verkürzt ({164,7}. _{164,16}), an folgenden Stellen ī geschrieben
+reichthümern           -> Reichtümern            1901-th           2  ¦ a. , als Herrscher, Gebieter, Besitzer von Reichthümern [ī́śāna s. īś] handelnd [kṛ́t]. 
+wurzelvocals           -> Wurzelvokals           1901-c            2  ¦ Instr. pl. von uccá, und dies aus úd und ac mit Wegfall des Wurzelvocals [ vgl. uccā́], 
+personification        -> personifikation        1901-c            2  ¦ m. , Eigenname eines Sehers (kaví {322,1}) der Vorzeit, häufig mit dem Beinamen kā́via {
+wünschenswerth         -> wünschenswert          1901-th           2  ¦ a. , wünschenswerth [von vaś]. -as (agnís) {519,9}.
+röthen                 -> röten                  1901-th           2  ¦ f. , 1〉 die Röthe des Himmels [von vas, hell werden, s. ], im pl. die Röthen ({179,1}), 
+speeren                -> sperren                111               2  ¦ f. , Speer, Spiess, Dolch [von ṛṣ, stossen, spiessen]; besonders häufig 2〉 von den Speer
+prädicativen           -> prädikativen           1901-c            2  ¦ pr. , a. , einer, aus dem in e-ta, e-na enthaltenen Deutestamme durch den Anhang -ka ent
+declinirt              -> dekliniert             1901-c-iren       2  ¦ pr. , Stamm etá, dieser hier, dieser [zusammengesetzt aus den Deutestämmen e ( s. éva, é
+grossthaten            -> Großtaten              1901-th           2  (oder metrisch gedehnt evā́),¦ so, auf diese Weise [aus dem Deutestamme e], hieraus entwic
+hiess                  -> hieß                   519               2  ¦ a. , m. [von i, gehen, eilen], 1〉 a. , eilend, rasch, als Beiwort der Rosse; 2〉 m. , die
+thue                   -> tue                    1901-th           2  ¦ wie evá (2); im nur in einem späten Liede {977,3}. evám … kṛdhi, so thue, entsprechend d
+dienstthuende          -> diensttuende           1901-th           2  ¦ m. , der Thäter, Ausführer (eines Werks) [von kṛ], daher 2〉 der Schaffer, Urheber; 3〉 de
+nab                    -> nabe                   85                2  ¦ m. , Tonne, auch kábandha geschrieben, vgl. kabandhín, aus ká und bandhá, also als die v
+austheiler             -> Austeiler              1901-th           2  ¦ m. , Vorleger der Speisen [von kṣad]; daher 2〉 Austheiler des Gutes. -ā́ 2〉 vāmásya bhū́
+conjunctivformen       -> Konjunktivformen       1901-c            2  1. ¦ [ ], in ursprünglicherer Form mit einem a-Laute, wie kṣā́, Sitz, kṣatrá, Herrschaft e
+willd                  -> wild                   75                2  ¦ m. , ein Baum von hartem Holze [wol aus khad, hart sein], Akazie: Acacia Catechu Willd. 
+aether                 -> Äther                  1901-th           2  ¦ m. , Name eines göttlichen Wesens oder einer Klasse derselben. Der Gandharve erscheint i
+geheimniss             -> geheimnis              212               2  ¦ a. , 1〉 zu verbergen, zu beseitigen [von guh]; daher 2〉 verborgen, geheim, geheimnissvol
+grath                  -> grat                   1901-th           2  ¦ a. , wol ursprünglich „ineinandergeschlungen“, [Page416] verknotet, verwickelt [von grat
+eigenthümlicher        -> eigentümlicher         1901-th           2  ¦ (mit Verlängerung des a nach den bekannten metrischen Gesetzen) hebt ähnlich wie íd und 
+hun                    -> huhn                   186               2  ¦ Der durchaus überwiegende Gebrauch dieses das vorhergehende Wort hervorhebenden Adverbs 
+cali                   -> kali                   1901-c            2  ¦ sich bewegen, wanken [aus car entstanden], enthalten in calācalá, mit vi in ávicācali.
+red                    -> rede                   1120              2  ¦ aus 2. ci erweitert ( s. dort), 1〉 etwas [ A. , G. ] erblicken, wahrnehmen; 2〉 beschauen
+ausserhalb             -> außerhalb              1961              2  ¦ m. , das beseelte Wesen, der Mensch [als der geborene, von jan], seltener von Göttern. 1
+aehren                 -> ähren                  782               2  ¦ m. [von 1. tan], 1〉 Faden, namentlich des Gewebes; 2〉 der Aufzug des Gewebes, auch das G
+vergrössern            -> vergrößern             180               2  ¦ Grundbedeutung ist, in Uebereinstimmung mit dem Begriffe der Präposition tirás, lat. tra
+übermässig             -> übermäßig              99                2  ¦ Grundbedeutung ist, in Uebereinstimmung mit dem Begriffe der Präposition tirás, lat. tra
+vocale                 -> vokale                 1901-c            2  ¦ Grundbedeutung ist, in Uebereinstimmung mit dem Begriffe der Präposition tirás, lat. tra
+uebersetzen            -> übersetzen             59                2  ¦ m. , das Uebersetzen (über ein Gewässer) [von tar]. -āya {204,12}; {705,1}.
+thatkräftig            -> tatkräftig             1901-th           2  ¦ a. , rasch vordringend, thatkräftig . -ínam índram {706,10}. -ínas [ N. p. ] víprās {706
+ueberwinder            -> überwinder             187               2  ¦ m. [von tar], 1〉 Ueberwinder, Besieger, mit Gen. [tar 5]; 2〉 Förderer, Antreiber, der Wa
+eingebüsst             -> eingebüßt              108               2  ¦ a. , „scharf“, geht fast in seiner ganzen Begriffsentwickelung mit tigmá wie auch mit tī
+concentrirten          -> konzentrierten         1901-c-iren       2  ¦ a. , „scharf“, geht fast in seiner ganzen Begriffsentwickelung mit tigmá wie auch mit tī
+conjunctiven           -> Konjunktiven           1901-c            2  (metrisch gedehnt tū́),¦ 1〉 bei Aufforderungen: doch (die Aufforderung dringender machend)
+oxytonirt              -> oxytoniert             1901-iren         2  ¦ Der Grundbegriff der heftigen, mit Gewalt verbundenen Bewegung prägt sich theils intrans
+dreissig               -> dreißig                384               2  ¦ n. , hundert [śatá] und dreissig [triṃśát]. -am varmíṇas {468,6}.
+dreitheilig            -> dreiteilig             1901-th           2  ¦ a. , aus drei Theilen [dhátu] bestehend, dreitheilig, so auch 2〉 vom Liede, dem Feuer, d
+dreitheilige           -> dreiteilige            1901-th           2  ¦ a. , aus drei Theilen [dhátu] bestehend, dreitheilig, so auch 2〉 vom Liede, dem Feuer, d
+todten                 -> toten                  6477              2  ¦ f. , als m. tvací mit gávye und ávye verbunden in {813,16}; {781,3}. Haut, Fell (der Men
+ausserordentlich       -> außerordentlich        802               2  ¦ a. [von dasmá], wundervoll, ausserordentlich . -am {644,20} (vácas).
+balb                   -> bald                   20                2  1. ¦ [ ], „geben“, mit der Nebenform dad; 1〉 jemandem [ D. ] etwas [ A. ] geben, auch ohne
+uebelthäter            -> Übeltäter              1901-th           2  ¦ a. , übel handelnd, m. , Uebelthäter; vgl. áduṣkṛt. -ṛ́tam tám (mártam) {457,32}. -ṛ́te 
+anthuend               -> antuend                1901-th           2  ¦ [ urspr. drugh aus *dhrugh, ], Grundbedeutung: jemandem Leid anthun (durch Betrug, Argli
+zwölftheilig           -> zwölfteilig            1901-th           2  ¦ a. , aus zwölfen bestehend, zwölftheilig [von dvā́daśan]. -ásya (des Zwölftheiligen Jahr
+gähren                 -> gehren                 76                2  ¦ wol aus dhū hervorgegangen ( vgl. altsl. du-nu, dŭm-u blase, lit. dves-iu) 1〉 blasen ein
+noti                   -> notieren               47                2  ¦ [ ], Verneinungswort, und zwar theils in strengem Sinne verneinend „nicht“, theils nur d
+mitzutheilen           -> mitzuteilen            1901-th           2  ¦ [ ], Verneinungswort, und zwar theils in strengem Sinne verneinend „nicht“, theils nur d
+heldenmüthig           -> heldenmütig            1901-th           2  ¦ a. , 1〉 Mannes Sinn habend, heldenmüthig; 2〉 an den Männern Lust habend, männerfreundlic
+mannesthat             -> Mannestat              1901-th           2  ¦ n. [von nṛ́], 1〉 Manneskraft, Mannhaftigkeit, Mannesweisheit; 2〉 Mannesthat . [Page753] 
+fittig                 -> fittich                355               2  ¦ m. , 1〉 Flügel, Fittig (des Vogels); 2〉 Achsel (des Menschen); 3〉 Seite das Leibes; 4〉 S
+bestandtheile          -> Bestandteile           1901-th           2  ¦ a. [von páñcadaśan], 1〉 der te ; 2〉 aus bestehend, Bestandtheile enthaltend . -ám 2〉 sut
+lastthier              -> Lasttier               1901-th           2  ¦ m. , ein Thier, vielleicht Lastthier [von pad]. -im {125,2} mukṣī́jayā‿iva 〰 utsinā́ti.
+äusserst               -> äußerst                1231              2  ¦ pron. [weder von noch von par abstammend, sondern zunāchst mit den Präp. párā, pári, prá
+bloss                  -> bloß                   3342              2  ¦ a. pr. [ Superl. von pára], 1〉 der fernste, äusserste; insbesondere 2〉 der entfernteste 
+casusform              -> Kasusform              1901-c            2  ¦ fort, weg, über (im Sinne der Obergewalt), [ gr. παρά , lat. per, u. s. w. ; das ā entsp
+hinderniss             -> hindernis              227               2  ¦ f. [von as mit pári, vgl. stí], 1〉 Hemmung, Hinderniss; 2〉 Bedrängniss . -is 1〉 {65,3}; 
+abtheilung             -> Abteilung              1901-th           2  ¦ n. , Knoten der Pflanzen; der unzweifelhafte Zusammenhang mit párvan, párvata macht es w
+waldthiere             -> Waldtiere              1901-th           2  ¦ m. , das Vieh, das in den Ställen angebundene und auf die Weide getriebene, wahrscheinli
+correlat               -> korrelat               1901-c            2  ¦ m. [ ], Vater [von 1. pā], bisweilen mit janitṛ́ verbunden ( s. janitṛ́); häufig 2〉 mit 
+mehrer                 -> mehrerer               2354              2  ¦ a. , m. , 1〉 a. , viel thuend, thatenreich; 2〉 m. , Mehrer mit Gen. -ṛt [ Vo. ] 1〉 indra
+breithüftig            -> breithüftig            1901-th           2  ¦ a. , breite Hüften [jāghána = jahána] habend, breithüftig [ pṛthujaghána, ]. -e [ V. s. 
+schos                  -> schoß                  200               2  ¦ a. , triefenden Schos [yóni] habend . -is páñcahotā ásuras {396,1}.
+heldenthat             -> Heldentat              1901-th           2  ¦ n. , a. [von puṃs], 1〉 n. , Manneskraft, Heldenkraft; 2〉 n. , Mannesthat, Heldenthat; 3〉
+blüthenähren           -> Blütenähren            1901-th           2  ¦ a. , f. [von sū mit prá], 1〉 a. , gebärend, 2〉 a. , Leibesfrucht tragend, fruchtbar; auc
+vortheil               -> Vorteil                1901-th           2  ¦ f. , Vorsprung, Vortheil (im Spiele) [von 1. hā mīt prá]. -ā́m {868,9}.
+speisevorrath          -> Speisevorrat           1901-th           2  ¦ f. , Speisevorrath, Lebensmittel [von 2. aś mit prá]. -ā́śam . 7 .
+reichthümer            -> reichtümer             1901-th           2  ¦ das anlautende ph weist auf ursprüngliches sp hin, es kann also nicht mit par = pur füll
+loos                   -> los                    1998              2  ¦ m. , das Zugetheilte [von bhaj], daher 1〉 der Antheil am Opfer, der den Göttern überhaup
+asia                   -> asien                  300               2  ¦ f. , Genuss, Freude, Nutzen [von bhuj], [Page940] auch 2〉 mit dem Gen. des Genossenen; 3
+triumphiren            -> triumphieren           1901-iren         2  ¦ ( gr. μαχέομαι, μαχείομαι ), von makhas, kämpfen; so von Indra, der mit den Maruts im Bu
+plat                   -> platt                  139               2  ¦ a. [von manīṣā́], weise von Göttern; 2〉 weise, verständig, nachdenkend von Menschen; 3〉 
+berather               -> berater                1901-th           2  ¦ m. [von 1. man], 1〉 Rath, Rathschlag; 2〉 Lenker, Walter (ursprünglich Berather); auch 3〉
+thatendrang            -> tatendrang             1901-th           2  ¦ m. , erregter Sinn, Gemüthsbewegung, [von 1. man], daher 1〉 Eifer, besonders religiöser 
+unmuth                 -> unmut                  1901-th           2  ¦ m. , erregter Sinn, Gemüthsbewegung, [von 1. man], daher 1〉 Eifer, besonders religiöser 
+wohlthuend             -> wohltuend              1901-th           2  ¦ a. , zur Labung [máyas 1.] gereichend [bhú von bhū], Freude bringend, erquickend, wohlth
+elephant               -> elefant                587               2  ¦ m. , Thier des Waldes, Wild, wildes Thier [von mṛj iṇ der Bedeutung des zendischen měrěg
+hath                   -> hat                    1901-th           2  ¦ [ n. von yá], Conjunction, oft hinter eins oder mehrere Worte des Nebensatzes gestellt. 
+nuth                   -> nut                    1901-th           2  ¦ [ n. von yá], Conjunction, oft hinter eins oder mehrere Worte des Nebensatzes gestellt. 
+kth                    -> kt                     1901-th           2  ¦ [aus 1. yu erweitert; ], 1〉 anschirren, anspannen Rosse oder andere Zugthiere [ A. ]; da
+zugthieres             -> Zugtieres              1901-th           2  ¦ m. [von yuj], 1〉 das Anschirren des Zugthieres oder Wagens [ G. ]; 2〉 Anschirrung, Fahrt
+schooss                -> schoß                  89                2  ¦ m. , „der Mutterleib“, als der festhaltende, in sich schliessende [von 1. yu; vgl. yonis
+correctur              -> Korrektur              1901-c            2  1. ¦ 1〉 jemandem [ D. ] etwas [ A. ] geben, verleihen, schenken; insbesondere 2〉 den Götte
+roc                    -> rock                   78                2  ¦ f. [von ruc], 1〉 Glanz, Licht; 2〉 Glanz in bildlichem Sinne = Ansehen oder Wohlstand . -
+lup                    -> lupe                   26                2  ¦ enthalten in ā́rupita, vgl. das spätere lup und das lat. rumpo.
+rothes                 -> rotes                  1901-th           2  ¦ a. , m. [ s. rohít], 1〉 a. , roth; 2〉 m. , rothes Ross (neben aruṣá {94,10}; {201,2}; {3
+galoppiren             -> galoppieren            1901-iren         2  ¦ identisch mit vaṅk [ vgl. ], in bogenförmig auf- und abgehender Bewegung laufen, also ga
+vicar                  -> vikar                  1901-c            2  2. ¦ n. [von vī], 1〉 Speise, Nahrung, Nahrungsmittel; insbesondere 2〉 Opferspeise; 3〉 was 
+heirathen              -> heiraten               1901-th           2  ¦ [ ], 1〉 jemand, etwas [ A. ] fahren vom Rosse, 2〉 vom Wagen, 3〉 vom Lenker des Wagens od
+heldenmuth             -> Heldenmut              1901-th           2  ¦ sich als Held [vīrá] erweisen . Mit jemandem [ A. ] in Heldenmuth nachstreben . [Page131
+angiebt                -> angibt                 1024              2  ¦ [ ], n. , hundert, 1〉 mit dem Gen. des gezählten; 2〉 in gleichem Casus und Numerus mit d
+opferthier             -> Opfertier              1901-th           2  ¦ m. , der beim Opfer thätige, dienstthuende Priester, Opferbereiter [von śam]; so auch 2〉
+elephanten             -> elefanten              1920              2  ¦ m. , ein den Löwen und Elephanten gefährliches Thier (ursprünglich Zerbrecher, von śar, 
+einverständniss        -> einverständnis         51                2  ¦ f. , Erkenntniss, Kunde [von 2. vid m. sám]; 2〉 Einverständniss, Vereinigung . -íd kā́ y
+locativen              -> Lokativen              1901-c            2  ¦ [ Instr. von sác, s. sac], in Gemeinschaft . I. Adverb: 1〉 in Gemeinschaft, zusammen ( u
+tac                    -> tag                    37                2  ¦ a. [ ], was so ist, wie es scheint oder wie es sein soll [von sát, Part. von as]. Daher 
+heiligthume            -> Heiligtume             1901-th           2  ¦ n. , Sitz [von sad], Sitzplatz, Ort des Sitzens oder des Aufenthaltes, Wohnsitz; insbeso
+ungetheilt             -> ungeteilt              1901-th           2  ¦ pron. [ , vgl. ]. Der Grundbegriff „ungetheilt, vollständig“ tritt im hervor, der Begrif
+furth                  -> furt                   1901-th           2  ¦ a. , schöne Furth habend, leicht zu durchwaten . -ā́ [ n. ] karat bráhmaṇe sutárā 〰 {613
+wohlgemuth             -> wohlgemut              1901-th           2  ¦ a. , 1〉 wohlgesinnt; 2〉 wohlgesinnt, hold jemandem [ D. ]; 3〉 wohlgemuth, befriedigt, be
+rühmenswerthe          -> rühmenswerte           1901-th           2  ¦ a. , f. , 1〉 a. , schönen Lobes werth; 2〉 f. , schöner Spruch, Preislied; 3〉 f. , rühmen
+causalem               -> kausalem               1901-c            2  ¦ [erweitert aus sṛ, zu dem es seiner Bedeutung nach in causalem Verhältnisse steht, wie b
+verzeichniss           -> verzeichnis            254               1  (√añc).¦ Als Grundbedeutung tritt in den Veden, wie auch in den verwandten Sprachen [ ] de
+thorheit               -> torheit                1901-th           1  ¦ f. , Thorheit, Verblendung (cítti). -is {602,6}. -im {298,11}. -ī [ I. ] {350,3}; {605,5
+wüste                  -> wüsste                 566               1  ¦ m. , ursprünglich die Trift, von aj, treiben; daher in den Veden die mit Gras oder Kräut
+bate                   -> bat                    335               1  1. [átrā].¦ aus dem Deutestamm a durch den Anhang tra gebildet, vertritt den Locativ von i
+übelthuend             -> übeltund               1901-th           1  ¦ a. , nicht übelthuend [duṣkṛ́t]. -ṛtau [ du. ] aghniaú {267,13}.
+theilweisen            -> teilweisen             1901-th           1  ¦ mit dehnbarem Auslaute. Aeltere Form für das gleichbedeutende átha, und im viel häufiger
+abstrahirt             -> abstrahiert            1901-iren         1  ¦ a. , der nicht zu verletzen, nicht anzugreifen ist; arvan, arva, arvaṇa ( s. d. v. ) sin
+thränenlos             -> tränenlos              1901-th           1  ¦ a. , thränenlos [áśru]. -ávas [ N. p. f. ] jánayas {844,7}.
+astha                  -> asta                   1901-th           1  ¦ a. , knochenlos [astha = asthán, Knochen]. -ás ūrús {621,34}.
+nachzuthun             -> nachzutun              1901-th           1  ¦ a. , nicht nachzuthun [anukṛtya s. kṛ mit anu], unnachahmlich . -ám [ n. ] {894,10}. -ā́
+athmende               -> atmende                1901-th           1  ¦ n. , ursprünglich wol der Mund als der athmende [an], aber stets vom ganzen Angesicht ge
+pris                   -> pries                  119               1  2. ¦ n. , Kraut ( ), ursprünglich der Keim, als der emporsteigende, emporspriessende ( vgl
+antheils               -> anteils                1901-th           1  ¦ ( ). Es bezeichnet die unmittelbare Nähe, oft mit dem Nebenbegriffe des Zugehörens, des 
+armuth                 -> armut                  1901-th           1  ¦ f. , ursprünglich wol „Bedrängniss, Noth“, von am im passiven Sinne (wie amáti im active
+locativs               -> Lokativs               1901-c            1  ¦ daheim [von áma (dieser) herstammend, in dem Sinne eines Locativs], Gegensatz [Page92] á
+uebelthaten            -> Übeltaten              1901-th           1  ¦ a. , nicht thöricht [mūrá], weise, einsichtsvoll; es wird nur von Göttern gebraucht, und
+röthlichem             -> rötlichem              1901-th           1  ¦ a. , von röthlichem Aussehen [psú]. [Page108] -us uṣā́s {682,16}; {625,1}. -um uṣásam {4
+röthliche              -> rötliche               1901-th           1  ¦ a. , röthliche Rosse [áśva] habend . -ās marútas {411,4}.
+liess                  -> ließ                   2568              1  ¦ Erweiterung aus ar. Die Grundbedeutung „in Bewegung setzen, abschiessen“ findet sich in 
+ermuthigen             -> ermutigen              1901-th           1  ¦ stets mit dem Acc. , der jedoch an einzelnen wenigen Stellen ({502,6}; {231,6}; {655,11}
+tadelnswerthes         -> tadelnswerthes         1901-th           1  ¦ a. , nicht zu loben [vadya s. vad], tadelnswerth, schlecht; 2〉 n. , Tadelnswerthes, Fehl
+wohlthätig             -> wohltätig              1901-th           1  ¦ a. , nicht verletzend [vadhá], wohlthätig . -ám [ n. ] {185,3} dātrám ádites.
+achttheilig            -> achtteilig             1901-th           1  ¦ a. , achtfüssig [pád, Fuss], daher 2〉 achttheilig (vom Liede). -adī gaurī́s {164,41}. -a
+existiren              -> existieren             1901-iren         1  1. ¦ [ ]. Die ursprüngliche Bedeutung „sich regen, leben“ tritt nur in Ableitungen [ásu, á
+schwerdt               -> schwert                2557              1  ¦ m. , das Schwerdt ( lat. ensis), als das geschwungene [von 2. as]. -ís {905,6}; {915,8}.
+zerfliessen            -> zerfließen             21                1  2. ¦ n. Es ist dies Wort vom vorigen zu trennen und auf der letzten Silbe zu betonen. Denn
+copula                 -> kopula                 1901-c            1  2. ¦ [ ], sagen, sprechen, und zwar sowol wenn die Rede wörtlich, als wenn sie dem Inhalte
+prädicatsnomen         -> Prädikatsnomen         1901-c            1  2. ¦ [ ], sagen, sprechen, und zwar sowol wenn die Rede wörtlich, als wenn sie dem Inhalte
+abstractum             -> abstraktum             39                1  ¦ aus *ana entstanden und daher zum griech. ἀνά , goth. ana [ ] zu stellen. Die Grundbedeu
+zugetheilten           -> zugeteilt              1901-th           1  ¦ m. , Verleiher, Zutheiler [eigentlich Herbeischaffer, von kṛ mit ā́, vgl. kará], auch mi
+zusammengerathenden    -> zusammengeratenden     1901-th           1  ¦ m. oder f. , Cymbeln oder Klappern [von ghaṭ mit ā́, die zusammengerathenden, zusammensc
+decliniren             -> deklinieren            1901-c-iren       1  ¦ m. , die Umfassung, der Rahmen einer Thür, und daher bildlich des Himmels [von tan mit ā
+theilnehmer            -> teilnehmer             1901-th           1  ¦ m. , Theilnehmer, Theilhaber an, mit dem Loc. [von bhaj mít ā́, vgl. bhága]. -as avapā́n
+zertheilt              -> zerteilt               1901-th           1  ¦ a. [ árupita] etwa „nicht abgefallen, nicht zerbrochen“, oder, wenn ā́ ursprünglich ist,
+opferantheilen         -> Opferanteilen          1901-th           1  ¦ m. , Nom. ā́vayās. Bezeichnung eines Priesters, der mit den Opferantheilen [avayā́j] zu 
+einemal                -> einmal                 96                1  ¦ so (vom Deutestamm i), stets auf das Gesprochene oder Gedachte hinweisend, und zwar so, 
+hymn                   -> hymen                  22                1  ¦ [ neutr. des Deutestammes i] hebt den durch das vorhergehende (betonte) Wort bezeichnete
+cäsur                  -> zäsur                  177               1  ¦ m. , Indra und Agni . Zusammengezogene Form: -ī [ V. ] {21,5}. _{21,6}; {108,1}—_{108,5}
+conjugationsklasse     -> Konjugationsklasse     1901-c            1  ¦ Aus der fünften Conjugationsklasse [inu] von i, gehen, hat sich eine selbständige Wurzel
+besässe                -> besäße                 71                1  ¦ aus aś (erlangen, in seinen Besitz oder seine Gewalt bekommen) entsprungen, wie īr aus a
+consonanz              -> konsonanz              1901-c            1  1. ¦ und, wo das Versmass die Länge fordert oder begünstigt, geschrieben, und zwar besonde
+ueberaus               -> überaus                96                1  1. ¦ und, wo das Versmass die Länge fordert oder begünstigt, geschrieben, und zwar besonde
+vertheilens            -> Verteilens             1901-th           1  ¦ [ I. f. von urú], weithin, weit und breit, insbesondere bei Verben 1〉 des Leuchtens, 2〉 
+abendröthen            -> Abendröten             1901-th           1  ¦ f. , 1〉 die Röthe des Himmels [von vas, hell werden, s. ], im pl. die Röthen ({179,1}), 
+abendröthe             -> abendröte              1901-th           1  ¦ f. , 1〉 die Röthe des Himmels [von vas, hell werden, s. ], im pl. die Röthen ({179,1}), 
+gefängniss             -> gefängnis              78                1  seltener ūruá,¦ m. , Behältniss, Verschluss [von 1. vṛ], namentlich 1〉 Seebecken; 2〉 die W
+bräunlichroth          -> bräunlichrot           1901-th           1  selten ¦ zu lesen, a. , röthlich, röthlich glänzend, bräunlichroth [von arj]. -rás háris {
+werthe                 -> werte                  1901-th           1  ¦ n. , Geltung, Werth [von 2. ūh]. -asā {508,9}, der Geltung, dem wahren Werthe nach [von 
+thörichte              -> törichte               1901-th           1  ¦ [von ká], auf welche Weise? wie? {41,7}; {77,1}; {185,1}; {299,5}. _{299,7}. _{299,8}; {
+prädicativer           -> prädikativer           1901-c            1  ¦ [ n. von ká], Fragewort bei directer Frage, aber ohne dass, wie bei den lateinischen non
+geräthe                -> geräte                 1901-th           1  ¦ m. , das männliche Glied [wol von ká und pṛth, prath, als das sich sehr ausdehnende]; in
+thäter                 -> täter                  1901-th           1  ¦ m. , der Thäter, Ausführer (eines Werks) [von kṛ], daher 2〉 der Schaffer, Urheber; 3〉 de
+schmuz                 -> schmutz                79                1  ¦ n. , Vergehen, Schuld [ursprünglich wol Schmuz, Befleckung, von kil = kir, vgl. das vori
+theilende              -> teilende               1901-th           1  ¦ f. , Brustbein, vielleicht als das sich (in Rippen) theilende [kas], pl. Brustrippen . -
+demüthigen             -> demütigen              1901-th           1  ¦ [ ]. Die Form skṛ zeigt sich nach dem Augment in askṛta und bei der Verschmelzung mit de
+kukuk                  -> kuckuck                291               1  ¦ m. , der Kukuk, nach seinem Geschrei benannt, enthalten in: %%kóka-yātu%%.
+dems                   -> dem                    45                1  1. ¦ [ ], in ursprünglicherer Form mit einem a-Laute, wie kṣā́, Sitz, kṣatrá, Herrschaft e
+aecker                 -> äcker                  1192              1  ¦ a. , Land [kṣétra] gewinnend [sā́ von san], Aecker verleihend . -áam ghanám (dadhikrā́m)
+theilt                 -> teilt                  1901-th           1  ¦ m. , f. , ursprünglich wol jedes, was sich in verschiedene auseinanderstehende Theile th
+misbilligen            -> missbilligen           24                1  ¦ andere Form von 1. gir. Der Grundbegriff „erheben, in die Höhe heben“ tritt in Verbindun
+hochaufgethürmt        -> hochaufgetürmt         1901-th           1  ¦ a. , Grundbegriff „angeschwollen, umfangsreich“ [ 1b] oder „hochaufgethürmt“ [von gur, e
+theilnimmt             -> teilnimmt              1901-th           1  ¦ a. , der an dem Opfer [medha] im Hause [gṛhá] theilnimmt, am Hausopfer Antheil habend . 
+hausrath               -> Hausrat                1901-th           1  ¦ n. , Hausrath (eigentlich das im Hause, gehá, befindliche). -am {264,7} ábhaktam cid bha
+kin                    -> kein                   102               1  ¦ m. , f. , „Rind, Stier, Kuh“, ursprünglich wol: der Brüller von gu, ertönen, ertönen las
+rinderreichthums       -> Rinderreichtums        1901-th           1  ¦ 1〉 a. , an Rindern oder Kühen [gó] reich, und zwar vom Besitzer, vom Besitze, vom Stalle
+fiction                -> fiktion                440               1  ¦ f. , Erde [ s. unter kṣám]; der N. gam ist eine unberechtigte Fiction. -ás [ Ab. ] divás
+ine                    -> inne                   78                1  oder ¦ selten mit h statt bh, ursprünglich wol als *ghrabh anzusetzen und dem gothischen g
+constructionswendung   -> Konstruktionswendung   1901-c            1  ¦ (mit Verlängerung des a nach den bekannten metrischen Gesetzen) hebt ähnlich wie íd und 
+reduplicirte           -> reduplizierte          1901-iren         1  ¦ n. , m. , das Rad, wol als das rollende, schnell sich drehende benannt; es ist (wie ϰύϰλ
+langmüthig             -> langmütig              1901-th           1  ¦ a. , langmüthig, gnädig [eine Intensivbildung von kṣam]. -ás {215,9} bráhmaṇas pátis.
+citi                   -> zitieren               32                1  1. ¦ „aneinanderreihen, schichten“ [ vgl. altslav. c̣in-iti, ordnen]; hieraus entwickelte 
+anzuschliessen         -> anzuschließen          77                1  2. ¦ Der Grundbegriff, wie ihn diese Wurzel und die aus ihr entsprungene, viel häufigere, 
+aehnlich               -> ähnlich                872               1  ¦ ursprünglich neutr. des Interrogativstammes, aber nur als tonlose Partikel an ein betont
+theilnehmen            -> teilnehmen             1901-th           1  ¦ m. , das beseelte Wesen, der Mensch [als der geborene, von jan], seltener von Göttern. 1
+poln                   -> polen                  112               1  1. ¦ [ursprünglich *gvar], der ursprüngliche Begriff bezeichnet das Tönen der menschlichen
+familieneigenthum      -> Familieneigentum       1901-th           1  ¦ a. , „verschwistert“. Da auch die Form yāmi in gleicher Bedeutung vorkommt und auch yamá
+volksthümliche         -> volkstümliche          1901-th           1  ¦ f. , die Zunge; als Grundform muss, wie das altlat. dingua, goth. tuggo zeigt, *dihvā́ a
+geheissen              -> geheißen               723               1  ¦ a. [ urspr. Part. II. von juṣ, aber mit veränderter Betonung], 1〉 willkommen, beliebt; 2
+erection               -> erektion               21                1  ¦ gähnen, den Rachen aufsperren [aus jabh, jambh etwa durch die Mittelstufen *jarbh, *jṛbh
+thes                   -> these                  71                1  ¦ a. , Superlativ des Verbale jyā́, 1〉 der mächtigste, vorzüglichste, von lebendigen Wesen
+caste                  -> kaste                  1901-c            1  ¦ n. , Licht [von jyut], 1〉 Licht, Schein, Glanz, mit dem Gen. (des Blitzes, Feuers, Somaʼ
+zertheilend            -> zerteilend             1901-th           1  1. ¦ [ ; doch die Wörter mit den Begriffen Donner, tosend s. unter 2. tan]. Der Grundbegri
+irrthum                -> irrtum                 1901-th           1  ¦ n. [von tam, ], 1〉 Dunkel, Finsterniss, bisweilen ({46,6}; {92,6}) mit dem Nebenbegriffe
+ueberlegenheit         -> überlegenheit          573               1  ¦ n. [von tar], 1〉 Ueberlegenheit; 2〉 Kampf . -uṣas [ G. ] 1〉 īśānā́sas 〰 {122,13}; krátvā
+kraftthat              -> Krafttat               1901-th           1  ¦ a. , n. [von tu], 1〉 a. , stark, von Göttern oder 2〉 a. , von Gegenständen, die mit den 
+concentrirt            -> konzentriert           1901-iren         1  ¦ a. , scharf, spitzig [von tij]; daher 2〉 heiss, von der Flamme; 3〉 heftig andringend, vo
+celt                   -> zelt                   1901-c            1  ¦ präp. , „durch“, mit tar in Zusammenhang stehend, aber nicht aus ihm abzuleiten, im Zend
+ueberwinden            -> überwinden             29                1  ¦ n. , 1〉 das Ueberwinden [von 1. tur]; 2〉 das Erlangen [ 1. tur = tar 11]. -áṇe 1〉 {629,1
+dreien                 -> drei                   699               1  ¦ a. , zu dreien verbunden . -ā́ [ p. n. ] bheṣajā́ {885,9}.
+bestandtheilen         -> Bestandteilen          1901-th           1  ¦ a. , aus drei Theilen [dhátu] bestehend, dreitheilig, so auch 2〉 vom Liede, dem Feuer, d
+götterthaten           -> Göttertaten            1901-th           1  ¦ a. [von daṃsánā], wunderkräftig, herrliche Götterthaten vollbringend . -ān índras {30,16
+zertheilung            -> Zerteilung             1901-th           1  ¦ [ ], 1〉 austheilen, vertheilen [ A. ], auch 2〉 ohne Object; 3〉 jemandem [ D. ] etwas [ A
+wagentheile            -> Wagenteile             1901-th           1  ¦ a. , zehn [dáśan]. Wagentheile, die mit einem Ruder [arítra] verglichen sind, enthaltend
+wunderthätig           -> wundertätig            1901-th           1  ¦ a. , wunderthätig, durch Wunderthaten helfend [von daṃs]. -a pūṣan {42,5}; {497,4}. -ás 
+wunderthaten           -> Wundertaten            1901-th           1  ¦ a. , wunderthätig, durch Wunderthaten helfend [von daṃs]. -a pūṣan {42,5}; {497,4}. -ás 
+insgesammt             -> insgesamt              297               1  1. ¦ [ ], „geben“, mit der Nebenform dad; 1〉 jemandem [ D. ] etwas [ A. ] geben, auch ohne
+ausgetheilte           -> ausgeteilte            1901-th           1  ¦ m. [von 1. 2. dā]. Dies Wort legt uns den Uebergang des Begriffs „theilen, austheilen“, 
+tagestheil             -> Tagesteil              1901-th           1  ¦ m. , f. [von div 2], „Himmel“, als der leuchtende, „Tag“, als der leuchtende, „Lichtglan
+vocalausstossung       -> Vokalausstoßung        1901-c            1  ¦ f. , Thür [aus dvā́r durch Vocalausstossung entstanden]. — Adj. mā́nuṣa, víśva, víṣvac, 
+gethanes               -> Getanes                1901-th           1  ¦ n. [aus dus und itá, Part. von i], eigentlich „das schlimm ergehende“, daher 1〉 Noth, Ge
+uebelwollen            -> übelwollen             50                1  ¦ f. , Misgunst, Uebelwollen; oft persönlich gefasst: der Bösgesinnte ({676,15}; {866,13};
+bethört                -> betört                 1901-th           1  ¦ a. , bösen Rausch [máda] habend, trunken, toll, von tollem Wahn bethört . -as ayoddhā́ (
+vocaländerung          -> Vokaländerung          1901-c            1  [ 1. ],¦ Eine solche Wurzel in der Bedeutung von dā, geben, und daraus entstanden, liegt i
+reichthumgeber         -> Reichtumgeber          1901-th           1  ¦ a. , m. , Gut [dráviṇas] gebend, Reichthumgeber . -éṣu {53,1}.
+geräth                 -> gerät                  1901-th           1  ¦ m. n. [siehe dā́ru], Holz ( vergl. dru-ghaná, [Page648] dru-padá), daher ein Geräth aus 
+zwölftheiligen         -> zwölfteiligen          1901-th           1  ¦ a. , aus zwölfen bestehend, zwölftheilig [von dvā́daśan]. -ásya (des Zwölftheiligen Jahr
+daur                   -> dauer                  60                1  ¦ f. [ ], Thür, als die verschliessende [dvar]; das gr. ϑύρα , lat. for-es, goth. daur erw
+aufzuthun              -> aufzutun               1901-th           1  ¦ f. [ ], Thür, als die verschliessende [dvar]; das gr. ϑύρα , lat. for-es, goth. daur erw
+castell                -> kastell                1901-c            1  ¦ f. Als Grundbegriff dieses Wortes so wie des verwandten 2. dhánvan erscheint der Begriff
+unwirthbares           -> unwirtbares            1901-th           1  2. ¦ n. , das hervorragende Land [ vgl. dhánu], daher: 1〉 Land, Festland, trocknes Land, n
+überfluthend           -> überflutend            1901-th           1  ¦ a. , das Gestade [dhánu] überfluthend [árṇas Fluth] ( dhánva-arṇas). -asas [ N. p. f. ] 
+causalen               -> kausalen               1901-c            1  1. ¦ [ ], stets transitiv. Der Begriff spaltet sich (schon vor der Sprachtrennung) in den 
+woh                    -> wo                     60                1  1. ¦ [ ], stets transitiv. Der Begriff spaltet sich (schon vor der Sprachtrennung) in den 
+annam                  -> annahm                 79                1  1. ¦ [ ], stets transitiv. Der Begriff spaltet sich (schon vor der Sprachtrennung) in den 
+heimath                -> heimat                 1901-th           1  ¦ n. [von 1. dhā], das gesetzte, festgesetzte, und zwar theils räumlich „Sitz, Stätte“, th
+beschliessen           -> beschließen            330               1  ¦ 1〉 schauen; 2〉 hinblicken, aufmerken auf; 3〉 aussehen wie, erscheinen wie; 4〉 sinnen, na
+hochmüthig             -> hochmütig              1901-th           1  ¦ ursprünglich Causativ von dhū (dhūpa kommt in den Veden noch nicht vor). Mit im Part. II
+angethanes             -> angetanes              1901-th           1  ¦ f. , Beschädigung, angethanes Leid [von dhūrv, dhur]. -ís {18,3}; {610,8}; {647,15}; {66
+gegentheil             -> Gegenteil              1901-th           1  ¦ [ ], Verneinungswort, und zwar theils in strengem Sinne verneinend „nicht“, theils nur d
+zehen                  -> zehn                   3949              1  ¦ [ ; Grundform *nagha], m. n. , 1〉 Nagel (an Fingern und Zehen); 2〉 Kralle (des Vogels). 
+hebr                   -> hebräer                28                1  ¦ m. , Schilf, Schilfrohr (in Teichen wachsende Grasart ). Die Form weist auf älteres *nar
+fluthen                -> fluten                 1901-th           1  2. ¦ f. , 1〉 der Fluss, als der rauschende [von nad, vgl. nadá]; 2〉 auch übertragen auf di
+neptunus               -> neptun                 216               1  ¦ Die Bedeutung „bersten“, welche man wol als Grundbedeutung annehmen muss, hat sich schon
+zeugniss               -> zeugnis                355               1  ¦ Die Bedeutung „bersten“, welche man wol als Grundbedeutung annehmen muss, hat sich schon
+mannesthaten           -> Mannestaten            1901-th           1  ¦ a. , m. , n. , die erste Form nur einmal [{321,4}], von nár. 1〉 a. , mannhaft, männlich,
+verachtungswerth       -> Verachtungswert        1901-th           1  ¦ a. , verächtlich, verachtungswerth [von nind]. -āsas ninditā́ras {356,6}.
+sprüchwort             -> sprichwort             229               1  ¦ n. [von vac mit ní], 1〉 Anrede, namentlich an die Götter, also Gebet u. s. w. ; 2〉 Sprüc
+thalwärts              -> talwärts               1901-th           1  ¦ f. , Tiefe, Thal [von ní, vgl. nimná], überall mit dem Gegensatze udvát; 2〉 der Instrume
+unthätigkeit           -> untätigkeit            1901-th           1  ¦ f. , Rast, Unthätigkeit [von sad mít ní]. -is {317,9} kā́ te 〰.
+excrement              -> exkrement              1901-c            1  ¦ f. , Auswurf, Excrement [von pad mit nís]. -ádas [ N. pl. ] {928,6} ṛchánti smā 〰 mudgal
+oertern                -> orten                  1311              1  ¦ 1〉 jemand [ A. ] führen, leiten, häufig mit dem Nebenbegriff des Schutzes oder Heiles; 2
+dis                    -> dies                   3739              1  ¦ a. ( Superl. des Superl. nédisṭha), der allernächste (mit Gen. ). -ās [ m. ] vayám {810,
+fünfen                 -> fünf                   49                1  ¦ f. , Schar von Fünfen [von páñcan]. -ī́s [ A. pl. ] {943,8}. -ís bhúvanasya 〰 (Variante 
+kochgeräth             -> Kochgerät              1901-th           1  ¦ n. , Kochgeräth [von pac]. -am {162,6}.
+mittheilt              -> mitteilt               1901-th           1  ¦ m. , ursprünglich „der Händler, Tauscher, der nichts ohne Entgelt geben will“ ( ) von pa
+deklinirt              -> dekliniert             1901-iren         1  ¦ m. [ ], „Schützer, Herrscher, Herr“ [von 1. pā, älter *pa], daher weiter „Gatte“ 1〉 Schü
+nebencasus             -> Nebenkasus             1901-c            1  ¦ m. [ ], „Schützer, Herrscher, Herr“ [von 1. pā, älter *pa], daher weiter „Gatte“ 1〉 Schü
+staunenswerth          -> staunenswert           1901-th           1  ¦ a. (ursprünglich Part. IV. des vorigen), staunenswerth . -am [ n. ] ójas {160,5}; kṛtám 
+sthaat                 -> staat                  1901-th           1  ¦ a. pr. [ Superl. von pára], 1〉 der fernste, äusserste; insbesondere 2〉 der entfernteste 
+zugetheiltes           -> zugeteiles             1901-th           1  ¦ m. , Antheil, Zugetheiltes [von 1. aś, aṃś mit pari, unter Ausstossung des Wurzelvokals,
+reichthun              -> Reichtum               1901-th           1  ¦ m. , Fülle, Reichthun [von 1. par], insbesondere 2〉 Ab. , Instr. reichlich . -asam {258,
+banda                  -> bande                  143               1  ¦ m. , das Vieh, das in den Ställen angebundene und auf die Weide getriebene, wahrscheinli
+fank                   -> fang                   34                1  ¦ n. Die Grundbedeutung ist die des funkelnden, strahlenden Lichtes, besonders wie es vord
+saas                   -> saß                    212               1  ¦ m. [ ], Vater [von 1. pā], bisweilen mit janitṛ́ verbunden ( s. janitṛ́); häufig 2〉 mit 
+verrätherisch          -> verräterisch           1901-th           1  ¦ a. , verläumderisch, verrätherisch, böse gesinnt; Verräther, Bösewicht [wol von piś in d
+verräther              -> verräter               1901-th           1  ¦ a. , verläumderisch, verrätherisch, böse gesinnt; Verräther, Bösewicht [wol von piś in d
+ausfliessen            -> ausfließen             39                1  ¦ a. , vorströmend [von purás und prasrávaṇa das Ausfliessen, Hervorfliessen]. -ās [ N. pl
+doppelconsonanz        -> Doppelkonsonanz        1901-c            1  ¦ in dieser Form nur vor Doppelconsonanz, auf vielerlei Weise, vielfach: vor prásūtas {288
+mythus                 -> mythos                 788               1  ¦ a. , m. , 1〉 a. , laut oder oft rufend [rávas = ráva], so in {31,4}, falls es nicht auch
+blüthenentwickelung    -> Blütenentwicklung      1901-th           1  ¦ Der Grundbegriff scheint der des Wachsens der Pflanzen bis zu ihrer vollen Blüthenentwic
+lastthieres            -> Lasttiers              1901-th           1  ¦ n. , der Rücken der Thiere, als derhervorragende [für pra-stha]; auch 2〉 bildlich von de
+theiles                -> Teiles                 1901-th           1  ¦ f. , kleinster Theil, Theil des Theiles Nir {6,6} [ v. prá u. kalā́], enthalten in praka
+speciell               -> speziell               1901-c            1  ¦ f. [von jan mit prá, durch die Ableitendung ā gebildet], 1〉 Nachkommenschaft, Kinder und
+maass                  -> maß                    654               1  ¦ n. [von 1. mā mit práti], 1〉 was gleiches Maass d. h. gleiche Grösse oder Kraft mit eine
+feuersgluth            -> feuersglut             1901-th           1  verstärkt pratyáñc, pratiáñc,¦ 1〉 entgegengewandt, zugewandt mit Acc. ; oder 2〉 mit viśvát
+erdtheil               -> Erdteil                1901-th           1  ¦ f. [von diś mit prá], 1〉 Anweisung, Befehl; und zwar 2〉 mit dem Gen. des Anweisenden; 3〉
+hervorthuend           -> hervortund             1901-th           1  ¦ a. , sich hervorthuend, sich auszeichnend [von bhū mit prá]. -ás śókas agnés {229,5}.
+thörigt                -> törigt                 1901-th           1  ¦ a. , thöricht, sehr thörigt [mūrá], enthalten in á-pramūra.
+ueberschuss            -> überschuss             364               1  ¦ n. , Ueberschuss [von ric mit prá]. -am {17,6} siā́t utá 〰.
+säemann                -> sämann                 35                1  ¦ m. , vielleicht der Säer, Säemann [von phar]. -eṣu {932,2} uṣṭā́rā‿iva 〰 śrayethe.
+rothbraun              -> rotbraun               1901-th           1  ¦ a. [ ], rothbraun, braun, als Brandfarbe von einer Wurzel mit der Bedeutung brennen [ ],
+gärtn                  -> gärten                 20                1  ¦ m. (wol für válva-ja, wie es auch im klassischen Sanskrit lautet; vgl. lat. valva, valvo
+concentrirung          -> Konzentrierung         1901-c-iren       1  ¦ dicht, gross, stark sein . Mit Intens. : jemandem [ D. ] den Arm [ A. ] fest anlegen, ih
+lichtroth              -> lichtrot               1901-th           1  ¦ a. , lichtroth; so erscheint es als eine der sechs Farben, welche die Bahu des Agni beze
+gebethassend           -> gebethassend           1901-th           1  ¦ a. , m. , gebethassend, gottlos, Religionshasser . -íṣam {493,2}. -íṣe {264,17}; {463,8}
+austheilung            -> Austeilung             1901-th           1  ¦ f. , Vertheilung, Austheilung mit Gen. [von bhaj]. -áye {647,11} vāmásya.
+zutheilende            -> zuteilende             1901-th           1  ¦ m. , von bhaj (zutheilen), theils „der Zutheilende“ theils „das Zugetheilte“, daher [Pag
+zutheilern             -> Zuteilern              1901-th           1  ¦ a. , von den Göttern (den Zutheilern, bhága 1) zugetheilt. -asya rāyás {24,5}.
+ausschliessen          -> ausschließen           182               1  ¦ (siehe das daraus erweiterte bhakṣ), 1〉 jemandem [ D. ] etwas [ A. ] zutheilen; 2〉 etwas
+ere                    -> ehre                   170               1  ¦ [für *bhrañj, latein. frang-ere, goth. brik-an, brak], 1〉 brechen [ A. ]; 2〉 bildlich br
+gewissermaassen        -> gewissermaßen          119               1  ¦ aus bhā erweitert [ ]; die Bedeutungen „leuchten“ und „sprechen“, welche sich ursprüngli
+pakth                  -> pakt                   1901-th           1  ¦ aus bhā erweitert [ ]; die Bedeutungen „leuchten“ und „sprechen“, welche sich ursprüngli
+büssen                 -> büßen                  180               1  2. ¦ [für *bhruj, mit dem im Sanskrit häufigen Wegfall des r nach weichen Lippenbuchstaben
+thälern                -> Tälern                 1901-th           1  ¦ a. , wol von 1. bhuj, reich an Einsenkungen, an wasserreichen Thälern . -ā́ girís 〰 pinv
+scheere                -> schere                 605               1  ¦ f. [von bhur], 1〉 du. , Scheere; 2〉 du. , zweiarmiges Werkzeug des Wagners zum Festhalte
+drath                  -> draht                  606               1  ¦ [ ; gr. φύ-ω , lat. fu-am, alts. biu-m, lit. buv-aú, ( Inf. bû-ti)], 1〉 werden, entstehe
+opfergeräth            -> Opfergerät             1901-th           1  ¦ [ ; φέρ-ω , fer-o, got. bair-a (bar)], im Aktiv stets mit dem Acc. des Objects, der nur 
+unstät                 -> unstet                 54                1  ¦ sich unstät (mit veränderter Richtung) bewegen [ ], zu Grunde liegend in bhramá, bhṛmá, 
+gatti                  -> gatte                  24                1  ¦ f. (das tti ist aus dāti oder dati, von 1. dā, zusammen gezogen). Das Mittheilen oder 2〉
+gabenreichthum         -> Gabenreichtum          1901-th           1  ¦ n. [von maghávat], Gabenreichthum, Gabenfülle . -ásya {468,3} te ‥ 〰 vidmá.
+auszutheilen           -> auszuteilen            1901-th           1  ¦ a. [von maghá], ersteres auch in maghón zusammen gezogen, 1〉 der Geschenke oder Lohn aus
+vermutheten            -> vermuteten             1901-th           1  ¦ vielleicht zu der unter maṅgalá vermutheten Wurzel mañj, maj gehörig, enthalten in nírma
+amulet                 -> amulett                75                1  ¦ a. , eine Perlenschnur oder ein Amulet am Halse [grīvā́] tragend . -ám árṇas (neben híra
+conjunktiver           -> Konjunktiver           1901-c            1  ¦ [ ]. Als Grundbedeutung ist „wallen, sprudeln“ anzusehen, welche im noch nachweisbar ist
+thatkräftige           -> tatkräftige            1901-th           1  ¦ m. [von mad], 1〉 Rausch, freudige und thatkräftige Begeisterung, die durch den Genuss de
+seelenthätigkeit       -> Seelentätigkeit        1901-th           1  ¦ n. [von 1. man], Geist, innerer Sinn, bald mehr selbständig gefasst, bald als Organ der 
+thatbereit             -> tatbereit              1901-th           1  ¦ n. [von 1. man], Geist, innerer Sinn, bald mehr selbständig gefasst, bald als Organ der 
+verständniss           -> verständnis            524               1  ¦ f. [von man], 1〉 Weisheit (der Götter); 2〉 Weisheit, geistiges Verständniss (der Mensche
+rathschlag             -> ratschlag              1901-th           1  ¦ m. [von 1. man], 1〉 Rath, Rathschlag; 2〉 Lenker, Walter (ursprünglich Berather); auch 3〉
+beratherin             -> Beraterin              1901-th           1  ¦ m. [von 1. man], 1〉 Rath, Rathschlag; 2〉 Lenker, Walter (ursprünglich Berather); auch 3〉
+thatlustigen           -> tatlustigen            1901-th           1  ¦ a. [ Part. des Doppelstammes von mand], 1〉 sich erfreuend an [ L. ]; 2〉 berauscht oder e
+gemüthsbewegung        -> Gemütsbewegung         1901-th           1  ¦ m. , erregter Sinn, Gemüthsbewegung, [von 1. man], daher 1〉 Eifer, besonders religiöser 
+lichttheil             -> Lichtteil              1901-th           1  ¦ f. , Lichttheil, Lichtatom [als funkelnd, von *mar]. -īs [ A. p. ] {884,6}. -īnām padám 
+accentuirt             -> akzentuiert            1901-iren         1  ¦ mit maṃh [ s. d. ] wesentlich gleich. Die Grundbedeutung „gross sein“ tritt in dem adjek
+nothwendigen           -> notwendigen            1901-th           1  ¦ a. (von mah), gross in allen Bedeutungsübergängen des deutschen Wortes, aber häufig mit 
+gränze                 -> grenze                 2377              1  1. ¦ [ ], „messen“, und zwar ursprünglich nicht „nachmessen, wie gross etwas ist“, sondern
+tath                   -> tat                    1901-th           1  ¦ [ gr. μή , ], nicht, in prohibitiven Sätzen. Ueberall wird es, wenn man die Form bhujema
+causativs              -> Kausativs              1901-c            1  ¦ a. ( maṃścatú, ), ein offenbar zusammengesetztes Wort. Ich versuche folgende Deutung aus
+kniee                  -> knie                   993               1  ¦ a. , aufgerichtete ( d. h. nicht zusammensinkende) [mitá von mi] Kniee [jñú = jā́nu] hab
+engl                   -> engel                  884               1  ¦ zusammentreffen, begegnen [das i aus altem a geschwächt, vgl. altfries. metan, engl. mee
+nante                  -> nannte                 161               1  ¦ [von mith], 1〉 gegenseitig, einander, miteinander, durcheinander {26,9}; {68,8}; {119,3}
+ereigniss              -> ereignis               186               1  ¦ erschreckt werden (durch ein plötzlich eintretendes Ereigniss), irre werden, verwirrt we
+todte                  -> tote                   2235              1  ¦ [ ], sterben . Stamm I. -ate {912,11} jarásā pátis. -anti tā́s viṣpuliṅgakā́s {191,12}. 
+landthier              -> Landtier               1901-th           1  ¦ [von mṛgay], wildes Thier, Landthier . -ásas [ N. p. ] {229,7}.
+dienstthuenden         -> dienstuenden           1901-th           1  2. ¦ m. , 1〉 Nahrung, Opfertrank, den die Götter sich schmecken lassen ({3,9}), und die di
+hausthieren            -> Haustieren             1901-th           1  ¦ m. , Widder, Schafbock ( vgl. ). -ás bhūtás {622,40} (índras). -ám pī́vānam 〰 apacanta {
+körpertheile           -> Körperteile            1901-th           1  ¦ m. , Krankheit, die von einem Körpertheile [Page1070] zum andern dringt [yakṣ], und die 
+participi              -> partizipieren          28                1  ¦ [von yá], 1〉 wie, ebenso wie einen vollständigen Nebensatz anknüpfend, in welchem wenigs
+conjunctivform         -> Konjunktivform         1901-c            1  ¦ [ n. von yá], Conjunction, oft hinter eins oder mehrere Worte des Nebensatzes gestellt. 
+ber                    -> bär                    112               1  ¦ [ n. von yá], Conjunction, oft hinter eins oder mehrere Worte des Nebensatzes gestellt. 
+imper                  -> immer                  23                1  ¦ Zusammenhang mit dam, der durch eine mit dy anlautende Grundform vermittelt wird, ist wa
+unterthan              -> untertan               1901-th           1  ¦ a. , den Yama zum Könige [rā́jan] habend, des Yama Unterthan (im Reiche der Seligen). -ñ
+getreidereichthum      -> Getreiderichtum        1901-th           1  ¦ a. , mit Getreide [yáva] versehen; daher 1〉 m. , Getreidebauer; 2〉 n. , Getreidereichthu
+getreidevorrath        -> Getreidevorrat         1901-th           1  ¦ n. , Getreidevorrath [von yáva]. -am {140,13} neben gávyam.
+thürpfosten            -> Türpfosten             1901-th           1  ¦ m. , der Pfosten, namentlich mit dúria der Thürpfosten, mit jaraná der morsche Balken, a
+fleissig               -> fleißig                1186              1  1. ¦ [ , vgl. 7], 1〉 jemand [ A. ] beschützen, behüten; 2〉 etwas [ A. ] behüten, bewachen,
+wüthend                -> wütend                 1901-th           1  ¦ a. [von rábhas], 1〉 ungestüm, stark, lebhaft; insbesondere 2〉 vom Somasafte: stark, scha
+kriegsgeräth           -> Kriegsgerät            1901-th           1  ¦ a. , f. [von rambhá], 1〉 a. , mit einer Stütze versehen, eine Krücke tragend, Bezeichnun
+assimilirt             -> assimiliert            1901-iren         1  1. ¦ 1〉 jemandem [ D. ] etwas [ A. ] geben, verleihen, schenken; insbesondere 2〉 den Götte
+haufe                  -> haufen                 605               1  ¦ m. [siehe raśanā́], ursprünglich wol Bündel, daher 1〉 grosse Menge, Haufe mit Gen. ; 2〉 
+gewaltthätigen         -> gewalttätigen          1901-th           1  ¦ a. , wol = riśá-adas ( ), die Gewaltthätigen verzehrend [adas von ad]. -ās agnís {77,4};
+aerzte                 -> ärzte                  2600              1  ¦ a. , m. [von *rud], 1〉 a. , Beiwort verschiedener Götter, etwa in dem Sinne: glänzend, p
+spriessen              -> sprießen               24                1  2. ¦ [mit ruh identisch, und wol mit vṛdh verwandt ( vgl. )], wachsen, spriessen . Mit das
+blutroth               -> blutrot                1901-th           1  ¦ a. , blutig, blutroth; n. , in der spätern Sprache: Blut . -ám piśācám .
+arzenei                -> arznei                 146               1  ¦ f. , scheint Bezeichnung einer Pflanze oder Arzenei, die die Wirkung des Giftes (viṣásya
+bethören               -> betören                1901-th           1  ¦ irre werden, heftig begehren [ ]. Mit Caus. irre machen, bethören . Part. des Caus. -ant
+studiren               -> studieren              1901-iren         1  ¦ [ ], 1〉 reden, sprechen, auch ({837,6}) vom Rauschen des Agni; 2〉 im Passiv mit medialer
+erwiedern              -> erwidern               562               1  ¦ [ ], 1〉 reden, sprechen, auch ({837,6}) vom Rauschen des Agni; 2〉 im Passiv mit medialer
+beredtsamkeit          -> beredsamkeit           119               1  ¦ f. (von vacasy), Beredtsamkeit, Liederkunst; 2〉 Redelust . -ā́m {226,1}. -áyā [ I. ] {33
+fluthbrausend          -> Flutbrausend           1901-th           1  ¦ a. , im Wasser [vána 7] rauschend, fluthbrausend [ vana-prakṣá]. -ám (sómam) {820,7} neb
+scheeren               -> scheren                433               1  1. ¦ 1〉 scheeren, Bart [ A. ]; 2〉 bildlich abscheeren, abgrasen die Erde [ A. ]. Mit absch
+fetthaut               -> Fetthaut               1901-th           1  ¦ f. , scheint ursprünglich „Fett“ (médas) zu bedeuten, dann aber ( u. s. w. ) insbesonder
+äusserlich             -> äußerlich              901               1  2. ¦ n. [von vī], 1〉 Speise, Nahrung, Nahrungsmittel; insbesondere 2〉 Opferspeise; 3〉 was 
+zweitheilung           -> Zweiteilung            1901-th           1  1. ¦ f. , Zweig [ob für dvayā́ wegen der Zweitheilung ?], insbesondere 2〉 mit dem Gen. des
+ban                    -> bahn                   61                1  ¦ [ ], 1〉 etwas [ A. ] zu haben wünschen, begehren, danach verlangen, selten [{492,14}; {6
+kampfesthat            -> Kampfestat             1901-th           1  ¦ n. , Kampfesthat, Kampf . -eṣu {876,2}.
+siebentheilige         -> siebenteilige          1901-th           1  3. ¦ m. , Musik, wol mit dem vorigen zusammenhängend. -ás {640,8} góbhis 〰 ajyate sóbharīṇ
+werthes                -> Wertes                 1901-th           1  ¦ a. , n. [von van], 1〉 lieb, theuer, werth, herrlich; 2〉 n. , Gut, werthes Gut, Heil, Woh
+wasserthier            -> Wassertier             1901-th           1  ¦ m. , Wasserthier, Fisch . -ás {229,8} nach Rothʼs Conjectur für váruṇas.
+zwanzigen              -> zwanzig                32                1  ¦ f. , Schaar von Zwanzigen, zwanzig [ ; aus vi = dvi und verkürztem daśati (Zehnzahl), al
+zustossen              -> zustoßen               53                1  1. ¦ finden [ ]. Es ist diese Wurzel mit 2. vid (erkennen) ursprünglich eins. Die Grundbed
+vertheilt              -> verteilt               1901-th           1  ¦ n. [von dhṛ m. ví], 1〉 Vertheilung, Ausbreitung (der Marutʼs auf ihrem Zuge); 2〉 die wei
+bewundernswerther      -> bewundernswerter       1901-th           1  ¦ f. [von pan m. ví], nur im Instr. , 1〉 mit Bewunderung; 2〉 in bewundernswerther Weise . 
+zutheilung             -> Zuteilung              1901-th           1  ¦ m. , Vertheilung, Zutheilung des Gutes u. s. w. [ G. ]; 2〉 auch ohne solchen Gen. [von b
+frühroth               -> Früh rot               1901-th           1  ¦ a. m. , 1〉 a. , leuchtend, strahlend, aufleuchtend, morgendlich [von 1. vas m. ví]; insb
+repräsentirt           -> repräsentiert          1901-iren         1  ¦ a. m. , 1〉 a. , leuchtend, strahlend, aufleuchtend, morgendlich [von 1. vas m. ví]; insb
+specifisch             -> spezifisch             1901-c            1  ¦ pron. , adj. (in Zusammensetzungeṇ und Ableitungen viśvá betont), 1〉 jeder, ganz, alle (
+compositum             -> kompositum             1901-c            1  ¦ a. , alle Nahrung enthaltend, allnährend [psnia von psā]. -as (ráthas aśvínos) {587,4}. 
+geradlinigt            -> geradlinig             40                1  3. ¦ a. , gerade, geradlinigt, nicht krumm oder höckerig. Gegensatz vṛjiná {298,11} [wol v
+conjunktiv             -> konjunktiv             1901-c            1  ¦ Der Grundbegriff dieser schwierigen Wurzel ist, soweit derselbe sich zurück verfolgen lä
+thate                  -> tat                    386               1  ¦ [ ], A. Transitiv im Aktiv des Wurzelverbs und des Causale, aber auch im Medium beider b
+bag                    -> back                   32                1  ¦ [ ], A. Transitiv im Aktiv des Wurzelverbs und des Causale, aber auch im Medium beider b
+liebenswerth           -> liebenswert            1901-th           1  ¦ 1〉 a. , liebenswerth, (von ven); 2〉 m. , Eigenname eines Mannes. -ás 1〉 (sómas) {485,8}.
+koth                   -> kot                    1901-th           1  ¦ n. , Koth, Excremente [ ]. -ṛt {161,10} 〰 ékas ápa ‿abharat. -nā́ , -nás
+excremente             -> Exkremente             1901-c            1  ¦ n. , Koth, Excremente [ ]. -ṛt {161,10} 〰 ékas ápa ‿abharat. -nā́ , -nás
+hangen                 -> hängen                 2850              1  ¦ Grundbedeutung „schwanken, hangen“ [ vgl. go. hahan, ags. hangan], zu Grunde liegend in 
+thore                  -> Tore                   1901-th           1  ¦ a. , hundert Thore oder Thüren [dura = dúr] habend . -asya {925,3} (védas). -eṣu {51,3}.
+thieropfer             -> Tieropfer              1901-th           1  ¦ m. , der beim Opfer thätige, dienstthuende Priester, Opferbereiter [von śam]; so auch 2〉
+wohlthätigst           -> wohltätigst            1901-th           1  ¦ a. , Superl. von śambhú, 1〉 am meisten zum Heile gereichend, wohlthätigst; auch 2〉 mit D
+stengel                -> stängel                1996              1  ¦ f. , muss, nach dem folgenden Worte zu schliessen, eine Bezeichnung der Somapflanze gewe
+muthes                 -> Mutes                  1901-th           1  ¦ Gegen die Trennung in zwei Wurzeln ( ) spricht die vollkommene Identität der Formen und 
+anderntheils           -> andernteils            1901-th           1  ¦ Gegen die Trennung in zwei Wurzeln ( ) spricht die vollkommene Identität der Formen und 
+weis                   -> weiß                   5665              1  ¦ a. , weis hell [wol von śi = śā, vergl. Bed. 3].
+personificirte         -> personifizierte        1901-c-iren       1  ¦ m. , Bezeichnung zweier Ackergenien. Hier ist sīra der personificirte Pflug . Da in dem 
+zierath                -> Zierat                 1901-th           1  ¦ f. , 1〉 Glanz, Pracht; 2〉 Dat. oder Acc. in infinitivem Sinne: um sich zu schmücken, ein
+waare                  -> ware                   4988              1  ¦ n. , Preis einer Waare, Kaufgeld . -ā́ya mahé {598,6}; mahé, sahásrāya {621,5}.
+glänzendroth           -> glänzendrot            1901-th           1  ¦ a. , flammenfarbig, glänzendroth [von einer Wurzel *śu, welche in śuc, śvit u. s. w. zu 
+röthlichweissen        -> rötlichweißen          1901-th           1  ¦ a. , hell, weiss, röthlich weiss [wol aus śvetá entstanden], daher 2〉 m. , weisses Ross;
+muthmassliche          -> mutmaßliche            1901-th           1  ¦ [über die muthmassliche Grundbedeutung vergl. meine „ “], 1〉 sich anstrengen, sich abmüh
+rühmenswerthen         -> rühmenswerten          1901-th           1  ¦ zu sprechen śravas-eṣá, m. , Wunsch [ 2. eṣá] nach Rühmenswerthen (nach Gut u. s. w. ). 
+ueberhaupt             -> überhaupt              3321              1  ¦ Grundbegriff „etwas woran lehnen“ ( vgl. , unter kri), daher „etwas wohin bringen, dass 
+hörenswerth            -> hörenswert             1901-th           1  ¦ a. [ Part. IV. v. śru] 1〉 hörenswerth, was man gerne hört; 2〉 rühmenswerth, werth dass m
+athemholen             -> atemholen              1901-th           1  ¦ bezeichnet das Geräusch bei starkem Athemholen; daher 1〉 schnaufen bei heftiger Bewegung
+ertheilend             -> erteilend              1901-th           1  ¦ a. , Kraft ertheilend, kräftigend, gedeihlich . -ā́jā váyasā {624,9}.
+raubthier              -> Raubtier               1901-th           1  ¦ m. , aber śvápāda zu sprechen mit derselben Umsetzung der Quantitäten wie in [Page1435] 
+doppelconsonanten      -> Doppelkonsonanten      1901-c            1  ¦ pr. , 1〉 der, dieser, vertritt im N. s. m. und f. das Pronom tá, und wird daher in diese
+vertheidiger           -> verteidiger            1901-th           1  1. ¦ a. , m. [von sah, wie parṣáṇi von par, vgl. pra-sakṣín], 1〉 a. , überwältigend, besie
+einmüthigkeit          -> einmütigkeit           1901-th           1  ¦ n. [von jñā m. sám], Einverständniss, Einmüthigkeit, Uebereinstimmung . -am {845,4} 〰 yá
+bewirthen              -> bewirten               1901-th           1  ¦ [ ], Grundbegriff „sich setzen, sich niederlassen“, auch mit dem Begriffsübergange „wohi
+konstruirt             -> konstruiert            1901-iren         1  ¦ m. [von san], 1〉 Erlangung, Erbeutung; insbesondere 2〉 mit Gen. des Erbeuteten, oder 3〉 
+haupttheile            -> Hauptteile             1901-th           1  ¦ a. , siebenköpfig; 2〉 bildlich: sieben Haupttheile enthaltend . -ānam agnís pāti {239,5}
+berathung              -> Beratung               1901-th           1  ¦ f. [ vgl. ], 1〉 Versammlung, Schar der Versammelten, z. B. zur Berathung, zum Opfer oder
+rathsversammlung       -> Ratsversammlung        1901-th           1  ¦ a. , die Rathsversammlung beherrschend [sāhá von sah]. -éna sákhiā {897,10} (yaśásā‿ā́ga
+coordinirten           -> koordinierten          1901-c-iren       1  ¦ [ursprünglich Instr. fem. von sámana mit adverbialer Betonung], [Page1480] 1〉 zusammen, 
+fluthenreich           -> Flutreich              1901-th           1  ¦ 1〉 a. , fluthenreich; 2〉 a. , zum Meere gehörig; 3〉 m. , Ansammlung der Wasser, Meer, au
+tausendthorig          -> tausendtorig           1901-th           1  ¦ a. , tausend Thüren [dvā́r] habend, tausendthorig . -āram gṛhám {604,5}.
+edelmuth               -> Edelmut                1901-th           1  ¦ f. , Edelmuth, edler Sinn [ v. sujātá]. -ā [ I. ] uṣā́s ápa svasúr támas sám vartayati v
+strasse                -> straße                 1266              1  ¦ a. , schön gangbar, schön gebahnt; insbesondere 2〉 in der Verbindung jemandem [ D. ] etw
+beeren                 -> bären                  46                1  ¦ a. , schöne Beeren tragend . -ā́s [ N. p. f. ] óṣadhīs {617,5}.
+ausgetheiltes          -> ausgeteiltes           1901-th           1  ¦ a. , n. , 1〉 Gutes austheilend, Gutes erweisend, gabenreich; 2〉 n. , ausgetheiltes Gut, 
+gerathenes             -> geratenes              1901-th           1  ¦ [Nebenform von svad], Grundbedeutung „etwas angenehm, namentlich schmackhaft, süss mache
+übergiebt              -> übergibt               92                1  ¦ f. [von sū́rya], Bezeichnung der Sonne, sofern sie als weiblich gedachte Gottheit aufgef
+wohlthun               -> wohltun                1901-th           1  ¦ n. , das Wohlthun [von sukṛ́t]. -āya {962,4} múnis devásya-devasya 〰 sákhā hitás.
+wiederhallen           -> widerhallen            56                1  ¦ aus stu erweitert, rauschen, preisen, lobsingen; 2〉 Caus. , Lieder ertönen lassen . Mit 
+müssig                 -> müßig                  183               1  ¦ a. , etwa: still stehend, müssig stehend (für *sthauná, von sthū = sthā?). -ā́s (dreisil
+abstract               -> abstrakt               60                1  ¦ [ ], 1〉 stehen, Gegensatz gehen (car); daher 2〉 tasthivás das Stehende mit [Page1597] de
+aehre                  -> ähre                   378               1  ¦ m. , etwa Aehre des Getreides oder ( ) Scheffel . -íbhyas [ Ab. ] párvatebhyas nís gā́s 
+begehrenswerthe        -> begehrenswerte         1901-th           1  ¦ a. , begehrenswerthe Geschenke habend, erwünschtes Gut besitzend . -ās (índras) {312,16}
+missrathen             -> missraten              1901-th           1  ¦ ( , auch wol mit sar, ja weiter mit *srā, *sri u. s. w. verwandt, vgl. Bedeutung „zerrin
+zufliessen             -> zufließen              40                1  ¦ ( , auch wol mit sar, ja weiter mit *srā, *sri u. s. w. verwandt, vgl. Bedeutung „zerrin
+wasserfluth            -> Wasserflut             1901-th           1  ¦ f. [ v. sru], 1〉 Strom; 2〉 Wasserfluth . -yā́s [ A. p. ] 1〉 navatím 〰 náva ca srávantīs 
+rosserichthum          -> Rossereichtum          1901-th           1  ¦ nur einmal ({180,9} am Ende einer Tristubhzeile) n. , Besitz schöner Rosse, Rosserichthu
+änlich                 -> ähnlich                21                1  ¦ das vorhergehende Wort hervorhebend, änlich wie gha, mit dem es ursprünglich identisch i
+lap                    -> lab                    22                1  ¦ m. [ ], Gans; die Gänse werden als in Reihen ziehend (śreṇiśás yátānās {242,9}, vgl. {16
+epheu                  -> efeu                   604               1  ¦ a. , m. , Grundbegriff „feuerfarben“ [von har]; vgl. . Der Uebergang in den Begriff des 
+tzen                   -> zehn                   95                1  ¦ (bis _{109,1} sind alle Stellen berücksichtigt, von da an nur einzelne); 1〉 denn, in Beh
+anstoss                -> anstoß                 266               1  ¦ [Desiderativbildung von han], 1〉 verwunden; 2〉 jemand [ A. ] verletzen, beschädigen; 3〉 
+vergiessen             -> vergießen              91                1  ¦ [ ; ], 1〉 giessen [ A. ]; insbesondere 2〉 Opfertrank [ A. ] giessen; 3〉 Opfertrank [ A. 
+vistha                 -> vista                  1901-th           1  1387,24: śáviṣṭha st. śávistha
+athmend                -> atmend                 1901-th           1  *( ), ¦ a. , nicht athmend; Gegensatz vi-anát. -at [ n. ] {946,2}.
+
+# ===== RESIDUAL pattern candidates (-> LLM pass) =====
+# -- th: 442 distinct (top 15) --
+   tham                      395
+   thiv                      278
+   thas                      263
+   sth                       220
+   path                      185
+   the                       160
+   tha                       127
+   ukth                      120
+   thivy                     115
+   thena                      91
+   sthe                       84
+   athas                      82
+   pratham                    72
+   atha                       57
+   enthaltend                 57
+# -- c-hard: 319 distinct (top 15) --
+   cas                       272
+   car                       151
+   cakr                      127
+   can                        84
+   rocan                      62
+   camas                      50
+   cak                        50
+   candr                      42
+   cat                        39
+   causale                    33
+   rcas                       23
+   catv                       17
+   cud                        16
+   casas                      16
+   cobhis                     13
+# -- -iren: 0 distinct (top 15) --
+# -- ss-eszett: 1 distinct (top 15) --
+   graßmann                    2
+# -- ey: 24 distinct (top 15) --
+   eyam                        8
+   rameya                      5
+   eya                         4
+   benfey                      3
+   matey                       3
+   eyus                        3
+   steya                       3
+   varey                       3
+   rjuney                      2
+   vaitrey                     2
+   stheyas                     2
+   gameyam                     1
+   eye                         1
+   maghadey                    1
+   neyena                      1

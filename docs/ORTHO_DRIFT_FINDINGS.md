@@ -141,6 +141,46 @@ Net: the German reform lexicon grew **978 → 2,809 → 2,823 → 15,685 forms**
 The per-dictionary drift reports are deliberately frozen at the deterministic-pass snapshot so the
 SCH-control comparison stays stable; the long tail is banked in the map for future runs.
 
+### O3 — re-run with the full 15,685-form map: rates inflate, the dating holds
+
+The freeze decision above (keep the published gradient at the deterministic-pass snapshot) was
+re-tested by re-running all five German dicts against the full 15,685-form map (`ortho_drift.py
+<DICT> --full`; expanded outputs banked as [`de_drift_summary.expanded_map.tsv`](../ortho_drift/de_drift_summary.expanded_map.tsv)
++ `<DICT>_drift_report.expanded_map.txt`). The result confirms the freeze was right:
+
+| dictionary (era) | drift/1k frozen → expanded | 1901 `th` | 1901 `c` | 1996 `ß` (canon-tagged) |
+|---|--:|--:|--:|--:|
+| PW (1855–75) | 10.26 → **28.59** | 6,203 → 10,198 | 1,752 → 3,072 | 15 → 16 |
+| PWG (1855–75) | 8.86 → **26.84** | 6,508 → 10,477 | 2,275 → 3,656 | 12 → 14 |
+| GRA (1873) | 7.90 → **27.69** | 1,460 → 1,931 | 507 → 648 | 0 → 0 |
+| CCS (1887) | 4.72 → **12.17** | 341 → 484 | 126 → 160 | 84 → 94 |
+| **SCH (1928)** | 2.52 → **9.77** | 76 → **89** | 86 → 87 | 319 → **446** |
+
+Two things change, one thing does not:
+
+1. **Absolute rates roughly triple** — the bigger map recalls far more historical forms per dict.
+2. **The clean publication-date gradient at the top flattens.** Frozen, the four pre-modern dicts
+   declined monotonically (10.26 → 8.86 → 7.90 → 4.72); expanded, PW/PWG/GRA cluster at ~27–29 with
+   **GRA (27.69) now slightly *above* PWG (26.84)** — the monotone-by-date ordering breaks at the
+   top. Cause: the DTA long-tail conflates *general* early-modern and Latinate-loanword spelling
+   variation (`elephant→elefant`, `insect→insekt`, `object→objekt`, `tact→takt`, `commentar→kommentar`,
+   `brahman→brahmane`, `oertlichkeit→örtlichkeit`) with the *dated, legislated* 1901/1996 reforms.
+   This inflates every pre-modern dict roughly equally, compressing the gradient.
+3. **The SCH-1928 era-dating control is fully intact.** The dating instrument is the *relative era
+   signature*, not the absolute rate — and it survives untouched: SCH remains uniquely `ß`-dominant
+   (`1996-ss` **446** ≫ `1901-th` **89**), while every pre-1901 dict stays `th`-dominant (PW `th`
+   **10,198** ≫ `ss` **16**). SCH still lands precisely in its post-1901/pre-1996 window. The bigger
+   map does **not** blur era-dating.
+
+**Conclusion (vindicates the freeze):** the DTA-expanded map is a **search-normalization recall
+asset, not a drift-*rate* metric** — for the published per-dictionary gradient it conflates dated
+reforms with generic historical variation, so that table stays frozen at the deterministic-pass
+snapshot. The reliable dating instrument is the **per-era column signature** (`th`-dominant vs
+`ss`-dominant), which is robust to the 5.5× map expansion. (Note: most DTA-merged `ß` forms —
+`weiss→weiß`, `gross→groß`, `gefäss→gefäß` — carry a numeric DTA-attestation tag rather than the
+`1996-ss` canon label, so they inflate the *total* drift but not the era column; the era signature
+is therefore carried by the curated/seed forms and stays clean.)
+
 ### Russian — legislated 1918, the dramatic case
 
 The 1918 reform is the most sweeping in the corpus: it abolished the letters ѣ (yat), і, ѳ (fita),

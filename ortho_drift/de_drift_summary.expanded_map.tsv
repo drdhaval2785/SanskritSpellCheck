@@ -1,0 +1,8 @@
+# German orthographic-drift across dictionaries -- DOCUMENTATION ONLY
+# drift/1k = reform-drift occurrences per 1000 gloss tokens
+dict	tokens	modern%	drift	drift/1k	1901-th	1901-c	1901-c-iren	1901-iren	1996-ss	archaic-ey
+CCS	117976	65	1436	12.17	484	160	1	2	94	2
+GRA	254745	45	7055	27.69	1931	648	48	16	0	0
+PW	845888	59	24184	28.59	10198	3072	575	635	16	2
+PWG	1053264	61	28268	26.84	10477	3656	471	612	14	3
+SCH	192039	42	1876	9.77	89	87	0	0	446	3

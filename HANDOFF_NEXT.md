@@ -254,12 +254,13 @@ a self-contained fresh-chat task; the ⚠️-marked ones need a local install or
 
 **✅ Ready now (no external data):**
 
-- **O3 — Re-run the German cluster with the 15,685-form map.** Cheapest, highest-certainty.
-  > In `SanskritSpellCheck/detectors`, re-run `python ortho_drift.py <DICT> --full` for the German
-  > dicts (PW PWG GRA CCS SCH) now that `de_reform_map.tsv` is 15,685 forms (was 2,823). Report the
-  > new drift/1k per dict vs the frozen table in `docs/ORTHO_DRIFT_FINDINGS.md`, and **check the
-  > SCH-1928 control still dates correctly** (the bigger map must not blur the era-dating). de_DE dic
-  > is the Adobe one already on disk. Update the findings doc + changelog; commit.
+- ~~**O3 — Re-run the German cluster with the 15,685-form map.**~~ ✅ **DONE (2026-06-26).** Rates
+  ~triple (PW 10.26 → 28.59/1k, SCH 2.52 → 9.77) and the top-of-gradient monotone ordering flattens
+  (GRA 27.69 > PWG 26.84) — DTA long-tail conflates generic early-modern/loanword variation with the
+  dated reforms. **SCH-1928 control intact**: relative era signature robust (SCH `ß`-dominant 446 ≫
+  `th` 89; pre-1901 dicts `th`-dominant). Vindicates the freeze; expanded map = recall asset, not a
+  rate metric. Findings doc "O3" subsection + changelog; expanded run banked as
+  [`de_drift_summary.expanded_map.tsv`](ortho_drift/de_drift_summary.expanded_map.tsv).
 - **O5 — Split the æ/œ ligature class from reform.** Small, well-scoped.
   > In `detectors/ortho_drift.py`, the dominant "drift" in several English dicts is the æ/œ ligature
   > (SHS 109, MW72 92, VEI 12) — typographic, not orthographic reform. Add a separate `ligature`

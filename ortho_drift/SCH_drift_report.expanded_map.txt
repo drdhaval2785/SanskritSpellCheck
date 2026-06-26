@@ -1,0 +1,532 @@
+# SCH (German) orthographic-drift -- DOCUMENTATION ONLY (never edits the source)
+# FULL corpus
+# modern word-list: ORTHO_DE_DIC, 103756 stems
+# gloss tokens: 192039 ; already-modern: 79817 ; reform-drift: 1876 (transform 0 + map 1876)
+# drift occurrences by era: 1996-ss=446, 49=171, 64=95, 1901-th=89, 1901-c=87, 30=57, 23=56, 83=46, 26=36, 2981=34, 3774=30, 22=30, 82=26, 102=24, 72=24, 8441=23, 20=22, 70=22, 52=19, 41=19, 423=18, 21=18, 926=18, 602=18, 192=16, 88=15, 201=15, 28=14, 57=14, 587=14, 1806=13, 32=12, 155=11, 175=11, 4469=10, 108=10, 35=9, 53=9, 37=8, 99=8, 107=8, 315=8, 1128=7, 313=7, 1120=7, 598=7, 239=6, 1996=6, 1324=5, 65=5, 29=5, 2175=5, 63=5, 86=5, 62=5, 139=5, 152=4, 36=4, 993=4, 723=4, 97=4, 51=4, 25=4, 274=4, 118=4, 81=3, 66=3, 572=3, archaic-ey=3, 24=3, 332=3, 154=3, 2819=3, 39=3, 33=3, 75=3, 762=2, 915=2, 547=2, 158=2, 34=2, 294=2, 443=2, 143=2, 1901=2, 135=2, 1899=2, 699=2, 71=2, 566=2, 31752=2, 764=2, 583=2, 235=2, 767=2, 2203=2, 296=2, 1904=1, 120=1, 112=1, 79=1, 197=1, 1702=1, 285=1, 232=1, 3739=1, 250=1, 144=1, 241=1, 483=1, 980=1, 111=1, 212=1, 433=1, 68=1, 48=1, 884=1, 94=1, 394=1, 55=1, 798=1, 655=1, 326=1, 459=1, 194=1, 1801=1, 994=1, 27=1, 85=1, 149=1, 44=1, 119=1, 160=1, 390=1, 356=1, 168=1, 50=1, 320=1, 522=1, 300=1, 827=1, 202=1, 166=1, 211=1, 40=1, 1461=1, 4988=1, 165=1, 84=1
+#
+# ===== reform-drift CONFIRMED by transform (+ wordlist, where available) =====
+
+# ===== reform-drift from the curated/accumulated map =====
+rin                    -> rein                   49              171  akṣudraparicārin ¦ Adj. keinen niedrigen Diener um sich habend. Nom abstr. ˚ritā f. ˚pariv
+pari                   -> parieren               64               91  aparihita ¦ Adj. = pariṣecanahīna ( ), , v.l. {part=,seq=3496,type=,n=2}
+vant                   -> fand                   23               54  akṣamāvant ¦ Adj. ungeduldig, unnachsichtig, {part=,seq=248,type=,n=2}
+brahman                -> brahmane               30               50  ° abjajanman ¦ m. = Brahman, {part=,seq=3987,type=˚,n=2}
+daß                    -> dass                   1996-ss          44  akṣayya ¦ , akṣayyodaka n. Wasser, begleitet von dem Wunsche, daß es nie mangeln möge, ; a
+nam                    -> nahm                   2981             34  atinanāmin ¦ , lies ˚namāmi Adj. über dem namāmi (ich verneige mich) stehend. {part=,seq=1
+may                    -> mai                    3774             30  akāmayāna ¦ Adj. nicht wünschend, {part=,seq=91,type=,n=2}
+val                    -> fall                   83               29  akṣāvalī ¦ f. Rosenkranz, {part=,seq=290,type=,n=1}
+lam                    -> lahm                   26               29  ° akṣumā ¦ ? v.u. (Ko.); duhyate 'kṣumāyā ākṛṣyate iti dukūlam. {part=,seq=314,type=˚,n=2}
+kuß                    -> kuss                   1996-ss          28  ° adharapāna ¦ n. eine Art Kuß, Y 108. 133. {part=,seq=1677,type=˚,n=2}
+gat                    -> gatt                   82               26  ágatāsu ¦ Adj. nicht gestorben, (95,5). {part=,seq=357,type=,n=2}
+kin                    -> kein                   102              24  ° ak ¦ zur Erklärung von pracalākin: pracalam akanti kuṭilaṃ gacchantīti pracalākinaḥ pura
+bal                    -> ball                   72               24  * barīvarda ¦ m. = balīvarda Stier. va˚ geschrieben. {part=,seq=20317,type=*,n=2}
+fluß                   -> fluss                  1996-ss          23  atara ¦ Adj. nicht zu passieren (Fluß), ; (= durlaṅghya ; ˚vom Wagenlenker gesagt). {part=
+vil                    -> viel                   8441             23  Atmavidyāvilāsa ¦ m. Titel eines Werkes, {part=,seq=1451,type=,n=1}
+rit                    -> ritt                   22               20  akṣudraparicārin ¦ Adj. keinen niedrigen Diener um sich habend. Nom abstr. ˚ritā f. ˚pariv
+tath                   -> tat                    1901-th          20  2. amantra ¦ 3. keine Zaubersprüche kennend, -x- anwendend, — ˚unberaten, (man lese śrīs t
+jha                    -> ja                     70               20  jhaṃkṛti ¦ f. = jhaṃkāra , Caurap. (A). 102. 106. [ a .] {part=,seq=14285,type=,n=2}
+sar                    -> saar                   41               19  aṅgahāra ¦ m. ˚ = śarīravikṣepa oder sarīraśoṣa , [vom Sturmwinde gesagt]. {part=,seq=649,
+sik                    -> sich                   423              18  * agragrāsikā ¦ f. der Anspruch auf den ersten Bissen, zu {part=,seq=511,type=*,n=2}
+jar                    -> jahr                   926              18  Ajīrṇāmṛtamañjarī ¦ f. Titel eines Werkes, {part=,seq=858,type=,n=2}
+han                    -> haben                  602              18  ° ārāsin ¦ Adj. = ā samantāt rāsaḥ siṃhanādo vidyate yasya saḥ , {part=,seq=7354,type=˚,n=
+läßt                   -> lässt                  1996-ss          17  ácchambaṭkāram ¦ Absol. so daß man es nicht fehlen läßt. {part=,seq=762,type=,n=2}
+mat                    -> matt                   83               17  anumātar ¦ Nom. ag. der Schlüsse, Folgerungen zieht, Bhāmatī 343,6. {part=,seq=2846,type=,
+has                    -> hase                   192              16  aṃholiṅga ¦ Adj. das Wort aṃhas als Charakteristikum habend, Bez. einer Reihe von Sprüchen
+cam                    -> kam                    1901-c           15  ° adhimuñcam ¦ Adv.? a . {part=,seq=1787,type=˚,n=1}
+sak                    -> sack                   88               15  ° āvāsakāra ¦ die Wohnung aufschlagend, {part=,seq=7495,type=˚,n=2}
+sat                    -> satt                   201              15  ° utpravāha ¦ = ūrdhvapravāhaṃ sat , {part=,seq=8285,type=˚,n=2}
+ind                    -> und                    57               14  ārata ¦ n. quidam coeundi modus, Zitat im Ko. zu [Falsch! Mallinātha zitiert hier das Rati
+elephant               -> elefant                587              14  kaṭuka ¦ m. ˚elephant-rider, — ˚chamberlain, {part=,seq=9671,type=,n=3}
+vet                    -> fett                   52               13  Agnijihvá ¦ m. N. pr. eines Vetāla, {part=,seq=440,type=,n=2}
+calc                   -> kalk                   28               13  anannaśraddhājanana ¦ (Konj.) Adj. keine Eßlust machend, den Appetit vertreibend, (Calc. A
+wage                   -> waage                  1806             13  uttarāṅga ¦ n. auch: das Querholz über den zwei Pfeilern einer Wage, Hemādri 1,173,4. 8. —
+dik                    -> dick                   155              11  Agastyaśāsta ¦ Adj. von Agastya beherrscht. ˚śāstā dik Süden, {part=,seq=379,type=,n=3}
+air                    -> er                     175              11  airāvaṇa ¦ m. ˚ein weißer Elefant, [vgl. Ko. 5 v.u.]. {part=,seq=9447,type=,n=2}
+zit                    -> zeit                   21               10  aṅgāradhānikā ¦ Zit. im Komm. zu S. 965, Z. 3. {part=,seq=656,type=,n=2}
+füßen                  -> füssen                 1996-ss          10  ajaṅghāla ¦ Adj. ungewandt auf den Füßen. Nom. abstr. ˚tva n. {part=,seq=806,type=,n=2}
+dan                    -> dann                   4469             10  avasādanā ¦ f. Herabsetzung, Erniedrigung, Demütigung, ; {part=,seq=5507,type=,n=3}
+simpl                  -> simpel                 108              10  karś ¦ , ˚krśayate [lies karśayate ] mager erscheinen lassen, c . Mit ava , Simpl. ( ˚kṛśn
+sama                   -> same                   35                9  ac ¦ schmücken, — Mit ud, udañcant herauskommend, ; udañcita emporgehoben, — Mit samud sic
+bewußtsein             -> bewusstsein            1996-ss           9  apratibodhavant ¦ Adj. ohne Bewußtsein, -x- Intelligenz, {part=,seq=3794,type=,n=2}
+muß                    -> muss                   1996-ss           9  abhiyogya ¦ Adj. worauf großer Fleiß gewendet werden muß, — gewendet wird, {part=,seq=4204
+condition              -> kondition              1901-c            8  ° aṅgāratā ¦ condition of charcoal, {part=,seq=655,type=˚,n=2}
+hay                    -> hai                    99                8  atanu ¦ 2. m. der Liebesgott, auch (in atanūtkaṇṭhayā: atanuḥ Kāmaḥ; atanur analpā votkaṇṭ
+vali                   -> phalli                 20                8  Adhikaraṇaśāstra ¦ n., Adhikaraṇasārāvali f. Titel von Werken, {part=,seq=1732,type=,n=3}
+ane                    -> ohne                   107               8  anelamūka ¦ [pw *aneḍamūka ] Adj. taubstumm, (= vaktuṃ śrotuṃ cāsamarthās … kokilāḥ ); woh
+folg                   -> folge                  315               8  ° aruṇamaṇi ¦ m. Rubin, [245,5; s. folg.!] 367,4; II,4,1; 82,6; ; XXIX,13; XLI,50; ; XVIII
+arth                   -> art                    1901-th           8  arthāgama ¦ , lies m. statt n. {part=,seq=4987,type=,n=1}
+asth                   -> ast                    1901-th           8  Aṣṭasthānaparīkṣā ¦ f. Titel eines Werkes, {part=,seq=6077,type=,n=2}
+from                   -> fromm                  1128              7  agādha ¦ Adj. ˚free from greed, {part=,seq=384,type=,n=3}
+haas                   -> hase                   313               7  ajñāna ¦ n. ˚Mangel des Bewußtseins, [Haas "inconsciousness"]. {part=,seq=870,type=,n=2}
+maße                   -> masse                  1996-ss           7  atyūrjitam ¦ Adv. gar sehr, in hohem Maße, {part=,seq=1503,type=,n=2}
+mißgunst               -> missgunst              1996-ss           7  * apathakalpanā ¦ bedeutet nach Neid, Mißgunst. {part=,seq=3340,type=*,n=2}
+red                    -> rede                   1120              7  ° aruṇāy ¦ to be or become red, {part=,seq=4871,type=˚,n=2}
+lamb                   -> lamm                   598               7  avālamba ¦ m. = apālambá , {part=,seq=5576,type=,n=2}
+genuß                  -> genuss                 1996-ss           6  atisaṃbhoga ¦ m. ein großer Genuß, {part=,seq=1383,type=,n=2}
+sen                    -> sein                   239               6  * anīkastha ¦ m. nach dem Ko. ˚ = senāpati [pw. "Abrichter von Elefanten"; so wohl besser!
+roß                    -> ross                   1996-ss           6  1. árvan ¦ , die adj. Bedeutung zu streichen. In der Bed. Roß [ ] {part=,seq=5101,type=,n=
+paßt                   -> passt                  1996-ss           6  1. alakṣaṇa ¦ auch: kein Kennzeichen, ; eine Definition, die auf etwas (Gen.) nicht paßt, 
+lap                    -> lab                    22                6  Kālapṛṣṭa ¦ ( ˚ṣṭha die anderen Ausgaben), m. N. pr. eines Schlangendämons, {part=,seq=106
+kil                    -> kiel                   52                6  * kilāḍa ¦ und *kilāla wohl = kilāṭa oder kīlāla 1. {part=,seq=10820,type=*,n=2}
+tur                    -> tür                    32                6  ° cāturāśrama ¦ (n.) die vier Stände, {part=,seq=13390,type=˚,n=2}
+dau                    -> dow                    30                6  jīvāntarhita ¦ Adj. nach dem Komm. = jīvatāntarhitaḥ = pitāmahādiḥ pitrādau jīvati . {part
+naß                    -> nass                   1996-ss           5  akilina ¦ Adj. nicht feucht, -x- naß, {part=,seq=114,type=,n=2}
+wallnußbaum            -> Wallnussbaum           1996-ss           5  * akṣoṭa ¦ m. Wallnußbaum, v.u. (Ko.); {part=,seq=321,type=*,n=2}
+hirt                   -> hirte                  1324              5  1. agopāla ¦ m. kein Hirt, ein fehlender Hirt,238,4. {part=,seq=420,type=,n=2}
+cant                   -> kant                   1901-c            5  ac ¦ schmücken, — Mit ud, udañcant herauskommend, ; udañcita emporgehoben, — Mit samud sic
+häßlich                -> hässlich               1996-ss           5  ativirūpa ¦ Adj. (f. ā ) sehr mißgestaltet, -x- unförmlich, -x- häßlich. {part=,seq=1290,t
+dam                    -> damen                  29                5  adhiṣādam ¦ Absol. sich daraufsetzend, ; vgl. (16,4. 6). {part=,seq=1830,type=,n=3}
+one                    -> ohne                   2175              5  ° adhomukhībhū ¦ to cast down one's face, {part=,seq=1876,type=˚,n=2}
+veranlaßt              -> veranlasst             1996-ss           5  anaupādhika ¦ Adj. uneigennützig. —Nicht durch die Verbindung mit einem anderen Dinge vera
+tir                    -> tier                   20                5  anyatarato'tirātra ¦ Adj. nur von [Page043.3] einer Seite einen atirātra habend, {part=,se
+phil                   -> viel                   53                5  Amṛtaturaṃga ¦ (wohl ˚taraṃga ) m. Titel eines Werkes des Kṣemendra, Sitzungsber. d. phil.
+say                    -> sei                    86                5  avataṃsay ¦ als Kranz verwenden. śūlāvataṃsita so v.a. gepfählt, {part=,seq=5321,type=,n=3
+excellent              -> exzellent              1901-c            5  * āhatalakṣaṇa ¦ Adj. excellent, famous, {part=,seq=7668,type=*,n=2}
+schößling              -> schössling             1996-ss           5  kandalī ¦ ˚Schößling, — ˚Stengel s. kaṇṭhakandalī . — ? — s. karakandalī . {part=,seq=9839
+nus                    -> nuss                   62                5  kālanirmāṇayodhin ¦ Adj. nach = samayānusāriyuddhakuśala . {part=,seq=10644,type=,n=3}
+astha                  -> asta                   1901-th           5  ° kulakūṭastha ¦ m. = kulasya Śākyavaṃśasya kūṭasthaḥ mūlapuruṣaḥ , b . {part=,seq=11090,t
+kokosnußbaum           -> Kokosnussbaum          1996-ss           5  ° kūrcakesara ¦ m. Kokosnußbaum, v.u. (Ko.); {part=,seq=11256,type=˚,n=2}
+sapphir                -> saphir                 139               5  ° balabhinmaṇi ¦ m. Sapphir, c . {part=,seq=20333,type=˚,n=2}
+ißt                    -> isst                   1996-ss           4  agrabhuj ¦ m. die Sonne, — ˚Brahmane (der beim Opfer zuerst ißt), {part=,seq=526,type=,n=3
+erguß                  -> erguss                 1996-ss           4  atipūra ¦ m. ein heftiger Strom, -x- Erguß, (68,12). {part=,seq=1142,type=,n=2}
+rha                    -> rhe                    36                4  aduḥkhārha ¦ Adj. kein Leid verdienend, 20. 27. 34. {part=,seq=1582,type=,n=2}
+adr                    -> ader                   65                4  ° adrāvaka ¦ Adj. nicht flüssig, Y 36. {part=,seq=1643,type=˚,n=1}
+kniee                  -> knie                   993               4  anirbhuja ¦ Adj. (f. ā ), wobei man die Hände auf die Kniee legt, {part=,seq=2545,type=,n=
+feet                   -> fett                   20                4  ° anuddhāna ¦ not bathed? 286,5 anuddhānapādaḥ without having bathed my feet? {part=,seq=2
+book                   -> bock                   63                4  anubandhin ¦ ˚von Folgen begleitet, — m. ˚author of a book, {part=,seq=2824,type=,n=3}
+knieen                 -> knien                  723               4  antarjānu ¦ 2. mit den Händen zwischen den Knieen, Hemādri 1,100,11. {part=,seq=3107,type=
+citi                   -> zitieren               32                4  apacita ¦ n. Vergeltung, Genugtuung, ˚citi v.l. {part=,seq=3317,type=,n=2}
+unermeßlich            -> unermesslich           1996-ss           4  amāna ¦ Adj. ˚unermeßlich, {part=,seq=4489,type=,n=1}
+identification         -> identifikation         1901-c            4  ardhaśaphara ¦ m. *a sort of fish of uncertain identification, {part=,seq=5059,type=,n=2}
+sant                   -> sand                   97                4  avihiṃsant ¦ Adj. der niemand ein Leid zufügt, {part=,seq=5773,type=,n=2}
+bewußtlosigkeit        -> bewusstlosigkeit       1996-ss           4  asaṃprajñāta ¦ Adj. bewußtlos, Komm. zu f. ˚yogin m. ein Yogin im Zustande der Bewußtlosig
+einschluß              -> einschluss             1996-ss           4  ādadhīci ¦ Adv. mit Einschluß von Dadhīci, {part=,seq=6969,type=,n=2}
+kokosnuß               -> kokosnuss              1996-ss           4  udañcana ¦ [nach dem Ko. *n.] ˚Kokosnuß, ; II,42,9. — n. ˚ = prakaṭana , {part=,seq=8367,t
+sproß                  -> spross                 1996-ss           4  udbheda ¦ m. v.u. (Ko.) *Sproß; ˚ = mañjarī I,105,5. {part=,seq=8521,type=,n=2}
+abschluß               -> abschluss              1996-ss           4  evaṃpariṇāma ¦ Adj. einen solchen Abschluß habend, {part=,seq=9413,type=,n=2}
+butterfaß              -> Butterfass             1996-ss           4  kalaśī ¦ 1. f. Topf etc. auch *f. Butterfaß, ; {part=,seq=10219,type=,n=2}
+kek                    -> keck                   37                4  ° kekāda ¦ ? {part=,seq=11436,type=˚,n=1}
+that                   -> tat                    1901-th           4  * gaṇanīya ¦ Adj. that should be reckoned, {part=,seq=12211,type=*,n=2}
+ceta                   -> zeta                   1901-c            4  * cetaḥparyāyajñāna ¦ n. Kenntnis dessen, was im Geiste Anderer vorgeht, {part=,seq=13641,
+alls                   -> als                    274               4  paśyantī ¦ f. ˚"die schauende" ( vāc ), im die zweite Erscheinungsform der parā (s. d.), d
+rath                   -> rat                    1901-th           4  rathāgra ¦ n. Vorderteil eines Wagens, {part=,seq=22782,type=,n=2}
+hel                    -> hell                   118               4  rīḍhā ¦ = avajñā oder prahāra , Haravijaya 8,26; 13,33. [46,50.] — = ˚helā [im Komp. = 'sp
+gefaßt                 -> gefasst                1996-ss           3  akarṇagṛhīta ¦ Adj. nicht am Ohr gefaßt, {part=,seq=44,type=,n=2}
+jah                    -> ja                     81                3  ° akūṭātman ¦ Adj. = nirvyājahṛdaya und aparvatasvabhāva , {part=,seq=147,type=˚,n=2}
+tac                    -> tag                    37                3  akṛtacūḍa ¦ Adj. an dem die Zeremonie des Haarschneidens noch nicht vollzogen ist, {part=,
+bewußtseins            -> bewusstseins           1996-ss           3  ajñāna ¦ n. ˚Mangel des Bewußtseins, [Haas "inconsciousness"]. {part=,seq=870,type=,n=2}
+sohne                  -> sonne                  20                3  aṇika ¦ Adj., : vom Sohne lernend, nach Anderen: Geld verleihend. — Zu streichen, da ṛṇika
+life                   -> live                   66                3  ° adaśamīstha ¦ not having reached the full span of life, {part=,seq=1552,type=˚,n=2}
+nature                 -> natur                  572               3  adhikaraṇa ¦ n. ˚Örtlichkeit (?) in karaṇam adhikaraṇam , "the nature and place of the dee
+gewißheit              -> gewissheit             1996-ss           3  adhyavasitatā ¦ f. das zur Gewißheit Erhobensein, {part=,seq=1893,type=,n=2}
+prozeß                 -> prozess                1996-ss           3  1. anuttara ¦ n. eine mangelhafte Antwort in einem Prozeß, in Mit. 16. Nom. abstr. ˚tva n.
+einfluß                -> einfluss               1996-ss           3  anuparāga ¦ Adj. nicht unter dem Einfluß irgendeiner Leidenschaft stehend, {part=,seq=2767
+eyes                   -> eies                   archaic-ey        3  ° apunarunmīlana ¦ Adj. never again opening the eyes, {part=,seq=3677,type=˚,n=2}
+abr                    -> aber                   21                3  abrāhmaṇya ¦ *Mangel an Achtung vor Brahmanen, {part=,seq=4010,type=,n=2}
+überfluß               -> Überfluss              1996-ss           3  arikta ¦ 1. Nom. abstr. ˚tā f. — Auch: nicht mit leerer Hand und: im Überfluß vorhanden. {
+rauh                   -> rau                    1996              3  aruṇa ¦ Adj. rauh, grob (Speise), Nach einem Instr. oder am Ende eines Komp. voller, stark
+forth                  -> fort                   1901-th           3  ° āghrātuka ¦ Adj. breathing forth, {part=,seq=6767,type=˚,n=2}
+pfeilschußweite        -> pfeilschussweite       1996-ss           3  iṣupāta ¦ m. Pfeilschußweite, {part=,seq=7864,type=,n=2}
+schößlingen            -> schösslinge            1996-ss           3  utpallava ¦ Adj. mit aufsprießenden Schößlingen, {part=,seq=8260,type=,n=2}
+abfluß                 -> abfluss                1996-ss           3  udakprasravaṇa ¦ Adj. nach Norden einen Abfluß habend, Vgl. udakprasravaṇānvita . {part=,s
+oda                    -> ode                    51                3  ūnaṣodaśavarṣa ¦ Adj. noch nicht 16 Jahre alt, {part=,seq=9036,type=,n=2}
+schluß                 -> schluss                1996-ss           3  evam ¦ , evam evo geradeso (am Schluß eines Abschnittes), {part=,seq=9410,type=,n=3}
+hibiscus               -> hibiskus               1901-c            3  * oḍrapuṣpa ¦ n. Blüte von Hibiscus rosa sinensis, v.u. (Ko.); Y 234. {part=,seq=9475,type
+kanth                  -> kant                   1901-th           3  kanthā ¦ , vgl. kāvya˚ , Bālarāmāyaṇa 1,12 d . [Z.] {part=,seq=9816,type=,n=2}
+stengel                -> stängel                1996              3  kandalī ¦ ˚Schößling, — ˚Stengel s. kaṇṭhakandalī . — ? — s. karakandalī . {part=,seq=9839
+kunt                   -> kund                   332               3  kuntala ¦ ˚ = kuntahasta (kuntāṃl lānti gṛhṇanti) , — m. *Trinkschale, 11. 15. 20. 25. 30.
+mißernte               -> missernte              1996-ss           3  kúyava ¦ 3. die Bed. Mißernte paßt nicht in den Zusammenhang = (142,1) = Aufrecht vermutet
+kel                    -> kehl                   26                3  ° kelīdharā ¦ Spielplatz, {part=,seq=11480,type=˚,n=1}
+kol                    -> kohl                   53                3  kolākṣa ¦ n. ˚eine Frucht? E 832 (P). {part=,seq=11577,type=,n=1}
+foetus                 -> fötus                  154               3  garbhasaṃskāra ¦ m. Weihe des Foetus, eine best. Zeremonie, zu {part=,seq=12374,type=,n=3}
+carma                  -> karma                  1901-c            3  ° carmaṭaka ¦ m. Asket, v.u. (Ko.). {part=,seq=13348,type=˚,n=2}
+umfaßt                 -> umfasst                1996-ss           3  citta ¦ n. im ˚das Denkorgan der Einzelseele, das die drei inneren Sinne (buddhi, ahaṃkāra
+schaar                 -> schar                  2819              3  dhāṭī ¦ ˚Menge, Schaar, v.u. (Ko.); 605,6 v.u. (Ko.). — ˚ = vājivāhinī , Reiterheer, {part
+schuß                  -> schuss                 1996-ss           3  ° puṅkhānupuṅkha ¦ Schuß auf Schuß, [Pārvatīpariṇaya II,17 = p. 28 meiner Ausgabe hat das 
+liebesgenuß            -> liebesgenuss           1996-ss           3  ° bhogāṅka ¦ Subst. m. eine Spur vom Liebesgenuß, a . {part=,seq=21070,type=˚,n=2}
+meßschnur              -> messschnur             1996-ss           3  ° mānarajju ¦ Meßschnur, c . {part=,seq=21829,type=˚,n=1}
+wunsche                -> wünsche                762               2  akṣayya ¦ , akṣayyodaka n. Wasser, begleitet von dem Wunsche, daß es nie mangeln möge, ; a
+crocus                 -> krokus                 1901-c            2  agniśikha ¦ m. *Crocus sativus, {part=,seq=474,type=,n=1}
+math                   -> matt                   152               2  aṅkapāśa ¦ m. Kombination (math.) S. 110. {part=,seq=593,type=,n=2}
+ath                    -> at                     1901-th           2  átha ¦ 2. athāpi oder (nach yady eva ob nun), — 13. atha vaitarhi dennoch (im Nachsatz nac
+eßbar                  -> essbar                 1996-ss           2  adanīya ¦ Adj. eßbar in anadanīya (s.d.). {part=,seq=1536,type=,n=2}
+rab                    -> herab                  152               2  adūrabāndhava ¦ und adūre˚ m. ein naher Verwandter, Vasiṣṭha 15,6. {part=,seq=1592,type=,n
+ohre                   -> ohr                    915               2  adhikarṇam ¦ Adv. am Ohre, ˚ins Ohr, (hier zugleich = adhikam ṛṇam! ). {part=,seq=1734,typ
+eßlust                 -> Esslust                1996-ss           2  anannaśraddhājanana ¦ (Konj.) Adj. keine Eßlust machend, den Appetit vertreibend, (Calc. A
+erfaßt                 -> erfasst                1996-ss           2  anabhipanna ¦ Adj. nicht gepackt. — erfaßt, {part=,seq=2177,type=,n=2}
+überdruß               -> überdruss              1996-ss           2  anavagīta ¦ Adj. nicht zum Überdruß geworden, {part=,seq=2254,type=,n=2}
+mißlungen              -> misslungen             1996-ss           2  anavasthita ¦ auch: nicht daseiend, ; nicht bleiben könnend, Ragh 19,31; mißlungen, {part=
+hant                   -> hand                   64                2  anistiṣṭhant ¦ Adj. etwas nicht zu Ende bringend, auf halbem Wege stehen bleibend, {part=,
+author                 -> autor                  1901-th           2  anubandhin ¦ ˚von Folgen begleitet, — m. ˚author of a book, {part=,seq=2824,type=,n=3}
+ausguß                 -> ausguss                1996-ss           2  abilavant ¦ Adj. keinen Ausguß habend (Topf), Komm. zu {part=,seq=3975,type=,n=3}
+mißgeburt              -> missgeburt             1996-ss           2  abhíjanitos ¦ , lies Gen. Inf. (zu ergänzen īśvaraḥ ). Der Sinn ist: es könnte ihm eine Mi
+affection              -> affektion              547               2  ° abhyanuvṛtti ¦ probably error for atyanuvṛtti, excessive affection, {part=,seq=4319,type
+reception              -> rezeption              1901-c            2  abhyupapatti ¦ f. Glaubensbekenntnis, — ˚friendly reception, shelter, {part=,seq=4364,type
+amal                   -> einmal                 158               2  ° amalāṅgī ¦ eine Frau mit reinem (= tadellosem) Körper, a . {part=,seq=4479,type=˚,n=2}
+kugelamaranth          -> Kugelamarant           1901-th           2  * amlātaka ¦ n. puṣpabhedaḥ karaṇṭikā-puṣpabhedo vā (pw Kugelamaranth), {part=,seq=4661,ty
+ausschluß              -> ausschluss             1996-ss           2  avakarṇaprāvṛta ¦ Adj. verhüllt mit Ausschluß der Ohren, Vgl. sakarṇaprāvṛta . — Statt des
+aufguß                 -> aufguss                1996-ss           2  avajvāla ¦ m. heißer Aufguß, zu {part=,seq=5310,type=,n=1}
+lup                    -> lupe                   26                2  avalupta ¦ 1. Adj. s. u. 1. lup mit ava . — 2. *n. Nom. act. vṛkāva˚ das Heranspringen nac
+mißtrauen              -> misstrauen             1996-ss           2  aviśaṅkita ¦ Adj. 1. keine Scheu empfindend, nicht ängstlich, kein Bedenken habend, ; ; ; 
+stan                   -> stehen                 34                2  aṣṭāstanā ¦ Adj. f. achtzitzig, {part=,seq=6101,type=,n=1}
+mißlingen              -> misslingen             1996-ss           2  asaṃpatti ¦ f. das Nichtausreichen, Zuwenigsein, Hemādri 1,645,10. — Auch: das Mißlingen, 
+mißbilligen            -> missbilligen           1996-ss           2  asādhu ¦ 4. mit man mißbilligen, {part=,seq=6313,type=,n=2}
+häßlichkeit            -> hässlichkeit           1996-ss           2  * ārūpya ¦ n. das Mißgestaltetsein, Häßlichkeit, {part=,seq=7370,type=*,n=2}
+transactions           -> transaktion            294               2  * īlī ¦ , eine Art Schwert, [Auch Haravijaya 43,176. Vgl. Pāli illī? Kuhn's Beiträge 19; B
+congress               -> kongress               1901-c            2  * īlī ¦ , eine Art Schwert, [Auch Haravijaya 43,176. Vgl. Pāli illī? Kuhn's Beiträge 19; B
+ricinus                -> rizinus                1901-c            2  ° urubūka ¦ (m. n.) = uruvūka , Ricinus communis. {part=,seq=8945,type=˚,n=2}
+hot                    -> hat                    443               2  ° uṣṇāy ¦ to be hot, {part=,seq=9014,type=˚,n=1}
+mißgeschick            -> missgeschick           1996-ss           2  kālakarṇī ¦ 1. das personifizierte Mißgeschick, f. kālakarṇi˚ 40,16 ff. {part=,seq=10628,t
+faßt                   -> fasst                  1996-ss           2  ° kuḍmalapāṭalī ¦ [so faßt der Ko. zusammen, doch könnte man kuḍmala auch mit dem Vorangeh
+kalkspath              -> Kalkspat               1901-th           2  kṣīrin ¦ m. auch *Kalkspath, {part=,seq=11876,type=,n=2}
+sodaß                  -> sodass                 1996-ss           2  gūḍhodaka ¦ wohl ein Wassergefäß mit einem engen Halse, sodaß das Wasser darin nicht zu se
+grath                  -> grat                   1901-th           2  1. grath ¦ grathayate = Simpl. granthayate ed. Calc. 4,262. — Mit ud, udgṛṇatti (!) {part=
+shawl                  -> schal                  1901              2  ° chālā ¦ f. a shawl, v.u. — Die Ausgabe hat chālāprabhṛti grāmadvādaśakaṃ dadau , so daß 
+mißraten               -> missraten              1996-ss           2  jan ¦ 1. jajānat ( ). jajñivān lebte auf, wurde wieder lebendig, — Mit ava, ˚jāta = apajāt
+gepreßt                -> gepresst               1996-ss           2  jámbhasuta ¦ Adj. mit dem Gebiß gepreßt, ausgekaut. {part=,seq=13926,type=,n=2}
+jhar                   -> jahr                   135               2  jhar ¦ mit ˚nis herabfließen, (Ko.). {part=,seq=14300,type=,n=2}
+vermittelst            -> vermittels             1899              2  ° talāvapāta ¦ Versenkung des Fußbodens (vermittelst einer mechanischen Vorrichtung), ( ya
+taur                   -> tour                   21                2  ° taurūpa ¦ n. eine Art Sandelholz, (ed. Mysore 1919 liest taurūṣa .) Vgl. , S. 111, Anm. 
+dreien                 -> drei                   699               2  triyukta ¦ Adj. mit Dreien bespannt, {part=,seq=15173,type=,n=2}
+schnuren               -> schnüren               70                2  ° triśara ¦ [vgl. pw trisara! ] aus drei Schnuren bestehend, {part=,seq=15201,type=˚,n=2}
+türverschluß           -> Türverschluss          1996-ss           2  ° dvārapuṭa ¦ m. Türverschluß, {part=,seq=16125,type=˚,n=2}
+rasth                  -> rast                   1901-th           2  dvārasthūṇā ¦ f. = dvārbāhu , Komm. zu {part=,seq=16129,type=,n=2}
+wüste                  -> wüsste                 566               2  ° dhanvabhūmi ¦ f. Wüste, /7 v.u. (Ko.). {part=,seq=16264,type=˚,n=2}
+nit                    -> nicht                  31752             2  * nitīraṇa ¦ n. etwa Entscheidung, {part=,seq=16997,type=*,n=2}
+genußmittel            -> Genussmittel           1996-ss           2  niṣpramanda ¦ ˚abgenutzte Salbe, abgenutztes Genußmittel? Vgl. pramanda . {part=,seq=17421
+nud                    -> nut                    39                2  1. nud ¦ mit prativi vertreiben, verscheuchen, ( v.l. tud ). — dass., {part=,seq=17543,typ
+flecke                 -> fleck                  764               2  padmaka ¦ m. n. *rote Flecke beim Elefanten, zu ; ; a . — n. ˚ = kusumbha , (Ko.); vgl. (K
+round                  -> rund                   33                2  ° parivartakam ¦ turning round, {part=,seq=18247,type=˚,n=2}
+amulet                 -> amulett                75                2  ° pavitrikā ¦ a kind of ornament or amulet, {part=,seq=18423,type=˚,n=2}
+blaßrot                -> blassrot               1996-ss           2  ° pāṇḍurakta ¦ Adj. blaßrot, {part=,seq=18542,type=˚,n=1}
+mass                   -> maß                    583               2  puṣpaketu ¦ ˚mass of flowers, — 3. c) N. pr. eines Fürsten von Puṣpabhadra, {part=,seq=190
+betelnuß               -> Betelnuss              1996-ss           2  * pūgaphala ¦ n. Betelnuß, {part=,seq=19080,type=*,n=1}
+thv                    -> tv                     1901-th           2  ° pṛthvīpraśāstar ¦ m. Fürst, t. o. 4 [p. 17,8]. {part=,seq=19167,type=˚,n=2}
+ausfluß                -> ausfluss               1996-ss           2  praghāta ¦ m. ˚Absturz, Ausfluß mit starkem Gefälle, {part=,seq=19317,type=,n=2}
+meth                   -> met                    1901-th           2  madhūttha ¦ n. auch Meth, zu f. {part=,seq=21390,type=,n=2}
+secret                 -> sekret                 1901-c            2  marman ¦ n. *= rahasya , secret, {part=,seq=21589,type=,n=2}
+tintenfaß              -> Tintenfass             1996-ss           2  * maṣidhāna ¦ n. Tintenfaß, (Ko.). {part=,seq=21624,type=*,n=2}
+chol                   -> kohl                   24                2  ° riñcholikā ¦ f. Reihe ["riñcholī paṅktir āvalī", iti Trikāṇḍaśeṣaḥ] , b . {part=,seq=229
+vast                   -> fast                   235               2  ° vastūtthāna ¦ m. = ˚tthāpana , a . — ˚n. ( pw f.) Bez. eines Teiles der ārabhaṭī , a ; b
+sag                    -> sage                   767               2  vilāsagṛha ¦ n. auch p. 11, Z. 4. {part=,seq=24420,type=,n=1}
+himmelsfluß            -> Himmelsfluss           1996-ss           2  ° vyomāpagā ¦ Himmelsfluß, a . {part=,seq=24998,type=˚,n=1}
+character              -> charakter              2203              2  ° śauryaśālitā ¦ heroic character, {part=,seq=25646,type=˚,n=2}
+paß                    -> pass                   1996-ss           2  samudra ¦ Adj. ˚verschlossen, — ˚Mit einem Paß versehen, {part=,seq=26410,type=,n=3}
+saur                   -> sauer                  296               2  Saurāṣṭrī ¦ ˚eine Frau aus Surāṣṭra, {part=,seq=27387,type=,n=2}
+unermeßlichem          -> unermesslichem         1996-ss           1  akalitātman ¦ Adj. von unermeßlichem Geiste, {part=,seq=65,type=,n=2}
+cod                    -> code                   30                1  ° akṣīva ¦ n. v.u. (Ko.) = akṣība . cod{part=,seq=309,type=˚,n=2}
+cantor                 -> kantor                 1901-c            1  akṣauhiṇī ¦ auch: die Zahl 1 mit 20 Nullen, Cantor 1,517. — in der Bed.: ein vollständiges
+product                -> produkt                1904              1  agrānta ¦ the product added to the ultimate term, {part=,seq=546,type=,n=2}
+unfaßbarkeit           -> unfassbarkeit          1996-ss           1  ajñeyatva ¦ n. Unerkennbarkeit, Unfaßbarkeit. {part=,seq=873,type=,n=2}
+thief                  -> tief                   1901-th           1  ataskará ¦ Adj. frei von Räubern, — ˚not a thief, {part=,seq=985,type=,n=3}
+gescheidt              -> gescheit               120               1  aticatura ¦ (f. ā ) auch: überaus geschickt oder gescheidt, Caurap. (A) 4. {part=,seq=1040
+gemißbilligt           -> gemissbilligt          1996-ss           1  atidūṣita ¦ Adj. sehr gemißbilligt, im Komm. zu {part=,seq=1100,type=,n=2}
+keen                   -> kein                   112               1  ° atipaṭīyas ¦ very keen, {part=,seq=1132,type=˚,n=1}
+maßen                  -> massen                 1996-ss           1  atibhayaṃkaram ¦ Adv. über die Maßen fürchterlich, {part=,seq=1179,type=,n=2}
+salzgenuß              -> salzgenuss             1996-ss           1  atilavaṇasātmya ¦ Adj. zu sehr an Salzgenuß gewöhnt, {part=,seq=1253,type=,n=2}
+mißgestaltet           -> missgestaltet          1996-ss           1  ativirūpa ¦ Adj. (f. ā ) sehr mißgestaltet, -x- unförmlich, -x- häßlich. {part=,seq=1290,t
+geschlechtsgenuß       -> geschlechtsgenuss      1996-ss           1  ativyavāya ¦ m. übertriebener Geschlechtsgenuß, {part=,seq=1321,type=,n=2}
+festgruß               -> festgruss              1996-ss           1  atiśri ¦ Adj. die Śrī übertreffend, Festgruß 19. {part=,seq=1354,type=,n=2}
+mißvergnügen           -> missvergnügen          1996-ss           1  atuṣṭikara ¦ Adj. Mißvergnügen verursachend, {part=,seq=1439,type=,n=2}
+mißtönig               -> misstönig              1996-ss           1  atyakṣara ¦ Adj. unartikuliert. śaldāḥ , Oder: überlaut, mißtönig, garstig, oder allzu lan
+pathe                  -> pate                   1901-th           1  [adarśanapatha] ¦ , ˚pathe vyavasthāpay jemandem den Anblick verwehren (als Zeichen der Un
+annam                  -> annahm                 79                1  anāka ¦ ? v.u. (Ko.; parimitam [annam] anākahīnam ). {part=,seq=2322,type=,n=2}
+stam                   -> stamm                  197               1  anāyasta ¦ Adj. wobei man sich nicht anstrengt. ˚stānana Adj. (f. ā ) so v.a. das Gesicht 
+schlußsatz             -> schlusssatz            1996-ss           1  anidhana ¦ Adj. ohne den nidhana genannten Schlußsatz, {part=,seq=2502,type=,n=3}
+vergeßlich             -> vergesslich            1996-ss           1  anirākariṣṇu ¦ Adj. nicht vergeßlich, {part=,seq=2527,type=,n=2}
+ungewiß                -> ungewiss               1996-ss           1  aniścita ¦ Adj. unbestimmt, ungewiß. Nom. abstr. ˚tā f., {part=,seq=2580,type=,n=2}
+kloße                  -> klosse                 1996-ss           1  anupiṇḍam ¦ Adv. bei jedem Kloße, {part=,seq=2804,type=,n=2}
+wißbegierig            -> wissbegierig           1996-ss           1  anupraṣṭar ¦ Nom. ag. der sich nach allem erkundigt, wißbegierig, {part=,seq=2816,type=,n=
+schlußfolgerung        -> schlussfolgerung       1996-ss           1  anumita ¦ 1. Adj. s. unter 3. mā mit anu . — 2. n. Schlußfolgerung, Zit. bei zu , Vārtt. 5
+under                  -> unter                  1702              1  anūka ¦ m. n. ˚ = sādṛśya , ; Vgl. sānūkatā! — ˚horse's under lip, {part=,seq=2958,type=,n
+ders                   -> des                    285               1  anyo'nyamithuna ¦ Adj. Pl. paarweise lebend, — ˚bhāva m. Aniruddha zu — ˚vṛtti f. ders. zu
+mißfallens             -> missfallens            1996-ss           1  apadṛṣṭi ¦ f. ein Blick des Mißfallens, {part=,seq=3351,type=,n=2}
+unwiderbringlich       -> unwiederbringlich      24                1  * apratyuddhārya ¦ Adj. unwiderbringlich, {part=,seq=3854,type=*,n=2}
+mißstimmung            -> missstimmung           1996-ss           1  apramada ¦ m. Unlust, Mißstimmung, Nach Adj. = pramadayā striyā hīnaḥ , d. i. ūrdhvaretas 
+mißvergnügt            -> missvergnügt           1996-ss           1  aprītamanas ¦ Adj. mißvergnügt, {part=,seq=3927,type=,n=2}
+unmeßbar               -> unmessbar              1996-ss           1  amāpya ¦ Adj. unmeßbar, ; {part=,seq=4496,type=,n=2}
+arch                   -> arche                  232               1  arch ¦ mit ava, avā́rchati (!) , avārchet — Mit ā Schaden nehmen, (118,19), wo yádārcháti 
+plume                  -> blume                  21                1  ardhacandra ¦ m. ˚halbmondförmige Verzierung an der Rüstung des Elefanten, ; *eine Art Näg
+entschluß              -> entschluss             1996-ss           1  * arpaṇā ¦ f. Richtung der Gedanken, Entschluß, {part=,seq=5088,type=*,n=2}
+budha                  -> buddha                 20                1  Alaṃpura ¦ n. und Alaṃbudha n. N. pr. zweier tīrtha, {part=,seq=5171,type=,n=2}
+erdklößen              -> erdklossen             1996-ss           1  aloṣṭaka ¦ Adj. (f. ā ) frei von Erdklößen. {part=,seq=5213,type=,n=1}
+faßbar                 -> fassbar                1996-ss           1  avibhāvya ¦ Adj. nicht wahrnehmbar, -x- vernehmbar, -x- erkennbar, -x- faßbar. {part=,seq=
+unterlaß               -> unterlass              1996-ss           1  avirāmam ¦ Adv. ohne Unterlaß, {part=,seq=5714,type=,n=1}
+prozeßunfähig          -> prozessunfähig         1996-ss           1  avyavahārya ¦ Adj. 1. ˚unstatthaft, ungültig (Schenkung), — 2. ˚prozeßunfähig, ebenda 175,
+nichtnaßmachen         -> nichtnassmachen        1996-ss           1  aśiraḥsnāna ¦ n. das Nichtnaßmachen des Kopfes, {part=,seq=5904,type=,n=2}
+rößlein                -> rösslein               1996-ss           1  aśvaka ¦ Rößlein (als Kinderspielzeug), — *N. pr. eines Mönches, = Aśvajit , {part=,seq=59
+roßarzt                -> rossarzt               1996-ss           1  aśvapa ¦ m. ˚Reiter, ˚Roßarzt, {part=,seq=6009,type=,n=2}
+collection             -> Kollektion             1901-c            1  ° aṣṭamaṅgalaka ¦ n. collection of eight lucky objects oder bracelet, {part=,seq=6060,type
+bewußtlos              -> bewusstlos             1996-ss           1  asaṃprajñāta ¦ Adj. bewußtlos, Komm. zu f. ˚yogin m. ein Yogin im Zustande der Bewußtlosig
+mißbehagen             -> missbehagen            1996-ss           1  asukhāy(ate) ¦ Unlust -x-, Mißbehagen empfinden, kein Gefallen finden, {part=,seq=6366,typ
+tagesabschluß          -> tagesabschluss         1996-ss           1  ahaḥsaṃsthā ¦ f. Tagesabschluß, {part=,seq=6537,type=,n=2}
+verfaßt                -> verfasst               1996-ss           1  ātijagata ¦ Adj. im Metrum atijagatī verfaßt, Ko. zu {part=,seq=6903,type=,n=2}
+selbstgenuß            -> selbstgenuss           1996-ss           1  ātmaprīti ¦ f. Selbstgenuß, Selbstbefriedigung. {part=,seq=6932,type=,n=2}
+dis                    -> dies                   3739              1  Āmnāyakriyārthatvādisūtravicāra ¦ m. und Āmnāyaṣaṭka n. Titel von Werken, {part=,seq=7261,
+mißgestaltetsein       -> missgestaltetsein      1996-ss           1  * ārūpya ¦ n. das Mißgestaltetsein, Häßlichkeit, {part=,seq=7370,type=*,n=2}
+naßwerden              -> nasswerden             1996-ss           1  ārdrībhāva ¦ m. das Naßwerden, {part=,seq=7404,type=,n=2}
+rhat                   -> rat                    250               1  ° ārhatābhāsa ¦ m. ein angehender Jaina-Heiliger, {part=,seq=7423,type=˚,n=2}
+riß                    -> riss                   1996-ss           1  āvraska ¦ m. Riß, Stelle, von der man etwas abgehauen hat, ˚ja Adj. auf einer solchen Stel
+distance               -> distanz                23                1  ° āṣṭāpada ¦ Adj. golden, āṣṭrādaṃṣṭrá , so zu betonen. 2. ās 9. katham āste tātaḥ so v.a.
+unbewußte              -> unbewusste             1996-ss           1  * āsaṃjñika ¦ n. das Unbewußte, Unbewußtheit, {part=,seq=7597,type=*,n=2}
+unbewußtheit           -> Unbewusstheit          1996-ss           1  * āsaṃjñika ¦ n. das Unbewußte, Unbewußtheit, {part=,seq=7597,type=*,n=2}
+itth                   -> itt                    1901-th           1  itthám ¦ , das Sternchen zu streichen. {part=,seq=7730,type=,n=1}
+sinnengenuß            -> sinnengenuss           1996-ss           1  indriyasevana ¦ n. Sinnengenuß, {part=,seq=7828,type=,n=2}
+kuhn                   -> kühn                   144               1  * īlī ¦ , eine Art Schwert, [Auch Haravijaya 43,176. Vgl. Pāli illī? Kuhn's Beiträge 19; B
+wasserfaß              -> wasserfass             1996-ss           1  ° udañjara ¦ n. Wasserfaß, nach Shama Sastri gleichbedeutend mit aliñjaru (aliñjara) . {pa
+weiheabschluß          -> weiheabschluss         1996-ss           1  ° uddīkṣā ¦ Weiheabschluß, 13. 19. {part=,seq=8473,type=˚,n=2}
+zuguß                  -> zuguss                 1996-ss           1  upaseka ¦ m. Zuguß, Komm. zu {part=,seq=8820,type=,n=2}
+kameel                 -> kamel                  241               1  ° uṣṭraka ¦ m. = uṣṭra (Kameel), {part=,seq=9000,type=˚,n=1}
+selbstbewußtsein       -> selbstbewusstsein      1996-ss           1  ūrjay ¦ , ūrjitam Adv. stolz, mit Selbstbewußtsein, (82,9). {part=,seq=9050,type=,n=2}
+absatze                -> absatz                 51                1  ekaparvan ¦ Adj. aus einem Absatze oder Gliede bestehend, {part=,seq=9219,type=,n=2}
+schlußgabe             -> schlussgabe            1996-ss           1  ekaviṣṭakṛt ¦ Adj. mit einer gemeinsamen Schlußgabe an Sviṣṭakṛt versehen. {part=,seq=9302
+capital                -> kapital                1901-c            1  kaṭaka ¦ m. ˚ = śikhara , — m. n. *Heer, ; 451,6; 574,1; 605,4; XLIII,20. 28; ; (Ko.); VII
+bag                    -> back                   32                1  ° kaṇṭhālaka ¦ bag, {part=,seq=9743,type=˚,n=1}
+opuntia                -> opuntie                65                1  kanthārikā ¦ f. wohl = kanthārī (eine Art Opuntia), {part=,seq=9817,type=,n=2}
+flußpferd              -> flusspferd             1996-ss           1  ° kariyādas ¦ m. Flußpferd, {part=,seq=10040,type=˚,n=1}
+beschluß               -> beschluss              1996-ss           1  * karmavācanā ¦ f. der Antrag -x-, der Beschluß in einer Versammlung des Kapitels der Mönc
+mißhandeln             -> misshandeln            1996-ss           1  karṣ ¦ mit ud ˚in Besitz nehmen, sich aneignen, — Streiche 6., da hier bījotkraṣṭā zu lese
+respect                -> respekt                483               1  kalyāṇābhiniveśin ¦ , merely a term of respect, {part=,seq=10326,type=,n=2}
+tötlich                -> tödlich                21                1  ° kārtānta ¦ Adj. auf den Tod bezüglich, tötlich, {part=,seq=10604,type=˚,n=2}
+cobra                  -> kobra                  1901-c            1  kāliya ¦ eine Schlangenart, Cobra, {part=,seq=10696,type=,n=1}
+verfaßten              -> verfassten             1996-ss           1  Kāśīśvara ¦ 1. m. a) Gebieter von Benares. — b) N. pr. eines Grammatikers. — 2. f. ī wohl 
+bischen                -> bisschen               980               1  kiṃcinmātra ¦ n. ein Weniges, Bischen, {part=,seq=10776,type=,n=2}
+speeren                -> sperren                111               1  ° kuntin ¦ Adj. mit Speeren bewaffnet, {part=,seq=10984,type=˚,n=2}
+seitengäßchen          -> seitengässchen         1996-ss           1  kumārga ¦ m. ˚Seitengäßchen, ; VIII,125. {part=,seq=11019,type=,n=2}
+perfect                -> perfekt                212               1  * kṛtamukha ¦ Adj. perfect, {part=,seq=11306,type=*,n=1}
+weltprozeß             -> weltprozess            1996-ss           1  kṛtya ¦ 1. c) wird auf kart zurückgeführt Beitr. 45. Dem Worte wird auch die Bedeutung vid
+ker                    -> kehr                   21                1  kerā ¦ f. eine best. Pflanze, {part=,seq=11466,type=,n=1}
+scheeren               -> scheren                433               1  keśavāpa ¦ n. das Scheeren des Haupthaares, [,7. 12. Nach Knauer ˚m. Haarschneider.] {part
+kaun                   -> kauen                  22                1  kaunāla ¦ Adj. (?) {part=,seq=11617,type=,n=1}
+ocean                  -> ozean                  1901-c            1  ° kṣīrodāy ¦ resemble the ocean of milk, {part=,seq=11882,type=˚,n=2}
+mineralog              -> mineraloge             37                1  * khanyavādin ¦ m. Mineralog, {part=,seq=12020,type=*,n=2}
+opp                    -> ob                     68                1  Gajendramokṣa ¦ m. Titel eines Werkes, Opp. cat. 1. {part=,seq=12180,type=,n=2}
+mutterschoß            -> mutterschoss           1996-ss           1  ° gavīnī ¦ Mutterschoß, c . {part=,seq=12423,type=˚,n=1}
+betelnußbaum           -> betelnussbaum          1996-ss           1  * gūvāka ¦ m. Betelnußbaum, {part=,seq=12610,type=*,n=1}
+gon                    -> gehen                  143               1  gonāsa ¦ Adj. kine-snouted, {part=,seq=12709,type=,n=1}
+correlat               -> korrelat               1901-c            1  grāhya ¦ *n. ˚Objekt (Correlat. zu grāhaka , ) [B.] {part=,seq=12868,type=,n=2}
+loken                  -> locken                 26                1  cakkalaka ¦ n. eine Verbindung von vier dem Sinne nach zusammengehörigen Śloken, ; zu ; Jo
+cura                   -> curacao                22                1  cañcura ¦ ˚Adj. ingenious, active, ; bewandert in, {part=,seq=13084,type=,n=2}
+schlußsätzen           -> schlusssätzen          1996-ss           1  caturnidhana ¦ Adj. aus vier Schlußsätzen bestehend, {part=,seq=13169,type=,n=2}
+camin                  -> kamin                  1901-c            1  ° camin ¦ schlürfend, /6. {part=,seq=13291,type=˚,n=1}
+gedankenfluß           -> gedankenfluss          1996-ss           1  cittadhārā ¦ f. Gedankenfluß, {part=,seq=13489,type=,n=2}
+bright                 -> bricht                 48                1  * citrokti ¦ f. "bright conversation" [Haas; pw "eine seltsame Stimme, St. vom Himmel"]. {
+conversation           -> konversation           1901-c            1  * citrokti ¦ f. "bright conversation" [Haas; pw "eine seltsame Stimme, St. vom Himmel"]. {
+thick                  -> tick                   1901-th           1  cipiṭa ¦ Adj. ˚short, — ˚thick, — m. *plattgedrückter Reis, {part=,seq=13546,type=,n=3}
+cuv                    -> kuv                    1901-c            1  ° cuñcuvālukā ¦ f. Treibsand, {part=,seq=13589,type=˚,n=1}
+cur                    -> kur                    1901-c            1  * curī ¦ kleiner Brunnen, (Ko.); II,198,6. {part=,seq=13601,type=*,n=2}
+gebiß                  -> gebiss                 1996-ss           1  jámbhasuta ¦ Adj. mit dem Gebiß gepreßt, ausgekaut. {part=,seq=13926,type=,n=2}
+betr                   -> beter                  53                1  ° jaladantin ¦ m. Krokodil? S. ˚karin! An unserer Stelle wird dem betr. Tiere dāna = mada 
+engl                   -> engel                  884               1  jāghani ¦ Diener, ? Doch vgl. die engl. Übers. p. 278 (zu 200, n. 3). [Z.] {part=,seq=1404
+muskatnußfarbig        -> muskatnussfarbig       1996-ss           1  ° jātīvarṇa ¦ Adj. jasminfarbig (oder muskatnußfarbig?), v.u. {part=,seq=14072,type=˚,n=2}
+siegesbewußt           -> siegesbewusst          1996-ss           1  ° jitakāsin ¦ Adj. = jitakāśin siegesbewußt, /5. {part=,seq=14126,type=˚,n=2}
+gnau                   -> genau                  94                1  jīvataṇḍula ¦ als m. oder n. (sc. odana) Mus von frischem Reis. dakṣiṇāgnau jīvataṇḍulaṃ ś
+jut                    -> jute                   28                1  * jut ¦ glänzen, {part=,seq=14190,type=*,n=1}
+wißbegierde            -> wissbegierde           1996-ss           1  jñānakautūhala ¦ n. Wißbegierde, {part=,seq=14222,type=,n=2}
+goß                    -> goss                   1996-ss           1  (a)ḍhaṃḍholayat ¦ (?) t. s. 50,4 = sie goß hin. {part=,seq=14383,type=,n=2}
+schlußglied            -> schlussglied           1996-ss           1  tápaḥparārdha ¦ Adj. (f. ā ) wobei tapas das Schlußglied bildet, (57,3). {part=,seq=14528,
+türschloß              -> türschloss             1996-ss           1  tāḍaka ¦ = tālaka , Türschloß, {part=,seq=14659,type=,n=2}
+trit                   -> tritt                  394               1  ° tritāla ¦ eine Art Zeltergalopp, {part=,seq=15092,type=˚,n=2}
+trib                   -> trieb                  55                1  tribāhu ¦ m. auch N. pr. eines Unholdes, {part=,seq=15153,type=,n=2}
+biß                    -> biss                   1996-ss           1  ° dantaccheda ¦ m. Biß, (Ko.; ˚cchada gedruckt). {part=,seq=15361,type=˚,n=2}
+hero                   -> her                    798               1  damanaka ¦ m. ˚hero, champion; ˚foe, {part=,seq=15392,type=,n=2}
+excess                 -> exzess                 1901-c            1  ° darpabahulatā ¦ excess of haughtiness, {part=,seq=15414,type=˚,n=2}
+courier                -> kurier                 655               1  * dīrghādhvaga ¦ m. courier, {part=,seq=15669,type=*,n=2}
+häßliche               -> hässliche              1996-ss           1  ° durālapana ¦ n. häßliche Unterhaltung, {part=,seq=15723,type=˚,n=2}
+instruction            -> instruktion            326               1  duḥśasana ¦ evil instruction, {part=,seq=15798,type=,n=1}
+zwölfe                 -> zwölf                  71                1  ° dvādaśānta ¦ m. "der Saum der Zwölfe", in der myst. Anatomie des Yoga der äußere Rand de
+pothos                 -> pathos                 25                1  ° dviradapippalī ¦ Pothos officinalis oder Piper chaba, E 861 (A). {part=,seq=16182,type=˚
+flußhüter              -> flusshüter             1996-ss           1  ° nadīpāla ¦ m. Flußhüter, {part=,seq=16584,type=˚,n=1}
+flußbett               -> flussbett              1996-ss           1  nadīmārga ¦ m. Flußbett, {part=,seq=16586,type=,n=1}
+unumfaßt               -> unumfasst              1996-ss           1  ° nāvṛta ¦ Adj. unumfaßt, unumfaßbar, {part=,seq=16922,type=˚,n=2}
+unumfaßbar             -> unumfassbar            1996-ss           1  ° nāvṛta ¦ Adj. unumfaßt, unumfaßbar, {part=,seq=16922,type=˚,n=2}
+anlaß                  -> anlass                 1996-ss           1  nimittāvekṣa ¦ Adj. sich nach dem Anlaß richtend, {part=,seq=17063,type=,n=2}
+sigh                   -> sich                   71                1  ° nirucchvāsam ¦ Adv. without a sigh, {part=,seq=17121,type=˚,n=2}
+corn                   -> korn                   1901-c            1  ° nirghāsa ¦ remnants of corn fodder, {part=,seq=17154,type=˚,n=2}
+zerdrucken             -> drucken                22                1  ° niścotana ¦ (n.) Zerdrucken, (Ko.). {part=,seq=17331,type=˚,n=2}
+anhangen               -> anhängen               459               1  niṣaṅga ¦ m. *Anhangen, {part=,seq=17347,type=,n=1}
+cai                    -> kai                    1901-c            1  ° nīcaiścara ¦ = nikṛṣṭācāra , {part=,seq=17476,type=˚,n=1}
+decade                 -> dekade                 1901-c            1  pañcamī ¦ ˚fifth decade of life, {part=,seq=17769,type=,n=2}
+cork                   -> kork                   1901-c            1  ° pattravīṭā̆ ¦ cork, stopper (of a jar)? {part=,seq=17926,type=˚,n=2}
+canton                 -> kanton                 1901-c            1  pathaka ¦ auch Distrikt, Canton, {part=,seq=17938,type=,n=2}
+blaßrote               -> blassrote              1996-ss           1  ° paripāṭalatā ¦ f. überaus blaßrote Färbung, {part=,seq=18191,type=˚,n=2}
+parir                  -> parieren               22                1  ° parirūkṣa ¦ Adj. ganz struppig, {part=,seq=18244,type=˚,n=2}
+blaßrotes              -> blassrotes             1996-ss           1  pāṭala ¦ m. ˚blaßrotes Mal, {part=,seq=18500,type=,n=1}
+thon                   -> ton                    1901-th           1  pāthonātha ¦ m. ˚ = Varuṇa, {part=,seq=18571,type=,n=2}
+fußfeßler              -> fußfessler             1996-ss           1  ° pādapāśika ¦ m. Fußfeßler, v.u. {part=,seq=18581,type=˚,n=2}
+hilt                   -> hielt                  64                1  pāli ¦ f. *Zeichen, in ˚pālidhvaja = cihnapatāka . — *Weib mit Bart, — *beautiful (at the 
+opferkloß              -> opferkloß              1996-ss           1  piṇḍikā ¦ ˚Opferkloß, v.u. (Ko.). {part=,seq=18769,type=,n=1}
+sye                    -> sie                    194               1  piśuna ¦ 2. a) kapyāsye st. kārpāse (wie im PW vermutet wurde) nach Beitr. 88. {part=,seq=
+flußbiegung            -> flussbiegung           1996-ss           1  * puṭabheda ¦ m. Flußbiegung, ; Stadt, t. o. 4 [p. 16,15]. — ˚Öffnen der Augenlider, b ; a
+bunthufig              -> bunthutig              1901-th           1  pṛśniśapha ¦ Adj. (f. ā ) bunthufig, {part=,seq=19171,type=,n=2}
+sabbath                -> sabbat                 1901-th           1  poṣadha ¦ so v.a. Sabbath, poṣadhotsava m. Sabbathfeier,6,6. {part=,seq=19237,type=,n=3}
+sabbathfeier           -> Sabbatfeier            1901-th           1  poṣadha ¦ so v.a. Sabbath, poṣadhotsava m. Sabbathfeier,6,6. {part=,seq=19237,type=,n=3}
+function               -> funktion               1801              1  ° prajāpālatā ¦ function of a ruler, {part=,seq=19355,type=˚,n=2}
+manuscript             -> manuskript             1901-c            1  prati ¦ Kopie oder Original? Bhandarkar, Report 1883/84, p. 450, v. 2 (v. o.); mūlaprati ,
+mißhelligkeiten        -> misshelligkeiten       1996-ss           1  pratikartar ¦ m. ˚einer, der (Mißhelligkeiten) entgegenarbeitet, {part=,seq=19402,type=,n=
+nebenfluß              -> nebenfluss             1996-ss           1  ° pratinadī ¦ Nebenfluß, {part=,seq=19449,type=˚,n=1}
+mißliebigen            -> missliebigen           1996-ss           1  pratibhedana ¦ n. ˚t. t. aus der hastiśikṣā, — das ˚Schneiden (eines Mißliebigen), Dhanika
+het                    -> hat                    994               1  ° pratyālambha ¦ "het zich verzetten", {part=,seq=19665,type=˚,n=2}
+present                -> präsent                27                1  ° prasādalabdha ¦ Adj. received as a present, {part=,seq=19907,type=˚,n=2}
+nab                    -> nabe                   85                1  ° prasūnabāṇāsana ¦ m. = Liebesgott, {part=,seq=19926,type=˚,n=2}
+banda                  -> bande                  143               1  bandīkṛta ¦ Adj. zu einem Buddhisten bekehrt, banda = Buddhist nach dem Komm. {part=,seq=2
+imper                  -> immer                  23                1  bandh ¦ bandha 2. Imper. — Mit ā sich erhängen, — Mit vini fesseln, — dass.,17,17. {part=,
+kuma                   -> koma                   33                1  ° bāhvīkuṅkuma ¦ n. = kāśmīrakesara , v.u. (Ko.). {part=,seq=20510,type=˚,n=2}
+bind                   -> binde                  149               1  ° bindūyamāna ¦ Tropfen darstellend, {part=,seq=20521,type=˚,n=2}
+breithüftig            -> breithüftig            1901-th           1  ° bṛhajjaghana ¦ Adj. breithüftig, {part=,seq=20584,type=˚,n=2}
+composita              -> komposita              1901-c            1  bṛhatīka ¦ Adj. aus bṛhatī bestehend, Hier sind yato˚ und tato˚ Composita. {part=,seq=2058
+refectorium            -> refektorium            44                1  bhaktāgra ¦ Refectorium, {part=,seq=20672,type=,n=1}
+beredtsamkeit          -> beredsamkeit           119               1  bhaṇitimaya ¦ Adj. in Beredtsamkeit bestehend, {part=,seq=20707,type=,n=2}
+thronsessel            -> Thronsessel            1901-th           1  ° bhadrapīṭhikā ¦ f. Thronsessel, a . {part=,seq=20726,type=˚,n=2}
+modification           -> modifikation           1901-c            1  bhāṣā ¦ , ˚ = bhāṣaṇa 3., a . — ˚same as rāgiṇī , a modification of a musical mode, {part=
+bewußtseinsinhalts     -> bewusstseinsinhalts    1996-ss           1  ° bhūcarī ¦ , im die letzte der 4 karaṇeśvarī's, Herrin des im materiellen All sich objekt
+brotherr               -> Brotherr               1901-th           1  bhoganātha ¦ lies Brotherr, Ernährer. ˚bhogabhūti f. Genußmittel, ( bhogabhūtīnāṃ karpūrak
+provincial             -> provinzial             1901-c            1  maṇḍaleśvara ¦ m. ˚provincial governor, v.u. {part=,seq=21247,type=,n=2}
+masculina              -> maskulina              1901-c            1  [madhupa] ¦ , ˚f. ī weibl. Biene, ; [Ich möchte hier darauf hinweisen, daß es streng genom
+wußten                 -> wussten                1996-ss           1  [madhupa] ¦ , ˚f. ī weibl. Biene, ; [Ich möchte hier darauf hinweisen, daß es streng genom
+central                -> zentral                1901-c            1  ° madhyanāyaka ¦ m. central gem in a necklace, {part=,seq=21396,type=˚,n=2}
+götterfluß             -> götterfluss            1996-ss           1  ° marutsravantī ¦ f. Götterfluß, d . {part=,seq=21567,type=˚,n=2}
+basilicum              -> basilikum              1901-c            1  maruvaka ¦ m. *Majoran? (Ko.: sugandhapattra ), — "probably *Ocimum basilicum" und "*crane
+district               -> distrikt               160               1  maruvaka ¦ m. *Majoran? (Ko.: sugandhapattra ), — "probably *Ocimum basilicum" und "*crane
+abgefaßt               -> abgefasst              1996-ss           1  Mahārāṣṭravariṣṭhabhāṣāmaya ¦ Adj. in der Sprache der Mahratten, der vorzüglichsten der Sp
+thicken                -> ticken                 1901-th           1  ° māṃsalīkṛ ¦ to thicken, {part=,seq=21764,type=˚,n=1}
+geschoß                -> geschoss               1996-ss           1  mukta ¦ ˚Geschoß, {part=,seq=22031,type=,n=1}
+freßzange              -> fresszange             1996-ss           1  mukhasaṃdaṃśa ¦ m. Freßzange, {part=,seq=22080,type=,n=2}
+paßaufseher            -> passaufseher           1996-ss           1  ° mudrādhyakṣa ¦ m. Stempel- und Paßaufseher, {part=,seq=22126,type=˚,n=2}
+vergeßlichkeit         -> vergesslichkeit        1996-ss           1  * muṣitasmṛtitā ¦ f. Schwund des Gedächtnisses, Vergeßlichkeit, {part=,seq=22147,type=*,n=
+must                   -> musst                  390               1  mustā ¦ f. ˚eine Giftpflanze; {part=,seq=22159,type=,n=1}
+gace                   -> gaze                   1901-c            1  ° mṛgaceṣṭita ¦ n. Verhalten der Gazelle (= Flucht), {part=,seq=22201,type=˚,n=2}
+lehmkloße              -> lehmklosse             1996-ss           1  ° mṛtpiṇḍīkṛta ¦ zum Lehmkloße gemacht, zermalmt, /9 v.u. (Ko.). {part=,seq=22246,type=˚,n
+willd                  -> wild                   75                1  * mṛtyuphala ¦ n. fruit of the Trichosanthes palmata Roxb., or the Musa sapientum Willd., 
+laß                    -> lass                   1996-ss           1  [ya] ¦ , yat khalu jānīyāḥ so v.a. beliebe zu erfahren, mit deiner Erlaubnis, yan nu mit d
+eßbare                 -> essbare                1996-ss           1  yadaśanīya ¦ n. alles Eßbare, ; {part=,seq=22436,type=,n=2}
+protection             -> protektion             356               1  yantraṇa ¦ ˚feather-guard on an arrow, *protection, {part=,seq=22454,type=,n=2}
+blutfluß               -> blutfluss              1996-ss           1  ° raktasruti ¦ f. Blutfluß (= Abortus), E 896 (R). {part=,seq=22631,type=˚,n=2}
+aderlaß                -> aderlass               1996-ss           1  ° raktākṛṣṭi ¦ f. Blutentziehung, Aderlaß, b . {part=,seq=22632,type=˚,n=2}
+schlußvers             -> schlussvers            1996-ss           1  raṇaraṇaka ¦ der Liebesgott, p. 169; Schlußvers. [Z.] {part=,seq=22707,type=,n=4}
+athletentum            -> Athletentum            1901-th           1  ° ratimallatā ¦ Athletentum in der Liebe, E 846 (R). {part=,seq=22737,type=˚,n=2}
+sechszehn              -> sechzehn               168               1  1. rājan ¦ als Bez. der Zahl sechszehn, — 1. a)a) — *= yakṣa [Ko. = gaṇa ], {part=,seq=228
+broth                  -> brot                   1901-th           1  lāsaka ¦ m. *Pfau, — pulse broth, — lāsikā ˚Tänzerin, {part=,seq=23236,type=,n=3}
+angepaßtes             -> angepasstes            1996-ss           1  lokādhipateya ¦ n. ein der öffentlichen Meinung angepaßtes Betragen, {part=,seq=23320,type
+brauthemd              -> Brauthemd              1901-th           1  vadhūvāsas ¦ n. Brauthemd, {part=,seq=23471,type=,n=2}
+waldfluß               -> waldfluss              1996-ss           1  ° vanadhunī ¦ Waldfluß, {part=,seq=23482,type=˚,n=1}
+metal                  -> metall                 50                1  ° vāhaṭikā ¦ f. v.u. (in savāhaṭika Adj.) und 3 v.u. nach Tawney, S. 70, Anm. 3 = Gujarāti
+bewußtlosmachen        -> bewusstlosmachen       1996-ss           1  ° vicetīkaraṇa ¦ n. das Bewußtlosmachen, (Ko.) {part=,seq=24051,type=˚,n=2}
+erblaßt                -> erblasst               1996-ss           1  ° vicchādaka ¦ [vicchādakāḥ saṃhatībhavantaḥ prasaranto vā , Ko.] [2. vicchāyay], vicchāyi
+vida                   -> vita                   64                1  vidaṃśa ¦ das Beißen, {part=,seq=24131,type=,n=1}
+unbeeinflußt           -> unbeeinflusst          1996-ss           1  vinirodha ¦ Adj. unbeeinflußt, untätig, Haravijaya 6,120. {part=,seq=24223,type=,n=1}
+haß                    -> hass                   1996-ss           1  ° viprīti ¦ f. Haß, {part=,seq=24305,type=˚,n=1}
+bordellgäßchen         -> bordellgässchen        1996-ss           1  ° veśavīthikā ¦ Bordellgäßchen, p. 12, Z. 12 v. o. {part=,seq=24791,type=˚,n=2}
+occupation             -> okkupation             320               1  ° vyāpṛtatā ¦ occupation, {part=,seq=24965,type=˚,n=1}
+patr                   -> pater                  25                1  śatapattrī ¦ *f. eine Rosenart, [ ˚patrī gedruckt]. {part=,seq=25100,type=,n=2}
+amp                    -> am                     522               1  * śampā ¦ Blitz, a ; b ; IV,39 a . Haravijaya 9,23. [41,54.] Blitz und Gürtel, ebenda 5,23
+mel                    -> mehl                   300               1  ° śīlakā ¦ ? v.u. (Ko.: samāgamavilambinī melāpakaśīlakā .) {part=,seq=25471,type=˚,n=2}
+liebesgäßchen          -> liebesgässchen         1996-ss           1  ° śṛṅgāravīthikā ¦ Liebesgäßchen, p. 12, Z. 9 v. o. {part=,seq=25580,type=˚,n=2}
+distinct               -> distinkt               25                1  Śyāma ¦ m. *the Indian cuckoo, ("Perhaps some distinct species of this bird is intended in
+vermißt                -> vermisst               1996-ss           1  [śrī ¦ Eigennamen in Verbindung damit suche man unter ihren Anfangsbuchstaben, falls man s
+principal              -> prinzipal              1901-c            1  ° śvetabhikṣu ¦ "Jacobi informs me that this word is not an equivalent of śvetāmbara, and 
+thronfolge             -> Thronfolge             1901-th           1  saṃrodha ¦ ˚Ausschließung (von der Thronfolge), {part=,seq=25847,type=,n=2}
+seßhafter              -> sesshafter             1996-ss           1  saṃstha ¦ m. ˚seßhafter Späher (pw nur *Späher), {part=,seq=25888,type=,n=2}
+calculator             -> kalkulator             1901-c            1  * saṃkalitin ¦ ˚m. astrologer, calculator, {part=,seq=25946,type=*,n=2}
+number                 -> nummer                 32                1  ° saṃkhyāpaka ¦ Adj. making up a number, {part=,seq=25969,type=˚,n=2}
+race                   -> rasse                  827               1  saṃghaṭṭa ¦ ˚a race, {part=,seq=25990,type=,n=2}
+companies              -> kompanie               20                1  ° saṃghabhṛta ¦ m. Arbeitergenossenschaft oder Arbeiter einer Genossenschaft ("guilds of w
+ungewißheit            -> ungewissheit           1996-ss           1  ° saṃdigdhatā ¦ f. = ˚tva (Zweifelhaftigkeit, Ungewißheit), {part=,seq=26141,type=˚,n=3}
+abstraction            -> abstraktion            202               1  ° samādhimaraṇa ¦ n. a death of deep spiritual abstraction, v.u. {part=,seq=26326,type=˚,n
+combination            -> kombination            1901-c            1  samāyoga ¦ m. ˚combination? — ˚a levee or mobilization? {part=,seq=26342,type=,n=3}
+genußmenschen          -> genussmenschen         1996-ss           1  sāṃsārika ¦ ˚Subst. Pl. "Weltkinder", Genußmenschen, c . {part=,seq=26708,type=,n=2}
+mißtrauisch            -> misstrauisch           1996-ss           1  sābhiśaṅka ¦ Adj. mißtrauisch, {part=,seq=26766,type=,n=2}
+sain                   -> sein                   26                1  Saināpatya ¦ ˚Adj. Skanda gehörig, {part=,seq=27327,type=,n=2}
+schultersproß          -> schultersprossen       1996-ss           1  ° skandhapraroha ¦ m. Schultersproß = Arm, t. o. 18 [p. 32,13]. {part=,seq=27410,type=˚,n=
+stok                   -> stock                  63                1  ° stokīkṛta ¦ klein gemacht, v.u. (Ko.) {part=,seq=27453,type=˚,n=2}
+consul                 -> konsul                 1901-c            1  ° sthānapuruṣa ¦ m. Pl. representatives, /3; 108,4/3 v.u. ("Perhaps it might be translated
+syn                    -> sein                   166               1  ° svapathu ¦ ? v.u. (Ko.; svapathuprāpta syn. von sthūlabhūta .) {part=,seq=27650,type=˚,n
+calcutta               -> kalkutta               1901-c            1  haricandana ¦ (gelber Sandel) wird mit raktacandana erklärt. [Letzteres ist aber kein Prod
+north                  -> nord                   211               1  ° Hariharit ¦ north-east, v.u. {part=,seq=27843,type=˚,n=2}
+amboß                  -> amboss                 1996-ss           1  ° adhikaraṇī ¦ f. Amboß oder Ofen? /6. {part=N,seq=28124,type=˚,n=2}
+mißachtung             -> missachtung            1996-ss           1  ° anarcā ¦ f. Mißachtung, {part=N,seq=28150,type=˚,n=1}
+ichbewußtsein          -> ichbewusstsein         1996-ss           1  ° anahaṃkṛtatva ¦ n. Freisein vom Ichbewußtsein, Uneigennützigkeit, Dhanika zu (S. 47, Z. 
+hye                    -> hie                    25                1  antara ¦ Adj. ˚äußerlich, a . [ "antaraḥ paridhānīye bāhye svīye 'ntarātmani", iti Vaijaya
+thag                   -> tag                    1901-th           1  ° apṛthagāśraya ¦ Adj. = ananyagatika , b . ( liest ˚āśaya = abhinnacitta ). {part=N,seq=2
+hinablaßbare           -> hinablassbare          1996-ss           1  ° avakṣepasopāna ¦ hinablaßbare Leiter oder Treppe, {part=N,seq=28362,type=˚,n=2}
+dry                    -> drei                   40                1  ° ācāmla ¦ n. the eating of dry food simply moistened or boiled in water, Vgl. Tawney, S. 
+meßart                 -> messart                1996-ss           1  ° āyamāna ¦ n. Meßart des königlichen Einkommens, v.u. {part=N,seq=28519,type=˚,n=2}
+carri                  -> karriere               39                1  upakaṇṭha ¦ n. *Carrière des Pferdes, v.u. {part=N,seq=28645,type=,n=2}
+saffran                -> safran                 1461              1  ° kāśmīrīrasa ¦ Saffran, {part=N,seq=28867,type=˚,n=1}
+waare                  -> ware                   4988              1  ° kūṭamudrā ¦ f. gefälschter Stempel, Vielleicht eher als m. oder n. zu fassen: "Waare mit
+küraß                  -> kürass                 1996-ss           1  * kūrpasa ¦ m. Küraß, {part=N,seq=28913,type=*,n=1}
+elixir                 -> elixier                165               1  ° koṭivedharasa ¦ all-powerful elixir, /8. {part=N,seq=28927,type=˚,n=2}
+inscription            -> inskription            1901-c            1  khaṇḍapraśasti ¦ ˚fragmentary inscription, Prabandh,99,8 v.u. {part=N,seq=28965,type=,n=2}
+nden                   -> enden                  84                1  gumph ¦ mit ˚anu durchfléchten, umwínden, b ( ˚gumphita = yukta ). {part=N,seq=29006,type=
+unstätheit             -> Unstätheit             1901-th           1  ° calācalatā ¦ f. Unstätheit, /5. {part=N,seq=29049,type=˚,n=2}
+siegesbewußtsein       -> siegesbewusstsein      1996-ss           1  ° jitakāśitā ¦ f. Siegesbewußtsein, (Instr. = im Triumphe). {part=N,seq=29089,type=˚,n=2}
+
+# ===== RESIDUAL pattern candidates (-> LLM pass) =====
+# -- th: 886 distinct (top 15) --
+   the                       120
+   sth                        85
+   tha                        81
+   rtha                       69
+   yath                       37
+   enthaltend                 34
+   with                       25
+   artha                      25
+   stha                       24
+   kath                       18
+   without                    16
+   patha                      14
+   utth                       13
+   sthita                     12
+   mithy                      12
+# -- c-hard: 1257 distinct (top 15) --
+   cara                       58
+   campaka                    35
+   cala                       30
+   cak                        30
+   cana                       25
+   caka                       23
+   catu                       22
+   candr                      19
+   car                        18
+   cappeller                  16
+   catura                     14
+   ficus                      13
+   candra                     13
+   indica                     12
+   become                     12
+# -- -iren: 3 distinct (top 15) --
+   büffelhirt                  2
+   thirst                      1
+   kälberhirt                  1
+# -- ss-eszett: 218 distinct (top 15) --
+   große                      60
+   großer                     23
+   großes                     16
+   genießend                  10
+   längenmaß                  10
+   fuße                        9
+   füße                        8
+   ausstoßend                  7
+   weißer                      7
+   übermaß                     6
+   großen                      6
+   erdkloß                     6
+   schließend                  6
+   weiße                       6
+   süße                        6
+# -- ey: 192 distinct (top 15) --
+   tawney                     61
+   eya                        22
+   leya                        8
+   dheya                       5
+   deya                        5
+   treya                       4
+   deyam                       4
+   leyaka                      4
+   neya                        3
+   peya                        3
+   vineya                      3
+   geya                        3
+   teya                        3
+   eyat                        3
+   pateya                      3

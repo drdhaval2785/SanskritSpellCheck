@@ -1,0 +1,487 @@
+# CCS (German) orthographic-drift -- DOCUMENTATION ONLY (never edits the source)
+# FULL corpus
+# modern word-list: ORTHO_DE_DIC, 103756 stems
+# gloss tokens: 117976 ; already-modern: 76178 ; reform-drift: 1436 (transform 0 + map 1436)
+# drift occurrences by era: 1901-th=484, 1901-c=160, 315=133, 1996-ss=94, 108=87, 30=57, 68=45, 285=23, 52=23, 1996=21, 37=20, 25=19, 45=17, 605=13, 99=11, 1324=7, 1072=7, 212=7, 980=7, 23=6, 2354=5, 53=5, 1899=5, 21=5, 7386=4, 566=4, 42=4, 1806=4, 139=4, 75=3, 3610=3, 41=3, 1901=3, 78=3, 146=3, 300=3, 20=3, 177=3, 26=3, 915=3, 6196=2, 2116=2, 892=2, 2819=2, 257=2, 1775=2, 1901-iren=2, 4988=2, 2850=2, 28805=2, 49=2, 332=2, 102=2, 31=2, archaic-ey=2, 240=2, 34=2, 59=2, 344=2, 459=2, 22=2, 1128=2, 737=2, 1014=2, 61=1, 583=1, 62=1, 978=1, 1412=1, 88=1, 1664=1, 2496=1, 364=1, 745=1, 473=1, 412=1, 100=1, 188=1, 1920=1, 1901-c-iren=1, 1075=1, 112=1, 503=1, 46=1, 35=1, 76=1, 237=1, 65=1, 668=1, 107=1, 1065=1, 2082=1, 993=1, 711=1, 29=1, 155=1, 211=1, 36=1, 1998=1, 109=1, 152=1, 229=1, 7873=1, 147=1, 999=1, 400=1, 819=1, 1908=1, 3904=1, 2484=1, 150=1, 39=1, 1901-th-adjacent=1, 138=1, 3342=1, 467=1, 1848=1, 762=1, 85=1, 40=1, 309=1, 149=1, 24=1, 63=1, 1461=1, 2981=1, 1160=1, 199=1, 187=1, 1513=1, 137=1, 54=1, 1533=1, 159=1, 1192=1, 2609=1, 297=1, 86=1
+#
+# ===== reform-drift CONFIRMED by transform (+ wordlist, where available) =====
+
+# ===== reform-drift from the curated/accumulated map =====
+folg                   -> folge                  315             133  ¦ m. Pl. (Bewohner von Antarvedī s. folg.).
+simpl                  -> simpel                 108              87  ¦ atmen. aushauchen, verwehen. = simpl.
+thun                   -> tun                    1901-th          68  ¦ nicht zu thun; n. Unthat.
+brahman                -> brahmane               30               55  ¦ m. Urgott (Brahman, Viṣṇu o. Śiva ).
+opp                    -> ob                     68               45  ¦ Adv. unten, auf der Erde; hinab, in die Hölle (opp. tiefer und tiefer. tief stellen (dop
+ders                   -> des                    285              23  ¦ (auch f. Flaschengurke; m. n. die Frucht ders. u. ein Gefäß daraus (zum Schröpfen).
+thätig                 -> tätig                  1901-th          22  1. ¦ thätig sein, arbeiten.
+coll                   -> kohl                   37               20  ¦ niedriger, geringer. unterwerfen. m. Unterlippe; coll. Lippen.
+dess                   -> dessen                 52               20  ¦ m. , f. eine Art Baum; n. die Nuss dess.
+that                   -> tat                    1901-th          19  ¦ um einen Zweck, in der That, dem Sinne nach.
+thätigkeit             -> tätigkeit              1901-th          19  ¦ die Thätigkeit des Bittens ausdrückend (g).
+thuend                 -> tuend                  1901-th          18  ¦ nicht thuend, unterlassend.
+accent                 -> akzent                 1901-c           18  ¦ nicht mit dem Svarita-Accent versehen. Abstr. n. (g.)
+patr                   -> pater                  25               18  2. ¦ m. Patr. Mehrerer Rishi.
+dems                   -> dem                    45               17  ¦ m. N. eines Herbstmonats; f. der Vollmondstag in dems.
+thränen                -> tränen                 1901-th          16  ¦ Adj. Thränen verhaltend; n. verhaltene Thränen.
+ceremonie              -> zeremonie              1901-c           14  ¦ dass. (—˚) m. n. eine Ceremonie zur Anhaltung des Atmens (r)
+gethan                 -> getan                  1901-th          13  ¦ vorher nicht gethan.
+haufe                  -> haufen                 605              13  ¦ (—˚) m. aufgeschütteter Haufe.
+rauh                   -> rau                    1996             12  ¦ allzu rauh o. hart.*
+füßen                  -> füssen                 1996-ss          12  ¦ nicht ganz feststehend, noch auf schwachen Füßen stehend.
+unterthan              -> untertan               1901-th          11  ¦ nicht dem (Gen.) unterthan.
+außtehen               -> ausstehen              1996-ss          11  1. ¦ (selten Act.) anregen, bewegen, treiben; sich bewegen, sich erheben, hervorkommen, er
+thür                   -> tür                    1901-th          11  ¦ f. Thür.
+angen                  -> ahnen                  99               11  ¦ n. Wesen, Ding, Welt (2, 3, 7 u. 14 angen.) , Erde; Aufenthalt, Wohnung.
+zugethan               -> zugetan                1901-th          10  ¦ nicht zugeteilt; nicht zugethan.
+thöricht               -> töricht                1901-th          10  ¦ unverbunden, fremd, unzusammenhängend, thöricht.
+stengel                -> stängel                1996              9  ¦ m. Rohrstab, Stengel.
+außteigen              -> aussteigen             1996-ss           9  ¦ f. die Betretung; das Außteigen.
+commentar              -> kommentar              1901-c            9  ¦ m. der Rigveda (die Ricas mit oder ohne die Commentar-Litter atur).
+unthätig               -> untätig                1901-th           8  1. ¦ unthätig.
+übelthat               -> übeltat                1901-th           8  ¦ schlecht behandelt; n. Übelthat.
+casus                  -> kasus                  1901-c            8  1. ¦ der dritte; n. adv. drittens, zum dritten mal f. der dritte Tag (im Halbmonat) ; die 
+hirt                   -> hirte                  1324              7  ¦ dass.; m. kein Hirt.
+zweien                 -> zwei                   1072              7  ¦ einer von zweien; wiederholt der eine — der andere. auf eine oder die andere Weise (g).
+compositum             -> kompositum             1901-c            7  ¦ m. adverb. Compositum (g.)
+bischen                -> bisschen               980               7  ¦ m. Korn, Samenkorn, Tropfen (auch m.) ; Funke, Stückehen, ein Weniges, Bischen, eine Kle
+reichthum              -> reichtum               1901-th           7  ¦ mit Getreide versehen; m. Getreidebauer, n. -reichthum.
+angethan               -> angetan                1901-th           6  2. ¦ u. gehen, kommen (punar wieder—), sich begeben, gelangen zu, geraten in (Acc.) , zu t
+wagschale              -> waagschale             212               6  ¦ m. Versteck, Gebüsch; m. f. Achselgrube, Gurt, Schurz; Wagschale (gew. f.); f. Ringmauer
+wohlthätig             -> wohltätig              1901-th           6  ¦ gefällig, wohlthätig.
+außetzen               -> aussetzen              1996-ss           5  ¦ n. das Außetzen auf .
+mehrer                 -> mehrerer               2354              5  ¦ f. Mutter; Voc. oft blosser Ausruf (auch an mehrer): ach!
+betr                   -> beter                  53                5  1. ¦ (auch Praes. , Act. u. Med. machen, thun (in weitester Verwendung: an sich oder ander
+außtellen              -> ausstellen             1996-ss           5  ¦ sich bewegen, gehen, fahren mit (Instr) , herumstreichen; wandern durch, entlang nach (A
+ocean                  -> ozean                  1901-c            5  ¦ m. Ocean, Meer.
+maße                   -> masse                  1996-ss           5  ¦ so groß, so lang (Raum u. Zeit) , soviel. n. adv. soweit, solange, in der Zeit, inzwisch
+aufthun                -> auftun                 1901-th           5  1. ¦ auseinandergehen o. fallen, aufbrechen; sprengen, zerreißen. Pass. intr. ; p.p. gespa
+übelthäter             -> übeltäter              1901-th           5  ¦ übelthuend. m. Übelthäter; n. Übelthat.
+vermittelst            -> vermittels             1899              5  ¦ f. Thor, Thür, Öffnung, Ausweg, Mittel; (—˚) vermittelst, durch.
+thorheit               -> torheit                1901-th           4  ¦ f. Unverstand, Thorheit.
+heldenthat             -> Heldentat              1901-th           4  ¦ n. Heldenthat.
+hülfe                  -> hilfe                  7386              4  2. ¦ f. Überlegenheit, Hülfe.
+masculinum             -> maskulinum             1901-c            4  ¦ f. kein Weib, kein Feminimum, also Masculinum und Neutrum (g).
+wüste                  -> wüsste                 566               4  ¦ n. salzhaltiges Land, Wüste.
+wohlthat               -> wohltat                1901-th           4  ¦ m. Dienstfertigkeit, Förderung, Wohlthat, Hülfe.
+außuchen               -> aussuchen              1996-ss           4  2. ¦ suchend; m. das Außuchen; m. Wunsch, Wahl.
+thatsache              -> Tatsache               1901-th           4  ¦ m. Thatsache.
+thal                   -> tal                    1901-th           4  ¦ m. Bauch, Mutterleib; Höhle, Thal.
+gethanes               -> Getanes                1901-th           4  ¦ (Gethanes tilgend,) undankbar.
+auß                    -> aus                    1996-ss           4  ¦ auß Bild gebracht, gemalt.
+citrone                -> zitrone                1901-c            4  ¦ m. Citronenbaum; n. Citrone.
+außperren              -> aussperren             1996-ss           4  ¦ den Mund außperren, schnauben.
+wage                   -> waage                  1806              4  ¦ f. Wage, Wagschale, Gewicht, Gleichgewicht, Gleichheit, Ähnlichkeit; Wage (im Tierkreis)
+thürsteher             -> Türsteher              1901-th           4  ¦ m. , f. Thürsteher, in.
+umthun                 -> umtun                  1901-th           4  1. ¦ ; , setzen, stellen, legen; bringen zu o. nach, richten, lenken auf (Loc. o. Dat) ; e
+mannesthat             -> Mannestat              1901-th           4  ¦ männlich, mannhaft, Mannes-; stark, kräftig; menschlich. m. Mann, Mensch; n. Mannesthat 
+sapphir                -> saphir                 139               4  ¦ dunkelfarbig, blau, schwarzblau, schwarz. m. Sapphir; männl. Name. f. weibl. Name. Indig
+bethörung              -> Betörung               1901-th           4  ¦ n. Bethörung. bethört.
+kundthun               -> kundtun                1901-th           4  ¦ n. das Kundthun.
+gangen                 -> gegangen               3610              3  ¦ vorher nicht (zum Lehrer) hinge. gangen.
+recitieren             -> rezitieren             1901-c            3  ¦ zu recitieren, f. f. ein best. zu recitierender Vers (r.)
+giebt                  -> gibt                   1901              3  ¦ Praep. bei, in, vor (Loc. oder˚— , vgl. , Adv. dazu, auch, ferner, desgleichen; sogar, s
+reduplication          -> Reduplikation          1901-c            3  ¦ m. Hinzufügung, Wiederholung; Reduplication (g).
+thräne                 -> Träne                  1901-th           3  ¦ n. (m.) Thräne.
+scene                  -> szene                  1901-c            3  ¦ m.n. Raum, Luftraum, die Luft als das feinste Element (ph.) ; in die Scene o. hinter der
+thuende                -> tuende                 1901-th           3  ¦ n. , f. , n. , f. , n. , f. das zu Thuende, die Notwendigkeit.
+außchauen              -> ausschauen             1996-ss           3  ,¦ (selten sehen, blicken, erblicken, betrachten, wahrnehmen, beachten, berücksichtigen, e
+gewaltthätigkeit       -> Gewalttätigkeit        1901-th           3  ¦ f. , n. Gewaltthätigkeit, Strenge.
+thatkraft              -> Tatkraft               1901-th           3  ¦ m. Urheber; n. das Außtehen, Aufgang, Entstehung; Außtand, Thatkraft, Energie.
+arzenei                -> arznei                 146               3  ¦ aus Kräutern gemacht; n. das Kraut (coll.) , Heilkraut, Heilmittel, Arzenei.
+anthun                 -> antun                  1901-th           3  1. ¦ (auch Praes. , Act. u. Med. machen, thun (in weitester Verwendung: an sich oder ander
+recitation             -> rezitation             1901-c            3  ¦ m. Schritt, Gang, Lauf, Verlauf, Art und Weise, Ordnung, Reihenfolge; Art Recitation (de
+causativ               -> kausativ               1901-c            3  ¦ das Causativ von jas (g.).
+wagerecht              -> waagerecht             300               3  ¦ quer gehend, wagerecht.
+übelthuend             -> übeltund               1901-th           3  ¦ übelthuend. m. Übelthäter; n. Übelthat.
+thürhüter              -> Türhüter               1901-th           3  ¦ u. m. Thürhüter.
+thürpfosten            -> Türpfosten             1901-th           3  ¦ m. Thürpfosten.
+hinthun                -> hintun                 1901-th           3  1. ¦ ; , setzen, stellen, legen; bringen zu o. nach, richten, lenken auf (Loc. o. Dat) ; e
+unthätigkeit           -> untätigkeit            1901-th           3  ¦ f. Rückkehr; das Aufhören, Schwinden; Nichtweitergeltung, opp. (g.) ; das Abstehen, Sich
+bethört                -> betört                 1901-th           3  ¦ bewusstlos, bethört.
+sohne                  -> sonne                  20                3  ¦ aus dem Sohne bestehend.
+unterthanen            -> Untertanen             1901-th           3  ¦ f. Natur, Ursprünglichkeit, das Primitive, Grundlage, Norm, Faktor, [Page266-2] bes. die
+bethörend              -> betörend               1901-th           3  ,¦ f. verwirrend, bethörend.
+wohlthuend             -> wohltuend              1901-th           3  ¦ erfreuend, wohlthuend; n. das Ergötzen, Befriedigen.
+bethätigen             -> betätigen              1901-th           3  3. ,¦ u. , Pass. messen, abmessen, durchmessen, ermessen, vergleichen mit (Instr.); intr. 
+bethören               -> betören                1901-th           3  ,¦ irre werden, sich verwirren, ohnmächtig werden, fehlschlagen, misraten. p. p. s. bes. ;
+discus                 -> diskus                 1901-c            3  ¦ n. Wagenteil, Wagenrad, Discus (bes. Kṛṣṇa); N. eines Vogels (auch m. ).
+abthun                 -> abtun                  1901-th           3  ,¦ sich drehen, rollen, ablaufen (Zeit) , erfolgen, geschehen, werden, sein (auch als Cop.
+chr                    -> christus               21                3  ¦ m. N. versch Fürsten, bes. des angebl. Stifters einer Ära (56 v. Chr.).
+vet                    -> fett                   52                3  ¦ u. f. die 25 Erzählungen vom Vetāla (T. versch. Sammlungen).
+ohre                   -> ohr                    915               3  1. ¦ mit dem ohre vernommen; n. as Hörenlassen, Verkünden.
+fuss                   -> fuß                    6196              2  ¦ m. Fuss.
+nichtthun              -> Nichttun               1901-th           2  ¦ n. Nichtthun, Unterlassung.
+unthat                 -> untat                  1901-th           2  ¦ nicht zu thun; n. Unthat.
+subject                -> subjekt                2116              2  ¦ m. das Subject des Nicht-Causativums, des einfachen Verbums, (g)
+oberaußicht            -> Oberaufsicht           1996-ss           2  ¦ m. Oberaußicht, Herrscherwürde; Verwaltung, Ausübung, Amt, Dienst; abschnitt, Kapitel vo
+lection                -> lektion                892               2  ¦ m. Studium, Lection, Kapitel.
+schaar                 -> schar                  2819              2  ¦ n. Antlitz, Front; Heer, Schaar.
+nachthuend             -> nachtund               1901-th           2  ¦ nachthuend; m. Gehülfe.
+gehülfe                -> gehilfe                257               2  ¦ nachthuend; m. Gehülfe.
+secundäre              -> sekundäre              1901-c            2  ¦ m. secundäre (eventuelle) Vorschrift.
+object                 -> objekt                 1775              2  ¦ ein anderes Object habend, sich auf etwas anderes beziehend.
+obl                    -> l                      41                2  ¦ (nur Cas. obl. im Sgl. m. f. einander. (˚—) adv. wechselseitig.
+werkthätig             -> werktätig              1901-th           2  2. ¦ werkthätig, geschäftig.
+componiert             -> komponiert             1901-c            2  2. ,¦ schleudern, schießen, werfen; (abwerfen nur p.p. . wegwerfen, abwerfen, niederlegen;
+waare                  -> ware                   4988              2  ¦ m. Markt, Waare.
+vocativ                -> vokativ                1901-c            2  ¦ n. Anrede, Vocativ (g.).
+bethätigung            -> Betätigung             1901-th           2  ¦ n. , m. das Offenbaren, die Bethätigung.
+hangen                 -> hängen                 2850              2  ¦ f. das Sichanhängen, die Verfolgung; das Hangen an, ie Hingabe an (Loc. o. —˚).
+außchlagen             -> ausschlagen            1996-ss           2  ¦ n. das Außchlagen.
+blos                   -> bloß                   28805             2  1. ¦ so, zur Hervorhebung eines oder mehrerer zu einer Aufzäghlung (mit oder ohne verbunde
+gewaltthätig           -> gewalttätig            1901-th           2  ¦ gewaltthätig.
+zuthat                 -> zutat                  1901-th           2  ¦ n. Dienstfertigkeit, zuthat, Werkzeug, Gerät, Mittel.
+composition            -> komposition            1901-c            2  ¦ n. Composition, Versification, Dichtung.
+vocale                 -> vokale                 1901-c            2  ¦ die Vocale e und o (g.).
+casusendung            -> kasusendung            1901-c            2  ¦ die Casusendung ena (g.)
+thorflügel             -> Torflügel              1901-th           2  ¦ m. n. Thorflügel. mit einer Thorflügel- (d. h. breiten) Brust begabl.
+conjugation            -> konjugation            1901-c            2  1. ¦ (auch Praes. , Act. u. Med. machen, thun (in weitester Verwendung: an sich oder ander
+thäter                 -> täter                  1901-th           2  ¦ m. Macher, Thäter, Urheber, Schöpfer; Agens, logisches Subjekt (g.). facturus.
+daß                    -> dass                   1996-ss           2  ¦ adv. nach Wunsch, gern, jedenfalls, gewiss; freilich, wohl, zwar, wenn auch, obgleich, g
+casusbegriff           -> Kasusbegriff           1901-c            2  ¦ (f. machend, thuend, bewirkend ( Gen. o. —˚); *facturus ( Acc. ; Abstr. n.),abs. etwas e
+commentars             -> Kommentars             1901-c            2  ¦ aus Kāśi o. Benares stammend; f. die Stadt Benares; T. eines Commentars zu Pāṇini (auch
+commentators           -> Kommentators           1901-c            2  ¦ m. N. eines Commentators des Manu.
+successiv              -> sukzessiv              102               2  ¦ ererbt, successiv.
+konig                  -> könig                  78                2  ¦ m. Furst, Konig.
+thau                   -> tau                    1901-th           2  ¦ n. Nebel, Thau (eig. Luftwasser).
+düte                   -> tüte                   31                2  ¦ m. Düte.
+großthuerei            -> Großtuerei             1901-th           2  ¦ n. dass., polterndes Wesen, Großthuerei.
+schooß                 -> schoß                  archaic-ey        2  ¦ m. Mutterleib, Schooß, das Innere (adj. —˚ etwas im Inneren enthaltend); Leibesfrucht, E
+krystall               -> kristall               240               2  ¦ m. Krystall.
+multiplicieren         -> multiplizieren         1901-c            2  ¦ vervielfachen, multiplicieren; p.p. vervielfacht, verstärkt; erfüllt von .
+thaten                 -> Taten                  1901-th           2  ¦ n. (s. das Gehen, der Gang, Weg, Wandel, das Treiben, Benehmen, die Thaten, Abenteuer.
+wunderthätig           -> wundertätig            1901-th           2  ¦ (nur wunderthätig sein.
+guirlande              -> girlande               34                2  ¦ n. , f. Band, Schnur, Guirlande.
+thürflügel             -> Türflügel              1901-th           2  ¦ u. m. Thürflügel, Thür.
+thränenstrom           -> Tränenstrom            1901-th           2  ¦ n. Thränenstrom.
+stadtthor              -> Stadttor               1901-th           2  ¦ n. Stadtthor.
+cerebral               -> zerebral               1901-c            2  ¦ f. Senkung, Verneigung, Demut; Umwandlung eines Dentalen in einen Cerebral (g.).
+bethränt               -> betränt                1901-th           2  ¦ bethränt, verweint.
+erguß                  -> erguss                 1996-ss           2  ¦ erfüllend, befriedigend . m. das Füllen, Vollmachen, Befriedigung; Erguß, Flut, Strom, Ü
+mannichfaltig          -> mannigfaltig           344               2  ¦ verschiedenartig; mannichfaltig.
+lung                   -> lunge                  177               2  ¦ n. Hervorbringung, Behandlung, Besprechung (Abstr. n.) ; Abhand- [Page266-1] -lung, Absc
+außchütten             -> ausschütten            1996-ss           2  ¦ n. das Werfen, Hineinwerfen, Außchütten o. -giessen.
+thorsteher             -> Torsteher              1901-th           2  ¦ m. das Anschlagen; Thor, Thorsteher, f. in.
+anhangen               -> anhängen               459               2  ¦ f. das Anhangen, Hingabe, Neigung, Beschäftigung.
+gewiß                  -> gewiss                 1996-ss           2  ¦ (s. n. adv. gewiß, sicherlich, gut, ja.
+außagen                -> aussagen               1996-ss           2  ,¦ sagen, reden, sprechen, berichten, verkünden; sprechen zu (Acc. o. Gen.) , — von ( Acc.
+palastthor             -> Palasttor              1901-th           2  ¦ n. Palastthor.
+from                   -> fromm                  1128              2  ,¦ f. u. grausig, n. adv. m. eine From Śiva's Mannsname. f. eine From der Durgā.
+amulet                 -> amulett                75                2  ¦ heilbringend, glückbedeutend; n. Glück, Segen, Glückwunsch, glückverheißendes Zeichen, G
+verd                   -> fährt                  26                2  ¦ = ; auch ein Weilchen, einen Augenblick, wiederholt (auch verd.) ; wiederum, dagegen; ba
+thon                   -> ton                    1901-th           2  ¦ u. f. Lehm, Thon, Schiefer.
+thongefäß              -> Tongefäß               1901-th           2  ¦ n. Thongefäß.
+dacht                  -> dachte                 737               2  ,¦ ordnen, verbinden, mit jemd. (Instr.) wetteifern (Act.) ; sich zusammenschließen, sich 
+theil                  -> teil                   1901-th           2  ,¦ gehen, ziehen, fahren mit (Instr.) , aufbrechen, sich entfernen, entkommen, vergehen, z
+reichthümer            -> reichtümer             1901-th           2  ¦ m. Herr der Reichthümer.
+hinaußteigen           -> hinaussteigen          1996-ss           2  1. ,¦ (u. ersteigen, wachsen, sich entwickeln, gedeihen, zu- nehmen. p. p. gewachsen, ents
+affect                 -> affekt                 1014              2  ¦ m. das Sträuben der Körperhärschen (im Affect) , Aufregung.
+unterthänig            -> untertänig             1901-th           2  ¦ in der Gewalt von—befindlich, abhängig von, unterthänig (Gen. o. —˚). Abstr. n.
+tötlich                -> tödlich                21                2  ,¦ f. mörderisch, tötlich. m. Schwert; n. das Schlachten, Zerlegen.
+gutthat                -> guttat                 1901-th           2  ¦ n. Leichenverbrennung (eig. Gutthat).
+vocal                  -> vokal                  1901-c            2  ¦ n. das Auseinanderziehen; Auflösung eines Halbvocals in einen Vocal und dieser selbst (g
+imper                  -> immer                  23                2  1. ,¦ stehen, hintreten; treten auf, betreten, sich begeben nach (Acc.) ; stehen bleiben, 
+ungethan               -> ungetan                1901-th           1  ¦ ungethan, unbearbeitet, unvollkommen; unaufgefordert.
+unverlezt              -> unverletzt             75                1  ¦ unverlezt.
+brandmahl              -> brandmal               61                1  ¦ Haken, Biegung, Bug, Flanke, Schoß, Seite, Nähe; Mahl, Zeichen, Brandmahl; akt eines Dra
+mass                   -> maß                    583               1  ¦ m. die beiden (als Zeichen der Ehrerbietung) hohl zusammengelegten Hände; (auch als Mass
+thörcht                -> töricht                1901-th           1  ¦ ganz thörcht.
+localität              -> lokalität              1901-c            1  ¦ n. Substrat, Stoff; Beziehung, bes Localität (g) ; Gerichtshof; Abschnitt, Paragraph.
+dienstthuende          -> diensttuende           1901-th           1  ¦ m. der dienstthuende Priester.
+thränenlos             -> tränenlos              1901-th           1  ¦ thränenlos.
+icht                   -> ich                    62                1  ¦ icht anzuschauen
+curieren               -> kurieren               1901-c            1  ¦ u. nicht zu curieren.
+wittwen                -> witwen                 978               1  ¦ n. das Nachsterben (bes. des die Selbstverbrennung der Wittwen).
+vocals                 -> Vokals                 1901-c            1  ¦ m. Nasalklang eines Vocals (g).
+mißtrauisch            -> misstrauisch           1996-ss           1  ¦ mißtrauisch.
+verschluß              -> verschluss             1996-ss           1  ¦ n. Bedeckung, Deckel, Verschluß.
+ubel                   -> übel                   1412              1  ¦ unlieb, unerfreulich; n. Ubel, Unannehmlichkeit.
+methaphysik            -> metaphysik             1901-th           1  ¦ m. Methaphysik (der Buddhisten).
+dialect                -> dialekt                88                1  ¦ f. Halb-Māgadhī (ein Dialect).
+tödten                 -> töten                  1664              1  ¦ nicht zu tödten, unverletzbar.
+nothwendigkeit         -> notwendigkeit          1901-th           1  ¦ m. Nothwendigkeit.
+uberfall               -> überfall               78                1  ¦ m. Uberfall, angriff.
+wittwe                 -> witwe                  2496              1  ¦ f. Nicht-Wittwe.
+spezificiert           -> spezifiziert           1901-c            1  ¦ nicht spezificiert.
+unthunlich             -> untunlich              1901-th           1  ¦ unmöglich, unthunlich.
+studiren               -> studieren              1901-iren         1  2. ,¦ schleudern, schießen, werfen; (abwerfen nur p.p. . wegwerfen, abwerfen, niederlegen;
+bethränten             -> beträngten             1901-th           1  ,¦ f. bethränten Gesichts, verweint.*
+ueberschuss            -> überschuss             364               1  ¦ n. Ueberschuss, das Vorwalten.
+identification         -> identifikation         1901-c            1  ¦ m. , n. das Außetzen, Hinstellen; die Uebertragung, Unterstellung, Identification mit (L
+denunciation           -> denunziation           1901-c            1  ¦ n. das Zeigen, Vorführen, die Anzeige; Denunciation (j).
+schaale                -> schale                 745               1  ¦ f. Schaale, Schüssel.
+hinaußpringen          -> hinausspringen         1996-ss           1  ¦ m. das Hinaußpringen, der Angriff.
+geberde                -> gebärde                473               1  ¦ n. Geberde.
+kraftthat              -> Krafttat               1901-th           1  ¦ dem Indra gehörig, ähnlich, lieb; ein Genosse Indra's. n. Indra's Macht, Obergewalt, Kra
+wachsthum              -> wachstum               1901-th           1  ¦ m. , n. , m. f. das Steigen, die Höhe, das Wachsthum.
+uebermaaß              -> Übermaß                1901-th           1  ¦ hochfahrend; m. Erhebung, Vorrang, Uebermaaß, Trefflichkeit.
+compositums            -> Kompositums            1901-c            1  ¦ n. hinteres Glied eines Compositums (g.)
+außtand                -> ausstand               1996-ss           1  ¦ m. Urheber; n. das Außtehen, Aufgang, Entstehung; Außtand, Thatkraft, Energie.
+thränem                -> Tränen                 1901-th           1  ¦ m. das Drücken, der Druck; Strom (von Thränem).
+jenseit                -> jenseits               412               1  ¦ jenseit der Grenze wohnend.
+acut                   -> akut                   1901-c            1  ¦ erhoben, hoch, berühmt, hochbetont; m. der Acut (g.).
+bärin                  -> bären                  100               1  2. ¦ schlimm, böse; m. der Bär (Pl. das Siebengestirn); Mannsname. f. die Bärin; m. n. Ste
+litter                 -> liter                  49                1  ¦ m. der Rigveda (die Ricas mit oder ohne die Commentar-Litter atur).
+matron                 -> matrone                188               1  ¦ m. patron. oder matron. N. eines alten Lehrers.
+elephanten             -> elefanten              1920              1  ¦ f. von einem Elephanten herrührend.
+nachthun               -> nachtun                1901-th           1  1. ¦ (auch Praes. , Act. u. Med. machen, thun (in weitester Verwendung: an sich oder ander
+gleichthun             -> gleichtun              1901-th           1  1. ¦ (auch Praes. , Act. u. Med. machen, thun (in weitester Verwendung: an sich oder ander
+wohlthun               -> wohltun                1901-th           1  1. ¦ (auch Praes. , Act. u. Med. machen, thun (in weitester Verwendung: an sich oder ander
+qualificirt            -> qualifiziert           1901-c-iren       1  1. ¦ (auch Praes. , Act. u. Med. machen, thun (in weitester Verwendung: an sich oder ander
+rohrschößling          -> Rohrschössling         1996-ss           1  ¦ m. Rohrschößling (auch n.); N. eines Strauches.
+werkthätigkeit         -> Werktätigkeit          1901-th           1  ¦ werkthätig; m. Arbeiter. n. Werkthätigkeit.
+thier                  -> tier                   1901-th           1  ¦ aussätzig. Abstr. n. — f. ein geflectes Thier. n. Aussatz.
+kunt                   -> kund                   332               1  ¦ m. Sohn der Kuntī (Bein. d. Panduiden).
+welthüters             -> Welthüters             1901-th           1  ¦ m. N. eines Gottes der Tiefe, später des Gottes der Schätze, des Welthüters im Norden.
+edict                  -> edikt                  1075              1  ¦ n. ein gefälschtes Edicht, m. Edict-, Urkundenfälscher.
+centrum                -> zentrum                1901-c            1  ¦ m. Centrum eines Kreises.
+ber                    -> bär                    112               1  ¦ m. Behälter (jeder Art, bes.) Fass, Kufe, Wassereimer (ber. der Wolken) , Kasten; Degens
+schandthat             -> schandtat              1901-th           1  ¦ n. die Schamteile; Tuch um die S.; Schandthat.
+spahn                  -> span                   42                1  ¦ m. Spahn zum Auffangen des Feuers (r.).
+extract                -> extrakt                503               1  ¦ m. Decoct, Extract.
+beeren                 -> bären                  46                1  ¦ m. Pl. Art Beeren.
+sama                   -> same                   35                1  1. ¦ werfen, schleudern, richten (Blicke u. Gedanken) ; treffen, verletzen, schmähen, sche
+rhinoceros             -> rhinozeros             1901-c            1  ¦ m. Schwert, Degen; Rhinoceros.
+darthuend              -> dartuend               1901-th           1  ¦ (—˚) kündend, darthuend.
+thunlich               -> tunlich                1901-th           1  ¦ eundus, zu dem man gehen soll o. kann, zugänglich (auch im geschlechtl. S.) , thunlich, 
+multiplicator          -> multiplikator          1901-c            1  ¦ m. Faden, Schnur, Strick, Bogensehne, Saite, Bestandteil, Multiplicator (˚— fach, fältig
+articulation           -> artikulation           1901-c            1  ¦ m. Faden, Schnur, Strick, Bogensehne, Saite, Bestandteil, Multiplicator (˚— fach, fältig
+secundär               -> sekundär               1901-c            1  ¦ untergeordent, secundär.
+überschuß              -> überschuss             1996-ss           1  ¦ Überschuß an Vorzügen.
+beifal                 -> beifall                76                1  ¦ f. Beifal, Lob.
+zodiacalbild           -> Zodiakalbild           1901-c            1  ¦ m. Diener (Anfasser); m. (n.) Haus (Umfassung), Wohnung (oft Pl.) ; —˚ Tempel des —, Lau
+hausthür               -> Haustür                1901-th           1  ¦ n. Hausthür.
+röthel                 -> Rötel                  1901-th           1  ¦ n. (A f.) Röthel.
+thiere                 -> tiere                  1901-th           1  ¦ Adj. Dorf-, ländlich, zahm, kultiviert (Thiere u. Pflanzen) , bäuerisch, roh. m. = vor. 
+wiederlegen            -> widerlegen             237               1  ¦ sehen, erblicken, erscheinen, zeigen, verkünden, sagen. jemd. (Acc.) nachblicken, sehen.
+fursten                -> fürsten                30                1  ¦ m. N. eines Fursten.
+cand                   -> kant                   65                1  ¦ m. ein Candāla (Mann aus der verachtetsten Kaste); f. u. .
+plaz                   -> platz                  668               1  ¦ m. n. viereckiger Plaz o. Hof.
+gewandheit             -> gewandtheit            107               1  ¦ n. Gewandheit, Anmut.
+sinnesbethörung        -> Sinnesbetörung         1901-th           1  ¦ m. Sinnesbethörung.
+cur                    -> kur                    1901-c            1  ¦ m. Pl. cur und Genossen (g.).
+wildpret               -> wildbret               1065              1  ¦ trocken, eben, fruchtbar (Gegend) ; in einer fruchtbaren Gegend lebend m. Haselhuhn; n. 
+hofnung                -> hoffnung               2082              1  ¦ f. der Wunsch o. die Hofnung zu leben.
+kundzuthun             -> kundzutun              1901-th           1  ¦ u. kundzuthun, mitzuteilen.
+kniee                  -> knie                   993               1  ¦ die Kniee beugend.
+schößling              -> schössling             1996-ss           1  ¦ n. (neugeborenes) Kind, Knabe, Junges; Schößling, Ei.
+causativs              -> Kausativs              1901-c            1  ¦ u. i (= aya), der Charakter des Causativs (g.).
+erkenntniss            -> erkenntnis             711               1  ¦ n. Erkenntniss der Wahrheit; Titel eines Werkes.
+thatsachen             -> tatsachen              1901-th           1  ¦ m. eine auf Grund von Thatsachen erfolgte Anklage (j.)
+todschlag              -> totschlag              29                1  ¦ scharf, spitz, stechend, brennend (geschmack) , heftig, streng. (Compar. u. Superl. s. b
+hingiebt               -> hingibt                155               1  ¦ m. der— (Gen. o. Acc.) verlässt o. hingiebt.
+dutzen                 -> duzen                  30                1  ¦ m. das Dumachen, Dutzen.
+wunderthat             -> Wundertat              1901-th           1  ¦ n. , f. Wunderthat o. kraft.
+wüthenden              -> wütenden               1901-th           1  ¦ Adv. Zahn an Zahn (vom wüthenden Kampfe).
+sien                   -> sein                   211               1  1. ¦ zahm sien; zähmen, bezwingen; p.p. gezähmt, sanft. Caus. zähmen, zwingen; p.p. .
+sih                    -> sie                    42                1  ¦ (ohne Praes., vgl. sehen, erblicken, betrachten, erkennen (an— Instr.) , untersuchen, pr
+koloquinthengurke      -> Koloquintengurke       1901-th           1  ¦ u. f. Koloquinthengurke.
+rha                    -> rhe                    36                1  ¦ m. Fürst der Daśārha; Bein. Kṛṣṇa's.
+loos                   -> los                    1998              1  ¦ f. schweres Loos, Unglück.
+geren                  -> gern                   109               1  ¦ m. das Gelüste (bes. der Schwan- [Page185-2] geren), Schwangerschaft, Verlangen nach (Lo
+copulatives            -> Kopulatives            1901-c            1  ¦ n. Paar, Dualismus, Gegensatz, Zweikampf, Streit, Wettstreit; Acc. u. Instr. adv. paarwe
+thürriegel             -> Türriegel              1901-th           1  ¦ n. Thürriegel, Abschluss.
+accusativ              -> Akkusativ              1901-c            1  ¦ der zweite. n. adv. zweitens. o. zum zweiten Mal. m. Genosse, Begleiter, Freund; Nebenbu
+umgethan               -> umgetan                1901-th           1  1. ¦ ; , setzen, stellen, legen; bringen zu o. nach, richten, lenken auf (Loc. o. Dat) ; e
+commentaren            -> Kommentaren            1901-c            1  ¦ m. , u. f. T. von Commentaren zum vor.
+math                   -> matt                   152               1  ¦ n. die Nala-Episode (aus dem Mathābhārata).
+außtreichen            -> ausstreichen           1996-ss           1  ¦ m. das Einreiben, Außtreichen; der Probierstein; n. der darauf aufgetragene Goldstreifen
+sprüchwort             -> sprichwort             229               1  ¦ n. Ausspruch, Anrede, Sprüchwort.
+thalwärts              -> talwärts               1901-th           1  ¦ f. Tiefe, Thal; Instr. adv. thalwärts.
+participien            -> partizipien            1901-c            1  ¦ (meist —˚) gelegen, befindlich, beruhend auf, abhängig von, hingegeben an. Abstr. f. f. 
+vant                   -> fand                   23                1  ¦ zum Pajrageschlecht gehörig (Bein. Kakṣīvant's).
+fünfen                 -> fünf                   49                1  ¦ von fünfen der beste.*
+gleichwol              -> gleichwohl             7873              1  ¦ (Compar. fernliegend (in Raum und Zeit) , jenseitig, dortig, fremd; verschieden von (Abl
+activ                  -> aktiv                  147               1  ¦ n. die activen Verbalendungen, das Activ des Verbums (g.).
+ausschluß              -> ausschluss             1996-ss           1  ¦ Adv. ringsum, umher, ˚— beim Nomen u. Adv. verst., beim Zahlwort = volle. Präp um, gegen
+thorbalken             -> Torbalken              1901-th           1  ¦ m. Thorbalken (Du. Thor); Keule, Wolkenstreif vor der Sonne.
+thorpfosten            -> Torpfosten             1901-th           1  ¦ m. Thorpfosten,*
+kenntniss              -> kenntnis               999               1  ¦ n. das Erkennen Kenntniss.
+wiedersacher           -> widersacher            400               1  ¦ im wege stehend. hinderlich; m. Wiedersacher, Feind.
+genügethun             -> genügetun              1901-th           1  ¦ n. das Erfüllen, Genügethun.
+sopha                  -> sofa                   819               1  ¦ m. Ruhebett, Sopha; das Unterschlagen der Beine beim Sitzen.
+ler                    -> leer                   59                1  ¦ f. auf die Pañcāla bezüglich. m. ein Pañcāler, Fürst der P., Pl. das [Page248-1] Volk de
+recitator              -> rezitator              1901-c            1  ¦ m. Hersager, recitator, Lehrer, Schüler, Gelebrter.
+missethat              -> missetat               1901-th           1  ¦ n. Missethat.
+missethäter            -> missetäter             1901-th           1  ¦ f. dass. ; m. Missethäter.
+übelthaten             -> Übeltaten              1901-th           1  ¦ m. Reihe von Übelthaten.
+durchstudiren          -> durchstudieren         1901-iren         1  ¦ n. das Durchgehen (übertr.) , Durchstudiren, Lesen.
+brotherr               -> Brotherr               1901-th           1  ¦ der die Mehlklöße darbringt (r.) ; m. Brotgeber, Brotherr.
+seind                  -> sind                   1908              1  ,¦ nur Partic. derb, fest seind.
+verrätherisch          -> verräterisch           1901-th           1  ¦ klatschaft, verleumderisch, verrätherisch, boshaft, schlecht. m. Hinterbringer, Afterred
+wiederthun             -> wiedertun              1901-th           1  ¦ n. das Wiederthun.
+thatenreich            -> tatenreich             1901-th           1  ¦ u. viel thuend, thatenreich.
+überfluß               -> Überfluss              1996-ss           1  ¦ erfüllend, befriedigend . m. das Füllen, Vollmachen, Befriedigung; Erguß, Flut, Strom, Ü
+compositionsglied      -> Kompositionsglied      1901-c            1  ¦ n. vorderes Compositionsglied (g.).
+breithüftig            -> breithüftig            1901-th           1  ¦ breithüftig.
+giessen                -> gießen                 332               1  ¦ n. das Werfen, Hineinwerfen, Außchütten o. -giessen.
+correlativ             -> korrelativ             1901-c            1  ¦ correlativ (ph.).
+thorgegend             -> Torgegend              1901-th           1  ¦ f. Thorgegend.
+vocalen                -> Vokalen                1901-c            1  ¦ m. Anschluss, Verschmelzung (von Vocalen).
+lebensthätigkeit       -> Lebenstätigkeit        1901-th           1  ¦ f. Lebensthätigkeit o. unterhalt.
+ergiebt                -> ergibt                 3904              1  ¦ n. die Wahl zwischen Zweien, ob eines oder das andere sich aus einer Regel ergiebt (g.).
+genugthung             -> Genugtuung             1901-th           1  ¦ n. , f. Genugthung, Ersatz, Sühne, Buße.
+rit                    -> ritt                   22                1  ¦ m. Abgabe, Geschenk, Huldigungsgabe, fromme Spende (opp. rit, Opfer); Name eines Daitya.
+außenthür              -> Außentür               1901-th           1  ¦ n. Außenthür o. Platz vor der Thür.
+possessivcompositum    -> Possessivkompositum    1901-c            1  ¦ m. (eig. viel Reis habend) Possessivcompositum (g.).
+schußweite             -> Schussweite            1996-ss           1  ¦ m. Schußweite (eig. Pfeilweg).
+pfeilschuß             -> Pfeilschuss            1996-ss           1  ¦ m. Pfeilschuß o. flug.
+thränenerguß           -> Tränenerguß            1901-th           1  ¦ m. Thränenerguß.
+gross                  -> groß                   2484              1  ¦ in der Mitte gross.
+theolog                -> theologe               150               1  ¦ heiliger Weisheit o. des Zaubers kundig ( Superl. ); m. Theolog o. Philosoph.
+prädicats              -> Prädikats              1901-c            1  ¦ sein o. geschehen müssend; n. impers. mit Instr. des Subj. u. Prädicats.
+abstractum             -> abstraktum             39                1  ¦ dessen Agens ein Abstractum ist (g.).
+commentarverfasser     -> Kommentarverfasser     1901-c            1  ¦ u. m. Commentarverfasser, Bein. Patanjalīs.
+copula                 -> kopula                 1901-c            1  1. ,¦ werden, sein (mit Nom. o. Adv. auf o. , entstehen, geschehen, dasein, etwas sein o. 
+meth                   -> met                    1901-th           1  ¦ (f. u. süß, lieblich, angenehm m. der erste Fruhlingsmonat, Frühling überh.; N. eines Dä
+gemütsthätigkeit       -> Gemütstätigkeit        1901-th           1  ¦ f. Gemütsthätigkeit o. stimmung.
+dinte                  -> tinte                  1901-th-adjacent    1  ¦ u. f. Pulver, Schwarz, Dinte, Ausgenschminke.
+großthaten             -> Großtaten              1901-th           1  2. ¦ groß, reichlich; n. Pl. Großthaten.
+hohenpriester          -> hohepriester           138               1  ¦ u. m. ein Haupt- o. Hohenpriester (r.).
+bloss                  -> bloß                   3342              1  ¦ f. Maß. Ausdehnung, Umfang, Menge, Dauer, More (metr.) , Augenblick, Teilchen, Kleinigke
+thönern                -> tönern                 1901-th           1  ¦ f. thönern; n. Thongeschirr.
+souveränetät           -> souveränität           467               1  ¦ n. Herrscherwürde, Souveränetät.
+commentare             -> Kommentare             1901-c            1  ¦ in gemessener (gebundener o. bündiger) Rege abgefasst; f. T. mehrerer Commentare.
+zuthun                 -> zutun                  1901-th           1  ,¦ die Augen schließen, sich schließen (vom A. selbst), auch = . p. p. die A. geschlossen 
+thorenaufklärung       -> Torenaufklärung        1901-th           1  ¦ n. T. einer Grammatik (eig. Thorenaufklärung).
+tambourin              -> tamburin               42                1  ¦ m. Art Trommel o. Tambourin.
+sammt                  -> samt                   1848              1  ¦ sammt der Lotuswurzel.
+cäsur                  -> zäsur                  177               1  3. ¦ f. Lenkung; Pause, Cäsur.
+wunsche                -> wünsche                762               1  ¦ dass. ; ˚— u. n. nach Wunsche.
+muhammedaner           -> mohammedaner           26                1  2. ¦ m. ein Grieche o. Muhammedaner, überh. ein Fremder.
+gebür                  -> gebühr                 85                1  ¦ n. Richtigkeit, Wahrheit. Acc. , Instr. u. adv. nach Wahrheit o. Gebür.
+concentration          -> Konzentration          1901-c            1  ¦ m. das Anschirren, Fahrt, Gespann, Geschirr; Ausrüstung, Anwendung, Mittel, Kniff, Zaube
+aether                 -> Äther                  1901-th           1  ¦ n. Dunstkreis, Atmosphäre, Luftraum (2 0. 3. angen., opp. ) = aer: aether , Dunkel, Nebe
+kämpf                  -> kämpfe                 40                1  ¦ erfreulich; n. Freude, Kämpf.
+befliessen             -> beflissen              42                1  ,¦ (Act. meist nur trans.) zum Stehen bringen, aufhalten, befestigen; stehen bleiben, ruhe
+nen                    -> einen                  309               1  ¦ m. Pl. des Königs Gattin (nen).
+gebr                   -> geber                  149               1  1. ¦ m. König, Herrscher (oft von Göttern gebr.) , ein Mann aus der Kriegerkaste. f. König
+wehthuend              -> wehtuend               1901-th           1  ,¦ p. p. schmerzend, wehthuend.*
+außetzer               -> aussetzer              1996-ss           1  ¦ m. Außetzer, Pflanzer.
+bedd                   -> bett                   24                1  ¦ (f. u. leicht (in allen Bedd.) , schnell, behende, kurz (prosod.). gering, schwach, unbe
+book                   -> bock                   63                1  ¦ bärtig (Book).
+perfect                -> perfekt                212               1  ¦ das perfect und seine Endungen (g.).
+verthun                -> vertun                 1901-th           1  1. ,¦ zerbrechen, beschädigen, rauben, plündern, zerstören, be- seitigen, verthun, verschw
+conjunctiv             -> Konjunktiv             1901-c            1  ¦ der Conjunctiv u. seine Endungen (g.).
+rothalsig              -> rothalsig              1901-th           1  ¦ rothalsig .
+zusammenthun           -> zusammentun            1901-th           1  2. ,¦ , hinstreuen, säen, hinwerfen, bestreuen, besäen. p. p. hingeworfen, zerstreut, gesä
+saffran                -> safran                 1461              1  3. ¦ vorzüglichst, best, schönst (unter Gen, Loc., Abl. o. —˚), vorzüglicher, besser als (
+schir                  -> schier                 25                1  ¦ geschützt (durch Waffen 0. ein Schtzbrett, s. vor.) ; schützend, schir- mend; zu Wagen s
+unterthanwerden        -> Untertan werden        1901-th           1  ¦ n. das Unterthanwerden.
+unterthansein          -> Untertansein           1901-th           1  ¦ f. , n. das Unterthansein, Abhängigkeit.
+combination            -> kombination            1901-c            1  ¦ m. Wechsel, Alternative (Instr. adv. fakulativ, arbirträr), Verschiedenheit, Möglichkeit
+nam                    -> nahm                   2981              1  ¦ menschenleer. n. Einsamkeit. ˚naM o. E. machen d.i. alle Zeugen entfernen.
+wei                    -> wie                    59                1  3. ,¦ finden, treffen, erreichen, erfassen, heimsuchen; be- wirken, erweben, jemd. (Dat.) 
+ord                    -> ort                    23                1  ,¦ f. regelnd, bestimmend. n. Ord- nung, Vorschrift, Regel, Bestimmung, Art und Weise, Ver
+wiederwärtigkeit       -> widerwärtigkeit        23                1  ¦ beschädigt, beraubt, allein; entfernt o. getrennt von (—˚); gedrückt, traurig; mangelhaf
+zenith                 -> zenit                  1901-th           1  ¦ n. Viṣṇu's Gebiet, d. i. Luftraum, Himmel; Zenith, Scheitelpunkt.
+gallerie               -> galerie                1160              1  ¦ u. f. Reihe, Straße, Gallerie.
+eiferig                -> eifrig                 199               1  ¦ f. das Rollen (von Thränen) , Geschehen, Vorkommen; Hingegebensein an, Eifer in (Loc. 0.
+vocalsteigerung        -> Vokalsteigerung        1901-c            1  ¦ f. das Wachsen, Großwerden, Vermehrung, Zunahme, Gedeihen, Wohl- fahrt, Glück; Gewinn, Z
+thürsteherin           -> Türsteherin            1901-th           1  ¦ f. Thürsteherin (eig. Stabträgerin).
+malzeit                -> mahlzeit               187               1  ¦ n. Abendandacht o. -malzeit.
+unterthänigkeit        -> Untertänigkeit         1901-th           1  ¦ m. ein Angehöriger der dritten Kaste, Mann des Volkes (f. . n. Unterthänigkeit, Abhängig
+central                -> zentral                1901-c            1  ¦ Adj. Mittel-, central.
+consonant              -> konsonant              1901-c            1  ¦ dass., f. indirekte Aussage (rh.). n. Schmuck; das Offenbaren, Bekunden. Deutlichkeit; K
+hundertthorig          -> hunderttorig           1901-th           1  ¦ hundertthorig.
+funfzig                -> fünfzig                1513              1  ¦ n. ein halbes Hundert, funfzig.
+wohlthätigkeit         -> Wohltätigkeit          1901-th           1  ¦ n. Wohlthätigkeit.
+kraftthätig            -> krafttätig             1901-th           1  ¦ übermächtig, kraftthätig.
+gelert                 -> gelehrt                137               1  ¦ gelert, o. belehrend.
+unstät                 -> unstet                 54                1  ¦ dass. , unstät, schlaff, lässig in (Loc.).
+schmertz               -> schmerz                1533              1  1. ,¦ u. flammen, brennen, Schmertz empfinden, trauern, betrauern. Caus. entzünden, betrüb
+glaubig                -> gläubig                159               1  ,¦ u. glaubig.
+ruhmesthat             -> Ruhmestat              1901-th           1  ¦ Adj. ruhmerstrebend, eifrig. n. Ruhm, Ruhmesthat. f. Ruhmbegier, Eifer, Eile.
+auseinanderthun        -> auseinandertun         1901-th           1  ,¦ Act. lehnen an, stützen auf, bringen o. verbreiten in (Loc.) ; meist Med. sich lehnen a
+contact                -> Kontakt                1901-c            1  ¦ m. Verbindung, Zusammenhang; Contact (ph.) ; Freundschaftverhältnis, Verschwägerung, Ehe
+ergreiffen             -> ergreifen              1192              1  ¦ m. das Ergreiffen, Erhalten, Genießen, Einnehmen (von Arznei) ; Sammeln, Vorrat, Sammlun
+compendium             -> kompendium             1901-c            1  ¦ m. das Ergreiffen, Erhalten, Genießen, Einnehmen (von Arznei) ; Sammeln, Vorrat, Sammlun
+wohlthäter             -> Wohltäter              1901-th           1  ¦ m. Wohlthäter.
+concretum              -> konkretum              1901-c            1  ¦ m. Dingwort, Concretum (g.).
+reichthümern           -> Reichtümern            1901-th           1  ¦ reich (Abstr. f.) o. samt den Reichthümern.
+locativ                -> lokativ                1901-c            1  ,¦ f. der siebente. f. der siebente Tag im Halbmonat; der siebente Casus (Locativ) und sei
+schluß                 -> schluss                1996-ss           1  ¦ f. Erlangung, Beendigung, Schluß.
+composita              -> komposita              1901-c            1  ¦ m. ein an Composita tretendes Suffix (g.).
+copulativen            -> kopulativen            1901-c            1  ¦ hinzufügend o. copulativen Sinn habend, einschließend.
+association            -> assoziation            1901-c            1  ¦ n. das Außtehen, Entstehung, Erhebung, Unternehmung, Steigerung, Vermehrung, Heilung. Mi
+halbvocals             -> Halbvokals             1901-c            1  ¦ n. das Auseinanderziehen; Auflösung eines Halbvocals in einen Vocal und dieser selbst (g
+weissen                -> weißen                 2609              1  ¦ mit weissen Lotusblüten bekränzt.
+tausendthörig          -> tausendtörig           1901-th           1  ¦ tausendthörig.
+nommen                 -> nomen                  23                1  2. ,¦ (nur binden; p. p. gebunden, verbunden mit, begleitet von (Instr. o. —˚). Caus. (nur
+mässig                 -> mäßig                  297               1  ¦ überschüssig o. -mässig.
+verrichter             -> richter                41                1  ,¦ f. zu Stande bringend, ausführend (Gen. o. —˚), wirksam (Superl. , zweckmäßigig. m. Ver
+congruenz              -> kongruenz              1901-c            1  ¦ n. grammatische Congruenz o. Coordination.
+coordination           -> koordination           1901-c            1  ¦ n. grammatische Congruenz o. Coordination.
+kampher                -> kampfer                86                1  ¦ m. eine weiße Wolke; Kampher.
+schenkwirth            -> schenkwirt             1901-th           1  ¦ vom Branntwein lebend; m. Schenkwirth.
+zuthunlich             -> zutunlich              1901-th           1  ¦ zuthunlich, hold, mild.
+geprisen               -> gepriesen              22                1  ,¦ loben, preisen, verherrlichen; singen, vortragen die med. Formen oft mit pass. Bed.). P
+articulationsstelle    -> Artikulationsstelle    1901-c            1  ¦ n. das Stehen, Bestehen, Verweilen; Zustand, Stellung, Würde; Standort, Wohnsitz, Aufent
+außteller              -> aussteller             1996-ss           1  ¦ m. Außteller, Begründer; Anordner (d.).
+wunderthäter           -> Wundertäter            1901-th           1  ¦ geschickt im Werke; m. Künstler, Wunderthäter.
+selbstgethan           -> selbstgetan            1901-th           1  ¦ selbstgethan.
+teilungsvocal          -> Teilungsvokal          1901-c            1  ¦ f. Teilungsvocal (g.).
+außicht                -> aussicht               1996-ss           1  ¦ n. auch Außicht über (Gen.).
+
+# ===== RESIDUAL pattern candidates (-> LLM pass) =====
+# -- th: 86 distinct (top 15) --
+   enthaltend                 73
+   myth                       19
+   mythol                      9
+   atharvaveda                 6
+   lusthaus                    5
+   verkehrtheit                5
+   aratha                      4
+   sichenthalten               4
+   welthüter                   4
+   haupthaar                   3
+   enthaltensein               2
+   gedrücktheit                2
+   dacaratha                   2
+   stadthaupt                  2
+   enthülsen                   2
+# -- c-hard: 60 distinct (top 15) --
+   concr                      20
+   indecl                     16
+   encl                       13
+   correl                     10
+   coram                       8
+   coire                       5
+   collect                     3
+   cas                         2
+   causa                       2
+   ricas                       2
+   dacaratha                   2
+   decoct                      2
+   hauscultus                  2
+   constr                      2
+   incl                        2
+# -- -iren: 8 distinct (top 15) --
+   oberhirt                    2
+   pferdehirt                  1
+   speicificirt                1
+   rinderhirt                  1
+   büffelhirt                  1
+   kälberhirt                  1
+   vriddhirt                   1
+   schafthirt                  1
+# -- ss-eszett: 400 distinct (top 15) --
+   große                      58
+   großer                     57
+   genießend                  25
+   großes                     22
+   weiße                      21
+   fuße                       13
+   füße                       13
+   gemäßig                    11
+   großen                     11
+   fließend                   11
+   übermäßigig                 9
+   äußerste                    9
+   heißend                     8
+   weißlich                    8
+   zusammenstoß                8
+# -- ey: 3 distinct (top 15) --
+   aitareya                    2
+   jasaneya                    2
+   daiteya                     1

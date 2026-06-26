@@ -9,6 +9,18 @@ ready for a dated entry.
 ## [Unreleased]
 
 ### Added
+- **Ortho-drift O3 — re-ran the German cluster (PW/PWG/GRA/CCS/SCH) against the full 15,685-form
+  `de_reform_map.tsv`** (was 2,823 at the frozen deterministic-pass snapshot). Finding: absolute
+  drift/1k roughly triples (PW 10.26 → 28.59, SCH 2.52 → 9.77) and the monotone publication-date
+  gradient at the top flattens (GRA 27.69 now edges above PWG 26.84) — the DTA long-tail conflates
+  generic early-modern/loanword variation with the dated 1901/1996 reforms. **But the SCH-1928
+  era-dating control is fully intact**: SCH stays uniquely `ß`-dominant (1996-ss 446 ≫ 1901-th 89),
+  pre-1901 dicts stay `th`-dominant — the relative era signature is robust to the 5.5× expansion.
+  This **vindicates the freeze**: the per-dict gradient stays at the deterministic-pass snapshot;
+  the expanded map is a search-normalization recall asset, not a drift-rate metric. Expanded-run
+  outputs banked as `ortho_drift/de_drift_summary.expanded_map.tsv` +
+  `ortho_drift/<DICT>_drift_report.expanded_map.txt`; the committed frozen reports are unchanged.
+  Written up in `docs/ORTHO_DRIFT_FINDINGS.md` (new "O3" subsection). Closes O3 in `HANDOFF_NEXT.md`.
 - **`docs/HYPOTHESES.md` — project hypothesis ledger.** Documents in detail every testable
   hypothesis behind the toolset, with verdicts and evidence: **7 confirmed** (body = ground truth;
   tier-A precision near-zero on mature dicts; do-not-file is the deliverable; drift = f(reform type);
