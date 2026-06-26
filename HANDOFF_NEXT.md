@@ -18,6 +18,7 @@ by priority. The headword-triage handoff (for re-runs) is separate:
 | ~~2~~ | ~~Tier-C ranking calibration~~ | engineering | ✅ **DONE** — negative result; tier-promotion unsafe (real minimal pairs), kept a ranking nudge |
 | ~~3~~ | ~~Ortho-drift within-EN recency control~~ | study extension | ✅ **DONE** (PD/PE/BHS/IEG = 0.00, VEI 0.06; en_GB.dic staged) |
 | ~~4~~ | ~~German DTA/RIDGES long-tail merge~~ | study extension | ✅ **DONE** — DTA lingattr-TEI, de map 2,823 → 15,685 (+12,862) |
+| **O1–O7** | **Research backlog** — open hypotheses (re-run German, ligature split, inline body-check, dating tool, …) | research | mixed — 4 ready now, 3 gated |
 | — | Cleanup / low-priority + blocked-on-external | — | see bottom |
 
 ## Shared context
@@ -245,6 +246,57 @@ documentation page:
 > then `docs/ORTHO_DRIFT_FINDINGS.md` + `changelog.md`, and commit.
 
 ---
+
+## Research backlog — the open hypotheses (O1–O7)
+
+The seven open questions from [docs/HYPOTHESES.md](docs/HYPOTHESES.md), ordered by readiness. Each is
+a self-contained fresh-chat task; the ⚠️-marked ones need a local install or external data first.
+
+**✅ Ready now (no external data):**
+
+- **O3 — Re-run the German cluster with the 15,685-form map.** Cheapest, highest-certainty.
+  > In `SanskritSpellCheck/detectors`, re-run `python ortho_drift.py <DICT> --full` for the German
+  > dicts (PW PWG GRA CCS SCH) now that `de_reform_map.tsv` is 15,685 forms (was 2,823). Report the
+  > new drift/1k per dict vs the frozen table in `docs/ORTHO_DRIFT_FINDINGS.md`, and **check the
+  > SCH-1928 control still dates correctly** (the bigger map must not blur the era-dating). de_DE dic
+  > is the Adobe one already on disk. Update the findings doc + changelog; commit.
+- **O5 — Split the æ/œ ligature class from reform.** Small, well-scoped.
+  > In `detectors/ortho_drift.py`, the dominant "drift" in several English dicts is the æ/œ ligature
+  > (SHS 109, MW72 92, VEI 12) — typographic, not orthographic reform. Add a separate `ligature`
+  > classification so it isn't counted as reform drift; re-report the EN summary with the two classes
+  > split. Doc-only; keep the existing rows, add the split. Commit.
+- **O1 — Inline body-check in the ranker (closes R1's gap).** Highest value — turns the tier-C
+  negative result into a positive.
+  > In `SanskritSpellCheck/detectors`, R1 (see HYPOTHESES.md) showed `run_all.score_tier` mis-ranks
+  > real minimal pairs (`patra`/`pAtra`) because the engine lacks the body. `triage_util.EntryIndex`
+  > already parses entry bodies. Wire a **cheap per-candidate body lookup** into the ranker: if the
+  > suspect has its own real definition in its dictionary's entry, demote/suppress it (don't surface
+  > it as a typo) — the deterministic, model-free version of the body-grounded triage. Measure with
+  > `eval.py` (FP stays 0); the goal is fewer real-word candidates in tier A/B without losing the
+  > known o_vs_O pairs. Commit.
+- **O4 — Drift-rate as a dating tool.** Research/modeling; the data already exists.
+  > Using `ortho_drift/en_drift_summary.tsv` (+ de/ru) and each dictionary's known publication year,
+  > calibrate **drift/1k ↔ year** (the monotone WIL 1832=0.57 → MW 1899=0.01 → PD 1976=0.00 gradient).
+  > Fit/plot the relation, report its tightness, and test whether it can **estimate the epoch of an
+  > undated dictionary or stratum** from drift rate alone. Doc-only deliverable.
+
+**⚠️ Need a local install:**
+
+- **O2 — A better attestation signal than DCS-band-0.** R1 also failed because `suspect_band==0` is
+  unreliable (DCS gaps). Test whether an **inflection-aware attestation** (vidyut-expanded stems, via
+  `gen_vidyut_stems.py` — needs `pip install vidyut`) makes "suspect-not-attested" reliable enough to
+  safely promote. Likely still bounded by R1's deeper cause (the body), so pair it with O1.
+- **O7 — Does OCR pre-verify actually help the human?** Tied to **Task 1** (needs tesseract + the
+  `san` model). After running `ocr_verify.py` on the 122 FILE-FIRST candidates, measure the
+  CONFIRM/DENY/**UNCERTAIN** split — if UNCERTAIN dominates (likely, on old Devanāgarī scans), OCR
+  pre-verify does *not* reduce the human scan-verification load and Task 1 should drop the OCR gate.
+
+**⚠️ Need external corpora:**
+
+- **O6 — Language-general reform maps.** The transform-and-check + corpus-norm-merge pipeline (H4+H6)
+  is language-agnostic. Build reform maps for English (EEBO/ECCO), French (Frantext/BFM), etc. from
+  their diachronic corpora — same `extract_*_pairs.py` → `merge_reform_pairs.py <lang>` flow as DTA.
+  Needs a corpus export with a normalization layer per language (drop on disk / direct URL).
 
 ## Cleanup / low-priority (active-dev backlog)
 
