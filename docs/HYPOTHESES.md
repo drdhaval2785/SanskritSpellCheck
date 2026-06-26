@@ -127,27 +127,53 @@ errors higher.
 - **Consequence:** confirmed the 2.5 GB lingattr-TEI was required *before* paying for it; saved a
   wrong 2.5 GB download. The lesson: probe the cheapest artifact for the signal first.
 
+### R5 — A cheap, model-free body lookup in the ranker can demote real-word minimal pairs (was O1)
+*Hypothesis:* R1 mis-ranks `patra`/`pAtra` because the engine lacks the body. Wire a *deterministic*
+per-candidate `EntryIndex` body lookup into `score_tier` — if the suspect has its own real definition,
+demote it — to fix R1 without a full LLM triage. Goal: fewer real-word candidates in tier A/B, no loss
+of known o_vs_O pairs.
+- **Test:** probed every candidate body signal against the 3,884 known o_vs_O pairs (the real errors
+  that must stay) vs the rest, in tiers A/B, before changing any code.
+- **Verdict:** **refuted — no model-free body signal separates the two classes.** Three independent
+  signals all fail:
+  1. **Body presence/length** — known *real errors* carry substantive glosses at the **same** rate as
+     everything else (tier A: 83 % vs 82 % at >= 40 chars; tier B: 78 % vs 79 %). A typo'd headword in
+     a poorly-digitised dict has a full definition too — presence cannot tell it from a real word.
+  2. **DCS attestation of the suspect** — the real words it must protect are themselves band-0:
+     `patra`, `vata` are **absent from DCS-2021** (band 0) while `pAtra`/`vAta`/`deva` are band 5. So
+     "suspect attested => real word" misses exactly the words R1 cares about (R1's coverage-gap cause).
+  3. **Suspect-vs-suggestion body overlap** — both classes have low overlap (tier A: known <= 0.1 =
+     89 % vs other 90 %); in tier B it **inverts** (known 88 % vs other 49 %), so demoting low-overlap
+     would drop *more* known errors than candidates.
+  - **Tightest conjunction** (the exact `patra` signature: tier-B, single-detector, `best_band >= 3`-
+    promoted, body >= 40 chars) still demotes **60 known real errors** (20 % of tier-B known pairs) to
+    catch 244 *unverified* others — and since tier-A/B precision is already near-zero on mature dicts
+    (H2), most of those 244 are likely real errors too. No clean win exists.
+- **Consequence:** **made no change to `score_tier`** — any deterministic demotion trades known-error
+  recall 1-for-<=4 against unverified precision. The body must be *read* (the LLM body-grounded
+  triage), not measured; R1's gap is a semantic ceiling, not a ranker-tuning problem. Confirms H1 from
+  the ranker side. Do not re-attempt a deterministic body/attestation gate in the scorer.
+
 ---
 
 ## 🔭 Open / newly-raised
 
-- **O1 — Inline body check in the ranker.** R1 showed the engine mis-ranks minimal pairs because it
-  lacks the body. Could a *cheap per-candidate body lookup* (the `EntryIndex` already exists) gate the
-  ranker so the engine itself never elevates a `patra`/`pAtra` pair — closing the tier-C gap without
-  a full LLM triage?
+- ~~**O1 — Inline body check in the ranker.**~~ **→ refuted, now [R5](#r5--a-cheap-model-free-body-lookup-in-the-ranker-can-demote-real-word-minimal-pairs-was-o1).**
+  No model-free body signal (presence/length, DCS attestation, suspect↔suggestion overlap) separates
+  real-word minimal pairs from typos without an equal hit to known-error recall.
 - **O2 — A better attestation signal than DCS-band-0.** The tier-C promotion failed partly on DCS
   coverage gaps. Would an inflection-aware attestation (vidyut-expanded) or a larger corpus make
-  `suspect-not-attested` reliable enough to promote safely?
-- **O3 — Re-run German with the 15,685-form map.** The DTA long tail now dwarfs the dictionaries' own
-  drift forms. Re-running the German cluster would reclassify residuals as known drift — does German
-  drift-*recall* rise materially, and does the SCH-1928 control still hold (does the bigger map blur
-  the era-dating)?
-- **O4 — Drift-rate as a dating tool.** The monotone WIL 0.57 → PD 0.00 gradient suggests drift/1k ↔
+  `suspect-not-attested` reliable enough to promote safely? (Note R5: `patra`/`vata` are DCS band-0
+  *real* words — vidyut stems may not rescue them either, since they are valid but corpus-absent.)
+- ~~**O3 — Re-run German with the 15,685-form map.**~~ **✅ done (2026-06-26).** Rates ~triple and the
+  top-of-gradient monotone ordering flattens (GRA > PWG), but the SCH-1928 era-dating control is fully
+  intact — vindicates freezing the per-dict gradient. See `ORTHO_DRIFT_FINDINGS.md` "O3".
+- **O4 — Drift-rate as a dating tool.** The monotone WIL 0.46 → PD 0.00 gradient suggests drift/1k ↔
   year is calibratable. Could the metric *date* an undated/anonymous dictionary, edition, or textual
   stratum from its drift rate alone?
-- **O5 — Separate ligatures from reform.** The dominant "drift" in several English dicts is the æ/œ
-  ligature (SHS 109, MW72 92, VEI 12), which is *typographic*, not orthographic reform. Splitting a
-  `ligature` class from `reform` would stop it inflating the reform signal.
+- ~~**O5 — Separate ligatures from reform.**~~ **✅ done (2026-06-26).** Added `NONREFORM_ERAS` so the
+  æ/œ ligature is its own column, excluded from reform-drift/1k; mid-tier EN dicts (ligature-dominated)
+  collapse to ≈0 reform. See `ORTHO_DRIFT_FINDINGS.md` EN section.
 - **O6 — Language-general reform maps.** The transform-and-check + corpus-norm-merge pipeline (H4+H6)
   is language-agnostic. Could it build reform maps for English (EEBO/ECCO), French (Frantext), etc.,
   from their diachronic corpora — turning the study into a reusable method, not a one-corpus result?

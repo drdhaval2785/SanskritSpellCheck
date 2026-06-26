@@ -267,15 +267,14 @@ a self-contained fresh-chat task; the ⚠️-marked ones need a local install or
   0.04, AP90 0.08 → 0.00 (100 % ligature), VEI 0.06 → 0.00, WIL 0.57 → 0.46. True EN reform-drift now
   concentrates in `-ick`/`-xion`; all 5 modern anchors at 0.00. Findings doc EN tables + tier summary
   updated; `en_drift_summary.tsv` regenerated (per-era columns + map unchanged).
-- **O1 — Inline body-check in the ranker (closes R1's gap).** Highest value — turns the tier-C
-  negative result into a positive.
-  > In `SanskritSpellCheck/detectors`, R1 (see HYPOTHESES.md) showed `run_all.score_tier` mis-ranks
-  > real minimal pairs (`patra`/`pAtra`) because the engine lacks the body. `triage_util.EntryIndex`
-  > already parses entry bodies. Wire a **cheap per-candidate body lookup** into the ranker: if the
-  > suspect has its own real definition in its dictionary's entry, demote/suppress it (don't surface
-  > it as a typo) — the deterministic, model-free version of the body-grounded triage. Measure with
-  > `eval.py` (FP stays 0); the goal is fewer real-word candidates in tier A/B without losing the
-  > known o_vs_O pairs. Commit.
+- ~~**O1 — Inline body-check in the ranker (closes R1's gap).**~~ ❌ **REFUTED (2026-06-26) → R5.**
+  Probed every model-free body signal against the 3,884 known o_vs_O pairs before touching code: body
+  presence/length doesn't discriminate (known errors carry full glosses, 83 % vs 82 %); DCS
+  attestation can't mark real words (`patra`/`vata` are band-0 real words DCS omits); suspect↔suggestion
+  overlap doesn't separate (inverts in tier B). Tightest `patra`-rule still demotes 60 known real
+  errors for 244 unverified others. **No `score_tier` change** — the body must be *read*, not measured
+  (R1 is a semantic ceiling). Written up as [R5 in docs/HYPOTHESES.md](docs/HYPOTHESES.md). The real
+  lever for these pairs stays the LLM body-grounded triage, not the scorer.
 - **O4 — Drift-rate as a dating tool.** Research/modeling; the data already exists.
   > Using `ortho_drift/en_drift_summary.tsv` (+ de/ru) and each dictionary's known publication year,
   > calibrate **drift/1k ↔ year** (the monotone WIL 1832=0.57 → MW 1899=0.01 → PD 1976=0.00 gradient).

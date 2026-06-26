@@ -8,6 +8,19 @@ ready for a dated entry.
 
 ## [Unreleased]
 
+### Investigated (no code change)
+- **O1 / R5 — a model-free body lookup in the ranker cannot demote real-word minimal pairs.**
+  Tested whether a cheap deterministic `EntryIndex` body check could close R1's gap (the engine
+  mis-ranking `patra`/`pAtra`) without an LLM triage. Probed every candidate body signal against the
+  3,884 known o_vs_O pairs (the real errors that must stay) in tiers A/B **before** changing code —
+  all three fail: (1) body presence/length doesn't discriminate (known errors carry full glosses at
+  83 % vs 82 %); (2) DCS attestation can't mark real words — `patra`/`vata` are band-0 *real* words
+  DCS-2021 omits; (3) suspect↔suggestion body overlap doesn't separate (89 % vs 90 %, inverted in
+  tier B). The tightest `patra`-signature rule still demotes 60 known real errors (20 % of tier-B
+  known pairs) for 244 unverified others. **Made no change to `score_tier`** — the body must be read
+  (LLM triage), not measured; R1 is a semantic ceiling. Written up as R5 in `docs/HYPOTHESES.md`
+  (O1 refuted). Closes O1 in `HANDOFF_NEXT.md`.
+
 ### Changed
 - **Ortho-drift O5 — split the typographic æ/œ ligature out of the reform-drift rate.**
   `detectors/ortho_drift.py` gains a `NONREFORM_ERAS = {'ligature'}` set; the `ligature` class
