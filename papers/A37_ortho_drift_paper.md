@@ -4,7 +4,7 @@ title: "Reading the Reform off the Gloss: Orthographic Drift as a Dater of 19th�
 status: draft (skeleton, 2/5) — scaffolded 2026-06-26
 readiness: 2/5
 venue: "Digital Scholarship in the Humanities (DSH) / International Journal of Lexicography; alt. Journal of Historical Pragmatics"
-author: "M. Gasūns (byline to finalise)"
+author: "**Mārcis Gasūns**, independent scholar ([ORCID 0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X)), gasyoun@ya.ru"
 data_source: "docs/ORTHO_DRIFT_FINDINGS.md (study complete; figures verified against ortho_drift/*.tsv)"
 ---
 
@@ -218,3 +218,4 @@ Study synthesis, every figure, and the per-language reproduction commands live i
 [`detectors/ortho_drift.py`](../detectors/ortho_drift.py); committed tables in
 [`ortho_drift/`](../ortho_drift/). The work is documentation / search-normalisation
 only — it never edits `csl-orig`.
+

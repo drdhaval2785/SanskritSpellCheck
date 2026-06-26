@@ -4,7 +4,7 @@ title: "The Dictionary Body as Ground Truth: Body-Grounded LLM Triage and the Pr
 status: draft (skeleton, 2/5) — scaffolded 2026-06-26
 readiness: 2/5
 venue: "DSH / Journal of Cultural Analytics / eLex / LREC-COLING"
-author: "M. Gasūns (sole)"
+author: "**Mārcis Gasūns**, independent scholar ([ORCID 0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X)), gasyoun@ya.ru"
 data_source: "corrections_draft/README.md (33-dict triage complete) + nochange/do_not_file_suppress.txt (2297 deduped) + .claude/commands/dict-triage.md (pipeline)"
 ---
 
@@ -325,3 +325,4 @@ counts in the suppress file (**2,549**); the deduped union is its data-row count
 (**2,297**); the filable totals are the data rows of each `*_file_first_sf.txt`
 (**122** across 11 dicts); MW precision is **4 / 1,954 = 0.20 %**. The work never edits
 `csl-orig`; confirmed corrections are reported to the separate CORRECTIONS workflow.
+
