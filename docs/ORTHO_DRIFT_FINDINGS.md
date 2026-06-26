@@ -130,10 +130,16 @@ German recall was extended in three stages, banked in the accumulating
 3. **External web-harvested merge** — 14 documented 1901/1996 pairs from the German Wikipedia reform
    articles, ingested dic-validated via
    [detectors/merge_reform_pairs.py](../detectors/merge_reform_pairs.py).
+4. **DTA long-tail merge** — the **Deutsches Textarchiv** lingattr-TEI corpus
+   ([deutschestextarchiv.de](https://www.deutschestextarchiv.de/download), 5,285 texts, 1473–1900)
+   carries a per-token `DTA::CAB norm` modern-orthography layer. [extract_dta_pairs.py](../detectors/extract_dta_pairs.py)
+   harvested every `surface ≠ norm` token (596 k distinct), kept those attested **≥ 20×** (43,579),
+   and merge_reform_pairs.py dic-validated them → **+12,862 accepted** (textbook forms: `vnd→und`,
+   `bey→bei`, `Theil→Teil`, `gantz→ganz`, `krafft→kraft`, `thaler→taler`, `creutz→kreuz`, `fuss→fuß`).
 
-Net: the German reform lexicon grew **978 → 2,809 → 2,823 forms** across the three stages. The
-per-dictionary drift reports are deliberately frozen at the deterministic-pass snapshot so the
-SCH-control comparison stays stable.
+Net: the German reform lexicon grew **978 → 2,809 → 2,823 → 15,685 forms** across the four stages.
+The per-dictionary drift reports are deliberately frozen at the deterministic-pass snapshot so the
+SCH-control comparison stays stable; the long tail is banked in the map for future runs.
 
 ### Russian — legislated 1918, the dramatic case
 
@@ -263,6 +269,6 @@ none (no reform) and Russian needs none (the 1918 letters are definitional). Eac
 | figure | file |
 |---|---|
 | per-dict drift/1k + era columns | [ortho_drift/`<lang>`_drift_summary.tsv](../ortho_drift/) |
-| accumulated historical→2026 lexicon | [ortho_drift/`<lang>`_reform_map.tsv](../ortho_drift/) (de ≈ 2,825, ru ≈ 7,711, en 73, fr 20, la 2 forms; the maps accumulate across runs) |
+| accumulated historical→2026 lexicon | [ortho_drift/`<lang>`_reform_map.tsv](../ortho_drift/) (de **15,685** incl. DTA long tail, ru ≈ 7,711, en 73, fr 20, la 2 forms; the maps accumulate across runs) |
 | per-dict detail (header: tokens / modern / drift) | [ortho_drift/`<DICT>`_drift_report.txt](../ortho_drift/) |
 | German residual LLM-classify (6,804 → 1,831 drift) | [de_residual_classified.tsv](../ortho_drift/de_residual_classified.tsv) |

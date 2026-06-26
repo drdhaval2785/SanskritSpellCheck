@@ -19,6 +19,15 @@ ready for a dated entry.
   draft-changefile prep (unblocks the umbrella-issue handoff, Task 1).
 
 ### Added
+- **DTA long-tail merge (Task 4) — German reform map 2,823 → 15,685 forms.** The Deutsches Textarchiv
+  `lingattr-TEI` corpus (5,285 texts, 1473–1900; `<w … norm="MODERN">surface</w>` with the DTA::CAB
+  normalization layer) was harvested by the new [detectors/extract_dta_pairs.py](detectors/extract_dta_pairs.py)
+  (streams the 2.5 GB zip, skips corrupt members): **596 k** distinct `surface≠norm` pairs → kept those
+  attested **≥ 20×** (43,579) → `merge_reform_pairs.py` dic-validated (`old ∉ de_DE & new ∈ de_DE`) →
+  **+12,862 accepted** (`vnd→und`, `bey→bei`, `Theil→Teil`, `gantz→ganz`, `krafft→kraft`, `thaler→taler`,
+  `fuss→fuß`, `october→oktober`; the ≥20× cut drops OCR singletons like `aaal→all`). The corpus zip +
+  extracted TSV stay gitignored under `external_src/`; only the grown `de_reform_map.tsv` is committed.
+  Per-dict drift reports left frozen (recall banked in the map). Closes the ortho-drift long-tail item.
 - **Tier-C ranking calibration (Task 2) — negative result + ranking nudge.** Tested the proposed
   corpus+confusion tier-C→B promotion (suggestion DCS band ≥ 4, suspect band 0, high-weight confusion):
   it lifts 602 `dict_vs_corpus`-alone candidates C→B but **surfaces real Sanskrit minimal pairs as typos**

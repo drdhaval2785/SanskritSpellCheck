@@ -17,7 +17,7 @@ by priority. The headword-triage handoff (for re-runs) is separate:
 | **1** | **Draft the CORRECTIONS umbrella issue** (122 FILE-FIRST typos → one OCR-prefiltered issue) | lexicographic payoff | ⚠️ needs tesseract + `san` model for the OCR pre-verify |
 | ~~2~~ | ~~Tier-C ranking calibration~~ | engineering | ✅ **DONE** — negative result; tier-promotion unsafe (real minimal pairs), kept a ranking nudge |
 | ~~3~~ | ~~Ortho-drift within-EN recency control~~ | study extension | ✅ **DONE** (PD/PE/BHS/IEG = 0.00, VEI 0.06; en_GB.dic staged) |
-| **4** | **German DTA/RIDGES long-tail merge** (`merge_reform_pairs.py`) | study extension | ⚠️ needs a DTA/RIDGES export or row-list URL |
+| ~~4~~ | ~~German DTA/RIDGES long-tail merge~~ | study extension | ✅ **DONE** — DTA lingattr-TEI, de map 2,823 → 15,685 (+12,862) |
 | — | Cleanup / low-priority + blocked-on-external | — | see bottom |
 
 ## Shared context
@@ -200,9 +200,17 @@ WIL→…→PD recency gradient.
 
 ---
 
-## Task 4 — German DTA/RIDGES long-tail merge (needs a corpus export/URL)
+## Task 4 — German DTA/RIDGES long-tail merge — ✅ DONE (2026-06-25)
 
-**Goal:** grow the German reform lexicon (`ortho_drift/de_reform_map.tsv`, ≈ 2,825 forms) by merging
+> **Complete via DTA.** Downloaded the **DTA lingattr-TEI** corpus (2.5 GB, `external_src/dta/`,
+> gitignored), harvested `surface ≠ DTA::CAB-norm` pairs with [detectors/extract_dta_pairs.py](detectors/extract_dta_pairs.py)
+> (596 k distinct → ≥ 20× → 43,579 → dic-validated **+12,862**), growing `de_reform_map.tsv` **2,823 →
+> 15,685 forms**. ⚠️ Windows schannel resets the TLS mid-download — use a `curl -C -` resume loop and
+> skip the ~20 corrupt zip members (`zipfile` `except Exception`). **RIDGES not needed** (DTA sufficed);
+> if you ever want it, its Laudatio `dipl`/`norm` export feeds the same `merge_reform_pairs.py`. Brief
+> kept below for reference.
+
+**Goal (done):** grow the German reform lexicon (`ortho_drift/de_reform_map.tsv`) by merging
 **documented 1901/1996 old→new pairs** harvested from the DTA / RIDGES historical corpora into the map.
 `detectors/merge_reform_pairs.py` is the **ready, dic-validated** ingest (accept a pair iff old ∉ dic &
 new ∈ dic → filters hallucinations / dual-spellings / rejected proposals); it has already absorbed 14
