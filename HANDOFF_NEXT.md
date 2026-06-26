@@ -297,8 +297,9 @@ a self-contained fresh-chat task; the ⚠️-marked ones need a local install or
   **easyocr** fallback backend (neural Devanagari, `pip install easyocr`; torch was already present) —
   verified detecting + initialising (`EASYOCR_OK=True`). The pilot ran end-to-end **except the fetch**:
   the Cologne `servepdf.php` endpoint **429-throttles this IP hard** (persists at 20 s spacing + browser
-  UA — back off hours, don't hammer; maintainers dislike bot noise). To finish O7 once the cooldown
-  clears: `cd detectors && python ocr_verify.py ../corrections_draft/SHS/SHS_file_first_sf.txt 15` (or
+  UA — back off hours, don't hammer; maintainers dislike bot noise). A patient in-session retry
+  (4 polite probes over ~70 min) **stayed 429 throughout** — this is a *sustained* IP block, so the
+  realistic path is a **fresh IP / different network**, not a short wait. To finish O7 once unblocked: `cd detectors && python ocr_verify.py ../corrections_draft/SHS/SHS_file_first_sf.txt 15` (or
   any FILE-FIRST dict), then read the CONFIRM/DENY/**UNCERTAIN** split in `ocr_verify_report.txt`. The
   hypothesis stands: if UNCERTAIN dominates on these single-edit vowel-length/sibilant pairs (likely),
   OCR pre-verify does *not* cut the human scan-load and Task 1 should drop the OCR gate.
