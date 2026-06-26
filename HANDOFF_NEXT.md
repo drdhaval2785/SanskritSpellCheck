@@ -285,10 +285,12 @@ a self-contained fresh-chat task; the ⚠️-marked ones need a local install or
 
 **⚠️ Need a local install:**
 
-- **O2 — A better attestation signal than DCS-band-0.** R1 also failed because `suspect_band==0` is
-  unreliable (DCS gaps). Test whether an **inflection-aware attestation** (vidyut-expanded stems, via
-  `gen_vidyut_stems.py` — needs `pip install vidyut`) makes "suspect-not-attested" reliable enough to
-  safely promote. Likely still bounded by R1's deeper cause (the body), so pair it with O1.
+- ~~**O2 — A better attestation signal than DCS-band-0.**~~ ❌ **REFUTED (2026-06-26) → R6.** vidyut
+  0.4.0 + kosha data were on disk; tested `Kosha.get` (pada) + the 205 k vendored stems. Fails both
+  ways: still misses real words (`patra`: stem ✗, pada ✗) AND over-attests real errors (34 % tier-A /
+  47 % tier-B of known o_vs_O suspects are valid vidyut forms). Surface attestation is orthogonal to
+  typo-vs-real; a "demote if attested" rule would drop ~404 known errors (vs R5's 60). No scorer
+  change. [R6 in docs/HYPOTHESES.md](docs/HYPOTHESES.md).
 - **O7 — Does OCR pre-verify actually help the human?** Tied to **Task 1** (needs tesseract + the
   `san` model). After running `ocr_verify.py` on the 122 FILE-FIRST candidates, measure the
   CONFIRM/DENY/**UNCERTAIN** split — if UNCERTAIN dominates (likely, on old Devanāgarī scans), OCR

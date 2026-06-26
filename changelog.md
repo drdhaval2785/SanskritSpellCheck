@@ -36,6 +36,15 @@ ready for a dated entry.
   ("O4" section). Closes O4 in `HANDOFF_NEXT.md`.
 
 ### Investigated (no code change)
+- **O2 / R6 — vidyut inflection-aware attestation is not a reliable "real word" signal.** With vidyut
+  0.4.0 + kosha data on disk, tested whether `Kosha.get` (pada lookup) + the 205 k vendored pratipadika
+  stems could mark real words as attested where DCS band-0 failed. **Refuted both ways:** it still
+  misses real words (`patra`: DCS 0, stem ✗, pada ✗) and it over-attests real errors — **34 % of
+  tier-A and 47 % of tier-B known o_vs_O real-error suspects are valid vidyut stems/padas** (a
+  misspelling often coincidentally lands on a valid form; in tier B attestation fires *more* on errors
+  than on others). A "demote if attested" rule would drop ~404 known real errors (vs R5's 60). **No
+  scorer change** — surface attestation (DCS *or* vidyut) is orthogonal to typo-vs-real; only the body
+  settles it. Written up as R6 in `docs/HYPOTHESES.md`. Closes O2 in `HANDOFF_NEXT.md`.
 - **O1 / R5 — a model-free body lookup in the ranker cannot demote real-word minimal pairs.**
   Tested whether a cheap deterministic `EntryIndex` body check could close R1's gap (the engine
   mis-ranking `patra`/`pAtra`) without an LLM triage. Probed every candidate body signal against the

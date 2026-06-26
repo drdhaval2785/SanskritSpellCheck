@@ -154,6 +154,29 @@ of known o_vs_O pairs.
   triage), not measured; R1's gap is a semantic ceiling, not a ranker-tuning problem. Confirms H1 from
   the ranker side. Do not re-attempt a deterministic body/attestation gate in the scorer.
 
+### R6 — vidyut inflection-aware attestation is a reliable "real word" signal (was O2)
+*Hypothesis:* R1/R5 failed partly because DCS band-0 mislabels real words (`patra`, `vata`) as
+unattested. A morphologically-aware oracle — the vidyut **Kosha** (`get()` = is this a valid *pada*),
+plus the vendored 205 k pratipadika **stems** — should recognise those real words, making
+"suspect-not-attested" reliable enough to promote (or "attested" reliable enough to demote).
+- **Test:** `vidyut.kosha.Kosha.get` + `vidyut_stems.txt`, on the tier-A/B suspects, known o_vs_O
+  real-errors vs the rest (vidyut 0.4.0 + kosha data both on disk).
+- **Verdict:** **refuted — attestation cross-cuts the real-word/typo distinction.** It fails in *both*
+  directions:
+  1. **Still misses real words.** `patra` is unattested by every oracle (DCS 0, stem ✗, pada ✗) — the
+     kosha lacks the bare neuter stem just as DCS did. (`vata` *is* rescued — partial, not reliable.)
+  2. **Over-attests real errors.** **34 % of tier-A and 47 % of tier-B known real-error suspects are
+     valid vidyut stems/padas** — in a richly inflected language a misspelling frequently lands on a
+     coincidentally-valid form. In tier B attestation fires *more* on errors (47 %) than on others
+     (39 %). A "demote if vidyut-attested" rule would drop **~404 known real errors** (266 A + 138 B) —
+     far worse than R5's body rule (60); "promote if not-attested" would promote `patra` and miss
+     ~40 % of real errors.
+- **Consequence:** **no change to the scorer.** vidyut attestation answers "is this string a valid
+  Sanskrit form?", which is **orthogonal** to "is this entry a typo?" — most typos are valid forms of
+  *something*. Confirms R5/H1 from the morphology side: surface attestation (DCS *or* vidyut) cannot
+  replace reading the body. vidyut stays a display/PPP-validation aid + ranking nudge (R2), not an
+  attestation gate. Do not re-attempt corpus/morphology attestation as a tier signal.
+
 ---
 
 ## 🔭 Open / newly-raised
@@ -161,10 +184,10 @@ of known o_vs_O pairs.
 - ~~**O1 — Inline body check in the ranker.**~~ **→ refuted, now [R5](#r5--a-cheap-model-free-body-lookup-in-the-ranker-can-demote-real-word-minimal-pairs-was-o1).**
   No model-free body signal (presence/length, DCS attestation, suspect↔suggestion overlap) separates
   real-word minimal pairs from typos without an equal hit to known-error recall.
-- **O2 — A better attestation signal than DCS-band-0.** The tier-C promotion failed partly on DCS
-  coverage gaps. Would an inflection-aware attestation (vidyut-expanded) or a larger corpus make
-  `suspect-not-attested` reliable enough to promote safely? (Note R5: `patra`/`vata` are DCS band-0
-  *real* words — vidyut stems may not rescue them either, since they are valid but corpus-absent.)
+- ~~**O2 — A better attestation signal than DCS-band-0.**~~ **→ refuted, now [R6](#r6--vidyut-inflection-aware-attestation-is-a-reliable-real-word-signal-was-o2).**
+  vidyut Kosha/stem attestation still misses real words (`patra`) AND over-attests real errors (34–47 %
+  of known typos are valid forms) — surface attestation is orthogonal to typo-vs-real. The R5 caveat
+  held.
 - ~~**O3 — Re-run German with the 15,685-form map.**~~ **✅ done (2026-06-26).** Rates ~triple and the
   top-of-gradient monotone ordering flattens (GRA > PWG), but the SCH-1928 era-dating control is fully
   intact — vindicates freezing the per-dict gradient. See `ORTHO_DRIFT_FINDINGS.md` "O3".
