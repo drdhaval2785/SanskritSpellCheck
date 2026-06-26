@@ -22,6 +22,7 @@ import subprocess
 import collections
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import slp1util as u
+import union_attestation as ua
 
 u.reconfigure_stdio()
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -58,7 +59,7 @@ CORROB_CW = 0.05
 
 class Cand:
     __slots__ = ('suspect', 'detectors', 'sugg_dets', 'sugg_dicts', 'reasons', 'dicts',
-                 'morph', 'corroborated')
+                 'morph', 'corroborated', 'union_n')
 
     def __init__(self, suspect):
         self.suspect = suspect
@@ -69,6 +70,7 @@ class Cand:
         self.dicts = set()
         self.morph = False                              # vidyut: suggestion is a valid stem, suspect is not
         self.corroborated = False                       # corpus+confusion corroboration (ranking nudge)
+        self.union_n = 0                                # union index: # of dicts attesting this suspect
 
 
 def ensure_outputs(sanhw1, rerun):
@@ -133,7 +135,7 @@ def aggregate():
     return cands
 
 
-def score_tier(c, dcs, weights, stems):
+def score_tier(c, dcs, weights, stems, union=None):
     ndet = len(c.detectors)
     # best suggestion = most detector support, then highest DCS band
     best, best_band, best_supp = '', 0, -1
@@ -151,8 +153,17 @@ def score_tier(c, dcs, weights, stems):
     # suggestion is a frequent DCS lemma, suspect is unattested, edit is a high-weight confusion.
     suspect_band = dcs.get(u.normalize_lemma(c.suspect), 0)
     c.corroborated = (best_band >= CORROB_SUGG_BAND and suspect_band == 0 and cw >= CORROB_CW)
+    # union attestation: the suspect itself is a headword in c.union_n dictionaries.
+    # Broad cross-dict attestation is strong evidence it is a real word, not a typo
+    # (the "attested in N other dicts -> not a typo" signal). It ranks a candidate
+    # DOWN within its tier and, when broadly attested, demotes tier A -> B -- but
+    # NEVER below B and NEVER for the high-precision flaggers (a charset/phonotactic
+    # violation is a real error even if a shared digitization mistake is attested
+    # in several dicts). When the union index is absent, c.union_n is 0 -> no effect.
+    c.union_n = ua.attestation(c.suspect, union) if union is not None else 0
     score = (ndet * 100 + best_band * 10 + (50 if hpf else 0) + len(c.dicts)
-             + round(cw * 20) + (15 if c.morph else 0) + (5 if c.corroborated else 0))
+             + round(cw * 20) + (15 if c.morph else 0) + (5 if c.corroborated else 0)
+             - min(c.union_n, 12))
     if c.detectors == {'dict_vs_corpus'}:
         tier = 'C'                              # exploratory alone (corroboration ranks it up in C)
     elif ndet >= 2 or hpf or best_band == 5:
@@ -161,6 +172,8 @@ def score_tier(c, dcs, weights, stems):
         tier = 'B'
     else:
         tier = 'C'
+    if tier == 'A' and not hpf and c.union_n >= ua.UNION_TRUST_DICTS:
+        tier = 'B'                              # broadly attested -> real word, demote out of tier A
     return score, tier, best, best_band
 
 
@@ -169,27 +182,38 @@ def main(sanhw1, rerun):
     dcs = u.load_dcs_lemmas(u.dcs_path())
     weights = u.load_confusion_weights()
     stems = u.load_vidyut_stems()
+    union = ua.load_union()
+    if union:
+        print("union attestation: %d headwords from %s" % (len(union), ua.union_path()))
+    else:
+        print("union attestation: index absent (%s) -- signal off" % ua.union_path())
     cands = aggregate()
 
     rows = []
     for c in cands.values():
-        score, tier, best, band = score_tier(c, dcs, weights, stems)
+        score, tier, best, band = score_tier(c, dcs, weights, stems, union)
         rows.append((score, tier, band, best, c))
     rows.sort(key=lambda r: (-r[0], r[4].suspect))
+    demoted = sum(1 for r in rows if r[4].union_n >= ua.UNION_TRUST_DICTS
+                  and not (r[4].detectors & HIGH_PRECISION))
 
     tiers = collections.Counter(r[1] for r in rows)
     multi = sum(1 for r in rows if len(r[4].detectors) >= 2)
     print("unified candidates: %d (deduped across %d detectors); multi-detector: %d"
           % (len(rows), len(DETECTORS), multi))
     print("tiers: A=%d  B=%d  C=%d" % (tiers['A'], tiers['B'], tiers['C']))
+    if union:
+        print("union-attested suspects (>=%d dicts, demoted A->B unless high-precision): %d"
+              % (ua.UNION_TRUST_DICTS, demoted))
 
     # combined_candidates.txt -- full ranked list
     with open(os.path.join(HERE, 'combined_candidates.txt'), 'w', encoding='utf-8') as f:
         for score, tier, band, best, c in rows:
             dets = ",".join(sorted(c.detectors))
-            f.write("%s\t%d\t%s -> %s\t[%s]\t[%s]%s\n"
+            f.write("%s\t%d\t%s -> %s\t[%s]\t[%s]%s%s\n"
                     % (tier, score, c.suspect, best or "(flag)", dets, ",".join(sorted(c.dicts)),
-                       "\tmorph" if c.morph else ""))
+                       "\tmorph" if c.morph else "",
+                       "\tunion=%d" % c.union_n if c.union_n else ""))
 
     # combined_sf.txt -- standard format; emit only the dicts a corrector tied to
     # the chosen suggestion (not flagger-contributed dicts with no correction evidence)
