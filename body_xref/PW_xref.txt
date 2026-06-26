@@ -1,0 +1,1475 @@
+# PW cross-reference integrity -- DRAFT for human review (scan-verify each)
+# 10460 See/cf./s./vgl./=/q.v. targets ; 1467 unresolved (14.0%).
+#   TYPO'd-ref (1 confusion-edit from a real entry -> FILE-FIRST): 181
+#   other-unresolved (partial/inflected/uncertain form refs): 1286
+# 12186 {{Lbody=N}} redirects ; 0 dangling L-numbers (0.0%) -> BROKEN redirect
+# === FILE-FIRST: typo'd cross-references (headword<TAB>raw<TAB>canon<TAB>should-be<TAB>line) ===
+akOSala	akoSala	akoSala	akOSala	795
+akzapiRqa	akzApIqa	akzApIqa	akzapIqa	1068
+agnidIpta	AgnijvAlA	AgnijvAlA	agnijvAlA	2105
+agradiDizu	agrediDisu	agrediDisu	agrediDizu	2805
+atyantapadmA	amalinI	amalinI	analinI	8403
+aDveSa	advapa	advapa	aDvapa	11918
+antarvAsika	antarvaMsika	antarvaMsika	antarvaMSika	19910
+apAMnaptar	apaM napAt	apaMnapAt	apAMnapAt	23807
+amaramaNgala	amaraSiMha	amaraSiMha	amarasiMha	30201
+amiza	Amisa	Amisa	Amiza	30865
+aruRIyaviDi	aruRAmnayaviDi	aruRAmnayaviDi	aruRAmnAyaviDi	34271
+avIcimant	avici	avici	avIci	42294
+aSrunipAta	aSrupAwa	aSrupAwa	aSrupAta	44251
+ahiPala	erAvatI	erAvatI	ErAvatI	49888
+AkzapAwika	AkzapAwaka	AkzapAwaka	akzapAwaka	50986
+AKukarRaparRikA	AKukarRi	AKukarRi	AKukarRI	51179
+AgneyapurARa	AgnipurARa	AgnipurARa	agnipurARa	51700
+AcAra	AntaryAmin	AntaryAmin	antaryAmin	52037
+AcArAtikrama	AkriyA	AkriyA	akriyA	52105
+ATarvaRa	ATarvaRaveda	ATarvaRaveda	aTarvaRaveda	54048
+ADAna	AgnyADAna	AgnyADAna	agnyADAna	54844
+AnUkam	Anvak	Anvak	anvak	55812
+Ap	sarvANgIna	sarvANgIna	sarvANgIRa	595286
+ABAzya	aBAzya	aBAzya	ABAzya	56982
+AyAjiBawwa	AyyAjIBawwa	AyyAjIBawwa	ayyAjIBawwa	57964
+AraRyagAna	AranyakagAna	AranyakagAna	AraRyakagAna	58429
+ArDika	ArDasIrin	ArDasIrin	arDasIrin	59384
+AlamarTya	AlamarTatA	AlamarTatA	alamarTatA	59800
+AvawyAyanI	AvawyA	AvawyA	Avawya	60217
+AhitTa	AvahitTa	AvahitTa	avahitTa	62951
+ISvara	voDisattva	voDisattva	boDisattva	616275
+upasUryaga	upasuryaka	upasuryaka	upasUryaka	77914
+kaNkaRIka	prAtisarA	prAtisarA	pratisarA	90265
+kawukatva	kawukawA	kawukawA	kawukatA	91218
+kaRIyaMs	kaRiyaMs	kaRiyaMs	kaRIyaMs	91839
+kanawI	kunatI	kunatI	kunawI	93395
+kapilasAMKyapravacana	saMKyapravacana	saMKyapravacana	sAMKyapravacana	94535
+kAMsyopadoha	kaMsyadoha	kaMsyadoha	kAMsyadoha	102414
+kAkapIlu	zvetaguYjA	zvetaguYjA	SvetaguYjA	102657
+kAcilindi	kakaciYcika	kakaciYcika	kAkaciYcika	103246
+kAmAKya	kAmAkzi	kAmAkzi	kAmAkzI	105215
+kuleya	kulIma	kulIma	kulIna	116084
+kuSasTala	zuSruta	zuSruta	suSruta	116629
+keSamuzwi	vizamuzwI	vizamuzwI	vizamuzwi	122000
+koRapa	nirFti	nirFti	nirfti	123239
+KawukI	KAwwikI	KAwwikI	KawwikI	132711
+KaleSa	KaliSA	KaliSA	KaliSa	134347
+gaganapuzpa	gaganakuSuma	gaganakuSuma	gaganakusuma	135835
+ganDapattra	aSvaganDa	aSvaganDa	aSvaganDA	138091
+GawikAyantra	GAwiyantra	GAwiyantra	Gawiyantra	151969
+GarmavicarcikA	Garmacarcika	Garmacarcika	GarmacarcikA	152703
+caRqImAhAtmya	devImAhatmya	devImAhatmya	devImAhAtmya	155783
+cuRqya	cuRWI	cuRWI	cuRwI	163931
+jANGika	jANGikAH	jANGikAH	jANGikaH	172500
+jihIrazA	jihIrza	jihIrza	jihIrzA	174467
+jIvanvimukta	jivanmukta	jivanmukta	jIvanmukta	175246
+jIvopAya	jivyopAya	jivyopAya	jIvyopAya	175593
+qimbikA	jalavimba	jalavimba	jalabimba	179328
+tapasvin	mahASravaRikA	mahASravaRikA	mahASrAvaRikA	182539
+turI	SudrA	SudrA	SUdrA	190312
+tuvikza	bahuvikzepa	bahuvikzepa	bAhuvikzepa	190732
+tripatAkAkara	tripatAkakara	tripatAkakara	tripatAkAkara	194982
+daRqaDAraka	daRqADAra	daRqADAra	daRqaDAra	199219
+dA	AhutIH	AhutIH	AhutiH	203298
+dAsI	bedI	bedI	vedI	205470
+digBrama	diNnoha	diNnoha	diNmoha	205839
+digvAraRa	dikkArin	dikkArin	dikkarin	205862
+dinagaRa	AhargaRa	AhargaRa	ahargaRa	206191
+dinOGa	dinArASi	dinArASi	dinarASi	206338
+dfmBU	danBU	danBU	danBu	213695
+deva	SyamA	SyamA	SyAmA	214077
+Dar	Sarakara	Sarakara	SarakAra	223709
+nakula	SaNKini	SaNKini	SaNKinI	230901
+nAqIka	nAdI	nAdI	nadI	237125
+nArAyaRIyaka	nArayaRIya	nArayaRIya	nArAyaRIya	238646
+nI	udA	udA	uda	248448
+nIla	tAliSapattra	tAliSapattra	tAlISapattra	249246
+parASarin	pArASArin	pArASArin	pArASarin	262513
+parSu	parazu	parazu	paraSu	267831
+parzad	parizAd	parizAd	parizad	267867
+pAdapadma	pAdmapAda	pAdmapAda	padmapAda	271773
+pAripela	pAripelava	pAripelava	paripelava	273643
+prASU	SIDra	SIDra	sIDra	307369
+prERAna	prIRAna/	prIRAna	prIRana	308882
+PUtkAra	PatkAra	PatkAra	PawkAra	311210
+barh	utpAtita	utpAtita	utpAwita	312690
+bahuputrikA	maha SatAvarI	mahaSatAvarI	mahASatAvarI	314651
+bahumUla	makandI	makandI	mAkandI	314862
+bilavAsin	bilabAsa	bilabAsa	bilavAsa	317512
+brahmakuSA	AjamodA	AjamodA	ajamodA	320374
+brahmaparizadya	brahmaparzadya	brahmaparzadya	brahmapArzadya	320878
+BAjA	vakrayazwi	vakrayazwi	vakrayazwI	326957
+maNgalya	ADaHpuzpI	ADaHpuzpI	aDaHpuzpI	336999
+mad	'valati	valati	valatI	339314
+manoraTa	manoraTapraBa	manoraTapraBa	manoraTapraBA	343199
+mandray	arcati	arcati	arCati	344765
+mallaBawItUrya	mallaturya	mallaturya	mallatUrya	347223
+mahAGoza	karkawazfNgI	karkawazfNgI	karkawaSfNgI	348641
+mahAGoza	zfNgI	zfNgI	SfNgI	348641
+mahAsattva	mahAsatA	mahAsatA	mahASatA	352137
+mahIyA	pujA	pujA	pUjA	353003
+mAtar	viButi	viButi	viBUti	354707
+mAdra	ativisA	ativisA	ativizA	355412
+mArkaRqa	ma/rkaRqeya	markaRqeya	mArkaRqeya	357200
+mAlin	AgniSiKA	AgniSiKA	agniSiKA	358059
+mih	mutrita	mutrita	mUtrita	359980
+mukUlaka	makulaka	makulaka	nakulaka	360532
+murArinAwaka	AnarGarAGava	AnarGarAGava	anarGarAGava	362658
+mUrtiliNga	pragjyotiza	pragjyotiza	prAgjyotiza	363789
+mUzyAyaRa	AjYAtapitfka	AjYAtapitfka	ajYAtapitfka	364517
+mfgapada	mfgyAH	mfgyAH	mfgyaH	364715
+mfgaSIrzaka	margaSIrza	margaSIrza	mArgaSIrza	364966
+mfgasakTa	mfgasya	mfgasya	mfgAsya	364981
+mfRAlaka	mfRala	mfRala	mfRAla	365371
+meWi	meQIButa	meQIButa	meQIBUta	366931
+meDi	meQIButa	meQIButa	meQIBUta	367300
+mEtra	mEtrasutra	mEtrasutra	mEtrasUtra	367766
+yakzin	pujanIya	pujanIya	pUjanIya	369763
+yaTABijYAya	yaTABiprEta	yaTABiprEta	yaTABipreta	371989
+yaTecCakam	yaTEcCa	yaTEcCa	yaTecCa	372669
+yadryaYc	yadri/yaNc	yadriyaNc	yadriyaYc	373000
+yozA	yo/zaRa	yozaRa	yozaRA	379384
+raktANga	jIvatI	jIvatI	jIvati	380484
+lomaSa	mahAmadA	mahAmadA	mahAmada	402719
+vacas	va/casA	vacasA	vacasa	405078
+viBAvarI	kupitA	kupitA	kupita	432854
+viS	aBisam	aBisam	aBiSam	436596
+vizRu	vAsudevatA	vAsudevatA	vasudevatA	440863
+vftta	JiYjarizwA	JiYjarizwA	JiYJarizwA	444607
+vfttaparRI	mahASARapuzpikA	mahASARapuzpikA	mahASaRapuzpikA	444691
+vekawa	AdButa	AdButa	adButa	446611
+vyAGranaKaka	vyAGraKa	vyAGraKa	vyAGraka	453969
+SatamUla	cavA	cavA	cava	459372
+SaravARi	papizWa	papizWa	pApizWa	462510
+Sala	kzetraBid	kzetraBid	kzetravid	463308
+Sastaka	ANgulitrARa	ANgulitrARa	aNgulitrARa	464278
+SAtapaTa	SatapaTabrahmaRa	SatapaTabrahmaRa	SatapaTabrAhmaRa	465716
+SilagarBaja	pAzARABedana	pAzARABedana	pAzARaBedana	469801
+SilpakAraka	SilpakArA	SilpakArA	SilpakAra	470186
+Suza	SozARa	SozARa	SozaRa	475252
+Setya	Setavya	Setavya	setavya	476780
+SreRika	bimbisArA	bimbisArA	bimbisAra	482773
+zazWa	IndrasenA	IndrasenA	indrasenA	486350
+saMyuktaka	saMyuktagama	saMyuktagama	saMyuktAgama	487031
+saMGoza	Geza	Geza	geza	491981
+satyavant	AcCodA	AcCodA	acCodA	494339
+satvant	yadavaH	yadavaH	yAdavaH	494777
+samaNga	Kadiri	Kadiri	KadirI	500373
+samAnasalila	samanodaka	samanodaka	samAnodaka	502289
+sampa	SazpA	SazpA	Sazpa	504401
+saMpratipatti	saMprAtipattimant	saMprAtipattimant	saMpratipattimant	504863
+sarpAkza	ganDAnAkulI	ganDAnAkulI	ganDanAkulI	508220
+sAMnahanika	sAMnahika	sAMnahika	sAMnAhika	517063
+sAMnipAtin	saMni	saMni	saMnI	517100
+sAmudayika	samudAyika	samudAyika	sAmudAyika	517952
+sidDa	FdDi	FdDi	fdDi	521790
+suKaMkarI	jIvAnti	jIvAnti	jIvanti	524530
+suKaMGuRa	suKAMsuRa	suKAMsuRa	suKaMsuRa	524533
+sutasomajAtaka	sutasomavadAna	sutasomavadAna	sutasomAvadAna	526251
+suvarRa	suvarRalu	suvarRalu	suvarRAlu	532842
+sUda	sArATya	sArATya	sAraTya	536739
+sUryASman	sUryAkAnta	sUryAkAnta	sUryakAnta	537748
+sfpAwa	raktaDArA	raktaDArA	raktaDarA	538098
+sObaleya	sOvala	sOvala	sObala	541215
+sOraRa	SuraRa	SuraRa	suraRa	541690
+sTalasIman	sTaRdila	sTaRdila	sTaRqila	545042
+sTira	kakolI	kakolI	kAkolI	546482
+sTUpaka	vAhnicUqa	vAhnicUqa	vahnicUqa	546843
+sTUlalakzya	sTUlakza	sTUlakza	sTUlAkza	547121
+syamIka	nIlika	nIlika	nIlikA	549943
+svAna	suvAna/	suvAna	suvana	555079
+hitapaTya	prAptA	prAptA	prApta	562876
+huhuva	huhavA	huhavA	huhava	564552
+hfzwiyoni	irzyaka	irzyaka	Irzyaka	565290
+hotrIya	haBirgeha	haBirgeha	havirgeha	566574
+hOtna	yajAmAna	yajAmAna	yajamAna	566802
+Iyakz	i/yakzamARa	iyakzamARa	IyakzamARa	581535
+malanA	utpuMsanA	utpuMsanA	utpuMsana	597236
+mAtaNgavedi	vAraRqaka	vAraRqaka	varaRqaka	597281
+uzRihAkakuBO	uzRihakaku/BO	uzRihakakuBO	uzRihAkakuBO	618259
+PelA	pewA	pewA	pewa	634488
+# === DANGLING {{Lbody=N}} redirects (headword<TAB>L-number<TAB>line) ===
+# === OTHER unresolved (headword<TAB>raw<TAB>canon<TAB>line) ===
+aMhas	aMhasas	aMhasas	199
+aMhriSiras	aMhrisakanDa	aMhrisakanDa	246
+akutoBaya	akutakzcidBaya	akutakzcidBaya	603
+akzikUwa	pakzmaRI	pakzmaRI	578849
+akzijAha	akzRo mUlam	akzRomUlam	1335
+agnivArtta	avnijIvin	avnijIvin	2366
+agnizwoma	amnizwut	amnizwut	567953
+agnihotra	agnihotrasaMjYakO dvO haviryajYasomO	agnihotrasaMjYakOdvOhaviryajYasomO	598909
+aNkUra	agkura	agkura	3402
+aNga	Cinno vedAgraBAgaH srugAdisaMmArjanArTaH	CinnovedAgraBAgaHsrugAdisaMmArjanArTaH	578963
+aNGrivallikA	aNDriparRI	aNDriparRI	4124
+acCa	afkza	afkza	4415
+ajapa	haMsamantra	haMsamantra	4771
+ajaSfNgI	arkawaSfNgI	arkawaSfNgI	4922
+atikAraka	atikrAntaH kArakAn	atikrAntaHkArakAn	6332
+atigava	gAmatikrAntaH	gAmatikrAntaH	6460
+aDarma	aDarmeRa	aDarmeRa	568841
+aDika	ekADikaM Satam	ekADikaMSatam	10437
+aDistri	striyAm	striyAm	11124
+aDihari	harO	harO	11133
+aDvan	sasTAna, avaskanda	sasTAnaavaskanda	11800
+anaquhy	anaqvAnivAcarati	anaqvAnivAcarati	12232
+anirdeSa	vistareRa na tu nirdeSamAtrarUpeRa saMkzepeRa	vistareRanatunirdeSamAtrarUpeRasaMkzepeRa	579773
+anutUlay	tUlenAnukuzRAti	tUlenAnukuzRAti	16316
+anubanDa	muKyAnuyAyI SiSuH	muKyAnuyAyISiSuH	17193
+anuBAva	satAM matiniScayaH	satAMmatiniScayaH	17283
+anyatas	anyasya	anyasya	605546
+anyavAdin	anyaTAvAdan	anyaTAvAdan	21079
+aparapara	apare ca pare ca	aparecapareca	22479
+aparihita	parizecanahIna	parizecanahIna	570398
+apAkza	aDyakza, pratyakza	aDyakzapratyakza	23639
+apAzwi	apAzWa, apAzWi	apAzWaapAzWi	23981
+api	sarpizo bindurapi syAt	sarpizobindurapisyAt	24006
+abjapARi	admapARi	admapARi	26369
+abjAsana	admAsana	admAsana	26408
+aBipAta	SarIrasyABipAtaH	SarIrasyABipAtaH	607826
+aBiprAya	vivattyaBiprAya	vivattyaBiprAya	27637
+amaRqa	AmaRqa, maRqa	AmaRqamaRqa	29933
+amanaskalaya	SunyASunya, parApara	SunyASunyaparApara	30020
+amutas	amuzmAt	amuzmAt	30936
+ambla	amla, Amla	amlaAmla	32064
+aruRa	amuRqitikA	amuRqitikA	34143
+arTay	prerayasi	prerayasi	571259
+arDendu	atiprOQastriyonyaNguliyojana	atiprOQastriyonyaNguliyojana	36597
+arz	paryArzan	paryArzan	37028
+ala	Ala, haritAla	AlaharitAla	37144
+aligarda	algarda	algarda	37699
+avafti	avrti	avrti	38319
+avakalpitin	avakalpitaM yena saH	avakalpitaMyenasaH	38364
+avakokila	avakruzwaHkokilayA	avakruzwaHkokilayA	38424
+avatUlay	tUla/ravakuzRAti	tUlaravakuzRAti	38938
+avaDAritin	avaDAritamanena	avaDAritamanena	39124
+avaloka	daSa/pAvaloka	daSapAvaloka	40162
+avahAra	DarmAntara	DarmAntara	40713
+avahAra	apanetavyadravya	apanetavyadravya	40713
+avipawa	avAnAM vistAraH	avAnAMvistAraH	41604
+avimuktaka	maDumADavipuzpa	maDumADavipuzpa	41774
+avos	ayo/s	ayos	42581
+aSanika	aSanO kuSalaH	aSanOkuSalaH	43250
+aSvay	aSvataramAcazwe	aSvataramAcazwe	44767
+azwa	azwran	azwran	45226
+azwAdaSavivAdAnuSAsana	armaSAstra	armaSAstra	45611
+as	cinnayAmAsa	cinnayAmAsa	589240
+asaMramBa	anirBayatva	anirBayatva	46042
+asaMBAvita	asaMBavAvanIya	asaMBavAvanIya	47060
+Akarzaka	Akarze kuSalaH	AkarzekuSalaH	50400
+AkarzaSva	AkarzaH Sveva	AkarzaHSveva	50421
+Akarzika	AkarzeRa carati	AkarzeRacarati	50424
+Akzika	akzAnharati, vahati	akzAnharativahati	51013
+AgastIya	Agastaye hitam	Agastayehitam	51490
+Agnipada	Agnipade dIyate kAryaM vA	AgnipadedIyatekAryaMvA	51587
+Agraha	AsaNga, sakti	AsaNgasakti	51744
+Acayaka	Acaye kuSalaH	AcayekuSalaH	51984
+AjIvya	BHfwYAqAYAH	BHfwYAqAYAH	52535
+AtaYcana	prtivApa	prtivApa	53016
+AtAra	saMsAratIraM prApyApi punarAvartanam	saMsAratIraMprApyApipunarAvartanam	53138
+Atmavat	AtmAnamiva	AtmAnamiva	53729
+Atmasama	AtmasamatA	AtmasamatA	581272
+AdIpana	AtarpaRa, Alimpana, maRqodaka	AtarpaRaAlimpanamaRqodaka	54661
+Anukalpika	anukalpamaDIre veda vA	anukalpamaDIrevedavA	55602
+AnukUlika	anukUlaM vartate	anukUlaMvartate	55605
+AnuguRika	anuguRamaDIte vade vA	anuguRamaDItevadevA	55626
+Anulomika	anulomaM vartate	anulomaMvartate	55722
+Anusuka	anusUmaDIte veda vA	anusUmaDItevedavA	55794
+Anna	AnnaM labDA	AnnaMlabDA	55980
+Apakara	apakare jYAtaH	apakarejYAtaH	56167
+ApvA	kaRWasTAna	kaRWasTAna	56825
+ABIkzRa	ABIkzRaya	ABIkzRaya	57078
+ka	kAmagranTi	kAmagranTi	89683
+ArohaRIya	ArohaRaM prayojanamasya	ArohaRaMprayojanamasya	58994
+Alinda	Alanda	Alanda	60046
+AvasaTa	vakrakavitAna	vakrakavitAna	60462
+ASana	ASana, asana	ASanaasana	60931
+ASaya	viBava, kiMpacAna	viBavakiMpacAna	60934
+Asevitin	Asevitamanena	Asevitamanena	62353
+AstaraRa	AstaraRe dIyate	AstaraRedIyate	62410
+Ahvaray	AhvarakaM karoti	AhvarakaMkaroti	63139
+iRqva	dArumayaM nigaqam	dArumayaMnigaqam	615820
+iti	itikim	itikim	64270
+indrARikA	indrasurama	indrasurama	65514
+inv	gatikarman	gatikarman	65770
+iyakz	gatikarman	gatikarman	65883
+irajy	paricaraRakarman	paricaraRakarman	65931
+iz	icCAmi	icCAmi	66251
+izwani	izaM tanvan	izaMtanvan	589789
+Ikz	anuvyEkzetAm	anuvyEkzetAm	66848
+Ijitum	yazwum, Ijire/	yazwumIjire	67099
+Iq	Irte	Irte	67102
+ISay	IRmantamAcazwe	IRmantamAcazwe	67473
+Izire	Izus, IzirarzayaH	IzusIzirarzayaH	67800
+ukTa	vfhatIsahasrAtmakaM Sastram	vfhatIsahasrAtmakaMSastram	67922
+utkawa	uzwrasadaSakeSa	uzwrasadaSakeSa	69283
+uttarapadika	uttarapadamaDIte veda vA	uttarapadamaDItevedavA	70138
+uttarAMsa	jYatru	jYatru	581625
+utTApanIya	utTApanaM prayojanamasya	utTApanaMprayojanamasya	70749
+utpiYjala	raRe lolatA	raRelolatA	71107
+utpucCa	utkrAntaH pucCAt	utkrAntaHpucCAt	71137
+utpucCa	udastaM pucCamasya	udastaMpucCamasya	71137
+utpucCa	pucCamudasyati	pucCamudasyati	71137
+utsaNgavala	utsaNgo 'syAsti	utsaNgosyAsti	71272
+utsava	utseka, amarza	utsekaamarza	71370
+utsAhavala	utsAho 'syAsti	utsAhosyAsti	71454
+udakavajra	udakasya vajraH	udakasyavajraH	71720
+udakavIvaDa	udakasya vIvaDaH	udakasyavIvaDaH	71729
+udakya	udaSyAmAka	udaSyAmAka	617050
+udDvaMsana	udDvamsa	udDvamsa	73720
+unmezam	upabfhaRa	upabfhaRa	74848
+upavallikA	amatasravA	amatasravA	77247
+upasTita	dvAraBeda	dvAraBeda	590018
+upAkftin	upAkftamanena	upAkftamanena	78416
+upAsAditin	upAsAditamanena	upAsAditamanena	78857
+uBayadant	uBayAdrant	uBayAdrant	79275
+urvarA	urvarAya	urvarAya	80036
+uzRopagama	uzRogama	uzRogama	81045
+UrugrAha	urupraha	urupraha	81362
+Urva	urvapO, jAmadagnyO	urvapOjAmadagnyO	82155
+fkRa	fkTa, rikTa	fkTarikTa	82520
+fgayana	fcAmayanam	fcAmayanam	82671
+fjIzita	fjIzaM saMjAtamasya	fjIzaMsaMjAtamasya	82860
+ekajAtIya	ekjAti	ekjAti	84419
+etay	enImAcazwe	enImAcazwe	86253
+EDa	EDamiva	EDamiva	87226
+EndrAvAruRa	EdrAvaruRa	EdrAvaruRa	87393
+ElavAluka	alavAlu	alavAlu	87549
+ozWajAha	ozWasya mUlam	ozWasyamUlam	88204
+OdameGa	OdameGyAnAM saMGaH	OdameGyAnAMsaMGaH	88625
+OpAnuvAkya	upAnuvAdya	upAnuvAdya	89220
+OSAna	A'uSAna	AuSAna	89538
+kawAra	nAgara, kAmin	nAgarakAmin	91059
+kaRWa	yonimeKalA	yonimeKalA	92088
+kattri	kutsitAstrayaH	kutsitAstrayaH	92604
+kapilaBAzya	kapilasAMKBapravacanaSAstraBAzya	kapilasAMKBapravacanaSAstraBAzya	94511
+kamp	kruDyatikarman	kruDyatikarman	95345
+karAmarda	karmarda	karmarda	96845
+karAlajanaka	janak	janak	96907
+karIra	kariRo gajAnIrayati kzipati	kariRogajAnIrayatikzipati	595755
+karmakAra	krmakara	krmakara	98815
+karz	avakarzet	avakarzet	99341
+kala	mantra, dravya	mantradravya	99649
+kalay	kaliM gfhRAti	kaliMgfhRAti	99943
+kali	anyo'nyaM devAsurAdInAM vErakartA	anyonyaMdevAsurAdInAMvErakartA	100394
+kalman	karman, viparItaM karma	karmanviparItaMkarma	101111
+kA	kad, ku	kadku	102330
+kA	aBiDatte	aBiDatte	102333
+kARqa	kARqasyAvayavo vikAro vA	kARqasyAvayavovikArovA	103588
+kApAwika	kapAwikeva	kapAwikeva	104302
+kApAlika	kapAlikeva	kapAlikeva	104318
+kAmAvasAyin	kAmAnsvecCayAvasAyayituM SIlamasya	kAmAnsvecCayAvasAyayituMSIlamasya	105294
+kAmAvasAyin	satyasaMkalpatA	satyasaMkalpatA	105294
+kAri	karaRaSIla	karaRaSIla	106045
+kAryapuwa	anarTakara, unmatta	anarTakaraunmatta	106613
+kAlatara	kAlo 'tiSete kAlIm	kAlotiSetekAlIm	107308
+kAlasUtraka	kAlasUtr	kAlasUtr	107861
+kAlikApUrva	paramApUrvajanakamapUrvam	paramApUrvajanakamapUrvam	108163
+kAlitarA	kAlyatiSete kAlam	kAlyatiSetekAlam	108225
+kASU	vikalaDAtu	vikalaDAtu	108929
+kAzAyin	vfTAliNgaDArin	vfTAliNgaDArin	109113
+kAsaktika	badDaparikaraH kaYcukI	badDaparikaraHkaYcukI	109361
+kiMrAja	kasya rAjA	kasyarAjA	109535
+kiMsa	kiM syati	kiMsyati	109625
+kInASa	paSuGAtin	paSuGAtin	110856
+kIvant	kiyant A/ kI/vataH	kiyantAkIvataH	111126
+kukkuwaka	kkuwa	kkuwa	111319
+kuw	kutsIBUta	kutsIBUta	111833
+kuwannaka	kuwananawa	kuwananawa	111886
+kuwika	sTAvaragfhatyAga	sTAvaragfhatyAga	111948
+kuberAkza	vallIkaraYja	vallIkaraYja	113777
+kuru	kuruzu	kuruzu	114987
+kuru	fjivajas	fjivajas	114987
+kul	saMhatO	saMhatO	115264
+kulaNga	kuraNga, kuluNga	kuraNgakuluNga	115379
+kulAyana	kulInasya ayanam	kulInasyaayanam	621785
+kulmAza	kAwadazwA mAzAH	kAwadazwAmAzAH	116144
+kuzmARqa	BrURAntara	BrURAntara	116950
+kusi	AtamaSoka	AtamaSoka	116990
+kustA	kuSitA, kuSitAyI	kuSitAkuSitAyI	117280
+kfta	kftabrahmAYjali	kftabrahmAYjali	118526
+kftaparva	katayuga	katayuga	118742
+kfttivAsa	kattivAsas	kattivAsas	119251
+kfpaRy	arcatikarman	arcatikarman	119567
+kfpAy	arcatikarman	arcatikarman	119623
+koTa	Sawita	Sawita	123278
+koma	kloma, kloman	klomakloman	123399
+kohala	kuzmARqasurA	kuzmARqasurA	123985
+kOmBakAraka	kumBakAreRa kftam	kumBakAreRakftam	124741
+kOravya	paRqavAH	paRqavAH	124791
+kOlAlaka	kulAlena kftam (saMjYayAm)	kulAlenakftamsaMjYayAm	124940
+kOlmAzika	kulmAze sADu	kulmAzesADu	125039
+kva	kasminnapi	kasminnapi	128028
+kva	kasmiMScit	kasmiMScit	128028
+kzamitar	kzamAvantt	kzamAvantt	128863
+kzAmin	kzAmo 'syAsti	kzAmosyAsti	129249
+kzi	gatikarman	gatikarman	129404
+kzipra	kzipra/miva	kzipramiva	129913
+kzIbika	kzIbena tarati	kzIbenatarati	130057
+kzullakavESvadeva	AjyAnAmAdime stotre	AjyAnAmAdimestotre	590662
+KaYjarIwa	KaNgArIwa	KaNgArIwa	132628
+Kanya	KananIya, Keya	KananIyaKeya	133618
+Karapattra	kzudrapattratulasI	kzudrapattratulasI	133827
+KarjUra	Kla	Kla	134068
+KARqava	pippalIiSuRWIyukto mudgayUzaH	pippalIiSuRWIyuktomudgayUzaH	134643
+KARqika	KaRqikAnAM samUhaH	KaRqikAnAMsamUhaH	134668
+KArika	KAra, KArI	KAraKArI	134931
+KAlika	Kala iva	Kalaiva	134985
+Kun	canIKudat	canIKudat	135191
+KuluNgikA	rozamUkA	rozamUkA	135280
+Kulla	kzudra, kzulla	kzudrakzulla	135283
+Kewin	nAgara, kAmin	nAgarakAmin	135416
+Kel	Kelant	Kelant	135490
+gaqa	pfTuSilA	pfTuSilA	590743
+gaRya	gaRasamUha	gaRasamUha	137393
+gadgadaka	gadgade kuSalaH	gadgadekuSalaH	137752
+ganDana	utsAha, utsAhane	utsAhautsAhane	138050
+ganDapAzARavant	manaHSilAdiDAtupAzARamaya	manaHSilAdiDAtupAzARamaya	623647
+gayASiKara	gavaSiras, gayASIrzaparvata	gavaSirasgayASIrzaparvata	139363
+gargakula	gargyasya, gArgyayoH	gargyasyagArgyayoH	139721
+gartya	gartamarhati	gartamarhati	139898
+gardaBa	aparAjitA, kawaBI	aparAjitAkawaBI	139913
+galaSuRqI	galaSRqikA	galaSRqikA	140728
+gARqI	vajragranTi	vajragranTi	141575
+gAloqay	gAloqitamAcazWe	gAloqitamAcazWe	142368
+gAloqita	unmAdaSIla, rogArta	unmAdaSIlarogArta	142371
+girija	kArI, kzudrapAzARaBedA, girikadalI, trAyamARA	kArIkzudrapAzARaBedAgirikadalItrAyamARA	142615
+gItamArga	daSapadacaNkramaRa	daSapadacaNkramaRa	143037
+gup	gopayant	gopayant	144210
+guruvat	gururiva	gururiva	144626
+guruvftta	garuvartin	garuvartin	144650
+gfhameDin	sAttvikI budDiH	sAttvikIbudDiH	145835
+gfhaye	gfhyate	gfhyate	578186
+godama	svargaM BUmiM ca damayati vaSIkaroti	svargaMBUmiMcadamayativaSIkaroti	147040
+gomat	gomAnivAcarati	gomAnivAcarati	147918
+gomaty	gomantamicCati	gomantamicCati	147936
+gorakzajambU	goRqAPala	goRqAPala	148172
+gosani	gopaRi	gopaRi	148949
+na	dviraRqa	dviraRqa	230805
+gORika	guRe sADuH	guResADuH	149195
+gOpAyana	gOpagotra	gOpagotra	149343
+graB	gfhARa	gfhARa	150069
+graha	yo gfhRAti	yogfhRAti	150410
+grAmIRa	samBfto grAmEH	samBftogrAmEH	151163
+grAmya	grAmyo vyADirmiTunasaMyogAt	grAmyovyADirmiTunasaMyogAt	624696
+grAvastotriyA	grAvastotrAya	grAvastotrAya	151309
+grEzmika	grizmamaDIte veda vA	grizmamaDItevedavA	151581
+Gawa	GawAsyAsti	GawAsyAsti	151798
+Gawika	Gawena tarati	Gawenatarati	151958
+Gawwa	SulkadeSa	SulkadeSa	590942
+Gana	Gana/mA	GanamA	152232
+GanasAra	dakziRAvartapArada	dakziRAvartapArada	152424
+GAwa	GAwAsyAsti	GAwAsyAsti	152858
+GfRi	SudDatejomaya	SudDatejomaya	153320
+GrA	grastasaMDi	grastasaMDi	154021
+cak	svArUQaM paSyanti	svArUQaMpaSyanti	154164
+cakravAwa	kriyAriha	kriyAriha	154622
+caturTakAla	catuTakAlika	catuTakAlika	156164
+catuzka	aMsayoH kawyoScAntarAlam	aMsayoHkawyoScAntarAlam	156700
+catuzka	svastikAdi	svastikAdi	590990
+catuzkala	catasraH kalAScaturvedaprAptisUcakANguzWamU lareKA yasya saH	catasraHkalAScaturvedaprAptisUcakANguzWamUlareKAyasyasaH	156726
+cayaka	caye kuSalaH	cayekuSalaH	158501
+carcara	caraRaSIla	caraRaSIla	159139
+cARqAlaka	caRqAlena kftam	caRqAlenakftam	160062
+cAramika	caramamaDIte veda vA	caramamaDItevedavA	160717
+cArcika	carcAmaDIte veda vA	carcAmaDItevedavA	161006
+cikina	sTUlezadDrasva	sTUlezadDrasva	591047
+citravallI	mahendrvAruRI	mahendrvAruRI	162519
+cUrRaka	SAlmalIviSeza	SAlmalIviSeza	625824
+ced	na ced	naced	164720
+cEkIrzita	cikIrzant	cikIrzant	164917
+Cad	arcatikarman	arcatikarman	166005
+Ceda	yaSCinatti	yaSCinatti	167351
+Ceda	yacCidyate	yacCidyate	167351
+CEdika	CedaM nityamarhati	CedaMnityamarhati	167430
+jaYj	aBiBavantI	aBiBavantI	168172
+janmeSa	janmaya	janmaya	169481
+japatA	gAyatrImAtrasevinAm	gAyatrImAtrasevinAm	169557
+jam	gatikarman	gatikarman	169641
+jANgala	kAzWaja	kAzWaja	172430
+jArUTya	triguRadakziRa, mAMsamaya	triguRadakziRamAMsamaya	173576
+jitaSrama	kadA cidayi na SramavAn	kadAcidayinaSramavAn	174141
+jIvaGAtyA	jIvaGAtArha	jIvaGAtArha	626628
+jIvana	jIvantI, kAkolI, qoqI, medA, mahAmedA	jIvantIkAkolIqoqImedAmahAmedA	175111
+jIvanaS	jIvasya nASaH	jIvasyanASaH	175146
+jYa	jYA devatAsya	jYAdevatAsya	176377
+jYA	SaMBunA sADanena mukunde pravartate	SaMBunAsADanenamukundepravartate	176424
+jyezWatarikA	jyezWara	jyezWara	177247
+jyotIrasa	pAradarasa	pAradarasa	596268
+wagara	helAviBramagocara	helAviBramagocara	178643
+woqarendra	woqarakzamApati	woqarakzamApati	178982
+taw	tAqayati	tAqayati	179955
+taqit	vaDakarman	vaDakarman	180082
+tatas	tasmAdanyasmin	tasmAdanyasmin	180287
+tatra	yasmiMstasmin	yasmiMstasmin	180774
+taTA	devA FzigaRAstaTA	devAFzigaRAstaTA	180827
+tanvi	tanni, tannI	tannitannI	182183
+tapasya	tapaH karizye	tapaHkarizye	182515
+tamAlaka	tAmravllI	tAmravllI	182968
+tamAhvaya	tAlISapttra	tAlISapttra	183000
+tarasant	trasant	trasant	183579
+talpa	uparyADAro veSmanaH	uparyADAroveSmanaH	591362
+tAmravallI	sUkzmavalrI	sUkzmavalrI	186020
+tAraka	laGuvfndAvana	laGuvfndAvana	186184
+tAlavecanaka	tAlarecana	tAlarecana	186909
+tAlApacara	tAlajIvin	tAlajIvin	186948
+tAlita	tulitapawa	tulitapawa	186975
+tiktaka	karaYjavallI	karaYjavallI	187283
+tinduka	karza suvarRa	karzasuvarRa	187819
+tilaka	triSlokI	triSlokI	591392
+tIkzRa	atyamlaparRI, mahAjyotizmatI, vacA	atyamlaparRImahAjyotizmatIvacA	188762
+tIkzRaganDa	jIvantI, vacA	jIvantIvacA	188842
+tIrTaDvANkza	tArTakAka	tArTakAka	189141
+tuRqa	sarvaBakzaka	sarvaBakzaka	189698
+turIyAditya	tu/rIyam Aditya	turIyamAditya	190372
+turPari	kziprahantar	kziprahantar	190399
+tuS	pIyate, aBizUyate	pIyateaBizUyate	190837
+tUzRIm	tUzRIM baBUva	tUzRIMbaBUva	627742
+tfpra	caru, puroqASa	carupuroqASa	192046
+tfprAlu	tfpraM na sahate	tfpraMnasahate	192054
+tfvft	tivft	tivft	192072
+tErohnya	tiro'hnaya	tirohnaya	192674
+trikatraya	triPalA, trikawu	triPalAtrikawu	194211
+triyajYa	triBirveda ijyate, yajYeSa	triBirvedaijyateyajYeSa	195616
+trireKa	pucCaloman	pucCaloman	195703
+triveRu	akzakUbarayoH saMDAnArTaM triSiKAM nAru	akzakUbarayoHsaMDAnArTaMtriSiKAMnAru	196060
+triSakala	trIRi SakalAnyasya	trIRiSakalAnyasya	196090
+trisama	samatrayavayava	samatrayavayava	196498
+trotra	AtrUpakriyA	AtrUpakriyA	197177
+tryaDISa	trayDipati	trayDipati	197264
+tryambaka	trayARaM vedAnAmambako vaktA	trayARaMvedAnAmambakovaktA	197278
+tvakka	sAndravarman	sAndravarman	197519
+tvakpattra	hiMNgupattrI	hiMNgupattrI	197546
+tvakz	karoti, tanUkaraRe	karotitanUkaraRe	197578
+Tarv	carati	carati	198147
+dakzaniDana	dakzaRiGana	dakzaRiGana	198483
+dakziRAsaMcara	sakziRApaTa	sakziRApaTa	198889
+daG	gatikarman	gatikarman	199024
+daRqakAraRya	dfRqaka	dfRqaka	199131
+dadrUGna	dasruGna	dasruGna	199883
+daB	gatikarman	gatikarman	200706
+darasAna	dyotva	dyotva	201152
+darSa	darSapUrRamAsO	darSapUrRamAsO	201677
+dala	utseDavadvastu, utaseDa, avadravya (apadravya)	utseDavadvastuutaseDaavadravyaapadravya	201936
+dalAmala	damanaka, maruvaka	damanakamaruvaka	202047
+daSagAgrya	daSaBirgArgI BiH krItaH	daSaBirgArgIBiHkrItaH	202184
+daSatas	daSaByas	daSaByas	202266
+daSaDIva	daSaBirDIvarIBiH krItaH	daSaBirDIvarIBiHkrItaH	202319
+daSapawu	daSaBiH pawvIBiH krItaH	daSaBiHpawvIBiHkrItaH	202384
+dA	anupra	anupra	203298
+dA	parIkzamARa	parIkzamARa	203534
+dARqamATika	daRqamATaM DAvati	daRqamATaMDAvati	203832
+dAna	datta, deyaBUta	dattadeyaBUta	204025
+dAmalih	yo dAmalihamicCati	yodAmalihamicCati	204408
+dAmalihy	dAmalihamicCati	dAmalihamicCati	204413
+dArdura	darduraDarma	darduraDarma	204902
+dArdurika	darduram karoti	darduramkaroti	204917
+dAsa	vintArTa	vintArTa	205361
+dAsa	jYAtAtman	jYAtAtman	205361
+dikkuYjara	dikkArim	dikkArim	205665
+digDasahaSaya	digDena saha Sete	digDenasahaSete	205821
+dinavyAsadala	AhavyaryAsa	AhavyaryAsa	206262
+div	dyotyate	dyotyate	206386
+divi	kikIdivi, kikidIvi/	kikIdivikikidIvi	206694
+divya	brAhmI, mahAmedA	brAhmImahAmedA	206827
+dInAra	nizka, suvarRABaraRa	nizkasuvarRABaraRa	207665
+dIrGapattraka	jalajamaDUka	jalajamaDUka	208392
+duHKAcAra	duHKA ca ArA	duHKAcaArA	208980
+duG	du/hAna	duhAna	209134
+dunduBigrIva	dunduBisvanakaRWa	dunduBisvanakaRWa	209256
+duruPa	duraHPa	duraHPa	209934
+durviza	duHKena vezwuM vyApatuM pravezwumaSakyaH	duHKenavezwuMvyApatuMpravezwumaSakyaH	211419
+dfzwipAta	dazwinipAta	dazwinipAta	214000
+deva	devar, devara	devardevara	214115
+devan	devar, devara	devardevara	214794
+devavat	devakarmavat	devakarmavat	215455
+devasaha	BikzAsUtra	BikzAsUtra	215692
+dEtya	caRqOzaGi	caRqOzaGi	216734
+dEvarAjaka	devarAjena kftam	devarAjenakftam	217085
+dolAdri	dolapavarta	dolapavarta	217325
+dOrvIRa	mfzwaparRa	mfzwaparRa	217768
+dOhika	dohaM nityamarhati	dohaMnityamarhati	217901
+dyukarRArDa	ahavryAsa	ahavryAsa	217992
+dyumOrvI	dyjIvA	dyjIvA	218198
+dravottara	drAvAduttro'dravo dravahInaH	drAvAduttrodravodravahInaH	218779
+dravyaka	dravyaM harati, vahati	dravyaMharativahati	218802
+drunaha	draRaha	draRaha	219356
+drOhika	drohaM nityamarhati	drohaMnityamarhati	219866
+dvitIyika	dvitIyo vfhyAdirasmindIyate	dvitIyovfhyAdirasmindIyate	221023
+dvipadikA	dvO pAdO	dvOpAdO	221267
+dvirAmuzyAyaRa	ddyAmuzyAyaRa	ddyAmuzyAyaRa	221562
+dviruttara	maDuguqa	maDuguqa	221581
+dviSukla	dviSulkavant	dviSulkavant	221780
+DanasA	Danama/ni	Danamani	222942
+Danus	DanuHsvarUpa	DanuHsvarUpa	223310
+Dar	ekaveRiDarA	ekaveRiDarA	223709
+Dar	samaDArayam	samaDArayam	223709
+Darmatas	DarmAt na calati nijavarRaDarmato yaH	DarmAtnacalatinijavarRaDarmatoyaH	224426
+Davala	svAmyanuyAyin	svAmyanuyAyin	642607
+DA	saMdaDAna	saMdaDAna	225628
+DArayizRu	avaDAraRaSIlatA	avaDAraRaSIlatA	227021
+DIra	kAkolI, kzIrakAkolI, mahAjyotizmatI, medA, SvetavacA	kAkolIkzIrakAkolImahAjyotizmatImedASvetavacA	227829
+Dunimant	Di/ni	Dini	228009
+Duvaka	garBamocaka	garBamocaka	228139
+Dfzad	daza/d	dazad	229242
+DyAtar	DyAtftva	DyAtftva	229790
+DvaMs	kutsayet	kutsayet	230250
+naMSuka	venudAraka	venudAraka	230836
+nandi	dyUtANga	dyUtANga	232659
+nandikeSvara	mahAkAla, aDimuktika	mahAkAlaaDimuktika	232702
+naraka	devarAtripraBeda	devarAtripraBeda	233863
+naraka	narAnkAyati	narAnkAyati	233863
+nardabuda	garBasya SabdayitA, niSAmakaH	garBasyaSabdayitAniSAmakaH	234491
+navama	navatama	navatama	235153
+navikA	navaSabdayuktA	navaSabdayuktA	235404
+nAmanAmika	nAmni nAmni viditaH	nAmninAmnividitaH	238172
+nArAla	narAliriva	narAliriva	238655
+nAstikya	nAstikatA karmaRAm	nAstikatAkarmaRAm	239255
+nikaTitin	nikaTitamanena	nikaTitamanena	239361
+niGfzva	nitarAM dIpyamAnaH	nitarAMdIpyamAnaH	240045
+niGfzva	KuramArjana	KuramArjana	240045
+nicayaka	nicaye kuSalaH	nicayekuSalaH	240098
+nityakftya	ityakarman	ityakarman	240415
+niDAyya	nitarAM saMpAdanIyo BAgaH	nitarAMsaMpAdanIyoBAgaH	240891
+nipaWitin	nipaWitaM yena saH	nipaWitaMyenasaH	241119
+nimitta	Agantu, deha, AdeSa	AgantudehaAdeSa	241438
+niyAga	saMyamo mokza	saMyamomokza	241804
+niraNgula	nirgatamaNguliByaH	nirgatamaNguliByaH	242011
+niravakASa	nirAlamaba	nirAlamaba	242327
+nirAtmaka	prARarahita	prARarahita	242649
+nirAsa	apratizWa, kARatvAdidozAdgArhasTyaM kartumaSaktaH	apratizWakARatvAdidozAdgArhasTyaMkartumaSaktaH	242862
+nirUpa	ni/paRa	nipaRa	243245
+nirUpaRa	avalokana, Aloka, vicAra, nidarSana	avalokanaAlokavicAranidarSana	243255
+nirUha	UhaSUnya	UhaSUnya	243298
+niroha	nitarAM rohahetuH	nitarAMrohahetuH	243388
+nirdara	vidIrRapAzARa	vidIrRapAzARa	630666
+nirBI	niBIki	niBIki	244225
+nirmala	nirmAlaya	nirmAlaya	244371
+nirmARa	sAranBUtam	sAranBUtam	244414
+nirvAda	nizWitavAda, niScitavAda	nizWitavAdaniScitavAda	244951
+nivAnyAvatsa	nivAnyAyA vatsaH	nivAnyAyAvatsaH	245658
+niHSreRi	niSrayaRI/, niSreRI	niSrayaRIniSreRI	246551
+nizAditin	nizAditamanena	nizAditamanena	246712
+nizkakaRWa	yudDe jitAnAM jAjYAm	yudDejitAnAMjAjYAm	246846
+nizkUwa	gfhArAmakalpa	gfhArAmakalpa	247084
+nizkraya	budDiyoga, sAmaTrya	budDiyogasAmaTrya	247162
+nizkriya	sasAraSUnya	sasAraSUnya	247179
+nizwi	grIvAbanDa	grIvAbanDa	247231
+nisAra	nyAyadAtavyavitta	nyAyadAtavyavitta	247841
+nistuza	nirdozatva	nirdozatva	642694
+nIhArAy	nIhAraM karoti	nIhAraMkaroti	250065
+nu	pIqayantam	pIqayantam	592218
+nfmRa	Dana, sarvapuruzArTaniDi	DanasarvapuruzArTaniDi	250686
+nEyAsika	nyAsamaDIte veda vA	nyAsamaDItevedavA	251783
+nEzAdaka	nizAdena kftam (saMjYAyAm)	nizAdenakftamsaMjYAyAm	252075
+nyaNga	cihna, liNga	cihnaliNga	252450
+nyAsika	nyAsena carati	nyAsenacarati	253030
+nyubja	SrAdDAdipAtraBeda, darBamayasruc	SrAdDAdipAtraBedadarBamayasruc	253048
+pakza	pAcaka, bADaka	pAcakabADaka	253356
+paYcakrozwar	paYcaBiH krozwrIBiH krItaH	paYcaBiHkrozwrIBiHkrItaH	254355
+paYcagArgya	paYcaBirgArgIBiH krItaH	paYcaBirgArgIBiHkrItaH	254388
+paYcaDIva	paYcaBirDIvarIBiH krItaH	paYcaBirDIvarIBiHkrItaH	254662
+paYcapawu	paYcaBiH pawvIBiH krItaH	paYcaBiHpawvIBiHkrItaH	254759
+paYcendra	paYcendrARyo devatA asya	paYcendrARyodevatAasya	255904
+pad	samutpannakOtUhala	samutpannakOtUhala	258267
+pad	pratipadyasva	pratipadyasva	258267
+padavIyam	padavya^m	padavyam	258849
+par	svasuKecCAvadAnya	svasuKecCAvadAnya	260474
+pararIRa	parRavfntarasa	parRavfntarasa	261564
+pararIRa	parRasirA	parRasirA	261564
+parasva	sarvasvaBUta	sarvasvaBUta	261869
+parAhna	parAgatamahaH	parAgatamahaH	262600
+parikara	AramBa, samAramBa	AramBasamAramBa	262642
+parikalitin	parikalitaM yena saH	parikalitaMyenasaH	262716
+parigaditin	parigaditaM yena saH	parigaditaMyenasaH	262932
+parigfhyA	parigfhyavedi	parigfhyavedi	631879
+pariDeya	pariDiBava	pariDiBava	263800
+parimaRqalakuzWa	maRqalakuzWa	maRqalakuzWa	264441
+parirakzitin	parirakzitaM yena saH	parirakzitaMyenasaH	264694
+parivAditin	parivAditaM yena saH	parivAditaMyenasaH	264922
+pariveza	parivfti, pariDAna, vezwana	parivftipariDAnavezwana	265154
+parizada	parizada, pArzad	parizadapArzad	265414
+parIraRa	aBIzwa, tatpara	aBIzwatatpara	266157
+parparIRa	parRacUrRarasa	parRacUrRarasa	267003
+parparIRa	dyUtakambala	dyUtakambala	267003
+paryayaRa	sve kzetre praTamaM parigamanam	svekzetrepraTamaMparigamanam	267114
+parvaRa	prApayati	prApayati	267550
+parvarIRa	parRavfntarasa	parRavfntarasa	267756
+parvarIRa	patracUrRarasa	patracUrRarasa	267756
+parvarIRa	parRasirA	parRasirA	267756
+parvarIRa	dyUtakambala	dyUtakambala	267756
+palita	palAyitar	palAyitar	268159
+pAMsucAmara	dUrvAYcitatawIBU	dUrvAYcitatawIBU	269588
+pAkala	boDanadravya	boDanadravya	269779
+pAkAri	zvetakAYcana	zvetakAYcana	269857
+pAYcadaSya	paYcadaSasAmiDenImantrEH prakASyaH	paYcadaSasAmiDenImantrEHprakASyaH	270096
+pAwa	vAdyatUrotkara	vAdyatUrotkara	270265
+pAwalika	kAladeSin	kAladeSin	270354
+pAta	tAlakAlakriyAviSeza	tAlakAlakriyAviSeza	592597
+pATya	sanmArgavartin	sanmArgavartin	271598
+pAday	pAdO nirasyati	pAdOnirasyati	271888
+pAdasTa	citraPalakasTa	citraPalakasTa	271988
+pAdyaka	pAdyaprakAra	pAdyaprakAra	272262
+pArakulIna	parakule sADuH	parakulesADuH	272971
+pAragAmin	paralokahitaM karma	paralokahitaMkarma	273000
+pAramagopucCika	paramagopucCena krItam	paramagopucCenakrItam	273138
+pArasyakulIna	parasya kule sADuH	parasyakulesADuH	273320
+pAripArSva	SrutiDaratva	SrutiDaratva	273626
+pArizatka	parizadamaDIte veda vA	parizadamaDItevedavA	273780
+pArevaqabA	pAre vaqabeva	pArevaqabeva	273897
+pArpara	gadAntara	gadAntara	274070
+pAlavI	kapardaniryitapAtra	kapardaniryitapAtra	274613
+pAvana	SUrpe	SUrpe	592633
+picCila	sPowikAvAtyArAmAvAtAKupAMsavaH	sPowikAvAtyArAmAvAtAKupAMsavaH	275632
+piRqada	SarIrakartrImAtA	SarIrakartrImAtA	275958
+piRqamUla	piRqAkAraM mUlakam	piRqAkAraMmUlakam	276052
+piRqABra	ozaDiBeda	ozaDiBeda	592657
+pitfdeva	kavyavAhanAdayaH	kavyavAhanAdayaH	276460
+lI	vaYcayati	vaYcayati	400326
+pippala	vastracCedaBeda	vastracCedaBeda	277077
+pilu	pAlu	pAlu	277246
+piS	vipuzyati	vipuzyati	277262
+piSAcaka	piSAce kuSalaH	piSAcekuSalaH	277328
+piSIla	bAhvorantarAlam	bAhvorantarAlam	586887
+pIl	roDe, jaqIBAve	roDejaqIBAve	278465
+puMsa	puMs, pumaMs	puMspumaMs	278687
+puMska	puMs, pumaMs	puMspumaMs	278709
+puYjIla	pIjYUla	pIjYUla	278937
+puw	pAwina	pAwina	278940
+puwita	ahipuwa	ahipuwa	279025
+puRyAhavAcana	puRyAhavAcanaM prayojanamasya	puRyAhavAcanaMprayojanamasya	279480
+putraka	yAvatUlakaH	yAvatUlakaH	279535
+putrya	putriya, putrIya	putriyaputrIya	279823
+puras	arAtyaBiyukta	arAtyaBiyukta	280737
+puruprOQa	atiSayena nipuRa	atiSayenanipuRa	281400
+puruzamfga	naramuKo mfgaviSezaH	naramuKomfgaviSezaH	281690
+purUravasa	pu/varavas	puvaravas	282024
+pulaka	asurajI	asurajI	282315
+puzkarasAda	puzkarasarpa	puzkarasarpa	282692
+puzkarAhvaya	puzkarAgva	puzkarAgva	282757
+pU	vidArayati	vidArayati	283690
+pUjayitavya	pUjanIyi	pUjanIyi	283811
+pUrRaka	DAnyajvara	DAnyajvara	284442
+pUrRakumBa	graTitANguliByAM hastAByAM paraSirasaH pIqanam	graTitANguliByAMhastAByAMparaSirasaHpIqanam	284472
+pUrvapaYcAla	pUrvaH paYcAlAnAm	pUrvaHpaYcAlAnAm	285157
+pUrvapadika	pUrvapadamaDIte veda vA	pUrvapadamaDItevedavA	285171
+pfSanya	sparSanakuSala	sparSanakuSala	286891
+pfzWaja	kfmArAnujAH	kfmArAnujAH	287192
+pfzWya	pfzWAnAM samUhaH	pfzWAnAMsamUhaH	287347
+pezI	hiMsikA, piSAcikA	hiMsikApiSAcikA	287674
+pEwakika	piwakena harati	piwakenaharati	287787
+pEwAkika	piwakena harati	piwakenaharati	287793
+pElumUla	pIlumUle dIyate kAryaM vA	pIlumUledIyatekAryaMvA	288006
+powAy	powAM karoti	powAMkaroti	288113
+potalaka	polata	polata	288206
+potu	mAnaBARqaSoDaka	mAnaBARqaSoDaka	288249
+potyA	potAnAM samUhaH	potAnAMsamUhaH	288252
+pOtana	maTurApradeSa	maTurApradeSa	288544
+pOnaruktika	punaruktamaDIte veda vA	punaruktamaDItevedavA	288653
+pOruzeya	samUha (saMGa) vaDa	samUhasaMGavaDa	288879
+pOrvavarzika	pUrvAsu varzAsu BavaH	pUrvAsuvarzAsuBavaH	289025
+pOrvaSAla	pUrvasyAM SalAyAM BavaH	pUrvasyAMSalAyAMBavaH	289028
+pOzpa	puzpAya hitaM bahusaMtatipradam	puzpAyahitaMbahusaMtatipradam	289215
+prakKara	praKara, prakzara	praKaraprakzara	289992
+prakraya	klaptika	klaptika	290023
+pragraha	SatroruttAnapAtanArTa pAdAkarzaRam	SatroruttAnapAtanArTapAdAkarzaRam	290442
+pragraha	galahastaka	galahastaka	290442
+praRaya	praman, viSramBa, yAYcA, praSraya, aBimAna, prasAda, prasara, prasava	pramanviSramBayAYcApraSrayaaBimAnaprasAdaprasaraprasava	291593
+praRayana	udarapUraRa	udarapUraRa	291603
+praRiDi	guptaScAraH	guptaScAraH	291767
+pratadvasu	prAptavasu	prAptavasu	291897
+pratigraha	grahaBeda	grahaBeda	292529
+pratiyatna	lipsA, upagraha, upagrahaRa, nigrahAdi, grahaRAdi, pratigraha	lipsAupagrahaupagrahaRanigrahAdigrahaRAdipratigraha	294044
+pratiroDa	vyutTAna, tiraskAra, cOrya	vyutTAnatiraskAracOrya	294210
+prativarDin	prAtikUlyena cCedI	prAtikUlyenacCedI	294341
+prativARi	pariBAzA, aBiprAya, prajYnapti	pariBAzAaBiprAyaprajYnapti	294397
+pratyaMSu	pratigatoM 'SuH	pratigatoMSuH	295837
+pratyaMSu	pratigatA aMSavo 'sya	pratigatAaMSavosya	295837
+pratyavamarSa	svakftakarmAnusaMDAna	svakftakarmAnusaMDAna	296528
+pratyurasa	pratigatamuraH	pratigatamuraH	297139
+praTay	pfTumAcazwe	pfTumAcazwe	297453
+praTasnu	praTanaSIla	praTanaSIla	297461
+pradaGos	pradagDos	pradagDos	297559
+prapaYca	Aqambara, viparyAsa	AqambaraviparyAsa	298187
+prapaYca	vEparItya, Brama, mAya	vEparItyaBramamAya	298187
+pramaRqala	raTanIqAkzayoH saM DAnakAzWajAtam	raTanIqAkzayoHsaMDAnakAzWajAtam	299320
+prayas	pra/yase	prayase	300144
+prayogArTa	pratyukrama	pratyukrama	300485
+pravaRa	catuzpaTa, kzaRa	catuzpaTakzaRa	300931
+pravaRa	gUQaBAvena nimnagamanAya	gUQaBAvenanimnagamanAya	300931
+pravaranfpati	pravaramena	pravaramena	301093
+pravAla	pallavayukta	pallavayukta	634008
+praSas	praSasta, prakfzwacCedana	praSastaprakfzwacCedana	302111
+praSravas	prakfzwAnna	prakfzwAnna	302453
+prasavya	prasavIya	prasavIya	302803
+prasuta	savanIyaH paSuH	savanIyaHpaSuH	303072
+prasuti	putrajanman	putrajanman	303078
+prasfti	prakfzwagati, java	prakfzwagatijava	303190
+prasfzwa	sarvANgasaMSlezaRa	sarvANgasaMSlezaRa	303214
+praskanda	maDyamaSiPA	maDyamaSiPA	303270
+praskandana	brahmAdInAmapi cyAvayitA	brahmAdInAmapicyAvayitA	303273
+praskunda	cakrAkArA vedikA	cakrAkArAvedikA	303291
+prasnava	UQaHpradeSa	UQaHpradeSa	303535
+prasnavitrIy	prasnavitevAcarati	prasnavitevAcarati	303548
+prAca	prkarzeRarakzakaH	prkarzeRarakzakaH	304812
+prAjAvata	prajAvatyA Darmyama	prajAvatyADarmyama	305117
+prAjya	prakarzeRa ajyaM jyArahitam	prakarzeRaajyaMjyArahitam	305165
+prARayama	prRayAma	prRayAma	305547
+prARavIrya	prARAKyaM vIryam	prARAKyaMvIryam	305593
+prAdeSana	pradaSana	pradaSana	306322
+prADva	banDa, banDana	banDabanDana	306397
+prApay	priyamAcazwe	priyamAcazwe	306488
+prABUtika	praBUtamAha	praBUtamAha	306661
+prAroha	prarohaH SIlamasya	prarohaHSIlamasya	306936
+prAlepika	pralepikAyA Darmyam	pralepikAyADarmyam	307035
+prAvarga	prakarzeRa SatrURAM varjayitA	prakarzeRaSatrURAMvarjayitA	307112
+prAvAsa	pravAse dIyate kAryaM vA	pravAsedIyatekAryaMvA	307153
+prAvAsika	pravAse sADuH, pravAsAya praBavati	pravAsesADuHpravAsAyapraBavati	307156
+prAvI	prakarzeRa gantA	prakarzeRagantA	307180
+prAveSana	praveSane dIyate kAryaM vA	praveSanedIyatekAryaMvA	307262
+prAsaNga	DAnyAdipiDAnayogyaM caturaSram	DAnyAdipiDAnayogyaMcaturaSram	307415
+priyAy	priyamivAcarate	priyamivAcarate	308032
+prohyapadi	prohya pAdO (hastinaM vAhayati)	prohyapAdOhastinaMvAhayati	309207
+Palka	viSoDitANk	viSoDitANk	310803
+ba	toyaM gatam	toyaMgatam	311357
+bakaDUpa	DUpabaka	DUpabaka	311420
+balUla	balaM na sahate	balaMnasahate	313676
+bahuka	jalaKAtaka	jalaKAtaka	314183
+bAD	vahd	vahd	315724
+bAhIka	kAzWaka, paripAlaka	kAzWakaparipAlaka	597077
+bida	vadEsya	vadEsya	317210
+bilva	hiNgapattrI	hiNgapattrI	317574
+buDasAnu	pajYapuruza	pajYapuruza	318642
+brahmaRyadeva	brahmaRyanAM SrezWaH	brahmaRyanAMSrezWaH	320645
+brahmavarcasya	brahmavacasa	brahmavacasa	321306
+brahmasaMbanDa	brahmarAkza	brahmarAkza	321540
+brahmojJa	brahmojYhatA	brahmojYhatA	321903
+brAhmaka	brahmaRA kftam saMjYAyAm	brahmaRAkftamsaMjYAyAm	321969
+BagnI	BagninI	BagninI	323221
+BaYj	BagnagrIva	BagnagrIva	323513
+Badra	anantA, AparAjitA, kawPala, kAkodumbarikA, kfzRA, jIvantI, dantI, nIlI, prasAriRI, balA, rAsnA, vacA, SamI, SvetadUrvA, sArivAviSeza	anantAAparAjitAkawPalakAkodumbarikAkfzRAjIvantIdantInIlIprasAriRIbalArAsnAvacASamISvetadUrvAsArivAviSeza	323985
+BadrOdanI	pItabalA	pItabalA	324582
+Barawika	Barawena harati	Barawenaharati	324934
+BaraRika	BaraRena harati	BaraRenaharati	324956
+Barvara	jagadBartar, prajApati	jagadBartarprajApati	325465
+Bavaka	BavatAt	BavatAt	325616
+Bavitra	Buvana, atarikza	Buvanaatarikza	326003
+Bastrika	BastrayA harati	BastrayAharati	326244
+BAjI	pakvo 'rTaH	pakvorTaH	326965
+BAjI	paNkavyaYjanaviSezaH	paNkavyaYjanaviSezaH	593335
+BAva	manuzyaBAva	manuzyaBAva	328031
+BAvAva	BAvAn	BAvAn	593359
+BAvAva	jantUn	jantUn	593359
+Buraj	Brajjanta	Brajjanta	330732
+Buvanti	BuvaM tanoti	BuvaMtanoti	330943
+BU	sattArUpa	sattArUpa	331265
+BUrivarcas	suvarRakAnti	suvarRakAnti	333083
+BfNgavfkza	vAtaharavfkza	vAtaharavfkza	333629
+BfRIy	kruDyati	kruDyati	333739
+BEdika	BEdaM	BEdaM	334300
+BOta	BtAnAM	BtAnAM	335076
+majjatas	majjAM	majjAM	337149
+maRiBUmikAkarman	kftrimaputrikAnirmARa	kftrimaputrikAnirmARa	337929
+maRivAla	maRiSudDavAla, maRivarRakeSa	maRiSudDavAlamaRivarRakeSa	338058
+maRqitaputra	maRiqata	maRiqata	338423
+matallI	matalitkA	matalitkA	338565
+matya	jYAnasya karaRam	jYAnasyakaraRam	338858
+matsa	matspa	matspa	338861
+matsya	svastikamaDyAkftiH	svastikamaDyAkftiH	338908
+matsyAkzI	gaRqa/rvA	gaRqarvA	339061
+maTUrA	maTyra	maTyra	339303
+mada	cazakavastu	cazakavastu	339393
+maderu	balAtiSayamatta	balAtiSayamatta	340033
+madguraka	madrura	madrura	340089
+madryadrik	mnadri/k	mnadrik	340261
+maDukukkuwI	maDikukkuwikA	maDikukkuwikA	340421
+maDura	kAlolI, bfhajjIvanjI, maDukarkawikA, maDikukkuwikA	kAlolIbfhajjIvanjImaDukarkawikAmaDikukkuwikA	340917
+maDyakOmudI	maDyasIdDAntaka/mudI	maDyasIdDAntakamudI	341504
+maDyaMdina	mADyMdina	mADyMdina	341588
+SilA	dvArADodAru	dvArADodAru	469836
+SilA	SirA, sirA	SirAsirA	469846
+mantragaRqaka	vidvA	vidvA	343485
+mantraspfS	mantreRa	mantreRa	343910
+manTIvant	mnTivant	mnTivant	344200
+mandurika	mAndDarika	mAndDarika	344708
+manvISa	manIzayA	manIzayA	344958
+mayUravyaMsaka	DUrtamayUra	DUrtamayUra	345243
+marAyin	SatrURAM	SatrURAM	345426
+marv	marvanti	marvanti	346541
+mallikapUrva	mallakArjuna	mallakArjuna	347316
+mahAkalpa	divyaBuzRa	divyaBuzRa	348196
+mahAkAla	vizRu/pAKaRqadaRqAyamAnasamayaH	vizRupAKaRqadaRqAyamAnasamayaH	348254
+mahAtikta	yavatitkA	yavatitkA	348944
+mahAtyaya	mahAkazwa	mahAkazwa	349017
+mahADur	mahAnDuHsadaSaH	mahAnDuHsadaSaH	349277
+mahApaTa	brahmaranDna	brahmaranDna	349627
+mahApUruza	mavApuruza	mavApuruza	349871
+mahAvidyA	viSupopAsanA	viSupopAsanA	351514
+mahAsahasrapramardinI	mahAsahastrapramadana	mahAsahastrapramadana	352215
+mahAsuganDa	marpAkzI	marpAkzI	352304
+mahikeru	pra/Qakarman	praQakarman	352562
+mahOjasa	tejasvnI	tejasvnI	353467
+mahOjaska	maha/jas	mahajas	353472
+mahOzaDa	BumyAhalya	BumyAhalya	353481
+mA	yAcYAkarman	yAcYAkarman	353549
+mAMsika	mAMsAya	mAMsAya	353970
+mAMsodana	mAMsa/dana	mAMsadana	353993
+mAMspfzwa	mAmanuprAptaH	mAmanuprAptaH	354014
+mAGakAvya	SiSrpAlavaDa	SiSrpAlavaDa	354179
+mANgalikya	mANgAlaka	mANgAlaka	354259
+mARipAla	maRipAlyA	maRipAlyA	354537
+mAtu	vAgvarRasamudAya	vAgvarRasamudAya	354826
+mAtura	dvimAtara	dvimAtara	354829
+mADyaMdina	mADyaMdinaH	mADyaMdinaH	355730
+mADyaMdina	mADyaMdinaM	mADyaMdinaM	355730
+mADyamikIya	maDyamikAyAM	maDyamikAyAM	355804
+mAnaskfta	pujAyA	pujAyA	356279
+mAnda	mAndva	mAndva	356510
+mAyAvasika	parapratAraka	parapratAraka	356789
+mAriza	mAdaSa	mAdaSa	357053
+mArga	vAdyasya tAqanaBedAH	vAdyasyatAqanaBedAH	642981
+mArjAlIya	SudDadeha	SudDadeha	357560
+mAlavaka	mAlavo	mAlavo	357891
+mAzapattrikA	pfSnaparRI	pfSnaparRI	358237
+mAsakft	mAsAnAM cArDamAsAnAM ca kartAH	mAsAnAMcArDamAsAnAMcakartAH	358321
+mAhendra	zfBadaRqaviSeza	zfBadaRqaviSeza	358684
+mAheSvara	dDargA	dDargA	358726
+mi	gatikarmman	gatikarmman	358769
+mi	zfyatiH	zfyatiH	358769
+mi	pramIyate	pramIyate	358769
+mi	gacCti	gacCti	358769
+mitradrohin	mitraduha	mitraduha	359032
+miTyAnirasana	SapaSTa	SapaSTa	359506
+midDa	cintABisaMkzepa	cintABisaMkzepa	359636
+minmina	miRimaRa	miRimaRa	359657
+miSra	mizfka	mizfka	359767
+miSrakavyavahAra	mizfvyavahAra	mizfvyavahAra	359798
+mih	yAcYAkarman	yAcYAkarman	359980
+muku	mutki	mutki	360377
+muktanirmoka	mutkakaNcuka	mutkakaNcuka	360589
+muktamUrDaja	mutkakeSa	mutkakeSa	360601
+muktAPalajAla	mutkAjAla	mutkAjAla	360703
+muKa	BrAtfrUpin	BrAtfrUpin	636548
+muKatas	muKe	muKe	360977
+muc	SApavimukta	SApavimukta	361471
+mudrAmArga	brahmaranDa	brahmaranDa	362282
+mUwaka	mua	mua	363365
+mUrKa	gAyatrIrahita	gAyatrIrahita	363608
+mUrDajyotis	brahmaranDa	brahmaranDa	363826
+mUlya	mUlyenAnAmyam	mUlyenAnAmyam	364364
+mfzwaSalAka	ujjvalapaYjara	ujjvalapaYjara	366326
+meGasaMdeSa	meGa/ta	meGata	366759
+meGAy	meGaM karoti	meGaMkaroti	366835
+meDayu	saMgrAmecCu	saMgrAmecCu	367192
+meha	mes	mes	367724
+mERmiRya	miRimaRatva	miRimaRatva	367763
+mEtreya	mEtrayaka	mEtrayaka	367937
+mETunopagamana	mETungamana	mETungamana	368041
+ya	mAnuzAMSca	mAnuzAMSca	369559
+yakza	kuberamAtar	kuberamAtar	369625
+yakzaRa	jakzanA	jakzanA	369655
+yakzadfS	utsavasya	utsavasya	369676
+yajYapuruza	yajapumaMs	yajapumaMs	370332
+yajYaSeza	yajaSizwa	yajaSizwa	370583
+yat	karmasu pravartayati	karmasupravartayati	370923
+yatra	yasmiMstasmin	yasmiMstasmin	371284
+yatra	yasminkasmin	yasminkasmin	371284
+yatra	yasminkasminnapi	yasminkasminnapi	371284
+yatra	yasminkasiMSca	yasminkasiMSca	371284
+yatra	yasminkasmiMSca	yasminkasmiMSca	371284
+yaTABirUpam	aBirUpasya yogyam	aBirUpasyayogyam	372007
+yantar	yAcYAkarman	yAcYAkarman	373032
+yam	udyatapASakara	udyatapASakara	373244
+yavaja	javakzAra	javakzAra	374152
+yavamaty	yavamAnivAcaratti	yavamAnivAcaratti	374285
+yaSas	udaka, anna	udakaanna	374561
+yA	vyatikramya gataH	vyatikramyagataH	637061
+yAvasa	tfRasAMtati	tfRasAMtati	376543
+yuj	ayuNkta	ayuNkta	377163
+yutaka	calanAgra	calanAgra	377553
+yutaka	SUrpAgra	SUrpAgra	377553
+yuDma	SezasaMgrAma	SezasaMgrAma	377776
+yuyukKura	kzadravyAGra	kzadravyAGra	377811
+yOgavaratra	yugavaratrARAM samUhaH	yugavaratrARAMsamUhaH	379457
+raktagranTi	mUtragraTi	mUtragraTi	379849
+raGu	raGuvaSa	raGuvaSa	380946
+raj	ramayati	ramayati	381437
+rajasay	rajasvinamAcazwe	rajasvinamAcazwe	381733
+raRvan	ramaRIyABiScittiBiH	ramaRIyABiScittiBiH	382336
+raRvita	Sabdite	Sabdite	382342
+ram	saha mayA	sahamayA	384256
+raSmipati	AdityaraSmaya	AdityaraSmaya	385053
+rAgaprasava	rAgapuzya	rAgapuzya	386428
+rAjanyabanDu	rAnjanya^	rAnjanya	387149
+rAsa	BAzASfNKalaka	BAzASfNKalaka	390123
+riP	viliKantO	viliKantO	390625
+riSAdas	ariSAdas	ariSAdas	597443
+rizIkara	hiMstra	hiMstra	390749
+rud	rudyAt	rudyAt	391542
+ruD	samantAdAvftya	samantAdAvftya	392063
+ruD	aparudDa	aparudDa	392063
+ruSant	rozavatI	rozavatI	392433
+req	kruDyati	kruDyati	393384
+rerivan	prerayirar	prerayirar	393639
+reSaya	hiMsant	hiMsant	393764
+roka	krayaBid	krayaBid	393934
+roka	kfpaRaBeda	kfpaRaBeda	393934
+rocaka	granTiparRaBeda	granTiparRaBeda	394104
+romakesara	rAmagutsa	rAmagutsa	394528
+romavivara	rAmakUpa	rAmakUpa	394619
+rora	aMsagranTi	aMsagranTi	394737
+rOdraka	rudreRa	rudreRa	395244
+rOmaka	rumAnadIBava	rumAnadIBava	395339
+rOravaka	ruruRA	ruruRA	395385
+lakzyavITI	brahmalokamArga	brahmalokamArga	396224
+lawa	pramAdavacana	pramAdavacana	397264
+lawva	jAtiviSeza	jAtiviSeza	397299
+lamaka	tIrTaSoDaka	tIrTaSoDaka	397852
+lavay	lavamAcazwe	lavamAcazwe	398792
+lAkzyika	lakzyamaDIte	lakzyamaDIte	399072
+lAjin	lAjopalakzita	lAjopalakzita	399245
+lAhala	SabaraviSeza	SabaraviSeza	399734
+ligu	BUpradeSa	BUpradeSa	399896
+lIlANga	vilasitANga	vilasitANga	400471
+lUta	pUrvAvicCinna	pUrvAvicCinna	401077
+lokasmft	pfTivIlokasya	pfTivIlokasya	402116
+lohala	SfNKalADArya	SfNKalADArya	403159
+vakman	mArgaBUta	mArgaBUta	404336
+vakzaResTA	vahnO	vahnO	404650
+vac	aByanu	aByanu	404865
+vacas	droGavacase	droGavacase	405078
+vajranipAtana	AratnidvayaGAta	AratnidvayaGAta	405430
+vaqabA	dvijastrI	dvijastrI	406136
+vaRWara	karIrakoSa	karIrakoSa	406365
+vaRWara	sTagikarajju	sTagikarajju	406365
+vat	piteva	piteva	406389
+vatsya	vatsadeSAH	vatsadeSAH	637895
+vanaprakza	vanekzIyate	vanekzIyate	407619
+vam	ud-sary	udsary	637958
+vayA	vayasAm	vayasAm	409092
+var	vivArayAmAsa	vivArayAmAsa	409213
+varavarRin	pratiyaNgu	pratiyaNgu	409935
+varAha	varAhasihira	varAhasihira	410179
+varUTa	nijarAzwraka	nijarAzwraka	410670
+varta	mUtrabila	mUtrabila	638021
+varti	gErikAdigulikA	gErikAdigulikA	638033
+valmIka	sAtapo meGaH	sAtapomeGaH	413981
+vallUra	vanakzetra	vanakzetra	414195
+vaS	SudDa dedIpyamAna	SudDadedIpyamAna	414239
+vasana	strIkawIBUzaRa	strIkawIBUzaRa	414855
+vasu	azwame	azwame	415237
+vasnana	kawIBUzaRa	kawIBUzaRa	416162
+vAjapeSas	annErASlizwaH	annErASlizwaH	418128
+vAjasaMnyasta	vAjeByaH kesareByaH vAjena vegena vA saMnyastAstyaktAH (SAKAH)	vAjeByaHkesareByaHvAjenavegenavAsaMnyastAstyaktAHSAKAH	418284
+vAtakeli	ziNgAnAM dantaleKanam	ziNgAnAMdantaleKanam	418852
+vAtApya	vAta[m] Apyam	vAtamApyam	419354
+vAda	yasmindeSa AsIno 'cCAvAkaH „acCAvAka vadasva“ ityukto vadati sa deSaH	yasmindeSaAsInocCAvAkaH„acCAvAkavadasva“ityuktovadatisadeSaH	597574
+vAyavya	vAyavya^M pA/tram	vAyavyaMpAtram	420733
+vAyosAvitra	vAyuvitfByAm	vAyuvitfByAm	421130
+vAr	vAramiva	vAramiva	421148
+vArakIra	vAragrAhin	vAragrAhin	421216
+vArakIra	nIrAjitahaya	nIrAjitahaya	421216
+vArtana	vartanIzu BavaH	vartanIzuBavaH	422092
+vArzRivfdDa	vfzRivfdDezu jAtaH	vfzRivfdDezujAtaH	422580
+vAlaja	nfkeSaja	nfkeSaja	422661
+vASita	kikkiwAdiSabdjAtAni	kikkiwAdiSabdjAtAni	423036
+vAsantika	vasantamaDIte	vasantamaDIte	423223
+vAsita	jYAnamAtra	jYAnamAtra	423455
+vAsya	vAsI, vA/SI	vAsIvASI	423857
+vAhyanaya	vAhIkanIti	vAhIkanIti	424092
+vikawa	vikawajaNGA	vikawajaNGA	638345
+vikara	BUvivara	BUvivara	597601
+viGfta	rasopeta	rasopeta	425835
+vicezwita	vice	vice	426392
+viwa	prAYcalloha	prAYcalloha	427371
+viwapa	Giwa	Giwa	427400
+vid	samanu	samanu	428186
+vidUratva	vidUrAt	vidUrAt	428764
+vidraDa	vidfQa	vidfQa	429546
+vinikarttavya	nikftyA vaYcayitavyaH	nikftyAvaYcayitavyaH	430722
+vinyAka	vidDavfkza	vidDavfkza	431276
+vipaRa	nirvyavahAra	nirvyavahAra	431382
+vibalAka	AkasmikapAtASanirahita	AkasmikapAtASanirahita	432480
+viBARqa	nIlagokarRI	nIlagokarRI	432797
+viBAvarI	vivAdavastraguRWI	vivAdavastraguRWI	432854
+virAj	virAjaH sADanam	virAjaHsADanam	434508
+virUpAkza	vizamavyavahAra	vizamavyavahAra	434874
+vilapana	GftAdimala	GftAdimala	638798
+viva	gacCati!	gacCati!	435773
+vivartana	AyuHkzapaRa	AyuHkzapaRa	435958
+vivasvadvAta	vivasvannAmako vAto vAyuryasyAH	vivasvannAmakovAtovAyuryasyAH	436047
+vivikta	vasunandana	vasunandana	436263
+vivitti	viSezalABa	viSezalABa	436317
+vivizwi	viSezeRa vizwirvyAptiryasya brahmaRastat	viSezeRavizwirvyAptiryasyabrahmaRastat	436375
+vivftti	viviDavfttilABa	viviDavfttilABa	436427
+viSAtana	saMhartara	saMhartara	437197
+viSezatas	viSezasya	viSezasya	437656
+viSpati	rAjAnaH	rAjAnaH	437826
+viSvanara	viSve narA yasya	viSvenarAyasya	438547
+viSvavapari	viSvasmiYjagati raSmInAvaptA vistArayitA	viSvasmiYjagatiraSmInAvaptAvistArayitA	438945
+viSvasft	viSvasya srazwA	viSvasyasrazwA	439134
+viSvAmitra	viSvAmitrasyAnuvAkaH	viSvAmitrasyAnuvAkaH	439291
+viSvAvant	viSvamavantI pAlayantI	viSvamavantIpAlayantI	439353
+vizamamaya	vizamAdAgataH	vizamAdAgataH	439928
+vizwAnta	vyAptAvasAna	vyAptAvasAna	440765
+vizRa	vizRave	vizRave	440857
+visarga	ayanaBedo viBAvasoH	ayanaBedoviBAvasoH	441605
+visecaka	vigatah secako yasmAt	vigatahsecakoyasmAt	441843
+visravanmiSra	BayakampAdimiSra	BayakampAdimiSra	442211
+vihAyas	mahant, vaYcanavant	mahantvaYcanavant	442418
+vIta	prajanana, utpatti	prajananautpatti	442953
+vIti	gati, prajana	gatiprajana	443064
+vIDra	naBas, vAyu	naBasvAyu	443146
+vIpsa	yo vIpsati	yovIpsati	443169
+vIra	SfNgI, SfNgAwaka, nala (naqa), nata, marica, puzkaramUla, kAYjika, uSIra	SfNgISfNgAwakanalanaqanatamaricapuzkaramUlakAYjikauSIra	443188
+vIryakfta	sAmarTyena saMpAditaH	sAmarTyenasaMpAditaH	443916
+vUs	pfTakkuryAt	pfTakkuryAt	444026
+vfkadvaras	savftadvAra	savftadvAra	444100
+vfjina	raktacarman	raktacarman	444533
+vfttiBAj	homAdivyApari kurvan	homAdivyAparikurvan	444879
+vfDasAnu	puruz, pattra	puruzpattra	445559
+vfScika	hAla, hAlika	hAlahAlika	445723
+vfScika	agrahAyaRamAsa	agrahAyaRamAsa	445723
+vfzadaYji	vfzatA (somena) aYjantaH	vfzatAsomenaaYjantaH	445919
+vfzapsu	varzaRarUpa	varzaRarUpa	446045
+vfzaBa	ArzarBa	ArzarBa	446048
+vfzAkapAyI	SrI, gOrI, svAhA	SrIgOrIsvAhA	446291
+vekawa	jAtatAruRya	jAtatAruRya	446611
+vewa	pIluvfkza	pIluvfkza	446868
+veqa	sAndravicCinnacandana	sAndravicCinnacandana	446886
+verawa	miSrIkfta	miSrIkfta	448481
+vEkaTika	vikaTAyAm sADuH	vikaTAyAmsADuH	449142
+vEkza	vIkzA SIlamasya	vIkzASIlamasya	449319
+vERuka	veRO sADuH	veROsADuH	449618
+vEtaDfta	vEnaGfta, vEnaBfta	vEnaGftavEnaBfta	449664
+vEtAna	vitAnasamUha	vitAnasamUha	449719
+vEdehaka	videha, vEdeha	videhavEdeha	449969
+vEBAjitra	viBAjayiturDarmyam	viBAjayiturDarmyam	450482
+vEzaya	vizayARAM samUhaH	vizayARAMsamUhaH	451761
+vEzwamBa	vEzwamBasya	vEzwamBasya	451794
+vyaYjana	vAditrakarman	vAditrakarman	452363
+vyaDvan	vi/ a/DvAnaH	viaDvAnaH	452806
+vyA	vyApnoti	vyApnoti	453693
+vyAkulitin	vyAkulitamanena	vyAkulitamanena	453765
+vyAja	vyAjena	vyAjena	454098
+vyUhana	jagatkzoBaka	jagatkzoBaka	455248
+vyodana	viviDe 'nne labDe sati	viviDennelabDesati	455322
+vraj	kuwilaM vrajati	kuwilaMvrajati	455488
+vratASa	mitaMhitaM meDyaM cASnAti	mitaMhitaMmeDyaMcASnAti	456011
+vrAtyaBAva	vrAtyatA, vrAtyacaraRa	vrAtyatAvrAtyacaraRa	456192
+vrIhirAjika	kaNguDAnya	kaNguDAnya	456280
+SaMva	musalAgrasTalOhamaRqaka	musalAgrasTalOhamaRqaka	456384
+SaMs	aBiSaSaMsa	aBiSaSaMsa	456410
+SaMsana	vedapraSasya	vedapraSasya	456505
+SakendrakAla	SakakAla, SakaBUpakAla	SakakAlaSakaBUpakAla	457023
+Sakri	meGa, vajra, hastin	meGavajrahastin	457554
+SaNKin	SvetacukrA, SvetapuMnAga	SvetacukrASvetapuMnAga	458372
+Satadvasu	Satavasu	Satavasu	458989
+Sadri	jizRu, taqit	jizRutaqit	460199
+Sap	SaSApa	SaSApa	460354
+Sap	saMSaSApa	saMSaSApa	460354
+Sapa	SapaTa, Sapana	SapaTaSapana	460393
+Sam	SAntaM pApam	SAntaMpApam	461113
+Samba	anulomakarzaRa	anulomakarzaRa	461493
+Sambara	citra, bOdDavrataBeda	citrabOdDavrataBeda	461509
+Sar	ucCrIyate	ucCrIyate	462045
+SaraRqa	sarawa, DUrta, BURAntara, pakzin, kAmuka	sarawaDUrtaBURAntarapakzinkAmuka	462203
+Saravant	kaRwakErhinasti	kaRwakErhinasti	462495
+SarIranicaya	SarIrasya saMcayaH	SarIrasyasaMcayaH	462781
+Sala	dravaRasamarTa	dravaRasamarTa	463308
+SaSa	loDravfkza	loDravfkza	639529
+SA	saMSitAm tIkzRAM budDiM kftvA niScatya	saMSitAmtIkzRAMbudDiMkftvAniScatya	464529
+SAkabAleya	brahymayazwi	brahymayazwi	464700
+SAkuRa	parottApin	parottApin	464934
+SAktika	SaktyA jIvati	SaktyAjIvati	465034
+SAwaka	nAwakaBeda	nAwakaBeda	465415
+SAntivAcana	SAntivAcanaM prayojanamasya	SAntivAcanaMprayojanamasya	466130
+SAyyika	SayyayA jIvati	SayyayAjIvati	466549
+SAratka	SaradamaDIte veda vA	SaradamaDItevedavA	466579
+SAradvata	gOtamAs	gOtamAs	466671
+SArikukza	SAreriva kukzirasya	SArerivakukzirasya	466733
+SAzkulika	SazkulIva	SazkulIva	467907
+Sikya	vajravikAra	vajravikAra	468340
+SiKA	SiKavfdDa	SiKavfdDa	468642
+Sitikakzin	pARqarodaro gfDraH	pARqarodarogfDraH	469006
+Sirasy	Sira icCati	SiraicCati	469546
+Sirasya	Sira iva	Siraiva	469549
+SilAwaka	awwa, tila	awwatila	469888
+SilI	stamBaSIrza	stamBaSIrza	470064
+SilpaSAla	Silpagaha	Silpagaha	470227
+SivaBAgavata	Sivasya BAgavataH	SivasyaBAgavataH	470680
+SivaBAgavata	BagavAnBaktirasya	BagavAnBaktirasya	470680
+Siz	viSezayant	viSezayant	471439
+SIrza	Siro vartay	Sirovartay	472535
+Sukta	pUtiBUta	pUtiBUta	473115
+Suktasvara	avyaktasvara	avyaktasvara	473139
+SuRWADI	pItamuKI, vezwitamuKI	pItamuKIvezwitamuKI	473962
+Sulba	yajYakarman, AcAra, jalasaMniDi	yajYakarmanAcArajalasaMniDi	475115
+Suzma	bala, ojas, tejas	balaojastejas	475392
+SUka	navodBinnapallavakoSI	navodBinnapallavakoSI	475446
+SUrasenaka	SUrasana	SUrasana	475941
+SUlina	BARqIravfkza	BARqIravfkza	476214
+Sepya	vatsasya SepasaMvezwanaM carma	vatsasyaSepasaMvezwanaMcarma	476799
+Seva	liNgAkfti	liNgAkfti	476856
+SEkya	SikyasamudAya	SikyasamudAya	477096
+SESirika	SiSiramaDIte	SiSiramaDIte	477804
+SowIrya	SouwIrya	SouwIrya	477954
+SORqIra	SouwIra	SouwIra	478640
+SmASAnika	SmaSAne 'DIte	SmaSAneDIte	479128
+Syetay	SyenImAcazwe	SyenImAcazwe	479525
+SramaRa	SabarIBid	SabarIBid	479924
+SramB	viSvasta, anudBawa, gAQa, SAnta, atyarTa	viSvastaanudBawagAQaSAntaatyarTa	479975
+SravApya	baliyogyapaSu	baliyogyapaSu	480210
+SrAyasa	Sreyasi Bavam	SreyasiBavam	480475
+Sriti	SrityE	SrityE	480876
+Sruti	vedoktAni karmARI	vedoktAnikarmARI	482504
+Srutikawa	prAYcaloha	prAYcaloha	482529
+SrutiSIla	tantrInAdaviBAjanaSIla	tantrInAdaviBAjanaSIla	482653
+SlavaRa	raktavarRe	raktavarRe	483368
+SlAkzRika	SlakzRamaDIte veda vA	SlakzRamaDItevedavA	483374
+SvacillI	SnakacillI	SnakacillI	483828
+SvASura	SvASureryUnaSCAttraH	SvASureryUnaSCAttraH	484418
+Svetay	SvetASvamAcazwe	SvetASvamAcazwe	484933
+zaqa	peyAntare Bede	peyAntareBede	485648
+zaRqAlI	tElamAna	tElamAna	486114
+zaRQitA	zaRQI yoniH	zaRQIyoniH	486149
+zAwkula	zawsu kulezu BavaH	zawsukulezuBavaH	486452
+zoqIy	zoqantamAcazwe	zoqantamAcazwe	486755
+saMyatvara	vAjyata	vAjyata	486897
+saMyamin	saMyAmanA	saMyAmanA	486963
+saMveSanIya	saMvenaM prayojanasasya	saMvenaMprayojanasasya	488059
+saMsidDi	madogrA	madogrA	488687
+sakuzWika	sagulPa	sagulPa	489922
+sakz	saMBajamAnAs	saMBajamAnAs	490169
+sacyuti	samAnA cyutiH	samAnAcyutiH	492281
+saYj	sajjayasi	sajjayasi	640133
+sawvA	pakziBeda	pakziBeda	493220
+saqa	saha qena vartate	sahaqenavartate	493229
+satitarA	satItarA, sattarA	satItarAsattarA	493370
+satyasaMhita	satyasaMGa	satyasaMGa	494489
+sad	avasasAda	avasasAda	494830
+sadya	sadyijAta	sadyijAta	495835
+sanat	sanA, sanAt	sanAsanAt	496405
+santi	sati, sAti	satisAti	497053
+saMDimant	AprasUtataruRI	AprasUtataruRI	497701
+saMDilA	dvAdaSatUryanirGoza	dvAdaSatUryanirGoza	497724
+saptamahABAga	saptaBirgAyatryAdiBirarpaRIyAHsaptEva	saptaBirgAyatryAdiBirarpaRIyAHsaptEva	499223
+sabva	pakkASayagatamannam	pakkASayagatamannam	500015
+samakarRa	fjurvakraSca	fjurvakraSca	500295
+samarUpya	samAdAgataH	samAdAgataH	501199
+samAdAna	samIcInagrahaRa	samIcInagrahaRa	501912
+samAna	varRaBid	varRaBid	502025
+samApriya	saMtatAni	saMtatAni	502492
+samAvadindriya	samAvadDIrya	samAvadDIrya	502690
+samutpiYja	BfSamAkulaH	BfSamAkulaH	503522
+samudGAta	AtmapradaSAnAM	AtmapradaSAnAM	503696
+samudrAru	grAhaBeda	grAhaBeda	504039
+saMpada	samaM	samaM	504464
+saMpuwa	ekajAtIyoBayamaTyavartin	ekajAtIyoBayamaTyavartin	504696
+saMprayogin	kAmuka, kalAkeli, suprayoja, saMprayojana	kAmukakalAkelisuprayojasaMprayojana	505063
+samba	muzalAnala	muzalAnala	505284
+saMbADana	dvAHsadana, sadanasya dvAram SUlAgra	dvAHsadanasadanasyadvAramSUlAgra	505398
+saMBAvitavya	saMBAyitavya	saMBAyitavya	505591
+saMmadin	garvaBAj	garvaBAj	505862
+sarAtri	samAnarAtri	samAnarAtri	507197
+sarka	vAyu manas	vAyumanas	507464
+sarj	pratinis	pratinis	640608
+sarjarasa	sarjEH	sarjEH	507850
+sarpAkza	nAgaPaRI	nAgaPaRI	508220
+sarvajanIya	sarvezAM	sarvezAM	508690
+sarvatantra	sarvaM	sarvaM	508821
+sarvatas	sarvasmAt	sarvasmAt	508848
+sarvatra	sarvasmin	sarvasmin	508980
+sarvOGa	guruBeda	guruBeda	510822
+savana	puMsavanaH	puMsavanaH	511229
+savid	savitarUpa	savitarUpa	511514
+saveRI	samAnaveRI	samAnaveRI	511674
+sah	protsAhayati	protsAhayati	512469
+sah	tfptO	tfptO	512545
+sahana	saMjYAyAm	saMjYAyAm	512865
+sahasravft	vriyamARa	vriyamARa	513845
+sAMyogika	saMyogaya	saMyogaya	514668
+sAMvAsika	saMvAsAya	saMvAsAya	514736
+sAMveSanika	saMveSanAya	saMveSanAya	514760
+sAMvezika	saMvezAya	saMvezAya	514766
+sAMsargavidya	saMsargavidyAmaDIte	saMsargavidyAmaDIte	514792
+sAMsTAnika	saMsTAne	saMsTAne	514813
+sAktuka	saktuni	saktuni	514970
+sAktusEnDava	saktusinDuzu	saktusinDuzu	514975
+sAMkaTika	saMkaTAyAM	saMkaTAyAM	515320
+sAMgrahasUtrika	saMgrahasUtramaDIte	saMgrahasUtramaDIte	515585
+sAMgrahika	saMgrahe sADuH	saMgrahesADuH	515588
+sAMGawika	saMGawamaDIte	saMGawamaDIte	515603
+sAMGawwika	saMGawwamaDIte	saMGawwamaDIte	515606
+sAMGAta	saMGAte	saMGAte	515615
+sAdana	kuwukI	kuwukI	516009
+sAdarapUrvakam	sAwaram	sAwaram	516038
+sAdfSa	sAdaSya	sAdaSya	516069
+sAMniveSika	saMniveSaM	saMniveSaM	517106
+sApatya	sapatnyAH	sapatnyAH	517169
+sAmaka	sAmADIte	sAmADIte	517385
+sAMpezika	saMpezAya praBavati	saMpezAyapraBavati	518088
+sAMpraSnika	saMpraSnaM nityamarhati	saMpraSnaMnityamarhati	518116
+sAMmodanika	saMmodanAya praBavati	saMmodanAyapraBavati	518236
+sAyaka	kramasTiti	kramasTiti	518336
+sAra	nacanIta, lOha	nacanItalOha	518520
+sAraNga	rAgahaMsa	rAgahaMsa	518609
+sAraRqa	sarpARqa	sarpARqa	518706
+sArasvata	kaSmIrAsa	kaSmIrAsa	518997
+sArgika	sargAya	sargAya	519250
+sAsrava	karmabanDahetuH kriyAhiMsAdiH	karmabanDahetuHkriyAhiMsAdiH	520172
+si	praskta	praskta	520454
+siNGaRa	SiNkzARa	SiNkzARa	521109
+sitapuzpa	Sverohita	Sverohita	521446
+sitapuzpa	SvetAparAjitA	SvetAparAjitA	521446
+sitAhvaya	Sverohita	Sverohita	521722
+sidDivAda	jYAnagozWI	jYAnagozWI	522613
+siD	vipratizeDena	vipratizeDena	522672
+sinduka	minduvAra	minduvAra	522852
+sinDuvAhas	nadInAM pravAhayitA	nadInAMpravAhayitA	523083
+sisADayizu	sizA/	sizA	523403
+sItA	vyomagaNgA, gaNgABeda	vyomagaNgAgaNgABeda	523465
+sIlamA	sIrARi yayozaDyA rajjuBUtayA baDyante sA	sIrARiyayozaDyArajjuBUtayAbaDyantesA	523816
+suKAjAta	suKarUpeRa AjAtaH	suKarUpeRaAjAtaH	524949
+suganDAra	SoBano ganDAradeSodBavaH	SoBanoganDAradeSodBavaH	525322
+sucatura	sudrazwA caturRAm	sudrazwAcaturRAm	525695
+sudIkzA	yajYADikArasidDi	yajYADikArasidDi	526858
+suniyat	SoBanAviDA	SoBanAviDA	527850
+supraSna	suKapraSne	suKapraSne	529315
+suBaga	SoBanapaSu	SoBanapaSu	529696
+suBava	uttamajanman	uttamajanman	529867
+sumitraDas	soBanAni	soBanAni	530638
+suraka	surAprakAra	surAprakAra	531051
+suraBi	barbara, ganDaPala	barbaraganDaPala	531462
+suraBi	murApAcI	murApAcI	531462
+suloma	tAsravallI	tAsravallI	532650
+suvarRya	suvarRamarhati	suvarRamarhati	533198
+suvidatriya	suvidOtra	suvidOtra	533534
+susamidDa	susamidDe	susamidDe	534939
+susvaru	SoBanagamana	SoBanagamana	535380
+sUkzmatva	sUkzatA	sUkzatA	535873
+sUkzmapattraka	kzudropAdakI	kzudropAdakI	535903
+sUca	darBANkura	darBANkura	536000
+sUtray	sUtraM karotiH	sUtraMkarotiH	536624
+sUra	sU/rA u	sUrAu	537042
+sfmara	mahAsUkara	mahAsUkara	538137
+setikA	AyoGyA	AyoGyA	538299
+sEkatika	BrAntijIvin	BrAntijIvin	538924
+sEkatika	mAtfyAtrA	mAtfyAtrA	538924
+sEDrika	sAravfkzaviSeza	sAravfkzaviSeza	538980
+sEra	sIrARAM	sIrARAM	539110
+sEra	pratisIrARAM	pratisIrARAM	539110
+sOtrAmaRi	sEtrAmaRa	sEtrAmaRa	540894
+sOra	sa/raBeyI	saraBeyI	541661
+sOra	bfhatsOram	bfhatsOram	541661
+sOraBya	sanojYatva	sanojYatva	541764
+sOSami	sOSamInAM kanTA	sOSamInAMkanTA	542130
+sOzupta	sOptikaM parva	sOptikaMparva	542193
+skanDya	skanDa iva	skanDaiva	542653
+stukI	stokaGftaDArA	stokaGftaDArA	543881
+stega	raSmisaMGAtyAdityaH	raSmisaMGAtyAdityaH	544056
+stotriya	gratIva	gratIva	544172
+stoBa	cezwAviGAta	cezwAviGAta	641191
+stomapfzwa	stomEH	stomEH	544232
+strI	striyam	striyam	544336
+sTaRqila	lohapAtra	lohapAtra	544876
+sTaRqilasaMveSana	sTaRqiSayyA	sTaRqiSayyA	544890
+sTaRqileSaya	sTARqalaSAyin	sTARqalaSAyin	544899
+sTapuwa	vizamonnatapradeSa	vizamonnatapradeSa	544923
+sTA	izadutTitapakza	izadutTitapakza	545139
+sTA	pratasTe	pratasTe	545139
+sTUragudA	gudakARqe	gudakARqe	546864
+snIhiti	vaDakAriRI	vaDakAriRI	547753
+spfSi	vizayaspfS	vizayaspfS	548415
+smar	vismaryate	vismaryate	549201
+smfto	uH SaMBH Smfto yena saH	uHSaMBHSmftoyenasaH	549746
+sravantI	gulmasTAna	gulmasTAna	550252
+sru	niHsArayati	niHsArayati	550395
+srucay	srugvantamAcazwe	srugvantamAcazwe	550534
+sv	sva ivAcarati	svaivAcarati	550736
+svakIya	rsva	rsva	550798
+svatantrin	svaSAstrAnusArin	svaSAstrAnusArin	551169
+svatas	svasmAt	svasmAt	551178
+svapna	sva/pnam	svapnam	551773
+svayamaBigUrta	svayameva zomaparSve gantumudyataH	svayamevazomaparSvegantumudyataH	552326
+svar	nirgacCa	nirgacCa	552575
+svar	upatApaya	upatApaya	552575
+svavicCandas	svacCandas	svacCandas	554093
+svastyAstaraRa	svastikAkAramaRqaladAstaraRam	svastikAkAramaRqaladAstaraRam	554475
+svApakIy	svApakamicCati	svApakamicCati	555152
+svAy	sva ivAcarati	svaivAcarati	555313
+svAlakzaRa	svErapi durdarSaH	svErapidurdarSaH	555479
+svAsrIya	svAsrIyeryUSCAttrAH	svAsrIyeryUSCAttrAH	555589
+han	avahanyamAnasya	avahanyamAnasya	556752
+hananIy	hananamicCati	hananamicCati	557154
+harASaya	haraHSaya/	haraHSaya	558401
+hari	jayAs	jayAs	558412
+halay	haliM gfhRAti	haliMgfhRAti	560125
+hArika	haririva	haririva	562016
+hi	prajiGAya	prajiGAya	562513
+hiRq	aBibaBuva	aBibaBuva	562795
+hiraRyapAva	hiraRyena	hiraRyena	563722
+hInatas	hInAt	hInAt	564112
+huqumba	Brazwacipiwa	Brazwacipiwa	564349
+hftpadma	hftpaNgaja	hftpaNgaja	564717
+hezas	SabdakAriRI hetiH	SabdakAriRIhetiH	566182
+hezasvant	Sabdayukta	Sabdayukta	566185
+hEmantika	hemantamaDIte veda vA	hemantamaDItevedavA	566283
+hoQ	hoQa (!) ivAcarati	hoQa!ivAcarati	566441
+hoQAy	hoQa (!) ivAcarati	hoQa!ivAcarati	566450
+hotADvaryU	hotraDvaryU	hotraDvaryU	566468
+hradaka	hrade kuSalaH	hradekuSalaH	566924
+hrAdaka	hrAde kuSalaH	hrAdekuSalaH	567105
+hlAdaka	hlAde kuSala	hlAdekuSala	567335
+hvAyakIy	hvAyakamicCati	hvAyakamicCati	567523
+amitrakarzin	amftakarzaRa	amftakarzaRa	571037
+asnAna	nEzWikabrahmacarya	nEzWikabrahmacarya	572048
+ASAtika	Agatya SAtyamAnaH, asmABireva bADyamAnaH	AgatyaSAtyamAnaHasmABirevabADyamAnaH	572465
+acCanda	acCandena	acCandena	587301
+adeSika	deSAccyutaH	deSAccyutaH	579347
+aDyudDi	upasTIyaM mAMsam	upasTIyaMmAMsam	574044
+anAcarant	kzudrAcArahIna	kzudrAcArahIna	574203
+kzapaka	karmakzapaRAyodyataH	karmakzapaRAyodyataH	585916
+AvasaTIya	AvamaTya	AvamaTya	581397
+karapuwAYjali	anYjalipuwa	anYjalipuwa	582229
+kAlanirmARayoDin	samayAnusAriyudDakuSala	samayAnusAriyudDakuSala	582370
+gajanimIlana	gajYanimIlikA	gajYanimIlikA	582740
+gaYjulikA	dIrGA gamBIrAH kuwilAH SlakzRA jYalASayAH	dIrGAgamBIrAHkuwilAHSlakzRAjYalASayAH	582746
+nivartitapUrva	nivfttapUrva	nivfttapUrva	583979
+agnyavaBfTa	avaBfTaDarmeRAgniBirdahanam	avaBfTaDarmeRAgniBirdahanam	584060
+ajamaTana	brahmaSirohartar	brahmaSirohartar	584107
+aprakzAla	SezahIna	SezahIna	584584
+apramada	pramadayA striyA hInaH	pramadayAstriyAhInaH	584710
+urudrapsa	bahusArAvayava	bahusArAvayava	585592
+ekapArSvAvadArita	vAmapakzASritaM yAnam	vAmapakzASritaMyAnam	585649
+pariDAsyE	pariDAnAya	pariDAnAya	586800
+partvA	prItiM prApya	prItiMprApya	586839
+areqant	anAdaramakurvan	anAdaramakurvan	588474
+avasyuvAta	rakzayitAro vAyavo yasya	rakzayitArovAyavoyasya	588841
+itAnta	prAptapAra	prAptapAra	589756
+uccazaka	apagatapAnaBAjana	apagatapAnaBAjana	589798
+kAvyajIvajYa	SukragurubuDa	SukragurubuDa	590431
+kzepaRika	karkarAdi	karkarAdi	590665
+CamaRqala	pradeSaviSeza	pradeSaviSeza	591096
+talasArika	aSvamuKapawwikorRAsUtramayI	aSvamuKapawwikorRAsUtramayI	591356
+dIkzya	dIkzaRIya, Sizya	dIkzaRIyaSizya	591620
+nAgAYcanA	nAgayazwO dviradasya ca mudgare	nAgayazwOdviradasyacamudgare	591969
+makaramuKa	makarAkAraDArin	makarAkAraDArin	593461
+makaramuKa	jalanirgamanadvAra	jalanirgamanadvAra	593461
+makaramuKa	jAnUrDvAvayava	jAnUrDvAvayava	593461
+mahASvetA	ravisTadevatA	ravisTadevatA	593662
+narmasPiYja	narmasPaYja, narmasPUrja	narmasPaYjanarmasPUrja	596570
+vAhAvalI	vAhyAvalI	vAhyAvalI	597598
+akfSAnekakaRwaka	akfSA aneke ca kaRwakA yasya vidyante	akfSAanekecakaRwakAyasyavidyante	598141
+agnipraskandana	SrOtasmArtAdyagnisADyakarmatyAga	SrOtasmArtAdyagnisADyakarmatyAga	598843
+anAstarita	anAntIrRa	anAntIrRa	603776
+ISAnahata	jvarahata	jvarahata	616269
+upamuKa	muKasamIpena	muKasamIpena	617731
+upavI	upAkartuM veti gacCati	upAkartuMvetigacCati	617839
+KAtapUrva	anAvfzwO kUpodakErnizpAditErDAnyErjIvatAM Danam	anAvfzwOkUpodakErnizpAditErDAnyErjIvatAMDanam	623299
+jIvAntarhita	jIvatAntarhitaH	jIvatAntarhitaH	626673
+jIvAntarhita	pitAmahAdiH pitrAdO jIvati	pitAmahAdiHpitrAdOjIvati	626673
+duzprada	duHKaprada	duHKaprada	628866
+niHzyandana	nisyanda, nizyanda	nisyandanizyanda	630963
+nyAma	niyAma, niyama	niyAmaniyama	631304
+paNkajAta	pApasamUha	pApasamUha	631379
+paripacana	tElapAcanikA	tElapAcanikA	631936
+mowa	muwa, mUwa	muwamUwa	636808
+SaraBA	viSIrRANgI	viSIrRANgI	639484
+sAMkASikA	pitrAdigfhezvagnyAdidAyinI	pitrAdigfhezvagnyAdidAyinI	640796

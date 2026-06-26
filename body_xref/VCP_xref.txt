@@ -1,0 +1,8 @@
+# VCP cross-reference integrity -- DRAFT for human review (scan-verify each)
+# 0 See/cf./s./vgl./=/q.v. targets ; 0 unresolved (0.0%).
+#   TYPO'd-ref (1 confusion-edit from a real entry -> FILE-FIRST): 0
+#   other-unresolved (partial/inflected/uncertain form refs): 0
+# 1765 {{Lbody=N}} redirects ; 0 dangling L-numbers (0.0%) -> BROKEN redirect
+# === FILE-FIRST: typo'd cross-references (headword<TAB>raw<TAB>canon<TAB>should-be<TAB>line) ===
+# === DANGLING {{Lbody=N}} redirects (headword<TAB>L-number<TAB>line) ===
+# === OTHER unresolved (headword<TAB>raw<TAB>canon<TAB>line) ===

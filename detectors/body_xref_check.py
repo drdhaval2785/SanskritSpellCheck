@@ -29,7 +29,11 @@ tu.reconfigure_stdio()
 
 RING = '˚°'                         # ring-above / degree (MW's headword-abbreviation mark)
 _STRIP = re.compile(r"[˚°0/\\^'’\-–— .,;:()\[\]|]")
-_CUE = re.compile(r'(?:\bSee\b|\bcf\.|\bq\.\s?v\.|=)\s*<s>([^<]+)</s>', re.I)
+# cue word (English See/cf./q.v., German s./vgl., or '=') + a Sanskrit span in either markup
+# family: <s>..</s> (MW) or {#..#} (PW/PWG/VCP/SHS). The target is whichever group matched.
+_CUE = re.compile(r'(?:\bSee\b|\bcf\.|\bq\.\s?v\.|\bvgl\.|\bs\.\s*(?:u\.|w\.)?|=)\s*'
+                  r'(?:<s>([^<]+)</s>|\{#([^#]+)#\})', re.I)
+_LBODY = re.compile(r'\{\{Lbody=([0-9.]+)\}\}')   # PW/VCP redirect: target identified by L-number
 
 
 def canon(form):
@@ -89,11 +93,13 @@ def main():
                 return canon(nb)
         return None
 
-    total = broke = 0
-    typo_rows, other_rows = [], []
+    total = broke = lbody_total = lbody_broke = 0
+    typo_rows, other_rows, lbody_rows = [], [], []
     for hw, entries in idx.by_k1.items():
         for e in entries:
-            for raw in _CUE.findall(e['body']):
+            body = e['body']
+            for m in _CUE.finditer(body):
+                raw = m.group(1) or m.group(2) or ''
                 k = canon(raw)
                 if not k:
                     continue
@@ -106,13 +112,22 @@ def main():
                     typo_rows.append((hw, raw.strip(), k, nm, e['lineno']))
                 else:
                     other_rows.append((hw, raw.strip(), k, e['lineno']))
+            # {{Lbody=N}} redirect: resolves iff N is a real L-number in this dictionary
+            for ln_no in _LBODY.findall(body):
+                lbody_total += 1
+                if ln_no not in idx.by_l:
+                    lbody_broke += 1
+                    lbody_rows.append((hw, ln_no, e['lineno']))
 
     pct = 100 * broke / total if total else 0
+    lpct = 100 * lbody_broke / lbody_total if lbody_total else 0
     head = ('# %s cross-reference integrity -- DRAFT for human review (scan-verify each)\n'
-            '# %d See/cf./=/q.v. targets ; %d unresolved (%.1f%%).\n'
+            '# %d See/cf./s./vgl./=/q.v. targets ; %d unresolved (%.1f%%).\n'
             '#   TYPO\'d-ref (1 confusion-edit from a real entry -> FILE-FIRST): %d\n'
             '#   other-unresolved (partial/inflected/uncertain form refs): %d\n'
-            % (dictcode, total, broke, pct, len(typo_rows), len(other_rows)))
+            '# %d {{Lbody=N}} redirects ; %d dangling L-numbers (%.1f%%) -> BROKEN redirect\n'
+            % (dictcode, total, broke, pct, len(typo_rows), len(other_rows),
+               lbody_total, lbody_broke, lpct))
     sys.stdout.write(head)
     if out:
         with open(out, 'w', encoding='utf-8') as f:
@@ -120,13 +135,16 @@ def main():
             f.write('# === FILE-FIRST: typo\'d cross-references (headword<TAB>raw<TAB>canon<TAB>should-be<TAB>line) ===\n')
             for hw, raw, k, nm, ln in typo_rows:
                 f.write('%s\t%s\t%s\t%s\t%d\n' % (hw, raw, k, nm, ln))
+            f.write('# === DANGLING {{Lbody=N}} redirects (headword<TAB>L-number<TAB>line) ===\n')
+            for hw, ln_no, ln in lbody_rows:
+                f.write('%s\tLbody=%s\t%d\n' % (hw, ln_no, ln))
             f.write('# === OTHER unresolved (headword<TAB>raw<TAB>canon<TAB>line) ===\n')
             for hw, raw, k, ln in other_rows:
                 f.write('%s\t%s\t%s\t%d\n' % (hw, raw, k, ln))
         print('-> %s' % out)
     print('--- FILE-FIRST sample (typo\'d cross-refs) ---')
-    for hw, raw, k, nm, ln in typo_rows[:25]:
-        print('  %-16s See/cf. %-20s [%s -> %s]  line %d' % (hw, raw, k, nm, ln))
+    for hw, raw, k, nm, ln in typo_rows[:15]:
+        print('  %-16s ref %-20s [%s -> %s]  line %d' % (hw, raw, k, nm, ln))
 
 
 if __name__ == '__main__':

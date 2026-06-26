@@ -1,7 +1,8 @@
 # MW cross-reference integrity -- DRAFT for human review (scan-verify each)
-# 18602 See/cf./=/q.v. targets ; 1159 unresolved (6.2%).
+# 18605 See/cf./s./vgl./=/q.v. targets ; 1159 unresolved (6.2%).
 #   TYPO'd-ref (1 confusion-edit from a real entry -> FILE-FIRST): 270
 #   other-unresolved (partial/inflected/uncertain form refs): 889
+# 4352 {{Lbody=N}} redirects ; 0 dangling L-numbers (0.0%) -> BROKEN redirect
 # === FILE-FIRST: typo'd cross-references (headword<TAB>raw<TAB>canon<TAB>should-be<TAB>line) ===
 agnimaRi	surya-kAnta	suryakAnta	sUryakAnta	3693
 agnisvAtta	-zvAtta/	zvAtta	svAtta	4119
@@ -15,7 +16,7 @@ amAvAsI	-vAsyA/	vAsyA	vAsya	50472
 amUrtimat	amurta-rajas	amurtarajas	amUrtarajas	51105
 arizwaduzwaDI	vIvaSa	vIvaSa	vivaSa	55283
 arkamUlA	-pattrA	pattrA	pattra	56193
-arti	artnI	artnI	ArtnI	56898
+arti	artnI	artnI	artni	56898
 avaDeya	-DAtavya	DAtavya	dAtavya	62717
 aSvAvat	a/sva-vat	asvavat	aSvavat	71833
 azwAdiS	azwaqiS	azwaqiS	azwadiS	72514
@@ -31,17 +32,17 @@ kawika	hawi	hawi	hati	147016
 karatantu	kAratantavika	kAratantavika	kAratantavikA	153633
 karRajalUkA	-kIwA	kIwA	kIwa	156166
 karRadunduBi	-kIwA	kIwA	kIwa	156211
-kizkinDa	-gandika	gandika	gAndika	174957
+kizkinDa	-gandika	gandika	gandikA	174957
 kIla	kilA	kilA	kila	175591
 kftrima	javadi	javadi	javAdi	187748
 kratu	kra/tu-da/kzO	kratudakzO	kratUdakzO	197232
-kzArapattra	-dalA	dalA	dAlA	202179
+kzArapattra	-dalA	dalA	dala	202179
 kzIrA	kakolI	kakolI	kAkolI	203717
 kzudraSvetA	-SyamA	SyamA	SyAmA	204746
 Kalli	kallI	kallI	KallI	210126
-ganDavatI	-mAtri	mAtri	matri	214870
+ganDavatI	-mAtri	mAtri	mAtf	214870
 gaBa	gamB	gamB	gamb	215461
-gaveSa	gav-iSa	gaviSa	gaviza	218809
+gaveSa	gav-iSa	gaviSa	gavISa	218809
 girinadI	-RadI	RadI	madI	221373
 girinadDa	-RadDa	RadDa	nadDa	221382
 girinimnagA	-RadI	RadI	madI	221394
@@ -56,7 +57,7 @@ gozan	-za/Ri	zaRi	saRi	229557
 gozA	-za/Ri	zaRi	saRi	229563
 gosani	-za/Ri	zaRi	saRi	229755
 gnAvat	stuti-vAcas	stutivAcas	stutivacas	231896
-candramuKI	-vadanA	vadanA	vaDanA	243033
+candramuKI	-vadanA	vadanA	vadana	243033
 cAruPalA	-gucCA	gucCA	gucCa	247514
 citrA	dravanti	dravanti	dravantI	249054
 citrapAdA	-netrA	netrA	netra	249456
@@ -86,7 +87,7 @@ trisaMDi	-zaMDi	zaMDi	saMDi	297097
 daRqin	wri-	wri	tri	301629
 daBna	dura-daBnA/	duradaBnA	duradaBna	303129
 darSa	ca/dir-darSa/	cadirdarSa	CadirdarSa	304279
-daSapawu	-DIva	DIva	DIvA	305178
+daSapawu	-DIva	DIva	Diva	305178
 dAruputrikA	-garBA	garBA	garBa	308158
 dAruputrI	-garBA	garBA	garBa	308161
 dAsI	nilA	nilA	nila	308820
@@ -99,7 +100,7 @@ dIrGapattraka	rakta-lasuna	raktalasuna	raktalaSuna	312664
 durAlamBA	-AlaBA	AlaBA	AlaBa	314840
 durhanA	haRA	haRA	haRa	316814
 devaganDA	mahAmodA	mahAmodA	mahAmoda	320785
-dEvanirmita	-krita	krita	krIta	324746
+dEvanirmita	-krita	krita	kfta	324746
 drekka	dfkAna	dfkAna	dfkARa	328547
 dvipendra	-pa-pati	papati	pApati	330435
 dviBAva	dvE-BAvyA	dvEBAvyA	dvEBAvya	330720
@@ -108,9 +109,9 @@ dvIpaja	-KarjurI	KarjurI	KarjUrI	332086
 DanvaNga	DaNvaga	DaNvaga	Danvaga	333736
 DUmotTa	-ma-ja	maja	naja	340469
 DUruzad	DUr-zAd	DUrzAd	DUrzad	340936
-Dfzadvin	-za/t	zat	zaw	341577
+Dfzadvin	-za/t	zat	sat	341577
 DvanyAcArya	Ananda-vardana	Anandavardana	AnandavarDana	343476
-nardita	nAdI	nAdI	nAdi	349637
+nardita	nAdI	nAdI	nAqI	349637
 nAgavawwa	-rawwa	rawwa	rawwA	352379
 niraYCana	laYC	laYC	lAYC	366523
 nirRejana	patrI-nirRejana	patrInirRejana	pAtrInirRejana	367701
@@ -122,7 +123,7 @@ parivAra	pari-vri	parivri	parivf	398622
 paryAsa	pary-	pary	pAry	403104
 pAradArika	-jAyika	jAyika	jayika	411704
 pAli	prabeDa	prabeDa	praveDa	414029
-pAvaka	soDaka	soDaka	sodaka	414113
+pAvaka	soDaka	soDaka	SoDaka	414113
 piSIlI	piSila-vIRA	piSilavIRA	piSIlavIRA	418169
 putrahatI	jagDI	jagDI	jagDi	421522
 purudasma	-daMsa	daMsa	daMSa	424097
@@ -133,10 +134,10 @@ pranikzaRa	-RikzaRa	RikzaRa	nikzaRa	452997
 pranindana	-Rindana	Rindana	nindana	453003
 pratinfpati	-kzoRiBft	kzoRiBft	kzoRIBft	441511
 pradoha	su-pradoha	supradoha	supradohA	452201
-pranAla	-RAla	RAla	nAla	452988
+pranAla	-RAla	RAla	mAla	452988
 prAghoma	-Goma	Goma	GoRa	467676
 prERAna	prIRAna/	prIRAna	prIRana	473560
-psA	BasA	BasA	vasA	475001
+psA	BasA	BasA	BazA	475001
 PakkikA	purva-pakza	purvapakza	pUrvapakza	475093
 ba	varuna	varuna	varuRa	477354
 bahuvIja	-bija	bija	vija	482469
@@ -153,7 +154,7 @@ BAjA	vakra-yazwi	vakrayazwi	vakrayazwI	501540
 Burizah	BUrisah	BUrisah	BUrizah	507118
 makaralAYCana	-kelana	kelana	Kelana	515159
 maNKuRa	maNKaRa	maNKaRa	maNkaRa	515811
-maW	maTaya	maTaya	maWaya	517115
+maW	maTaya	maTaya	maTAya	517115
 matsyasaganDin	-gODa	gODa	gOda	518978
 matteBagamanA	mattA-gAminI	mattAgAminI	mattagAminI	519583
 maDuSvAsA	jivantI	jivantI	jIvantI	522058
@@ -187,15 +188,15 @@ rudra	vfd	vfd	vfD	595703
 laGvAdyuqumbarAhvA	laGu/dumbarikA	laGudumbarikA	laGUdumbarikA	603754
 lap	aBilApalap	aBilApalap	aBIlApalap	604646
 vajravIjaka	-bijaka	bijaka	bIjaka	616401
-vara	vita	vita	vIta	622035
-vara	varata	varata	Barata	622074
+vara	vita	vita	viwa	622035
+vara	varata	varata	varatA	622074
 vasu	-varma-Dara	varmaDara	varRaDara	628265
 vAtahuqA	-KuqA	KuqA	Kuqa	631172
 vAwyA	vAtyAlaka	vAtyAlaka	vAwyAlaka	634126
 vAdana	-qaRqa	qaRqa	daRqa	634789
 vArtta	-taraka	taraka	tAraka	638421
 vijayina	-jila	jila	jIla	642014
-vinAsaka	-nAsa	nAsa	nasa	642521
+vinAsaka	-nAsa	nAsa	mAsa	642521
 vikzoBin	rakzo-vikzoBiRi	rakzovikzoBiRi	rakzovikzoBiRI	646670
 viBAvarI	kupitA	kupitA	kupita	659658
 vimohana	Akuli-karaRa	AkulikaraRa	AkulIkaraRa	661549
@@ -224,12 +225,12 @@ SilAtvac	-valkA	valkA	valka	721640
 SiSvan	saM-Si/svan	saMSisvan	saMSiSvan	724238
 SuklA	kAkOlI	kAkOlI	kAkolI	727252
 Suz	parna-Suz	parnaSuz	parRaSuz	730061
-SUnyA	malI	malI	mAlI	730478
+SUnyA	malI	malI	nalI	730478
 SUrpanaKA	-RaKA	RaKA	RaKa	731348
 SUrpanaKI	-RaKA	RaKA	RaKa	731351
 SUza	SuKa	SuKa	suKa	731771
 Setya	Setavya	Setavya	setavya	732755
-SOrasenikA	-senI	senI	SenI	736014
+SOrasenikA	-senI	senI	seni	736014
 SradDAsamanvita	SradDa/nvita	SradDanvita	SradDAnvita	737565
 SrIgraha	SakunIprapA	SakunIprapA	SakuniprapA	739540
 SreRikA	SyeRikA	SyeRikA	SyenikA	741951
@@ -242,16 +243,16 @@ saMgraha	-grahanI	grahanI	grahaRI	758541
 saMcAriRI	haMsa-padi	haMsapadi	haMsapadI	760169
 sannivAsa	saM-ni-	saMni	saMnI	764317
 saptAhvA	saptatA	saptatA	saptata	772538
-samAnakartfka	kartri	kartri	kartf	777466
+samAnakartfka	kartri	kartri	kartrI	777466
 sampraRad	-RAdita	RAdita	nAdita	784346
 sammoha	saMgrAna	saMgrAna	saMgrAma	787587
 savyezWa	savya-zWa	savyazWa	savyazWA	796035
 sAQf	soDf	soDf	soQf	797308
 sehana	sAsahARa	sAsahARa	sAsahAna	797335
 sADana	vIharaRa	vIharaRa	viharaRa	802130
-sAmbara	SAmb	SAmb	sAmb	805580
+sAmbara	SAmb	SAmb	Samb	805580
 sArcis	sa/rci	sarci	sArci	807257
-siNGiRI	SiNGiRI	SiNGiRI	siNGiRI	809970
+siNGiRI	SiNGiRI	SiNGiRI	SiNGinI	809970
 sukanda	vArAhi-kanda	vArAhikanda	vArAhIkanda	814295
 sucaYcukA	mahA-caYcu	mahAcaYcu	mahAcaYcU	817016
 sucIrA	-cArA	cArA	cAra	817205
@@ -273,6 +274,7 @@ hari	manuzyAH	manuzyAH	manuzyaH	864211
 haritA	nIla-dUrva	nIladUrva	nIladUrvA	865912
 himajA	kziriRI	kziriRI	kzIriRI	870934
 himadugDA	kzIriRi	kzIriRi	kzIriRI	870973
+# === DANGLING {{Lbody=N}} redirects (headword<TAB>L-number<TAB>line) ===
 # === OTHER unresolved (headword<TAB>raw<TAB>canon<TAB>line) ===
 akzAvApa	dyUta-pati	dyUtapati	1860
 atipracit	-cikite	cikite	10935

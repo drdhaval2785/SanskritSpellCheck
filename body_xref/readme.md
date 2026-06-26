@@ -60,16 +60,42 @@ work on a mature dictionary, for the same reason R1 fails on headwords:
 makes (cross-references), not *spelling* judgements (which need the body-grounded triage). This mirrors
 H1: the body adjudicates, plain spelling does not.
 
+## Scaled across dictionaries
+
+The check is markup- and language-aware: it handles both span families (`<s>…</s>` MW / `{#…#}`
+everyone else), English (`See`/`cf.`/`q.v.`) **and** German (`s.`/`vgl.`) cue words, and validates
+`{{Lbody=N}}` redirects by L-number.
+
+| dict | cue targets | unresolved | **FILE-FIRST typo'd-refs** | `{{Lbody}}` redirects | dangling |
+|---|--:|--:|--:|--:|--:|
+| MW  | 18,605 | 6.2 %  | **270** | 4,352  | 0 |
+| PWG | 23,112 | 23.0 % | **215** | 9      | 0 |
+| PW  | 10,460 | 14.0 % | **181** | 12,186 | 0 |
+| SHS | 2,504  | 7.6 %  | **43**  | 13     | 0 |
+| AP  | 2,806  | 9.4 %  | **24**  | 9,621  | 0 |
+| VCP | 0      | —      | 0       | 1,765  | 0 |
+| SKD | 0      | —      | 0       | 335    | 0 |
+
+**Two findings:**
+1. **733 candidate typo'd cross-references** across the cue-using dicts — a new, prioritized,
+   fileable corpus (each still scan-verify). German dicts (PWG 23 %, PW 14 %) carry more unresolved
+   than English (MW 6 %, SHS/AP 8–9 %): partly real typo'd-refs, partly German notation the resolver
+   handles less fully than MW's — worth more notation work before filing PWG/PW.
+2. **Redirect integrity is clean** — of **~28,300 `{{Lbody=N}}` redirects** across all dicts (VCP and
+   SKD use these *exclusively*), **0 dangle**. The redirect machinery points only to real entries; a
+   reassuring negative result (no broken redirects to file).
+
 ## Run it
 
 ```sh
-cd detectors && python body_xref_check.py MW ../body_xref/MW_xref.txt
+cd detectors && python body_xref_check.py <DICT> ../body_xref/<DICT>_xref.txt   # MW PW PWG VCP SKD SHS AP …
 ```
 
-## Next (target order, per the plan)
+## Status vs the plan (target order)
 
-1. **Sanskrit body-forms** — done (this pilot): cross-ref integrity ✅, raw typo/mis-citation ✗.
-2. **Cross-ref targets across more dicts** — run on PW/PWG/VCP (German/Sanskrit cue words differ:
-   `s.`/`vgl.`/`{{Lbody=N}}`), and on a poorly-digitised dict (SHS) where the typo'd-ref density
-   should be higher.
+1. **Sanskrit body-forms** — done: cross-ref integrity ✅ (733 typo'd-refs), raw typo/mis-citation ✗.
+2. **Cross-ref targets** — done across 7 dicts (English + German cues, `{{Lbody}}` redirects).
 3. **Gloss-language words** — already covered by the ortho-drift study.
+
+**Before filing:** refine German (PW/PWG) notation handling to drive the 14–23 % unresolved down (so
+the typo'd-ref set is cleaner), then scan-verify each FILE-FIRST candidate per the standard workflow.
