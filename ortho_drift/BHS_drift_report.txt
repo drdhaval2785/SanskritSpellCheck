@@ -1,7 +1,8 @@
 # BHS (English) orthographic-drift -- DOCUMENTATION ONLY (never edits the source)
 # FULL corpus
 # modern word-list: ORTHO_EN_DIC, 56571 stems
-# gloss tokens: 379068 ; already-modern: 137154 ; reform-drift: 1 (transform 0 + map 1)
+# gloss tokens: 379068 ; already-modern: 137154 ; drift occurrences: 1 (transform 0 + map 1)
+# reform-drift: 1 (0.00/1k) ; non-reform/ligature (excluded from rate): 0
 # drift occurrences by era: xion=1
 #
 # ===== reform-drift CONFIRMED by transform (+ wordlist, where available) =====

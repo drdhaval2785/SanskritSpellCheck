@@ -261,11 +261,12 @@ a self-contained fresh-chat task; the ⚠️-marked ones need a local install or
   `th` 89; pre-1901 dicts `th`-dominant). Vindicates the freeze; expanded map = recall asset, not a
   rate metric. Findings doc "O3" subsection + changelog; expanded run banked as
   [`de_drift_summary.expanded_map.tsv`](ortho_drift/de_drift_summary.expanded_map.tsv).
-- **O5 — Split the æ/œ ligature class from reform.** Small, well-scoped.
-  > In `detectors/ortho_drift.py`, the dominant "drift" in several English dicts is the æ/œ ligature
-  > (SHS 109, MW72 92, VEI 12) — typographic, not orthographic reform. Add a separate `ligature`
-  > classification so it isn't counted as reform drift; re-report the EN summary with the two classes
-  > split. Doc-only; keep the existing rows, add the split. Commit.
+- ~~**O5 — Split the æ/œ ligature class from reform.**~~ ✅ **DONE (2026-06-26).** Added
+  `NONREFORM_ERAS = {'ligature'}` to `ortho_drift.py`; ligature kept as its own column but excluded
+  from reform-drift/1k. The mid-tier EN dicts were almost all ligature — SHS 0.31 → 0.08, GST 0.31 →
+  0.04, AP90 0.08 → 0.00 (100 % ligature), VEI 0.06 → 0.00, WIL 0.57 → 0.46. True EN reform-drift now
+  concentrates in `-ick`/`-xion`; all 5 modern anchors at 0.00. Findings doc EN tables + tier summary
+  updated; `en_drift_summary.tsv` regenerated (per-era columns + map unchanged).
 - **O1 — Inline body-check in the ranker (closes R1's gap).** Highest value — turns the tier-C
   negative result into a positive.
   > In `SanskritSpellCheck/detectors`, R1 (see HYPOTHESES.md) showed `run_all.score_tier` mis-ranks

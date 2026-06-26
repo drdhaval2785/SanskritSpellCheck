@@ -1,7 +1,8 @@
 # PD (English) orthographic-drift -- DOCUMENTATION ONLY (never edits the source)
 # FULL corpus
 # modern word-list: ORTHO_EN_DIC, 56571 stems
-# gloss tokens: 1317037 ; already-modern: 469284 ; reform-drift: 0 (transform 0 + map 0)
+# gloss tokens: 1317037 ; already-modern: 469284 ; drift occurrences: 0 (transform 0 + map 0)
+# reform-drift: 0 (0.00/1k) ; non-reform/ligature (excluded from rate): 0
 # drift occurrences by era: (none)
 #
 # ===== reform-drift CONFIRMED by transform (+ wordlist, where available) =====

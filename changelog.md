@@ -8,6 +8,20 @@ ready for a dated entry.
 
 ## [Unreleased]
 
+### Changed
+- **Ortho-drift O5 — split the typographic æ/œ ligature out of the reform-drift rate.**
+  `detectors/ortho_drift.py` gains a `NONREFORM_ERAS = {'ligature'}` set; the `ligature` class
+  (`mediæval→medieval`, `æther→ether`) is still counted as its own era column but **excluded from
+  the headline reform-drift/1k** — it's a print-shop convention, not a dated reform. Effect is large:
+  the mid-tier EN dicts were almost all ligature. SHS 0.31 → **0.08**, GST 0.31 → **0.04**, MW72/AP90
+  ~0.09 → **0.01/0.00** (AP90 was 100 % ligature), VEI 0.06 → **0.00**; WIL 0.57 → **0.46** (its drift
+  is real Johnsonian `-ick`/`-xion`, not ligature). True EN reform-drift now concentrates in two real
+  classes (`-ick`, `-xion`) on a cleaner gradient (WIL 0.46 ≫ MD 0.14 > MW 0.01 → ~0), and **all five**
+  modern recency-control anchors read 0.00. Re-ran all 15 EN dicts (per-era columns reproduce the
+  frozen values exactly; `en_reform_map.tsv` byte-identical); updated `docs/ORTHO_DRIFT_FINDINGS.md`
+  (EN tables + the tier summary) and `ortho_drift/en_drift_summary.tsv`. Non-EN summaries unaffected
+  (no ligature era). Closes O5 in `HANDOFF_NEXT.md`.
+
 ### Added
 - **Ortho-drift O3 — re-ran the German cluster (PW/PWG/GRA/CCS/SCH) against the full 15,685-form
   `de_reform_map.tsv`** (was 2,823 at the frozen deterministic-pass snapshot). Finding: absolute

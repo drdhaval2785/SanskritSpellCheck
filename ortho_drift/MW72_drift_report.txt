@@ -1,13 +1,17 @@
 # MW72 (English) orthographic-drift -- DOCUMENTATION ONLY (never edits the source)
 # FULL corpus
 # modern word-list: ORTHO_EN_DIC, 56571 stems
-# gloss tokens: 1222406 ; already-modern: 574755 ; reform-drift: 107 (transform 93 + map 14)
+# gloss tokens: 1222406 ; already-modern: 574755 ; drift occurrences: 107 (transform 0 + map 107)
+# reform-drift: 15 (0.01/1k) ; non-reform/ligature (excluded from rate): 92
 # drift occurrences by era: ligature=92, archaic=14, ick=1
 #
 # ===== reform-drift CONFIRMED by transform (+ wordlist, where available) =====
+
+# ===== reform-drift from the curated/accumulated map =====
 phœnix                 -> phoenix                ligature         22  ¦ kiriṭi, n. the fruit of the marshy date tree, Phœnix Paludosa.
 fœtus                  -> foetus                 ligature         22  Kīla, as, ā, ¦ m. f. a sharp piece of wood, a stake, a pin, a peg, a bolt, a wedge, &c.; a
 diarrhœa               -> diarrhoea              ligature         20  2¦. anna, as, ā, am (fr. rt. ad ), eaten; ( am ), n. food or victual in general; food in a
+ancle                  -> ankle                  archaic          13  Aṃhri, is, ¦ m. a foot, the root of a tree [cf. aṅghri ]. —Aṃhri-pa, as, m. a tree (foot-d
 perinæum               -> perineum               ligature          4  Bhaga, as, ¦ m. a liberal or wealthy master (‘ap- portioner of food’), gracious lord, patr
 manœuvre               -> manoeuvre              ligature          3  Upa-sañcara, as, ¦ m. manœuvre, flattery (?).
 cæsura                 -> caesura                ligature          3  ¦ pāṭha, as, m. (fr. rt. paṭh ), recitation, recital; reading, perusal, study; reading sac
@@ -24,12 +28,9 @@ brœw                   -> brew                   ligature          1  ¦ bhrū,
 mœte                   -> mete                   ligature          1  2¦. mad [cf. rts. mand, mud ], cl. 4. P. (rarely A. in Ved.) mādyati (-te), ma- māda, amād
 bœr                    -> boer                   ligature          1  Rakta, as, ā, am, ¦ coloured, dyed, painted, tinged, stained; reddened, red, crimson, of a
 lœn                    -> len                    ligature          1  ¦ ric, cl. 7. P. A. riṇakti, riṅkte, rireca, ririce, rekṣyati, -te, aricat or araikṣīt (Ve
+shewn                  -> shown                  archaic           1  Vakra, as, ā, am, ¦ crooked, winding, tortuous, curved, bent, bowed, meandering, curled, c
 wœd                    -> wed                    ligature          1  ¦ ve, cl. 1. P. A. vayati, -te, vavau or uvāya (2nd sing. uvayitha, uvitha, uvātha, 3rd pl
 nœd                    -> ned                    ligature          1  ¦ snā (probably connected with rt. 1. snu ), cl. 2. P. (ep. also A.) snāti (-te), Pot. P. 
-
-# ===== reform-drift from the curated/accumulated map =====
-ancle                  -> ankle                  archaic          13  Aṃhri, is, ¦ m. a foot, the root of a tree [cf. aṅghri ]. —Aṃhri-pa, as, m. a tree (foot-d
-shewn                  -> shown                  archaic           1  Vakra, as, ā, am, ¦ crooked, winding, tortuous, curved, bent, bowed, meandering, curled, c
 
 # ===== RESIDUAL pattern candidates (-> LLM pass) =====
 # -- xion: 4 distinct (top 15) --

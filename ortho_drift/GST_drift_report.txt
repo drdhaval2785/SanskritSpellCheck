@@ -1,11 +1,11 @@
 # GST (English) orthographic-drift -- DOCUMENTATION ONLY (never edits the source)
 # FULL corpus
 # modern word-list: ORTHO_EN_DIC, 56571 stems
-# gloss tokens: 152728 ; already-modern: 62575 ; reform-drift: 48 (transform 1 + map 47)
+# gloss tokens: 152728 ; already-modern: 62575 ; drift occurrences: 48 (transform 0 + map 48)
+# reform-drift: 6 (0.04/1k) ; non-reform/ligature (excluded from rate): 42
 # drift occurrences by era: ligature=42, archaic=3, ick=3
 #
 # ===== reform-drift CONFIRMED by transform (+ wordlist, where available) =====
-mulæ                   -> mule                   ligature          1  ¦ Tatpur. n. ( ) 1 Calling, addressing, in- voking, inviting. 2 Consecrating, making sacre
 
 # ===== reform-drift from the curated/accumulated map =====
 æther                  -> ether                  ligature         34  ¦ Avyayībh. Concerning or relating to the world. A chapter in the Upanishads treating ther
@@ -16,6 +16,7 @@ garlick                -> garlic                 ick               2  ¦ Tatpur.
 heroick                -> heroic                 ick               1  ¦ f. ( ) Heroick valor, prowess. E. , taddh. aff. .
 shewing                -> showing                archaic           1  ¦ I. Tatpur. m. ( ) 1 Salutation, courtesy, shewing respect or adoration to a guest or dei
 œsophagus              -> oesophagus             ligature          1  ¦ Tatpur. f. ( ) (In Medicine.) The œsophagus, the gullet. E. and .
+mulæ                   -> mule                   ligature          1  ¦ Tatpur. n. ( ) 1 Calling, addressing, in- voking, inviting. 2 Consecrating, making sacre
 
 # ===== RESIDUAL pattern candidates (-> LLM pass) =====
 # -- xion: 1 distinct (top 15) --

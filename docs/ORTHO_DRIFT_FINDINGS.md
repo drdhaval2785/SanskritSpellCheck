@@ -20,7 +20,7 @@ tiers:
 | tier | reform regime | drift rate (per 1,000 gloss tokens) | example |
 |---|---|--:|---|
 | **Legislated** | a dated, state-mandated reform | **10 – 358** | Russian Kossovich **358**, German PW **10.26** |
-| **Convention** | gradual editorial drift, no central authority | **0.01 – 0.57** | English WIL **0.57** → MW **0.01**; French BUR **0.31** |
+| **Convention** | gradual editorial drift, no central authority | **0.01 – 0.46** | English WIL **0.46** → MW **0.01** (reform-only, ex-ligature); French BUR **0.31** |
 | **None** | no reform ever occurred | **0** | Latin BOP **0** (negative control) |
 
 Legislated reforms outdrift convention drift by **one to three orders of magnitude**. A 19th-century
@@ -202,24 +202,35 @@ not part of the Cologne 33.)
 English has no central spelling authority, so its drift is a *gradient*, not a reform date. Ten
 19th-century English dictionaries were run with an **en_GB reference** (so British `honour` / `-ise`
 / `-re` are correctly *not* flagged), from [en_drift_summary.tsv](../ortho_drift/en_drift_summary.tsv)
-(five modern dictionaries are added as a recency control in the subsection below):
+(five modern dictionaries are added as a recency control in the subsection below).
 
-| dictionary (era) | tokens | drift/1k | dominant forms |
-|---|--:|--:|---|
-| **WIL · Wilson (1832)** | 432,117 | **0.57** | Johnsonian `-ick` (`garlick`, `musick`), æ (`æther`, `chamæleon`), `reflexion` |
-| GST (1856) | 152,728 | 0.31 | ligature |
-| SHS (1900) | 471,445 | 0.31 | ligature |
-| MD (1893) | 277,933 | 0.16 | `-xion` |
-| BEN (1866) | 222,874 | 0.14 | ligature |
-| MW72 (1872) | 1,222,406 | 0.09 | ligature |
-| AP90 (1890) | 471,172 | 0.08 | ligature |
-| MW · Monier-Williams (1899) | 993,495 | **0.01** | archaic |
-| AP (modern) | 540,653 | **0.00** | — |
-| CAE (1891) | 179,477 | **0.00** | — |
+**The ligature is split out of the rate (O5).** The dominant "drift" in several dicts was the **æ/œ
+ligature** (`mediæval`, `æther`, `manœuvre` → `medieval`, `ether`, `maneuvre`) — a *typographic*
+print-shop convention, **not** a dated orthographic reform. It is now counted as its own `ligature`
+era column but **excluded from the headline reform-drift/1k** (code: `NONREFORM_ERAS` in
+[ortho_drift.py](../detectors/ortho_drift.py)). The effect is large: the mid-tier dicts were almost
+entirely ligature, not reform.
 
-The range is **0.00 – 0.57/1k** — two orders of magnitude *below* German, and tracking editor and
-age rather than any single reform: the oldest (Wilson 1832) tops out, the heavily-standardised
-Monier-Williams (1899) is near-zero. English convention drift is real but minor.
+| dictionary (era) | tokens | reform-drift/1k | (was, w/ ligature) | ligature (typographic) | dominant reform forms |
+|---|--:|--:|--:|--:|---|
+| **WIL · Wilson (1832)** | 432,341 | **0.46** | 0.57 | 46 | Johnsonian `-ick` (`garlick`, `musick`) 103, archaic 78, `-xion` 19 |
+| MD (1893) | 277,933 | **0.14** | 0.16 | 4 | `-xion` 39 |
+| SHS (1900) | 471,442 | **0.08** | 0.31 | 109 | `-ick` 16, `-xion` 14, archaic 8 |
+| GST (1856) | 152,728 | **0.04** | 0.31 | 42 | `-ick` 3, archaic 3 |
+| BEN (1866) | 222,874 | **0.02** | 0.14 | 27 | `-xion` 2, scattered |
+| MW · Monier-Williams (1899) | 993,490 | **0.01** | 0.01 | 0 | archaic 12 |
+| MW72 (1872) | 1,222,406 | **0.01** | 0.09 | 92 | archaic 14, `-ick` 1 |
+| AP90 (1890) | 471,171 | **0.00** | 0.08 | 39 | — (**all** ligature) |
+| AP (modern) | 540,655 | **0.00** | 0.00 | 0 | — |
+| CAE (1891) | 179,477 | **0.00** | 0.00 | 0 | — |
+
+Separating typography from orthography sharpens the picture. True reform-drift concentrates in just
+**two real classes** — Johnsonian `-ick` (overwhelmingly WIL) and `-xion→-ction` (WIL/MD/MW) —
+leaving a cleaner age gradient: **WIL 0.46 ≫ MD 0.14 > MW 0.01 → ~0**. The mid-tier dicts that
+*looked* like moderate drifters (SHS/GST 0.31, MW72/AP90 ~0.09) collapse to ≈0 reform once their
+æ/œ ligatures are removed — AP90's "drift" was **100 %** typographic. The ligature is itself
+age-correlated (the oldest dicts set the most æ/œ: SHS 109, MW72 92, WIL 46, AP90 39) — a genuine
+typographic signal, just not a spelling *reform*, so it is reported in its own column.
 
 #### Recency control — the modern end of the gradient
 
@@ -228,17 +239,17 @@ at the very bottom of the gradient (≈ 0). Five modern-leaning English sources 
 — **PD** (the *Encyclopaedic Dictionary of Sanskrit*, Deccan College **1976–2009**, the most modern
 and by far the largest corpus here), plus the 20th-century glossaries **PE, BHS, IEG, VEI**:
 
-| dictionary (era) | tokens | drift/1k | note |
-|---|--:|--:|---|
-| **PD · Deccan College (1976–2009)** | 1,317,037 | **0.00** | most modern; 1.3 M tokens, **exactly zero** reform-drift |
-| PE · Purāṇic Encyclopaedia (20th c.) | 740,406 | 0.00 | — |
-| BHS · Edgerton (1953) | 379,068 | 0.00 | — |
-| IEG · Sircar (1966) | 84,754 | 0.00 | — |
-| VEI · Vedic Index (1912) | 222,063 | 0.06 | residual æ ligatures only |
+| dictionary (era) | tokens | reform-drift/1k | ligature | note |
+|---|--:|--:|--:|---|
+| **PD · Deccan College (1976–2009)** | 1,317,037 | **0.00** | 0 | most modern; 1.3 M tokens, **exactly zero** reform-drift |
+| PE · Purāṇic Encyclopaedia (20th c.) | 740,406 | 0.00 | 0 | — |
+| BHS · Edgerton (1953) | 379,068 | 0.00 | 0 | one stray `-xion` |
+| IEG · Sircar (1966) | 82,932 | 0.00 | 0 | — |
+| VEI · Vedic Index (1912) | 222,063 | **0.00** | 12 | was 0.06 — **all** residual æ ligature; reform-drift = 1 |
 
-The control holds cleanly: the modern anchors are at or essentially at **0**, with **PD — the largest
-and most recent — at exactly 0.00 across 1.3 million gloss tokens**. The full English picture is now a
-monotone recency gradient from Wilson 1832 (**0.57**) down through Monier-Williams 1899 (**0.01**) to
+With the ligature split, the control holds even more cleanly: **all five** modern anchors are now at
+**0.00 reform-drift** — VEI's former 0.06 was entirely typographic æ. The full English picture is a
+monotone recency gradient from Wilson 1832 (**0.46**) down through Monier-Williams 1899 (**0.01**) to
 the modern compilations (**0.00**), confirming that the detector tracks each dictionary's orthographic
 epoch rather than flagging noise. (en_GB reference = the `ropensci/hunspell` `en_GB.dic`, ~86 k stems,
 staged locally.)

@@ -36,6 +36,13 @@ from collections import Counter, defaultdict
 
 OUT = os.path.join(triage_util.ROOT, 'ortho_drift')
 SAMPLE_N = 2500
+
+# Typographic substitutions that are NOT orthographic reform: the æ/œ ligature
+# (mediæval->medieval, æther->ether) is a print-shop convention, not a dated/legislated
+# spelling change. It is still counted + reported as its own era column, but it is
+# EXCLUDED from the headline reform-drift/1k rate so it doesn't inflate the gradient
+# (it dominated several EN dicts: SHS 109, MW72 92, AP90 39). See ORTHO_DRIFT_FINDINGS.md.
+NONREFORM_ERAS = {'ligature'}
 _ADOBE = (r'C:\Program Files\Adobe\Adobe InDesign 2026\Resources\Dictionaries\LILO'
           r'\Linguistics\Providers\Plugins2\AdobeHunspellPlugin\Dictionaries')
 
@@ -360,6 +367,9 @@ def main():
     era_occ = Counter()
     for (o, nw, era), c in list(drift.items()) + list(dicdrift.items()):
         era_occ[era] += c
+    # split the typographic (ligature) class out of the headline reform rate
+    nonreform = sum(era_occ.get(e, 0) for e in NONREFORM_ERAS)
+    reform_total = total - nonreform
 
     rep = os.path.join(OUT, '%s_drift_report.txt' % dict_code)
     with open(rep, 'w', encoding='utf-8') as f:
@@ -371,8 +381,10 @@ def main():
                 % ('%s, %d stems' % (prof['wordlist_env'], len(modern)) if modern is not None
                    else ('wordlist-free (1918 rule is definitional)' if prof['wordlist_free']
                          else 'NONE (control / not wired) -- map + patterns only')))
-        f.write('# gloss tokens: %d ; already-modern: %d ; reform-drift: %d (transform %d + map %d)\n'
+        f.write('# gloss tokens: %d ; already-modern: %d ; drift occurrences: %d (transform %d + map %d)\n'
                 % (n_tokens, n_modern, total, dic_total, drift_total))
+        f.write('# reform-drift: %d (%.2f/1k) ; non-reform/ligature (excluded from rate): %d\n'
+                % (reform_total, 1000.0 * reform_total / max(1, n_tokens), nonreform))
         f.write('# drift occurrences by era: %s\n'
                 % (', '.join('%s=%d' % (e, era_occ[e]) for e in sorted(era_occ, key=lambda k: -era_occ[k])) or '(none)'))
         f.write('#\n# ===== reform-drift CONFIRMED by transform (+ wordlist, where available) =====\n')
@@ -418,12 +430,13 @@ def main():
             if not ln.startswith('#') and '\t' in ln and not ln.startswith('dict\t'):
                 summ[ln.split('\t', 1)[0]] = ln.rstrip('\n')
     cols = ([dict_code, str(n_tokens), '%.0f' % (100.0 * n_modern / max(1, n_tokens)),
-             str(total), '%.2f' % (1000.0 * total / max(1, n_tokens))]
+             str(reform_total), '%.2f' % (1000.0 * reform_total / max(1, n_tokens))]
             + [str(era_occ.get(e, 0)) for e in CANON])
     summ[dict_code] = '\t'.join(cols)
     with open(summ_file, 'w', encoding='utf-8') as f:
         f.write('# %s orthographic-drift across dictionaries -- DOCUMENTATION ONLY\n' % prof['name'])
-        f.write('# drift/1k = reform-drift occurrences per 1000 gloss tokens\n')
+        f.write('# drift/1k = reform-drift per 1000 gloss tokens; EXCLUDES typographic eras %s\n'
+                % (sorted(NONREFORM_ERAS),))
         f.write('dict\ttokens\tmodern%%\tdrift\tdrift/1k\t%s\n' % '\t'.join(CANON))
         for k in sorted(summ):
             f.write(summ[k] + '\n')
@@ -431,8 +444,8 @@ def main():
     print('%s (%s): %d gloss tokens; modern-filtered %d%s'
           % (dict_code, prof['name'], n_tokens, n_modern,
              '' if (modern is not None or prof['wordlist_free']) else ' (no wordlist)'))
-    print('  reform-drift: %d (%.2f/1k); by era: %s'
-          % (total, 1000.0 * total / max(1, n_tokens),
+    print('  reform-drift: %d (%.2f/1k); non-reform/ligature excluded: %d; by era: %s'
+          % (reform_total, 1000.0 * reform_total / max(1, n_tokens), nonreform,
              ', '.join('%s=%d' % (e, era_occ[e]) for e in CANON if era_occ.get(e)) or '(none)'))
     print('  transform %d in %d forms + map %d in %d forms; residual %d -> %s'
           % (dic_total, len(dicdrift), drift_total, len(drift), len(seen),
