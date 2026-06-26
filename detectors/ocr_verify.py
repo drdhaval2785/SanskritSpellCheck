@@ -12,10 +12,12 @@ This is a TRIAGE PRIOR, never a verdict (OCR of old Devanagari scans is unreliab
 it reorders the human review queue; a human still confirms against the scan.
 
 Pipeline (all runnable here except OCR): servepdf.php -> parse the <object> PDF URL ->
-fetch the page PDF -> pymupdf text/render. OCR needs tesseract + a Devanagari model
-(`san` or `hin`); without it the page image is cached next to the candidate as a
-review aid and the label is MANUAL. Polite: results are cached and fetches are
-rate-limited -- run on small batches (e.g. a tier-A sample), not the whole corpus.
+fetch the page PDF -> pymupdf text/render. OCR uses tesseract + a Devanagari model
+(`san`/`hin`) if present, else falls back to **easyocr** (`pip install easyocr`, neural
+Devanagari, no system binary / admin needed); with neither, the page image is cached as a
+review aid and the label is MANUAL. Polite: results are cached and fetches are rate-limited
+-- run on small batches (e.g. a tier-A sample), not the whole corpus. (The Cologne servepdf
+endpoint IP-throttles aggressively: a 429 burst means back off for a while, don't hammer it.)
 
   python ocr_verify.py [candidates=combined_sf.txt] [n=5] [--lang san]
 """
@@ -45,6 +47,22 @@ try:
     OCR_OK = True
 except Exception:
     OCR_OK = False
+
+# Fallback OCR backend -- easyocr's neural Devanagari model needs NO system binary or admin
+# (tesseract install is admin-gated on some machines). Used only when tesseract is absent.
+try:
+    import easyocr  # noqa: F401
+    EASYOCR_OK = True
+except Exception:
+    EASYOCR_OK = False
+_easyocr_reader = [None]
+
+
+def easyocr_text(png_bytes):
+    if _easyocr_reader[0] is None:
+        import easyocr
+        _easyocr_reader[0] = easyocr.Reader(['hi'], gpu=False, verbose=False)   # Devanagari script
+    return ' '.join(_easyocr_reader[0].readtext(png_bytes, detail=0, paragraph=True))
 
 
 _last_fetch = [0.0]
@@ -111,6 +129,8 @@ def page_slp1(url, pngpath):
         from PIL import Image
         raw = pytesseract.image_to_string(Image.open(io.BytesIO(png)), lang=LANG)
         return 'ocr', u.devanagari_to_slp1(raw)
+    if EASYOCR_OK:
+        return 'easyocr', u.devanagari_to_slp1(easyocr_text(png))
     return 'image', ''
 
 
@@ -140,8 +160,9 @@ def main(infile, n):
             cands.append((p[0], p[1], p[2]))
         if len(cands) >= n:
             break
-    print("OCR engine: %s; processing %d candidates (rate-limited %.1fs)"
-          % ('tesseract:' + LANG if OCR_OK else 'NONE -> scan-prefetch aid only', len(cands), RATE_S))
+    engine = ('tesseract:' + LANG if OCR_OK else 'easyocr:Devanagari' if EASYOCR_OK
+              else 'NONE -> scan-prefetch aid only')
+    print("OCR engine: %s; processing %d candidates (rate-limited %.1fs)" % (engine, len(cands), RATE_S))
     out = open(os.path.join(HERE, 'ocr_verify_report.txt'), 'w', encoding='utf-8')
     labels = {}
     for i, (dictc, wrong, right) in enumerate(cands):
@@ -161,8 +182,9 @@ def main(infile, n):
     out.close()
     print("labels: " + ", ".join("%s=%d" % kv for kv in sorted(labels.items())))
     print("-> ocr_verify_report.txt  (scan images cached in ocrcache/)")
-    if not OCR_OK:
-        print("install tesseract + a Devanagari model (san/hin) to enable auto CONFIRM/DENY.")
+    if not OCR_OK and not EASYOCR_OK:
+        print("install tesseract + a Devanagari model (san/hin), or `pip install easyocr`, "
+              "to enable auto CONFIRM/DENY.")
 
 
 if __name__ == "__main__":

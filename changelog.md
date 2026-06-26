@@ -35,6 +35,15 @@ ready for a dated entry.
   composition pins it post-1901/pre-1996 (the O3 control). Written up in `docs/ORTHO_DRIFT_FINDINGS.md`
   ("O4" section). Closes O4 in `HANDOFF_NEXT.md`.
 
+### Changed
+- **`ocr_verify.py` — admin-free easyocr OCR backend (O7 prep).** tesseract is admin-gated on some
+  machines (choco/conda need elevation); added an **easyocr** fallback (neural Devanagari, `['hi']`,
+  no system binary) used when tesseract is absent — verified `EASYOCR_OK=True`, Reader inits + `readtext`
+  runs. Docstring notes the Cologne `servepdf.php` IP-throttle (429). **O7 measurement still pending:**
+  the pilot ran end-to-end except the scan fetch, which 429s hard on this IP (persists at 20 s spacing +
+  browser UA) — deferred until the server cooldown; rerun `python ocr_verify.py <DICT>_file_first_sf.txt N`
+  then read the CONFIRM/DENY/UNCERTAIN split. See O7 in `HANDOFF_NEXT.md`.
+
 ### Investigated (no code change)
 - **O2 / R6 — vidyut inflection-aware attestation is not a reliable "real word" signal.** With vidyut
   0.4.0 + kosha data on disk, tested whether `Kosha.get` (pada lookup) + the 205 k vendored pratipadika

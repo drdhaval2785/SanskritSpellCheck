@@ -291,10 +291,17 @@ a self-contained fresh-chat task; the ⚠️-marked ones need a local install or
   47 % tier-B of known o_vs_O suspects are valid vidyut forms). Surface attestation is orthogonal to
   typo-vs-real; a "demote if attested" rule would drop ~404 known errors (vs R5's 60). No scorer
   change. [R6 in docs/HYPOTHESES.md](docs/HYPOTHESES.md).
-- **O7 — Does OCR pre-verify actually help the human?** Tied to **Task 1** (needs tesseract + the
-  `san` model). After running `ocr_verify.py` on the 122 FILE-FIRST candidates, measure the
-  CONFIRM/DENY/**UNCERTAIN** split — if UNCERTAIN dominates (likely, on old Devanāgarī scans), OCR
-  pre-verify does *not* reduce the human scan-verification load and Task 1 should drop the OCR gate.
+- **O7 — Does OCR pre-verify actually help the human?** ⏳ **Harness READY; measurement deferred on a
+  server throttle (2026-06-26).** The install prerequisite is now **met without admin**: tesseract is
+  admin-gated on this box (choco/conda unavailable non-elevated), so `ocr_verify.py` gained an
+  **easyocr** fallback backend (neural Devanagari, `pip install easyocr`; torch was already present) —
+  verified detecting + initialising (`EASYOCR_OK=True`). The pilot ran end-to-end **except the fetch**:
+  the Cologne `servepdf.php` endpoint **429-throttles this IP hard** (persists at 20 s spacing + browser
+  UA — back off hours, don't hammer; maintainers dislike bot noise). To finish O7 once the cooldown
+  clears: `cd detectors && python ocr_verify.py ../corrections_draft/SHS/SHS_file_first_sf.txt 15` (or
+  any FILE-FIRST dict), then read the CONFIRM/DENY/**UNCERTAIN** split in `ocr_verify_report.txt`. The
+  hypothesis stands: if UNCERTAIN dominates on these single-edit vowel-length/sibilant pairs (likely),
+  OCR pre-verify does *not* cut the human scan-load and Task 1 should drop the OCR gate.
 
 **⚠️ Need external corpora:**
 
