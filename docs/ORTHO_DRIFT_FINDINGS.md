@@ -14,8 +14,8 @@ only — nothing here edits dictionary source. See the design in
 
 **The magnitude of orthographic drift in a dictionary's gloss language is governed by the *type* of
 the language's spelling reform, not merely by the dictionary's age.** Across five gloss languages
-spanning ~13 decades of indological lexicography, drift rates fall into three sharply separated
-tiers:
+spanning nearly two centuries of indological lexicography (1832–2009), drift rates fall into three
+sharply separated tiers:
 
 | tier | reform regime | drift rate (per 1,000 gloss tokens) | example |
 |---|---|--:|---|
@@ -23,7 +23,8 @@ tiers:
 | **Convention** | gradual editorial drift, no central authority | **0.01 – 0.46** | English WIL **0.46** → MW **0.01** (reform-only, ex-ligature); French BUR **0.31** |
 | **None** | no reform ever occurred | **0** | Latin BOP **0** (negative control) |
 
-Legislated reforms outdrift convention drift by **one to three orders of magnitude**. A 19th-century
+Legislated reforms outdrift convention drift by **up to three orders of magnitude** (Russian vs.
+peak English ≈ 780×; the narrowest regime boundary, German SCH 2.52 vs. English WIL 0.46, ≈ 5×). A 19th-century
 dictionary written in a language that *later underwent a legislated reform* (German, Russian) reads
 as massively "misspelled" against a 2026 standard; a contemporaneous dictionary in a language that
 only drifted by convention (English, French) is almost entirely modern; and a language with no
@@ -251,8 +252,8 @@ With the ligature split, the control holds even more cleanly: **all five** moder
 **0.00 reform-drift** — VEI's former 0.06 was entirely typographic æ. The full English picture is a
 monotone recency gradient from Wilson 1832 (**0.46**) down through Monier-Williams 1899 (**0.01**) to
 the modern compilations (**0.00**), confirming that the detector tracks each dictionary's orthographic
-epoch rather than flagging noise. (en_GB reference = the `ropensci/hunspell` `en_GB.dic`, ~86 k stems,
-staged locally.)
+epoch rather than flagging noise. (en_GB reference = the `ropensci/hunspell` `en_GB.dic`, 56,571
+stems per the drift-report headers, staged locally.)
 
 ### French — convention, minimal
 

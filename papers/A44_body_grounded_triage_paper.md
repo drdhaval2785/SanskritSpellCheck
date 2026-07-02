@@ -206,7 +206,7 @@ headwords** ([`nochange/do_not_file_suppress.txt`](../nochange/do_not_file_suppr
 header: "2297 unique headwords from 33 dictionaries"). Both numbers are reported
 deliberately: the gross 2,549 measures the work per source; the deduped 2,297 is the
 artifact actually wired into the detectors. The largest contributors are MW (630), VCP
-(408), PW (255), PWG (248), PD (116), SCH (109), and SKD (103). This list — not the
+(408), BHS (294), PW (255), PWG (248), PD (116), SCH (109), and SKD (103). This list — not the
 handful of typos — is the durable value: it prevents a future bulk edit from
 "correcting" forms the editors put there on purpose.
 

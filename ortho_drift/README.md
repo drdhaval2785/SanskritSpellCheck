@@ -85,7 +85,7 @@ comparison stays stable; re-running any dict now would reclassify its share of t
 ## Cross-language — English, French, Latin, Russian
 
 The same profile-driven tool applied to the corpus's other gloss languages (per-language
-`<lang>_reform_map.tsv` + `<lang>_drift_summary.tsv`). All **five** gloss languages, ~13 decades:
+`<lang>_reform_map.tsv` + `<lang>_drift_summary.tsv`). All **five** gloss languages, 1832–2009:
 
 | dictionary (era) | gloss lang | tokens | drift/1k | reform regime |
 |---|---|--:|--:|---|

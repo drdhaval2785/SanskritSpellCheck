@@ -27,11 +27,13 @@ definitions. We show that the second of these — the gloss prose — carries a 
 orthographic fingerprint, and that the **magnitude and composition of orthographic
 drift in the gloss language is governed by the *type* of that language's spelling
 reform, not merely by the dictionary's age.** Measuring drift against a pinned 2026
-standard across five gloss languages and ~13 decades of the Cologne Digital Sanskrit
-Dictionaries, drift rates fall into three sharply separated tiers — **legislated**
+standard across five gloss languages and nearly two centuries of sources (1832–2009)
+in the Cologne Digital Sanskrit Dictionaries, drift rates fall into three sharply
+separated tiers — **legislated**
 reform (Russian 1918 ≈ 358 / 1 000 gloss tokens; German 1901/1996 ≈ 2.5–10), **convention**
 drift (English / French ≈ 0–0.46), and **none** (Latin = 0, a negative control) —
-separated by one to three orders of magnitude. We further show that the *per-era
+separated by up to three orders of magnitude (Russian vs. peak English ≈ 780×; the
+narrowest regime boundary, German SCH vs. English WIL, ≈ 5×). We further show that the *per-era
 composition* of the drift (which reform's forms dominate) dates a dictionary's
 orthographic epoch from its own prose more reliably than the scalar rate: Schmidt's
 1928 supplement flips from a `th`-dominant (pre-1901) to an `ß`-dominant (pre-1996)
@@ -45,7 +47,7 @@ reproducible cross-decade drift dataset and a metalanguage-dating method.
 Historical lexicography is usually dated by its title page. We ask whether a
 dictionary's *text* — specifically its gloss metalanguage — can date itself, and
 what governs how strongly it can. The Cologne Digital Sanskrit Dictionaries are an
-unusually clean testbed: a single, uniformly marked-up corpus of ~36 dictionaries
+unusually clean testbed: a single, uniformly marked-up corpus of 33 dictionaries
 whose authors wrote in four European metalanguages across the long 19th century —
 Wilson's 1832 English, Böhtlingk–Roth's 1850s–70s German, Burnouf's 1866 French,
 Bopp's 1847 Latin — plus 20th-century compilations. Because Cologne markup wraps the
@@ -123,7 +125,8 @@ are pre-1918 by definition): 87 636 tokens · **31 389 drift · 358.17 / 1k ≈ 
 `kossovich.jsonl` — external to the Cologne 33.
 
 ### 4.4 English — convention drift, editor- and age-dependent
-Ten 19th-c. dictionaries against `en_GB` (so British `honour`/`-ise`/`-re` are not
+Ten English dictionaries (nine dated 19th-c., plus the undated modern Apte held out
+as a test case) against `en_GB` (so British `honour`/`-ise`/`-re` are not
 flagged). The æ/œ **ligature is split out** of the reform rate as a *typographic*
 convention. True reform-drift then forms a clean recency gradient: **WIL 1832 (0.46)
 ≫ MD 1893 (0.14) > MW 1899 (0.01) → 0**. A recency control of five 20th–21st-c.
