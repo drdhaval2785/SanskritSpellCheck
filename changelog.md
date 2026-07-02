@@ -6,6 +6,18 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.45.0] - 2026-07-02
+
+### Changed
+- **The umbrella issue is LIVE:**
+  [sanskrit-lexicon/CORRECTIONS#447](https://github.com/sanskrit-lexicon/CORRECTIONS/issues/447),
+  posted 02-07-2026 with M.G.'s explicit authorization — the payoff milestone of the whole
+  triage effort (roadmap §Q3 items 1–2 complete). The committed
+  [CORRECTIONS_umbrella_issue.md](corrections_draft/CORRECTIONS_umbrella_issue.md) now carries
+  the POSTED banner and remains the source of record for the issue body. Next: human
+  scan-verification (SHS → YAT → ACC) and maintainer follow-up on the issue; change-file drafts
+  on request; `csl-orig` application stays human-gated.
+
 ## [1.44.0] - 2026-07-02
 
 ### Added

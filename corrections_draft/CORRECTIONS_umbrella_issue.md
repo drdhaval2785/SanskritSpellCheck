@@ -1,5 +1,9 @@
 # Verified headword typo candidates across 11 dictionaries — batch from SanskritSpellCheck triage
 
+> **POSTED 02-07-2026** as [sanskrit-lexicon/CORRECTIONS#447](https://github.com/sanskrit-lexicon/CORRECTIONS/issues/447)
+> (M.G. authorization). This file is the source of record for the issue body; maintainer
+> follow-ups happen on the issue.
+
 This issue presents **120 tier-A candidates** — 92 proposed corrections + 17 scan-first candidates
 + 11 editorial (duplicate-pair / apparatus collision) decisions — drawn from a **body-grounded
 triage** of all 33 CDSL dictionaries in [SanskritSpellCheck](https://github.com/drdhaval2785/SanskritSpellCheck):
