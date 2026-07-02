@@ -42,6 +42,18 @@ MCI 10 · MW 2sf+2ed · SKD 3 · WIL 3 · PW 1+1ed · VCP 1 · GST 1.
    reversed pair the triage had missed. Grammar-exceptionless rules count as evidence; a
    `k2` that merely mirrors `k1` does not count as counter-evidence.
 
+## Judge spot-check of the checker-PASSes (02-07-2026, post-posting)
+
+The 28 flags were judge-adjudicated; the 94 checker-PASSes initially went on checker authority.
+After [CORRECTIONS#447](https://github.com/sanskrit-lexicon/CORRECTIONS/issues/447) was posted,
+Fable 5 (`claude-fable-5`) re-verified a seeded 10-row cross-dict sample (one PASS per dict)
+directly against the `csl-orig` entries: **10/10 hold** — nine from the entry's own text
+(`E. {#kAzWa#}`, vyutpatti `BAsa + ac`, inflection `({#-qyaM#})`, in-gloss `cAmIkara`/`mākandīm`,
+the Kāvyaprakāśa quote, derivation `yajYa + 2. muz`), one (`YAT zazWihAyana`) via its
+"Idem"-neighbor ("An elephant" = the classical ṣaṣṭihāyana epithet, built on `zazwi` "sixty").
+Side observation for a future batch: the neighboring `YAT zazWimatta` "elephant" likely carries
+the same `zW→zw` defect and is NOT in the current queue.
+
 ## Process cautions (for the next verification run)
 
 - Readme evidence cells are often **class-level templates, not verbatim quotes** — naive

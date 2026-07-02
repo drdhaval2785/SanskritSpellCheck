@@ -6,6 +6,23 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.46.0] - 2026-07-02
+
+### Added
+- **Fable 5 referee reviews of both papers** —
+  [papers/A37_review_fable5.md](papers/A37_review_fable5.md) and
+  [papers/A44_review_fable5.md](papers/A44_review_fable5.md): substantive pre-submission
+  reviews (argument/framing/venue-fit, prioritized fix lists) by Fable 5 (`claude-fable-5`)
+  within the trial window. A37 headline risks: empty related-work vs stylochronometry,
+  "law" overclaim (Latin zero overdetermined), PW/PWG non-independence in the n=5 correlation,
+  §4.4 gradient-vs-saturation inconsistency. A44 headline: reframe for IJL, fold in the 02-07
+  verification (collision = a new fifth candidate class), fix bare model attributions, cite
+  eval.py; IRR remains the blocking human gate. Estimated two sessions each to 4/5.
+- **Judge spot-check recorded in [VERIFICATION_2026_07.md](corrections_draft/VERIFICATION_2026_07.md):**
+  10/10 seeded cross-dict sample of checker-PASS rows re-confirmed against `csl-orig` by
+  Fable 5 after posting #447; side-flag: `YAT zazWimatta` likely carries the same `zW→zw`
+  defect (future batch).
+
 ## [1.45.0] - 2026-07-02
 
 ### Changed
