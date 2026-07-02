@@ -6,6 +6,27 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.42.0] - 2026-07-02
+
+### Added
+- **FILE-FIRST verification gate ([corrections_draft/file_first_verified.tsv](corrections_draft/file_first_verified.tsv)
+  + [VERIFICATION_2026_07.md](corrections_draft/VERIFICATION_2026_07.md)).** All 122 candidates
+  re-verified against the `csl-orig` entry text (4 Sonnet 4.6 checker agents; Fable 5 adjudicated
+  the 28 flags): **97 PASS · 12 SCAN-FIRST · 11 EDITORIAL · 1 DNF · 1 DROP**. Key discoveries:
+  ~9 % of candidates are *collisions* (the right spelling already exists as its own entry — YAT
+  dual-listings, MW `kattfRa`, PWG's `duzWu` errata note, PW's `*hemana`) needing a merge-vs-respell
+  editorial decision, not a respell; `SHS kARqapfzwa` already fixed upstream (queue decays ~0.8 %/wk);
+  `YAT RiS→niS` is ṇopadeśa notation → do-not-file. The umbrella issue gains a third,
+  editorial-decision section. MW's "4 of 1,954" restates as 2 scan-first + 2 editorial.
+
+### Fixed
+- **Paper fact-check corrections** (Sonnet 4.6 fact-checkers vs committed data, ~75 claims
+  verified): A44 "largest do-not-file contributors" list was missing third-place BHS (294);
+  A37 + [docs/ORTHO_DRIFT_FINDINGS.md](docs/ORTHO_DRIFT_FINDINGS.md): en_GB dic is 56,571 stems
+  (was "~86 k"), corpus is the Cologne 33 (was "~36"), "one to three orders of magnitude" →
+  "up to three" with the honest ~5× floor at the German–English boundary, "~13 decades" →
+  1832–2009, "ten 19th-c. dictionaries" → nine dated + the undated Apte held out.
+
 ## [1.41.0] - 2026-07-02
 
 ### Added
