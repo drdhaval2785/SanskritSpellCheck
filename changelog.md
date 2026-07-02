@@ -6,6 +6,22 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.43.0] - 2026-07-02
+
+### Added
+- **[docs/CHANDAS_ANUPRASA_PRIOR_ART.md](docs/CHANDAS_ANUPRASA_PRIOR_ART.md)** — survey grounding
+  the planned **batch chandas validator** (new detector family: meter breaks = suspect-text
+  signal over GRETIL/DCS verse corpora) and the reuse of the UoHyd **Anuprāsa Identifier**
+  (ISCLS 2024; code unpublished, algorithm fully specified → clean-room SLP1 reimplementation).
+  Converged recommendation: **skrutable** (has a "Scan GRETIL" batch mode + per-pāda
+  `problem_syllables` diagnostics) primary, **`chanda`/Chandojñānam** (per-syllable Levenshtein
+  edit-ops, 98.2 % on corrupted verses) as cross-validator; both licenses need clarification;
+  no public UoHyd chandas tool exists — the student code is acquired via direct contact.
+  Roadmap updated: tiny skrutable+chanda pilot **now** (Q3), full detector + anuprāsa
+  reimplementation in Q1 2027. Also flags ISCLS items to track (2024 "Contextual Spellchecking
+  for Sanskrit" demo; 2026 "Proof-Reader Effect of LLMs in Sanskrit OCR"; Patel & Kulkarni
+  word-sense alignment; HANSEL; CHANDOMITRA; varṇacitra).
+
 ## [1.42.0] - 2026-07-02
 
 ### Added
