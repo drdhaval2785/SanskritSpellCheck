@@ -1,5 +1,9 @@
 # SanskritSpellCheck — roadmap
 
+> **Superseded as the forward plan (02-07-2026):** the current 1-year plan is
+> [ROADMAP_2026_2027.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ROADMAP_2026_2027.md).
+> This file remains as the Phase 1–3 record.
+
 Phased plan for where the toolset goes next. The questions below were left open, so
 this uses defaults — **override any of them and the plan re-shapes**:
 
