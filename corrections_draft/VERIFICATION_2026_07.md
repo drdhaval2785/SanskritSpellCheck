@@ -5,7 +5,7 @@
 Pre-filing verification of all **122 FILE-FIRST candidates** against the `csl-orig` entry
 text, run 02-07-2026 as the Fable-window gate from
 [ROADMAP_2026_2027.md §Q3](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ROADMAP_2026_2027.md).
-Mechanical verification: four Sonnet 4.6 (`claude-sonnet-4-6`) agents (locate → evidence-quote →
+Mechanical verification: four Sonnet 5 (`claude-sonnet-5`) agents (locate → evidence-quote →
 direction → collision checks, reusing `triage_util.EntryIndex`). Adjudication of all 28 flags:
 Fable 5 (`claude-fable-5`). Full per-row verdicts:
 [file_first_verified.tsv](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/file_first_verified.tsv).

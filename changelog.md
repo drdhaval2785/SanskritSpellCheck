@@ -6,6 +6,25 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.44.0] - 2026-07-02
+
+### Added
+- **[corrections_draft/CORRECTIONS_umbrella_issue.md](corrections_draft/CORRECTIONS_umbrella_issue.md)**
+  — the complete umbrella-issue body for the verified queue, M.G.-approved format: per-dict
+  sections (biggest first), each with Proposed / Scan-first / Editorial (merge-vs-respell)
+  tables, in-entry evidence and scan links per row, DROP+DNF audit appendix. **92 proposed +
+  17 scan-first + 11 editorial across 11 dicts** (the 5 weak-evidence SHS rows were reclassified
+  PASS→SCAN-FIRST per M.G., TSV updated). NOT posted — M.G. posts to
+  [sanskrit-lexicon/CORRECTIONS](https://github.com/sanskrit-lexicon/CORRECTIONS/issues).
+
+### Fixed
+- **Model-attribution erratum (same-day):** today's research/verification subagents ran on the
+  `sonnet` alias, which resolves to **Sonnet 5 (`claude-sonnet-5`)** in the current environment —
+  earlier 1.42.0/1.43.0 entries and docs said "Sonnet 4.6" from a stale alias→version mapping.
+  Corrected in place across changelog/docs/TSV/roadmap/.ai_state (June triage runs remain
+  Sonnet 4.6 — correct for their date). Lesson encoded in the roadmap model-budget row: resolve
+  the alias against the CURRENT env mapping at run time, never from memory.
+
 ## [1.43.0] - 2026-07-02
 
 ### Added
@@ -27,7 +46,7 @@ ready for a dated entry.
 ### Added
 - **FILE-FIRST verification gate ([corrections_draft/file_first_verified.tsv](corrections_draft/file_first_verified.tsv)
   + [VERIFICATION_2026_07.md](corrections_draft/VERIFICATION_2026_07.md)).** All 122 candidates
-  re-verified against the `csl-orig` entry text (4 Sonnet 4.6 checker agents; Fable 5 adjudicated
+  re-verified against the `csl-orig` entry text (4 Sonnet 5 `claude-sonnet-5` checker agents; Fable 5 adjudicated
   the 28 flags): **97 PASS · 12 SCAN-FIRST · 11 EDITORIAL · 1 DNF · 1 DROP**. Key discoveries:
   ~9 % of candidates are *collisions* (the right spelling already exists as its own entry — YAT
   dual-listings, MW `kattfRa`, PWG's `duzWu` errata note, PW's `*hemana`) needing a merge-vs-respell
@@ -36,7 +55,7 @@ ready for a dated entry.
   editorial-decision section. MW's "4 of 1,954" restates as 2 scan-first + 2 editorial.
 
 ### Fixed
-- **Paper fact-check corrections** (Sonnet 4.6 fact-checkers vs committed data, ~75 claims
+- **Paper fact-check corrections** (Sonnet 5 `claude-sonnet-5` fact-checkers vs committed data, ~75 claims
   verified): A44 "largest do-not-file contributors" list was missing third-place BHS (294);
   A37 + [docs/ORTHO_DRIFT_FINDINGS.md](docs/ORTHO_DRIFT_FINDINGS.md): en_GB dic is 56,571 stems
   (was "~86 k"), corpus is the Cologne 33 (was "~36"), "one to three orders of magnitude" →
@@ -53,7 +72,7 @@ ready for a dated entry.
   web app in a new GH-Pages repo, Cologne integration, Zenodo dataset); entry-body pilots
   (deterministic SHS, then LLM MW-citations); union-across-runs recall; quarterly-deep +
   monthly-light cadence (CI detects, agent triages). Fable 5 (`claude-fable-5`) judges until
-  08-07-2026, then Sonnet 4.6/Opus 4.8 hybrid. [ROADMAP.md](ROADMAP.md) marked superseded as
+  08-07-2026, then Sonnet 5/Opus 4.8 hybrid. [ROADMAP.md](ROADMAP.md) marked superseded as
   the forward plan.
 
 ### Fixed

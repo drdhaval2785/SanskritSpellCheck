@@ -2,7 +2,7 @@
 
 <p align="right"><sub>Created: 02-07-2026 · Last updated: 02-07-2026</sub></p>
 
-Survey run 02-07-2026 (four Sonnet 4.6 `claude-sonnet-4-6` research agents; Fable 5
+Survey run 02-07-2026 (four Sonnet 5 `claude-sonnet-5` research agents; Fable 5
 `claude-fable-5` synthesis) to ground the **batch chandas (meter) validator** — a planned
 SanskritSpellCheck detector over verse corpora (GRETIL first) — and the reuse assessment of the
 UoHyd **Anuprāsa Identifier**. M.G. decisions locked the same day: the meter validator lives

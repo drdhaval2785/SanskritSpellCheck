@@ -1,4 +1,4 @@
-# FILE-FIRST verification verdicts, 2026-07-02. Sonnet 4.6 (claude-sonnet-4-6) mechanical
+# FILE-FIRST verification verdicts, 2026-07-02. Sonnet 5 (claude-sonnet-5) mechanical
 # verification vs csl-orig entry text; Fable 5 (claude-fable-5) adjudication of the 28 flags.
 # verdict: PASS (file) | SCAN-FIRST (file; scan is decisive) | EDITORIAL (duplicate/apparatus
 # collision - editor chooses merge vs respell) | DNF (do-not-file) | DROP (stale/already fixed)
@@ -21,20 +21,20 @@ SHS	kAzwakuddAla	kAzWakuddAla	PASS	E. {#kAzWa#} wood, and {#kuddAla#} shovel; al
 SHS	klItakika	klItakikA	PASS	E. {#krItaka#} traffic, ... (fem. marker context); MISSING evidence but entry supports fem -ikA reading; accepted per worklist rationale, no contradiction found
 SHS	kzIraballI	kzIravallI	PASS	E. {#kzIra#} water, and {#vallI#} pedicle: see {#kzIrakandA#}. -- etymology spells vallI with v; headword kzIraballI has b
 SHS	laGizwa	laGizWa	PASS	mfn. ({#-zWaH-zWA-zWaM#}) ... E. {#laGa#} light, {#izWan#} aff. of the irr. superlative. -- inflectional stem -zWa (capital W) and superlative affix izWan both confirm retroflex zWa; headword laGizwa has lowercase w
-SHS	maYjarinamra	maYjarInamra	PASS	{#maYjarinamra#} m. (-mraH) The Vetasa plant.; entry is terse, no E. etymology to arbitrate i/I length; accepted on worklist rationale (affix pattern), not contradicted
+SHS	maYjarinamra	maYjarInamra	SCAN-FIRST	MG 02-07: no in-entry etymology, class-pattern rationale only -> scan decides. {#maYjarinamra#} m. (-mraH) The Vetasa plant.; entry is terse, no E. etymology to arbitrate i/I length; accepted on worklist rationale (affix pattern), not contradicted
 SHS	murali	muralI	PASS	f.(-lI): {#murali#} f. ({#-lI#}) A flute, a pipe. E. {#mura#} ... {#lA#} ... affs. {#ka#} and {#NIz#} -- fem. inflectional stem -lI implies nom. muralI, headword short-i is inconsistent
-SHS	natyuha	natyUha	PASS	{#natyuha#} m. ({#-haH#}) A gallinule.; no E. etymology present; PASS on worklist's MISSING basis, no internal contradiction found
+SHS	natyuha	natyUha	SCAN-FIRST	MG 02-07: no in-entry etymology, class-pattern rationale only -> scan decides. {#natyuha#} m. ({#-haH#}) A gallinule.; no E. etymology present; PASS on worklist's MISSING basis, no internal contradiction found
 SHS	navakArika	navakArikA	PASS	E. {#nava#} new, and {#kArikA#} agent. -- etymology spells the second element kArikA (fem., long final A); headword navakArika ends short -ika
 SHS	ninittakAla	nimittakAla	PASS	E. {#nimitta#}, and {#kAla#} time. -- etymology literally spells nimitta; headword ninittakAla has ninitta
 SHS	nyaNkuBUrUha	nyaNkuBUruha	PASS	E. {#nyaNku#} a deer, and {#BUruha#} [a tree] -- etymology spells BUruha with short u; headword has BUrUha with long U
 SHS	pAniyavarRikA	pAnIyavarRikA	PASS	{#pAniyavarRikA#} f. ({#-kA#}) Sand. {#pAnIyamiva varRavati-varRi-Rvul#}. -- entry's own grammatical derivation spells pAnIya with long I; headword pAniyavarRikA has short i
 SHS	paNKagrAha	paNkagrAha	PASS	E. {#paNka#} mud, and {#grAha#} a shark. -- etymology spells paNka with lowercase k; headword paNKagrAha has capital K
 SHS	padazwIva	padazWIva	PASS	n. ({#-vaM#}) The feet and knees. E. {#pad#} a foot, and {#azWIvat#} the knee, deriv. irr. -- etymology spells azWIvat with capital W; headword padazwIva has lowercase w
-SHS	pitfrupa	pitfrUpa	PASS	{#pitfrupa#} m. ({#-paH#}) An epithet of SIVA.; no E. etymology present, but compound transparently = pitf + rUpa 'form', matching the systematic rupa->rUpa correction class seen elsewhere in this batch (jalarupa->jalarUpa); accepted, no contradiction found
+SHS	pitfrupa	pitfrUpa	SCAN-FIRST	MG 02-07: no in-entry etymology, class-pattern rationale only -> scan decides. {#pitfrupa#} m. ({#-paH#}) An epithet of SIVA.; no E. etymology present, but compound transparently = pitf + rUpa 'form', matching the systematic rupa->rUpa correction class seen elsewhere in this batch (jalarupa->jalarUpa); accepted, no contradiction found
 SHS	pratipaTan	pratipaTam	SCAN-FIRST	bare gloss, no internal etymology; adverbial -am grammar-plausible; scan decides [sonnet: FLAG — evidence-not-found: entry is a bare gloss with no E. etymology or inflection ({#pratipaTan#} Ind. Along the road.) -- nothing in the entry body confirms -an vs -am; correction plausible on general grammatical grounds (adverbial accusative -am pattern) but not evidenced by this entry's own text]
 SHS	pratyupaveza	pratyupaveSa	SCAN-FIRST	bare gloss; z/S not internally decidable; upaveSa (root viS) etymology-certain; scan decides [sonnet: FLAG — evidence-not-found: entry is a bare gloss with no E. etymology ({#pratyupaveza#} m. ({#-zaH#}) Besetting any one in order to bring him to compliance.) -- nothing in the entry body confirms z vs S]
-SHS	purUzadantikA	puruzadantikA	PASS	{#purUzadantikA#} f. ({#-kA#}) A medicinal root; see {#medA#}.; no E. etymology present; PASS on worklist's MISSING basis (purUza -> puruza is the standard short-u spelling of the word 'man'), no contradiction found
-SHS	saptAtitama	saptatitama	PASS	{#saptAtitama#} mfn. (-maH-mA-maM) The seventieth.; wrong spelling also recurs in body headword tag only, no other body occurrence
+SHS	purUzadantikA	puruzadantikA	SCAN-FIRST	MG 02-07: no in-entry etymology, class-pattern rationale only -> scan decides. {#purUzadantikA#} f. ({#-kA#}) A medicinal root; see {#medA#}.; no E. etymology present; PASS on worklist's MISSING basis (purUza -> puruza is the standard short-u spelling of the word 'man'), no contradiction found
+SHS	saptAtitama	saptatitama	SCAN-FIRST	MG 02-07: no in-entry etymology, class-pattern rationale only -> scan decides. {#saptAtitama#} mfn. (-maH-mA-maM) The seventieth.; wrong spelling also recurs in body headword tag only, no other body occurrence
 SHS	svarRabalkala	svarRavalkala	PASS	E. {#svarRa#} gold, {#valkala#} bark. -- etymology spells valkala with v; headword svarRabalkala has b
 SHS	vAcanIka	vAcanika	PASS	E. {#vacana#} and {#Wak#} aff. -- Wak (thak) affix regularly yields short -ika, not long -Ika; headword vAcanIka contradicts its own etymology
 SHS	vArttayana	vArttAyana	PASS	E. {#vArttA#} news, {#ayana#} going. -- etymology spells vArttA with long final A joining ayana; headword vArttayana has short a at the join
