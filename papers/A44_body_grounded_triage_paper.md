@@ -1,46 +1,54 @@
 ---
 paper_id: A44
 title: "The Dictionary Body as Ground Truth: Body-Grounded LLM Triage and the Precision-Collapse Result"
-status: draft (skeleton, 2/5) — scaffolded 2026-06-26
-readiness: 2/5
-venue: "DSH / Journal of Cultural Analytics / eLex / LREC-COLING"
+status: revision executed (referee fixes applied 2026-07-03), pending IRR human gate + author pass
+readiness: 3/5
+venue: "International Journal of Lexicography (IJL) — per the locked venue split"
 author: "**Mārcis Gasūns**, independent scholar ([ORCID 0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X)), gasyoun@ya.ru"
 data_source: "corrections_draft/README.md (33-dict triage complete) + nochange/do_not_file_suppress.txt (2297 deduped) + .claude/commands/dict-triage.md (pipeline)"
 ---
 
 # The Dictionary Body as Ground Truth: Body-Grounded LLM Triage and the Precision-Collapse Result
 
-> **Draft status (2026-06-26).** Manuscript skeleton built directly on the
+> **Draft status (2026-06-26; referee fixes applied 2026-07-03, Fable 5
+> `claude-fable-5`, per [A44_review_fable5.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/A44_review_fable5.md)).**
+> Manuscript built directly on the
 > completed 33-dictionary triage indexed in
-> [`corrections_draft/README.md`](../corrections_draft/README.md). All numerical
+> [`corrections_draft/README.md`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/README.md). All numerical
 > claims below are transcribed from, and recompute against, the committed per-dict
-> packages in [`corrections_draft/`](../corrections_draft/) and the deduped
-> suppression file [`nochange/do_not_file_suppress.txt`](../nochange/do_not_file_suppress.txt).
-> **Open before submission:** (1) write §2 Related work; (2) add the SHS/YAT worked
-> in-entry examples and the three-error-class table to §4; (3) obtain an inter-coder
-> reliability number (a second annotator — *human gate*); (4) finalise byline + ORCID
-> and lock the venue. Anything not yet verified against the files is marked **TODO**.
+> packages in [`corrections_draft/`](https://github.com/drdhaval2785/SanskritSpellCheck/tree/master/corrections_draft) and the deduped
+> suppression file [`nochange/do_not_file_suppress.txt`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/nochange/do_not_file_suppress.txt),
+> with the 2026-07-02 source re-verification folded in (§4.5).
+> **Open before submission:** (1) obtain an inter-coder
+> reliability number (a second annotator — *human gate*, tracked in GTD); (2) finalise
+> byline; (3) MG read-through for the IJL register.
 
 ## Abstract
 
-A spelling-anomaly detector cannot, on its own, tell a typo from a real but rare
-word, an intentional orthographic variant, or editorial apparatus. Run against
+On the Monier-Williams Sanskrit–English dictionary, a spelling-anomaly detector's
+top tier yields **4 filable corrections out of 1,954 candidates — a precision of
+0.20 %** — because a detector cannot, on its own, tell a typo from a real but rare
+word, an intentional orthographic variant, or editorial apparatus; run against
 mature, much-corrected dictionaries, such detectors produce lists that are almost
-all false positives: on the Monier-Williams Sanskrit–English dictionary, only **4 of
-1,954** top-tier candidates are filable corrections — a precision of **0.20 %**. We
+all false positives. We
 report a three-stage *agentic* triage pipeline that recovers the signal by changing
 the arbiter. Rather than judging a candidate against spelling statistics or corpus
 attestation, the pipeline judges it against the dictionary's **own entry text**: a
 first model classifies each candidate, a second confirms the suspected typos against
 the entry body, an adversarial review pass gates false positives, and a human
 verifies the survivors against the entry (ultimately the scanned page). Applied
-across all **33 dictionaries** of the Cologne Digital Sanskrit Dictionaries that
-carry anomaly candidates, the pipeline converts a near-useless flag list into two
-durable assets: a small, evidence-backed **FILE-FIRST** queue (**122 filable typos
-across 11 dictionaries**) and — the principal deliverable — a standing **do-not-file
+across the **33 dictionaries of the Cologne Digital Sanskrit Dictionaries merge that
+carry top-tier anomaly candidates** (the collection itself is larger), the pipeline
+converts a near-useless flag list into two
+durable assets: a small, evidence-backed **FILE-FIRST** queue (**122 triage-confirmed
+candidates across 11 dictionaries, of which 97 survive full source re-verification
+as unqualified correction proposals**, as of 2026-07-02) and — the principal
+deliverable — a standing **do-not-file
 suppression layer** of spellings each dictionary documents on purpose (**2,549 gross
 across the dictionaries; 2,297 unique after deduplication**), which prevents
-damaging bulk "corrections." The genuine typos are not uniformly distributed: they
+damaging bulk "corrections." Re-verification also surfaced a fifth candidate class
+only entry-reading can catch: the **collision**, where the "correct" spelling already
+exists as its own entry and a silent respell would clobber apparatus (§4.5). The genuine typos are not uniformly distributed: they
 concentrate in **poorly-digitised sources** whose entries nonetheless carry strong
 internal checks — *Śabda-Sāgara* (SHS) at **37/246 ≈ 15 %** and Yates (YAT) at
 **27/247 ≈ 10.9 %** — where the entry's own etymology or inflectional paradigm
@@ -93,21 +101,38 @@ never edits a dictionary's source. The host toolset already contains spelling-an
 detectors; the contribution here is the body-grounded triage layer above them and the
 empirical result about where the signal actually lives.
 
-## 2. Related work  *(TODO — to be written)*
+## 2. Related work
 
-Position against three axes. (a) **Dictionary-digitisation QA and OCR
-post-correction** — the host SanskritSpellCheck toolset's own pattern detectors
-(faultfinder, n-gram, o_vs_O) and the broader literature on detecting errors in
-digitised reference works; the gap is that these operate on the headword string, not
-the entry body. (b) **LLM-as-judge and agentic verification** — the use of language
-models as classifiers/verifiers and the known reliability pitfalls (over-acceptance,
-stochastic outputs), which motivate the deterministic-marker backbone and the
-adversarial review stage here. (c) **Variation vs error in historical lexicography** —
-how editions encode *variae lectiones*, wrong-reading apparatus, and attested variants,
-and why a "correction" of these corrupts the source. Land the novelty claim: *the
-entry body as the arbiter, operationalised as a staged classify→confirm→verify
-pipeline over a uniformly marked-up multi-dictionary corpus*, yielding a reusable
-suppression layer — not a new spelling model.
+**(a) Spelling-anomaly detection in digitised Sanskrit lexica.** The host
+SanskritSpellCheck toolset's own pattern detectors — faultfinder, n-gram, o_vs_O —
+are the immediate prior art and this paper's §4.1 input; the nearest external tool
+is the ISCLS contextual-spellchecking demo for Sanskrit (Prasanna Venkatesh 2024).
+Cross-lexicon comparison of the same corpus has been used for *sense* alignment
+(Patel and Kulkarni 2024). The shared gap is that all of these operate on the
+headword string or cross-dictionary statistics — not on the entry body that states
+whether an unusual spelling is meant.
+
+**(b) LLM verification and its characteristic failure.** Using language models as
+classifiers and verifiers imports a known failure mode that is fatal in exactly this
+domain: the *proof-reader effect*, in which an LLM "corrects" faithful text toward
+its expectation — documented for Sanskrit OCR by Jain, Bhatt and Choudhary (2026),
+whose title ("Preserving What Is Written, Not What Is Expected") is this pipeline's
+design constraint stated as a slogan. The deterministic-marker backbone (§3.3 step
+1), the adversarial review gate (step 4), and the never-edit guardrail (§3.5) are
+the architecture that failure mode dictates.
+
+**(c) Variation versus error is a lexicographic distinction, not a string
+property.** Scholarly lexica deliberately record *variae lectiones*, wrong-reading
+apparatus, in-composition forms, and cross-references — apparatus in the classical
+sense of dictionary microstructure (Zgusta 1971; Hausmann and Wiegand 1989; on
+editorial practice, Atkins and Rundell 2008). "Correcting" apparatus corrupts the
+edition. This is why the arbiter must be the entry: the apparatus labels itself
+there, and nowhere else.
+
+The novelty claim, against all three axes: *the entry body as the arbiter,
+operationalised as a staged classify→confirm→verify pipeline over a uniformly
+marked-up multi-dictionary corpus*, yielding a reusable suppression layer — not a
+new spelling model.
 
 ## 3. Data and method
 
@@ -130,8 +155,10 @@ The engine's tier-A candidates (per dict, from
 [`detectors/combined_candidates.txt`](../detectors/combined_candidates.txt)) are
 headwords whose vowel/consonant pattern is absent from a trusted reference. As §1
 showed, on a mature dictionary almost none of these are real errors. The triage's job
-is to decide, per candidate, which of four things it is — a genuine typo, a rare real
-word, an intentional variant, or editorial apparatus — and that decision requires the
+is to decide, per candidate, which of five things it is — a genuine typo, a rare real
+word, an intentional variant, editorial apparatus, or (a class the 2026-07
+re-verification forced into the taxonomy, §4.5) a **collision**, where the would-be
+"correct" spelling already exists as its own entry — and that decision requires the
 entry, not the headword.
 
 ### 3.3 The three-stage pipeline
@@ -146,18 +173,23 @@ The pipeline is run per dictionary via the
    *variae lectiones* (`v.l.`), in-composition/sandhi forms, and cross-references
    (`See`, `s.`, `= X`). This marker layer is model-independent and is the precision
    backbone.
-2. **Classify (Sonnet).** The remaining real-word candidates are classified in bulk —
+2. **Classify — Sonnet 4.6 (`claude-sonnet-4-6`), June 2026 runs.** The remaining
+   real-word candidates are classified in bulk —
    the cheaper model on the high-volume pass.
-3. **Source-confirm (Opus).** The suspected-typo pile is confirmed against the entry
+3. **Source-confirm — Opus 4.8 (`claude-opus-4-8`), June 2026 runs.** The
+   suspected-typo pile is confirmed against the entry
    body by a stronger model, which must point to the entry's own evidence.
-4. **Adversarial review (Opus).** A second pass acts as a false-positive gate over the
+4. **Adversarial review — Opus 4.8 (`claude-opus-4-8`).** A second pass acts as a false-positive gate over the
    confirmed pile, applying an explicit keep/drop rubric: **keep** only when the
    entry's *own* derivation or citation confirms the suggestion (b/v and vowel-length
    are the highest-yield classes); **drop** for wrong-reading, redirect, *vṛddhi*
    forms, attested variants, or real distinct words.
 5. **Human verification.** A human verifies each FILE-FIRST survivor against the entry,
    and — the irreducible final arbiter — against the scanned page (for b/v cases,
-   checking व vs ब on the scan).
+   checking व vs ब on the scan). A machine pre-verification of this stage was run
+   2026-07-02: four Sonnet 5 (`claude-sonnet-5`) checker agents
+   (locate → evidence-quote → direction → collision), with all flags adjudicated by
+   Fable 5 (`claude-fable-5`) — see §4.5.
 
 The pipeline emits, per dictionary, a `<DICT>_file_first_sf.txt` (the FILE-FIRST queue
 in the CORRECTIONS standard format) and a `<DICT>_wrong_readings.txt` (the do-not-file
@@ -198,8 +230,22 @@ core negative result the body-grounded method exists to address.
 
 ### 4.2 The do-not-file suppression layer (the principal deliverable)
 Across all 33 triaged dictionaries, the body-grounded pass catalogues the spellings
-each dictionary records on purpose — wrong-reading apparatus, *variae lectiones*,
-in-composition/sandhi forms, cross-references, grammatical/Vedic notes. The
+each dictionary records on purpose. These fall into a small apparatus taxonomy —
+the lexicographically native heart of the result (Table 2a):
+
+**Table 2a. The apparatus taxonomy of documented-intentional spellings.**
+
+| class | what the entry says | example marker |
+|---|---|---|
+| wrong reading (*w.r.*) | the editor records a reading he judges erroneous in his sources | `w.r.`, German *fehlerhaft für*, *Richtig* |
+| *varia lectio* (*v.l.*) | an attested alternative reading, deliberately preserved | `v.l.` |
+| in-composition / sandhi form | a form valid only inside compounds or in sandhi | *in comp. for …* |
+| cross-reference | the headword exists to point elsewhere | `See`, `s.`, `= X q.v.` |
+| grammatical / Vedic note | ṇopadeśa root notation, Vedic stems, and similar tradition-internal marking | e.g. Dhātupāṭha `RiS` for *niś* |
+
+*(Per-dictionary counts per class are a queued mechanical extraction from the
+committed `<DICT>_wrong_readings.txt` files, whose rows carry the entry evidence but
+not yet a structured class tag.)* The
 **per-dictionary counts sum to 2,549** documented-intentional spellings (the gross
 figure recorded in the suppress-file header); the **deduplicated union is 2,297 unique
 headwords** ([`nochange/do_not_file_suppress.txt`](../nochange/do_not_file_suppress.txt)
@@ -220,7 +266,7 @@ concentrated:
 | YAT (Yates, 1846) | **27** | 247 | ~10.9 % |
 | ACC (Aufrecht, *Cat. Cat.*) | **22** | 174 | ~12.6 % |
 | PWG (Großes PW) | 12 | 497 | 2.4 % |
-| MCI (mythical-name index) | 10 | 41 | ~24 % |
+| MCI (*Mahābhārata Cultural Index*) | 10 | 41 | ~24 % |
 | MW (1899) | 4 | 1,954 | 0.20 % |
 | SKD (*Śabdakalpadruma*) | 3 | 412 | 0.7 % |
 | WIL (Wilson, 1832) | 3 | 108 | 2.8 % |
@@ -230,7 +276,10 @@ concentrated:
 
 The remaining 22 dictionaries yield **0** filable typos. The signal lives in the
 **poorly-digitised, less-corrected sources** (SHS, YAT, ACC), not in the large mature
-ones.
+ones. (The counts in this table are the *triage outputs*; §4.5 reports what survives
+the downstream source re-verification — for MW, the celebrated "4 of 1,954" resolves
+into 2 solid-but-scan-first proposals and 2 editorial duplicate-pair decisions, which
+deepens rather than weakens the precision-collapse story.)
 
 ### 4.4 The recovery case — entries that contradict their own headwords
 SHS is the body-grounded method's ideal case: a smaller, far less-corrected
@@ -251,8 +300,38 @@ own text. The errors fall into a small set of entry-decidable classes
 
 YAT shows the same profile (27 typos, mostly non-b/v digitisation errors each fixed by
 the entry's own citation/gloss; a b/v cluster of ~32 is held back pending scan
-confirmation). *TODO: expand each class with one fully-worked example and add the YAT
-held-for-scan note.*
+confirmation — deliberately, because the Bengali printing of Yates does not
+typographically distinguish व from ब, so for this cluster the entry text cannot
+outrank the scan). Per-row worked evidence lines for every proposed correction are
+published in the live umbrella issue
+[sanskrit-lexicon/CORRECTIONS#447](https://github.com/sanskrit-lexicon/CORRECTIONS/issues/447)
+— the method's real-world deployment, which doubles as the paper's worked-example
+appendix.
+
+### 4.5 The source re-verification pass — and the fifth class
+Before filing, all 122 FILE-FIRST rows were re-verified against the live `csl-orig`
+entry text (2026-07-02; four Sonnet 5 `claude-sonnet-5` checker agents —
+locate → evidence-quote → direction → collision — with all 28 flags adjudicated by
+Fable 5 `claude-fable-5`; per-row verdicts in
+[`corrections_draft/file_first_verified.tsv`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/file_first_verified.tsv),
+synthesis in
+[`corrections_draft/VERIFICATION_2026_07.md`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/VERIFICATION_2026_07.md)):
+
+| verdict | n | meaning |
+|---|--:|---|
+| PASS | **97** | unqualified correction proposals (human scan-check still applies) |
+| SCAN-FIRST | 12 | grammar-certain but entry-internally silent — the scan is decisive |
+| EDITORIAL (collision) | 11 | the "correct" spelling **already exists as its own entry** |
+| DNF | 1 | ṇopadeśa notation → moved to the do-not-file class |
+| DROP | 1 | already fixed upstream between triage and verification |
+
+The 11 collisions — YAT dual-listings cross-referenced "Idem", MW `kattfRa`, PWG's
+errata-note `duzWu`, Böhtlingk's constructed `*hemana` — are the pass's conceptual
+yield: a **fifth candidate class that only entry-reading can catch**, because the
+evidence is the *existence of another entry*, not any property of the flagged string.
+A silent headword respell here would create duplicate headwords or clobber apparatus.
+That the verification pass *strengthened* the taxonomy is itself evidence for the
+body-as-arbiter thesis.
 
 ## 5. Discussion
 
@@ -282,6 +361,9 @@ digitisations still need attention.
   and can lose a verified typo; the 122 count is therefore a *floor*, not a point
   estimate, and verified packages are unioned across runs rather than overwritten. The
   do-not-file list does not share this instability (deterministic marker backbone).
+- **The queue decays against the living corpus.** One of 122 candidates (~0.8 %) was
+  fixed upstream in `csl-orig` in the single week between triage and re-verification;
+  any queue must be re-checked against live source immediately before filing.
 - **No inter-coder reliability number yet.** The pipeline's third stage is human
   verification, but agreement has not been quantified. A second annotator independently
   re-verifying a sample (FILE-FIRST survivors and a sample of do-not-file/reviewed-out
@@ -292,7 +374,9 @@ digitisations still need attention.
   expected and would only refine the do-not-file list.
 - **The scan is the final, irreducible arbiter.** The LLM/human entry-reading layer is
   a prior; b/v and similar cases must ultimately be confirmed on the scanned page
-  before filing. *TODO: state the residual unconfirmed-on-scan count, if any.*
+  before filing. As of the 2026-07-02 re-verification, **12 of 122** rows are
+  explicitly scan-first (grammar-certain, entry-internally silent), plus the ~32-row
+  YAT b/v cluster held back wholesale (§4.4).
 
 ## 7. Conclusion
 
@@ -314,15 +398,57 @@ The 33-dictionary triage index and per-dictionary status table live in
 package (`readme.md`, `<DICT>_file_first_sf.txt`, `<DICT>_wrong_readings.txt`,
 `<DICT>_triaged.txt`) is in [`corrections_draft/<DICT>/`](../corrections_draft/). The
 deduplicated suppression artifact is
-[`nochange/do_not_file_suppress.txt`](../nochange/do_not_file_suppress.txt),
+[`nochange/do_not_file_suppress.txt`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/nochange/do_not_file_suppress.txt),
 regenerated with `cd detectors && python gen_do_not_file_suppress.py` (re-prints the
 count and the per-dict header). The pipeline is the
-[`/dict-triage <DICT>`](../.claude/commands/dict-triage.md) skill over
-[`detectors/triage_*.py`](../detectors/) and
-[`detectors/bodyaware_workflow.js`](../detectors/bodyaware_workflow.js). To re-verify
-the headline figures: the gross do-not-file total is the sum of the per-dict header
-counts in the suppress file (**2,549**); the deduped union is its data-row count
-(**2,297**); the filable totals are the data rows of each `*_file_first_sf.txt`
-(**122** across 11 dicts); MW precision is **4 / 1,954 = 0.20 %**. The work never edits
-`csl-orig`; confirmed corrections are reported to the separate CORRECTIONS workflow.
+[`/dict-triage <DICT>`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/.claude/commands/dict-triage.md) skill over
+[`detectors/triage_*.py`](https://github.com/drdhaval2785/SanskritSpellCheck/tree/master/detectors) and
+[`detectors/bodyaware_workflow.js`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/bodyaware_workflow.js).
+
+**What reproduces how.** The claims split by layer, deliberately. The
+**deterministic** layers reproduce exactly: the marker backbone, the suppress-list
+generation, and every count above — the gross do-not-file total is the sum of the
+per-dict header counts in the suppress file (**2,549**); the deduped union is its
+data-row count (**2,297**); the filable totals are the data rows of each
+`*_file_first_sf.txt` (**122** across 11 dicts); MW precision is
+**4 / 1,954 = 0.20 %**. The **LLM typo pass** reproduces only as a *floor under
+union-across-runs* (§3.4, §6). The suppression layer's safety is itself tested by the
+committed evaluation harness
+[`detectors/eval.py`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/eval.py):
+**zero false positives** against the ~31k human-confirmed known-good words of
+`nochange.txt`, and recall measured against the 3,884 human-curated historical
+o_vs_O pairs — the quantitative backing for §3.4's claim that the layer does not
+over-suppress. The work never edits
+`csl-orig`; confirmed corrections are reported to the separate CORRECTIONS workflow
+(live umbrella issue: [CORRECTIONS#447](https://github.com/sanskrit-lexicon/CORRECTIONS/issues/447)).
+
+## References (draft — author to finalise)
+
+Atkins, B. T. Sue, and Michael Rundell. 2008. *The Oxford Guide to Practical
+Lexicography.* Oxford: Oxford University Press.
+
+Hausmann, Franz Josef, and Herbert Ernst Wiegand. 1989. "Component Parts and
+Structures of General Monolingual Dictionaries: A Survey." In Hausmann, Reichmann,
+Wiegand and Zgusta (eds.), *Wörterbücher / Dictionaries / Dictionnaires,* vol. 1
+(HSK 5.1), 328–360. Berlin and New York: Walter de Gruyter.
+
+Jain, ..., Bhatt, ..., and Choudhary, ... 2026. "Preserving What Is Written, Not What
+Is Expected: The Proof-Reader Effect of LLMs in Sanskrit OCR." In *Proceedings of the
+International Sanskrit Computational Linguistics Symposium (ISCLS 2026).* *[author to
+complete first names/pages when the proceedings volume is published]*
+
+Patel, Dhaval, and Amba Kulkarni. 2024. "Word Sense Alignment of Sanskrit Lexica."
+In *Proceedings of the 6th International Sanskrit Computational Linguistics Symposium
+(ISCLS 2024).* [aclanthology.org/2024.iscls-1.1](https://aclanthology.org/2024.iscls-1.1.pdf).
+
+Prasanna Venkatesh, T. S. 2024. "Contextual Spellchecking for Sanskrit." Demo
+presented at the 6th International Sanskrit Computational Linguistics Symposium
+(ISCLS 2024). *[demo track — no proceedings PDF; author to confirm citation form]*
+
+Zgusta, Ladislav. 1971. *Manual of Lexicography.* (Janua Linguarum, Series Maior 39.)
+Prague: Academia; The Hague and Paris: Mouton.
+
+**Primary digital source.** Cologne Digital Sanskrit Dictionaries (CDSL). Institute
+of Indology and Tamil Studies, University of Cologne.
+[`sanskrit-lexicon.uni-koeln.de`](https://www.sanskrit-lexicon.uni-koeln.de/).
 
