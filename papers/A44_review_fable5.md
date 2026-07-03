@@ -1,6 +1,6 @@
 # A44 — referee-style review (pre-submission)
 
-<p align="right"><sub>Created: 02-07-2026 · Last updated: 02-07-2026</sub></p>
+_Created: 02-07-2026 · Last updated: 03-07-2026_
 
 Substantive review of
 [A44_body_grounded_triage_paper.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/A44_body_grounded_triage_paper.md)
@@ -91,4 +91,41 @@ pass; (5) is agent-draftable + M.G. curation; (3) one paragraph + one citation; 
 human gate (schedule the second annotator now — longest lead time); (7) trivial. Realistic: two
 working sessions + the annotator to reach 4/5.
 
-<p align="right"><sub>Review: Claude Fable 5 (`claude-fable-5`) · paper: Dr. Mārcis Gasūns</sub></p>
+## Fixes applied (03-07-2026, Fable 5 `claude-fable-5`, H127/S16)
+
+All agent-doable findings applied in one pass ([H127](https://github.com/gasyoun/Uprava/blob/main/handoffs/H127_a44_fable_fixpass.md)):
+
+- **Major 1 (IJL reframe, partial)** — frontmatter venue locked to IJL; the apparatus
+  taxonomy is now a named table (Table 2a, five classes with markers and examples);
+  abstract leads with the 0.20 % hook. NOT yet done: per-dict × per-class counts (the
+  committed `wrong_readings` rows carry evidence but no structured class tag — a queued
+  mechanical extraction, flagged in-paper) and the full prose re-registering, which needs
+  the MG read-through.
+- **Major 2** — the 2026-07-02 verification pass folded in as new §4.5. **Correction to
+  this review's own numbers:** the committed
+  [VERIFICATION_2026_07.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/VERIFICATION_2026_07.md)
+  verdicts are **PASS 97 / SCAN-FIRST 12 / EDITORIAL 11 / DNF 1 / DROP 1** — not the
+  "92 / 17" quoted above; the paper uses the committed figures. Collision added as the
+  fifth candidate class (§3.2, §4.5); MW headline restated (§4.3); queue decay (~0.8 %/wk)
+  added to §6.
+- **Major 3** — reproducibility split written (deterministic layers exact; LLM pass a
+  floor under union-across-runs) and the
+  [eval.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/eval.py)
+  harness cited (0 FP vs ~31k known-good; recall vs 3,884 historical pairs).
+- **Major 4** — per-phase model attribution: Sonnet 4.6 (`claude-sonnet-4-6`) classify /
+  Opus 4.8 (`claude-opus-4-8`) confirm + adversarial (June 2026); Sonnet 5
+  (`claude-sonnet-5`) checkers + Fable 5 (`claude-fable-5`) adjudication (2026-07-02).
+- **Major 5** — §2 related work written; the two ISCLS items cited with honest hedges
+  (the 2026 proof-reader-effect paper pending proceedings; the 2024 demo has no PDF),
+  plus Patel & Kulkarni 2024, Zgusta 1971, Hausmann & Wiegand 1989, Atkins & Rundell
+  2008. References section added (the paper had none).
+- **Major 7** — abstract corpus-count phrasing fixed; canonical headline stamped
+  ("122 triage-confirmed, of which 97 survive source re-verification, as of 2026-07-02").
+- **Minors** — #447 cited as the production artifact / worked-example appendix; MCI's
+  proper title (*Mahābhārata Cultural Index*); the YAT b/v Bengali-print sentence;
+  readiness → 3/5.
+
+**Still open:** Major 6 — the human IRR second annotator (GTD `@DO`, the gate to 4/5);
+the per-class apparatus counts; MG's IJL-register read-through.
+
+_Review: Claude Fable 5 (`claude-fable-5`) · paper: Dr. Mārcis Gasūns_
