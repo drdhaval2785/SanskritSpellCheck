@@ -1,6 +1,6 @@
 # A37 — referee-style review (pre-submission)
 
-<p align="right"><sub>Created: 02-07-2026 · Last updated: 02-07-2026</sub></p>
+_Created: 02-07-2026 · Last updated: 03-07-2026_
 
 Substantive review of
 [A37_ortho_drift_paper.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/A37_ortho_drift_paper.md)
@@ -78,4 +78,40 @@ corrector) will land well with DSH's digital-editions readership.
 (6) needs one plotting session; (7) is a framing decision (recommended: case study). Realistic:
 two working sessions + M.G. read-through to reach 4/5.
 
-<p align="right"><sub>Review: Claude Fable 5 (`claude-fable-5`) · paper: Dr. Mārcis Gasūns</sub></p>
+## Fixes applied (03-07-2026, Fable 5 `claude-fable-5`, H125/S15)
+
+All agent-doable findings above were applied in one pass ([H125](https://github.com/gasyoun/Uprava/blob/main/handoffs/H125_a37_fable_polish.md)):
+
+- **Major 1** — §2 Related work WRITTEN, from verified literature only: normalisation
+  (Baron & Rayson 2008 VARD2; Bollmann 2012 Norma; Bollmann 2019 survey; Jurish 2012
+  DTA::CAB; Bawden et al. 2022 FreEM), stylochronometry/text-dating (Stamou 2008;
+  Niculae et al. 2014), reform historiography (Johnson 2005; Comrie, Stone & Polinsky
+  1996), metalanguage layer (Hausmann & Wiegand 1989). A full References section added
+  (the paper had none). The FABLE-index comparanda suggestions "Haaf 2014 / Clérice
+  2016 / Romanov 2019" could not be verified as apt and were NOT cited.
+- **Major 2** — "three-tier law" renamed **three-regime stratification** throughout;
+  the Latin regime-vs-vitality confound and the n=1 regime cells named in §9.
+- **Major 3** — PW/PWG dependence stated in §5 with the without-PW sensitivity
+  (n = 4, perfectly monotone, ρ = −1.00) and case-study-scale framing; the stale
+  t-approximation p-values replaced by the exact/permutation values from the merged
+  [#14](https://github.com/drdhaval2785/SanskritSpellCheck/pull/14) correction
+  (German p = 0.033 exact; English p = 0.016 Monte-Carlo).
+- **Major 4** — §4.4 reframed as an upper-epoch bound; the saturation is now stated
+  in §4.4 itself, consistent with §5.
+- **Major 5** — denominator-comparability paragraph added to §3.2.
+- **Major 6** — figures wired: new committed
+  [drift_composition.png](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ortho_drift/drift_composition.png)
+  (per-era composition stacked bars, the SCH era-flip; generated from the §4.1 table,
+  CVD-checked, grayscale-safe) as Figure 1 in §4.2, and the existing
+  [drift_dating.png](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ortho_drift/drift_dating.png)
+  referenced as Figure 2 in §5.
+- **Major 7** — §7 fixed as the tight Kossovich case study (the open alternative
+  removed).
+- **Minors** — abstract "780×/5×" precision-bait rephrased; "long 19th century"
+  aligned to the 1832–2009 span; data-availability statement written with the
+  wordlist snapshot identities (de_DE 103,756 · ropensci en_GB 56,571 · fr_FR);
+  frontmatter venue locked to DSH, readiness → 4/5.
+
+Remaining gates are **author-only**: byline finalisation and the MG read-through.
+
+_Review: Claude Fable 5 (`claude-fable-5`) · paper: Dr. Mārcis Gasūns_
