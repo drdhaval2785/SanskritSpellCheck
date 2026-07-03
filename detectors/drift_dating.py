@@ -144,6 +144,12 @@ def main():
     for lang in LANGS:
         fit_report(lang, data[lang])
 
+    print("\n[2b] German sensitivity WITHOUT PW (PW is Boehtlingk's abridgement of PWG --")
+    print('     same lexicographer/era/overlapping gloss text, so PW and PWG are not independent):')
+    de_nopw = [r for r in data['de'] if r[0] != 'PW']
+    fit_report('de', de_nopw)
+    print('    (case-study scale: n=4 after dropping PW; report alongside the n=5 figure.)')
+
     print('\n[3] Dating power -- leave-one-out year prediction from the rate:')
     for lang in ('de', 'en'):
         if len(data[lang]) >= 3:
@@ -205,6 +211,8 @@ def main():
     png = os.path.join(OUT, 'drift_dating.png')
     fig.savefig(png, dpi=130)
     print('\n  plot -> %s' % os.path.relpath(png, triage_util.ROOT))
+
+
 
 
 if __name__ == '__main__':
