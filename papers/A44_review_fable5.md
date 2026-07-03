@@ -95,12 +95,15 @@ working sessions + the annotator to reach 4/5.
 
 All agent-doable findings applied in one pass ([H127](https://github.com/gasyoun/Uprava/blob/main/handoffs/H127_a44_fable_fixpass.md)):
 
-- **Major 1 (IJL reframe, partial)** — frontmatter venue locked to IJL; the apparatus
-  taxonomy is now a named table (Table 2a, five classes with markers and examples);
-  abstract leads with the 0.20 % hook. NOT yet done: per-dict × per-class counts (the
-  committed `wrong_readings` rows carry evidence but no structured class tag — a queued
-  mechanical extraction, flagged in-paper) and the full prose re-registering, which needs
-  the MG read-through.
+- **Major 1 (IJL reframe) — completed across two concurrent passes.** H127
+  ([PR #17](https://github.com/drdhaval2785/SanskritSpellCheck/pull/17)) locked the venue,
+  named the apparatus table, and moved the 0.20 % hook to sentence one; a parallel session's
+  fuller rewrite ([PR #16](https://github.com/drdhaval2785/SanskritSpellCheck/pull/16),
+  merged after with its version taking precedence on the paper) completed the full IJL
+  re-registering — pipeline mechanics to Appendix A and the per-dict × per-class apparatus
+  counts extracted into Tables 2a/2b (cross-ref 1,048 · other 845 · v.l. 260 · w.r. 259 ·
+  in-comp 137 = 2,549 exactly). The paper text on `master` is PR #16's; this addendum and
+  the review-file hygiene are PR #17's.
 - **Major 2** — the 2026-07-02 verification pass folded in as new §4.5. **Correction to
   this review's own numbers:** the committed
   [VERIFICATION_2026_07.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/VERIFICATION_2026_07.md)
@@ -126,6 +129,6 @@ All agent-doable findings applied in one pass ([H127](https://github.com/gasyoun
   readiness → 3/5.
 
 **Still open:** Major 6 — the human IRR second annotator (GTD `@DO`, the gate to 4/5);
-the per-class apparatus counts; MG's IJL-register read-through.
+MG's References verification pass and IJL-register read-through.
 
 _Review: Claude Fable 5 (`claude-fable-5`) · paper: Dr. Mārcis Gasūns_
