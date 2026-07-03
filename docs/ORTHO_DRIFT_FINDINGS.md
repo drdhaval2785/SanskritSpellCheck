@@ -303,11 +303,19 @@ must therefore be done **within** a language.
 
 **2. Within a language, monotonicity tracks the reform regime.** Spearman ρ(year, drift/1k):
 
-| language | n | Spearman ρ | leave-one-out year MAE | reading |
-|---|--:|--:|--:|---|
-| **German** (legislated) | 5 | **−0.975** (p=0.005) | **±15 yr** | a usable coarse dater; linear R²=0.87 |
-| English (convention) | 14 | −0.642 (p=0.013) | ±40 yr | significant but editor-noisy + saturated |
-| French | 2 | −1.0 | — | trivial (2 points) |
+| language | n | Spearman ρ | exact/permutation p | leave-one-out year MAE | reading |
+|---|--:|--:|--:|--:|---|
+| **German** (legislated) | 5 | **−0.975** | **0.033** (exact, 60 perms) | **±15 yr** | a usable coarse dater; linear R²=0.87 |
+| English (convention) | 14 | −0.642 | 0.016 (Monte-Carlo) | ±40 yr | significant but editor-noisy + saturated |
+| French | 2 | −1.0 | 1.000 (only 2 perms) | — | trivial (2 points) |
+
+> **Significance correction (2026-07-03).** scipy's default Spearman p is a t-approximation
+> that is **invalid at these sample sizes** — at n=5 it reported p=0.005 for German, below the
+> exact minimum (~1/60 ≈ 0.017), and it mis-weights the 7 tied zeros in English. The exact
+> permutation p (`drift_dating.py::exact_spearman_p`, all 60 distinct year-permutations for
+> German; 100k Monte-Carlo for English) gives **German p = 0.033** (still significant, ~7× the
+> t-approx) and **English p = 0.016**. The German dating gradient is real but should be reported
+> at p = 0.033, and the "±15 yr instrument" rests on n=5 — coarse, as the text already says.
 
 The **legislated** German gradient is tight (ρ = −0.975, ±15 yr over 1865–1928). The **convention**
 English gradient is weak: editor idiosyncrasy outranks date below the early-19th-c. peak — Macdonell's

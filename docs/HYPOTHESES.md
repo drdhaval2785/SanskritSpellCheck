@@ -65,6 +65,10 @@ Preventing bad bulk edits is worth more than the few corrections.
   post-1901. Recency control: **PD (1976–2009, 1.32 M tokens) = 0.00/1k**, PE/BHS/IEG = 0.00, VEI
   0.06 — yielding a monotone gradient **WIL 1832 (0.57) → MW 1899 (0.01) → modern (0.00)**.
 - **Consequence:** opens O4 (drift-rate as a *dating* tool).
+- **Significance (2026-07-03, exact test):** the *scalar-rate* dater is real but weaker than the
+  t-approximation implied — German ρ=−0.975 is significant at **exact permutation p=0.033** (not
+  scipy's invalid-at-n=5 p=0.005), English at p=0.016 (Monte-Carlo). So H5's fine dating rests on
+  the SCH-style **per-era composition**, not the n=5 scalar gradient. See `drift_dating.py::exact_spearman_p`.
 
 ### H6 — A diachronic corpus's normalization layer yields valid reform pairs after dic-validation + frequency thresholding
 - **Test:** harvest `surface ≠ DTA::CAB-norm` pairs from the Deutsches Textarchiv lingattr-TEI corpus

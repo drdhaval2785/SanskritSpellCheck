@@ -65,6 +65,34 @@ def load(lang):
     return rows
 
 
+def exact_spearman_p(yrs, rate, rng_iters=100000):
+    """Two-tailed permutation p for Spearman rho: fraction of year-permutations whose
+    |rho| >= |observed|. scipy's default p is a t-approximation that is unreliable at
+    small n (at n=5 it can report p<0.01, below the exact minimum of ~1/60) and with
+    heavy ties -- so report the exact/Monte-Carlo permutation p alongside it.
+    Exact enumeration for n<=8 (<=40320 perms); Monte-Carlo above."""
+    from itertools import permutations
+    obs = abs(stats.spearmanr(yrs, rate)[0])
+    n = len(yrs)
+    if n <= 8:
+        seen, total, ge = set(), 0, 0
+        for perm in permutations(yrs):
+            if perm in seen:
+                continue
+            seen.add(perm)
+            total += 1
+            if abs(stats.spearmanr(perm, rate)[0]) >= obs - 1e-9:
+                ge += 1
+        return ge / total, total, 'exact'
+    rng = np.random.default_rng(20260703)
+    y = np.array(yrs, float)
+    ge = 0
+    for _ in range(rng_iters):
+        if abs(stats.spearmanr(rng.permutation(y), rate)[0]) >= obs - 1e-9:
+            ge += 1
+    return ge / rng_iters, rng_iters, 'monte-carlo'
+
+
 def fit_report(lang, rows):
     if len(rows) < 2:
         print('  %s: %d point(s) -- cannot fit (%s)'
@@ -73,8 +101,11 @@ def fit_report(lang, rows):
     yrs = np.array([y for _, y, _ in rows], float)
     rate = np.array([r for _, _, r in rows], float)
     rho, p = stats.spearmanr(yrs, rate)
-    print('  %s (n=%d): Spearman(year, drift/1k) = %+.3f (p=%.3f); rates %.2f..%.2f over %d..%d'
-          % (LANG_NAME[lang], len(rows), rho, p, rate.min(), rate.max(), int(yrs.min()), int(yrs.max())))
+    p_perm, n_perm, kind = exact_spearman_p([y for _, y, _ in rows], rate)
+    print('  %s (n=%d): Spearman(year, drift/1k) = %+.3f (t-approx p=%.3f; %s permutation p=%.3f over %d) '
+          '; rates %.2f..%.2f over %d..%d'
+          % (LANG_NAME[lang], len(rows), rho, p, kind, p_perm, n_perm,
+             rate.min(), rate.max(), int(yrs.min()), int(yrs.max())))
     return rho
 
 
