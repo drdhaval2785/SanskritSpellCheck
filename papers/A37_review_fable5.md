@@ -3,7 +3,7 @@
 _Created: 02-07-2026 · Last updated: 03-07-2026_
 
 Substantive review of
-[A37_ortho_drift_paper.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/A37_ortho_drift_paper.md)
+[H042-Fable_SanskritSpellCheck_ortho_drift_26.06.26_paper.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/H042-Fable_SanskritSpellCheck_ortho_drift_26.06.26_paper.md)
 by Fable 5 (`claude-fable-5`), 02-07-2026, within the Fable trial window — the highest-judgment
 gate the roadmap assigns to this period. Target venue per the locked split: **DSH** (Digital
 Scholarship in the Humanities). Fact-checking was done separately (02-07, ~35 claims, 5 fixes);
@@ -80,7 +80,7 @@ two working sessions + M.G. read-through to reach 4/5.
 
 ## Fixes applied (03-07-2026, Fable 5 `claude-fable-5`, H125/S15)
 
-All agent-doable findings above were applied in one pass ([H125](https://github.com/gasyoun/Uprava/blob/main/handoffs/H125_a37_fable_polish.md)):
+All agent-doable findings above were applied in one pass ([H125](https://github.com/gasyoun/Uprava/blob/main/handoffs/H125-Fable_SanskritSpellCheck_a37_fable_polish_03.07.26.md)):
 
 - **Major 1** — §2 Related work WRITTEN, from verified literature only: normalisation
   (Baron & Rayson 2008 VARD2; Bollmann 2012 Norma; Bollmann 2019 survey; Jurish 2012

@@ -124,7 +124,7 @@ ready for a dated entry.
   Method language-general; map epoch-bound — kept the validated pairs
   ([fr_reform_freem_pairs.tsv](ortho_drift/fr_reform_freem_pairs.tsv)) + banked the BUR/STC FreEM runs
   (`*_drift_report.freem.txt`), but **froze** the canonical fr map/figures (as with O3). Written up in
-  `docs/ORTHO_DRIFT_FINDINGS.md` ("O6"). Closes O6 in `HANDOFF_NEXT.md`.
+  `docs/ORTHO_DRIFT_FINDINGS.md` ("O6"). Closes O6 in `H008-Opus_SanskritSpellCheck_NEXT_23.06.26.md`.
 - **Ortho-drift O4 — drift-rate as a dating tool.** New [detectors/drift_dating.py](detectors/drift_dating.py)
   calibrates drift/1k ↔ publication year across the five languages (Spearman + leave-one-out year
   prediction + a symlog scatter, `ortho_drift/drift_dating.png`). Finding: drift/1k is a **coarse,
@@ -135,7 +135,7 @@ ready for a dated entry.
   Macdonell's `-xion` puts MD 1893 above BEN 1866). (3) The **per-era composition** out-dates the
   scalar rate: a pre-1901 rate-fit mis-dates SCH-1928 to 1896 (−32 yr), but its `ss`-dominant
   composition pins it post-1901/pre-1996 (the O3 control). Written up in `docs/ORTHO_DRIFT_FINDINGS.md`
-  ("O4" section). Closes O4 in `HANDOFF_NEXT.md`.
+  ("O4" section). Closes O4 in `H008-Opus_SanskritSpellCheck_NEXT_23.06.26.md`.
 
 ### Changed
 - **`ocr_verify.py` — admin-free easyocr OCR backend (O7 prep).** tesseract is admin-gated on some
@@ -144,7 +144,7 @@ ready for a dated entry.
   runs. Docstring notes the Cologne `servepdf.php` IP-throttle (429). **O7 measurement still pending:**
   the pilot ran end-to-end except the scan fetch, which 429s hard on this IP (persists at 20 s spacing +
   browser UA) — deferred until the server cooldown; rerun `python ocr_verify.py <DICT>_file_first_sf.txt N`
-  then read the CONFIRM/DENY/UNCERTAIN split. See O7 in `HANDOFF_NEXT.md`.
+  then read the CONFIRM/DENY/UNCERTAIN split. See O7 in `H008-Opus_SanskritSpellCheck_NEXT_23.06.26.md`.
 
 ### Investigated (no code change)
 - **O2 / R6 — vidyut inflection-aware attestation is not a reliable "real word" signal.** With vidyut
@@ -155,7 +155,7 @@ ready for a dated entry.
   misspelling often coincidentally lands on a valid form; in tier B attestation fires *more* on errors
   than on others). A "demote if attested" rule would drop ~404 known real errors (vs R5's 60). **No
   scorer change** — surface attestation (DCS *or* vidyut) is orthogonal to typo-vs-real; only the body
-  settles it. Written up as R6 in `docs/HYPOTHESES.md`. Closes O2 in `HANDOFF_NEXT.md`.
+  settles it. Written up as R6 in `docs/HYPOTHESES.md`. Closes O2 in `H008-Opus_SanskritSpellCheck_NEXT_23.06.26.md`.
 - **O1 / R5 — a model-free body lookup in the ranker cannot demote real-word minimal pairs.**
   Tested whether a cheap deterministic `EntryIndex` body check could close R1's gap (the engine
   mis-ranking `patra`/`pAtra`) without an LLM triage. Probed every candidate body signal against the
@@ -166,7 +166,7 @@ ready for a dated entry.
   tier B). The tightest `patra`-signature rule still demotes 60 known real errors (20 % of tier-B
   known pairs) for 244 unverified others. **Made no change to `score_tier`** — the body must be read
   (LLM triage), not measured; R1 is a semantic ceiling. Written up as R5 in `docs/HYPOTHESES.md`
-  (O1 refuted). Closes O1 in `HANDOFF_NEXT.md`.
+  (O1 refuted). Closes O1 in `H008-Opus_SanskritSpellCheck_NEXT_23.06.26.md`.
 
 ### Changed
 - **Ortho-drift O5 — split the typographic æ/œ ligature out of the reform-drift rate.**
@@ -180,7 +180,7 @@ ready for a dated entry.
   modern recency-control anchors read 0.00. Re-ran all 15 EN dicts (per-era columns reproduce the
   frozen values exactly; `en_reform_map.tsv` byte-identical); updated `docs/ORTHO_DRIFT_FINDINGS.md`
   (EN tables + the tier summary) and `ortho_drift/en_drift_summary.tsv`. Non-EN summaries unaffected
-  (no ligature era). Closes O5 in `HANDOFF_NEXT.md`.
+  (no ligature era). Closes O5 in `H008-Opus_SanskritSpellCheck_NEXT_23.06.26.md`.
 
 ### Added
 - **Ortho-drift O3 — re-ran the German cluster (PW/PWG/GRA/CCS/SCH) against the full 15,685-form
@@ -194,7 +194,7 @@ ready for a dated entry.
   the expanded map is a search-normalization recall asset, not a drift-rate metric. Expanded-run
   outputs banked as `ortho_drift/de_drift_summary.expanded_map.tsv` +
   `ortho_drift/<DICT>_drift_report.expanded_map.txt`; the committed frozen reports are unchanged.
-  Written up in `docs/ORTHO_DRIFT_FINDINGS.md` (new "O3" subsection). Closes O3 in `HANDOFF_NEXT.md`.
+  Written up in `docs/ORTHO_DRIFT_FINDINGS.md` (new "O3" subsection). Closes O3 in `H008-Opus_SanskritSpellCheck_NEXT_23.06.26.md`.
 - **`docs/HYPOTHESES.md` — project hypothesis ledger.** Documents in detail every testable
   hypothesis behind the toolset, with verdicts and evidence: **7 confirmed** (body = ground truth;
   tier-A precision near-zero on mature dicts; do-not-file is the deliverable; drift = f(reform type);
@@ -234,7 +234,7 @@ ready for a dated entry.
   C-stuck known o_vs_O pairs (99 % `spell_correct`, band 0–2) don't benefit. **Rejected the tier
   promotion**; kept a documented `CORROB_*` **score nudge** (rank corroborated candidates higher
   within their tier). Tiers unchanged (A=5371/B=4693/C=4688), `eval.py` FP=0. Write-up in Task 2 of
-  [HANDOFF_NEXT.md](HANDOFF_NEXT.md).
+  [H008-Opus_SanskritSpellCheck_NEXT_23.06.26.md](H008-Opus_SanskritSpellCheck_NEXT_23.06.26.md).
 - **Ortho-drift within-EN recency control (Task 3 done).** Registered the five modern-leaning English
   dicts **PD / PE / BHS / IEG / VEI** as `en` in `ortho_drift.py`'s `LANG_OF` and ran them against the
   `en_GB` reference (`ropensci/hunspell` `en_GB.dic`, staged at `external_src/hunspell/`, gitignored;
@@ -243,7 +243,7 @@ ready for a dated entry.
   gradient sits at ≈ 0, confirming the metric dates orthography. Full English picture is now a monotone
   recency gradient WIL 1832 (0.57) → MW 1899 (0.01) → modern (0.00). Written up in
   [docs/ORTHO_DRIFT_FINDINGS.md](docs/ORTHO_DRIFT_FINDINGS.md); 10-dict table left stable, 5 rows added.
-- **Handoff roadmap rewritten** ([HANDOFF_NEXT.md](HANDOFF_NEXT.md)) as a prioritized 4-task
+- **Handoff roadmap rewritten** ([H008-Opus_SanskritSpellCheck_NEXT_23.06.26.md](H008-Opus_SanskritSpellCheck_NEXT_23.06.26.md)) as a prioritized 4-task
   roadmap: (1) draft the CORRECTIONS umbrella issue for the 122 FILE-FIRST typos (OCR-prefiltered,
   pilot-SHS-then-scale), (2) tier-C calibration, (3) ortho-drift recency control, (4) DTA/RIDGES
   long-tail merge — each with a paste-ready fresh-chat brief + its data prerequisite.

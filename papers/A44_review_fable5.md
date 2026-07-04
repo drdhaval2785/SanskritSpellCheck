@@ -3,7 +3,7 @@
 _Created: 02-07-2026 · Last updated: 03-07-2026_
 
 Substantive review of
-[A44_body_grounded_triage_paper.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/A44_body_grounded_triage_paper.md)
+[H047-Opus_SanskritSpellCheck_body_grounded_triage_26.06.26_paper.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/H047-Opus_SanskritSpellCheck_body_grounded_triage_26.06.26_paper.md)
 by Fable 5 (`claude-fable-5`), 02-07-2026, within the Fable trial window. Target venue per the
 locked split: **International Journal of Lexicography** — note the draft's frontmatter still
 says DSH/Cultural Analytics/eLex and the prose is written for that NLP-leaning audience; the
@@ -93,7 +93,7 @@ working sessions + the annotator to reach 4/5.
 
 ## Fixes applied (03-07-2026, Fable 5 `claude-fable-5`, H127/S16)
 
-All agent-doable findings applied in one pass ([H127](https://github.com/gasyoun/Uprava/blob/main/handoffs/H127_a44_fable_fixpass.md)):
+All agent-doable findings applied in one pass ([H127](https://github.com/gasyoun/Uprava/blob/main/handoffs/H127-Fable_SanskritSpellCheck_a44_fable_fixpass_03.07.26.md)):
 
 - **Major 1 (IJL reframe) — completed across two concurrent passes.** H127
   ([PR #17](https://github.com/drdhaval2785/SanskritSpellCheck/pull/17)) locked the venue,
