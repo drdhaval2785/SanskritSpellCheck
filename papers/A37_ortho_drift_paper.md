@@ -171,8 +171,9 @@ are pre-1918 by definition): 87 636 tokens · **31 389 drift · 358.17 / 1k ≈ 
 `kossovich.jsonl` — external to the Cologne 33.
 
 ### 4.4 English — convention drift, editor- and age-dependent
-Ten English dictionaries (nine dated 19th-c., plus the undated modern Apte held out
-as a test case) against `en_GB` (so British `honour`/`-ise`/`-re` are not
+Fifteen English dictionaries — fourteen dated (the n = 14 of §5's correlation), plus
+the undated modern Apte held out
+as a test case — against `en_GB` (so British `honour`/`-ise`/`-re` are not
 flagged). The æ/œ **ligature is split out** of the reform rate as a *typographic*
 convention. True reform-drift then declines with recency at the early end — **WIL
 1832 (0.46) ≫ MD 1893 (0.14) > MW 1899 (0.01)** — and then **saturates at zero**: a
