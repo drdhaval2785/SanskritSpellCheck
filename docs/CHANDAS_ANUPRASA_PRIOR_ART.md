@@ -1,6 +1,6 @@
 # Chandas validation + Anuprāsa analysis — prior-art survey
 
-<p align="right"><sub>Created: 02-07-2026 · Last updated: 02-07-2026</sub></p>
+_Created: 02-07-2026 · Last updated: 06-07-2026_
 
 Survey run 02-07-2026 (four Sonnet 5 `claude-sonnet-5` research agents; Fable 5
 `claude-fable-5` synthesis) to ground the **batch chandas (meter) validator** — a planned
@@ -96,4 +96,99 @@ and [iscls.github.io/program.html](https://iscls.github.io/program.html) (2026):
   substrate than raw GRETIL for the meter validator.
 - ISCLS 2024 also carries M.G.'s own demo ("Future of Cologne Digital Lexicons").
 
-<p align="right"><sub>Dr. Mārcis Gasūns</sub></p>
+## 4. Pilot results (06-07-2026, Sonnet 5 `claude-sonnet-5`)
+
+Ran the scoped pilot from §2: `pip install skrutable chanda`, one clean GRETIL text
+([Kālidāsa's Meghadūta per Vallabhadeva/Hultzsch](https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/5_poetry/2_kavya/kmeghvpu.htm),
+111 verses, uniformly mandākrāntā — the same text Chandojñānam's own paper used), ran
+both tools on all 111 verses, diffed verdicts, hand-checked every disagreement against a
+second independent GRETIL rendering of the same edition
+([pada-marked edition](http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/5_poetry/2_kavya/kmeghvau.htm)),
+and propose an output format below. **Analysis scripts were throwaway (not committed) —
+scoped as a tiny pilot per the M.G. timing ruling above; the code is trivial to
+reproduce from this writeup if a batch tool is built in Q1 2027.**
+
+**Method:** skrutable's `identify_meter` was run once per **full 4-pada verse** (its
+`resplit_lite` default correctly locates pāda boundaries in a whole verse — feeding it
+half-verse or single-pāda fragments confuses the resplit heuristic and produces bogus
+meter guesses, e.g. "upagīti" instead of mandākrāntā). chanda's `analyze_line` was run
+once per **physical half-verse line** (GRETIL's plain-text edition prints 2 padas per
+line with no internal pada marker for mandākrāntā's long lines) — chanda's own
+pada-doubling detection inside a single `analyze_line` call resolves both padas
+correctly without needing `verse_mode`.
+
+**Results — 111/111 verses agree on mandākrāntā** (the correct, well-known meter of the
+entire poem), but the two tools disagree sharply on *how confidently* they get there:
+
+| | skrutable (full verse) | chanda (per half-line, 222 lines) |
+|---|---|---|
+| Exact/clean match | 110/111 perfect | 31/222 (14%) exact |
+| Needed fuzzy recovery | — | 191/222 (86%), cost 1–3, similarity 0.91–0.97 |
+| Flagged imperfect | 1/111 (v62, see below) | 0 exact "no match" cases once fuzzy is included |
+
+**Finding 1 — chanda's exact/strict matcher is not a usable clean-text baseline on its
+own.** It fails outright on ~72% of genuinely correct, untouched verses in this poem, and
+needs its fuzzy fallback (`fuzzy=True`) to recover the right answer nearly every time.
+Root-caused by inspecting the fuzzy `suggestion` edit-ops on 10+ sampled lines: chanda's
+strict scansion does not (a) resyllabify a word-final single consonant across a
+following vowel-initial word (it scores the syllable heavy by the dangling consonant
+instead of carrying the consonant onto the next syllable, e.g. `vasatir alakā` → `tir`
+wrongly scored guru), and (b) does not apply the padānta-guru convention (a pāda's final
+syllable counts as heavy by convention regardless of what follows — chanda's exact
+engine scores it by its literal weight instead). **Implication for the validator: use
+chanda's exact-OR-fuzzy(cost ≤ 2, similarity ≥ 0.9) match as its "clean" signal, never
+exact-match alone — an exact-only gate would false-flag ~70% of undamaged verses as
+corrupt.**
+
+**Finding 2 — chanda's top-ranked fuzzy guess can name the wrong (but metrically
+adjacent) meter on a near-tie.** v108's first half-line: chanda's rank-1 fuzzy guess was
+*kusumitalatāvellitā* (cost 2, similarity 0.944) with the correct *mandākrāntā* ranked
+2nd at virtually the same cost/similarity (cost 2, similarity 0.941) — both skrutable and
+the verse's other half-line confirm mandākrāntā. **Implication: check chanda's top-*k*
+fuzzy candidates against skrutable's verse-level label, not chanda's rank-1 alone, when
+costs are within ~0.01 similarity of each other.**
+
+**Finding 3 — skrutable correctly caught one genuine hypermetric pāda.** v62 pāda 4
+(`cchāyābhinnaḥ sphaṭikaviśadaṃ nirviśeḥ paravataṃ tam`) scans to **18 syllables**, one
+more than mandākrāntā's 17 (`gggglllllgglglllgg` + trailing syllable) —
+`skrutable.diagnostic.problem_syllables = {'4': [13]}`, `is_perfect=False`. Confirmed
+identical across both independent GRETIL files of the Hultzsch/Vallabhadeva edition (not
+a transcription artifact on my end). **This is exactly the "pāda that breaks its
+identified meter is a suspect-text signal" the validator is meant to surface** — a
+genuine text-critical crux at this verse, deferred to a human with the Hultzsch edition
+apparatus in hand (Mallinatha's alternate recension numbers this verse differently and
+may read the pāda differently — worth a scholar's cross-check before treating this as an
+error vs. an accepted metrical license, but the *detection* itself is a true positive.)
+
+**Proposed detector output format** (per-verse-locus record, matches the flat
+"file + locus + pāda + positions" shape already scoped in §2's "glue needed" list):
+
+```
+{
+  "source": "GRETIL:kmeghvpu (Meghadūta, Vallabhadeva)",
+  "locus": "KMdV_62",
+  "skrutable": {"meter": "mandākrāntā", "is_perfect": false, "problem_padas": {"4": [13]}},
+  "chanda": [
+    {"pada_pair": "1-2", "match": "exact", "meter": "mandākrāntā"},
+    {"pada_pair": "3-4", "match": "fuzzy", "meter": "mandākrāntā", "cost": 2, "similarity": 0.941}
+  ],
+  "verdict": "suspect",           // clean | suspect | review
+  "verdict_reason": "skrutable is_perfect=false (hypermetric pāda 4)"
+}
+```
+
+`verdict` rule: **clean** = skrutable perfect AND chanda exact-or-fuzzy(cost≤2) agrees;
+**review** = chanda's top-fuzzy meter disagrees with skrutable but within a near-tie
+(Finding 2); **suspect** = skrutable imperfect, OR chanda's best candidate (any cost)
+never matches skrutable's meter. On this 111-verse corpus: 109 clean, 1 review (v108),
+1 suspect (v62) — i.e. the two-tool ensemble converges to exactly the residual anomalies
+worth a human's attention, at ~1.8% of verses, which is a workable review load for a
+full corpus run.
+
+**Not done in this pilot (Q1 2027 scope, per §2):** the GRETIL walker/TEI parser for
+batch ingestion across text families, license clarification for `skrutable`
+(custom share-alike, not OSI) and `chanda` (license "Other") before any redistribution
+of derived outputs, and skrutable's silent `None`-case policy for both-pādas-wrong
+verses.
+
+_Dr. Mārcis Gasūns_
