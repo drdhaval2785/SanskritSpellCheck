@@ -60,7 +60,7 @@ CORROB_CW = 0.05
 
 class Cand:
     __slots__ = ('suspect', 'detectors', 'sugg_dets', 'sugg_dicts', 'reasons', 'dicts',
-                 'morph', 'corroborated', 'union_n')
+                 'morph', 'corroborated', 'union_n', 'meter')
 
     def __init__(self, suspect):
         self.suspect = suspect
@@ -72,6 +72,7 @@ class Cand:
         self.morph = False                              # vidyut: suggestion is a valid stem, suspect is not
         self.corroborated = False                       # corpus+confusion corroboration (ranking nudge)
         self.union_n = 0                                # union index: # of dicts attesting this suspect
+        self.meter = None                               # meter_check corroboration level: 'suspect'|'review'|None
 
 
 def ensure_outputs(sanhw1, rerun):
@@ -129,6 +130,26 @@ def aggregate():
                 rcode, _, detail = mid.partition('=')
                 if x in whitelist:
                     continue
+                if name == 'meter_check':
+                    # H277: meter_check is a pure CORROBORATION NUDGE, not a detector
+                    # peer. It never INTRODUCES a candidate (an ordinary word merely
+                    # co-occurring with an irregular kavya verse is coincidence, not a
+                    # spelling signal -- kavya vocabulary overlaps ordinary headwords
+                    # too much) and never joins c.detectors (so it can never lift ndet
+                    # to 2 and promote a candidate to tier A on a coincidence -- the
+                    # exact failure the CORROB_* block above rejected for a similar
+                    # corpus signal). It only strengthens the RANK of a candidate an
+                    # independent spelling detector already surfaced, via a small
+                    # score nudge in score_tier keyed on c.meter. So: annotate an
+                    # existing candidate; skip if none.
+                    c = cands.get(x)
+                    if c is None:
+                        continue
+                    level = 'suspect' if detail.startswith('suspect') else 'review'
+                    if level == 'suspect' or c.meter is None:
+                        c.meter = level
+                    c.reasons.append((name, rcode, detail))
+                    continue
                 c = get(x)
                 c.detectors.add(name)
                 c.reasons.append((name, rcode, detail))
@@ -162,9 +183,13 @@ def score_tier(c, dcs, weights, stems, union=None):
     # violation is a real error even if a shared digitization mistake is attested
     # in several dicts). When the union index is absent, c.union_n is 0 -> no effect.
     c.union_n = ua.attestation(c.suspect, union) if union is not None else 0
+    # meter corroboration (H277): a small RANK nudge only -- suspect verse a touch
+    # more than review. Never a tier promoter (see aggregate()'s meter_check note);
+    # c.meter is not in c.detectors, so it does not touch ndet/tier below.
+    meter_nudge = 8 if c.meter == 'suspect' else 4 if c.meter == 'review' else 0
     score = (ndet * 100 + best_band * 10 + (50 if hpf else 0) + len(c.dicts)
              + round(cw * 20) + (15 if c.morph else 0) + (5 if c.corroborated else 0)
-             - min(c.union_n, 12))
+             + meter_nudge - min(c.union_n, 12))
     if c.detectors == {'dict_vs_corpus'}:
         tier = 'C'                              # exploratory alone (corroboration ranks it up in C)
     elif ndet >= 2 or hpf or best_band == 5:
@@ -211,9 +236,10 @@ def main(sanhw1, rerun):
     with open(os.path.join(HERE, 'combined_candidates.txt'), 'w', encoding='utf-8') as f:
         for score, tier, band, best, c in rows:
             dets = ",".join(sorted(c.detectors))
-            f.write("%s\t%d\t%s -> %s\t[%s]\t[%s]%s%s\n"
+            f.write("%s\t%d\t%s -> %s\t[%s]\t[%s]%s%s%s\n"
                     % (tier, score, c.suspect, best or "(flag)", dets, ",".join(sorted(c.dicts)),
                        "\tmorph" if c.morph else "",
+                       "\tmeter=%s" % c.meter if c.meter else "",
                        "\tunion=%d" % c.union_n if c.union_n else ""))
 
     # combined_sf.txt -- standard format; emit only the dicts a corrector tied to
@@ -290,6 +316,8 @@ def write_review_html(rows, path, cap=1500):
         reason = "; ".join("%s:%s" % (d, code) for d, code, _ in c.reasons)
         if c.morph:
             reason = (reason + " morph✓").strip()
+        if c.meter:
+            reason = (reason + " meter:%s" % c.meter).strip()
         data.append({'w': c.suspect, 's': best, 'tier': tier, 'score': score,
                      'dets': sorted(c.detectors), 'dicts': sorted(c.dicts), 'reason': reason})
     payload = html.escape(json.dumps(data, ensure_ascii=False)).replace('</', '<\\/')
