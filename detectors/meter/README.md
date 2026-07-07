@@ -16,9 +16,18 @@ following on the pilot in
 gretil_walker.py      -- parse GRETIL corpustei plaintext -> verse records
 meter_ident.py         -- skrutable + chanda + vidyut-chandas 3-way vote -> verdict
 build_meter_index.py   -- offline, corpus-scale: walker + ident -> meter_verdicts.jsonl
+reprocess_verdicts.py  -- recompute verdicts from a built index (verdict()-only changes; no tool re-run)
 headword_bridge.py     -- word -> dictionary-headword bridge (vidyut.cheda lemmatizer)
 ../meter_check.py      -- reads meter_verdicts.jsonl + live sanhw1.txt -> meter_suspects.txt
 ```
+
+`meter_verdicts.jsonl` stores each verse's raw `skrutable`/`chanda`/`vidyut` tool
+outputs alongside its `verdict`, so a change to the VERDICT-COMPUTATION alone
+(`meter_ident.verdict()`) is re-derived in seconds with
+[`reprocess_verdicts.py`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/meter/reprocess_verdicts.py)
+(dry-run prints an old→new confusion matrix; `--apply` rewrites in place) —
+**no** re-invocation of skrutable/chanda/vidyut over the corpus. Only a change to
+the per-verse IDENTIFICATION logic needs a full `build_meter_index.py` rerun.
 
 `build_meter_index.py` is the only expensive step (~0.14 s/verse, ~26k verses
 in the Kavya section -> ~1 hour) and is **not** re-run by `run_all.py` itself
@@ -52,27 +61,72 @@ mkdir -p detectors/gretil_kavya_raw
 python detectors/meter/build_meter_index.py
 ```
 
-## Actual results (full corpus, 07-07-2026)
+## Actual results (full corpus, recalibrated H277 07-07-2026)
 
 25,824 verse-shaped blocks parsed (9,005 blocks skipped for having no locus
 tag -- prose/commentary interleaving; 184 blocks skipped as prose by the
-`MAX_VERSE_CHARS` filter below), 25,705 scored:
+`MAX_VERSE_CHARS` filter below):
 
-| Verdict | Count | Share |
+| Verdict | H251 (initial) | H277 (recalibrated) |
 |---|---|---|
-| clean | 15,772 | 61.4% |
-| review | 6,357 | 24.7% |
-| suspect | 3,695 | 14.4% |
+| clean   | 15,772 (61.1%) | **21,714 (84.1%)** |
+| review  |  6,357 (24.6%) |  **1,438 (5.6%)** |
+| suspect |  3,695 (14.3%) |  **2,672 (10.3%)** |
 
-`meter_check.py` bridges 10,052 non-clean verses to 7,925 distinct
-headwords (`detectors/meter_suspects.txt`). The combined review+suspect
-rate (39.1%) is much higher than the single-text pilot's 1.8% -- expected,
-since the pilot used one clean mandākrāntā edition and this corpus spans 57
-texts of far more variable meter families and markup quality (per the
-locked decision 2's own warning) -- but **a human should decide** whether
-the `review` threshold (chanda fuzzy cost≤2/similarity≥0.9) needs
-recalibrating against a larger hand-checked sample before this signal is
-trusted for anything beyond its current ranking-nudge role in `run_all.py`.
+The initial H251 run's 39.1% non-clean rate was, per user review
+(07-07-2026), implausibly high — "no human will check so many; in all the
+Cologne dictionaries we had 120+ suspected words before". The **H277
+recalibration** root-caused and fixed it (see next section): non-clean fell
+to **15.9%**, and the bridge — now DCS-rarity-gated and consumed by
+`run_all.py` as a corroboration nudge only — flags **1,719** distinct *rare*
+headwords (`detectors/meter_suspects.txt`), of which only ~46 also carry an
+independent spelling-detector signal (the informative set).
+
+## Recalibration (H277, 07-07-2026)
+
+The 39% non-clean rate was **over-flagging valid poetry**, not finding
+corruption. Root cause, in two parts:
+
+1. **skrutable's `is_perfect=False` is not corruption evidence.** It means "this
+   is not the single most-regular sub-pattern (pathyā)", and fires on named,
+   metrically valid varieties — anuṣṭubh with a *vipulā* / *asamīcīnā*, an
+   *upajāti* triṣṭubh mix — which are standard Classical poetic license. ~24.7%
+   of the corpus was `is_perfect=False` with an **empty `problem_padas`** (no
+   localized broken syllable named).
+2. **The chanda meter-identity cross-check fired on valid varieties.** skrutable's
+   verbose variety labels (`upajāti triṣṭubh: indravajrā 1,2,4; upendravajrā 3`)
+   are not string-comparable to chanda's per-line names, so "chanda disagrees"
+   was flagged as `review` on perfectly valid verses.
+
+**Fix** (`meter_ident.verdict()`): the only per-verse signals kept are a
+**localized broken syllable** (non-empty `problem_padas`) or a **total scan
+failure** (skrutable's empty / `na kiṃcid adhyavasitam` label — see
+`_skrutable_scanned()`). A verse skrutable scanned to any recognized meter/variety
+with no localized defect is `clean`, regardless of `is_perfect` and regardless of
+a bare chanda/vidyut name disagreement. The 3-way vote still decides `suspect` vs
+`review` *within* the localized-defect / scan-failure branch (contradicted or
+uncorroborated → suspect; a localized defect the tools still fit → review). This
+converges the non-clean set to skrutable's ~14.2% genuinely-localized cases plus
+~1.7% total scan failures.
+
+Hand-checked (per the H277 brief) against a sample of the ~964 reclassified
+syllable-count-anomaly verses (`ūnākṣarā` deficient / `adhikākṣarā` excess): these
+are **not** dropped/added-akṣara typos but corpus artifacts — overwhelmingly
+prose intrusions the walker bundled into a verse block (speaker tags
+`vallāla uvāca:` / `rājovāca:`, chapter headings `caturtho 'dhyāyaḥ`), which
+inflate skrutable's syllable count. Correctly left `clean`; a future
+`gretil_walker.py` improvement could strip `... uvāca:` prefixes (see Format
+notes).
+
+Two downstream precision changes rode along:
+- **DCS-rarity gate** (`meter_check.py`, `RARE_BAND=2`): only *rare* headwords
+  (DCS band ≤ 2) are emitted — a common word (deva, rāja, gam…) beside a metrical
+  anomaly is coincidence, not signal (31,917 common-word bridge hits dropped).
+- **Corroboration-nudge-only in `run_all.py`**: `meter_check` no longer joins
+  `c.detectors`, so it can never lift `ndet` to 2 and promote an ordinary word to
+  tier A by coincidence (23 such promotions removed; the same failure the
+  `CORROB_*` block rejects). It only ranks up a candidate an independent spelling
+  detector already found (`meter=suspect|review` tag).
 
 ## Format notes (checked against the 57-file Kavya section, 06-07-2026)
 
@@ -86,17 +140,28 @@ special-casing, out of scope for a first cut): an occasional invocatory
 line (`oṃ namo ...`) bundled into a text's first "verse" block, and prose
 commentary/tippani blocks with no locus tag (skipped -- see
 `gretil_walker.walk_corpus`'s per-run skip count on stderr, not silently
-dropped).
+dropped). **Prose speaker-tags and chapter headings** bundled into a verse
+block (`vallāla uvāca:`, `rājovāca:`, `caturtho 'dhyāyaḥ`) are the dominant
+cause of skrutable's `adhikākṣarā` (excess-syllable) diagnostic -- surfaced
+by the H277 hand-check. They are correctly treated as `clean` now (no
+localized `problem_padas`); stripping a leading `<name> uvāca:` /
+`<ordinal> 'dhyāyaḥ` prefix in `gretil_walker.parse_file` is a candidate
+future precision improvement (would need a corpus rebuild).
 
-## Verdict scheme (3-way vote, extends the pilot's 2-tool scheme)
+## Verdict scheme (3-way vote, recalibrated H277)
 
-See `meter_ident.py`'s module docstring and `verdict()` function. skrutable's
-silent both-pAdas-wrong case (build task 5 in H251) is handled locally, not
-patched upstream: when skrutable returns no diagnostic (`meter_label = "na
-kiṃcid adhyavasitam"`), `is_perfect` is treated as unknown/false and the
-verse falls through to the chanda/vidyut cross-check, converging to
-`suspect` unless another tool actually corroborates a meter -- i.e. it is
-never silently dropped, unlike the raw `chanda`-only pilot's blind spot.
+See `meter_ident.py`'s module docstring and `verdict()` function. The decisive
+per-verse signal is skrutable's **localized `problem_padas`** (a named broken
+syllable) or a **total scan failure**; a recognized irregular variety with
+neither is `clean` (see Recalibration above). skrutable's silent
+both-pAdas-wrong case (build task 5 in H251) is still caught: `meter_label =
+"na kiṃcid adhyavasitam"` (and an empty label) are the scan-failure sentinels
+(`_skrutable_scanned()` returns False), so the verse falls through to the
+chanda/vidyut cross-check, converging to `suspect` unless a tool actually
+corroborates a meter -- never silently dropped, unlike the raw `chanda`-only
+pilot's blind spot. What changed in H277: `is_perfect=False` **alone** (empty
+`problem_padas`, a recognized variety) no longer routes to suspect/review, and a
+bare chanda name-mismatch no longer downgrades a verse skrutable scanned clean.
 
 ## Word -> headword bridge
 

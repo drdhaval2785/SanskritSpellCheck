@@ -34,6 +34,18 @@ u.reconfigure_stdio()
 HERE = os.path.dirname(os.path.abspath(__file__))
 VERDICTS_PATH = os.path.join(HERE, 'meter', 'meter_verdicts.jsonl')
 
+# DCS-rarity gate (H277): only surface a headword whose lemma is LOW-frequency in
+# the DCS corpus. A common word (deva, rāja, ca, gam...) sitting in a metrically
+# irregular kavya verse carries no signal -- kavya vocabulary overlaps enormously
+# with ordinary dictionary headwords, so an un-gated bridge flags thousands of
+# perfectly ordinary words by pure co-occurrence (7,925 pre-gate). A rare / unusual
+# / unattested spelling near a metrical anomaly is the informative combination --
+# mirrors run_all.py's CORROB_* reasoning (suspect + rare, not suspect + common)
+# and headword_bridge's own STOPWORDS/MIN_LEMMA_LEN filter, extended to frequency.
+# Bands (slp1util.load_dcs_lemmas): 1=hapax 2=rare(2-9) 3=uncommon 4=common 5=1000+;
+# absent=0. Keep band <= RARE_BAND (0,1,2).
+RARE_BAND = 2
+
 
 def main(sanhw1, outfile):
     if not os.path.exists(VERDICTS_PATH):
@@ -44,8 +56,9 @@ def main(sanhw1, outfile):
         return
 
     idx = hb.load_headword_index(sanhw1)
+    dcs = u.load_dcs_lemmas(u.dcs_path())
     hits = collections.defaultdict(lambda: {'suspect': set(), 'review': set()})
-    n_verses = n_nonclean = n_bridged = 0
+    n_verses = n_nonclean = n_bridged = n_common_skipped = 0
     with open(VERDICTS_PATH, 'r', encoding='utf-8') as f:
         for line in f:
             line = line.strip()
@@ -62,11 +75,16 @@ def main(sanhw1, outfile):
             if not full_text:
                 continue
             verse_hits = hb.bridge_verse(full_text, idx)
-            if verse_hits:
-                n_bridged += 1
             locus = "%s#%s" % (rec['source'], rec['locus'])
+            bridged_here = False
             for hw in verse_hits:
+                if dcs and dcs.get(u.normalize_lemma(hw), 0) > RARE_BAND:
+                    n_common_skipped += 1        # common DCS word -> uninformative
+                    continue
                 hits[hw][v].add(locus)
+                bridged_here = True
+            if bridged_here:
+                n_bridged += 1
 
     with open(outfile, 'w', encoding='utf-8') as out:
         for hw in sorted(hits):
@@ -79,8 +97,10 @@ def main(sanhw1, outfile):
                 out.write("%s:MTR=%s:%s\n" % (hw, detail, dicts))
 
     sys.stderr.write("meter_check: %d verses in index, %d non-clean, %d bridged to a headword, "
-                      "%d distinct headwords flagged -> %s\n"
-                      % (n_verses, n_nonclean, n_bridged, len(hits), outfile))
+                      "%d common-word bridge hits skipped (DCS band > %d), "
+                      "%d distinct rare headwords flagged -> %s\n"
+                      % (n_verses, n_nonclean, n_bridged, n_common_skipped, RARE_BAND,
+                         len(hits), outfile))
 
 
 if __name__ == '__main__':

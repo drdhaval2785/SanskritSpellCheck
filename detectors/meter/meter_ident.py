@@ -121,6 +121,31 @@ def _norm_name(n):
     return n.lower().replace('ṃ', 'ṁ').rstrip('.')
 
 
+# skrutable meter_label values that mean "could not scan this verse at all", as
+# opposed to a named (possibly irregular) meter variety. 'na kiṃcid adhyavasitam'
+# is skrutable's explicit "determined nothing" sentinel (H251 build task 5); an
+# empty label is the same total-failure case. These two -- and ONLY these -- are
+# genuine scan failures; every other label (anuṣṭubh with a vipulā, an upajāti
+# triṣṭubh mix, āryā, ajñātasamavṛtta, ...) is a recognized pattern, NOT corruption.
+_SKR_FAIL_LABELS = {'na kiṃcid adhyavasitam'}
+
+
+def _skrutable_scanned(skr):
+    """True when skrutable actually resolved the verse to some metrical pattern
+    (a named meter or a named irregular variety), False only when it failed to
+    scan at all. This is the H277 distinction that keeps is_perfect=False from
+    being read as corruption: skrutable's is_perfect flag means "is this the single
+    most regular sub-pattern (pathyā)", not "is this scannable" -- a recognized
+    vipulā/asamīcīnā/upajāti variety is is_perfect=False yet perfectly valid
+    Sanskrit, and only an empty or 'na kiṃcid adhyavasitam' label is a real
+    scan failure worth flagging."""
+    label = (skr.get('meter') or '').strip()
+    if not label:
+        return False
+    base = label.split(' [')[0].split(' (')[0].split(':')[0].strip().lower()
+    return base not in _SKR_FAIL_LABELS
+
+
 def _flatten_chanda_names(raw_names):
     """chanda groups metrically-identical synonym names in one string joined
     by ' = ' (e.g. 'vasantatilakā = siṁhonnatā = uddharṣiṇī' are ALL names for
@@ -139,40 +164,56 @@ def _flatten_chanda_names(raw_names):
 
 
 def verdict(skr, cha, vid):
-    """3-way vote per the locked scheme (see module docstring)."""
+    """3-way vote per the locked scheme (see module docstring), recalibrated H277.
+
+    The H277 recalibration (07-07-2026): skrutable's `is_perfect=False` alone is
+    NOT corruption evidence -- it fires on named, valid irregular varieties
+    (vipulā / asamīcīnā / upajāti mixes) that are standard Classical poetic
+    license. Only a **localized broken syllable** (non-empty `problem_padas`) or a
+    **total scan failure** (empty / 'na kiṃcid adhyavasitam' label) is a real
+    per-verse signal. A recognized irregular variety with no localized defect is
+    `clean`. This cut the non-clean rate from 39.1% to ~16% -- see
+    meter/README.md "Recalibration (H277)". """
     skr_name = _norm_name(skr.get('meter'))
-    skr_ok = bool(skr.get('is_perfect'))
+    skr_defect = bool(skr.get('problem_padas'))      # a LOCALIZED broken-syllable flag
+    skr_scanned = _skrutable_scanned(skr)
+    # skrutable genuinely complains only when it localizes a broken syllable OR
+    # fails to scan the verse at all. Everything else it "scanned", however
+    # irregular, is valid text (H277).
+    skr_problem = skr_defect or not skr_scanned
+
     cha_names = set()
-    cha_clean = True
     for r in cha:
-        if r.get('match') == 'exact':
+        if r.get('match') in ('exact', 'fuzzy', 'fuzzy-weak'):
             cha_names |= _flatten_chanda_names(r.get('meters', []))
-        elif r.get('match') == 'fuzzy':
-            cha_names |= _flatten_chanda_names(r.get('meters', []))
-        elif r.get('match') == 'fuzzy-weak':
-            cha_names |= _flatten_chanda_names(r.get('meters', []))
-            cha_clean = False
-        else:
-            cha_clean = False
     vid_name = _norm_name(vid.get('meter'))
 
-    votes = [n for n in (skr_name, vid_name) if n]
-    cha_agrees = (not cha_names) or (skr_name in cha_names) if skr_name else False
-    vid_agrees = (not vid_name) or (vid_name == skr_name)
-
-    if skr_ok and cha_agrees and vid_agrees:
-        return 'clean', 'skrutable perfect; chanda/vidyut agree or silent'
-    if not skr_ok:
+    if skr_problem:
+        # The one strong per-verse signal: skrutable either localized a broken
+        # syllable or failed to scan. The 3-way vote earns its keep HERE --
+        # chanda/vidyut agreement decides suspect vs review:
+        #   * contradicted (or chanda silent, so nothing corroborates the meter)
+        #     -> suspect
+        #   * a localized defect that chanda still fits to the same meter -> review
         others_disagree = (cha_names and skr_name not in cha_names) or (vid_name and vid_name != skr_name)
+        if skr_defect:
+            detail = 'skrutable localized a broken syllable (%s)' % (skr.get('problem_padas') or {})
+        else:
+            detail = "skrutable found no meter (%r)" % ((skr.get('meter') or '').strip())
         if others_disagree or not cha_names:
-            return 'suspect', 'skrutable imperfect scansion (%s)' % (skr.get('problem_padas') or {})
-        return 'review', 'skrutable imperfect but no other tool contradicts the meter'
-    if skr_name and cha_names and skr_name not in cha_names:
-        return 'review', "chanda's best candidate (%s) never matches skrutable (%s)" % (
-            ','.join(sorted(cha_names)), skr_name)
-    if not cha_clean:
-        return 'review', 'chanda needed a weak/near-tie fuzzy match (pilot Finding 2)'
-    return 'clean', 'skrutable perfect; chanda/vidyut agree'
+            return 'suspect', detail
+        return 'review', detail + ' but no other tool contradicts the meter'
+
+    # skrutable scanned the verse to a recognized meter/variety with NO localized
+    # syllable defect -> clean. This deliberately does NOT downgrade on a mere
+    # chanda/vidyut meter-IDENTITY disagreement (H277): with skrutable having
+    # scanned the verse and pointing at no broken syllable, a differing chanda
+    # name is tool-disagreement noise on a valid irregular variety (vipulā,
+    # upajāti mix, asamīcīnā...), not textual corruption -- and for a ranking-nudge
+    # detector, flagging valid poetry as "review/suspect" is exactly the 39%->16%
+    # over-flag this recalibration removes. Real syllable-level corruption would
+    # have surfaced as a non-empty problem_padas in the skr_problem branch above.
+    return 'clean', 'skrutable scanned a recognized meter/variety; no localized defect'
 
 
 def identify_verse(verse):
