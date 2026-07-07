@@ -137,6 +137,37 @@ Two downstream precision changes rode along:
   `CORROB_*` block rejects). It only ranks up a candidate an independent spelling
   detector already found (`meter=suspect|review` tag).
 
+### Evidence tables (from the recalibration session — kept here so they're recallable)
+
+**1. Why 39% was wrong** — the H251 non-clean verdicts broken down by whether skrutable's
+own `problem_padas` diagnostic actually localized a broken syllable. The ~24.7% with an
+*empty* `problem_padas` is `is_perfect=False` firing on valid named varieties, not corruption:
+
+| verdict | `problem_padas` empty | `problem_padas` non-empty |
+|---|---:|---:|
+| review  | 4,927 (19.1%) | 1,430 (5.5%) |
+| suspect | 1,449 (5.6%)  | 2,246 (8.7%) |
+
+**2. Old → new verdict confusion matrix** (reprocessing the 25,824-record H251 index through
+the recalibrated `verdict()`, before the H277-b rebuild):
+
+| old \ new | clean | review | suspect |
+|---|---:|---:|---:|
+| clean   | 15,772 | — | — |
+| review  | 4,894 | 1,438 | 25 |
+| suspect | 1,048 | — | 2,647 |
+
+Totals: clean 15,772→21,714 · review 6,357→1,438 · suspect 3,695→2,672; **non-clean 38.9% → 15.9%**.
+
+**3. `run_all.py` tier impact** (same cached spelling detectors, meter demoted to corroboration-only):
+
+| | candidates | tier A | tier B | tier C | rows touching meter | tier-A meter-sole |
+|---|---:|---:|---:|---:|---:|---:|
+| before (H251) | 22,126 | 5,392 | 4,713 | 12,021 | 7,437 | 0 |
+| after (H277)  | 14,752 | 5,369 | 4,695 | 4,688 | 46 | 0 |
+
+(23 tier-A coincidence-promotions removed; the ~7.4k meter-only candidates no longer flood the list.)
+
 ## H277-b follow-ups (07-07-2026)
 
 Four user-requested follow-ons to the recalibration, all landed in one corpus rebuild:
