@@ -264,4 +264,33 @@ is the right failure mode for a ranking-nudge evidence source.
   BY-NC-SA) is not a build-time blocker per locked decision 4 -- revisit only
   if a derived corruption-flag dataset is proposed for publication.
 
+## H289 Phase 2–3 — other GRETIL sections (dataset + error lists)
+
+The Phase-1 feasibility pilot ([`PILOT_OTHER_SECTIONS.md`](PILOT_OTHER_SECTIONS.md),
+[PR #22](https://github.com/drdhaval2785/SanskritSpellCheck/pull/22)) established that the
+meter QA generalizes beyond Kāvya. Phase 2–3 extend it to four more genre-diverse sections
+(**Purāṇa** Mārkaṇḍeya, **Epic** Vālmīki Rāmāyaṇa southern-2, **Subhāṣita anthology**
+Vidyākara, **verse-śāstra** Manusmṛti), each a **first-1500-block sample** (never
+fetch-and-build whole — H289 guard), and produce two error streams. New tooling, all
+consuming the unchanged walker/identifier:
+
+- [`fetch_gretil.py`](fetch_gretil.py) — fetch + structurally sample a GRETIL plaintext
+  into a gitignored `../gretil_<section>_raw/` (CC BY-NC-SA, same rule as the Kāvya corpus).
+- [`build_section_dataset.py`](build_section_dataset.py) → [`SECTIONS_DATASET.md`](SECTIONS_DATASET.md)
+  — the **Phase-2 cross-section dataset**: per-section verdict distribution + base-meter
+  census. Headline: non-clean% tracks metrical *ornateness*, not corruption — narrative
+  śloka genres (Manu 0.1%, Purāṇa 0.9%, Epic 3.7%) are near-pristine, the ornate anthology
+  (11%) and Kāvya (15.9%) higher; **no genre spiked into meter-fit failure**.
+- [`multisection_error_candidates.py`](multisection_error_candidates.py) →
+  [`MULTISECTION_ERROR_CANDIDATES.md`](MULTISECTION_ERROR_CANDIDATES.md) — **Phase-3 stream 1**
+  (dictionary headwords): tier-A/B `run_all` candidates that gain a meter nudge from the
+  enlarged Kāvya+sections corroboration index (`meter_verdicts_all.jsonl`, gitignored). Route
+  the `.tsv` to a `/review-sheet`; meter stays corroboration-only (H277 invariant).
+- [`ngram_corpus_check.py`](ngram_corpus_check.py) →
+  [`GRETIL_TEXT_TYPOS.md`](GRETIL_TEXT_TYPOS.md) + `ngram_typos_<section>.tsv` — **Phase-3
+  stream 2** (in-corpus e-text typos): the MW∩PW-bigram checker (from
+  [`ngram/ngramspellcheck.py`](../../ngram/ngramspellcheck.py)) over IAST→SLP1 running text,
+  locus-annotated. Reported upstream to **GRETIL**, not to Cologne CORRECTIONS. Caught a
+  systematic ṝ→ḥ encoding corruption in the Rāmāyaṇa e-text (`mātḥṇāṃ` for *mātṝṇām*, etc.).
+
 _Dr. Mārcis Gasūns_

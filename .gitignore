@@ -43,6 +43,11 @@ detectors/meter/meter_verdicts.jsonl
 detectors/meter/meter_verdicts_*.jsonl
 detectors/meter/*.jsonl.bak
 detectors/meter/*.log
+# H289: the enlarged meter_check corroboration index (regenerable from the .jsonl
+# indices via meter_check.py --verdicts=meter_verdicts_all.jsonl) is a large
+# intermediate; the small curated deliverables (SECTIONS_DATASET.md,
+# MULTISECTION_ERROR_CANDIDATES.md + .tsv, ngram_typos_*.tsv) ARE committed.
+detectors/meter/meter_suspects_all*.txt
 
 # Folder config file
 Desktop.ini
@@ -84,3 +89,6 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+
+# Local Claude Code settings (per-machine, not shared)
+.claude/settings.local.json
