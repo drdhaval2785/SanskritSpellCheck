@@ -37,7 +37,10 @@ external_src/
 # (meter_verdicts.jsonl, also regenerable, ~1hr offline build) is likewise
 # not committed -- see detectors/meter/build_meter_index.py.
 detectors/gretil_kavya_raw/
+detectors/gretil_pilot_raw/
+detectors/gretil_*_raw/
 detectors/meter/meter_verdicts.jsonl
+detectors/meter/meter_verdicts_*.jsonl
 detectors/meter/*.jsonl.bak
 detectors/meter/*.log
 
