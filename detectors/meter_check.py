@@ -46,6 +46,15 @@ VERDICTS_PATH = os.path.join(HERE, 'meter', 'meter_verdicts.jsonl')
 # absent=0. Keep band <= RARE_BAND (0,1,2).
 RARE_BAND = 2
 
+# Smaller high-precision SIBLING file (`<out>_strong.txt`): the full meter_suspects.txt
+# (~1.7k rare headwords) is intentionally the broad list, but it is a lot to skim by
+# hand, so we also emit the tightest subset -- headwords hit by a SUSPECT verdict verse
+# (a localized broken syllable that a second tool contradicts, the strongest per-verse
+# signal) whose lemma is band <= STRONG_BAND (hapax / unattested). This is the "check
+# these first" shortlist. Left as a sibling, not a replacement (per user, 07-07-2026:
+# "1709 is a lot, leave as such, document, but make a smaller sibling too").
+STRONG_BAND = 1
+
 
 def main(sanhw1, outfile):
     if not os.path.exists(VERDICTS_PATH):
@@ -86,7 +95,10 @@ def main(sanhw1, outfile):
             if bridged_here:
                 n_bridged += 1
 
-    with open(outfile, 'w', encoding='utf-8') as out:
+    strong_out = os.path.splitext(outfile)[0] + '_strong' + os.path.splitext(outfile)[1]
+    n_strong = 0
+    with open(outfile, 'w', encoding='utf-8') as out, \
+            open(strong_out, 'w', encoding='utf-8') as strong:
         for hw in sorted(hits):
             dicts = idx.get(hw, '')
             for verdict_key in ('suspect', 'review'):
@@ -94,13 +106,19 @@ def main(sanhw1, outfile):
                 if not loci:
                     continue
                 detail = "%s|%s" % (verdict_key, ';'.join(loci))
-                out.write("%s:MTR=%s:%s\n" % (hw, detail, dicts))
+                line = "%s:MTR=%s:%s\n" % (hw, detail, dicts)
+                out.write(line)
+                # high-precision shortlist: suspect verdict + rarest band only
+                if verdict_key == 'suspect' and dcs.get(u.normalize_lemma(hw), 0) <= STRONG_BAND:
+                    strong.write(line)
+                    n_strong += 1
 
     sys.stderr.write("meter_check: %d verses in index, %d non-clean, %d bridged to a headword, "
                       "%d common-word bridge hits skipped (DCS band > %d), "
                       "%d distinct rare headwords flagged -> %s\n"
+                      "meter_check: %d high-precision (suspect + band <= %d) rows -> %s\n"
                       % (n_verses, n_nonclean, n_bridged, n_common_skipped, RARE_BAND,
-                         len(hits), outfile))
+                         len(hits), outfile, n_strong, STRONG_BAND, strong_out))
 
 
 if __name__ == '__main__':

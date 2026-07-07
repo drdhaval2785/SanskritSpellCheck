@@ -10,6 +10,7 @@ __pycache__/
 
 # detector generated outputs (regenerable)
 detectors/*_suspects.txt
+detectors/*_suspects_strong.txt
 detectors/*_corrections.txt
 detectors/combined_*
 detectors/*_hw.txt
@@ -37,6 +38,7 @@ external_src/
 # not committed -- see detectors/meter/build_meter_index.py.
 detectors/gretil_kavya_raw/
 detectors/meter/meter_verdicts.jsonl
+detectors/meter/*.jsonl.bak
 detectors/meter/*.log
 
 # Folder config file
