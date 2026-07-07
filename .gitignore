@@ -30,6 +30,15 @@ corrections_draft/*/*_evidence.jsonl
 # never committed here -- this repo hosts QA tooling + do-not-file lists, not dict text.
 external_src/
 
+# GRETIL kavya corpus (CC BY-NC-SA, third-party verse text) -- same "don't
+# commit external source text" rule as external_src/ above. Fetched by
+# detectors/meter/README.md's corpus-fetch step; the derived meter index
+# (meter_verdicts.jsonl, also regenerable, ~1hr offline build) is likewise
+# not committed -- see detectors/meter/build_meter_index.py.
+detectors/gretil_kavya_raw/
+detectors/meter/meter_verdicts.jsonl
+detectors/meter/*.log
+
 # Folder config file
 Desktop.ini
 

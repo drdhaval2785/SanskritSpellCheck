@@ -35,6 +35,7 @@ DETECTORS = [
     ('dict_vs_corpus', 'dict_vs_corpus.py',    'dict_vs_corpus_corrections.txt', 'corrector'),
     ('phonotactic',    'phonotactic_check.py', 'phonotactic_suspects.txt',       'flagger'),
     ('charset',        'charset_check.py',     'charset_suspects.txt',           'flagger'),
+    ('meter_check',    'meter_check.py',       'meter_suspects.txt',             'flagger'),
 ]
 HIGH_PRECISION = {'phonotactic', 'charset'}
 SCAN = "http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=%s&key=%s"
