@@ -56,11 +56,12 @@ RARE_BAND = 2
 STRONG_BAND = 1
 
 
-def main(sanhw1, outfile):
-    if not os.path.exists(VERDICTS_PATH):
+def main(sanhw1, outfile, verdicts_path=None):
+    verdicts_path = verdicts_path or VERDICTS_PATH
+    if not os.path.exists(verdicts_path):
         sys.stderr.write("meter_check: %s not found -- run meter/build_meter_index.py first; "
                           "emitting empty output (not an error, the corpus index is a one-time "
-                          "offline build, see meter/build_meter_index.py docstring)\n" % VERDICTS_PATH)
+                          "offline build, see meter/build_meter_index.py docstring)\n" % verdicts_path)
         open(outfile, 'w', encoding='utf-8').close()
         return
 
@@ -68,7 +69,7 @@ def main(sanhw1, outfile):
     dcs = u.load_dcs_lemmas(u.dcs_path())
     hits = collections.defaultdict(lambda: {'suspect': set(), 'review': set()})
     n_verses = n_nonclean = n_bridged = n_common_skipped = 0
-    with open(VERDICTS_PATH, 'r', encoding='utf-8') as f:
+    with open(verdicts_path, 'r', encoding='utf-8') as f:
         for line in f:
             line = line.strip()
             if not line:
@@ -122,7 +123,12 @@ def main(sanhw1, outfile):
 
 
 if __name__ == '__main__':
+    # --verdicts=PATH points the bridge at any built index (e.g. a per-section
+    # meter_verdicts_<section>.jsonl), so a new GRETIL section can be bridged
+    # without touching the canonical Kavya index -- see handoff H289.
+    verdicts_arg = next((a.split('=', 1)[1] for a in sys.argv[1:]
+                         if a.startswith('--verdicts=')), None)
     args = [a for a in sys.argv[1:] if not a.startswith('--')]
     sanhw1_arg = args[0] if len(args) > 0 else os.path.join(HERE, '..', 'sanhw1.txt')
     out_arg = args[1] if len(args) > 1 else os.path.join(HERE, 'meter_suspects.txt')
-    main(sanhw1_arg, out_arg)
+    main(sanhw1_arg, out_arg, verdicts_arg)
