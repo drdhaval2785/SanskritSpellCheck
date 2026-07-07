@@ -84,6 +84,9 @@ def main(corpus_dir, out_path):
             counts[rec['verdict']] = counts.get(rec['verdict'], 0) + 1
             out.write(json.dumps(rec, ensure_ascii=False) + '\n')
             out.flush()
+            done.add(key)   # a handful of loci legitimately repeat in the corpus; record
+                            # each key as written so a duplicate-locus verse is not emitted
+                            # twice (one record per (source,locus), matching resume semantics)
             n += 1
             if n % 1000 == 0:
                 sys.stderr.write("  %d verses (%.0fs) clean=%d review=%d suspect=%d timeouts=%d\n"

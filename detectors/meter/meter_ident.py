@@ -63,7 +63,18 @@ def identify_skrutable(full_text):
     is_perfect = getattr(v, 'is_perfect', None)
     if is_perfect is None:
         is_perfect = (len(problem) == 0) if diag is not None else None
-    return {'meter': getattr(v, 'meter_label', None), 'is_perfect': is_perfect, 'problem_padas': problem}
+    # skrutable resplits the verse into pAdas; `text_syllabified` / `syllable_weights`
+    # are '\n'-separated per pAda, and `problem_padas`' keys are 1-based pAda indices
+    # into them. Storing the per-pAda text lets a future bridge (H277 step 2) localize
+    # lemmatization to the actually-flagged pAda instead of the whole verse -- without
+    # re-running skrutable. Syllabified spaces mark syllable boundaries; strip them to
+    # recover the pAda's running text.
+    syl = getattr(v, 'text_syllabified', None)
+    wts = getattr(v, 'syllable_weights', None)
+    padas = syl.split('\n') if isinstance(syl, str) and syl else None
+    pada_weights = wts.split('\n') if isinstance(wts, str) and wts else None
+    return {'meter': getattr(v, 'meter_label', None), 'is_perfect': is_perfect,
+            'problem_padas': problem, 'padas': padas, 'pada_weights': pada_weights}
 
 
 def identify_chanda(lines):

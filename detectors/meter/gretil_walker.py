@@ -26,6 +26,30 @@ import glob
 LOCUS_RE = re.compile(r'([A-Za-z][A-Za-z0-9]*_[0-9]+(?:[.,][0-9]+)*)')
 PAGE_MARK_RE = re.compile(r'\[\[[^\]]*\]\]')
 
+# Prose intrusions the mass-converted GRETIL plaintext bundles into a verse block:
+# a leading SPEAKER attribution ("vallāla uvāca:", fused "rājovāca:" / "sakhyuvāca:")
+# or a leading chapter/section COLOPHON-heading ("caturtho 'dhyāyaḥ", "... ucchvāsaḥ",
+# "... sargaḥ"). Both add non-verse syllables to the first pAda, which made skrutable
+# report a spurious adhikākṣarā (excess-syllable) diagnostic -- the dominant cause of
+# the H277 syllable-count anomalies (verified 07-07-2026, see meter/README.md). They
+# are stripped ONLY as a LEADING prefix (looped, so a heading+speaker stack both go),
+# which is where they occur -- never mid-verse, to avoid eating a real verse word that
+# merely ends in "uvāca" or is a genuine finite verb.
+PROSE_PREFIX_RE = re.compile(
+    r"^\s*(?:"
+    r"(?:\S+\s+)?\S*[uo]vāca\s*[:.]"                               # (name )?…uvāca: / fused …ovāca: (rāja+uvāca) speaker tag
+    r"|(?:iti\s+)?\S+\s+'?(?:adhyāyaḥ|dhyāyaḥ|sargaḥ|ucchvāsaḥ|lambakaḥ|taraṅgaḥ|ullāsaḥ|āśvāsaḥ)\b"  # section heading
+    r")\s*", re.UNICODE)
+
+
+def _strip_prose_prefix(text):
+    """Remove leading speaker attributions / section headings (see PROSE_PREFIX_RE)."""
+    prev = None
+    while text != prev:
+        prev = text
+        text = PROSE_PREFIX_RE.sub('', text, count=1)
+    return text.strip()
+
 # A handful of "Kavya"-section texts are PROSE (campU / prose-romance, e.g.
 # Dandin's Dasakumaracarita), not verse -- their locus-tagged paragraphs run
 # to thousands of characters and both (a) produce meaningless meter verdicts
@@ -75,6 +99,7 @@ def parse_file(path):
     verses = []
     skipped = 0
     skipped_prose = 0
+    prose_stripped = 0
     for block in iter_blocks(path):
         joined = ' '.join(block)
         m = None
@@ -90,35 +115,41 @@ def parse_file(path):
         text = LOCUS_RE.sub('', joined)
         text = text.replace('//', ' ').replace('/', ' / ')
         text = re.sub(r'\s+', ' ', text).strip(' /')
+        stripped = _strip_prose_prefix(text)
+        if stripped != text:
+            prose_stripped += 1
+            text = stripped
         lines_clean = [LOCUS_RE.sub(' ', re.sub(r'//?', ' ', l)) for l in block]
-        lines_clean = [re.sub(r'\s+', ' ', l).strip() for l in lines_clean]
+        lines_clean = [_strip_prose_prefix(re.sub(r'\s+', ' ', l).strip()) for l in lines_clean]
         verses.append({
             'file': fname,
             'locus': m,
             'lines': [l for l in lines_clean if l],
             'full_text': text,
         })
-    return verses, skipped, skipped_prose
+    return verses, skipped, skipped_prose, prose_stripped
 
 
 def walk_corpus(corpus_dir):
     """Yield (verse_dict) across every *.txt in corpus_dir, logging per-file
     skip counts to stderr (no silent caps)."""
     import sys
-    total_v = total_skip = total_prose = 0
+    total_v = total_skip = total_prose = total_stripped = 0
     for path in sorted(glob.glob(os.path.join(corpus_dir, '*.txt'))):
-        verses, skipped, skipped_prose = parse_file(path)
+        verses, skipped, skipped_prose, prose_stripped = parse_file(path)
         total_v += len(verses)
         total_skip += skipped
         total_prose += skipped_prose
+        total_stripped += prose_stripped
         if skipped_prose:
             sys.stderr.write("gretil_walker: %s -- %d blocks over %d chars skipped as prose\n"
                               % (os.path.basename(path), skipped_prose, MAX_VERSE_CHARS))
         for v in verses:
             yield v
     sys.stderr.write("gretil_walker: %d verses parsed, %d blocks skipped (no locus tag), "
-                      "%d blocks skipped (prose, >%d chars)\n"
-                      % (total_v, total_skip, total_prose, MAX_VERSE_CHARS))
+                      "%d blocks skipped (prose, >%d chars), %d verses had a prose prefix "
+                      "(speaker tag / section heading) stripped\n"
+                      % (total_v, total_skip, total_prose, MAX_VERSE_CHARS, total_stripped))
 
 
 if __name__ == '__main__':

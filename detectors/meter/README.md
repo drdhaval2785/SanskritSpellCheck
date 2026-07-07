@@ -17,9 +17,15 @@ gretil_walker.py      -- parse GRETIL corpustei plaintext -> verse records
 meter_ident.py         -- skrutable + chanda + vidyut-chandas 3-way vote -> verdict
 build_meter_index.py   -- offline, corpus-scale: walker + ident -> meter_verdicts.jsonl
 reprocess_verdicts.py  -- recompute verdicts from a built index (verdict()-only changes; no tool re-run)
+variety_stats.py       -- meter / anuṣṭubh pāda-variety census -> METER_VARIETY_STATS.md
 headword_bridge.py     -- word -> dictionary-headword bridge (vidyut.cheda lemmatizer)
-../meter_check.py      -- reads meter_verdicts.jsonl + live sanhw1.txt -> meter_suspects.txt
+../meter_check.py      -- reads meter_verdicts.jsonl + live sanhw1.txt -> meter_suspects.txt (+ _strong sibling)
 ```
+
+Each `meter_verdicts.jsonl` record stores skrutable's **pāda-segmented text**
+(`skrutable.padas` / `skrutable.pada_weights`, `\n`-split per pāda, from H277-b's
+rebuild) — the 1-based keys of `problem_padas` index into it, so a future bridge can
+localize lemmatization to the actually-flagged pāda without re-running skrutable.
 
 `meter_verdicts.jsonl` stores each verse's raw `skrutable`/`chanda`/`vidyut` tool
 outputs alongside its `verdict`, so a change to the VERDICT-COMPUTATION alone
@@ -67,11 +73,14 @@ python detectors/meter/build_meter_index.py
 tag -- prose/commentary interleaving; 184 blocks skipped as prose by the
 `MAX_VERSE_CHARS` filter below):
 
-| Verdict | H251 (initial) | H277 (recalibrated) |
+| Verdict | H251 (initial, 25,824 recs) | H277 (recalibrated + rebuilt, 25,559 recs) |
 |---|---|---|
-| clean   | 15,772 (61.1%) | **21,714 (84.1%)** |
-| review  |  6,357 (24.6%) |  **1,438 (5.6%)** |
-| suspect |  3,695 (14.3%) |  **2,672 (10.3%)** |
+| clean   | 15,772 (61.1%) | **21,505 (84.1%)** |
+| review  |  6,357 (24.6%) |  **1,380 (5.4%)** |
+| suspect |  3,695 (14.3%) |  **2,674 (10.5%)** |
+
+_(The H277 column is the canonical post-rebuild index — 25,559 unique verse records after
+the walker prose-strip + dedup, vs H251's 25,824 which double-counted 265 repeated loci.)_
 
 The initial H251 run's 39.1% non-clean rate was, per user review
 (07-07-2026), implausibly high — "no human will check so many; in all the
@@ -128,6 +137,39 @@ Two downstream precision changes rode along:
   `CORROB_*` block rejects). It only ranks up a candidate an independent spelling
   detector already found (`meter=suspect|review` tag).
 
+## H277-b follow-ups (07-07-2026)
+
+Four user-requested follow-ons to the recalibration, all landed in one corpus rebuild:
+
+1. **Walker prose-intrusion strip** (`gretil_walker._strip_prose_prefix`) — removes the
+   leading speaker tags / section headings that were inflating skrutable's syllable
+   count (see Format notes). **39** verses had a prefix removed (mostly `X uvāca:`
+   speaker tags); this dropped anuṣṭubh's spurious `adhikākṣarā` pāda-pairs from 592 to
+   558. (The overall non-clean rate is unchanged — the recalibration already scores an
+   `adhikākṣarā` verse `clean` — but the stored meter labels and the variety census are
+   now more faithful.)
+2. **Pāda-segmented text stored** in every jsonl record (`skrutable.padas` /
+   `skrutable.pada_weights`) — see the Pipeline note. Enables per-pāda bridge
+   localization later without re-scanning.
+3. **Variety census** ([`variety_stats.py`](variety_stats.py) →
+   [`METER_VARIETY_STATS.md`](METER_VARIETY_STATS.md)) — the *amount and frequency of
+   the vipulā / meter varieties*, logged as **valid poetic variation, not a suspect
+   list**: base-meter distribution (anuṣṭubh ~49%, upajāti triṣṭubh ~12%, …) and the
+   anuṣṭubh per-pāda breakdown (pathyā ~78%, then na-/ma-/bha-/ra-vipulā and asamīcīnā).
+4. **High-precision sibling** `meter_suspects_strong.txt` — the full
+   `meter_suspects.txt` (1,703 rare headwords) is intentionally the broad list; the
+   sibling is the tight "check these first" shortlist (suspect verdict + DCS band ≤ 1) —
+   **700** rows. (The truly actionable set is smaller still: the **46** headwords the
+   meter signal *corroborates* an independent spelling detector on, carried as a
+   `meter=` tag in `combined_candidates.txt`.)
+
+Post-rebuild verdict distribution (25,559 unique verse records): **clean 21,505 (84.1%)
+· review 1,380 (5.4%) · suspect 2,674 (10.5%)** — non-clean 15.9%, unchanged from the
+H277-a reprocess, confirming the recalibration is stable across a clean full rebuild.
+A latent `build_meter_index` bug was fixed in passing: it never recorded a just-written
+key, so the ~172 legitimately-duplicated loci were emitted twice; it now `done.add`s
+each written key (one record per `(source, locus)`).
+
 ## Format notes (checked against the 57-file Kavya section, 06-07-2026)
 
 GRETIL's mass-converted plaintext is mostly uniform (header ends at a bare
@@ -141,12 +183,15 @@ line (`oṃ namo ...`) bundled into a text's first "verse" block, and prose
 commentary/tippani blocks with no locus tag (skipped -- see
 `gretil_walker.walk_corpus`'s per-run skip count on stderr, not silently
 dropped). **Prose speaker-tags and chapter headings** bundled into a verse
-block (`vallāla uvāca:`, `rājovāca:`, `caturtho 'dhyāyaḥ`) are the dominant
-cause of skrutable's `adhikākṣarā` (excess-syllable) diagnostic -- surfaced
-by the H277 hand-check. They are correctly treated as `clean` now (no
-localized `problem_padas`); stripping a leading `<name> uvāca:` /
-`<ordinal> 'dhyāyaḥ` prefix in `gretil_walker.parse_file` is a candidate
-future precision improvement (would need a corpus rebuild).
+block (`vallāla uvāca:`, fused `rājovāca:`/`sakhyuvāca:`, `caturtho 'dhyāyaḥ`,
+`... ucchvāsaḥ`/`... sargaḥ`) were the dominant cause of skrutable's
+`adhikākṣarā` (excess-syllable) diagnostic -- surfaced by the H277 hand-check.
+`gretil_walker._strip_prose_prefix` (H277-b, 07-07-2026) now strips such a
+LEADING prefix (looped, so a heading+speaker stack both go; anchored at the
+start only, so a real verse word merely ending in `uvāca` or a long compound is
+never touched — see `PROSE_PREFIX_RE`). The per-run stderr line reports how many
+verses had a prefix stripped. This required the corpus rebuild that also stores
+skrutable's pāda-segmented text (below).
 
 ## Verdict scheme (3-way vote, recalibrated H277)
 
