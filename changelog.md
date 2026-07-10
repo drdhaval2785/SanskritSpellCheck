@@ -6,6 +6,44 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.47.0] - 2026-07-10
+
+### Changed
+- **[ROADMAP_2026_2027.md](ROADMAP_2026_2027.md) — revision 2**, re-interviewed with M.G. after
+  eight days of execution diverged from revision 1 ([PR #25](https://github.com/drdhaval2785/SanskritSpellCheck/pull/25)).
+  Eight rulings (D1–D8), each recorded with its rationale:
+  **D1** Fable 5 (`claude-fable-5`) is scoped to **judgment gates only** (paper referee/author passes,
+  prior-art synthesis, triage adjudication); Sonnet 5 (`claude-sonnet-5`) classifies, Opus 4.8
+  (`claude-opus-4-8`) confirms, mechanical build work is Sonnet's — supersedes the expired
+  "until 08-07-2026" window.
+  **D2** A44's blocking human-IRR gate is replaced by an **LLM second-annotator agreement study**
+  (Cohen's κ + disagreement taxonomy), reported as part of the paper's contribution; keeps the
+  31-12-2026 IJL submission. The human-annotator recruit stays deferred.
+  **D3** Corrections delivery switches from [CORRECTIONS#447](https://github.com/sanskrit-lexicon/CORRECTIONS/issues/447)
+  (posted 02-07, **eight days with zero comments**) to **monthly consolidated PRs** of XML-validated
+  `updateByLine` change files. `csl-orig` stays read-only to agents.
+  **D4** The over-delivered meter track (5 GRETIL sections, [SECTIONS_DATASET.md](detectors/meter/SECTIONS_DATASET.md),
+  [GRETIL_TEXT_TYPOS.md](detectors/meter/GRETIL_TEXT_TYPOS.md)) **folds into A47** as a joint
+  sound/metre paper rather than becoming a separate publication.
+  **D5** Anuprāsa stays Q1 2027, so **A47 drafts Q2 2027 and submits Q3 2027** — past this roadmap's
+  horizon, opening the 2027–2028 plan.
+  **D6** All four product shapes kept, sequenced cheapest-first: Zenodo dataset → PyPI package →
+  web app → Cologne integration.
+  **D7** The union-across-runs recall harvest drops from "generous budget" to **three dicts**
+  (SHS/YAT/ACC), with the recall gain **measured** rather than assumed — tier-A precision is
+  near-zero on mature dictionaries.
+  **D8** The typos found in GRETIL's *own* e-texts are **reported upstream immediately**, not held
+  back for A47's publication priority.
+- Roadmap now carries an explicit **non-goals** section (what was considered and ruled out), so
+  future sessions stop re-proposing the closed paths, and its banned HTML dated-header/byline is
+  converted to plain Markdown per the authored-MD contract.
+
+### Added
+- Four executable handoffs wired into the Uprava registry and GTD:
+  **H452** prior-art scan → `docs/PRIOR_ART.md` (the lead Q3 item — it unblocks the web-app design
+  *and* the related-work sections of both A37 and A44) · **H453** the A44 agreement study ·
+  **H454** the batched-PR switchover · **H456** the GRETIL typo report.
+
 ## [1.46.0] - 2026-07-02
 
 ### Added
