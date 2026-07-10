@@ -6,6 +6,28 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.49.0] - 2026-07-10
+
+### Added
+- **A44 blind LLM second-annotator agreement study (H453, ruling D2)** — replaces the deferred
+  human-IRR gate. All 122 [file_first_verified.tsv](corrections_draft/file_first_verified.tsv)
+  rows re-annotated blind by Opus 4.8 (`claude-opus-4-8`, 10 parallel agents, fresh prompt,
+  entry-body evidence only); **κ = 0.336 five-way, 99.2 % binary defect recognition (κ = 0.663)**,
+  zero corrections rejected as wrong, EDITORIAL class reproduced at perfect recall. All 50
+  disagreements decompose into collision-threshold (33) and evidence-threshold (16) *policy*
+  differences + 1 decisiveness reversal — no misread evidence. The blind pass independently
+  reproduced the editor's 02-07 PASS→SCAN-FIRST audit on 4 of the 5 downgraded SHS rows. New:
+  [detectors/irr_build_inputs.py](detectors/irr_build_inputs.py),
+  [detectors/irr_agreement.py](detectors/irr_agreement.py) (stdlib, exact rational arithmetic),
+  [corrections_draft/irr/](corrections_draft/irr/) (blind annotations + generated stats). New
+  paper section §4.6 + honest limitations rewrite; A44 3/5 → 4/5.
+
+### Fixed
+- **A44 stale verdict counts**: §4.5/abstract/data-statement printed the pre-audit 97/12 split;
+  the committed TSV (and MG's 02-07 audit commit `ce8f4f7`) says **92 PASS / 17 SCAN-FIRST** —
+  corrected everywhere, with the audit now described in §4.5. (The H453 handoff's guard cited
+  the numbers in the reverse direction; the artifact governs.)
+
 ## [1.48.0] - 2026-07-10
 
 ### Added
