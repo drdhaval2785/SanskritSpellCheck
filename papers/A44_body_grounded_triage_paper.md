@@ -15,9 +15,11 @@ data_source: "corrections_draft/README.md (33-dict triage) + corrections_draft/V
 > source re-verification folded in (fifth candidate class: *collision*), apparatus
 > taxonomy promoted to a named table with per-dictionary counts, §2 related work
 > drafted, per-phase model attribution added, reproducibility claims split.
-> **Open before submission:** (1) inter-coder reliability — the human second
-> annotator (*human gate*, tracked in GTD); (2) M.G. verification pass over the
-> References; (3) M.G. read-through.
+> **Open before submission:** (1) M.G. verification pass over the References;
+> (2) M.G. read-through. *(The former gate (1), human inter-coder reliability, was
+> replaced 10-07-2026 by ruling D2 with the blind LLM second-annotator study now
+> reported in §4.6; the human recruit stays deferred and is acknowledged as future
+> work in §6.)*
 
 ## Abstract
 
@@ -33,7 +35,7 @@ the editorial apparatus the entry itself declares. Applied across the **33
 dictionaries of the merged Cologne Digital Sanskrit collection that carry top-tier
 anomaly candidates**, the triage converts a near-useless flag list into two durable
 lexicographic assets: a small, evidence-backed correction queue (**122
-triage-confirmed candidates, of which 97 survive a subsequent per-row source
+triage-confirmed candidates, of which 92 survive a subsequent per-row source
 re-verification as unqualified proposals**, as of 2026-07-02) and — the principal
 deliverable — a standing **do-not-file catalogue** of spellings each dictionary
 documents on purpose (**2,549 across the dictionaries; 2,297 unique after
@@ -344,8 +346,8 @@ narrative in [`corrections_draft/VERIFICATION_2026_07.md`](../corrections_draft/
 
 | verdict | n | meaning |
 |---|--:|---|
-| **PASS** | 97 | unqualified proposals (still scan-checked by the human, as always) |
-| **SCAN-FIRST** | 12 | grammar-certain but entry-internal evidence silent — the scan is decisive |
+| **PASS** | 92 | unqualified proposals (still scan-checked by the human, as always) |
+| **SCAN-FIRST** | 17 | grammar-certain but entry-internal evidence silent — the scan is decisive |
 | **EDITORIAL (collision)** | 11 | the correct spelling already exists as its own entry — merge/respell/leave is an editorial decision |
 | **DNF** | 1 | ṇopadeśa root notation — moved to the do-not-file class |
 | **DROP** | 1 | already corrected upstream between triage and verification |
@@ -361,7 +363,65 @@ re-verification into 2 scan-first plus 2 editorial-collision rows — the
 precision-collapse story deepens (on the most-corrected dictionary, even the
 survivors are not simple fixes). Third, **queues decay**: one row (~0.8 %) was fixed
 upstream in the five weeks between triage and verification; correction queues must be
-re-verified against the live source immediately before filing.
+re-verified against the live source immediately before filing. (The verdict counts
+above reflect the editor's same-day audit of the verification pass, which downgraded
+five SHS rows resting on class-pattern rationale alone from PASS to SCAN-FIRST —
+"no in-entry etymology → the scan decides". §4.6 returns to those five rows.)
+
+### 4.6 A blind LLM second annotator: the method's reproducibility, measured
+
+The five-way verdict taxonomy of §4.5 was re-applied to all 122 rows by a **blind
+second annotator**: an independent model tier (Opus 4.8, `claude-opus-4-8`; the
+original pass was Sonnet 5, `claude-sonnet-5`, mechanical verification with Fable 5,
+`claude-fable-5`, adjudication of flags), a prompt written fresh from the taxonomy
+definitions, and an evidence file containing *only* the candidate pair and the
+dictionary's own entry bodies under both spellings — no access to the original
+verdicts, notes, prompts, or detector tier labels
+([`corrections_draft/irr/`](../corrections_draft/irr/); inputs built by
+[`irr_build_inputs.py`](../detectors/irr_build_inputs.py), agreement computed with
+exact rational arithmetic by [`irr_agreement.py`](../detectors/irr_agreement.py)).
+
+Agreement on the five-way taxonomy is **κ = 0.336** (Cohen; observed agreement
+59.0 %, chance 38.3 %; full confusion matrix and per-class κ in
+[`agreement_stats.md`](../corrections_draft/irr/agreement_stats.md)). On the
+pre-registered binary collapse — *does this row describe a genuine defect needing
+action* ({PASS, SCAN-FIRST, EDITORIAL}) versus not ({DNF, DROP}) — agreement is
+**121/122 (99.2 %, binary κ = 0.663** against a heavily skewed marginal**)**. The
+blind annotator never once rejected a proposed correction as substantively wrong
+(zero DNF), and reproduced the original EDITORIAL class with perfect recall (all 11
+rows).
+
+The 50 five-way disagreements are not noise; they decompose almost exhaustively
+into two *policy* differences, with **no case of misread evidence**:
+
+1. **Collision threshold (33 rows).** The blind annotator labels EDITORIAL whenever
+   the corrected spelling has *any* entry of its own; the original pass reserved
+   EDITORIAL for genuine rival readings, filing catalogue-structure repeats (ACC's
+   multi-supplement *Catalogus Catalogorum* lists the same work several times, so a
+   misspelled repeat is a plain typo, not a merge question) as PASS. Twenty-one of
+   the thirty-three rows are ACC.
+2. **Evidence threshold (16 rows).** The blind annotator demands that the entry body
+   *spell* the corrected form, refusing philological inference the original pass
+   accepted (that a month-name is *Phālguna*, that *mahāmāyā* underlies "Durgā;
+   illusion", that ruki requires *-ṣu* in a desiderative). Two of these
+   (YAT `duzwu`, `cInapizWa`) flag a real subtlety: the entry's inflectional
+   parenthesis repeats the headword's own error, so body-internal consistency can
+   *support* a typo — the one configuration where the body misleads as arbiter.
+3. **One decisiveness reversal**: on SHS `saptAtitama` the blind annotator was *more*
+   confident than the editor (morphological impossibility read as decisive; the
+   editor's audit had ruled the scan decisive).
+
+Two findings earn their place in the contribution. First, the disagreement is
+**about filing policy, not about facts** — both annotators recognise the same
+defects on the same evidence (the 99.2 % binary figure), and κ = 0.336 measures how
+much of the five-way taxonomy is decision rule rather than observation; this is the
+category-definition effect the agreement literature warns about (Artstein and
+Poesio 2008), here isolated experimentally because the evidence channel was held
+fixed. Second, the blind annotator **independently reproduced the human editor's
+audit**: of the five weak SHS rows the editor downgraded PASS → SCAN-FIRST on
+02-07-2026 (§4.5), the blind pass — with no knowledge that an audit had occurred —
+assigned SCAN-FIRST to four and PASS to one. The method's cautious layer, in other
+words, is recoverable from the evidence alone.
 
 ## 5. Discussion
 
@@ -392,13 +452,16 @@ digitisations still need attention.
 - **The LLM typo pass is stochastic** (§3.4): the 122 figure is a floor under
   union-across-runs, not a point estimate. The do-not-file catalogue does not share
   this instability (deterministic marker backbone; `eval.py` harness).
-- **No inter-coder reliability number yet.** The 2026-07-02 spot-check (10 sampled
-  PASS rows independently re-confirmed against source by a second model, 10/10) is
-  supporting evidence, but it is model-vs-model agreement, not human inter-coder
-  reliability. A human second annotator independently re-verifying a sample
-  (proposal survivors and a sample of do-not-file/reviewed-out lines) against the
-  entry text, reporting κ / percent agreement, is required before submission.
-  *(Human gate — tracked in the project GTD.)*
+- **The reliability number is model-vs-model, not human IRR.** §4.6 reports a blind
+  second-annotator study (κ = 0.336 five-way; 99.2 % binary defect recognition), but
+  both annotators are language models of different tiers under different prompts.
+  What it measures is the **reproducibility of the method from the evidence alone** —
+  whether the taxonomy can be re-derived blind from the entry bodies — plus an
+  incidental convergence with the human editor's audit on the five weak SHS rows. It
+  does not measure agreement with an independent human expert, which remains future
+  work (the recruit is deferred; tracked in the project GTD). The κ was computed once,
+  on the first blind run, and reported as obtained — the second annotator's prompt was
+  not iterated toward agreement.
 - **Queues decay.** ~0.8 %/week against the live, actively corrected `csl-orig`
   (measured over the triage→verification interval); all counts carry their as-of
   dates, and filing must re-verify against the live source.
@@ -407,7 +470,7 @@ digitisations still need attention.
   source is expected and would only refine the do-not-file list.
 - **The scan is the final, irreducible arbiter.** The LLM/human entry-reading layer
   is a prior; b/v and similar cases must be confirmed on the scanned page before
-  filing — twelve rows are explicitly held at SCAN-FIRST, plus YAT's ~32-row b/v
+  filing — seventeen rows are explicitly held at SCAN-FIRST, plus YAT's ~32-row b/v
   cluster (§4.4).
 
 ## 7. Conclusion
@@ -451,7 +514,11 @@ headline figures: the gross do-not-file total is the sum of the per-dict section
 counts in the wrong-readings files (**2,549**); the deduped union is the suppress
 file's data-row count (**2,297**); the confirmed totals are the data rows of each
 `*_file_first_sf.txt` (**122** across 11 dicts, as of triage) and the verdict rows of
-`file_first_verified.tsv` (97/12/11/1/1, as of 2026-07-02); MW precision is
+`file_first_verified.tsv` (92/17/11/1/1, as of 2026-07-02, including the editor's
+same-day PASS→SCAN-FIRST audit of five SHS rows); the agreement study's artifacts are
+`corrections_draft/irr/` (blind second annotations, exact-arithmetic κ, disagreement
+taxonomy) with `detectors/irr_build_inputs.py` + `detectors/irr_agreement.py` as the
+reproducing scripts; MW precision is
 **4 / 1,954 = 0.20 %**. The work never edits `csl-orig`; confirmed corrections are
 reported to the separate CORRECTIONS workflow
 ([umbrella issue #447](https://github.com/sanskrit-lexicon/CORRECTIONS/issues/447)).

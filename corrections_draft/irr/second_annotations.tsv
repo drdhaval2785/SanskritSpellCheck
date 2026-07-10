@@ -1,0 +1,129 @@
+# H453 blind second annotation, 10-07-2026. Annotator B = Opus 4.8 (claude-opus-4-8),
+# 10 parallel general-purpose agents, fresh prompt, evidence = irr_inputs.tsv rows only
+# (dict, wrong, right, wrong_entry_text, right_entry_text) -- NO access to the original
+# verdicts, notes, prompts, or tier labels. Inputs built by detectors/irr_build_inputs.py;
+# agreement computed by detectors/irr_agreement.py. Label set: PASS | SCAN-FIRST |
+# EDITORIAL | DNF | DROP (same five-way taxonomy as file_first_verified.tsv).
+row_id	a2_label	a2_reason
+001	PASS	Etymology 'BU earth, and mayaw aff.' yields BUmaya; headword's 'n' is an m-misread.
+002	PASS	Etymology 'Badra lucky, vallI a creeper' spells vallI; headword's ballI is b/v error.
+003	PASS	Etymology 'valka bark' plus variant SilAvalkala confirm valka; headword balkA is b/v error.
+004	PASS	Etymology spells AkASa (long initial a); headword's short akASa is the error.
+005	PASS	Etymology 'diDizU as above, and pati' spells long U; headword diDizu is the error.
+006	PASS	Etymology 'suta a son' spells short u; headword ditisUta long U is the error.
+007	PASS	Etymology 'pfTivI earth' spells v; headword pfTibI is b/v error.
+008	PASS	Etymology 'drava' and gloss dravAt jAyate spell drava; headword draba is b/v error.
+009	PASS	Etymology 'SuRqA the trunk' spells S; headword's lowercase s is the error.
+010	PASS	Inflection -vAn, matup affix, variant jAmbuvat confirm vat; headword bab is b/v error.
+011	PASS	Etymology spells jAmbUnada (long U); headword short jAmbunada is the error.
+012	PASS	Etymology 'rUpa form' and gloss rUpam spell long U; headword rupa is the error.
+013	DROP	No entry under kARqapfzwa in current source; only corrected form exists -- stale candidate.
+014	PASS	Etymology kalyARI + Qak yields -R-; body proves kAlyARineya.
+015	PASS	Etymology kAzWa wood and variant kAzWakUddAla spell zW decisively.
+016	PASS	Body gives f. (-kA) and 'fem. form'; feminine headword klItakikA required.
+017	PASS	Etymology vallI pedicle proves v, not b.
+018	PASS	Inflection -zWaH-zWA-zWaM and izWan superlative affix prove zW.
+019	SCAN-FIRST	Body only defines Vetasa plant; silent on i vs I in maYjarI -- check scan.
+020	PASS	f. (-lI) inflection and NIz affix match only muralI.
+021	SCAN-FIRST	Body gives only gloss, no etymology; u vs U undecided by entry alone.
+022	PASS	f. (-kA) inflection and etymology kArikA prove feminine navakArikA.
+023	PASS	Etymology nimitta + kAla proves m, not n.
+024	PASS	Etymology BUruha 'a tree' proves short u in final syllable.
+025	PASS	Etymology spells pAnIyamiva -- pAnIya, confirming headword's pAniya is the error.
+026	PASS	Etymology paNka 'mud' spells paNka; headword paNKa is the digitization error.
+027	PASS	Etymology azWIvat 'knee' spells azWIva; headword azwIva is wrong.
+028	SCAN-FIRST	Definition 'epithet of Shiva' only; no etymology to confirm rupa vs rUpa. Check page.
+029	SCAN-FIRST	Indeclinable 'along the road'; body silent on final -n vs -m. Scan needed.
+030	SCAN-FIRST	Inflection -zaH matches veza not proposed veSa; body doesn't support correction. Scan.
+031	SCAN-FIRST	Gloss 'medicinal root' only; body silent on purUza vs puruza. Check page.
+032	PASS	Gloss 'The seventieth' is uniquely saptatitama (from saptati); saptAti is no word.
+033	PASS	Etymology valkala 'bark' spells valkala; headword balkala is the error.
+034	PASS	Etymology vacana + Wak affix (-ika) yields vAcanika, not vAcanIka.
+035	PASS	Etymology vArttA + ayana yields vArttAyana; headword's short a is wrong.
+036	PASS	Etymology vizama spells vizama with z; headword viSama is the error.
+037	PASS	Body present-tense form suhyati spells s, contradicting headword z; correct root suh proven.
+038	EDITORIAL	Corrected spelling akza-dyUta exists as its own entry ('Idem.'); collision needs editorial merge.
+039	SCAN-FIRST	Definition 'of the afternoon' fits aparAhRika but body never spells the R; check page.
+040	PASS	All inflections (naBati, naByati, naBnAti) begin n, proving headword should be naB not RaB.
+041	EDITORIAL	Corrected niS already exists as separate homograph entry ('Night'); collision, editorial call.
+042	PASS	Inflections niMkte, nenekti, nenikte all begin n, proving root nij not Rij.
+043	SCAN-FIRST	Long-A aSanAyA plausible but body only says 'Hunger'; spelling not decided by body.
+044	SCAN-FIRST	ambu vs ambU (short/long u) undecided by body; 'Sputtered' gives no spelling proof.
+045	EDITORIAL	Corrected arSasa exists as its own adjective entry ('having piles'); separate bodies collide.
+046	SCAN-FIRST	'Indifferent' fits asaMsakta but body never spells the sibilant; page needed.
+047	PASS	Body's own paradigm (zwaH-zwA-zwaM) uses w, contradicting headword W; proves avasfzwa.
+048	SCAN-FIRST	Body paradigm (zWaH) matches current W, not the proposed w; body gives no correction proof.
+049	SCAN-FIRST	drAvaRa retroflexion plausible, but body and inflection (naM) consistently show dental n; no spelling proof in body.
+050	SCAN-FIRST	duzWu plausible for duzWu, but headword and inflection both show zwu; body not decisive.
+051	EDITORIAL	Corrected gadABft exists as its own separate entry (m. Idem); a duplicate/collision merge decision, not a simple respell.
+052	SCAN-FIRST	hantakAra (short a) plausible, but body spells hantA-kAra throughout; gloss is silent on vowel length.
+053	SCAN-FIRST	lakzmIPala fits the fruit semantically, but body spells pala; English gloss does not spell Pala.
+054	SCAN-FIRST	Gloss 'illusion; Durga' points to mAyA, but that is semantic inference; body spells mayA, no SLP1 spelling proof.
+055	EDITORIAL	Corrected mAyA-vin exists as its own separate entry (m. a juggler); duplicate/collision merge decision.
+056	SCAN-FIRST	pAradfSvan fits 'long-sighted', but body and inflection consistently show z; only semantic support.
+057	SCAN-FIRST	pAnIya 'water' fits 'trough for watering', but body spells pARIya; gloss does not spell the member.
+058	SCAN-FIRST	PAlguna is dental-n by name, but body says only 'Idem' with retroflex inflection; nothing in body proves it.
+059	PASS	Inflection (zwaH-zwA-zwaM) shows zwa, matching corrected vizwa, not the headword's vizWa.
+060	EDITORIAL	Corrected prati-zidDa exists as its own separate entry (forbidden, prohibited, unlawful); duplicate/collision merge decision.
+061	EDITORIAL	Separate saNgati entry exists with own body, both numbered f.; duplicate/split, merge decision not simple fix
+062	SCAN-FIRST	vESizwya plausibly correct but body gives no etymology proving W vs w; no separate entry, check page
+063	EDITORIAL	Separate vizWABU entry duplicates same definition 'Born in filth'; collision requiring merge, not plain correction
+064	SCAN-FIRST	Body itself restates zazWi spelling; no etymology decides w vs W; no separate entry, verify scan
+065	EDITORIAL	Full separate EtareyabrAhmaRa entry exists; v/b catalogue variants both with bodies, editorial merge
+066	EDITORIAL	Separate QuRQi entry with multiple bodies exists; collides with QuRqi as catalogue variants, merge decision
+067	EDITORIAL	Full separate SAkawAyana entry exists though body spells SAkawAyana; catalogue collision, editorial merge
+068	EDITORIAL	Separate SAkawAyanasmfti entry with own body exists; both spellings collide as catalogue variants
+069	EDITORIAL	Full separate SatapaTabrAhmaRa entry exists; v/b catalogue variants each with bodies, editorial merge
+070	EDITORIAL	Separate SrAvaRa entry exists with own body; collision as catalogue variants, merge decision
+071	EDITORIAL	Separate bfhannArAyaRa entry with cross-reference exists; both spellings collide, editorial resolution needed
+072	EDITORIAL	Multiple separate dakziRAmUrti entries exist with own bodies; catalogue collision requiring merge, not simple fix
+073	EDITORIAL	Corrected gAyatrIBAzya exists as separate entry with own body; collapsing the s/z typo is a merge decision.
+074	EDITORIAL	Full separate vistara entry already exists; vistAra/vistara duplicate requires editorial merge, not simple respell.
+075	EDITORIAL	kAWaka entry exists separately with extensive body; w/W duplicate is an editorial merge.
+076	EDITORIAL	Correct mahAnArAyaRa entry exists separately; nAraya/nArAya duplicate needs editorial merge.
+077	EDITORIAL	mEtrAyaRIya entry exists separately with variants; e/E duplicate is an editorial merge decision.
+078	EDITORIAL	paramArTasAra entries (Lbody link) exist separately; parA/para duplicate requires editorial merge.
+079	EDITORIAL	rAsayAtrAviveka entry exists separately (same work); yAtra/yAtrA duplicate is an editorial merge.
+080	EDITORIAL	rUpa gosvAmin entries exist separately; rupa/rUpa duplicate of same author needs editorial merge.
+081	EDITORIAL	sAttvikabrahma entry exists separately; v/b duplicate of same work requires editorial merge.
+082	EDITORIAL	saMnyAsaviDi entry exists separately with own body; nyasa/nyAsa duplicate is an editorial merge.
+083	EDITORIAL	viSvarUpanibanDa entry exists separately (same Purana part); v/b duplicate requires editorial merge.
+084	EDITORIAL	vivekacUqAmaRi entry exists separately with multiple sub-bodies; I/i duplicate is an editorial merge.
+085	EDITORIAL	Both zadarTasaMkzepa and zaqarTasaMkzepa exist as separate catalogue entries with own bodies; merge/respell is editorial.
+086	EDITORIAL	Both headwords exist as separate kavya catalogue entries with distinct bodies; resolving is an editorial merge decision.
+087	PASS	Etymology (BAva + ba) spells the second element as ba(nDana), proving BAvabanDana; no rival entry.
+088	SCAN-FIRST	Etymology abbreviation Da does not disambiguate b/v; gloss 'white/bright' only semantically hints Davala. Check scan.
+089	EDITORIAL	Separate arTabanDa entry already exists with own body; body quote supports respell but collision needs editorial merge.
+090	EDITORIAL	Separate avakASa homonym entry exists with full body; typo entry collides, requiring editorial merge not simple respell.
+091	SCAN-FIRST	Etymology names desiderative formation; ruki grammar implies zu but body doesn't spell biBedayizu. Verify scan.
+092	EDITORIAL	Separate divAkIrtya homonym entry exists; wrong entry's own etymology spells divA, but collision is editorial merge.
+093	EDITORIAL	Separate duzWu errata/apparatus entry exists alongside duzwu; both headwords present, editorial apparatus resolution needed.
+094	EDITORIAL	Separate paRabanDa entry exists with own body; etymology ba supports respell but collision is editorial merge.
+095	EDITORIAL	Separate pfzwabanDu entry exists with etymology and RV citation; both headwords collide, editorial merge required.
+096	EDITORIAL	Separate tArAvalI entry exists with own body; body quote spells tArAvalI but collision needs editorial merge.
+097	SCAN-FIRST	Marked f. suggests feminine -A, but inline lemma tfzitottara keeps -a; body silent on ending, need scan.
+098	PASS	Etymology root muz and cross-ref izwimuz decisively show retroflex; dental -s is the error, -z correct.
+099	PASS	Gloss 'banyan tree' (=vawa, short a) and in-text 'ArunDatIvawa' confirm short a; long vAwa is typo.
+100	PASS	Body repeatedly spells aSvaSiras (aSva=horse), citation aSvaSiro; display AsvaSiras is the error.
+101	PASS	Body 'king of BalIhas' and citation balIhAnAm show long I; display Baliha short i is typo.
+102	PASS	Citation brahmopanizadaM shows z; upanizad always retroflex; display Brahmopanisad (s) is error.
+103	PASS	All citations dakziRApaTa- have retroflex R (dakziRa=south); display with dental n is typo.
+104	PASS	Body 'the KIkawas' and citation kIkawAwavIn show long I; display Kikawa short i is error.
+105	PASS	Body 'went to MAkandI' and citation mAkandIm show long I; display MAkandi short i is typo.
+106	PASS	nadI (river) always long I; citations mahAnadI and homonyms confirm; short i is typo.
+107	EDITORIAL	Body confirms long I, but Supratika collides with existing SupratIka homonyms; respell needs renumbering decision.
+108	PASS	Citations vESAKam/vESAKe show S; month VESAKa; display with dental s is error.
+109	EDITORIAL	Separate full BawwAraka entry exists alongside the short-a typo entry; a merge decision, not a plain respell.
+110	SCAN-FIRST	Body 'a degree of latitude' gives no Sanskrit spelling; aMSa is plausible but body not decisive.
+111	EDITORIAL	Separate kat-tfRa cross-reference entry exists next to kattfna; both headwords present, editorial merge.
+112	EDITORIAL	Separate prati-voQavya cross-reference entry exists alongside prativoDavya; collision needs editorial resolution.
+113	PASS	Etymology '(hitAnAM AvalI yatra)' spells AvalI, decisively fixing the b/v typo.
+114	PASS	Etymology 'BAsate iti . BAsa + ac' spells BAsa, proving BAzA is the error.
+115	PASS	Etymology 'BAsate iti . BAsa + ac' spells BAsa, decisively correcting BAzA to BAsA.
+116	PASS	Inflection {-maH} and etymology 'druma a tree' spell druma, fixing druna.
+117	PASS	Inflection {-vAn} and variant jAmbuvat confirm v, proving jAmbabat is the typo.
+118	PASS	Inflection {-qyaM} spells qya, decisively correcting kaNkalodya to kaNkaloqya.
+119	EDITORIAL	Separate full BagaRa entry exists; Bagama duplicates its zodiac-cycle sense, an editorial merge.
+120	EDITORIAL	Separate hEmana entries exist; hemana cross-refs them, collision needs editorial handling.
+121	EDITORIAL	Separate cAmIkara (neut, gold) entry exists beside camIkara (masc, place); merge is an editorial call.
+122	PASS	Etymology 'E. a neg. and prAkaraRika' and example spell prAkaraRika, fixing aprakaraRika.
