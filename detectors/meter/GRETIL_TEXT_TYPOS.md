@@ -1,6 +1,15 @@
 # GRETIL in-corpus typo candidates — bigram checker on running text
 
-_Created: 07-07-2026 · Last updated: 07-07-2026_
+_Created: 07-07-2026 · Last updated: 10-07-2026_
+
+> **Superseded for upstream use (10-07-2026, H456):** every locus below has been
+> hand-verified against the raw e-texts; the curated, reportable result is
+> [GRETIL_UPSTREAM_REPORT.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/meter/GRETIL_UPSTREAM_REPORT.md)
+> (60 verified loci / 11 anomalous / 53 classified false positives). This file stays as
+> the raw candidates record. Note two verification reversals: `hbizekzyati` is a genuine
+> e-text transposition (*'hbiṣekṣyati* in the raw), not a walker artifact as guessed
+> below; and `skmsauka`/`pvpadyA` are the editor's apparatus citation sigla, not
+> corruption.
 
 Handoff [H289](https://github.com/gasyoun/Uprava/blob/main/handoffs/H289-Opus_SanskritSpellCheck_gretil_other_sections_pilot_07.07.26.md)
 Phase 3, **stream 2**: errors *inside the GRETIL e-text itself* (OCR / encoding /

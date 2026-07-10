@@ -6,6 +6,20 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.51.0] - 2026-07-10
+
+### Added
+- **[detectors/meter/GRETIL_UPSTREAM_REPORT.md](detectors/meter/GRETIL_UPSTREAM_REPORT.md)
+  (H456, ruling D8)** — the verified GRETIL corrections report: all 124 bigram-screen loci
+  hand-checked against the raw e-texts → **60 verified error loci across 7 texts** (incl. two
+  systematic classes: ḥ-for-vowel conversion corruption in the Vālmīki-Rāmāyaṇa southern-2 +
+  108-buddhist-stotras, and an *agrya*→*agyra* transposition family across 7 loci in two
+  files), 11 anomalous lines reported without a proposed fix, 53 flags documented as false
+  positives (mantra bījas, BHS orthography, apparatus sigla, valid rare forms). Verification
+  reversed two earlier guesses: `'hbiṣekṣyati` is a real e-text transposition (not a walker
+  artifact) and `skmsauka`/`pvpadyā` are apparatus citation sigla (not corruption). The
+  Göttingen email is drafted UNSENT in the Uprava outreach queue; M.G. sends.
+
 ## [1.50.0] - 2026-07-10
 
 ### Added
