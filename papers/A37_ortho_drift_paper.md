@@ -104,6 +104,14 @@ object; the **reform-regime stratification** of drift magnitude; and the
 **per-era composition** (not the scalar rate) as the dating instrument — none of
 which requires, or offers, a new normaliser.
 
+Finally, spellchecking of the Sanskrit **object language** is its own, separate
+line of work — most completely Prasanna (2022), a Paninian word-and-paradigm
+Hunspell dictionary with an online interface (the 10-07-2026 survey in
+[docs/PRIOR_ART.md](../docs/PRIOR_ART.md) maps that landscape). It shares this
+paper's Hunspell tooling family — our drift measurements run against Hunspell
+reference dictionaries for the gloss languages (de_DE, en_GB) — but targets the
+opposite channel: the headword language, not the gloss metalanguage measured here.
+
 ## 3. Data and method
 
 ### 3.1 Corpus and the key insight
@@ -342,6 +350,11 @@ German.* PhD dissertation, Universität Potsdam.
 Niculae, Vlad, Marcos Zampieri, Liviu P. Dinu, and Alina Maria Ciobanu. 2014.
 "Temporal Text Ranking and Automatic Dating of Texts." In *Proceedings of EACL
 2014,* 17–21. Gothenburg: Association for Computational Linguistics.
+
+Prasanna, S. 2022. "Spellchecker for Sanskrit: The Road Less Taken." In
+*Proceedings of the 19th International Conference on Natural Language Processing
+(ICON 2022),* 290–299. New Delhi: NLP Association of India.
+[`aclanthology.org/2022.icon-main.35`](https://aclanthology.org/2022.icon-main.35/).
 
 Stamou, Constantina. 2008. "Stylochronometry: Stylistic Development, Sequence of
 Composition, and Relative Dating." *Literary and Linguistic Computing* 23 (2):

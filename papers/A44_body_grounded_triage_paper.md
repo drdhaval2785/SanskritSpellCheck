@@ -109,10 +109,16 @@ operates on the string level — pattern anomalies, n-gram plausibility, diction
 lookups (Piotrowski 2012 surveys the OCR-era pipeline). The host toolset's own
 detectors (pattern, n-gram, confusion-pair) are of this family, and §4.1 measures
 exactly how far string-level evidence carries on a mature lexicon: to 0.20 %
-precision. The nearest prior tool for this corpus is the contextual spell-checker
-for Sanskrit demonstrated at ISCLS 2024 (Sanskrit-language object text); the present
-work differs in target (the *dictionary as edition*, headwords plus apparatus) and
-in output (a suppression catalogue, not corrections). **(b) LLM-assisted correction
+precision. The nearest prior tool is the Hunspell-based spellchecker for Sanskrit
+presented at ICON 2022 (Prasanna 2022 — Sanskrit-language object text; 100 %
+precision on the words it accepts, but heavy over-flagging from its 37,058-entry
+paradigm-generated lexicon — the mirror image of the precision collapse measured
+here); the present work differs in target (the *dictionary as edition*, headwords
+plus apparatus) and in output (a suppression catalogue, not corrections). No tool
+in the surveyed landscape models the variant-versus-typo distinction — Hunspell
+wordlists, up to the 543,758-entry `sa_IN` pack bundled with LibreOffice since
+2025, hard-code one spelling as correct (full survey:
+[docs/PRIOR_ART.md](../docs/PRIOR_ART.md)). **(b) LLM-assisted correction
 and its characteristic failure.** Recent work on LLM post-correction of Sanskrit OCR
 documents an over-correction failure mode — the model "fixes" what the witness
 actually reads toward what it expects (the *proof-reader effect*, ISCLS 2026). That
@@ -454,10 +460,12 @@ reported to the separate CORRECTIONS workflow
 
 - Piotrowski, M. (2012). *Natural Language Processing for Historical Texts*. Morgan &
   Claypool.
-- ISCLS (2024). Contextual spellchecking for Sanskrit (system demonstration).
-  *Proceedings of the International Sanskrit Computational Linguistics Symposium.*
-  *(exact author/title to be verified — see
-  [docs/CHANDAS_ANUPRASA_PRIOR_ART.md §3](../docs/CHANDAS_ANUPRASA_PRIOR_ART.md))*
+- Prasanna, S. (2022). Spellchecker for Sanskrit: The Road Less Taken. *Proceedings
+  of the 19th International Conference on Natural Language Processing (ICON 2022)*,
+  290–299. [https://aclanthology.org/2022.icon-main.35/](https://aclanthology.org/2022.icon-main.35/).
+  *(Verified 10-07-2026 by the H452 prior-art scan; replaces the earlier "ISCLS 2024
+  contextual spellchecker" placeholder — that volume contains no spellchecking paper.
+  See [docs/PRIOR_ART.md](../docs/PRIOR_ART.md).)*
 - ISCLS (2026). Preserving what is written, not what is expected: the proof-reader
   effect of LLMs in Sanskrit OCR. *Proceedings of the International Sanskrit
   Computational Linguistics Symposium.* *(exact author list to be verified — ibid.)*
