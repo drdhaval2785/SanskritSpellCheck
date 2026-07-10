@@ -1,8 +1,8 @@
 ---
 paper_id: A44
 title: "The Dictionary Body as Ground Truth: Body-Grounded LLM Triage and the Precision-Collapse Result"
-status: full draft (3/5) — revised 2026-07-03 per A44_review_fable5.md (IJL reframe, verification pass folded in)
-readiness: 3/5
+status: full draft (4/5) — author-voice pass 2026-07-10; blind second-annotator study (§4.6) folded in 2026-07-10; revised 2026-07-03 per A44_review_fable5.md (IJL reframe, verification pass folded in)
+readiness: 4/5
 venue: "International Journal of Lexicography (IJL)"
 author: "**Mārcis Gasūns**, independent scholar ([ORCID 0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X)), gasyoun@ya.ru"
 data_source: "corrections_draft/README.md (33-dict triage) + corrections_draft/VERIFICATION_2026_07.md (per-row re-verification) + nochange/do_not_file_suppress.txt (2297 deduped) + .claude/commands/dict-triage.md (pipeline)"
@@ -10,16 +10,19 @@ data_source: "corrections_draft/README.md (33-dict triage) + corrections_draft/V
 
 # The Dictionary Body as Ground Truth: Body-Grounded LLM Triage and the Precision-Collapse Result
 
-> **Draft status (2026-07-03).** Revised per the pre-submission review
+> **Draft status (2026-07-10).** Revised per the pre-submission review
 > ([A44_review_fable5.md](A44_review_fable5.md)): reframed for IJL, the 2026-07-02
 > source re-verification folded in (fifth candidate class: *collision*), apparatus
 > taxonomy promoted to a named table with per-dictionary counts, §2 related work
-> drafted, per-phase model attribution added, reproducibility claims split.
-> **Open before submission:** (1) M.G. verification pass over the References;
-> (2) M.G. read-through. *(The former gate (1), human inter-coder reliability, was
-> replaced 10-07-2026 by ruling D2 with the blind LLM second-annotator study now
-> reported in §4.6; the human recruit stays deferred and is acknowledged as future
-> work in §6.)*
+> drafted, per-phase model attribution added, reproducibility claims split. The
+> blind second-annotator study of §4.6 was added on 2026-07-10; it discharges the
+> former reliability gate under ruling D2, and the human recruit stays deferred and
+> acknowledged as future work in §6.
+>
+> **Open before submission:** (1) a verification pass over the References — two
+> entries are known to need it, see
+> [SIGNOFF_A44_author_pass.md](SIGNOFF_A44_author_pass.md); (2) an author
+> read-through for register.
 
 ## Abstract
 
@@ -253,7 +256,7 @@ sharpened MW's four survivors further — see §4.5.)
 ### 4.2 The do-not-file catalogue (the principal deliverable)
 Across all 33 triaged dictionaries, the body-grounded pass catalogues the spellings
 each dictionary records on purpose. **Table 2** gives the apparatus taxonomy with its
-counts — the paper's most lexicography-native result:
+counts:
 
 *Table 2a. Documented-intentional spellings by apparatus class (all 33 dictionaries,
 gross = 2,549).*
@@ -281,15 +284,15 @@ gross = 2,549).*
 
 The **per-dictionary counts sum to 2,549**; the **deduplicated union is 2,297 unique
 headwords** ([`nochange/do_not_file_suppress.txt`](../nochange/do_not_file_suppress.txt)).
-Both numbers are reported deliberately: the gross 2,549 measures the work per source;
-the deduped 2,297 is the artifact wired into the detectors. The class profile is
-itself lexicographically telling — the indigenous VCP suppresses almost entirely via
+Both numbers are reported because they answer different questions: the gross 2,549
+measures the work per source; the deduped 2,297 is the artifact wired into the
+detectors. The class profile repays attention — the indigenous VCP suppresses almost entirely via
 cross-references (its kośa structure), while Böhtlingk's PW is the corpus's densest
 carrier of explicit wrong-reading apparatus (95), and Edgerton's BHS of *variae
 lectiones* (81). This catalogue — not the handful of typos — is the durable value: it
 prevents a future bulk edit from "correcting" forms the editors put there on purpose.
 
-### 4.3 The filable typos and where they live
+### 4.3 The fileable typos and where they live
 The triage yields **122 confirmed candidates across 11 dictionaries**. They are highly
 concentrated:
 
@@ -307,7 +310,7 @@ concentrated:
 | VCP (*Vācaspatyam*) | 1 | 563 | 0.18 % |
 | GST (Goldstücker, 1856) | 1 | 48 | 2.1 % |
 
-The remaining 22 dictionaries yield **0** filable typos. The signal lives in the
+The remaining 22 dictionaries yield **0** fileable typos. The signal lives in the
 **poorly-digitised, less-corrected sources** (SHS, YAT, ACC), not in the large mature
 ones.
 
@@ -358,7 +361,7 @@ note, PW's constructed `*hemana` — would, under a naïve respell, have created
 duplicate headwords or clobbered apparatus. Only entry-reading catches these, which
 strengthens the body-as-arbiter thesis: even the *confirmed-typo* pile still contains
 decisions that belong to the editor, not the pipeline. Second, **MW's headline
-restated honestly**: the triage's celebrated "4 filable of 1,954" resolves after
+restated**: the triage's "4 fileable of 1,954" resolves after
 re-verification into 2 scan-first plus 2 editorial-collision rows — the
 precision-collapse story deepens (on the most-corrected dictionary, even the
 survivors are not simple fixes). Third, **queues decay**: one row (~0.8 %) was fixed
@@ -386,7 +389,7 @@ Agreement on the five-way taxonomy is **κ = 0.336** (Cohen; observed agreement
 [`agreement_stats.md`](../corrections_draft/irr/agreement_stats.md)). On the
 pre-registered binary collapse — *does this row describe a genuine defect needing
 action* ({PASS, SCAN-FIRST, EDITORIAL}) versus not ({DNF, DROP}) — agreement is
-**121/122 (99.2 %, binary κ = 0.663** against a heavily skewed marginal**)**. The
+**121/122 (99.2 %)**, with a binary κ of 0.663 against a heavily skewed marginal. The
 blind annotator never once rejected a proposed correction as substantively wrong
 (zero DNF), and reproduced the original EDITORIAL class with perfect recall (all 11
 rows).
@@ -411,7 +414,7 @@ into two *policy* differences, with **no case of misread evidence**:
    confident than the editor (morphological impossibility read as decisive; the
    editor's audit had ruled the scan decisive).
 
-Two findings earn their place in the contribution. First, the disagreement is
+Two findings follow. First, the disagreement is
 **about filing policy, not about facts** — both annotators recognise the same
 defects on the same evidence (the 99.2 % binary figure), and κ = 0.336 measures how
 much of the five-way taxonomy is decision rule rather than observation; this is the
@@ -443,7 +446,7 @@ century-corrected edition. This is the paper's inversion: the spell-checking cam
 most valuable output is the list of things it must never touch.
 
 **Filable rate as a digitisation-quality signal.** The strong concentration of typos
-in SHS/YAT/ACC, and their near-absence in MW/PW/VCP, means the filable rate doubles as
+in SHS/YAT/ACC, and their near-absence in MW/PW/VCP, means the fileable rate doubles as
 a proxy for how well-corrected a source already is — a cheap triage signal for which
 digitisations still need attention.
 
@@ -466,7 +469,7 @@ digitisations still need attention.
   (measured over the triage→verification interval); all counts carry their as-of
   dates, and filing must re-verify against the live source.
 - **PD external source.** PD is read from a staged external source, not `csl-orig`,
-  and was triaged on its first source only (0 filable, 116 do-not-file); a second
+  and was triaged on its first source only (0 fileable, 116 do-not-file); a second
   source is expected and would only refine the do-not-file list.
 - **The scan is the final, irreducible arbiter.** The LLM/human entry-reading layer
   is a prior; b/v and similar cases must be confirmed on the scanned page before
