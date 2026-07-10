@@ -6,6 +6,20 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.50.0] - 2026-07-10
+
+### Added
+- **H454 scan-verification gate tooling (ruling D3 prep)** — the batched-PR switchover found
+  **zero `y`-flipped rows in all 11 FILE-FIRST queues**, so change-file generation is gated on
+  the human scan pass. Shipped the gate as one sitting instead of a file-editing chore:
+  [detectors/gen_scanverify_sheet.py](detectors/gen_scanverify_sheet.py) generates an
+  interactive voting sheet over all 109 fileable rows (entry-body evidence + verification note +
+  Cologne scan deep-link per row; keyboard voting; localStorage persistence; decisions.json
+  export), and [corrections_draft/apply_scanverify_decisions.py](corrections_draft/apply_scanverify_decisions.py)
+  folds the votes back (`--apply` flips approved rows `n`→`y`, lists rejected rows for
+  do-not-file routing; dry-run by default). `review/` gitignored. Change files, queue parking,
+  and the #447 follow-up comment deliberately NOT produced — they require verified rows.
+
 ## [1.49.0] - 2026-07-10
 
 ### Added
