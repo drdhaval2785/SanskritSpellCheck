@@ -92,3 +92,6 @@ Temporary Items
 
 # Local Claude Code settings (per-machine, not shared)
 .claude/settings.local.json
+
+# review sheets (personal voting artifacts, regenerable via detectors/gen_scanverify_sheet.py)
+review/
