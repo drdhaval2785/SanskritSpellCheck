@@ -6,6 +6,27 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.48.0] - 2026-07-10
+
+### Added
+- **[docs/PRIOR_ART.md](docs/PRIOR_ART.md)** — the H452 prior-art scan (roadmap Q3 item 1, ruling
+  D1: Fable 5 `claude-fable-5` judgment gate). 12+ Sanskrit spellchecking tools/surfaces
+  characterized with the five-column verdict (approach · data · license · maintenance ·
+  reuse-or-avoid), every claim fetch-backed. Headlines: the netlify spellchecker identified as
+  **Prasanna S., ICON 2022** ([2022.icon-main.35](https://aclanthology.org/2022.icon-main.35/),
+  source unpublished, dormant); **LibreOffice bundles a 543,758-entry `sa_IN` Hunspell pair since
+  01-2025** with formally unsettled licensing (eval baseline only — no ingest); no maintained
+  flag-and-suggest Sanskrit spellchecker exists — the Q1-2027 web app's niche is unoccupied.
+
+### Fixed
+- **A44 mis-citation** ([papers/A44_body_grounded_triage_paper.md](papers/A44_body_grounded_triage_paper.md)
+  §2 + References): the "contextual spell-checker for Sanskrit demonstrated at ISCLS 2024" does not
+  exist in that volume; corrected to Prasanna (ICON 2022) with the over-flagging/precision-collapse
+  contrast made explicit. A37 §2 gained the object-language delimiting paragraph + reference.
+
+### Changed
+- [ROADMAP_2026_2027.md](ROADMAP_2026_2027.md) Q3 item 1 ticked ✅ (done 10-07-2026, H452).
+
 ## [1.47.0] - 2026-07-10
 
 ### Changed
