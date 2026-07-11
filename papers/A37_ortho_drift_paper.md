@@ -1,7 +1,7 @@
 ---
 paper_id: A37
 title: "Reading the Reform off the Gloss: Orthographic Drift as a Dater of 19th–20th-Century Indological Dictionaries"
-status: revision executed (referee fixes applied 2026-07-03), pending author pass
+status: author pass executed 2026-07-11, pending MG read-and-sign (SIGNOFF_A37_author_pass.md)
 readiness: 4/5
 venue: "Digital Scholarship in the Humanities (DSH) — per the locked venue split"
 author: "**Mārcis Gasūns**, independent scholar ([ORCID 0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X)), gasyoun@ya.ru"
@@ -10,17 +10,22 @@ data_source: "docs/ORTHO_DRIFT_FINDINGS.md (study complete; figures verified aga
 
 # Reading the Reform off the Gloss: Orthographic Drift as a Dater of 19th–20th-Century Indological Dictionaries
 
-> **Draft status (2026-06-26; referee fixes applied 2026-07-03, Fable 5
-> `claude-fable-5`, per [A37_review_fable5.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/A37_review_fable5.md)).**
+> **Draft status (2026-06-26; referee fixes applied 2026-07-03, author-voice pass
+> 2026-07-11, both Fable 5
+> `claude-fable-5`, per [A37_review_fable5.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/A37_review_fable5.md)
+> and [SIGNOFF_A37_author_pass.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/SIGNOFF_A37_author_pass.md)).**
 > Manuscript built directly on the completed
 > study in [`docs/ORTHO_DRIFT_FINDINGS.md`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/ORTHO_DRIFT_FINDINGS.md). All
 > numerical claims below are transcribed from that synthesis and recompute from the
 > committed [`ortho_drift/`](https://github.com/drdhaval2785/SanskritSpellCheck/tree/master/ortho_drift) TSVs;
-> significance values use the exact/permutation correction of 2026-07-03. **Open
-> before submission (author-only):** finalise byline; MG read-through. The
+> significance values use the exact/permutation correction of 2026-07-03. The byline
+> is the canonical author identity (name, independent-scholar affiliation, ORCID,
+> gasyoun@ya.ru — as used for the A25 submission). **Open
+> before submission (author-only):** MG read-through + sign-off per the signoff
+> document. The
 > Russian/Kossovich
 > material is folded in as §7 — it absorbs the former standalone
-> "Kossovich pre-1918 digitization protocol" idea and is framed as the extreme-regime
+> "Kossovich pre-1918 digitisation protocol" idea and is framed as the extreme-regime
 > case study.
 
 ## Abstract
@@ -29,10 +34,11 @@ Each historical bilingual dictionary is written twice over: once in the headword
 language it describes, and once in the *metalanguage* of its glosses, prefaces, and
 definitions. We show that the second of these — the gloss prose — carries a datable
 orthographic fingerprint, and that the **magnitude and composition of orthographic
-drift in the gloss language is governed by the *type* of that language's spelling
-reform, not merely by the dictionary's age.** Measuring drift against a pinned 2026
+drift in the gloss language are governed by the *type* of that language's spelling
+reform, not merely by the dictionary's age.** Measured against a pinned 2026
 standard across five gloss languages and nearly two centuries of sources (1832–2009)
-in the Cologne Digital Sanskrit Dictionaries, drift rates fall into three sharply
+— the Cologne Digital Sanskrit Dictionaries and one external pre-revolutionary
+Russian source — drift rates fall into three sharply
 separated tiers — **legislated**
 reform (Russian 1918 ≈ 358 / 1 000 gloss tokens; German 1901/1996 ≈ 2.5–10), **convention**
 drift (English / French ≈ 0–0.46), and **none** (Latin = 0, a negative control) —
@@ -105,29 +111,29 @@ object; the **reform-regime stratification** of drift magnitude; and the
 which requires, or offers, a new normaliser.
 
 Finally, spellchecking of the Sanskrit **object language** is its own, separate
-line of work — most completely Prasanna (2022), a Paninian word-and-paradigm
+line of work — most comprehensively Prasanna (2022), a Paninian word-and-paradigm
 Hunspell dictionary with an online interface (the 10-07-2026 survey in
-[docs/PRIOR_ART.md](../docs/PRIOR_ART.md) maps that landscape). It shares this
+[docs/PRIOR_ART.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/PRIOR_ART.md) maps that landscape). It shares this
 paper's Hunspell tooling family — our drift measurements run against Hunspell
 reference dictionaries for the gloss languages (de_DE, en_GB) — but targets the
 opposite channel: the headword language, not the gloss metalanguage measured here.
 
 ## 3. Data and method
 
-### 3.1 Corpus and the key insight
+### 3.1 Corpus and the measured channel
 The period orthography lives in the gloss language, not in the Sanskrit. Cologne
 markup already separates the two, so we extract gloss tokens (outside `{#…#}` /
 `{@…@}`) and measure how far they have drifted from a pinned 2026 standard.
 
 ### 3.2 Transform-and-check
 For each gloss token we apply a language-specific reform rule and accept it as
-**reform-drift** *iff* the transformed form is in the modern Hunspell dictionary
+**reform-drift** only if the transformed form is in the modern Hunspell dictionary
 **and** the original is not. This rejects coincidental modern digraphs (German
 `Theater`, `Gottheit` kept; `Thier`, `gerathen` flagged) and is wordlist-free where
 the reform is definitional (Russian, below). A residual the rule cannot resolve
 (inflected/compound drift, foreign words, names, OCR fragments) is classified by an
 LLM pass against the 2026 standard. Implementation: one profile-driven tool,
-[`detectors/ortho_drift.py`](../detectors/ortho_drift.py), one profile per language
+[`detectors/ortho_drift.py`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/ortho_drift.py), one profile per language
 (`de/en/fr/la/ru`).
 
 **Denominator comparability.** The "modern %" column below swings 42–65 % across
@@ -172,7 +178,7 @@ flip as per-era composition shares.
 
 ![Figure 1. Per-era composition of German reform drift across the five dictionaries; Schmidt's 1928 supplement flips from th-dominant (pre-1901 signature) to ß-dominant (post-1901, pre-1996).](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ortho_drift/drift_composition.png)
 
-### 4.3 Russian — legislated 1918, the dramatic case *(see also §7)*
+### 4.3 Russian — legislated 1918, the extreme case *(see also §7)*
 Kossovich's pre-1918 dictionary, measured **wordlist-free** (the abolished letters
 are pre-1918 by definition): 87 636 tokens · **31 389 drift · 358.17 / 1k ≈ 36 %**
 (hard-sign 12 125 · decimal-і 11 106 · yat 8 139 · fita 19). Source: SamudraManthanam
@@ -206,7 +212,7 @@ the tool — correctly — manufactures none. This confirms the method's specifi
 | **Convention** | gradual editorial, no authority | **0.01 – 0.46** | English WIL 0.46 → MW 0.01 |
 | **None** | no reform | **0** | Latin BOP 0 |
 
-## 5. Can drift date a dictionary? (O4)
+## 5. Can drift date a dictionary?
 
 - **No cross-language calibration** — the rate is regime-stratified (a ~5/1k rate is
   mid-19th-c. German but off-scale for English).
@@ -214,7 +220,7 @@ the tool — correctly — manufactures none. This confirms the method's specifi
   Spearman ρ(year, drift/1k) = **−0.975** (exact permutation p = 0.033 over all 60
   year-permutations; scipy's t-approximation reports 0.005, which is invalid at
   n = 5), leave-one-out year MAE
-  **±15 yr**, linear R² = 0.87. Two caveats keep this honest: (a) **PW and PWG are
+  **±15 yr**, linear R² = 0.87. Two caveats qualify this: (a) **PW and PWG are
   not independent points** — PW is Böhtlingk's abridgement of PWG, same
   lexicographer, same era, overlapping gloss prose; dropping PW leaves a perfectly
   monotone n = 4 series (ρ = −1.00), so the gradient does not depend on the
@@ -229,12 +235,12 @@ the tool — correctly — manufactures none. This confirms the method's specifi
 - **Per-era composition beats the scalar rate.** A pre-1901 rate-fit mis-dates SCH to
   1896; its `ss`-dominant composition pins it post-1901/pre-1996 exactly.
 
-**Verdict:** drift/1k is a real but coarse, regime-bounded dating signal; for fine
+**In sum:** drift/1k is a real but coarse, regime-bounded dating signal; for fine
 dating the **per-era composition** is the robust instrument and survives a 5.5× recall-map
 expansion intact, whereas the scalar gradient flattens (the DTA long tail conflates
 generic early-modern variation with the dated reforms).
 
-## 6. Does the method generalise? (O6 — French via FreEMnorm)
+## 6. Does the method generalise? French via FreEMnorm
 
 The *method* generalises: the `extract → dic-validate → merge` pipeline produced a
 clean, reusable French reform lexicon (236 validated pairs) from the openly-licensed
@@ -244,7 +250,7 @@ onto the 19th–20th-c. IAST-laced French gloss, ~90 % of the added flags are
 abbreviation/homograph/transliteration collisions. Generality is a property of the
 pipeline, not of any one map.
 
-## 7. The Kossovich case: pre-1918 Russian and a digitization protocol
+## 7. The Kossovich case: pre-1918 Russian and a digitisation protocol
 *(folds the former standalone "Орфография как датирующий признак" idea)*
 
 Russia's 1918 reform is the corpus's most sweeping, and Kossovich's dictionary is its
@@ -290,8 +296,8 @@ search-normalisation map and an epoch label, both derived without touching the s
 
 ## 10. Conclusion
 
-A dictionary's gloss prose dates itself, and how strongly is governed by the kind of
-spelling reform its metalanguage underwent. Across five languages the signal separates
+A dictionary's gloss prose dates itself, and how strongly it does so is governed by
+the kind of spelling reform its metalanguage underwent. Across five languages the signal separates
 into legislated, convention, and no-reform tiers, and the per-era composition resolves
 the orthographic epoch from the text alone — a reproducible result extracted from a
 single, uniformly marked-up lexicographic corpus.
