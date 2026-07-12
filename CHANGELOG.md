@@ -43,6 +43,22 @@ ready for a dated entry.
     added and the two live References defects (missing Artstein & Poesio,
     fabricated ISCLS 2026) resolved.
 
+## [1.52.0] - 2026-07-12
+
+### Added
+- **[docs/WEB_SUGGESTER_SPEC.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/WEB_SUGGESTER_SPEC.md)
+  (H828, rulings D1/D6/D13)** — the design spec for the Q1-2027 web spellchecker's suggestion
+  engine: an [Oflazer 1996](https://aclanthology.org/J96-1003.pdf) error-tolerant FST traversal
+  (turning the vendored Vidyut kosha/stems from a *validator* into a *suggestion generator*) over
+  the 431,596-headword union trie, ranked by a [Brill & Moore 2000](https://aclanthology.org/P00-1037/)
+  noisy-channel model (string-edit channel × DCS frequency prior × the measured
+  [confusion_weights.json](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/confusion_weights.json)),
+  with the do-not-file catalogue as a variant-aware accept list. Reuse map (in-repo assets vs the
+  two ACL algorithms + app to build), differentiators, licensing guards (Vidyut MIT embeddable; do
+  NOT ingest LibreOffice/GPL wordlists), the ISCLS demo hook, an 8-item build breakdown, and 5
+  parked open questions. **Spec only — no build** (D13 defers it past the ≥300-corrections
+  north-star). Authored by Opus 4.8 (`claude-opus-4-8`).
+
 ## [1.51.0] - 2026-07-10
 
 ### Added
