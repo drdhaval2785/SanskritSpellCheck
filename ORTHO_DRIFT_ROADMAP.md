@@ -1,5 +1,7 @@
 # Orthographic-Drift Roadmap
 
+_Created: 17-06-2026 · Last updated: 04-07-2026_
+
 **Status: ✅ COMPLETE across all 5 gloss languages** (changelog `[1.20.0]`–`[1.30.0]`). This
 document is the original **design**; the implementation (`detectors/ortho_drift.py`, profile-driven
 de/en/fr/la/ru), the per-language outputs in `ortho_drift/`, and the synthesis are all done — read
@@ -197,3 +199,5 @@ whole approach against the one language whose reform is fully rule-defined.
 Historical-spelling normalization is a mature DH subfield — the contribution here is **applying
 it to a uniformly-marked-up, multilingual indological-lexicography corpus** and producing the
 cross-decade drift dataset, not building new normalizers.
+
+_Dr. Mārcis Gasūns_

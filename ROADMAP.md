@@ -1,5 +1,7 @@
 # SanskritSpellCheck — roadmap
 
+_Created: 14-06-2026 · Last updated: 02-07-2026_
+
 > **Superseded as the forward plan (02-07-2026):** the current 1-year plan is
 > [ROADMAP_2026_2027.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ROADMAP_2026_2027.md).
 > This file remains as the Phase 1–3 record.
@@ -133,3 +135,5 @@ Phase 1.1–1.3 (unified runner → confidence tiers → review workflow) is the
 leverage: it turns ten scattered candidate streams into one ranked, deduplicated,
 reviewable queue and makes the human verification loop fast — which is what actually
 gates corrections shipping.
+
+_Dr. Mārcis Gasūns_
