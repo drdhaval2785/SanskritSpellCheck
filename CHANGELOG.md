@@ -6,7 +6,7 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
-## [Unreleased]
+## [1.53.0] - 2026-07-12
 
 ### Added
 - **H825 (ACL uplift): GEC/GED reframe, detection-level eval metrics, cross-family
