@@ -5,7 +5,7 @@ _Created: 10-07-2026 · Last updated: 10-07-2026_
 The hand-verified curation of [GRETIL_TEXT_TYPOS.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/meter/GRETIL_TEXT_TYPOS.md)'s
 candidate list, prepared for upstream report to GRETIL (gretil@sub.uni-goettingen.de) per
 ruling D8 in [ROADMAP_2026_2027.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ROADMAP_2026_2027.md)
-and [H456](https://github.com/gasyoun/Uprava/blob/main/handoffs/H456-Sonnet_SanskritSpellCheck_gretil-typo-report-upstream_10.07.26.md).
+and [H456](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H456-Sonnet_SanskritSpellCheck_gretil-typo-report-upstream_10.07.26.md).
 **Every row below was re-checked against the raw GRETIL e-text line by a human-review pass**
 (Fable 5 `claude-fable-5`, 10-07-2026; raw corpus fetched 06/07-07-2026): all 124 flagged loci
 from the five `ngram_typos_*.tsv` files were pulled with their full verse context and

@@ -11,7 +11,7 @@ _Created: 07-07-2026 · Last updated: 10-07-2026_
 > below; and `skmsauka`/`pvpadyA` are the editor's apparatus citation sigla, not
 > corruption.
 
-Handoff [H289](https://github.com/gasyoun/Uprava/blob/main/handoffs/H289-Opus_SanskritSpellCheck_gretil_other_sections_pilot_07.07.26.md)
+Handoff [H289](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H289-Opus_SanskritSpellCheck_gretil_other_sections_pilot_07.07.26.md)
 Phase 3, **stream 2**: errors *inside the GRETIL e-text itself* (OCR / encoding /
 transcription slips), as distinct from the dictionary-headword corrections of
 [stream 1](MULTISECTION_ERROR_CANDIDATES.md). These are **GRETIL / e-text defects,

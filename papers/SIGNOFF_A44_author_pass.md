@@ -4,7 +4,7 @@ _Created: 10-07-2026 · Last updated: 10-07-2026_
 
 Author-voice pass over [`papers/A44_body_grounded_triage_paper.md`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/A44_body_grounded_triage_paper.md)
 ("The Dictionary Body as Ground Truth"), executed under handoff
-[H047](https://github.com/gasyoun/Uprava/blob/main/handoffs/H047-Opus_SanskritSpellCheck_body_grounded_triage_26.06.26.md)
+[H047](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H047-Opus_SanskritSpellCheck_body_grounded_triage_26.06.26.md)
 by Opus 4.8 (`claude-opus-4-8`) via the [`/paper-author-pass`](https://github.com/gasyoun/claude-config/blob/main/commands/paper-author-pass.md) skill.
 
 This document exists so the bump to 5/5 costs a ~30-minute read rather than a full

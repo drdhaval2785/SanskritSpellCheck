@@ -4,7 +4,7 @@ _Created: 11-07-2026 · Last updated: 11-07-2026_
 
 Author-voice pass over [`papers/A37_ortho_drift_paper.md`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/A37_ortho_drift_paper.md)
 ("Reading the Reform off the Gloss"), executed under handoff
-[H678](https://github.com/gasyoun/Uprava/blob/main/handoffs/H678-Fable_SanskritSpellCheck_a37-ortho-drift-author-pass_11.07.26.md)
+[H678](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H678-Fable_SanskritSpellCheck_a37-ortho-drift-author-pass_11.07.26.md)
 by Fable 5 (`claude-fable-5`) via the [`/paper-author-pass`](https://github.com/gasyoun/claude-config/blob/main/commands/paper-author-pass.md) skill.
 
 This document exists so the bump to 5/5 costs a ~30-minute read rather than a full

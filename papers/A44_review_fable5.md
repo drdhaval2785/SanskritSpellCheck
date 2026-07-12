@@ -93,7 +93,7 @@ working sessions + the annotator to reach 4/5.
 
 ## Fixes applied (03-07-2026, Fable 5 `claude-fable-5`, H127/S16)
 
-All agent-doable findings applied in one pass ([H127](https://github.com/gasyoun/Uprava/blob/main/handoffs/H127-Fable_SanskritSpellCheck_a44_fable_fixpass_03.07.26.md)):
+All agent-doable findings applied in one pass ([H127](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H127-Fable_SanskritSpellCheck_a44_fable_fixpass_03.07.26.md)):
 
 - **Major 1 (IJL reframe) — completed across two concurrent passes.** H127
   ([PR #17](https://github.com/drdhaval2785/SanskritSpellCheck/pull/17)) locked the venue,

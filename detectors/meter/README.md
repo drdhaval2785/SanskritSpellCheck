@@ -6,7 +6,7 @@ Detector #7 (`meter_check.py`, one level up) -- a pAda that breaks its
 identified meter is a suspect-text signal, fed into
 [`run_all.py`](../run_all.py)'s cross-detector scoring as a ranking nudge (see
 that file's `DETECTORS` list and the guard comment on `HIGH_PRECISION`).
-Built per [`H251`](https://github.com/gasyoun/Uprava/blob/main/handoffs/H251-Sonnet_SanskritSpellCheck_chandas_validator_q1_2027_build_06.07.26.md),
+Built per [`H251`](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H251-Sonnet_SanskritSpellCheck_chandas_validator_q1_2027_build_06.07.26.md),
 following on the pilot in
 [`docs/CHANDAS_ANUPRASA_PRIOR_ART.md`](../../docs/CHANDAS_ANUPRASA_PRIOR_ART.md) §4.
 

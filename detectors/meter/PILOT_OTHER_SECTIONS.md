@@ -4,7 +4,7 @@ _Created: 07-07-2026 · Last updated: 07-07-2026_
 
 Can the H251/H277 meter validator (and the wider SanskritSpellCheck QA stack) be launched on GRETIL
 sections **beyond Kavya**? This is the Phase-1 feasibility pilot of handoff
-[H289](https://github.com/gasyoun/Uprava/blob/main/handoffs/H289-Opus_SanskritSpellCheck_gretil_other_sections_pilot_07.07.26.md).
+[H289](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H289-Opus_SanskritSpellCheck_gretil_other_sections_pilot_07.07.26.md).
 **Verdict: yes — it generalizes.**
 
 ## What was run
@@ -48,7 +48,7 @@ nudge in `run_all.py`).
 ## Verdict & caveats
 
 **PASS — launch on other Classical-verse sections.** Caveats carried into
-[H289](https://github.com/gasyoun/Uprava/blob/main/handoffs/H289-Opus_SanskritSpellCheck_gretil_other_sections_pilot_07.07.26.md)
+[H289](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H289-Opus_SanskritSpellCheck_gretil_other_sections_pilot_07.07.26.md)
 Phases 2–3:
 - **Exclude the Vedic section** (Vedic accent + non-Classical meter → skrutable will mis-scan). Run the
   `ngram` running-text checker there and on prose-heavy Śāstra instead of the meter validator.

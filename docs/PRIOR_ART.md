@@ -2,7 +2,7 @@
 
 _Created: 10-07-2026 · Last updated: 10-07-2026_
 
-Survey run 10-07-2026 for [H452](https://github.com/gasyoun/Uprava/blob/main/handoffs/H452-Fable_SanskritSpellCheck_prior-art-scan_10.07.26.md)
+Survey run 10-07-2026 for [H452](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H452-Fable_SanskritSpellCheck_prior-art-scan_10.07.26.md)
 (roadmap Q3 item 1, ruling D1 in [ROADMAP_2026_2027.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ROADMAP_2026_2027.md)):
 three parallel web-research agents (general-purpose, Fable 5 `claude-fable-5` session) + main-session
 verification, Fable 5 (`claude-fable-5`) synthesis. Every claim below traces to a fetched page or a

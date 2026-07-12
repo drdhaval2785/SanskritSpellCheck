@@ -80,7 +80,7 @@ two working sessions + M.G. read-through to reach 4/5.
 
 ## Fixes applied (03-07-2026, Fable 5 `claude-fable-5`, H125/S15)
 
-All agent-doable findings above were applied in one pass ([H125](https://github.com/gasyoun/Uprava/blob/main/handoffs/H125-Fable_SanskritSpellCheck_a37_fable_polish_03.07.26.md)):
+All agent-doable findings above were applied in one pass ([H125](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H125-Fable_SanskritSpellCheck_a37_fable_polish_03.07.26.md)):
 
 - **Major 1** — §2 Related work WRITTEN, from verified literature only: normalisation
   (Baron & Rayson 2008 VARD2; Bollmann 2012 Norma; Bollmann 2019 survey; Jurish 2012
