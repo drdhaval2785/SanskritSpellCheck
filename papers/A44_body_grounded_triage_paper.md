@@ -1,7 +1,7 @@
 ---
 paper_id: A44
 title: "The Dictionary Body as Ground Truth: Body-Grounded LLM Triage and the Precision-Collapse Result"
-status: full draft (4/5) — author-voice pass 2026-07-10; blind second-annotator study (§4.6) folded in 2026-07-10; revised 2026-07-03 per A44_review_fable5.md (IJL reframe, verification pass folded in)
+status: full draft (4/5) — GED/confusion-set reframe + harm metric (§4.7) + References fixes 2026-07-12; author-voice pass 2026-07-10; blind second-annotator study (§4.6) folded in 2026-07-10; revised 2026-07-03 per A44_review_fable5.md (IJL reframe, verification pass folded in)
 readiness: 4/5
 venue: "International Journal of Lexicography (IJL)"
 author: "**Mārcis Gasūns**, independent scholar ([ORCID 0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X)), gasyoun@ya.ru"
@@ -19,15 +19,30 @@ data_source: "corrections_draft/README.md (33-dict triage) + corrections_draft/V
 > former reliability gate under ruling D2, and the human recruit stays deferred and
 > acknowledged as future work in §6.
 >
-> **Open before submission:** (1) a verification pass over the References — two
-> entries are known to need it, see
-> [SIGNOFF_A44_author_pass.md](SIGNOFF_A44_author_pass.md); (2) an author
-> read-through for register.
+> **This pass (12-07-2026, Fable 5, `claude-fable-5`, per H825 ruling D10).** The
+> task is now positioned explicitly on the GED / confusion-set (real-word error)
+> lineage — additive framing in the Abstract, §1 and a new §2(d); the related work
+> gains verified confusion-set, anomaly-detection and CDSL-adjacent citations; a
+> detection-level **harm metric** against the held-out gold verdicts is reported
+> (new §4.7); and the two known References defects are fixed — Artstein & Poesio
+> (2008) now has a full entry, and the unverifiable "ISCLS 2026 proof-reader"
+> entry is **removed** (the over-correction claim now rests on verified citations
+> plus this project's own observation). Every References URL was resolved and
+> title/author-checked against its landing page on 12-07-2026.
+>
+> **Open before submission:** (1) an author read-through for register; (2) the
+> cross-family blind annotation run (§4.6) — tooled, pending an API credential;
+> (3) the human-anchor gap of §6 remains tracked, not resolved.
 
 ## Abstract
 
 A spelling-anomaly detector cannot, on its own, tell a typo from a real but rare
-word, an intentional orthographic variant, or editorial apparatus. Run against
+word, an intentional orthographic variant, or editorial apparatus. In
+error-detection terms the task is **grammatical error detection (GED)** posed at
+the headword level over a confusion set of near-spellings — a real-word-error
+problem, since the flagged string is (or resembles) a possible word and the
+question is whether *this* occurrence is an error; the system detects and
+triages, it does not auto-correct. Run against
 mature, much-corrected dictionaries, such detectors produce lists that are almost
 all false positives: on the Monier-Williams Sanskrit–English dictionary, only **4 of
 1,954** top-tier candidates survive triage — a precision of **0.20 %**. We report a
@@ -74,6 +89,20 @@ is far more often a rare-but-real word, an intentional variant, or apparatus tha
 typographic error. The result, on a mature dictionary corrected for over a century,
 is an anomaly list that is overwhelmingly noise.
 
+This task has a name and a twenty-five-year lineage. In the vocabulary of the
+error-detection literature it is **grammatical error detection (GED)** at the
+headword level, over a **confusion set**: each candidate is a real-word-like
+string to be arbitrated against a small set of near-spellings (b/v, vowel length,
+retroflexion) — the *real-word error* setting studied since Golding and Roth's
+(1999) context-sensitive spelling correction and institutionalised as a benchmark
+by the Chinese Spelling Check bake-offs (Tseng et al. 2015), where most errors are
+likewise visually or phonologically confusable real characters. And the system
+reported here sits squarely on the *detection* side of the detection/correction
+distinction drawn by Rei and Yannakoudakis (2016): it flags, classifies, and
+triages single headwords; it performs no full-sentence correction and applies
+nothing automatically. Section 4.7 evaluates it accordingly, with the
+detection-standard precision-weighted F0.5.
+
 We quantify this **precision collapse** and then resolve it. On Monier-Williams (MW,
 1899), the engine's top tier produces 1,954 candidates of which only 4 survive
 triage — **0.20 % precision**. The same pattern holds on the other large, mature
@@ -108,13 +137,25 @@ empirical result about where the signal actually lives.
 
 ## 2. Related work
 
-Three literatures border the method. **(a) Dictionary-digitisation quality assurance
+Four literatures border the method. **(a) Dictionary-digitisation quality assurance
 and OCR post-correction.** Error detection in digitised reference works generally
 operates on the string level — pattern anomalies, n-gram plausibility, dictionary
-lookups (Piotrowski 2012 surveys the OCR-era pipeline). The host toolset's own
-detectors (pattern, n-gram, confusion-pair) are of this family, and §4.1 measures
-exactly how far string-level evidence carries on a mature lexicon: to 0.20 %
-precision. The nearest prior tool is the Hunspell-based spellchecker for Sanskrit
+lookups (Piotrowski 2012 surveys the OCR-era pipeline). The direct methodological
+ancestor of the host toolset's detectors is Bloodgood and Strauss (2016), who run a
+battery of statistical anomaly detectors (character rarity, length, language-model
+signals) over an XML electronic dictionary to flag likely errors; the pattern,
+n-gram and confusion-pair detectors here are the same move on Sanskrit headwords,
+and §4.1 measures exactly how far that string-level family carries on a mature
+lexicon: to 0.20 % precision. Discrepancy- and entropy-based anomaly ranking has
+likewise been used to surface inconsistencies in annotated lexical resources
+(Hollenstein et al. 2016). On this paper's own corpus, Mondaca and Rau (2020)
+transform the Cologne Digital Sanskrit Dictionaries into OntoLex-Lemon — a
+modelling effort, not a correcting one — and Patel and Kulkarni (2024), by the
+host toolset's author, align word senses *across* the Sanskrit lexica; that
+cross-dictionary correspondence is the same signal this toolset's consensus and
+collation detectors exploit, turned from sense alignment to error detection, which
+makes the two lines direct companions. The nearest prior tool is the
+Hunspell-based spellchecker for Sanskrit
 presented at ICON 2022 (Prasanna 2022 — Sanskrit-language object text; 100 %
 precision on the words it accepts, but heavy over-flagging from its 37,058-entry
 paradigm-generated lexicon — the mirror image of the precision collapse measured
@@ -124,22 +165,47 @@ in the surveyed landscape models the variant-versus-typo distinction — Hunspel
 wordlists, up to the 543,758-entry `sa_IN` pack bundled with LibreOffice since
 2025, hard-code one spelling as correct (full survey:
 [docs/PRIOR_ART.md](../docs/PRIOR_ART.md)). **(b) LLM-assisted correction
-and its characteristic failure.** Recent work on LLM post-correction of Sanskrit OCR
-documents an over-correction failure mode — the model "fixes" what the witness
-actually reads toward what it expects (the *proof-reader effect*, ISCLS 2026). That
-failure mode is precisely what a dictionary's apparatus maximally provokes, and it
-motivates this pipeline's two design choices: a deterministic marker backbone that
-settles declared apparatus *before* any model runs, and an adversarial review stage
-gating the model's confirmations. **(c) Variation versus error in historical
-lexicography.** The editorial theory of *variae lectiones* and wrong-reading
-apparatus long predates digitisation; what the digital setting adds is scale and the
-new risk of *bulk* corruption. We are not aware of prior work that operationalises
-the entry body as the arbiter for typo-vs-variant at corpus scale, or that treats
-the resulting **do-not-file catalogue as the primary deliverable** of a
-spell-checking campaign — the inversion this paper argues for.
+and its characteristic failure.** Recent evaluations of LLM and vision-language
+reading of historical text document an over-correction failure mode: the model
+produces fluent, plausible output with little grounding in what the witness
+actually reads — "plausible but visually unsupported" substitutions on ancient
+Greek editions (Karamolegkou et al. 2026), and no-free-lunch results for
+LLM post-correction of historical documents generally (Kanerva et al. 2025). We
+have observed the same tendency in this pipeline's own model passes — the model
+"fixes" what is written toward what it expects; call it the *proof-reader
+effect*. That failure mode is precisely what a dictionary's apparatus maximally
+provokes, and it motivates this pipeline's two design choices: a deterministic
+marker backbone that settles declared apparatus *before* any model runs, and an
+adversarial review stage gating the model's confirmations. **(c) Variation versus
+error in historical lexicography.** The editorial theory of *variae lectiones* and
+wrong-reading apparatus long predates digitisation; what the digital setting adds
+is scale and the new risk of *bulk* corruption. We are not aware of prior work
+that operationalises the entry body as the arbiter for typo-vs-variant at corpus
+scale, or that treats the resulting **do-not-file catalogue as the primary
+deliverable** of a spell-checking campaign — the inversion this paper argues for.
+**(d) Grammatical error detection and the confusion-set tradition.** The
+typo-vs-variant decision is a real-word error problem — the flagged string is (or
+resembles) a possible word, and the judgment is whether *this* occurrence is an
+error. That is the setting of context-sensitive spelling correction since Golding
+and Roth (1999), whose WinSpell arbitrates within fixed confusion sets, and of the
+SIGHAN Chinese Spelling Check bake-offs (Tseng et al. 2015), whose errors are
+predominantly visually or phonologically confusable real characters — the closest
+large-scale analogue to the b/v, vowel-length and retroflex confusions here. Two
+of that tradition's instruments transfer directly. First, the
+detection/correction distinction (Rei and Yannakoudakis 2016): this system is GED
+— it flags and triages, it never auto-corrects — and is evaluated with the
+tradition's precision-weighted F0.5 (§4.7; on GEC/GED evaluation practice see
+Grundkiewicz et al. 2015). Second, typed error annotation with per-type counts as
+the backbone of evaluation (Bryant et al. 2017's ERRANT); Table 2's apparatus
+taxonomy with per-class and per-dictionary counts is the lexicographic analogue.
+What the dictionary setting adds to this lineage is the apparatus problem — a
+confusion set that *deliberately contains* "wrong" forms — and an arbiter the
+sentence-level tradition does not have: the entry body. On annotator disagreement
+as signal rather than noise, §4.6 follows Plank (2022).
 
-*(References drafted agent-side; each must pass the project's human
-citation-verification gate before submission.)*
+*(Every References URL was resolved and title/author-checked on 12-07-2026; the
+project's human citation-verification gate remains a final spot-check before
+submission.)*
 
 ## 3. Data and method
 
@@ -394,8 +460,9 @@ blind annotator never once rejected a proposed correction as substantively wrong
 (zero DNF), and reproduced the original EDITORIAL class with perfect recall (all 11
 rows).
 
-The 50 five-way disagreements are not noise; they decompose almost exhaustively
-into two *policy* differences, with **no case of misread evidence**:
+The 50 five-way disagreements are not noise but signal — the position argued for
+annotator label variation generally by Plank (2022); they decompose almost
+exhaustively into two *policy* differences, with **no case of misread evidence**:
 
 1. **Collision threshold (33 rows).** The blind annotator labels EDITORIAL whenever
    the corrected spelling has *any* entry of its own; the original pass reserved
@@ -426,6 +493,53 @@ audit**: of the five weak SHS rows the editor downgraded PASS → SCAN-FIRST on
 assigned SCAN-FIRST to four and PASS to one. The method's cautious layer, in other
 words, is recoverable from the evidence alone.
 
+One caveat of design, not execution: both annotators are Anthropic models — a
+same-family pairing the self-enhancement-bias literature cautions against. A
+cross-family replication is now tooled
+([`detectors/irr_cross_family.py`](../detectors/irr_cross_family.py) re-runs the
+identical blind protocol with a non-Anthropic judge) and pending an API
+credential; its κ will be reported as obtained, like the first.
+
+### 4.7 The harm metric: what a naive auto-apply would corrupt
+
+The GED framing of §1 licenses a detection-level evaluation of the underlying
+spelling-anomaly detectors themselves, and that evaluation directly measures the
+stakes of this paper's central claim. The verified verdicts of §4.5 double as a
+held-out gold set ([`detectors/gold_corrections.tsv`](../detectors/gold_corrections.tsv),
+derived from [`file_first_verified.tsv`](../corrections_draft/file_first_verified.tsv)):
+**108 POSITIVE rows** (genuine corrections a detector *should* find) and **13
+HARM rows** — the EDITORIAL-collision, DNF and DROP verdicts, i.e. exactly the
+rows that must **not** be silently "corrected". [`detectors/eval.py`](../detectors/eval.py)
+scores each corrector against this gold set with the tradition's
+precision-weighted F0.5 (β = 0.5; on GEC/GED evaluation practice see Grundkiewicz
+et al. 2015), plus a **harm rate**: the share of the 13 protected rows the
+detector flags as if they were plain corrections.
+
+*Table 4. Detection-level metrics against the verified gold set (108 POSITIVE /
+13 HARM; false-positive rate measured against the ~31,843-word known-good
+whitelist).*
+
+| detector | P | R | F0.5 | FPR (whitelist) | harm rate |
+|---|--:|--:|--:|--:|--:|
+| `spell_correct` | 91.2 % | 95.4 % | 0.920 | 0.0 | **76.9 %** (10/13) |
+| `consensus` | 88.5 % | 85.2 % | 0.878 | 0.0 | **92.3 %** (12/13) |
+| `intra_dup` | 75.0 % | 33.3 % | 0.600 | 0.0 | **92.3 %** (12/13) |
+| `dict_vs_corpus` | 0.0 % | 0.0 % | 0.000 | 0.0 | 0.0 % (0/13) |
+| **union of all** | 89.2 % | 99.1 % | 0.910 | 0.0 | **100 %** (13/13) |
+
+Read as ordinary GED systems, the detectors are good: F0.5 of 0.88–0.92, 99.1 %
+recall in union, and zero false positives against the known-good whitelist — the
+existing filing gate holds. But the harm column is the finding: the same
+detectors, on their own, flag **77–100 % of the exact collision, apparatus and
+stale rows** that the triage's EDITORIAL/DNF/DROP verdicts exist to protect. A
+naive auto-apply pipeline celebrating its 99 % recall would, in the same run,
+corrupt all 13 protected rows — merging rival readings, respelling apparatus,
+re-introducing an upstream-fixed form. This is not a separate result from the
+paper's thesis; it is that thesis measured. The do-not-file layer (§4.2, §5) is
+what stands between a strong detector and the harm column, and nothing in the
+detector's own scores — precision, recall, F0.5, whitelist FPR — reveals the
+danger: only entry-level triage does.
+
 ## 5. Discussion
 
 **Why the body beats spelling and corpus.** A spelling-only arbiter has no access to
@@ -442,8 +556,12 @@ the collision class shows entry-reading catching what even confirmed-typo lists 
 number of recoverable typos is tiny and not worth a campaign; the catalogue of
 documented-intentional spellings is the lasting asset, because it actively *prevents
 harm* — a guard rail against well-meaning bulk "corrections" that would corrupt a
-century-corrected edition. This is the paper's inversion: the spell-checking campaign's
-most valuable output is the list of things it must never touch.
+century-corrected edition. Section 4.7 puts a number on that harm: the union of
+the underlying detectors recovers 99 % of the genuine corrections *and* all 13
+protected rows, so precision and harm rise together, and it is the protection
+layer, not the detector, that makes the queue safe to act on. This is the paper's
+inversion: the spell-checking campaign's most valuable output is the list of
+things it must never touch.
 
 **Filable rate as a digitisation-quality signal.** The strong concentration of typos
 in SHS/YAT/ACC, and their near-absence in MW/PW/VCP, means the fileable rate doubles as
@@ -464,7 +582,11 @@ digitisations still need attention.
   does not measure agreement with an independent human expert, which remains future
   work (the recruit is deferred; tracked in the project GTD). The κ was computed once,
   on the first blind run, and reported as obtained — the second annotator's prompt was
-  not iterated toward agreement.
+  not iterated toward agreement. Both figures (κ = 0.336 five-way, 0.663 binary) are
+  LLM-only inter-rater comparisons — soon two model *families*, once the pending
+  cross-family run of §4.6 completes — and are not yet licensed against an
+  independent human-labelled seed set; that outstanding gap is tracked explicitly in
+  [`corrections_draft/irr/HUMAN_ANCHOR_NEEDED.md`](../corrections_draft/irr/HUMAN_ANCHOR_NEEDED.md).
 - **Queues decay.** ~0.8 %/week against the live, actively corrected `csl-orig`
   (measured over the triage→verification interval); all counts carry their as-of
   dates, and filing must re-verify against the live source.
@@ -512,7 +634,9 @@ deduplicated suppression artifact is
 [`nochange/do_not_file_suppress.txt`](../nochange/do_not_file_suppress.txt),
 regenerated with `cd detectors && python gen_do_not_file_suppress.py`; its safety
 harness is [`detectors/eval.py`](../detectors/eval.py) (0 false positives vs ~31k
-known-good headwords; recall vs the 3,884 historical pairs). To re-verify the
+known-good headwords; recall vs the 3,884 historical pairs); the same script
+reproduces the §4.7 detection-level table (F0.5 + harm rate) against
+[`detectors/gold_corrections.tsv`](../detectors/gold_corrections.tsv). To re-verify the
 headline figures: the gross do-not-file total is the sum of the per-dict section
 counts in the wrong-readings files (**2,549**); the deduped union is the suppress
 file's data-row count (**2,297**); the confirmed totals are the data rows of each
@@ -526,16 +650,70 @@ reproducing scripts; MW precision is
 reported to the separate CORRECTIONS workflow
 ([umbrella issue #447](https://github.com/sanskrit-lexicon/CORRECTIONS/issues/447)).
 
-## References *(drafted agent-side — human verification pass required before submission)*
+## References *(every URL resolved and title/author-checked 12-07-2026; final human spot-check before submission)*
 
+- Artstein, R., & Poesio, M. (2008). Survey Article: Inter-Coder Agreement for
+  Computational Linguistics. *Computational Linguistics*, 34(4), 555–596.
+  [https://aclanthology.org/J08-4004/](https://aclanthology.org/J08-4004/).
+- Bloodgood, M., & Strauss, B. (2016). Data Cleaning for XML Electronic
+  Dictionaries via Statistical Anomaly Detection. *Proceedings of the 2016 IEEE
+  Tenth International Conference on Semantic Computing (ICSC)*.
+  [https://arxiv.org/abs/1602.07807](https://arxiv.org/abs/1602.07807).
+- Bryant, C., Felice, M., & Briscoe, T. (2017). Automatic Annotation and
+  Evaluation of Error Types for Grammatical Error Correction. *Proceedings of the
+  55th Annual Meeting of the Association for Computational Linguistics (Volume 1:
+  Long Papers)*. [https://aclanthology.org/P17-1074/](https://aclanthology.org/P17-1074/).
+- Golding, A. R., & Roth, D. (1999). A Winnow-Based Approach to Context-Sensitive
+  Spelling Correction. *Machine Learning*, 34(1–3).
+  [https://arxiv.org/abs/cs/9811003](https://arxiv.org/abs/cs/9811003).
+- Grundkiewicz, R., Junczys-Dowmunt, M., & Gillian, E. (2015). Human Evaluation of
+  Grammatical Error Correction Systems. *Proceedings of the 2015 Conference on
+  Empirical Methods in Natural Language Processing (EMNLP)*.
+  [https://aclanthology.org/D15-1052/](https://aclanthology.org/D15-1052/).
+- Hollenstein, N., Schneider, N., & Webber, B. (2016). Inconsistency Detection in
+  Semantic Annotation. *Proceedings of the Tenth International Conference on
+  Language Resources and Evaluation (LREC 2016)*.
+  [https://aclanthology.org/L16-1629/](https://aclanthology.org/L16-1629/).
+- Kanerva, J., Ledins, C., Käpyaho, S., & Ginter, F. (2025). OCR Error
+  Post-Correction with LLMs in Historical Documents: No Free Lunches. *Proceedings
+  of the RESOURCEFUL 2025 Workshop*.
+  [https://arxiv.org/abs/2502.01205](https://arxiv.org/abs/2502.01205).
+- Karamolegkou, A., Angleraud, N., Sagot, B., & Clérice, T. (2026). Reading or
+  Guessing? Visual Grounding Failures of Vision-Language Models for OCR in Ancient
+  Greek Editions. arXiv:2605.27750.
+  [https://arxiv.org/abs/2605.27750](https://arxiv.org/abs/2605.27750).
+- Mondaca, F., & Rau, F. (2020). Transforming the Cologne Digital Sanskrit
+  Dictionaries into OntoLex-Lemon. *Proceedings of the 7th Workshop on Linked Data
+  in Linguistics (LDL-2020)*.
+  [https://aclanthology.org/2020.ldl-1.2/](https://aclanthology.org/2020.ldl-1.2/).
+- Patel, D. K., & Kulkarni, A. (2024). Word Sense Alignment of Sanskrit Lexica.
+  *Proceedings of the 7th International Sanskrit Computational Linguistics
+  Symposium (ISCLS 2024)*.
+  [https://aclanthology.org/2024.iscls-1.1/](https://aclanthology.org/2024.iscls-1.1/).
 - Piotrowski, M. (2012). *Natural Language Processing for Historical Texts*. Morgan &
   Claypool.
+- Plank, B. (2022). The "Problem" of Human Label Variation: On Ground Truth in
+  Data, Modeling and Evaluation. *Proceedings of the 2022 Conference on Empirical
+  Methods in Natural Language Processing (EMNLP)*.
+  [https://aclanthology.org/2022.emnlp-main.731/](https://aclanthology.org/2022.emnlp-main.731/).
 - Prasanna, S. (2022). Spellchecker for Sanskrit: The Road Less Taken. *Proceedings
   of the 19th International Conference on Natural Language Processing (ICON 2022)*,
   290–299. [https://aclanthology.org/2022.icon-main.35/](https://aclanthology.org/2022.icon-main.35/).
   *(Verified 10-07-2026 by the H452 prior-art scan; replaces the earlier "ISCLS 2024
   contextual spellchecker" placeholder — that volume contains no spellchecking paper.
   See [docs/PRIOR_ART.md](../docs/PRIOR_ART.md).)*
-- ISCLS (2026). Preserving what is written, not what is expected: the proof-reader
-  effect of LLMs in Sanskrit OCR. *Proceedings of the International Sanskrit
-  Computational Linguistics Symposium.* *(exact author list to be verified — ibid.)*
+- Rei, M., & Yannakoudakis, H. (2016). Compositional Sequence Labeling Models for
+  Error Detection in Learner Writing. *Proceedings of the 54th Annual Meeting of
+  the Association for Computational Linguistics (Volume 1: Long Papers)*.
+  [https://aclanthology.org/P16-1112/](https://aclanthology.org/P16-1112/).
+- Tseng, Y.-H., Lee, L.-H., Chang, L.-P., & Chen, H.-H. (2015). Introduction to
+  SIGHAN 2015 Bake-off for Chinese Spelling Check. *Proceedings of the Eighth
+  SIGHAN Workshop on Chinese Language Processing*.
+  [https://aclanthology.org/W15-3106/](https://aclanthology.org/W15-3106/).
+
+*(Removed 12-07-2026: the draft's former entry "ISCLS (2026). Preserving what is
+written, not what is expected…" could not be verified — the published ISCLS 2026
+proceedings ([https://aclanthology.org/volumes/2026.iscls-1/](https://aclanthology.org/volumes/2026.iscls-1/))
+contain no such paper. The over-correction claim it supported is now grounded in
+Karamolegkou et al. (2026) and Kanerva et al. (2025) plus this project's own
+observation; see §2(b).)*
