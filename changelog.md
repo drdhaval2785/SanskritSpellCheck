@@ -6,6 +6,28 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [1.52.0] - 2026-07-12
+
+### Added
+- **[ROADMAP_2026_2027.md](ROADMAP_2026_2027.md) revision 3 — ACL Anthology uplift** (Opus 4.8
+  `claude-opus-4-8`, 9-agent workflow: repo/paper audit + a six-facet mine of the CL literature +
+  synthesis, from an interview with M.G.): **seven new rulings D9–D15** covering the *method / evaluation /
+  venue* literature that revision-1's `docs/PRIOR_ART.md` *tool*-survey never touched. **D9** A44 second
+  annotator → **cross-family (non-Anthropic) blind judge** (self-preference-bias fix,
+  [arXiv 2410.21819](https://arxiv.org/abs/2410.21819)); **D10** A44 framing → **GEC/GED confusion-set
+  lineage** (position as GED); **D11** `detectors/eval.py` → **F0.5 + FPR + a novel harm metric** (FP=0 stays
+  the filing gate); **D12** **ISCLS demo + WSC-CSDH resource-paper** venue track (IJL/DSH stay journal
+  targets); **D13** **web-app suggester spec now** (Oflazer × Vidyut × Brill-Moore/DCS noisy-channel), build
+  post-30-06-2027; **D14** **tied-field SLP1↔Devanāgarī↔IAST consistency detector**, full build; **D15** A37
+  **S-curve exo/endo fit + SemEval-2015 DTE benchmark + LChange companion** (DSH stays the target). Wave-1
+  execution minted as [H825](https://github.com/gasyoun/Uprava/blob/main/handoffs/H825-Sonnet_SanskritSpellCheck_a44-acl-uplift-gec-eval-crossfamily_12.07.26.md)
+  / [H826](https://github.com/gasyoun/Uprava/blob/main/handoffs/H826-Sonnet_SanskritSpellCheck_a37-scurve-dte-lchange-uplift_12.07.26.md)
+  / [H827](https://github.com/gasyoun/Uprava/blob/main/handoffs/H827-Sonnet_SanskritSpellCheck_tied-field-crossfield-detector_12.07.26.md)
+  / [H828](https://github.com/gasyoun/Uprava/blob/main/handoffs/H828-Fable_SanskritSpellCheck_web-suggester-spec-oflazer-vidyut_12.07.26.md).
+  Keystone related-work additions the prior-art scan missed: [Bloodgood & Strauss 1602.07807](https://arxiv.org/abs/1602.07807)
+  (dictionary anomaly-detection ancestor) and [Patel & Kulkarni 2024.iscls-1.1](https://aclanthology.org/2024.iscls-1.1.pdf)
+  (the lead author's own cross-dict work).
+
 ## [1.51.0] - 2026-07-10
 
 ### Added
