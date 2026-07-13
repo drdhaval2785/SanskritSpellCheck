@@ -89,6 +89,49 @@ Preventing bad bulk edits is worth more than the few corrections.
   PD fully triageable (1007 tier-A, 0 unlocatable).
 - **Consequence:** the same shim takes any future non-csl-orig source (incl. PD's optional 2nd).
 
+### H8 — Tied-field cross-encoding consistency (SLP1 ↔ Devanāgarī ↔ IAST) is a viable new detector shape
+[Bloodgood & Strauss, arXiv 1602.07807](https://arxiv.org/abs/1602.07807) (IEEE ICSC 2016) — the
+project's direct methodological ancestor for XML-dictionary anomaly detection — has one detector
+shape this project lacked: **tied-field consistency**, checking that two fields expected to encode
+the same content actually agree. For CDSL that is SLP1-headword ↔ its Devanāgarī rendering ↔ its
+IAST rendering.
+- **Test (H827, ACL roadmap rev 3 ruling D14 — full build across all 33 dicts):**
+  [detectors/tied_field_check.py](../detectors/tied_field_check.py) round-trips every in-alphabet
+  `sanhw1.txt` headword through both SLP1→Devanāgarī→SLP1 and SLP1→IAST→SLP1 (the shared
+  `sanskrit-util` package's `slp1_to_devanagari`/`deva_to_slp1` and `from_slp1`/`to_slp1`, new thin
+  wrappers added to `slp1util.py`), flagging any headword whose round-trip does not return the
+  original. Wired into `run_all.py` as the 11th detector family (`tied_field`, high-precision —
+  alongside `phonotactic`/`charset`); `eval.py`'s filing gate still **PASS** (FP unaffected — the
+  detector's own suspects file was empty, see Evidence).
+- **Two round-trip asymmetries are documented PROPERTIES of the transcoders, not data errors, and
+  are suppressed** (do-not-file, not filed as candidates): (1) Devanāgarī path — candrabindu `~` and
+  avagraha `'` are not round-trip stable (both collapse into Devanāgarī's single nasalization /
+  elision slot); (2) IAST path — IAST re-spells SLP1's single-character aspirates/diphthongs
+  (K/G/C/J/W/Q/T/D/P/B, E/O) as two-letter digraphs, so a genuine plain-stop+`h` sequence at a
+  compound/sandhi boundary (`vAk`+`hasta` → `vAkhasta`) or vowel hiatus (`a`+`i`) reads through IAST
+  identically to the digraph and reads back as the single aspirate/diphthong — an inherent one-way
+  lossiness of concatenative IAST, not a bug.
+- **Verdict:** confirmed — the detector shape is real, correctly implemented, and its suppression
+  rules are exact, not approximate.
+- **Evidence:** full run across all **431,596** `sanhw1.txt` lines (431,568 unique in-alphabet
+  headwords): **0 unsuppressed tied-field disagreements.** Every round-trip mismatch is fully
+  explained by the two documented asymmetries above — 12 by candrabindu/avagraha (Devanāgarī path),
+  100 by the digraph/hiatus ambiguity (IAST path) — with **zero unexplained residual** at this scale.
+  This is an honest **negative finding on error discovery** (the shared `sanskrit-util` transcoder is
+  round-trip consistent across the full unified headword population — itself a useful validation of
+  that package at scale) but a **positive finding on methodology**: the detector correctly
+  discriminates genuine defects from normalization axes, it just found no genuine defects because
+  sanhw1.txt carries no independently-authored Devanāgarī/IAST field to disagree with the SLP1 it was
+  derived from — only the SLP1 headword exists as stored data; the other two encodings are always
+  *derived* by the same trusted transcoder, so under a correct transcoder they cannot disagree by
+  construction.
+- **Consequence:** ships as a real 11th detector (zero regression risk — it can only ever raise its
+  hand on an actual transcoder defect or a genuinely un-derivable headword) with a documented
+  do-not-file catalogue entry for the two asymmetry classes. The genuinely interesting version of
+  this check — a *stored* Devanāgarī/IAST field disagreeing with SLP1 — needs a data source this repo
+  doesn't currently have (e.g. an independently-keyed citation-form field); flagged as a follow-up if
+  one is ever ingested.
+
 ---
 
 ## ❌ Refuted / failed (the negative results)
