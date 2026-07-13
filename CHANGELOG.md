@@ -8,6 +8,8 @@ ready for a dated entry.
 
 ## [Unreleased]
 
+## [1.55.0] - 2026-07-13
+
 ### Added
 - **H827: tied-field cross-encoding consistency detector.** New 11th detector family
   [detectors/tied_field_check.py](detectors/tied_field_check.py) — the "tied-field
