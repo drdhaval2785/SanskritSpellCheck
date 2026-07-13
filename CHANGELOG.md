@@ -6,6 +6,43 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [Unreleased]
+
+### Added
+- **H826 (ACL uplift): A37 S-curve exo/endo fit + SemEval-2015 DTE benchmark + LChange
+  companion.** Ruling D15 from the ACL Anthology roadmap interview (revision 3):
+  - [detectors/drift_dating.py](detectors/drift_dating.py) extended with
+    `fit_scurve()` (a per-variant logistic S-curve fit adapted from Ghanbarnejad,
+    Gerlach, Miotto and Altmann's "Extracting Information from S-curves of Language
+    Change," arXiv:1406.4498) and `dte_bands()` (re-expresses the existing
+    leave-one-out dater in SemEval-2015 Task 7 Diachronic Text Evaluation terms —
+    correct-25-yr-epoch rate + distance-to-true-year tolerance bands, per S15-2147/
+    S15-2148). Results persisted to
+    [docs/ORTHO_DRIFT_FINDINGS.md](docs/ORTHO_DRIFT_FINDINGS.md) §O7a/§O7b.
+  - **Honest negative finding, not forced into the expected direction:** the naive
+    cross-sectional S-curve fit **inverts** the expected exo/endo mechanism ordering —
+    English (convention/endogenous) fits a narrow 9.7-yr transition; German
+    (legislated/exogenous, 1901/1996) fits a wide 50.2-yr one. Diagnosed as two
+    distinct sampling artifacts (English's zero-censoring saturation; German's sparse
+    edition-spacing around the true 1901 reform date), not evidence about either
+    language's actual change mechanism — see §O7a's full caveat before citing the
+    per-language `b`/`Δt80` numbers.
+  - [papers/A37_ortho_drift_paper.md](papers/A37_ortho_drift_paper.md) §2 gains three
+    related-work paragraphs (Ghanbarnejad et al., SemEval-2015 DTE, Lüschow 2021 ZfS
+    graphemic variation); new §4.8 reports the S-curve finding as a methodological
+    limitation; §5 gains the DTE distance-band re-expression. References section grows
+    by five verified citations (Ghanbarnejad et al. 2014; Popescu and Strapparava
+    2015; Szymanski and Lynch 2015; Ren, Wang, Zhao and Ren 2023; Lüschow 2021).
+  - New [papers/A37_lchange_companion.md](papers/A37_lchange_companion.md) — a
+    standalone LChange short-paper draft ("When the S-curve Lies") that isolates the
+    inversion finding as a transferable methodological caution for anyone applying
+    Ghanbarnejad-style S-curve mechanism classification to cross-sectional (edition-
+    level, non-Ngram) corpora, with a 4-point diagnostic checklist (§5). DSH stays the
+    primary journal target for A37 itself; this is an additional companion, not a
+    replacement.
+  - No change to SanskritSpellCheck detection logic — this is A37 paper scholarship
+    only (no LOCKED/REFUTED contact).
+
 ## [1.53.0] - 2026-07-12
 
 ### Added

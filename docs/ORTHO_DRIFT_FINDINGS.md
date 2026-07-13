@@ -384,6 +384,124 @@ not the 17th-c. FreEMnorm.
 
 ---
 
+## O7 — S-curve exo/endo fit + SemEval-2015 DTE benchmark (H826, ACL uplift)
+
+Two ACL-Anthology-informed extensions of O4, both computed by
+[detectors/drift_dating.py](../detectors/drift_dating.py) §[5]/§[6] (`fit_scurve` /
+`dte_bands`) from the same committed `ortho_drift/*_drift_summary.tsv` data — no new
+measurement, a re-reading of the existing gradient in two literatures' own vocabulary.
+
+### O7a — per-variant logistic S-curve fit (adapted from Ghanbarnejad et al. 2014)
+
+[Ghanbarnejad, Gerlach, Miotto & Altmann, "Extracting information from S-curves of
+language change" (arXiv:1406.4498)](https://arxiv.org/abs/1406.4498), *J. R. Soc.
+Interface* 2014, fit logistic S-curves to two centuries of German/Russian language
+change and show the curve's **transition width** separates *exogenous* (legislated,
+abrupt) from *endogenous* (community-driven, gradual) change mechanisms — the exact
+"legislated ≫ convention ≫ none" gradient this paper already reports, now testable as a
+measured shape rather than an assertion.
+
+**Methodological adaptation (read before citing).** Ghanbarnejad et al. fit a logistic
+to a *frequency-over-time trajectory within one continuous corpus* (Google Books
+n-grams tracking one spelling variant's adoption year by year). Our corpus is
+cross-sectional — one point per *dictionary*, each a different author/edition, not a
+continuous text. There is no true adoption trajectory to fit. The proxy used here:
+
+> adoption(year) = 1 − drift/1k(year) / max(drift/1k) within a language's own dated
+> dictionaries — i.e. each dictionary's position on its own reform's residual-to-modern
+> scale, fit to a 2-parameter logistic `1/(1+exp(-b·(t-t0)))` via `scipy.optimize.curve_fit`.
+
+The steepness `b` (adoption-fraction/year) and the derived 20–80 % transition width
+`Δt80 = ln(16)/b` (Ghanbarnejad et al.'s own transition-time construction) are the
+exo/endo parameter. Only languages with n ≥ 3 dated points support a fit (a 2-point
+logistic is unconstrained; a 1-point series is an anchor, not a trajectory).
+
+| variant | n | b (adoption/yr) | t0 (inflection yr) | Δt80 (20–80% width, yr) | R² | naive label |
+|---|--:|--:|--:|--:|--:|---|
+| **English** (convention) | 14 | +0.2862 | 1848 | **9.7** | 0.87 | "exogenous-like (abrupt)" |
+| **German** (legislated) | 5 | +0.0552 | 1895 | **50.2** | 0.84 | "endogenous-like (gradual)" |
+| German, no PW (sensitivity) | 4 | +0.0507 | 1903 | 54.6 | 0.84 | "endogenous-like (gradual)" |
+| French (convention) | 2 | — | — | — | — | cannot fit (n=2, unconstrained) |
+| Russian (legislated) | 1 | — | — | — | — | cannot fit (n=1, single anchor) |
+| Latin (none) | 1 | — | — | — | — | cannot fit (zero variance, n=1) |
+
+**Headline finding — the naive proxy does NOT reproduce the expected mechanism split,
+and that is itself the finding.** By Ghanbarnejad et al.'s own logic, English
+(convention drift) should show the WIDE transition and German (a dated, legislated
+reform) the NARROW one. The fit gives the **opposite ordering** (English Δt80 = 9.7 yr
+≪ German Δt80 = 50.2 yr). Two distinct artifacts explain this, and both are diagnostic
+of *why the proxy breaks*, not of the underlying mechanism:
+
+1. **English's narrow fitted width is a zero-censoring artifact, not a fast switch.**
+   Seven of fourteen English dictionaries read *exactly* 0.00 drift/1k, spanning
+   1890–1990 (§O4[4b]) — i.e. `adoption=1` for a full century of ties. The logistic
+   fit, forced through this saturated plateau plus the small non-zero cluster at the
+   early end (WIL 1832 → MD 1893), finds the steepest curve that clears the transition
+   before the plateau begins — an **artifact of the sample's own saturation**, not
+   evidence that English orthography changed abruptly. This is the same saturation
+   already flagged as a rate-metric weakness in O4 (English "gives an upper-epoch
+   bound, not a full gradient").
+2. **German's wide fitted width is a sparse-sampling artifact around a real point
+   event.** The true German reforms are dated exactly (1901, 1996) — about as
+   "exogenous" as a change mechanism gets. But the corpus samples only **five discrete
+   editions** across 1865–1928, none within decades of the actual 1901 switch date on
+   either side densely enough to resolve it; the fitted Δt80 = 50 yr reflects the
+   **spacing of the five editions relative to 1901**, not the sociolinguistic speed of
+   the reform's real-world adoption (which historically was comparatively fast —
+   state-mandated, school-enforced).
+
+**Reading:** this cross-sectional adaptation of the Ghanbarnejad et al. S-curve method
+is not validated as an exo/endo classifier on edition-level dictionary data — a
+continuous, year-by-year frequency trajectory (as in their original Google-Ngrams
+design, or the DTA `norm`-layer long tail already banked for German in O3) would be
+needed to recover the true transition shape. We report `b`/`t0`/`Δt80` per language as
+requested (Steps §1) and the inverted ordering as a **methodological limitation
+worth publishing in its own right** — a caution against applying frequency-trajectory
+S-curve machinery to sparse cross-sectional data without first checking for
+censoring/saturation and edition-sampling density. Do not read the "exogenous-like" /
+"endogenous-like" labels above as validated classifications; they are the literal
+output of the naive threshold, reported for transparency, not as a finding.
+
+### O7b — the dater in SemEval-2015 DTE terms
+
+[SemEval-2015 Task 7, Diachronic Text Evaluation (S15-2147)](https://aclanthology.org/S15-2147/)
++ the character/word n-gram system [S15-2148](https://aclanthology.org/S15-2148/) date a
+text from surface features and report accuracy as a **correct-epoch rate** (fixed-width
+year bins) and **distance-to-true-year tolerance bands**. Re-expressing the existing
+leave-one-out dater (O4 §[3]) in those terms places it against a known shared-task
+convention rather than only an MAE specific to this paper:
+
+| variant | n (LOO) | MAE (yr) | correct 25-yr-epoch | ≤5 yr | ≤10 yr | ≤25 yr | ≤50 yr |
+|---|--:|--:|--:|--:|--:|--:|--:|
+| **German** (legislated) | 5 | 14.9 | 20% | 40% | 40% | 80% | 100% |
+| **English** (convention) | 14 | 39.5 | 21% | 14% | 21% | 29% | 57% |
+
+German's ≤25 yr band (80 %) and ≤50 yr band (100 %) confirm the ±15 yr MAE headline is
+not driven by a couple of lucky predictions; English's flatter profile (only 57 % even
+at ≤50 yr) confirms the convention regime is a substantially weaker dater, consistent
+with its saturation at 0 (§O4). Both DTE distance bands close to n as small as 5 and 14
+should be read as descriptive re-expression, not a claim of statistical power comparable
+to a Task-7 system trained/evaluated on hundreds of texts — [Ren et al., "Time-Aware
+Language Modeling for Historical Text Dating" (2023.findings-emnlp.911)](https://aclanthology.org/2023.findings-emnlp.911/)
+is the relevant black-box-dating contrast: A37's edge over such systems is not raw
+accuracy at scale but **interpretability** — the dater's error is attributable to a named
+reform and era-composition signature, not a latent LM representation.
+
+### Vocabulary adopted from the normalization-measurement literature
+
+[Bollmann, "A Large-Scale Comparison of Historical Text Normalization Systems"
+(N19-1389)](https://aclanthology.org/N19-1389/) and
+[`coastalcph/histnorm`](https://github.com/coastalcph/histnorm) establish word-accuracy
+and CER-on-incorrect-subset as the field's standard measurement vocabulary. This paper's
+drift/1k is not directly a normalization-accuracy metric (there is no gold-normalized
+reference text, only a transform-and-check rule against a modern wordlist), but the
+**modern%** column already reported per dictionary (§ results tables above) is the same
+family of measurement — the fraction of tokens already matching the modern surface form
+— and is named here explicitly as such for a DSH/CL reviewer's benefit, rather than left
+implicit.
+
+---
+
 ## Caveats (read before citing)
 
 - **Modern word-lists are a local dependency.** The Hunspell `de_DE` / `en_GB` / `fr_FR`
