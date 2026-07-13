@@ -6,7 +6,7 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
-## [Unreleased]
+## [1.54.0] - 2026-07-13
 
 ### Added
 - **H826 (ACL uplift): A37 S-curve exo/endo fit + SemEval-2015 DTE benchmark + LChange
