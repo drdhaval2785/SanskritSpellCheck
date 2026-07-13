@@ -153,6 +153,36 @@ def devanagari_to_slp1(s):
     return deva_to_slp1(s).replace('।', ' ').replace('॥', ' ')
 
 
+def slp1_to_devanagari(s):
+    """SLP1 -> Devanagari via the shared sanskrit-util package (real transcode: virama
+    conjuncts + matras; round-trip partner of devanagari_to_slp1 above). Used by
+    tied_field_check (H827) to render the Devanagari surface form of an SLP1 headword.
+    NOT round-trip stable for candrabindu (~) or avagraha (') -- see sanskrit_util's own
+    module note; callers that need round-trip stability must account for those two."""
+    from sanskrit_util import slp1_to_devanagari as _s2d
+    return _s2d(s)
+
+
+def slp1_to_iast(s):
+    """SLP1 -> IAST via the shared sanskrit-util package (from_slp1; one-char-per-phoneme
+    map). Used by tied_field_check (H827)."""
+    from sanskrit_util import from_slp1
+    return from_slp1(s)
+
+
+def iast_to_slp1(s):
+    """IAST -> SLP1 via the shared sanskrit-util package (to_slp1; longest-key-first so
+    aspirate/diphthong digraphs map as one phoneme). Used by tied_field_check (H827).
+    NOT the inverse of slp1_to_iast for every string: a plain stop immediately followed by
+    'h' (k+h, g+h, ... at a compound/sandhi boundary, never an SLP1 aspirate -- SLP1 already
+    has one char for aspirates) or two adjacent short vowels (a+i, a+u) render through IAST
+    as the same digraph as the aspirate/diphthong and read back as one phoneme. This is an
+    inherent one-way lossiness of concatenative IAST, not a transcoder bug -- see
+    tied_field_check.py's _iast_collapse for the exact suppression rule."""
+    from sanskrit_util import to_slp1
+    return to_slp1(s)
+
+
 def edit_distance(a, b, cap=3):
     """Levenshtein distance, short-circuited once it exceeds `cap`."""
     if abs(len(a) - len(b)) > cap:

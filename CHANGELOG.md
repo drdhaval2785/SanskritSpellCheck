@@ -6,6 +6,34 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [Unreleased]
+
+### Added
+- **H827: tied-field cross-encoding consistency detector.** New 11th detector family
+  [detectors/tied_field_check.py](detectors/tied_field_check.py) — the "tied-field
+  consistency" shape from [Bloodgood & Strauss, arXiv 1602.07807](https://arxiv.org/abs/1602.07807)
+  (IEEE ICSC 2016), the project's direct methodological ancestor, missing until now: checks
+  that SLP1-headword, its Devanāgarī rendering, and its IAST rendering are mutually
+  derivable, by round-tripping every `sanhw1.txt` headword through both encodings via the
+  shared `sanskrit-util` package (three new thin wrappers added to
+  [detectors/slp1util.py](detectors/slp1util.py): `slp1_to_devanagari`, `slp1_to_iast`,
+  `iast_to_slp1`). Wired into [detectors/run_all.py](detectors/run_all.py) as a
+  high-precision flagger (`X:TFC-DEV=…:D` / `X:TFC-IAST=…:D`); `detectors/eval.py`'s filing
+  gate stays **PASS**.
+  Full run across all **431,596** lines / 431,568 unique in-alphabet headwords: **0
+  unsuppressed disagreements** — every round-trip mismatch is explained by one of two
+  documented, non-error transcoder asymmetries (candrabindu/avagraha via Devanāgarī: 12
+  instances; the aspirate/diphthong digraph ambiguity inherent to concatenative IAST — e.g.
+  a genuine `k`+`h` compound boundary reading back as the aspirate `K` — via IAST: 100
+  instances), with zero unexplained residual. An honest **negative finding on error
+  discovery** (the shared transcoder is round-trip consistent at full scale — itself a
+  useful validation) alongside a **positive finding on methodology** (the detector correctly
+  discriminates a genuine defect from a documented normalization axis; it just found no
+  genuine defects because `sanhw1.txt` stores only the SLP1 headword, with no
+  independently-authored Devanāgarī/IAST field to disagree with it). New hypothesis entry
+  H8 in [docs/HYPOTHESES.md](docs/HYPOTHESES.md); detector table + prose in
+  [detectors/readme.md](detectors/readme.md).
+
 ## [1.54.0] - 2026-07-13
 
 ### Added
