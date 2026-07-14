@@ -33,7 +33,7 @@ SHS is poorly digitised, but nearly every entry carries an explicit `E.` etymolo
 grammatical derivation) that independently fixes the correct spelling — which is why it is the
 highest-yield dict in this pass. Every row below was (1) body-confirmed by automated triage +
 manual verification (classification, source-confirmation, and adversarial review across models),
-and (2) re-verified against the current [csl-orig SHS entry text](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt)
+and (2) re-verified against the current [csl-orig SHS entry text](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/shs/shs.txt)
 on 2026-07-02. The scan remains the final arbiter — nothing is applied until a human checks the
 print.
 
@@ -88,7 +88,7 @@ etymology, so the print must decide.
 
 ### 3. Already fixed upstream (1)
 
-`kARqapfzwa` → `kARqapfzWa` — corrected in [csl-orig](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt) since the June triage (the correct form `kARqapfzWa` already exists as its own entry, id 9855, pc 171-b); listed only for the audit trail.
+`kARqapfzwa` → `kARqapfzWa` — corrected in [csl-orig](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/shs/shs.txt) since the June triage (the correct form `kARqapfzWa` already exists as its own entry, id 9855, pc 171-b); listed only for the audit trail.
 
 ---
 
@@ -355,7 +355,7 @@ candidates is a clean, unqualified typo.
 
 ## Appendix — audit trail (not proposed)
 
-- **DROP — SHS `kARqapfzwa` → `kARqapfzWa`.** Already fixed upstream in [csl-orig](https://github.com/sanskrit-lexicon/csl-orig/blob/master/v02/shs/shs.txt) since the original triage; the correct form `kARqapfzWa` already exists as its own entry (id 9855, pc 171-b). No action needed.
+- **DROP — SHS `kARqapfzwa` → `kARqapfzWa`.** Already fixed upstream in [csl-orig](https://github.com/sanskrit-lexicon/csl-orig/blob/main/v02/shs/shs.txt) since the original triage; the correct form `kARqapfzWa` already exists as its own entry (id 9855, pc 171-b). No action needed.
 - **DNF — YAT `RiS` → `niS`.** Reclassified do-not-file: `RiS` (L16299, "to meditate profoundly, or abstractedly") and `niS` (L21672, "Night") are semantically and grammatically unrelated words that merely resemble each other in SLP1; `RiS` is likely Dhātupāṭha ṇopadeśa root notation, and filing this correction would destroy a deliberate grammatical record, not fix a typo.
 
 ---
