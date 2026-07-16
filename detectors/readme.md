@@ -50,6 +50,15 @@ consumption contract.
 | 5 | [phonotactic_check.py](phonotactic_check.py) | hard phonotactic violations (anusvara/visarga mis-placed, double vowel) | 60 (0 false positives) | `X:PH-<rule>=…:D` |
 | 6 | [charset_check.py](charset_check.py) | non-SLP1 characters (encoding errors) | 28 | `X:CHS=…:D` |
 | 7 | [order_check.py](order_check.py) | headwords out of Sanskrit collation order | n/a (needs source-order input) | `X:ORD=…:line` |
+| 8 | [tied_field_check.py](tied_field_check.py) | tied-field cross-encoding consistency: SLP1↔Devanāgarī↔IAST round-trip disagreement | 0 (of 431,568 unique headwords — see [docs/HYPOTHESES.md](../docs/HYPOTHESES.md) H8) | `X:TFC-DEV=…:D` / `X:TFC-IAST=…:D` |
+
+`tied_field_check` is the **11th detector family** counting the standalone scripts in this table
+alongside `meter_check` ([detectors/meter/](meter/)), `body_xref_check` (cross-reference integrity,
+below) and `ortho_drift` (gloss-language drift, below) as separate families beside the original six —
+see H827/H8 for why it currently reports 0 (the sanhw1.txt data model has no independently-authored
+Devanāgarī/IAST field to disagree with the SLP1 it derives from; the check is real and correctly
+discriminates two documented, non-error round-trip asymmetries — candrabindu/avagraha via Devanāgarī,
+and the aspirate/diphthong digraph ambiguity via IAST — from a genuine defect, it just found none).
 
 ## Unified runner & review (start here)
 
@@ -150,10 +159,10 @@ Two larger pipelines also live here; they consume the detector output but have t
   across all 5 languages** — see [../docs/ORTHO_DRIFT_FINDINGS.md](../docs/ORTHO_DRIFT_FINDINGS.md).
 
 ## Output formats (reuse the existing pipeline)
-- **Flaggers** (4, 5, 6) emit faultfinder-style `X:CODE=detail:D`, so
+- **Flaggers** (5, 6, 7, 8) emit faultfinder-style `X:CODE=detail:D`, so
   [../faultfinder3a-html.php](../faultfinder3a-html.php) (with the `repeat=2` arg)
   and [../triage_suspects.py](../triage_suspects.py) can render/triage them.
-- **Correctors** (1, 2, 3) emit the CORRECTIONS standard format `DICT:wrong:right:n`
+- **Correctors** (1, 2, 3, 4) emit the CORRECTIONS standard format `DICT:wrong:right:n`
   (issue #154), ready for [../chg_nchg_sep.py](../chg_nchg_sep.py) and submission.
 
 ## Run
@@ -161,6 +170,7 @@ Two larger pipelines also live here; they consume the detector output but have t
 cd detectors
 python charset_check.py        # ../sanhw1.txt -> charset_suspects.txt
 python phonotactic_check.py    # ../sanhw1.txt -> phonotactic_suspects.txt
+python tied_field_check.py     # ../sanhw1.txt -> tied_field_suspects.txt
 python consensus.py            # -> consensus_corrections.txt
 python intra_dup.py            # -> intra_dup_corrections.txt
 python spell_correct.py        # -> spell_correct_corrections.txt   (loads MW/PW/VCP + corpus)
@@ -232,6 +242,17 @@ run on raw dictionary text before it ever reaches `sanhw1.txt`.
 where `sanskrit_sort_key(cur) < sanskrit_sort_key(prev)`. The key mirrors `sanhw1.py`
 (SLP1 sort alphabet + anusvara-before-varga sorting as the homorganic nasal), verified
 by reporting 0 violations on the 431 k already-sorted `sanhw1` headwords.
+
+**tied_field_check — cross-encoding consistency.** Round-trips every SLP1 headword through
+Devanāgarī (`slp1_to_devanagari` → `devanagari_to_slp1`) and IAST (`slp1_to_iast` → `iast_to_slp1`,
+all via the shared `sanskrit-util` package); a headword that does not return unchanged is flagged,
+*unless* the mismatch is fully explained by one of two documented transcoder asymmetries (candrabindu
+`~`/avagraha `'` not round-trip stable via Devanāgarī; plain-stop+`h`/vowel-hiatus reading back as an
+aspirate/diphthong via IAST — both are properties of the transliteration schemes themselves, not
+errors). *Why:* this is the "tied-field consistency" detector shape from Bloodgood & Strauss (arXiv
+1602.07807) the project lacked — it checks that fields *expected* to agree actually do, distinct from
+every other detector here (which compare a headword against other headwords or a corpus). See H8 in
+[docs/HYPOTHESES.md](../docs/HYPOTHESES.md) for why it currently reports 0 real flags.
 
 ### Shared design principles
 - One confusion model in [slp1util.py](slp1util.py) — no per-detector copies (the

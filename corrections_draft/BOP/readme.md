@@ -4,7 +4,7 @@ The unified detector engine flagged **39 tier-A** BOP headwords as possible miss
 Bopp's *Glossarium Sanscritum* (1847) — a Sanskrit lexicon glossed in **Latin**, with grammatical
 derivations (`r. <root> praef. <prefix> s. <suffix>`) and classical-text citations. This package
 triages the candidates against BOP's *own entry text* (from
-[csl-orig](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/bop)).
+[csl-orig](https://github.com/sanskrit-lexicon/csl-orig/tree/main/v02/bop)).
 
 ## The finding
 

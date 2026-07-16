@@ -25,6 +25,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy import stats
+from scipy.optimize import curve_fit
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import triage_util
@@ -129,6 +130,110 @@ def loo_dating(lang, rows):
               % (np.mean(errs), len(errs)))
 
 
+def _logistic(t, b, t0):
+    """Standard 2-parameter logistic on [0,1]: 1 / (1 + exp(-b*(t-t0)))."""
+    return 1.0 / (1.0 + np.exp(-b * (t - t0)))
+
+
+def fit_scurve(lang, rows, label=''):
+    """O7 (H826): per-variant S-curve fit, adapted from Ghanbarnejad, Gerlach, Miotto &
+    Altmann, "Extracting information from S-curves of language change" (arXiv:1406.4498,
+    J. R. Soc. Interface 2014). CAVEAT (methodological adaptation, not a re-run of their
+    method): Ghanbarnejad et al. fit a logistic to a FREQUENCY-OVER-TIME trajectory within
+    a single continuous corpus (Google Books n-grams). Our corpus is cross-sectional -- one
+    point per dictionary, each a different author/edition -- so there is no single-text
+    adoption trajectory to fit. The proxy used here is adoption(year) = 1 - drift/1k(year) /
+    max(drift/1k) within the language's own dated dictionaries, i.e. each dictionary's
+    position on its OWN reform's residual-to-modern scale. This is a coarse, n-bounded
+    stand-in for a true diachronic frequency curve and should be read as exploratory, not a
+    validated per-language classifier.
+
+    The parameter that operationalises "exogenous vs endogenous" is the logistic steepness
+    b (adoption-fraction change per year) and the derived 20-80% transition width
+    dt80 = ln(16)/b (Ghanbarnejad et al.'s transition-time construction). A SHORT dt80 (fast
+    switch) is the signature of an EXOGENOUS, centrally-imposed change (a legislated reform
+    date); a LONG dt80 (slow, gradual switch) is the signature of ENDOGENOUS, community-driven
+    convention drift. The dt80<20yr / >=20yr split below is an illustrative threshold, not a
+    calibrated boundary -- report b and dt80 themselves, not just the label.
+
+    Returns None (with a printed reason) when the data cannot support a fit: n<3 points give
+    an unconstrained 2-parameter logistic (any b fits within noise); zero variance (rate==0
+    everywhere) has no transition to fit at all -- the Latin negative control is exactly this
+    case, and correctly has no S-curve rather than a fabricated flat one.
+    """
+    tag = '%s%s' % (LANG_NAME[lang], label)
+    if len(rows) < 3:
+        reason = ('n=1 (single dated dictionary -- an anchor point, not a trajectory)'
+                   if len(rows) == 1 else
+                   'n=2 (a 2-point logistic is unconstrained -- any steepness b fits exactly)')
+        print('  %s: cannot fit S-curve -- %s' % (tag, reason))
+        return None
+    yrs = np.array([y for _, y, _ in rows], float)
+    rate = np.array([r for _, _, r in rows], float)
+    rmax = rate.max()
+    if rmax <= 0:
+        print('  %s: cannot fit S-curve -- zero variance (rate is 0 at every dated point; '
+              'no transition to fit, consistent with a "no reform" regime)' % tag)
+        return None
+    adopt = 1.0 - rate / rmax
+    t0_guess = float(np.median(yrs))
+    try:
+        popt, _ = curve_fit(_logistic, yrs, adopt, p0=[0.05, t0_guess],
+                             maxfev=20000, bounds=([-5, yrs.min() - 200], [5, yrs.max() + 200]))
+    except Exception as e:
+        print('  %s: S-curve fit failed to converge (%s)' % (tag, e))
+        return None
+    b, t0 = popt
+    pred = _logistic(yrs, b, t0)
+    ss_res = np.sum((adopt - pred) ** 2)
+    ss_tot = np.sum((adopt - adopt.mean()) ** 2)
+    r2 = 1 - ss_res / ss_tot if ss_tot > 0 else float('nan')
+    dt80 = np.log(16) / abs(b) if abs(b) > 1e-9 else float('inf')
+    if dt80 < 20:
+        mech = 'exogenous-like (abrupt switch)'
+    elif dt80 < 1e5:
+        mech = 'endogenous-like (gradual switch)'
+    else:
+        mech = 'undetermined (b~0, no resolvable switch)'
+    print('  %s (n=%d): logistic b=%+.4f/yr, t0=%.0f, 20-80%% transition width=%.1f yr, '
+          'R^2=%.2f -> %s' % (tag, len(rows), b, t0, dt80, r2, mech))
+    return {'lang': lang, 'label': label, 'n': len(rows), 'b': b, 't0': t0, 'dt80': dt80,
+            'r2': r2, 'mech': mech}
+
+
+def dte_bands(lang, rows):
+    """O7 (H826): re-express the leave-one-out dater in SemEval-2015 Task 7 Diachronic Text
+    Evaluation terms (S15-2147 https://aclanthology.org/S15-2147/; the n-gram system
+    S15-2148 https://aclanthology.org/S15-2148/) -- correct-epoch rate (25-yr bins, DTE's own
+    bin width) and distance-to-true-year tolerance bands, so the dater is placeable against a
+    known shared-task convention rather than only reported as an MAE specific to this paper."""
+    if len(rows) < 3:
+        return None
+    recs = []
+    for i in range(len(rows)):
+        tr = [rows[j] for j in range(len(rows)) if j != i]
+        x = np.array([r for _, _, r in tr], float)
+        y = np.array([yr for _, yr, _ in tr], float)
+        if np.ptp(x) == 0:
+            continue
+        sl, ic, *_ = stats.linregress(x, y)
+        pred = sl * rows[i][2] + ic
+        recs.append((rows[i][0], rows[i][1], pred))
+    if not recs:
+        return None
+    n = len(recs)
+    bands = [5, 10, 25, 50]
+    band_rates = {b: sum(1 for _, y, p in recs if abs(p - y) <= b) / n for b in bands}
+    epoch_of = lambda yr: int(yr // 25) * 25
+    correct_epoch = sum(1 for _, y, p in recs if epoch_of(p) == epoch_of(y)) / n
+    mae = float(np.mean([abs(p - y) for _, y, p in recs]))
+    print('  %s DTE terms (n=%d, LOO): MAE=%.1f yr; correct-25yr-epoch rate=%.0f%%; '
+          'distance-band accuracy <=5/<=10/<=25/<=50 yr = %.0f%% / %.0f%% / %.0f%% / %.0f%%'
+          % (LANG_NAME[lang], n, mae, correct_epoch * 100, band_rates[5] * 100,
+             band_rates[10] * 100, band_rates[25] * 100, band_rates[50] * 100))
+    return {'lang': lang, 'n': n, 'mae': mae, 'correct_epoch': correct_epoch, 'bands': band_rates}
+
+
 def main():
     data = {lang: load(lang) for lang in LANGS}
 
@@ -175,6 +280,25 @@ def main():
         print('  (b) English saturation: %d dicts read EXACTLY 0.00 drift/1k, spanning %d-%d (%d yr)'
               % (len(zeros), min(ys), max(ys), max(ys) - min(ys)))
         print('      -- the rate cannot order or date any of them; post-reform-completion it is flat.')
+
+    print('\n[5] O7 (H826) -- per-variant S-curve exo/endo fit (adapted from Ghanbarnejad et al.')
+    print('    2014, arXiv:1406.4498; see fit_scurve() docstring for the cross-sectional-proxy caveat):')
+    scurve_results = {}
+    for lang in LANGS:
+        r = fit_scurve(lang, data[lang])
+        if r:
+            scurve_results[lang] = r
+    print('    German sensitivity without PW (same collinearity caveat as [2b]):')
+    r = fit_scurve('de', de_nopw, label=' (no PW)')
+    if r:
+        scurve_results['de_nopw'] = r
+
+    print('\n[6] O7 (H826) -- dater re-reported in SemEval-2015 DTE terms (S15-2147/S15-2148):')
+    dte_results = {}
+    for lang in ('de', 'en'):
+        r = dte_bands(lang, data[lang])
+        if r:
+            dte_results[lang] = r
 
     # --- plot: drift/1k (symlog) vs year, per language ---
     fig, ax = plt.subplots(figsize=(8.5, 5.5))

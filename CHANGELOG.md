@@ -6,27 +6,151 @@ This repository does not currently publish versioned release notes. Entries use
 dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
+## [Unreleased]
+
+## [1.56.0] - 2026-07-16
+
+### Added
+- **[ROADMAP_2026_2027.md](ROADMAP_2026_2027.md) revision 3 table — ACL Anthology uplift**
+  (Opus 4.8 `claude-opus-4-8`, 9-agent workflow: repo/paper audit + a six-facet mine of the
+  CL literature + synthesis, from an interview with M.G., authored 2026-07-12): the planning
+  record for **seven rulings D9–D15**, covering the *method / evaluation / venue* literature
+  that revision-1's `docs/PRIOR_ART.md` *tool*-survey never touched. **D9** A44 second
+  annotator → **cross-family (non-Anthropic) blind judge** (self-preference-bias fix,
+  [arXiv 2410.21819](https://arxiv.org/abs/2410.21819)); **D10** A44 framing → **GEC/GED
+  confusion-set lineage** (position as GED); **D11** `detectors/eval.py` → **F0.5 + FPR + a
+  novel harm metric** (FP=0 stays the filing gate); **D12** **ISCLS demo + WSC-CSDH
+  resource-paper** venue track (IJL/DSH stay journal targets); **D13** **web-app suggester
+  spec now** (Oflazer × Vidyut × Brill-Moore/DCS noisy-channel), build post-30-06-2027;
+  **D14** **tied-field SLP1↔Devanāgarī↔IAST consistency detector**, full build; **D15** A37
+  **S-curve exo/endo fit + SemEval-2015 DTE benchmark + LChange companion** (DSH stays the
+  target). Wave-1 execution already shipped ahead of this doc landing —
+  [H825](https://github.com/gasyoun/Uprava/blob/main/handoffs/H825-Sonnet_SanskritSpellCheck_a44-acl-uplift-gec-eval-crossfamily_12.07.26.md)
+  (D9–D11, **[1.53.0]** below) / [H826](https://github.com/gasyoun/Uprava/blob/main/handoffs/H826-Sonnet_SanskritSpellCheck_a37-scurve-dte-lchange-uplift_12.07.26.md)
+  (D15, **[1.54.0]**) / [H827](https://github.com/gasyoun/Uprava/blob/main/handoffs/H827-Sonnet_SanskritSpellCheck_tied-field-crossfield-detector_12.07.26.md)
+  (D14, **[1.55.0]**) / [H828](https://github.com/gasyoun/Uprava/blob/main/handoffs/H828-Fable_SanskritSpellCheck_web-suggester-spec-oflazer-vidyut_12.07.26.md)
+  (D12/D13, [1.52.0] below). Keystone related-work additions the prior-art scan missed:
+  [Bloodgood & Strauss 1602.07807](https://arxiv.org/abs/1602.07807) (dictionary
+  anomaly-detection ancestor) and [Patel & Kulkarni 2024.iscls-1.1](https://aclanthology.org/2024.iscls-1.1.pdf)
+  (the lead author's own cross-dict work).
+
+## [1.55.0] - 2026-07-13
+
+### Added
+- **H827: tied-field cross-encoding consistency detector.** New 11th detector family
+  [detectors/tied_field_check.py](detectors/tied_field_check.py) — the "tied-field
+  consistency" shape from [Bloodgood & Strauss, arXiv 1602.07807](https://arxiv.org/abs/1602.07807)
+  (IEEE ICSC 2016), the project's direct methodological ancestor, missing until now: checks
+  that SLP1-headword, its Devanāgarī rendering, and its IAST rendering are mutually
+  derivable, by round-tripping every `sanhw1.txt` headword through both encodings via the
+  shared `sanskrit-util` package (three new thin wrappers added to
+  [detectors/slp1util.py](detectors/slp1util.py): `slp1_to_devanagari`, `slp1_to_iast`,
+  `iast_to_slp1`). Wired into [detectors/run_all.py](detectors/run_all.py) as a
+  high-precision flagger (`X:TFC-DEV=…:D` / `X:TFC-IAST=…:D`); `detectors/eval.py`'s filing
+  gate stays **PASS**.
+  Full run across all **431,596** lines / 431,568 unique in-alphabet headwords: **0
+  unsuppressed disagreements** — every round-trip mismatch is explained by one of two
+  documented, non-error transcoder asymmetries (candrabindu/avagraha via Devanāgarī: 12
+  instances; the aspirate/diphthong digraph ambiguity inherent to concatenative IAST — e.g.
+  a genuine `k`+`h` compound boundary reading back as the aspirate `K` — via IAST: 100
+  instances), with zero unexplained residual. An honest **negative finding on error
+  discovery** (the shared transcoder is round-trip consistent at full scale — itself a
+  useful validation) alongside a **positive finding on methodology** (the detector correctly
+  discriminates a genuine defect from a documented normalization axis; it just found no
+  genuine defects because `sanhw1.txt` stores only the SLP1 headword, with no
+  independently-authored Devanāgarī/IAST field to disagree with it). New hypothesis entry
+  H8 in [docs/HYPOTHESES.md](docs/HYPOTHESES.md); detector table + prose in
+  [detectors/readme.md](detectors/readme.md).
+
+## [1.54.0] - 2026-07-13
+
+### Added
+- **H826 (ACL uplift): A37 S-curve exo/endo fit + SemEval-2015 DTE benchmark + LChange
+  companion.** Ruling D15 from the ACL Anthology roadmap interview (revision 3):
+  - [detectors/drift_dating.py](detectors/drift_dating.py) extended with
+    `fit_scurve()` (a per-variant logistic S-curve fit adapted from Ghanbarnejad,
+    Gerlach, Miotto and Altmann's "Extracting Information from S-curves of Language
+    Change," arXiv:1406.4498) and `dte_bands()` (re-expresses the existing
+    leave-one-out dater in SemEval-2015 Task 7 Diachronic Text Evaluation terms —
+    correct-25-yr-epoch rate + distance-to-true-year tolerance bands, per S15-2147/
+    S15-2148). Results persisted to
+    [docs/ORTHO_DRIFT_FINDINGS.md](docs/ORTHO_DRIFT_FINDINGS.md) §O7a/§O7b.
+  - **Honest negative finding, not forced into the expected direction:** the naive
+    cross-sectional S-curve fit **inverts** the expected exo/endo mechanism ordering —
+    English (convention/endogenous) fits a narrow 9.7-yr transition; German
+    (legislated/exogenous, 1901/1996) fits a wide 50.2-yr one. Diagnosed as two
+    distinct sampling artifacts (English's zero-censoring saturation; German's sparse
+    edition-spacing around the true 1901 reform date), not evidence about either
+    language's actual change mechanism — see §O7a's full caveat before citing the
+    per-language `b`/`Δt80` numbers.
+  - [papers/A37_ortho_drift_paper.md](papers/A37_ortho_drift_paper.md) §2 gains three
+    related-work paragraphs (Ghanbarnejad et al., SemEval-2015 DTE, Lüschow 2021 ZfS
+    graphemic variation); new §4.8 reports the S-curve finding as a methodological
+    limitation; §5 gains the DTE distance-band re-expression. References section grows
+    by five verified citations (Ghanbarnejad et al. 2014; Popescu and Strapparava
+    2015; Szymanski and Lynch 2015; Ren, Wang, Zhao and Ren 2023; Lüschow 2021).
+  - New [papers/A37_lchange_companion.md](papers/A37_lchange_companion.md) — a
+    standalone LChange short-paper draft ("When the S-curve Lies") that isolates the
+    inversion finding as a transferable methodological caution for anyone applying
+    Ghanbarnejad-style S-curve mechanism classification to cross-sectional (edition-
+    level, non-Ngram) corpora, with a 4-point diagnostic checklist (§5). DSH stays the
+    primary journal target for A37 itself; this is an additional companion, not a
+    replacement.
+  - No change to SanskritSpellCheck detection logic — this is A37 paper scholarship
+    only (no LOCKED/REFUTED contact).
+
+## [1.53.0] - 2026-07-12
+
+### Added
+- **H825 (ACL uplift): GEC/GED reframe, detection-level eval metrics, cross-family
+  annotator tooling.** Ruling D9/D10/D11 from the ACL Anthology roadmap interview:
+  - [detectors/gold_corrections.tsv](detectors/gold_corrections.tsv)
+    ([detectors/build_gold_set.py](detectors/build_gold_set.py)) — a held-out
+    detection-level gold set derived from `corrections_draft/file_first_verified.tsv`
+    (109 POSITIVE fileable-typo rows / 13 HARM collision-apparatus-stale rows).
+  - [detectors/eval.py](detectors/eval.py) extended with detection-level
+    precision/recall/**F0.5** (β=0.5, Grundkiewicz-style), **FPR** against the
+    nochange whitelist, and a **harm metric** (fraction of the 13 HARM rows a
+    corrector wrongly proposes to "fix") — plus a real FP=0 filing gate (nonzero
+    exit code on violation, previously print-only). Measured result: the
+    underlying detectors flag 77–100% of the exact collision/apparatus/stale rows
+    the do-not-file catalogue exists to protect — direct evidence for A44's own
+    "do-not-file catalogue is the real product" thesis.
+  - [detectors/irr_cross_family.py](detectors/irr_cross_family.py) — a
+    cross-family blind second-annotator script (non-Anthropic judge via any
+    OpenAI-compatible endpoint, e.g. DeepSeek) for the IRR sample, addressing the
+    self-enhancement-bias confound in the existing Sonnet/Opus (same-family) IRR
+    design. Built and dry-run verified; the actual annotation run is pending an
+    `LLM_API_KEY` (none configured on the host that built this).
+  - [detectors/irr_agreement.py](detectors/irr_agreement.py) generalized to report
+    a cross-family agreement section alongside the existing within-family one
+    (degrades gracefully when the cross-family run hasn't happened yet); regression
+    checked against the existing κ=0.336/0.663 figures.
+  - [corrections_draft/irr/HUMAN_ANCHOR_NEEDED.md](corrections_draft/irr/HUMAN_ANCHOR_NEEDED.md)
+    — flags the outstanding gate: both existing kappas are LLM-only inter-rater
+    comparisons, not yet licensed against an independent human-labelled seed set.
+    A human should decide whether to produce that ~30-row seed before submission.
+  - [papers/A44_body_grounded_triage_paper.md](papers/A44_body_grounded_triage_paper.md)
+    reframed on the GEC/GED/confusion-set spine (Fable 5, `claude-fable-5`,
+    register adjudication per ruling D1), with the related-work citations above
+    added and the two live References defects (missing Artstein & Poesio,
+    fabricated ISCLS 2026) resolved.
+
 ## [1.52.0] - 2026-07-12
 
 ### Added
-- **[ROADMAP_2026_2027.md](ROADMAP_2026_2027.md) revision 3 — ACL Anthology uplift** (Opus 4.8
-  `claude-opus-4-8`, 9-agent workflow: repo/paper audit + a six-facet mine of the CL literature +
-  synthesis, from an interview with M.G.): **seven new rulings D9–D15** covering the *method / evaluation /
-  venue* literature that revision-1's `docs/PRIOR_ART.md` *tool*-survey never touched. **D9** A44 second
-  annotator → **cross-family (non-Anthropic) blind judge** (self-preference-bias fix,
-  [arXiv 2410.21819](https://arxiv.org/abs/2410.21819)); **D10** A44 framing → **GEC/GED confusion-set
-  lineage** (position as GED); **D11** `detectors/eval.py` → **F0.5 + FPR + a novel harm metric** (FP=0 stays
-  the filing gate); **D12** **ISCLS demo + WSC-CSDH resource-paper** venue track (IJL/DSH stay journal
-  targets); **D13** **web-app suggester spec now** (Oflazer × Vidyut × Brill-Moore/DCS noisy-channel), build
-  post-30-06-2027; **D14** **tied-field SLP1↔Devanāgarī↔IAST consistency detector**, full build; **D15** A37
-  **S-curve exo/endo fit + SemEval-2015 DTE benchmark + LChange companion** (DSH stays the target). Wave-1
-  execution minted as [H825](https://github.com/gasyoun/Uprava/blob/main/handoffs/H825-Sonnet_SanskritSpellCheck_a44-acl-uplift-gec-eval-crossfamily_12.07.26.md)
-  / [H826](https://github.com/gasyoun/Uprava/blob/main/handoffs/H826-Sonnet_SanskritSpellCheck_a37-scurve-dte-lchange-uplift_12.07.26.md)
-  / [H827](https://github.com/gasyoun/Uprava/blob/main/handoffs/H827-Sonnet_SanskritSpellCheck_tied-field-crossfield-detector_12.07.26.md)
-  / [H828](https://github.com/gasyoun/Uprava/blob/main/handoffs/H828-Fable_SanskritSpellCheck_web-suggester-spec-oflazer-vidyut_12.07.26.md).
-  Keystone related-work additions the prior-art scan missed: [Bloodgood & Strauss 1602.07807](https://arxiv.org/abs/1602.07807)
-  (dictionary anomaly-detection ancestor) and [Patel & Kulkarni 2024.iscls-1.1](https://aclanthology.org/2024.iscls-1.1.pdf)
-  (the lead author's own cross-dict work).
+- **[docs/WEB_SUGGESTER_SPEC.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/WEB_SUGGESTER_SPEC.md)
+  (H828, rulings D1/D6/D13)** — the design spec for the Q1-2027 web spellchecker's suggestion
+  engine: an [Oflazer 1996](https://aclanthology.org/J96-1003.pdf) error-tolerant FST traversal
+  (turning the vendored Vidyut kosha/stems from a *validator* into a *suggestion generator*) over
+  the 431,596-headword union trie, ranked by a [Brill & Moore 2000](https://aclanthology.org/P00-1037/)
+  noisy-channel model (string-edit channel × DCS frequency prior × the measured
+  [confusion_weights.json](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/confusion_weights.json)),
+  with the do-not-file catalogue as a variant-aware accept list. Reuse map (in-repo assets vs the
+  two ACL algorithms + app to build), differentiators, licensing guards (Vidyut MIT embeddable; do
+  NOT ingest LibreOffice/GPL wordlists), the ISCLS demo hook, an 8-item build breakdown, and 5
+  parked open questions. **Spec only — no build** (D13 defers it past the ≥300-corrections
+  north-star). Authored by Opus 4.8 (`claude-opus-4-8`).
 
 ## [1.51.0] - 2026-07-10
 

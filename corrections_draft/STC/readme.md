@@ -4,7 +4,7 @@ The unified detector engine flagged **111 tier-A** STC headwords as possible mis
 Stchoupak–Nitti–Renou's *Dictionnaire Sanscrit-Français* (1932) — Sanskrit headwords glossed in
 **French**, with the Sanskrit set in `{@...@}` (IAST) and the French gloss in `{%...%}`. This
 package triages the candidates against STC's *own entry text* (from
-[csl-orig](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/stc)).
+[csl-orig](https://github.com/sanskrit-lexicon/csl-orig/tree/main/v02/stc)).
 
 ## The finding
 

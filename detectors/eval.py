@@ -21,6 +21,18 @@ Measures the detector suite against the data we actually have:
     spotcheck_sample.txt for human precision verification (true precision needs eyes
     on the scans), and reports an automated proxy.
 
+  DETECTION-LEVEL METRICS (H825, ruling D11) -- against the held-out gold set in
+    detectors/gold_corrections.tsv (build_gold_set.py, derived from the body-grounded
+    triage's corrections_draft/file_first_verified.tsv -- never used to tune the
+    detectors themselves): per-corrector precision / recall / F0.5 (beta=0.5,
+    precision-weighted, Grundkiewicz D15-1052) against the 109 POSITIVE (fileable
+    typo) rows, FPR against the large nochange whitelist, and a HARM metric = the
+    fraction of the 13 HARM rows (EDITORIAL/DNF/DROP -- duplicate/apparatus
+    collisions, do-not-file spellings, stale fixes) a corrector wrongly proposes to
+    "fix". FP=0 on the nochange whitelist stays the shipping/filing gate (now a real
+    gate: nonzero exit code on violation) -- the historical FALSE-POSITIVE sanity
+    check above and this gate are the same measurement, not a conflict.
+
   python eval.py   (reads the *_corrections.txt the detectors already produced; run
                     run_all.py first if they are missing)
 """
@@ -35,6 +47,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 CORRECTORS = ['spell_correct', 'consensus', 'intra_dup', 'dict_vs_corpus']
 SCAN = "http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=%s&key=%s"
+GOLD = os.path.join(HERE, 'gold_corrections.tsv')
 
 
 def load_corrector_pairs(name):
@@ -76,6 +89,31 @@ def load_tiers():
     return tier
 
 
+def load_gold():
+    """Held-out gold set (detectors/gold_corrections.tsv). Returns (positive_wrongs,
+    harm_wrongs); empty sets (with a warning) if the file hasn't been generated yet."""
+    positive, harm = set(), set()
+    if not os.path.exists(GOLD):
+        print("(no gold_corrections.tsv; run detectors/build_gold_set.py for detection metrics)")
+        return positive, harm
+    for line in u._read_words(GOLD):
+        if line.startswith('#') or not line:
+            continue
+        cols = line.split('\t')
+        if cols[0] == 'row_id':
+            continue
+        _row_id, _dict, wrong, _right, cls, _verdict = cols
+        (positive if cls == 'POSITIVE' else harm).add(wrong)
+    return positive, harm
+
+
+def f_beta(precision, recall, beta=0.5):
+    if precision == 0 and recall == 0:
+        return 0.0
+    b2 = beta * beta
+    return (1 + b2) * precision * recall / (b2 * precision + recall)
+
+
 def main():
     known = load_known_pairs()
     nochange = u.load_whitelist(os.path.join(ROOT, 'nochange', 'nochange.txt'))
@@ -96,9 +134,31 @@ def main():
     print("  novelty: %d corrector candidate-pairs are NEW (not in the 2017 set)" % novel)
 
     print("=== FALSE-POSITIVE sanity vs %d known-good (nochange) words ===" % len(nochange))
+    filing_gate_ok = True
     for name in CORRECTORS:
         fp = len(per_wrong[name] & nochange)
         print("  %-15s flags %d known-good words (want 0)" % (name, fp))
+        if fp:
+            filing_gate_ok = False
+
+    gold_positive, gold_harm = load_gold()
+    if gold_positive:
+        print("=== DETECTION-LEVEL METRICS vs gold_corrections.tsv "
+              "(%d POSITIVE, %d HARM) ===" % (len(gold_positive), len(gold_harm)))
+        for name in CORRECTORS + ['ALL (union)']:
+            wrongs = per_wrong[name] if name != 'ALL (union)' else set().union(*per_wrong.values())
+            tp = wrongs & gold_positive
+            fp_harm = wrongs & gold_harm
+            fp_whitelist = wrongs & nochange
+            precision_denom = len(tp) + len(fp_harm) + len(fp_whitelist)
+            precision = len(tp) / precision_denom if precision_denom else 0.0
+            recall = len(tp) / len(gold_positive) if gold_positive else 0.0
+            fpr = len(fp_whitelist) / len(nochange) if nochange else 0.0
+            harm = len(fp_harm) / len(gold_harm) if gold_harm else 0.0
+            print("  %-15s P=%5.1f%% R=%5.1f%% F0.5=%5.3f  FPR=%.6f  harm=%5.1f%% "
+                  "(tp=%d fp_whitelist=%d fp_harm=%d)"
+                  % (name, 100 * precision, 100 * recall, f_beta(precision, recall),
+                     fpr, 100 * harm, len(tp), len(fp_whitelist), len(fp_harm)))
 
     tier = load_tiers()
     if tier:
@@ -112,6 +172,10 @@ def main():
               ", ".join("%s=%d" % (t, rec_tiers[t]) for t in 'ABC'))
 
     write_spotcheck(tier)
+
+    print("=== FILING GATE: %s ===" % ("PASS" if filing_gate_ok else "FAIL"))
+    if not filing_gate_ok:
+        sys.exit(1)
 
 
 def write_spotcheck(tier, n=100):

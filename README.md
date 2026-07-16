@@ -162,4 +162,4 @@ Step 4 - type php dictwisesorter.php AllvsMW-new.html dictwiseerrors1.html (This
 
 # o_vs_O method
 
-The steps are shown in [this readme](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/o_vs_O/readme.txt)
+The steps are shown in [this readme](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/o_vs_O/backup/readme.txt)

@@ -36,8 +36,9 @@ DETECTORS = [
     ('phonotactic',    'phonotactic_check.py', 'phonotactic_suspects.txt',       'flagger'),
     ('charset',        'charset_check.py',     'charset_suspects.txt',           'flagger'),
     ('meter_check',    'meter_check.py',       'meter_suspects.txt',             'flagger'),
+    ('tied_field',     'tied_field_check.py',  'tied_field_suspects.txt',        'flagger'),
 ]
-HIGH_PRECISION = {'phonotactic', 'charset'}
+HIGH_PRECISION = {'phonotactic', 'charset', 'tied_field'}
 SCAN = "http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=%s&key=%s"
 
 # Corpus-corroboration ranking nudge (score_tier). A candidate is corroborated when the

@@ -4,7 +4,7 @@ The unified detector engine flagged **162 tier-A** BUR headwords as possible mis
 Burnouf's *Dictionnaire classique sanscrit-français* (1866) — Sanskrit headwords (SLP1 in `{#...#}`)
 glossed in **French**, each headword echoed in IAST in the gloss `{%...%}`. This package triages the
 candidates against BUR's *own entry text* (from
-[csl-orig](https://github.com/sanskrit-lexicon/csl-orig/tree/master/v02/bur)).
+[csl-orig](https://github.com/sanskrit-lexicon/csl-orig/tree/main/v02/bur)).
 
 ## The finding
 

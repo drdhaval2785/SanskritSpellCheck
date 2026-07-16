@@ -26,7 +26,15 @@ data_source: "docs/ORTHO_DRIFT_FINDINGS.md (study complete; figures verified aga
 > Russian/Kossovich
 > material is folded in as §7 — it absorbs the former standalone
 > "Kossovich pre-1918 digitisation protocol" idea and is framed as the extreme-regime
-> case study.
+> case study. **ACL Anthology uplift (2026-07-13, H826, Sonnet 5
+> `claude-sonnet-5`, ruling D15):** §2 gains three related-work paragraphs (Ghanbarnejad
+> et al.'s S-curve method, SemEval-2015 DTE, ZfS graphemic variation); new §4.8 reports
+> the S-curve exo/endo fit as a **negative methodological result** (the naive
+> cross-sectional proxy inverts the expected mechanism ordering — read the caveat before
+> citing); §5 gains the DTE distance-band re-expression. An [LChange short-paper
+> companion](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/A37_lchange_companion.md)
+> drafts the S-curve finding as a standalone submission to the venue that community lives
+> in. DSH remains the primary journal target for this manuscript.
 
 ## Abstract
 
@@ -96,6 +104,28 @@ signature of the spelling system itself**, which is why it works on the highly
 formulaic, stylistically flat prose of dictionary glosses where stylometry has
 little purchase — and why its resolution is bounded by the reform calendar rather
 than by corpus size.
+
+**The "legislated ≫ convention ≫ none" gradient (§1, §4.7) is itself a published
+parameter of language change, not merely an assertion of this paper.** Ghanbarnejad,
+Gerlach, Miotto and Altmann (2014) fit logistic S-curves to two centuries of German and
+Russian language change — our exact two legislated-reform languages — and show the
+curve's *transition shape* separates exogenous (centrally imposed) from endogenous
+(community-driven) change mechanisms. We adapt their S-curve fit to our cross-sectional
+dictionary data (§4.8; the adaptation is imperfect and the result is reported as a
+methodological limitation, not a confirmation — see the caveat there). We also
+re-express the leave-one-out dater (§5) in the terms of a known shared task, **SemEval-2015
+Task 7, Diachronic Text Evaluation** (Popescu and Strapparava 2015; the character/word
+n-gram system of Szymanski and Lynch 2015), so the accuracy is placeable against a
+convention (correct-epoch rate, distance-to-true-year bands) rather than only an
+MAE specific to this paper — and cite Ren, Wang, Zhao and Ren (2023), a black-box
+language-model dater, as the contrast against which A37's interpretability (an error
+attributable to a named reform, not a latent representation) is the relative
+advantage, not raw accuracy at scale. Finally, graphemic variation as a datable signal
+in its own right is discussed generally in Lüschow (2021, *Zeitschrift für
+Sprachwissenschaft* 40(3)), which quantifies graphemic variation across large corpora
+and frames orthographic variation as a structural property of writing systems rather
+than error — the frame this paper's "drift is regime-governed, not merely
+age-governed" claim (§1) sits inside.
 
 **The reforms themselves are well documented as historical events** — the German
 reforms of 1901 and 1996 and their politics (Johnson 2005), the Russian reform of
@@ -212,7 +242,36 @@ the tool — correctly — manufactures none. This confirms the method's specifi
 | **Convention** | gradual editorial, no authority | **0.01 – 0.46** | English WIL 0.46 → MW 0.01 |
 | **None** | no reform | **0** | Latin BOP 0 |
 
-## 5. Can drift date a dictionary?
+### 4.8 S-curve exo/endo fit (O7a) — a negative methodological result
+
+Ghanbarnejad et al. (2014) fit each language variant's adoption trajectory to a
+logistic S-curve `1/(1+exp(-b·(t-t0)))` and read the transition width `Δt80 =
+ln(16)/b` (time from 20% to 80% adoption) as a mechanism signature: narrow ⇒
+exogenous/legislated, wide ⇒ endogenous/convention. We adapt this to our data by
+treating each dictionary's `1 − drift/1k ÷ max(drift/1k)` (within its own language) as
+an adoption fraction and fitting the same logistic
+([`detectors/drift_dating.py::fit_scurve`](../detectors/drift_dating.py)):
+
+| variant | n | b (adoption/yr) | t0 | Δt80 (yr) | R² | naive label |
+|---|--:|--:|--:|--:|--:|---|
+| English (convention) | 14 | +0.286 | 1848 | **9.7** | 0.87 | "abrupt" |
+| German (legislated) | 5 | +0.055 | 1895 | **50.2** | 0.84 | "gradual" |
+| German, no PW | 4 | +0.051 | 1903 | 54.6 | 0.84 | "gradual" |
+| French / Russian / Latin | ≤2 | — | — | — | — | cannot fit (n too small / zero-variance) |
+
+**This inverts the expected mechanism ordering, and we report the inversion as the
+finding rather than force the expected label.** English's narrow width is a
+zero-censoring artifact (seven dictionaries tie at exactly 0.00 across a full century,
+§4.4); German's wide width is a sparse-edition-sampling artifact (five discrete
+editions across 1865–1928 cannot resolve a switch dated to a single year, 1901). A
+cross-sectional adaptation of a *frequency-trajectory* S-curve method is therefore
+**not validated as an exo/endo classifier** on edition-level lexicographic data without
+first checking for saturation and edition-sampling density against the reform date —
+we surface this as a transferable caution for anyone applying Ghanbarnejad-style
+S-curves to non-continuous corpora, alongside the parameter values themselves. Full derivation and caveats: [O7a in
+`docs/ORTHO_DRIFT_FINDINGS.md`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/ORTHO_DRIFT_FINDINGS.md#o7a--per-variant-logistic-s-curve-fit-adapted-from-ghanbarnejad-et-al-2014).
+
+## 5. Can drift date a dictionary? (O4, O7b)
 
 - **No cross-language calibration** — the rate is regime-stratified (a ~5/1k rate is
   mid-19th-c. German but off-scale for English).
@@ -234,6 +293,14 @@ the tool — correctly — manufactures none. This confirms the method's specifi
   (Figure 2).
 - **Per-era composition beats the scalar rate.** A pre-1901 rate-fit mis-dates SCH to
   1896; its `ss`-dominant composition pins it post-1901/pre-1996 exactly.
+- **Re-reported in SemEval-2015 Diachronic Text Evaluation terms (O7b)**, so the dater
+  is placeable against a known shared-task convention rather than only an MAE specific
+  to this paper: German's leave-one-out predictions land within **±25 yr for 80 %** and
+  **±50 yr for 100 %** of held-out dictionaries (correct-25-yr-epoch rate 20 %,
+  n = 5); English's flatter, saturation-limited profile reaches only **57 % even at
+  ±50 yr** (n = 14). These bands are a descriptive re-expression of the same LOO fit
+  above, not a claim of Task-7-scale statistical power at n = 5/14. Full table: [O7b in
+  `docs/ORTHO_DRIFT_FINDINGS.md`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/ORTHO_DRIFT_FINDINGS.md#o7b--the-dater-in-semeval-2015-dte-terms).
 
 **In sum:** drift/1k is a real but coarse, regime-bounded dating signal; for fine
 dating the **per-era composition** is the robust instrument and survives a 5.5× recall-map
@@ -337,10 +404,17 @@ Annotation of Corpora for Research in the Humanities (ACRH-2).* Lisbon.
 
 Bollmann, Marcel. 2019. "A Large-Scale Comparison of Historical Text Normalization
 Systems." In *Proceedings of NAACL-HLT 2019,* 3885–3898. Minneapolis: Association
-for Computational Linguistics.
+for Computational Linguistics. See also the accompanying [`coastalcph/histnorm`](https://github.com/coastalcph/histnorm)
+benchmark repository, which fixes word-accuracy and CER-on-incorrect-subset as the
+field's standard measurement vocabulary (§O7b/data-and-method).
 
 Comrie, Bernard, Gerald Stone, and Maria Polinsky. 1996. *The Russian Language in
 the Twentieth Century.* 2nd ed. Oxford: Clarendon Press.
+
+Ghanbarnejad, Fakhteh, Martin Gerlach, Jose M. Miotto, and Eduardo G. Altmann.
+2014. "Extracting Information from S-curves of Language Change." *Journal of the
+Royal Society Interface* 11 (101): 20141044.
+[`arxiv.org/abs/1406.4498`](https://arxiv.org/abs/1406.4498).
 
 Hausmann, Franz Josef, and Herbert Ernst Wiegand. 1989. "Component Parts and
 Structures of General Monolingual Dictionaries: A Survey." In Hausmann, Reichmann,
@@ -353,18 +427,37 @@ German Orthography.* Clevedon: Multilingual Matters.
 Jurish, Bryan. 2012. *Finite-State Canonicalization Techniques for Historical
 German.* PhD dissertation, Universität Potsdam.
 
+Lüschow, Hanna. 2021. "Quantifying Graphemic Variation via Large Text Corpora."
+*Zeitschrift für Sprachwissenschaft* 40 (3): 349–378.
+[`doi.org/10.1515/zfs-2021-2038`](https://doi.org/10.1515/zfs-2021-2038).
+
 Niculae, Vlad, Marcos Zampieri, Liviu P. Dinu, and Alina Maria Ciobanu. 2014.
 "Temporal Text Ranking and Automatic Dating of Texts." In *Proceedings of EACL
 2014,* 17–21. Gothenburg: Association for Computational Linguistics.
+
+Popescu, Octavian, and Carlo Strapparava. 2015. "SemEval 2015, Task 7: Diachronic
+Text Evaluation." In *Proceedings of the 9th International Workshop on Semantic
+Evaluation (SemEval 2015),* 870–878. Denver: Association for Computational
+Linguistics. [`aclanthology.org/S15-2147`](https://aclanthology.org/S15-2147/).
 
 Prasanna, S. 2022. "Spellchecker for Sanskrit: The Road Less Taken." In
 *Proceedings of the 19th International Conference on Natural Language Processing
 (ICON 2022),* 290–299. New Delhi: NLP Association of India.
 [`aclanthology.org/2022.icon-main.35`](https://aclanthology.org/2022.icon-main.35/).
 
+Ren, Han, Hai Wang, Yajie Zhao, and Yafeng Ren. 2023. "Time-Aware Language
+Modeling for Historical Text Dating." In *Findings of the Association for
+Computational Linguistics: EMNLP 2023,* 13646–13656. Singapore: Association for
+Computational Linguistics. [`aclanthology.org/2023.findings-emnlp.911`](https://aclanthology.org/2023.findings-emnlp.911/).
+
 Stamou, Constantina. 2008. "Stylochronometry: Stylistic Development, Sequence of
 Composition, and Relative Dating." *Literary and Linguistic Computing* 23 (2):
 181–199.
+
+Szymanski, Terrence, and Gerard Lynch. 2015. "UCD: Diachronic Text Classification
+with Character, Word, and Syntactic N-grams." In *Proceedings of the 9th
+International Workshop on Semantic Evaluation (SemEval 2015),* 879–883. Denver:
+Association for Computational Linguistics. [`aclanthology.org/S15-2148`](https://aclanthology.org/S15-2148/).
 
 **Primary digital source.** Cologne Digital Sanskrit Dictionaries (CDSL).
 Institute of Indology and Tamil Studies, University of Cologne.
