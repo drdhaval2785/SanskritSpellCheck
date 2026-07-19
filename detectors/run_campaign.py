@@ -10,7 +10,7 @@ Outputs (gitignored, regenerable):
   campaigns/<DICT>/candidates.txt   -- the dict's ranked candidate list
   campaigns/campaign_summary.txt    -- dashboard: per-dict A/B/C counts (campaign order)
 
-  python run_campaign.py [--rerun] [sanhw1=../sanhw1.txt]
+  python run_campaign.py [--rerun | --allow-stale-cache] [sanhw1=../sanhw1.txt]
 """
 import sys
 import os
@@ -32,8 +32,8 @@ def build_campaign_rows(cands, dcs, weights, stems):
     return by_dict
 
 
-def main(sanhw1, rerun):
-    ra.ensure_outputs(sanhw1, rerun)
+def main(sanhw1, rerun=False, allow_stale_cache=False):
+    ra.ensure_outputs(sanhw1, rerun, allow_stale_cache)
     dcs = u.load_dcs_lemmas(u.dcs_path())
     weights = u.load_confusion_weights()
     stems = u.load_vidyut_stems()
@@ -53,7 +53,7 @@ def main(sanhw1, rerun):
             for score, tier, band, best, c in rows:
                 f.write("%s\t%d\t%s -> %s\t[%s]\n"
                         % (tier, score, c.suspect, best or "(flag)", ",".join(sorted(c.detectors))))
-        ra.write_review_html(rows, os.path.join(ddir, 'review.html'))
+        ra.write_review_html(rows, os.path.join(ddir, 'review.html'), dict_scope={d})
         summary.append((tiers['A'], tiers['B'], tiers['C'], len(rows), d))
 
     summary.sort(key=lambda s: (-s[0], -s[3]))   # campaign order: most tier-A first
@@ -71,5 +71,6 @@ def main(sanhw1, rerun):
 
 if __name__ == "__main__":
     rerun = '--rerun' in sys.argv
+    allow_stale_cache = '--allow-stale-cache' in sys.argv
     args = [a for a in sys.argv[1:] if not a.startswith('--')]
-    main(args[0] if args else "../sanhw1.txt", rerun)
+    main(args[0] if args else "../sanhw1.txt", rerun, allow_stale_cache)

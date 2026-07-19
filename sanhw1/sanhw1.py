@@ -106,7 +106,7 @@ def addhw(code,d):
  # dirmain example:  PWGScan/2013/  if code == PWG
  dirmain = "%sScan/%s/" %(code,year)
  # "../../"  due to relative location of this program file
- dirbase = dirin = "../../" + dirmain
+ dirbase = "../../" + dirmain
  if code == 'MW': 
   filein = dirbase + "mwaux/mwkeys/extract_keys_b.txt"
   hws = extracthw_mw(filein)

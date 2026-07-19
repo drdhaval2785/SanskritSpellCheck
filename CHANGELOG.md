@@ -8,6 +8,27 @@ ready for a dated entry.
 
 ## [Unreleased]
 
+### Added
+- Reproducible core, development, and optional-analysis dependency manifests,
+  with CI coverage for Python 3.11/3.14 and PHP 8.2/8.3.
+- Verified detector caching via `detectors/.run_all_cache.json`; both unified
+  and campaign runs reject stale or altered output unless the warning-bearing
+  `--allow-stale-cache` override is explicit.
+
+### Fixed
+- Unified and campaign review pages now embed script-safe JSON, initialize it
+  before JavaScript consumes it, and export corrections only for dictionaries
+  supported by the selected corrector and campaign.
+- `faultfinder3a.php` now enforces its four-argument contract and reports input
+  and output-path errors before processing.
+- The `sanskrit-util` compatibility layer now prefers the installed package
+  without module-name shadowing, while retaining the sibling-checkout fallback;
+  optional Vidyut chandas data has an environment override and graceful warning.
+
+### Documentation
+- Recorded the installation split and the fact that the project currently
+  declares no license; license selection remains a maintainer decision.
+
 ## [1.55.0] - 2026-07-13
 
 ### Added

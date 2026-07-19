@@ -36,7 +36,7 @@ import collections
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 import gretil_walker as gw       # noqa: E402
-import sanskrit_util as su       # noqa: E402
+import sanskrit_util_compat as su       # noqa: E402
 
 sys.stdout.reconfigure(encoding='utf-8')
 sys.stderr.reconfigure(encoding='utf-8')

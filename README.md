@@ -15,6 +15,33 @@ from faultfinder3a.php - the machine is commandline tool now.
 > dictionary, type **`/dict-triage <DICT>`** in Claude Code (the link opens the index; the
 > slash-command is run by typing it, not by clicking).
 
+## Installation
+
+The supported automated-test runtimes are Python 3.11 and 3.14, plus PHP 8.2
+and 8.3 for the legacy CLI tools. Install the pinned core Python packages with:
+
+```sh
+python -m pip install -r requirements.txt
+```
+
+Contributors can install the test and lint tools with
+`python -m pip install -r requirements-dev.txt`. The research-only OCR,
+statistics, plotting, meter, and morphology stack is intentionally separate:
+`python -m pip install -r requirements-analysis.txt`.
+
+The shared `sanskrit-util` package is preferred when installed. A legacy
+sibling checkout at `../sanskrit-util` remains supported for existing Cologne
+workspaces. Vidyut's optional chandas classifier also needs its `meters.tsv`;
+pass that path explicitly in Python, set `VIDYUT_CHANDAS_DATA`, or retain the
+legacy `../WhitneyRoots/scratch/vidyut_data/chandas/meters.tsv` layout. When no
+table is available, meter analysis warns and continues without the Vidyut vote.
+
+## License status
+
+This project currently declares no software license. Consequently, the terms
+for redistribution or reuse are not stated; choosing and adding a license
+requires a decision by the maintainer.
+
 ## Detection methods
 
 | method | finds | output |
@@ -51,7 +78,7 @@ the V/C skeleton) — that is what the `detectors/` package addresses.
 - **[detectors/readme.md](detectors/readme.md)** — the seven newer algorithms (DCS-grounded).
 - **[ROADMAP.md](ROADMAP.md)** — phased plan for what's next.
 - **[CLAUDE.md](CLAUDE.md)** — architecture, runtime/porting status, conventions.
-- **[changelog.md](changelog.md)** — dated change history.
+- **[CHANGELOG.md](CHANGELOG.md)** — dated change history.
 
 ## faultfinder pipeline (detail)
 
@@ -74,9 +101,10 @@ This is a command-line php program.
 1. Read parameters from $argv
 dictref ( a code for 'reference' dictionary)
 wholedatafile (filename of a file in format as sanhw1.txt)
-output ( name of output file)
+output (name of report output file)
+sf-output (name of standard-format output file)
 Usage from commandline only:
-php faultfinder3a.php <dictref> <wholedatafile> <output>
+php faultfinder3a.php <dictref> <wholedatafile> <output> <sf-output>
 Usage exampple:
 php faultfinder3a.php MW sanhw1.txt AllvsMW.txt AllvsMW_sf.txt
 Note 1: the headwords for dictref are derived from wholedata.
@@ -155,7 +183,7 @@ In short - the logic is as follows
 The latest version of the code is faultfinder3a.php (specific for finding errors from a headword list sanhw1.txt (https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/sanhw1.txt) of dictionaries hosted at http://www.sanskrit-lexicon.uni-koeln.de/).
 It is a commandline code which can be executed as shown below.
 Step 1 - CD to the directory containing faultfinder3a.php
-Step 2 - type php faultfinder3a.php MW sanhw1.txt AllvsMW.txt. (This will create a file having suspect wrong entries from sanhw1.php when compared to MW as base.) 
+Step 2 - type php faultfinder3a.php MW sanhw1.txt AllvsMW.txt AllvsMW_sf.txt. (This creates both the suspect report and CORRECTIONS standard-format output.)
 Step 3 - type php faultfinder3a-html.php AllvsMW.txt AllvsMW-new.html (This will render AllvsMW.txt in an HTML file with links to individual entries for checking online)
 Step 4 - type php dictwisesorter.php AllvsMW-new.html dictwiseerrors1.html (This will sort AllvsMW-new.html dictionarywise.)
 

@@ -30,7 +30,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
-import sanskrit_util as su   # noqa: E402
+import sanskrit_util_compat as su   # noqa: E402
 import slp1util as u          # noqa: E402
 
 WORD_RE = re.compile(r"[^\W\d_]+", re.UNICODE)

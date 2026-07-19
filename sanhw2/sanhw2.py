@@ -131,7 +131,7 @@ def addhw(code,d):
  # Nov 2, 2015.  the 'hws' variable now contains a list of strings,
  # each string having the form 'hw;L', where 'L' is the L-number of the
  # first record containing the given 'hw'.  
- dirbase = dirin = "../../" + dirmain
+ dirbase = "../../" + dirmain
  if code == 'MW': 
   filein = dirbase + "mwaux/mwkeys/extract_keys_b.txt"
   hws = extracthw_mw(filein)

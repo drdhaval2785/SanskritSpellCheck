@@ -20,6 +20,11 @@ detectors/campaigns/
 detectors/ocrcache/
 detectors/ocr_verify_report.txt
 detectors/vidyut_stems.txt
+detectors/.run_all_cache.json
+detectors/.run_all_cache.json.tmp
+detectors/.run_all.*.tmp
+.pytest_cache/
+.ruff_cache/
 
 # triage intermediates (regenerable from triage_enrich.py + the LLM workflow);
 # the committed artifact is corrections_draft/<DICT>/<DICT>_triaged.txt

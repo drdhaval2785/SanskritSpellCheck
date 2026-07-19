@@ -11,9 +11,9 @@ ini_set('display_errors', '1');
     wholedatafile (filename of a file in format as sanhw1.txt)
     output ( name of output file)
     Usage from commandline only:
-     php faultfinder3a.php <dictref> <wholedatafile> <output>
+     php faultfinder3a.php <dictref> <wholedatafile> <output> <sf-output>
     Usage exampple:
-     php faultfinder3a.php MW sanhw1.txt AllvsMW.txt
+     php faultfinder3a.php MW sanhw1.txt AllvsMW.txt AllvsMW_sf.txt
     Note 1: the headwords for dictref are derived from wholedata.
       Thus, wholedata is the only input data source.
     Note 2:  output is written as a text file. The file is composed of
@@ -37,19 +37,52 @@ ini_set('display_errors', '1');
  * Google doc for understanding the logic behind the machine is https://docs.google.com/document/d/1G4HoDz9nuj2GPeHQopNVSnDEGrnXtoAuXFugj4sQHZg/edit?usp=sharing
  */
  /* set memory limit to 1000 MB */
-ini_set("memory_limit","1000M");
-error_reporting(E_ALL ^ E_NOTICE);
-/* get command-line arguments */
+ ini_set("memory_limit","1000M");
+ error_reporting(E_ALL ^ E_NOTICE);
+ /* get command-line arguments */
+ if ($argc !== 5) {
+  fwrite(STDERR, "Usage: php faultfinder3a.php <dictref> <wholedatafile> <output> <sf-output>\n");
+  exit(2);
+ }
  $dictref = $argv[1]; // 'MW';
  $wholedatafile = $argv[2]; // sanhw1.txt
  $output = $argv[3];  //AllvsMW.txt;
  $sf = $argv[4]; // AllvsMW_sf.txt
+ if (!is_readable($wholedatafile)) {
+  fwrite(STDERR, "Input file is not readable: $wholedatafile\n");
+  exit(1);
+ }
+ function output_path_key($path) {
+  $dir = realpath(dirname($path));
+  $key = ($dir === false ? dirname($path) : $dir) . DIRECTORY_SEPARATOR . basename($path);
+  $key = str_replace('\\', '/', $key);
+  return PHP_OS_FAMILY === 'Windows' ? strtolower($key) : $key;
+ }
+ if (output_path_key($output) === output_path_key($sf)) {
+  fwrite(STDERR, "Output and sf-output must be distinct paths.\n");
+  exit(2);
+ }
+ foreach (array($output, $sf) as $path) {
+  $parent = dirname($path);
+  if (!is_dir($parent) || !is_writable($parent)) {
+   fwrite(STDERR, "Output directory is not writable: $parent\n");
+   exit(1);
+  }
+ }
 // get pattern data
 include "faultfinder3a_utils.php";
 $pattern_data = faultfinder_patterns();
 // open file where we store the suspect wrong entries.
-$outfile=fopen($output,"w");  // completely overwrite
-$sffile=fopen($sf,"w"); // For standard format.
+ $outfile=@fopen($output,"c");
+ $sffile=@fopen($sf,"c");
+ if ($outfile === false || $sffile === false) {
+  if ($outfile !== false) { fclose($outfile); }
+  if ($sffile !== false) { fclose($sffile); }
+  fwrite(STDERR, "Could not open output files: $output ; $sf\n");
+  exit(1);
+ }
+ ftruncate($outfile, 0); rewind($outfile);  // completely overwrite
+ ftruncate($sffile, 0); rewind($sffile);    // standard format
 
 // read wholedatafile into array of trimmed lines
 $wholedata = file($wholedatafile);
