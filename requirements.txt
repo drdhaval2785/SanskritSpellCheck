@@ -1,0 +1,2 @@
+sanskrit-util @ git+https://github.com/sanskrit-lexicon/sanskrit-util.git@v0.7.0#subdirectory=py
+csl-pyutil @ git+https://github.com/sanskrit-lexicon/csl-pyutil.git@v0.3.0

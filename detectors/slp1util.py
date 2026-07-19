@@ -20,7 +20,7 @@ import collections
 # the old normalize_lemma on 432,988/432,989 real headwords — the 1 diff is slp1_norm trimming
 # a stray trailing space, which the loaders already strip).
 try:
-    from sanskrit_util import SLP1_VOWELS, SLP1_MARKS, SLP1_CONSONANTS, slp1_norm as _slp1_norm
+    from sanskrit_util_compat import SLP1_VOWELS, SLP1_MARKS, SLP1_CONSONANTS, slp1_norm as _slp1_norm
     VOWELS = set(SLP1_VOWELS)
     MARKS = set(SLP1_MARKS)
     CONSONANTS = set(SLP1_CONSONANTS)
@@ -149,7 +149,7 @@ def devanagari_to_slp1(s):
     Used only by ocr_verify; needs the sanskrit-util sibling (or the pip-installed pkg).
     Calls the package's direct deva_to_slp1 (ळ -> L); to_slp1(deva_to_iast(·)) mis-mapped ळ
     onto vocalic ḷ -> 'x' because both share the IAST glyph ḷ (U+1E37)."""
-    from sanskrit_util import deva_to_slp1
+    from sanskrit_util_compat import deva_to_slp1
     return deva_to_slp1(s).replace('।', ' ').replace('॥', ' ')
 
 
@@ -159,14 +159,14 @@ def slp1_to_devanagari(s):
     tied_field_check (H827) to render the Devanagari surface form of an SLP1 headword.
     NOT round-trip stable for candrabindu (~) or avagraha (') -- see sanskrit_util's own
     module note; callers that need round-trip stability must account for those two."""
-    from sanskrit_util import slp1_to_devanagari as _s2d
+    from sanskrit_util_compat import slp1_to_devanagari as _s2d
     return _s2d(s)
 
 
 def slp1_to_iast(s):
     """SLP1 -> IAST via the shared sanskrit-util package (from_slp1; one-char-per-phoneme
     map). Used by tied_field_check (H827)."""
-    from sanskrit_util import from_slp1
+    from sanskrit_util_compat import from_slp1
     return from_slp1(s)
 
 
@@ -179,7 +179,7 @@ def iast_to_slp1(s):
     as the same digraph as the aspirate/diphthong and read back as one phoneme. This is an
     inherent one-way lossiness of concatenative IAST, not a transcoder bug -- see
     tied_field_check.py's _iast_collapse for the exact suppression rule."""
-    from sanskrit_util import to_slp1
+    from sanskrit_util_compat import to_slp1
     return to_slp1(s)
 
 

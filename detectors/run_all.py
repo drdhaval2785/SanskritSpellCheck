@@ -9,22 +9,28 @@ is the main signal), and emits:
   combined_sf.txt          -- CORRECTIONS standard format (DICT:wrong:right:n) for the best suggestion
 
 Detectors are consumed via their OUTPUT FILES (the X:CODE=Y:D and DICT:wrong:right:n
-contracts), not their internals -- so this stays decoupled. Cached outputs are reused;
-pass --rerun to regenerate them.
+contracts), not their internals -- so this stays decoupled. Cached outputs are reused only
+when their manifest verifies every input and output; pass --rerun to regenerate them.
 
-  python run_all.py [--rerun] [sanhw1=../sanhw1.txt]
+  python run_all.py [--rerun | --allow-stale-cache] [sanhw1=../sanhw1.txt]
 """
 import sys
 import os
 import json
+import hashlib
 import subprocess
 import collections
+from importlib import metadata
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import slp1util as u
 import union_attestation as ua
 
 u.reconfigure_stdio()
 HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(HERE)
+CACHE_SCHEMA = 1
+CACHE_PATH = os.path.join(HERE, '.run_all_cache.json')
+INTERNAL_PACKAGES = ('sanskrit-util', 'csl-pyutil')
 
 # (name, script, output file, kind). order_check needs source-order input -> excluded.
 DETECTORS = [
@@ -75,18 +81,168 @@ class Cand:
         self.meter = None                               # meter_check corroboration level: 'suspect'|'review'|None
 
 
-def ensure_outputs(sanhw1, rerun):
-    for name, script, out, kind in DETECTORS:
+def _sha256(path):
+    digest = hashlib.sha256()
+    with open(path, 'rb') as stream:
+        for chunk in iter(lambda: stream.read(1024 * 1024), b''):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def _cache_input_paths(sanhw1):
+    """Return every existing file that can affect detector output."""
+    paths = {os.path.abspath(sanhw1)}
+    for base, patterns in ((HERE, ('*.py', '*.json')), (os.path.join(HERE, 'meter'), ('*.py',))):
+        if not os.path.isdir(base):
+            continue
+        for pattern in patterns:
+            import glob
+            paths.update(os.path.abspath(p) for p in glob.glob(os.path.join(base, pattern)))
+    paths.update(os.path.abspath(os.path.join(ROOT, 'nochange', name)) for name in
+                 ('nochange.txt', 'do_not_file_suppress.txt'))
+    optional = [
+        os.path.join(HERE, 'vidyut_stems.txt'),
+        ua.union_path(),
+    ]
+    legacy_package = os.path.abspath(os.path.join(
+        HERE, '..', '..', 'sanskrit-util', 'py', 'sanskrit_util'))
+    if os.path.isdir(legacy_package):
+        import glob
+        optional.extend(glob.glob(os.path.join(legacy_package, '*.py')))
+    meter_dir = os.path.join(HERE, 'meter')
+    if os.path.isdir(meter_dir):
+        import glob
+        optional.extend(glob.glob(os.path.join(meter_dir, 'meter_verdicts*.jsonl')))
+    paths.update(os.path.abspath(p) for p in optional)
+    return sorted(p for p in paths if os.path.isfile(p) and os.path.abspath(p) != CACHE_PATH)
+
+
+def _installed_versions():
+    versions = {}
+    for package in INTERNAL_PACKAGES:
+        try:
+            versions[package] = metadata.version(package)
+        except metadata.PackageNotFoundError:
+            versions[package] = 'not-installed'
+    return versions
+
+
+def _cache_fingerprint(sanhw1):
+    digest = hashlib.sha256()
+    digest.update(('schema:%d\n' % CACHE_SCHEMA).encode('ascii'))
+    digest.update(json.dumps(DETECTORS, separators=(',', ':')).encode('utf-8'))
+    digest.update(json.dumps(_installed_versions(), sort_keys=True).encode('utf-8'))
+    for path in _cache_input_paths(sanhw1):
+        try:
+            label = os.path.relpath(path, ROOT)
+        except ValueError:
+            label = path
+        digest.update(label.replace('\\', '/').encode('utf-8'))
+        digest.update(b'\0')
+        digest.update(_sha256(path).encode('ascii'))
+        digest.update(b'\n')
+    return digest.hexdigest()
+
+
+def _output_hashes():
+    outputs = {}
+    for name, _script, out, _kind in DETECTORS:
         path = os.path.join(HERE, out)
-        if rerun or not os.path.exists(path) or os.path.getsize(path) == 0:
+        if not os.path.isfile(path) or os.path.getsize(path) == 0:
+            return None
+        outputs[name] = {'path': out, 'sha256': _sha256(path)}
+    return outputs
+
+
+def _read_cache_manifest():
+    try:
+        with open(CACHE_PATH, 'r', encoding='utf-8') as stream:
+            value = json.load(stream)
+    except (OSError, ValueError):
+        return None
+    return value if isinstance(value, dict) else None
+
+
+def _cache_problem(sanhw1):
+    outputs = _output_hashes()
+    if outputs is None:
+        return 'one or more detector outputs are missing or empty'
+    manifest = _read_cache_manifest()
+    if manifest is None:
+        return 'cache manifest is missing or unreadable'
+    if manifest.get('schema') != CACHE_SCHEMA:
+        return 'cache schema does not match'
+    if manifest.get('fingerprint') != _cache_fingerprint(sanhw1):
+        return 'cache input fingerprint does not match'
+    if manifest.get('outputs') != outputs:
+        return 'cached detector output hashes do not match'
+    return None
+
+
+def _write_cache_manifest(sanhw1):
+    outputs = _output_hashes()
+    if outputs is None:
+        raise RuntimeError('cannot write cache manifest with missing outputs')
+    value = {
+        'schema': CACHE_SCHEMA,
+        'fingerprint': _cache_fingerprint(sanhw1),
+        'outputs': outputs,
+    }
+    temp = CACHE_PATH + '.tmp'
+    with open(temp, 'w', encoding='utf-8', newline='\n') as stream:
+        json.dump(value, stream, ensure_ascii=False, indent=2, sort_keys=True)
+        stream.write('\n')
+        stream.flush()
+        os.fsync(stream.fileno())
+    os.replace(temp, CACHE_PATH)
+
+
+def _regenerate_outputs(sanhw1):
+    staged = []
+    try:
+        for name, script, out, _kind in DETECTORS:
+            temp = os.path.join(HERE, '.run_all.%s.tmp' % name)
+            if os.path.exists(temp):
+                os.unlink(temp)
+            staged.append((temp, os.path.join(HERE, out)))
             print("running %s ..." % name)
-            r = subprocess.run([sys.executable, os.path.join(HERE, script), sanhw1, path],
-                               cwd=HERE, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, text=True)
-            if r.returncode != 0:
-                sys.stderr.write("ERROR: %s failed (exit %d):\n%s\n" % (name, r.returncode, (r.stderr or '')[-1500:]))
+            result = subprocess.run(
+                [sys.executable, os.path.join(HERE, script), sanhw1, temp],
+                cwd=HERE, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE,
+                text=True, encoding='utf-8')
+            if result.returncode != 0:
+                sys.stderr.write("ERROR: %s failed (exit %d):\n%s\n" %
+                                 (name, result.returncode, (result.stderr or '')[-1500:]))
                 raise SystemExit(1)
-        else:
-            print("using cached %s" % out)
+            if not os.path.isfile(temp) or os.path.getsize(temp) == 0:
+                sys.stderr.write("ERROR: %s produced no detector output\n" % name)
+                raise SystemExit(1)
+        for temp, output in staged:
+            os.replace(temp, output)
+        _write_cache_manifest(sanhw1)
+    finally:
+        for temp, _output in staged:
+            try:
+                os.unlink(temp)
+            except FileNotFoundError:
+                pass
+
+
+def ensure_outputs(sanhw1, rerun=False, allow_stale_cache=False):
+    if rerun:
+        _regenerate_outputs(sanhw1)
+        return
+    problem = _cache_problem(sanhw1)
+    if problem is None:
+        print('using verified detector cache')
+        return
+    if allow_stale_cache and _output_hashes() is not None:
+        sys.stderr.write('WARNING: using stale detector cache: %s\n' % problem)
+        return
+    sys.stderr.write('ERROR: detector cache is unsafe: %s\n' % problem)
+    sys.stderr.write('Run again with --rerun to rebuild it. '
+                     'Use --allow-stale-cache only when you accept unverifiable results.\n')
+    raise SystemExit(2)
 
 
 def aggregate():
@@ -203,8 +359,8 @@ def score_tier(c, dcs, weights, stems, union=None):
     return score, tier, best, best_band
 
 
-def main(sanhw1, rerun):
-    ensure_outputs(sanhw1, rerun)
+def main(sanhw1, rerun=False, allow_stale_cache=False):
+    ensure_outputs(sanhw1, rerun, allow_stale_cache)
     dcs = u.load_dcs_lemmas(u.dcs_path())
     weights = u.load_confusion_weights()
     stems = u.load_vidyut_stems()
@@ -345,6 +501,7 @@ def write_review_html(rows, path, cap=1500, dict_scope=None):
 
 if __name__ == "__main__":
     rerun = '--rerun' in sys.argv
+    allow_stale_cache = '--allow-stale-cache' in sys.argv
     args = [a for a in sys.argv[1:] if not a.startswith('--')]
     sanhw1 = args[0] if args else "../sanhw1.txt"
-    main(sanhw1, rerun)
+    main(sanhw1, rerun, allow_stale_cache)
