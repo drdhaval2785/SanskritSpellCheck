@@ -16,7 +16,6 @@ pass --rerun to regenerate them.
 """
 import sys
 import os
-import html
 import json
 import subprocess
 import collections
@@ -280,6 +279,7 @@ REVIEW_TEMPLATE = r"""<!DOCTYPE html><html><head><meta charset="utf-8"><title>Sa
 @@CAPNOTE@@
 <table id="t"><thead><tr><th>#</th><th>tier</th><th>suspect</th><th>&rarr; suggestion</th>
 <th>detectors</th><th>evidence</th><th>scans</th><th>decision</th></tr></thead><tbody></tbody></table>
+<script type="application/json" id="payload">@@PAYLOAD@@</script>
 <script>
 const DATA=JSON.parse(document.getElementById('payload').textContent);
 const dec={}; let cur=0;
@@ -298,7 +298,7 @@ function set(i,v){dec[i]=(dec[i]===v?undefined:v);const tr=document.getElementBy
 function counts(){const a=Object.values(dec).filter(x=>x==='y').length,r=Object.values(dec).filter(x=>x==='n').length;
  document.getElementById('counts').textContent='accepted '+a+' · rejected '+r+' · total '+DATA.length;}
 function filt(t){document.querySelectorAll('#t tbody tr').forEach((tr,i)=>{tr.style.display=(!t||DATA[i].tier===t)?'':'none'});}
-function exp(v){const out=[];DATA.forEach((r,i)=>{if(dec[i]===v&&r.s){r.dicts.forEach(d=>out.push(d+':'+r.w+':'+r.s+':'+v))}});
+function exp(v){const out=[];DATA.forEach((r,i)=>{if(dec[i]===v&&r.s){r.export_dicts.forEach(d=>out.push(d+':'+r.w+':'+r.s+':'+v))}});
  const b=new Blob([out.join('\n')+'\n'],{type:'text/plain'});const a=document.createElement('a');
  a.href=URL.createObjectURL(b);a.download=(v==='y'?'accepted':'rejected')+'_sf.txt';a.click();}
 document.addEventListener('keydown',e=>{if(e.key==='a')set(cur,'y');else if(e.key==='r')set(cur,'n');
@@ -307,11 +307,20 @@ document.addEventListener('keydown',e=>{if(e.key==='a')set(cur,'y');else if(e.ke
 try{Object.assign(dec,JSON.parse(localStorage.getItem('sscdec')||'{}'))}catch(e){}
 render();
 </script>
-<script type="application/json" id="payload">@@PAYLOAD@@</script>
 </body></html>"""
 
 
-def write_review_html(rows, path, cap=1500):
+def _json_for_script(value):
+    """Serialize JSON safely inside a script data block without corrupting quotes."""
+    payload = json.dumps(value, ensure_ascii=False)
+    for char, escaped in (('&', r'\u0026'), ('<', r'\u003c'), ('>', r'\u003e'),
+                          ('\u2028', r'\u2028'), ('\u2029', r'\u2029')):
+        payload = payload.replace(char, escaped)
+    return payload
+
+
+def write_review_html(rows, path, cap=1500, dict_scope=None):
+    scope = set(dict_scope) if dict_scope is not None else None
     data = []
     for score, tier, band, best, c in rows[:cap]:
         reason = "; ".join("%s:%s" % (d, code) for d, code, _ in c.reasons)
@@ -319,9 +328,13 @@ def write_review_html(rows, path, cap=1500):
             reason = (reason + " morph✓").strip()
         if c.meter:
             reason = (reason + " meter:%s" % c.meter).strip()
+        scan_dicts = c.dicts if scope is None else c.dicts & scope
+        supported = c.sugg_dicts.get(best, ()) if best else ()
+        export_dicts = set(supported) if scope is None else set(supported) & scope
         data.append({'w': c.suspect, 's': best, 'tier': tier, 'score': score,
-                     'dets': sorted(c.detectors), 'dicts': sorted(c.dicts), 'reason': reason})
-    payload = html.escape(json.dumps(data, ensure_ascii=False)).replace('</', '<\\/')
+                     'dets': sorted(c.detectors), 'dicts': sorted(scan_dicts),
+                     'export_dicts': sorted(export_dicts), 'reason': reason})
+    payload = _json_for_script(data)
     capnote = ("" if len(rows) <= cap else
                "<p><b>Note:</b> showing top %d of %d by score; full list in combined_candidates.txt.</p>"
                % (cap, len(rows)))

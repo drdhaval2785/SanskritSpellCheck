@@ -53,7 +53,7 @@ def main(sanhw1, rerun):
             for score, tier, band, best, c in rows:
                 f.write("%s\t%d\t%s -> %s\t[%s]\n"
                         % (tier, score, c.suspect, best or "(flag)", ",".join(sorted(c.detectors))))
-        ra.write_review_html(rows, os.path.join(ddir, 'review.html'))
+        ra.write_review_html(rows, os.path.join(ddir, 'review.html'), dict_scope={d})
         summary.append((tiers['A'], tiers['B'], tiers['C'], len(rows), d))
 
     summary.sort(key=lambda s: (-s[0], -s[3]))   # campaign order: most tier-A first
