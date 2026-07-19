@@ -446,7 +446,7 @@ function render(){const tb=document.querySelector('#t tbody');tb.innerHTML='';
   tr.innerHTML='<td>'+(i+1)+'</td><td>'+r.tier+'</td><td><b>'+r.w+'</b></td><td>'+(r.s||'<i>(flag)</i>')+'</td>'+
    '<td>'+r.dets.map(d=>'<span class=badge>'+d+'</span>').join('')+'</td><td>'+(r.reason||'')+'</td>'+
    '<td>'+scanlinks(r.w,r.dicts)+'</td>'+
-   '<td><button onclick="set('+i+",'y')\">&#10003;</button><button onclick=\"set("+i+",'n')\">&#10007;</button></td>';
+   `<td><button onclick="set(${i},'y')">&#10003;</button><button onclick="set(${i},'n')">&#10007;</button></td>`;
   tb.appendChild(tr);});counts();}
 function set(i,v){dec[i]=(dec[i]===v?undefined:v);const tr=document.getElementById('r'+i);
  tr.className=DATA[i].tier+(dec[i]==='y'?' acc':dec[i]==='n'?' rej':'');counts();

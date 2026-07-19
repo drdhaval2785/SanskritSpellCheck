@@ -1,7 +1,11 @@
 import json
 import re
+import shutil
+import subprocess
 import sys
 from pathlib import Path
+
+import pytest
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -28,6 +32,22 @@ def _row():
     cand.sugg_dicts["yदेव"].add("MW")
     cand.dicts.update({"MW", "PW"})
     return (250, "A", 4, "yदेव", cand)
+
+
+def test_generated_javascript_parses(tmp_path):
+    if shutil.which("node") is None:
+        pytest.skip("Node.js is unavailable")
+    out = tmp_path / "review.html"
+    run_all.write_review_html([_row()], out)
+    doc = out.read_text(encoding="utf-8")
+    scripts = re.findall(r"<script(?: [^>]*)?>(.*?)</script>", doc, flags=re.S)
+    executable = tmp_path / "review.js"
+    executable.write_text(scripts[-1], encoding="utf-8")
+    result = subprocess.run(
+        ["node", "--check", str(executable)], capture_output=True, text=True,
+        encoding="utf-8",
+    )
+    assert result.returncode == 0, result.stderr
 
 
 def test_payload_precedes_consumer_and_round_trips(tmp_path):

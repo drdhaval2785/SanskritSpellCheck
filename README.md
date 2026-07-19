@@ -15,6 +15,33 @@ from faultfinder3a.php - the machine is commandline tool now.
 > dictionary, type **`/dict-triage <DICT>`** in Claude Code (the link opens the index; the
 > slash-command is run by typing it, not by clicking).
 
+## Installation
+
+The supported automated-test runtimes are Python 3.11 and 3.14, plus PHP 8.2
+and 8.3 for the legacy CLI tools. Install the pinned core Python packages with:
+
+```sh
+python -m pip install -r requirements.txt
+```
+
+Contributors can install the test and lint tools with
+`python -m pip install -r requirements-dev.txt`. The research-only OCR,
+statistics, plotting, meter, and morphology stack is intentionally separate:
+`python -m pip install -r requirements-analysis.txt`.
+
+The shared `sanskrit-util` package is preferred when installed. A legacy
+sibling checkout at `../sanskrit-util` remains supported for existing Cologne
+workspaces. Vidyut's optional chandas classifier also needs its `meters.tsv`;
+pass that path explicitly in Python, set `VIDYUT_CHANDAS_DATA`, or retain the
+legacy `../WhitneyRoots/scratch/vidyut_data/chandas/meters.tsv` layout. When no
+table is available, meter analysis warns and continues without the Vidyut vote.
+
+## License status
+
+This project currently declares no software license. Consequently, the terms
+for redistribution or reuse are not stated; choosing and adding a license
+requires a decision by the maintainer.
+
 ## Detection methods
 
 | method | finds | output |

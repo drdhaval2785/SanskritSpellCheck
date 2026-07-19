@@ -107,7 +107,7 @@ def commonngram(n):
 		ngram = getngrams(basewords,n)
 		print(len(ngram))
 		ngrams.append(ngram)
-	commonngrams = commons(ngrams,n)
+	commons(ngrams,n)
 def whiteterm(ends,word,diff,basengrams,n):
 	for end in ends:
 		[pre,post] = end.split(':')
@@ -196,4 +196,3 @@ if __name__=="__main__":
 	#commonngram(int(n)) # to generate the common ngrams (data/2grams.txt and data/3grams.txt)
 	testwithcommonngrams(fin,fout,int(n))
 	#lessusedngrams(fin,fout,int(n))
-	
