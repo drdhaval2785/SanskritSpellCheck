@@ -121,9 +121,18 @@ def _installed_versions():
     versions = {}
     for package in INTERNAL_PACKAGES:
         try:
-            versions[package] = metadata.version(package)
+            distribution = metadata.distribution(package)
         except metadata.PackageNotFoundError:
             versions[package] = 'not-installed'
+            continue
+        record = {'version': distribution.version}
+        direct_url = distribution.read_text('direct_url.json')
+        if direct_url:
+            try:
+                record['direct_url'] = json.loads(direct_url)
+            except ValueError:
+                record['direct_url'] = direct_url.strip()
+        versions[package] = record
     return versions
 
 

@@ -1,4 +1,5 @@
 import sys
+import json
 from pathlib import Path
 
 import pytest
@@ -8,6 +9,25 @@ DETECTORS = ROOT / 'detectors'
 sys.path.insert(0, str(DETECTORS))
 
 import run_all  # noqa: E402
+
+
+def test_installed_version_fingerprint_includes_vcs_provenance(monkeypatch):
+    class Distribution:
+        version = '0.4.0'
+
+        @staticmethod
+        def read_text(name):
+            assert name == 'direct_url.json'
+            return json.dumps({
+                'url': 'https://github.com/sanskrit-lexicon/sanskrit-util.git',
+                'vcs_info': {'requested_revision': 'v0.7.0', 'commit_id': 'abc123'},
+            })
+
+    monkeypatch.setattr(run_all, 'INTERNAL_PACKAGES', ('sanskrit-util',))
+    monkeypatch.setattr(run_all.metadata, 'distribution', lambda _name: Distribution())
+    value = run_all._installed_versions()['sanskrit-util']
+    assert value['version'] == '0.4.0'
+    assert value['direct_url']['vcs_info']['requested_revision'] == 'v0.7.0'
 
 
 @pytest.fixture
