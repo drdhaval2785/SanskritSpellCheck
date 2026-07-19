@@ -45,6 +45,16 @@ def test_output_paths_must_be_distinct(tmp_path):
     assert "distinct" in result.stderr
 
 
+def test_invalid_output_directory_is_reported(tmp_path):
+    source = tmp_path / "source.txt"
+    source.write_text("a:MW\n", encoding="utf-8")
+    missing = tmp_path / "missing-directory"
+    result = _run("MW", source, missing / "report.txt", tmp_path / "standard.txt")
+    assert result.returncode == 1
+    assert "not writable" in result.stderr
+    assert not (missing / "report.txt").exists()
+
+
 def test_minimal_four_argument_run(tmp_path):
     source = tmp_path / "source.txt"
     source.write_text("a:MW\nagni:MW\nakza:PW\n", encoding="utf-8")
