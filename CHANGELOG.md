@@ -8,6 +8,8 @@ ready for a dated entry.
 
 ## [Unreleased]
 
+## [1.56.0] - 2026-07-26
+
 ### Added
 - **Union-across-runs recall harvest (roadmap ruling D7, H1471).** A second
   independent body-aware triage run on SHS/YAT/ACC, unioned with the committed
