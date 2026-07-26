@@ -9,6 +9,17 @@ ready for a dated entry.
 ## [Unreleased]
 
 ### Added
+- **Union-across-runs recall harvest (roadmap ruling D7, H1471).** A second
+  independent body-aware triage run on SHS/YAT/ACC, unioned with the committed
+  packages rather than replacing them: `detectors/union_across_runs.py` (the
+  measurement tool, which reconstructs a run's FILE-FIRST set from the
+  `triage_work/` verdicts using `triage_synthesize.py`'s own survival rule) and
+  `corrections_draft/union_d7.tsv` (156 rows — 54 in both runs, 70 net-new, 32
+  run-1-only, each net-new carrying its Opus confirm reason and Opus review
+  verdict). Measured gain **+70 fileable candidates (+81%)** over the committed
+  86; single-run agreement is only **35%**. Recorded as `docs/HYPOTHESES.md`
+  **H9 — confirmed**, with R3 quantified and H2's per-dict counts re-labelled as
+  single-draw lower bounds. No committed package was overwritten.
 - Reproducible core, development, and optional-analysis dependency manifests,
   with CI coverage for Python 3.11/3.14 and PHP 8.2/8.3.
 - Verified detector caching via `detectors/.run_all_cache.json`; both unified
