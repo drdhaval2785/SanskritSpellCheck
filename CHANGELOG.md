@@ -39,6 +39,13 @@ ready for a dated entry.
   optional Vidyut chandas data has an environment override and graceful warning.
 
 ### Documentation
+- **MG ruling D9 (26-07-2026): the union-across-runs scale-up is funded**, lifting
+  the "full generous-budget union across all 11 fileable dicts" non-goal. The
+  deciding argument is contamination rather than recall — an uncorrected typo
+  headword propagates into the cross-dict union headword list, which `run_all.py`
+  reads to demote broadly-attested suspects, so a typo left unfixed inflates its
+  own attestation and helps suppress its own detection. Recorded in
+  `ROADMAP_2026_2027.md` (D9 + the lifted non-goal); execution is handoff H1709.
 - Recorded the installation split and the fact that the project currently
   declares no license; license selection remains a maintainer decision.
 
