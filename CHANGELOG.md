@@ -21,7 +21,11 @@ ready for a dated entry.
   `combined_candidates.txt`/`_sf.txt`/`_review.html` + the report as run
   artifacts every cycle, and opens/updates a PR with the refreshed baseline +
   report only when the cycle found a delta — a quiet month makes no noise.
-  See `detectors/monthly_loop/README.md`.
+  See `detectors/monthly_loop/README.md`. (Follow-up: the workflow now installs
+  `requirements.txt` before running the suite — its first `workflow_dispatch`
+  verification failed with `ModuleNotFoundError: sanskrit_util`, since
+  `meter_check.py`'s transcoder import needs the pip-installed package that
+  `ci.yml` already installs but this workflow initially didn't.)
 
 ### Fixed
 - **`run_all.py` could never complete `--rerun` on a fresh checkout.** PR #45's
