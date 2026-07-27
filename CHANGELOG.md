@@ -8,6 +8,22 @@ ready for a dated entry.
 
 ## [Unreleased]
 
+## [1.57.0] - 2026-07-27
+
+### Added
+- **[zenodo_dataset_v1/](zenodo_dataset_v1/) — Zenodo dataset release v1 package (H1534,
+  Sonnet 5 `claude-sonnet-5`)** — staged FAIR data package for the roadmap's Q4 2026 item 3:
+  the 3,884 `o_vs_O` evaluation pairs + confusion-weight model, the 2,297-headword
+  do-not-file suppression list (2,549 raw entries across 33 dicts, per-dict counts table),
+  the 122-row first-pass FILE-FIRST set plus the 156-row D7 union-across-runs FILE-FIRST
+  set, the five gloss-language orthographic reform maps (de 15,685 / ru 7,709 / fr 18 /
+  en 76 / la 0), and the meter-verdict + GRETIL-typo summary indices. `README.md` +
+  `metadata.yaml` + `CITATION.cff` + `LICENSE-DATA` (CC BY 4.0) + `checksums.sha256` (27
+  files, sha256). Deliberately excludes the per-dict `*_wrong_readings.txt` files (several
+  quote entry text verbatim; `PD`'s is CC BY-NC-SA) and the gitignored/regenerable
+  `meter_verdicts.jsonl`. **DOI minting stays a human `@DO`** (needs a Zenodo-account
+  login/API token) — tracked in `Uprava/GTD_NEXT_ACTIONS.md`.
+
 ## [1.56.0] - 2026-07-26
 
 ### Added
