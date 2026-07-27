@@ -1,0 +1,61 @@
+name: Monthly detection loop
+
+# Q4 2026 roadmap item 5 (H1533): re-run the deterministic detector suite
+# (detectors/run_all.py) against the committed sanhw1.txt, diff the resulting
+# tier-A candidates against the last cycle's baseline (the suppression layer
+# itself -- nochange.txt + do_not_file_suppress.txt -- is already applied
+# inside run_all.aggregate(), so this is purely the across-cycles delta), and
+# publish the result. combined_candidates.txt/_sf.txt/_review.html and the
+# dated report are always uploaded as run artifacts; a PR with the refreshed
+# baseline + report is opened/updated only when the cycle found a delta, so a
+# quiet month makes no noise. See detectors/monthly_loop/README.md.
+
+on:
+  schedule:
+    - cron: "0 5 1 * *"     # 05:00 UTC on the 1st of each month
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  detection-loop:
+    name: Run detectors + diff tier-A delta
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Run detector suite + tier-A delta
+        id: loop
+        working-directory: detectors
+        run: python monthly_loop.py --rerun ../sanhw1.txt
+
+      - name: Upload run artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: monthly-detection-loop-${{ github.run_id }}
+          if-no-files-found: warn
+          path: |
+            detectors/combined_candidates.txt
+            detectors/combined_sf.txt
+            detectors/combined_review.html
+            detectors/monthly_loop/reports/*.md
+
+      - name: Open / update delta PR
+        if: steps.loop.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v8
+        with:
+          branch: monthly-detection-loop
+          add-paths: detectors/monthly_loop/**
+          commit-message: "chore: monthly detection loop -- ${{ steps.loop.outputs.new_count }} new / ${{ steps.loop.outputs.resolved_count }} resolved tier-A candidates"
+          title: "Monthly detection loop -- ${{ steps.loop.outputs.new_count }} new tier-A candidates"
+          body-path: ${{ steps.loop.outputs.report_path }}
+          labels: enhancement
+          delete-branch: false
