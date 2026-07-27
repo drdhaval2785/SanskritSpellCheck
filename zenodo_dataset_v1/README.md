@@ -38,7 +38,11 @@ transliteration.
 | `meter/PILOT_OTHER_SECTIONS.md` | The pilot report extending the meter validator from the epic section to purana/smrti/subhasita | pilot report | H277-b |
 
 Every file's SHA-256 checksum is in [`checksums.sha256`](checksums.sha256) (sha256sum format,
-verify with `sha256sum -c checksums.sha256` from this directory).
+verify with `sha256sum -c checksums.sha256` from this directory). Checksums are computed on
+the LF-normalized (git-blob) content — the form a `git clone`, GitHub zipball, or the
+Zenodo–GitHub integration archive actually delivers. A local Windows checkout with
+`core.autocrlf=true` will show CRLF line endings and therefore **different** local hashes
+than this file — that's an expected checkout-time transform, not a corrupted download.
 
 ## Excluded / not in this package
 
