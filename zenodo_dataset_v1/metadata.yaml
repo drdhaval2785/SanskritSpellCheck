@@ -1,0 +1,165 @@
+########################################################################
+# Zenodo upload metadata for SanskritSpellCheck derived-data package v1
+# Created: 27-07-2026 · Last updated: 27-07-2026
+# Staged by H1534 (Sonnet 5, claude-sonnet-5) per ROADMAP_2026_2027.md Q4 2026 item 3.
+# Fields follow the Zenodo deposit metadata schema (https://developers.zenodo.org/#representation)
+# so this file can be pasted/adapted directly into the Zenodo upload form or its API.
+########################################################################
+
+title: "SanskritSpellCheck derived-data package v1: confusion pairs, do-not-file whitelists, orthographic reform maps, and meter-verdict/GRETIL-typo indices for the Cologne Digital Sanskrit Dictionaries"
+
+upload_type: dataset
+
+description: >
+  Six derived-data assets built by the SanskritSpellCheck QA toolset over the Cologne
+  Digital Sanskrit Dictionaries (CDSL): (1) 3,884 o_vs_O minimal-pair headword confusions
+  across CDSL dictionaries and the confusion-weight model mined from them; (2) a
+  2,297-headword deduplicated do-not-file suppression list plus per-dictionary counts
+  (2,549 total across 33 dictionaries) documenting intentional non-standard spellings
+  found by body-grounded LLM triage against each dictionary's own entry text; (3) the
+  122-row first-pass FILE-FIRST verified-correction candidate set plus the 156-row
+  union-across-runs FILE-FIRST set (roadmap ruling D7 — a second independent triage pass
+  on the three highest-yield dictionaries SHS/YAT/ACC unioned against the first, a
+  measured +81% recall gain); (4) orthographic reform maps for German (15,685 pairs),
+  Russian (7,709), French (18), English (76), and Latin (0) gloss-language tokens found
+  inside CDSL entry bodies, tracking 19th-century-to-2026 spelling drift; (5) a
+  hand-verified GRETIL e-text corrections report (60 verified error loci across 7 texts)
+  plus its candidate screen (124 loci); (6) a batch chandas (meter) validation summary
+  (variety census, multi-section error candidates, corpus manifest) across 5 GRETIL
+  Kavya sections (~26k verses). See README.md for full schema, provenance, and caveats
+  per asset.
+
+creators:
+  - name: "Patel, Dhaval"
+    affiliation: "SanskritSpellCheck (github.com/drdhaval2785/SanskritSpellCheck) — original engine, methodology, and sanhw1.txt/sanhw2.txt headword corpus"
+  - name: "Gasūns, Mārcis"
+    orcid: "0000-0003-4513-884X"
+    affiliation: "independent scholar — derived-analytics package (confusion model, body-grounded triage, orthographic-drift study, meter validator), compiled and released as this dataset"
+
+license: "CC-BY-4.0"
+
+access_right: "open"
+
+keywords:
+  - Sanskrit
+  - lexicography
+  - spell-checking
+  - Cologne Digital Sanskrit Dictionaries
+  - CDSL
+  - orthographic drift
+  - chandas
+  - meter validation
+  - GRETIL
+  - digital humanities
+  - dictionary error detection
+
+related_identifiers:
+  - relation: "isSupplementTo"
+    identifier: "https://github.com/drdhaval2785/SanskritSpellCheck"
+    scheme: "url"
+  - relation: "isDerivedFrom"
+    identifier: "http://www.sanskrit-lexicon.uni-koeln.de/"
+    scheme: "url"
+
+version: "1.0.0"
+
+publication_date: "PENDING — set to the actual Zenodo upload date"
+
+source_commit: "007e0efd8b526c678e15facce99a320a0037b4b9"
+source_repo: "https://github.com/drdhaval2785/SanskritSpellCheck"
+source_branch: "master"
+
+doi:
+  concept_doi: "PENDING — reserved at first Zenodo upload, stable across all future versions"
+  version_doi: "PENDING — minted per version (this is v1.0.0)"
+
+files:
+  - path: "data/o_vs_O_evaluation_pairs.txt"
+    rows: 3884
+    sha256: "c6e5f05757e23addc4fdc0cc9eaaf3e9cdf6430de6fde05d58b70267254965d5"
+  - path: "data/confusion_weights.json"
+    rows: null
+    sha256: "805743b31b088afb594a99312cfede3c91a69c8836d223b1a57858d994073c67"
+  - path: "data/do_not_file_suppress.txt"
+    rows: 2297
+    sha256: "6d0d3596aae4cd49a91de8bcce73aa8832080939544f3901b61c3dc81a9d339e"
+  - path: "data/do_not_file_counts_by_dict.tsv"
+    rows: 33
+    sha256: "2e82fab557720b9274eaaa7b51b0a3ebe57971c43d4d22cf94f5c115fb67a9cb"
+  - path: "data/file_first_verified.tsv"
+    rows: 122
+    sha256: "58bb46bc1f8d5e5be7e66a47def46770075a979ff2f127cd07c1d4226a3909cb"
+  - path: "data/union_d7.tsv"
+    rows: 156
+    sha256: "688f4a0474aaf64fb31c8235e7ca483ae762eff74d2c429448a84a15e5858c40"
+  - path: "data/reform_maps/de_reform_map.tsv"
+    rows: 15685
+    sha256: "9c3bc9c24876814bd4847775efd28f03a8fcbcc72bc47d992755439fa5003e5b"
+  - path: "data/reform_maps/ru_reform_map.tsv"
+    rows: 7709
+    sha256: "9b6835b8bd1d3bc6cad8f9d21233a01a0b4ad89e14956dfa78c3b61d4048edda"
+  - path: "data/reform_maps/fr_reform_map.tsv"
+    rows: 18
+    sha256: "e0094cb3167087f0cc360116a9aadb9c6d0b471a53536379c133774add40569c"
+  - path: "data/reform_maps/en_reform_map.tsv"
+    rows: 76
+    sha256: "fa0ea88820565007ceb40759b32a1cad16aad0a4c0b5e5cb31200e281c692a12"
+  - path: "data/reform_maps/la_reform_map.tsv"
+    rows: 0
+    sha256: "f1cf8807638ec2b6e772135134f3dfb944d6d4f8db7240b49432b1ad69fe34e4"
+  - path: "data/meter/GRETIL_TEXT_TYPOS.md"
+    rows: null
+    sha256: "60583a3e0792acc96be76e2c704dda0654be647f9e834fa97902a098687e6b7a"
+  - path: "data/meter/GRETIL_UPSTREAM_REPORT.md"
+    rows: null
+    sha256: "71e38869a2e2e53c4324a2abe0471f5f1894e2f3bd42e05420bdfa3213e9cd08"
+  - path: "data/meter/METER_VARIETY_STATS.md"
+    rows: null
+    sha256: "9ef9f9a63eef1f514a73c5f72181ee80b322f257a67a7906b85f4dab09b6a854"
+  - path: "data/meter/METER_VARIETY_STATS_epic.md"
+    rows: null
+    sha256: "b7de79efb54cbfec2f262c11265be1e15594afd500713e1b46c34ddc2497123f"
+  - path: "data/meter/METER_VARIETY_STATS_purana.md"
+    rows: null
+    sha256: "da59f4745c0019d59156f016d3f0919977e580cd7753ce3de43832c73440e86e"
+  - path: "data/meter/METER_VARIETY_STATS_smrti.md"
+    rows: null
+    sha256: "37cca145486d94649c06fbf5ab00f1bd79dee731b0f624ae6e74273eef86587b"
+  - path: "data/meter/METER_VARIETY_STATS_subhasita.md"
+    rows: null
+    sha256: "b144058167aa019ca3540e7b28f037dc10cd65096c20cf119b7b3c74c94d5308"
+  - path: "data/meter/MULTISECTION_ERROR_CANDIDATES.md"
+    rows: null
+    sha256: "060255bc8c45a3e59e230579265422aeddb94f5eb3c0ea06a19bfa5e1a039f35"
+  - path: "data/meter/multisection_error_candidates.tsv"
+    rows: 21
+    sha256: "4158375453999f9593c30c607b905ef3c8fbe80dbbd51c4b157772b8b880faf5"
+  - path: "data/meter/PILOT_OTHER_SECTIONS.md"
+    rows: null
+    sha256: "73de743d8f0bfff62e7da968b7867edd0c1443b54944df496046eb256f93ef88"
+  - path: "data/meter/SECTIONS_DATASET.md"
+    rows: null
+    sha256: "996a3c45136e0e8eb3084f1f79ac0c4c76f935f7828c034e0c9f394fd675de82"
+  - path: "data/meter/ngram_typos_epic.tsv"
+    rows: 9
+    sha256: "0e782a928be706be695807b1861bf72086b77b7b9a049e414cd1e01aa20ac651"
+  - path: "data/meter/ngram_typos_pilot.tsv"
+    rows: 69
+    sha256: "b35f34d712f526b446479caee66ffe2eeaeab86a89bd12fcac567034ec988c16"
+  - path: "data/meter/ngram_typos_purana.tsv"
+    rows: 22
+    sha256: "3ba06cf8cf44509f5035198196450f0bfec17decd2cfafad373de4883ef9d44a"
+  - path: "data/meter/ngram_typos_smrti.tsv"
+    rows: 5
+    sha256: "616a1d0ddfd46cccd4f7ed5c15da227a0f11beb89cfd3a9687dbd430c55d78c8"
+  - path: "data/meter/ngram_typos_subhasita.tsv"
+    rows: 18
+    sha256: "63a583bca421afdf984289afb974720f5a14a3bb3d97d6910c7cc89db713df5e"
+
+checksums_file: "checksums.sha256"
+
+notes: >
+  DOI minting is a human @DO (needs a Zenodo-account-holder's login/API token) — see
+  Uprava/GTD_NEXT_ACTIONS.md. Once minted, paste both DOIs back into this file, README.md,
+  and CITATION.cff (three-place sync per the org /data-release convention), and update
+  publication_date above to the actual upload date.

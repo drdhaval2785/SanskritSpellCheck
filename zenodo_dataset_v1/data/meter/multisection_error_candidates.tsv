@@ -1,0 +1,21 @@
+tier	score	edit	meter	detectors	n_loci	n_new_section_loci	new_section_only	sample_loci
+A	356	SUri -> sUri	suspect	[consensus,intra_dup,spell_correct]	1	0	False	GRETIL:sa_jayadeva-gItagovinda-alt#gg_12.3
+A	349	viSad -> vizad	suspect	[consensus,intra_dup,spell_correct]	4	0	False	GRETIL:sa_jIvagosvAmin-gopAlacampUp1-33u1-3u5-6u29#jgc_1,2.28;GRETIL:sa_jayadeva-gItagovinda#GG_2.8;GRETIL:sa_jayadeva-gItagovinda#GG_6.4;GRETIL:sa_jayadeva-gItagovinda-alt#gg_6.4
+A	329	niBf -> nivf	suspect	[consensus,intra_dup,spell_correct]	4	0	False	GRETIL:sa_govardhana-AryAsaptazatI#gass_19;GRETIL:sa_jIvagosvAmin-gopAlacampUp1-33u1-3u5-6u29#jgc_1,1.20;GRETIL:sa_jayadeva-gItagovinda#GG_2.11;GRETIL:sa_jayadeva-gItagovinda-alt#gg_2.11
+A	261	cikitsa -> cikitsA	suspect	[consensus,spell_correct]	1	0	False	GRETIL:sa_azvaghoSa-saundarAnanda-edmatsunami#saund_13.55
+A	246	cikIrza -> cikIrzA	suspect	[consensus,spell_correct]	1	0	False	GRETIL:sa_mAgha-zizupAlavadha#mspv_16.68
+A	234	mUli -> mUlI	suspect	[consensus,spell_correct]	8	0	False	GRETIL:sa_azvaghoSa-buddhacarita#BC_5.8;GRETIL:sa_bhaTTi-rAvaNavadha#Bhk_13.1;GRETIL:sa_bhaTTi-rAvaNavadha#Bhk_13.11;GRETIL:sa_govardhana-AryAsaptazatI#gass_200
+A	233	jAli -> jAlI	suspect	[consensus,spell_correct]	1	0	False	GRETIL:sa_jayadeva-gItagovinda-alt#gg_1.30
+A	216	antam -> Antam	suspect	[consensus,intra_dup]	1	0	False	GRETIL:sa_jIvagosvAmin-gopAlacampUp1-33u1-3u5-6u29#jgc_1,14.12
+A	216	paYci -> pAYci	suspect	[consensus,intra_dup]	5	0	False	GRETIL:sa_AnandabhaTTa-vallAlacarita#valc_2,10.26;GRETIL:sa_azvaghoSa-buddhacarita#BC_13.7;GRETIL:sa_bhaTTi-rAvaNavadha#Bhk_12.62;GRETIL:sa_govardhana-AryAsaptazatI#gass_699
+A	209	Jarat -> jarat	suspect	[consensus,intra_dup]	1	0	False	GRETIL:sa_jIvagosvAmin-gopAlacampUp1-33u1-3u5-6u29#jgc_1,23.64
+B	143	nIli -> nIlI	suspect	[consensus]	1	0	False	GRETIL:sa_ravideva-rAkSasakAvyawithTIkA#RaKaT_11
+B	115	kusumavicitra -> kusumavicitrA	suspect	[intra_dup]	1	0	False	GRETIL:sa_jIvagosvAmin-gopAlacampUp1-33u1-3u5-6u29#jgc_1,2.24
+B	113	DaraRItala -> DaraRitala	suspect	[intra_dup]	1	0	False	GRETIL:sa_daNDin-dazakumAracarita#dkc_1,1.77
+B	108	sarvadEvatya -> sarvadevatya	suspect	[intra_dup]	1	0	False	GRETIL:sa_AnandabhaTTa-vallAlacarita#valc_2,15.11
+A	232	kalindA -> kalinda	review	[consensus,intra_dup]	1	0	False	GRETIL:sa_nArAyaNabhaTTa-nArAyaNIya#Nar_10,39.1
+A	212	vimuKita -> vimuKitA	review	[consensus,intra_dup]	1	0	False	GRETIL:sa_bhAravi-kirAtArjunIya#BhKir_9.46
+A	208	padmAkAra -> padmAkara	review	[consensus,intra_dup]	1	1	True	GRETIL:sa_108-buddhist-stotras#BuSto_34.8
+A	201	ArADi -> ArAQi	review	[consensus,spell_correct]	2	2	True	GRETIL:sa_bhatRhari-zatakatraya#bharst_1.4;GRETIL:sa_bhatRhari-zatakatraya#bharst_1.5
+B	109	rAgi -> rAgI	review	[intra_dup]	1	0	False	GRETIL:sa_jayadeva-gItagovinda-alt#gg_1.40
+B	101	nitam -> nitan	review	[intra_dup]	1	1	True	GRETIL:sa_vidyAkara-subhASitaratnakoza#VidSrk_24.27
