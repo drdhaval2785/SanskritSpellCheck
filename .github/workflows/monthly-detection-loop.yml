@@ -30,6 +30,14 @@ jobs:
       - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        # slp1util.py/meter_check.py import the pip-installed sanskrit-util +
+        # csl-pyutil packages (requirements.txt) -- without this the very
+        # first detector to touch a Devanagari/IAST transcoder (meter_check)
+        # fails with ModuleNotFoundError on a fresh runner.
+        run: python -m pip install -r requirements.txt
 
       - name: Run detector suite + tier-A delta
         id: loop
