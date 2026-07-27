@@ -9,6 +9,19 @@ ready for a dated entry.
 ## [Unreleased]
 
 ### Added
+- **SHS entry-body deterministic detector pilot (H1535, roadmap Q3 item 6).**
+  [detectors/entry_body_pilot.py](detectors/entry_body_pilot.py) extends
+  `charset_check`/`phonotactic_check`/the bigram `ngram` checker from headwords
+  into SHS entry-body text (209k `{#...#}` spans → 162,814 clean body words after
+  excluding two SHS notation conventions found along the way: `-` stem-elision
+  and `0` as a period-substitute abbreviation-dot). Full human-verified precision
+  on the 25 charset+phonotactic candidates: **16.0%** — in-band with SHS's own
+  headword-level triage precision (~15%). The dominant false-positive class
+  (~84%) is Pāṇinian grammatical-citation notation (bare affix-name citations,
+  parenthetical variant-reading shorthand) that ordinary phonotactic rules
+  aren't designed for — documented with concrete suppression rules for scale-up.
+  9 genuine candidates flagged for future scan-verification, none filed. See
+  [corrections_draft/SHS/body_pilot/README.md](corrections_draft/SHS/body_pilot/README.md).
 - **Monthly detection-loop GitHub Actions cron (H1533, roadmap Q4 item 5).**
   `.github/workflows/monthly-detection-loop.yml` runs on the 1st of each month
   (and via `workflow_dispatch`) re-running the full `run_all.py` detector
