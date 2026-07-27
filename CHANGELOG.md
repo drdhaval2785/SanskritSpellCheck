@@ -8,6 +8,34 @@ ready for a dated entry.
 
 ## [Unreleased]
 
+### Added
+- **Monthly detection-loop GitHub Actions cron (H1533, roadmap Q4 item 5).**
+  `.github/workflows/monthly-detection-loop.yml` runs on the 1st of each month
+  (and via `workflow_dispatch`) re-running the full `run_all.py` detector
+  suite against the committed `sanhw1.txt`, then `detectors/monthly_loop.py`
+  diffs the resulting tier-A candidates against a committed baseline
+  (`detectors/monthly_loop/tier_a_baseline.txt`) to compute what's genuinely
+  NEW since the previous cycle (the suppression layer itself is already
+  applied inside `run_all.aggregate()`). Emits a dated delta report
+  (`detectors/monthly_loop/reports/<YYYY-MM>.md`), uploads
+  `combined_candidates.txt`/`_sf.txt`/`_review.html` + the report as run
+  artifacts every cycle, and opens/updates a PR with the refreshed baseline +
+  report only when the cycle found a delta — a quiet month makes no noise.
+  See `detectors/monthly_loop/README.md`.
+
+### Fixed
+- **`run_all.py` could never complete `--rerun` on a fresh checkout.** PR #45's
+  cache-manifest hardening treated ANY zero-byte detector output as a crash,
+  but two detectors legitimately produce one: `meter_check` when its offline
+  GRETIL corpus index (gitignored, ~1hr build) is absent — true on every fresh
+  clone — and `tied_field_check`, which currently finds zero disagreements
+  against `sanhw1.txt`. Neither detector swallows exceptions, so a non-zero
+  `returncode` already reliably signals a real failure; `_regenerate_outputs`
+  and `_output_hashes` now trust that instead of also gating on output size.
+  Found while building the monthly-loop workflow above, whose first
+  `--rerun` invocation hard-failed with "meter_check produced no detector
+  output" on a stock checkout.
+
 ## [1.57.0] - 2026-07-27
 
 ### Added

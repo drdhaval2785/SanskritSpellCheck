@@ -157,7 +157,9 @@ def _output_hashes():
     outputs = {}
     for name, _script, out, _kind in DETECTORS:
         path = os.path.join(HERE, out)
-        if not os.path.isfile(path) or os.path.getsize(path) == 0:
+        # An empty file is a legitimate cacheable result here too -- see the
+        # matching note in _regenerate_outputs -- so only existence is checked.
+        if not os.path.isfile(path):
             return None
         outputs[name] = {'path': out, 'sha256': _sha256(path)}
     return outputs
@@ -223,9 +225,15 @@ def _regenerate_outputs(sanhw1):
                 sys.stderr.write("ERROR: %s failed (exit %d):\n%s\n" %
                                  (name, result.returncode, (result.stderr or '')[-1500:]))
                 raise SystemExit(1)
-            if not os.path.isfile(temp) or os.path.getsize(temp) == 0:
+            if not os.path.isfile(temp):
                 sys.stderr.write("ERROR: %s produced no detector output\n" % name)
                 raise SystemExit(1)
+            # An empty output file is a legitimate result, not a failure signal: none of
+            # these scripts swallow exceptions, so a non-zero returncode (checked above)
+            # already catches a genuine crash. meter_check writes an empty file by design
+            # when its offline corpus index is absent (true on any fresh checkout), and
+            # tied_field_check legitimately finds zero disagreements at the current
+            # sanhw1.txt -- both are "ran fine, nothing to report", not "produced no output".
         for temp, output in staged:
             os.replace(temp, output)
         _write_cache_manifest(sanhw1)

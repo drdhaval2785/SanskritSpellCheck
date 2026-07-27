@@ -57,6 +57,35 @@ def test_forced_rerun_builds_verified_manifest(cache_pipeline):
     run_all.ensure_outputs(str(source))
 
 
+def test_empty_detector_output_is_not_a_failure(tmp_path, monkeypatch):
+    """A detector that exits 0 having legitimately written nothing (meter_check with
+    no corpus index; tied_field_check finding zero disagreements) must not be treated
+    as a crash -- only a non-zero returncode or a missing file means the detector
+    failed. Regression guard for H1533: this previously made run_all.py --rerun hard
+    -fail on any fresh checkout, since meter_check always starts with no committed
+    (gitignored) meter_verdicts.jsonl."""
+    script = tmp_path / 'empty_detector.py'
+    script.write_text(
+        "import pathlib, sys\npathlib.Path(sys.argv[2]).write_text('', encoding='utf-8')\n",
+        encoding='utf-8')
+    source = tmp_path / 'sanhw1.txt'
+    source.write_text('bad:MW\n', encoding='utf-8')
+    monkeypatch.setattr(run_all, 'HERE', str(tmp_path))
+    monkeypatch.setattr(run_all, 'ROOT', str(tmp_path))
+    monkeypatch.setattr(run_all, 'CACHE_PATH', str(tmp_path / '.run_all_cache.json'))
+    monkeypatch.setattr(run_all, 'INTERNAL_PACKAGES', ())
+    monkeypatch.setattr(
+        run_all, 'DETECTORS', [('empty', script.name, 'empty_output.txt', 'flagger')])
+    monkeypatch.setattr(run_all.ua, 'union_path', lambda: str(tmp_path / 'missing-union.tsv'))
+
+    run_all.ensure_outputs(str(source), rerun=True)
+    output = tmp_path / 'empty_output.txt'
+    assert output.is_file()
+    assert output.read_text(encoding='utf-8') == ''
+    assert run_all._cache_problem(str(source)) is None
+    run_all.ensure_outputs(str(source))  # cached path also accepts the empty output
+
+
 @pytest.mark.parametrize('mutation', ['input', 'detector', 'output'])
 def test_changed_cache_material_is_rejected(cache_pipeline, mutation):
     source, script, output, _manifest = cache_pipeline
