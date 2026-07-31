@@ -20,10 +20,11 @@ error-localization, so it never contributes problem-syllable positions and a
 """
 import os
 import sys
+import warnings
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
-import sanskrit_util as su  # noqa: E402
+import sanskrit_util_compat as su  # noqa: E402
 
 _skrutable_mi = None
 _vidyut_chandas = None
@@ -37,15 +38,30 @@ def _skrutable():
     return _skrutable_mi
 
 
+def _vidyut_data_path(data_path=None):
+    """Resolve the chandas table: explicit argument, environment, then sibling."""
+    selected = data_path or os.environ.get('VIDYUT_CHANDAS_DATA')
+    if not selected:
+        selected = os.path.join(
+            os.path.dirname(os.path.abspath(__file__)), '..', '..', '..',
+            'WhitneyRoots', 'scratch', 'vidyut_data', 'chandas', 'meters.tsv')
+    return os.path.abspath(os.path.expanduser(selected))
+
+
 def _vidyut(data_path=None):
     global _vidyut_chandas
     if _vidyut_chandas is None:
         from vidyut.chandas import Chandas
-        if data_path is None:
-            data_path = os.path.join(
-                os.path.dirname(os.path.abspath(__file__)),
-                '..', '..', '..', 'WhitneyRoots', 'scratch', 'vidyut_data', 'chandas', 'meters.tsv')
-        _vidyut_chandas = Chandas(data_path) if os.path.exists(data_path) else False
+        data_path = _vidyut_data_path(data_path)
+        if os.path.isfile(data_path):
+            _vidyut_chandas = Chandas(data_path)
+        else:
+            warnings.warn(
+                "Vidyut chandas data is unavailable at %s; meter identification will "
+                "continue without the Vidyut vote. Pass an explicit data path or set "
+                "VIDYUT_CHANDAS_DATA to meters.tsv." % data_path,
+                RuntimeWarning, stacklevel=2)
+            _vidyut_chandas = False
     return _vidyut_chandas or None
 
 

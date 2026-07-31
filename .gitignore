@@ -20,11 +20,22 @@ detectors/campaigns/
 detectors/ocrcache/
 detectors/ocr_verify_report.txt
 detectors/vidyut_stems.txt
+detectors/.run_all_cache.json
+detectors/.run_all_cache.json.tmp
+detectors/.run_all.*.tmp
+.pytest_cache/
+.ruff_cache/
 
 # triage intermediates (regenerable from triage_enrich.py + the LLM workflow);
 # the committed artifact is corrections_draft/<DICT>/<DICT>_triaged.txt
 corrections_draft/*/triage_work/
 corrections_draft/*/*_evidence.jsonl
+
+# H1535: entry-body pilot intermediates (regenerable from csl-orig via
+# detectors/entry_body_pilot.py); the committed artifacts are the small
+# *_suspects.txt candidate lists + body_pilot/README.md.
+corrections_draft/*/body_pilot/*_tokens.txt
+corrections_draft/*/body_pilot/*_running.txt
 
 # external dictionary sources NOT in csl-orig (e.g. PD = Deccan College Encyclopaedic
 # Dictionary, CC BY-NC-SA, ~55 MB). Fetched with detectors/get_external_source.py;

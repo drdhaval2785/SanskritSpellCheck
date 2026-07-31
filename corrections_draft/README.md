@@ -33,6 +33,13 @@ real OCR/keying errors, each confirmed by the entry's own etymology/inflection.
 | GST (English, 1856) | 48 | **1** | 22 |
 | _22 others_ — AP · MW72 · SCH · AP90 · MD · CAE · GRA · BEN · CCS · SNP · BHS · PUI · IEG · INM · PE · VEI · PGN · KRM · BUR · STC · BOP · PD | — | **0** | 806 |
 
+> ⚠️ **Every `fileable` count above is ONE stochastic draw — a lower bound, not the population.**
+> A second independent run on the three high-yield dicts (roadmap ruling **D7**, 26-07-2026) found
+> **70 net-new** fileable typos that run 1 missed, while itself missing 32 that run 1 caught —
+> single-run agreement is only **35%**. In union: **SHS 37→68, YAT 27→61, ACC 22→27**. The union
+> table is [union_d7.tsv](union_d7.tsv); the measurement is
+> [HYPOTHESES.md H9](../docs/HYPOTHESES.md). Union across runs, never re-run and overwrite.
+
 ## Status — all 33 dictionaries (by tier-A volume)
 
 `tier-A` = engine tier-A candidate count (per-dict, from `combined_candidates.txt`). The dict

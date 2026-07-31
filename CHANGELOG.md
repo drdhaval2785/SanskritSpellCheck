@@ -8,6 +8,109 @@ ready for a dated entry.
 
 ## [Unreleased]
 
+## [1.58.0] - 2026-07-31
+### Added
+- **SHS entry-body deterministic detector pilot (H1535, roadmap Q3 item 6).**
+  [detectors/entry_body_pilot.py](detectors/entry_body_pilot.py) extends
+  `charset_check`/`phonotactic_check`/the bigram `ngram` checker from headwords
+  into SHS entry-body text (209k `{#...#}` spans → 162,814 clean body words after
+  excluding two SHS notation conventions found along the way: `-` stem-elision
+  and `0` as a period-substitute abbreviation-dot). Full human-verified precision
+  on the 25 charset+phonotactic candidates: **16.0%** — in-band with SHS's own
+  headword-level triage precision (~15%). The dominant false-positive class
+  (~84%) is Pāṇinian grammatical-citation notation (bare affix-name citations,
+  parenthetical variant-reading shorthand) that ordinary phonotactic rules
+  aren't designed for — documented with concrete suppression rules for scale-up.
+  9 genuine candidates flagged for future scan-verification, none filed. See
+  [corrections_draft/SHS/body_pilot/README.md](corrections_draft/SHS/body_pilot/README.md).
+- **Monthly detection-loop GitHub Actions cron (H1533, roadmap Q4 item 5).**
+  `.github/workflows/monthly-detection-loop.yml` runs on the 1st of each month
+  (and via `workflow_dispatch`) re-running the full `run_all.py` detector
+  suite against the committed `sanhw1.txt`, then `detectors/monthly_loop.py`
+  diffs the resulting tier-A candidates against a committed baseline
+  (`detectors/monthly_loop/tier_a_baseline.txt`) to compute what's genuinely
+  NEW since the previous cycle (the suppression layer itself is already
+  applied inside `run_all.aggregate()`). Emits a dated delta report
+  (`detectors/monthly_loop/reports/<YYYY-MM>.md`), uploads
+  `combined_candidates.txt`/`_sf.txt`/`_review.html` + the report as run
+  artifacts every cycle, and opens/updates a PR with the refreshed baseline +
+  report only when the cycle found a delta — a quiet month makes no noise.
+  See `detectors/monthly_loop/README.md`. (Follow-up: the workflow now installs
+  `requirements.txt` before running the suite — its first `workflow_dispatch`
+  verification failed with `ModuleNotFoundError: sanskrit_util`, since
+  `meter_check.py`'s transcoder import needs the pip-installed package that
+  `ci.yml` already installs but this workflow initially didn't.)
+
+### Fixed
+- **`run_all.py` could never complete `--rerun` on a fresh checkout.** PR #45's
+  cache-manifest hardening treated ANY zero-byte detector output as a crash,
+  but two detectors legitimately produce one: `meter_check` when its offline
+  GRETIL corpus index (gitignored, ~1hr build) is absent — true on every fresh
+  clone — and `tied_field_check`, which currently finds zero disagreements
+  against `sanhw1.txt`. Neither detector swallows exceptions, so a non-zero
+  `returncode` already reliably signals a real failure; `_regenerate_outputs`
+  and `_output_hashes` now trust that instead of also gating on output size.
+  Found while building the monthly-loop workflow above, whose first
+  `--rerun` invocation hard-failed with "meter_check produced no detector
+  output" on a stock checkout.
+
+## [1.57.0] - 2026-07-27
+
+### Added
+- **[zenodo_dataset_v1/](zenodo_dataset_v1/) — Zenodo dataset release v1 package (H1534,
+  Sonnet 5 `claude-sonnet-5`)** — staged FAIR data package for the roadmap's Q4 2026 item 3:
+  the 3,884 `o_vs_O` evaluation pairs + confusion-weight model, the 2,297-headword
+  do-not-file suppression list (2,549 raw entries across 33 dicts, per-dict counts table),
+  the 122-row first-pass FILE-FIRST set plus the 156-row D7 union-across-runs FILE-FIRST
+  set, the five gloss-language orthographic reform maps (de 15,685 / ru 7,709 / fr 18 /
+  en 76 / la 0), and the meter-verdict + GRETIL-typo summary indices. `README.md` +
+  `metadata.yaml` + `CITATION.cff` + `LICENSE-DATA` (CC BY 4.0) + `checksums.sha256` (27
+  files, sha256). Deliberately excludes the per-dict `*_wrong_readings.txt` files (several
+  quote entry text verbatim; `PD`'s is CC BY-NC-SA) and the gitignored/regenerable
+  `meter_verdicts.jsonl`. **DOI minting stays a human `@DO`** (needs a Zenodo-account
+  login/API token) — tracked in `Uprava/GTD_NEXT_ACTIONS.md`.
+
+## [1.56.0] - 2026-07-26
+
+### Added
+- **Union-across-runs recall harvest (roadmap ruling D7, H1471).** A second
+  independent body-aware triage run on SHS/YAT/ACC, unioned with the committed
+  packages rather than replacing them: `detectors/union_across_runs.py` (the
+  measurement tool, which reconstructs a run's FILE-FIRST set from the
+  `triage_work/` verdicts using `triage_synthesize.py`'s own survival rule) and
+  `corrections_draft/union_d7.tsv` (156 rows — 54 in both runs, 70 net-new, 32
+  run-1-only, each net-new carrying its Opus confirm reason and Opus review
+  verdict). Measured gain **+70 fileable candidates (+81%)** over the committed
+  86; single-run agreement is only **35%**. Recorded as `docs/HYPOTHESES.md`
+  **H9 — confirmed**, with R3 quantified and H2's per-dict counts re-labelled as
+  single-draw lower bounds. No committed package was overwritten.
+- Reproducible core, development, and optional-analysis dependency manifests,
+  with CI coverage for Python 3.11/3.14 and PHP 8.2/8.3.
+- Verified detector caching via `detectors/.run_all_cache.json`; both unified
+  and campaign runs reject stale or altered output unless the warning-bearing
+  `--allow-stale-cache` override is explicit.
+
+### Fixed
+- Unified and campaign review pages now embed script-safe JSON, initialize it
+  before JavaScript consumes it, and export corrections only for dictionaries
+  supported by the selected corrector and campaign.
+- `faultfinder3a.php` now enforces its four-argument contract and reports input
+  and output-path errors before processing.
+- The `sanskrit-util` compatibility layer now prefers the installed package
+  without module-name shadowing, while retaining the sibling-checkout fallback;
+  optional Vidyut chandas data has an environment override and graceful warning.
+
+### Documentation
+- **MG ruling D9 (26-07-2026): the union-across-runs scale-up is funded**, lifting
+  the "full generous-budget union across all 11 fileable dicts" non-goal. The
+  deciding argument is contamination rather than recall — an uncorrected typo
+  headword propagates into the cross-dict union headword list, which `run_all.py`
+  reads to demote broadly-attested suspects, so a typo left unfixed inflates its
+  own attestation and helps suppress its own detection. Recorded in
+  `ROADMAP_2026_2027.md` (D9 + the lifted non-goal); execution is handoff H1709.
+- Recorded the installation split and the fact that the project currently
+  declares no license; license selection remains a maintainer decision.
+
 ## [1.55.0] - 2026-07-13
 
 ### Added

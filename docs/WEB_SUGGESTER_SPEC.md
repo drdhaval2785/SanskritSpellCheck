@@ -5,7 +5,7 @@ _Created: 12-07-2026 · Last updated: 12-07-2026_
 Design spec for the **suggestion-generation engine** behind the Q1-2027 web spellchecker
 app ([ROADMAP_2026_2027.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ROADMAP_2026_2027.md)
 Q1 item 2; product ruling **D6**). Authored 12-07-2026 by Opus 4.8 (`claude-opus-4-8`) for
-[H828](https://github.com/gasyoun/Uprava/blob/main/handoffs/H828-Fable_SanskritSpellCheck_web-suggester-spec-oflazer-vidyut_12.07.26.md)
+[H828](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H828-Fable_SanskritSpellCheck_web-suggester-spec-oflazer-vidyut_12.07.26.md)
 — commissioned as a Fable 5 (`claude-fable-5`) design task per ruling **D1** (judgment gates);
 executed at M.G.'s direction. **This is a specification, not an implementation** — the build is
 deferred to post-30-06-2027 under ruling **D13** so it does not compete with the ≥300-corrections

@@ -2,7 +2,7 @@
 /* modifications of Dec 8, 2014  so output is a table.
   ref https://github.com/sanskrit-lexicon/CORRECTIONS/issues/42
   Usage:
-php faultfinder3a.php MW sanhw1.txt AllvsMW.txt
+php faultfinder3a.php MW sanhw1.txt AllvsMW.txt AllvsMW_sf.txt
 php faultfinder3a-html.php AllvsMW.txt AllvsMW-norepeat.html
 php dictwisesorter-v3.php AllvsMW-norepeat.html dictwiseerrors3-table.html
  

@@ -37,6 +37,10 @@ The engine's "tier A" is high *engine confidence*, not precision; precision depe
   2.4%** — each error confirmed by the entry's *own* etymology/citation.
 - **Consequence:** triage effort should target poorly-digitised sources for real typos; on mature
   dicts the value is elsewhere (H3).
+- **Caveat added 26-07-2026 ([H9](#h9--union-across-runs-materially-raises-recall-one-run-recovers-only-13-of-the-two-run-union)):**
+  every count above is one stochastic draw, so they are **lower bounds**. A second run lifts SHS 37→68,
+  YAT 27→61, ACC 22→27 in union. The high-vs-low split this entry rests on is unaffected; the absolute
+  numbers are not the ceiling.
 
 ### H3 — The durable deliverable is the *do-not-file* list, not the handful of typos
 Preventing bad bulk edits is worth more than the few corrections.
@@ -134,6 +138,57 @@ IAST rendering.
 
 ---
 
+### H9 — Union-across-runs materially raises recall: one run recovers only ~1/3 of the two-run union
+[R3](#r3--re-running-the-body-aware-typo-pass-improves-recall) refuted *re-running* and prescribed
+*unioning* instead, but the size of the gain was never measured. Roadmap ruling **D7** ordered it
+measured at reduced scope — two extra runs on the three high-yield dicts (SHS/YAT/ACC) — and the line
+closed either way.
+- **Test:** one further independent body-aware run per dict, same pipeline and per-phase models as run 1
+  (Sonnet 5 `claude-sonnet-5` classify → Opus 4.8 `claude-opus-4-8` source-confirm → Opus 4.8 adversarial
+  review), from byte-identical deterministic prep. The committed packages were **never overwritten**:
+  `triage_synthesize.py` would have replaced `<DICT>_file_first_sf.txt` with run 2's verdicts and
+  silently destroyed run 1's finds, so [union_across_runs.py](../detectors/union_across_runs.py)
+  reconstructs run 2's FILE-FIRST set from the gitignored `triage_work/` verdicts using
+  `triage_synthesize.py`'s own rule — `confirm.is_typo ∧ (review absent ∨ review.fileable)` — making the
+  two runs comparable like for like.
+- **Verdict:** **confirmed**, and the instability is far larger than R3's "a different small handful"
+  suggested.
+- **Evidence:** 563 candidates re-judged; agreement is *set overlap ÷ union* (Jaccard).
+
+| dict | run 1 (committed) | run 2 | in both | **net-new** | run-1-only | union | agreement |
+|---|---|---|---|---|---|---|---|
+| SHS | 37 | 63 | 32 | **31** | 5 | 68 | 47% |
+| YAT | 27 | 46 | 12 | **34** | 15 | 61 | 20% |
+| ACC | 22 | 15 | 10 | **5** | 12 | 27 | 37% |
+| **total** | **86** | **124** | **54** | **+70 (+81%)** | **32** | **156** | **35%** |
+
+  The gap is not an artifact of a shifting candidate pool: **0** of the 86 run-1 rows have dropped out of
+  today's tier A, and exactly 1 (SHS) is now settled deterministically before the LLM sees it — so 31 of
+  the 32 non-reproductions are genuine run-to-run variance. Nor is the net-new set noise: **10 of 10**
+  hand-checked net-new are real typos contradicted by the entry's own text — SHS `dibA`→`divA`
+  (`E. div`), `pranipAta`→`praRipAta` (ṇatva; cf. adjacent `praRipAtarasa`), `jamBari`→`jamBAri`
+  (`E. jamBa + ari`), `nErASyA`→`nErASya` (neuter `-SyaM`); YAT `viqbarAha`→`viqvarAha` ("a tame hog"),
+  `vAbadUka`→`vAvadUka` (next entry `vAvadUkatA` "Garrulity"), `AkASabartman`→`AkASavartman`
+  ("Firmament"), `avedabid`→`avedavid` ("not knowing the vedas"), `advEzwf`→`advezwf` (*dveṣṭṛ* has e,
+  not ai), `nirAlamva`→`nirAlamba` ("self-supported"). **The misses run both ways:** run 2 failed to
+  re-find ACC `EtareyavrAhmaRa`→`EtareyabrAhmaRa` and `SatapaTavrAhmaRa`→`SatapaTabrAhmaRa` — two
+  unmistakable *Brāhmaṇa* b/v errors run 1 had caught. Neither run dominates; the union beats both.
+- **Consequence:** union, never replace — now with a number attached. The union table is
+  [corrections_draft/union_d7.tsv](../corrections_draft/union_d7.tsv) (156 rows; every net-new row
+  carries its Opus confirm reason **and** its Opus review verdict + false-positive type, the adjudication
+  gate D7 required for new candidates). Three consequences follow:
+  1. **[H2](#h2--tier-a-precision-is-near-zero-on-mature-dictionaries-high-on-poorly-digitised-ones)'s
+     per-dict counts are single-draw lower bounds, not populations.** For these three dicts the fileable
+     count is ≥156, not 86 — SHS ≈68 not 37, YAT ≈61 not 27. The *ordering* (poorly-digitised ≫ mature)
+     is unaffected.
+  2. **The human scan-verification queue nearly doubles** for these three: the existing 109-row sheet
+     (H454) is short by the 70 net-new and should be regenerated before the batch-PR switchover files
+     anything.
+  3. **The roadmap's "full generous-budget union across all 11 fileable dicts" non-goal deserves
+     re-opening** — it was ruled out on *precision* grounds, which this does not contest; the argument
+     for it is now *recall*, and it is a much stronger one. Still a human call, not an agent's.
+  The residual caution is unchanged: FILE-FIRST is a triage prior, and the scan is the arbiter.
+
 ## ❌ Refuted / failed (the negative results)
 
 ### R1 — Corpus + confusion signal can promote a tier-C candidate to B
@@ -166,6 +221,9 @@ errors higher.
   small handful and can *lose* genuine typos (an MW re-run once refuted 4 verified typos).
 - **Consequence:** never blindly overwrite a committed package; for recall, *union across runs*. The
   deterministic marker layer (apparatus/redirect detection) is the stable backbone.
+- **Quantified 26-07-2026 by [H9](#h9--union-across-runs-materially-raises-recall-one-run-recovers-only-13-of-the-two-run-union)**
+  (roadmap D7): the union is worth **+81%** on SHS/YAT/ACC and single-run agreement is only **35%** —
+  the "different small handful" is in fact most of the set.
 
 ### R4 — The base DTA TEI carries the reform normalization
 - **Verdict:** refuted by a cheap probe (downloaded the 274 MB base subset first). The base DTABf TEI

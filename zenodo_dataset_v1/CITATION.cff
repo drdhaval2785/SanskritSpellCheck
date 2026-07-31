@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+type: dataset
+title: "SanskritSpellCheck derived-data package v1: confusion pairs, do-not-file whitelists, orthographic reform maps, and meter-verdict/GRETIL-typo indices for the Cologne Digital Sanskrit Dictionaries"
+version: 1.0.0
+date-released: "PENDING"
+doi: "PENDING"
+repository-code: "https://github.com/drdhaval2785/SanskritSpellCheck"
+license: CC-BY-4.0
+keywords:
+  - Sanskrit
+  - lexicography
+  - spell-checking
+  - Cologne Digital Sanskrit Dictionaries
+  - orthographic drift
+  - chandas
+  - GRETIL
+authors:
+  - family-names: "Patel"
+    given-names: "Dhaval"
+  - family-names: "Gasūns"
+    given-names: "Mārcis"
+    orcid: "https://orcid.org/0000-0003-4513-884X"
