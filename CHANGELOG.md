@@ -8,6 +8,7 @@ ready for a dated entry.
 
 ## [Unreleased]
 
+## [1.58.0] - 2026-07-31
 ### Added
 - **SHS entry-body deterministic detector pilot (H1535, roadmap Q3 item 6).**
   [detectors/entry_body_pilot.py](detectors/entry_body_pilot.py) extends
