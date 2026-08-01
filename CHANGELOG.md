@@ -8,6 +8,7 @@ ready for a dated entry.
 
 ## [Unreleased]
 
+## [1.58.1] - 2026-08-01
 ### Added
 - **H454 gate census + reconfirm (Grok 4.5 override dual-run, 01-08-2026).**
   [corrections_draft/h454_gate_census.py](corrections_draft/h454_gate_census.py)
