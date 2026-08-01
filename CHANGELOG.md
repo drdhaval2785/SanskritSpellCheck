@@ -8,6 +8,17 @@ ready for a dated entry.
 
 ## [Unreleased]
 
+### Added
+- **H454 gate census + reconfirm (Grok 4.5 override dual-run, 01-08-2026).**
+  [corrections_draft/h454_gate_census.py](corrections_draft/h454_gate_census.py)
+  counts `:y`/`:n` across all FILE-FIRST queues (exit 2 when gate closed).
+  Measurement 01-08-2026: **y=0 / n=122** — still blocked on MG scan-verify
+  votes; report at
+  [corrections_draft/H454_GATE_RECONFIRM_01.08.26.md](corrections_draft/H454_GATE_RECONFIRM_01.08.26.md).
+  [detectors/make_changefiles.py](detectors/make_changefiles.py) now **skips
+  trailing `:n` / unknown flags** so queue files cannot silently emit drafts
+  for unverified rows (H454 load-bearing guard).
+
 ## [1.58.0] - 2026-07-31
 ### Added
 - **SHS entry-body deterministic detector pilot (H1535, roadmap Q3 item 6).**
