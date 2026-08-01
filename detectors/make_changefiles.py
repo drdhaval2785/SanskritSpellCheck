@@ -11,6 +11,11 @@ and every `new` line is a DRAFT a human must verify against the scan before fili
 (the Cologne maintainers are sensitive to bot noise). Headword occurrences inside the
 entry BODY are not touched — only the <k1>/<k2> key field — so flag those for the human.
 
+H454 / ruling D3 guard (load-bearing): FILE-FIRST queue rows carry a trailing
+`:n` / `:y` scan-verification flag. Rows still marked `:n` are NEVER emitted as
+change-file cases. Bare `DICT:wrong:right` lines (accepted_sf export without a
+flag) remain accepted — they are already the human-approved export form.
+
   python make_changefiles.py [accepted_sf.txt] [csl-orig-root=../../csl-orig] [outdir=changefiles]
 """
 import sys
@@ -33,9 +38,29 @@ def corrected(line, wrong, right):
     return line
 
 
+def _accepted_row(parts):
+    """Return (dict, wrong, right) if this row may enter a change file, else None.
+
+    Formats:
+      DICT:wrong:right        — accepted export (no flag) → include
+      DICT:wrong:right:y      — scan-verified approve → include
+      DICT:wrong:right:n      — not yet scan-verified → skip
+      DICT:wrong:right:<other> — unknown flag → skip (fail closed)
+    """
+    if len(parts) < 3 or not parts[0].isalnum() or parts[1] == parts[2]:
+        return None
+    if len(parts) >= 4:
+        flag = parts[3].strip().lower()
+        if flag != 'y':
+            return None
+    return (parts[0], parts[1], parts[2])
+
+
 def main(infile, csl_root, outdir):
     by_dict = collections.defaultdict(list)   # DICT -> [(wrong, right)]
     seen = set()
+    skipped_n = 0
+    skipped_other_flag = 0
     for line in u._read_words(infile):
         # skip sf comment lines (the file_first_sf header + the auto-commented
         # "; REVIEWED-OUT ..." annotations); a real row is DICT:wrong:right:n with an
@@ -43,11 +68,31 @@ def main(infile, csl_root, outdir):
         if line.startswith((';', '#')):
             continue
         p = line.split(':')
-        if len(p) >= 3 and p[0].isalnum() and p[1] != p[2]:
-            key = (p[0], p[1], p[2])
-            if key not in seen:
-                seen.add(key)
-                by_dict[p[0]].append((p[1], p[2]))
+        if len(p) >= 4 and p[0].isalnum() and p[1] != p[2]:
+            flag = p[3].strip().lower()
+            if flag == 'n':
+                skipped_n += 1
+                continue
+            if flag != 'y':
+                skipped_other_flag += 1
+                continue
+        row = _accepted_row(p)
+        if row is None:
+            continue
+        key = row
+        if key not in seen:
+            seen.add(key)
+            by_dict[row[0]].append((row[1], row[2]))
+
+    if skipped_n or skipped_other_flag:
+        print("gate: skipped %d :n row(s) (not scan-verified)%s" % (
+            skipped_n,
+            ('; %d other-flag row(s)' % skipped_other_flag) if skipped_other_flag else ''))
+
+    if not by_dict:
+        print("total: 0 corrections across 0 dicts "
+              "(no approved rows — flip scan-verify votes n→y first, H454 gate)")
+        return
 
     os.makedirs(os.path.join(os.path.dirname(os.path.abspath(__file__)), outdir), exist_ok=True)
     manifest = []
