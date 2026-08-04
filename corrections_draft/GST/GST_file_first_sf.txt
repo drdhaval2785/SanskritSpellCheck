@@ -3,3 +3,8 @@
 ; VERIFY each remaining case on the scan, flip trailing n->y for confirmed ones, then:
 ;   python chg_nchg_sep.py GST_file_first_sf.txt chg.txt nchg.txt
 GST:aprakaraRika:aprAkaraRika:n
+; --- net-new from the union-across-runs passes (D7/H1471 + D9/H1709), verified 04-08-2026. Verified: Sonnet 5 (claude-sonnet-5) check vs the entry text,
+;     Fable 5 (claude-fable-5) adjudication of flags. Evidence per row in
+;     file_first_verified.tsv; EDITORIAL rows deliberately excluded (they are
+;     headword collisions, not plain corrections). All ":n" — vote the scan sheet.
+GST:aDoGaRWA:aDoGaRwA:n
