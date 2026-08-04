@@ -52,6 +52,15 @@ real OCR/keying errors, each confirmed by the entry's own etymology/inflection.
 > **The size of the union gain tracks digitisation quality** — +81% on the poorly-digitised three,
 > +22% on the mature eight — so do not quote D7's +81% as a general expectation. Combined over both
 > passes: **11 dicts, 122 → 200 fileable (+78, +64%)**.
+>
+> **All 78 net-new rows are now verified and in the human gate (H2274, 04-08-2026).** They were
+> absent from [file_first_verified.tsv](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/file_first_verified.tsv) — the run-1 population — so the
+> scan-verification sheet covered only 109 of 182 fileable rows (~58%). Verified on the July-2026
+> method (Sonnet 5 `claude-sonnet-5` check against the entry text; Fable 5 `claude-fable-5`
+> adjudication of flags, ruling D1): **47 PASS · 26 SCAN-FIRST · 5 EDITORIAL**, no DNF, no DROP.
+> The 5 EDITORIAL are all ACC collisions where the corrected spelling already exists as its own
+> `<k1>` — filing them as plain corrections would create duplicate headwords. **Sheet: 109 → 182
+> rows**, regenerate with `python detectors/gen_scanverify_sheet.py`.
 
 ## Status — all 33 dictionaries (by tier-A volume)
 
