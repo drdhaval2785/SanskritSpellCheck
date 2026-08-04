@@ -7,6 +7,8 @@ dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
 ## [Unreleased]
+
+## [1.61.0] - 2026-08-04
 ### Added
 - **The 22 zero-fileable dicts do NOT need a second run — scope question closed (H2281,
   04-08-2026).** [v1.59.0](https://github.com/drdhaval2785/SanskritSpellCheck/releases/tag/v1.59.0)
