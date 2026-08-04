@@ -7,6 +7,46 @@ dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
 ## [Unreleased]
+### Added
+- **The 78 net-new FILE-FIRST rows are verified; the scan-verification sheet now covers the
+  WHOLE fileable queue (H2274, 04-08-2026).** The sheet is generated from
+  `corrections_draft/file_first_verified.tsv`, which held only the run-1 population, so the
+  73 fileable rows added by the union-across-runs passes (D7/H1471 · D9/H1709) were invisible
+  to the human gate — it covered **109 of 182 rows (~58%)**. Verified them on the July-2026
+  method: Sonnet 5 (`claude-sonnet-5`) mechanical check against the entry text
+  (locate → evidence → direction → collision), Fable 5 (`claude-fable-5`) adjudication of
+  flags per ruling D1. Outcome over 78 rows: **47 PASS · 26 SCAN-FIRST · 5 EDITORIAL**, no
+  DNF, no DROP. The 5 EDITORIAL are all ACC collisions where the corrected spelling already
+  exists as its own `<k1>` (e.g. `keSAvAditya`→`keSavAditya`, which exists at L5026) — filing
+  them as plain corrections would have created duplicate headwords.
+  **Sheet: 109 → 182 rows.**
+- New tooling, all reusable: `corrections_draft/build_netnew_worklist.py` (collect union-table
+  NET_NEW rows lacking a verdict), `corrections_draft/build_verify_batches.py` (deterministic
+  per-dict batching), `detectors/verify_netnew_workflow.js` (check + adjudicate),
+  `detectors/adjudicate_rows_workflow.js` (rule an EXPLICIT row list — the derived-batch
+  workflow's flag set shifts when a batch fails and is resumed, so leftovers need a
+  deterministic path), `corrections_draft/merge_netnew_verdicts.py` (assemble verdicts and
+  append).
+### Fixed
+- **`detectors/gen_scanverify_sheet.py` could not be regenerated at all once the fileable
+  population grew.** It asserted `len(items) == 109` and carried `109rows` in its own output
+  filename, both pinned to the run-1 population — so the correct response to "there are more
+  rows to review" was an `AssertionError`, and the gate silently kept its old coverage. The
+  count is now derived, the filename is count-free
+  (`sanskritspellcheck-filefirst-scanverify_review.html`), headings interpolate count + date,
+  and the guard is against an EMPTY sheet, which is the failure that actually matters.
+- **73 of 182 sheet rows had no entry body to judge against.** Bodies came only from
+  `corrections_draft/irr/irr_inputs.tsv`, built for the run-1 IRR study; every later row
+  rendered as a bare correction with no entry text, which is unvotable. Added a fallback
+  through `triage_util.build_entry_index` (the same resolver the triage and
+  `make_changefiles.py` use, so `external_src/`-staged dicts work identically).
+  **Body coverage 109/182 → 182/182.**
+- `merge_netnew_verdicts.py` reads **both** durable channels (on-disk verdict JSON *and* the
+  workflow journals) and unions them, because neither is complete alone — 3 of 13 check
+  batches returned without writing their file, and 3 different batches failed to return
+  across two runs ([Uprava FINDINGS §303](https://github.com/gasyoun/Uprava/blob/main/FINDINGS.md)).
+  It asserts full coverage and **refuses to apply** while any row is unresolved, invalid, or
+  flagged-but-never-adjudicated — that last gate caught a real one (YAT `kaMsyanIla`, see below).
 
 ## [1.59.0] - 2026-08-04
 ### Added
