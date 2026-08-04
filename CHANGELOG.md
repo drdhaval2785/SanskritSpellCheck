@@ -7,6 +7,8 @@ dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
 ## [Unreleased]
+
+## [1.60.0] - 2026-08-04
 ### Added
 - **The 78 net-new FILE-FIRST rows are verified; the scan-verification sheet now covers the
   WHOLE fileable queue (H2274, 04-08-2026).** The sheet is generated from
