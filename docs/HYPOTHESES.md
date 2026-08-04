@@ -236,6 +236,26 @@ Opus 5 (`claude-opus-5`) source-confirm → Opus 5 adversarial review; 3,045 can
   read off disk; and a classify agent can return verdicts without writing its `body_adj_*.json`
   (MW batch 000, WIL batch 003), leaving a full-looking classified count with a hole in the
   reproducibility trail. Audit `body_batch_NNN.jsonl` ⇄ `body_adj_NNN.json` before trusting a union.
+- **The scope question this left open is now CLOSED (04-08-2026, H2281): do NOT sweep the 22
+  zero-fileable dicts.** Probe on the two highest-volume ones — BHS (551 candidates re-judged)
+  and SCH (644) — returned **0 fileable each**, matching their committed zeros. 1,195 candidates,
+  23 surviving the classify stage, **0 confirmed at source**. The pipeline was not inert: it
+  produced a normal TYPO pile both times, which then failed against the full entry.
+  **These zeros are structural, not stochastic**, and the two dicts fail differently: **BHS**
+  carries its own critical apparatus and has already labelled its misprints (`[laṭikā, app.
+  misprint for latikā (so Index)]`, `[Anantaryasamādhi, misprint in Mvy 901 … corrected in
+  Index]`), so the detector re-finds what Edgerton annotated and a "correction" would destroy
+  the apparatus; **SCH** corroborates the headword in its own body (`girī` a cvi-adverb,
+  `samadhurA` a feminine, `yudda` = *yud+da* "battle-giving"), so the minimal-pair suggestion is
+  simply wrong. Neither is a coin-flip a third run might land differently — which is precisely
+  what separates this from the SHS/YAT/ACC instability measured above, and is the sharpest
+  available statement of
+  [H2](#h2--tier-a-precision-is-near-zero-on-mature-dictionaries-high-on-poorly-digitised-ones):
+  **a zero-fileable verdict on a self-documenting or internally-corroborating lexicon is a
+  property of the dictionary, not a draw.** Limit: 2 of 22 tested, deliberately the two most
+  likely to yield; the other 20 are smaller and mostly the same mature/foreign-gloss/specialist
+  kinds. Evidence for all 23 refutations:
+  [REFUTED_TYPO_CANDIDATES_PROBE22.tsv](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/REFUTED_TYPO_CANDIDATES_PROBE22.tsv).
 - **Consequence:** the scan-verification sheet is now short by these 8 as well as D7's 70;
   regenerate before the batched-PR switchover files anything. The contamination loop D9 names is
   only closed once corrections are *filed* and `HeadwordLists/union/` is rebuilt in

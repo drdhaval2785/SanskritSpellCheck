@@ -144,9 +144,31 @@ that legitimately changes verdicts: SKD's resume reversed two earlier survivors
 
 ## Open
 
-- **The 22 zero-fileable dicts.** Cheap probe: re-run two of the highest-volume ones
-  (BHS 713 tier-A, SCH 678) and see whether either yields a single fileable typo. A
-  non-zero result argues for the full 33; a zero result closes the question cheaply.
+- ~~**The 22 zero-fileable dicts.** Cheap probe: re-run two of the highest-volume ones
+  (BHS 713 tier-A, SCH 678) and see whether either yields a single fileable typo.~~
+  **✅ ANSWERED 04-08-2026 ([H2281](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2281-Opus_SanskritSpellCheck_zero-fileable-dicts-rerun-probe_04.08.26.md)) — do NOT sweep the 22.**
+  Both re-runs returned **0 fileable**, matching their committed zeros: BHS 551 candidates
+  re-judged (15 classified TYPO, all refuted at source-confirm), SCH 644 (8 classified TYPO,
+  all refuted). 1,195 candidates, 23 survivors of the classify stage, **0 confirmed**.
+  The pipeline was not inert — it produced a normal-looking TYPO pile both times; the pile
+  simply did not survive contact with the full entry.
+
+  **The reason matters more than the number: these zeros are STRUCTURAL, not stochastic**, and
+  the two dicts fail in two different ways —
+
+  | dict | why every candidate died |
+  |---|---|
+  | **BHS** (Edgerton) | the dictionary carries its **own critical apparatus** and has already labelled its misprints: `[laṭikā, app. misprint for latikā (so Index)]`, `[Anantaryasamādhi, misprint in Mvy 901 for Ānant˚; corrected in Index]`, `[adhyāśana, (probably error) for Skt. adhyāsana]`. The detector re-finds what the lexicographer annotated — and "correcting" it would destroy the apparatus. |
+  | **SCH** (Schmidt) | the **body corroborates the headword**: key and gloss agree, so the minimal-pair suggestion is simply wrong — `girī` a distinct cvi-adverb, `samadhurā` a feminine, `yudda` = *yud+da* "battle-giving", `Kalindī` short-*a* in the body too. |
+
+  Neither mechanism is a coin-flip that a third run might land differently, which is exactly
+  what distinguishes this from the SHS/YAT/ACC instability H9 measured. A dictionary whose zero
+  comes from *self-documenting apparatus* or from *internal corroboration* will keep returning
+  zero. **Generalisation, stated as the limit it is:** 2 of 22 tested, chosen as the highest-volume
+  cases and therefore the most likely to yield something. They did not. Extending the sweep to the
+  other 20 — smaller, and mostly the same mature/foreign-gloss/specialist-index kinds — is not
+  supported by this evidence. Refutation evidence for all 23:
+  [REFUTED_TYPO_CANDIDATES_PROBE22.tsv](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/REFUTED_TYPO_CANDIDATES_PROBE22.tsv).
 - **The scan-verification sheet is short by 78 rows, and regenerating it will not fix that.**
   [detectors/gen_scanverify_sheet.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/gen_scanverify_sheet.py)
   builds the sheet from `corrections_draft/file_first_verified.tsv`, taking the rows whose

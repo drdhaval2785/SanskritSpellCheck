@@ -61,6 +61,16 @@ real OCR/keying errors, each confirmed by the entry's own etymology/inflection.
 > The 5 EDITORIAL are all ACC collisions where the corrected spelling already exists as its own
 > `<k1>` — filing them as plain corrections would create duplicate headwords. **Sheet: 109 → 182
 > rows**, regenerate with `python detectors/gen_scanverify_sheet.py`.
+>
+> **The 22 zero-fileable dicts do NOT need a second run (H2281, 04-08-2026).** Probe on the two
+> highest-volume ones returned **0 fileable each**, matching their committed zeros: BHS 551
+> candidates re-judged (15 classified TYPO, all refuted at source), SCH 644 (8 classified TYPO,
+> all refuted) — 1,195 candidates, **0 confirmed**. The zeros are **structural, not stochastic**:
+> **BHS** already labels its own misprints in its critical apparatus (`[laṭikā, app. misprint for
+> latikA (so Index)]`), so the detector re-finds what Edgerton annotated; **SCH** corroborates the
+> headword in its own body (`girī` a cvi-adverb, `yudda` = *yud+da*), so the suggestion is simply
+> wrong. Neither is a coin-flip a third run might land differently. Refutation evidence:
+> [REFUTED_TYPO_CANDIDATES_PROBE22.tsv](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/REFUTED_TYPO_CANDIDATES_PROBE22.tsv).
 
 ## Status — all 33 dictionaries (by tier-A volume)
 
