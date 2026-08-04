@@ -98,7 +98,7 @@ channel `P(x | w)` is Brill-Moore, the prior `P(w)` is DCS corpus frequency, and
 - **Accept SLP1, IAST, and Devanāgarī**; convert everything to **SLP1** internally (the repo's
   invariant — all Sanskrit text is SLP1). Conversion goes through the shared **sanskrit-util**
   package, already wired into this repo as
-  [detectors/sanskrit_util.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/sanskrit_util.py)
+  [detectors/sanskrit_util.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/main/detectors/sanskrit_util.py)
   (a thin shim re-exporting `to_slp1`, `deva_to_slp1`, `deva_to_iast`, …). Do **not** vendor a
   transcoder; consume the package (this is also the Q1 PyPI package's rule).
 - **Scheme detection:** if the input carries Devanāgarī codepoints → Devanāgarī; else if it carries
@@ -293,7 +293,7 @@ The design principle: **consume the repo's assets, build only the two ACL algori
 
 | Need | Existing asset | Notes |
 |---|---|---|
-| SLP1/IAST/Devanāgarī → SLP1 | [detectors/sanskrit_util.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/sanskrit_util.py) → `sanskrit-util` pkg | shared package; `ळ→x` gotcha noted §2.1 |
+| SLP1/IAST/Devanāgarī → SLP1 | [detectors/sanskrit_util.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/main/detectors/sanskrit_util.py) → `sanskrit-util` pkg | shared package; `ळ→x` gotcha noted §2.1 |
 | Attested-headword oracle | [sanhw1.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/sanhw1.txt) (431,596) + `slp1util.parse_sanhw1`/`load_lexicon` | also gives per-word dict-attestation count for the prior |
 | Morphological-stem oracle | [detectors/vidyut_stems.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/vidyut_stems.txt) (205,233) + `slp1util.load_vidyut_stems` | vendored from Vidyut (MIT); the FST to traverse in §2.3(b) |
 | Corpus-frequency prior | [detectors/dcs_lemma_summary.json](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/dcs_lemma_summary.json) + `slp1util.load_dcs_lemmas` | freq bands 1..5; DCS-2021 CC-BY |
