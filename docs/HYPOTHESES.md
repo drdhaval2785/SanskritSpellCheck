@@ -189,6 +189,59 @@ closed either way.
      for it is now *recall*, and it is a much stronger one. Still a human call, not an agent's.
   The residual caution is unchanged: FILE-FIRST is a triage prior, and the scan is the arbiter.
 
+#### H9 scale-up (ruling D9, 04-08-2026) — the gain replicates, but its *size* tracks digitisation quality
+
+Consequence 3 above ("the non-goal deserves re-opening") was ruled by MG on 26-07-2026 — funded, and
+on a *contamination* argument rather than a recall one: an uncorrected typo headword flows into the
+cross-dict union headword list, inflating its own attestation count and thereby helping
+`run_all.py` demote it out of tier A. A typo left unfixed suppresses its own detection.
+Scope call: the eight remaining fileable dicts (the 22 zero-fileable ones deliberately left to a
+cheap probe). Same pipeline and prep, per-phase models Sonnet 5 (`claude-sonnet-5`) classify →
+Opus 5 (`claude-opus-5`) source-confirm → Opus 5 adversarial review; 3,045 candidates re-judged.
+
+| dict | run 1 | run 2 | both | **net-new** | r1-only | union | agreement |
+|---|--:|--:|--:|--:|--:|--:|--:|
+| PWG | 12 | 11 | 7 | **4** | 5 | 16 | 44% |
+| WIL | 3 | 3 | 1 | **2** | 2 | 5 | 20% |
+| SKD | 3 | 2 | 1 | **1** | 2 | 4 | 25% |
+| GST | 1 | 1 | 0 | **1** | 1 | 2 | 0% |
+| MCI | 10 | 9 | 9 | 0 | 1 | 10 | 90% |
+| MW | 4 | 0 | 0 | 0 | 4 | 4 | 0% |
+| PW | 2 | 0 | 0 | 0 | 2 | 2 | 0% |
+| VCP | 1 | 0 | 0 | 0 | 1 | 1 | 0% |
+| **total** | **36** | **26** | **18** | **+8 (+22%)** | **18** | **44** | **41%** |
+
+- **The instability replicates** — 41% agreement here against D7's 35%, and again *none* of it is a
+  pool artifact: `r1:pool` = 0 and `r1:settled` = 0 for all eight, so all 18 non-reproductions are
+  genuine run-to-run variance. **8 of 8 net-new hand-verified** (the whole set, where D7 could
+  only afford 10 of 70), in two checkable classes: the entry's `<lex>` gender tag contradicting the
+  headword's final vowel (PWG `citrikA`→`citrika`, `kxptakIla`→`kxptakIlA`, `mAlArizwa`→`mAlArizwA`;
+  SKD `mahotka`→`mahotkA`), and the entry's own derivation spelling the base differently
+  (PWG `pARivanDa`→`pARibanDa`; GST `aDoGaRWA`→`aDoGaRwA`; WIL `paYcaSErizaka`→`paYcaSErIzaka`,
+  `vapuzmAt`→`vapuzmat`).
+- **But the magnitude is a function of digitisation quality, not a constant.** +22% here vs D7's
+  +81%. That is the [H2](#h2--tier-a-precision-is-near-zero-on-mature-dictionaries-high-on-poorly-digitised-ones)
+  axis reappearing inside H9: on mature dicts both runs find little, so the union adds little.
+  PWG — the sole poorly-digitised source in this set — yields half the net-new off 11% of the volume.
+  **So "+81%" must not be quoted as the expected union gain for a dictionary; quote it for
+  poorly-digitised sources and ~+22% for mature ones.** Combined across both passes: 11 dicts,
+  122 → 200 fileable (+78, +64%).
+- **A single run's near-zero on a mature dict is as much noise as signal.** MW, PW and VCP each
+  returned a run-2 zero against a non-zero committed count — 7 committed typos not reproduced,
+  none explicable by pool movement. This *strengthens* H2's ordering while further undermining its
+  per-dict counts: the ranking is stable, the numbers are draws.
+- **Two silent-failure modes found in the workflow's reporting layer** (details in
+  [UNION_ACROSS_RUNS_D9_SCALEUP_SCOPE_AND_RESULTS.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/UNION_ACROSS_RUNS_D9_SCALEUP_SCOPE_AND_RESULTS.md)):
+  a dropped Confirm batch reads as `confirmedTypos: 0`, indistinguishable from a real zero unless
+  read off disk; and a classify agent can return verdicts without writing its `body_adj_*.json`
+  (MW batch 000, WIL batch 003), leaving a full-looking classified count with a hole in the
+  reproducibility trail. Audit `body_batch_NNN.jsonl` ⇄ `body_adj_NNN.json` before trusting a union.
+- **Consequence:** the scan-verification sheet is now short by these 8 as well as D7's 70;
+  regenerate before the batched-PR switchover files anything. The contamination loop D9 names is
+  only closed once corrections are *filed* and `HeadwordLists/union/` is rebuilt in
+  [SanskritLexicography](https://github.com/gasyoun/SanskritLexicography) — which runs through the
+  monthly batched csl-orig PR and its human scan gate, not through this repo.
+
 ## ❌ Refuted / failed (the negative results)
 
 ### R1 — Corpus + confusion signal can promote a tier-C candidate to B
