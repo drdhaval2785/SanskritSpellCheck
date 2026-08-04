@@ -7,6 +7,8 @@ dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
 ## [Unreleased]
+
+## [1.59.0] - 2026-08-04
 ### Added
 - **Union-across-runs scale-up to the 8 remaining fileable dicts (H1709, ruling D9,
   04-08-2026).** Second independent body-aware run on PWG · MCI · MW · SKD · WIL · PW ·
