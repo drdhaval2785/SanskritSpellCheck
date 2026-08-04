@@ -21,8 +21,8 @@ different consumer: CORRECTIONS is for dictionary text, this is for corpus text)
 
 ## Method
 
-[`ngram_corpus_check.py`](detectors/meter/ngram_corpus_check.py) walks each sampled section's verses
-([`gretil_walker.py`](detectors/meter/gretil_walker.py)), transliterates every verse IAST→SLP1 with the
+[`ngram_corpus_check.py`](ngram_corpus_check.py) walks each sampled section's verses
+([`gretil_walker.py`](gretil_walker.py)), transliterates every verse IAST→SLP1 with the
 canonical [`sanskrit_util.to_slp1`](../sanskrit_util.py), and flags words containing a
 bigram **absent from the MW∩PW headword bigram model** (the same
 [`ngram/data/2grams.txt`](../../ngram/data/2grams.txt) + whitelist/whiteends suppression
