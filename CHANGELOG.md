@@ -7,6 +7,8 @@ dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
 ## [Unreleased]
+
+## [1.60.1] - 2026-08-04
 ### Fixed
 - **A scan vote on a net-new row could not be applied — it had no queue row to land in
   (H2278, 04-08-2026).** The sheet is generated from `file_first_verified.tsv`, but
