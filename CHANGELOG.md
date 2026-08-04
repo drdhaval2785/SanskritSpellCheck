@@ -8,6 +8,33 @@ ready for a dated entry.
 
 ## [Unreleased]
 
+## [1.59.1] - 2026-08-04
+### Changed
+- **`.gitattributes` now pins `eol=lf`, closing the last unpoliced repo in the guarded set
+  (Opus 5 `claude-opus-5`, 04-08-2026).** The existing file was the stock Visual Studio /
+  msysgit template: `* text=auto` with **no `eol=lf`**, so blobs were normalized to LF in
+  the repository but the working tree was left to `core.autocrlf`. A CRLF census across all
+  16 main-tree-guarded repos flagged this one as **unpoliced rather than clean** — its zero
+  violations were *vacuous*, because the standard detector
+  (`git ls-files --eol | grep -E 'i/(crlf|mixed)' | grep 'eol=lf'`) only sees files that
+  carry an `eol=lf` attribute, and none did. Nothing was stopping the class from arriving;
+  it simply had not yet. Fixed by appending the canonical org LF block, imported from
+  [`Uprava/tools/cologne_batch_deploy.py`](https://github.com/gasyoun/Uprava/blob/main/tools/cologne_batch_deploy.py)
+  (`GITATTRIBUTES_TEMPLATE` / `merge_gitattributes`, H2004) rather than hand-copied — the
+  merge appends under a banner and preserves every existing custom rule (the `diff=csharp`,
+  `merge=union` and `diff=astextplain` entries are untouched).
+  **`git add --renormalize` was run in the same commit and changed nothing**, confirming
+  every blob was already LF — the policy is now enforced going forward, with zero content
+  churn and no binary file touched. Pairing the renormalize with the policy is deliberate:
+  adding `.gitattributes` alone governs only *future* writes and silently leaves existing
+  blobs contradicting the new rule, which is precisely how
+  [csl-devanagari#52](https://github.com/sanskrit-lexicon/csl-devanagari/pull/52) was left
+  behind by its own policy commit.
+  **One deliberate override to note:** the org block marks `*.pdf` (and other assets)
+  `binary`, which supersedes this repo's legacy `*.pdf diff=astextplain` diff driver.
+  `binary` is the safer default — it guarantees such files are never normalized — but it
+  does drop the astextplain convenience for PDF/RTF diffs.
+
 ## [1.59.0] - 2026-08-04
 ### Added
 - **Union-across-runs scale-up to the 8 remaining fileable dicts (H1709, ruling D9,
