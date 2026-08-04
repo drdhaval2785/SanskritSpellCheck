@@ -39,6 +39,19 @@ real OCR/keying errors, each confirmed by the entry's own etymology/inflection.
 > single-run agreement is only **35%**. In union: **SHS 37→68, YAT 27→61, ACC 22→27**. The union
 > table is [union_d7.tsv](union_d7.tsv); the measurement is
 > [HYPOTHESES.md H9](../docs/HYPOTHESES.md). Union across runs, never re-run and overwrite.
+>
+> **Scaled to the other eight fileable dicts** (ruling **D9**, 04-08-2026 — funded on the
+> *contamination* argument: a typo left uncorrected inflates its own attestation in the cross-dict
+> union headword list and so helps suppress its own detection). **+8 net-new over the committed 36
+> (+22%)**, agreement **41%**, all 8 hand-verified: **PWG 12→16, WIL 3→5, SKD 3→4, GST 1→2**;
+> MCI/MW/PW/VCP gained nothing, and MW/PW/VCP each returned a run-2 **zero** against a non-zero
+> committed count. Union table:
+> [union_d9.tsv](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/union_d9.tsv);
+> scope call, method and run hygiene:
+> [UNION_ACROSS_RUNS_D9_SCALEUP_SCOPE_AND_RESULTS.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/UNION_ACROSS_RUNS_D9_SCALEUP_SCOPE_AND_RESULTS.md).
+> **The size of the union gain tracks digitisation quality** — +81% on the poorly-digitised three,
+> +22% on the mature eight — so do not quote D7's +81% as a general expectation. Combined over both
+> passes: **11 dicts, 122 → 200 fileable (+78, +64%)**.
 
 ## Status — all 33 dictionaries (by tier-A volume)
 

@@ -1,0 +1,45 @@
+dict	suspect	suggestion	status	cls_confidence	opus_confirm_reason	opus_review	review_fp_type	opus_review_reason
+MW	Bawwaraka	BawwAraka	RUN1_ONLY_LLM_VARIANCE					
+MW	akzAMsa	akzAMSa	RUN1_ONLY_LLM_VARIANCE					
+MW	kattfna	kattfRa	RUN1_ONLY_LLM_VARIANCE					
+MW	prativoDavya	prativoQavya	RUN1_ONLY_LLM_VARIANCE					
+PWG	citrikA	citrika	NET_NEW	medium	'(von citrA) m. = cEtrika der Monat Caitra' - masculine gloss requires citrika; long-A key undocumented.	fileable	none	L25534 marked <lex>m.</lex> = cEtrika (month Caitra); MW L73990 citrika m. Not a variant/apparatus note.
+PWG	kxptakIla	kxptakIlA	NET_NEW	medium	'(kxpta + kIla) f. Rechtsurkunde' - feminine marking is incompatible with a short-a stem; kxptakIlA. No spelling note.	fileable	none	L18994 marked <lex>f.</lex> though headword ends -a; MW L55581 kxptakIlA f. from same TRIK./HAR. Derivation lists stems, no contradiction.
+PWG	mAlArizwa	mAlArizwA	NET_NEW	low	'(wohl mAlA + a~) f. eine best. Pflanze, = pAcI' - feminine plant name needs -A stem mAlArizwA; nothing documents the key.	fileable	none	L60199 <lex>f.</lex> plant = pAcI (RAJAN.); MW L163676 mAlArizwA f. same source. '(wohl mAlA + a˚)' is compound analysis in stems only.
+PWG	pARivanDa	pARibanDa	NET_NEW	high	'({#pA~#} + {#ba~#}) m. die Verbindung der Haende (bei der Heirath)' - etymology itself points to banDa (a PWG lemma); vanDa is not, so headword v is a bare error.	fileable	none	L44149 derivation ({#pA˚#} + {#ba˚#}); sorts between pARipradAna (p) and pARiBuj (bh), the b slot.
+PWG	BAvavanDana	BAvabanDana	BOTH_RUNS	medium	Etym '(BAva + ba~)' = banDana, gloss 'die Herzen verbindend' (RAGH. 3,24); slot before BAvaboDaka fits ban, not van.	fileable	none	L54718 derivation ({#BAva#} + {#ba˚#}) = banDana; sorts between BAvapradIpikA and BAvaboDaka, the ba- slot.
+PWG	Dabalapakza	Davalapakza	BOTH_RUNS	high	Sits between Davalatva and DavalapurARa~ (exactly Davalapakza's slot); gloss 'Gans / lichte Haelfte' = Davala. No Dabala lemma in PWG.	fileable	none	L36472 derivation {#Da˚#} = Davala; entry sits between Davalatva and DavalapurARasamuccaya, so the print read Davala°.
+PWG	arTavanDa	arTabanDa	BOTH_RUNS	medium	Sole citation 'lalitArTabanDaM pattre niveSitam' has b; supplement slot before arTamAtra fits arTabanDa. No variant note.	fileable	none	L65124 sole citation 'lalitArTabanDaM' (VIKR. 32); entry sorts between arTaprayoga and arTamAtra, i.e. the b slot.
+PWG	avakaSa	avakASa	BOTH_RUNS	high	Body uses only avakASa (avakASena, AkASamavakASapradAne, tamasAmavakASAya); headword form nowhere documented.	fileable	none	L65329 Nachtrag; body's own citations read avakASena/avakASo/avakASAya, gloss 'das Herableuchten' (ava-kAS). No apparatus note.
+PWG	paRavanDa	paRabanDa	BOTH_RUNS	medium	Etymology '(paRa + ba~)' = banDa, gloss 'das Abschliessen eines Vertrags'; slot before paRava fits ba, not va.	fileable	none	L41732 derivation ({#paRa#} + {#ba˚#}); sorts between paRaPara (ph) and paRava (v), only correct as paRabanDa.
+PWG	tfzitottara	tfzitottarA	BOTH_RUNS	medium	'(tfzita n. + uttara 4,e) f. N. einer Pflanze (aSanaparRI)' - feminine, so lemma must be tfzitottarA.	fileable	none	L30443 <lex>f.</lex> plant aSanaparRI (SABDAC.); MW L86791 tfzitottarA f. same gloss.
+PWG	yajYamus	yajYamuz	BOTH_RUNS	medium	Etym '(yajYa + 2. muz)', gloss 'das Opfer raubend', 'Vgl. izwimuz'; stem-final must be z, and no note defends s.	fileable	none	L80987 derivation ({#yajYa#} + 2.{#muz#}), 'Vgl. izwimuz'; cf. netramuz, cakzurmuz. s/z slip.
+PWG	biBedayisu	biBedayizu	RUN1_ONLY_LLM_VARIANCE					
+PWG	dIvAkIrtya	divAkIrtya	RUN1_ONLY_LLM_VARIANCE					
+PWG	duzwu	duzWu	RUN1_ONLY_LLM_VARIANCE					
+PWG	pfzwavanDu	pfzwabanDu	RUN1_ONLY_LLM_VARIANCE					
+PWG	tarAvalI	tArAvalI	RUN1_ONLY_LLM_VARIANCE					
+SKD	mahotka	mahotkA	NET_NEW	medium	L26941: 'strI, (mahAn utkaH darSanotsuko loko yasyAH .) vidyut' - fem bahuvrihi requires mahotkA; short -a contradicts strI + yasyAH.	fileable	none	'strI, (mahAn utkaH ... yasyAH .)' requires fem. mahotkA; MW L161293 has k1 mahotkA. No apparatus/redirect/variant note.
+SKD	hitAbalI	hitAvalI	BOTH_RUNS	high	L41790: etym '(hitAnAM AvalI yatra .)' plus Hindi 'hiyAvalI' both give v; only the key has b.	fileable	none	Own derivation '(hitAnAM AvalI yatra .)' + hindI gloss 'hiyAvalI'; sole -AbalI headword vs 11 -AvalI in SKD.
+SKD	pUzaBAzA	pUzaBAsA	RUN1_ONLY_LLM_VARIANCE					
+SKD	vfzaBAzA	vfzaBAsA	RUN1_ONLY_LLM_VARIANCE					
+PW	Bagama	BagaRa	RUN1_ONLY_LLM_VARIANCE					
+PW	hemana	hEmana	RUN1_ONLY_LLM_VARIANCE					
+VCP	camIkara	cAmIkara	RUN1_ONLY_LLM_VARIANCE					
+WIL	paYcaSErizaka	paYcaSErIzaka	NET_NEW	high	'E. paYca, and SirIza Mimosa sirisha, WaY aff.' — base SirIza has long I, so vrddhi form paYcaSErIzaka.	fileable	none	L22891: E. {paYca}+{SirIza}+{WaY}; vrddhi of SirIza keeps the long I, so SErIzaka; short i unsupported.
+WIL	vapuzmAt	vapuzmat	NET_NEW	medium	'mfn. (-zmAn-zmantI-zmat) Having a body... E. vapus and matup aff.' — stem is vapuzmat; only 3 -mAt headwords vs hundreds of -mat.	fileable	none	L33595: infl. {-zmAn-zmantI-zmat} and E. {vapus}+{matup}; WIL writes all other matup stems -mat (Ayuzmat, arcizmat).
+WIL	boDidruna	boDidruma	BOTH_RUNS	high	'm. (-maH) The holy fig tree ... E. boDi knowledge, druma a tree.' — inflection -maH and etymology druma both require boDidruma.	fileable	none	L27971: infl. {-maH} and E. {boDi}+{druma} a tree both require -druma; headword -na is a clean typo.
+WIL	jAmbabat	jAmbavat	RUN1_ONLY_LLM_VARIANCE					
+WIL	kaNkalodya	kaNkaloqya	RUN1_ONLY_LLM_VARIANCE					
+GST	aDoGaRWA	aDoGaRwA	NET_NEW	medium	Body: 'Bahuvr. f. ({#-RwA#}) A plant (Acheranthes aspera). See {#apAmArga#}. E. {#aDas#} and {#GaRwA#}' - body twice uses w, headword W unsupported.	fileable	none	L1999: gloss 'A plant (Achyranthes aspera)'; own inflection {#-RwA#} and etymology 'E. aDas and GaRwA' both give -Rw-, no w.r./v.l./redirect marker
+GST	aprakaraRika	aprAkaraRika	RUN1_ONLY_LLM_VARIANCE					
+MCI	asvaSiras	aSvaSiras	BOTH_RUNS	high	L1008 display 'Asvasiras' but body has Asvasiras with palatal s repeatedly and quote 'dattva casvasiro gacchad'; no note.	fileable	none	L1008 tirtha entry: body and cite have Asvasiras with palatal S ('dattva casvasiro'); headword's first sibilant is plain s.
+MCI	baliha	balIha	BOTH_RUNS	high	L2408 body: 'Arkaja was then the king of Balihas' and quote 'arkajas ca balihanam' - long i; title short i undocumented.	fileable	none	L2408 body 'king of Balihas' and cite arkajas ca balihanam show long I; headword short i, no variant or apparatus note.
+MCI	brahmopanisad	brahmopanizad	BOTH_RUNS	high	L749 body's own quote 'rajadharmams ca brahmopanisadam tatha' has retroflex s; title's dental s is a plain key error.	fileable	none	L749 body cite reads brahmopanisadam with retroflex s (z); headword has dental s only, no v.l./w.r. note.
+MCI	dakzinApaTa	dakziRApaTa	BOTH_RUNS	high	L2312 body uses retroflex n throughout: 'daksinapathavasin', 'daksinapathajanmanah', 'daksinapatham'; title's dental n undocumented.	fileable	none	L2312 body uses Dakshinapatha with retroflex n everywhere (daksinapathavasin, daksinapathajanmanah); headword has dental n only.
+MCI	kikawa	kIkawa	BOTH_RUNS	medium	L2205 display 'Kikata' but body: 'regarding the Kikatas', 'the Kikatas were followers', quote 'kikatatavin' - all long i.	fileable	none	L2205 'Name of a people' body consistently Kikatas with long I and cite kikatatavin; headword short i only.
+MCI	mAkandi	mAkandI	BOTH_RUNS	medium	L2451 body quotes 'makandim atha gangayas tire' and 'makandim...janapadayutam' plus 'went to Makandi' - long i stem.	fileable	none	L2451 f. name of region; body and cite have Makandi with long I (makandim atha gangayas; makandim...janapadayutam).
+MCI	mahAnadi	mahAnadI	BOTH_RUNS	medium	L1518 display 'Mahanadi(1)' short i, but body quotes 'mahanadi ca tatraiva', 'punya caiva mahanadi' and 'the Mahanadi' with long i; no variant note.	fileable	none	L1518 body reads 'Mahanadi' but all cites are mahanadi with long I ('punya caiva mahanadi'); siblings L1519/L1520 are mahAnadI h2/h3.
+MCI	supratika	supratIka	BOTH_RUNS	high	L386 display '{@Supratika,@}' but body spells Supratika with long i four times (Supratika whose body..., kula of Supratika); no v.l./w.r. note.	fileable	none	L386 body says 'dimensions of Supratika' (long I) throughout; L384/L385 are already supratIka h1/h2 — this is the unnumbered h3.
+MCI	vEsAKa	vESAKa	BOTH_RUNS	high	L943 display 'Vaisakha' (dental s) but body quotes 'madhave vaisakhe', 'nistared ekabhaktena vaisakham', 'month of Vaisakha' with palatal s.	fileable	none	L943 body and cites read Vaisakha with palatal S ('nistared ekabhaktena vaisakham'); headword has plain s.
+MCI	arunDatIvAwa	arunDatIvawa	RUN1_ONLY_LLM_VARIANCE					

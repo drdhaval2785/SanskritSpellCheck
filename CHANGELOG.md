@@ -7,6 +7,35 @@ dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
 ## [Unreleased]
+### Added
+- **Union-across-runs scale-up to the 8 remaining fileable dicts (H1709, ruling D9,
+  04-08-2026).** Second independent body-aware run on PWG · MCI · MW · SKD · WIL · PW ·
+  VCP · GST — 3,045 candidates re-judged, Sonnet 5 (`claude-sonnet-5`) classify → Opus 5
+  (`claude-opus-5`) source-confirm → Opus 5 adversarial review. **+8 net-new fileable typos
+  over the committed 36 (+22%)**, agreement 41%, **8/8 hand-verified** against the entry
+  text. Union table
+  [corrections_draft/union_d9.tsv](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/union_d9.tsv)
+  (44 rows); scope call, method and run hygiene in
+  [docs/UNION_ACROSS_RUNS_D9_SCALEUP_SCOPE_AND_RESULTS.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/UNION_ACROSS_RUNS_D9_SCALEUP_SCOPE_AND_RESULTS.md).
+  Committed packages were never overwritten (no `make_dict_package.py`, no `--finish`).
+### Changed
+- **[docs/HYPOTHESES.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/HYPOTHESES.md)
+  H9 extended, not forked.** The union gain replicates but its *size* tracks digitisation
+  quality — **+81% on the poorly-digitised three (D7), +22% on the mature eight (D9)** — so
+  D7's +81% must not be quoted as a general expectation. MW, PW and VCP each returned a
+  run-2 **zero** against a non-zero committed count, so a single run's near-zero on a mature
+  dict is as much noise as signal: H2's *ordering* holds, its per-dict *counts* are draws.
+  Combined over both passes: 11 dicts, 122 → 200 fileable (+78, +64%).
+- **[corrections_draft/README.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/README.md)**
+  single-stochastic-draw warning now carries the D9 numbers alongside D7's.
+### Fixed
+- **Two silent-failure modes in the body-aware workflow's reporting layer, found by auditing
+  on-disk artifacts against the workflow return value.** A dropped Confirm batch reads as
+  `confirmedTypos: 0` — indistinguishable from a real zero unless read off disk (VCP hit this
+  twice; its 13 verdicts were on disk and all genuinely refuted). A classify agent can return
+  verdicts without writing its `body_adj_*.json`, leaving a full-looking classified count with
+  a hole in the reproducibility trail (MW batch 000, WIL batch 003). Audit
+  `body_batch_NNN.jsonl` ⇄ `body_adj_NNN.json` per dict before trusting a union.
 
 ## [1.58.1] - 2026-08-01
 ### Added
