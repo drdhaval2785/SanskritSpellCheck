@@ -6,6 +6,7 @@ Exit 0 = pass, 1 = fail.
 """
 
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -147,6 +148,19 @@ if MANUSCRIPT.exists():
             )
     else:
         failures.append("could not locate the manuscript's Abstract section")
+
+# Anonymized submission files must stay current with the source. The builder script's --check
+# mode verifies this deterministically, so delegate to it rather than duplicating its logic.
+anon_check = subprocess.run(
+    [sys.executable, "papers/build_a44_anonymous.py", "--check"],
+    capture_output=True,
+    text=True,
+    encoding="utf-8",
+)
+if anon_check.returncode != 0:
+    failures.append("anonymized submission files are stale or non-anonymous — see above")
+    print(anon_check.stdout, end="")
+    print(anon_check.stderr, end="", file=sys.stderr)
 
 if failures:
     print("FAIL — A44 pack selftest")
