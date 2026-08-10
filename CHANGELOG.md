@@ -7,6 +7,33 @@ dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
 ## [Unreleased]
+### Added
+- **A44 submission pack for the *International Journal of Lexicography* (H2407,
+  10-08-2026, Fable 5 `claude-fable-5`).** The paper sat at 4/5 with no packaging
+  artifacts; this adds the four the venue and the internal gate require:
+  [papers/A44_cover_letter.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/A44_cover_letter.md)
+  (IJL-addressed, 4 ⟦MG⟧ decisions isolated in a table),
+  [papers/A44_submission_checklist.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/A44_submission_checklist.md)
+  (16 requirements off the OUP general instructions, fetched 10-08-2026),
+  [papers/A44_checklist.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/A44_checklist.md)
+  (ARR Responsible NLP, A1/A2 both discharged — no blocker in the family that gate
+  exists to catch), and a repo-first
+  [CITATION.cff](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/CITATION.cff).
+  - **One published mandatory requirement is failed and named as a blocker:** *IJL*
+    requires funding sources in the manuscript and A44 has no funding statement.
+  - **Four requirements are recorded as UNVERIFIED, not guessed** — word limit, abstract
+    length, keyword count and the anonymous-review question are absent from OUP's public
+    page and live in the gated Author Pack. Measured against common caps, the ~331-word
+    abstract is the likely casualty and the named byline plus self-citing repo URLs would
+    be disclosure defects under anonymous review.
+  - **B2 is the one outright `no`:** neither the CDSL inputs nor the created do-not-file
+    artifacts carry a licence declaration, and the repo itself declares none — so
+    `CITATION.cff` deliberately ships *without* a `license:` key rather than inventing
+    redistribution terms, and with no DOI rather than a placeholder.
+  - [papers/validate_a44_pack.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/validate_a44_pack.py)
+    guards the pack: canonical identity tokens, no fabricated licence or DOI, byline
+    agreement, the no-figures claim behind IJL's mandatory alt text, and regression of the
+    two References defects H825 fixed.
 
 ## [1.58.0] - 2026-07-31
 ### Added
