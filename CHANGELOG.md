@@ -7,6 +7,38 @@ dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
 ## [Unreleased]
+### Added
+- **A37 submission pack for *Digital Scholarship in the Humanities* (H2406, 10-08-2026,
+  Fable 5 `claude-fable-5`).** Sibling of the A44 *IJL* pack in 1.59.0 — the second of the five
+  PLUS5 prestige papers to get one. Start at
+  [papers/A37_PACK_README.md](https://github.com/gasyoun/SanskritSpellCheck/blob/master/papers/A37_PACK_README.md):
+  [cover letter](https://github.com/gasyoun/SanskritSpellCheck/blob/master/papers/A37_cover_letter.md)
+  (6 ⟦MG⟧ decisions), a [20-row DSH venue checklist](https://github.com/gasyoun/SanskritSpellCheck/blob/master/papers/A37_submission_checklist.md),
+  a [filled ARR checklist](https://github.com/gasyoun/SanskritSpellCheck/blob/master/papers/A37_checklist.md),
+  and [validate_a37_pack.py](https://github.com/gasyoun/SanskritSpellCheck/blob/master/papers/validate_a37_pack.py).
+  - **Unlike *IJL*, DSH publishes its numbers**, so 18 of 20 rows are verified rather than
+    UNVERIFIED. Only two are genuinely unpublished: the **peer-review anonymity model** and ORCID
+    handling. Anonymity is the one that bites — the manuscript carries a named byline with ORCID
+    plus self-citing repo URLs throughout, so anonymous review would force a second blinded file.
+  - **Four blockers, and length is not among them**: the body is ~3,143 words against a 9,000-word
+    limit. What fails is form — a **structured abstract** (DSH mandates five sub-headings; the
+    current abstract is a 246-word narrative paragraph, *inside* the cap but unstructured), a
+    missing **Funding** section, a missing **AI Disclosure Statement**, and Figure 1 at **200 dpi
+    against a 300 dpi floor** with no `Alt text:` line.
+  - **The AI-disclosure gap is the subtle one.** A37's model-assisted history is documented
+    unusually well — but only inside the draft-status blockquote, which is on the
+    strip-at-submission list, so today's compliance would vanish at the exact moment the paper is
+    submitted. It has to become real end-matter separating model-assisted *drafting* from the
+    **model-free measurement chain** (a deterministic detector; no model touches the numbers).
+  - **B2 (licences) is the one outright `no`** on the ARR checklist — the same gap A44 reports, and
+    the reason [CITATION.cff](https://github.com/gasyoun/SanskritSpellCheck/blob/master/CITATION.cff)
+    can declare no `license:` truthfully. One ruling closes A37's B2, A44's B2, and the CFF key.
+  - **Two self-corrections recorded in the pack README:** the first push targeted the upstream
+    `drdhaval2785` repo (wrong home for author scaffolding; that PR is closed and this is the
+    re-land on the fork), and the abstract was first reported as 251 words — the count had
+    included two heading lines. The new validator caught the latter on its first run.
+  - Manuscript **unedited**: no number, claim, citation, or section changed. A37 stays **4/5** —
+    the author read-through is the gate.
 
 ## [1.60.0] - 2026-08-10
 ### Fixed
