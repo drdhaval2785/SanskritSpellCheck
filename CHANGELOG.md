@@ -8,6 +8,40 @@ ready for a dated entry.
 
 ## [Unreleased]
 
+## [1.60.0] - 2026-08-10
+### Fixed
+- **The four UNVERIFIED A44 venue requirements are now resolved from the gated IJL
+  Author Pack — and three are worse than v1.59.0 could assume (H2407 follow-up,
+  Fable 5 `claude-fable-5`, [PR #6](https://github.com/gasyoun/SanskritSpellCheck/pull/6)).**
+  `IJL_Author_Pack.zip` (`IJL Stylesheet 2024.docx` + `IJL Main Document.dotx` +
+  `IJL Title Page.docx`) is where every journal-specific number lives; none of it is on
+  OUP's public instructions page.
+  - **Abstract cap is 150 words, not the 250 inferred from OUP-wide humanities norms.**
+    A44's abstract is 329 words — 2.2× over — so this is a rewrite, not a trim, and it
+    must also become one paragraph in impersonal register.
+  - **Review is double-blind**, which the public page never states: *"remove any
+    self-identifying information … to ensure anonymity."* Submission is **two files**
+    (Title Page + anonymized main file). A44 fails three ways — frontmatter
+    author/ORCID/email, ~40 in-text `drdhaval2785`/`gasyoun` links that identify the
+    author as surely as a byline, and draft notes naming internal handoff IDs. The
+    stylesheet also forbids the obvious workaround: do *not* replace names with "Author".
+    Now the top-ranked task, and it creates a real tension — the paper's credibility rests
+    on artifacts whose links are exactly what anonymization removes (⟦MG⟧ decision #5).
+  - **Article band is 4,000–8,000 words including appendices** (Supplementary Online
+    Material is unlimited). Measured **5,889** in that scope — passes, with ~2,100 words of
+    headroom, so abstract cuts can move into §1. The band has a floor, so shortening the
+    paper is not a free move.
+  - **Keywords** format is now exact (below the Abstract, `Keywords: `, semicolons), but the
+    controlled vocabulary is only visible inside ScholarOne, so the local line is provisional.
+  - Nine further requirements the public page never mentioned: British English, endnotes not
+    footnotes, table captions above / figure captions below, italics-for-forms +
+    bold-for-headwords, gloss quoting, number style, £350 per print-colour figure,
+    commissioned-only book reviews, and **all editor contact inside ScholarOne** — so the
+    cover letter is pasted, not emailed (corrected, along with its word count).
+  - The selftest now guards the real caps so a later edit cannot restore the wrong ones, and
+    asserts no requirement row is left marked ❓. Refetch tooling lives in Uprava
+    ([PR #1766](https://github.com/gasyoun/Uprava/pull/1766)).
+
 ## [1.59.0] - 2026-08-10
 ### Added
 - **A44 submission pack for the *International Journal of Lexicography* (H2407,
