@@ -2,7 +2,15 @@
 
 _Created: 10-08-2026 · Last updated: 10-08-2026_
 
-*(Skeleton, drafted under [H2407](https://github.com/gasyoun/Uprava/blob/main/handoffs/H2407-Fable_SanskritSpellCheck_a44-plus5-camera-ready-pack_07.08.26.md). Every ⟦MG⟧ marker is a human decision, not a pending lookup.)*
+*(Skeleton, drafted under [H2407](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H2407-Fable_SanskritSpellCheck_a44-plus5-camera-ready-pack_07.08.26.md). Every ⟦MG⟧ marker is a human decision, not a pending lookup.)*
+
+> **Delivery route (from the Author Pack stylesheet, read 10-08-2026): paste this into
+> ScholarOne, do not email it.** The stylesheet requires that authors "keep all interaction
+> with the Editors within the ScholarOne platform" ([mc.manuscriptcentral.com/ijlex](https://mc.manuscriptcentral.com/ijlex)),
+> which needs an account created once and reused for later submissions. The letter accompanies
+> a **two-file** submission — a separate Title Page carrying the author identity, and an
+> **anonymized** main file — because *IJL* review is **double-blind**. This letter is the only
+> place in the submission where the author is named to the editor.
 
 ---
 
@@ -44,12 +52,14 @@ the Limitations rather than papered over. Third, as **editorial practice**: the 
 edits its sources — confirmed corrections are reported to the separate Cologne CORRECTIONS
 workflow — so the paper doubles as a description of a non-destructive correction discipline.
 
-The article runs to approximately **6,500 words** including apparatus, with 15 references in
+The article runs to approximately **5,900 words** in the journal's counting scope (text plus
+appendix, excluding the reference list), within the 4,000–8,000 band, with 15 references in
 APA (7th ed.) style. All underlying artifacts — the per-dictionary triage queues, the
 re-verification table, the deduplicated suppression file, and the evaluation harness that
-reproduces every headline figure — are openly available in the project repository and are
-listed in the Data and reproducibility section; they can accompany the article as supplements
-or be cited as datasets, as the editors prefer.
+reproduces every headline figure — are openly available and are listed in the Data and
+reproducibility section; they can accompany the article as supplements or be cited as
+datasets, as the editors prefer. In the anonymized main file these are referred to without
+identifying the repository owner.
 
 The work is original, has not been published elsewhere, and is not under consideration by
 another journal. I have no competing interests to declare. ⟦MG⟧ funding statement: the
@@ -73,8 +83,9 @@ gasyoun@ya.ru · ORCID: [0000-0003-4513-884X](https://orcid.org/0000-0003-4513-8
 | # | Decision | Why it is a human's |
 |---|---|---|
 | 1 | **Funding statement wording** — *IJL* requires funding sources named in the manuscript; "no external funding" is presumed but not confirmed. | A factual claim about the author's funding. |
-| 2 | **Supplement vs. dataset citation** — offer the artifacts as supplementary files, or cite them as `[dataset]` entries with a DOI (which requires minting one, e.g. Zenodo). | Changes the References list and commits to a DOI. |
-| 3 | **Article-type framing** — submitted as a full research article; the negative-result spine could also suit a shorter format. | Editorial positioning. |
-| 4 | **Read-through for register** — the standing gate from [SIGNOFF_A44_author_pass.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/SIGNOFF_A44_author_pass.md), still open. | The author's public voice. |
+| 2 | **Supplement vs. dataset citation** — offer the artifacts as supplementary files, or cite them as `[dataset]` entries with a DOI (which requires minting one, e.g. Zenodo). Note the stylesheet's incentive: Supplementary Online Material carries **no word limit**, so heavy apparatus can move there. | Changes the References list and commits to a DOI. |
+| 3 | **Article-type framing** — submitted as a full research article. The 4,000–8,000 band has a *floor*, so a "shorter format" is not freely available; book reviews are commissioned separately and are not this route. | Editorial positioning. |
+| 4 | **Read-through for register** — the standing gate from [SIGNOFF_A44_author_pass.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/SIGNOFF_A44_author_pass.md), still open, now also covering the ≤150-word abstract rewrite in impersonal register. | The author's public voice. |
+| 5 | **How far to anonymize the reproducibility trail** — double-blind review requires removing ~40 self-identifying repository links, but the paper's credibility rests on those artifacts being checkable. Anonymized-repo mirror, supplementary files, or accept reduced verifiability during review? | Trades anonymity compliance against evidential strength; reviewers may read it either way. |
 
 _Dr. Mārcis Gasūns_

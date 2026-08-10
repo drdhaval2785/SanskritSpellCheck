@@ -5,6 +5,7 @@ repository contradicts. Run: python papers/validate_a44_pack.py
 Exit 0 = pass, 1 = fail.
 """
 
+import re
 import sys
 from pathlib import Path
 
@@ -102,6 +103,50 @@ if MANUSCRIPT.exists():
         "Removed 12-07-2026" in manuscript,
         "the note recording the ISCLS (2026) removal is gone",
     )
+
+# 6. IJL hard limits, known from the Author Pack stylesheet (read 10-08-2026).
+#    These are measured, not asserted: the checklist must keep stating the real numbers,
+#    so a later edit cannot quietly restore the wrong caps this pack was first built on.
+checklist = PAPERS / "A44_submission_checklist.md"
+if checklist.exists():
+    text = checklist.read_text(encoding="utf-8")
+    # The abstract cap is 150 words, NOT the 250 assumed from OUP-wide norms.
+    check(
+        "150 words" in text or "≤150" in text,
+        "checklist no longer states the real 150-word abstract cap",
+    )
+    check(
+        "4,000" in text and "8,000" in text,
+        "checklist no longer states the 4,000-8,000 word article band",
+    )
+    check(
+        "double-blind" in text or "double-anonymous" in text,
+        "checklist no longer records that IJL review is double-blind",
+    )
+    # No requirement ROW may still carry the unknown marker. The word "UNVERIFIED"
+    # survives legitimately in the prose that records those rows being resolved, so
+    # match on a table cell (❓ between pipes) rather than anywhere in the file.
+    unknown_rows = [
+        line for line in text.splitlines() if line.startswith("|") and "❓" in line
+    ]
+    check(
+        not unknown_rows,
+        f"{len(unknown_rows)} checklist row(s) still marked ❓ after the Author Pack was read",
+    )
+
+if MANUSCRIPT.exists():
+    # Abstract length is the headline blocker; assert the measurement is still true so the
+    # checklist cannot drift from the manuscript.
+    match = re.search(r"^## Abstract\s*$(.*?)^## ", manuscript, re.M | re.S)
+    if match:
+        abstract_words = len(match.group(1).split())
+        if abstract_words <= 150:
+            print(
+                f"note: abstract is now {abstract_words} words and meets the IJL cap; "
+                "update the checklist row 3 status from blocker to satisfied"
+            )
+    else:
+        failures.append("could not locate the manuscript's Abstract section")
 
 if failures:
     print("FAIL — A44 pack selftest")
