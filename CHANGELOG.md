@@ -7,6 +7,34 @@ dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
 ## [Unreleased]
+### Added
+- **A37 submission pack for *Digital Scholarship in the Humanities* (H2406, 10-08-2026,
+  Fable 5 `claude-fable-5`).** Byline confirmed, venue checklist, ARR checklist, cover-letter
+  skeleton for the first of the five PLUS5 prestige papers to get one:
+  [papers/A37_PACK_README.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/A37_PACK_README.md)
+  (start here), [A37_cover_letter.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/A37_cover_letter.md),
+  [A37_submission_checklist.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/A37_submission_checklist.md),
+  [A37_checklist.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/A37_checklist.md).
+  - **Four blockers found, none of them length.** The body is ~3,143 words against a 9,000-word
+    limit, so the paper is comfortably inside — what actually fails is *form*: DSH mandates a
+    **structured abstract** (five sub-headings, 250 words; current abstract is one 251-word
+    narrative paragraph), a **Funding** section, and an **AI Disclosure Statement**, none of which
+    exist; and Figure 1 (`ortho_drift/drift_composition.png`) is **200 dpi against a 300 dpi
+    floor** with no `Alt text:` line.
+  - **The AI-disclosure gap is the interesting one.** A37's model-assisted history is documented
+    unusually well — but only inside the draft-status blockquote, which is on the
+    strip-at-submission list. Today's compliance therefore disappears at the exact moment the
+    paper is submitted; the disclosure has to be rewritten as a real end-matter statement that
+    separates model-assisted *drafting* from the model-free *measurement* chain.
+  - **B2 (licences) is the one outright `no`** on the ARR checklist, and it is the same gap A44
+    reports: no licence for the created `ortho_drift/` tables and detector offered for reuse, and
+    none declarable in `CITATION.cff`. One ruling closes all three.
+  - Unresolvable from the public page and flagged for pre-upload resolution: **whether DSH review
+    is anonymous** — the manuscript carries a named byline plus ORCID and cites the author's own
+    repositories throughout, so an anonymous model would require a blinded copy.
+  - The manuscript itself was **not edited** — no number, claim, citation, or section changed.
+    A37 stays at **4/5**; the open gate is the author read-through, which is human and
+    non-fabricable.
 
 ## [1.61.0] - 2026-08-04
 ### Added
