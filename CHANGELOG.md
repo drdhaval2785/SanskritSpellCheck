@@ -7,6 +7,8 @@ dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
 ## [Unreleased]
+
+## [1.61.0] - 2026-08-10
 ### Added
 - **A37 submission pack for *Digital Scholarship in the Humanities* (H2406, 10-08-2026,
   Fable 5 `claude-fable-5`).** Sibling of the A44 *IJL* pack in 1.59.0 — the second of the five
