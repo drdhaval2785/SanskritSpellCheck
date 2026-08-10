@@ -7,6 +7,8 @@ dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
 ## [Unreleased]
+
+## [1.59.0] - 2026-08-10
 ### Added
 - **A44 submission pack for the *International Journal of Lexicography* (H2407,
   10-08-2026, Fable 5 `claude-fable-5`).** The paper sat at 4/5 with no packaging
