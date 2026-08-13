@@ -146,6 +146,137 @@ ready for a dated entry.
   trailing `:n` / unknown flags** so queue files cannot silently emit drafts
   for unverified rows (H454 load-bearing guard).
 
+## [1.62.0] - 2026-08-10
+### Added
+- **A44 submission pack for the *International Journal of Lexicography* (H2407,
+  10-08-2026, Fable 5 `claude-fable-5`).** The paper sat at 4/5 with no packaging
+  artifacts; this adds the four the venue and the internal gate require:
+  [papers/A44_cover_letter.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/A44_cover_letter.md)
+  (IJL-addressed, 4 ⟦MG⟧ decisions isolated in a table),
+  [papers/A44_submission_checklist.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/A44_submission_checklist.md)
+  (16 requirements off the OUP general instructions, fetched 10-08-2026),
+  [papers/A44_checklist.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/A44_checklist.md)
+  (ARR Responsible NLP, A1/A2 both discharged — no blocker in the family that gate
+  exists to catch), and a repo-first
+  [CITATION.cff](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/CITATION.cff).
+  - **One published mandatory requirement is failed and named as a blocker:** *IJL*
+    requires funding sources in the manuscript and A44 has no funding statement.
+  - **Four requirements are recorded as UNVERIFIED, not guessed** — word limit, abstract
+    length, keyword count and the anonymous-review question are absent from OUP's public
+    page and live in the gated Author Pack. Measured against common caps, the ~331-word
+    abstract is the likely casualty and the named byline plus self-citing repo URLs would
+    be disclosure defects under anonymous review.
+  - **B2 is the one outright `no`:** neither the CDSL inputs nor the created do-not-file
+    artifacts carry a licence declaration, and the repo itself declares none — so
+    `CITATION.cff` deliberately ships *without* a `license:` key rather than inventing
+    redistribution terms, and with no DOI rather than a placeholder.
+  - [papers/validate_a44_pack.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/validate_a44_pack.py)
+    guards the pack: canonical identity tokens, no fabricated licence or DOI, byline
+    agreement, the no-figures claim behind IJL's mandatory alt text, and regression of the
+    two References defects H825 fixed.
+
+## [1.63.0] - 2026-08-10
+### Fixed
+- **The four UNVERIFIED A44 venue requirements are now resolved from the gated IJL
+  Author Pack — and three are worse than v1.59.0 could assume (H2407 follow-up,
+  Fable 5 `claude-fable-5`, [PR #6](https://github.com/gasyoun/SanskritSpellCheck/pull/6)).**
+  `IJL_Author_Pack.zip` (`IJL Stylesheet 2024.docx` + `IJL Main Document.dotx` +
+  `IJL Title Page.docx`) is where every journal-specific number lives; none of it is on
+  OUP's public instructions page.
+  - **Abstract cap is 150 words, not the 250 inferred from OUP-wide humanities norms.**
+    A44's abstract is 329 words — 2.2× over — so this is a rewrite, not a trim, and it
+    must also become one paragraph in impersonal register.
+  - **Review is double-blind**, which the public page never states: *"remove any
+    self-identifying information … to ensure anonymity."* Submission is **two files**
+    (Title Page + anonymized main file). A44 fails three ways — frontmatter
+    author/ORCID/email, ~40 in-text `drdhaval2785`/`gasyoun` links that identify the
+    author as surely as a byline, and draft notes naming internal handoff IDs. The
+    stylesheet also forbids the obvious workaround: do *not* replace names with "Author".
+    Now the top-ranked task, and it creates a real tension — the paper's credibility rests
+    on artifacts whose links are exactly what anonymization removes (⟦MG⟧ decision #5).
+  - **Article band is 4,000–8,000 words including appendices** (Supplementary Online
+    Material is unlimited). Measured **5,889** in that scope — passes, with ~2,100 words of
+    headroom, so abstract cuts can move into §1. The band has a floor, so shortening the
+    paper is not a free move.
+  - **Keywords** format is now exact (below the Abstract, `Keywords: `, semicolons), but the
+    controlled vocabulary is only visible inside ScholarOne, so the local line is provisional.
+  - Nine further requirements the public page never mentioned: British English, endnotes not
+    footnotes, table captions above / figure captions below, italics-for-forms +
+    bold-for-headwords, gloss quoting, number style, £350 per print-colour figure,
+    commissioned-only book reviews, and **all editor contact inside ScholarOne** — so the
+    cover letter is pasted, not emailed (corrected, along with its word count).
+  - The selftest now guards the real caps so a later edit cannot restore the wrong ones, and
+    asserts no requirement row is left marked ❓. Refetch tooling lives in Uprava
+    ([PR #1766](https://github.com/gasyoun/Uprava/pull/1766)).
+
+## [1.64.0] - 2026-08-10
+### Added
+- **A37 submission pack for *Digital Scholarship in the Humanities* (H2406, 10-08-2026,
+  Fable 5 `claude-fable-5`).** Sibling of the A44 *IJL* pack in 1.59.0 — the second of the five
+  PLUS5 prestige papers to get one. Start at
+  [papers/A37_PACK_README.md](https://github.com/gasyoun/SanskritSpellCheck/blob/master/papers/A37_PACK_README.md):
+  [cover letter](https://github.com/gasyoun/SanskritSpellCheck/blob/master/papers/A37_cover_letter.md)
+  (6 ⟦MG⟧ decisions), a [20-row DSH venue checklist](https://github.com/gasyoun/SanskritSpellCheck/blob/master/papers/A37_submission_checklist.md),
+  a [filled ARR checklist](https://github.com/gasyoun/SanskritSpellCheck/blob/master/papers/A37_checklist.md),
+  and [validate_a37_pack.py](https://github.com/gasyoun/SanskritSpellCheck/blob/master/papers/validate_a37_pack.py).
+  - **Unlike *IJL*, DSH publishes its numbers**, so 18 of 20 rows are verified rather than
+    UNVERIFIED. Only two are genuinely unpublished: the **peer-review anonymity model** and ORCID
+    handling. Anonymity is the one that bites — the manuscript carries a named byline with ORCID
+    plus self-citing repo URLs throughout, so anonymous review would force a second blinded file.
+  - **Four blockers, and length is not among them**: the body is ~3,143 words against a 9,000-word
+    limit. What fails is form — a **structured abstract** (DSH mandates five sub-headings; the
+    current abstract is a 246-word narrative paragraph, *inside* the cap but unstructured), a
+    missing **Funding** section, a missing **AI Disclosure Statement**, and Figure 1 at **200 dpi
+    against a 300 dpi floor** with no `Alt text:` line.
+  - **The AI-disclosure gap is the subtle one.** A37's model-assisted history is documented
+    unusually well — but only inside the draft-status blockquote, which is on the
+    strip-at-submission list, so today's compliance would vanish at the exact moment the paper is
+    submitted. It has to become real end-matter separating model-assisted *drafting* from the
+    **model-free measurement chain** (a deterministic detector; no model touches the numbers).
+  - **B2 (licences) is the one outright `no`** on the ARR checklist — the same gap A44 reports, and
+    the reason [CITATION.cff](https://github.com/gasyoun/SanskritSpellCheck/blob/master/CITATION.cff)
+    can declare no `license:` truthfully. One ruling closes A37's B2, A44's B2, and the CFF key.
+  - **Two self-corrections recorded in the pack README:** the first push targeted the upstream
+    `drdhaval2785` repo (wrong home for author scaffolding; that PR is closed and this is the
+    re-land on the fork), and the abstract was first reported as 251 words — the count had
+    included two heading lines. The new validator caught the latter on its first run.
+  - Manuscript **unedited**: no number, claim, citation, or section changed. A37 stays **4/5** —
+    the author read-through is the gate.
+
+## [1.60.0] - 2026-08-10
+### Fixed
+- **The four UNVERIFIED A44 venue requirements are now resolved from the gated IJL
+  Author Pack — and three are worse than v1.59.0 could assume (H2407 follow-up,
+  Fable 5 `claude-fable-5`, [PR #6](https://github.com/gasyoun/SanskritSpellCheck/pull/6)).**
+  `IJL_Author_Pack.zip` (`IJL Stylesheet 2024.docx` + `IJL Main Document.dotx` +
+  `IJL Title Page.docx`) is where every journal-specific number lives; none of it is on
+  OUP's public instructions page.
+  - **Abstract cap is 150 words, not the 250 inferred from OUP-wide humanities norms.**
+    A44's abstract is 329 words — 2.2× over — so this is a rewrite, not a trim, and it
+    must also become one paragraph in impersonal register.
+  - **Review is double-blind**, which the public page never states: *"remove any
+    self-identifying information … to ensure anonymity."* Submission is **two files**
+    (Title Page + anonymized main file). A44 fails three ways — frontmatter
+    author/ORCID/email, ~40 in-text `drdhaval2785`/`gasyoun` links that identify the
+    author as surely as a byline, and draft notes naming internal handoff IDs. The
+    stylesheet also forbids the obvious workaround: do *not* replace names with "Author".
+    Now the top-ranked task, and it creates a real tension — the paper's credibility rests
+    on artifacts whose links are exactly what anonymization removes (⟦MG⟧ decision #5).
+  - **Article band is 4,000–8,000 words including appendices** (Supplementary Online
+    Material is unlimited). Measured **5,889** in that scope — passes, with ~2,100 words of
+    headroom, so abstract cuts can move into §1. The band has a floor, so shortening the
+    paper is not a free move.
+  - **Keywords** format is now exact (below the Abstract, `Keywords: `, semicolons), but the
+    controlled vocabulary is only visible inside ScholarOne, so the local line is provisional.
+  - Nine further requirements the public page never mentioned: British English, endnotes not
+    footnotes, table captions above / figure captions below, italics-for-forms +
+    bold-for-headwords, gloss quoting, number style, £350 per print-colour figure,
+    commissioned-only book reviews, and **all editor contact inside ScholarOne** — so the
+    cover letter is pasted, not emailed (corrected, along with its word count).
+  - The selftest now guards the real caps so a later edit cannot restore the wrong ones, and
+    asserts no requirement row is left marked ❓. Refetch tooling lives in Uprava
+    ([PR #1766](https://github.com/gasyoun/Uprava/pull/1766)).
+
 ## [1.58.0] - 2026-07-31
 ### Added
 - **SHS entry-body deterministic detector pilot (H1535, roadmap Q3 item 6).**

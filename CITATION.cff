@@ -1,0 +1,46 @@
+cff-version: 1.2.0
+message: "If you use this software or its derived correction catalogues, please cite it as below."
+title: "SanskritSpellCheck: body-grounded spelling triage for the Cologne Digital Sanskrit Dictionaries"
+abstract: >-
+  Detectors and a staged triage pipeline for spelling anomalies in digitised Sanskrit
+  dictionaries. Headword-level anomaly detection collapses to near-zero precision on
+  mature digitised sources; this project confirms candidates against the entry body
+  instead, and publishes the resulting do-not-file catalogue that prevents damaging
+  bulk corrections across the Cologne corpus.
+type: software
+authors:
+  - family-names: Gasūns
+    given-names: Mārcis
+    orcid: "https://orcid.org/0000-0003-4513-884X"
+    email: gasyoun@ya.ru
+    affiliation: "Independent scholar"
+repository-code: "https://github.com/drdhaval2785/SanskritSpellCheck"
+# No `license:` key: the project declares no software license (see README "License
+# status"), so no SPDX identifier can be stated here truthfully. Adding one would
+# invent redistribution terms. This is the same gap as checklist item B2 in
+# papers/A44_checklist.md — resolve both together.
+keywords:
+  - Sanskrit
+  - lexicography
+  - digital dictionaries
+  - spelling error detection
+  - grammatical error detection
+  - Cologne Digital Sanskrit Dictionaries
+preferred-citation:
+  type: article
+  title: >-
+    The Dictionary Body as Ground Truth: Body-Grounded LLM Triage and the
+    Precision-Collapse Result
+  authors:
+    - family-names: Gasūns
+      given-names: Mārcis
+      orcid: "https://orcid.org/0000-0003-4513-884X"
+      email: gasyoun@ya.ru
+      affiliation: "Independent scholar"
+  journal: "International Journal of Lexicography"
+  year: 2026
+  notes: >-
+    Manuscript at readiness 4/5, not yet submitted (target venue International Journal
+    of Lexicography; ISCLS demo as secondary). No DOI is recorded because none has been
+    minted — a placeholder DOI is never supplied. Update year, volume, pages and DOI on
+    acceptance.

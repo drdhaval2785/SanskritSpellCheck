@@ -1,0 +1,172 @@
+"""Selftest for the A44 submission pack (H2407).
+
+Verifies the pack is internally consistent and that no pack file makes a claim the
+repository contradicts. Run: python papers/validate_a44_pack.py
+Exit 0 = pass, 1 = fail.
+"""
+
+import re
+import subprocess
+import sys
+from pathlib import Path
+
+sys.stdout.reconfigure(encoding="utf-8")
+sys.stderr.reconfigure(encoding="utf-8")
+
+ROOT = Path(__file__).resolve().parent.parent
+PAPERS = ROOT / "papers"
+
+PACK = [
+    PAPERS / "A44_cover_letter.md",
+    PAPERS / "A44_submission_checklist.md",
+    PAPERS / "A44_checklist.md",
+    ROOT / "CITATION.cff",
+]
+MANUSCRIPT = PAPERS / "A44_body_grounded_triage_paper.md"
+
+failures: list[str] = []
+
+
+def check(condition: bool, message: str) -> None:
+    if not condition:
+        failures.append(message)
+
+
+# 1. Every pack file exists and is non-trivial.
+for path in PACK:
+    check(path.exists(), f"missing pack file: {path.relative_to(ROOT)}")
+    if path.exists():
+        check(
+            len(path.read_text(encoding="utf-8")) > 500,
+            f"suspiciously short: {path.relative_to(ROOT)}",
+        )
+
+# 2. CITATION.cff parses and carries the canonical identity from Uprava/AUTHOR.md.
+cff_path = ROOT / "CITATION.cff"
+if cff_path.exists():
+    cff = cff_path.read_text(encoding="utf-8")
+    for token in ("0000-0003-4513-884X", "gasyoun@ya.ru", "Gasūns", "Mārcis"):
+        check(token in cff, f"CITATION.cff missing canonical identity token: {token}")
+    # The repo declares no license (README "License status") -- never invent one.
+    check(
+        "\nlicense:" not in cff,
+        "CITATION.cff declares a license, but the repo states it has none",
+    )
+    # Never ship a fabricated DOI.
+    check("doi:" not in cff.lower(), "CITATION.cff carries a DOI; none has been minted")
+    try:
+        import yaml
+
+        yaml.safe_load(cff)
+    except ImportError:
+        print("note: PyYAML absent, skipped YAML parse")
+    except Exception as exc:  # noqa: BLE001
+        failures.append(f"CITATION.cff is not valid YAML: {exc}")
+
+# 3. Byline consistency: the manuscript frontmatter and the cover letter agree.
+if MANUSCRIPT.exists():
+    manuscript = MANUSCRIPT.read_text(encoding="utf-8")
+    check("0000-0003-4513-884X" in manuscript, "manuscript lost its ORCID")
+    letter = (PAPERS / "A44_cover_letter.md").read_text(encoding="utf-8")
+    check("0000-0003-4513-884X" in letter, "cover letter lost its ORCID")
+    check(
+        "International Journal of Lexicography" in letter,
+        "cover letter does not name the target venue",
+    )
+
+# 4. Figures claimed absent in the checklist must really be absent (alt-text rule).
+if MANUSCRIPT.exists():
+    check(
+        "![" not in manuscript,
+        "manuscript now contains an image; IJL alt text becomes mandatory "
+        "(checklist item 7 says 'no figures')",
+    )
+
+# 5. The checklist must not silently re-open the two References defects fixed in H825.
+if MANUSCRIPT.exists():
+    check(
+        "Artstein" in manuscript,
+        "Artstein & Poesio reference vanished (H825 fixed this; do not regress)",
+    )
+    # The string survives in the audit notes that DOCUMENT the removal, so match on a
+    # live References bullet rather than anywhere in the file.
+    live_iscls_2026 = [
+        line
+        for line in manuscript.splitlines()
+        if line.lstrip().startswith("- ISCLS (2026)")
+    ]
+    check(
+        not live_iscls_2026,
+        "the unverifiable ISCLS (2026) citation is back as a live reference; "
+        "H825 removed it",
+    )
+    check(
+        "Removed 12-07-2026" in manuscript,
+        "the note recording the ISCLS (2026) removal is gone",
+    )
+
+# 6. IJL hard limits, known from the Author Pack stylesheet (read 10-08-2026).
+#    These are measured, not asserted: the checklist must keep stating the real numbers,
+#    so a later edit cannot quietly restore the wrong caps this pack was first built on.
+checklist = PAPERS / "A44_submission_checklist.md"
+if checklist.exists():
+    text = checklist.read_text(encoding="utf-8")
+    # The abstract cap is 150 words, NOT the 250 assumed from OUP-wide norms.
+    check(
+        "150 words" in text or "≤150" in text,
+        "checklist no longer states the real 150-word abstract cap",
+    )
+    check(
+        "4,000" in text and "8,000" in text,
+        "checklist no longer states the 4,000-8,000 word article band",
+    )
+    check(
+        "double-blind" in text or "double-anonymous" in text,
+        "checklist no longer records that IJL review is double-blind",
+    )
+    # No requirement ROW may still carry the unknown marker. The word "UNVERIFIED"
+    # survives legitimately in the prose that records those rows being resolved, so
+    # match on a table cell (❓ between pipes) rather than anywhere in the file.
+    unknown_rows = [
+        line for line in text.splitlines() if line.startswith("|") and "❓" in line
+    ]
+    check(
+        not unknown_rows,
+        f"{len(unknown_rows)} checklist row(s) still marked ❓ after the Author Pack was read",
+    )
+
+if MANUSCRIPT.exists():
+    # Abstract length is the headline blocker; assert the measurement is still true so the
+    # checklist cannot drift from the manuscript.
+    match = re.search(r"^## Abstract\s*$(.*?)^## ", manuscript, re.M | re.S)
+    if match:
+        abstract_words = len(match.group(1).split())
+        if abstract_words <= 150:
+            print(
+                f"note: abstract is now {abstract_words} words and meets the IJL cap; "
+                "update the checklist row 3 status from blocker to satisfied"
+            )
+    else:
+        failures.append("could not locate the manuscript's Abstract section")
+
+# Anonymized submission files must stay current with the source. The builder script's --check
+# mode verifies this deterministically, so delegate to it rather than duplicating its logic.
+anon_check = subprocess.run(
+    [sys.executable, "papers/build_a44_anonymous.py", "--check"],
+    capture_output=True,
+    text=True,
+    encoding="utf-8",
+)
+if anon_check.returncode != 0:
+    failures.append("anonymized submission files are stale or non-anonymous — see above")
+    print(anon_check.stdout, end="")
+    print(anon_check.stderr, end="", file=sys.stderr)
+
+if failures:
+    print("FAIL — A44 pack selftest")
+    for item in failures:
+        print(f"  - {item}")
+    sys.exit(1)
+
+print(f"PASS — A44 pack selftest ({len(PACK)} pack files verified)")
+sys.exit(0)
