@@ -7,6 +7,8 @@ dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
 ## [Unreleased]
+### Added
+- **A44 double-blind submission set for *IJL* — the anonymised main file, its title page, the supplementary index, and the generator that builds them (Opus 5 `claude-opus-5`, 14-08-2026).** Completes the A44 pack shipped in 1.59.0, which carried the cover letter and checklists but not the anonymised body IJL's double-blind review actually requires. [papers/build_a44_anonymous.py](https://github.com/gasyoun/SanskritSpellCheck/blob/master/papers/build_a44_anonymous.py) derives [A44_ijl_main_anonymous.md](https://github.com/gasyoun/SanskritSpellCheck/blob/master/papers/A44_ijl_main_anonymous.md) from the signed source paper, so the anonymised copy is **generated, never hand-maintained** — the failure mode being a de-anonymising edit that survives because two files drifted apart. Author identity lives only in the separate [A44_ijl_title_page.md](https://github.com/gasyoun/SanskritSpellCheck/blob/master/papers/A44_ijl_title_page.md), per IJL Stylesheet 2024 §1.1. Verified rather than asserted: `papers/validate_a44_pack.py` PASS (4 pack files), and a direct grep of the main file for the author's name, ORCID handle and e-mail returns **0 hits**. These four files existed only in an unpushed local commit until now.
 
 ## [1.61.0] - 2026-08-10
 ### Added
