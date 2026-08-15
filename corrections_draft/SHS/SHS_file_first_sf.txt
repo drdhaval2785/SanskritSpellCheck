@@ -43,3 +43,38 @@ SHS:zuh:suh:n
 ;SHS:SreRiBUta:SreRIBUta:n
 ; REVIEWED-OUT (variant): 'A lexicon' (Sabdakoza=Sabdakoza); koSa/koza (kosa/kosa) are both standard attested spellings of the word for treasury/l
 ;SHS:Sabdakoza:SabdakoSa:n
+; --- net-new from the union-across-runs passes (D7/H1471 + D9/H1709), verified 04-08-2026. Verified: Sonnet 5 (claude-sonnet-5) check vs the entry text,
+;     Fable 5 (claude-fable-5) adjudication of flags. Evidence per row in
+;     file_first_verified.tsv; EDITORIAL rows deliberately excluded (they are
+;     headword collisions, not plain corrections). All ":n" — vote the scan sheet.
+SHS:BUjajyA:BujajyA:n
+SHS:BadrapIwa:BadrapIWa:n
+SHS:BrAtfbala:BrAtfvala:n
+SHS:DubakA:DuvakA:n
+SHS:aByupetyaSuSrUzA:aByupetyASuSrUzA:n
+SHS:dibA:divA:n
+SHS:dudyuzu:dudyUzu:n
+SHS:dvindriyagrAhya:dvIndriyagrAhya:n
+SHS:gaNgAdbAra:gaNgAdvAra:n
+SHS:jamBari:jamBAri:n
+SHS:jvAlajihva:jvAlAjihva:n
+SHS:krOYcAdAna:krOYcAdana:n
+SHS:kzaRadAcAra:kzaRadAcara:n
+SHS:metrAvaruRa:mEtrAvaruRa:n
+SHS:muzwimuzwi:muzwImuzwi:n
+SHS:nErASyA:nErASya:n
+SHS:navagrahA:navagraha:n
+SHS:pAripAWya:pAripAwya:n
+SHS:padminIballaBa:padminIvallaBa:n
+SHS:parRarUh:parRaruh:n
+SHS:parikzaRa:parIkzaRa:n
+SHS:parinala:parimala:n
+SHS:paripadIn:paripadin:n
+SHS:prARinizu:prARiRizu:n
+SHS:pracayaRa:pracayana:n
+SHS:pranipAta:praRipAta:n
+SHS:pravyahAra:pravyAhAra:n
+SHS:saMyuyuzu:saMyuyUzu:n
+SHS:tEmana:temana:n
+SHS:vAgvanDana:vAgbanDana:n
+SHS:virukzaRa:virUkzaRa:n

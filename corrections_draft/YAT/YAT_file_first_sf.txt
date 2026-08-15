@@ -109,3 +109,25 @@ YAT:prAkPAlguRa:prAkPAlguna:n
 ;YAT:puMbfza:puMvfza:n
 ; REVIEWED-OUT (other): b/v - Bengali-orthography; needs scan. vala->bala (force), body matches key.
 ;YAT:suhfdvala:suhfdbala:n
+; --- net-new from the union-across-runs passes (D7/H1471 + D9/H1709), verified 04-08-2026. Verified: Sonnet 5 (claude-sonnet-5) check vs the entry text,
+;     Fable 5 (claude-fable-5) adjudication of flags. Evidence per row in
+;     file_first_verified.tsv; EDITORIAL rows deliberately excluded (they are
+;     headword collisions, not plain corrections). All ":n" — vote the scan sheet.
+YAT:BrAtfbala:BrAtfvala:n
+YAT:Gftabara:Gftavara:n
+YAT:aBizizenayizu:aBizizeRayizu:n
+YAT:advEzwf:advezwf:n
+YAT:apekzabudDi:apekzAbudDi:n
+YAT:darSanapratiBAvya:darSanaprAtiBAvya:n
+YAT:dfQavanDinI:dfQabanDinI:n
+YAT:dinavala:dinabala:n
+YAT:gfhavali:gfhabali:n
+YAT:kArAyamARa:kArayamARa:n
+YAT:kaMsyanIla:kAMsyanIla:n
+YAT:kaRwAkila:kaRwakila:n
+YAT:kawuraba:kawurava:n
+YAT:padmavanDu:padmabanDu:n
+YAT:reRuruzita:reRurUzita:n
+YAT:sahaBAbin:sahaBAvin:n
+YAT:spfhanIya:spfhaRIya:n
+YAT:vAbadUka:vAvadUka:n

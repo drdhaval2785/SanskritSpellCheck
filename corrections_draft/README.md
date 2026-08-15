@@ -39,6 +39,38 @@ real OCR/keying errors, each confirmed by the entry's own etymology/inflection.
 > single-run agreement is only **35%**. In union: **SHS 37→68, YAT 27→61, ACC 22→27**. The union
 > table is [union_d7.tsv](union_d7.tsv); the measurement is
 > [HYPOTHESES.md H9](../docs/HYPOTHESES.md). Union across runs, never re-run and overwrite.
+>
+> **Scaled to the other eight fileable dicts** (ruling **D9**, 04-08-2026 — funded on the
+> *contamination* argument: a typo left uncorrected inflates its own attestation in the cross-dict
+> union headword list and so helps suppress its own detection). **+8 net-new over the committed 36
+> (+22%)**, agreement **41%**, all 8 hand-verified: **PWG 12→16, WIL 3→5, SKD 3→4, GST 1→2**;
+> MCI/MW/PW/VCP gained nothing, and MW/PW/VCP each returned a run-2 **zero** against a non-zero
+> committed count. Union table:
+> [union_d9.tsv](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/union_d9.tsv);
+> scope call, method and run hygiene:
+> [UNION_ACROSS_RUNS_D9_SCALEUP_SCOPE_AND_RESULTS.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/UNION_ACROSS_RUNS_D9_SCALEUP_SCOPE_AND_RESULTS.md).
+> **The size of the union gain tracks digitisation quality** — +81% on the poorly-digitised three,
+> +22% on the mature eight — so do not quote D7's +81% as a general expectation. Combined over both
+> passes: **11 dicts, 122 → 200 fileable (+78, +64%)**.
+>
+> **All 78 net-new rows are now verified and in the human gate (H2274, 04-08-2026).** They were
+> absent from [file_first_verified.tsv](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/file_first_verified.tsv) — the run-1 population — so the
+> scan-verification sheet covered only 109 of 182 fileable rows (~58%). Verified on the July-2026
+> method (Sonnet 5 `claude-sonnet-5` check against the entry text; Fable 5 `claude-fable-5`
+> adjudication of flags, ruling D1): **47 PASS · 26 SCAN-FIRST · 5 EDITORIAL**, no DNF, no DROP.
+> The 5 EDITORIAL are all ACC collisions where the corrected spelling already exists as its own
+> `<k1>` — filing them as plain corrections would create duplicate headwords. **Sheet: 109 → 182
+> rows**, regenerate with `python detectors/gen_scanverify_sheet.py`.
+>
+> **The 22 zero-fileable dicts do NOT need a second run (H2281, 04-08-2026).** Probe on the two
+> highest-volume ones returned **0 fileable each**, matching their committed zeros: BHS 551
+> candidates re-judged (15 classified TYPO, all refuted at source), SCH 644 (8 classified TYPO,
+> all refuted) — 1,195 candidates, **0 confirmed**. The zeros are **structural, not stochastic**:
+> **BHS** already labels its own misprints in its critical apparatus (`[laṭikā, app. misprint for
+> latikA (so Index)]`), so the detector re-finds what Edgerton annotated; **SCH** corroborates the
+> headword in its own body (`girī` a cvi-adverb, `yudda` = *yud+da*), so the suggestion is simply
+> wrong. Neither is a coin-flip a third run might land differently. Refutation evidence:
+> [REFUTED_TYPO_CANDIDATES_PROBE22.tsv](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/REFUTED_TYPO_CANDIDATES_PROBE22.tsv).
 
 ## Status — all 33 dictionaries (by tier-A volume)
 

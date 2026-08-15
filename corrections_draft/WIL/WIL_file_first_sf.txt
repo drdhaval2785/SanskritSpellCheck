@@ -7,3 +7,9 @@ WIL:jAmbabat:jAmbavat:n
 WIL:kaNkalodya:kaNkaloqya:n
 ; REVIEWED-OUT (realword): <lex>r.</lex> 1st cl. (saYcati) 'To go'; genuine root ṣañc, ṣopadeśa root cited with ṣ but conjugates to dental s. Inten
 ;WIL:zaYca:saYca:n
+; --- net-new from the union-across-runs passes (D7/H1471 + D9/H1709), verified 04-08-2026. Verified: Sonnet 5 (claude-sonnet-5) check vs the entry text,
+;     Fable 5 (claude-fable-5) adjudication of flags. Evidence per row in
+;     file_first_verified.tsv; EDITORIAL rows deliberately excluded (they are
+;     headword collisions, not plain corrections). All ":n" — vote the scan sheet.
+WIL:paYcaSErizaka:paYcaSErIzaka:n
+WIL:vapuzmAt:vapuzmat:n

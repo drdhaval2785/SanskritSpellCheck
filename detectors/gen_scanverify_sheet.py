@@ -1,15 +1,27 @@
 """Generate the H454 scan-verification review sheet (interactive HTML).
 
-Items = the 109 fileable rows of corrections_draft/file_first_verified.tsv
-(verdict PASS or SCAN-FIRST), enriched with entry bodies from
-corrections_draft/irr/irr_inputs.tsv and a Cologne scan deep-link per row.
-Output: <repo>/review/sanskritspellcheck-filefirst-scanverify_109rows_review.html
+Items = EVERY fileable row of corrections_draft/file_first_verified.tsv (verdict PASS or
+SCAN-FIRST), enriched with entry bodies from corrections_draft/irr/irr_inputs.tsv and a
+Cologne scan deep-link per row.
+Output: <repo>/review/sanskritspellcheck-filefirst-scanverify_review.html
 (review/ is gitignored -- the sheet is a personal voting artifact, regenerable).
 Votes are consumed by corrections_draft/apply_scanverify_decisions.py.
+
+The row count is DERIVED from the TSV, and both the filename and the headings are
+count-free/interpolated. Until 04-08-2026 this script asserted `len(items) == 109` and
+carried "109rows" in its own output filename -- the run-1 population. That made the sheet
+un-regenerable the moment the fileable population legitimately grew: the union-across-runs
+passes (D7/H1471, D9/H1709) added 73 PASS/SCAN-FIRST rows and the generator simply crashed,
+so the human gate silently kept covering only the original 109 (~58%). A hardcoded expected
+count turns "there is more to review" into "the tool is broken".
 """
+import datetime
 import json
 import os
 import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import triage_util  # noqa: E402
 
 sys.stdout.reconfigure(encoding='utf-8')
 
@@ -17,9 +29,13 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TSV = os.path.join(ROOT, 'corrections_draft', 'file_first_verified.tsv')
 IRR = os.path.join(ROOT, 'corrections_draft', 'irr', 'irr_inputs.tsv')
 OUT_DIR = os.path.join(ROOT, 'review')
-SHEET_NAME = 'sanskritspellcheck-filefirst-scanverify_109rows_review'
+# Count-free by design: the old name embedded "109rows", so a sheet regenerated after the
+# fileable population grew would either lie in its own filename or silently orphan the
+# previous decisions file under a different name.
+SHEET_NAME = 'sanskritspellcheck-filefirst-scanverify_review'
 OUT = os.path.join(OUT_DIR, SHEET_NAME + '.html')
 SCAN_URL = 'http://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=%s&key=%s'
+GENERATED = datetime.date.today().strftime('%d-%m-%Y')
 ORDER = ['SHS', 'YAT', 'ACC', 'PWG', 'MCI', 'MW', 'SKD', 'WIL', 'PW', 'VCP', 'GST']
 
 bodies = {}
@@ -43,6 +59,29 @@ with open(TSV, encoding='utf-8') as f:
                          'verdict': p[3], 'note': p[4] if len(p) > 4 else ''})
 
 rows.sort(key=lambda r: (ORDER.index(r['dict']) if r['dict'] in ORDER else 99))
+
+# Entry bodies: irr_inputs.tsv first, then the dictionary source itself.
+# irr_inputs.tsv was built for the run-1 IRR study, so it covers ONLY those rows -- every row
+# added later (the 73 union-pass rows) had no body and rendered as a bare correction with no
+# entry text to judge it against, which is unvotable. The fallback reads the entry through
+# triage_util.build_entry_index, the same resolver the triage and make_changefiles use, so a
+# dict staged in external_src/ works identically. Indices are built lazily, one per dict.
+_idx_cache = {}
+
+
+def body_for(dictcode, hw):
+    """The entry body for a headword: IRR inputs if present, else read from the source."""
+    cached = bodies.get((dictcode, hw))
+    if cached:
+        return cached
+    if dictcode not in _idx_cache:
+        _idx_cache[dictcode] = triage_util.build_entry_index(triage_util.csl_root(), dictcode)
+    idx = _idx_cache[dictcode]
+    if idx is None:
+        return ''
+    got = idx.bodies(hw)
+    return ' ⟪//⟫ '.join(b for b in got if b) if got else ''
+
 items = []
 for r in rows:
     items.append({
@@ -52,17 +91,27 @@ for r in rows:
         'right': r['right'],
         'verdict': r['verdict'],
         'note': r['note'],
-        'body': bodies.get((r['dict'], r['wrong']), ''),
+        'body': body_for(r['dict'], r['wrong']),
         'scan': SCAN_URL % (r['dict'].lower(), r['wrong']),
     })
 
-assert len(items) == 109, 'expected 109 fileable rows, got %d' % len(items)
+# The row count is DERIVED, never asserted against a literal. It was pinned at 109 (the
+# run-1 population) which meant that every time the fileable population legitimately grew,
+# regenerating the sheet CRASHED instead of covering the new rows -- so the gate silently
+# stayed at its old coverage. The union-across-runs passes (D7/H1471, D9/H1709) added 73
+# PASS/SCAN-FIRST rows and hit exactly that. Guard against an EMPTY sheet instead, which is
+# the failure that actually matters.
+if not items:
+    sys.exit('no PASS/SCAN-FIRST rows found in %s -- refusing to write an empty sheet' % TSV)
+print('sheet covers %d fileable row(s): %s'
+      % (len(items), ' · '.join('%s %d' % (v, sum(1 for i in items if i['verdict'] == v))
+                                for v in ('PASS', 'SCAN-FIRST'))))
 
 payload = json.dumps(items, ensure_ascii=False).replace('</', '<\\/')
 
 page = """<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
-<title>SanskritSpellCheck — FILE-FIRST scan verification (109 rows) — H454 batch 1</title>
+<title>SanskritSpellCheck — FILE-FIRST scan verification (%COUNT% rows) — H454 batch 1</title>
 <style>
 body{font-family:Segoe UI,Arial,sans-serif;margin:0;background:#f5f4f0;color:#222}
 header{position:sticky;top:0;background:#2b3a4a;color:#fff;padding:10px 16px;z-index:5}
@@ -94,7 +143,7 @@ main{max-width:980px;margin:0 auto;padding:12px}
 .dicthead{margin:18px 0 4px 0;font-size:14px;color:#2b3a4a;border-bottom:2px solid #2b3a4a}
 </style></head><body>
 <header>
-<h1>SanskritSpellCheck — FILE-FIRST scan verification · 109 rows · H454 batch 1 · 10-07-2026</h1>
+<h1>SanskritSpellCheck — FILE-FIRST scan verification · %COUNT% rows · H454 batch 1 · %DATE%</h1>
 <div id="tally"></div>
 <div class="hint">✅ approve = the scanned page confirms the correction (row flips n→y, enters the batch) ·
 ❌ reject = the scan shows the digitization is faithful (stays n, feeds do-not-file) ·
@@ -164,7 +213,10 @@ document.getElementById('dl').onclick=()=>{
 render();
 </script></body></html>
 """
-page = page.replace('%PAYLOAD%', payload).replace('%NAME%', SHEET_NAME.replace('_review', ''))
+page = (page.replace('%PAYLOAD%', payload)
+            .replace('%NAME%', SHEET_NAME.replace('_review', ''))
+            .replace('%COUNT%', str(len(items)))
+            .replace('%DATE%', GENERATED))
 os.makedirs(OUT_DIR, exist_ok=True)
 with open(OUT, 'w', encoding='utf-8', newline='\n') as f:
     f.write(page)
