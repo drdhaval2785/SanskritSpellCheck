@@ -116,14 +116,27 @@ def dec(fr, places=4):
 
 def report_section(w, a_rows, other_map, other_name, other_desc):
     """Emit one full agreement section (matrix, kappas, binary collapse,
-    disagreements) for annotator A vs `other_map` (keyed by row_id)."""
+    disagreements) for annotator A vs `other_map` (keyed by row_id).
+
+    Coverage rule (H4075 fix 2): stats are computed over the COVERED overlap
+    (rows present in both A and the second annotation), with the uncovered
+    rows reported explicitly — a partially-grown file_first_verified.tsv must
+    not stub the whole section (the F2 lesson: 122-row annotations + a 200-row
+    A file used to erase the kappas entirely). Stub only on zero overlap.
+    """
+    covered = [r for r in a_rows if r['row_id'] in other_map]
     missing = [r['row_id'] for r in a_rows if r['row_id'] not in other_map]
-    if missing:
-        w('**SKIPPED — %d rows lack a %s annotation: %s**' % (len(missing), other_name, missing))
+    if not covered:
+        w('**SKIPPED — no %s annotations at all; %d A rows uncovered.**' % (other_name, len(missing)))
         w('')
         return
+    if missing:
+        w('_Coverage: %d of %d A rows have a %s annotation; stats below cover the '
+          'overlap only. Unannotated rows (%d): %s._'
+          % (len(covered), len(a_rows), other_name, len(missing), ', '.join(missing)))
+        w('')
 
-    pairs = [(r['a'], other_map[r['row_id']]['label']) for r in a_rows]
+    pairs = [(r['a'], other_map[r['row_id']]['label']) for r in covered]
     n = len(pairs)
     po, pe, k = kappa(pairs)
 
@@ -182,7 +195,7 @@ def report_section(w, a_rows, other_map, other_name, other_desc):
     w('')
     w('| row | dict | wrong | right | A | %s | %s reason |' % (other_name, other_name))
     w('|---|---|---|---|---|---|---|')
-    for r in a_rows:
+    for r in covered:
         b = other_map[r['row_id']]
         if r['a'] != b['label']:
             w('| %s | %s | %s | %s | %s | %s | %s |' % (
