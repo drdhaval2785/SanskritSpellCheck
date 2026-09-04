@@ -1,6 +1,14 @@
 # FILE-FIRST verification pass — July 2026
 
-<p align="right"><sub>Created: 02-07-2026 · Last updated: 02-07-2026</sub></p>
+<p align="right"><sub>Created: 02-07-2026 · Last updated: 04-09-2026</sub></p>
+
+> **Amendment 04-09-2026 (H3537 red-team, review-sheet row 26):** the Outcome table
+> below originally printed the pre-audit counts **PASS 97 / SCAN-FIRST 12**; the
+> audited totals — which this memo's own downstream consumers (the A44 paper's
+> repro paragraph, `file_first_verified.tsv`) already carry — are **92 / 17** after
+> the same-day editor's audit downgraded five weak SHS rows PASS → SCAN-FIRST
+> (§4.5 of the paper). Table and per-dict line restated accordingly; the original
+> 97/12 line is retained in the amendment note for the record.
 
 Pre-filing verification of all **122 FILE-FIRST candidates** against the `csl-orig` entry
 text, run 02-07-2026 as the Fable-window gate from
@@ -14,14 +22,15 @@ Fable 5 (`claude-fable-5`). Full per-row verdicts:
 
 | Verdict | n | Meaning for the umbrella issue |
 |---|--:|---|
-| **PASS** | 97 | propose as corrections (still scan-checked by the human, as always) |
-| **SCAN-FIRST** | 12 | propose, explicitly marked "grammar-certain but entry-internal evidence silent — the scan is decisive" |
+| **PASS** | 92 | propose as corrections (still scan-checked by the human, as always) |
+| **SCAN-FIRST** | 17 | propose, explicitly marked "grammar-certain but entry-internal evidence silent — the scan is decisive" |
 | **EDITORIAL** | 11 | present as **duplicate-pair / apparatus-collision decisions** (merge vs respell vs leave), NOT as plain corrections |
 | **DNF** | 1 | `YAT RiS→niS` — likely Dhātupāṭha ṇopadeśa root notation; moved toward the do-not-file class |
 | **DROP** | 1 | `SHS kARqapfzwa` — already fixed upstream since triage |
 
-Per dict: SHS 34+2sf (−1 stale) · YAT 17+4sf+5ed+1dnf · ACC 17+4sf+1ed · PWG 10+2ed ·
-MCI 10 · MW 2sf+2ed · SKD 3 · WIL 3 · PW 1+1ed · VCP 1 · GST 1.
+Per dict (post-audit): SHS 29+7sf (−1 stale) · YAT 17+4sf+5ed+1dnf · ACC 17+4sf+1ed ·
+PWG 10+2ed · MCI 10 · MW 2sf+2ed · SKD 3 · WIL 3 · PW 1+1ed · VCP 1 · GST 1.
+*(Pre-audit print: SHS 34+2sf; PASS 97 / SCAN-FIRST 12.)*
 
 ## What changed vs the triage-era picture
 

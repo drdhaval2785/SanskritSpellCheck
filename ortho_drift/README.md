@@ -43,7 +43,7 @@ All five German dictionaries run (`ortho_drift.py <DICT> --full`); per-dict drif
 
 | dict (era) | tokens | modern % | drift/1k | 1901 `th` | 1901 `c` | 1996 `ß` |
 |---|--:|--:|--:|--:|--:|--:|
-| PW (1855–75) | 845,888 | 59 | **10.26** | 6203 | 1752 | 15 |
+| PW (1879–89) | 845,888 | 59 | **10.26** | 6203 | 1752 | 15 |
 | PWG (1855–75) | 1,070,124 | 60 | 8.86 | 6508 | 2275 | 12 |
 | GRA (1873) | 254,745 | 45 | 7.90 | 1460 | 507 | 0 |
 | CCS (1887) | 117,976 | 65 | 4.72 | 341 | 126 | 84 |
@@ -90,7 +90,7 @@ The same profile-driven tool applied to the corpus's other gloss languages (per-
 | dictionary (era) | gloss lang | tokens | drift/1k | reform regime |
 |---|---|--:|--:|---|
 | **Kossovich** (pre-1918) | Russian | 87,636 | **358** | 1918 — radical (ѣ/і/ѳ/ѵ + word-final ъ abolished) |
-| PW (1855–75) | German | 845,888 | 10.26 | 1901 + 1996 — moderate, legislated |
+| PW (1879–89) | German | 845,888 | 10.26 | 1901 + 1996 — moderate, legislated |
 | **WIL · Wilson** (1832) | English | 432,117 | **0.57** | convention — most archaic of 10 (`-ick`, æ) |
 | BUR · Burnouf (1866) | French | 229,053 | 0.31 | convention — minor |
 | MW · Monier-Williams (1899) | English | 993,495 | 0.01 | convention — heavily standardised (min of 10) |

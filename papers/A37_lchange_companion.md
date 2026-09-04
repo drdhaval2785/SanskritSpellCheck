@@ -38,12 +38,16 @@ from five European gloss languages in the Cologne Digital Sanskrit Dictionaries
 spelling drift is uncontroversially a *gradual, endogenous* convention shift, fits a
 **narrow** 9.7-year transition; German, whose 1901 and 1996 reforms are textbook
 *exogenous*, legislated, single-year events, fits a **wide** 50-year transition. We show
-both results are sampling artifacts — English's narrowness is manufactured by
-zero-censoring (a full century of dictionaries reading exactly 0.00 drift) and German's
-width by sparse edition-spacing around the true reform date — rather than evidence
-about either language's actual change mechanism. We conclude that Ghanbarnejad-style
-S-curve mechanism classification requires validating corpus continuity and sampling
-density *before* interpreting the fitted transition width, and offer this as a
+both results are artifacts of proxy construction, not evidence about either language's
+actual change mechanism: English's narrowness is manufactured by max-normalization
+handing the fit to a single extreme dictionary (Wilson 1832 — the full century of
+exactly-0.00 readings is causally inert), and German's width by pre-reform
+inter-dictionary proxy dispersion (PW 0.000 vs PWG 0.1365 in the same year 1865; CCS
+0.540 already in 1887, fourteen years before the reform). We conclude that
+Ghanbarnejad-style
+S-curve mechanism classification requires checking single-point leverage, proxy
+normalization, and pre-reform proxy dispersion *before* interpreting the fitted
+transition width, and offer this as a
 transferable diagnostic checklist for computational historical linguists applying
 S-curve models to any non-Ngram-style, edition-level, or otherwise cross-sectionally
 sampled corpus — a corpus type common in the digital humanities (dictionary editions,
@@ -64,9 +68,10 @@ language changed, not just *when*, from nothing more than a frequency series.
 
 The temptation to apply it beyond Ngram corpora is obvious, and we give in to it: the
 companion paper to this one, A37 ("Reading the Reform off the Gloss," Gasūns 2026),
-measures reform-drift rates in the *gloss metalanguage* of 33 historical Sanskrit
-dictionaries across five European languages and finds drift magnitude stratified by
-reform regime (legislated ≫ convention ≫ none). Each dictionary is one dated data
+measures reform-drift rates in the *gloss metalanguage* of a 33-dictionary historical
+Sanskrit corpus across five European languages and finds drift magnitude stratified by
+reform regime (legislated ≫ convention ≫ none) — the fits here consume 24 of the
+33-dictionary Cologne corpus plus one external Russian dictionary (Kossovich). Each dictionary is one dated data
 point. Fitting an S-curve to a language's dated dictionaries and reading off the
 transition width seemed a natural extension — turning the qualitative
 "legislated vs. convention" label into the same measured parameter Ghanbarnejad et al.
@@ -106,8 +111,12 @@ such rather than forced.
 | variant | regime (ground truth) | n | b (adoption/yr) | t0 | Δt80 (yr) | R² | naive S-curve label |
 |---|---|--:|--:|--:|--:|--:|---|
 | **English** | convention (endogenous) | 14 | +0.286 | 1848 | **9.7** | 0.87 | "abrupt / exogenous" |
-| **German** | legislated (exogenous) | 5 | +0.055 | 1895 | **50.2** | 0.84 | "gradual / endogenous" |
+| **German** | legislated (exogenous) | 5 | +0.048 | 1904 | **57.4** | 0.65 | "gradual / endogenous" |
 | German, no PW (sensitivity) | legislated (exogenous) | 4 | +0.051 | 1903 | 54.6 | 0.84 | "gradual / endogenous" |
+
+German rows are fit with PW dated to its own print run (kürzere Fassung, 1879–1889;
+midpoint ≈1884 — the earlier PW = 1865 dating was PWG's range and is retracted): the
+five-point fit at that dating gives b = +0.048, t0 = 1904, Δt80 = 57.4, R² = 0.65.
 | French | convention (endogenous) | 2 | — | — | — | — | cannot fit (n=2, unconstrained) |
 | Russian | legislated (exogenous) | 1 | — | — | — | — | cannot fit (n=1, single anchor) |
 | Latin | none | 1 | — | — | — | — | cannot fit (zero variance) |
@@ -119,46 +128,56 @@ not that the S-curve method is wrong in general, but that its cross-sectional
 adaptation here manufactures a confidently-labelled, precisely-quantified, and
 **completely inverted** classification.
 
-## 4. Why the fit inverts: two distinct artifacts
+## 4. Why the fit inverts: single-point leverage and proxy construction
 
-**English's narrow width is a zero-censoring artifact.** Seven of the fourteen English
-dictionaries read *exactly* 0.00 reform-drift, spanning 1890–1990 (a full century of
-ties at the ceiling of "adoption"). The two-parameter logistic, forced through this
-long saturated plateau plus a handful of non-zero points clustered at the early end
-(Wilson 1832 → Macdonell 1893), finds the steepest curve that clears the transition
-before the plateau begins. This is a **property of the sample's saturation**, not a
-measurement of how fast English orthographic convention actually changed — the
-underlying process is well attested as gradual, editor-by-editor drift over more than
-a century, the textbook endogenous case.
+**English's narrow width is manufactured by single-point leverage under
+max-normalization, not by zero-censoring.** The seven exactly-0.00 points (1890–1990)
+are causally inert: refitting on the seven non-zero points alone reproduces the fit
+bit-for-bit (b = +0.286, Δt80 = 9.7). The real driver is one point — Wilson 1832 —
+combined with the max-normalized proxy (adoption = 1 − rate/max(rate)): Wilson's raw
+rate (0.46) is 3.3× the next dictionary's, so the very next edition (GST 1856) already
+reads as 91 % "adopted", and the entire "transition" is the Wilson→GST jump. Drop that
+single point and the width explodes to ~120–230 years (a flat SSE basin) with R²
+collapsing from 0.87 to ≈0.05–0.09 — the narrow-width reading dies with it. (The same
+proxy normalization makes the German width mapping-dependent as well: under an
+alternative drift→adoption mapping the German Δt80 moves between 11.75 and 50.2
+years.)
 
-**German's wide width is a sparse-sampling artifact around a genuine point event.**
-The German reforms are dated to a single year each (1901, 1996) — as centrally imposed
-and abrupt a mechanism as exists. But the corpus samples only **five discrete
-editions** across 1865–1928, and none falls densely enough around 1901 to resolve a
-switch that, historically, was comparably fast (state-mandated, enforced in schools
-within a few years). The fitted 50-year width reflects the **gap between the available
-editions**, not the reform's real-world adoption speed.
+**German's wide width is driven by pre-reform proxy values, not by sparse edition
+spacing.** A simulation rules the sampling explanation out: a true step function at
+1901, sampled at exactly the five German editions (1865, 1865, 1873, 1887, 1928 → 0,
+0, 0, 0, 1), fits arbitrarily steeply — Δt80 down to 0.55 years at the search
+boundary, and even the shallowest near-exact fit gives Δt80 ≈ 14 years, inside the
+paper's own "< 20 years = exogenous" threshold. Sparsity, had it been the driver,
+would have produced the correct narrow label. The actual driver is inter-dictionary
+dispersion in the pre-reform proxy: PW reads 0.000 while PWG reads 0.1365 in the same
+year 1865, and CCS already reads 0.540 in 1887 — fourteen years before the reform. A
+logistic forced through such points is flat at any grid step. The fitted 50-year width
+reflects these proxy values, not the gap between editions.
 
 Both artifacts share a root cause: **Ghanbarnejad et al.'s method assumes a
 continuous, densely-sampled frequency trajectory. Cross-sectional, edition-level data —
 common across the digital humanities (dictionary editions, manuscript witnesses,
-periodical print runs, successive census categories) — violates that assumption in two
-opposite-looking but equally fatal ways: censoring at the boundary (English) and
-under-sampling near the true switch point (German).** A fitted `b`/`Δt80` from such data
-is not diagnostic of mechanism until both failure modes are ruled out.
+periodical print runs, successive census categories) — breaks that assumption through
+proxy-construction artifacts instead: max-normalization hands the whole fit to a
+single extreme point (English), and pre-reform inter-dictionary dispersion flattens
+the curve regardless of sampling density (German).** A fitted `b`/`Δt80` from such data
+is not diagnostic of mechanism until single-point leverage and proxy normalization are
+ruled out.
 
 ## 5. A diagnostic checklist
 
 Before reading a fitted S-curve's transition width as an exo/endo mechanism signature
 on cross-sectional (non-Ngram, edition-level) data, we recommend checking:
 
-1. **Boundary saturation.** Does a substantial share of points sit at exactly the
-   floor or ceiling of the measured quantity? If so, the fit is dominated by the
-   plateau, not the transition (§4, English).
-2. **Sampling density around any known switch date.** If the change has a documented
-   date (a reform decree, a standardization event), are there data points within a
-   few years of it on both sides? If not, the fitted width reflects edition spacing,
-   not adoption speed (§4, German).
+1. **Single-point leverage / proxy normalization.** Refit without each single point,
+   and check how the proxy is normalized: a max-normalized adoption proxy can hand
+   the entire transition to one extreme dictionary (§4, English — dropping Wilson
+   1832 widens Δt80 from 9.7 to 120+ years).
+2. **Pre-reform proxy dispersion.** Before blaming edition spacing for a wide fit,
+   check whether dictionaries *disagree with each other* before the switch date:
+   same-year proxy values that differ across dictionaries (or values already high
+   years before the reform) flatten the fit at any sampling density (§4, German).
 3. **Independence of points.** Are any two "dictionaries" or "editions" the same
    underlying text at different remove (an abridgement, a reprint)? A37 already flags
    this for German (PW is Böhtlingk's abridgement of PWG); we report the sensitivity

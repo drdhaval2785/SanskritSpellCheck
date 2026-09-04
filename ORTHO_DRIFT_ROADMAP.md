@@ -44,7 +44,7 @@ From the 18 dictionaries already triaged for headwords, the gloss-language × er
 
 | gloss language | dictionaries (era) | reform regime |
 |---|---|---|
-| **German** | PW · PWG (1855–75) · GRA (1873) · CCS (1887) — all **pre-1901**; SCH (1928) — **post-1901, pre-1996** | legislated, twice |
+| **German** | PWG (1855–75) · PW (1879–89, kürzere Fassung) · GRA (1873) · CCS (1887) — all **pre-1901**; SCH (1928) — **post-1901, pre-1996** | legislated, twice |
 | **English** | WIL (1832) · GST (1856) · BEN (1866) · MW72 (1872) · CAE (1891) · MD (1893) · MW (1899) · SHS (1900) · AP90 (1890) · AP (mod.) | convention drift |
 | **French** | BUR (Burnouf, 1866) · STC (Stchoupak–Nitti–Renou, 1932) | minor |
 | **Latin** | BOP (Bopp, *Glossarium*, 1847) | ~stable |

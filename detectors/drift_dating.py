@@ -41,7 +41,9 @@ YEARS = {
     'MD': 1893, 'MW': 1899, 'SHS': 1900, 'VEI': 1912, 'BHS': 1953, 'IEG': 1966,
     'PE': 1975, 'PD': 1990,
     # German (legislated 1901 / 1996)
-    'PW': 1865, 'PWG': 1865, 'GRA': 1873, 'CCS': 1887, 'SCH': 1928,
+    # PW = Böhtlingk's kürzere Fassung, published 1879-1889 (midpoint 1884);
+    # PWG = the grosses Wörterbuch (1855-1875). PWG keeps its range midpoint.
+    'PW': 1884, 'PWG': 1865, 'GRA': 1873, 'CCS': 1887, 'SCH': 1928,
     # French (minor reform), Latin (none), Russian (legislated 1918)
     'BUR': 1866, 'STC': 1932, 'BOP': 1847, 'KOSSOVICH': 1885,
 }
