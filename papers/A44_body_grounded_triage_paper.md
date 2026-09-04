@@ -365,10 +365,10 @@ concentrated:
 | dictionary | confirmed | tier-A | rate |
 |---|--:|--:|--:|
 | SHS (*Śabda-Sāgara*, 1900) | **37** | 246 | ~15 % |
-| YAT (Yates, 1846) | **27** | 247 | ~10.9 % |
-| ACC (Aufrecht, *Catalogus Catalogorum*) | **22** | 174 | ~12.6 % |
+| YAT (Yates, 1846) | **27** | 219 | 12.3 % |
+| ACC (Aufrecht, *Catalogus Catalogorum*) | **22** | 144 | 15.3 % |
 | PWG (Großes PW) | 12 | 497 | 2.4 % |
-| MCI (*Mahābhārata Cultural Index*) | 10 | 41 | ~24 % |
+| MCI (*Mahābhārata Cultural Index*) | 10 | 24 | 41.7 % |
 | MW (1899) | 4 | 1,954 | 0.20 % |
 | SKD (*Śabdakalpadruma*) | 3 | 412 | 0.7 % |
 | WIL (Wilson, 1832) | 3 | 108 | 2.8 % |
@@ -378,7 +378,11 @@ concentrated:
 
 The remaining 22 dictionaries yield **0** fileable typos. The signal lives in the
 **poorly-digitised, less-corrected sources** (SHS, YAT, ACC), not in the large mature
-ones.
+ones. Tier-A denominators are counted from the committed per-dictionary
+candidate files (2026-07-02 pin: YAT 219, ACC 144, MCI 24); the earlier print's
+YAT 247 / ACC 174 / MCI 41 came from the gitignored `combined_candidates.txt` and is
+not reproducible from anything committed — regenerate with `cd detectors && python
+run_all.py ../sanhw1.txt` only for live work, never as the paper's denominators.
 
 ### 4.4 The recovery case — entries that contradict their own headwords
 SHS is the body-grounded method's ideal case: a smaller, far less-corrected
@@ -451,11 +455,14 @@ verdicts, notes, prompts, or detector tier labels
 exact rational arithmetic by [`irr_agreement.py`](../detectors/irr_agreement.py)).
 
 Agreement on the five-way taxonomy is **κ = 0.336** (Cohen; observed agreement
-59.0 %, chance 38.3 %; full confusion matrix and per-class κ in
+59.0 %, chance 38.3 %; approximate 95 % CI ≈ 0.34 ± 0.14 — spanning "poor" to
+"moderate"; full confusion matrix and per-class κ in
 [`agreement_stats.md`](../corrections_draft/irr/agreement_stats.md)). On the
-pre-registered binary collapse — *does this row describe a genuine defect needing
-action* ({PASS, SCAN-FIRST, EDITORIAL}) versus not ({DNF, DROP}) — agreement is
-**121/122 (99.2 %)**, with a binary κ of 0.663 against a heavily skewed marginal. The
+binary collapse — *does this row describe a genuine defect needing
+action* ({PASS, SCAN-FIRST, EDITORIAL}) versus not ({DNF, DROP}) — raw agreement is
+**121/122 (99.2 %)**; we print the raw count rather than a κ for the binary
+collapse: with marginals this skewed (the blind annotator produced zero DNF, a
+2×1 marginal), κ is a one-cell statistic and misleads. The
 blind annotator never once rejected a proposed correction as substantively wrong
 (zero DNF), and reproduced the original EDITORIAL class with perfect recall (all 11
 rows).
@@ -507,7 +514,8 @@ spelling-anomaly detectors themselves, and that evaluation directly measures the
 stakes of this paper's central claim. The verified verdicts of §4.5 double as a
 held-out gold set ([`detectors/gold_corrections.tsv`](../detectors/gold_corrections.tsv),
 derived from [`file_first_verified.tsv`](../corrections_draft/file_first_verified.tsv)):
-**108 POSITIVE rows** (genuine corrections a detector *should* find) and **13
+**109 POSITIVE rows — 108 unique (one duplicate pair, jAmbabat, filed for both SHS and
+WIL)** (genuine corrections a detector *should* find) and **13
 HARM rows** — the EDITORIAL-collision, DNF and DROP verdicts, i.e. exactly the
 rows that must **not** be silently "corrected". [`detectors/eval.py`](../detectors/eval.py)
 scores each corrector against this gold set with the tradition's
@@ -515,8 +523,8 @@ precision-weighted F0.5 (β = 0.5; on GEC/GED evaluation practice see Grundkiewi
 et al. 2015), plus a **harm rate**: the share of the 13 protected rows the
 detector flags as if they were plain corrections.
 
-*Table 4. Detection-level metrics against the verified gold set (108 POSITIVE /
-13 HARM; false-positive rate measured against the ~31,843-word known-good
+*Table 4. Detection-level metrics against the verified gold set (109 rows / 108 unique
+POSITIVE / 13 HARM; false-positive rate measured against the ~31,843-word known-good
 whitelist).*
 
 | detector | P | R | F0.5 | FPR (whitelist) | harm rate |
@@ -529,9 +537,14 @@ whitelist).*
 
 Read as ordinary GED systems, the detectors are good: F0.5 of 0.88–0.92, 99.1 %
 recall in union, and zero false positives against the known-good whitelist — the
-existing filing gate holds. But the harm column is the finding: the same
+existing filing gate holds. One scope caveat on that 99.1 %: the gold frame is by
+construction the union's own surviving verdicts, so this is **recall of the triage
+frame**, not dictionary-wide recall; precision, FPR and the harm rate are not affected
+by the circularity. But the harm column is the finding: the same
 detectors, on their own, flag **77–100 % of the exact collision, apparatus and
-stale rows** that the triage's EDITORIAL/DNF/DROP verdicts exist to protect. A
+stale rows** (range across the seven flag-raising detectors; the degenerate
+`dict_vs_corpus` — which flags nothing at all, 0/13 — is excluded from the range)
+that the triage's EDITORIAL/DNF/DROP verdicts exist to protect. A
 naive auto-apply pipeline celebrating its 99 % recall would, in the same run,
 corrupt all 13 protected rows — merging rival readings, respelling apparatus,
 re-introducing an upstream-fixed form. This is not a separate result from the
@@ -582,7 +595,8 @@ digitisations still need attention.
   does not measure agreement with an independent human expert, which remains future
   work (the recruit is deferred; tracked in the project GTD). The κ was computed once,
   on the first blind run, and reported as obtained — the second annotator's prompt was
-  not iterated toward agreement. Both figures (κ = 0.336 five-way, 0.663 binary) are
+  not iterated toward agreement. Both figures (κ = 0.336 five-way; 121/122 raw binary
+agreement — the binary κ is not printed, see §4.6) are
   LLM-only inter-rater comparisons — soon two model *families*, once the pending
   cross-family run of §4.6 completes — and are not yet licensed against an
   independent human-labelled seed set; that outstanding gap is tracked explicitly in
@@ -640,7 +654,9 @@ reproduces the §4.7 detection-level table (F0.5 + harm rate) against
 headline figures: the gross do-not-file total is the sum of the per-dict section
 counts in the wrong-readings files (**2,549**); the deduped union is the suppress
 file's data-row count (**2,297**); the confirmed totals are the data rows of each
-`*_file_first_sf.txt` (**122** across 11 dicts, as of triage) and the verdict rows of
+`*_file_first_sf.txt` (**122** across 11 dicts, as of triage — the queue files are
+living artifacts and held **178** data rows as of 04-09-2026; the frozen triage-era
+frame is the `file_first_verified.tsv` verdict rows, not the live queues) and the verdict rows of
 `file_first_verified.tsv` (92/17/11/1/1, as of 2026-07-02, including the editor's
 same-day PASS→SCAN-FIRST audit of five SHS rows); the agreement study's artifacts are
 `corrections_draft/irr/` (blind second annotations, exact-arithmetic κ, disagreement

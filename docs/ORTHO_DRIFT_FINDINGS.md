@@ -94,14 +94,18 @@ run against the modern Hunspell `de_DE` word-list (103,756 stems). Per-dictionar
 
 | dictionary (era) | tokens | modern % | drift/1k | 1901 `th` | 1901 `c` | 1996 `ß` |
 |---|--:|--:|--:|--:|--:|--:|
-| PW (1855–75) | 845,888 | 59 | **10.26** | 6,203 | 1,752 | 15 |
+| PW (1879–89) | 845,888 | 59 | **10.26** | 6,203 | 1,752 | 15 |
 | PWG (1855–75) | 1,070,124 | 60 | 8.86 | 6,508 | 2,275 | 12 |
 | GRA (1873) | 254,745 | 45 | 7.90 | 1,460 | 507 | 0 |
 | CCS (1887) | 117,976 | 65 | 4.72 | 341 | 126 | 84 |
 | **SCH (1928)** | 192,039 | 42 | **2.52** | **76** | **86** | **319** |
 
-The overall drift rate declines **monotonically with publication date** (10.26 → 8.86 → 7.90 →
-4.72 → 2.52 per 1k) — the corpus modernising across ~70 years. On full PW alone the method finds
+The overall drift rate declines with publication date once PW is dated to its own print
+run (kürzere Fassung, 1879–89): the monotone spine is PWG 1865 → GRA 1873 → CCS 1887 →
+SCH 1928 (8.86 → 7.90 → 4.72 → 2.52 per 1k), while PW (≈1884, 10.26/1k — Böhtlingk's
+conservative abridgement) sits above its date-neighbours and breaks strict monotonicity
+(ρ = −0.70 at n = 5; the no-PW series is perfectly monotone, ρ = −1.00) — the corpus
+modernising across ~70 years. On full PW alone the method finds
 **8,683 drift occurrences across 697 distinct forms**, dominated by `gerathen→geraten` (253),
 `personificirt→personifiziert` (191), `theilhaftig→teilhaftig` (190).
 
@@ -151,7 +155,7 @@ re-tested by re-running all five German dicts against the full 15,685-form map (
 
 | dictionary (era) | drift/1k frozen → expanded | 1901 `th` | 1901 `c` | 1996 `ß` (canon-tagged) |
 |---|--:|--:|--:|--:|
-| PW (1855–75) | 10.26 → **28.59** | 6,203 → 10,198 | 1,752 → 3,072 | 15 → 16 |
+| PW (1879–89) | 10.26 → **28.59** | 6,203 → 10,198 | 1,752 → 3,072 | 15 → 16 |
 | PWG (1855–75) | 8.86 → **26.84** | 6,508 → 10,477 | 2,275 → 3,656 | 12 → 14 |
 | GRA (1873) | 7.90 → **27.69** | 1,460 → 1,931 | 507 → 648 | 0 → 0 |
 | CCS (1887) | 4.72 → **12.17** | 341 → 484 | 126 → 160 | 84 → 94 |
@@ -419,7 +423,7 @@ logistic is unconstrained; a 1-point series is an anchor, not a trajectory).
 | variant | n | b (adoption/yr) | t0 (inflection yr) | Δt80 (20–80% width, yr) | R² | naive label |
 |---|--:|--:|--:|--:|--:|---|
 | **English** (convention) | 14 | +0.2862 | 1848 | **9.7** | 0.87 | "exogenous-like (abrupt)" |
-| **German** (legislated) | 5 | +0.0552 | 1895 | **50.2** | 0.84 | "endogenous-like (gradual)" |
+| **German** (legislated; PW ≈ 1884 refit) | 5 | +0.048 | 1904 | **57.4** | 0.65 | "endogenous-like (gradual)" |
 | German, no PW (sensitivity) | 4 | +0.0507 | 1903 | 54.6 | 0.84 | "endogenous-like (gradual)" |
 | French (convention) | 2 | — | — | — | — | cannot fit (n=2, unconstrained) |
 | Russian (legislated) | 1 | — | — | — | — | cannot fit (n=1, single anchor) |
@@ -432,23 +436,29 @@ reform) the NARROW one. The fit gives the **opposite ordering** (English Δt80 =
 ≪ German Δt80 = 50.2 yr). Two distinct artifacts explain this, and both are diagnostic
 of *why the proxy breaks*, not of the underlying mechanism:
 
-1. **English's narrow fitted width is a zero-censoring artifact, not a fast switch.**
-   Seven of fourteen English dictionaries read *exactly* 0.00 drift/1k, spanning
-   1890–1990 (§O4[4b]) — i.e. `adoption=1` for a full century of ties. The logistic
-   fit, forced through this saturated plateau plus the small non-zero cluster at the
-   early end (WIL 1832 → MD 1893), finds the steepest curve that clears the transition
-   before the plateau begins — an **artifact of the sample's own saturation**, not
-   evidence that English orthography changed abruptly. This is the same saturation
-   already flagged as a rate-metric weakness in O4 (English "gives an upper-epoch
-   bound, not a full gradient").
-2. **German's wide fitted width is a sparse-sampling artifact around a real point
-   event.** The true German reforms are dated exactly (1901, 1996) — about as
-   "exogenous" as a change mechanism gets. But the corpus samples only **five discrete
-   editions** across 1865–1928, none within decades of the actual 1901 switch date on
-   either side densely enough to resolve it; the fitted Δt80 = 50 yr reflects the
-   **spacing of the five editions relative to 1901**, not the sociolinguistic speed of
-   the reform's real-world adoption (which historically was comparatively fast —
-   state-mandated, school-enforced).
+1. **English's narrow fitted width is manufactured by single-point leverage under the
+   max-normalized proxy, not by zero-censoring.** The seven exactly-0.00 readings
+   (1890–1990, §O4[4b]) are causally inert: refitting on the seven non-zero points
+   alone reproduces the fit bit-for-bit (b = +0.286, Δt80 = 9.7). The real driver is
+   one point — WIL 1832 — combined with the proxy's max-normalization: Wilson's raw
+   rate (0.46) is 3.3× the next dictionary's, so GST 1856 already reads as 91 %
+   "adopted" and the whole "transition" is the Wilson→GST jump. Dropping that single
+   point widens Δt80 to ~120–230 years (flat SSE basin) with R² collapsing from 0.87
+   to ≈0.05–0.09 — the same saturation already flagged as a rate-metric weakness in
+   O4 (English "gives an upper-epoch bound, not a full gradient").
+2. **German's wide fitted width is driven by pre-reform proxy dispersion, not by
+   sparse edition sampling.** A simulation rules the sampling explanation out: a true
+   step function at 1901, sampled at exactly the five German editions (1865, 1865,
+   1873, 1887, 1928 → 0, 0, 0, 0, 1), fits arbitrarily steeply — Δt80 down to 0.55
+   years at the search boundary, and even the shallowest near-exact fit gives
+   Δt80 ≈ 14 years, inside this paper's own "< 20 years = exogenous" threshold.
+   Sparsity, had it been the driver, would have produced the correct narrow label.
+   The actual driver is inter-dictionary dispersion in the pre-reform proxy: PW reads
+   0.000 while PWG reads 0.1365 in the same year 1865, and CCS already reads 0.540 in
+   1887 — fourteen years before the reform. A logistic forced through such points is
+   flat at any grid step. (Also re-dated here: PW is Böhtlingk's *kürzere Fassung*,
+   1879–1889, midpoint ≈1884 — the 1855–75 range belongs to PWG; the German rows
+   above carry the PW ≈ 1884 refit.)
 
 **Reading:** this cross-sectional adaptation of the Ghanbarnejad et al. S-curve method
 is not validated as an exo/endo classifier on edition-level dictionary data — a
@@ -457,8 +467,8 @@ design, or the DTA `norm`-layer long tail already banked for German in O3) would
 needed to recover the true transition shape. We report `b`/`t0`/`Δt80` per language as
 requested (Steps §1) and the inverted ordering as a **methodological limitation
 worth publishing in its own right** — a caution against applying frequency-trajectory
-S-curve machinery to sparse cross-sectional data without first checking for
-censoring/saturation and edition-sampling density. Do not read the "exogenous-like" /
+S-curve machinery to sparse cross-sectional data without first checking single-point
+leverage / proxy normalization and pre-reform proxy dispersion. Do not read the "exogenous-like" /
 "endogenous-like" labels above as validated classifications; they are the literal
 output of the naive threshold, reported for transparency, not as a finding.
 

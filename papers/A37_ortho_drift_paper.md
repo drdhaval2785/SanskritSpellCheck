@@ -66,6 +66,8 @@ Historical lexicography is usually dated by its title page. We ask whether a
 dictionary's *text* — specifically its gloss metalanguage — can date itself, and
 what governs how strongly it can. The Cologne Digital Sanskrit Dictionaries are an
 unusually clean testbed: a single, uniformly marked-up corpus of 33 dictionaries
+(the fits and dated series consume 24 of the 33 plus one external Russian,
+Kossovich — see the per-language n values)
 whose authors wrote in four European metalanguages across nearly two centuries
 (1832–2009) —
 Wilson's 1832 English, Böhtlingk–Roth's 1850s–70s German, Burnouf's 1866 French,
@@ -187,12 +189,17 @@ reach Böhtlingk's *Thier*); `ortho_drift.py` never edits `csl-orig`.
 ## 4. Results by language
 
 ### 4.1 German — legislated, twice (the validation target)
-Five German dictionaries against modern Hunspell `de_DE` (103 756 stems). The
-deterministic-pass drift rate declines **monotonically with publication date**:
+Five German dictionaries against modern Hunspell `de_DE` (103 756 stems). Dating PW to
+its own print run — Böhtlingk's *kürzere Fassung*, 1879–1889 (midpoint ≈1884; the
+1855–75 range belongs to PWG) — the deterministic-pass drift rate falls across the
+series (10.26 → 2.52 per 1k), but no longer **strictly monotonically**: the pre-1901
+line PWG 1865 (8.86) → GRA 1873 (7.90) → CCS 1887 (4.72) → SCH 1928 (2.52) is
+monotone, while PW (≈1884) reads **10.26** — above its date-neighbours, as expected
+for Böhtlingk's conservative abridgement:
 
 | dictionary (era) | tokens | modern % | drift/1k | 1901 `th` | 1901 `c` | 1996 `ß` |
 |---|--:|--:|--:|--:|--:|--:|
-| PW (1855–75) | 845 888 | 59 | **10.26** | 6 203 | 1 752 | 15 |
+| PW (1879–89) | 845 888 | 59 | **10.26** | 6 203 | 1 752 | 15 |
 | PWG (1855–75) | 1 070 124 | 60 | 8.86 | 6 508 | 2 275 | 12 |
 | GRA (1873) | 254 745 | 45 | 7.90 | 1 460 | 507 | 0 |
 | CCS (1887) | 117 976 | 65 | 4.72 | 341 | 126 | 84 |
@@ -255,18 +262,23 @@ an adoption fraction and fitting the same logistic
 | variant | n | b (adoption/yr) | t0 | Δt80 (yr) | R² | naive label |
 |---|--:|--:|--:|--:|--:|---|
 | English (convention) | 14 | +0.286 | 1848 | **9.7** | 0.87 | "abrupt" |
-| German (legislated) | 5 | +0.055 | 1895 | **50.2** | 0.84 | "gradual" |
+| German (legislated; PW ≈ 1884 refit) | 5 | +0.048 | 1904 | **57.4** | 0.65 | "gradual" |
 | German, no PW | 4 | +0.051 | 1903 | 54.6 | 0.84 | "gradual" |
 | French / Russian / Latin | ≤2 | — | — | — | — | cannot fit (n too small / zero-variance) |
 
 **This inverts the expected mechanism ordering, and we report the inversion as the
-finding rather than force the expected label.** English's narrow width is a
-zero-censoring artifact (seven dictionaries tie at exactly 0.00 across a full century,
-§4.4); German's wide width is a sparse-edition-sampling artifact (five discrete
-editions across 1865–1928 cannot resolve a switch dated to a single year, 1901). A
+finding rather than force the expected label.** Adversarial refits sharpen the
+diagnosis: English's narrow width is manufactured by single-point leverage under the
+max-normalized proxy — Wilson 1832 hands the fit its whole transition (refitting on
+the non-zero points alone is bit-identical; dropping Wilson widens Δt80 to ~120–230
+years) — while German's wide width is driven by pre-reform proxy dispersion (PW 0.000
+vs PWG 0.1365 in the same year 1865; CCS 0.540 already in 1887), since a true 1901
+step sampled at these five editions would fit arbitrarily steeply (Δt80 ≤ 14 years).
+A
 cross-sectional adaptation of a *frequency-trajectory* S-curve method is therefore
 **not validated as an exo/endo classifier** on edition-level lexicographic data without
-first checking for saturation and edition-sampling density against the reform date —
+first checking single-point leverage / proxy normalization and pre-reform proxy
+dispersion —
 we surface this as a transferable caution for anyone applying Ghanbarnejad-style
 S-curves to non-continuous corpora, alongside the parameter values themselves. Full derivation and caveats: [O7a in
 `docs/ORTHO_DRIFT_FINDINGS.md`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/ORTHO_DRIFT_FINDINGS.md#o7a--per-variant-logistic-s-curve-fit-adapted-from-ghanbarnejad-et-al-2014).
@@ -275,16 +287,19 @@ S-curves to non-continuous corpora, alongside the parameter values themselves. F
 
 - **No cross-language calibration** — the rate is regime-stratified (a ~5/1k rate is
   mid-19th-c. German but off-scale for English).
-- **Within a language, monotonicity tracks the regime.** German (legislated):
-  Spearman ρ(year, drift/1k) = **−0.975** (exact permutation p = 0.033 over all 60
-  year-permutations; scipy's t-approximation reports 0.005, which is invalid at
-  n = 5), leave-one-out year MAE
-  **±15 yr**, linear R² = 0.87. Two caveats qualify this: (a) **PW and PWG are
-  not independent points** — PW is Böhtlingk's abridgement of PWG, same
-  lexicographer, same era, overlapping gloss prose; dropping PW leaves a perfectly
-  monotone n = 4 series (ρ = −1.00), so the gradient does not depend on the
-  double-counted pair, but all §5 statistics are **case-study-scale, not
-  corpus-scale inference**. (b) English (convention): ρ = −0.642 (Monte-Carlo
+- **Within a language, monotonicity tracks the regime — with one retraction.** German
+  (legislated): the earlier print claimed Spearman ρ(year, drift/1k) = **−0.975**
+  (exact permutation p = 0.033, n = 5) and a strictly monotone decline; that series
+  was computed with PW mis-dated to 1865 (PWG's range). With PW dated to its own
+  print run (kürzere Fassung 1879–1889, midpoint ≈1884) the five-point correlation
+  drops to ρ = **−0.70** (exact permutation p = 0.23) and strict monotonicity fails
+  (PW 10.26 sits above its 1873/1887 neighbours); the five-point fit itself refits to
+  b = +0.048, t0 = 1904, Δt80 = 57.4, R² = 0.65. The defensible German series is the
+  **no-PW line** (n = 4, strictly monotone, ρ = −1.00, Δt80 = 54.6, R² = 0.84) —
+  PW is both the double-counted point (Böhtlingk's abridgement of PWG, same
+  lexicographer, overlapping gloss prose) and the one that breaks monotonicity. All
+  §5 statistics remain **case-study-scale, not
+  corpus-scale inference**. English (convention): ρ = −0.642 (Monte-Carlo
   permutation p = 0.016, n = 14), ±40 yr,
   and saturates — **7 English dicts read exactly 0.00 across 1890–1990** — so under
   a convention regime the rate is an upper-epoch bound (§4.4), not a dater.
