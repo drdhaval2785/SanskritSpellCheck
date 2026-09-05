@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # BHS correction candidates — BODY-GROUNDED triage (DRAFT for human review)
 
 The unified detector engine flagged **713 tier-A** BHS headwords as possible misspellings.
@@ -32,15 +34,15 @@ durable deliverable is the do-not-file list, which feeds the detector suppressio
 
 ## The authoritative artifacts
 
-- **[BHS_wrong_readings.txt](BHS_wrong_readings.txt)** — the standing **do-not-file** list: 294
+- **[BHS_wrong_readings.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/BHS/BHS_wrong_readings.txt)** — the standing **do-not-file** list: 294
   deliberate spellings, grouped by sub-type (cross-reference **138**, varia-lectio **81**,
   other-intentional **67**, wrong-reading **6**, in-composition **2**). Use it as a suppression
   list so future runs never re-flag them; it is folded into
-  [nochange/do_not_file_suppress.txt](../../nochange/do_not_file_suppress.txt) by
-  [detectors/gen_do_not_file_suppress.py](../../detectors/gen_do_not_file_suppress.py).
-- **[BHS_triaged.txt](BHS_triaged.txt)** — the full review queue: the 415 REAL-WORD entries (with
+  [nochange/do_not_file_suppress.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/nochange/do_not_file_suppress.txt) by
+  [detectors/gen_do_not_file_suppress.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/gen_do_not_file_suppress.py).
+- **[BHS_triaged.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/BHS/BHS_triaged.txt)** — the full review queue: the 415 REAL-WORD entries (with
   Edgerton's own gloss/derivation showing why each is a distinct word) and the 294 INTENTIONAL ones.
-- **[BHS_file_first_sf.txt](BHS_file_first_sf.txt)** — **empty** (0 fileable). Nothing to file.
+- **[BHS_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/BHS/BHS_file_first_sf.txt)** — **empty** (0 fileable). Nothing to file.
 
 ## Why every candidate is safe (worked examples)
 
@@ -69,3 +71,5 @@ durable deliverable is the do-not-file list, which feeds the detector suppressio
 
 > **DRAFT for human review.** This package never edits `csl-orig`. The do-not-file list is the
 > deliverable; there are no corrections to file from BHS tier A.
+
+_Dr. Mārcis Gasūns_

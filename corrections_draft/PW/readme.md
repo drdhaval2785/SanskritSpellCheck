@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # PW correction candidates — BODY-GROUNDED triage (DRAFT for human review)
 
 The unified detector engine flagged **657 tier-A** PW (Sanskrit–German *Petersburger
@@ -21,12 +23,12 @@ apparatus, but the entry can.
 
 ## The authoritative artifact
 
-- **[PW_triaged.txt](PW_triaged.txt)** — the review queue: six ranked buckets
+- **[PW_triaged.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/PW/PW_triaged.txt)** — the review queue: six ranked buckets
   (FILE-FIRST · TYPO-UNSURE · REVIEW · REAL-WORD · INTENTIONAL · UNLOCATABLE), each row
   with PW's own entry text, the judgment, the source-confirmation, and a scan link.
-- **[PW_file_first_sf.txt](PW_file_first_sf.txt)** — the 2 FILE-FIRST candidates in
+- **[PW_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/PW/PW_file_first_sf.txt)** — the 2 FILE-FIRST candidates in
   CORRECTIONS standard format (`PW:wrong:right:n`). Verify on the scan, flip `n`→`y`, file.
-- **[PW_wrong_readings.txt](PW_wrong_readings.txt)** — the standing **do-not-file** list:
+- **[PW_wrong_readings.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/PW/PW_wrong_readings.txt)** — the standing **do-not-file** list:
   255 headwords PW documents on purpose (wrong-reading `fehlerhaft für` 95, `v.l.` 38,
   in-composition 18, cross-reference 16, other 88), grouped by sub-type with the entry
   text. Use it as a suppression list so future runs never re-flag them.
@@ -66,12 +68,14 @@ python triage_synthesize.py PW     # -> PW_triaged.txt + PW_file_first_sf.txt + 
 ```
 
 Language profiles (English MW / German PW·PWG / Sanskrit VCP) live in
-[detectors/triage_lang.py](../../detectors/triage_lang.py). The LLM layer is a *triage
+[detectors/triage_lang.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/triage_lang.py). The LLM layer is a *triage
 prior*, not a verdict — a human confirms each kept case against the scanned page.
 
 ## Raw engine output (provenance — do NOT apply)
 
-- [PW_candidates.txt](PW_candidates.txt) — the engine's 657 ranked tier-A candidates.
-- [PW_draft.txt](PW_draft.txt) — draft updateByLine change-file for all located
+- [PW_candidates.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/PW/PW_candidates.txt) — the engine's 657 ranked tier-A candidates.
+- [PW_draft.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/PW/PW_draft.txt) — draft updateByLine change-file for all located
   candidates. **Superseded** by the triage (~99.7% should not be filed); use
-  [PW_file_first_sf.txt](PW_file_first_sf.txt) instead.
+  [PW_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/PW/PW_file_first_sf.txt) instead.
+
+_Dr. Mārcis Gasūns_

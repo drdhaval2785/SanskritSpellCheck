@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # BUR correction candidates — BODY-GROUNDED triage (DRAFT for human review)
 
 The unified detector engine flagged **162 tier-A** BUR headwords as possible misspellings. BUR is
@@ -26,11 +28,11 @@ IEG 0/162 · BOP 0/39 · STC 0/111 · **BUR 0/162**.
 
 ## The authoritative artifacts
 
-- **[BUR_wrong_readings.txt](BUR_wrong_readings.txt)** — the **do-not-file** list: 20 deliberate
+- **[BUR_wrong_readings.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/BUR/BUR_wrong_readings.txt)** — the **do-not-file** list: 20 deliberate
   spellings (cross-reference 17, other 3). Folded into
-  [nochange/do_not_file_suppress.txt](../../nochange/do_not_file_suppress.txt).
-- **[BUR_triaged.txt](BUR_triaged.txt)** — full queue: 123 REAL-WORD + 20 INTENTIONAL + 4 TYPO-UNSURE.
-- **[BUR_file_first_sf.txt](BUR_file_first_sf.txt)** — **empty** (0 fileable); the 4 reviewed-out
+  [nochange/do_not_file_suppress.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/nochange/do_not_file_suppress.txt).
+- **[BUR_triaged.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/BUR/BUR_triaged.txt)** — full queue: 123 REAL-WORD + 20 INTENTIONAL + 4 TYPO-UNSURE.
+- **[BUR_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/BUR/BUR_file_first_sf.txt)** — **empty** (0 fileable); the 4 reviewed-out
   candidates (`aSunya`, `kamawa`, `smASAnika`, `vizwala`) are commented there with the reasons.
 
 ## Method
@@ -39,3 +41,5 @@ IEG 0/162 · BOP 0/39 · STC 0/111 · **BUR 0/162**.
 **French** in `triage_lang.py`: `faute pour`/`lisez` = wrong-reading, `voyez`/`voy.`/`cf.` =
 cross-reference) → source-confirm the TYPO pile on Opus → **Opus false-positive review** →
 `triage_dict.py BUR --finish`. **DRAFT for human review; never edits `csl-orig`.**
+
+_Dr. Mārcis Gasūns_

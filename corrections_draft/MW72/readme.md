@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # MW72 correction candidates — BODY-GROUNDED triage (DRAFT for human review)
 
 The unified detector engine flagged **360 tier-A** MW72 (Monier-Williams, the **1872 first
@@ -23,10 +25,10 @@ Across the dictionaries triaged, fileable-typo counts are
 
 ## The authoritative artifact
 
-- **[MW72_wrong_readings.txt](MW72_wrong_readings.txt)** — the standing **do-not-file** list
+- **[MW72_wrong_readings.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/MW72/MW72_wrong_readings.txt)** — the standing **do-not-file** list
   (77 documented-intentional spellings, grouped by sub-type).
-- **[MW72_triaged.txt](MW72_triaged.txt)** — the full six-bucket queue.
-- **[MW72_file_first_sf.txt](MW72_file_first_sf.txt)** — empty of fileable rows; the 1
+- **[MW72_triaged.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/MW72/MW72_triaged.txt)** — the full six-bucket queue.
+- **[MW72_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/MW72/MW72_file_first_sf.txt)** — empty of fileable rows; the 1
   reviewed-out case is commented with `;`.
 
 ### Reviewed out (do NOT file — a real word, not a typo)
@@ -44,5 +46,7 @@ spellings; the body-aware pass + the Opus review handled the `realword` remainde
 
 ## Raw engine output (provenance — do NOT apply)
 
-- [MW72_candidates.txt](MW72_candidates.txt) — the engine's 360 ranked tier-A candidates.
-- [MW72_draft.txt](MW72_draft.txt) — draft updateByLine change-file; **superseded** by the triage.
+- [MW72_candidates.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/MW72/MW72_candidates.txt) — the engine's 360 ranked tier-A candidates.
+- [MW72_draft.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/MW72/MW72_draft.txt) — draft updateByLine change-file; **superseded** by the triage.
+
+_Dr. Mārcis Gasūns_

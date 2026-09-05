@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # BOP correction candidates — BODY-GROUNDED triage (DRAFT for human review)
 
 The unified detector engine flagged **39 tier-A** BOP headwords as possible misspellings. BOP is
@@ -27,13 +29,13 @@ IEG 0/162 · **BOP 0/39**.
 
 ## The authoritative artifacts
 
-- **[BOP_wrong_readings.txt](BOP_wrong_readings.txt)** — the **do-not-file** list: 6 deliberate
+- **[BOP_wrong_readings.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/BOP/BOP_wrong_readings.txt)** — the **do-not-file** list: 6 deliberate
   spellings (cross-reference 4, other 2). Folded into
-  [nochange/do_not_file_suppress.txt](../../nochange/do_not_file_suppress.txt).
-- **[BOP_triaged.txt](BOP_triaged.txt)** — full queue: 24 REAL-WORD distinct words + 6 INTENTIONAL +
+  [nochange/do_not_file_suppress.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/nochange/do_not_file_suppress.txt).
+- **[BOP_triaged.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/BOP/BOP_triaged.txt)** — full queue: 24 REAL-WORD distinct words + 6 INTENTIONAL +
   1 REVIEW (`BAgiraTI`, short-i derivation `ab BAgiraTa`, internally consistent — left for the scan)
   + 1 UNLOCATABLE.
-- **[BOP_file_first_sf.txt](BOP_file_first_sf.txt)** — **empty** (0 fileable).
+- **[BOP_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/BOP/BOP_file_first_sf.txt)** — **empty** (0 fileable).
 
 ## Method
 
@@ -42,3 +44,5 @@ IEG 0/162 · **BOP 0/39**.
 cross-reference) → source-confirm the TYPO pile on Opus → `triage_dict.py BOP --finish`. The classify
 pass returned 0 TYPO, so the confirm/review piles were empty. **DRAFT for human review; never edits
 `csl-orig`.**
+
+_Dr. Mārcis Gasūns_

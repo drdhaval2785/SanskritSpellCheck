@@ -1,15 +1,17 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 SanskritSpellCheck
 ==================
 
 from faultfinder3a.php - the machine is commandline tool now.
 
 > **Runtime:** modernized June 2026 to run on **Python 3 + PHP 8** — see
-> [CLAUDE.md](CLAUDE.md). For task-oriented recipes see **[USE_CASES.md](USE_CASES.md)**;
-> for the newer algorithms see **[detectors/readme.md](detectors/readme.md)**; for the project's
-> confirmed/refuted/open hypotheses see **[docs/HYPOTHESES.md](docs/HYPOTHESES.md)**.
+> [CLAUDE.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/CLAUDE.md). For task-oriented recipes see **[USE_CASES.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/USE_CASES.md)**;
+> for the newer algorithms see **[detectors/readme.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/readme.md)**; for the project's
+> confirmed/refuted/open hypotheses see **[docs/HYPOTHESES.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/HYPOTHESES.md)**.
 >
 > **Body-grounded triage:** per-dictionary status + results for **all 33 dictionaries (complete)**
-> are indexed in **[corrections_draft/README.md](corrections_draft/README.md)** — 122 fileable typos
+> are indexed in **[corrections_draft/README.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/README.md)** — 122 fileable typos
 > across 11 dicts, ~2,549 do-not-file spellings (folded into the detector suppression layer). The
 > high-yield outliers are poorly-digitised sources (SHS 37, YAT 27, ACC 22). To re-triage a
 > dictionary, type **`/dict-triage <DICT>`** in Claude Code (the link opens the index; the
@@ -59,7 +61,7 @@ requires a decision by the maintainer.
 
 ## Real error distribution (what the corrections actually are)
 
-Measured from the [o_vs_O](o_vs_O/o_vs_O2.txt) confusion pairs (single-letter class):
+Measured from the [o_vs_O](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/o_vs_O/o_vs_O2.txt) confusion pairs (single-letter class):
 
 | class | share | example |
 |---|---|---|
@@ -74,11 +76,11 @@ the V/C skeleton) — that is what the `detectors/` package addresses.
 
 ## Documentation
 
-- **[USE_CASES.md](USE_CASES.md)** — pick a goal, get the commands and the verify→submit path.
-- **[detectors/readme.md](detectors/readme.md)** — the seven newer algorithms (DCS-grounded).
-- **[ROADMAP.md](ROADMAP.md)** — phased plan for what's next.
-- **[CLAUDE.md](CLAUDE.md)** — architecture, runtime/porting status, conventions.
-- **[CHANGELOG.md](CHANGELOG.md)** — dated change history.
+- **[USE_CASES.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/USE_CASES.md)** — pick a goal, get the commands and the verify→submit path.
+- **[detectors/readme.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/readme.md)** — the seven newer algorithms (DCS-grounded).
+- **[ROADMAP.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ROADMAP.md)** — phased plan for what's next.
+- **[CLAUDE.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/CLAUDE.md)** — architecture, runtime/porting status, conventions.
+- **[CHANGELOG.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/CHANGELOG.md)** — dated change history.
 
 ## faultfinder pipeline (detail)
 
@@ -191,3 +193,5 @@ Step 4 - type php dictwisesorter.php AllvsMW-new.html dictwiseerrors1.html (This
 # o_vs_O method
 
 The steps are shown in [this readme](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/o_vs_O/backup/readme.txt)
+
+_Dr. Mārcis Gasūns_

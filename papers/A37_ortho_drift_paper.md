@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 ---
 paper_id: A37
 title: "Reading the Reform off the Gloss: Orthographic Drift as a Dater of 19th–20th-Century Indological Dictionaries"
@@ -257,7 +259,7 @@ ln(16)/b` (time from 20% to 80% adoption) as a mechanism signature: narrow ⇒
 exogenous/legislated, wide ⇒ endogenous/convention. We adapt this to our data by
 treating each dictionary's `1 − drift/1k ÷ max(drift/1k)` (within its own language) as
 an adoption fraction and fitting the same logistic
-([`detectors/drift_dating.py::fit_scurve`](../detectors/drift_dating.py)):
+([`detectors/drift_dating.py::fit_scurve`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/drift_dating.py)):
 
 | variant | n | b (adoption/yr) | t0 | Δt80 (yr) | R² | naive label |
 |---|--:|--:|--:|--:|--:|---|
@@ -478,3 +480,4 @@ Association for Computational Linguistics. [`aclanthology.org/S15-2148`](https:/
 Institute of Indology and Tamil Studies, University of Cologne.
 [`sanskrit-lexicon.uni-koeln.de`](https://www.sanskrit-lexicon.uni-koeln.de/).
 
+_Dr. Mārcis Gasūns_

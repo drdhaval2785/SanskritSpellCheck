@@ -1,6 +1,6 @@
 # GRETIL in-corpus typo candidates — bigram checker on running text
 
-_Created: 07-07-2026 · Last updated: 10-07-2026_
+_Created: 07-07-2026 · Last updated: 05-09-2026_
 
 > **Superseded for upstream use (10-07-2026, H456):** every locus below has been
 > hand-verified against the raw e-texts; the curated, reportable result is
@@ -14,19 +14,19 @@ _Created: 07-07-2026 · Last updated: 10-07-2026_
 Handoff [H289](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H289-Opus_SanskritSpellCheck_gretil_other_sections_pilot_07.07.26.md)
 Phase 3, **stream 2**: errors *inside the GRETIL e-text itself* (OCR / encoding /
 transcription slips), as distinct from the dictionary-headword corrections of
-[stream 1](MULTISECTION_ERROR_CANDIDATES.md). These are **GRETIL / e-text defects,
+[stream 1](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/meter/MULTISECTION_ERROR_CANDIDATES.md). These are **GRETIL / e-text defects,
 reported upstream to GRETIL** (gretil@sub.uni-goettingen.de) — NOT to the Cologne
 [CORRECTIONS](https://github.com/sanskrit-lexicon/CORRECTIONS/issues) queue (a
 different consumer: CORRECTIONS is for dictionary text, this is for corpus text).
 
 ## Method
 
-[`ngram_corpus_check.py`](ngram_corpus_check.py) walks each sampled section's verses
-([`gretil_walker.py`](gretil_walker.py)), transliterates every verse IAST→SLP1 with the
+[`ngram_corpus_check.py`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/meter/ngram_corpus_check.py) walks each sampled section's verses
+([`gretil_walker.py`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/meter/gretil_walker.py)), transliterates every verse IAST→SLP1 with the
 canonical [`sanskrit_util.to_slp1`](../sanskrit_util.py), and flags words containing a
 bigram **absent from the MW∩PW headword bigram model** (the same
-[`ngram/data/2grams.txt`](../../ngram/data/2grams.txt) + whitelist/whiteends suppression
-assets as [`ngram/ngramspellcheck.py`](../../ngram/ngramspellcheck.py)), keeping the
+[`ngram/data/2grams.txt`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ngram/data/2grams.txt) + whitelist/whiteends suppression
+assets as [`ngram/ngramspellcheck.py`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ngram/ngramspellcheck.py)), keeping the
 locus of each hit. The method is deliberately **high-recall / low-precision** on running
 text — inflected, sandhi'd, and compounded words legitimately contain bigrams no headword
 has — so every row is a **human-review candidate, never an auto-fix**. Per-section full

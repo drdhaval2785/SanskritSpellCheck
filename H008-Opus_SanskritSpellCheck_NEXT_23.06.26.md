@@ -1,12 +1,14 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # HANDOFF — roadmap for SanskritSpellCheck
 
 Paste-ready briefs for a **fresh chat** (no memory of the prior session) to pick up a task, ordered
 by priority. The headword-triage handoff (for re-runs) is separate:
-[corrections_draft/HANDOFF.md](corrections_draft/HANDOFF.md).
+[corrections_draft/HANDOFF.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/HANDOFF.md).
 
 > **State (changelog up to `[1.40.0]` + Unreleased):** headword triage is **COMPLETE — all 33/33
 > dictionaries**; the **ortho-drift study is COMPLETE across all 5 gloss languages**
-> ([docs/ORTHO_DRIFT_FINDINGS.md](docs/ORTHO_DRIFT_FINDINGS.md)); the do-not-file **suppression layer**
+> ([docs/ORTHO_DRIFT_FINDINGS.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/ORTHO_DRIFT_FINDINGS.md)); the do-not-file **suppression layer**
 > is at 33 dicts / 2,297 unique, `eval.py` false-positives 0. The big deliverables are done — the work
 > below is *realizing the value* (filing the corrections) and *active-development* refinements.
 
@@ -32,7 +34,7 @@ by priority. The headword-triage handoff (for re-runs) is separate:
   keep maintainer-facing noise low; render paths/URLs as clickable links. Update `changelog.md`
   (dated `## [x.y.z]` entries, newest first) and `.ai_state.md` as you go (document-first).
 - **Triage status:** ALL 33/33 dicts done (index:
-  [corrections_draft/README.md](corrections_draft/README.md)) — 122 fileable typos across 11 dicts.
+  [corrections_draft/README.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/README.md)) — 122 fileable typos across 11 dicts.
 
 ---
 
@@ -158,7 +160,7 @@ without inflating the false-positive rate (which must stay ~0 against `nochange.
 > **Complete.** PD/PE/BHS/IEG/VEI registered `en` in `LANG_OF`; en_GB reference = `ropensci/hunspell`
 > `en_GB.dic`, staged at `external_src/hunspell/` (gitignored; `_dic()` falls back there). Result:
 > **PD (1976–2009, 1.32 M tokens) = 0.00 drift/1k**, PE/BHS/IEG 0.00, VEI 0.06 — modern end of the
-> gradient ≈ 0; written up in [docs/ORTHO_DRIFT_FINDINGS.md](docs/ORTHO_DRIFT_FINDINGS.md). Brief kept
+> gradient ≈ 0; written up in [docs/ORTHO_DRIFT_FINDINGS.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/ORTHO_DRIFT_FINDINGS.md). Brief kept
 > below for reference. To re-run: `python ortho_drift.py <DICT> --full` from `detectors/`.
 
 **Goal (done):** extend the completed ortho-drift study with a **recency control**. The study showed English
@@ -204,7 +206,7 @@ WIL→…→PD recency gradient.
 ## Task 4 — German DTA/RIDGES long-tail merge — ✅ DONE (2026-06-25)
 
 > **Complete via DTA.** Downloaded the **DTA lingattr-TEI** corpus (2.5 GB, `external_src/dta/`,
-> gitignored), harvested `surface ≠ DTA::CAB-norm` pairs with [detectors/extract_dta_pairs.py](detectors/extract_dta_pairs.py)
+> gitignored), harvested `surface ≠ DTA::CAB-norm` pairs with [detectors/extract_dta_pairs.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/extract_dta_pairs.py)
 > (596 k distinct → ≥ 20× → 43,579 → dic-validated **+12,862**), growing `de_reform_map.tsv` **2,823 →
 > 15,685 forms**. ⚠️ Windows schannel resets the TLS mid-download — use a `curl -C -` resume loop and
 > skip the ~20 corrupt zip members (`zipfile` `except Exception`). **RIDGES not needed** (DTA sufficed);
@@ -249,7 +251,7 @@ documentation page:
 
 ## Research backlog — the open hypotheses (O1–O7)
 
-The seven open questions from [docs/HYPOTHESES.md](docs/HYPOTHESES.md), ordered by readiness. Each is
+The seven open questions from [docs/HYPOTHESES.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/HYPOTHESES.md), ordered by readiness. Each is
 a self-contained fresh-chat task; the ⚠️-marked ones need a local install or external data first.
 
 **✅ Ready now (no external data):**
@@ -260,7 +262,7 @@ a self-contained fresh-chat task; the ⚠️-marked ones need a local install or
   dated reforms. **SCH-1928 control intact**: relative era signature robust (SCH `ß`-dominant 446 ≫
   `th` 89; pre-1901 dicts `th`-dominant). Vindicates the freeze; expanded map = recall asset, not a
   rate metric. Findings doc "O3" subsection + changelog; expanded run banked as
-  [`de_drift_summary.expanded_map.tsv`](ortho_drift/de_drift_summary.expanded_map.tsv).
+  [`de_drift_summary.expanded_map.tsv`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ortho_drift/de_drift_summary.expanded_map.tsv).
 - ~~**O5 — Split the æ/œ ligature class from reform.**~~ ✅ **DONE (2026-06-26).** Added
   `NONREFORM_ERAS = {'ligature'}` to `ortho_drift.py`; ligature kept as its own column but excluded
   from reform-drift/1k. The mid-tier EN dicts were almost all ligature — SHS 0.31 → 0.08, GST 0.31 →
@@ -273,10 +275,10 @@ a self-contained fresh-chat task; the ⚠️-marked ones need a local install or
   attestation can't mark real words (`patra`/`vata` are band-0 real words DCS omits); suspect↔suggestion
   overlap doesn't separate (inverts in tier B). Tightest `patra`-rule still demotes 60 known real
   errors for 244 unverified others. **No `score_tier` change** — the body must be *read*, not measured
-  (R1 is a semantic ceiling). Written up as [R5 in docs/HYPOTHESES.md](docs/HYPOTHESES.md). The real
+  (R1 is a semantic ceiling). Written up as [R5 in docs/HYPOTHESES.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/HYPOTHESES.md). The real
   lever for these pairs stays the LLM body-grounded triage, not the scorer.
-- ~~**O4 — Drift-rate as a dating tool.**~~ ✅ **DONE (2026-06-26).** [drift_dating.py](detectors/drift_dating.py)
-  calibrates drift/1k ↔ year (+ [plot](ortho_drift/drift_dating.png)). Coarse, regime-bounded dater:
+- ~~**O4 — Drift-rate as a dating tool.**~~ ✅ **DONE (2026-06-26).** [drift_dating.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/drift_dating.py)
+  calibrates drift/1k ↔ year (+ [plot](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ortho_drift/drift_dating.png)). Coarse, regime-bounded dater:
   no cross-language calibration (regime-stratified RU 358 ≫ DE 2.5–10 ≫ EN/FR 0–0.46 ≫ LA 0); within
   language, **legislated** German is tight (ρ −0.975, LOO ±15 yr) but **convention** English is
   editor-noisy + saturated (ρ −0.642, ±40 yr; 7 dicts at exactly 0.00 across 1890–1990). The per-era
@@ -290,7 +292,7 @@ a self-contained fresh-chat task; the ⚠️-marked ones need a local install or
   ways: still misses real words (`patra`: stem ✗, pada ✗) AND over-attests real errors (34 % tier-A /
   47 % tier-B of known o_vs_O suspects are valid vidyut forms). Surface attestation is orthogonal to
   typo-vs-real; a "demote if attested" rule would drop ~404 known errors (vs R5's 60). No scorer
-  change. [R6 in docs/HYPOTHESES.md](docs/HYPOTHESES.md).
+  change. [R6 in docs/HYPOTHESES.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/HYPOTHESES.md).
 - **O7 — Does OCR pre-verify actually help the human?** ⏳ **Harness READY; measurement deferred on a
   server throttle (2026-06-26).** The install prerequisite is now **met without admin**: tesseract is
   admin-gated on this box (choco/conda unavailable non-elevated), so `ocr_verify.py` gained an
@@ -307,7 +309,7 @@ a self-contained fresh-chat task; the ⚠️-marked ones need a local install or
 **⚠️ Need external corpora:**
 
 - ~~**O6 — Language-general reform maps.**~~ ✅ **DONE for French (2026-06-26) — method generalises,
-  map is epoch-bound.** Built [extract_freem_pairs.py](detectors/extract_freem_pairs.py) over the free
+  map is epoch-bound.** Built [extract_freem_pairs.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/extract_freem_pairs.py) over the free
   [FreEMnorm](https://github.com/FreEM-corpora/FreEMnorm) 17th-c. corpus → 236 dic-validated EMF→modern
   pairs (`fr` map 18→254). Pipeline works with no per-language code. BUT applied to BUR/STC the map is
   ~90 % false positives (abbreviation `moy.`, homograph `dés`=dice, IAST `pha`) — epoch/register/language
@@ -332,3 +334,5 @@ a self-contained fresh-chat task; the ⚠️-marked ones need a local install or
   (VisualDCS release), GRETIL corpus download.
 - **Applying corrections to `csl-orig`** — the human-eyes-on-scans step after Task 1's issue is filed;
   follow the csl-orig correction workflow in the org `CLAUDE.md`. Never bot-applied.
+
+_Dr. Mārcis Gasūns_

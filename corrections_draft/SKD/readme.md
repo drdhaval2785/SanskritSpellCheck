@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # SKD correction candidates — BODY-GROUNDED triage (DRAFT for human review)
 
 The unified detector engine flagged **412 tier-A** SKD (*Śabdakalpadruma*, the great
@@ -24,11 +26,11 @@ Across the dictionaries triaged, fileable-typo counts are
 
 ## The authoritative artifact
 
-- **[SKD_file_first_sf.txt](SKD_file_first_sf.txt)** — the 3 FILE-FIRST candidates in
+- **[SKD_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/SKD/SKD_file_first_sf.txt)** — the 3 FILE-FIRST candidates in
   CORRECTIONS standard format (the reviewed-out one is commented with `;`). Verify each on
   the scan, flip `n`→`y`, file.
-- **[SKD_triaged.txt](SKD_triaged.txt)** — the full six-bucket queue.
-- **[SKD_wrong_readings.txt](SKD_wrong_readings.txt)** — the standing **do-not-file** list
+- **[SKD_triaged.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/SKD/SKD_triaged.txt)** — the full six-bucket queue.
+- **[SKD_wrong_readings.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/SKD/SKD_wrong_readings.txt)** — the standing **do-not-file** list
   (103 documented-intentional spellings, grouped by sub-type).
 
 ### The 3 FILE-FIRST candidates — each confirmed by the entry's own derivation
@@ -62,6 +64,8 @@ spellings before any LLM saw them; the body-aware pass + the Opus review handled
 
 ## Raw engine output (provenance — do NOT apply)
 
-- [SKD_candidates.txt](SKD_candidates.txt) — the engine's 412 ranked tier-A candidates.
-- [SKD_draft.txt](SKD_draft.txt) — draft updateByLine change-file; **superseded** by the
-  triage (use [SKD_file_first_sf.txt](SKD_file_first_sf.txt) instead).
+- [SKD_candidates.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/SKD/SKD_candidates.txt) — the engine's 412 ranked tier-A candidates.
+- [SKD_draft.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/SKD/SKD_draft.txt) — draft updateByLine change-file; **superseded** by the
+  triage (use [SKD_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/SKD/SKD_file_first_sf.txt) instead).
+
+_Dr. Mārcis Gasūns_

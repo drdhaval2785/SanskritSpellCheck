@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # Spellcheck by bigrams and trigrams
 
 To compare n-grams of a given text against the possible ngrams extracted and put in 'data' folder as 2grams.txt and 3grams.txt
@@ -26,3 +28,5 @@ MW PW PWG PD MW72 VCP SHS YAT WIL SKD CAE AP ACC AP90 CCS SCH STC MD BUR BHS BEN
 5. stripgretil.txt - Stores the abbreviations used by GRETIL. Tries to filter out issues of direct copy pasting from GRETIL.
 6. whiteends.txt - `declinedend:undeclinedend` format.
 7. whitelist.txt - 2grams which are found OK on testing with data. You can also add your OK bigrams here. It would not be shown as error on subsequent run of the code.
+
+_Dr. Mārcis Gasūns_

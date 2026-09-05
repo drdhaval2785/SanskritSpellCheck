@@ -1,6 +1,6 @@
 # GRETIL in-corpus typo candidates — bigram checker on running text
 
-_Created: 07-07-2026 · Last updated: 10-07-2026_
+_Created: 07-07-2026 · Last updated: 05-09-2026_
 
 > **Superseded for upstream use (10-07-2026, H456):** every locus below has been
 > hand-verified against the raw e-texts; the curated, reportable result is
@@ -14,7 +14,7 @@ _Created: 07-07-2026 · Last updated: 10-07-2026_
 Handoff [H289](https://github.com/gasyoun/Uprava/blob/main/handoffs/H289-Opus_SanskritSpellCheck_gretil_other_sections_pilot_07.07.26.md)
 Phase 3, **stream 2**: errors *inside the GRETIL e-text itself* (OCR / encoding /
 transcription slips), as distinct from the dictionary-headword corrections of
-[stream 1](MULTISECTION_ERROR_CANDIDATES.md). These are **GRETIL / e-text defects,
+[stream 1](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/zenodo_dataset_v1/data/meter/MULTISECTION_ERROR_CANDIDATES.md). These are **GRETIL / e-text defects,
 reported upstream to GRETIL** (gretil@sub.uni-goettingen.de) — NOT to the Cologne
 [CORRECTIONS](https://github.com/sanskrit-lexicon/CORRECTIONS/issues) queue (a
 different consumer: CORRECTIONS is for dictionary text, this is for corpus text).

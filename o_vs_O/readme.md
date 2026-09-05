@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # Generate error list without L IDs
 
 Inputs: sanhw1.txt
@@ -76,3 +78,5 @@ Outputs -
 3. On 16 Nov 2015 - 21989 : 14103 (Removed entries which had less than 4 letters length.)
 4. On 16 Nov 2015 - 21989 : 4253 (Removed entries where both sided had the same dictionary e.g. Both words appear in the same dictionary)
 5. On 17 Nov 2015 - 21989 : 3884 (Removed entries which were in nochange.txt)
+
+_Dr. Mārcis Gasūns_

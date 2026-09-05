@@ -50,3 +50,5 @@ Once the seed exists:
 referees) or accept the current LLM-only κ with an explicit caveat in the paper —
 this trade-off is recorded in A44's Limitations section pending that call. Not
 blocking the eval-harness (step 2) or reframe (step 3) work in this handoff.
+
+_Dr. Mārcis Gasūns_

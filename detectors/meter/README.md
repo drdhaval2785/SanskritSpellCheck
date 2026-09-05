@@ -1,14 +1,14 @@
 # Batch chandas (meter) validator
 
-_Created: 06-07-2026 · Last updated: 07-07-2026_
+_Created: 06-07-2026 · Last updated: 05-09-2026_
 
 Detector #7 (`meter_check.py`, one level up) -- a pAda that breaks its
 identified meter is a suspect-text signal, fed into
-[`run_all.py`](../run_all.py)'s cross-detector scoring as a ranking nudge (see
+[`run_all.py`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/run_all.py)'s cross-detector scoring as a ranking nudge (see
 that file's `DETECTORS` list and the guard comment on `HIGH_PRECISION`).
 Built per [`H251`](https://github.com/gasyoun/Uprava/blob/main/handoffs/archive/H251-Sonnet_SanskritSpellCheck_chandas_validator_q1_2027_build_06.07.26.md),
 following on the pilot in
-[`docs/CHANDAS_ANUPRASA_PRIOR_ART.md`](../../docs/CHANDAS_ANUPRASA_PRIOR_ART.md) §4.
+[`docs/CHANDAS_ANUPRASA_PRIOR_ART.md`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/CHANDAS_ANUPRASA_PRIOR_ART.md) §4.
 
 ## Pipeline
 
@@ -182,8 +182,8 @@ Four user-requested follow-ons to the recalibration, all landed in one corpus re
 2. **Pāda-segmented text stored** in every jsonl record (`skrutable.padas` /
    `skrutable.pada_weights`) — see the Pipeline note. Enables per-pāda bridge
    localization later without re-scanning.
-3. **Variety census** ([`variety_stats.py`](variety_stats.py) →
-   [`METER_VARIETY_STATS.md`](METER_VARIETY_STATS.md)) — the *amount and frequency of
+3. **Variety census** ([`variety_stats.py`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/meter/variety_stats.py) →
+   [`METER_VARIETY_STATS.md`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/meter/METER_VARIETY_STATS.md)) — the *amount and frequency of
    the vipulā / meter varieties*, logged as **valid poetic variation, not a suspect
    list**: base-meter distribution (anuṣṭubh ~49%, upajāti triṣṭubh ~12%, …) and the
    anuṣṭubh per-pāda breakdown (pathyā ~78%, then na-/ma-/bha-/ra-vipulā and asamīcīnā).
@@ -266,7 +266,7 @@ is the right failure mode for a ranking-nudge evidence source.
 
 ## H289 Phase 2–3 — other GRETIL sections (dataset + error lists)
 
-The Phase-1 feasibility pilot ([`PILOT_OTHER_SECTIONS.md`](PILOT_OTHER_SECTIONS.md),
+The Phase-1 feasibility pilot ([`PILOT_OTHER_SECTIONS.md`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/meter/PILOT_OTHER_SECTIONS.md),
 [PR #22](https://github.com/drdhaval2785/SanskritSpellCheck/pull/22)) established that the
 meter QA generalizes beyond Kāvya. Phase 2–3 extend it to four more genre-diverse sections
 (**Purāṇa** Mārkaṇḍeya, **Epic** Vālmīki Rāmāyaṇa southern-2, **Subhāṣita anthology**
@@ -274,22 +274,22 @@ Vidyākara, **verse-śāstra** Manusmṛti), each a **first-1500-block sample** 
 fetch-and-build whole — H289 guard), and produce two error streams. New tooling, all
 consuming the unchanged walker/identifier:
 
-- [`fetch_gretil.py`](fetch_gretil.py) — fetch + structurally sample a GRETIL plaintext
+- [`fetch_gretil.py`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/meter/fetch_gretil.py) — fetch + structurally sample a GRETIL plaintext
   into a gitignored `../gretil_<section>_raw/` (CC BY-NC-SA, same rule as the Kāvya corpus).
-- [`build_section_dataset.py`](build_section_dataset.py) → [`SECTIONS_DATASET.md`](SECTIONS_DATASET.md)
+- [`build_section_dataset.py`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/meter/build_section_dataset.py) → [`SECTIONS_DATASET.md`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/meter/SECTIONS_DATASET.md)
   — the **Phase-2 cross-section dataset**: per-section verdict distribution + base-meter
   census. Headline: non-clean% tracks metrical *ornateness*, not corruption — narrative
   śloka genres (Manu 0.1%, Purāṇa 0.9%, Epic 3.7%) are near-pristine, the ornate anthology
   (11%) and Kāvya (15.9%) higher; **no genre spiked into meter-fit failure**.
-- [`multisection_error_candidates.py`](multisection_error_candidates.py) →
-  [`MULTISECTION_ERROR_CANDIDATES.md`](MULTISECTION_ERROR_CANDIDATES.md) — **Phase-3 stream 1**
+- [`multisection_error_candidates.py`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/meter/multisection_error_candidates.py) →
+  [`MULTISECTION_ERROR_CANDIDATES.md`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/meter/MULTISECTION_ERROR_CANDIDATES.md) — **Phase-3 stream 1**
   (dictionary headwords): tier-A/B `run_all` candidates that gain a meter nudge from the
   enlarged Kāvya+sections corroboration index (`meter_verdicts_all.jsonl`, gitignored). Route
   the `.tsv` to a `/review-sheet`; meter stays corroboration-only (H277 invariant).
-- [`ngram_corpus_check.py`](ngram_corpus_check.py) →
-  [`GRETIL_TEXT_TYPOS.md`](GRETIL_TEXT_TYPOS.md) + `ngram_typos_<section>.tsv` — **Phase-3
+- [`ngram_corpus_check.py`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/meter/ngram_corpus_check.py) →
+  [`GRETIL_TEXT_TYPOS.md`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/meter/GRETIL_TEXT_TYPOS.md) + `ngram_typos_<section>.tsv` — **Phase-3
   stream 2** (in-corpus e-text typos): the MW∩PW-bigram checker (from
-  [`ngram/ngramspellcheck.py`](../../ngram/ngramspellcheck.py)) over IAST→SLP1 running text,
+  [`ngram/ngramspellcheck.py`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ngram/ngramspellcheck.py)) over IAST→SLP1 running text,
   locus-annotated. Reported upstream to **GRETIL**, not to Cologne CORRECTIONS. Caught a
   systematic ṝ→ḥ encoding corruption in the Rāmāyaṇa e-text (`mātḥṇāṃ` for *mātṝṇām*, etc.).
 

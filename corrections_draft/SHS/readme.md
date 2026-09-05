@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # SHS correction candidates — BODY-GROUNDED triage (DRAFT for human review)
 
 The unified detector engine flagged **246 tier-A** SHS (*Śabda-Sāgara*, a Sanskrit-English
@@ -35,7 +37,7 @@ Across all dictionaries triaged, fileable-typo counts are
 
 > **⚠️ This is by far the largest file-first set — prioritise the human scan-verification here.**
 > Each is high-confidence (entry-contradicted), but 37 corrections is a real review load; work
-> down [SHS_file_first_sf.txt](SHS_file_first_sf.txt), confirm on the scan, flip `n`→`y`.
+> down [SHS_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/SHS/SHS_file_first_sf.txt), confirm on the scan, flip `n`→`y`.
 
 ### Reviewed out (do NOT file — attested variants)
 
@@ -46,11 +48,11 @@ Across all dictionaries triaged, fileable-typo counts are
 
 ## The authoritative artifact
 
-- **[SHS_file_first_sf.txt](SHS_file_first_sf.txt)** — the 37 FILE-FIRST candidates in
+- **[SHS_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/SHS/SHS_file_first_sf.txt)** — the 37 FILE-FIRST candidates in
   CORRECTIONS standard format (the 2 reviewed-out are commented with `;`).
-- **[SHS_triaged.txt](SHS_triaged.txt)** — the full six-bucket queue (each FILE-FIRST row
+- **[SHS_triaged.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/SHS/SHS_triaged.txt)** — the full six-bucket queue (each FILE-FIRST row
   carries the entry text + the etymological evidence).
-- **[SHS_wrong_readings.txt](SHS_wrong_readings.txt)** — the standing **do-not-file** list (31).
+- **[SHS_wrong_readings.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/SHS/SHS_wrong_readings.txt)** — the standing **do-not-file** list (31).
 
 ## Method
 
@@ -60,5 +62,7 @@ The LLM/human layer is a triage prior — the scan confirms.
 
 ## Raw engine output (provenance — do NOT apply)
 
-- [SHS_candidates.txt](SHS_candidates.txt) — the engine's 246 ranked tier-A candidates.
-- [SHS_draft.txt](SHS_draft.txt) — draft updateByLine change-file; **superseded** by the triage.
+- [SHS_candidates.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/SHS/SHS_candidates.txt) — the engine's 246 ranked tier-A candidates.
+- [SHS_draft.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/SHS/SHS_draft.txt) — draft updateByLine change-file; **superseded** by the triage.
+
+_Dr. Mārcis Gasūns_

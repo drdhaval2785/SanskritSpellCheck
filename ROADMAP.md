@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # SanskritSpellCheck — roadmap
 
 > **Superseded as the forward plan (02-07-2026):** the current 1-year plan is
@@ -50,7 +52,7 @@ tiers A/B/C, review HTML); extract_csl_hw.py + raw-source flagger runs; eval.py
 3. ✅ **Review workflow** — `combined_review.html`: accept/reject over the ranked list,
    per-row scan links, keyboard a/r/s, decisions in localStorage, **Export
    accepted/rejected** → the `:y`/`:n` standard format for
-   [chg_nchg_sep.py](chg_nchg_sep.py).
+   [chg_nchg_sep.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/chg_nchg_sep.py).
 4. ✅ **Run charset / phonotactic / order on raw csl-orig sources** —
    `extract_csl_hw.py` pulls source-order headwords from a raw dict; order_check now
    runs on real source order (caveat: it measures deviation from sanhw's collation, so
@@ -133,3 +135,5 @@ Phase 1.1–1.3 (unified runner → confidence tiers → review workflow) is the
 leverage: it turns ten scattered candidate streams into one ranked, deduplicated,
 reviewable queue and makes the human verification loop fast — which is what actually
 gates corrections shipping.
+
+_Dr. Mārcis Gasūns_

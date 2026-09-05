@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # IEG correction candidates — BODY-GROUNDED triage (DRAFT for human review)
 
 The unified detector engine flagged **162 tier-A** IEG headwords as possible misspellings. IEG is
@@ -25,14 +27,16 @@ Cross-dict fileable precision: SHS 37/246 · YAT 27/247 · ACC 22/174 · … · 
 
 ## The authoritative artifacts
 
-- **[IEG_wrong_readings.txt](IEG_wrong_readings.txt)** — the **do-not-file** list: 40 deliberate
+- **[IEG_wrong_readings.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/IEG/IEG_wrong_readings.txt)** — the **do-not-file** list: 40 deliberate
   spellings (cross-reference 21, other 19). Folded into
-  [nochange/do_not_file_suppress.txt](../../nochange/do_not_file_suppress.txt).
-- **[IEG_triaged.txt](IEG_triaged.txt)** — full queue: 101 REAL-WORD attested terms + 40 INTENTIONAL.
-- **[IEG_file_first_sf.txt](IEG_file_first_sf.txt)** — **empty** (0 fileable).
+  [nochange/do_not_file_suppress.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/nochange/do_not_file_suppress.txt).
+- **[IEG_triaged.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/IEG/IEG_triaged.txt)** — full queue: 101 REAL-WORD attested terms + 40 INTENTIONAL.
+- **[IEG_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/IEG/IEG_file_first_sf.txt)** — **empty** (0 fileable).
 
 ## Method
 
 `detectors/triage_dict.py IEG` (package) → body-aware classification (IEG registered as English in
 `triage_lang.py`) → `triage_dict.py IEG --finish`. With 0 TYPO classifications there was no
 source-confirm / review pile. **DRAFT for human review; never edits `csl-orig`.**
+
+_Dr. Mārcis Gasūns_

@@ -1,8 +1,10 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # detectors/ — additional Sanskrit spell-check algorithms
 
 Six detectors that target error classes the original three tools (faultfinder,
 o_vs_O, ngram) miss. They were designed from the **real** error distribution: the
-[o_vs_O](../o_vs_O/o_vs_O2.txt) confusion pairs (vowel-length **75%**, aspiration
+[o_vs_O](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/o_vs_O/o_vs_O2.txt) confusion pairs (vowel-length **75%**, aspiration
 13%, sibilant 8%, diphthong 4%) and the
 [CORRECTIONS](https://github.com/sanskrit-lexicon/CORRECTIONS/issues) history
 (v↔b, ṛ↔ri, encoding, duplicates, misordering, anti-sandhi).
@@ -11,7 +13,7 @@ Key gap they close: the dominant errors are **skeleton-preserving substitutions*
 (a↔A, k↔K, s↔S), to which faultfinder is structurally blind, and which o_vs_O only
 catches when the correct variant already exists in another dictionary.
 
-[slp1util.py](slp1util.py) is the shared module: the SLP1 alphabet, the confusion
+[slp1util.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/slp1util.py) is the shared module: the SLP1 alphabet, the confusion
 model (`confusion_key` folds 99.2% of real confusion pairs to one key; `confusion_sub`
 tests a single confusion substitution; `confusion_candidates` generates correction
 neighbours), `sanskrit_sort_key`, `edit_distance`, and the lexicon/corpus/DCS/whitelist
@@ -23,7 +25,7 @@ re-implemented — single source of truth. (The SLP1 alphabet/char classes stay 
 ### Corpus grounding (DCS)
 
 Four detectors use the **DCS corpus** as ground truth via the vendored
-[`dcs_lemma_summary.json`](dcs_lemma_summary.json) — 83,239 SLP1 lemmas with frequency
+[`dcs_lemma_summary.json`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/dcs_lemma_summary.json) — 83,239 SLP1 lemmas with frequency
 bands 1–5 (1 = hapax … 5 = ≥1000 occurrences). It is used two ways:
 
 - **suppress** — a headword that is itself an attested DCS lemma is a real word, so
@@ -43,14 +45,14 @@ consumption contract.
 
 | # | script | catches | result on sanhw1 | output |
 |---|---|---|---|---|
-| 1 | [spell_correct.py](spell_correct.py) | misspelling whose confusion-neighbour is a trusted (MW/PW/VCP) headword; **DCS-ranked**, DCS-attested headwords suppressed | 9173 (4001 suppressed; 704 → common DCS lemma) | `DICT:wrong:right:n` |
-| 2 | [consensus.py](consensus.py) | minority spelling vs the N-way cross-dict consensus (DCS-attested minorities suppressed) | 7548 | `DICT:wrong:right:n` |
-| 3 | [intra_dup.py](intra_dup.py) | one dict holding both a word and a rare confusion-variant of it (DCS-attested variants suppressed) | 8945 | `DICT:wrong:right:n` |
-| 4 | [dict_vs_corpus.py](dict_vs_corpus.py) | **collective** dict errors: a form all dicts agree on but the DCS corpus contradicts (lowest precision) | 1350 (646 in ≥5 dicts) | `DICT:wrong:right:n` |
-| 5 | [phonotactic_check.py](phonotactic_check.py) | hard phonotactic violations (anusvara/visarga mis-placed, double vowel) | 60 (0 false positives) | `X:PH-<rule>=…:D` |
-| 6 | [charset_check.py](charset_check.py) | non-SLP1 characters (encoding errors) | 28 | `X:CHS=…:D` |
-| 7 | [order_check.py](order_check.py) | headwords out of Sanskrit collation order | n/a (needs source-order input) | `X:ORD=…:line` |
-| 8 | [tied_field_check.py](tied_field_check.py) | tied-field cross-encoding consistency: SLP1↔Devanāgarī↔IAST round-trip disagreement | 0 (of 431,568 unique headwords — see [docs/HYPOTHESES.md](../docs/HYPOTHESES.md) H8) | `X:TFC-DEV=…:D` / `X:TFC-IAST=…:D` |
+| 1 | [spell_correct.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/spell_correct.py) | misspelling whose confusion-neighbour is a trusted (MW/PW/VCP) headword; **DCS-ranked**, DCS-attested headwords suppressed | 9173 (4001 suppressed; 704 → common DCS lemma) | `DICT:wrong:right:n` |
+| 2 | [consensus.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/consensus.py) | minority spelling vs the N-way cross-dict consensus (DCS-attested minorities suppressed) | 7548 | `DICT:wrong:right:n` |
+| 3 | [intra_dup.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/intra_dup.py) | one dict holding both a word and a rare confusion-variant of it (DCS-attested variants suppressed) | 8945 | `DICT:wrong:right:n` |
+| 4 | [dict_vs_corpus.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/dict_vs_corpus.py) | **collective** dict errors: a form all dicts agree on but the DCS corpus contradicts (lowest precision) | 1350 (646 in ≥5 dicts) | `DICT:wrong:right:n` |
+| 5 | [phonotactic_check.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/phonotactic_check.py) | hard phonotactic violations (anusvara/visarga mis-placed, double vowel) | 60 (0 false positives) | `X:PH-<rule>=…:D` |
+| 6 | [charset_check.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/charset_check.py) | non-SLP1 characters (encoding errors) | 28 | `X:CHS=…:D` |
+| 7 | [order_check.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/order_check.py) | headwords out of Sanskrit collation order | n/a (needs source-order input) | `X:ORD=…:line` |
+| 8 | [tied_field_check.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/tied_field_check.py) | tied-field cross-encoding consistency: SLP1↔Devanāgarī↔IAST round-trip disagreement | 0 (of 431,568 unique headwords — see [docs/HYPOTHESES.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/HYPOTHESES.md) H8) | `X:TFC-DEV=…:D` / `X:TFC-IAST=…:D` |
 
 `tied_field_check` is the **11th detector family** counting the standalone scripts in this table
 alongside `meter_check` ([detectors/meter/](meter/)), `body_xref_check` (cross-reference integrity,
@@ -62,7 +64,7 @@ and the aspirate/diphthong digraph ambiguity via IAST — from a genuine defect,
 
 ## Unified runner & review (start here)
 
-[run_all.py](run_all.py) runs every detector, **deduplicates across them** by suspect
+[run_all.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/run_all.py) runs every detector, **deduplicates across them** by suspect
 headword, scores each candidate, and assigns an **A/B/C tier** — cross-detector
 agreement is the main signal (a word flagged by several detectors is far more likely a
 real error). It emits:
@@ -70,7 +72,7 @@ real error). It emits:
 - `combined_candidates.txt` — full ranked list (tier, score, suspect → suggestion, evidence)
 - `combined_review.html` — accept/reject UI: per-row scan links, ✓/✗ buttons (keys
   a/r/s), decisions persisted to `localStorage`, and **Export accepted / rejected** →
-  the `DICT:wrong:right:y|n` standard format for [chg_nchg_sep.py](../chg_nchg_sep.py)
+  the `DICT:wrong:right:y|n` standard format for [chg_nchg_sep.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/chg_nchg_sep.py)
 - `combined_sf.txt` — standard format for the best suggestion per suspect
 
 ```sh
@@ -84,7 +86,7 @@ flagged by several detectors at once — the verify-first queue. Outputs are git
 
 ## Evaluation & raw-source runs (Phase 1.4–1.6)
 
-- [extract_csl_hw.py](extract_csl_hw.py) — pull headwords in **source order** from a
+- [extract_csl_hw.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/extract_csl_hw.py) — pull headwords in **source order** from a
   raw csl-orig dictionary (`<k1>`/`<k2>` fields) so charset/phonotactic/**order_check**
   can run on the raw text, not just the cleaned `sanhw1.txt`:
   ```sh
@@ -94,7 +96,7 @@ flagged by several detectors at once — the verify-first queue. Outputs are git
   *Caveat:* order_check measures deviation from **sanhw's** collation (anusvara sorts
   as the homorganic nasal); a dictionary using a different anusvara convention shows
   many non-error deviations — verify against that dict's own ordering.
-- [eval.py](eval.py) — measures the suite against local ground truth:
+- [eval.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/eval.py) — measures the suite against local ground truth:
   - **recall** vs the 3884 historical o_vs_O pairs: union **50.6%** (spell_correct
     44.6%, consensus 25%), plus **15,152 new** candidate pairs beyond the 2017 method;
   - **false positives**: **0** against 29.5k known-good (`nochange`) words;
@@ -105,16 +107,16 @@ flagged by several detectors at once — the verify-first queue. Outputs are git
 
 ## Submission & tuning (Phase 2, in progress)
 
-- [gen_confusion_weights.py](gen_confusion_weights.py) — derive empirical single-char
-  confusion weights from the 3884 o_vs_O pairs → [confusion_weights.json](confusion_weights.json)
+- [gen_confusion_weights.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/gen_confusion_weights.py) — derive empirical single-char
+  confusion weights from the 3884 o_vs_O pairs → [confusion_weights.json](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/confusion_weights.json)
   (a/A 41%, i/I 24%, u/U 9%, s/S 8% …); `run_all` uses them to rank common confusions
   higher.
-- [run_campaign.py](run_campaign.py) — **per-dictionary campaigns**: splits the
+- [run_campaign.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/run_campaign.py) — **per-dictionary campaigns**: splits the
   unified suite per dictionary into `campaigns/<DICT>/{review.html,candidates.txt}` so
   you can work one dictionary's queue at a time, plus `campaigns/campaign_summary.txt`,
   a dashboard ranking dicts by tier-A count (MW 1977, PD 1045, BHS 737, SCH 678,
   PW 657 …) — campaign the biggest high-confidence queues first.
-- [ocr_verify.py](ocr_verify.py) — **OCR-assisted pre-verification** (triage prior, not
+- [ocr_verify.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/ocr_verify.py) — **OCR-assisted pre-verification** (triage prior, not
   a verdict): for a candidate, resolve the Cologne `servepdf` page → fetch the scan PDF
   → text layer or OCR → compare the print to the suspect vs the suggested spelling →
   pre-label CONFIRM / DENY / UNCERTAIN, reordering the human queue. Fetch+render and the
@@ -123,7 +125,7 @@ flagged by several detectors at once — the verify-first queue. Outputs are git
   cached as a review aid and the label is MANUAL. Polite by design (cached,
   rate-limited, 429 backoff) — run small batches, ideally server-side where the scans
   live. OCR of old Devanagari scans is unreliable, so a human always confirms.
-- [gen_vidyut_stems.py](gen_vidyut_stems.py) → `vidyut_stems.txt` — **morphology gate**
+- [gen_vidyut_stems.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/gen_vidyut_stems.py) → `vidyut_stems.txt` — **morphology gate**
   (Phase 3.2): the 205k vidyut pratipadika (stem) inventory. `run_all` tags `morph✓`
   when a correction's suggestion is a valid vidyut stem the suspect isn't (a
   grammatical-validity signal) and nudges its rank. **Honest caveat:** weak on
@@ -132,7 +134,7 @@ flagged by several detectors at once — the verify-first queue. Outputs are git
   is a ranking nudge + informational tag, **not** a tier promoter. Regenerate where
   vidyut is installed (`gen_vidyut_stems.py`); the tag is simply off if the file is
   absent. Stems from vidyut (Arun Prasad / ambuda-org, MIT).
-- [make_changefiles.py](make_changefiles.py) — turn accepted corrections
+- [make_changefiles.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/make_changefiles.py) — turn accepted corrections
   (`accepted_sf.txt` exported from the review UI) into per-dictionary **draft**
   change-files in the CORRECTIONS updateByLine format: locates the source line in
   csl-orig and proposes the `<k1>`/`<k2>` edit. **Prep only** — never edits dictionary
@@ -149,21 +151,21 @@ Two larger pipelines also live here; they consume the detector output but have t
   `triage_lang.py` + `bodyaware_workflow.js`, driven by the **`/dict-triage <DICT>`** skill. Judges
   each tier-A candidate against the dictionary's *own entry text* → a FILE-FIRST queue + a do-not-file
   list. **Done for all 33 dicts** — index + results in
-  [../corrections_draft/README.md](../corrections_draft/README.md);
+  [../corrections_draft/README.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/README.md);
   `gen_do_not_file_suppress.py` folds the do-not-file lists into the detector suppression layer.
   Dictionaries not in `csl-orig` (e.g. **PD**) are staged with
-  [get_external_source.py](get_external_source.py) into `external_src/` and resolved by
+  [get_external_source.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/get_external_source.py) into `external_src/` and resolved by
   `triage_util.source_file()`.
-- **Ortho-drift study** — [ortho_drift.py](ortho_drift.py) + `merge_reform_pairs.py`. Checks
+- **Ortho-drift study** — [ortho_drift.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/ortho_drift.py) + `merge_reform_pairs.py`. Checks
   gloss-language tokens (de/en/fr/la/ru) against a 2026 standard to document spelling drift; **complete
-  across all 5 languages** — see [../docs/ORTHO_DRIFT_FINDINGS.md](../docs/ORTHO_DRIFT_FINDINGS.md).
+  across all 5 languages** — see [../docs/ORTHO_DRIFT_FINDINGS.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/ORTHO_DRIFT_FINDINGS.md).
 
 ## Output formats (reuse the existing pipeline)
 - **Flaggers** (5, 6, 7, 8) emit faultfinder-style `X:CODE=detail:D`, so
-  [../faultfinder3a-html.php](../faultfinder3a-html.php) (with the `repeat=2` arg)
-  and [../triage_suspects.py](../triage_suspects.py) can render/triage them.
+  [../faultfinder3a-html.php](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/faultfinder3a-html.php) (with the `repeat=2` arg)
+  and [../triage_suspects.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/triage_suspects.py) can render/triage them.
 - **Correctors** (1, 2, 3, 4) emit the CORRECTIONS standard format `DICT:wrong:right:n`
-  (issue #154), ready for [../chg_nchg_sep.py](../chg_nchg_sep.py) and submission.
+  (issue #154), ready for [../chg_nchg_sep.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/chg_nchg_sep.py) and submission.
 
 ## Run
 ```sh
@@ -186,7 +188,7 @@ forms in particular need eyes on the print.
   `MARGIN` (attestation gap) — the rarity gate is what keeps distinct real words
   (anu/aRu, pAda/pada) out of the results.
 - `spell_correct.py`: trusted lexicon = MW+PW+VCP; corpus = CountVowels texts.
-- All detectors skip [../nochange/nochange.txt](../nochange/nochange.txt) whitelisted words.
+- All detectors skip [../nochange/nochange.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/nochange/nochange.txt) whitelisted words.
 
 ## How each detector works (algorithm + rationale)
 
@@ -252,13 +254,15 @@ aspirate/diphthong via IAST — both are properties of the transliteration schem
 errors). *Why:* this is the "tied-field consistency" detector shape from Bloodgood & Strauss (arXiv
 1602.07807) the project lacked — it checks that fields *expected* to agree actually do, distinct from
 every other detector here (which compare a headword against other headwords or a corpus). See H8 in
-[docs/HYPOTHESES.md](../docs/HYPOTHESES.md) for why it currently reports 0 real flags.
+[docs/HYPOTHESES.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/HYPOTHESES.md) for why it currently reports 0 real flags.
 
 ### Shared design principles
-- One confusion model in [slp1util.py](slp1util.py) — no per-detector copies (the
+- One confusion model in [slp1util.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/slp1util.py) — no per-detector copies (the
   bug the code-review caught in the original tools).
 - `confusion_key` for cheap grouping, `confusion_sub` for precise confirmation:
   group loosely, then verify strictly.
 - Rarity + attestation gates over raw similarity — similarity alone flags distinct
   real words.
 - Everything is a **candidate** for human + scan verification, never an auto-fix.
+
+_Dr. Mārcis Gasūns_

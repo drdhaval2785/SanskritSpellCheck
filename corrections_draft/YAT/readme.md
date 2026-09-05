@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # YAT correction candidates — BODY-GROUNDED triage (DRAFT for human review)
 
 The unified detector engine flagged **247 tier-A** YAT headwords as possible misspellings. YAT is
@@ -37,7 +39,7 @@ poorly-digitised sources.
 
 ## The authoritative artifacts
 
-- **[YAT_file_first_sf.txt](YAT_file_first_sf.txt)** — the **FILE-FIRST** queue: 27 body-confirmed,
+- **[YAT_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/YAT/YAT_file_first_sf.txt)** — the **FILE-FIRST** queue: 27 body-confirmed,
   review-survived typos in CORRECTIONS standard format (`YAT:wrong:right:n`). **Verify each on the
   scan, flip the trailing `n`→`y`, then** `python chg_nchg_sep.py …`. Error classes: dental-n vs
   retroflex-ṇ (`RaB→naB`, `Rij→nij`, `drAvana→drAvaRa`, `AparAhnika→AparAhRika`,
@@ -47,10 +49,10 @@ poorly-digitised sources.
   `lakzmIpala→lakzmIPala`, `avasfzWa→avasfzwa`, `prAyopavizWa→prAyopavizwa`, `zazWihAyana→zazwihAyana`,
   `vESizWya→vESizwya`), vowel-length (`mayAvin→mAyAvin`, `mahAmayA→mahAmAyA`, `aSanayA→aSanAyA`,
   `hantAkAra→hantakAra`, `AkzadyUta→akzadyUta`, `ambukfta→ambUkfta`).
-- **[YAT_triaged.txt](YAT_triaged.txt)** — full queue: 27 FILE-FIRST, 40 TYPO-UNSURE (the b/v +
+- **[YAT_triaged.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/YAT/YAT_triaged.txt)** — full queue: 27 FILE-FIRST, 40 TYPO-UNSURE (the b/v +
   uncertain), 13 REVIEW (eyes), 123 REAL-WORD, 1 INTENTIONAL, 15 unlocatable.
-- **[YAT_wrong_readings.txt](YAT_wrong_readings.txt)** — the do-not-file list (only 1 here; YAT
-  carries little apparatus). Folded into [nochange/do_not_file_suppress.txt](../../nochange/do_not_file_suppress.txt).
+- **[YAT_wrong_readings.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/YAT/YAT_wrong_readings.txt)** — the do-not-file list (only 1 here; YAT
+  carries little apparatus). Folded into [nochange/do_not_file_suppress.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/nochange/do_not_file_suppress.txt).
 
 ## Method
 
@@ -59,3 +61,5 @@ UNSURE; YAT registered as English in `triage_lang.py`) → **source-confirm** of
 its full YAT entry → **false-positive review** (the gate that held back the b/v cluster and the
 mis-paired ṇ→m suggestions) → `triage_dict.py YAT --finish`. **DRAFT for human review** — the
 27 FILE-FIRST must each be scan-verified before filing to CORRECTIONS; never edits `csl-orig`.
+
+_Dr. Mārcis Gasūns_

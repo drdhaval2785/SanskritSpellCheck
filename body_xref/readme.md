@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # Body-level QA — cross-reference integrity (pilot: MW)
 
 The headword tools only check `<k1>`/`<k2>`. This is the first pass at the **words inside** entries.
@@ -14,7 +16,7 @@ A body is full of cross-references (`See X`, `cf. X`, `= X`, `q.v.`) whose **tar
 form exists."** We can check whether it does. Unlike spelling, this needs no apparatus/markup and no
 corpus judgement — the dictionary makes a checkable claim about itself.
 
-[detectors/body_xref_check.py](../detectors/body_xref_check.py) extracts every `See/cf./=/q.v. <s>TARGET</s>`,
+[detectors/body_xref_check.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/body_xref_check.py) extracts every `See/cf./=/q.v. <s>TARGET</s>`,
 **canonicalizes the reference notation**, and resolves the target against every k1/k2 headword (all
 33 dicts, via `sanhw1`) + DCS lemmas. The notation handling is the whole game — without it the
 "unresolved" set is 36 % notation artifacts; with it, 6.2 %:
@@ -99,3 +101,5 @@ cd detectors && python body_xref_check.py <DICT> ../body_xref/<DICT>_xref.txt   
 
 **Before filing:** refine German (PW/PWG) notation handling to drive the 14–23 % unresolved down (so
 the typo'd-ref set is cleaner), then scan-verify each FILE-FIRST candidate per the standard workflow.
+
+_Dr. Mārcis Gasūns_

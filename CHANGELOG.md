@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # Changelog
 
 All notable changes to SanskritSpellCheck are documented here.
@@ -137,19 +139,19 @@ ready for a dated entry.
 ## [1.58.1] - 2026-08-01
 ### Added
 - **H454 gate census + reconfirm (Grok 4.5 override dual-run, 01-08-2026).**
-  [corrections_draft/h454_gate_census.py](corrections_draft/h454_gate_census.py)
+  [corrections_draft/h454_gate_census.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/h454_gate_census.py)
   counts `:y`/`:n` across all FILE-FIRST queues (exit 2 when gate closed).
   Measurement 01-08-2026: **y=0 / n=122** — still blocked on MG scan-verify
   votes; report at
-  [corrections_draft/H454_GATE_RECONFIRM_01.08.26.md](corrections_draft/H454_GATE_RECONFIRM_01.08.26.md).
-  [detectors/make_changefiles.py](detectors/make_changefiles.py) now **skips
+  [corrections_draft/H454_GATE_RECONFIRM_01.08.26.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/H454_GATE_RECONFIRM_01.08.26.md).
+  [detectors/make_changefiles.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/make_changefiles.py) now **skips
   trailing `:n` / unknown flags** so queue files cannot silently emit drafts
   for unverified rows (H454 load-bearing guard).
 
 ## [1.58.0] - 2026-07-31
 ### Added
 - **SHS entry-body deterministic detector pilot (H1535, roadmap Q3 item 6).**
-  [detectors/entry_body_pilot.py](detectors/entry_body_pilot.py) extends
+  [detectors/entry_body_pilot.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/entry_body_pilot.py) extends
   `charset_check`/`phonotactic_check`/the bigram `ngram` checker from headwords
   into SHS entry-body text (209k `{#...#}` spans → 162,814 clean body words after
   excluding two SHS notation conventions found along the way: `-` stem-elision
@@ -160,7 +162,7 @@ ready for a dated entry.
   parenthetical variant-reading shorthand) that ordinary phonotactic rules
   aren't designed for — documented with concrete suppression rules for scale-up.
   9 genuine candidates flagged for future scan-verification, none filed. See
-  [corrections_draft/SHS/body_pilot/README.md](corrections_draft/SHS/body_pilot/README.md).
+  [corrections_draft/SHS/body_pilot/README.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/SHS/body_pilot/README.md).
 - **Monthly detection-loop GitHub Actions cron (H1533, roadmap Q4 item 5).**
   `.github/workflows/monthly-detection-loop.yml` runs on the 1st of each month
   (and via `workflow_dispatch`) re-running the full `run_all.py` detector
@@ -253,14 +255,14 @@ ready for a dated entry.
 
 ### Added
 - **H827: tied-field cross-encoding consistency detector.** New 11th detector family
-  [detectors/tied_field_check.py](detectors/tied_field_check.py) — the "tied-field
+  [detectors/tied_field_check.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/tied_field_check.py) — the "tied-field
   consistency" shape from [Bloodgood & Strauss, arXiv 1602.07807](https://arxiv.org/abs/1602.07807)
   (IEEE ICSC 2016), the project's direct methodological ancestor, missing until now: checks
   that SLP1-headword, its Devanāgarī rendering, and its IAST rendering are mutually
   derivable, by round-tripping every `sanhw1.txt` headword through both encodings via the
   shared `sanskrit-util` package (three new thin wrappers added to
-  [detectors/slp1util.py](detectors/slp1util.py): `slp1_to_devanagari`, `slp1_to_iast`,
-  `iast_to_slp1`). Wired into [detectors/run_all.py](detectors/run_all.py) as a
+  [detectors/slp1util.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/slp1util.py): `slp1_to_devanagari`, `slp1_to_iast`,
+  `iast_to_slp1`). Wired into [detectors/run_all.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/run_all.py) as a
   high-precision flagger (`X:TFC-DEV=…:D` / `X:TFC-IAST=…:D`); `detectors/eval.py`'s filing
   gate stays **PASS**.
   Full run across all **431,596** lines / 431,568 unique in-alphabet headwords: **0
@@ -274,22 +276,22 @@ ready for a dated entry.
   discriminates a genuine defect from a documented normalization axis; it just found no
   genuine defects because `sanhw1.txt` stores only the SLP1 headword, with no
   independently-authored Devanāgarī/IAST field to disagree with it). New hypothesis entry
-  H8 in [docs/HYPOTHESES.md](docs/HYPOTHESES.md); detector table + prose in
-  [detectors/readme.md](detectors/readme.md).
+  H8 in [docs/HYPOTHESES.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/HYPOTHESES.md); detector table + prose in
+  [detectors/readme.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/readme.md).
 
 ## [1.54.0] - 2026-07-13
 
 ### Added
 - **H826 (ACL uplift): A37 S-curve exo/endo fit + SemEval-2015 DTE benchmark + LChange
   companion.** Ruling D15 from the ACL Anthology roadmap interview (revision 3):
-  - [detectors/drift_dating.py](detectors/drift_dating.py) extended with
+  - [detectors/drift_dating.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/drift_dating.py) extended with
     `fit_scurve()` (a per-variant logistic S-curve fit adapted from Ghanbarnejad,
     Gerlach, Miotto and Altmann's "Extracting Information from S-curves of Language
     Change," arXiv:1406.4498) and `dte_bands()` (re-expresses the existing
     leave-one-out dater in SemEval-2015 Task 7 Diachronic Text Evaluation terms —
     correct-25-yr-epoch rate + distance-to-true-year tolerance bands, per S15-2147/
     S15-2148). Results persisted to
-    [docs/ORTHO_DRIFT_FINDINGS.md](docs/ORTHO_DRIFT_FINDINGS.md) §O7a/§O7b.
+    [docs/ORTHO_DRIFT_FINDINGS.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/ORTHO_DRIFT_FINDINGS.md) §O7a/§O7b.
   - **Honest negative finding, not forced into the expected direction:** the naive
     cross-sectional S-curve fit **inverts** the expected exo/endo mechanism ordering —
     English (convention/endogenous) fits a narrow 9.7-yr transition; German
@@ -298,13 +300,13 @@ ready for a dated entry.
     edition-spacing around the true 1901 reform date), not evidence about either
     language's actual change mechanism — see §O7a's full caveat before citing the
     per-language `b`/`Δt80` numbers.
-  - [papers/A37_ortho_drift_paper.md](papers/A37_ortho_drift_paper.md) §2 gains three
+  - [papers/A37_ortho_drift_paper.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/A37_ortho_drift_paper.md) §2 gains three
     related-work paragraphs (Ghanbarnejad et al., SemEval-2015 DTE, Lüschow 2021 ZfS
     graphemic variation); new §4.8 reports the S-curve finding as a methodological
     limitation; §5 gains the DTE distance-band re-expression. References section grows
     by five verified citations (Ghanbarnejad et al. 2014; Popescu and Strapparava
     2015; Szymanski and Lynch 2015; Ren, Wang, Zhao and Ren 2023; Lüschow 2021).
-  - New [papers/A37_lchange_companion.md](papers/A37_lchange_companion.md) — a
+  - New [papers/A37_lchange_companion.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/A37_lchange_companion.md) — a
     standalone LChange short-paper draft ("When the S-curve Lies") that isolates the
     inversion finding as a transferable methodological caution for anyone applying
     Ghanbarnejad-style S-curve mechanism classification to cross-sectional (edition-
@@ -319,11 +321,11 @@ ready for a dated entry.
 ### Added
 - **H825 (ACL uplift): GEC/GED reframe, detection-level eval metrics, cross-family
   annotator tooling.** Ruling D9/D10/D11 from the ACL Anthology roadmap interview:
-  - [detectors/gold_corrections.tsv](detectors/gold_corrections.tsv)
-    ([detectors/build_gold_set.py](detectors/build_gold_set.py)) — a held-out
+  - [detectors/gold_corrections.tsv](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/gold_corrections.tsv)
+    ([detectors/build_gold_set.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/build_gold_set.py)) — a held-out
     detection-level gold set derived from `corrections_draft/file_first_verified.tsv`
     (109 POSITIVE fileable-typo rows / 13 HARM collision-apparatus-stale rows).
-  - [detectors/eval.py](detectors/eval.py) extended with detection-level
+  - [detectors/eval.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/eval.py) extended with detection-level
     precision/recall/**F0.5** (β=0.5, Grundkiewicz-style), **FPR** against the
     nochange whitelist, and a **harm metric** (fraction of the 13 HARM rows a
     corrector wrongly proposes to "fix") — plus a real FP=0 filing gate (nonzero
@@ -331,21 +333,21 @@ ready for a dated entry.
     underlying detectors flag 77–100% of the exact collision/apparatus/stale rows
     the do-not-file catalogue exists to protect — direct evidence for A44's own
     "do-not-file catalogue is the real product" thesis.
-  - [detectors/irr_cross_family.py](detectors/irr_cross_family.py) — a
+  - [detectors/irr_cross_family.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/irr_cross_family.py) — a
     cross-family blind second-annotator script (non-Anthropic judge via any
     OpenAI-compatible endpoint, e.g. DeepSeek) for the IRR sample, addressing the
     self-enhancement-bias confound in the existing Sonnet/Opus (same-family) IRR
     design. Built and dry-run verified; the actual annotation run is pending an
     `LLM_API_KEY` (none configured on the host that built this).
-  - [detectors/irr_agreement.py](detectors/irr_agreement.py) generalized to report
+  - [detectors/irr_agreement.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/irr_agreement.py) generalized to report
     a cross-family agreement section alongside the existing within-family one
     (degrades gracefully when the cross-family run hasn't happened yet); regression
     checked against the existing κ=0.336/0.663 figures.
-  - [corrections_draft/irr/HUMAN_ANCHOR_NEEDED.md](corrections_draft/irr/HUMAN_ANCHOR_NEEDED.md)
+  - [corrections_draft/irr/HUMAN_ANCHOR_NEEDED.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/irr/HUMAN_ANCHOR_NEEDED.md)
     — flags the outstanding gate: both existing kappas are LLM-only inter-rater
     comparisons, not yet licensed against an independent human-labelled seed set.
     A human should decide whether to produce that ~30-row seed before submission.
-  - [papers/A44_body_grounded_triage_paper.md](papers/A44_body_grounded_triage_paper.md)
+  - [papers/A44_body_grounded_triage_paper.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/A44_body_grounded_triage_paper.md)
     reframed on the GEC/GED/confusion-set spine (Fable 5, `claude-fable-5`,
     register adjudication per ruling D1), with the related-work citations above
     added and the two live References defects (missing Artstein & Poesio,
@@ -370,7 +372,7 @@ ready for a dated entry.
 ## [1.51.0] - 2026-07-10
 
 ### Added
-- **[detectors/meter/GRETIL_UPSTREAM_REPORT.md](detectors/meter/GRETIL_UPSTREAM_REPORT.md)
+- **[detectors/meter/GRETIL_UPSTREAM_REPORT.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/meter/GRETIL_UPSTREAM_REPORT.md)
   (H456, ruling D8)** — the verified GRETIL corrections report: all 124 bigram-screen loci
   hand-checked against the raw e-texts → **60 verified error loci across 7 texts** (incl. two
   systematic classes: ḥ-for-vowel conversion corruption in the Vālmīki-Rāmāyaṇa southern-2 +
@@ -387,10 +389,10 @@ ready for a dated entry.
 - **H454 scan-verification gate tooling (ruling D3 prep)** — the batched-PR switchover found
   **zero `y`-flipped rows in all 11 FILE-FIRST queues**, so change-file generation is gated on
   the human scan pass. Shipped the gate as one sitting instead of a file-editing chore:
-  [detectors/gen_scanverify_sheet.py](detectors/gen_scanverify_sheet.py) generates an
+  [detectors/gen_scanverify_sheet.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/gen_scanverify_sheet.py) generates an
   interactive voting sheet over all 109 fileable rows (entry-body evidence + verification note +
   Cologne scan deep-link per row; keyboard voting; localStorage persistence; decisions.json
-  export), and [corrections_draft/apply_scanverify_decisions.py](corrections_draft/apply_scanverify_decisions.py)
+  export), and [corrections_draft/apply_scanverify_decisions.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/apply_scanverify_decisions.py)
   folds the votes back (`--apply` flips approved rows `n`→`y`, lists rejected rows for
   do-not-file routing; dry-run by default). `review/` gitignored. Change files, queue parking,
   and the #447 follow-up comment deliberately NOT produced — they require verified rows.
@@ -399,15 +401,15 @@ ready for a dated entry.
 
 ### Added
 - **A44 blind LLM second-annotator agreement study (H453, ruling D2)** — replaces the deferred
-  human-IRR gate. All 122 [file_first_verified.tsv](corrections_draft/file_first_verified.tsv)
+  human-IRR gate. All 122 [file_first_verified.tsv](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/file_first_verified.tsv)
   rows re-annotated blind by Opus 4.8 (`claude-opus-4-8`, 10 parallel agents, fresh prompt,
   entry-body evidence only); **κ = 0.336 five-way, 99.2 % binary defect recognition (κ = 0.663)**,
   zero corrections rejected as wrong, EDITORIAL class reproduced at perfect recall. All 50
   disagreements decompose into collision-threshold (33) and evidence-threshold (16) *policy*
   differences + 1 decisiveness reversal — no misread evidence. The blind pass independently
   reproduced the editor's 02-07 PASS→SCAN-FIRST audit on 4 of the 5 downgraded SHS rows. New:
-  [detectors/irr_build_inputs.py](detectors/irr_build_inputs.py),
-  [detectors/irr_agreement.py](detectors/irr_agreement.py) (stdlib, exact rational arithmetic),
+  [detectors/irr_build_inputs.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/irr_build_inputs.py),
+  [detectors/irr_agreement.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/irr_agreement.py) (stdlib, exact rational arithmetic),
   [corrections_draft/irr/](corrections_draft/irr/) (blind annotations + generated stats). New
   paper section §4.6 + honest limitations rewrite; A44 3/5 → 4/5.
 
@@ -420,7 +422,7 @@ ready for a dated entry.
 ## [1.48.0] - 2026-07-10
 
 ### Added
-- **[docs/PRIOR_ART.md](docs/PRIOR_ART.md)** — the H452 prior-art scan (roadmap Q3 item 1, ruling
+- **[docs/PRIOR_ART.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/PRIOR_ART.md)** — the H452 prior-art scan (roadmap Q3 item 1, ruling
   D1: Fable 5 `claude-fable-5` judgment gate). 12+ Sanskrit spellchecking tools/surfaces
   characterized with the five-column verdict (approach · data · license · maintenance ·
   reuse-or-avoid), every claim fetch-backed. Headlines: the netlify spellchecker identified as
@@ -430,18 +432,18 @@ ready for a dated entry.
   flag-and-suggest Sanskrit spellchecker exists — the Q1-2027 web app's niche is unoccupied.
 
 ### Fixed
-- **A44 mis-citation** ([papers/A44_body_grounded_triage_paper.md](papers/A44_body_grounded_triage_paper.md)
+- **A44 mis-citation** ([papers/A44_body_grounded_triage_paper.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/A44_body_grounded_triage_paper.md)
   §2 + References): the "contextual spell-checker for Sanskrit demonstrated at ISCLS 2024" does not
   exist in that volume; corrected to Prasanna (ICON 2022) with the over-flagging/precision-collapse
   contrast made explicit. A37 §2 gained the object-language delimiting paragraph + reference.
 
 ### Changed
-- [ROADMAP_2026_2027.md](ROADMAP_2026_2027.md) Q3 item 1 ticked ✅ (done 10-07-2026, H452).
+- [ROADMAP_2026_2027.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ROADMAP_2026_2027.md) Q3 item 1 ticked ✅ (done 10-07-2026, H452).
 
 ## [1.47.0] - 2026-07-10
 
 ### Changed
-- **[ROADMAP_2026_2027.md](ROADMAP_2026_2027.md) — revision 2**, re-interviewed with M.G. after
+- **[ROADMAP_2026_2027.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ROADMAP_2026_2027.md) — revision 2**, re-interviewed with M.G. after
   eight days of execution diverged from revision 1 ([PR #25](https://github.com/drdhaval2785/SanskritSpellCheck/pull/25)).
   Eight rulings (D1–D8), each recorded with its rationale:
   **D1** Fable 5 (`claude-fable-5`) is scoped to **judgment gates only** (paper referee/author passes,
@@ -454,8 +456,8 @@ ready for a dated entry.
   **D3** Corrections delivery switches from [CORRECTIONS#447](https://github.com/sanskrit-lexicon/CORRECTIONS/issues/447)
   (posted 02-07, **eight days with zero comments**) to **monthly consolidated PRs** of XML-validated
   `updateByLine` change files. `csl-orig` stays read-only to agents.
-  **D4** The over-delivered meter track (5 GRETIL sections, [SECTIONS_DATASET.md](detectors/meter/SECTIONS_DATASET.md),
-  [GRETIL_TEXT_TYPOS.md](detectors/meter/GRETIL_TEXT_TYPOS.md)) **folds into A47** as a joint
+  **D4** The over-delivered meter track (5 GRETIL sections, [SECTIONS_DATASET.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/meter/SECTIONS_DATASET.md),
+  [GRETIL_TEXT_TYPOS.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/meter/GRETIL_TEXT_TYPOS.md)) **folds into A47** as a joint
   sound/metre paper rather than becoming a separate publication.
   **D5** Anuprāsa stays Q1 2027, so **A47 drafts Q2 2027 and submits Q3 2027** — past this roadmap's
   horizon, opening the 2027–2028 plan.
@@ -480,15 +482,15 @@ ready for a dated entry.
 
 ### Added
 - **Fable 5 referee reviews of both papers** —
-  [papers/A37_review_fable5.md](papers/A37_review_fable5.md) and
-  [papers/A44_review_fable5.md](papers/A44_review_fable5.md): substantive pre-submission
+  [papers/A37_review_fable5.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/A37_review_fable5.md) and
+  [papers/A44_review_fable5.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/A44_review_fable5.md): substantive pre-submission
   reviews (argument/framing/venue-fit, prioritized fix lists) by Fable 5 (`claude-fable-5`)
   within the trial window. A37 headline risks: empty related-work vs stylochronometry,
   "law" overclaim (Latin zero overdetermined), PW/PWG non-independence in the n=5 correlation,
   §4.4 gradient-vs-saturation inconsistency. A44 headline: reframe for IJL, fold in the 02-07
   verification (collision = a new fifth candidate class), fix bare model attributions, cite
   eval.py; IRR remains the blocking human gate. Estimated two sessions each to 4/5.
-- **Judge spot-check recorded in [VERIFICATION_2026_07.md](corrections_draft/VERIFICATION_2026_07.md):**
+- **Judge spot-check recorded in [VERIFICATION_2026_07.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/VERIFICATION_2026_07.md):**
   10/10 seeded cross-dict sample of checker-PASS rows re-confirmed against `csl-orig` by
   Fable 5 after posting #447; side-flag: `YAT zazWimatta` likely carries the same `zW→zw`
   defect (future batch).
@@ -500,7 +502,7 @@ ready for a dated entry.
   [sanskrit-lexicon/CORRECTIONS#447](https://github.com/sanskrit-lexicon/CORRECTIONS/issues/447),
   posted 02-07-2026 with M.G.'s explicit authorization — the payoff milestone of the whole
   triage effort (roadmap §Q3 items 1–2 complete). The committed
-  [CORRECTIONS_umbrella_issue.md](corrections_draft/CORRECTIONS_umbrella_issue.md) now carries
+  [CORRECTIONS_umbrella_issue.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/CORRECTIONS_umbrella_issue.md) now carries
   the POSTED banner and remains the source of record for the issue body. Next: human
   scan-verification (SHS → YAT → ACC) and maintainer follow-up on the issue; change-file drafts
   on request; `csl-orig` application stays human-gated.
@@ -508,7 +510,7 @@ ready for a dated entry.
 ## [1.44.0] - 2026-07-02
 
 ### Added
-- **[corrections_draft/CORRECTIONS_umbrella_issue.md](corrections_draft/CORRECTIONS_umbrella_issue.md)**
+- **[corrections_draft/CORRECTIONS_umbrella_issue.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/CORRECTIONS_umbrella_issue.md)**
   — the complete umbrella-issue body for the verified queue, M.G.-approved format: per-dict
   sections (biggest first), each with Proposed / Scan-first / Editorial (merge-vs-respell)
   tables, in-entry evidence and scan links per row, DROP+DNF audit appendix. **92 proposed +
@@ -527,7 +529,7 @@ ready for a dated entry.
 ## [1.43.0] - 2026-07-02
 
 ### Added
-- **[docs/CHANDAS_ANUPRASA_PRIOR_ART.md](docs/CHANDAS_ANUPRASA_PRIOR_ART.md)** — survey grounding
+- **[docs/CHANDAS_ANUPRASA_PRIOR_ART.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/CHANDAS_ANUPRASA_PRIOR_ART.md)** — survey grounding
   the planned **batch chandas validator** (new detector family: meter breaks = suspect-text
   signal over GRETIL/DCS verse corpora) and the reuse of the UoHyd **Anuprāsa Identifier**
   (ISCLS 2024; code unpublished, algorithm fully specified → clean-room SLP1 reimplementation).
@@ -543,8 +545,8 @@ ready for a dated entry.
 ## [1.42.0] - 2026-07-02
 
 ### Added
-- **FILE-FIRST verification gate ([corrections_draft/file_first_verified.tsv](corrections_draft/file_first_verified.tsv)
-  + [VERIFICATION_2026_07.md](corrections_draft/VERIFICATION_2026_07.md)).** All 122 candidates
+- **FILE-FIRST verification gate ([corrections_draft/file_first_verified.tsv](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/file_first_verified.tsv)
+  + [VERIFICATION_2026_07.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/VERIFICATION_2026_07.md)).** All 122 candidates
   re-verified against the `csl-orig` entry text (4 Sonnet 5 `claude-sonnet-5` checker agents; Fable 5 adjudicated
   the 28 flags): **97 PASS · 12 SCAN-FIRST · 11 EDITORIAL · 1 DNF · 1 DROP**. Key discoveries:
   ~9 % of candidates are *collisions* (the right spelling already exists as its own entry — YAT
@@ -556,7 +558,7 @@ ready for a dated entry.
 ### Fixed
 - **Paper fact-check corrections** (Sonnet 5 `claude-sonnet-5` fact-checkers vs committed data, ~75 claims
   verified): A44 "largest do-not-file contributors" list was missing third-place BHS (294);
-  A37 + [docs/ORTHO_DRIFT_FINDINGS.md](docs/ORTHO_DRIFT_FINDINGS.md): en_GB dic is 56,571 stems
+  A37 + [docs/ORTHO_DRIFT_FINDINGS.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/ORTHO_DRIFT_FINDINGS.md): en_GB dic is 56,571 stems
   (was "~86 k"), corpus is the Cologne 33 (was "~36"), "one to three orders of magnitude" →
   "up to three" with the honest ~5× floor at the German–English boundary, "~13 decades" →
   1832–2009, "ten 19th-c. dictionaries" → nine dated + the undated Apte held out.
@@ -564,14 +566,14 @@ ready for a dated entry.
 ## [1.41.0] - 2026-07-02
 
 ### Added
-- **[ROADMAP_2026_2027.md](ROADMAP_2026_2027.md) — the 1-year plan (July 2026 → June 2027).**
+- **[ROADMAP_2026_2027.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ROADMAP_2026_2027.md) — the 1-year plan (July 2026 → June 2027).**
   Decided in an interview with M.G. (02-07-2026): file the 122 FILE-FIRST typos NOW without the
   OCR gate (one umbrella issue, human posts/verifies); ≥300 corrections filed by 30-06-2027;
   both papers (A44→IJL, A37→DH venue) submitted by Q4 2026; productize in four shapes (PyPI,
   web app in a new GH-Pages repo, Cologne integration, Zenodo dataset); entry-body pilots
   (deterministic SHS, then LLM MW-citations); union-across-runs recall; quarterly-deep +
   monthly-light cadence (CI detects, agent triages). Fable 5 (`claude-fable-5`) judges until
-  08-07-2026, then Sonnet 5/Opus 4.8 hybrid. [ROADMAP.md](ROADMAP.md) marked superseded as
+  08-07-2026, then Sonnet 5/Opus 4.8 hybrid. [ROADMAP.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ROADMAP.md) marked superseded as
   the forward plan.
 
 ### Fixed
@@ -582,7 +584,7 @@ ready for a dated entry.
 
 ### Added (pre-roadmap engine + study work, formerly [Unreleased])
 - **Ortho-drift O6 — language-general reform map from a diachronic corpus (French, via FreEMnorm).**
-  New [detectors/extract_freem_pairs.py](detectors/extract_freem_pairs.py) harvests historical→modern
+  New [detectors/extract_freem_pairs.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/extract_freem_pairs.py) harvests historical→modern
   French pairs from the openly-licensed [FreEMnorm](https://github.com/FreEM-corpora/FreEMnorm) parallel
   corpus (55 texts, 1606–1697; staged gitignored under `external_src/freem/`). The DTA pipeline
   **generalises**: token-align → 9,973 pairs → ≥20× → 407 → `merge_reform_pairs.py fr` dic-validates
@@ -592,10 +594,10 @@ ready for a dated entry.
   `moy→moi` (763), `dés` (="dice") / Latin `tres` read as `dès`/`très`, IAST `pha`/`phull` misfired by
   `ph→f`. Epoch/register/language mismatch (17th-c. literary prose vs 20th-c. IAST-laced glosses).
   Method language-general; map epoch-bound — kept the validated pairs
-  ([fr_reform_freem_pairs.tsv](ortho_drift/fr_reform_freem_pairs.tsv)) + banked the BUR/STC FreEM runs
+  ([fr_reform_freem_pairs.tsv](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ortho_drift/fr_reform_freem_pairs.tsv)) + banked the BUR/STC FreEM runs
   (`*_drift_report.freem.txt`), but **froze** the canonical fr map/figures (as with O3). Written up in
   `docs/ORTHO_DRIFT_FINDINGS.md` ("O6"). Closes O6 in `H008-Opus_SanskritSpellCheck_NEXT_23.06.26.md`.
-- **Ortho-drift O4 — drift-rate as a dating tool.** New [detectors/drift_dating.py](detectors/drift_dating.py)
+- **Ortho-drift O4 — drift-rate as a dating tool.** New [detectors/drift_dating.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/drift_dating.py)
   calibrates drift/1k ↔ publication year across the five languages (Spearman + leave-one-out year
   prediction + a symlog scatter, `ortho_drift/drift_dating.png`). Finding: drift/1k is a **coarse,
   regime-bounded** dater. (1) No cross-language calibration — the rate is regime-stratified (Russian
@@ -688,7 +690,7 @@ ready for a dated entry.
 ### Added
 - **DTA long-tail merge (Task 4) — German reform map 2,823 → 15,685 forms.** The Deutsches Textarchiv
   `lingattr-TEI` corpus (5,285 texts, 1473–1900; `<w … norm="MODERN">surface</w>` with the DTA::CAB
-  normalization layer) was harvested by the new [detectors/extract_dta_pairs.py](detectors/extract_dta_pairs.py)
+  normalization layer) was harvested by the new [detectors/extract_dta_pairs.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/extract_dta_pairs.py)
   (streams the 2.5 GB zip, skips corrupt members): **596 k** distinct `surface≠norm` pairs → kept those
   attested **≥ 20×** (43,579) → `merge_reform_pairs.py` dic-validated (`old ∉ de_DE & new ∈ de_DE`) →
   **+12,862 accepted** (`vnd→und`, `bey→bei`, `Theil→Teil`, `gantz→ganz`, `krafft→kraft`, `thaler→taler`,
@@ -704,7 +706,7 @@ ready for a dated entry.
   C-stuck known o_vs_O pairs (99 % `spell_correct`, band 0–2) don't benefit. **Rejected the tier
   promotion**; kept a documented `CORROB_*` **score nudge** (rank corroborated candidates higher
   within their tier). Tiers unchanged (A=5371/B=4693/C=4688), `eval.py` FP=0. Write-up in Task 2 of
-  [H008-Opus_SanskritSpellCheck_NEXT_23.06.26.md](H008-Opus_SanskritSpellCheck_NEXT_23.06.26.md).
+  [H008-Opus_SanskritSpellCheck_NEXT_23.06.26.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/H008-Opus_SanskritSpellCheck_NEXT_23.06.26.md).
 - **Ortho-drift within-EN recency control (Task 3 done).** Registered the five modern-leaning English
   dicts **PD / PE / BHS / IEG / VEI** as `en` in `ortho_drift.py`'s `LANG_OF` and ran them against the
   `en_GB` reference (`ropensci/hunspell` `en_GB.dic`, staged at `external_src/hunspell/`, gitignored;
@@ -712,8 +714,8 @@ ready for a dated entry.
   tokens) = 0.00 drift/1k**, PE/BHS/IEG = 0.00, VEI 0.06 (residual æ ligatures) — the modern end of the
   gradient sits at ≈ 0, confirming the metric dates orthography. Full English picture is now a monotone
   recency gradient WIL 1832 (0.57) → MW 1899 (0.01) → modern (0.00). Written up in
-  [docs/ORTHO_DRIFT_FINDINGS.md](docs/ORTHO_DRIFT_FINDINGS.md); 10-dict table left stable, 5 rows added.
-- **Handoff roadmap rewritten** ([H008-Opus_SanskritSpellCheck_NEXT_23.06.26.md](H008-Opus_SanskritSpellCheck_NEXT_23.06.26.md)) as a prioritized 4-task
+  [docs/ORTHO_DRIFT_FINDINGS.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/ORTHO_DRIFT_FINDINGS.md); 10-dict table left stable, 5 rows added.
+- **Handoff roadmap rewritten** ([H008-Opus_SanskritSpellCheck_NEXT_23.06.26.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/H008-Opus_SanskritSpellCheck_NEXT_23.06.26.md)) as a prioritized 4-task
   roadmap: (1) draft the CORRECTIONS umbrella issue for the 122 FILE-FIRST typos (OCR-prefiltered,
   pilot-SHS-then-scale), (2) tier-C calibration, (3) ortho-drift recency control, (4) DTA/RIDGES
   long-tail merge — each with a paste-ready fresh-chat brief + its data prerequisite.
@@ -728,7 +730,7 @@ ready for a dated entry.
   records non-standard attested spellings with full citations + an explicit verdict (`agneyI` "w. r.
   for *āgneyī*", `aGni` v.l. `aGniya`), so filing any would corrupt its editorial record. The lone
   typo-unsure (`akzAMsa`) was source-refuted (own `[MW]` headword); 0 unlocatable. Package +
-  [readme](corrections_draft/PD/readme.md) under [corrections_draft/PD/](corrections_draft/PD/).
+  [readme](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/PD/readme.md) under [corrections_draft/PD/](corrections_draft/PD/).
   A second PD source is still expected — a re-run later only refines the do-not-file list.
 
 ### Changed
@@ -755,7 +757,7 @@ ready for a dated entry.
   on a fresh clone with `python detectors/get_external_source.py PD`.
 - **Verified ready:** `triage_dict.py PD` builds the package — **1,007 tier-A, 920 to body-judge, 0
   unlocatable** (every PD headword resolves in the source). The triage run itself is **held for PD's
-  second source** so it isn't redone; documented in [corrections_draft/PD/readme.md](corrections_draft/PD/readme.md).
+  second source** so it isn't redone; documented in [corrections_draft/PD/readme.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/PD/readme.md).
 
 ## [1.38.0] - 2026-06-24
 
@@ -872,7 +874,7 @@ ready for a dated entry.
     MCI/PGN/VEI = en, KRM = sa) ahead of triaging them.
 
 ### Changed
-- **Suppression list → 20 dicts**, [nochange/do_not_file_suppress.txt](nochange/do_not_file_suppress.txt)
+- **Suppression list → 20 dicts**, [nochange/do_not_file_suppress.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/nochange/do_not_file_suppress.txt)
   **2,020 → 2,041** unique. `eval.py` false-positives stay **0**.
 
 ## [1.31.0] - 2026-06-23
@@ -888,7 +890,7 @@ ready for a dated entry.
   - Cross-dict fileable precision: MW 4/1954 · PW 2/657 · VCP 1/563 · PWG 12/497 · SHS 37/246 · **BHS 0/713**.
 
 ### Changed
-- **Suppression list refreshed to 19 dicts** — [nochange/do_not_file_suppress.txt](nochange/do_not_file_suppress.txt)
+- **Suppression list refreshed to 19 dicts** — [nochange/do_not_file_suppress.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/nochange/do_not_file_suppress.txt)
   grew **1,726 → 2,020** unique headwords (BHS's 294 folded in via `gen_do_not_file_suppress.py`).
   Verified: `eval.py` false-positives stay **0**; 0 suppressed headwords survive as candidates
   (unified candidates 15,323 → 15,029).
@@ -897,7 +899,7 @@ ready for a dated entry.
 
 ### Added
 - **Orthographic-drift findings write-up — the publishable capstone.** New
-  [docs/ORTHO_DRIFT_FINDINGS.md](docs/ORTHO_DRIFT_FINDINGS.md) synthesises the completed 5-language
+  [docs/ORTHO_DRIFT_FINDINGS.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/ORTHO_DRIFT_FINDINGS.md) synthesises the completed 5-language
   ortho-drift study (German, English, French, Latin, Russian) into one standalone, citable artifact
   for a lexicography / DH audience: headline finding, method (transform-and-check), per-language
   results with the data tables, the SCH-1928 control, caveats, and a reproducibility note. Every
@@ -914,9 +916,9 @@ ready for a dated entry.
   The body-grounded triage emits, per dictionary, a `<DICT>_wrong_readings.txt` (the standing
   do-not-file list of spellings the dictionary documents *on purpose* — `w.r.`/`v.l.` apparatus,
   in-composition/sandhi forms, cross-references, grammatical/Vedic notes). New
-  [detectors/gen_do_not_file_suppress.py](detectors/gen_do_not_file_suppress.py) collects the
+  [detectors/gen_do_not_file_suppress.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/gen_do_not_file_suppress.py) collects the
   headword (left column) from all **18** triaged `*_wrong_readings.txt`, dedups, and writes
-  [nochange/do_not_file_suppress.txt](nochange/do_not_file_suppress.txt) (**1,726 unique** of
+  [nochange/do_not_file_suppress.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/nochange/do_not_file_suppress.txt) (**1,726 unique** of
   ~1,976 rows — the rest are cross-dict duplicates). Regenerate after triaging more dicts.
 
 ### Changed
@@ -1075,9 +1077,9 @@ ready for a dated entry.
 ## [1.20.0] - 2026-06-17
 
 ### Added
-- **Orthographic-drift pilot — Phase 0 (PW / German)** ([`detectors/ortho_drift.py`](detectors/ortho_drift.py),
-  outputs in [`ortho_drift/`](ortho_drift/README.md)). First slice of the
-  [orthographic-drift study](ORTHO_DRIFT_ROADMAP.md): extend the body-grounded method from
+- **Orthographic-drift pilot — Phase 0 (PW / German)** ([`detectors/ortho_drift.py`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/ortho_drift.py),
+  outputs in [`ortho_drift/`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ortho_drift/README.md)). First slice of the
+  [orthographic-drift study](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ORTHO_DRIFT_ROADMAP.md): extend the body-grounded method from
   Sanskrit headwords to the **gloss language**, checking German tokens against 2026 Duden.
   - On a 2,509-entry PW sample (12,917 German tokens): **48 confirmed reform-drift occurrences
     in 13 forms** (`Thier→Tier`, `Theil→Teil`, `Noth→Not`, `thun→tun`, `Vocal→Vokal`, …; eras
@@ -1218,7 +1220,7 @@ Correctness fixes from a recall-focused multi-agent code review of the triage pi
 ## [1.14.0] - 2026-06-16
 
 ### Added
-- **`/dict-triage <DICT>` skill** ([.claude/commands/dict-triage.md](.claude/commands/dict-triage.md)) —
+- **`/dict-triage <DICT>` skill** ([.claude/commands/dict-triage.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/.claude/commands/dict-triage.md)) —
   packages the full hybrid body-grounded triage as a repeatable repo command: build the package
   (`triage_dict.py <DICT>`) → launch `bodyaware_workflow.js` with hybrid models (Sonnet classify /
   Opus confirm) → synthesize → human-verify each FILE-FIRST candidate against the entry → write the
@@ -1515,7 +1517,7 @@ Correctness fixes from a recall-focused multi-agent code review of the triage pi
   `spell_correct.py` (noisy-channel vs MW/PW/VCP + corpus), `consensus.py` (N-way
   cross-dict voting), `intra_dup.py` (intra-dictionary self-contradiction),
   `phonotactic_check.py` (anti-sandhi rules), `charset_check.py` (encoding),
-  `order_check.py` (collation). See [detectors/readme.md](detectors/readme.md).
+  `order_check.py` (collation). See [detectors/readme.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/readme.md).
 - `USE_CASES.md` — goal-oriented guide mapping tasks to tools and the verify→submit path.
 - `triage_suspects.py` — splits a suspect list into noise / priority (non-rcc,
   verify-first) / gemination (post-repha, low priority).
@@ -1550,3 +1552,5 @@ Correctness fixes from a recall-focused multi-agent code review of the triage pi
 - 2026-05-29 ai-wip: add CODE_OF_CONDUCT.md (Contributor Covenant 2.1)
 - 2017-09-07 AllvsVCP ready
 - 2017-09-07 issue 365 change made
+
+_Dr. Mārcis Gasūns_

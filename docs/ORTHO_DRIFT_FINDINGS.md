@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # Orthographic Drift in a Multilingual Indological Lexicography Corpus
 
 *A cross-decade, five-language measurement of spelling change in the gloss text of the
@@ -5,8 +7,8 @@ Cologne Digital Sanskrit Dictionaries.*
 
 **Status:** findings synthesis (study complete). **Scope:** documentation / search-normalization
 only — nothing here edits dictionary source. See the design in
-[ORTHO_DRIFT_ROADMAP.md](../ORTHO_DRIFT_ROADMAP.md) and the working reports in
-[ortho_drift/README.md](../ortho_drift/README.md).
+[ORTHO_DRIFT_ROADMAP.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ORTHO_DRIFT_ROADMAP.md) and the working reports in
+[ortho_drift/README.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ortho_drift/README.md).
 
 ---
 
@@ -64,7 +66,7 @@ below). A residual of forms the rule cannot auto-resolve (inflected/compound dri
 names, OCR fragments) is then classified by an LLM pass against the 2026 standard.
 
 The implementation is a single profile-driven tool,
-[detectors/ortho_drift.py](../detectors/ortho_drift.py), with one profile per language (`de`, `en`,
+[detectors/ortho_drift.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/ortho_drift.py), with one profile per language (`de`, `en`,
 `fr`, `la`, `ru`) selected via `LANG_OF` + `PROFILES`. It reuses the body-grounded triage
 infrastructure (`triage_util`). Per-language accumulating reform lexicons live in
 `ortho_drift/<lang>_reform_map.tsv`; per-dictionary detail in `ortho_drift/<DICT>_drift_report.txt`;
@@ -74,7 +76,7 @@ cross-dictionary tables in `ortho_drift/<lang>_drift_summary.tsv`.
 
 This is a **documentation / search-normalization layer, never a correction list.** Modernising a
 historical gloss would corrupt the scholarly edition — the same principle as the headword
-[do-not-file lists](../corrections_draft/README.md). The drift reports are a *record* and a
+[do-not-file lists](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/README.md). The drift reports are a *record* and a
 *search-normalization map* (a user searching modern German *Tier* should still reach Böhtlingk's
 *Thier*); they do **not** edit `csl-orig`.
 
@@ -90,7 +92,7 @@ All figures below are verified against the committed data files
 German is the cleanest case: its reforms are dated and rule-defined (1901: etymological `th→t`,
 `c→k/z`, `-iren→-ieren`; 1996/2006: `ß→ss` after a short vowel). All five German dictionaries were
 run against the modern Hunspell `de_DE` word-list (103,756 stems). Per-dictionary, from
-[de_drift_summary.tsv](../ortho_drift/de_drift_summary.tsv):
+[de_drift_summary.tsv](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ortho_drift/de_drift_summary.tsv):
 
 | dictionary (era) | tokens | modern % | drift/1k | 1901 `th` | 1901 `c` | 1996 `ß` |
 |---|--:|--:|--:|--:|--:|--:|
@@ -124,20 +126,20 @@ expected window (post-1901, pre-1996).
 ### German recall arc
 
 German recall was extended in three stages, banked in the accumulating
-[de_reform_map.tsv](../ortho_drift/de_reform_map.tsv):
+[de_reform_map.tsv](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ortho_drift/de_reform_map.tsv):
 
 1. **Corpus transform-and-check** — 672 forms discovered beyond the curated seed on full PW.
 2. **Residual LLM-classify** — the 6,804 unique residual tokens across the five dicts classified vs
    2026 Duden (39 Sonnet agents); **1,831 confirmed reform-drift** (27% — inflected/compound forms
    the rule missed, e.g. `thierkreise→Tierkreise`, `eigenthümlichkeiten→Eigentümlichkeiten`),
    alongside 2,981 fragment/OCR (44%), 1,105 Latin/foreign (16%), 759 modern (11%), 106 names,
-   22 uncertain — see [de_residual_classified.tsv](../ortho_drift/de_residual_classified.tsv).
+   22 uncertain — see [de_residual_classified.tsv](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ortho_drift/de_residual_classified.tsv).
 3. **External web-harvested merge** — 14 documented 1901/1996 pairs from the German Wikipedia reform
    articles, ingested dic-validated via
-   [detectors/merge_reform_pairs.py](../detectors/merge_reform_pairs.py).
+   [detectors/merge_reform_pairs.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/merge_reform_pairs.py).
 4. **DTA long-tail merge** — the **Deutsches Textarchiv** lingattr-TEI corpus
    ([deutschestextarchiv.de](https://www.deutschestextarchiv.de/download), 5,285 texts, 1473–1900)
-   carries a per-token `DTA::CAB norm` modern-orthography layer. [extract_dta_pairs.py](../detectors/extract_dta_pairs.py)
+   carries a per-token `DTA::CAB norm` modern-orthography layer. [extract_dta_pairs.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/extract_dta_pairs.py)
    harvested every `surface ≠ norm` token (596 k distinct), kept those attested **≥ 20×** (43,579),
    and merge_reform_pairs.py dic-validated them → **+12,862 accepted** (textbook forms: `vnd→und`,
    `bey→bei`, `Theil→Teil`, `gantz→ganz`, `krafft→kraft`, `thaler→taler`, `creutz→kreuz`, `fuss→fuß`).
@@ -150,7 +152,7 @@ SCH-control comparison stays stable; the long tail is banked in the map for futu
 
 The freeze decision above (keep the published gradient at the deterministic-pass snapshot) was
 re-tested by re-running all five German dicts against the full 15,685-form map (`ortho_drift.py
-<DICT> --full`; expanded outputs banked as [`de_drift_summary.expanded_map.tsv`](../ortho_drift/de_drift_summary.expanded_map.tsv)
+<DICT> --full`; expanded outputs banked as [`de_drift_summary.expanded_map.tsv`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ortho_drift/de_drift_summary.expanded_map.tsv)
 + `<DICT>_drift_report.expanded_map.txt`). The result confirms the freeze was right:
 
 | dictionary (era) | drift/1k frozen → expanded | 1901 `th` | 1901 `c` | 1996 `ß` (canon-tagged) |
@@ -190,7 +192,7 @@ is therefore carried by the curated/seed forms and stays clean.)
 
 The 1918 reform is the most sweeping in the corpus: it abolished the letters ѣ (yat), і, ѳ (fita),
 ѵ (izhitsa) and word-final ъ (hard sign). Kossovich's pre-1918 dictionary
-([ru_drift_summary.tsv](../ortho_drift/ru_drift_summary.tsv)) therefore differs *massively* from
+([ru_drift_summary.tsv](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ortho_drift/ru_drift_summary.tsv)) therefore differs *massively* from
 modern Russian — and crucially this is detectable **wordlist-free**, because the abolished letters
 are pre-1918 *by definition*:
 
@@ -206,14 +208,14 @@ not part of the Cologne 33.)
 
 English has no central spelling authority, so its drift is a *gradient*, not a reform date. Ten
 19th-century English dictionaries were run with an **en_GB reference** (so British `honour` / `-ise`
-/ `-re` are correctly *not* flagged), from [en_drift_summary.tsv](../ortho_drift/en_drift_summary.tsv)
+/ `-re` are correctly *not* flagged), from [en_drift_summary.tsv](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ortho_drift/en_drift_summary.tsv)
 (five modern dictionaries are added as a recency control in the subsection below).
 
 **The ligature is split out of the rate (O5).** The dominant "drift" in several dicts was the **æ/œ
 ligature** (`mediæval`, `æther`, `manœuvre` → `medieval`, `ether`, `maneuvre`) — a *typographic*
 print-shop convention, **not** a dated orthographic reform. It is now counted as its own `ligature`
 era column but **excluded from the headline reform-drift/1k** (code: `NONREFORM_ERAS` in
-[ortho_drift.py](../detectors/ortho_drift.py)). The effect is large: the mid-tier dicts were almost
+[ortho_drift.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/ortho_drift.py)). The effect is large: the mid-tier dicts were almost
 entirely ligature, not reform.
 
 | dictionary (era) | tokens | reform-drift/1k | (was, w/ ligature) | ligature (typographic) | dominant reform forms |
@@ -261,7 +263,7 @@ stems per the drift-report headers, staged locally.)
 
 ### French — convention, minimal
 
-Two French dictionaries ([fr_drift_summary.tsv](../ortho_drift/fr_drift_summary.tsv)), run against
+Two French dictionaries ([fr_drift_summary.tsv](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ortho_drift/fr_drift_summary.tsv)), run against
 Hunspell `fr_FR`:
 
 | dictionary (era) | tokens | drift/1k | examples |
@@ -275,7 +277,7 @@ reliable for this pair.
 
 ### Latin — the negative control
 
-Bopp's *Glossarium* (1847), [la_drift_summary.tsv](../ortho_drift/la_drift_summary.tsv):
+Bopp's *Glossarium* (1847), [la_drift_summary.tsv](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ortho_drift/la_drift_summary.tsv):
 
 > 76,933 tokens · **0 drift · 0.00 per 1k**.
 
@@ -289,7 +291,7 @@ specificity**: it does not manufacture drift where none exists.
 
 If drift/1k tracks a text's orthographic epoch, it should also *predict its publication year*. Tested
 by pairing each dictionary's rate with its known year and fitting drift/1k ↔ year
-([detectors/drift_dating.py](../detectors/drift_dating.py) → [drift_dating.png](../ortho_drift/drift_dating.png)).
+([detectors/drift_dating.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/drift_dating.py) → [drift_dating.png](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ortho_drift/drift_dating.png)).
 The answer is **yes, but only within a single reform regime, and only coarsely** — three findings:
 
 **1. There is no cross-language calibration — the rate is regime-stratified.** A given drift/1k means
@@ -350,19 +352,19 @@ the openly-licensed **[FreEMnorm](https://github.com/FreEM-corpora/FreEMnorm)** 
 17th-c. French texts, 1606–1697, each line `diplomatic⟶normalised`).
 
 **The pipeline runs end-to-end and the method generalises.**
-[detectors/extract_freem_pairs.py](../detectors/extract_freem_pairs.py) token-aligns each sentence pair
+[detectors/extract_freem_pairs.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/extract_freem_pairs.py) token-aligns each sentence pair
 (difflib, 1:1 `replace` spans, long-ſ folded to `s` so it yields no spurious pair), harvesting **9,973
 distinct `surface≠norm` pairs**; at the DTA `≥20×` threshold, **407** survive, of which
-[merge_reform_pairs.py](../detectors/merge_reform_pairs.py) dic-validates **236** into the French map
+[merge_reform_pairs.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/merge_reform_pairs.py) dic-validates **236** into the French map
 (`fr`: 18 → 254 forms). The accepted pairs are textbook Early-Modern→modern French — i/j (`ie→je`), u/v
 (`vn→un`), y→i (`moy→moi`), circumflex-for-lost-s (`estre→être`, `nostre→notre`), and the **1835
 oi→ai imperfect** (`avoit→avait`, `estoit→était`). So the harvest itself is clean and reusable
-([fr_reform_freem_pairs.tsv](../ortho_drift/fr_reform_freem_pairs.tsv)).
+([fr_reform_freem_pairs.tsv](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ortho_drift/fr_reform_freem_pairs.tsv)).
 
 **But the map does *not* transfer to the target dictionaries** — applied to the 19th–20c French Sanskrit
 dicts (BUR 1866, STC 1932), it raises drift/1k from 0.31→3.43 (BUR) and 0.02→2.59 (STC), and **~90 % of
-that increase is false positives** ([BUR](../ortho_drift/BUR_drift_report.freem.txt) /
-[STC](../ortho_drift/STC_drift_report.freem.txt) banked, **not** merged into the canonical map). Three
+that increase is false positives** ([BUR](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ortho_drift/BUR_drift_report.freem.txt) /
+[STC](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ortho_drift/STC_drift_report.freem.txt) banked, **not** merged into the canonical map). Three
 collision classes, all from an **epoch/register/language mismatch** between a 17th-c. literary-prose map
 and a 20th-c. lexicographic gloss:
 
@@ -391,7 +393,7 @@ not the 17th-c. FreEMnorm.
 ## O7 — S-curve exo/endo fit + SemEval-2015 DTE benchmark (H826, ACL uplift)
 
 Two ACL-Anthology-informed extensions of O4, both computed by
-[detectors/drift_dating.py](../detectors/drift_dating.py) §[5]/§[6] (`fit_scurve` /
+[detectors/drift_dating.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/drift_dating.py) §[5]/§[6] (`fit_scurve` /
 `dte_bands`) from the same committed `ortho_drift/*_drift_summary.tsv` data — no new
 measurement, a re-reading of the existing gradient in two literatures' own vocabulary.
 
@@ -558,4 +560,6 @@ none (no reform) and Russian needs none (the 1918 letters are definitional). Eac
 | per-dict drift/1k + era columns | [ortho_drift/`<lang>`_drift_summary.tsv](../ortho_drift/) |
 | accumulated historical→2026 lexicon | [ortho_drift/`<lang>`_reform_map.tsv](../ortho_drift/) (de **15,685** incl. DTA long tail, ru ≈ 7,711, en 73, fr 20, la 2 forms; the maps accumulate across runs) |
 | per-dict detail (header: tokens / modern / drift) | [ortho_drift/`<DICT>`_drift_report.txt](../ortho_drift/) |
-| German residual LLM-classify (6,804 → 1,831 drift) | [de_residual_classified.tsv](../ortho_drift/de_residual_classified.tsv) |
+| German residual LLM-classify (6,804 → 1,831 drift) | [de_residual_classified.tsv](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ortho_drift/de_residual_classified.tsv) |
+
+_Dr. Mārcis Gasūns_

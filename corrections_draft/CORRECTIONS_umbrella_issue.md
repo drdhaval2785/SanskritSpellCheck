@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # Verified headword typo candidates across 11 dictionaries — batch from SanskritSpellCheck triage
 
 > **POSTED 02-07-2026** as [sanskrit-lexicon/CORRECTIONS#447](https://github.com/sanskrit-lexicon/CORRECTIONS/issues/447)
@@ -362,3 +364,5 @@ candidates is a clean, unqualified typo.
 
 Maintainers: please pick any subset of the above for filing — draft `updateByLine.py`
 change-files can be supplied per dictionary on request.
+
+_Dr. Mārcis Gasūns_

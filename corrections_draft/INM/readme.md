@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # INM correction candidates — BODY-GROUNDED triage (DRAFT for human review)
 
 The unified detector engine flagged **161 tier-A** INM headwords as possible misspellings. INM is
@@ -21,14 +23,16 @@ IEG 0/162 · **INM 0/161**.
 
 ## The authoritative artifacts
 
-- **[INM_wrong_readings.txt](INM_wrong_readings.txt)** — the **do-not-file** list: 16 deliberate
+- **[INM_wrong_readings.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/INM/INM_wrong_readings.txt)** — the **do-not-file** list: 16 deliberate
   spellings (cross-reference 4, other 12). Folded into
-  [nochange/do_not_file_suppress.txt](../../nochange/do_not_file_suppress.txt).
-- **[INM_triaged.txt](INM_triaged.txt)** — full queue: 123 REAL-WORD + 16 INTENTIONAL.
-- **[INM_file_first_sf.txt](INM_file_first_sf.txt)** — **empty** (0 fileable).
+  [nochange/do_not_file_suppress.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/nochange/do_not_file_suppress.txt).
+- **[INM_triaged.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/INM/INM_triaged.txt)** — full queue: 123 REAL-WORD + 16 INTENTIONAL.
+- **[INM_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/INM/INM_file_first_sf.txt)** — **empty** (0 fileable).
 
 ## Method
 
 `detectors/triage_dict.py INM` (package; INM registered as English in `triage_lang.py`) →
 body-aware classification → `--finish`. 0 TYPO → no source-confirm/review pile. **DRAFT; never edits
 `csl-orig`.**
+
+_Dr. Mārcis Gasūns_

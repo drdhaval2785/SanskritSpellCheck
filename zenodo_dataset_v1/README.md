@@ -1,6 +1,6 @@
 # SanskritSpellCheck derived-data package — Zenodo release v1
 
-_Created: 27-07-2026 · Last updated: 27-07-2026_
+_Created: 27-07-2026 · Last updated: 05-09-2026_
 
 This is the FAIR data package for the **first Zenodo dataset release** of the analytical
 layer built on top of [SanskritSpellCheck](https://github.com/drdhaval2785/SanskritSpellCheck)
@@ -92,7 +92,7 @@ section and [CLAUDE.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/
 
 ## How to cite
 
-See [`CITATION.cff`](CITATION.cff). `DOI: pending` — this package is staged for upload;
+See [`CITATION.cff`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/zenodo_dataset_v1/CITATION.cff). `DOI: pending` — this package is staged for upload;
 Zenodo DOI minting is a human `@DO` (needs a Zenodo-account-holder's login/API token), tracked
 in `Uprava/GTD_NEXT_ACTIONS.md`. A paper citing this dataset should not ship to a venue while
 the DOI is pending.

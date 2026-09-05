@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # SanskritSpellCheck — use cases
 
 Goal-oriented guide to the toolset: pick your task, run the named tool, verify the
@@ -7,18 +9,18 @@ candidates against the scanned dictionary pages, and submit confirmed correction
 Everything operates on **SLP1** transliteration. Two input artefacts drive almost
 everything:
 
-- [`sanhw1.txt`](sanhw1.txt) — every headword across ~36 Cologne dictionaries, one
+- [`sanhw1.txt`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/sanhw1.txt) — every headword across ~36 Cologne dictionaries, one
   line `headword:DICT1,DICT2,…` (regenerated server-side; treat as a fixed input).
-- the per-dictionary SLP1 stem dumps [`MWslp.txt`](MWslp.txt), [`PWslp.txt`](PWslp.txt),
-  [`VCPslp.txt`](VCPslp.txt), and the SLP1 corpus in [`CountVowels/`](CountVowels).
+- the per-dictionary SLP1 stem dumps [`MWslp.txt`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/MWslp.txt), [`PWslp.txt`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/PWslp.txt),
+  [`VCPslp.txt`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/VCPslp.txt), and the SLP1 corpus in [`CountVowels/`](CountVowels).
 
 Two output conventions:
 
 - **flagger** tools emit `X:CODE=Y:D` (headword : reason : dictionaries) — feed them
-  to [`faultfinder3a-html.php`](faultfinder3a-html.php) `repeat=2` for clickable
-  reports and to [`triage_suspects.py`](triage_suspects.py) to split signal/noise.
+  to [`faultfinder3a-html.php`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/faultfinder3a-html.php) `repeat=2` for clickable
+  reports and to [`triage_suspects.py`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/triage_suspects.py) to split signal/noise.
 - **corrector** tools emit `DICT:wrong:right:n` — the CORRECTIONS standard format,
-  ready for [`chg_nchg_sep.py`](chg_nchg_sep.py) and submission.
+  ready for [`chg_nchg_sep.py`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/chg_nchg_sep.py) and submission.
 
 Every result is a **candidate**, never an automatic fix. The final step is always a
 human comparing the digital spelling to the printed page (see *Verify against scans*).
@@ -120,7 +122,7 @@ Flags words whose bigrams are absent from MW∩PW. Use `n=2`; trigrams over-flag
 
 ## 8. "Build a review package for a human"
 
-**Easiest — the unified runner.** [detectors/run_all.py](detectors/run_all.py) runs
+**Easiest — the unified runner.** [detectors/run_all.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/run_all.py) runs
 every detector, dedups across them, tiers each candidate A/B/C (cross-detector
 agreement = higher tier), and writes an accept/reject **review UI** plus the standard
 format:
@@ -130,10 +132,10 @@ cd detectors && python run_all.py        # --rerun to regenerate detector output
 # -> combined_review.html (open it: ✓/✗ per row, scan links, Export accepted/rejected)
 #    combined_candidates.txt (full ranked list)   combined_sf.txt (DICT:wrong:right:n)
 ```
-The exported `accepted_sf.txt` (rows flipped to `:y`) feeds [chg_nchg_sep.py](chg_nchg_sep.py)
+The exported `accepted_sf.txt` (rows flipped to `:y`) feeds [chg_nchg_sep.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/chg_nchg_sep.py)
 (use case §10). Tier A = flagged by several detectors at once — verify those first.
 
-**Per dictionary (campaign mode).** [detectors/run_campaign.py](detectors/run_campaign.py)
+**Per dictionary (campaign mode).** [detectors/run_campaign.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/run_campaign.py)
 splits the suite per dictionary into `campaigns/<DICT>/review.html` + a dashboard
 ranking dicts by tier-A count — work one dictionary's queue at a time, then
 `make_changefiles.py` for that dict (§10).
@@ -156,14 +158,14 @@ Open the report; each word links to
 printed dictionary. Compare the printed spelling to the digital one:
 
 - **print matches digital** → faithful, *not* an error → add to
-  [`nochange/nochange.txt`](nochange/nochange.txt) so it stops being flagged.
+  [`nochange/nochange.txt`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/nochange/nochange.txt) so it stops being flagged.
 - **print differs** → digitization error → record `DICT:wrong:right:y` and file it
   at CORRECTIONS.
 
 The post-repha doublings (`sūryya`, `varṇṇa`) are usually the faithful printed form —
 treat those as an editorial-normalization question for the maintainers, not bugs.
 
-**Pre-triage with OCR (optional).** [detectors/ocr_verify.py](detectors/ocr_verify.py)
+**Pre-triage with OCR (optional).** [detectors/ocr_verify.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/ocr_verify.py)
 fetches each scan and (with tesseract + a Devanagari model installed) pre-labels
 candidates CONFIRM/DENY/UNCERTAIN to reorder the queue — and even without OCR it
 pre-caches the scan image next to each candidate. It is a triage prior only; a human
@@ -200,7 +202,7 @@ queue + a standing **do-not-file** list. Hybrid models, driven by a skill:
 → `corrections_draft/<DICT>/`: `<DICT>_file_first_sf.txt` (real typos), `<DICT>_wrong_readings.txt`
 (do-not-file, grouped by w.r./v.l./in-comp./xref), `<DICT>_triaged.txt` (full bucketed queue),
 `readme.md` (the finding). All **33 dicts are done** (index:
-[corrections_draft/README.md](corrections_draft/README.md)). Then fold the new do-not-file list into
+[corrections_draft/README.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/README.md)). Then fold the new do-not-file list into
 the detector whitelist so nothing is re-flagged:
 
 ```sh
@@ -210,7 +212,7 @@ python eval.py                                        # false-positives must sta
 
 ⚠️ The LLM TYPO pass is **stochastic** — don't blindly re-run a verified package (a re-run can *lose*
 typos). Tier-A precision is near-zero on mature dicts; the **do-not-file list is the real deliverable**
-(see [docs/HYPOTHESES.md](docs/HYPOTHESES.md) H1–H3).
+(see [docs/HYPOTHESES.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/HYPOTHESES.md) H1–H3).
 
 ## 12. "Triage a dictionary that isn't in csl-orig"
 
@@ -229,7 +231,7 @@ other dict is unaffected. Add a new source as a tuple in `get_external_source.py
 
 Not an error list — a documentation layer: how far the 19th-c. gloss spelling (German/English/French/
 Latin/Russian) has drifted from a 2026 standard. **Complete across 5 languages** — read
-[docs/ORTHO_DRIFT_FINDINGS.md](docs/ORTHO_DRIFT_FINDINGS.md).
+[docs/ORTHO_DRIFT_FINDINGS.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/ORTHO_DRIFT_FINDINGS.md).
 
 ```sh
 cd detectors && python ortho_drift.py <DICT> --full     # de/en/fr/la per LANG_OF; KOSSOVICH = ru (jsonl)
@@ -286,4 +288,6 @@ grep '^MW:' mw_corr.txt > mw_only.txt                       # just MW rows
 | a diachronic corpus with a normalization layer | reform-pair harvest (§14) |
 
 For the project's confirmed / refuted / open hypotheses (incl. *why* corpus-based tier-C promotion
-was rejected), see **[docs/HYPOTHESES.md](docs/HYPOTHESES.md)**.
+was rejected), see **[docs/HYPOTHESES.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/HYPOTHESES.md)**.
+
+_Dr. Mārcis Gasūns_

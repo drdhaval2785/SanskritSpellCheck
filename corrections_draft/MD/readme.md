@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # MD correction candidates — BODY-GROUNDED triage (DRAFT for human review)
 
 The unified detector engine flagged **50 tier-A** MD (Macdonell, *A Practical Sanskrit
@@ -16,12 +18,14 @@ Across the dictionaries triaged, fileable counts are
 
 ## The authoritative artifact
 
-- **[MD_wrong_readings.txt](MD_wrong_readings.txt)** — the standing **do-not-file** list (1).
-- **[MD_triaged.txt](MD_triaged.txt)** — the full six-bucket queue.
-- **[MD_file_first_sf.txt](MD_file_first_sf.txt)** — empty of fileable rows.
+- **[MD_wrong_readings.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/MD/MD_wrong_readings.txt)** — the standing **do-not-file** list (1).
+- **[MD_triaged.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/MD/MD_triaged.txt)** — the full six-bucket queue.
+- **[MD_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/MD/MD_file_first_sf.txt)** — empty of fileable rows.
 
 ## Method & provenance
 
 Driver `python triage_dict.py MD`, English `triage_lang` profile, hybrid model split. Raw
-engine output (do NOT apply): [MD_candidates.txt](MD_candidates.txt),
-[MD_draft.txt](MD_draft.txt) — superseded by the triage.
+engine output (do NOT apply): [MD_candidates.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/MD/MD_candidates.txt),
+[MD_draft.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/MD/MD_draft.txt) — superseded by the triage.
+
+_Dr. Mārcis Gasūns_

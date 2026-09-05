@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # KRM correction candidates — BODY-GROUNDED triage (DRAFT for human review)
 
 The unified detector engine flagged **47 tier-A** KRM headwords as possible misspellings. KRM is a
@@ -19,13 +21,15 @@ deliberate Pāṇinian notation (ṇopadeśa/ṣopadeśa), not a typo. Anubandha
 
 ## The authoritative artifacts
 
-- **[KRM_wrong_readings.txt](KRM_wrong_readings.txt)** — do-not-file: 6 (wrong-reading 1, other 5).
-  Folded into [nochange/do_not_file_suppress.txt](../../nochange/do_not_file_suppress.txt).
-- **[KRM_triaged.txt](KRM_triaged.txt)** — full queue: 37 REAL-WORD + 6 INTENTIONAL.
-- **[KRM_file_first_sf.txt](KRM_file_first_sf.txt)** — **empty** (0 fileable).
+- **[KRM_wrong_readings.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/KRM/KRM_wrong_readings.txt)** — do-not-file: 6 (wrong-reading 1, other 5).
+  Folded into [nochange/do_not_file_suppress.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/nochange/do_not_file_suppress.txt).
+- **[KRM_triaged.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/KRM/KRM_triaged.txt)** — full queue: 37 REAL-WORD + 6 INTENTIONAL.
+- **[KRM_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/KRM/KRM_file_first_sf.txt)** — **empty** (0 fileable).
 
 ## Method
 
 `detectors/triage_dict.py KRM` (Sanskrit, `sa`) → body-aware classification with the ṇ/ṣ-upadeśa
 convention treated as intentional → `--finish`. 0 TYPO → no confirm/review pile. **DRAFT; never
 edits `csl-orig`.**
+
+_Dr. Mārcis Gasūns_

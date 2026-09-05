@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # PGN correction candidates — BODY-GROUNDED triage (DRAFT for human review)
 
 The unified detector engine flagged **21 tier-A** PGN headwords as possible misspellings. PGN is an
@@ -16,12 +18,14 @@ detector's "suggestions" were near-spelling neighbours, not corrections.
 
 ## The authoritative artifacts
 
-- **[PGN_wrong_readings.txt](PGN_wrong_readings.txt)** — do-not-file: 1 (other). Folded into
-  [nochange/do_not_file_suppress.txt](../../nochange/do_not_file_suppress.txt).
-- **[PGN_triaged.txt](PGN_triaged.txt)** — full queue: 8 REAL-WORD + 1 INTENTIONAL.
-- **[PGN_file_first_sf.txt](PGN_file_first_sf.txt)** — **empty** (0 fileable).
+- **[PGN_wrong_readings.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/PGN/PGN_wrong_readings.txt)** — do-not-file: 1 (other). Folded into
+  [nochange/do_not_file_suppress.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/nochange/do_not_file_suppress.txt).
+- **[PGN_triaged.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/PGN/PGN_triaged.txt)** — full queue: 8 REAL-WORD + 1 INTENTIONAL.
+- **[PGN_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/PGN/PGN_file_first_sf.txt)** — **empty** (0 fileable).
 
 ## Method
 
 `detectors/triage_dict.py PGN` (English) → body-aware classification → `--finish`. 0 TYPO → no
 confirm/review pile. **DRAFT; never edits `csl-orig`.**
+
+_Dr. Mārcis Gasūns_

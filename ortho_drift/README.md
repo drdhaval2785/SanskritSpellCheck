@@ -1,6 +1,8 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # Orthographic-drift pilot — Phase 0 (PW / German)
 
-Pilot for the [orthographic-drift study](../ORTHO_DRIFT_ROADMAP.md): does the body-grounded
+Pilot for the [orthographic-drift study](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ORTHO_DRIFT_ROADMAP.md): does the body-grounded
 method extend from Sanskrit headwords to the **gloss language**? This is the **PW-vs-Duden**
 German slice (the cleanest case — German's reforms are legislated and rule-defined).
 
@@ -25,21 +27,21 @@ reform transform lands *in* it (so `Theater`/`Gottheit` are rejected; `Thier`/`g
 the first run it discovered **672 forms** beyond the curated seed; **once those are folded into the
 accumulating reform map, later runs attribute all 8,683 occurrences to the map** — the 8,683 total
 and the 697-form set are stable, only the dic-vs-map label migrates by design (so the committed
-[PW_drift_report.txt](PW_drift_report.txt) now shows `dic 0 / map 8,683`). Top forms:
+[PW_drift_report.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ortho_drift/PW_drift_report.txt) now shows `dic 0 / map 8,683`). Top forms:
 `gerathen→geraten` (253), `personificirt→personifiziert` (191), `theilhaftig→teilhaftig` (190),
 `theilen→teilen` (164), `ceremonie→zeremonie` (138), `thätigkeit→tätigkeit` (102),
 `mittheilen→mitteilen` (95), `reichthum→reichtum` (81), `casus→kasus` (76).
 
 **PW's German is pervasively pre-1901, confirmed at scale** — 697 distinct drift forms across the
 dictionary, dominated by 1901 `th→t` and `c→k/z`. They are persisted to
-**[de_reform_map.tsv](de_reform_map.tsv)** — a German reform lexicon that, after the whole cluster,
+**[de_reform_map.tsv](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ortho_drift/de_reform_map.tsv)** — a German reform lexicon that, after the whole cluster,
 holds **978 forms** (2,809 after the residual classify below, **2,823** after merging documented
 reform pairs) and accumulates across runs; it is the expandable container for DTA/RIDGES pairs.
 
 ## German cluster — drift across dictionaries, and the SCH-1928 control
 
 All five German dictionaries run (`ortho_drift.py <DICT> --full`); per-dict drift-by-era in
-[de_drift_summary.tsv](de_drift_summary.tsv):
+[de_drift_summary.tsv](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ortho_drift/de_drift_summary.tsv):
 
 | dict (era) | tokens | modern % | drift/1k | 1901 `th` | 1901 `c` | 1996 `ß` |
 |---|--:|--:|--:|--:|--:|--:|
@@ -63,7 +65,7 @@ overall drift rate also declines monotonically with publication date (10.26 → 
 The transform-and-check + curated map leave a residual per dict (forms the rule couldn't auto-
 resolve: inflected/compound drift, foreign words, names, OCR fragments). Deduped across the five
 dicts, that residual is **6,804 unique tokens**, each classified vs 2026 Duden by 39 Sonnet agents
-([de_residual_classified.tsv](de_residual_classified.tsv)):
+([de_residual_classified.tsv](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ortho_drift/de_residual_classified.tsv)):
 
 | category | count | share |
 |---|--:|--:|
@@ -76,7 +78,7 @@ dicts, that residual is **6,804 unique tokens**, each classified vs 2026 Duden b
 
 The **1,831 confirmed reform-drift** (e.g. `thierkreise→Tierkreise`, `abtheilung→Abteilung`,
 `commentars→Kommentars`, `eigenthümlichkeiten→Eigentümlichkeiten`) were folded into
-[de_reform_map.tsv](de_reform_map.tsv), growing it **978 → 2,809 forms** — a recall gain banked
+[de_reform_map.tsv](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ortho_drift/de_reform_map.tsv), growing it **978 → 2,809 forms** — a recall gain banked
 for future runs. (`modern_form` is advisory — a few LLM artifacts, e.g. one `Gestikulaion` typo.)
 The per-dict drift reports above are left as the deterministic-pass snapshot, so the SCH-control
 comparison stays stable; re-running any dict now would reclassify its share of these 1,831 from
@@ -130,7 +132,7 @@ gloss tokens scanned:
 | pattern candidates (need a 2026 wordlist / the LLM to confirm) | 163 distinct tokens |
 
 The 13 confirmed forms — genuine pre-1901/1996 German, each mapped to its 2026 spelling and
-found in real PW glosses ([PW_drift_report.txt](PW_drift_report.txt)):
+found in real PW glosses ([PW_drift_report.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ortho_drift/PW_drift_report.txt)):
 
 `Thier→Tier` (10) · `Theil→Teil` (6) · `Noth→Not` (5) · `thun→tun` (5) · `Thiere→Tiere` (4) ·
 `Werth→Wert` (3) · `Roth→Rot` (3) · `Vocal→Vokal` (3) · `Blüthe→Blüte` (3) · `theils→teils` (2) ·
@@ -139,7 +141,7 @@ archaic `ey→ei`, 1996 `ß→ss`.
 
 ### Candidates classified vs 2026 Duden (Sonnet as the Duden oracle)
 
-The 163 pattern-candidates ([PW_drift_classified.txt](PW_drift_classified.txt)):
+The 163 pattern-candidates ([PW_drift_classified.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ortho_drift/PW_drift_classified.txt)):
 
 | category | count | meaning |
 |---|--:|---|
@@ -199,12 +201,12 @@ python ortho_drift.py PW --full     # every entry
 ## Next (to finish Phase 0 → Phase 1)
 
 1. ✅ **LLM classify the 163 candidates vs 2026 Duden** — done: **114 reform-drift** confirmed,
-   noise correctly bucketed → [PW_drift_classified.txt](PW_drift_classified.txt).
+   noise correctly bucketed → [PW_drift_classified.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ortho_drift/PW_drift_classified.txt).
 2. ✅ **Wired the Hunspell `de_DE` word-list** (2006/Duden, 103,756 stems — Adobe's bundled dic,
    a local dependency) as the deterministic filter + transform-and-check drift detector → 697
    distinct drift forms on full PW (672 discovered beyond the curated seed). The residual LLM
    target is 2,171 candidates.
-3. ✅ **Reform map externalized + expanded** → [de_reform_map.tsv](de_reform_map.tsv): **715
+3. ✅ **Reform map externalized + expanded** → [de_reform_map.tsv](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ortho_drift/de_reform_map.tsv): **715
    forms** (366 `1901-th`, 224 `1901-c`, 84 `-iren`, 21 `c-iren`, 12 `1996-ss`, 5 `ey`), seeded
    from the curated pairs + the full-PW transform/dic-confirmed drift. `ortho_drift.py` loads it
    at startup and folds each run's discoveries back in, so it accumulates across dictionaries and
@@ -212,10 +214,12 @@ python ortho_drift.py PW --full     # every entry
    dic-validated tool** — `detectors/merge_reform_pairs.py <lang> <pairs.tsv>` accepts a pair only
    if `old∉dic & new∈dic` (filtering hallucinations / dual-spellings / rejected proposals). First
    real input: **14 documented 1901/1996 reform pairs** harvested from the German Wikipedia reform
-   articles ([de_reform_web_candidates.tsv](de_reform_web_candidates.tsv)) → **de map 2,809 → 2,823**
+   articles ([de_reform_web_candidates.tsv](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ortho_drift/de_reform_web_candidates.tsv)) → **de map 2,809 → 2,823**
    (`cigarre→zigarre`, `guitarre→gitarre`, `liqueur→likör`, `schloß→schloss`, `rauh→rau`…). WebFetch
    reaches the web but can't bulk-download the DTA/RIDGES corpora through its summariser — drop a
    local DTA/RIDGES export or give a row-list URL to merge the long tail.
 4. ✅ **German cluster done + SCH-1928 control validated** (see the comparison above). SCH's
    profile flips to 1996-`ß`-dominant (319) with 1901-`th` collapsed (76) — confirming the method
    dates orthography from the text. Reform map: 978 → 2,809 (residual classify) → 2,823 (external merge).
+
+_Dr. Mārcis Gasūns_

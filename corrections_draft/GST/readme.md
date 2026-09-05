@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # GST correction candidates — BODY-GROUNDED triage (DRAFT for human review)
 
 The unified detector engine flagged **48 tier-A** GST (Goldstücker, *A Dictionary, Sanskrit
@@ -20,13 +22,13 @@ The one fileable case:
 |---|---|---|
 | `aprakaraRika → aprAkaraRika` | vowel length | the entry's own etymology `E. a (neg.) and prAkaraRika` and its quoted Kāvyaprakāśa example `aprAkaraRikasyābhidhānena…` both use long **ā** |
 
-> Verify on the scan, then flip `n`→`y` in [GST_file_first_sf.txt](GST_file_first_sf.txt).
+> Verify on the scan, then flip `n`→`y` in [GST_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/GST/GST_file_first_sf.txt).
 
 ## The authoritative artifact
 
-- **[GST_file_first_sf.txt](GST_file_first_sf.txt)** — the 1 FILE-FIRST candidate.
-- **[GST_wrong_readings.txt](GST_wrong_readings.txt)** — the standing **do-not-file** list (22).
-- **[GST_triaged.txt](GST_triaged.txt)** — the full six-bucket queue.
+- **[GST_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/GST/GST_file_first_sf.txt)** — the 1 FILE-FIRST candidate.
+- **[GST_wrong_readings.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/GST/GST_wrong_readings.txt)** — the standing **do-not-file** list (22).
+- **[GST_triaged.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/GST/GST_triaged.txt)** — the full six-bucket queue.
 
 ## Method
 
@@ -35,5 +37,7 @@ Same pipeline as the other dictionaries (driver: `python triage_dict.py GST`), E
 
 ## Raw engine output (provenance — do NOT apply)
 
-- [GST_candidates.txt](GST_candidates.txt) — the engine's 48 ranked tier-A candidates.
-- [GST_draft.txt](GST_draft.txt) — draft updateByLine change-file; **superseded** by the triage.
+- [GST_candidates.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/GST/GST_candidates.txt) — the engine's 48 ranked tier-A candidates.
+- [GST_draft.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/GST/GST_draft.txt) — draft updateByLine change-file; **superseded** by the triage.
+
+_Dr. Mārcis Gasūns_

@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # CAE correction candidates — BODY-GROUNDED triage (DRAFT for human review)
 
 The unified detector engine flagged **89 tier-A** CAE (Cappeller, *A Sanskrit-English
@@ -17,12 +19,14 @@ Across the dictionaries triaged, fileable counts are
 
 ## The authoritative artifact
 
-- **[CAE_wrong_readings.txt](CAE_wrong_readings.txt)** — the standing **do-not-file** list (8).
-- **[CAE_triaged.txt](CAE_triaged.txt)** — the full six-bucket queue.
-- **[CAE_file_first_sf.txt](CAE_file_first_sf.txt)** — empty of fileable rows.
+- **[CAE_wrong_readings.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/CAE/CAE_wrong_readings.txt)** — the standing **do-not-file** list (8).
+- **[CAE_triaged.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/CAE/CAE_triaged.txt)** — the full six-bucket queue.
+- **[CAE_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/CAE/CAE_file_first_sf.txt)** — empty of fileable rows.
 
 ## Method & provenance
 
 Driver `python triage_dict.py CAE`, English `triage_lang` profile, hybrid model split. Raw
-engine output (do NOT apply): [CAE_candidates.txt](CAE_candidates.txt),
-[CAE_draft.txt](CAE_draft.txt) — superseded by the triage.
+engine output (do NOT apply): [CAE_candidates.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/CAE/CAE_candidates.txt),
+[CAE_draft.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/CAE/CAE_draft.txt) — superseded by the triage.
+
+_Dr. Mārcis Gasūns_

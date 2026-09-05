@@ -115,3 +115,5 @@ All agent-doable findings above were applied in one pass ([H125](https://github.
 Remaining gates are **author-only**: byline finalisation and the MG read-through.
 
 _Review: Claude Fable 5 (`claude-fable-5`) · paper: Dr. Mārcis Gasūns_
+
+_Dr. Mārcis Gasūns_

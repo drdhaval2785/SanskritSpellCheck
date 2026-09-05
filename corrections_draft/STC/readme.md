@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # STC correction candidates — BODY-GROUNDED triage (DRAFT for human review)
 
 The unified detector engine flagged **111 tier-A** STC headwords as possible misspellings. STC is
@@ -29,12 +31,12 @@ IEG 0/162 · BOP 0/39 · **STC 0/111**.
 
 ## The authoritative artifacts
 
-- **[STC_wrong_readings.txt](STC_wrong_readings.txt)** — the **do-not-file** list: 9 deliberate
+- **[STC_wrong_readings.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/STC/STC_wrong_readings.txt)** — the **do-not-file** list: 9 deliberate
   spellings (cross-reference / *lire* apparatus). Folded into
-  [nochange/do_not_file_suppress.txt](../../nochange/do_not_file_suppress.txt).
-- **[STC_triaged.txt](STC_triaged.txt)** — full queue: 75 REAL-WORD + 9 INTENTIONAL + 5 TYPO-UNSURE
+  [nochange/do_not_file_suppress.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/nochange/do_not_file_suppress.txt).
+- **[STC_triaged.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/STC/STC_triaged.txt)** — full queue: 75 REAL-WORD + 9 INTENTIONAL + 5 TYPO-UNSURE
   (incl. the b/v `bibhīṣaṇa` and d/ḍ `pradīna` cases, **held for scan**) + 1 REVIEW + 3 UNLOCATABLE.
-- **[STC_file_first_sf.txt](STC_file_first_sf.txt)** — **empty** (0 fileable); the 3 reviewed-out
+- **[STC_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/STC/STC_file_first_sf.txt)** — **empty** (0 fileable); the 3 reviewed-out
   candidates (`praS`, `biBIzaRa`, `pradIna`) are commented there with the reviewer's reasons.
 
 ## Method
@@ -43,3 +45,5 @@ IEG 0/162 · BOP 0/39 · **STC 0/111**.
 **French** in `triage_lang.py`: `faute pour`/`lisez` = wrong-reading, `voyez`/`voy.`/`cf.` =
 cross-reference) → source-confirm the TYPO pile on Opus → **Opus false-positive review** →
 `triage_dict.py STC --finish`. **DRAFT for human review; never edits `csl-orig`.**
+
+_Dr. Mārcis Gasūns_

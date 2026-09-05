@@ -1,6 +1,8 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # MW correction candidates — BODY-GROUNDED triage (DRAFT for human review)
 
-The unified detector engine ([detectors/run_all.py](../../detectors/run_all.py)) flagged
+The unified detector engine ([detectors/run_all.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/run_all.py)) flagged
 **1,954 tier-A** MW headwords as possible misspellings. This package is the result of
 **triaging** those candidates against MW's *own entry text* (from
 [csl-orig](https://github.com/sanskrit-lexicon/csl-orig)) — because a spelling-only
@@ -22,13 +24,13 @@ flags (retroflex, sibilant, aspirate) are far higher-precision (3 of the 4 confi
 
 ## The authoritative artifact
 
-- **[MW_triaged.txt](MW_triaged.txt)** — the review queue: six ranked buckets
+- **[MW_triaged.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/MW/MW_triaged.txt)** — the review queue: six ranked buckets
   (FILE-FIRST · TYPO-UNSURE · REVIEW · REAL-WORD · INTENTIONAL · UNLOCATABLE), each row
   with MW's own entry text, the judgment, the source-confirmation, and a scan link.
-- **[MW_file_first_sf.txt](MW_file_first_sf.txt)** — the 4 FILE-FIRST candidates in
+- **[MW_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/MW/MW_file_first_sf.txt)** — the 4 FILE-FIRST candidates in
   CORRECTIONS standard format (`MW:wrong:right:n`). Verify each on the scan, flip the
   trailing `n`→`y`, then `python chg_nchg_sep.py …`.
-- **[MW_wrong_readings.txt](MW_wrong_readings.txt)** — the standing **do-not-file** list:
+- **[MW_wrong_readings.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/MW/MW_wrong_readings.txt)** — the standing **do-not-file** list:
   630 headwords MW documents on purpose (wrong-reading apparatus `w.r.` 45, `v.l.` 54,
   in-composition/sandhi 105, cross-reference 204, other 222), grouped by sub-type with
   the entry text. Filing a "correction" for any of these *corrupts* MW; use it as a
@@ -81,10 +83,10 @@ each kept case against the scanned page before anything is filed.
 
 ## Raw engine output (provenance — do NOT apply)
 
-- [MW_candidates.txt](MW_candidates.txt) — the engine's 1,954 ranked tier-A candidates.
-- [MW_draft.txt](MW_draft.txt) — draft updateByLine change-file for all 1,943 located
+- [MW_candidates.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/MW/MW_candidates.txt) — the engine's 1,954 ranked tier-A candidates.
+- [MW_draft.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/MW/MW_draft.txt) — draft updateByLine change-file for all 1,943 located
   candidates. **Superseded:** the triage shows ~99.8% should *not* be filed. Kept only as
-  the engine's unfiltered output; use [MW_file_first_sf.txt](MW_file_first_sf.txt) instead.
+  the engine's unfiltered output; use [MW_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/MW/MW_file_first_sf.txt) instead.
 
 ## How to review → file
 
@@ -93,3 +95,5 @@ each kept case against the scanned page before anything is filed.
 3. Print shows the suspect spelling (or `<k2>`/body documents it) → drop the case.
 4. File the kept cases per the [CORRECTIONS](https://github.com/sanskrit-lexicon/CORRECTIONS/issues)
    workflow (one issue per dictionary).
+
+_Dr. Mārcis Gasūns_

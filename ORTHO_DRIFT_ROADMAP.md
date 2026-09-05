@@ -1,18 +1,20 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # Orthographic-Drift Roadmap
 
 **Status: ✅ COMPLETE across all 5 gloss languages** (changelog `[1.20.0]`–`[1.30.0]`). This
 document is the original **design**; the implementation (`detectors/ortho_drift.py`, profile-driven
 de/en/fr/la/ru), the per-language outputs in `ortho_drift/`, and the synthesis are all done — read
-the results in **[docs/ORTHO_DRIFT_FINDINGS.md](docs/ORTHO_DRIFT_FINDINGS.md)**. Nothing here edits
+the results in **[docs/ORTHO_DRIFT_FINDINGS.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/ORTHO_DRIFT_FINDINGS.md)**. Nothing here edits
 `csl-orig`. *Optional, externally-gated extensions remain* (within-EN recency control over the
 modern dicts incl. PD; German DTA/RIDGES long-tail merge) — see Task C in
-[H008-Opus_SanskritSpellCheck_NEXT_23.06.26.md](H008-Opus_SanskritSpellCheck_NEXT_23.06.26.md).
+[H008-Opus_SanskritSpellCheck_NEXT_23.06.26.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/H008-Opus_SanskritSpellCheck_NEXT_23.06.26.md).
 **Scope:** a new dimension for the body-grounded triage — check the **gloss-language tokens
 inside dictionary entries** against a **2026 standard**, and document, at meta level, how
 19th-/early-20th-century European-language spelling has drifted.
 
-> Companion to the headword triage ([corrections_draft/README.md](corrections_draft/README.md),
-> recipes in [USE_CASES.md](USE_CASES.md)). Same pipeline, new axis.
+> Companion to the headword triage ([corrections_draft/README.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/README.md),
+> recipes in [USE_CASES.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/USE_CASES.md)). Same pipeline, new axis.
 
 ---
 
@@ -114,7 +116,7 @@ Reuse the headword architecture; add a gloss dimension.
 
 Models: hybrid as now — **Sonnet classify / Opus confirm-review** (`bodyaware_workflow.js`
 gains an `ortho` mode, or a sibling `ortho_workflow.js`). Language config lives in a module
-parallel to [`detectors/triage_lang.py`](detectors/triage_lang.py) (per-language reference +
+parallel to [`detectors/triage_lang.py`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/triage_lang.py) (per-language reference +
 reform rule-set), registered the same single-line way `_LANG` is.
 
 ---
@@ -145,7 +147,7 @@ or a dedicated `ortho_drift/` tree.
 
 This is a **documentation / search-normalization layer, NOT a correction list.** Modernising a
 historical gloss would corrupt the scholarly edition — the same principle as the headword
-[do-not-file lists](corrections_draft/README.md). It produces a *report* + a *normalization map*
+[do-not-file lists](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/README.md). It produces a *report* + a *normalization map*
 (for search), and **never edits `csl-orig`**.
 
 It **could** graduate into a correction layer one day — but only for genuine OCR errors (never
@@ -197,3 +199,5 @@ whole approach against the one language whose reform is fully rule-defined.
 Historical-spelling normalization is a mature DH subfield — the contribution here is **applying
 it to a uniformly-marked-up, multilingual indological-lexicography corpus** and producing the
 cross-decade drift dataset, not building new normalizers.
+
+_Dr. Mārcis Gasūns_

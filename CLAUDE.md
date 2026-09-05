@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # CLAUDE.md
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
@@ -26,13 +28,13 @@ should stay Python 3 / PHP 8 native.
 
 ## Core methodology
 
-The central idea (see [README.md](README.md) "Logic" section): treat one
+The central idea (see [README.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/README.md) "Logic" section): treat one
 dictionary as a **base/reference** (presumed-correct), build an inventory of the
 vowel/consonant patterns its headwords use, then flag any headword in the *other*
 dictionaries that contains a pattern the base never uses. A pattern the base
 lacks is a spelling-anomaly candidate.
 
-Patterns are defined once in [faultfinder3a_utils.php](faultfinder3a_utils.php)
+Patterns are defined once in [faultfinder3a_utils.php](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/faultfinder3a_utils.php)
 (`faultfinder_patterns()`): `VV`, `VCV`, `VCCV` … up to `VCCCCCV`, plus
 `Start-CC`, `CC-End`, `CCC-End`, `CCCC-End`. `V` = `[aAiIuUfFxXeEoO]`,
 `C` = the SLP1 consonant class. Pattern names abbreviate to the `P` codes that
@@ -44,27 +46,27 @@ appear in output (e.g. `Start-Consonant-Consonant` → `SCC`).
 |---|---|---|
 | **faultfinder** (primary) | top-level `faultfinder3a.php` + `faultfinder_regen.sh` | headwords with vowel/consonant patterns absent from a base dict |
 | **o_vs_O** | [o_vs_O/](o_vs_O/) | minimal-pair / near-spelling confusions across dicts (e.g. `o` vs `O`, single-letter differences) |
-| **ngram** | [ngram/ngramspellcheck.py](ngram/ngramspellcheck.py) | suspect words in *running text* whose bigrams/trigrams are absent from MW∩PW |
+| **ngram** | [ngram/ngramspellcheck.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ngram/ngramspellcheck.py) | suspect words in *running text* whose bigrams/trigrams are absent from MW∩PW |
 
 `faultfinder.php`, `faultfinder1.php`, `faultfinder2.php`, `faultfinder3.php` are
 **superseded predecessors** of `faultfinder3a.php`; do not extend them.
 
 ## Data spine
 
-- **[sanhw1.txt](sanhw1.txt)** — merged headword list, one line `hw:DICT1,DICT2,…`
+- **[sanhw1.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/sanhw1.txt)** — merged headword list, one line `hw:DICT1,DICT2,…`
   (which dictionaries contain that headword). The primary input to faultfinder.
-- **[sanhw2.txt](sanhw2.txt)** — same, but with per-dict L-IDs: `hw:DICT;Lid,…`.
+- **[sanhw2.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/sanhw2.txt)** — same, but with per-dict L-IDs: `hw:DICT;Lid,…`.
   Enables deep-links to specific dictionary entries (used by the o_vs_O sanhw2 path).
 - Both are sorted in **Sanskrit alphabetical order with `M`→homorganic-nasal
   normalization** (so `aMga` sorts as `aNga`). This sort logic lives in
-  [sanhw1/sanhw1.py](sanhw1/sanhw1.py) / [sanhw2/sanhw2.py](sanhw2/sanhw2.py).
-- **[nochange/nochange.txt](nochange/nochange.txt)** — whitelist of
+  [sanhw1/sanhw1.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/sanhw1/sanhw1.py) / [sanhw2/sanhw2.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/sanhw2/sanhw2.py).
+- **[nochange/nochange.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/nochange/nochange.txt)** — whitelist of
   human-confirmed-correct words; `faultfinder3a.php` subtracts these from output.
 - `MWslp.txt`, `PWslp.txt`, `VCPslp.txt` — single-dictionary SLP1 headword dumps.
   [HeadwordLists/](HeadwordLists/) holds per-dict unique-key lists.
 
 **Specialized dictionaries** `ACC BHS BUR IEG KRM VEI PD` are treated as
-"less fruitful" and excluded in places (e.g. [chg_nchg_sep.py](chg_nchg_sep.py)
+"less fruitful" and excluded in places (e.g. [chg_nchg_sep.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/chg_nchg_sep.py)
 line 18) because they are domain-specific, not general Sanskrit lexica.
 
 **External dictionary sources (not in `csl-orig`).** A few dicts have headwords in
@@ -72,14 +74,14 @@ line 18) because they are domain-specific, not general Sanskrit lexica.
 College *Encyclopaedic Dictionary*, CC BY-NC-SA, ~55 MB). The body-grounded triage resolves a
 dict's entry text through `triage_util.source_file(dict_code)`, which prefers a gitignored
 `external_src/<dict>/<dict>.txt` staging file and otherwise falls back to `csl-orig`. Stage these
-with [detectors/get_external_source.py](detectors/get_external_source.py) (re-run on a fresh
+with [detectors/get_external_source.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/get_external_source.py) (re-run on a fresh
 clone); they are **never committed here** (license + size). PD expects a **second source** —
 register its URL in that script.
 
 ## Shared transliteration library
 
-[function.php](function.php) (≈436 KB), [slp-dev.php](slp-dev.php) (SLP1→Devanagari)
-and [dev-slp.php](dev-slp.php) (Devanagari→SLP1) are vendored from Dr. Patel's
+[function.php](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/function.php) (≈436 KB), [slp-dev.php](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/slp-dev.php) (SLP1→Devanagari)
+and [dev-slp.php](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/dev-slp.php) (Devanagari→SLP1) are vendored from Dr. Patel's
 `sanskrit` sandhi project. They are used only to render Devanagari and Cologne
 deep-links in the generated HTML reports — treat them as a third-party dependency:
 don't refactor them. They use no PHP-8-removed constructs (`each()`,
@@ -91,17 +93,17 @@ don't refactor them. They use no PHP-8-removed constructs (`each()`,
   `Y`=offending substring, `D`=comma-list of dicts containing `X` (never the base).
 - **`AllvsXX_sf.txt`** — "standard format" `DICT:word:word:n`, the correction-submission
   format from [CORRECTIONS#154](https://github.com/sanskrit-lexicon/CORRECTIONS/issues/154).
-  After a human edits the middle field, [chg_nchg_sep.py](chg_nchg_sep.py) splits it
+  After a human edits the middle field, [chg_nchg_sep.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/chg_nchg_sep.py) splits it
   into `chg.txt` (real corrections) and `nchg.txt` (false positives → feed back to whitelist).
 - The `o_vs_O` composite outputs rank candidate pairs by likelihood
-  (composite1 = highest … composite3 = near-nil); see [o_vs_O/readme.md](o_vs_O/readme.md).
-- **HTML reports** ([faultfinder3a-html.php](faultfinder3a-html.php)) take a 3rd
+  (composite1 = highest … composite3 = near-nil); see [o_vs_O/readme.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/o_vs_O/readme.md).
+- **HTML reports** ([faultfinder3a-html.php](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/faultfinder3a-html.php)) take a 3rd
   `repeat` arg: `0` (default) keeps only single-dictionary words *and* excludes
   post-repha words via `rcc()` (`r` + doubled consonant); `1` allows multi-dict; `2`
   renders every input row (including rcc). The default rcc exclusion encodes a real
   editorial judgment — post-repha doublings (sūryya, varṇṇa, ūrmma) are usually the
   faithful printed form, *not* errors. (`repeat=2` was dead code until fixed June 2026.)
-- **[triage_suspects.py](triage_suspects.py)** post-processes an `AllvsXX.txt` into
+- **[triage_suspects.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/triage_suspects.py)** post-processes an `AllvsXX.txt` into
   `noise` (specialized-dict-only), `priority` (non-rcc anomalies — review first), and
   `gemination` (the rcc/post-repha subset — low priority). The 2026 re-run packages
   live in [Allvs_2026/](Allvs_2026); the historical `AllvsXX/` dirs are the 2017 runs.
@@ -112,20 +114,20 @@ don't refactor them. They use no PHP-8-removed constructs (`each()`,
   (DCS-ranked), `consensus`, `intra_dup`, `dict_vs_corpus` (collective errors) emit
   `DICT:wrong:right:n`; flaggers `phonotactic_check`, `charset_check`, `order_check`,
   `meter_check` emit `X:CODE=Y:D`. They target the skeleton-preserving substitutions
-  faultfinder is blind to. Task-oriented recipes: **[USE_CASES.md](USE_CASES.md)**.
+  faultfinder is blind to. Task-oriented recipes: **[USE_CASES.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/USE_CASES.md)**.
 - **`meter_check`** (H251, 06-07-2026) — batch chandas (meter) validator: a headword
   co-occurring with a metrically broken GRETIL kavya verse is a corpus-corroboration
   signal. Three-way vote (skrutable + `chanda` + `vidyut-chandas`) over GRETIL's Kavya
   section (57 texts, ~26k verses), bridged from free verse text to dictionary headwords
   via `vidyut.cheda`'s segmenter/lemmatizer. Design, corpus-fetch step, verdict scheme,
   and guards (not a tier promoter — same cross-agreement mechanism as the other
-  detectors): **[detectors/meter/README.md](detectors/meter/README.md)**.
+  detectors): **[detectors/meter/README.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/meter/README.md)**.
 - **Body-grounded triage** (`detectors/triage_*.py` + `bodyaware_workflow.js`) — turns a
   dictionary's tier-A candidates into a verified FILE-FIRST queue + a do-not-file list by
   judging each against the dictionary's *own entry text* (not spelling alone). Run it with the
-  **`/dict-triage <DICT>`** skill ([.claude/commands/dict-triage.md](.claude/commands/dict-triage.md));
+  **`/dict-triage <DICT>`** skill ([.claude/commands/dict-triage.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/.claude/commands/dict-triage.md));
   hybrid models (Sonnet classify / Opus confirm). Output: `corrections_draft/<DICT>/`. **Done for
-  all 33 dicts** (index: [corrections_draft/README.md](corrections_draft/README.md)) — 122 fileable
+  all 33 dicts** (index: [corrections_draft/README.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/README.md)) — 122 fileable
   typos across 11 dicts, ~2,549 do-not-file spellings; the high-yield outliers are poorly-digitised
   sources (SHS 37, YAT 27, ACC 22). ⚠️ Tier-A precision is near-zero on mature dicts; the LLM TYPO pass is
   stochastic (don't blindly re-run a verified package) — the do-not-file list is the real value.
@@ -172,7 +174,7 @@ Local runtimes: **PHP 8.2** (`C:\xampp\php\php.exe`, *not* on PATH) and **Python
 and was ported in June 2026; what changed and how it was verified:
 
 **PHP (faultfinder pipeline) — runs clean on PHP 8.2.** Two changes in
-[faultfinder3a.php](faultfinder3a.php):
+[faultfinder3a.php](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/faultfinder3a.php):
 - `preg_split(..., null, ...)` → `-1` (null `$limit` is deprecated on 8.1+).
 - The check loop iterated `for ($j=0; $j<count($file1); $j++)` over `$file1` =
   `array_diff($worddata, $whitelistwords)`. `array_diff()` keeps the original (now
@@ -205,16 +207,16 @@ base for high-precision lists.
 **Python — all scripts ported to Python 3** (`py_compile` clean on 3.14; the
 runnable ones were executed):
 - `print` statements → `print(...)` everywhere.
-- [sanhw1.py](sanhw1/sanhw1.py) / [sanhw2.py](sanhw2/sanhw2.py): `string.maketrans`→`str.maketrans`,
+- [sanhw1.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/sanhw1/sanhw1.py) / [sanhw2.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/sanhw2/sanhw2.py): `string.maketrans`→`str.maketrans`,
   `string.translate(a,t)`→`a.translate(t)`, `cmp(a,b)`→`(a>b)-(a<b)`,
   `sorted(…,cmp=fn)`→`sorted(…,key=functools.cmp_to_key(fn))`,
   `encode('ascii','replace')`→`….decode('ascii')` (keep keys as `str`).
-- [ngramspellcheck.py](ngram/ngramspellcheck.py): `HTMLParser` import → `html.parser`,
+- [ngramspellcheck.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ngram/ngramspellcheck.py): `HTMLParser` import → `html.parser`,
   `MLStripper.__init__` calls `super().__init__()`, `is not 0`→`!= 0`, invalid `\(`
   regex escapes doubled. Runs against its `data/` fixtures (found 25 suspects).
-- [sortlen.py](o_vs_O/sortlen.py): `readlines(fin)`→`readlines()`; reproduces the
+- [sortlen.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/o_vs_O/sortlen.py): `readlines(fin)`→`readlines()`; reproduces the
   committed `o_vs_O/output3/composite*a.txt` exactly.
-- [chg_nchg_sep.py](chg_nchg_sep.py): runs (716 nchg lines on `AllvsMW_sf.txt`).
+- [chg_nchg_sep.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/chg_nchg_sep.py): runs (716 nchg lines on `AllvsMW_sf.txt`).
 - Remaining `codecs.open()` DeprecationWarnings are cosmetic (still works on 3.14) —
   optional future cleanup to `open(encoding=…)`.
 
@@ -223,6 +225,8 @@ runnable ones were executed):
 on the Cologne server, where `sanhw1.txt` / `sanhw2.txt` are regenerated. Treat the
 two `.txt` files as fixed local inputs.
 
-**Tooling:** [.pre-commit-config.yaml](.pre-commit-config.yaml) (ruff `E9,F63,F7,F8`)
-+ [.github/dependabot.yml](.github/dependabot.yml). Default branch `master`. The ruff
+**Tooling:** [.pre-commit-config.yaml](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/.pre-commit-config.yaml) (ruff `E9,F63,F7,F8`)
++ [.github/dependabot.yml](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/.github/dependabot.yml). Default branch `master`. The ruff
 rule set is syntax/undefined-name only, so it won't catch Py2 `print` statements.
+
+_Dr. Mārcis Gasūns_

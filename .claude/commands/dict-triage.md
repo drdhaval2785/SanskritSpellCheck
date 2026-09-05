@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 ---
 description: Body-grounded HYBRID triage of one Cologne dictionary's tier-A spell-check candidates — Sonnet classifies, Opus source-confirms, a human verifies against the entry text. Produces a FILE-FIRST queue + a do-not-file list. Arg = dict code (MW, PW, PWG, VCP, SCH, PD, ...).
 argument-hint: <DICT>  (e.g. SCH)
@@ -93,3 +95,5 @@ that gloss-language's wrong-reading / varia-lectio / in-composition / cross-refe
 (keep them **separator-independent** — body_text strips `¦`), and a `_HINT[lang]` paragraph for
 the workflow rubric. Add a `test_triage.py` case (e.g. assert the wrong-reading marker classifies
 `wr`). Then run steps 1–6.
+
+_Dr. Mārcis Gasūns_

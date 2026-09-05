@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # WIL correction candidates — BODY-GROUNDED triage (DRAFT for human review)
 
 The unified detector engine flagged **108 tier-A** WIL (H. H. Wilson, *A Dictionary,
@@ -28,7 +30,7 @@ Across the dictionaries triaged, fileable-typo counts are
 | `kaNkalodya → kaNkaloqya` | d/q (dental→retroflex) | paradigm `-qyaM` (retroflex q) contradicts the headword's dental `d` |
 
 > Candidates, not confirmed corrections — verify each on the scan (1832 typography), then flip
-> `n`→`y` in [WIL_file_first_sf.txt](WIL_file_first_sf.txt).
+> `n`→`y` in [WIL_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/WIL/WIL_file_first_sf.txt).
 
 ### Reviewed out (do NOT file)
 
@@ -36,10 +38,10 @@ Across the dictionaries triaged, fileable-typo counts are
 
 ## The authoritative artifact
 
-- **[WIL_file_first_sf.txt](WIL_file_first_sf.txt)** — the 3 FILE-FIRST candidates (1
+- **[WIL_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/WIL/WIL_file_first_sf.txt)** — the 3 FILE-FIRST candidates (1
   reviewed-out, commented).
-- **[WIL_triaged.txt](WIL_triaged.txt)** — the full six-bucket queue.
-- **[WIL_wrong_readings.txt](WIL_wrong_readings.txt)** — the standing **do-not-file** list (17).
+- **[WIL_triaged.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/WIL/WIL_triaged.txt)** — the full six-bucket queue.
+- **[WIL_wrong_readings.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/WIL/WIL_wrong_readings.txt)** — the standing **do-not-file** list (17).
 
 ## Method
 
@@ -48,5 +50,7 @@ Same pipeline as the other dictionaries (driver: `python triage_dict.py WIL`), E
 
 ## Raw engine output (provenance — do NOT apply)
 
-- [WIL_candidates.txt](WIL_candidates.txt) — the engine's 108 ranked tier-A candidates.
-- [WIL_draft.txt](WIL_draft.txt) — draft updateByLine change-file; **superseded** by the triage.
+- [WIL_candidates.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/WIL/WIL_candidates.txt) — the engine's 108 ranked tier-A candidates.
+- [WIL_draft.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/WIL/WIL_draft.txt) — draft updateByLine change-file; **superseded** by the triage.
+
+_Dr. Mārcis Gasūns_

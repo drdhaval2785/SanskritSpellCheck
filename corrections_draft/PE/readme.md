@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # PE correction candidates — BODY-GROUNDED triage (DRAFT for human review)
 
 The unified detector engine flagged **158 tier-A** PE headwords as possible misspellings. PE is
@@ -20,13 +22,15 @@ IEG 0/162 · INM 0/161 · **PE 0/158**.
 
 ## The authoritative artifacts
 
-- **[PE_wrong_readings.txt](PE_wrong_readings.txt)** — the **do-not-file** list: 13 deliberate
+- **[PE_wrong_readings.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/PE/PE_wrong_readings.txt)** — the **do-not-file** list: 13 deliberate
   spellings (cross-reference 10, other 3). Folded into
-  [nochange/do_not_file_suppress.txt](../../nochange/do_not_file_suppress.txt).
-- **[PE_triaged.txt](PE_triaged.txt)** — full queue: 138 REAL-WORD + 13 INTENTIONAL.
-- **[PE_file_first_sf.txt](PE_file_first_sf.txt)** — **empty** (0 fileable).
+  [nochange/do_not_file_suppress.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/nochange/do_not_file_suppress.txt).
+- **[PE_triaged.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/PE/PE_triaged.txt)** — full queue: 138 REAL-WORD + 13 INTENTIONAL.
+- **[PE_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/PE/PE_file_first_sf.txt)** — **empty** (0 fileable).
 
 ## Method
 
 `detectors/triage_dict.py PE` (package; PE registered as English in `triage_lang.py`) → body-aware
 classification → `--finish`. 0 TYPO → no source-confirm/review pile. **DRAFT; never edits `csl-orig`.**
+
+_Dr. Mārcis Gasūns_

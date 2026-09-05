@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # VCP correction candidates — BODY-GROUNDED triage (DRAFT for human review)
 
 The unified detector engine flagged **563 tier-A** VCP (*Vācaspatyam*, a Sanskrit–Sanskrit
@@ -25,13 +27,13 @@ TYPO pass is stochastic and low-yield; the durable deliverable is the do-not-fil
 
 ## The authoritative artifact
 
-- **[VCP_triaged.txt](VCP_triaged.txt)** — the review queue: the 155 REAL-WORD entries (with
+- **[VCP_triaged.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/VCP/VCP_triaged.txt)** — the review queue: the 155 REAL-WORD entries (with
   VCP's own derivation/gloss and why each is a distinct word) and the 408 INTENTIONAL ones.
-- **[VCP_wrong_readings.txt](VCP_wrong_readings.txt)** — the standing **do-not-file** list:
+- **[VCP_wrong_readings.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/VCP/VCP_wrong_readings.txt)** — the standing **do-not-file** list:
   408 deliberate spellings (cross-reference/redirect **362**, other 43, `v.l.` 2,
   in-composition 1), grouped by sub-type. Use it as a suppression list so future runs never
   re-flag them.
-- **[VCP_file_first_sf.txt](VCP_file_first_sf.txt)** — the 1 body-confirmed candidate
+- **[VCP_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/VCP/VCP_file_first_sf.txt)** — the 1 body-confirmed candidate
   (`camIkara → cAmIkara`): VCP glosses `camIkara` with gold terms (*kṛtasvara*, *svarṇa*),
   but the word for gold is *cāmīkara* (long ā) — verify on the scan, flip `n`→`y`, file.
 
@@ -60,12 +62,14 @@ python triage_synthesize.py VCP    # -> VCP_triaged.txt + VCP_wrong_readings.txt
 ```
 
 The decisive VCP-specific signal is **`{{Lbody=N}}`** (a redirect headword), tuned into the
-Sanskrit profile in [detectors/triage_lang.py](../../detectors/triage_lang.py). The LLM
+Sanskrit profile in [detectors/triage_lang.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/triage_lang.py). The LLM
 layer (a triage prior, not a verdict) reads VCP's abbreviated Sanskrit — roots, derivations,
 gender/POS marks — to separate real words from any misspelled key.
 
 ## Raw engine output (provenance — do NOT apply)
 
-- [VCP_candidates.txt](VCP_candidates.txt) — the engine's 563 ranked tier-A candidates.
-- [VCP_draft.txt](VCP_draft.txt) — draft updateByLine change-file. **Superseded:** the triage
+- [VCP_candidates.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/VCP/VCP_candidates.txt) — the engine's 563 ranked tier-A candidates.
+- [VCP_draft.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/VCP/VCP_draft.txt) — draft updateByLine change-file. **Superseded:** the triage
   finds 0 fileable typos; do not apply it.
+
+_Dr. Mārcis Gasūns_

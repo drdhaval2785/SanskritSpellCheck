@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # PD correction candidates — BODY-GROUNDED triage (DRAFT for human review)
 
 The unified detector engine flagged **1,007 tier-A** PD headwords as possible misspellings. PD is the
@@ -36,20 +38,22 @@ Cross-dict fileable precision: SHS 37/246 · YAT 27/247 · ACC 22/174 · … · 
 
 ## The authoritative artifacts
 
-- **[PD_wrong_readings.txt](PD_wrong_readings.txt)** — the **do-not-file** list: 116 deliberate
+- **[PD_wrong_readings.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/PD/PD_wrong_readings.txt)** — the **do-not-file** list: 116 deliberate
   spellings (varia-lectio 66, wrong-reading 16, cross-reference 22, other 12). Folded into
-  [nochange/do_not_file_suppress.txt](../../nochange/do_not_file_suppress.txt) (suppression list →
+  [nochange/do_not_file_suppress.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/nochange/do_not_file_suppress.txt) (suppression list →
   33 dicts / 2,297 unique; `eval.py` false-positives 0 after `run_all.py --rerun`).
-- **[PD_triaged.txt](PD_triaged.txt)** — full queue: 888 REAL-WORD + 116 INTENTIONAL + 1 TYPO-UNSURE
+- **[PD_triaged.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/PD/PD_triaged.txt)** — full queue: 888 REAL-WORD + 116 INTENTIONAL + 1 TYPO-UNSURE
   + 2 REVIEW.
-- **[PD_file_first_sf.txt](PD_file_first_sf.txt)** — **empty** (0 fileable).
+- **[PD_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/PD/PD_file_first_sf.txt)** — **empty** (0 fileable).
 
 ## Source & method
 
 - **Source 1:** `external_src/pd/pd.txt` — re-fetch with `python detectors/get_external_source.py PD`.
   **Source 2:** TBD — register its URL as a second tuple under `PD` in
-  [detectors/get_external_source.py](../../detectors/get_external_source.py), then re-stage and re-run.
+  [detectors/get_external_source.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/get_external_source.py), then re-stage and re-run.
 - `detectors/triage_dict.py PD` (package; reads PD via `triage_util.source_file()` → `external_src/`)
   → body-aware HYBRID classification (PD registered `en`) → source-confirm the TYPO pile on Opus →
   **Opus false-positive review** → `triage_dict.py PD --finish`. **DRAFT for human review; never edits
   the source.**
+
+_Dr. Mārcis Gasūns_

@@ -132,3 +132,5 @@ All agent-doable findings applied in one pass ([H127](https://github.com/gasyoun
 MG's References verification pass and IJL-register read-through.
 
 _Review: Claude Fable 5 (`claude-fable-5`) · paper: Dr. Mārcis Gasūns_
+
+_Dr. Mārcis Gasūns_

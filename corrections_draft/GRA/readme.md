@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # GRA correction candidates — BODY-GROUNDED triage (DRAFT for human review)
 
 The unified detector engine flagged **45 tier-A** GRA (Grassmann, *Wörterbuch zum Rig-Veda*,
@@ -21,12 +23,14 @@ Across the dictionaries triaged, fileable counts are
 
 ## The authoritative artifact
 
-- **[GRA_wrong_readings.txt](GRA_wrong_readings.txt)** — the standing **do-not-file** list (7).
-- **[GRA_triaged.txt](GRA_triaged.txt)** — the full six-bucket queue.
-- **[GRA_file_first_sf.txt](GRA_file_first_sf.txt)** — empty of fileable rows (1 reviewed-out, commented).
+- **[GRA_wrong_readings.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/GRA/GRA_wrong_readings.txt)** — the standing **do-not-file** list (7).
+- **[GRA_triaged.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/GRA/GRA_triaged.txt)** — the full six-bucket queue.
+- **[GRA_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/GRA/GRA_file_first_sf.txt)** — empty of fileable rows (1 reviewed-out, commented).
 
 ## Method & provenance
 
 Driver `python triage_dict.py GRA`, German `triage_lang` profile (`GRA → de`), hybrid model
-split. Raw engine output (do NOT apply): [GRA_candidates.txt](GRA_candidates.txt),
-[GRA_draft.txt](GRA_draft.txt) — superseded by the triage.
+split. Raw engine output (do NOT apply): [GRA_candidates.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/GRA/GRA_candidates.txt),
+[GRA_draft.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/GRA/GRA_draft.txt) — superseded by the triage.
+
+_Dr. Mārcis Gasūns_

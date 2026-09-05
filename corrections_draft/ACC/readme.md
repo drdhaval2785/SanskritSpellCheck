@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # ACC correction candidates — BODY-GROUNDED triage (DRAFT for human review)
 
 The unified detector engine flagged **174 tier-A** ACC headwords as possible misspellings. ACC is
@@ -31,13 +33,13 @@ scan before filing.
 
 ## The authoritative artifacts
 
-- **[ACC_file_first_sf.txt](ACC_file_first_sf.txt)** — the **FILE-FIRST** queue: 22 candidates in
+- **[ACC_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/ACC/ACC_file_first_sf.txt)** — the **FILE-FIRST** queue: 22 candidates in
   CORRECTIONS standard format (`ACC:wrong:right:n`). Verify each on the scan, flip `n`→`y`, then
   `python chg_nchg_sep.py …`.
-- **[ACC_wrong_readings.txt](ACC_wrong_readings.txt)** — the do-not-file list: 25 deliberate
+- **[ACC_wrong_readings.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/ACC/ACC_wrong_readings.txt)** — the do-not-file list: 25 deliberate
   spellings (cross-reference 10, other 15). Folded into
-  [nochange/do_not_file_suppress.txt](../../nochange/do_not_file_suppress.txt).
-- **[ACC_triaged.txt](ACC_triaged.txt)** — full queue: 22 FILE-FIRST, 4 TYPO-UNSURE, 25 REVIEW
+  [nochange/do_not_file_suppress.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/nochange/do_not_file_suppress.txt).
+- **[ACC_triaged.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/ACC/ACC_triaged.txt)** — full queue: 22 FILE-FIRST, 4 TYPO-UNSURE, 25 REVIEW
   (eyes), 68 REAL-WORD, 25 INTENTIONAL.
 
 ## Method
@@ -46,3 +48,5 @@ scan before filing.
 `triage_lang.py`) → **source-confirm + false-positive review** of every TYPO against its full ACC
 entry, with explicit *direction* and *faithful-colophon* checks → `triage_dict.py ACC --finish`.
 **DRAFT for human review** — never edits `csl-orig`.
+
+_Dr. Mārcis Gasūns_

@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # MCI correction candidates — BODY-GROUNDED triage (DRAFT for human review)
 
 The unified detector engine flagged **41 tier-A** MCI headwords as possible misspellings. MCI is a
@@ -22,7 +24,7 @@ MW 4/1954 · … — MCI's small-but-rich entries make it proportionally high-yi
 
 ## The FILE-FIRST queue (10 — verify on scan, then file)
 
-[MCI_file_first_sf.txt](MCI_file_first_sf.txt) (`MCI:wrong:right:n`):
+[MCI_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/MCI/MCI_file_first_sf.txt) (`MCI:wrong:right:n`):
 `mahAnadi→mahAnadI`, `supratika→supratIka`, `mAkandi→mAkandI`, `kikawa→kIkawa`, `baliha→balIha`
 (vowel-length, ī); `dakzinApaTa→dakziRApaTa` (ṇatva); `asvaSiras→aSvaSiras`, `vEsAKa→vESAKa`,
 `brahmopanisad→brahmopanizad` (sibilant s→ś/ṣ); `arunDatIvAwa→arunDatIvawa` (vaṭa "banyan", short a).
@@ -31,13 +33,15 @@ still **DRAFT** — verify the Devanāgarī scan before flipping `n`→`y`.
 
 ## The authoritative artifacts
 
-- **[MCI_file_first_sf.txt](MCI_file_first_sf.txt)** — 10 FILE-FIRST candidates.
-- **[MCI_wrong_readings.txt](MCI_wrong_readings.txt)** — do-not-file: 3 (cross-reference 2, other 1).
-  Folded into [nochange/do_not_file_suppress.txt](../../nochange/do_not_file_suppress.txt).
-- **[MCI_triaged.txt](MCI_triaged.txt)** — full queue: 10 FILE-FIRST, 11 REAL-WORD, 3 INTENTIONAL.
+- **[MCI_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/MCI/MCI_file_first_sf.txt)** — 10 FILE-FIRST candidates.
+- **[MCI_wrong_readings.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/MCI/MCI_wrong_readings.txt)** — do-not-file: 3 (cross-reference 2, other 1).
+  Folded into [nochange/do_not_file_suppress.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/nochange/do_not_file_suppress.txt).
+- **[MCI_triaged.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/MCI/MCI_triaged.txt)** — full queue: 10 FILE-FIRST, 11 REAL-WORD, 3 INTENTIONAL.
 
 ## Method
 
 `detectors/triage_dict.py MCI` → body-aware classification (English) → **source-confirm + review**
 of every TYPO against its full MCI entry (citations confirmed the headword/lemma mismatch) →
 `--finish`. **DRAFT for human review; never edits `csl-orig`.**
+
+_Dr. Mārcis Gasūns_

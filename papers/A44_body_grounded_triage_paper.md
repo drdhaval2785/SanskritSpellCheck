@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 ---
 paper_id: A44
 title: "The Dictionary Body as Ground Truth: Body-Grounded LLM Triage and the Precision-Collapse Result"
@@ -11,7 +13,7 @@ data_source: "corrections_draft/README.md (33-dict triage) + corrections_draft/V
 # The Dictionary Body as Ground Truth: Body-Grounded LLM Triage and the Precision-Collapse Result
 
 > **Draft status (2026-07-10).** Revised per the pre-submission review
-> ([A44_review_fable5.md](A44_review_fable5.md)): reframed for IJL, the 2026-07-02
+> ([A44_review_fable5.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/A44_review_fable5.md)): reframed for IJL, the 2026-07-02
 > source re-verification folded in (fifth candidate class: *collision*), apparatus
 > taxonomy promoted to a named table with per-dictionary counts, §2 related work
 > drafted, per-phase model attribution added, reproducibility claims split. The
@@ -164,7 +166,7 @@ plus apparatus) and in output (a suppression catalogue, not corrections). No too
 in the surveyed landscape models the variant-versus-typo distinction — Hunspell
 wordlists, up to the 543,758-entry `sa_IN` pack bundled with LibreOffice since
 2025, hard-code one spelling as correct (full survey:
-[docs/PRIOR_ART.md](../docs/PRIOR_ART.md)). **(b) LLM-assisted correction
+[docs/PRIOR_ART.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/PRIOR_ART.md)). **(b) LLM-assisted correction
 and its characteristic failure.** Recent evaluations of LLM and vision-language
 reading of historical text document an over-correction failure mode: the model
 produces fluent, plausible output with little grounding in what the witness
@@ -211,7 +213,7 @@ submission.)*
 
 ### 3.1 Corpus
 The testbed is the Cologne Digital Sanskrit Dictionaries as merged in the host
-toolset's headword spine [`sanhw1.txt`](../sanhw1.txt). Of the dictionaries in that
+toolset's headword spine [`sanhw1.txt`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/sanhw1.txt). Of the dictionaries in that
 merge, **33** carry top-tier anomaly candidates and are triaged here; they span English
 (MW, Yates, *Śabda-Sāgara*, Apte, Wilson, Goldstücker, …), German (PW, the Großes
 Petersburger Wörterbuch PWG, Schmidt's *Nachträge*, Cappeller, Grassmann), Sanskrit
@@ -220,7 +222,7 @@ Latin (Bopp), and several name/index works. Entry text is read from the canonica
 [`csl-orig`](https://github.com/sanskrit-lexicon/csl-orig) source, `v02/<dict>/<dict>.txt`.
 One dictionary, the Deccan College *Encyclopaedic Dictionary* (PD), is not in
 `csl-orig` and is read from a staged external source
-([`detectors/get_external_source.py`](../detectors/get_external_source.py)); it was
+([`detectors/get_external_source.py`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/get_external_source.py)); it was
 triaged on its first source (see §6). All Sanskrit text is in SLP1 transliteration.
 
 ### 3.2 The candidates and the five-way decision
@@ -246,7 +248,7 @@ requires the entry, not the headword.
 
 ### 3.3 The staged pipeline
 The pipeline is run per dictionary via the
-[`/dict-triage <DICT>`](../.claude/commands/dict-triage.md) skill (operational detail
+[`/dict-triage <DICT>`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/.claude/commands/dict-triage.md) skill (operational detail
 in Appendix A). Model attribution follows the project standard — tier plus exact
 version per phase; the June 2026 triage runs used Sonnet 4.6 (`claude-sonnet-4-6`)
 for bulk classification and Opus 4.8 (`claude-opus-4-8`) for source-confirmation and
@@ -254,7 +256,7 @@ adversarial review; the 2026-07-02 re-verification used four Sonnet 5
 (`claude-sonnet-5`) checkers with Fable 5 (`claude-fable-5`) adjudication:
 
 1. **Deterministic pre-settlement** (no model). Language-specific markers
-   ([`detectors/triage_lang.py`](../detectors/triage_lang.py)) settle the declared
+   ([`detectors/triage_lang.py`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/triage_lang.py)) settle the declared
    apparatus: wrong-reading (`w.r.`, German *fehlerhaft für*, *Richtig*), *variae
    lectiones* (`v.l.`), in-composition/sandhi forms, cross-references (`See`, `s.`,
    `= X`). This marker layer is model-independent and is the precision backbone.
@@ -285,14 +287,14 @@ re-runs surface a slightly different small handful and can even *lose* a previou
 verified typo (an MW re-run once refuted 4 confirmed typos), so verified packages are
 unioned across runs and never blindly overwritten; the 122 figure is a floor under
 union-across-runs, not a point estimate. The suppression layer's safety has its own
-harness: [`detectors/eval.py`](../detectors/eval.py) checks that the suppress list
+harness: [`detectors/eval.py`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/eval.py) checks that the suppress list
 raises **zero false positives against ~31,000 known-good headwords** and measures
 recall against the 3,884 historically corrected pairs — the evidence that the
 do-not-file layer does not over-suppress. The deduplicated union of all 33
 do-not-file lists is regenerated by
-[`detectors/gen_do_not_file_suppress.py`](../detectors/gen_do_not_file_suppress.py)
-into [`nochange/do_not_file_suppress.txt`](../nochange/do_not_file_suppress.txt), which
-[`detectors/slp1util.py`](../detectors/slp1util.py) `load_whitelist()` unions with the
+[`detectors/gen_do_not_file_suppress.py`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/gen_do_not_file_suppress.py)
+into [`nochange/do_not_file_suppress.txt`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/nochange/do_not_file_suppress.txt), which
+[`detectors/slp1util.py`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/slp1util.py) `load_whitelist()` unions with the
 human-curated `nochange.txt` so the detectors never re-surface a documented-intentional
 spelling.
 
@@ -349,7 +351,7 @@ gross = 2,549).*
 | SKD | 103 | other 86 · cross-ref 14 |
 
 The **per-dictionary counts sum to 2,549**; the **deduplicated union is 2,297 unique
-headwords** ([`nochange/do_not_file_suppress.txt`](../nochange/do_not_file_suppress.txt)).
+headwords** ([`nochange/do_not_file_suppress.txt`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/nochange/do_not_file_suppress.txt)).
 Both numbers are reported because they answer different questions: the gross 2,549
 measures the work per source; the deduped 2,297 is the artifact wired into the
 detectors. The class profile repays attention — the indigenous VCP suppresses almost entirely via
@@ -390,7 +392,7 @@ digitisation in which many OCR/keying errors survive, *and* nearly every entry c
 an explicit etymology (`E. <components>`) and an inflectional paradigm — the strongest
 possible internal check. Every one of the 37 SHS typos is contradicted by the entry's
 own text. The errors fall into a small set of entry-decidable classes
-([`corrections_draft/SHS/readme.md`](../corrections_draft/SHS/readme.md); each class
+([`corrections_draft/SHS/readme.md`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/SHS/readme.md); each class
 is deployed with full in-entry evidence lines in the live umbrella issue
 [CORRECTIONS #447](https://github.com/sanskrit-lexicon/CORRECTIONS/issues/447)):
 
@@ -414,8 +416,8 @@ correctly recognising the limit of its own arbiter.
 ### 4.5 The re-verification pass — and the collision class
 Before any filing, all 122 confirmed candidates were re-verified per row against live
 `csl-orig` (2026-07-02; per-row verdicts in
-[`corrections_draft/file_first_verified.tsv`](../corrections_draft/file_first_verified.tsv),
-narrative in [`corrections_draft/VERIFICATION_2026_07.md`](../corrections_draft/VERIFICATION_2026_07.md)):
+[`corrections_draft/file_first_verified.tsv`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/file_first_verified.tsv),
+narrative in [`corrections_draft/VERIFICATION_2026_07.md`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/VERIFICATION_2026_07.md)):
 
 | verdict | n | meaning |
 |---|--:|---|
@@ -451,13 +453,13 @@ definitions, and an evidence file containing *only* the candidate pair and the
 dictionary's own entry bodies under both spellings — no access to the original
 verdicts, notes, prompts, or detector tier labels
 ([`corrections_draft/irr/`](../corrections_draft/irr/); inputs built by
-[`irr_build_inputs.py`](../detectors/irr_build_inputs.py), agreement computed with
-exact rational arithmetic by [`irr_agreement.py`](../detectors/irr_agreement.py)).
+[`irr_build_inputs.py`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/irr_build_inputs.py), agreement computed with
+exact rational arithmetic by [`irr_agreement.py`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/irr_agreement.py)).
 
 Agreement on the five-way taxonomy is **κ = 0.336** (Cohen; observed agreement
 59.0 %, chance 38.3 %; approximate 95 % CI ≈ 0.34 ± 0.14 — spanning "poor" to
 "moderate"; full confusion matrix and per-class κ in
-[`agreement_stats.md`](../corrections_draft/irr/agreement_stats.md)). On the
+[`agreement_stats.md`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/irr/agreement_stats.md)). On the
 binary collapse — *does this row describe a genuine defect needing
 action* ({PASS, SCAN-FIRST, EDITORIAL}) versus not ({DNF, DROP}) — raw agreement is
 **121/122 (99.2 %)**; we print the raw count rather than a κ for the binary
@@ -503,7 +505,7 @@ words, is recoverable from the evidence alone.
 One caveat of design, not execution: both annotators are Anthropic models — a
 same-family pairing the self-enhancement-bias literature cautions against. A
 cross-family replication is now tooled
-([`detectors/irr_cross_family.py`](../detectors/irr_cross_family.py) re-runs the
+([`detectors/irr_cross_family.py`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/irr_cross_family.py) re-runs the
 identical blind protocol with a non-Anthropic judge) and pending an API
 credential; its κ will be reported as obtained, like the first.
 
@@ -512,12 +514,12 @@ credential; its κ will be reported as obtained, like the first.
 The GED framing of §1 licenses a detection-level evaluation of the underlying
 spelling-anomaly detectors themselves, and that evaluation directly measures the
 stakes of this paper's central claim. The verified verdicts of §4.5 double as a
-held-out gold set ([`detectors/gold_corrections.tsv`](../detectors/gold_corrections.tsv),
-derived from [`file_first_verified.tsv`](../corrections_draft/file_first_verified.tsv)):
+held-out gold set ([`detectors/gold_corrections.tsv`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/gold_corrections.tsv),
+derived from [`file_first_verified.tsv`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/file_first_verified.tsv)):
 **109 POSITIVE rows — 108 unique (one duplicate pair, jAmbabat, filed for both SHS and
 WIL)** (genuine corrections a detector *should* find) and **13
 HARM rows** — the EDITORIAL-collision, DNF and DROP verdicts, i.e. exactly the
-rows that must **not** be silently "corrected". [`detectors/eval.py`](../detectors/eval.py)
+rows that must **not** be silently "corrected". [`detectors/eval.py`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/eval.py)
 scores each corrector against this gold set with the tradition's
 precision-weighted F0.5 (β = 0.5; on GEC/GED evaluation practice see Grundkiewicz
 et al. 2015), plus a **harm rate**: the share of the 13 protected rows the
@@ -600,7 +602,7 @@ agreement — the binary κ is not printed, see §4.6) are
   LLM-only inter-rater comparisons — soon two model *families*, once the pending
   cross-family run of §4.6 completes — and are not yet licensed against an
   independent human-labelled seed set; that outstanding gap is tracked explicitly in
-  [`corrections_draft/irr/HUMAN_ANCHOR_NEEDED.md`](../corrections_draft/irr/HUMAN_ANCHOR_NEEDED.md).
+  [`corrections_draft/irr/HUMAN_ANCHOR_NEEDED.md`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/irr/HUMAN_ANCHOR_NEEDED.md).
 - **Queues decay.** ~0.8 %/week against the live, actively corrected `csl-orig`
   (measured over the triage→verification interval); all counts carry their as-of
   dates, and filing must re-verify against the live source.
@@ -629,28 +631,28 @@ typo-vs-variant.
 ## Appendix A — pipeline operational detail
 
 The per-dictionary run is driven by the
-[`/dict-triage <DICT>`](../.claude/commands/dict-triage.md) skill over
+[`/dict-triage <DICT>`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/.claude/commands/dict-triage.md) skill over
 [`detectors/triage_*.py`](../detectors/) and
-[`detectors/bodyaware_workflow.js`](../detectors/bodyaware_workflow.js). Each run
+[`detectors/bodyaware_workflow.js`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/bodyaware_workflow.js). Each run
 emits `<DICT>_file_first_sf.txt` (the proposal queue in the CORRECTIONS standard
 format) and `<DICT>_wrong_readings.txt` (the do-not-file list with per-class
 sections); see [`corrections_draft/<DICT>/`](../corrections_draft/). The 2026-07-02
 re-verification reused `triage_util.EntryIndex` for entry location and emitted
-[`corrections_draft/file_first_verified.tsv`](../corrections_draft/file_first_verified.tsv).
+[`corrections_draft/file_first_verified.tsv`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/file_first_verified.tsv).
 
 ## Data and reproducibility
 
 The 33-dictionary triage index and per-dictionary status table live in
-[`corrections_draft/README.md`](../corrections_draft/README.md); the re-verification
-record in [`corrections_draft/VERIFICATION_2026_07.md`](../corrections_draft/VERIFICATION_2026_07.md)
-and [`file_first_verified.tsv`](../corrections_draft/file_first_verified.tsv). The
+[`corrections_draft/README.md`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/README.md); the re-verification
+record in [`corrections_draft/VERIFICATION_2026_07.md`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/VERIFICATION_2026_07.md)
+and [`file_first_verified.tsv`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/file_first_verified.tsv). The
 deduplicated suppression artifact is
-[`nochange/do_not_file_suppress.txt`](../nochange/do_not_file_suppress.txt),
+[`nochange/do_not_file_suppress.txt`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/nochange/do_not_file_suppress.txt),
 regenerated with `cd detectors && python gen_do_not_file_suppress.py`; its safety
-harness is [`detectors/eval.py`](../detectors/eval.py) (0 false positives vs ~31k
+harness is [`detectors/eval.py`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/eval.py) (0 false positives vs ~31k
 known-good headwords; recall vs the 3,884 historical pairs); the same script
 reproduces the §4.7 detection-level table (F0.5 + harm rate) against
-[`detectors/gold_corrections.tsv`](../detectors/gold_corrections.tsv). To re-verify the
+[`detectors/gold_corrections.tsv`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/gold_corrections.tsv). To re-verify the
 headline figures: the gross do-not-file total is the sum of the per-dict section
 counts in the wrong-readings files (**2,549**); the deduped union is the suppress
 file's data-row count (**2,297**); the confirmed totals are the data rows of each
@@ -717,7 +719,7 @@ reported to the separate CORRECTIONS workflow
   290–299. [https://aclanthology.org/2022.icon-main.35/](https://aclanthology.org/2022.icon-main.35/).
   *(Verified 10-07-2026 by the H452 prior-art scan; replaces the earlier "ISCLS 2024
   contextual spellchecker" placeholder — that volume contains no spellchecking paper.
-  See [docs/PRIOR_ART.md](../docs/PRIOR_ART.md).)*
+  See [docs/PRIOR_ART.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/PRIOR_ART.md).)*
 - Rei, M., & Yannakoudakis, H. (2016). Compositional Sequence Labeling Models for
   Error Detection in Learner Writing. *Proceedings of the 54th Annual Meeting of
   the Association for Computational Linguistics (Volume 1: Long Papers)*.
@@ -733,3 +735,5 @@ proceedings ([https://aclanthology.org/volumes/2026.iscls-1/](https://aclantholo
 contain no such paper. The over-correction claim it supported is now grounded in
 Karamolegkou et al. (2026) and Kanerva et al. (2025) plus this project's own
 observation; see §2(b).)*
+
+_Dr. Mārcis Gasūns_

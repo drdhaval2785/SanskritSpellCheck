@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # FILE-FIRST verification pass — July 2026
 
 <p align="right"><sub>Created: 02-07-2026 · Last updated: 04-09-2026</sub></p>
@@ -74,3 +76,5 @@ the same `zW→zw` defect and is NOT in the current queue.
   the TSV — the umbrella issue should quote it from there.
 
 <p align="right"><sub>Dr. Mārcis Gasūns</sub></p>
+
+_Dr. Mārcis Gasūns_

@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # PWG correction candidates — BODY-GROUNDED triage (DRAFT for human review)
 
 The unified detector engine flagged **497 tier-A** PWG (Sanskrit–German *Petersburger
@@ -24,11 +26,11 @@ Across all four dictionaries triaged, fileable-typo counts are
 
 ## The authoritative artifact
 
-- **[PWG_file_first_sf.txt](PWG_file_first_sf.txt)** — the 12 FILE-FIRST candidates in
+- **[PWG_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/PWG/PWG_file_first_sf.txt)** — the 12 FILE-FIRST candidates in
   CORRECTIONS standard format (the 2 reviewed-out are commented with `;`). Verify each on
   the scan (for b/v cases: check व vs ब on the page), flip `n`→`y`, file.
-- **[PWG_triaged.txt](PWG_triaged.txt)** — the full six-bucket queue.
-- **[PWG_wrong_readings.txt](PWG_wrong_readings.txt)** — the standing **do-not-file** list
+- **[PWG_triaged.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/PWG/PWG_triaged.txt)** — the full six-bucket queue.
+- **[PWG_wrong_readings.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/PWG/PWG_wrong_readings.txt)** — the standing **do-not-file** list
   (248 documented-intentional spellings, grouped by sub-type).
 
 ### The 12 FILE-FIRST candidates — each confirmed by the entry's own text
@@ -70,6 +72,8 @@ handled the `realword` remainder. The LLM/human layer is a triage prior — the 
 
 ## Raw engine output (provenance — do NOT apply)
 
-- [PWG_candidates.txt](PWG_candidates.txt) — the engine's 497 ranked tier-A candidates.
-- [PWG_draft.txt](PWG_draft.txt) — draft updateByLine change-file; **superseded** by the
-  triage (use [PWG_file_first_sf.txt](PWG_file_first_sf.txt) instead).
+- [PWG_candidates.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/PWG/PWG_candidates.txt) — the engine's 497 ranked tier-A candidates.
+- [PWG_draft.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/PWG/PWG_draft.txt) — draft updateByLine change-file; **superseded** by the
+  triage (use [PWG_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/PWG/PWG_file_first_sf.txt) instead).
+
+_Dr. Mārcis Gasūns_

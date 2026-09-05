@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # AP correction candidates — BODY-GROUNDED triage (DRAFT for human review)
 
 The unified detector engine flagged **152 tier-A** AP (Apte, *The Practical Sanskrit-English
@@ -22,11 +24,11 @@ Across the dictionaries triaged, fileable-typo counts are
 
 ## The authoritative artifact
 
-- **[AP_wrong_readings.txt](AP_wrong_readings.txt)** — the standing **do-not-file** list
+- **[AP_wrong_readings.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/AP/AP_wrong_readings.txt)** — the standing **do-not-file** list
   (32 documented-intentional spellings, grouped by sub-type).
-- **[AP_triaged.txt](AP_triaged.txt)** — the full six-bucket queue (start with bucket 2/3 if
+- **[AP_triaged.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/AP/AP_triaged.txt)** — the full six-bucket queue (start with bucket 2/3 if
   you want to eyeball the borderline cases).
-- **[AP_file_first_sf.txt](AP_file_first_sf.txt)** — empty of fileable rows (0 confirmed).
+- **[AP_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/AP/AP_file_first_sf.txt)** — empty of fileable rows (0 confirmed).
 
 ## Method
 
@@ -36,5 +38,7 @@ the Opus review settled every candidate; none survived as a clean fileable typo.
 
 ## Raw engine output (provenance — do NOT apply)
 
-- [AP_candidates.txt](AP_candidates.txt) — the engine's 152 ranked tier-A candidates.
-- [AP_draft.txt](AP_draft.txt) — draft updateByLine change-file; **superseded** by the triage.
+- [AP_candidates.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/AP/AP_candidates.txt) — the engine's 152 ranked tier-A candidates.
+- [AP_draft.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/AP/AP_draft.txt) — draft updateByLine change-file; **superseded** by the triage.
+
+_Dr. Mārcis Gasūns_

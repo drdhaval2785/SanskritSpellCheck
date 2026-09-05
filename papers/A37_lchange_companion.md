@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 ---
 paper_id: A37-LChange
 title: "When the S-curve Lies: Why Frequency-Trajectory Language-Change Models Misclassify Change Mechanism on Cross-Sectional Lexicographic Data"

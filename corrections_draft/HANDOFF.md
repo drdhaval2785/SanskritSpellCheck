@@ -1,9 +1,11 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # Handoff — (re)triage a dictionary in a new chat
 
-> **All 33 dictionaries are already triaged** (see the [index](README.md)). There is **no pending
+> **All 33 dictionaries are already triaged** (see the [index](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/README.md)). There is **no pending
 > dict left to triage for the first time.** This handoff now serves **re-runs** — most usefully
 > **PD once its optional second source is wired in** (register it in
-> [../detectors/get_external_source.py](../detectors/get_external_source.py) `SOURCES['PD']`, re-stage,
+> [../detectors/get_external_source.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/get_external_source.py) `SOURCES['PD']`, re-stage,
 > re-run). PD is read from a staged external source (`external_src/pd/`), not `csl-orig`.
 
 Open a new chat **in the SanskritSpellCheck repo, on Opus**, then either invoke the skill or paste
@@ -53,3 +55,5 @@ A `corrections_draft/<DICT>/` package: a pre-curated `<DICT>_file_first_sf.txt` 
 auto-commented false positives), a `<DICT>_wrong_readings.txt` do-not-file list, a `<DICT>_triaged.txt`
 six-bucket queue, and a `readme.md` with the finding. Verify each kept case on the scan before filing
 to [CORRECTIONS](https://github.com/sanskrit-lexicon/CORRECTIONS/issues).
+
+_Dr. Mārcis Gasūns_

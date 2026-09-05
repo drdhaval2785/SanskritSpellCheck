@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # SanskritSpellCheck — hypothesis ledger
 
 This project is a sequence of **testable hypotheses** about two questions: *how do you find
@@ -8,9 +10,9 @@ the **negative results**, which are as load-bearing as the confirmations.
 
 Format per entry: **Hypothesis → Test → Verdict → Evidence → Consequence.**
 
-Cross-refs: methodology + numbers in [ORTHO_DRIFT_FINDINGS.md](ORTHO_DRIFT_FINDINGS.md); task recipes
-in [../USE_CASES.md](../USE_CASES.md); per-dict triage results in
-[../corrections_draft/README.md](../corrections_draft/README.md).
+Cross-refs: methodology + numbers in [ORTHO_DRIFT_FINDINGS.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/ORTHO_DRIFT_FINDINGS.md); task recipes
+in [../USE_CASES.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/USE_CASES.md); per-dict triage results in
+[../corrections_draft/README.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/README.md).
 
 ---
 
@@ -100,7 +102,7 @@ shape this project lacked: **tied-field consistency**, checking that two fields 
 the same content actually agree. For CDSL that is SLP1-headword ↔ its Devanāgarī rendering ↔ its
 IAST rendering.
 - **Test (H827, ACL roadmap rev 3 ruling D14 — full build across all 33 dicts):**
-  [detectors/tied_field_check.py](../detectors/tied_field_check.py) round-trips every in-alphabet
+  [detectors/tied_field_check.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/tied_field_check.py) round-trips every in-alphabet
   `sanhw1.txt` headword through both SLP1→Devanāgarī→SLP1 and SLP1→IAST→SLP1 (the shared
   `sanskrit-util` package's `slp1_to_devanagari`/`deva_to_slp1` and `from_slp1`/`to_slp1`, new thin
   wrappers added to `slp1util.py`), flagging any headword whose round-trip does not return the
@@ -147,7 +149,7 @@ closed either way.
   (Sonnet 5 `claude-sonnet-5` classify → Opus 4.8 `claude-opus-4-8` source-confirm → Opus 4.8 adversarial
   review), from byte-identical deterministic prep. The committed packages were **never overwritten**:
   `triage_synthesize.py` would have replaced `<DICT>_file_first_sf.txt` with run 2's verdicts and
-  silently destroyed run 1's finds, so [union_across_runs.py](../detectors/union_across_runs.py)
+  silently destroyed run 1's finds, so [union_across_runs.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/union_across_runs.py)
   reconstructs run 2's FILE-FIRST set from the gitignored `triage_work/` verdicts using
   `triage_synthesize.py`'s own rule — `confirm.is_typo ∧ (review absent ∨ review.fileable)` — making the
   two runs comparable like for like.
@@ -174,7 +176,7 @@ closed either way.
   re-find ACC `EtareyavrAhmaRa`→`EtareyabrAhmaRa` and `SatapaTavrAhmaRa`→`SatapaTabrAhmaRa` — two
   unmistakable *Brāhmaṇa* b/v errors run 1 had caught. Neither run dominates; the union beats both.
 - **Consequence:** union, never replace — now with a number attached. The union table is
-  [corrections_draft/union_d7.tsv](../corrections_draft/union_d7.tsv) (156 rows; every net-new row
+  [corrections_draft/union_d7.tsv](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/union_d7.tsv) (156 rows; every net-new row
   carries its Opus confirm reason **and** its Opus review verdict + false-positive type, the adjudication
   gate D7 required for new candidates). Three consequences follow:
   1. **[H2](#h2--tier-a-precision-is-near-zero-on-mature-dictionaries-high-on-poorly-digitised-ones)'s
@@ -376,7 +378,7 @@ plus the vendored 205 k pratipadika **stems** — should recognise those real wo
   editor-noisy and saturates to 0 (−0.642, ±40 yr; 7 dicts at exactly 0.00 across 1890–1990). The
   per-era *composition* out-dates the scalar rate (the SCH-1928 control). So it places a text on its
   own language's pre-/post-reform timeline, not a year. See `ORTHO_DRIFT_FINDINGS.md` "O4"
-  ([drift_dating.py](../detectors/drift_dating.py)).
+  ([drift_dating.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/drift_dating.py)).
 - ~~**O5 — Separate ligatures from reform.**~~ **✅ done (2026-06-26).** Added `NONREFORM_ERAS` so the
   æ/œ ligature is its own column, excluded from reform-drift/1k; mid-tier EN dicts (ligature-dominated)
   collapse to ≈0 reform. See `ORTHO_DRIFT_FINDINGS.md` EN section.
@@ -388,8 +390,10 @@ plus the vendored 205 k pratipadika **stems** — should recognise those real wo
   (abbreviation `moy.`=*moyen*, homograph `dés`=dice / Latin `tres`, inline-IAST `pha`/`phull`). A
   reform map needs a source corpus matched in epoch + register + script to the target. Validated pairs
   kept as an artifact; canonical fr map frozen (O3 pattern). See `ORTHO_DRIFT_FINDINGS.md` "O6"
-  ([extract_freem_pairs.py](../detectors/extract_freem_pairs.py)).
+  ([extract_freem_pairs.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/extract_freem_pairs.py)).
 - **O7 — Does OCR pre-verify actually help the human?** Task 1 (the CORRECTIONS umbrella issue) plans
   to pre-filter the 122 FILE-FIRST candidates with `ocr_verify` (CONFIRM/DENY/UNCERTAIN). Open
   question: is OCR of old Devanāgarī scans reliable enough to *trust as a pre-filter*, or does it
   produce too many UNCERTAIN to reduce the human scan-verification load?
+
+_Dr. Mārcis Gasūns_

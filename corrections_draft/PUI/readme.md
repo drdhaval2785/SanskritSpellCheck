@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # PUI correction candidates — BODY-GROUNDED triage (DRAFT for human review)
 
 The unified detector engine flagged **518 tier-A** PUI headwords as possible misspellings. PUI is
@@ -24,13 +26,13 @@ PWG 12/497 · SHS 37/246 · BHS 0/713 · **PUI 0/518**.
 
 ## The authoritative artifacts
 
-- **[PUI_wrong_readings.txt](PUI_wrong_readings.txt)** — the standing **do-not-file** list: 21
+- **[PUI_wrong_readings.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/PUI/PUI_wrong_readings.txt)** — the standing **do-not-file** list: 21
   deliberate spellings (cross-reference 7, other-intentional 14). Folded into
-  [nochange/do_not_file_suppress.txt](../../nochange/do_not_file_suppress.txt) by
-  [detectors/gen_do_not_file_suppress.py](../../detectors/gen_do_not_file_suppress.py).
-- **[PUI_triaged.txt](PUI_triaged.txt)** — the full review queue: 467 REAL-WORD named entities + 21
+  [nochange/do_not_file_suppress.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/nochange/do_not_file_suppress.txt) by
+  [detectors/gen_do_not_file_suppress.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/gen_do_not_file_suppress.py).
+- **[PUI_triaged.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/PUI/PUI_triaged.txt)** — the full review queue: 467 REAL-WORD named entities + 21
   INTENTIONAL.
-- **[PUI_file_first_sf.txt](PUI_file_first_sf.txt)** — **empty** (0 fileable). Nothing to file.
+- **[PUI_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/PUI/PUI_file_first_sf.txt)** — **empty** (0 fileable). Nothing to file.
 
 ## Method
 
@@ -39,3 +41,5 @@ against PUI's own entries (TYPO / REALWORD / INTENTIONAL / UNSURE; PUI registere
 `detectors/triage_lang.py`) → `triage_dict.py PUI --finish`. With 0 TYPO classifications there was
 no source-confirm / review pile. **DRAFT for human review; never edits `csl-orig`.** The do-not-file
 list is the deliverable.
+
+_Dr. Mārcis Gasūns_

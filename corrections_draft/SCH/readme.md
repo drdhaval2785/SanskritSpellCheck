@@ -1,3 +1,5 @@
+_Created: 10-08-2026 · Last updated: 05-09-2026_
+
 # SCH correction candidates — BODY-GROUNDED triage (DRAFT for human review)
 
 The unified detector engine flagged **678 tier-A** SCH (Richard Schmidt, *Nachträge zum
@@ -22,10 +24,10 @@ Across the dictionaries triaged, fileable-typo counts are
 
 ## The authoritative artifact
 
-- **[SCH_wrong_readings.txt](SCH_wrong_readings.txt)** — the standing **do-not-file** list
+- **[SCH_wrong_readings.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/SCH/SCH_wrong_readings.txt)** — the standing **do-not-file** list
   (109 documented-intentional spellings, grouped by sub-type).
-- **[SCH_triaged.txt](SCH_triaged.txt)** — the full six-bucket queue.
-- **[SCH_file_first_sf.txt](SCH_file_first_sf.txt)** — empty of fileable rows; the 3
+- **[SCH_triaged.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/SCH/SCH_triaged.txt)** — the full six-bucket queue.
+- **[SCH_file_first_sf.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/SCH/SCH_file_first_sf.txt)** — empty of fileable rows; the 3
   reviewed-out cases are commented with `;`.
 
 ### Reviewed out (do NOT file — real words / a variant, not typos)
@@ -50,5 +52,7 @@ LLM saw them; the body-aware pass + the Opus review handled the `realword` remai
 
 ## Raw engine output (provenance — do NOT apply)
 
-- [SCH_candidates.txt](SCH_candidates.txt) — the engine's 678 ranked tier-A candidates.
-- [SCH_draft.txt](SCH_draft.txt) — draft updateByLine change-file; **superseded** by the triage.
+- [SCH_candidates.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/SCH/SCH_candidates.txt) — the engine's 678 ranked tier-A candidates.
+- [SCH_draft.txt](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/SCH/SCH_draft.txt) — draft updateByLine change-file; **superseded** by the triage.
+
+_Dr. Mārcis Gasūns_
