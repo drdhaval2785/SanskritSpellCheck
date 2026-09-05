@@ -9,7 +9,9 @@ dated maintenance snapshots; keep upcoming work under [Unreleased] until it is
 ready for a dated entry.
 
 ## [Unreleased]
+<!-- entries land in changelog_queue/ -- appended via tools/changelog_queue_consume.py, consumed by cut_release.py at release-cut (H3355); direct bullets here are hook-blocked -->
 
+## [1.62.0] - 2026-09-05
 ### Added
 - **Grammar-example audit prototype — csl-kale crawl (H4154 Lane A, 05-09-2026, OxAlpha).**
   [tools/audit_grammar_examples.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/tools/audit_grammar_examples.py)
