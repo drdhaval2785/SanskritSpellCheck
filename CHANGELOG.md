@@ -10,6 +10,21 @@ ready for a dated entry.
 
 ## [Unreleased]
 
+### Added
+- **bashspell lessons doc + DH-stack program (05-09-2026, OxAlpha).**
+  [reports/bashspell-lessons-2026-09-05.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/reports/bashspell-lessons-2026-09-05.md)
+  — what [AigizK/bashspell](https://github.com/AigizK/bashspell) teaches a Sanskrit
+  spellchecker: the unrestricted rule-chain walker over a shared lexicon (replaces the
+  weak ~6.6% vidyut pratipadika gate), budget-bounded no-partial search, boundary-provenance
+  morpheme splitting ("never invent morphemes"), the grammar-audit crawl methodology
+  (pages.tsv/scan.json/review-candidates.tsv + SHA-256 manifests, "candidates for review,
+  not auto-verdicts"), and derived-data discipline (--write/--check idempotence, inverse
+  paradigms from forward classes, same-flag tag disambiguation). MG ruled full DH stack:
+  Lane A audit prototype minted as
+  [H4154](https://github.com/gasyoun/Uprava/blob/main/handoffs/H4154-OxAlpha_SanskritSpellCheck_grammar-example-audit-prototype_05.09.26.md);
+  Lane C OntoLex lemma groundwork (Claude lane) + Lane D IIIF deep-links queued in GTD;
+  license @DECIDE pending (blocks Zenodo release only).
+
 ## [1.61.0] - 2026-08-04
 ### Added
 - **The 22 zero-fileable dicts do NOT need a second run — scope question closed (H2281,
