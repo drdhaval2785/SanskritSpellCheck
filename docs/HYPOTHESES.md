@@ -39,7 +39,7 @@ The engine's "tier A" is high *engine confidence*, not precision; precision depe
   2.4%** — each error confirmed by the entry's *own* etymology/citation.
 - **Consequence:** triage effort should target poorly-digitised sources for real typos; on mature
   dicts the value is elsewhere (H3).
-- **Caveat added 26-07-2026 ([H9](#h9--union-across-runs-materially-raises-recall-one-run-recovers-only-13-of-the-two-run-union)):**
+- **Caveat added 26-07-2026 ([H9](#h9-union-across-runs-materially-raises-recall-one-run-recovers-only-13-of-the-two-run-union)):**
   every count above is one stochastic draw, so they are **lower bounds**. A second run lifts SHS 37→68,
   YAT 27→61, ACC 22→27 in union. The high-vs-low split this entry rests on is unaffected; the absolute
   numbers are not the ceiling.
@@ -141,7 +141,7 @@ IAST rendering.
 ---
 
 ### H9 — Union-across-runs materially raises recall: one run recovers only ~1/3 of the two-run union
-[R3](#r3--re-running-the-body-aware-typo-pass-improves-recall) refuted *re-running* and prescribed
+[R3](#r3-re-running-the-body-aware-typo-pass-improves-recall) refuted *re-running* and prescribed
 *unioning* instead, but the size of the gain was never measured. Roadmap ruling **D7** ordered it
 measured at reduced scope — two extra runs on the three high-yield dicts (SHS/YAT/ACC) — and the line
 closed either way.
@@ -179,7 +179,7 @@ closed either way.
   [corrections_draft/union_d7.tsv](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/union_d7.tsv) (156 rows; every net-new row
   carries its Opus confirm reason **and** its Opus review verdict + false-positive type, the adjudication
   gate D7 required for new candidates). Three consequences follow:
-  1. **[H2](#h2--tier-a-precision-is-near-zero-on-mature-dictionaries-high-on-poorly-digitised-ones)'s
+  1. **[H2](#h2-tier-a-precision-is-near-zero-on-mature-dictionaries-high-on-poorly-digitised-ones)'s
      per-dict counts are single-draw lower bounds, not populations.** For these three dicts the fileable
      count is ≥156, not 86 — SHS ≈68 not 37, YAT ≈61 not 27. The *ordering* (poorly-digitised ≫ mature)
      is unaffected.
@@ -222,7 +222,7 @@ Opus 5 (`claude-opus-5`) source-confirm → Opus 5 adversarial review; 3,045 can
   (PWG `pARivanDa`→`pARibanDa`; GST `aDoGaRWA`→`aDoGaRwA`; WIL `paYcaSErizaka`→`paYcaSErIzaka`,
   `vapuzmAt`→`vapuzmat`).
 - **But the magnitude is a function of digitisation quality, not a constant.** +22% here vs D7's
-  +81%. That is the [H2](#h2--tier-a-precision-is-near-zero-on-mature-dictionaries-high-on-poorly-digitised-ones)
+  +81%. That is the [H2](#h2-tier-a-precision-is-near-zero-on-mature-dictionaries-high-on-poorly-digitised-ones)
   axis reappearing inside H9: on mature dicts both runs find little, so the union adds little.
   PWG — the sole poorly-digitised source in this set — yields half the net-new off 11% of the volume.
   **So "+81%" must not be quoted as the expected union gain for a dictionary; quote it for
@@ -252,7 +252,7 @@ Opus 5 (`claude-opus-5`) source-confirm → Opus 5 adversarial review; 3,045 can
   simply wrong. Neither is a coin-flip a third run might land differently — which is precisely
   what separates this from the SHS/YAT/ACC instability measured above, and is the sharpest
   available statement of
-  [H2](#h2--tier-a-precision-is-near-zero-on-mature-dictionaries-high-on-poorly-digitised-ones):
+  [H2](#h2-tier-a-precision-is-near-zero-on-mature-dictionaries-high-on-poorly-digitised-ones):
   **a zero-fileable verdict on a self-documenting or internally-corroborating lexicon is a
   property of the dictionary, not a draw.** Limit: 2 of 22 tested, deliberately the two most
   likely to yield; the other 20 are smaller and mostly the same mature/foreign-gloss/specialist
@@ -296,7 +296,7 @@ errors higher.
   small handful and can *lose* genuine typos (an MW re-run once refuted 4 verified typos).
 - **Consequence:** never blindly overwrite a committed package; for recall, *union across runs*. The
   deterministic marker layer (apparatus/redirect detection) is the stable backbone.
-- **Quantified 26-07-2026 by [H9](#h9--union-across-runs-materially-raises-recall-one-run-recovers-only-13-of-the-two-run-union)**
+- **Quantified 26-07-2026 by [H9](#h9-union-across-runs-materially-raises-recall-one-run-recovers-only-13-of-the-two-run-union)**
   (roadmap D7): the union is worth **+81%** on SHS/YAT/ACC and single-run agreement is only **35%** —
   the "different small handful" is in fact most of the set.
 
@@ -361,10 +361,10 @@ plus the vendored 205 k pratipadika **stems** — should recognise those real wo
 
 ## 🔭 Open / newly-raised
 
-- ~~**O1 — Inline body check in the ranker.**~~ **→ refuted, now [R5](#r5--a-cheap-model-free-body-lookup-in-the-ranker-can-demote-real-word-minimal-pairs-was-o1).**
+- ~~**O1 — Inline body check in the ranker.**~~ **→ refuted, now [R5](#r5-a-cheap-model-free-body-lookup-in-the-ranker-can-demote-real-word-minimal-pairs-was-o1).**
   No model-free body signal (presence/length, DCS attestation, suspect↔suggestion overlap) separates
   real-word minimal pairs from typos without an equal hit to known-error recall.
-- ~~**O2 — A better attestation signal than DCS-band-0.**~~ **→ refuted, now [R6](#r6--vidyut-inflection-aware-attestation-is-a-reliable-real-word-signal-was-o2).**
+- ~~**O2 — A better attestation signal than DCS-band-0.**~~ **→ refuted, now [R6](#r6-vidyut-inflection-aware-attestation-is-a-reliable-real-word-signal-was-o2).**
   vidyut Kosha/stem attestation still misses real words (`patra`) AND over-attests real errors (34–47 %
   of known typos are valid forms) — surface attestation is orthogonal to typo-vs-real. The R5 caveat
   held.
