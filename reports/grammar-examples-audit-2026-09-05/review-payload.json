@@ -1,0 +1,80 @@
+[
+  {
+    "w": "kamal",
+    "s": "ka+mal",
+    "tier": "B",
+    "score": 200,
+    "dets": [
+      "grammar_example"
+    ],
+    "dicts": [
+      "MW"
+    ],
+    "reason": "compound-split(ka+mal) no MW/PW/VCP hit; MW scan for eyeball"
+  },
+  {
+    "w": "mahatat",
+    "s": "mahat+at",
+    "tier": "B",
+    "score": 200,
+    "dets": [
+      "grammar_example"
+    ],
+    "dicts": [
+      "MW"
+    ],
+    "reason": "compound-split(mahat+at) no MW/PW/VCP hit; MW scan for eyeball"
+  },
+  {
+    "w": "puzan",
+    "s": "puz+an",
+    "tier": "B",
+    "score": 200,
+    "dets": [
+      "grammar_example"
+    ],
+    "dicts": [
+      "MW"
+    ],
+    "reason": "compound-split(puz+an) no MW/PW/VCP hit; MW scan for eyeball"
+  },
+  {
+    "w": "sarvak",
+    "s": "sarv+ak",
+    "tier": "B",
+    "score": 200,
+    "dets": [
+      "grammar_example"
+    ],
+    "dicts": [
+      "MW"
+    ],
+    "reason": "compound-split(sarv+ak) no MW/PW/VCP hit; MW scan for eyeball"
+  },
+  {
+    "w": "Iyas",
+    "s": null,
+    "tier": "C",
+    "score": 100,
+    "dets": [
+      "grammar_example"
+    ],
+    "dicts": [
+      "MW"
+    ],
+    "reason": "unparsed(no stem match, proven split, or conservative ending strip) no MW/PW/VCP hit; MW scan for eyeball"
+  },
+  {
+    "w": "viSvarAw",
+    "s": null,
+    "tier": "C",
+    "score": 100,
+    "dets": [
+      "grammar_example"
+    ],
+    "dicts": [
+      "MW"
+    ],
+    "reason": "unparsed(no stem match, proven split, or conservative ending strip) no MW/PW/VCP hit; MW scan for eyeball"
+  }
+]

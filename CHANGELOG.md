@@ -11,6 +11,19 @@ ready for a dated entry.
 ## [Unreleased]
 
 ### Added
+- **Grammar-example audit prototype — csl-kale crawl (H4154 Lane A, 05-09-2026, OxAlpha).**
+  [tools/audit_grammar_examples.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/tools/audit_grammar_examples.py)
+  + [reports/grammar-examples-audit-2026-09-05/](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/reports/grammar-examples-audit-2026-09-05/README.md):
+  bashspell audit pattern ported — crawls 18 csl-kale chapter files (730 pages,
+  SHA-256 manifests for sources AND dictionaries), extracts `<span class="san">`
+  example words (139 unique, SLP1-validated, length-guarded, BOM/charset-sniffed),
+  checks each against sanhw1 + MW/PW/VCP + a vidyut parse vote (vendored stems +
+  proven compound-split + conservative ending-strip), and emits pages.tsv /
+  scan.json (every verdict, `unparsable` recorded, never silently dropped) /
+  review-candidates.tsv + .csv dual export / review-payload.json in the
+  combined_review.html `:y`/`:n` schema. 133/139 accepted; 6 review candidates
+  (candidates for linguistic review, NOT defects — no dictionary edits, no eval.py
+  promotion); 27/27 spot-check verified. 24 new tests, suite green.
 - **bashspell lessons doc + DH-stack program (05-09-2026, OxAlpha).**
   [reports/bashspell-lessons-2026-09-05.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/reports/bashspell-lessons-2026-09-05.md)
   — what [AigizK/bashspell](https://github.com/AigizK/bashspell) teaches a Sanskrit
