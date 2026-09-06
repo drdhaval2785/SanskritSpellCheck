@@ -1,9 +1,9 @@
-_Created: 10-08-2026 · Last updated: 05-09-2026_
+_Created: 10-08-2026 · Last updated: 06-09-2026_
 
 ---
 paper_id: A44
 title: "The Dictionary Body as Ground Truth: Body-Grounded LLM Triage and the Precision-Collapse Result"
-status: full draft (4/5) — GED/confusion-set reframe + harm metric (§4.7) + References fixes 2026-07-12; author-voice pass 2026-07-10; blind second-annotator study (§4.6) folded in 2026-07-10; revised 2026-07-03 per A44_review_fable5.md (IJL reframe, verification pass folded in)
+status: full draft (4/5) — author-voice pass 2 2026-09-06 (SIGNOFF_A44_author_pass.md); GED/confusion-set reframe + harm metric (§4.7) + References fixes 2026-07-12; author-voice pass 2026-07-10; blind second-annotator study (§4.6) folded in 2026-07-10; revised 2026-07-03 per A44_review_fable5.md (IJL reframe, verification pass folded in)
 readiness: 4/5
 venue: "International Journal of Lexicography (IJL)"
 author: "**Mārcis Gasūns**, independent scholar ([ORCID 0000-0003-4513-884X](https://orcid.org/0000-0003-4513-884X)), gasyoun@ya.ru"
@@ -32,6 +32,10 @@ data_source: "corrections_draft/README.md (33-dict triage) + corrections_draft/V
 > plus this project's own observation). Every References URL was resolved and
 > title/author-checked against its landing page on 12-07-2026.
 >
+> **Second author-voice pass (06-09-2026, Fable 5.1, `claude-fable-5-1`, H3857).**
+> Register only — no number, claim or citation altered; the calls made and the
+> flags carried are in [SIGNOFF_A44_author_pass.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/SIGNOFF_A44_author_pass.md).
+>
 > **Open before submission:** (1) an author read-through for register; (2) the
 > cross-family blind annotation run (§4.6) — tooled, pending an API credential;
 > (3) the human-anchor gap of §6 remains tracked, not resolved.
@@ -44,7 +48,7 @@ error-detection terms the task is **grammatical error detection (GED)** posed at
 the headword level over a confusion set of near-spellings — a real-word-error
 problem, since the flagged string is (or resembles) a possible word and the
 question is whether *this* occurrence is an error; the system detects and
-triages, it does not auto-correct. Run against
+triages but does not auto-correct. Run against
 mature, much-corrected dictionaries, such detectors produce lists that are almost
 all false positives: on the Monier-Williams Sanskrit–English dictionary, only **4 of
 1,954** top-tier candidates survive triage — a precision of **0.20 %**. We report a
@@ -98,8 +102,8 @@ string to be arbitrated against a small set of near-spellings (b/v, vowel length
 retroflexion) — the *real-word error* setting studied since Golding and Roth's
 (1999) context-sensitive spelling correction and institutionalised as a benchmark
 by the Chinese Spelling Check bake-offs (Tseng et al. 2015), where most errors are
-likewise visually or phonologically confusable real characters. And the system
-reported here sits squarely on the *detection* side of the detection/correction
+likewise visually or phonologically confusable real characters. The system
+reported here sits on the *detection* side of the detection/correction
 distinction drawn by Rei and Yannakoudakis (2016): it flags, classifies, and
 triages single headwords; it performs no full-sentence correction and applies
 nothing automatically. Section 4.7 evaluates it accordingly, with the
@@ -110,7 +114,7 @@ We quantify this **precision collapse** and then resolve it. On Monier-Williams 
 triage — **0.20 % precision**. The same pattern holds on the other large, mature
 dictionaries: Böhtlingk–Roth (PW) 2 of 657, the *Vācaspatyam* (VCP) 1 of 563. A list
 at this precision is worse than useless to a corrections workflow: acting on it
-naïvely would *introduce* errors by "correcting" forms the editor put there
+naively would *introduce* errors by "correcting" forms the editor put there
 deliberately.
 
 The thesis of this paper is that the fix is not a better spelling model but a
@@ -163,10 +167,12 @@ precision on the words it accepts, but heavy over-flagging from its 37,058-entry
 paradigm-generated lexicon — the mirror image of the precision collapse measured
 here); the present work differs in target (the *dictionary as edition*, headwords
 plus apparatus) and in output (a suppression catalogue, not corrections). No tool
-in the surveyed landscape models the variant-versus-typo distinction — Hunspell
+in the survey models the variant-versus-typo distinction — Hunspell
 wordlists, up to the 543,758-entry `sa_IN` pack bundled with LibreOffice since
 2025, hard-code one spelling as correct (full survey:
-[docs/PRIOR_ART.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/PRIOR_ART.md)). **(b) LLM-assisted correction
+[docs/PRIOR_ART.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/PRIOR_ART.md)).
+
+**(b) LLM-assisted correction
 and its characteristic failure.** Recent evaluations of LLM and vision-language
 reading of historical text document an over-correction failure mode: the model
 produces fluent, plausible output with little grounding in what the witness
@@ -178,13 +184,16 @@ have observed the same tendency in this pipeline's own model passes — the mode
 effect*. That failure mode is precisely what a dictionary's apparatus maximally
 provokes, and it motivates this pipeline's two design choices: a deterministic
 marker backbone that settles declared apparatus *before* any model runs, and an
-adversarial review stage gating the model's confirmations. **(c) Variation versus
+adversarial review stage gating the model's confirmations.
+
+**(c) Variation versus
 error in historical lexicography.** The editorial theory of *variae lectiones* and
 wrong-reading apparatus long predates digitisation; what the digital setting adds
 is scale and the new risk of *bulk* corruption. We are not aware of prior work
 that operationalises the entry body as the arbiter for typo-vs-variant at corpus
 scale, or that treats the resulting **do-not-file catalogue as the primary
 deliverable** of a spell-checking campaign — the inversion this paper argues for.
+
 **(d) Grammatical error detection and the confusion-set tradition.** The
 typo-vs-variant decision is a real-word error problem — the flagged string is (or
 resembles) a possible word, and the judgment is whether *this* occurrence is an
@@ -195,7 +204,7 @@ predominantly visually or phonologically confusable real characters — the clos
 large-scale analogue to the b/v, vowel-length and retroflex confusions here. Two
 of that tradition's instruments transfer directly. First, the
 detection/correction distinction (Rei and Yannakoudakis 2016): this system is GED
-— it flags and triages, it never auto-corrects — and is evaluated with the
+— it flags and triages but never auto-corrects — and is evaluated with the
 tradition's precision-weighted F0.5 (§4.7; on GEC/GED evaluation practice see
 Grundkiewicz et al. 2015). Second, typed error annotation with per-type counts as
 the backbone of evaluation (Bryant et al. 2017's ERRANT); Table 2's apparatus
@@ -353,7 +362,7 @@ gross = 2,549).*
 The **per-dictionary counts sum to 2,549**; the **deduplicated union is 2,297 unique
 headwords** ([`nochange/do_not_file_suppress.txt`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/nochange/do_not_file_suppress.txt)).
 Both numbers are reported because they answer different questions: the gross 2,549
-measures the work per source; the deduped 2,297 is the artifact wired into the
+measures the work per source; the deduped 2,297 is the artefact wired into the
 detectors. The class profile repays attention — the indigenous VCP suppresses almost entirely via
 cross-references (its kośa structure), while Böhtlingk's PW is the corpus's densest
 carrier of explicit wrong-reading apparatus (95), and Edgerton's BHS of *variae
@@ -429,7 +438,7 @@ narrative in [`corrections_draft/VERIFICATION_2026_07.md`](https://github.com/dr
 
 Three consequences. First, the **collision class** (§3.2, class 5): eleven candidates
 — YAT dual-listings cross-referenced "Idem", MW's `kattfRa`, PWG's `duzWu` errata
-note, PW's constructed `*hemana` — would, under a naïve respell, have created
+note, PW's constructed `*hemana` — would, under a naive respell, have created
 duplicate headwords or clobbered apparatus. Only entry-reading catches these, which
 strengthens the body-as-arbiter thesis: even the *confirmed-typo* pile still contains
 decisions that belong to the editor, not the pipeline. Second, **MW's headline
@@ -465,12 +474,12 @@ action* ({PASS, SCAN-FIRST, EDITORIAL}) versus not ({DNF, DROP}) — raw agreeme
 **121/122 (99.2 %)**; we print the raw count rather than a κ for the binary
 collapse: with marginals this skewed (the blind annotator produced zero DNF, a
 2×1 marginal), κ is a one-cell statistic and misleads. The
-blind annotator never once rejected a proposed correction as substantively wrong
+blind annotator never rejected a proposed correction as substantively wrong
 (zero DNF), and reproduced the original EDITORIAL class with perfect recall (all 11
 rows).
 
-The 50 five-way disagreements are not noise but signal — the position argued for
-annotator label variation generally by Plank (2022); they decompose almost
+The 50 five-way disagreements are not noise but signal — the position Plank (2022) argues for
+annotator label variation generally; they decompose almost
 exhaustively into two *policy* differences, with **no case of misread evidence**:
 
 1. **Collision threshold (33 rows).** The blind annotator labels EDITORIAL whenever
@@ -547,7 +556,7 @@ detectors, on their own, flag **77–100 % of the exact collision, apparatus and
 stale rows** (range across the seven flag-raising detectors; the degenerate
 `dict_vs_corpus` — which flags nothing at all, 0/13 — is excluded from the range)
 that the triage's EDITORIAL/DNF/DROP verdicts exist to protect. A
-naive auto-apply pipeline celebrating its 99 % recall would, in the same run,
+naive auto-apply pipeline reporting 99 % recall would, in the same run,
 corrupt all 13 protected rows — merging rival readings, respelling apparatus,
 re-introducing an upstream-fixed form. This is not a separate result from the
 paper's thesis; it is that thesis measured. The do-not-file layer (§4.2, §5) is
@@ -578,7 +587,7 @@ layer, not the detector, that makes the queue safe to act on. This is the paper'
 inversion: the spell-checking campaign's most valuable output is the list of
 things it must never touch.
 
-**Filable rate as a digitisation-quality signal.** The strong concentration of typos
+**Fileable rate as a digitisation-quality signal.** The strong concentration of typos
 in SHS/YAT/ACC, and their near-absence in MW/PW/VCP, means the fileable rate doubles as
 a proxy for how well-corrected a source already is — a cheap triage signal for which
 digitisations still need attention.
@@ -598,7 +607,7 @@ digitisations still need attention.
   work (the recruit is deferred; tracked in the project GTD). The κ was computed once,
   on the first blind run, and reported as obtained — the second annotator's prompt was
   not iterated toward agreement. Both figures (κ = 0.336 five-way; 121/122 raw binary
-agreement — the binary κ is not printed, see §4.6) are
+  agreement — the binary κ is not printed, see §4.6) are
   LLM-only inter-rater comparisons — soon two model *families*, once the pending
   cross-family run of §4.6 completes — and are not yet licensed against an
   independent human-labelled seed set; that outstanding gap is tracked explicitly in
@@ -646,7 +655,7 @@ The 33-dictionary triage index and per-dictionary status table live in
 [`corrections_draft/README.md`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/README.md); the re-verification
 record in [`corrections_draft/VERIFICATION_2026_07.md`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/VERIFICATION_2026_07.md)
 and [`file_first_verified.tsv`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/file_first_verified.tsv). The
-deduplicated suppression artifact is
+deduplicated suppression artefact is
 [`nochange/do_not_file_suppress.txt`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/nochange/do_not_file_suppress.txt),
 regenerated with `cd detectors && python gen_do_not_file_suppress.py`; its safety
 harness is [`detectors/eval.py`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/eval.py) (0 false positives vs ~31k
@@ -657,10 +666,10 @@ headline figures: the gross do-not-file total is the sum of the per-dict section
 counts in the wrong-readings files (**2,549**); the deduped union is the suppress
 file's data-row count (**2,297**); the confirmed totals are the data rows of each
 `*_file_first_sf.txt` (**122** across 11 dicts, as of triage — the queue files are
-living artifacts and held **178** data rows as of 04-09-2026; the frozen triage-era
+living artefacts and held **178** data rows as of 04-09-2026; the frozen triage-era
 frame is the `file_first_verified.tsv` verdict rows, not the live queues) and the verdict rows of
 `file_first_verified.tsv` (92/17/11/1/1, as of 2026-07-02, including the editor's
-same-day PASS→SCAN-FIRST audit of five SHS rows); the agreement study's artifacts are
+same-day PASS→SCAN-FIRST audit of five SHS rows); the agreement study's artefacts are
 `corrections_draft/irr/` (blind second annotations, exact-arithmetic κ, disagreement
 taxonomy) with `detectors/irr_build_inputs.py` + `detectors/irr_agreement.py` as the
 reproducing scripts; MW precision is

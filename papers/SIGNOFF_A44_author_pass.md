@@ -1,6 +1,6 @@
 # SIGNOFF — A44 author-voice pass
 
-_Created: 10-07-2026 · Last updated: 10-07-2026_
+_Created: 10-07-2026 · Last updated: 06-09-2026_
 
 Author-voice pass over [`papers/A44_body_grounded_triage_paper.md`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/A44_body_grounded_triage_paper.md)
 ("The Dictionary Body as Ground Truth"), executed under handoff
@@ -127,5 +127,60 @@ voice pass should impose unasked. Raise it if you want it.
    strip the scaffolding markers in §3.
 
 Steps 1–2 are the only true blockers; 3–4 are register.
+
+---
+
+## Pass 2 — 06-09-2026 (Fable 5.1 `claude-fable-5-1`)
+
+Second author-voice pass over [`papers/A44_body_grounded_triage_paper.md`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/papers/A44_body_grounded_triage_paper.md)
+under handoff [H3857](https://github.com/gasyoun/Uprava/blob/main/handoffs/H3857-Fable_Uprava_all-articles-author-voice-pass-workflow_01.09.26.md) (all-articles author-voice pass workflow), Fable 5.1
+(`claude-fable-5-1`), 06-09-2026. Scope: voice, register and framing only; no
+number, claim or citation altered; mechanical drift gate
+([`voice_drift_check.py`](https://github.com/gasyoun/Uprava/blob/main/tools/voice_drift_check.py)
+against `origin/master`) **CLEAN** — 456 numbers, 66 URLs, 2 bracketed citations,
+21 IAST and 9 Devanagari tokens, 24 headings and 50 table rows count-identical.
+Pass-1 calls V1–V8 above were found applied and are untouched; this section lists
+only what pass 2 changed or found.
+
+### 1. Voice calls made — each may be vetoed
+
+| # | Location | Call | Rationale |
+|---|---|---|---|
+| P2-1 | Abstract | "the system detects and triages, it does not auto-correct" → "detects and triages but does not auto-correct" | Comma splice; the clause already sits after a semicolon. Same claim, same strength. |
+| P2-2 | §1, GED paragraph | "And the system reported here sits squarely on the *detection* side" → "The system reported here sits on the *detection* side" | Sentence-initial "And" plus the filler intensifier "squarely"; the sentence is a direct claim and reads as one without either. |
+| P2-3 | §2(a) | "No tool in the surveyed landscape models…" → "No tool in the survey models…" | "landscape" is on the de-AI list; the survey is the named document ([docs/PRIOR_ART.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/docs/PRIOR_ART.md)), so the plain noun is also more exact. |
+| P2-4 | §2 | One 66-line paragraph split into four at the existing bold run-in labels **(a)**–**(d)** | Paragraph breaks only; no word changed. A single-paragraph related-work section is hard to referee in the IJL two-column proof. Heading count unchanged (labels stay run-in bold, not headings). |
+| P2-5 | §2(d) | "it flags and triages, it never auto-corrects" → "it flags and triages but never auto-corrects" | Comma splice inside an em-dash parenthetical; "never" kept. |
+| P2-6 | §4.6 | "the position argued for annotator label variation generally by Plank (2022)" → "the position Plank (2022) argues for annotator label variation generally" | Word order; the passive with a trailing agent read as a machine sentence. Citation form unchanged. |
+| P2-7 | §4.6 | "never once rejected" → "never rejected" | Intensifier; "never" carries the full strength. |
+| P2-8 | §4.7 | "A naive auto-apply pipeline **celebrating** its 99 % recall" → "reporting 99 % recall" | Same fix pass 1 made in §4.5 (V6, "celebrated"): a personified pipeline is decoration; the number and the consequence clause are unchanged. |
+| P2-9 | §5 run-in heading | "**Filable rate** as a digitisation-quality signal" → "**Fileable rate**" | Pass 1's V8 normalised `filable` → `fileable` five times but missed this bold run-in heading; the sentence under it already says "fileable rate". |
+| P2-10 | §1, §4.5 | "naïvely" / "naïve" → "naively" / "naive" | §4.7 already uses the undotted form twice; one spelling throughout. |
+| P2-11 | §6, second bullet | Continuation line "agreement — the binary κ is not printed…" given the bullet's two-space indent | Markdown hygiene: the line broke out of the list item in some renderers. No text changed. |
+| P2-12 | §4.2, Data and reproducibility (4×) | "artifact(s)" → "artefact(s)" | The paper is otherwise in Oxford spelling (digitised, catalogue, labelled, analogue, modelling); IJL is an OUP journal. Easily vetoed if the author prefers the American form. |
+| P2-13 | Header, frontmatter `status`, draft-status note | `Last updated` → 06-09-2026; "author-voice pass 2 2026-09-06 (SIGNOFF_A44_author_pass.md)" prepended to `status`; one blockquote paragraph naming this pass and linking this signoff | Bookkeeping the brief requires; no other note added anywhere. |
+
+**Considered and declined (still open for a ruling).**
+
+1. Editorial "we" → "I". Seven instances remain ("We report", "We quantify", "Our claims", "We are not aware", "We have observed", "we state them separately", "we print the raw count"). Pass 1 declined the flip and asked for a ruling; none is recorded, so pass 2 leaves it. IJL prints both forms for single-author papers; the flip is a five-minute mechanical edit once ruled.
+2. §4.7 "This is not a separate result from the paper's thesis; it is that thesis measured." The "not X; it is Y" pattern is on the de-AI list, but here it is the paper's own claim stated at full strength; rewriting it would touch framing, not register.
+3. §4.6 "are not noise but signal" — same pattern, but it paraphrases Plank (2022)'s title thesis exactly; left.
+
+### 2. Substance flags carried (not fixed)
+
+1. **YAT rate inconsistency.** The Abstract, claim 3 in §1 and §7 all say "YAT ≈ 11 %", but the §4.3 table gives YAT 27 / 219 = 12.3 %. The ≈ 11 % survives from the earlier denominator (27 / 247 = 10.9 %) that §4.3 itself retires as "not reproducible from anything committed". A human should decide whether the three prose figures become ≈ 12 % (matching the pinned denominator) — a number change, outside a voice pass.
+2. **§5 "precision and harm rise together".** Table 4 shows the union's *recall* (99.1 %) and harm (13/13) rising together; the union's precision (89.2 %) is below `spell_correct`'s (91.2 %). "precision" here looks like a slip for "recall". A one-word substance fix, flagged not made.
+3. **§4.7 "range across the seven flag-raising detectors".** Table 4 lists three flag-raising detectors plus the union (and the degenerate `dict_vs_corpus`); the text never says where "seven" comes from. Either the table is a subset of `eval.py`'s detector list (say so in the caption) or the count is stale.
+4. **Table numbering.** The manuscript captions only Table 2a, Table 2b and Table 4; the §4.1, §4.3 and §4.5 tables carry no caption and no number, and there is no Table 1 or Table 3. IJL will want a full sequence. Table references are untouchable in a voice pass.
+5. **Header `_Created: 10-08-2026_`** postdates the paper's own history (H047 first draft 26-06-2026; review 02-07-2026; pass 1 10-07-2026). Dates are a hard limit for this pass; a human should correct the creation date.
+6. **Relative links that die outside the repo tree.** §3.2 `[detectors/combined_candidates.txt](../detectors/combined_candidates.txt)` points at a file §4.3 says is gitignored; §4.6 `../corrections_draft/irr/`, Appendix A `../detectors/` and `../corrections_draft/` are relative paths. URLs are a hard limit for this pass; they need full blob URLs (or removal) before the anonymised pack is built.
+7. **Scaffolding still in the manuscript body** (carried from pass 1 §3): the §2 tail parenthetical "*(Every References URL was resolved…)*", the parenthetical in the References heading, the "*(Removed 12-07-2026: …)*" note after the References, the "*(Verified 10-07-2026 by the H452 prior-art scan…)*" note inside the Prasanna entry, and the whole draft-status blockquote. All are workflow text, not manuscript text; strip at submission.
+8. **Forward-looking promises that age.** §4.6 "pending an API credential; its κ will be reported as obtained" and §6 "soon two model *families*, once the pending cross-family run of §4.6 completes" have stood since 12-07-2026. Either the cross-family run lands before submission or these become plain "future work" sentences.
+9. **Pass 1 flag on "pre-registered binary collapse" is resolved** — the word no longer appears in §4.6; nothing to carry.
+10. **Derived submission pack.** The anonymised IJL pack (`A44_ijl_*.md`, cover letter) is generated from this manuscript by `build_a44_anonymous.py` and was deliberately not touched; it must be regenerated after this branch merges, or the pack and the manuscript diverge on P2-1…P2-12. (Neither the pack files nor the build script are on `origin/master` at the time of this pass — they live in another checkout; whoever holds them re-runs the build.)
+
+### 3. Read-and-sign
+
+About 30 minutes: skim the thirteen calls in §1 and veto any; rule on flags 1–3 (each is a one-token substance fix a voice pass may not make); strip the scaffolding in flag 7 at submission time. Proposed readiness: **stays 4/5** — the manuscript is voice-clean, but flags 1–3 are referee-visible arithmetic and the "we/I" question is unruled; the 5/5 bump is the author's to make after those. Venue: no change recommended — IJL remains the right home (the do-not-file inversion and the apparatus taxonomy are its native material). Submission itself stays frozen until 2026-11-01 per the standing rule.
 
 _Dr. Mārcis Gasūns_
