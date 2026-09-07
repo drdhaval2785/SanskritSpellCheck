@@ -236,7 +236,7 @@ triaged on its first source (see §6). All Sanskrit text is in SLP1 transliterat
 
 ### 3.2 The candidates and the five-way decision
 The engine's tier-A candidates (per dict, from
-[`detectors/combined_candidates.txt`](../detectors/combined_candidates.txt)) are
+`detectors/combined_candidates.txt`) are
 headwords whose vowel/consonant pattern is absent from a trusted reference. As §1
 showed, on a mature dictionary almost none of these are real errors. The triage's job
 is to decide, per candidate, which of **five** things it is:

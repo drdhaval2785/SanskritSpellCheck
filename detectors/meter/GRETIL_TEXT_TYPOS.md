@@ -23,7 +23,7 @@ different consumer: CORRECTIONS is for dictionary text, this is for corpus text)
 
 [`ngram_corpus_check.py`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/meter/ngram_corpus_check.py) walks each sampled section's verses
 ([`gretil_walker.py`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/meter/gretil_walker.py)), transliterates every verse IAST→SLP1 with the
-canonical [`sanskrit_util.to_slp1`](../sanskrit_util.py), and flags words containing a
+canonical `sanskrit_util.to_slp1`, and flags words containing a
 bigram **absent from the MW∩PW headword bigram model** (the same
 [`ngram/data/2grams.txt`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ngram/data/2grams.txt) + whitelist/whiteends suppression
 assets as [`ngram/ngramspellcheck.py`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ngram/ngramspellcheck.py)), keeping the

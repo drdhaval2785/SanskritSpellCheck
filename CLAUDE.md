@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 > Org-level conventions (issue taxonomy, `.ai_state.md` session protocol, the
 > `csl-orig` correction workflow, Windows/encoding rules) live in the parent
-> [GitHub/CLAUDE.md](../CLAUDE.md) and are **not** repeated here. This file covers
+> [GitHub/CLAUDE.md](../Uprava-h4060-drain/CLAUDE.md) and are **not** repeated here. This file covers
 > only what is specific to SanskritSpellCheck.
 
 ## What this repo is

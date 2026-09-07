@@ -21,12 +21,12 @@ different consumer: CORRECTIONS is for dictionary text, this is for corpus text)
 
 ## Method
 
-[`ngram_corpus_check.py`](ngram_corpus_check.py) walks each sampled section's verses
-([`gretil_walker.py`](gretil_walker.py)), transliterates every verse IAST→SLP1 with the
-canonical [`sanskrit_util.to_slp1`](../sanskrit_util.py), and flags words containing a
+`ngram_corpus_check.py` walks each sampled section's verses
+(`gretil_walker.py`), transliterates every verse IAST→SLP1 with the
+canonical `sanskrit_util.to_slp1`, and flags words containing a
 bigram **absent from the MW∩PW headword bigram model** (the same
-[`ngram/data/2grams.txt`](../../ngram/data/2grams.txt) + whitelist/whiteends suppression
-assets as [`ngram/ngramspellcheck.py`](../../ngram/ngramspellcheck.py)), keeping the
+`ngram/data/2grams.txt` + whitelist/whiteends suppression
+assets as `ngram/ngramspellcheck.py`), keeping the
 locus of each hit. The method is deliberately **high-recall / low-precision** on running
 text — inflected, sandhi'd, and compounded words legitimately contain bigrams no headword
 has — so every row is a **human-review candidate, never an auto-fix**. Per-section full
