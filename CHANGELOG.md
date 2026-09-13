@@ -11,6 +11,7 @@ ready for a dated entry.
 ## [Unreleased]
 <!-- entries land in changelog_queue/ -- appended via tools/changelog_queue_consume.py, consumed by cut_release.py at release-cut (H3355); direct bullets here are hook-blocked -->
 
+- Added a root `AGENTS.md` agent-entrypoint stub (H4634): names itself the agent entrypoint, links [CLAUDE.md](CLAUDE.md), points at the [Uprava org standard](https://github.com/gasyoun/Uprava/blob/main/AGENTS.md).
 ## [1.62.0] - 2026-09-05
 ### Added
 - **Grammar-example audit prototype — csl-kale crawl (H4154 Lane A, 05-09-2026, OxAlpha).**
