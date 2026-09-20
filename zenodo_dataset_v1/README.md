@@ -45,6 +45,10 @@ than this file — that's an expected checkout-time transform, not a corrupted d
 
 ## Excluded / not in this package
 
+- **A37's `ortho_drift/` tables** — the orthographic-drift study's fuller per-dictionary
+  tables remain a **separate future deposit** (not minted with v1; deliberate, per the
+  20-09-2026 mint-lane scope). The reform maps shipped here (`data/reform_maps/`) are the
+  v1 slice of that work.
 - **Per-dictionary `*_wrong_readings.txt` files** ([`corrections_draft/`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/corrections_draft/README.md)) —
   several quote dictionary entry text verbatim as evidence for each do-not-file verdict.
   `PD` ([Deccan College *Encyclopaedic Dictionary*](https://sanskrit-lexicon.uni-koeln.de/scans/PDScan/2020/web/index.php))
