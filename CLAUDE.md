@@ -1,5 +1,7 @@
 # CLAUDE.md
 
+> _H5176 SLA review 20-09-2026: read top-to-bottom; structure and claims verified as written by the external owner. LOCAL-ONLY commit — local master is diverged 15/19 vs origin; do not push from an agent lane._
+
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 > Org-level conventions (issue taxonomy, `.ai_state.md` session protocol, the
