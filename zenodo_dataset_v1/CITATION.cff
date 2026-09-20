@@ -3,8 +3,15 @@ message: "If you use this dataset, please cite it as below."
 type: dataset
 title: "SanskritSpellCheck derived-data package v1: confusion pairs, do-not-file whitelists, orthographic reform maps, and meter-verdict/GRETIL-typo indices for the Cologne Digital Sanskrit Dictionaries"
 version: 1.0.0
-date-released: "PENDING"
-doi: "PENDING"
+date-released: "2026-09-20"
+doi: "10.5281/zenodo.22854023"
+identifiers:
+  - identifier: "10.5281/zenodo.22854022"
+    type: "doi"
+    description: "Concept DOI (all versions) — preferred citation"
+  - identifier: "10.5281/zenodo.22854023"
+    type: "doi"
+    description: "Version DOI for v1.0.0 (minted 2026-09-20)"
 repository-code: "https://github.com/drdhaval2785/SanskritSpellCheck"
 license: CC-BY-4.0
 keywords:

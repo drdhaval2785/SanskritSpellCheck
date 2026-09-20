@@ -12,6 +12,16 @@ ready for a dated entry.
 <!-- entries land in changelog_queue/ -- appended via tools/changelog_queue_consume.py, consumed by cut_release.py at release-cut (H3355); direct bullets here are hook-blocked -->
 
 - Added a root `AGENTS.md` agent-entrypoint stub (H4634): names itself the agent entrypoint, links [CLAUDE.md](CLAUDE.md), points at the [Uprava org standard](https://github.com/gasyoun/Uprava/blob/main/AGENTS.md).
+- **Zenodo dataset v1 MINTED (H5170, 20-09-2026, OxAlpha tier, GLM `zai-coding-plan/glm-5.3-flash`).**
+  The [zenodo_dataset_v1/](zenodo_dataset_v1/) package (H1534) is published on Zenodo:
+  concept DOI [10.5281/zenodo.22854022](https://doi.org/10.5281/zenodo.22854022) · version DOI
+  [10.5281/zenodo.22854023](https://doi.org/10.5281/zenodo.22854023) (v1.0.0). All 32 uploads
+  MD5-verified; record live-verified logged-out before any wiring. Data files deposited
+  blob-exact against `checksums.sha256`; the manifest was regenerated first because the H4092
+  byline/header pass had touched 8 `data/meter/*.md` files after H1534 staged the hashes
+  (19/27 verification → 27/27 after regeneration). Creators per `metadata.yaml`: Patel, Dhaval +
+  Gasūns, Mārcis. Wiring: `zenodo_dataset_v1/CITATION.cff` + `metadata.yaml` + `README.md`
+  PENDING slots filled; the "DOI minting stays a human `@DO`" note in 1.57.0 struck.
 ## [1.62.0] - 2026-09-05
 ### Added
 - **Grammar-example audit prototype — csl-kale crawl (H4154 Lane A, 05-09-2026, OxAlpha).**
@@ -238,8 +248,10 @@ ready for a dated entry.
   `metadata.yaml` + `CITATION.cff` + `LICENSE-DATA` (CC BY 4.0) + `checksums.sha256` (27
   files, sha256). Deliberately excludes the per-dict `*_wrong_readings.txt` files (several
   quote entry text verbatim; `PD`'s is CC BY-NC-SA) and the gitignored/regenerable
-  `meter_verdicts.jsonl`. **DOI minting stays a human `@DO`** (needs a Zenodo-account
-  login/API token) — tracked in `Uprava/GTD_NEXT_ACTIONS.md`.
+  `meter_verdicts.jsonl`. **MINTED 20-09-2026 (H5170)**: Zenodo concept DOI
+  [10.5281/zenodo.22854022](https://doi.org/10.5281/zenodo.22854022) · version DOI
+  [10.5281/zenodo.22854023](https://doi.org/10.5281/zenodo.22854023) (v1.0.0) — see
+  [Unreleased] below.
 
 ## [1.56.0] - 2026-07-26
 
