@@ -8,8 +8,7 @@ layer built on top of [SanskritSpellCheck](https://github.com/drdhaval2785/Sansk
 [Cologne Digital Sanskrit Dictionaries](http://www.sanskrit-lexicon.uni-koeln.de/) (CDSL),
 originated by Dr. Dhaval Patel. It packages the six derived-data assets named in
 [ROADMAP_2026_2027.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ROADMAP_2026_2027.md)
-Q4 2026 item 3, staged for a human to upload to Zenodo — see `DOI: pending` below and the
-`@DO` row this release adds to `Uprava/GTD_NEXT_ACTIONS.md`.
+Q4 2026 item 3, **uploaded to Zenodo 2026-09-20 (H5170)** — see *How to cite* below.
 
 **This package ships derived analytical data only** — headword-pair confusions, statistics,
 whitelists, and verdict indices. It does **not** reproduce any dictionary's full entry text,
@@ -92,10 +91,12 @@ section and [CLAUDE.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/
 
 ## How to cite
 
-See [`CITATION.cff`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/zenodo_dataset_v1/CITATION.cff). `DOI: pending` — this package is staged for upload;
-Zenodo DOI minting is a human `@DO` (needs a Zenodo-account-holder's login/API token), tracked
-in `Uprava/GTD_NEXT_ACTIONS.md`. A paper citing this dataset should not ship to a venue while
-the DOI is pending.
+See [`CITATION.cff`](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/zenodo_dataset_v1/CITATION.cff).
+**DOI (minted 2026-09-20, H5170):** concept DOI
+[10.5281/zenodo.22854022](https://doi.org/10.5281/zenodo.22854022) (preferred citation,
+all versions) · version DOI [10.5281/zenodo.22854023](https://doi.org/10.5281/zenodo.22854023)
+for v1.0.0. Cite the concept DOI for the dataset family; pin the version DOI when the
+v1.0.0 files must be reproducible.
 
 ## License
 

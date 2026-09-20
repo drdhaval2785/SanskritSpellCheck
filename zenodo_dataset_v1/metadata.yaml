@@ -63,15 +63,15 @@ related_identifiers:
 
 version: "1.0.0"
 
-publication_date: "PENDING — set to the actual Zenodo upload date"
+publication_date: "2026-09-20"
 
 source_commit: "007e0efd8b526c678e15facce99a320a0037b4b9"
 source_repo: "https://github.com/drdhaval2785/SanskritSpellCheck"
 source_branch: "master"
 
 doi:
-  concept_doi: "PENDING — reserved at first Zenodo upload, stable across all future versions"
-  version_doi: "PENDING — minted per version (this is v1.0.0)"
+  concept_doi: "10.5281/zenodo.22854022 (reserved at first upload 2026-09-20, stable across all future versions)"
+  version_doi: "10.5281/zenodo.22854023 (v1.0.0, minted 2026-09-20)"
 
 files:
   - path: "data/o_vs_O_evaluation_pairs.txt"
