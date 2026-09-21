@@ -1,4 +1,4 @@
-_Created: 10-08-2026 · Last updated: 05-09-2026_
+_Created: 10-08-2026 · Last updated: 21-09-2026_
 
 # CLAUDE.md
 
@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 > Org-level conventions (issue taxonomy, `.ai_state.md` session protocol, the
 > `csl-orig` correction workflow, Windows/encoding rules) live in the parent
-> [GitHub/CLAUDE.md](../Uprava-h4060-drain/CLAUDE.md) and are **not** repeated here. This file covers
+> [GitHub/CLAUDE.md](https://github.com/gasyoun/github-spine/blob/main/CLAUDE.md) and are **not** repeated here. This file covers
 > only what is specific to SanskritSpellCheck.
 
 ## What this repo is
@@ -204,21 +204,10 @@ not "already-corrected leftovers." A small result still means "mostly corrected,
 (17 k entries) → 31 959 flags, many against specialized dicts — prefer a large clean
 base for high-precision lists.
 
-**Python — all scripts ported to Python 3** (`py_compile` clean on 3.14; the
-runnable ones were executed):
-- `print` statements → `print(...)` everywhere.
-- [sanhw1.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/sanhw1/sanhw1.py) / [sanhw2.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/sanhw2/sanhw2.py): `string.maketrans`→`str.maketrans`,
-  `string.translate(a,t)`→`a.translate(t)`, `cmp(a,b)`→`(a>b)-(a<b)`,
-  `sorted(…,cmp=fn)`→`sorted(…,key=functools.cmp_to_key(fn))`,
-  `encode('ascii','replace')`→`….decode('ascii')` (keep keys as `str`).
-- [ngramspellcheck.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ngram/ngramspellcheck.py): `HTMLParser` import → `html.parser`,
-  `MLStripper.__init__` calls `super().__init__()`, `is not 0`→`!= 0`, invalid `\(`
-  regex escapes doubled. Runs against its `data/` fixtures (found 25 suspects).
-- [sortlen.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/o_vs_O/sortlen.py): `readlines(fin)`→`readlines()`; reproduces the
-  committed `o_vs_O/output3/composite*a.txt` exactly.
-- [chg_nchg_sep.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/chg_nchg_sep.py): runs (716 nchg lines on `AllvsMW_sf.txt`).
-- Remaining `codecs.open()` DeprecationWarnings are cosmetic (still works on 3.14) —
-  optional future cleanup to `open(encoding=…)`.
+**Python — all scripts ported to Python 3** (`py_compile` clean on 3.14; the runnable ones —
+`ngramspellcheck.py` (25 suspects on its `data/` fixtures), `sortlen.py` (reproduces the committed
+`o_vs_O/output3/composite*a.txt` exactly), `chg_nchg_sep.py` — were executed). The per-file 2→3
+rewrites are in git history. Remaining `codecs.open()` DeprecationWarnings are cosmetic.
 
 **`sanhw1.py` / `sanhw2.py` were ported for correctness but not run here** — their
 `addhw()` reads sibling `<CODE>Scan/<year>/pywork/<code>hw2.txt` trees that exist only
@@ -229,4 +218,4 @@ two `.txt` files as fixed local inputs.
 + [.github/dependabot.yml](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/.github/dependabot.yml). Default branch `master`. The ruff
 rule set is syntax/undefined-name only, so it won't catch Py2 `print` statements.
 
-_Dr. Mārcis Gasūns_
+_Гасунс_
