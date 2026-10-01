@@ -78,7 +78,8 @@ the V/C skeleton) — that is what the `detectors/` package addresses.
 
 - **[USE_CASES.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/USE_CASES.md)** — pick a goal, get the commands and the verify→submit path.
 - **[detectors/readme.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/readme.md)** — the seven newer algorithms (DCS-grounded).
-- **[ROADMAP.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ROADMAP.md)** — phased plan for what's next.
+- **[ROADMAP.md](https://github.com/gasyoun/SanskritSpellCheck/blob/master/ROADMAP.md)** — archived 01-10-2026 (wave-2 verdict [H5574](https://github.com/gasyoun/Uprava/blob/main/handoffs/H5574-OxAlpha_SanskritSpellCheck_roadmap-verdict-w2-spack-afanasiy-visualdcs_01.10.26.md)); full copy in [archive/ROADMAP.md](https://github.com/gasyoun/SanskritSpellCheck/blob/master/archive/ROADMAP.md).
+- **[ORTHO_DRIFT_ROADMAP.md](https://github.com/gasyoun/SanskritSpellCheck/blob/master/ORTHO_DRIFT_ROADMAP.md)** — archived 01-10-2026 (same verdict); copy in [archive/ORTHO_DRIFT_ROADMAP.md](https://github.com/gasyoun/SanskritSpellCheck/blob/master/archive/ORTHO_DRIFT_ROADMAP.md).
 - **[CLAUDE.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/CLAUDE.md)** — architecture, runtime/porting status, conventions.
 - **[CHANGELOG.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/CHANGELOG.md)** — dated change history.
 
