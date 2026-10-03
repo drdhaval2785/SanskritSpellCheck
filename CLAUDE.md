@@ -229,4 +229,12 @@ two `.txt` files as fixed local inputs.
 + [.github/dependabot.yml](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/.github/dependabot.yml). Default branch `master`. The ruff
 rule set is syntax/undefined-name only, so it won't catch Py2 `print` statements.
 
+## Repo guards
+
+The shared main tree is guarded: `.githooks/pre-commit` blocks main-tree commits
+(escape `ALLOW_MAIN_TREE_COMMIT=1`, solo only) and `.githooks/post-checkout`
+auto-reverts a foreign branch-switch back to `master` (shared-tree branch-switch guard,
+03-10-2026, PR #118; escape `ALLOW_MAIN_TREE_CHECKOUT=1`). Work in a session-unique
+worktree; `core.hooksPath=.githooks`.
+
 _Dr. Mārcis Gasūns_
