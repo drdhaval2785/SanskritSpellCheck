@@ -1,4 +1,4 @@
-_Created: 10-08-2026 · Last updated: 05-09-2026_
+_Created: 10-08-2026 · Last updated: 04-10-2026_
 
 # CLAUDE.md
 
@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 > Org-level conventions (issue taxonomy, `.ai_state.md` session protocol, the
 > `csl-orig` correction workflow, Windows/encoding rules) live in the parent
-> [GitHub/CLAUDE.md](../Uprava-h4060-drain/CLAUDE.md) and are **not** repeated here. This file covers
+> [Uprava/CLAUDE.md](https://github.com/gasyoun/Uprava/blob/main/CLAUDE.md) and are **not** repeated here. This file covers
 > only what is specific to SanskritSpellCheck.
 
 ## What this repo is
@@ -167,66 +167,30 @@ There is no build, no test suite, and no package manifest — the "tests" are th
 generated suspect lists, verified by human reviewers against the scanned dictionaries.
 All PHP pipelines and Python helpers run under PHP 8 / Python 3 (see below).
 
-## Runtime & porting status
+## Runtime (PHP 8.2 / Python 3.14)
 
 Local runtimes: **PHP 8.2** (`C:\xampp\php\php.exe`, *not* on PATH) and **Python
-3.14** (`python`), with `lxml` installed. The code was originally Python 2 / PHP 5–7
-and was ported in June 2026; what changed and how it was verified:
-
-**PHP (faultfinder pipeline) — runs clean on PHP 8.2.** Two changes in
-[faultfinder3a.php](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/faultfinder3a.php):
-- `preg_split(..., null, ...)` → `-1` (null `$limit` is deprecated on 8.1+).
-- The check loop iterated `for ($j=0; $j<count($file1); $j++)` over `$file1` =
-  `array_diff($worddata, $whitelistwords)`. `array_diff()` keeps the original (now
-  gappy) keys, so this both (a) flooded PHP 8 with "Undefined array key" +
-  `preg_match(null)` warnings on the gaps and (b) **stopped at the survivor count**,
-  never testing survivors whose original index exceeded it — silently dropping the
-  tail of the Sanskrit alphabetical order. Replaced with
-  `foreach ($file1 as $j => $value)`, which skips gaps and covers every survivor
-  (`$j` stays the original key, so `$worddata[$j]`/`$dictdata[$j]` stay aligned).
-  Scripts set `memory_limit=1000M` and read all ~431 k lines of `sanhw1.txt`.
-
-The `foreach` change is a **deliberate behaviour change, not output-neutral** — but
-strictly additive: verified on VCP, all 6856 previously-found suspects still appear,
-plus **555** newly-covered ones (all `s…`/`h…`, i.e. the alphabet tail), 0 warnings.
-The committed `AllvsMW/PW/PWG/VCP` files are left as their historical 2017 runs;
-re-running now legitimately finds more.
+3.14** (`python`, `lxml` installed). The code was ported from Python 2 / PHP 5–7
+in June 2026 and verified end-to-end — the full porting log (the `foreach`
+faultfinder fix and the 555 alphabet-tail suspects it added, per-file Python
+diffs) is in the **git history of this file** (revisions before 04-10-2026; it
+was cut for the 4 000 approx-tok agent-docs budget, MG ruling 04-10-2026
+«I trust you, cut»). New code stays Python 3 / PHP 8 native.
 
 **Heads-up — re-running an *old* base dict now yields far fewer hits than its
-committed file, and that is expected, not a regression.** The tool's purpose is to
-surface errors that get fixed upstream in CORRECTIONS and folded back into a
-regenerated `sanhw1.txt`, so the head of the alphabet is now largely clean: fresh
-`MW`=110, `PW`=183, `PWG`=256 vs the committed 2017 files (1705 / 1853 / 1984). Those
-fresh counts are *post*-`foreach`-fix, and most of each is now alphabet-tail (`s…`/
-`h…`) suspects that the old loop never tested — i.e. genuinely worth a review pass,
-not "already-corrected leftovers." A small result still means "mostly corrected,"
-**not** "pipeline broken." A *small* base flags more (narrow pattern inventory): SKD
-(17 k entries) → 31 959 flags, many against specialized dicts — prefer a large clean
-base for high-precision lists.
+committed file, and that is expected, not a regression.** Fixed errors go
+upstream to CORRECTIONS and fold back into a regenerated `sanhw1.txt`, so the
+alphabet head is now largely clean: fresh `MW`=110 / `PW`=183 / `PWG`=256 vs the
+committed 2017 files (1705 / 1853 / 1984), and most fresh hits are alphabet-tail
+(`s…`/`h…`) suspects genuinely worth a review pass. A small result means "mostly
+corrected," **not** "pipeline broken." A *small* base flags more (narrow pattern
+inventory): SKD (17 k entries) → 31 959 flags — prefer a large clean base for
+high-precision lists. `sanhw1.py` / `sanhw2.py` regenerate only on the Cologne
+server (they read sibling `<CODE>Scan/<year>/pywork/` trees that exist nowhere
+else) — treat `sanhw1.txt` / `sanhw2.txt` as fixed local inputs.
 
-**Python — all scripts ported to Python 3** (`py_compile` clean on 3.14; the
-runnable ones were executed):
-- `print` statements → `print(...)` everywhere.
-- [sanhw1.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/sanhw1/sanhw1.py) / [sanhw2.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/sanhw2/sanhw2.py): `string.maketrans`→`str.maketrans`,
-  `string.translate(a,t)`→`a.translate(t)`, `cmp(a,b)`→`(a>b)-(a<b)`,
-  `sorted(…,cmp=fn)`→`sorted(…,key=functools.cmp_to_key(fn))`,
-  `encode('ascii','replace')`→`….decode('ascii')` (keep keys as `str`).
-- [ngramspellcheck.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/ngram/ngramspellcheck.py): `HTMLParser` import → `html.parser`,
-  `MLStripper.__init__` calls `super().__init__()`, `is not 0`→`!= 0`, invalid `\(`
-  regex escapes doubled. Runs against its `data/` fixtures (found 25 suspects).
-- [sortlen.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/o_vs_O/sortlen.py): `readlines(fin)`→`readlines()`; reproduces the
-  committed `o_vs_O/output3/composite*a.txt` exactly.
-- [chg_nchg_sep.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/chg_nchg_sep.py): runs (716 nchg lines on `AllvsMW_sf.txt`).
-- Remaining `codecs.open()` DeprecationWarnings are cosmetic (still works on 3.14) —
-  optional future cleanup to `open(encoding=…)`.
-
-**`sanhw1.py` / `sanhw2.py` were ported for correctness but not run here** — their
-`addhw()` reads sibling `<CODE>Scan/<year>/pywork/<code>hw2.txt` trees that exist only
-on the Cologne server, where `sanhw1.txt` / `sanhw2.txt` are regenerated. Treat the
-two `.txt` files as fixed local inputs.
-
-**Tooling:** [.pre-commit-config.yaml](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/.pre-commit-config.yaml) (ruff `E9,F63,F7,F8`)
-+ [.github/dependabot.yml](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/.github/dependabot.yml). Default branch `master`. The ruff
-rule set is syntax/undefined-name only, so it won't catch Py2 `print` statements.
+**Tooling:** [.pre-commit-config.yaml](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/.pre-commit-config.yaml) (ruff `E9,F63,F7,F8` —
+syntax/undefined-name only, won't catch Py2 `print`)
++ [.github/dependabot.yml](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/.github/dependabot.yml). Default branch `master`.
 
 _Dr. Mārcis Gasūns_
