@@ -1,4 +1,4 @@
-_Created: 10-08-2026 · Last updated: 05-09-2026_
+_Created: 10-08-2026 · Last updated: 04-10-2026 (H5885: parent-link fix + SLA trim)_
 
 # CLAUDE.md
 
@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 > Org-level conventions (issue taxonomy, `.ai_state.md` session protocol, the
 > `csl-orig` correction workflow, Windows/encoding rules) live in the parent
-> [GitHub/CLAUDE.md](../Uprava-h4060-drain/CLAUDE.md) and are **not** repeated here. This file covers
+> [github-spine CLAUDE.md](https://github.com/gasyoun/github-spine/blob/main/CLAUDE.md) and are **not** repeated here. This file covers
 > only what is specific to SanskritSpellCheck.
 
 ## What this repo is
@@ -22,8 +22,7 @@ repo (this repo never edits dictionary source itself).
 All Sanskrit text in this repo is in **SLP1** transliteration.
 
 **Runtime** (modernized June 2026): the toolset now runs on **Python 3 + PHP 8**.
-All scripts were ported from the original Python 2 / PHP 5–7 (see "Runtime &
-porting status" below for exactly what changed and how it was verified). New code
+All scripts were ported from the original Python 2 / PHP 5–7. New code
 should stay Python 3 / PHP 8 native.
 
 ## Core methodology
@@ -67,7 +66,7 @@ appear in output (e.g. `Start-Consonant-Consonant` → `SCC`).
 
 **Specialized dictionaries** `ACC BHS BUR IEG KRM VEI PD` are treated as
 "less fruitful" and excluded in places (e.g. [chg_nchg_sep.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/chg_nchg_sep.py)
-line 18) because they are domain-specific, not general Sanskrit lexica.
+line 18).
 
 **External dictionary sources (not in `csl-orig`).** A few dicts have headwords in
 `sanhw1.txt` but no `csl-orig/v02/<dict>/<dict>.txt` entry text — notably **PD** (Deccan
@@ -84,8 +83,7 @@ register its URL in that script.
 and [dev-slp.php](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/dev-slp.php) (Devanagari→SLP1) are vendored from Dr. Patel's
 `sanskrit` sandhi project. They are used only to render Devanagari and Cologne
 deep-links in the generated HTML reports — treat them as a third-party dependency:
-don't refactor them. They use no PHP-8-removed constructs (`each()`,
-`create_function()`, `$str{i}` offsets), so they already run on PHP 8 as-is.
+don't refactor them. No PHP-8-removed constructs — they run on PHP 8 as-is.
 
 ## Output formats (conventions other tools depend on)
 
@@ -101,16 +99,15 @@ don't refactor them. They use no PHP-8-removed constructs (`each()`,
   `repeat` arg: `0` (default) keeps only single-dictionary words *and* excludes
   post-repha words via `rcc()` (`r` + doubled consonant); `1` allows multi-dict; `2`
   renders every input row (including rcc). The default rcc exclusion encodes a real
-  editorial judgment — post-repha doublings (sūryya, varṇṇa, ūrmma) are usually the
-  faithful printed form, *not* errors. (`repeat=2` was dead code until fixed June 2026.)
+  editorial judgment — post-repha doublings are usually the faithful printed form,
+  *not* errors.
 - **[triage_suspects.py](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/triage_suspects.py)** post-processes an `AllvsXX.txt` into
   `noise` (specialized-dict-only), `priority` (non-rcc anomalies — review first), and
   `gemination` (the rcc/post-repha subset — low priority). The 2026 re-run packages
   live in [Allvs_2026/](Allvs_2026); the historical `AllvsXX/` dirs are the 2017 runs.
 - **[detectors/](detectors)** — eight newer algorithms on a shared `slp1util.py`
   confusion model, several grounded in the **DCS corpus** (vendored
-  `dcs_lemma_summary.json`, 83k SLP1 lemmas + frequency bands, DCS-2021 CC-BY, used
-  to suppress real-word headwords and rank suggestions): correctors `spell_correct`
+  `dcs_lemma_summary.json`, DCS-2021 CC-BY): correctors `spell_correct`
   (DCS-ranked), `consensus`, `intra_dup`, `dict_vs_corpus` (collective errors) emit
   `DICT:wrong:right:n`; flaggers `phonotactic_check`, `charset_check`, `order_check`,
   `meter_check` emit `X:CODE=Y:D`. They target the skeleton-preserving substitutions
@@ -118,10 +115,7 @@ don't refactor them. They use no PHP-8-removed constructs (`each()`,
 - **`meter_check`** (H251, 06-07-2026) — batch chandas (meter) validator: a headword
   co-occurring with a metrically broken GRETIL kavya verse is a corpus-corroboration
   signal. Three-way vote (skrutable + `chanda` + `vidyut-chandas`) over GRETIL's Kavya
-  section (57 texts, ~26k verses), bridged from free verse text to dictionary headwords
-  via `vidyut.cheda`'s segmenter/lemmatizer. Design, corpus-fetch step, verdict scheme,
-  and guards (not a tier promoter — same cross-agreement mechanism as the other
-  detectors): **[detectors/meter/README.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/meter/README.md)**.
+  section (not a tier promoter): **[detectors/meter/README.md](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/detectors/meter/README.md)**.
 - **Body-grounded triage** (`detectors/triage_*.py` + `bodyaware_workflow.js`) — turns a
   dictionary's tier-A candidates into a verified FILE-FIRST queue + a do-not-file list by
   judging each against the dictionary's *own entry text* (not spelling alone). Run it with the
@@ -135,8 +129,7 @@ don't refactor them. They use no PHP-8-removed constructs (`each()`,
   (`csl_root()`/`csl_dict_file()`, `package_dir()`/`work_dir()`), CLI helpers
   (`reconfigure_stdio()`, `dict_arg()`), the tunables every step must agree on (`BATCH_SIZE`,
   `INTENTIONAL_KINDS`, `NEEDS_JUDGMENT`, `SCAN_URL`), the JSON-verdict loaders, and the csl-orig
-  `EntryIndex`. Per-dictionary language markers live in `detectors/triage_lang.py` (`_LANG`
-  maps the dict code to en/de/sa and defaults unknown codes to English).
+  `EntryIndex`. Per-dict language markers: `detectors/triage_lang.py` `_LANG` (dict code → en/de/sa, default English).
 
 ## Commands
 
