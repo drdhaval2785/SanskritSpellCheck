@@ -315,6 +315,33 @@ def load_whitelist(path='nochange/nochange.txt'):
     return words
 
 
+SPELLCHECK_DICT = 'HeadwordLists/spellcheck_union_mwderiv-v1.0.0.txt'
+
+
+def spellcheck_dict_path(root=None):
+    """Path of the versioned spell-check dictionary (the A55 union headword
+    index + MWderivations product of tools/build_spellcheck_dict.py; see
+    HeadwordLists/spellcheck_union_mwderiv-v1.0.0.txt.meta.json for provenance
+    and counts). The SANSKRIT_SPELLCHECK_DICT env override wins; otherwise
+    <root>/HeadwordLists/... (root=None gives the cwd-relative default, the
+    same convention as the other loaders here)."""
+    env = os.environ.get('SANSKRIT_SPELLCHECK_DICT')
+    if env:
+        return env
+    return os.path.join(root, SPELLCHECK_DICT) if root else SPELLCHECK_DICT
+
+
+def load_spellcheck_dict(path=None):
+    """Versioned spell-check dictionary as a word set. Empty set when the file
+    is absent — callers degrade to their pre-dictionary behaviour, the same
+    contract as load_union()."""
+    p = path or spellcheck_dict_path()
+    try:
+        return {w for w in _read_words(p) if w and not w.startswith('#')}
+    except OSError:
+        return set()
+
+
 def parse_sanhw1(path='sanhw1.txt'):
     """Yield (headword, [dict_codes]) from a sanhw1.txt-format file."""
     for line in _read_words(path):

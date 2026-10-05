@@ -22,6 +22,17 @@ ready for a dated entry.
   (19/27 verification → 27/27 after regeneration). Creators per `metadata.yaml`: Patel, Dhaval +
   Gasūns, Mārcis. Wiring: `zenodo_dataset_v1/CITATION.cff` + `metadata.yaml` + `README.md`
   PENDING slots filled; the "DOI minting stays a human `@DO`" note in 1.57.0 struck.
+- **Spell-check dictionary v1.0.0 assembled from the A55 union headword index + MWderivations (H6068, 05-10-2026).**
+  [HeadwordLists/spellcheck_union_mwderiv-v1.0.0.txt](HeadwordLists/spellcheck_union_mwderiv-v1.0.0.txt) —
+  337,305 SLP1 words, one per line, Sanskrit alphabetical order (M→homorganic-nasal normalization). Built by
+  [tools/build_spellcheck_dict.py](tools/build_spellcheck_dict.py) from the sibling SanskritLexicography union index
+  (kosha dataset `union-headwords`, release data-v0.4.0, DOI [10.5281/zenodo.22102090](https://doi.org/10.5281/zenodo.22102090), CC BY-SA 4.0;
+  323,422 rows) + funderburkjim/MWderivations `step4/analysis2.txt` (220,248 rows; key1 of every row + hyphen/mark-stripped
+  key2 of parse-resolved DONE rows): 657,176 raw → 337,305 deduped (+13,883 MWderivations-only derived/compound spellings).
+  Provenance, counts and sha256 in the [manifest](HeadwordLists/spellcheck_union_mwderiv-v1.0.0.txt.meta.json). Consumed via
+  `detectors/slp1util.load_spellcheck_dict()` (env `SANSKRIT_SPELLCHECK_DICT`, degrades to no-op when absent);
+  [detectors/spell_correct.py](detectors/spell_correct.py) merges it into its trusted lexicon — real-run suspects 7,844 → 4,623.
+  Tests: [tests/test_spellcheck_dict.py](tests/test_spellcheck_dict.py) (builder roundtrip, loader contract, artifact canary); full suite 50 passed.
 ## [1.62.0] - 2026-09-05
 ### Added
 - **Grammar-example audit prototype — csl-kale crawl (H4154 Lane A, 05-09-2026, OxAlpha).**

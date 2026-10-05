@@ -1,0 +1,38 @@
+{
+  "artifact": "spellcheck_union_mwderiv-v1.0.0.txt",
+  "version": "1.0.0",
+  "built": "2026-10-05",
+  "format": "plain text, UTF-8, LF, one SLP1 word per line, Sanskrit alphabetical order (M->homorganic normalization)",
+  "sha256": "518c763d46ffc1218d1a8605834b9352ffc6dd5193f0106fea1b4c099573fadc",
+  "counts": {
+    "union_rows": 323422,
+    "union_words": 323422,
+    "mwderiv_rows": 220248,
+    "mwderiv_key1_words": 193892,
+    "mwderiv_key2_words": 139862,
+    "combined_raw": 657176,
+    "deduped": 337305,
+    "duplicates_removed": 319871,
+    "mwderiv_only": 13883,
+    "union_only": 130012
+  },
+  "sources": {
+    "union": {
+      "dataset": "gasyoun/kosha union-headwords (A55)",
+      "release": "data-v0.4.0",
+      "doi": "10.5281/zenodo.22102090",
+      "license": "CC BY-SA 4.0",
+      "rows": 323422,
+      "local_copy": "SanskritLexicography/HeadwordLists/union/union_headwords.tsv",
+      "env_override": "SANSKRIT_UNION_HEADWORDS"
+    },
+    "mwderivations": {
+      "repo": "funderburkjim/MWderivations",
+      "file": "step4/analysis2.txt",
+      "rows": 220248,
+      "env_override": "MWDERIVATIONS_ANALYSIS2"
+    }
+  },
+  "builder": "tools/build_spellcheck_dict.py",
+  "consumers": "detectors/slp1util.load_spellcheck_dict()"
+}

@@ -35,6 +35,11 @@ def main(sanhw1, outfile):
     corpus = u.load_corpus(glob.glob(os.path.join(root, 'CountVowels', '*-CVC-SLP1.txt')))
     dcs = u.load_dcs_lemmas(u.dcs_path())
     whitelist = u.load_whitelist(os.path.join(root, 'nochange', 'nochange.txt'))
+    scd = u.load_spellcheck_dict(u.spellcheck_dict_path(root))
+    if scd:
+        lex |= scd
+        print("spellcheck dict (A55 union + MWderivations): %d words merged into the trusted lexicon"
+              % len(scd))
     print("trusted lexicon: %d   corpus tokens: %d   DCS lemmas: %d" % (len(lex), len(corpus), len(dcs)))
 
     def band(c):
