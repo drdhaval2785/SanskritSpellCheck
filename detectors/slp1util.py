@@ -315,7 +315,7 @@ def load_whitelist(path='nochange/nochange.txt'):
     return words
 
 
-SPELLCHECK_DICT = 'HeadwordLists/spellcheck_union_mwderiv-v1.0.0.txt'
+SPELLCHECK_DICT = 'HeadwordLists/spellcheck_union_mwderiv-v1.0.1.txt'
 
 
 def spellcheck_dict_path(root=None):

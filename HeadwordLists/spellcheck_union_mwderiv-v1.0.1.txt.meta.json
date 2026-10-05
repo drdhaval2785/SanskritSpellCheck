@@ -1,9 +1,9 @@
 {
-  "artifact": "spellcheck_union_mwderiv-v1.0.0.txt",
-  "version": "1.0.0",
+  "artifact": "spellcheck_union_mwderiv-v1.0.1.txt",
+  "version": "1.0.1",
   "built": "2026-10-05",
   "format": "plain text, UTF-8, LF, one SLP1 word per line, Sanskrit alphabetical order (M->homorganic normalization)",
-  "sha256": "518c763d46ffc1218d1a8605834b9352ffc6dd5193f0106fea1b4c099573fadc",
+  "sha256": "8d17eebb12de82bad10c88f117c800675aea3e135edc05f22a61193476c7b525",
   "counts": {
     "union_rows": 323422,
     "union_words": 323422,

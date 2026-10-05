@@ -28,9 +28,10 @@ Assembly rules
     (detectors/slp1util.sanskrit_sort_key: M -> homorganic nasal normalization,
     so aMga sorts as aNga), UTF-8, LF, one word per line.
 
-Output: HeadwordLists/spellcheck_union_mwderiv-v1.0.0.txt plus a .meta.json
+Output: HeadwordLists/spellcheck_union_mwderiv-v1.0.1.txt plus a .meta.json
 manifest carrying the version, source versions, dedup counts and the artifact
-sha256. Consumers load it with detectors/slp1util.load_spellcheck_dict().
+sha256. The build is byte-reproducible (total order: sort key + raw string
+tiebreak). Consumers load it with detectors/slp1util.load_spellcheck_dict().
 
   python tools/build_spellcheck_dict.py               # default locations
   python tools/build_spellcheck_dict.py --out DIR     # alternate output dir
@@ -45,7 +46,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)),
                                 os.pardir, "detectors"))
 import slp1util  # noqa: E402  (repo-local shared util: sort key only)
 
-DICT_VERSION = "1.0.0"
+DICT_VERSION = "1.0.1"
 ARTIFACT_NAME = "spellcheck_union_mwderiv-v" + DICT_VERSION + ".txt"
 
 # Marks the MWderivations analysis layer carries that the union key1 layer
@@ -125,7 +126,12 @@ def build(union_path, mwderiv_path, out_dir):
     mw_k1, mw_k2, mw_rows = load_mwderiv_words(mwderiv_path)
 
     combined_raw = union | mw_k1 | mw_k2
-    deduped = sorted(combined_raw, key=slp1util.sanskrit_sort_key)
+    # secondary raw-string key: sanskrit_sort_key alone is NOT injective
+    # (M->homorganic normalization ties akiMcana with akiNcana), and a set's
+    # iteration order varies per process (PYTHONHASHSEED) — without it the
+    # artifact bytes would not be reproducible.
+    deduped = sorted(combined_raw,
+                     key=lambda w: (slp1util.sanskrit_sort_key(w), w))
 
     os.makedirs(out_dir, exist_ok=True)
     artifact = os.path.join(out_dir, ARTIFACT_NAME)
