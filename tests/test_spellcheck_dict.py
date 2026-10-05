@@ -3,6 +3,7 @@ the tools/build_spellcheck_dict.py builder and the detectors/slp1util loader."""
 import hashlib
 import importlib.util
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -80,6 +81,27 @@ def test_builder_rejects_bad_union(tmp_path):
          "--out", str(tmp_path)],
         capture_output=True, text=True, encoding="utf-8")
     assert result.returncode != 0
+
+
+def test_builder_is_byte_reproducible(tmp_path):
+    """Two runs under different PYTHONHASHSEED must produce identical bytes:
+    sanskrit_sort_key alone is not injective (M->homorganic ties), so the
+    raw-string tiebreak is what makes the artifact deterministic."""
+    union = tmp_path / "union_headwords.tsv"
+    union.write_text(UNION_FIXTURE, encoding="utf-8")
+    mwd = tmp_path / "analysis2.txt"
+    mwd.write_text(MWD_FIXTURE, encoding="utf-8")
+    digests = set()
+    for seed, out in (("1", tmp_path / "a"), ("2", tmp_path / "b")):
+        result = subprocess.run(
+            [sys.executable, str(ROOT / "tools" / "build_spellcheck_dict.py"),
+             "--union", str(union), "--mwderiv", str(mwd), "--out", str(out)],
+            capture_output=True, text=True, encoding="utf-8",
+            env=dict(os.environ, PYTHONHASHSEED=seed))
+        assert result.returncode == 0, result.stderr
+        digests.add(hashlib.sha256(
+            (out / builder.ARTIFACT_NAME).read_bytes()).hexdigest())
+    assert len(digests) == 1
 
 
 def test_load_spellcheck_dict_env_override_and_degrade(tmp_path, monkeypatch):
