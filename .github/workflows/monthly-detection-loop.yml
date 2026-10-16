@@ -45,7 +45,7 @@ jobs:
         run: python monthly_loop.py --rerun ../sanhw1.txt
 
       - name: Upload run artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         if: always()
         with:
           name: monthly-detection-loop-${{ github.run_id }}
