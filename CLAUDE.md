@@ -193,4 +193,12 @@ else) — treat `sanhw1.txt` / `sanhw2.txt` as fixed local inputs.
 syntax/undefined-name only, won't catch Py2 `print`)
 + [.github/dependabot.yml](https://github.com/drdhaval2785/SanskritSpellCheck/blob/master/.github/dependabot.yml). Default branch `master`.
 
+## Repo guards
+
+The shared main tree is guarded: `.githooks/pre-commit` blocks main-tree commits
+(escape `ALLOW_MAIN_TREE_COMMIT=1`, solo only) and `.githooks/post-checkout`
+auto-reverts a foreign branch-switch back to `master` (shared-tree branch-switch guard,
+03-10-2026, PR #118; escape `ALLOW_MAIN_TREE_CHECKOUT=1`). Work in a session-unique
+worktree; `core.hooksPath=.githooks`.
+
 _Dr. Mārcis Gasūns_
