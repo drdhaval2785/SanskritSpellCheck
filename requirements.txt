@@ -2,5 +2,5 @@
 # tools/build_spellcheck_dict.py writes its .meta.json through it instead of a
 # hand-rolled manifest. Merge order: sanskrit-util#82 first, then re-pin to the
 # v0.13.0 tag (or the merge commit if that PR is squash-merged).
-sanskrit-util @ git+https://github.com/sanskrit-lexicon/sanskrit-util.git@bf33074fa32ecf9cead5cdde9db6981533a3429f#subdirectory=py
+cdsl-sanskrit-util @ git+https://github.com/sanskrit-lexicon/sanskrit-util.git@bf33074fa32ecf9cead5cdde9db6981533a3429f#subdirectory=py  # import name is sanskrit_util; the distribution is cdsl-sanskrit-util
 csl-pyutil @ git+https://github.com/sanskrit-lexicon/csl-pyutil.git@v0.3.0
