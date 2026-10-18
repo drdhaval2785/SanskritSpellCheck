@@ -29,9 +29,12 @@ Assembly rules
     so aMga sorts as aNga), UTF-8, LF, one word per line.
 
 Output: HeadwordLists/spellcheck_union_mwderiv-v1.0.1.txt plus a .meta.json
-manifest carrying the version, source versions, dedup counts and the artifact
-sha256. The build is byte-reproducible (total order: sort key + raw string
-tiebreak). Consumers load it with detectors/slp1util.load_spellcheck_dict().
+sidecar carrying the version, source versions, dedup counts, the artifact
+sha256 AND the H6979 provenance contract (who made it, on which handoff/model,
+which consumers) — written through `sanskrit_util.write_sidecar`, which refuses
+a layer with no consumer and no `dormant` declaration. The build is
+byte-reproducible (total order: sort key + raw string tiebreak). Consumers load
+it with detectors/slp1util.load_spellcheck_dict().
 
   python tools/build_spellcheck_dict.py               # default locations
   python tools/build_spellcheck_dict.py --out DIR     # alternate output dir
@@ -45,6 +48,12 @@ import sys
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)),
                                 os.pardir, "detectors"))
 import slp1util  # noqa: E402  (repo-local shared util: sort key only)
+
+try:  # the layer-sidecar gate, shared library (H6979) — never re-implemented here
+    from sanskrit_util import sidecar_path_for, write_sidecar
+except ImportError as exc:  # pragma: no cover - the pin is in requirements.txt
+    raise SystemExit(
+        "sanskrit-util >= 0.13.0 is required for the layer sidecar (H6979): %s" % exc)
 
 DICT_VERSION = "1.0.1"
 ARTIFACT_NAME = "spellcheck_union_mwderiv-v" + DICT_VERSION + ".txt"
@@ -179,12 +188,32 @@ def build(union_path, mwderiv_path, out_dir):
             },
         },
         "builder": "tools/build_spellcheck_dict.py",
-        "consumers": "detectors/slp1util.load_spellcheck_dict()",
+        # H6979 provenance contract (sanskrit_util.write_sidecar): the layer is
+        # written by a handoff-named agent lane and has two real consumers, so
+        # it is `active` — not a quiet registration with an empty consumer list.
+        "layer": "spellcheck-union-mwderiv",
+        "made_by": "ai",
+        "model": "z-ai/glm-5.3-flash",
+        "handoff": "H6068",
+        "status": "active",
+        "consumers": [
+            {"kind": "repo", "id": "SanskritSpellCheck",
+             "use": "detectors/slp1util.load_spellcheck_dict() — spell-check "
+                    "dictionary; detectors/spell_correct.py merges it into the "
+                    "trusted lexicon"},
+            {"kind": "repo", "id": "SanskritLexicography",
+             "use": "headword spelling QA over the union/key1-key2 exports"},
+        ],
+        "novelty": (
+            "Lifts the spell-check dictionary past the A55 union with the "
+            "MWderivations key2 spellings the fifteen key1 exports miss "
+            "(+13,883 words, 337,305 total), deduped on the exact SLP1 string "
+            "and ordered with a raw-string tiebreak so a rerun is byte-identical "
+            "— the union alone would have shipped 319,871 duplicate lines and a "
+            "hash-seed-dependent order."),
     }
-    meta_path = artifact + ".meta.json"
-    with open(meta_path, "w", encoding="utf-8", newline="\n") as f:
-        json.dump(manifest, f, ensure_ascii=False, indent=2)
-        f.write("\n")
+    meta_path = sidecar_path_for(artifact)
+    write_sidecar(meta_path, manifest)
 
     print("union: %d rows -> %d words" % (union_rows, len(union)))
     print("mwderivations: %d rows -> %d key1 + %d cleaned key2 (DONE)"

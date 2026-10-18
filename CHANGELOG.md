@@ -1,4 +1,4 @@
-_Created: 10-08-2026 · Last updated: 05-09-2026_
+_Created: 10-08-2026 · Last updated: 18-10-2026_
 
 # Changelog
 
@@ -12,6 +12,7 @@ ready for a dated entry.
 <!-- entries land in changelog_queue/ -- appended via tools/changelog_queue_consume.py, consumed by cut_release.py at release-cut (H3355); direct bullets here are hook-blocked -->
 
 - Added a root `AGENTS.md` agent-entrypoint stub (H4634): names itself the agent entrypoint, links [CLAUDE.md](CLAUDE.md), points at the [Uprava org standard](https://github.com/gasyoun/Uprava/blob/main/AGENTS.md).
+- **The spell-check dictionary's `.meta.json` becomes a H6979 data-layer sidecar: contract fields (`made_by`/`model`/`handoff`/`consumers`/`status`/`novelty`) written through `sanskrit_util.write_sidecar`, which refuses a layer with no consumer and no `dormant` declaration.** (H6979, 18-10-2026, DeepSeek Flash `deepseek-flash`.) [tools/build_spellcheck_dict.py](tools/build_spellcheck_dict.py) no longer hand-rolls its manifest: the same `counts`/`sources`/`sha256` block now sits beside the contract fields, the string `consumers` became two named consumers (this repo's `load_spellcheck_dict()`/`spell_correct.py` lexicon, and SanskritLexicography headword QA), and the artifact is unchanged — rebuilt through the new path at **sha256 `8d17eebb…`**, byte-identical to the committed v1.0.1 (`337,305` words, `319,871` duplicates removed, `+13,883` MWderivations-only spellings). Spec: [kosha LAYER_SIDECAR_SPEC](https://github.com/gasyoun/kosha/blob/main/docs/LAYER_SIDECAR_SPEC.md). `requirements.txt` pin moves to `sanskrit-util` 0.13.0 (sanskrit-util#82 — merge it first).
 - **Zenodo dataset v1 MINTED (H5170, 20-09-2026, OxAlpha tier, GLM `zai-coding-plan/glm-5.3-flash`).**
   The [zenodo_dataset_v1/](zenodo_dataset_v1/) package (H1534) is published on Zenodo:
   concept DOI [10.5281/zenodo.22854022](https://doi.org/10.5281/zenodo.22854022) · version DOI

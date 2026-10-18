@@ -1,7 +1,7 @@
 {
   "artifact": "spellcheck_union_mwderiv-v1.0.1.txt",
   "version": "1.0.1",
-  "built": "2026-10-05",
+  "built": "2026-10-18",
   "format": "plain text, UTF-8, LF, one SLP1 word per line, Sanskrit alphabetical order (M->homorganic normalization)",
   "sha256": "8d17eebb12de82bad10c88f117c800675aea3e135edc05f22a61193476c7b525",
   "counts": {
@@ -34,5 +34,22 @@
     }
   },
   "builder": "tools/build_spellcheck_dict.py",
-  "consumers": "detectors/slp1util.load_spellcheck_dict()"
+  "layer": "spellcheck-union-mwderiv",
+  "made_by": "ai",
+  "model": "z-ai/glm-5.3-flash",
+  "handoff": "H6068",
+  "status": "active",
+  "consumers": [
+    {
+      "kind": "repo",
+      "id": "SanskritSpellCheck",
+      "use": "detectors/slp1util.load_spellcheck_dict() — spell-check dictionary; detectors/spell_correct.py merges it into the trusted lexicon"
+    },
+    {
+      "kind": "repo",
+      "id": "SanskritLexicography",
+      "use": "headword spelling QA over the union/key1-key2 exports"
+    }
+  ],
+  "novelty": "Lifts the spell-check dictionary past the A55 union with the MWderivations key2 spellings the fifteen key1 exports miss (+13,883 words, 337,305 total), deduped on the exact SLP1 string and ordered with a raw-string tiebreak so a rerun is byte-identical — the union alone would have shipped 319,871 duplicate lines and a hash-seed-dependent order."
 }
